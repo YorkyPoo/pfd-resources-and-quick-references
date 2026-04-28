@@ -77,35 +77,35 @@ Checked items have been successfully converted into the high-quality matrix form
 
 
 ## Pharmacology / Medication Reference
-- [x] [[Adenosine]] / Adenocard
-- [x] [[Albuterol]] Sulfate / Proventil
-- [x] [[Amiodarone]] / Cordarone
-- [x] [[Aspirin]]
-- [x] [[Atropine]] Sulfate
-- [x] [[Calcium Chloride]]
-- [x] [[Dextrose]] 10%, 25%, 50%
+- [x] [Adenosine](../pharmacology/Adenosine.md) / Adenocard
+- [x] [Albuterol](../pharmacology/Albuterol.md) Sulfate / Proventil
+- [x] [Amiodarone](../pharmacology/Amiodarone.md) / Cordarone
+- [x] [Aspirin](../pharmacology/Aspirin.md)
+- [x] [Atropine](../pharmacology/Atropine.md) Sulfate
+- [x] [Calcium Chloride](../pharmacology/Calcium%20Chloride.md)
+- [x] [Dextrose](../pharmacology/Dextrose.md) 10%, 25%, 50%
 - [x] Diphenhydramine / Benadryl
-- [x] [[Epinephrine]] / Adrenaline
+- [x] [Epinephrine](../pharmacology/Epinephrine.md) / Adrenaline
 - [x] Etomidate / Amidate
 - [x] Furosemide / Lasix
-- [x] [[Glucagon]]
+- [x] [Glucagon](../pharmacology/Glucagon.md)
 - [x] Haloperidol / Haldol
 - [x] Hydroxocobalamin / CYANOKIT
-- [x] [[Ipratropium]] Bromide / Atrovent
-- [x] [[Ketamine]]
+- [x] [Ipratropium](../pharmacology/Ipratropium.md) Bromide / Atrovent
+- [x] [Ketamine](../pharmacology/Ketamine.md)
 - [x] Ketorolac tromethamine / Toradol
-- [x] [[Lidocaine]] / Xylocaine
-- [x] [[Magnesium Sulfate]]
+- [x] [Lidocaine](../pharmacology/Lidocaine.md) / Xylocaine
+- [x] [Magnesium Sulfate](../pharmacology/Magnesium%20Sulfate.md)
 - [x] Methylprednisolone Succinate / Solu-Medrol
-- [x] [[Midazolam]] HCl / Versed
+- [x] [Midazolam](../pharmacology/Midazolam.md) HCl / Versed
 - [x] Morphine Sulfate
-- [x] [[Naloxone]] / [[Naloxone]]
-- [x] [[Nitroglycerin]] / Nitrostat
-- [x] Norepinephrine / Levophed
-- [x] [[Ondansetron]] / [[Ondansetron]]
+- [x] [Naloxone](../pharmacology/Naloxone.md) / [Naloxone](../pharmacology/Naloxone.md)
+- [x] [Nitroglycerin](../pharmacology/Nitroglycerin.md) / Nitrostat
+- [x] Nor[Epinephrine](../pharmacology/Epinephrine.md) / Levophed
+- [x] [Ondansetron](../pharmacology/Ondansetron.md) / [Ondansetron](../pharmacology/Ondansetron.md)
 - [x] Rocuronium / Zemuron
-- [x] [[Sodium Bicarbonate]]
-- [x] [[Fentanyl]] / Sublimaze
+- [x] [Sodium Bicarbonate](../pharmacology/Sodium%20Bicarbonate.md)
+- [x] [Fentanyl](../pharmacology/Fentanyl.md) / Sublimaze
 - [x] Succinylcholine / Anectine
 - [x] Vecuronium / Norcuron
 - [x] Ziprasidone / Geodon

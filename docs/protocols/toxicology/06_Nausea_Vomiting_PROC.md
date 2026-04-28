@@ -37,12 +37,12 @@ This protocol outlines the assessment and management of patients experiencing pe
 | 1 | Follow Universal Patient Care | | • | | • | |
 | 2 | Place in position of comfort / recovery position if unresponsive; suction as needed | | • | | • | |
 | 3 | Refer to Airway and Hypotension protocols as needed | | • | | • | |
-| 4 | **[[Ondansetron]] ([[Ondansetron]]) 4 mg** ODT | | | • | | • |
-| 5 | Adult: **[[Ondansetron]] ([[Ondansetron]]) 4 mg** IV/IO slow push, IM, or PO<br>Pediatric: **[[Ondansetron]] ([[Ondansetron]]) 0.15 mg/kg** IV/IO/IM/PO (max **4 mg**) | | | | • | |
+| 4 | **[Ondansetron](../pharmacology/Ondansetron.md) ([Ondansetron](../pharmacology/Ondansetron.md)) 4 mg** ODT | | | • | | • |
+| 5 | Adult: **[Ondansetron](../pharmacology/Ondansetron.md) ([Ondansetron](../pharmacology/Ondansetron.md)) 4 mg** IV/IO slow push, IM, or PO<br>Pediatric: **[Ondansetron](../pharmacology/Ondansetron.md) ([Ondansetron](../pharmacology/Ondansetron.md)) 0.15 mg/kg** IV/IO/IM/PO (max **4 mg**) | | | | • | |
 | 6 | Contact Poquoson OMD / Medical Control for additional doses or orders | | | MC | MC | MC |
 
 ### Pearls
-* ⚠ **[[Ondansetron]] ([[Ondansetron]])** must be administered as a SLOW IV push (over 2-5 minutes) to avoid syncope or other adverse reactions.
-* ⚠ Use caution in patients with known prolonged QT interval, as **[[Ondansetron]]** can cause QT prolongation and potentially lead to Torsades de Pointes.
+* ⚠ **[Ondansetron](../pharmacology/Ondansetron.md) ([Ondansetron](../pharmacology/Ondansetron.md))** must be administered as a SLOW IV push (over 2-5 minutes) to avoid syncope or other adverse reactions.
+* ⚠ Use caution in patients with known prolonged QT interval, as **[Ondansetron](../pharmacology/Ondansetron.md)** can cause QT prolongation and potentially lead to Torsades de Pointes.
 * ⚠ Prophylactic use of antiemetics is generally not recommended unless specific clinical indications are present.
-* ⚠ Maximum total dose of **[[Ondansetron]]** is **8 mg** for Adults and **0.3 mg/kg** for Pediatrics.
+* ⚠ Maximum total dose of **[Ondansetron](../pharmacology/Ondansetron.md)** is **8 mg** for Adults and **0.3 mg/kg** for Pediatrics.

@@ -19,7 +19,7 @@
 - May cause hypotension. Use with caution in patients with cardiac disease, ≥65 years old, or taking anti-arrhythmic medications.
 - May lower seizure threshold – use only when benefit outweighs risk in patients with known seizure disorder.
 - May cause dystonic reactions (abnormal involuntary movements) or muscle rigidity.
-- May block the activity of [[Epinephrine]] – use **Norepinephrine** if vasopressor is required.
+- May block the activity of [Epinephrine](../pharmacology/Epinephrine.md) – use **Nor[Epinephrine](../pharmacology/Epinephrine.md)** if vasopressor is required.
 
 ## Dosage
 ### Adults
@@ -45,4 +45,4 @@
 
 ## Pearls
 - ⚠ **Warning:** Patients with dementia-related psychosis who are treated with antipsychotic drugs are at an increased risk of death – **Haldol** is not approved for use in these patients.
-- ⚠ **Warning:** May block the activity of [[Epinephrine]] – use **Norepinephrine** if vasopressor is required.
+- ⚠ **Warning:** May block the activity of [Epinephrine](../pharmacology/Epinephrine.md) – use **Nor[Epinephrine](../pharmacology/Epinephrine.md)** if vasopressor is required.

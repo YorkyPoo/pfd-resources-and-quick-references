@@ -1,4 +1,4 @@
-# **[[Glucagon]]**
+# **[Glucagon](../pharmacology/Glucagon.md)**
 **Trade Name:** Not specified in protocol
 
 ## Classification & Action

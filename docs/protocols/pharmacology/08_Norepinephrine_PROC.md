@@ -1,4 +1,4 @@
-# **Norepinephrine**
+# **Nor[Epinephrine](../pharmacology/Epinephrine.md)**
 **Trade Name:** Levophed
 
 ## Classification & Action
@@ -18,7 +18,7 @@
 
 ## Dosage
 ### Adults
-- **4 mg** of **norepinephrine** in 250 mL of NS (final concentration **16 mcg/mL**) IV Infusion — Dosing **5 - 20 mcg/min**. Maximum **20 mcg/min** = 75 gtt/min (60 drop set)
+- **4 mg** of **nor[Epinephrine](../pharmacology/Epinephrine.md)** in 250 mL of NS (final concentration **16 mcg/mL**) IV Infusion — Dosing **5 - 20 mcg/min**. Maximum **20 mcg/min** = 75 gtt/min (60 drop set)
 
 ### Pediatrics
 - Not specified in protocol

@@ -1,4 +1,4 @@
-# **Nitroglycerine**
+# **[Nitroglycerin](../pharmacology/Nitroglycerin.md)e**
 **Trade Name:** Nitrostat
 
 ## Classification & Action

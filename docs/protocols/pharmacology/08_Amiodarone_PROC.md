@@ -1,4 +1,4 @@
-# **[[Amiodarone]]**
+# **[Amiodarone](../pharmacology/Amiodarone.md)**
 **Trade Name:** **Cordarone**
 
 ## Classification & Action

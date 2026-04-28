@@ -1,4 +1,4 @@
-# [[Midazolam]]
+# [Midazolam](../pharmacology/Midazolam.md)
 **Trade Name:** Versed
 
 ## Classification & Action

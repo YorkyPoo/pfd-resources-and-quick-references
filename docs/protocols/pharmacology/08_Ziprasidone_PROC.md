@@ -3,7 +3,7 @@
 
 ## Classification & Action
 - **Drug Class:** Anti-psychotic, sedative
-- **Mechanism of Action:** Inhibits synaptic reuptake of serotonin and norepinephrine – potent sedative
+- **Mechanism of Action:** Inhibits synaptic reuptake of serotonin and nor[Epinephrine](../pharmacology/Epinephrine.md) – potent sedative
 
 ## Indications
 - Behavioral Emergencies – severe agitation

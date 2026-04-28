@@ -42,8 +42,8 @@ Respiratory arrest (apnea) and respiratory failure represent life-threatening em
 | 11 | **Surgical Airway (Cricothyrotomy):**<br>• If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway.<br>• Use 14G, 3.25" catheter or surgical cricothyrotomy kit per Poquoson Protocols. | | | | | |
 | 12 | **Post-Intubation Airway Management:**<br>• Verify tube placement with continuous box-waveform capnography AND auscultation (bilateral lung sounds, absence of gastric sounds).<br>• Secure tube with tape or commercial tube holder.<br>• Document depth of placement at teeth/gums. | | | | | • |
 | 13 | **Ongoing Ventilation Monitoring:**<br>• Monitor ET tube placement and ventilation continuously with SpO2 and EtCO2.<br>• Reassess lung sounds and gastric sounds after any patient movement. | | | | | • |
-| 14 | **Post-Advanced Airway Analgesia – [[Fentanyl]] (Sublimaze):**<br>• **ADULT:** **25–50 mcg** IV/IO over 2 minutes or IN/IM.<br>• **PEDIATRIC:** **0.5–1 mcg/kg** IV/IO over 2 minutes or IN/IM (Maximum dose **25 mcg**).<br>• Repeat every 10–15 minutes as needed. | | | | | |
-| 15 | **Post-Advanced Airway Sedation – [[Midazolam]] (Versed):**<br>• **ADULT:** **2.5 mg** IV/IO over 2 minutes or **5 mg** IN/IM.<br>• **PEDIATRIC:** **0.1 mg/kg** IV/IO over 2 minutes or **0.2 mg/kg** IN/IM (Maximum dose **2.5 mg** IV/IO or **5 mg** IN/IM).<br>• Repeat every 10–15 minutes as needed. | | | | | |
+| 14 | **Post-Advanced Airway Analgesia – [Fentanyl](../pharmacology/Fentanyl.md) (Sublimaze):**<br>• **ADULT:** **25–50 mcg** IV/IO over 2 minutes or IN/IM.<br>• **PEDIATRIC:** **0.5–1 mcg/kg** IV/IO over 2 minutes or IN/IM (Maximum dose **25 mcg**).<br>• Repeat every 10–15 minutes as needed. | | | | | |
+| 15 | **Post-Advanced Airway Sedation – [Midazolam](../pharmacology/Midazolam.md) (Versed):**<br>• **ADULT:** **2.5 mg** IV/IO over 2 minutes or **5 mg** IN/IM.<br>• **PEDIATRIC:** **0.1 mg/kg** IV/IO over 2 minutes or **0.2 mg/kg** IN/IM (Maximum dose **2.5 mg** IV/IO or **5 mg** IN/IM).<br>• Repeat every 10–15 minutes as needed. | | | | | |
 
 ### Pearls
 1. **EtCO2 Target:** Maintain continuous box-waveform EtCO2 at **35–45 mmHg** once advanced airway is placed. This is the definitive indicator of adequate ventilation and perfusion.
@@ -56,9 +56,9 @@ Respiratory arrest (apnea) and respiratory failure represent life-threatening em
 
 5. **Two-Person BVM Technique:** Whenever possible, use two providers for BVM ventilation—one to seal the mask and open the airway, one to squeeze the bag. This significantly improves tidal volume delivery.
 
-6. **⚠ Sedation Precautions:** Use **half doses** of **[[Fentanyl]]** and **[[Midazolam]]** for frail, hypotensive, underweight, and/or elderly (>65 years) patients. Monitor closely for respiratory depression.
+6. **⚠ Sedation Precautions:** Use **half doses** of **[Fentanyl](../pharmacology/Fentanyl.md)** and **[Midazolam](../pharmacology/Midazolam.md)** for frail, hypotensive, underweight, and/or elderly (>65 years) patients. Monitor closely for respiratory depression.
 
-7. **⚠ Opioid-Benzodiazepine Combination:** Due to risk of apnea, use **[[Fentanyl]]** in combination with **[[Midazolam]]** only after airway is definitively secured (ET tube or SGA in place).
+7. **⚠ Opioid-Benzodiazepine Combination:** Due to risk of apnea, use **[Fentanyl](../pharmacology/Fentanyl.md)** in combination with **[Midazolam](../pharmacology/Midazolam.md)** only after airway is definitively secured (ET tube or SGA in place).
 
 8. **Foreign Body Management:** If complete airway obstruction is suspected and BVM ventilation fails, proceed immediately to laryngoscopy with Magill forceps removal or surgical airway if visualization is impossible.
 

@@ -33,14 +33,14 @@ This protocol outlines the assessment and management of obstetrical emergencies,
 | 3 | **Shoulder Dystocia:** Place mother in McRobert's position (knees to chest) and apply suprapubic pressure. | | • | | • | |
 | 4 | **Umbilical Cord Prolapse:** Wrap exposed cord in saline-moistened gauze. Elevate mother's hips or place in Trendelenburg position. Insert gloved hand to relieve pressure on the cord. DO NOT attempt vaginal delivery. | | • | | • | |
 | 5 | **Breech Delivery:** Allow controlled, spontaneous delivery to the umbilicus. Deliver the legs and support the body. | | • | | • | |
-| 6 | **Eclampsia (Seizures):** Administer **[[Magnesium Sulfate]] 4 g** IV/IO infusion over 10 minutes. | | | | | • |
-| 7 | If seizures persist > 5 minutes, administer **[[Midazolam]] 5 mg** IV/IO or **10 mg** IM. | | | | | • |
+| 6 | **Eclampsia (Seizures):** Administer **[Magnesium Sulfate](../pharmacology/Magnesium%20Sulfate.md) 4 g** IV/IO infusion over 10 minutes. | | | | | • |
+| 7 | If seizures persist > 5 minutes, administer **[Midazolam](../pharmacology/Midazolam.md) 5 mg** IV/IO or **10 mg** IM. | | | | | • |
 | 8 | **Bleeding / Rupture / Abruptio:** Place patient in left lateral recumbent position. | | • | | • | |
 | 9 | Establish IV access and administer **0.9% Normal Saline 20 mL/kg** up to **1,000 mL**. | | | | • | |
 | 10 | Contact Medical Control for guidance, especially for complications, eclampsia seizures, or difficult deliveries. | MC | MC | MC | MC | MC |
 
 ### Pearls
 • ⚠ Pre-eclampsia and eclampsia can occur up to 8 weeks AFTER delivery. Always ask about recent pregnancies in female patients presenting with seizures.
-• ⚠ The primary goal of **[[Magnesium Sulfate]]** administration in eclampsia is to limit and stop seizures, not strictly to lower blood pressure.
+• ⚠ The primary goal of **[Magnesium Sulfate](../pharmacology/Magnesium%20Sulfate.md)** administration in eclampsia is to limit and stop seizures, not strictly to lower blood pressure.
 • ⚠ Maintain a high index of suspicion for uterine rupture in pregnant patients who have experienced trauma, even if minor.
 • ⚠ Do not pull on the umbilical cord or infant during delivery.

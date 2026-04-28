@@ -1,4 +1,4 @@
-# **[[Calcium Chloride]]**
+# **[Calcium Chloride](../pharmacology/Calcium%20Chloride.md)**
 **Trade Name:** Not specified
 
 ## Classification & Action
@@ -34,8 +34,8 @@
 - Dysrhythmias
 
 ## Interactions
-- Given in combination with IV/IO **[[Sodium Bicarbonate]]**, **[[Calcium Chloride]]** may precipitate into calcium carbonate.
+- Given in combination with IV/IO **[Sodium Bicarbonate](../pharmacology/Sodium%20Bicarbonate.md)**, **[Calcium Chloride](../pharmacology/Calcium%20Chloride.md)** may precipitate into calcium carbonate.
 
 ## Pearls
 - ⚠ **Warning:** May cause tissue necrosis. Use only large bore, easily flushing IV/IO to avoid extravasation.
-- ⚠ **Warning:** Given in combination with IV/IO **[[Sodium Bicarbonate]]**, **[[Calcium Chloride]]** may precipitate into calcium carbonate – give via separate IV/IO sites or flush thoroughly (at least 20 mL) between medications.
+- ⚠ **Warning:** Given in combination with IV/IO **[Sodium Bicarbonate](../pharmacology/Sodium%20Bicarbonate.md)**, **[Calcium Chloride](../pharmacology/Calcium%20Chloride.md)** may precipitate into calcium carbonate – give via separate IV/IO sites or flush thoroughly (at least 20 mL) between medications.

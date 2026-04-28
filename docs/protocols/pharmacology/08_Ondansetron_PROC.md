@@ -1,5 +1,5 @@
-# **[[Ondansetron]]**
-**Trade Name:** [[Ondansetron]]
+# **[Ondansetron](../pharmacology/Ondansetron.md)**
+**Trade Name:** [Ondansetron](../pharmacology/Ondansetron.md)
 
 ## Classification & Action
 - **Drug Class:** Antiemetic

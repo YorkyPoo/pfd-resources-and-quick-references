@@ -1,4 +1,4 @@
-# **[[Epinephrine]]**
+# **[Epinephrine](../pharmacology/Epinephrine.md)**
 **Trade Name:** Adrenaline
 
 ## Classification & Action

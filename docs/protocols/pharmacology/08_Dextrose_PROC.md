@@ -1,5 +1,5 @@
-# **[[Dextrose]] 10%, 25% and 50%**
-**Trade Name:** [[Dextrose]]
+# **[Dextrose](../pharmacology/Dextrose.md) 10%, 25% and 50%**
+**Trade Name:** [Dextrose](../pharmacology/Dextrose.md)
 
 ## Classification & Action
 - **Drug Class:** Carbohydrate
