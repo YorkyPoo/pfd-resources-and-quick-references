@@ -1,4 +1,4 @@
-# [Ipratropium](../pharmacology/Ipratropium.md) Bromide
+# [Ipratropium](../pharmacology/Ipratropium Bromide.md) Bromide
 **Trade Name:** Atrovent
 
 ## Classification & Action

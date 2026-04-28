@@ -81,7 +81,7 @@ Checked items have been successfully converted into the high-quality matrix form
 - [x] [Albuterol](../pharmacology/Albuterol.md) Sulfate / Proventil
 - [x] [Amiodarone](../pharmacology/Amiodarone.md) / Cordarone
 - [x] [Aspirin](../pharmacology/Aspirin.md)
-- [x] [Atropine](../pharmacology/Atropine.md) Sulfate
+- [x] [Atropine](../pharmacology/Atropine Sulfate.md) Sulfate
 - [x] [Calcium Chloride](../pharmacology/Calcium%20Chloride.md)
 - [x] [Dextrose](../pharmacology/Dextrose.md) 10%, 25%, 50%
 - [x] Diphenhydramine / Benadryl
@@ -91,7 +91,7 @@ Checked items have been successfully converted into the high-quality matrix form
 - [x] [Glucagon](../pharmacology/Glucagon.md)
 - [x] Haloperidol / Haldol
 - [x] Hydroxocobalamin / CYANOKIT
-- [x] [Ipratropium](../pharmacology/Ipratropium.md) Bromide / Atrovent
+- [x] [Ipratropium](../pharmacology/Ipratropium Bromide.md) Bromide / Atrovent
 - [x] [Ketamine](../pharmacology/Ketamine.md)
 - [x] Ketorolac tromethamine / Toradol
 - [x] [Lidocaine](../pharmacology/Lidocaine.md) / Xylocaine
@@ -100,7 +100,7 @@ Checked items have been successfully converted into the high-quality matrix form
 - [x] [Midazolam](../pharmacology/Midazolam.md) HCl / Versed
 - [x] Morphine Sulfate
 - [x] [Naloxone](../pharmacology/Naloxone.md) / [Naloxone](../pharmacology/Naloxone.md)
-- [x] [Nitroglycerin](../pharmacology/Nitroglycerin.md) / Nitrostat
+- [x] [Nitroglycerin](../pharmacology/Nitroglycerine.md) / Nitrostat
 - [x] Nor[Epinephrine](../pharmacology/Epinephrine.md) / Levophed
 - [x] [Ondansetron](../pharmacology/Ondansetron.md) / [Ondansetron](../pharmacology/Ondansetron.md)
 - [x] Rocuronium / Zemuron

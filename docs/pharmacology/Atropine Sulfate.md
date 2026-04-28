@@ -1,4 +1,4 @@
-# **[Atropine](../pharmacology/Atropine.md) Sulfate**
+# **[Atropine](../pharmacology/Atropine Sulfate.md) Sulfate**
 **Trade Name:** Not specified
 
 ## Classification & Action

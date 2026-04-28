@@ -34,7 +34,7 @@ Guidelines for managing thermal, chemical, and radiation burns, emphasizing airw
 | 3 | Estimate depth of burns and Total Body Surface Area (TBSA) involved using Rule of 9s or patient's palm (1%). Only count partial (2nd degree) and full thickness (3rd degree) burns. | | | • | | • |
 | 4 | Apply clean, dry dressings to burns. Prevent loss of body heat and keep the patient warm. | | | • | | • |
 | 5 | Establish IV/IO access on a non-burned extremity, if possible (preferably obtain two sites of access). | | | | • | |
-| 6 | Hydrofluoric Acid (HF) Burns with Hypotension: Administer **[Calcium Chloride](../pharmacology/Calcium%20Chloride.md) 1 g** IV/IO over 3 mins (Repeat in 5 mins PRN). | | | | | |
+| 6 | Hydrofluoric Acid (HF) Burns with Hypotension: Administer **[Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) 1 g** IV/IO over 3 mins (Repeat in 5 mins PRN). | | | | | |
 | 7 | Contact Poquoson OMD / Medical Control if the most appropriate transport destination is unclear based on criteria. | MC | MC | MC | MC | MC |
 
 ### Pearls
@@ -43,5 +43,5 @@ Guidelines for managing thermal, chemical, and radiation burns, emphasizing airw
 • ⚠ Hemodynamic instability, airway compromise and/or major traumatic injuries take priority over direct transport to a burn center. Do not bypass a trauma center to transport to a burn center if the patient is unstable.
 • ⚠ Utilize reverse triage (i.e. treat pulseless/apneic patients first) in the case of lightning strike with multiple patients. Cardiac arrest is likely to be due to airway obstruction or shockable arrhythmia (VF/VT).
 • Treat road-rash as a burn injury. Assess closely for concomitant blunt trauma.
-• Hydrofluoric Acid (HF) – binds and rapidly reduces serum calcium leading to circulatory collapse. Treat hypotension with **[Calcium Chloride](../pharmacology/Calcium%20Chloride.md) 1 g** IV/IO over 3 minutes. Repeat in 5 minutes as needed.
+• Hydrofluoric Acid (HF) – binds and rapidly reduces serum calcium leading to circulatory collapse. Treat hypotension with **[Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) 1 g** IV/IO over 3 minutes. Repeat in 5 minutes as needed.
 • Only if necessary (i.e. no other accessible site), obtain IV/IO access through a burned area.

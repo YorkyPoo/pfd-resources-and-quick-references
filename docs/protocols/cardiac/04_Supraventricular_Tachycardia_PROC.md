@@ -41,12 +41,12 @@ Supraventricular tachycardia (SVT) is a rapid rhythm originating above the ventr
 | 4 | EMT: Obtain and transmit 12-Lead ECG | | | • | | • |
 | 5 | A: Obtain IV access | | | | • | |
 | 6 | A: **0.9% Sodium chloride** up to 1 L IV/IO (Adult)<br>250 – 500 mL boluses or **20 mL/kg** IV/IO (Pediatric)<br>Repeat as needed, max 60 mL/kg total | | | | • | |
-| 7 | I: If rhythm regular, **[Adenosine](../pharmacology/Adenosine.md) (Adenocard)** **6 mg** IV/IO (Adult)<br>or **0.1 mg/kg** IV/IO (Pediatric, max 6 mg)<br>Followed by 20 mL (Adult) or 10–20 mL (Ped) **0.9% Sodium chloride** flush | | | | | • |
-| 8 | I: If no conversion after 2 minutes, repeat [Adenosine](../pharmacology/Adenosine.md) at DOUBLE initial dose | | | | | • |
+| 7 | I: If rhythm regular, **[Adenosine](../../pharmacology/Adenosine.md) (Adenocard)** **6 mg** IV/IO (Adult)<br>or **0.1 mg/kg** IV/IO (Pediatric, max 6 mg)<br>Followed by 20 mL (Adult) or 10–20 mL (Ped) **0.9% Sodium chloride** flush | | | | | • |
+| 8 | I: If no conversion after 2 minutes, repeat [Adenosine](../../pharmacology/Adenosine.md) at DOUBLE initial dose | | | | | • |
 | 9 | I: If rhythm irregular/atrial fibrillation, initiate transport<br>Monitor for signs of poor perfusion | | | | | • |
 | 10 | MC: Contact Poquoson OMD for guidance<br>Ensure 12-Lead ECG transmitted | | | | MC | MC |
 | 11 | **UNSTABLE SVT PATHWAY** | | | | | |
-| 12 | I: For light sedation, consider **[Midazolam](../pharmacology/Midazolam.md) (Versed)**<br>**2.5 mg** IV/IO or **5 mg** IN/IM (Adult)<br>**0.05 mg/kg** IV/IO or **0.1 mg/kg** IM (Pediatric)<br>Max: 2.5 mg IV/IO or 5 mg IM | | | | | MC |
+| 12 | I: For light sedation, consider **[Midazolam](../../pharmacology/Midazolam.md) (Versed)**<br>**2.5 mg** IV/IO or **5 mg** IN/IM (Adult)<br>**0.05 mg/kg** IV/IO or **0.1 mg/kg** IM (Pediatric)<br>Max: 2.5 mg IV/IO or 5 mg IM | | | | | MC |
 | 13 | I: Monitor SpO₂ and EtCO₂ during sedation | | | | | |
 | 14 | P: Perform **SYNCHRONIZED cardioversion**<br>**100 joules** initial dose (Adult) or **1 joule/kg** (Pediatric) | | | | | |
 | 15 | P: If unsuccessful, check pad placement and repeat at **200 joules** (Adult)<br>or **2 joules/kg** (Pediatric) | | | | | |

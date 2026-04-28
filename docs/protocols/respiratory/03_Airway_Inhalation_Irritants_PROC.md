@@ -48,9 +48,9 @@ This protocol addresses exposure to choking agents and irritant gases causing ai
 | 3 | **Airway Assessment:**<br>• Assess for signs of airway injury (singed hairs, facial burns, hoarseness, stridor, soot).<br>• Monitor for progressive respiratory distress. | | • | | • | |
 | 4 | **Oxygen Administration:**<br>• Apply high-flow oxygen via NRB or BVM as indicated.<br>• Target SpO₂ > 94%. | | • | | • | |
 | 5 | **Airway Management - Basic:**<br>• Follow Airway Management and Ventilatory Support procedure.<br>• Position patient upright if tolerated. | | | • | | • |
-| 6 | **[Albuterol](../pharmacology/Albuterol.md) Sulfate (Bronchodilator):**<br>• **Adult:** **3 mL of 0.083% solution**, nebulized; repeat as necessary<br>• **Pediatric:** **3 mL of 0.083% solution**, nebulized; repeat as necessary | | | | • | |
+| 6 | **[Albuterol](../../pharmacology/Albuterol.md) Sulfate (Bronchodilator):**<br>• **Adult:** **3 mL of 0.083% solution**, nebulized; repeat as necessary<br>• **Pediatric:** **3 mL of 0.083% solution**, nebulized; repeat as necessary | | | | • | |
 | 7 | **Methylprednisolone (Solu-Medrol):**<br>• **Adult:** **125 mg IV/IO** slow push<br>• **Pediatric:** **2 mg/kg IV/IO** slow push (Maximum dose: **125 mg**) | | | | • | |
-| 8 | **[Sodium Bicarbonate](../pharmacology/Sodium%20Bicarbonate.md) - Chlorine Gas Exposure Only:**<br>• **Adult:** **2 mL** diluted with **2 mL 0.9% Sodium chloride**, nebulized (**ONCE only**)<br>• **Pediatric:** **2 mL** diluted with **2 mL 0.9% Sodium chloride**, nebulized (**ONCE only**) | | | | • | |
+| 8 | **[Sodium Bicarbonate](../../pharmacology/Sodium%20Bicarbonate.md) - Chlorine Gas Exposure Only:**<br>• **Adult:** **2 mL** diluted with **2 mL 0.9% Sodium chloride**, nebulized (**ONCE only**)<br>• **Pediatric:** **2 mL** diluted with **2 mL 0.9% Sodium chloride**, nebulized (**ONCE only**) | | | | • | |
 | 9 | **Advanced Airway Assessment:**<br>• Consider endotracheal intubation if signs of airway injury develop.<br>• Assess for impending airway compromise (worsening stridor, respiratory failure). | | | | | • |
 | 10 | **Endotracheal Intubation:**<br>• Follow Endotracheal Intubation procedure.<br>• ⚠ Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended. | | | | | • |
 | 11 | **Poison Control Consultation:**<br>• Contact **Poison Control Center at 1-800-222-1222** with any questions.<br>(Note: Poison Control is not online medical control.) | | | | | • |
@@ -59,7 +59,7 @@ This protocol addresses exposure to choking agents and irritant gases causing ai
 ### Pearls
 1. ⚠ **Decontamination Safety:** Victims must be decontaminated and/or confirmed "clean" prior to treatment and transport to prevent secondary contamination of EMS personnel and equipment.
 
-2. ⚠ **[Sodium Bicarbonate](../pharmacology/Sodium%20Bicarbonate.md) - Once Only:** For chlorine gas exposure, **[Sodium Bicarbonate](../pharmacology/Sodium%20Bicarbonate.md) nebulizer is administered ONCE only** (2 mL diluted with 2 mL 0.9% Sodium chloride). Repeat dosing is not indicated.
+2. ⚠ **[Sodium Bicarbonate](../../pharmacology/Sodium%20Bicarbonate.md) - Once Only:** For chlorine gas exposure, **[Sodium Bicarbonate](../../pharmacology/Sodium%20Bicarbonate.md) nebulizer is administered ONCE only** (2 mL diluted with 2 mL 0.9% Sodium chloride). Repeat dosing is not indicated.
 
 3. ⚠ **RSI Contraindication:** Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended. RSI is not addressed in Poquoson Protocols—refer to agency specific protocols.
 

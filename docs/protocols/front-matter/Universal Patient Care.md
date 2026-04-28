@@ -53,7 +53,7 @@ The Universal Patient Care / Initial Patient Contact protocol applies to all pat
    * **S:** Substrates (Glucose high/low, thiamine deficiency), Sepsis
    * **M:** Meningitis (CNS infection, dementia, encephalitis), Mental illness (Acute psychosis, mania, depression)
    * **A:** Alcohol (Intoxication, withdrawal), Accident (Head trauma, CVA, cerebral contusion, hemorrhage)
-   * **S:** Seizure (Active or post-ictal), Stimulants (Cocaine, amphetamines, PCP, LSD, [Ketamine](../pharmacology/Ketamine.md))
+   * **S:** Seizure (Active or post-ictal), Stimulants (Cocaine, amphetamines, PCP, LSD, [Ketamine](../../pharmacology/Ketamine.md))
    * **H:** Hyper- (Hypertension, hyperthyroidism, hypercarbia, hyperthermia), Hypo- (Hypotension, hypothyroidism, hypoxia, hypothermia)
    * **E:** Electrolytes (Sodium, calcium, potassium), Encephalopathy (Hepatic, uremic, hypertensive)
    * **D:** Drugs (Intoxication or withdrawal), Don’t forget other drugs

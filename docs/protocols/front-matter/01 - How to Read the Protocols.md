@@ -31,9 +31,9 @@ Instead of listing paragraphs of text for each certification level, intervention
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
 | 1 | **Perform general patient management.** | | • | | • | |
-| 2 | **Administer [Epinephrine](../pharmacology/Epinephrine.md) Auto-injector** | | | • | | • |
+| 2 | **Administer [Epinephrine](../../pharmacology/Epinephrine.md) Auto-injector** | | | • | | • |
 | 3 | **Obtain IV/IO access.** | | | | • | |
-| 4 | **Administer [Epinephrine](../pharmacology/Epinephrine.md) Infusion** | | | | MC | |
+| 4 | **Administer [Epinephrine](../../pharmacology/Epinephrine.md) Infusion** | | | | MC | |
 
 #### Matrix Key & Symbols:
 * **Dot (•):** You are authorized to perform that intervention as a **Standing Order**.

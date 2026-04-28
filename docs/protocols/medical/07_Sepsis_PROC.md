@@ -33,11 +33,11 @@ This protocol outlines the identification and management of sepsis, focusing on 
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Follow Universal Patient Care | | • | | • | |
 | 2 | Obtain IV/IO access and administer **0.9% Normal Saline** up to **1 L** in **250-500 mL** boluses (Adult) or **20 mL/kg** (Pediatric) max **60 mL/kg** | | | | • | |
-| 3 | Maintain MAP > 65 mmHg. **Nor[Epinephrine](../pharmacology/Epinephrine.md)** infusion **5-20 mcg/min** OR **[Epinephrine](../pharmacology/Epinephrine.md)** infusion **2-10 mcg/min** (Adult) | | | | | • |
-| 4 | Maintain age adjusted SBP. **[Epinephrine](../pharmacology/Epinephrine.md) 0.1 - 1 mcg/kg/min** infusion max **10 mcg/min** (Pediatric) | | | | | • |
-| 5 | Push dose **[Epinephrine](../pharmacology/Epinephrine.md) 5-10 mcg** IV/IO every 2-3 mins to maintain MAP until infusion is ready (Adult) | | | | | |
+| 3 | Maintain MAP > 65 mmHg. **Nor[Epinephrine](../../pharmacology/Epinephrine.md)** infusion **5-20 mcg/min** OR **[Epinephrine](../../pharmacology/Epinephrine.md)** infusion **2-10 mcg/min** (Adult) | | | | | • |
+| 4 | Maintain age adjusted SBP. **[Epinephrine](../../pharmacology/Epinephrine.md) 0.1 - 1 mcg/kg/min** infusion max **10 mcg/min** (Pediatric) | | | | | • |
+| 5 | Push dose **[Epinephrine](../../pharmacology/Epinephrine.md) 5-10 mcg** IV/IO every 2-3 mins to maintain MAP until infusion is ready (Adult) | | | | | |
 | 6 | Contact Poquoson OMD / Medical Control / Prehospital Sepsis Alert | | | MC | MC | MC |
 
 ### Pearls
 * ⚠ **CAUTION:** Administer IV fluids carefully in patients with a history of CHF or decreased ejection fraction. Monitor closely for signs of fluid overload and pulmonary edema.
-* ⚠ **WARNING:** Vasopressor infusions (**Nor[Epinephrine](../pharmacology/Epinephrine.md)** and **[Epinephrine](../pharmacology/Epinephrine.md)**) should ideally be administered via an infusion pump to ensure accurate dosing.
+* ⚠ **WARNING:** Vasopressor infusions (**Nor[Epinephrine](../../pharmacology/Epinephrine.md)** and **[Epinephrine](../../pharmacology/Epinephrine.md)**) should ideally be administered via an infusion pump to ensure accurate dosing.
