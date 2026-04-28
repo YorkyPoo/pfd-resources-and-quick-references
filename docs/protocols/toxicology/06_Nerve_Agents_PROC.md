@@ -42,12 +42,12 @@ This protocol outlines the pre-hospital management of patients with suspected ex
 | 3 | Follow Airway Management (Consider early intubation due to copious secretions) | | • | | • | |
 | 4 | Refer to Nausea/Vomiting, Seizure, and Hypotension protocols as needed | | • | | • | |
 | 5 | **DuoDote Autoinjector** IM (Adult and Pediatric ≥ 40kg). Repeat in 5 mins up to 3 doses based on symptom severity. | | | • | | • |
-| 6 | **[Atropine](../../pharmacology/Atropine.md) sulfate 2 mg** IV/IO/IM (Adult and Ped ≥ 40kg); **1 mg** IV/IO/IM (Ped < 40kg). Repeat every 5 mins up to 3 doses. (Use if DuoDote unavailable) | | | | | • |
+| 6 | **[Atropine](../../pharmacology/Atropine Sulfate.md) sulfate 2 mg** IV/IO/IM (Adult and Ped ≥ 40kg); **1 mg** IV/IO/IM (Ped < 40kg). Repeat every 5 mins up to 3 doses. (Use if DuoDote unavailable) | | | | | • |
 | 7 | Contact Poquoson OMD / Medical Control for additional guidance and dosing instructions | MC | MC | MC | MC | MC |
 
 ### Pearls
-• **DuoDote** contains **[Atropine](../../pharmacology/Atropine.md) 2.1 mg** and **Pralidoxime Chloride (2-PAM) 600 mg**.
+• **DuoDote** contains **[Atropine](../../pharmacology/Atropine Sulfate.md) 2.1 mg** and **Pralidoxime Chloride (2-PAM) 600 mg**.
 • Examples of nerve agents include Sarin (GB), Soman (GD), Tabun (GA), and VX.
 • ⚠ **WARNING:** Patients exposed to nerve agents can off-gas and contaminate providers. Decontamination must occur prior to transport.
-• **[Atropine](../../pharmacology/Atropine.md)** is the antidote of choice for organophosphate and nerve agent poisoning. Large and repeated doses may be required to dry secretions.
+• **[Atropine](../../pharmacology/Atropine Sulfate.md)** is the antidote of choice for organophosphate and nerve agent poisoning. Large and repeated doses may be required to dry secretions.
 • If using **AtroPen** autoinjectors for pediatrics, utilize weight-based dosing guidelines.

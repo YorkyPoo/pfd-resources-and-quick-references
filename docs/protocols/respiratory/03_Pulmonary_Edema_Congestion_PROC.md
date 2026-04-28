@@ -40,8 +40,8 @@ Management of acute cardiogenic pulmonary edema and congestion due to congestive
 | 7 | **CPAP CONTRAINDICATIONS (⚠️):**<br>• Facial trauma/burns/recent surgery<br>• Penetrating neck/chest trauma<br>• Active vomiting/severe nausea | | | • | | • |
 | 8 | **CPAP CONTRAINDICATIONS (⚠️):**<br>• Hypotension (SBP < 90 mmHg, MAP < 65)<br>• Inability to tolerate tight fitting mask | | | • | | • |
 | 9 | **CPAP Titration:** Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing | | | | | • |
-| 10 | **[Nitroglycerin](../../pharmacology/Nitroglycerin.md)**<br>Adult: **0.4 mg SL** | | | | • | |
-| 11 | **[Nitroglycerin](../../pharmacology/Nitroglycerin.md)** Repeat Administration:<br>May repeat every 5 minutes as needed if SBP remains > 100 mmHg / MAP > 65 mmHg (maximum 3 doses) | | | | • | |
+| 10 | **[Nitroglycerin](../../pharmacology/Nitroglycerine.md)**<br>Adult: **0.4 mg SL** | | | | • | |
+| 11 | **[Nitroglycerin](../../pharmacology/Nitroglycerine.md)** Repeat Administration:<br>May repeat every 5 minutes as needed if SBP remains > 100 mmHg / MAP > 65 mmHg (maximum 3 doses) | | | | • | |
 | 12 | **Furosemide (Lasix)**<br>Adult: **40 mg IV/IO slow push** | | | | | • |
 | 13 | Contact Poquoson OMD / Medical Control for guidance as needed | MC | MC | MC | MC | MC |
 

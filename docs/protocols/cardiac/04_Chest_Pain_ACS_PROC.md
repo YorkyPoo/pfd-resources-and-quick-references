@@ -45,7 +45,7 @@ Acute Coronary Syndrome (ACS) encompasses a spectrum of conditions resulting fro
 | 8 | **IV/IO Access:**<br>• Establish IV / IO access when indicated (refer to Intraosseous Access procedure). | | | | • | |
 | 9 | **Cardiac Monitoring:**<br>• Consider continuous cardiac monitoring. | | | | | • |
 | 10 | **[Aspirin](../../pharmacology/Aspirin.md) Administration (for ACS/STEMI):**<br>• **[Aspirin](../../pharmacology/Aspirin.md)** (NSAID - inhibits platelet action preventing clot formation)<br>• Indication: Acute coronary syndromes (ACS)/STEMI<br>• Confirm all "Rights" (Right patient, medication, dose, route, time)<br>• Ensure medications not expired, assess for drug-drug interactions<br>• Contraindications: Allergy to **[Aspirin](../../pharmacology/Aspirin.md)**/NSAIDs<br>• Precautions: History of GI bleeding/peptic ulcers, chronic kidney disease, trauma | | | | • | |
-| 11 | **[Nitroglycerin](../../pharmacology/Nitroglycerin.md) Administration:**<br>• Administer **[Nitroglycerin](../../pharmacology/Nitroglycerin.md)** per Pain Control Poquoson Protocol for chest pain.<br>• Confirm all "Rights" prior to administration. | | | | | • |
+| 11 | **[Nitroglycerin](../../pharmacology/Nitroglycerine.md) Administration:**<br>• Administer **[Nitroglycerin](../../pharmacology/Nitroglycerine.md)** per Pain Control Poquoson Protocol for chest pain.<br>• Confirm all "Rights" prior to administration. | | | | | • |
 | 12 | **Analgesia:**<br>• Consider analgesia (refer to Pain Control Poquoson Protocol). | | | | | • |
 | 13 | **Medical Control Contact:**<br>• Contact Poquoson OMD for guidance as needed. | | | MC | MC | MC |
 | 14 | **Right-Sided / 15-Lead ECG:**<br>• Consider right-sided 12-Lead or 15-Lead ECG for additional assessment. | | | | MC | MC |
