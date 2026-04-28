@@ -1,5 +1,5 @@
-# **Naloxone**
-**Trade Name:** Narcan
+# **[[Naloxone]]**
+**Trade Name:** [[Naloxone]]
 
 ## Classification & Action
 - **Drug Class:** Opiate/Opioid antagonist
@@ -13,7 +13,7 @@
 
 ## Precautions
 - May induce immediate opiate withdrawal (nausea, vomiting, diaphoresis, generalized pain, tachycardia, agitation)
-- Support respirations while administering **Naloxone**.
+- Support respirations while administering **[[Naloxone]]**.
 
 ## Dosage
 ### Adults
@@ -43,4 +43,4 @@
 
 ## Pearls
 - ⚠ **Warning:** May induce immediate opiate withdrawal (nausea, vomiting, diaphoresis, generalized pain, tachycardia, agitation).
-- Support respirations while administering **Naloxone**.
+- Support respirations while administering **[[Naloxone]]**.

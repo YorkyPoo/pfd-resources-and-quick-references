@@ -1,4 +1,4 @@
-# **Aspirin**
+# **[[Aspirin]]**
 **Trade Name:** Not specified
 
 ## Classification & Action
@@ -9,7 +9,7 @@
 - Acute coronary syndromes (ACS)/STEMI
 
 ## Contraindications
-- Allergy to **Aspirin**/NSAIDs
+- Allergy to **[[Aspirin]]**/NSAIDs
 
 ## Precautions
 - History of GI bleeding/peptic ulcers

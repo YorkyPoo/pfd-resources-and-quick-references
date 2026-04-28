@@ -1,4 +1,4 @@
-# **Atropine Sulfate**
+# **[[Atropine]] Sulfate**
 **Trade Name:** Not specified
 
 ## Classification & Action

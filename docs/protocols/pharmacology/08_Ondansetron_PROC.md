@@ -1,5 +1,5 @@
-# **Ondansetron**
-**Trade Name:** Zofran
+# **[[Ondansetron]]**
+**Trade Name:** [[Ondansetron]]
 
 ## Classification & Action
 - **Drug Class:** Antiemetic

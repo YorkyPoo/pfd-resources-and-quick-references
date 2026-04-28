@@ -53,10 +53,10 @@ This protocol addresses respiratory distress from obstructive (asthma/COPD), inf
 | 8 | **Advanced Airway Management (ETI):**<br>• Endotracheal intubation reserved for I-level providers per protocol |  |  |  | | • |
 | 9 | **IV/IO Access:**<br>• Establish vascular access for medication administration and fluid therapy<br>• IO if IV unobtainable |  |  | | • | |
 | 10 | **Fluid Administration:**<br>• **0.9% Sodium Chloride** or appropriate fluid as clinically indicated<br>• Monitor for signs of fluid overload in CHF patients |  |  | MC | MC | |
-| 11 | **Stridor Management (Upper Airway):**<br>• **Epinephrine 3 mg** of 1 mg/mL (1:1,000) nebulized<br>• May be repeated once<br>• May need assistance to hold nebulizer<br>• Administer simultaneously with the nebulized epinephrine treatment:<br>&nbsp;&nbsp;&nbsp;• **Methylprednisolone 125 mg** IV/IO (adult) or **2 mg/kg** IV/IO pediatric (maximum 125 mg)<br>&nbsp;&nbsp;&nbsp;⚠ Single dose only |  |  | MC | MC | |
+| 11 | **Stridor Management (Upper Airway):**<br>• **[[Epinephrine]] 3 mg** of 1 mg/mL (1:1,000) nebulized<br>• May be repeated once<br>• May need assistance to hold nebulizer<br>• Administer simultaneously with the nebulized [[Epinephrine]] treatment:<br>&nbsp;&nbsp;&nbsp;• **Methylprednisolone 125 mg** IV/IO (adult) or **2 mg/kg** IV/IO pediatric (maximum 125 mg)<br>&nbsp;&nbsp;&nbsp;⚠ Single dose only |  |  | MC | MC | |
 | 12 | **Bronchiolitis (Pediatric ONLY):**<br>• **0.9% Sodium Chloride 6 mL** nebulized<br>• Repeat as needed for increased work of breathing<br>• Transport in position of comfort with caregiver |  |  |  |  | |
-| 13 | **Pulmonary Edema:**<br>• If Dyspnea with crackles and/or jugular venous distention:<br>• **Nitroglycerin 0.4 mg** sublingual (adult only)<br>• Repeat every 5 minutes up to 3 doses if SBP >100 mmHg (MAP >65 mmHg)<br>• Consider CPAP if available and no contraindications |  |  |  |  | |
-| 14 | **Severe Asthma/COPD:**<br>• Refer to Asthma specific protocol for comprehensive treatment<br>• **Magnesium Sulfate** per Asthma protocol<br>⚠ Positive pressure may worsen pneumothorax or cause breath stacking |  |  |  |  | |
+| 13 | **Pulmonary Edema:**<br>• If Dyspnea with crackles and/or jugular venous distention:<br>• **[[Nitroglycerin]] 0.4 mg** sublingual (adult only)<br>• Repeat every 5 minutes up to 3 doses if SBP >100 mmHg (MAP >65 mmHg)<br>• Consider CPAP if available and no contraindications |  |  |  |  | |
+| 14 | **Severe Asthma/COPD:**<br>• Refer to Asthma specific protocol for comprehensive treatment<br>• **[[Magnesium Sulfate]]** per Asthma protocol<br>⚠ Positive pressure may worsen pneumothorax or cause breath stacking |  |  |  |  | |
 | 15 | **Cardiac Ischemia Management:**<br>• Evaluate for cardiac origin<br>• Consider 12-lead ECG<br>• Refer to Chest Pain/ACS protocol if indicated | | • | | • | |
 | 16 | **Respiratory Failure Management:**<br>• If apnea/agonal respirations or GCS ≤13:<br>• Prepare for immediate airway control<br>• Bag-valve-mask ventilation<br>• Consider advanced airway per provider level<br>• Transport without delay |  |  |  | | • |
 
@@ -69,7 +69,7 @@ This protocol addresses respiratory distress from obstructive (asthma/COPD), inf
 4. ⚠ I/P providers may titrate CPAP PEEP up to 10 cmH2O
 5. ⚠ **Breath Stacking Warning:** If breath stacking occurs during positive pressure ventilation, disconnect the BVM and allow for exhalation
 6. If patient continues to deteriorate despite CPAP, consider supraglottic airway or prepare for endotracheal intubation
-7. In CHF/pulmonary edema, avoid aggressive fluid resuscitation; consider nitroglycerin (sublingual if SBP permits) before CPAP if experienced provider available
+7. In CHF/pulmonary edema, avoid aggressive fluid resuscitation; consider [[Nitroglycerin]] (sublingual if SBP permits) before CPAP if experienced provider available
 8. Close monitoring is required during CPAP for hypotension or development of pneumothorax
 9. Pediatric respiratory distress: Consider bronchiolitis in infants with wheezing and respiratory distress; normal saline nebulizer can reduce work of breathing
 10. Maintain continuous EtCO2 monitoring throughout care to detect early signs of respiratory fatigue and guide interventions

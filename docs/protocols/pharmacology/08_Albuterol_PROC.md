@@ -1,4 +1,4 @@
-# **Albuterol Sulfate**
+# **[[Albuterol]] Sulfate**
 **Trade Name:** **Proventil**
 
 ## Classification & Action
@@ -14,7 +14,7 @@
 - Hypersensitivity/allergy
 
 ## Precautions
-- May cause tachycardia. Monitor closely, especially when used in combination with other sympathomimetic agents such as **Epinephrine**.
+- May cause tachycardia. Monitor closely, especially when used in combination with other sympathomimetic agents such as **[[Epinephrine]]**.
 
 ## Dosage
 ### Adults
@@ -37,8 +37,8 @@
 
 ## Interactions
 - **Beta-blockers** may antagonize effects.
-- Sympathomimetics (such as **Epinephrine**) may exacerbate cardiovascular side effects.
+- Sympathomimetics (such as **[[Epinephrine]]**) may exacerbate cardiovascular side effects.
 
 ## Pearls
-- ⚠ **Warning:** Monitor closely for tachycardia, especially when used in combination with other sympathomimetic agents such as **Epinephrine**.
+- ⚠ **Warning:** Monitor closely for tachycardia, especially when used in combination with other sympathomimetic agents such as **[[Epinephrine]]**.
 - May be used in crush injuries to assist with decreasing serum potassium.

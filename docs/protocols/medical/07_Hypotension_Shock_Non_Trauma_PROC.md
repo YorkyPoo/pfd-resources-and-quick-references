@@ -38,9 +38,9 @@ This protocol outlines the assessment and management of patients presenting with
 | 4 | Obtain and transmit a 12-Lead ECG. | | | • | | • |
 | 5 | Obtain IV/IO access. Administer:**<br>ADULT: **0.9% Sodium chloride** up to **1 L** IV/IO in **250 – 500 mL** boluses.<br>PEDIATRIC: **0.9% Sodium chloride** **20 mL/kg** IV/IO.<br>Repeat as needed to maintain adequate perfusion, up to **60 mL/kg** total. | | | | • | |
 | 6 | Assess and continuously monitor cardiac rhythm. Refer to Poquoson Tachyarrhythmias and Symptomatic Bradycardia protocols as needed. | | | | | • |
-| 7 | Maintain mean arterial pressure (MAP) above **65 mmHg**. Consider:<br>ADULT: **Norepinephrine (Levophed)** infusion **5 – 20 mcg/min** IV/IO (Add **4 mg** of **Norepinephrine** to **250 mL** **0.9% Sodium chloride** = **16 mcg/mL**)<br>OR<br>ADULT: **Epinephrine** infusion **2 – 10 mcg/min** IV/IO (Add **1 mg** of **Epinephrine** [**1 mg/mL**] to **100 mL** of **0.9% Sodium chloride** = **10 mcg/mL**) | | | | | • |
-| 8 | Maintain age adjusted SBP. Consider:<br>PEDIATRIC: **Epinephrine** **0.1 - 1 mcg/kg/min** IV/IO infusion. Max dose: **10 mcg/min**.<br>Under 1 year old: Titrate to SBP > **70 mmHg**<br>Over 1 year old: Titrate to SBP > **90 mmHg**<br>(Add **1 mg** of **Epinephrine** [**1 mg/mL**] to **100 mL** of **0.9% Sodium chloride** = **10 mcg/mL**)<br>Note: Infusion via IV pump is preferred if available. Monitor closely for signs of extravasation. | | | | | • |
-| 9 | To maintain MAP > **65 mmHg** until a vasopressor infusion is prepared, consider:<br>ADULT: Push dose **Epinephrine** **5-10 mcg** IV/IO every **2-3 minutes**<br>(Add **100 mcg** **Epinephrine** (**1 mL** of **0.1 mg/mL**) to **9 mL** of **0.9% Normal Saline** = **10 mcg / mL**) | | | | | |
+| 7 | Maintain mean arterial pressure (MAP) above **65 mmHg**. Consider:<br>ADULT: **Norepinephrine (Levophed)** infusion **5 – 20 mcg/min** IV/IO (Add **4 mg** of **Norepinephrine** to **250 mL** **0.9% Sodium chloride** = **16 mcg/mL**)<br>OR<br>ADULT: **[[Epinephrine]]** infusion **2 – 10 mcg/min** IV/IO (Add **1 mg** of **[[Epinephrine]]** [**1 mg/mL**] to **100 mL** of **0.9% Sodium chloride** = **10 mcg/mL**) | | | | | • |
+| 8 | Maintain age adjusted SBP. Consider:<br>PEDIATRIC: **[[Epinephrine]]** **0.1 - 1 mcg/kg/min** IV/IO infusion. Max dose: **10 mcg/min**.<br>Under 1 year old: Titrate to SBP > **70 mmHg**<br>Over 1 year old: Titrate to SBP > **90 mmHg**<br>(Add **1 mg** of **[[Epinephrine]]** [**1 mg/mL**] to **100 mL** of **0.9% Sodium chloride** = **10 mcg/mL**)<br>Note: Infusion via IV pump is preferred if available. Monitor closely for signs of extravasation. | | | | | • |
+| 9 | To maintain MAP > **65 mmHg** until a vasopressor infusion is prepared, consider:<br>ADULT: Push dose **[[Epinephrine]]** **5-10 mcg** IV/IO every **2-3 minutes**<br>(Add **100 mcg** **[[Epinephrine]]** (**1 mL** of **0.1 mg/mL**) to **9 mL** of **0.9% Normal Saline** = **10 mcg / mL**) | | | | | |
 | 10 | Contact Medical Control for guidance as needed. | MC | MC | MC | MC | MC |
 
 ### Pearls
@@ -72,8 +72,8 @@ This protocol outlines the assessment and management of patients presenting with
 | **17.5 mcg/min** | 65 |
 | **20 mcg/min** | 75 |
 
-### Epinephrine Drip Chart
-*To mix, add **1 mg (1 mg/mL)** Epinephrine to **100 mL** **0.9% Sodium Chloride***
+### [[Epinephrine]] Drip Chart
+*To mix, add **1 mg (1 mg/mL)** [[Epinephrine]] to **100 mL** **0.9% Sodium Chloride***
 *Final Concentration: **10 mcg/mL***
 
 | Dose | Drops per minute with 60-drop set |

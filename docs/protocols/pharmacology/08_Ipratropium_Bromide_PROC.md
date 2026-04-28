@@ -1,4 +1,4 @@
-# Ipratropium Bromide
+# [[Ipratropium]] Bromide
 **Trade Name:** Atrovent
 
 ## Classification & Action

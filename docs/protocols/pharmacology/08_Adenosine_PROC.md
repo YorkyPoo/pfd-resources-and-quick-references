@@ -1,4 +1,4 @@
-# **Adenosine**
+# **[[Adenosine]]**
 **Trade Name:** **Adenocard**
 
 ## Classification & Action

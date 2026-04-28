@@ -1,4 +1,4 @@
-# Magnesium Sulfate
+# [[Magnesium Sulfate]]
 **Trade Name:** Not specified
 
 ## Classification & Action
@@ -17,8 +17,8 @@
 
 ## Precautions
 - Rapid administration may lead to hypotension, respiratory depression and/or pulmonary edema. Administer no faster than **1g/min**.
-- **Magnesium Sulfate** reduces cardiac contractility, use with caution in patients with decreased ejection fraction/CHF.
-- Note: If not premixed for infusion, add **4g Magnesium Sulfate** to **100mL 0.9% Sodium Chloride** or **D5W**. Final concentration = **40mg/mL**.
+- **[[Magnesium Sulfate]]** reduces cardiac contractility, use with caution in patients with decreased ejection fraction/CHF.
+- Note: If not premixed for infusion, add **4g [[Magnesium Sulfate]]** to **100mL 0.9% Sodium Chloride** or **D5W**. Final concentration = **40mg/mL**.
 
 ## Dosage
 ### Adults
@@ -44,4 +44,4 @@
 
 ## Pearls
 - ⚠ **Warning:** Rapid administration may lead to hypotension, respiratory depression and/or pulmonary edema. Administer no faster than **1g/min**.
-- If not premixed for infusion, add **4g Magnesium Sulfate** to **100mL 0.9% Sodium Chloride** or **D5W**. Final concentration = **40mg/mL**.
+- If not premixed for infusion, add **4g [[Magnesium Sulfate]]** to **100mL 0.9% Sodium Chloride** or **D5W**. Final concentration = **40mg/mL**.

@@ -1,4 +1,4 @@
-# Fentanyl
+# [[Fentanyl]]
 **Trade Name:** Sublimaze
 
 ## Classification & Action

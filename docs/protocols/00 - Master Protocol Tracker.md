@@ -77,35 +77,35 @@ Checked items have been successfully converted into the high-quality matrix form
 
 
 ## Pharmacology / Medication Reference
-- [x] Adenosine / Adenocard
-- [x] Albuterol Sulfate / Proventil
-- [x] Amiodarone / Cordarone
-- [x] Aspirin
-- [x] Atropine Sulfate
-- [x] Calcium Chloride
-- [x] Dextrose 10%, 25%, 50%
+- [x] [[Adenosine]] / Adenocard
+- [x] [[Albuterol]] Sulfate / Proventil
+- [x] [[Amiodarone]] / Cordarone
+- [x] [[Aspirin]]
+- [x] [[Atropine]] Sulfate
+- [x] [[Calcium Chloride]]
+- [x] [[Dextrose]] 10%, 25%, 50%
 - [x] Diphenhydramine / Benadryl
-- [x] Epinephrine / Adrenaline
+- [x] [[Epinephrine]] / Adrenaline
 - [x] Etomidate / Amidate
 - [x] Furosemide / Lasix
-- [x] Glucagon
+- [x] [[Glucagon]]
 - [x] Haloperidol / Haldol
 - [x] Hydroxocobalamin / CYANOKIT
-- [x] Ipratropium Bromide / Atrovent
-- [x] Ketamine
+- [x] [[Ipratropium]] Bromide / Atrovent
+- [x] [[Ketamine]]
 - [x] Ketorolac tromethamine / Toradol
-- [x] Lidocaine / Xylocaine
-- [x] Magnesium Sulfate
+- [x] [[Lidocaine]] / Xylocaine
+- [x] [[Magnesium Sulfate]]
 - [x] Methylprednisolone Succinate / Solu-Medrol
-- [x] Midazolam HCl / Versed
+- [x] [[Midazolam]] HCl / Versed
 - [x] Morphine Sulfate
-- [x] Naloxone / Narcan
-- [x] Nitroglycerin / Nitrostat
+- [x] [[Naloxone]] / [[Naloxone]]
+- [x] [[Nitroglycerin]] / Nitrostat
 - [x] Norepinephrine / Levophed
-- [x] Ondansetron / Zofran
+- [x] [[Ondansetron]] / [[Ondansetron]]
 - [x] Rocuronium / Zemuron
-- [x] Sodium Bicarbonate
-- [x] Fentanyl / Sublimaze
+- [x] [[Sodium Bicarbonate]]
+- [x] [[Fentanyl]] / Sublimaze
 - [x] Succinylcholine / Anectine
 - [x] Vecuronium / Norcuron
 - [x] Ziprasidone / Geodon

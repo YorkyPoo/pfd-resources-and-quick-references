@@ -1,4 +1,4 @@
-# Sodium Bicarbonate
+# [[Sodium Bicarbonate]]
 **Trade Name:** Not specified in protocol
 
 ## Classification & Action
@@ -14,7 +14,7 @@
 - None in emergency use
 
 ## Precautions
-- **Sodium Bicarbonate** administration during cardiac arrest is not associated with improved long-term survival and may be associated with higher mortality. Per the American Heart Association, it is not indicated for routine use during cardiac arrest.
+- **[[Sodium Bicarbonate]]** administration during cardiac arrest is not associated with improved long-term survival and may be associated with higher mortality. Per the American Heart Association, it is not indicated for routine use during cardiac arrest.
 - Given in combination with IV/IO **Calcium**, bicarbonate may precipitate into calcium carbonate – give via separate IV/IO sites or flush thoroughly (at least **20 mL**) between medications.
 
 ## Dosage
@@ -38,4 +38,4 @@
 
 ## Pearls
 - ⚠ **Warning:** Given in combination with IV/IO **Calcium**, bicarbonate may precipitate into calcium carbonate – give via separate IV/IO sites or flush thoroughly (at least **20 mL**) between medications.
-- ⚠ **Warning:** **Sodium Bicarbonate** administration during cardiac arrest is not associated with improved long-term survival and may be associated with higher mortality. Per the American Heart Association, it is not indicated for routine use during cardiac arrest.
+- ⚠ **Warning:** **[[Sodium Bicarbonate]]** administration during cardiac arrest is not associated with improved long-term survival and may be associated with higher mortality. Per the American Heart Association, it is not indicated for routine use during cardiac arrest.

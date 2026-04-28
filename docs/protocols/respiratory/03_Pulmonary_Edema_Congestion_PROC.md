@@ -40,8 +40,8 @@ Management of acute cardiogenic pulmonary edema and congestion due to congestive
 | 7 | **CPAP CONTRAINDICATIONS (⚠️):**<br>• Facial trauma/burns/recent surgery<br>• Penetrating neck/chest trauma<br>• Active vomiting/severe nausea | | | • | | • |
 | 8 | **CPAP CONTRAINDICATIONS (⚠️):**<br>• Hypotension (SBP < 90 mmHg, MAP < 65)<br>• Inability to tolerate tight fitting mask | | | • | | • |
 | 9 | **CPAP Titration:** Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing | | | | | • |
-| 10 | **Nitroglycerin**<br>Adult: **0.4 mg SL** | | | | • | |
-| 11 | **Nitroglycerin** Repeat Administration:<br>May repeat every 5 minutes as needed if SBP remains > 100 mmHg / MAP > 65 mmHg (maximum 3 doses) | | | | • | |
+| 10 | **[[Nitroglycerin]]**<br>Adult: **0.4 mg SL** | | | | • | |
+| 11 | **[[Nitroglycerin]]** Repeat Administration:<br>May repeat every 5 minutes as needed if SBP remains > 100 mmHg / MAP > 65 mmHg (maximum 3 doses) | | | | • | |
 | 12 | **Furosemide (Lasix)**<br>Adult: **40 mg IV/IO slow push** | | | | | • |
 | 13 | Contact Poquoson OMD / Medical Control for guidance as needed | MC | MC | MC | MC | MC |
 
@@ -49,7 +49,7 @@ Management of acute cardiogenic pulmonary edema and congestion due to congestive
 1. Early use of non-invasive positive pressure ventilation (**CPAP**) has been shown to reduce the need for intubation and improve outcomes.
 2. Positive pressure ventilation does not replace the need for treatment of the underlying cause.
 3. ⚠️ Close monitoring for the development of hypotension and/or pneumothorax is required when utilizing **CPAP**.
-4. ⚠️ Use caution when administering **Epinephrine** to patients with suspected reactive airway disease who also have signs of congestive heart failure.
+4. ⚠️ Use caution when administering **[[Epinephrine]]** to patients with suspected reactive airway disease who also have signs of congestive heart failure.
 5. ⚠️ Exercise cautious diuresis (**Furosemide**) in patients to prevent acute hypotension or worsening of shock states.
 6. Patients with a history of CHF may present with wheezing ("cardiac asthma"); properly differentiate from true bronchospasm.
 7. If patient becomes apneic, agonal, or GCS drops below 14 while on **CPAP**, immediately remove mask and begin BVM ventilation.

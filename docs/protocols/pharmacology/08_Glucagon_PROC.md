@@ -1,4 +1,4 @@
-# **Glucagon**
+# **[[Glucagon]]**
 **Trade Name:** Not specified in protocol
 
 ## Classification & Action

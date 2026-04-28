@@ -1,4 +1,4 @@
-# Ketamine
+# [[Ketamine]]
 **Trade Name:** Ketalar
 
 ## Classification & Action

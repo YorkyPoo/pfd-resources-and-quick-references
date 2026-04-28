@@ -1,4 +1,4 @@
-# Lidocaine 2%
+# [[Lidocaine]] 2%
 **Trade Name:** Xylocaine
 
 ## Classification & Action
