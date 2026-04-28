@@ -1,0 +1,165 @@
+/* ============================================================
+   Poquoson Fire & Rescue - Mobile-Responsive Table Styles
+   ============================================================ */
+
+/* --- 1. Wrap all tables in a scrollable container --- */
+.md-typeset table:not([class]) {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+/* --- 2. Base cell styles --- */
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  white-space: normal;
+  word-break: break-word;
+  vertical-align: top;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* --- 3. Intervention tables only (7 columns: # | Action | EMR | EMT | A | I | P)
+   Scope narrow first-column ONLY to 7-column intervention tables           */
+.md-typeset table:not([class]):has(th:nth-child(7)) td:first-child,
+.md-typeset table:not([class]):has(th:nth-child(7)) th:first-child {
+  min-width: 28px;
+  max-width: 36px;
+  text-align: center;
+  padding: 0.5rem 0.3rem;
+}
+
+/* Action/Intervention column - second column gets most space */
+.md-typeset table:not([class]) td:nth-child(2),
+.md-typeset table:not([class]) th:nth-child(2) {
+  min-width: 180px;
+  max-width: 260px;
+}
+
+/* Provider-level columns (3+): compact, centered */
+.md-typeset table:not([class]) td:nth-child(n+3),
+.md-typeset table:not([class]) th:nth-child(n+3) {
+  min-width: 36px;
+  max-width: 52px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* --- 4. Mobile fine-tuning --- */
+@media screen and (max-width: 640px) {
+
+  .md-typeset table:not([class]) {
+    font-size: 0.78rem;
+  }
+
+  /* Slightly tighten padding on mobile */
+  .md-typeset table:not([class]) th,
+  .md-typeset table:not([class]) td {
+    padding: 0.35rem 0.4rem;
+  }
+
+  /* Action column can be narrower on small screens */
+  .md-typeset table:not([class]) td:nth-child(2),
+  .md-typeset table:not([class]) th:nth-child(2) {
+    min-width: 140px;
+    max-width: 180px;
+  }
+}
+
+/* --- 5. Visual improvements --- */
+
+/* Sticky header row */
+.md-typeset table:not([class]) thead tr th {
+  position: sticky;
+  top: 0;
+  background-color: var(--md-default-bg-color);
+  z-index: 1;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Zebra striping for readability */
+.md-typeset table:not([class]) tbody tr:nth-child(even) {
+  background-color: var(--md-code-bg-color);
+}
+
+/* Highlight table rows on hover */
+.md-typeset table:not([class]) tbody tr:hover {
+  background-color: var(--md-accent-fg-color--transparent);
+}
+
+/* Bold sub-headings in action cells: INLINE so bullet char stays attached.
+   display:block was causing orphan bullets to float on their own line.     */
+.md-typeset table:not([class]) td strong {
+  display: inline;
+  color: var(--md-primary-fg-color);
+  font-weight: 700;
+}
+
+/* ============================================================
+   MAROON & GOLD BRAND COLORS
+   ============================================================ */
+
+/* Light mode — Maroon primary */
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color:        #800000;
+  --md-primary-fg-color--light: #a03030;
+  --md-primary-fg-color--dark:  #5a0000;
+  --md-primary-bg-color:        #ffffff;
+  --md-primary-bg-color--light: rgba(255,255,255,0.7);
+}
+
+/* Gold accent */
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color:              #CFB53B;
+  --md-accent-fg-color--transparent: rgba(207,181,59,0.12);
+  --md-accent-bg-color:              #ffffff;
+  --md-accent-bg-color--light:       rgba(255,255,255,0.7);
+}
+
+/* Dark mode (slate) — maroon header stays, brighter gold accent */
+[data-md-color-scheme="slate"][data-md-color-primary="custom"] {
+  --md-primary-fg-color:        #800000;
+  --md-primary-fg-color--light: #a03030;
+  --md-primary-fg-color--dark:  #5a0000;
+  --md-primary-bg-color:        #ffffff;
+}
+
+[data-md-color-scheme="slate"][data-md-color-accent="custom"] {
+  --md-accent-fg-color:              #F0CC45;
+  --md-accent-fg-color--transparent: rgba(240,204,69,0.15);
+}
+
+/* ============================================================
+   NAV SECTION HEADER READABILITY
+   ============================================================ */
+
+/* Section group labels: "EMS Protocols", "Administrative", etc. */
+.md-nav__item--section > .md-nav__link,
+.md-nav__item--section > label {
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--md-accent-fg-color) !important;
+  padding-top: 0.6rem;
+  padding-bottom: 0.2rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  margin-top: 0.3rem;
+}
+
+/* First section — no top border */
+.md-nav__item--section:first-child > .md-nav__link,
+.md-nav__item--section:first-child > label {
+  border-top: none;
+}
+
+/* Active nav item — gold highlight */
+.md-nav__link--active {
+  color: var(--md-accent-fg-color) !important;
+  font-weight: 600;
+}

@@ -1,0 +1,152 @@
+site_name: Poquoson Fire & Rescue Protocols
+site_description: Frictionless, offline-capable EMS protocol and SOP dashboard
+site_author: YorkyPoo
+site_url: "https://yorkypoo.github.io/pfd-resources-and-quick-references/"
+use_directory_urls: false
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - search.suggest
+    - content.tabs.link
+    - search.highlight
+    - navigation.top
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+  font:
+    text: Roboto
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+  - offline
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+
+nav:
+  - Home: index.md
+  - Medications & Calculators: medications.md
+  - EMS Protocols:
+    - Overview: protocols/00 - Master Protocol Tracker.md
+    - Front Matter:
+      - Introduction: protocols/front-matter/00 - Introduction.md
+      - How to Read the Protocols: protocols/front-matter/01 - How to Read the Protocols.md
+      - Universal Patient Care: protocols/front-matter/Universal Patient Care.md
+    - Administrative:
+      - Abuse Recognition & Mandated Reporting: protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md
+      - ALS Release to BLS: protocols/administrative/01_ALS_Release_to_BLS_PROC.md
+      - Behavioral Health Transportation: protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md
+      - Communications: protocols/administrative/01_Communications_PROC.md
+      - Death Criteria / Withholding Resuscitation: protocols/administrative/01_Death_Criteria_for_Withholding_Resuscitation_PROC.md
+      - Helicopter EMS (HEMS): protocols/administrative/01_Helicopter_EMS_HEMS_PROC.md
+      - Infant Abandonment: protocols/administrative/01_Infant_Abandonment_PROC.md
+      - Patient Refusal of Treatment/Transport: protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md
+      - Patient Restraint: protocols/administrative/01_Patient_Restraint_PROC.md
+      - Safe Transport of Pediatric Patients: protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md
+      - STEMI Field Triage: protocols/administrative/01_STEMI_Field_Triage_PROC.md
+      - Stroke Field Triage: protocols/administrative/01_Stroke_Field_Triage_PROC.md
+      - Transportation & Destination: protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md
+      - Trauma Field Triage: protocols/administrative/01_Trauma_Field_Triage_PROC.md
+    - General:
+      - Behavioral Patient Restraint: protocols/general/02_Behavioral_Patient_Restraint_PROC.md
+      - Cold Exposure: protocols/general/02_Cold_Exposure_PROC.md
+      - Diving & Drowning: protocols/general/02_Diving_and_Drowning_Emergencies_PROC.md
+      - Heat Exposure: protocols/general/02_Heat_Exposure_PROC.md
+      - Pain Control: protocols/general/02_Pain_Control_PROC.md
+      - Sedation (Non-Paralytic): protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md
+    - Respiratory:
+      - Airway / Inhalation Irritants: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
+      - Asthma / COPD / Reactive Airway: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
+      - Pediatric Stridor: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+      - Pneumothorax: protocols/respiratory/03_Pneumothorax_PROC.md
+      - Pulmonary Edema / Congestion: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
+      - Respiratory Arrest: protocols/respiratory/03_Respiratory_Arrest_PROC.md
+      - Respiratory Distress: protocols/respiratory/03_Respiratory_Distress_PROC.md
+      - Smoke Inhalation: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+      - Upper Airway Obstruction: protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md
+    - Cardiac:
+      - Asystole / PEA: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
+      - Bradycardia: protocols/cardiac/04_Bradycardia_PROC.md
+      - Cardiac Arrest (Non-Traumatic): protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
+      - Cardiac Arrest (Traumatic): protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md
+      - Chest Pain / ACS: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
+      - Hypertensive Crisis: protocols/cardiac/04_Hypertensive_Crisis_PROC.md
+      - Post-Resuscitation Care: protocols/cardiac/04_Post_Resuscitation_Care_PROC.md
+      - Supraventricular Tachycardia: protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md
+      - V-Fib / Pulseless V-Tach: protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md
+    - Neurologic:
+      - Hypoglycemia / Hyperglycemia: protocols/neurologic/05_Hypoglycemia_Hyperglycemia_PROC.md
+      - Seizure: protocols/neurologic/05_Seizure_PROC.md
+      - Stroke / TIA: protocols/neurologic/05_Stroke_TIA_PROC.md
+    - Toxicology:
+      - Nausea & Vomiting: protocols/toxicology/06_Nausea_Vomiting_PROC.md
+      - Nerve Agents: protocols/toxicology/06_Nerve_Agents_PROC.md
+      - Overdose / Poisoning: protocols/toxicology/06_Overdose_Poisoning_PROC.md
+    - Medical:
+      - Allergic Reaction / Anaphylaxis: protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md
+      - Hypotension / Shock (Non-Trauma): protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md
+      - OB Emergencies: protocols/medical/07_OB_Emergencies_PROC.md
+      - Sepsis: protocols/medical/07_Sepsis_PROC.md
+    - Trauma:
+      - Burns (Thermal): protocols/trauma/09_Burns_Thermal_PROC.md
+      - Crush Syndrome: protocols/trauma/09_Crush_Syndrome_PROC.md
+      - Electrical Injuries: protocols/trauma/09_Electrical_Injuries_PROC.md
+      - Hemorrhage Control: protocols/trauma/09_Hemorrhage_Control_PROC.md
+      - Lightning Injuries: protocols/trauma/09_Lightning_Injuries_PROC.md
+      - Trauma: protocols/trauma/09_Trauma_PROC.md
+    - Pharmacology:
+      - Adenosine: protocols/pharmacology/08_Adenosine_PROC.md
+      - Albuterol: protocols/pharmacology/08_Albuterol_PROC.md
+      - Amiodarone: protocols/pharmacology/08_Amiodarone_PROC.md
+      - Aspirin: protocols/pharmacology/08_Aspirin_PROC.md
+      - Atropine Sulfate: protocols/pharmacology/08_Atropine_Sulfate_PROC.md
+      - Calcium Chloride: protocols/pharmacology/08_Calcium_Chloride_PROC.md
+      - Dextrose: protocols/pharmacology/08_Dextrose_PROC.md
+      - Diphenhydramine: protocols/pharmacology/08_Diphenhydramine_PROC.md
+      - Epinephrine: protocols/pharmacology/08_Epinephrine_PROC.md
+      - Etomidate: protocols/pharmacology/08_Etomidate_PROC.md
+      - Fentanyl: protocols/pharmacology/08_Fentanyl_PROC.md
+      - Furosemide: protocols/pharmacology/08_Furosemide_PROC.md
+      - Glucagon: protocols/pharmacology/08_Glucagon_PROC.md
+      - Haloperidol: protocols/pharmacology/08_Haloperidol_PROC.md
+      - Hydroxocobalamin: protocols/pharmacology/08_Hydroxocobalamin_PROC.md
+      - Ipratropium Bromide: protocols/pharmacology/08_Ipratropium_Bromide_PROC.md
+      - Ketamine: protocols/pharmacology/08_Ketamine_PROC.md
+      - Ketorolac: protocols/pharmacology/08_Ketorolac_PROC.md
+      - Lidocaine: protocols/pharmacology/08_Lidocaine_PROC.md
+      - Magnesium Sulfate: protocols/pharmacology/08_Magnesium_Sulfate_PROC.md
+      - Methylprednisolone: protocols/pharmacology/08_Methylprednisolone_PROC.md
+      - Midazolam: protocols/pharmacology/08_Midazolam_PROC.md
+      - Morphine Sulfate: protocols/pharmacology/08_Morphine_Sulfate_PROC.md
+      - Naloxone: protocols/pharmacology/08_Naloxone_PROC.md
+      - Nitroglycerin: protocols/pharmacology/08_Nitroglycerine_PROC.md
+      - Norepinephrine: protocols/pharmacology/08_Norepinephrine_PROC.md
+      - Ondansetron: protocols/pharmacology/08_Ondansetron_PROC.md
+      - Rocuronium: protocols/pharmacology/08_Rocuronium_PROC.md
+      - Sodium Bicarbonate: protocols/pharmacology/08_Sodium_Bicarbonate_PROC.md
+      - Succinylcholine: protocols/pharmacology/08_Succinylcholine_PROC.md
+      - Vecuronium: protocols/pharmacology/08_Vecuronium_PROC.md
+      - Ziprasidone: protocols/pharmacology/08_Ziprasidone_PROC.md

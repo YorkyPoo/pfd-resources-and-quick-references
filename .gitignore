@@ -1,0 +1,13 @@
+# MkDocs build output - managed by gh-deploy, not committed to main
+site/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
