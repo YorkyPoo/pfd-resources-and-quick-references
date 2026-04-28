@@ -118,38 +118,38 @@ nav:
       - Lightning Injuries: protocols/trauma/09_Lightning_Injuries_PROC.md
       - Trauma: protocols/trauma/09_Trauma_PROC.md
     - Pharmacology:
-      - Adenosine: protocols/pharmacology/08_Adenosine_PROC.md
-      - Albuterol: protocols/pharmacology/08_Albuterol_PROC.md
-      - Amiodarone: protocols/pharmacology/08_Amiodarone_PROC.md
-      - Aspirin: protocols/pharmacology/08_Aspirin_PROC.md
-      - Atropine Sulfate: protocols/pharmacology/08_Atropine_Sulfate_PROC.md
-      - Calcium Chloride: protocols/pharmacology/08_Calcium_Chloride_PROC.md
-      - Dextrose: protocols/pharmacology/08_Dextrose_PROC.md
-      - Diphenhydramine: protocols/pharmacology/08_Diphenhydramine_PROC.md
-      - Epinephrine: protocols/pharmacology/08_Epinephrine_PROC.md
-      - Etomidate: protocols/pharmacology/08_Etomidate_PROC.md
-      - Fentanyl: protocols/pharmacology/08_Fentanyl_PROC.md
-      - Furosemide: protocols/pharmacology/08_Furosemide_PROC.md
-      - Glucagon: protocols/pharmacology/08_Glucagon_PROC.md
-      - Haloperidol: protocols/pharmacology/08_Haloperidol_PROC.md
-      - Hydroxocobalamin: protocols/pharmacology/08_Hydroxocobalamin_PROC.md
-      - Ipratropium Bromide: protocols/pharmacology/08_Ipratropium_Bromide_PROC.md
-      - Ketamine: protocols/pharmacology/08_Ketamine_PROC.md
-      - Ketorolac: protocols/pharmacology/08_Ketorolac_PROC.md
-      - Lidocaine: protocols/pharmacology/08_Lidocaine_PROC.md
-      - Magnesium Sulfate: protocols/pharmacology/08_Magnesium_Sulfate_PROC.md
-      - Methylprednisolone: protocols/pharmacology/08_Methylprednisolone_PROC.md
-      - Midazolam: protocols/pharmacology/08_Midazolam_PROC.md
-      - Morphine Sulfate: protocols/pharmacology/08_Morphine_Sulfate_PROC.md
-      - Naloxone: protocols/pharmacology/08_Naloxone_PROC.md
-      - Nitroglycerin: protocols/pharmacology/08_Nitroglycerine_PROC.md
-      - Norepinephrine: protocols/pharmacology/08_Norepinephrine_PROC.md
-      - Ondansetron: protocols/pharmacology/08_Ondansetron_PROC.md
-      - Rocuronium: protocols/pharmacology/08_Rocuronium_PROC.md
-      - Sodium Bicarbonate: protocols/pharmacology/08_Sodium_Bicarbonate_PROC.md
-      - Succinylcholine: protocols/pharmacology/08_Succinylcholine_PROC.md
-      - Vecuronium: protocols/pharmacology/08_Vecuronium_PROC.md
-      - Ziprasidone: protocols/pharmacology/08_Ziprasidone_PROC.md
+      - Adenosine: pharmacology/08_Adenosine_PROC.md
+      - Albuterol: pharmacology/08_Albuterol_PROC.md
+      - Amiodarone: pharmacology/08_Amiodarone_PROC.md
+      - Aspirin: pharmacology/08_Aspirin_PROC.md
+      - Atropine Sulfate: pharmacology/08_Atropine_Sulfate_PROC.md
+      - Calcium Chloride: pharmacology/08_Calcium_Chloride_PROC.md
+      - Dextrose: pharmacology/08_Dextrose_PROC.md
+      - Diphenhydramine: pharmacology/08_Diphenhydramine_PROC.md
+      - Epinephrine: pharmacology/08_Epinephrine_PROC.md
+      - Etomidate: pharmacology/08_Etomidate_PROC.md
+      - Fentanyl: pharmacology/08_Fentanyl_PROC.md
+      - Furosemide: pharmacology/08_Furosemide_PROC.md
+      - Glucagon: pharmacology/08_Glucagon_PROC.md
+      - Haloperidol: pharmacology/08_Haloperidol_PROC.md
+      - Hydroxocobalamin: pharmacology/08_Hydroxocobalamin_PROC.md
+      - Ipratropium Bromide: pharmacology/08_Ipratropium_Bromide_PROC.md
+      - Ketamine: pharmacology/08_Ketamine_PROC.md
+      - Ketorolac: pharmacology/08_Ketorolac_PROC.md
+      - Lidocaine: pharmacology/08_Lidocaine_PROC.md
+      - Magnesium Sulfate: pharmacology/08_Magnesium_Sulfate_PROC.md
+      - Methylprednisolone: pharmacology/08_Methylprednisolone_PROC.md
+      - Midazolam: pharmacology/08_Midazolam_PROC.md
+      - Morphine Sulfate: pharmacology/08_Morphine_Sulfate_PROC.md
+      - Naloxone: pharmacology/08_Naloxone_PROC.md
+      - Nitroglycerin: pharmacology/08_Nitroglycerine_PROC.md
+      - Norepinephrine: pharmacology/08_Norepinephrine_PROC.md
+      - Ondansetron: pharmacology/08_Ondansetron_PROC.md
+      - Rocuronium: pharmacology/08_Rocuronium_PROC.md
+      - Sodium Bicarbonate: pharmacology/08_Sodium_Bicarbonate_PROC.md
+      - Succinylcholine: pharmacology/08_Succinylcholine_PROC.md
+      - Vecuronium: pharmacology/08_Vecuronium_PROC.md
+      - Ziprasidone: pharmacology/08_Ziprasidone_PROC.md
   - Fire SOPs:
     - Emergency Operations:
       - Staffing & Equipment Response: sops/emergency-operations/EO-10-Staffing-and-Equipment-Response-202406130909086447.md
