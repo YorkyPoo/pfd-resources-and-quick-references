@@ -1,130 +1,127 @@
 # Medications & Calculators
 
-Use the **search bar** at the top to quickly find specific dosages, protocols, or drug names.
+Use the search bar at the top of the screen to quickly find specific dosages or protocols.
 
----
+## Advanced Drip Rate Calculator
 
-## IV Drip Rate Calculator
+<div style="background: #1e1e1e; color: #ffffff; border-radius: 12px; padding: 20px; font-family: sans-serif; box-shadow: 0 4px 12px rgba(0,0,0,0.3); max-width: 500px; margin: 0 auto 30px auto;">
 
-<div style="background: var(--md-code-bg-color, #f5f5f5); border-radius: 8px; padding: 1.5rem; max-width: 480px; margin-bottom: 1.5rem;">
+<!-- Input Section -->
+<div style="display: flex; align-items: center; margin-bottom: 15px;">
+<div style="flex: 1;"><span style="background: #555; padding: 10px 15px; border-radius: 6px; display: inline-block; font-size: 14px; width: 120px; text-align: center;">Drug Amount</span></div>
+<div style="flex: 1; display: flex; align-items: center;">
+<input type="number" id="calc-amount" placeholder="0" style="width: 80px; padding: 10px; background: #000; border: 1px solid #444; color: #fff; border-radius: 4px; text-align: right; font-size: 16px;">
+<span style="margin-left: 10px; font-size: 16px;">mg</span>
+</div>
+</div>
 
-  <div style="margin-bottom: 1rem;">
-    <label style="display:block; font-weight:600; margin-bottom:0.25rem;">Volume to infuse (mL)</label>
-    <input id="volume" type="number" min="0" placeholder="e.g. 250" style="width:100%; padding:0.5rem; border:1px solid #ccc; border-radius:4px; font-size:1rem;">
-  </div>
+<div style="display: flex; align-items: center; margin-bottom: 15px;">
+<div style="flex: 1;"><span style="background: #555; padding: 10px 15px; border-radius: 6px; display: inline-block; font-size: 14px; width: 120px; text-align: center;">Volume</span></div>
+<div style="flex: 1; display: flex; align-items: center;">
+<input type="number" id="calc-volume" placeholder="0" style="width: 80px; padding: 10px; background: #000; border: 1px solid #444; color: #fff; border-radius: 4px; text-align: right; font-size: 16px;">
+<span style="margin-left: 10px; font-size: 16px;">mL</span>
+</div>
+</div>
 
-  <div style="margin-bottom: 1rem;">
-    <label style="display:block; font-weight:600; margin-bottom:0.25rem;">Time of infusion (minutes)</label>
-    <input id="time" type="number" min="1" placeholder="e.g. 60" style="width:100%; padding:0.5rem; border:1px solid #ccc; border-radius:4px; font-size:1rem;">
-  </div>
+<div style="display: flex; align-items: center; margin-bottom: 25px;">
+<div style="flex: 1;"><span style="background: #555; padding: 10px 15px; border-radius: 6px; display: inline-block; font-size: 14px; width: 120px; text-align: center;">Dose Ordered</span></div>
+<div style="flex: 1; display: flex; align-items: center;">
+<input type="number" id="calc-dose" placeholder="0" style="width: 80px; padding: 10px; background: #000; border: 1px solid #444; color: #fff; border-radius: 4px; text-align: right; font-size: 16px;">
+<span style="margin-left: 10px; font-size: 16px;">mg/hr</span>
+</div>
+</div>
 
-  <div style="margin-bottom: 1rem;">
-    <label style="display:block; font-weight:600; margin-bottom:0.25rem;">Drop Factor (gtts/mL)</label>
-    <select id="dropfactor" style="width:100%; padding:0.5rem; border:1px solid #ccc; border-radius:4px; font-size:1rem;">
-      <option value="10">10 gtts/mL (Macro)</option>
-      <option value="15">15 gtts/mL (Macro)</option>
-      <option value="20">20 gtts/mL (Macro)</option>
-      <option value="60">60 gtts/mL (Micro)</option>
-    </select>
-  </div>
+<!-- Buttons -->
+<div style="display: flex; gap: 15px; margin-bottom: 25px; justify-content: center;">
+<button onclick="calculateAdvancedDrip()" style="background: #777; color: white; border: none; padding: 12px 25px; border-radius: 6px; cursor: pointer; font-size: 16px; font-weight: bold; width: 120px;">Calculate</button>
+<button onclick="resetAdvancedDrip()" style="background: #555; color: white; border: none; padding: 12px 25px; border-radius: 6px; cursor: pointer; font-size: 16px; font-weight: bold; width: 120px;">Reset</button>
+</div>
 
-  <button onclick="calcDrip()" style="background:#c62828; color:white; border:none; padding:0.6rem 1.5rem; border-radius:4px; font-size:1rem; font-weight:600; cursor:pointer; width:100%;">Calculate Rate</button>
+<!-- Drip Set Radios -->
+<div style="text-align: center; margin-bottom: 25px;">
+<h4 style="margin: 0 0 15px 0; font-style: italic; font-weight: normal; color: #ccc;">Choose A Dripset (Drops per mL)</h4>
+<div style="display: flex; justify-content: center; gap: 20px; font-size: 16px;">
+<label style="cursor: pointer;"><input type="radio" name="calc-dropfactor" value="10" checked style="accent-color: #4db8ff;"> 10</label>
+<label style="cursor: pointer;"><input type="radio" name="calc-dropfactor" value="15" style="accent-color: #4db8ff;"> 15</label>
+<label style="cursor: pointer;"><input type="radio" name="calc-dropfactor" value="20" style="accent-color: #4db8ff;"> 20</label>
+<label style="cursor: pointer;"><input type="radio" name="calc-dropfactor" value="60" style="accent-color: #4db8ff;"> 60</label>
+</div>
+</div>
 
-  <div id="drip-result" style="margin-top:1rem; font-size:1.2rem; font-weight:700; text-align:center;"></div>
+<!-- Output Error Message -->
+<div id="calc-error" style="color: #ff5252; text-align: center; margin-bottom: 15px; font-weight: bold; display: none;">Please fill out all fields correctly.</div>
 
+<!-- Output Section -->
+<div style="display: flex; align-items: center; margin-bottom: 15px;">
+<div style="flex: 1;"><span style="background: #555; padding: 10px 15px; border-radius: 6px; display: inline-block; font-size: 14px; width: 120px; text-align: center;">Ratio</span></div>
+<div style="flex: 1; display: flex; align-items: center; justify-content: space-between; padding-right: 20px;">
+<span id="out-ratio" style="font-size: 18px; font-weight: bold;">--</span>
+<span style="font-size: 14px; color: #aaa;">mg/mL</span>
+</div>
+</div>
+
+<div style="display: flex; align-items: center; margin-bottom: 15px;">
+<div style="flex: 1;"><span style="background: #555; padding: 10px 15px; border-radius: 6px; display: inline-block; font-size: 14px; width: 120px; text-align: center;">Infusion Rate</span></div>
+<div style="flex: 1; display: flex; align-items: center; justify-content: space-between; padding-right: 20px;">
+<span id="out-infusion" style="font-size: 18px; font-weight: bold;">--</span>
+<span style="font-size: 14px; color: #aaa;">mL/hr</span>
+</div>
+</div>
+
+<div style="display: flex; align-items: center;">
+<div style="flex: 1;"><span style="background: #555; padding: 10px 15px; border-radius: 6px; display: inline-block; font-size: 14px; width: 120px; text-align: center;">Manual Rate</span></div>
+<div style="flex: 1; display: flex; align-items: center; justify-content: space-between; padding-right: 20px;">
+<span id="out-manual" style="font-size: 18px; font-weight: bold; color: #4db8ff;">--</span>
+<span style="font-size: 14px; color: #aaa;">gtts/min</span>
+</div>
+</div>
 </div>
 
 <script>
-function calcDrip() {
-  var vol = parseFloat(document.getElementById("volume").value);
-  var time = parseFloat(document.getElementById("time").value);
-  var df = parseFloat(document.getElementById("dropfactor").value);
-  var result = document.getElementById("drip-result");
-  if (isNaN(vol) || isNaN(time) || time <= 0) {
-    result.innerHTML = "<span style=color:#c62828>Please enter valid volume and time.</span>";
-    return;
-  }
-  var rate = (vol * df) / time;
-  result.innerHTML = "Drip Rate: <span style=color:#c62828>" + rate.toFixed(1) + " gtts/min</span>";
+function calculateAdvancedDrip() {
+const errorDiv = document.getElementById('calc-error');
+errorDiv.style.display = 'none';
+const amount = parseFloat(document.getElementById('calc-amount').value);
+const volume = parseFloat(document.getElementById('calc-volume').value);
+const dose = parseFloat(document.getElementById('calc-dose').value);
+let dropFactor = 10;
+const radios = document.getElementsByName('calc-dropfactor');
+for (let i = 0; i < radios.length; i++) {
+if (radios[i].checked) {
+dropFactor = parseFloat(radios[i].value);
+break;
+}
+}
+if (isNaN(amount) || isNaN(volume) || isNaN(dose) || amount <= 0 || volume <= 0 || dose < 0) {
+errorDiv.style.display = 'block';
+document.getElementById('out-ratio').innerText = "--";
+document.getElementById('out-infusion').innerText = "--";
+document.getElementById('out-manual').innerText = "--";
+return;
+}
+const ratio = amount / volume;
+const infusionRate = dose / ratio;
+const manualRate = (infusionRate * dropFactor) / 60;
+document.getElementById('out-ratio').innerText = ratio.toFixed(2);
+document.getElementById('out-infusion').innerText = infusionRate.toFixed(2);
+document.getElementById('out-manual').innerText = Math.round(manualRate);
+}
+function resetAdvancedDrip() {
+document.getElementById('calc-amount').value = '';
+document.getElementById('calc-volume').value = '';
+document.getElementById('calc-dose').value = '';
+document.getElementById('out-ratio').innerText = '--';
+document.getElementById('out-infusion').innerText = '--';
+document.getElementById('out-manual').innerText = '--';
+document.getElementById('calc-error').style.display = 'none';
+const radios = document.getElementsByName('calc-dropfactor');
+radios[0].checked = true;
 }
 </script>
 
----
+## Common Cardiology Dosages
 
-## Cardiac Arrest
+* **Amiodarone:** 300mg IV/IO push (Cardiac Arrest - First Dose)
+* **Epinephrine (1:10,000):** 1mg IV/IO every 3-5 mins (Cardiac Arrest)
+* **Atropine:** 1mg IV/IO every 3-5 mins (Symptomatic Bradycardia)
 
-| Medication | Dose | Route | Notes |
-|-----------|------|-------|-------|
-| **Epinephrine 1:10,000** | 1 mg | IV/IO | Every 3–5 min |
-| **Amiodarone** | 300 mg (1st dose) | IV/IO push | 150 mg for 2nd dose |
-| **Lidocaine** | 1–1.5 mg/kg | IV/IO | Alternative to amiodarone |
-| **Sodium Bicarbonate** | 1 mEq/kg | IV/IO | Suspected hyperkalemia or TCA OD |
-| **Calcium Chloride (10%)** | 1 g (10 mL) | IV/IO | Hyperkalemia, calcium-channel blocker OD |
-
----
-
-## Symptomatic Bradycardia
-
-| Medication | Dose | Route | Notes |
-|-----------|------|-------|-------|
-| **Atropine** | 0.5 mg | IV | Repeat q3–5 min; max 3 mg |
-| **Dopamine** | 2–20 mcg/kg/min | IV infusion | Titrate to effect |
-| **Epinephrine** | 2–10 mcg/min | IV infusion | Refractory bradycardia |
-
----
-
-## Tachycardia
-
-| Medication | Dose | Route | Notes |
-|-----------|------|-------|-------|
-| **Adenosine** | 6 mg (1st dose) | Rapid IV push | 12 mg for 2nd/3rd dose; SVT |
-| **Amiodarone** | 150 mg over 10 min | IV | Stable VT with pulse |
-| **Synchronized Cardioversion** | 100–200 J | — | Unstable tachycardia |
-
----
-
-## Analgesia & Sedation
-
-| Medication | Dose | Route | Notes |
-|-----------|------|-------|-------|
-| **Morphine** | 2–4 mg | IV/IM | Titrate; reassess pain |
-| **Fentanyl** | 1–2 mcg/kg | IV/IN | Preferred in hemodynamic instability |
-| **Ketamine** | 1–2 mg/kg | IV | Dissociative; airway maintained |
-| **Midazolam** | 2–5 mg | IV/IM/IN | Seizures, sedation |
-
----
-
-## Airway
-
-| Medication | Dose | Route | Notes |
-|-----------|------|-------|-------|
-| **Succinylcholine** | 1.5 mg/kg | IV/IO | RSI paralytic; avoid in hyperkalemia |
-| **Rocuronium** | 1.2 mg/kg | IV/IO | RSI alternative; reversal with sugammadex |
-| **Etomidate** | 0.3 mg/kg | IV | RSI induction |
-| **Ketamine** | 1–2 mg/kg | IV | RSI induction; preferred in hypotension |
-
----
-
-## Allergic Reaction / Anaphylaxis
-
-| Medication | Dose | Route | Notes |
-|-----------|------|-------|-------|
-| **Epinephrine 1:1,000** | 0.3–0.5 mg | IM (lateral thigh) | First-line anaphylaxis |
-| **Diphenhydramine** | 25–50 mg | IV/IM | Adjunct; not first-line |
-| **Methylprednisolone** | 125 mg | IV | Prevent biphasic reaction |
-| **Albuterol** | 2.5 mg | Nebulized | Bronchospasm |
-
----
-
-## Hypoglycemia
-
-| Medication | Dose | Route | Notes |
-|-----------|------|-------|-------|
-| **Dextrose 50%** | 25 g (50 mL) | IV | BGL < 60 with AMS |
-| **Glucagon** | 1 mg | IM/IN | No IV access |
-| **Oral Glucose** | 15–30 g | PO | Alert patient; able to protect airway |
-
----
-
-!!! warning "Protocol Authority"
-    All dosages listed are reference values. **Always follow your current approved PEMS/locality protocols.** When in doubt, consult medical direction.
