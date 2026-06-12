@@ -66,6 +66,29 @@
   
   <link rel="manifest" href="manifest.webmanifest" />
   <meta name="theme-color" content="#16213e" />
+  <script>
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/pfd-resources-and-quick-references/sw.js')
+            .then(function(reg) {
+                console.log('[PFD] Service Worker registered');
+                if (reg.installing) {
+                    var banner = document.createElement('div');
+                    banner.style.cssText = 'position:fixed;bottom:16px;right:16px;background:#16213e;color:#fff;padding:12px 20px;border-radius:8px;font-family:system-ui;font-size:14px;z-index:9999;box-shadow:0 4px 12px rgba(0,0,0,0.3);';
+                    banner.textContent = '📡 Downloading protocols for offline use...';
+                    document.body.appendChild(banner);
+                    reg.installing.addEventListener('statechange', function() {
+                        if (this.state === 'activated') {
+                            banner.textContent = '✅ All protocols available offline';
+                            banner.style.background = '#1b5e20';
+                            setTimeout(function() { banner.remove(); }, 3000);
+                        }
+                    });
+                }
+            });
+    });
+}
+</script>
 
   </head>
   
