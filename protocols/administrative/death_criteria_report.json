@@ -1,0 +1,25 @@
+{
+  "protocol": "Death and Criteria for Withholding Resuscitation",
+  "status": "FIXABLE",
+  "discrepancies": [
+    {
+      "field": "Terminology/Format",
+      "pems_original": "Includes specific procedural instructions for EMT vs I vs P and MC levels.",
+      "converted_text": "Simplifies into a table with broad coverage.",
+      "severity": "MINOR",
+      "recommendation": "While the simplified table is easy to read, ensure all specific provider-level actions (e.g., specific ALS interventions listed in PEMS) are captured."
+    },
+    {
+      "field": "Content/Completeness",
+      "pems_original": "Includes detailed instructions on honoring DNR forms in various settings (nursing home, licensed healthcare facility, travelling).",
+      "converted_text": "Missing some of these specific situational instructions.",
+      "severity": "MODERATE",
+      "recommendation": "Include the situational instructions for honoring DNR orders in different facilities/settings to ensure compliance with VA 12 VAC 5-66-40."
+    }
+  ],
+  "missing_sections": [
+    "Specific procedures for facility-based DNR honor",
+    "Detailed provider level actions for ALS interventions"
+  ],
+  "verified": false
+}

@@ -1,0 +1,15 @@
+{
+  "protocol": "OB Emergencies",
+  "status": "FIXABLE",
+  "discrepancies": [
+    {
+      "field": "Structure/Formatting",
+      "pems_original": "PEMS has separate protocols for Uterine Rupture, Abruptio Placenta, Childbirth/Labor/Delivery, and Eclampsia.",
+      "converted_text": "Poquoson combined them into one general OB Emergencies protocol.",
+      "severity": "MINOR",
+      "recommendation": "While acceptable for brevity, ensure all unique criteria, signs, symptoms, and procedural steps from each of the individual PEMS protocols are included."
+    }
+  ],
+  "missing_sections": [],
+  "verified": false
+}

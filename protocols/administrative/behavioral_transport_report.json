@@ -1,0 +1,15 @@
+{
+  "protocol": "Behavioral Health Transportation Decision",
+  "status": "MANUAL",
+  "discrepancies": [
+    {
+      "field": "Content and Scope",
+      "pems_original": "Brief guidance on identifying patients for potential direct transport to a mental health facility.",
+      "converted_text": "Includes significant additional procedural detail regarding Psychiatric vs Medical ECOs, law enforcement custody, and restraint-specific transport instructions not found in the original PEMS protocol for this topic.",
+      "severity": "CRITICAL",
+      "recommendation": "Review if the added ECO/Law Enforcement material should be in a separate, dedicated policy/protocol or if it belongs here. If it is PEMS-compliant, it needs to be clearly marked as such or derived from other PEMS policies (e.g. Patient Restraint/Refusal)."
+    }
+  ],
+  "missing_sections": [],
+  "verified": false
+}

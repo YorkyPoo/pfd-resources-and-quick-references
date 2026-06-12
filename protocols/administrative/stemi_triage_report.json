@@ -1,0 +1,17 @@
+{
+  "protocol": "STEMI Field Triage",
+  "status": "FIXABLE",
+  "discrepancies": [
+    {
+      "field": "Facility Listing",
+      "pems_original": "Contains a comprehensive list of specific PCI centers and their phone numbers.",
+      "converted_text": "Missing the list of specific hospitals and their contact numbers.",
+      "severity": "MODERATE",
+      "recommendation": "Add the list of regional PCI-capable hospitals and their contact numbers as in the original PEMS protocol."
+    }
+  ],
+  "missing_sections": [
+    "List of regional PCI hospitals and phone numbers"
+  ],
+  "verified": false
+}
