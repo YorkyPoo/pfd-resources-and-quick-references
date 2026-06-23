@@ -1,8 +1,8 @@
 // Pre-Cache Service Worker for Poquoson Fire & Rescue Protocols
-// Generated: 20260614-103819
+// Generated: 20260623-011203
 // Caches ALL protocols on first visit for full offline access
 
-const CACHE_NAME = "pfd-protocols-v20260614-103819";
+const CACHE_NAME = "pfd-protocols-v20260623-011203";
 
 const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/404.html",
@@ -44,6 +44,21 @@ const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/pharmacology/Succinylcholine.html",
     "/pfd-resources-and-quick-references/pharmacology/Vecuronium.html",
     "/pfd-resources-and-quick-references/pharmacology/Ziprasidone.html",
+    "/pfd-resources-and-quick-references/procedures/CPAP.html",
+    "/pfd-resources-and-quick-references/procedures/Capnography.html",
+    "/pfd-resources-and-quick-references/procedures/Chest_Decompression.html",
+    "/pfd-resources-and-quick-references/procedures/Endotracheal_Intubation.html",
+    "/pfd-resources-and-quick-references/procedures/Intraosseous_Access.html",
+    "/pfd-resources-and-quick-references/procedures/Medical_Devices_Pumps.html",
+    "/pfd-resources-and-quick-references/procedures/Medication_Administration.html",
+    "/pfd-resources-and-quick-references/procedures/Nasogastric_Tube.html",
+    "/pfd-resources-and-quick-references/procedures/Neonatal_Resuscitation.html",
+    "/pfd-resources-and-quick-references/procedures/Spinal_Motion_Restriction.html",
+    "/pfd-resources-and-quick-references/procedures/Surgical_Airway.html",
+    "/pfd-resources-and-quick-references/procedures/Taser_Barb_Removal.html",
+    "/pfd-resources-and-quick-references/procedures/Tourniquet_Application.html",
+    "/pfd-resources-and-quick-references/procedures/Transcutaneous_Pacing.html",
+    "/pfd-resources-and-quick-references/procedures/Vaccination.html",
     "/pfd-resources-and-quick-references/protocols/00 - Master Protocol Tracker.html",
     "/pfd-resources-and-quick-references/protocols/administrative/01_ALS_Release_to_BLS_PROC.html",
     "/pfd-resources-and-quick-references/protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.html",
@@ -284,4 +299,4 @@ self.addEventListener("fetch", event => {
     );
 });
 
-console.log("[SW] Poquoson Fire & Rescue — 201 pages ready for offline use");
+console.log("[SW] Poquoson Fire & Rescue — 216 pages ready for offline use");
