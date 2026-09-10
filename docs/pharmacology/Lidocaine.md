@@ -1,15 +1,19 @@
-# [Lidocaine](Lidocaine.md) 2%
+# Lidocaine 2%
+
 **Trade Name:** Xylocaine
 
 ## Classification & Action
-- **Drug Class:** Antidysrhythmic, Anesthetic
-- **Mechanism of Action:** Binds neuron sodium channels, preventing conduction (anesthetic). Slows cardiac action potential, reducing ectopy (antidysrhythmic).
+
+- **Drug Class:** Antidysrhythmic, anesthetic
+- **Mechanism of Action:** Binds neuronal sodium channels, preventing conduction (anesthetic). Slows cardiac action potential, reducing ectopy (antidysrhythmic).
 
 ## Indications
+
 - Cardiac arrest: VT/VF refractory to defibrillation
-- Pain control: Intraosseous access
+- Pain control: intraosseous access
 
 ## Contraindications
+
 - Known hypersensitivity / allergy
 - Dysrhythmia due to local anesthetic toxicity
 - 2nd or 3rd degree heart block
@@ -18,28 +22,45 @@
 - Stokes-Adams Syndrome
 
 ## Precautions
-- Monitor for CNS toxicity. Symptoms include slurred speech, facial numbness, decreased LOC, muscle twitches, seizure
+
+- Monitor for CNS toxicity. Symptoms include slurred speech, facial numbness, decreased LOC, muscle twitches, and seizure.
 
 ## Dosage
-### Adults
-- **Not specified in protocol**
 
-### Pediatrics
-- **Not specified in protocol**
+### Cardiac Arrest - VT/VF refractory to defibrillation
+
+- **Adult - first alternative dose when amiodarone is unavailable:** 1 mg/kg IV/IO slow push; maximum dose 100 mg.
+- **Pediatric - first alternative dose when amiodarone is unavailable:** 1 mg/kg IV/IO slow push; maximum dose 50 mg.
+- **Adult - subsequent alternative dose when amiodarone is unavailable:** 0.5 mg/kg IV/IO slow push; maximum dose 100 mg.
+- **Pediatric - subsequent alternative dose when amiodarone is unavailable:** 1 mg/kg IV/IO slow push; maximum dose 50 mg.
+
+### Conscious Patient - Intraosseous Pain Control
+
+- **Adult:** 2% Lidocaine 1 mg/kg IO slow push; maximum dose 40 mg. Allow to dwell for 1 minute, then flush with 0.9% sodium chloride. May repeat once as necessary for pain control.
+- **Pediatric:** 2% Lidocaine 0.5 mg/kg IO slow push; maximum dose 20 mg. Allow to dwell for 1 minute, then flush with 0.9% sodium chloride. May repeat once as necessary for pain control.
 
 ## Pharmacokinetics
+
 | Onset | Duration |
 | :--- | :--- |
-| Not specified in protocol | Not specified in protocol |
+| IV: 1-3 minutes | 2-6 hours (dose dependent) |
 
 ## Side Effects
+
 - Nausea
 - Widening of QRS
 - Seizure
 - Hypotension
 
 ## Interactions
-- Not specified in protocol
+
+- Additive effects with other CNS depressants.
 
 ## Pearls
-- ⚠ **Warning:** Monitor for CNS toxicity. Symptoms include slurred speech, facial numbness, decreased LOC, muscle twitches, seizure.
+
+- **Warning:** Monitor for CNS toxicity. Symptoms include slurred speech, facial numbness, decreased LOC, muscle twitches, and seizure.
+
+## Source Basis
+
+- **Dosage:** PEMS Regional Patient Care Protocols, *Cardiac Arrest: V-Fib / Pulseless V-Tach* (January 2024, pages 64-65) and *Procedures: Intraosseous Access* (March 2024, page 249).
+- **Onset, duration, and interaction:** ODEMSA 2018 Patient Care Protocols, *Lidocaine* medication reference (revised June 2015).
