@@ -37,11 +37,11 @@ Guidelines for assessing capacity, identifying surrogate decision makers, and ob
 | 3 | Identify appropriate surrogate decision maker (in descending order) if the patient lacks capacity or competence. | | • | | • | |
 | 4 | Clearly document information provided; obtain signatures for refusal from patient or surrogate and at least 1 adult witness. | | • | | • | |
 | 5 | Contact law enforcement regarding issuance of a Psychiatric ECO for patients with acute psychiatric emergencies risk of harm. | | • | | • | |
-| 6 | Contact **Poquoson OMD / Medical Control** regarding issuance of a Medical ECO for acute medical emergencies lacking capacity. | MC | MC | MC | MC | MC |
-| 7 | Contact **Poquoson OMD / Medical Control** for assistance if unsure of capacity, surrogate validity, or if patient refuses despite severe risk. | MC | MC | MC | MC | MC |
+| 6 | Contact **Poquoson Medical Control** regarding issuance of a Medical ECO for acute medical emergencies lacking capacity. | MC | MC | MC | MC | MC |
+| 7 | Contact **Poquoson Medical Control** for assistance if unsure of capacity, surrogate validity, or if patient refuses despite severe risk. | MC | MC | MC | MC | MC |
 
 ### Pearls
-• ⚠ **Medical ECOs:** For medical emergencies, issuance of an emergency custody order (ECO) for medical evaluation requires a licensed physician to petition a magistrate or special justice. Early discussion with **Poquoson OMD / Medical Control** to provide a detailed description of the current clinical situation, capacity assessment, and concerns is critical.
+• ⚠ **Medical ECOs:** For medical emergencies, issuance of an emergency custody order (ECO) for medical evaluation requires a licensed physician to petition a magistrate or special justice. Early discussion with **Poquoson Medical Control** to provide a detailed description of the current clinical situation, capacity assessment, and concerns is critical.
 • ⚠ **Medical Power of Attorney:** Only comes into effect when a patient lacks decision-making capacity. Attempt to obtain a copy of any documentation assigning guardianship or medical POA. If unavailable, accept assertion in good faith absent contradictory evidence.
 • ⚠ **Minor Exceptions:** A minor may be deemed an adult for the purpose of giving consent to surgical and medical treatment for her child.
 • ⚠ **Emergency Consent for Minors:** Treatment and/or transport of a minor is authorized if delay may adversely affect the minor’s recovery and no authorized person is available to provide consent. If the minor is 14 years of age or older and physically capable of giving consent, such consent shall be obtained first.

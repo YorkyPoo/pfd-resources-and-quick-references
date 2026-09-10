@@ -1,0 +1,580 @@
+{
+  "Abuse Recognition": [
+    [
+      9515,
+      "Abuse Recognition"
+    ],
+    [
+      11955,
+      "Abuse Recognition"
+    ],
+    [
+      11996,
+      "Abuse Recognition"
+    ]
+  ],
+  "ALS Release to BLS": [
+    [
+      9669,
+      "ALS Release to BLS"
+    ],
+    [
+      19205,
+      "ALS Release to BLS"
+    ],
+    [
+      19244,
+      "ALS Release to BLS"
+    ]
+  ],
+  "Behavioral Health Transportation": [
+    [
+      11516,
+      "Behavioral Health Transportation"
+    ]
+  ],
+  "Communications": [
+    [
+      9844,
+      "Communications"
+    ],
+    [
+      21161,
+      "Communications"
+    ],
+    [
+      21196,
+      "Communications"
+    ]
+  ],
+  "Helicopter EMS": [
+    [
+      10170,
+      "Helicopter EMS"
+    ],
+    [
+      32189,
+      "Helicopter EMS"
+    ],
+    [
+      32231,
+      "Helicopter EMS"
+    ]
+  ],
+  "Infant Abandonment": [
+    [
+      10337,
+      "Infant Abandonment"
+    ],
+    [
+      33540,
+      "Infant Abandonment"
+    ],
+    [
+      33579,
+      "Infant Abandonment"
+    ]
+  ],
+  "Patient Refusal": [
+    [
+      10505,
+      "Patient Refusal"
+    ],
+    [
+      22564,
+      "patient refusal"
+    ],
+    [
+      34833,
+      "Patient Refusal"
+    ]
+  ],
+  "Patient Restraint": [
+    [
+      10680,
+      "Patient Restraint"
+    ],
+    [
+      43142,
+      "Patient Restraint"
+    ],
+    [
+      43180,
+      "Patient Restraint"
+    ]
+  ],
+  "Safe Transport of Pediatric": [
+    [
+      10854,
+      "Safe Transport of Pediatric"
+    ],
+    [
+      46500,
+      "Safe Transport of Pediatric"
+    ],
+    [
+      46557,
+      "Safe Transport of Pediatric"
+    ]
+  ],
+  "STEMI Field Triage": [
+    [
+      11017,
+      "STEMI Field Triage"
+    ],
+    [
+      48072,
+      "STEMI Field Triage"
+    ],
+    [
+      48111,
+      "STEMI Field Triage"
+    ]
+  ],
+  "Stroke Field Triage": [
+    [
+      11189,
+      "Stroke Field Triage"
+    ],
+    [
+      50399,
+      "Stroke Field Triage"
+    ],
+    [
+      50439,
+      "Stroke Field Triage"
+    ]
+  ],
+  "Trauma Field Triage": [
+    [
+      11610,
+      "Trauma Field Triage"
+    ],
+    [
+      56571,
+      "Trauma Field Triage"
+    ],
+    [
+      56611,
+      "Trauma Field Triage"
+    ]
+  ],
+  "Cold Exposure": [
+    [
+      92542,
+      "Cold Exposure"
+    ],
+    [
+      92577,
+      "Cold Exposure"
+    ],
+    [
+      93484,
+      "cold exposure"
+    ]
+  ],
+  "Heat Exposure": [
+    [
+      63182,
+      "Heat Exposure"
+    ],
+    [
+      94867,
+      "Heat Exposure"
+    ],
+    [
+      94902,
+      "Heat Exposure"
+    ]
+  ],
+  "Pain Control": [
+    [
+      63718,
+      "Pain Control"
+    ],
+    [
+      104842,
+      "Pain Control"
+    ],
+    [
+      105082,
+      "Pain Control"
+    ]
+  ],
+  "Sedation": [
+    [
+      62195,
+      "Sedation"
+    ],
+    [
+      73781,
+      "Sedation"
+    ],
+    [
+      73833,
+      "Sedation"
+    ]
+  ],
+  "Asthma": [
+    [
+      66297,
+      "Asthma"
+    ],
+    [
+      164390,
+      "Asthma"
+    ],
+    [
+      167097,
+      "asthma"
+    ]
+  ],
+  "Pneumothorax": [
+    [
+      75126,
+      "pneumothorax"
+    ],
+    [
+      78851,
+      "pneumothorax"
+    ],
+    [
+      82151,
+      "pneumothorax"
+    ]
+  ],
+  "Pulmonary Edema": [
+    [
+      127915,
+      "Pulmonary edema"
+    ],
+    [
+      139160,
+      "Pulmonary Edema"
+    ],
+    [
+      150689,
+      "pulmonary edema"
+    ]
+  ],
+  "Respiratory Arrest": [
+    [
+      239401,
+      "respiratory arrest"
+    ],
+    [
+      240624,
+      "respiratory arrest"
+    ],
+    [
+      246962,
+      "respiratory arrest"
+    ]
+  ],
+  "Respiratory Distress": [
+    [
+      53357,
+      "respiratory distress"
+    ],
+    [
+      66276,
+      "Respiratory Distress"
+    ],
+    [
+      118909,
+      "respiratory distress"
+    ]
+  ],
+  "Upper Airway Obstruction": [
+    [
+      205696,
+      "upper airway obstruction"
+    ]
+  ],
+  "Asystole": [
+    [
+      62383,
+      "Asystole"
+    ],
+    [
+      75596,
+      "Asystole"
+    ],
+    [
+      75649,
+      "Asystole"
+    ]
+  ],
+  "Bradycardia": [
+    [
+      65116,
+      "Bradycardia"
+    ],
+    [
+      107500,
+      "bradycardia"
+    ],
+    [
+      138836,
+      "Bradycardia"
+    ]
+  ],
+  "Cardiac Arrest": [
+    [
+      27691,
+      "cardiac arrest"
+    ],
+    [
+      29961,
+      "cardiac arrest"
+    ],
+    [
+      37829,
+      "cardiac arrest"
+    ]
+  ],
+  "Chest Pain": [
+    [
+      65291,
+      "Chest Pain"
+    ],
+    [
+      70252,
+      "Chest Pain"
+    ],
+    [
+      126021,
+      "Chest pain"
+    ]
+  ],
+  "Supraventricular Tachycardia": [
+    [
+      66958,
+      "Supraventricular Tachycardia"
+    ],
+    [
+      178605,
+      "Supraventricular Tachycardia"
+    ],
+    [
+      178657,
+      "Supraventricular Tachycardia"
+    ]
+  ],
+  "V-Fib": [
+    [
+      62812,
+      "V-Fib"
+    ],
+    [
+      86003,
+      "V-fib"
+    ],
+    [
+      86066,
+      "V-Fib"
+    ]
+  ],
+  "Aortic Dissection": [
+    [
+      154228,
+      "aortic dissection"
+    ]
+  ],
+  "Hypoglycemia": [
+    [
+      36379,
+      "hypoglycemia"
+    ],
+    [
+      43904,
+      "hypoglycemia"
+    ],
+    [
+      65628,
+      "Hypoglycemia"
+    ]
+  ],
+  "Seizure": [
+    [
+      53596,
+      "seizure"
+    ],
+    [
+      66424,
+      "Seizure"
+    ],
+    [
+      72675,
+      "Seizure"
+    ]
+  ],
+  "Stroke": [
+    [
+      11189,
+      "Stroke"
+    ],
+    [
+      21915,
+      "Stroke"
+    ],
+    [
+      32349,
+      "Stroke"
+    ]
+  ],
+  "Nausea": [
+    [
+      65947,
+      "Nausea"
+    ],
+    [
+      105710,
+      "nausea"
+    ],
+    [
+      144509,
+      "Nausea"
+    ]
+  ],
+  "Nerve Agents": [
+    [
+      199261,
+      "Nerve Agents"
+    ],
+    [
+      199343,
+      "Nerve Agents"
+    ],
+    [
+      200047,
+      "nerve agents"
+    ]
+  ],
+  "Overdose": [
+    [
+      55535,
+      "overdose"
+    ],
+    [
+      66117,
+      "Overdose"
+    ],
+    [
+      76773,
+      "overdose"
+    ]
+  ],
+  "Allergic Reaction": [
+    [
+      64951,
+      "Allergic Reaction"
+    ],
+    [
+      133120,
+      "Allergic Reaction"
+    ],
+    [
+      133174,
+      "Allergic Reaction"
+    ]
+  ],
+  "Hypotension": [
+    [
+      36366,
+      "hypotension"
+    ],
+    [
+      65789,
+      "Hypotension"
+    ],
+    [
+      73433,
+      "Hypotension"
+    ]
+  ],
+  "Sepsis": [
+    [
+      66603,
+      "Sepsis"
+    ],
+    [
+      72804,
+      "Sepsis"
+    ],
+    [
+      154147,
+      "sepsis"
+    ]
+  ],
+  "Burns": [
+    [
+      32367,
+      "Burns"
+    ],
+    [
+      58403,
+      "Burns"
+    ],
+    [
+      58432,
+      "burns"
+    ]
+  ],
+  "Crush Syndrome": [
+    [
+      123934,
+      "crush syndrome"
+    ],
+    [
+      124468,
+      "Crush syndrome"
+    ],
+    [
+      125485,
+      "crush syndrome"
+    ]
+  ],
+  "Electrical Injuries": [
+    [
+      128788,
+      "Electrical Injuries"
+    ],
+    [
+      128830,
+      "Electrical Injuries"
+    ],
+    [
+      130211,
+      "Electrical Injuries"
+    ]
+  ],
+  "Hemorrhage Control": [
+    [
+      82750,
+      "Hemorrhage Control"
+    ],
+    [
+      102186,
+      "Hemorrhage Control"
+    ],
+    [
+      102225,
+      "Hemorrhage Control"
+    ]
+  ],
+  "Trauma": [
+    [
+      3689,
+      "Trauma"
+    ],
+    [
+      3707,
+      "Trauma"
+    ],
+    [
+      11610,
+      "Trauma"
+    ]
+  ]
+}

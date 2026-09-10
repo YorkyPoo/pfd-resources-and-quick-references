@@ -26,9 +26,9 @@ Guidelines for managing systemic hypothermia and localized cold injuries, emphas
 | 4 | Apply warmed and humidified **O2** if available. | | • | | • | |
 | 5 | **Localized cold injury:** Apply loose, sterile dressings to the affected part. | | • | | • | |
 | 6 | If patient is alert and responsive: Use active external rewarming with heat packs, warm blankets, etc. | | • | | • | |
-| 7 | **Cardiac Arrest:** Make persistent attempts at resuscitation for victims of prolonged cold exposure. Begin CPR and continuous warming procedures. | | • | | • | |
-| 8 | Rapid transport immediately with resuscitation efforts continued en route. Do not delay transport waiting for ALS. | | | • | | • |
-| 9 | Contact Poquoson OMD / Medical Control prior to use of AED. | MC | MC | MC | MC | MC |
+| 7 | **Cardiac Arrest:** Make persistent attempts at resuscitation for victims of prolonged cold exposure. Begin CPR and continuous warming procedures. | • | • | • | • | • |
+| 8 | Rapid transport immediately with resuscitation efforts continued en route. Do not delay transport waiting for ALS. | • | • | • | • | • |
+| 9 | Contact Poquoson Medical Control prior to use of AED. | MC | MC | MC | MC | MC |
 
 ### Pearls
 1. ⚠ Hypothermia patients are fragile: Rough handling, IV insertion, intubation, etc. might cause VF that is refractory to defibrillation and antiarrhythmic agents- use AHA guidelines for hypothermic arrest.

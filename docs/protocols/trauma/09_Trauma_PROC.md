@@ -18,6 +18,11 @@ Guidelines for the rapid assessment and management of suspected traumatic injuri
     - Calculate Shock Index (HR/SBP)
 
 
+
+!!! tip "Pediatric Dosing Reference"
+    For pediatric weight-based dosing, equipment sizing, and length estimation, see the [Pediatric Dosing Reference](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/pediatric-dosing/index.md).
+
+
 ### Interventions
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -33,7 +38,7 @@ Guidelines for the rapid assessment and management of suspected traumatic injuri
 | 10 | Tension pneumothorax: Decompress the affected side(s). Refer to Chest Decompression procedure. | | | | | • |
 | 11 | Traumatic Cardiac Arrest: Refer to Cardiac Arrest: Traumatic protocol. | | | | | • |
 | 12 | If the patient meets the trauma triage criteria according to Administrative Policy – Trauma Field Triage, transport immediately to a Level 1 or Level II Trauma Center. Goal scene time: Less than 10 minutes. | | | • | | • |
-| 13 | Contact Poquoson OMD / Medical Control for guidance and/or optimal destination determination as needed. | MC | MC | MC | MC | MC |
+| 13 | Contact Poquoson Medical Control for guidance and/or optimal destination determination as needed. | MC | MC | MC | MC | MC |
 
 ### Pearls
 • ⚠ Do not delay transport to establish IV lines or wait for ALS.

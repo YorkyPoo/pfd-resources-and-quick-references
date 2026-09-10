@@ -1,4 +1,4 @@
-# **[Epinephrine](../pharmacology/Epinephrine.md)**
+# **[Epinephrine](Epinephrine.md)**
 **Trade Name:** Adrenaline
 
 ## Classification & Action
@@ -45,3 +45,7 @@
 - ⚠ **Warning:** May induce tachyarrhythmias and/or ACS. Continuous monitoring of vitals is required. Monitoring of cardiac rhythm is also preferred.
 - ⚠ **Warning:** May cause tissue ischemia / necrosis with extravasation. Use proximal IV site (Antecubital or higher) and verify patency prior to IV administration/infusion.
 - Protect from exposure to light.
+
+
+!!! info "Pediatric Dosing"
+    For length-based pediatric dosing, see the [Pediatric Dosing Reference](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/pediatric-dosing/index.md).

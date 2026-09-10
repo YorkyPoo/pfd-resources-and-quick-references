@@ -1,0 +1,13 @@
+PEMS Regional Patient Care Protocols, Policies and Procedures Burn Injuries Version: January 2024 Burns Injuries 
+ 
+
+
+--- PAGE 90 ---
+     This Page Intentionally Left Blank  
+
+--- PAGE 91 ---
+      
+PEMS Regional Patient Care Protocols, Policies and Procedures Crush Injuries Version: January 2024 Crush Injuries 
+CRITERIA • Any patient with a trapped/crushed extremity or torso for more than 30 minutes.  • Any patient who has experienced a crush injury or prolonged entrapment and is in cardiac arrest or has one or more of the following ECG change suggestive of hyperkalemia:  o Peaked T waves o Prolonged PR segment (>200 ms) o Flattening or loss of P waves o Wide QRS complex  o Ectopic beats o Arrhythmia (e.g. ventricular tachycardia)PROTOCOL EMR Follow Universal Patient Care / Initial Patient Contact protocol. EMR EMR Refer to Trauma, Hemorrhage Control, and Pain Control protocols as needed.  EMR EMT If possible, obtain an ECG prior to and after release of the crushed part.  EMT A Administer (when able, initiate prior to release): ADULT: 0.9% Sodium chloride 1 L IV/IO in 250 – 500 mL boluses  PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO   A [ A ] Administer (when able, initiate prior to release): ADULT: Continuous Albuterol Sulfate (Proventil) 0.083% solution via nebulizer or BVM PEDIATRIC: Continuous Albuterol Sulfate (Proventil) 0.083% solution via nebulizer or BVM [ A ] [ I ] Administer, preferably via separate lines (when able, initiate prior to release):  ADULT: Sodium bicarbonate 1 mEq/kg IV/IO slow push. Maximum dose 50 mEq.  Followed by 20 mL 0.9% sodium chloride flush. ADULT: Calcium Chloride 1g IV/IO over 3 minutes PEDIATRIC: Sodium bicarbonate 1 mEq/kg IV/IO slow push. Maximum dose 50 mEq.  Followed by 20 mL 0.9% sodium chloride flush. PEDIATRIC: Calcium Chloride 20 mg/kg IV/IO over 3 minutes. Maximum dose 1,000 mg (1g). For persistent ECG changes suggestive of crush syndrome or cardiac arrest, repeat once.  [ I ] I Assess and continuously monitor cardiac rhythm. I EMT Extricate patient from entrapment and transport per Administrative Policy – Trauma Field Triage. EMT MC If it is anticipated the patient will not be able to be promptly and safely extricate, contact Medical Control at a regional trauma center for additional resources.   MC 
+
+--- PAGE 92 ---

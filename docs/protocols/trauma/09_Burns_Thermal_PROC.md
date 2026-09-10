@@ -20,9 +20,9 @@ Guidelines for managing thermal, chemical, and radiation burns, emphasizing airw
 === "Differential Considerations"
     - Inhalation injury / Airway compromise
     - Destination Criteria:
-    &nbsp;&nbsp;&nbsp;- Cardiac arrest / airway compromise -> Closest ED
-    &nbsp;&nbsp;&nbsp;- Major/multisystem trauma -> Trauma Center (Level I or II)
-    &nbsp;&nbsp;&nbsp;- Burn Center -> Full thickness, partial thickness > 10% TBSA, circumferential, electrical/chemical, inhalation, or burns to face/hands/feet/genitalia/joints
+       - Cardiac arrest / airway compromise -> Closest ED
+       - Major/multisystem trauma -> Trauma Center (Level I or II)
+       - Burn Center -> Full thickness, partial thickness > 10% TBSA, circumferential, electrical/chemical, inhalation, or burns to face/hands/feet/genitalia/joints
     - Concomitant trauma or cyanide poisoning
 
 
@@ -34,8 +34,8 @@ Guidelines for managing thermal, chemical, and radiation burns, emphasizing airw
 | 3 | Estimate depth of burns and Total Body Surface Area (TBSA) involved using Rule of 9s or patient's palm (1%). Only count partial (2nd degree) and full thickness (3rd degree) burns. | | | • | | • |
 | 4 | Apply clean, dry dressings to burns. Prevent loss of body heat and keep the patient warm. | | | • | | • |
 | 5 | Establish IV/IO access on a non-burned extremity, if possible (preferably obtain two sites of access). | | | | • | |
-| 6 | Hydrofluoric Acid (HF) Burns with Hypotension: Administer **[Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) 1 g** IV/IO over 3 mins (Repeat in 5 mins PRN). | | | | | |
-| 7 | Contact Poquoson OMD / Medical Control if the most appropriate transport destination is unclear based on criteria. | MC | MC | MC | MC | MC |
+| 6 | Hydrofluoric Acid (HF) Burns with Hypotension: Administer **[Calcium Chloride](Calcium%20Chloride.md) 1 g** IV/IO over 3 mins (Repeat in 5 mins PRN). | | | | | |
+| 7 | Contact Poquoson Medical Control if the most appropriate transport destination is unclear based on criteria. | MC | MC | MC | MC | MC |
 
 ### Pearls
 • ⚠ Assess for airway / inhalation injury. Consider early definitive airway management for patients with respiratory distress, hoarse voice or stridor, carbonaceous sputum and/or facial burns. Prompt assessment by a qualified RSI paramedic, when available, is preferred.
@@ -43,5 +43,5 @@ Guidelines for managing thermal, chemical, and radiation burns, emphasizing airw
 • ⚠ Hemodynamic instability, airway compromise and/or major traumatic injuries take priority over direct transport to a burn center. Do not bypass a trauma center to transport to a burn center if the patient is unstable.
 • ⚠ Utilize reverse triage (i.e. treat pulseless/apneic patients first) in the case of lightning strike with multiple patients. Cardiac arrest is likely to be due to airway obstruction or shockable arrhythmia (VF/VT).
 • Treat road-rash as a burn injury. Assess closely for concomitant blunt trauma.
-• Hydrofluoric Acid (HF) – binds and rapidly reduces serum calcium leading to circulatory collapse. Treat hypotension with **[Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) 1 g** IV/IO over 3 minutes. Repeat in 5 minutes as needed.
+• Hydrofluoric Acid (HF) – binds and rapidly reduces serum calcium leading to circulatory collapse. Treat hypotension with **[Calcium Chloride](Calcium%20Chloride.md) 1 g** IV/IO over 3 minutes. Repeat in 5 minutes as needed.
 • Only if necessary (i.e. no other accessible site), obtain IV/IO access through a burned area.

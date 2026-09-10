@@ -1,4 +1,4 @@
-# [Midazolam](../pharmacology/Midazolam.md)
+# [Midazolam](Midazolam.md)
 **Trade Name:** Versed
 
 ## Classification & Action
@@ -50,3 +50,7 @@
 - ⚠ **Warning:** May cause or exacerbate hypotension, particularly in pediatric, underweight (<50kg), frail, elderly (≥65 years), or hemodynamically unstable patients. Use minimum dose necessary and only when potential benefit outweighs the risk.
 - Paradoxical reactions (agitated/aggressive behavior) have been reported.
 - Half-life may be prolonged in patients with renal impairment.
+
+
+!!! info "Pediatric Dosing"
+    For length-based pediatric dosing, see the [Pediatric Dosing Reference](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/pediatric-dosing/index.md).

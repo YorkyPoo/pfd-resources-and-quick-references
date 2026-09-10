@@ -37,7 +37,7 @@ Guidelines for managing acute submersion, non-fatal drowning, and decompression 
 | 4 | Remove wet clothing and dry the skin. Keep the patient warm. | | • | | • | |
 | 5 | If hypothermia and hemodynamically unstable, focus effort on rewarming as well as resuscitation simultaneously. | | • | | • | |
 | 6 | Diving emergencies: Assess for pulmonary barotrauma, decompression sickness, and/or arterial gas embolism. Refer to appropriate Poquoson Protocol(s) as needed. | | • | | • | |
-| 7 | Contact Poquoson OMD / Medical Control for hyperbaric transport destination guidance if decompression injury is suspected. | MC | MC | MC | MC | MC |
+| 7 | Contact Poquoson Medical Control for hyperbaric transport destination guidance if decompression injury is suspected. | MC | MC | MC | MC | MC |
 
 ### Pearls
 1. ⚠ Do not initiate transport to a hyperbaric center without confirming chamber availability first.

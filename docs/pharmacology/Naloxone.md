@@ -1,5 +1,5 @@
-# **[Naloxone](../pharmacology/Naloxone.md)**
-**Trade Name:** [Naloxone](../pharmacology/Naloxone.md)
+# **[Naloxone](Naloxone.md)**
+**Trade Name:** [Naloxone](Naloxone.md)
 
 ## Classification & Action
 - **Drug Class:** Opiate/Opioid antagonist
@@ -13,7 +13,7 @@
 
 ## Precautions
 - May induce immediate opiate withdrawal (nausea, vomiting, diaphoresis, generalized pain, tachycardia, agitation)
-- Support respirations while administering **[Naloxone](../pharmacology/Naloxone.md)**.
+- Support respirations while administering **[Naloxone](Naloxone.md)**.
 
 ## Dosage
 ### Adults
@@ -43,4 +43,4 @@
 
 ## Pearls
 - ⚠ **Warning:** May induce immediate opiate withdrawal (nausea, vomiting, diaphoresis, generalized pain, tachycardia, agitation).
-- Support respirations while administering **[Naloxone](../pharmacology/Naloxone.md)**.
+- Support respirations while administering **[Naloxone](Naloxone.md)**.

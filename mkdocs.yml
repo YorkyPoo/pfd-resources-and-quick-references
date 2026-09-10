@@ -2,10 +2,14 @@ site_name: Poquoson Fire & Rescue Protocols
 site_description: Frictionless, offline-capable EMS protocol and SOP dashboard
 site_author: YorkyPoo
 site_url: "https://yorkypoo.github.io/pfd-resources-and-quick-references/"
+
+hooks:
+  - scripts/mkdocs_post_build.py
 use_directory_urls: false
 
 theme:
   name: material
+  custom_dir: overrides
   palette:
     - scheme: default
       primary: custom
@@ -48,6 +52,26 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Pediatric Dosing Reference:
+    - Overview: pediatric-dosing/index.md
+    - Pre-Calculated Dosing Tables: pediatric-dosing/dosing-tables.md
+    - Interactive Calculator: pediatric-dosing/calculator.md
+  - Procedures:
+    - Capnography: procedures/Capnography.md
+    - Chest Decompression: procedures/Chest_Decompression.md
+    - CPAP/BiPAP/PEEP: procedures/CPAP.md
+    - Endotracheal Intubation: procedures/Endotracheal_Intubation.md
+    - Intraosseous (IO) Access: procedures/Intraosseous_Access.md
+    - Medical Devices and Pumps: procedures/Medical_Devices_Pumps.md
+    - Medication Administration: procedures/Medication_Administration.md
+    - Nasogastric Tube Insertion: procedures/Nasogastric_Tube.md
+    - Neonatal Resuscitation: procedures/Neonatal_Resuscitation.md
+    - Spinal Motion Restriction: procedures/Spinal_Motion_Restriction.md
+    - Surgical Airway: procedures/Surgical_Airway.md
+    - Taser Barb Removal: procedures/Taser_Barb_Removal.md
+    - Tourniquet Application: procedures/Tourniquet_Application.md
+    - Transcutaneous Pacing: procedures/Transcutaneous_Pacing.md
+    - Vaccination Administration: procedures/Vaccination.md
   - Medications & Calculators: medications.md
   - EMS Protocols:
     - Overview: protocols/00 - Master Protocol Tracker.md
@@ -97,6 +121,7 @@ nav:
       - Post-Resuscitation Care: protocols/cardiac/04_Post_Resuscitation_Care_PROC.md
       - Supraventricular Tachycardia: protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md
       - V-Fib / Pulseless V-Tach: protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md
+      - Aortic Dissection & AAA: protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md
     - Neurologic:
       - Hypoglycemia / Hyperglycemia: protocols/neurologic/05_Hypoglycemia_Hyperglycemia_PROC.md
       - Seizure: protocols/neurologic/05_Seizure_PROC.md
@@ -142,7 +167,7 @@ nav:
       - Midazolam: pharmacology/Midazolam.md
       - Morphine Sulfate: pharmacology/Morphine Sulfate.md
       - Naloxone: pharmacology/Naloxone.md
-      - Nitroglycerin: pharmacology/Nitroglycerine.md
+      - Nitroglycerin: pharmacology/Nitroglycerin.md
       - Norepinephrine: pharmacology/Norepinephrine.md
       - Ondansetron: pharmacology/Ondansetron.md
       - Rocuronium: pharmacology/Rocuronium.md
@@ -262,3 +287,4 @@ nav:
       - Rescue Task Force Administration: sops/special-operations/so-1300-rescue-task-force-administration.md
   - Personnel Policies:
     - Policy Manual: personnel-policies/other/personnel-policy-manual.md
+

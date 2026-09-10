@@ -1,0 +1,217 @@
+{
+  "Trauma": {
+    "display_name": "Trauma",
+    "length": 2795,
+    "file": "Trauma.txt"
+  },
+  "Abuse_Recognition": {
+    "display_name": "Abuse Recognition",
+    "length": 2705,
+    "file": "Abuse_Recognition.txt"
+  },
+  "ALS_Release_to_BLS": {
+    "display_name": "ALS Release to BLS",
+    "length": 2705,
+    "file": "ALS_Release_to_BLS.txt"
+  },
+  "Communications": {
+    "display_name": "Communications",
+    "length": 2705,
+    "file": "Communications.txt"
+  },
+  "Helicopter_EMS": {
+    "display_name": "Helicopter EMS",
+    "length": 2705,
+    "file": "Helicopter_EMS.txt"
+  },
+  "Infant_Abandonment": {
+    "display_name": "Infant Abandonment",
+    "length": 2705,
+    "file": "Infant_Abandonment.txt"
+  },
+  "Patient_Refusal": {
+    "display_name": "Patient Refusal",
+    "length": 2705,
+    "file": "Patient_Refusal.txt"
+  },
+  "Patient_Restraint": {
+    "display_name": "Patient Restraint",
+    "length": 2705,
+    "file": "Patient_Restraint.txt"
+  },
+  "Safe_Transport_of_Pediatric": {
+    "display_name": "Safe Transport of Pediatric",
+    "length": 2705,
+    "file": "Safe_Transport_of_Pediatric.txt"
+  },
+  "STEMI_Field_Triage": {
+    "display_name": "STEMI Field Triage",
+    "length": 2705,
+    "file": "STEMI_Field_Triage.txt"
+  },
+  "Stroke_Field_Triage": {
+    "display_name": "Stroke Field Triage",
+    "length": 1182,
+    "file": "Stroke_Field_Triage.txt"
+  },
+  "Stroke": {
+    "display_name": "Stroke",
+    "length": 1182,
+    "file": "Stroke.txt"
+  },
+  "Behavioral_Health_Transportation": {
+    "display_name": "Behavioral Health Transportation",
+    "length": 855,
+    "file": "Behavioral_Health_Transportation.txt"
+  },
+  "Trauma_Field_Triage": {
+    "display_name": "Trauma Field Triage",
+    "length": 761,
+    "file": "Trauma_Field_Triage.txt"
+  },
+  "Cardiac_Arrest": {
+    "display_name": "Cardiac Arrest",
+    "length": 2967,
+    "file": "Cardiac_Arrest.txt"
+  },
+  "Burns": {
+    "display_name": "Burns",
+    "length": 1357,
+    "file": "Burns.txt"
+  },
+  "Hypoglycemia": {
+    "display_name": "Hypoglycemia",
+    "length": 2600,
+    "file": "Hypoglycemia.txt"
+  },
+  "Hypotension": {
+    "display_name": "Hypotension",
+    "length": 2600,
+    "file": "Hypotension.txt"
+  },
+  "Respiratory_Distress": {
+    "display_name": "Respiratory Distress",
+    "length": 4675,
+    "file": "Respiratory_Distress.txt"
+  },
+  "Seizure": {
+    "display_name": "Seizure",
+    "length": 4675,
+    "file": "Seizure.txt"
+  },
+  "Overdose": {
+    "display_name": "Overdose",
+    "length": 1719,
+    "file": "Overdose.txt"
+  },
+  "Sedation": {
+    "display_name": "Sedation",
+    "length": 3940,
+    "file": "Sedation.txt"
+  },
+  "Asystole": {
+    "display_name": "Asystole",
+    "length": 3940,
+    "file": "Asystole.txt"
+  },
+  "V-Fib": {
+    "display_name": "V-Fib",
+    "length": 3940,
+    "file": "V-Fib.txt"
+  },
+  "Heat_Exposure": {
+    "display_name": "Heat Exposure",
+    "length": 3074,
+    "file": "Heat_Exposure.txt"
+  },
+  "Pain_Control": {
+    "display_name": "Pain Control",
+    "length": 3074,
+    "file": "Pain_Control.txt"
+  },
+  "Asthma": {
+    "display_name": "Asthma",
+    "length": 2992,
+    "file": "Asthma.txt"
+  },
+  "Bradycardia": {
+    "display_name": "Bradycardia",
+    "length": 2992,
+    "file": "Bradycardia.txt"
+  },
+  "Chest_Pain": {
+    "display_name": "Chest Pain",
+    "length": 2992,
+    "file": "Chest_Pain.txt"
+  },
+  "Nausea": {
+    "display_name": "Nausea",
+    "length": 2992,
+    "file": "Nausea.txt"
+  },
+  "Allergic_Reaction": {
+    "display_name": "Allergic Reaction",
+    "length": 2992,
+    "file": "Allergic_Reaction.txt"
+  },
+  "Sepsis": {
+    "display_name": "Sepsis",
+    "length": 2992,
+    "file": "Sepsis.txt"
+  },
+  "Supraventricular_Tachycardia": {
+    "display_name": "Supraventricular Tachycardia",
+    "length": 1350,
+    "file": "Supraventricular_Tachycardia.txt"
+  },
+  "Pneumothorax": {
+    "display_name": "Pneumothorax",
+    "length": 1866,
+    "file": "Pneumothorax.txt"
+  },
+  "Hemorrhage_Control": {
+    "display_name": "Hemorrhage Control",
+    "length": 3251,
+    "file": "Hemorrhage_Control.txt"
+  },
+  "Cold_Exposure": {
+    "display_name": "Cold Exposure",
+    "length": 2933,
+    "file": "Cold_Exposure.txt"
+  },
+  "Crush_Syndrome": {
+    "display_name": "Crush Syndrome",
+    "length": 2323,
+    "file": "Crush_Syndrome.txt"
+  },
+  "Pulmonary_Edema": {
+    "display_name": "Pulmonary Edema",
+    "length": 1635,
+    "file": "Pulmonary_Edema.txt"
+  },
+  "Electrical_Injuries": {
+    "display_name": "Electrical Injuries",
+    "length": 3058,
+    "file": "Electrical_Injuries.txt"
+  },
+  "Aortic_Dissection": {
+    "display_name": "Aortic Dissection",
+    "length": 2754,
+    "file": "Aortic_Dissection.txt"
+  },
+  "Nerve_Agents": {
+    "display_name": "Nerve Agents",
+    "length": 962,
+    "file": "Nerve_Agents.txt"
+  },
+  "Upper_Airway_Obstruction": {
+    "display_name": "Upper Airway Obstruction",
+    "length": 893,
+    "file": "Upper_Airway_Obstruction.txt"
+  },
+  "Respiratory_Arrest": {
+    "display_name": "Respiratory Arrest",
+    "length": 2270,
+    "file": "Respiratory_Arrest.txt"
+  }
+}

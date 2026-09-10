@@ -1,4 +1,4 @@
-# **[Adenosine](../pharmacology/Adenosine.md)**
+# **[Adenosine](Adenosine.md)**
 **Trade Name:** **Adenocard**
 
 ## Classification & Action

@@ -1,4 +1,4 @@
-# [Ketamine](../pharmacology/Ketamine.md)
+# [Ketamine](Ketamine.md)
 **Trade Name:** Ketalar
 
 ## Classification & Action
@@ -52,3 +52,7 @@
 - ⚠ **Warning:** May increase the risk of post-intubation hypotension.
 - ⚠ **Warning:** Do not inject more than **5 mL** per IM site. Use multiple sites simultaneously if necessary.
 - Emergence reactions (bizarre, agitated behavior) may occur as dissociation lifts. **Benzodiazepines** are generally effective.
+
+
+!!! info "Pediatric Dosing"
+    For length-based pediatric dosing, see the [Pediatric Dosing Reference](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/pediatric-dosing/index.md).

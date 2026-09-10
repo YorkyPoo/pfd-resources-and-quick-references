@@ -20,17 +20,16 @@ This administrative protocol outlines the procedure for safely transferring pati
 
 
 ### Interventions
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | **Comprehensive Assessment**: Complete pertinent patient history, physical assessment, and full set of vital signs. | | | | • | |
-| 2 | **Clinical Verification**: Confirm ALS care is not currently medically necessary and will likely not be necessary in the near future (to include pain management). | | | | • | |
-| 3 | **BLS Verification**: Verify BLS provider is willing to accept responsibility and capable of providing a level of care that meets the assessed and documented needs. | | | | • | |
-| 4 | **Transfer of Care**: Transfer Attendant in Charge (AIC) responsibilities to the BLS provider. | | | • | | • |
-| 5 | **Medical Control**: Contact Medical Control when there is a concern of the appropriateness of the release. | | | MC | MC | MC |
-| 6 | **BLS Documentation**: Complete a Patient Care Report (PCR). | | | | | |
-| 7 | **ALS Documentation**: Complete documentation in, or as an addendum to, the PCR (physical findings, transfer of care, physician consultation). | | | | • | |
-| 8 | **QA/QI Review**: Any ALS Release to BLS must be reviewed by the agency Quality Assurance/Quality Improvement process. | | | • | | • |
-| 9 | **Incident Reporting**: Inappropriate release by QA/QI should be reported quarterly to the **Poquoson Fire and Rescue** PI Committee. | | | | • | |
+| #   | Action / Intervention                                                                                                                                                | EMR | EMT | A   | I   | P   |
+| :-- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-- | :-- | :-- | :-- | :-- |
+| 1   | **Comprehensive Assessment**: Complete pertinent patient history, physical assessment, and full set of vital signs.                                                  |     |     |     | •   |     |
+| 2   | **Clinical Verification**: Confirm ALS care is not currently medically necessary and will likely not be necessary in the near future (to include pain management).   |     |     |     | •   |     |
+| 3   | **BLS Verification**: Verify BLS provider is willing to accept responsibility and capable of providing a level of care that meets the assessed and documented needs. |     |     |     | •   |     |
+| 4   | **Transfer of Care**: Transfer Attendant in Charge (AIC) responsibilities to the BLS provider.                                                                       |     |     | •   |     | •   |
+| 5   | **Medical Control**: Contact Medical Control when there is a concern of the appropriateness of the release.                                                          |     |     | MC  | MC  | MC  |
+| 6   | **BLS Documentation**: Complete a Patient Care Report (PCR).                                                                                                         |     |     |     |     |     |
+| 7   | **ALS Documentation**: Complete documentation in, or as an addendum to, the PCR (physical findings, transfer of care, physician consultation).                       |     |     |     | •   |     |
+| 8   | **QA/QI Review**: Any ALS Release to BLS must be reviewed by the Officer or Acting Officer the following day, per departmental SOP.                                               |     |     | •   |     | •   |
 
 ### Pearls
 1. ⚠ **Thorough Assessment**: The ALS provider is strictly responsible for a comprehensive clinical assessment before handoff to ensure no hidden acuity exists.

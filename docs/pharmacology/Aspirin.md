@@ -1,4 +1,4 @@
-# **[Aspirin](../pharmacology/Aspirin.md)**
+# **[Aspirin](Aspirin.md)**
 **Trade Name:** Not specified
 
 ## Classification & Action
@@ -9,7 +9,7 @@
 - Acute coronary syndromes (ACS)/STEMI
 
 ## Contraindications
-- Allergy to **[Aspirin](../pharmacology/Aspirin.md)**/NSAIDs
+- Allergy to **[Aspirin](Aspirin.md)**/NSAIDs
 
 ## Precautions
 - History of GI bleeding/peptic ulcers

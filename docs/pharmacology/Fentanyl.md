@@ -1,4 +1,4 @@
-# [Fentanyl](../pharmacology/Fentanyl.md)
+# [Fentanyl](Fentanyl.md)
 **Trade Name:** Sublimaze
 
 ## Classification & Action
