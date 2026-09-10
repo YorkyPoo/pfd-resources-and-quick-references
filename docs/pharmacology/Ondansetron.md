@@ -60,7 +60,3 @@
 - Less effective if used after vomiting has begun.
 - Use caution with other QT-prolonging medications, including amiodarone and haloperidol.
 
-## Source Basis
-
-- **Dosage, routes, repeat timing, maximums, and IV administration:** PEMS Regional Patient Care Protocols, *Pain Control* (January 2024, page 77) and *Nausea / Vomiting* (January 2024, page 117).
-- **Onset, duration, and interactions:** ODEMSA 2018 Patient Care Protocols, *Ondansetron (Zofran)* medication reference (revised January 2018).

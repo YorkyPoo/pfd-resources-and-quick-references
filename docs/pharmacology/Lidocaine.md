@@ -60,7 +60,3 @@
 
 - **Warning:** Monitor for CNS toxicity. Symptoms include slurred speech, facial numbness, decreased LOC, muscle twitches, and seizure.
 
-## Source Basis
-
-- **Dosage:** PEMS Regional Patient Care Protocols, *Cardiac Arrest: V-Fib / Pulseless V-Tach* (January 2024, pages 64-65) and *Procedures: Intraosseous Access* (March 2024, page 249).
-- **Onset, duration, and interaction:** ODEMSA 2018 Patient Care Protocols, *Lidocaine* medication reference (revised June 2015).
