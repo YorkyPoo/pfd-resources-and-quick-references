@@ -53,4 +53,4 @@
 
 
 !!! info "Pediatric Dosing"
-    For length-based pediatric dosing, see the [Pediatric Dosing Reference](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/pediatric-dosing/index.md).
+    For length-based pediatric dosing, see the [Pediatric Dosing Reference](../pediatric-dosing/index.md).

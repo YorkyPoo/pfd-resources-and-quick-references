@@ -4,9 +4,9 @@ Use the search bar at the top of the screen to quickly find specific dosages or 
 
 ## Pediatric Dosing Reference
 
-For **length-based pediatric dosing** (emergency situations without a known weight), use the [Pediatric Dosing Reference](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/pediatric-dosing/index.md). The Pediatric Dosing system provides pre-calculated doses, equipment sizes, and defibrillation settings based on patient length — no need to calculate mg/kg on scene.
+For **length-based pediatric dosing** (emergency situations without a known weight), use the [Pediatric Dosing Reference](pediatric-dosing/index.md). The Pediatric Dosing system provides pre-calculated doses, equipment sizes, and defibrillation settings based on patient length — no need to calculate mg/kg on scene.
 
-> **Quick access:** [Hand Method Estimation](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/pediatric-dosing/index.md) | [Full Guidelines](dosing-tables.md) | [Dosing Charts](calculator.md)
+> **Quick access:** [Hand Method Estimation](pediatric-dosing/index.md) | [Full Guidelines](pediatric-dosing/dosing-tables.md) | [Dosing Charts](pediatric-dosing/calculator.md)
 
 ---
 

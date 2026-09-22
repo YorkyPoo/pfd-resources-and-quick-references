@@ -8,7 +8,7 @@ Used for gastric decompression in intubated patients, airway management in patie
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Measure length: Nose to ear to xiphoid process. | | | | | • |
-| 2 | Lubricate tip with [Lidocaine](Lidocaine.md) gel and pass through nostril posteriorly along the floor of the nasal passage. | | | | | • |
+| 2 | Lubricate tip with [Lidocaine](../pharmacology/Lidocaine.md) gel and pass through nostril posteriorly along the floor of the nasal passage. | | | | | • |
 | 3 | Advance gently until measured length reached. Ensure not coiled in oropharynx. | | | | | • |
 | 4 | **Confirm placement:** Inject 20cc air and auscultate over epigastrium for bubbles. | | | | | • |
 | 5 | Secure to nose and attach to low/medium suction. | | | | | • |

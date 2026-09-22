@@ -6,7 +6,7 @@ Management of unstable symptomatic bradycardia (HR <60 bpm).
 
 ### Indications
 - Adult: Persistent symptomatic bradycardia (HR <60 bpm).
-- Pediatric: Symptomatic bradycardia despite adequate ventilation, high-quality CPR, and appropriate pharmacological interventions ([Epinephrine](Epinephrine.md)/[Atropine](Atropine%20Sulfate.md)).
+- Pediatric: Symptomatic bradycardia despite adequate ventilation, high-quality CPR, and appropriate pharmacological interventions ([Epinephrine](../pharmacology/Epinephrine.md)/[Atropine](../pharmacology/Atropine%20Sulfate.md)).
 
 ### Procedure
 | # | Action / Intervention | EMR | EMT | A | I | P |

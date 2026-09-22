@@ -20,7 +20,7 @@ Guidelines for the rapid assessment and management of suspected traumatic injuri
 
 
 !!! tip "Pediatric Dosing Reference"
-    For pediatric weight-based dosing, equipment sizing, and length estimation, see the [Pediatric Dosing Reference](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/pediatric-dosing/index.md).
+    For pediatric weight-based dosing, equipment sizing, and length estimation, see the [Pediatric Dosing Reference](../../pediatric-dosing/index.md).
 
 
 ### Interventions

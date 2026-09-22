@@ -17,7 +17,7 @@ Intraosseous (IO) access is a rapid vascular access route for patients in extrem
 | 5 | Remove driver, remove stylet (turn counter-clockwise), dispose in sharps. | | | • | | • |
 | 6 | Secure needle, attach primed extension tubing. | | | • | | • |
 | 7 | **Confirm/Flush:** Aspirate to confirm (if unconscious), flush with 10–20 mL 0.9% Sodium Chloride. | | | • | | • |
-| 8 | **Pain Control (Conscious Patient):** Administer 2% [Lidocaine](Lidocaine.md) slow push (Adult: 1mg/kg max 40mg; Ped: 0.5mg/kg max 20mg). Dwell 1 min, flush. | | | | | • |
+| 8 | **Pain Control (Conscious Patient):** Administer 2% [Lidocaine](../pharmacology/Lidocaine.md) slow push (Adult: 1mg/kg max 40mg; Ped: 0.5mg/kg max 20mg). Dwell 1 min, flush. | | | | | • |
 
 ### Pearls
 *   If two "pops" (losses of resistance) are felt, the needle likely passed through the bone.

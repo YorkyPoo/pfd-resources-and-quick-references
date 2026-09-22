@@ -77,35 +77,35 @@ Checked items have been successfully converted into the high-quality matrix form
 
 
 ## Pharmacology / Medication Reference
-- [x] [Adenosine](Adenosine.md) / Adenocard
-- [x] [Albuterol](Albuterol.md) Sulfate / Proventil
-- [x] [Amiodarone](Amiodarone.md) / Cordarone
-- [x] [Aspirin](Aspirin.md)
+- [x] [Adenosine](../pharmacology/Adenosine.md) / Adenocard
+- [x] [Albuterol](../pharmacology/Albuterol.md) Sulfate / Proventil
+- [x] [Amiodarone](../pharmacology/Amiodarone.md) / Cordarone
+- [x] [Aspirin](../pharmacology/Aspirin.md)
 - [x] [Atropine](../pharmacology/Atropine Sulfate.md) Sulfate
-- [x] [Calcium Chloride](Calcium%20Chloride.md)
-- [x] [Dextrose](Dextrose.md) 10%, 25%, 50%
+- [x] [Calcium Chloride](../pharmacology/Calcium%20Chloride.md)
+- [x] [Dextrose](../pharmacology/Dextrose.md) 10%, 25%, 50%
 - [x] Diphenhydramine / Benadryl
-- [x] [Epinephrine](Epinephrine.md) / Adrenaline
+- [x] [Epinephrine](../pharmacology/Epinephrine.md) / Adrenaline
 - [x] Etomidate / Amidate
 - [x] Furosemide / Lasix
-- [x] [Glucagon](Glucagon.md)
+- [x] [Glucagon](../pharmacology/Glucagon.md)
 - [x] Haloperidol / Haldol
 - [x] Hydroxocobalamin / CYANOKIT
 - [x] [Ipratropium](../pharmacology/Ipratropium Bromide.md) Bromide / Atrovent
-- [x] [Ketamine](Ketamine.md)
+- [x] [Ketamine](../pharmacology/Ketamine.md)
 - [x] Ketorolac tromethamine / Toradol
-- [x] [Lidocaine](Lidocaine.md) / Xylocaine
-- [x] [Magnesium Sulfate](Magnesium%20Sulfate.md)
+- [x] [Lidocaine](../pharmacology/Lidocaine.md) / Xylocaine
+- [x] [Magnesium Sulfate](../pharmacology/Magnesium%20Sulfate.md)
 - [x] Methylprednisolone Succinate / Solu-Medrol
-- [x] [Midazolam](Midazolam.md) HCl / Versed
+- [x] [Midazolam](../pharmacology/Midazolam.md) HCl / Versed
 - [x] Morphine Sulfate
-- [x] [Naloxone](Naloxone.md) / [Naloxone](Naloxone.md)
-- [x] [Nitroglycerin](Nitroglycerine.md) / Nitrostat
-- [x] Nor[Epinephrine](Epinephrine.md) / Levophed
-- [x] [Ondansetron](Ondansetron.md) / [Ondansetron](Ondansetron.md)
+- [x] [Naloxone](../pharmacology/Naloxone.md) / Narcan
+- [x] [Nitroglycerin](../pharmacology/Nitroglycerin.md) / Nitrostat
+- [x] [Norepinephrine](../pharmacology/Norepinephrine.md) / Levophed
+- [x] [Ondansetron](../pharmacology/Ondansetron.md) / Zofran
 - [x] Rocuronium / Zemuron
-- [x] [Sodium Bicarbonate](Sodium%20Bicarbonate.md)
-- [x] [Fentanyl](Fentanyl.md) / Sublimaze
+- [x] [Sodium Bicarbonate](../pharmacology/Sodium%20Bicarbonate.md)
+- [x] [Fentanyl](../pharmacology/Fentanyl.md) / Sublimaze
 - [x] Succinylcholine / Anectine
 - [x] Vecuronium / Norcuron
 - [x] Ziprasidone / Geodon

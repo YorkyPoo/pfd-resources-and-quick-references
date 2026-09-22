@@ -9,8 +9,8 @@ Welcome to the digital protocol library. This system is designed for **Conscious
 | Resource | Status |
 |----------|--------|
 | [Medications & Calculators](medications.md) | ✅ Live |
-| [Pediatric Dosing Reference](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/pediatric-dosing/index.md) | ✅ Live |
-| [Fire & Rescue SOPs](EO-10-Staffing-and-Equipment-Response-202406130909086447.md) | LIVE |
+| [Pediatric Dosing Reference](pediatric-dosing/index.md) | ✅ Live |
+| [Fire & Rescue SOPs](sops/emergency-operations/EO-10-Staffing-and-Equipment-Response-202406130909086447.md) | LIVE |
 | Apparatus Checks | 🚧 Coming Soon |
 | City Policies | 🚧 Coming Soon |
 

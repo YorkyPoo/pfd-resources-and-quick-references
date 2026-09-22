@@ -11,7 +11,7 @@ Resuscitation protocol for newborns/neonates (<28 days) with heart rate <100/min
 | 2 | If apnea/gasping/HR <100: BVM with 21% O₂ for 30s, then 100% O₂. Rate: 40-60/min. | | • | | • | |
 | 3 | Apply ECG and EtCO₂ monitoring. | | | | • | |
 | 4 | If HR <60/min or pulseless: Begin compressions (3:1 ratio, 30 breaths/min). | | • | | • | |
-| 5 | Obtain IV/IO access, administer [Epinephrine](Epinephrine.md) 0.01 mg/kg (0.1 mg/mL). Repeat q3-5 mins. | | | | | • |
+| 5 | Obtain IV/IO access, administer [Epinephrine](../pharmacology/Epinephrine.md) 0.01 mg/kg (0.1 mg/mL). Repeat q3-5 mins. | | | | | • |
 
 ### Pearls
 *   Routine suctioning is no longer recommended.

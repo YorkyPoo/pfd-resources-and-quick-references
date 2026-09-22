@@ -295,4 +295,4 @@ These medications have the same dose for pediatric and adult patients per Poquos
 **Defib:** 2 J/kg (83 J) → 4 J/kg (166 J) | **CVD:** 0.5-1 J/kg (41 J)
 
 ---
-[← Back to Pediatric Dosing Reference](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/pediatric-dosing/index.md)
+[← Back to Pediatric Dosing Reference](index.md)

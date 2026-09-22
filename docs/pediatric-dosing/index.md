@@ -32,7 +32,7 @@ In pediatric emergencies, you may not have access to a scale. **Patient length i
     To estimate length: lay the patient supine and place your hand(s) alongside the body from crown to heel. Compare to the hand breadth estimates above. The hand measurement is approximate — use the nearest zone.
 
 !!! warning "Always Use Actual Weight When Available"
-    Length-based estimates are for situations where you cannot obtain an accurate weight. When a reliable weight is known, use it directly with the [Drug Calculator](medications.md).
+    Length-based estimates are for situations where you cannot obtain an accurate weight. When a reliable weight is known, use it directly with the [Drug Calculator](../medications.md).
 
 ---
 
@@ -50,25 +50,25 @@ In pediatric emergencies, you may not have access to a scale. **Patient length i
 These Poquoson protocols contain pediatric dosing guidance that this reference is derived from:
 
 ### Respiratory
-- [Pediatric Stridor](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/protocols/respiratory/03_Pediatric_Stridor_PROC.md)
-- [Respiratory Distress](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/protocols/respiratory/03_Respiratory_Distress_PROC.md)
-- [Asthma / COPD / Reactive Airway](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md)
-- [Respiratory Arrest](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/protocols/respiratory/03_Respiratory_Arrest_PROC.md)
+- [Pediatric Stridor](../protocols/respiratory/03_Pediatric_Stridor_PROC.md)
+- [Respiratory Distress](../protocols/respiratory/03_Respiratory_Distress_PROC.md)
+- [Asthma / COPD / Reactive Airway](../protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md)
+- [Respiratory Arrest](../protocols/respiratory/03_Respiratory_Arrest_PROC.md)
 
 ### Cardiac
-- [Cardiac Arrest (Non-Traumatic)](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md)
-- [Asystole / PEA](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md)
-- [Bradycardia](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/protocols/cardiac/04_Bradycardia_PROC.md)
+- [Cardiac Arrest (Non-Traumatic)](../protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md)
+- [Asystole / PEA](../protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md)
+- [Bradycardia](../protocols/cardiac/04_Bradycardia_PROC.md)
 
 ### Neurologic / Toxicology
-- [Seizure](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/protocols/neurologic/05_Seizure_PROC.md)
-- [Overdose / Poisoning](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md)
-- [Nausea & Vomiting](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/protocols/toxicology/06_Nausea_Vomiting_PROC.md)
+- [Seizure](../protocols/neurologic/05_Seizure_PROC.md)
+- [Overdose / Poisoning](../protocols/toxicology/06_Overdose_Poisoning_PROC.md)
+- [Nausea & Vomiting](../protocols/toxicology/06_Nausea_Vomiting_PROC.md)
 
 ### Medical / Trauma
-- [Allergic Reaction / Anaphylaxis](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md)
-- [Trauma](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/protocols/trauma/09_Trauma_PROC.md)
-- [Crush Syndrome](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/protocols/trauma/09_Crush_Syndrome_PROC.md)
+- [Allergic Reaction / Anaphylaxis](../protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md)
+- [Trauma](../protocols/trauma/09_Trauma_PROC.md)
+- [Crush Syndrome](../protocols/trauma/09_Crush_Syndrome_PROC.md)
 
 ---
 

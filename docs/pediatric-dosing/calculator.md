@@ -283,4 +283,4 @@ function resetCalc() {
 
 ---
 
-[← Back to Pediatric Dosing Reference](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/pediatric-dosing/index.md) | [Pre-Calculated Dosing Tables →](dosing-tables.md)
+[← Back to Pediatric Dosing Reference](index.md) | [Pre-Calculated Dosing Tables →](dosing-tables.md)

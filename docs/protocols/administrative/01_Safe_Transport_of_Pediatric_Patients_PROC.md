@@ -36,4 +36,4 @@ Best practices for the ambulance transportation of ill or injured pediatric pati
 
 
 !!! tip "Pediatric Dosing Reference"
-    For pediatric weight-based dosing and equipment sizing during transport, see the [Pediatric Dosing Reference](30%20-%20projects/Active/Fire%20and%20EMS%20Resources%20SSG%201/docs/pediatric-dosing/index.md).
+    For pediatric weight-based dosing and equipment sizing during transport, see the [Pediatric Dosing Reference](../../pediatric-dosing/index.md).
