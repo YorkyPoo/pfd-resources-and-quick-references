@@ -1,0 +1,8 @@
+# SOP material — no secrets expected; guard generic patterns anyway
+.env
+.env.*
+*.env
+secrets.env
+.DS_Store
+Thumbs.db
+*.tmp
