@@ -9,14 +9,14 @@ A nested mnemonic where the top-level letters **F.O.R.C.E.S.** match the **arriv
 
 ## The Top Level
 
-| Letter | Sub-mnemonic | Apparatus (Poquoson sequence) | EO 6.00 Role |
-| :--- | :--- | :--- | :--- |
-| **F** | **F.A.S.T.E.R.** | First engine (Tower 1) | Command + initial attack |
-| **O** | **O.P.E.N.S.** | Second engine (Squad 2) | Water supply + backup line |
-| **R** | **R.A.I.L.** | Third engine (Engine 3) | Rapid Intervention Team |
-| **C** | **C.L.E.A.R.** | First aerial — interior crew (Ladder 1) | Search & rescue |
-| **E** | **E.X.T.R.A.** | First aerial — exterior/driver (Ladder 1) | Egress ladders, ventilation, aerial |
-| **S** | **S.T.A.T.** | Squad (Squad 3) | Support priorities |
+| Letter | Sub-mnemonic | Unit & role |
+| :--- | :--- | :--- |
+| **F** | **F.A.S.T.E.R.** | 1st engine (Tower 1) — command & attack |
+| **O** | **O.P.E.N.S.** | 2nd engine (Squad 2) — water & backup line |
+| **R** | **R.A.I.L.** | 3rd engine (Engine 3) — RIT |
+| **C** | **C.L.E.A.R.** | Aerial interior (Ladder 1) — search & rescue |
+| **E** | **E.X.T.R.A.** | Aerial exterior (Ladder 1) — ladders & vent |
+| **S** | **S.T.A.T.** | Squad (Squad 3) — support priorities |
 
 ## F.A.S.T.E.R. — First Engine
 
