@@ -1,199 +1,133 @@
-# EO 6.00 First to Arrive Duties
+# EO 6.00 - First To Arrive Duties
+
+!!! info "SOP Header"
+    **SOP #:** EO 6.00  
+    **Category:** Emergency Operations  
+    **Department:** City of Poquoson Fire & Rescue  
+    **Effective Date:** 01/01/2009  
+    **Revised Date:** 08/01/2026  
+    **Subject:** First Arriving Unit Duties and Initial Alarm Company Assignments
 
-City of Poquoson Fire and Rescue
+!!! abstract "Connected Notes"
+    - Detailed company-by-company breakdown: [Initial Alarm Company Assignments](../../fire-ems-references/initial-alarm-company-assignments.md)
+    - Study mnemonic (arrival-order checklist): [EO 6.00 FORCES Mnemonic](EO-600a-FORCES-Mnemonic.md)
+    - Department SOP index: Poquoson_SOPs_Summary | Critical SOPs
+    - Tactical frameworks: Mnemonics | SAW CSS RECEO VSS | Reference cards
+    - Study roadmaps: SSG - First 5 Minutes Tactical Roadmap | SSG - RECEO VS Tactical Roadmap
 
-FIRST TO ARRIVE DUTIES
-I. PURPOSE
-City of Poquoson To provide a uniform guideline for
-Fire and Rescue determining strategic and tactical goals
+---
+
+## I. Purpose
+To establish a standardized process for the first arriving unit to evaluate, command, and initiate operations at emergency incidents.
+
+## II. Applicability
+Applies to all career and volunteer personnel responding to emergency incidents within the City of Poquoson Fire & Rescue Department.
+
+## III. Objective
+- Establish Incident Command early.
+- Conduct a systematic size-up and risk assessment.
+- Prioritize life safety, incident stabilization, and property conservation.
+- Provide standardized tactical assignments for initial alarm companies.
+- Improve coordination, accountability, and firefighter safety.
+
+## IV. Incident Priorities
+1. Life Safety
+2. Incident Stabilization
+3. Property Conservation
+
+## V. Risk Management
+- Risk a lot to save a savable life.
+- Risk little to save savable property.
+- Risk nothing for lives or property already lost.
+
+Firefighter safety shall remain a primary consideration in all operational decisions.
+
+## VI. Incident Command
+- **A.** The first arriving officer shall establish Incident Command.
+- **B.** Command shall remain with the initial officer until formally transferred.
+- **C.** Transfer of command should occur face-to-face whenever practical and shall include:
+    - Current conditions
+    - Strategy and tactical objectives
+    - Resource assignments
+    - Accountability status
+    - Safety concerns
+    - Additional resource requests
+- **D.** The transfer shall be announced over the radio.
+
+## VII. Size-Up
+The first arriving officer shall conduct a continuous size-up evaluating:
+
+| Group | Factors |
+| :--- | :--- |
+| **Building** | Occupancy, construction type, size and configuration, number of stories, access and egress, exposures, utilities |
+| **Incident** | Location and extent of fire, smoke conditions, victim survivability profile, collapse potential, hazardous conditions, fire spread potential |
+| **Resource** | Staffing, water supply, apparatus placement, additional resource needs |
+
+A 360-degree assessment shall be completed whenever conditions and staffing permit. See Mnemonics for the COAL WAS WEALTH size-up model.
+
+## VIII. Initial Radio Report
+The first arriving unit shall provide: unit identification, confirmation of arrival, building description, conditions observed, strategy declaration, initial actions, establishment of command, tactical channel assignment, and working incident declaration when appropriate.
+
+> **Example:**  
+> "Engine 1 on scene. Two-story single-family dwelling with heavy smoke showing from Division 1 Alpha side. Engine 1 establishing Oak Street Command. Offensive strategy. Advancing an attack line for fire control and primary search. Mark this as a working fire and switch all units to Fire Tac 1."
+
+## IX. Strategic Decision-Making
+
+| Strategy | Used When |
+|---|---|
+| **Offensive** | Conditions support interior operations; viable rescue profile; adequate staffing; building stability reasonably assured |
+| **Defensive** | Collapse imminent; fire conditions exceed resources; no survivable space; unacceptable risk to personnel |
+| **Transitional** | Exterior cooling will improve conditions; rapid reduction required before interior attack; conditions support transition to offensive operations |
+
+## X. Water Supply
+When smoke or fire conditions are reported or observed:
+- The first-arriving engine shall secure or establish a water supply whenever practical.
+- Water supply planning shall begin at the first indication of working fire conditions.
+- Primary attack water supply takes precedence over sprinkler/FDC operations unless standpipe operations are required.
+- Multiple and redundant water supplies should be considered early.
+
+> See SSG - Long-Lay Water Supply Protocol and 20260513b - Command Discipline at Water Supply Decision.
+
+## XI. Operational Models
+
+**Strategic Priorities (RECEO-VS):** Rescue, Exposures, Confinement, Extinguishment, Overhaul, Ventilation, Salvage.
+
+**Tactical Considerations (SLICE-RS):** Size-Up, Locate the Fire, Identify and Control the Flow Path, Cool from a Safe Location, Extinguish the Fire, Rescue, Salvage.
+
+> See Mnemonics, SAW CSS RECEO VSS, and Reference cards for the full framework notes.
+
+## XII. Initial Alarm Company Assignments
+Detailed company-by-company tactical assignments are maintained in:
+
+> **[Initial Alarm Company Assignments](../../fire-ems-references/initial-alarm-company-assignments.md)**
+
+Covers: Single-Family Residential Fires, Commercial Residential Occupancies, Commercial Non-Residential Occupancies, High-Rise and Mid-Rise Incidents, and Vehicle Entrapments and Extrications.
+
+## XIII. Accountability
+- PARs shall be conducted following significant events, strategy changes, structural collapse concerns, missing personnel, or when otherwise warranted.
+- Command shall maintain accountability throughout the incident.
+
+## XIV. Safety
+- Personnel shall wear appropriate PPE.
+- Unsafe conditions shall be reported immediately.
+- Incident Command shall continuously evaluate risk versus gain.
+- RIT shall be assigned, announced, and maintained whenever crews are operating in hazardous environments.
+
+## XV. Critical Operational Considerations
+- Assume occupants are present until proven otherwise.
+- Consider survivability profiling (SIGNAL).
+- Call for additional resources early.
+- Assign divisions early to maintain span of control.
+- Limit radio traffic to essential communications.
+- Utilize face-to-face communications whenever practical.
+- Engines should leave room for aerial apparatus.
+- Aerial apparatus should receive the address whenever possible.
+- Water supply planning shall begin at the first indication of a working fire.
+- Maintain situational awareness until the incident is terminated.
+
+---
+*Extracted from the City of Poquoson Fire & Rescue SOP manual (EO 6.00). Source PDF: "EO 6.00 First To Arrive Duties Revised.pdf".*
+
+---
+*Formatted from **EO 6.00 First To Arrive Duties Revised.pdf** (vault note, last modified 2026-10-09). The signed PDF remains the authoritative document.*
 
-when evaluating an emergency incident
-
-Ave. -
-eo Eee for first arriving apparatus.
-
-Poquoson, VA 23662
-757-868-3510
-
-F757-868-3514 Il. SCOPE/APPLICABILITY
-EMERGENCY OPERATIONS _| Fhis policy shall pertain to all Fire
-Department personnel responding to
-emergency scenes.
-SOP#: Eo 6.00 Ill. OBJECTIVE
-
-The objective of this policy is to provide a
-clear outline of duties to be performed by
-the first arriving emergency unit.
-Effective Date: 01/01/2009 Consistent use of these guidelines will
-enable the establishment of the IMS and
-alert incoming apparatus to conditions
-
-Title:_ First To Arrive Duties
-
-Revised Date: __01/01/2009 _ | and assignments on the emergency scene.
-—eetet outa) Chiefs Signature IV. GENERAL GUIDELINES
-Whol Response: Upon arrival or while en-
-City Manager’s Signature route, should it be determined that no
-emergency exists or that immediate
-intervention is not required, it shall be the
-
-EMERGENCY OPERATIONS Page 10f5
-
-EO 6.00 First to Arrive Duties
-
-first due company or responding Officer’s responsibility to
-downgrade the response of additional units to a non-emergency
-status.
-
-Staffing and Deployment: Upon arrival the first member must
-assess the needs of the emergency incident in terms of staffing and
-apparatus. Immediate consideration to incident priorities such as
-rescue, fire attack and control, and property conservation require the
-following: initial commitment, sustainment activities, RIT, and
-property protection. Consider your initial and ongoing requirements
-and request the appropriate resources early in the incident.
-
-RECEO: Many departments utilize the RECEO method for
-evaluating an emergency incident. This is a useful acronym to
-remember when formulating strategic and tactical goals:
-
-Rescue
-
-Exposures
-
-Confinement
-Extinguishment/Control
-Overhaul
-
-o0o0000
-
-Since fire fighting is not the only type of emergency problem handled,
-the term “control” may be used in place of “extinguishment”.
-
-Other arriving units: As additional units arrive, they will be
-expected to make the incident commander aware of their presence
-and will receive assignments from the IC. All units should work
-together while maintaining their assignments to bring the incident
-under control.
-
-V. POLICY
-A dependable water supply is essential to success and should be
-
-established as a primary function. It is the policy of the Poquoson
-Fire/Rescue Department that:
-
-EMERGENCY OPERATIONS 
-
-EO 6.00
-
-First to Arrive Duties
-
-When smoke or fire is visible, the first due fire
-apparatus will establish water supply.
-
-Other responsibilities of the first arriving unit are listed below. More
-detailed information related to obtaining water supply may be found
-in the “Water Supply” portion of the SOP’s.
-
-V. PROCEDURES
-
-If smoke and/or fire are indicated during dispatch or visible enroute,
-the first arriving engine will secure water supply.
-
-UPON ARRIVAL
-
-e Transmit a brief and concise initial radio report to include:
-
-le)
-
-o0o000
-
-Unit number and "on the scene"
-
-Height of building in stories
-
-Type of building (dwelling, apartment, commercial, etc)
-Conditions on arrival
-
-Officer in charge, identified by name and rank of the
-officer, not the unit number
-
-e Evaluate resource needs and request additional resources if
-needed
-
-e Assume command of the situation and remain in command
-until formally relieved by a superior officer
-
-e Size up the emergency situation utilizing the "RECEO"” Method
-
-e Determine the primary objective(s) based on priorities
-
-e Determine strategy based on objective(s)
-
-e Develop plan of action based on objective(s) and strategy
-
-EMERGENCY OPERATIONS 
-
-EO 6.00 First to Arrive Duties
-
-e Assign other arriving companies and units until relieved of
-command.
-
-e Communicate to the next in command the current situation and
-plan of action.
-
-e Whenever the incident is obviously beyond the capabilities of
-the first arriving company it maybe better for the first in officer
-to initially set up a command post rather than become involved
-directly in operations.
-
-LIFE SAFETY
-
-e Ifthere is a life hazard or potential life hazard, then life safety
-will become the number one priority. AllLactions on the scene,
-
-by fire personnel, will be directed toward minimizing the life
-hazard.
-o Sometimes, an aggressive, quick attack on the problem
-will alleviate the life hazard.
-o Life safety includes the life safety of the public and of
-fire personnel.
-o Fire personnel should not be placed in precarious
-positions or take unnecessary risks.
-
-CONFINEMENT
-
-e Every effort should be made to contain the problem to the
-smallest area possible.
-
-e Confinement also involves preventing an emergency problem
-from becoming more complex.
-
-e Confinement of an emergency problem is second only to life
-safety as a priority consideration.
-
-EXTINGUISHMENT/CONTROL
-
-EMERGENCY OPERATIONS 
-
-EO 6.00 First to Arrive Duties
-e Control relates to those activities engaged in by fire personnel
-which directly reduce or abate an emergency problem.
-e Many times control efforts such as a direct attack on a fire can
-accomplish life safety, confinement, and control
-
-simultaneously.
-
-e Control operations are utilized with an offensive strategy.
-
-OVERHAUL
-
-e Once the problem has been brought under control, overhaul
-will be utilized to identify any possible continuing hazards and
-renders the emergency scene both safe and under control to the
-greatest extent possible given the nature of the incident.
-
-e Properly effected overhaul may reduce the amount of overall
-damage at an emergency scene.
-
-EMERGENCY OPERATIONS

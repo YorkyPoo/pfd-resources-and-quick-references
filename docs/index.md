@@ -32,11 +32,11 @@ Welcome to the digital protocol library. This system is designed for **Conscious
 
     [Open →](protocols/00 - Master Protocol Tracker.md)
 
--   __EO 6.00 — First-to-Arrive Duties__
+-   __Initial Alarm Company Assignments__
 
-    The front-and-back standard. Plus the FORCES mnemonic card.
+    Company-by-company duties on the first alarm — single-family, commercial, high-rise, extrication (EO 6.00 §XII).
 
-    [Open →](sops/emergency-operations/EO-600-First-to-Arrive-Duties.md)
+    [Open →](fire-ems-references/initial-alarm-company-assignments.md)
 
 -   __PPE & Equipment SOPs__
 

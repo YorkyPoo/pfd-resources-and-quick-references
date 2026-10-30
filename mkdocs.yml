@@ -58,6 +58,9 @@ nav:
     - Overview: pediatric-dosing/index.md
     - Pre-Calculated Dosing Tables: pediatric-dosing/dosing-tables.md
     - Interactive Calculator: pediatric-dosing/calculator.md
+  - Fire & EMS References:
+    - Overview: fire-ems-references/index.md
+    - Initial Alarm Company Assignments: fire-ems-references/initial-alarm-company-assignments.md
   - Procedures:
     - Capnography: procedures/Capnography.md
     - Chest Decompression: procedures/Chest_Decompression.md
