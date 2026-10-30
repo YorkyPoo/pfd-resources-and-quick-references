@@ -12,7 +12,7 @@
     - Detailed company-by-company breakdown: [Initial Alarm Company Assignments](../../fire-ems-references/initial-alarm-company-assignments.md)
     - Study mnemonic (arrival-order checklist): [EO 6.00 FORCES Mnemonic](EO-600a-FORCES-Mnemonic.md)
     - Department SOP index: Poquoson_SOPs_Summary | Critical SOPs
-    - Tactical frameworks: Mnemonics | SAW CSS RECEO VSS | Reference cards
+    - Tactical frameworks: [Mnemonics](../../fire-ems-references/frameworks/mnemonics.md) | [SAW CSS RECEO VSS](../../fire-ems-references/frameworks/saw-css-receo-vss.md) | [Reference cards](../../fire-ems-references/frameworks/reference-cards.md)
     - Study roadmaps: SSG - First 5 Minutes Tactical Roadmap | SSG - RECEO VS Tactical Roadmap
 
 ---
@@ -63,21 +63,21 @@ The first arriving officer shall conduct a continuous size-up evaluating:
 | **Incident** | Location and extent of fire, smoke conditions, victim survivability profile, collapse potential, hazardous conditions, fire spread potential |
 | **Resource** | Staffing, water supply, apparatus placement, additional resource needs |
 
-A 360-degree assessment shall be completed whenever conditions and staffing permit. See Mnemonics for the COAL WAS WEALTH size-up model.
+A 360-degree assessment shall be completed whenever conditions and staffing permit. See [Mnemonics](../../fire-ems-references/frameworks/mnemonics.md) for the COAL WAS WEALTH size-up model.
 
 ## VIII. Initial Radio Report
 The first arriving unit shall provide: unit identification, confirmation of arrival, building description, conditions observed, strategy declaration, initial actions, establishment of command, tactical channel assignment, and working incident declaration when appropriate.
 
 > **Example:**  
-> "Engine 1 on scene. Two-story single-family dwelling with heavy smoke showing from Division 1 Alpha side. Engine 1 establishing Oak Street Command. Offensive strategy. Advancing an attack line for fire control and primary search. Mark this as a working fire and switch all units to Fire Tac 1."
+> "Engine 1 on scene. Two-story single-family dwelling with heavy smoke showing from Division 1 Alpha side. Engine 1 establishing Oak Street Command. [Offensive strategy](../../fire-ems-references/strategies/offensive.md). Advancing an attack line for fire control and primary search. Mark this as a working fire and switch all units to Fire Tac 1."
 
 ## IX. Strategic Decision-Making
 
 | Strategy | Used When |
 |---|---|
-| **Offensive** | Conditions support interior operations; viable rescue profile; adequate staffing; building stability reasonably assured |
-| **Defensive** | Collapse imminent; fire conditions exceed resources; no survivable space; unacceptable risk to personnel |
-| **Transitional** | Exterior cooling will improve conditions; rapid reduction required before interior attack; conditions support transition to offensive operations |
+| **[Offensive](../../fire-ems-references/strategies/offensive.md)** | Conditions support interior operations; viable rescue profile; adequate staffing; building stability reasonably assured |
+| **[Defensive](../../fire-ems-references/strategies/defensive.md)** | Collapse imminent; fire conditions exceed resources; no survivable space; unacceptable risk to personnel |
+| **[Transitional](../../fire-ems-references/strategies/transitional.md)** | Exterior cooling will improve conditions; rapid reduction required before interior attack; conditions support transition to offensive operations |
 
 ## X. Water Supply
 When smoke or fire conditions are reported or observed:
@@ -94,7 +94,7 @@ When smoke or fire conditions are reported or observed:
 
 **Tactical Considerations (SLICE-RS):** Size-Up, Locate the Fire, Identify and Control the Flow Path, Cool from a Safe Location, Extinguish the Fire, Rescue, Salvage.
 
-> See Mnemonics, SAW CSS RECEO VSS, and Reference cards for the full framework notes.
+> See [Mnemonics](../../fire-ems-references/frameworks/mnemonics.md), [SAW CSS RECEO VSS](../../fire-ems-references/frameworks/saw-css-receo-vss.md), and [Reference cards](../../fire-ems-references/frameworks/reference-cards.md) for the full framework notes.
 
 ## XII. Initial Alarm Company Assignments
 Detailed company-by-company tactical assignments are maintained in:
@@ -115,7 +115,7 @@ Covers: Single-Family Residential Fires, Commercial Residential Occupancies, Com
 
 ## XV. Critical Operational Considerations
 - Assume occupants are present until proven otherwise.
-- Consider survivability profiling (SIGNAL).
+- Consider survivability profiling ([SIGNAL](../../fire-ems-references/strategies/signal-victim-profiling.md)).
 - Call for additional resources early.
 - Assign divisions early to maintain span of control.
 - Limit radio traffic to essential communications.

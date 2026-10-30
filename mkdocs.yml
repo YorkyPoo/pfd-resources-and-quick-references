@@ -61,6 +61,15 @@ nav:
   - Fire & EMS References:
     - Overview: fire-ems-references/index.md
     - Initial Alarm Company Assignments: fire-ems-references/initial-alarm-company-assignments.md
+    - Frameworks:
+      - Mnemonics: fire-ems-references/frameworks/mnemonics.md
+      - SAW CSS RECEO VSS: fire-ems-references/frameworks/saw-css-receo-vss.md
+      - Reference Cards: fire-ems-references/frameworks/reference-cards.md
+    - Strategies:
+      - Offensive: fire-ems-references/strategies/offensive.md
+      - Defensive: fire-ems-references/strategies/defensive.md
+      - Transitional: fire-ems-references/strategies/transitional.md
+      - SIGNAL Victim Profiling: fire-ems-references/strategies/signal-victim-profiling.md
   - Procedures:
     - Capnography: procedures/Capnography.md
     - Chest Decompression: procedures/Chest_Decompression.md

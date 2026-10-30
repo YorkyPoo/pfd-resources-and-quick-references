@@ -174,15 +174,40 @@
   .sc-wrap th:nth-child(2), .sc-wrap td:nth-child(2) { position: sticky; left: 2.1em; z-index: 2; background: var(--md-default-bg-color); min-width: 42vw; border-right: 2px solid var(--md-primary-fg-color); }
 }
 
-/* .fx — fixed-first-column scroll wrapper for wide reference matrices (alarm assignments etc.) */
+/* .fx — wide reference matrices (alarm assignments). NOTE: Material's JS
+   hoists markdown tables out of custom wrappers into .md-typeset__table, so
+   the porter emits BOTH classes on the wrapper and rules target the hoisted path. */
 .fx-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1em 0; }
-.fx-wrap table { width: auto; min-width: 100%; }
-.fx-wrap th, .fx-wrap td { vertical-align: top; text-align: left; font-size: .74rem; }
+/* Material nests its own scrollers inside our wrapper; neutralize so .fx-wrap is the
+   single scroll container and sticky cells pin against it, not the inner box. */
+.fx-wrap .md-typeset__table, .fx-wrap .md-typeset__scrollwrap { overflow: visible !important; display: block !important; width: max-content !important; min-width: 100%; max-width: none !important; }
+.fx-wrap table { border-collapse: separate !important; border-spacing: 0; }  /* Chrome kills sticky cells under collapse */
+.md-typeset__table:has(> table:first-child) { } /* no-op guard */
+.md-typeset .fx-wrap > table, .md-typeset .fx-wrap table, .fx-wrap table {
+  display: table !important; table-layout: fixed !important; width: 1050px !important; min-width: 100%; }
+.fx-wrap th, .fx-wrap td { vertical-align: top; text-align: left; font-size: .74rem; white-space: normal; overflow-wrap: normal; }
+.fx-wrap th:nth-child(1), .fx-wrap td:nth-child(1) { width: 150px; }
+.fx-wrap th:nth-child(2), .fx-wrap td:nth-child(2) { width: 210px; }
+.fx-wrap th:nth-child(n+3), .fx-wrap td:nth-child(n+3) { width: 172px; }
+/* hoisted fallback: table sits inside .md-typeset__table.fx-wrap */
+.md-typeset table:not([class]) { }
 @media only screen and (max-width: 760px) {
   .fx-wrap th:first-child, .fx-wrap td:first-child {
     position: sticky; left: 0; z-index: 2; background: var(--md-default-bg-color);
-    border-right: 2px solid var(--md-primary-fg-color); min-width: 8.5em;
+    border-right: 2px solid var(--md-primary-fg-color);
   }
+}
+/* the hoisted table is no longer a descendant of the custom class — style via :has on the container carrying fx-wrap */
+.md-typeset__table.fx-wrap { display: block !important; overflow-x: auto; }
+.md-typeset__table.fx-wrap > table { width: 1050px !important; table-layout: fixed !important; display: table !important; }
+.md-typeset__table.fx-wrap > table th, .md-typeset__table.fx-wrap > table td { font-size: .74rem; vertical-align: top; text-align: left; }
+.md-typeset__table.fx-wrap > table th:nth-child(1), .md-typeset__table.fx-wrap > table td:nth-child(1) { width: 150px; }
+.md-typeset__table.fx-wrap > table th:nth-child(2), .md-typeset__table.fx-wrap > table td:nth-child(2) { width: 210px; }
+.md-typeset__table.fx-wrap > table th:nth-child(n+3), .md-typeset__table.fx-wrap > table td:nth-child(n+3) { width: 172px; }
+@media only screen and (max-width: 760px) {
+  .md-typeset__table.fx-wrap > table th:first-child, .md-typeset__table.fx-wrap > table td:first-child {
+    position: sticky; left: 0; z-index: 2; background: var(--md-default-bg-color);
+    border-right: 2px solid var(--md-primary-fg-color); }
 }
 
 /* Homepage recent-updates list */

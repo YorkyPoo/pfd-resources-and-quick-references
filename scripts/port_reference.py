@@ -9,6 +9,13 @@ SITE_MAP = {  # vault title -> repo path (docs/...)
     "EO 6.00 First To Arrive Duties": "sops/emergency-operations/EO-600-First-to-Arrive-Duties.md",
     "EO 6.00 FORCES Mnemonic": "sops/emergency-operations/EO-600a-FORCES-Mnemonic.md",
     "Initial Alarm Company Assignments": "fire-ems-references/initial-alarm-company-assignments.md",
+    "Mnemonics": "fire-ems-references/frameworks/mnemonics.md",
+    "SAW CSS RECEO VSS": "fire-ems-references/frameworks/saw-css-receo-vss.md",
+    "Reference cards": "fire-ems-references/frameworks/reference-cards.md",
+    "20261009b - Offensive Strategy": "fire-ems-references/strategies/offensive.md",
+    "20261009c - Defensive Strategy": "fire-ems-references/strategies/defensive.md",
+    "20261009a - Transitional Strategy": "fire-ems-references/strategies/transitional.md",
+    "20260513i - SIGNAL Victim Profiling": "fire-ems-references/strategies/signal-victim-profiling.md",
 }
 
 def wikilink_repl(out_dir, m):
@@ -35,7 +42,7 @@ def wide_table_wrap(text):
             while j < len(lines) and lines[j].startswith("|"):
                 j += 1
             if ncols >= 4:
-                out.append('<div class="fx-wrap" markdown="1">\n')
+                out.append('<div class="fx-wrap md-typeset__table" markdown="1">\n')
                 out.append("")
                 out.extend(lines[i:j])
                 out.append("")
@@ -66,6 +73,10 @@ def convert(src_path, out_path):
         body = re.sub(r"^> ?", "    ", mt.group(3), flags=re.M)
         return f'!!! {kind} "{title}"\n{body.rstrip()}\n'
     raw = re.sub(r"(?m)^> \[!(\w+)(?:[-+])?\]\s*(.*)\n((?:^>.*(?:\n|$))*)", callout, raw)
+    # study scaffolding stays in the vault, not on the site
+    raw = re.sub(r"\n## Immediate Verification Checklist\n.*?(?=\n---\n|\n## |\Z)", "\n", raw, flags=re.S)
+    raw = re.sub(r"\s*\(What is the call for [^)]*\)", "", raw)
+    raw = re.sub(r"%%.*?%%", "", raw, flags=re.S)
     # wikilinks
     out_dir = str(Path(out_path).parent)
     raw = re.sub(r"\[\[([^\]]+)\]\]", lambda m: wikilink_repl(out_dir, m), raw)
