@@ -1,8 +1,8 @@
 // Pre-Cache Service Worker for Poquoson Fire & Rescue Protocols
-// Generated: 20261030-073601
+// Generated: 20261030-135354
 // Caches ALL protocols on first visit for full offline access
 
-const CACHE_NAME = "pfd-protocols-v20261030-073601";
+const CACHE_NAME = "pfd-protocols-v20261030-135354";
 
 const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/404.html",
@@ -322,36 +322,33 @@ self.addEventListener("activate", event => {
     );
 });
 
-// Fetch: cache-first strategy — serve from cache, fall back to network
+// Fetch: fresh-when-online, cached-when-offline
+// HTML/CSS/JS/JSON: network-first (fall back to cache offline) so edits appear
+// immediately; images/icons: cache-first (immutable assets).
 self.addEventListener("fetch", event => {
-    // Only handle GET requests for same-origin resources
     if (event.request.method !== "GET") return;
-    
     const url = new URL(event.request.url);
-    
-    // Only cache same-origin HTML pages and assets
     if (url.origin !== self.location.origin) return;
-    
+
+    const isContent = event.request.mode === "navigate"
+        || /\.(html?|css|js|json|webmanifest)$/i.test(url.pathname)
+        || url.pathname.endsWith("/");
+
+    if (!isContent) {
+        event.respondWith(caches.match(event.request).then(c => c || fetch(event.request)));
+        return;
+    }
+
     event.respondWith(
-        caches.match(event.request).then(cachedResponse => {
-            if (cachedResponse) {
-                return cachedResponse;
+        fetch(event.request).then(response => {
+            if (response && response.status === 200) {
+                const clone = response.clone();
+                caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
             }
-            // Not in cache — fetch from network and cache for next time
-            return fetch(event.request).then(response => {
-                if (response && response.status === 200) {
-                    const responseToCache = response.clone();
-                    caches.open(CACHE_NAME).then(cache => {
-                        cache.put(event.request, responseToCache);
-                    });
-                }
-                return response;
-            }).catch(() => {
-                // Offline and not cached — return the homepage
-                return caches.match("/pfd-resources-and-quick-references/index.html");
-            });
-        })
+            return response;
+        }).catch(() => caches.match(event.request).then(cached =>
+            cached || (event.request.mode === "navigate"
+                ? caches.match("/pfd-resources-and-quick-references/index.html")
+                : Response.error())))
     );
 });
-
-console.log("[SW] Poquoson Fire & Rescue — 271 pages ready for offline use");

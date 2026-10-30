@@ -8576,96 +8576,22 @@ if ('serviceWorker' in navigator) {
 <h2 id="how-length-based-dosing-works">How Length-Based Dosing Works</h2>
 <p>In pediatric emergencies, you may not have access to a scale. <strong>Patient length is a reliable proxy for weight</strong> — the relationship between height and weight in children follows predictable growth curves established in pediatric emergency medicine. By estimating length, you can determine the weight zone and read pre-calculated doses directly, eliminating the need for on-scene math.</p>
 <h2 id="length-to-weight-estimation">Length-to-Weight Estimation</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Zone</th>
-<th style="text-align: center;">Approx. Length</th>
-<th style="text-align: center;">Est. Weight</th>
-<th style="text-align: center;">Typical Age</th>
-<th style="text-align: center;">Hand Breadth</th>
-</tr>
-</thead>
+<div class="dz-wrap"><table class="dz">
+<thead><tr><th class="dz-sticky" style="text-align:left">Zone</th><th>Approx. Length</th><th>Est. Weight</th><th>Typical Age</th><th>Hand Breadth</th></tr></thead>
 <tbody>
-<tr>
-<td style="text-align: center;"><strong>Pink</strong></td>
-<td style="text-align: center;">50-60 cm</td>
-<td style="text-align: center;">3-5 kg</td>
-<td style="text-align: center;">Newborn-2 mo</td>
-<td style="text-align: center;">~1 hand</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Red</strong></td>
-<td style="text-align: center;">60-70 cm</td>
-<td style="text-align: center;">6-7 kg</td>
-<td style="text-align: center;">3-6 mo</td>
-<td style="text-align: center;">~1.5 hands</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Purple</strong></td>
-<td style="text-align: center;">70-85 cm</td>
-<td style="text-align: center;">8-9 kg</td>
-<td style="text-align: center;">6-12 mo</td>
-<td style="text-align: center;">~2 hands</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Yellow</strong></td>
-<td style="text-align: center;">85-95 cm</td>
-<td style="text-align: center;">10-11 kg</td>
-<td style="text-align: center;">12-18 mo</td>
-<td style="text-align: center;">~2.5 hands</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>White</strong></td>
-<td style="text-align: center;">95-105 cm</td>
-<td style="text-align: center;">12-14 kg</td>
-<td style="text-align: center;">2-3 yr</td>
-<td style="text-align: center;">~3 hands</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Blue</strong></td>
-<td style="text-align: center;">105-120 cm</td>
-<td style="text-align: center;">15-18 kg</td>
-<td style="text-align: center;">3-5 yr</td>
-<td style="text-align: center;">~3.5 hands</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Orange</strong></td>
-<td style="text-align: center;">120-135 cm</td>
-<td style="text-align: center;">19-23 kg</td>
-<td style="text-align: center;">5-7 yr</td>
-<td style="text-align: center;">~4 hands</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Green</strong></td>
-<td style="text-align: center;">135-150 cm</td>
-<td style="text-align: center;">24-29 kg</td>
-<td style="text-align: center;">7-9 yr</td>
-<td style="text-align: center;">~4.5 hands</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Brown</strong></td>
-<td style="text-align: center;">150-160 cm</td>
-<td style="text-align: center;">30-36 kg</td>
-<td style="text-align: center;">9-12 yr</td>
-<td style="text-align: center;">~5 hands</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Gray</strong></td>
-<td style="text-align: center;">160-170 cm</td>
-<td style="text-align: center;">37-46 kg</td>
-<td style="text-align: center;">12-14 yr</td>
-<td style="text-align: center;">~5.5 hands</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Adult</strong></td>
-<td style="text-align: center;">&gt;170 cm</td>
-<td style="text-align: center;">&gt;47 kg</td>
-<td style="text-align: center;">&gt;14 yr</td>
-<td style="text-align: center;">Adult protocols</td>
-</tr>
-</tbody>
-</table>
+<tr><td class="dz-sticky" style="color:#f48fb1;font-weight:700">Pink</td><td>50-60 cm</td><td>3-5 kg</td><td>Newborn-2 mo</td><td>~1 hand</td></tr>
+<tr><td class="dz-sticky" style="color:#e57373;font-weight:700">Red</td><td>60-70 cm</td><td>6-7 kg</td><td>3-6 mo</td><td>~1.5 hands</td></tr>
+<tr><td class="dz-sticky" style="color:#b39ddb;font-weight:700">Purple</td><td>70-85 cm</td><td>8-9 kg</td><td>6-12 mo</td><td>~2 hands</td></tr>
+<tr><td class="dz-sticky" style="color:#fff176;font-weight:700">Yellow</td><td>85-95 cm</td><td>10-11 kg</td><td>12-18 mo</td><td>~2.5 hands</td></tr>
+<tr><td class="dz-sticky" style="color:#eceff1;font-weight:700">White</td><td>95-105 cm</td><td>12-14 kg</td><td>2-3 yr</td><td>~3 hands</td></tr>
+<tr><td class="dz-sticky" style="color:#64b5f6;font-weight:700">Blue</td><td>105-120 cm</td><td>15-18 kg</td><td>3-5 yr</td><td>~3.5 hands</td></tr>
+<tr><td class="dz-sticky" style="color:#ffb74d;font-weight:700">Orange</td><td>120-135 cm</td><td>19-23 kg</td><td>5-7 yr</td><td>~4 hands</td></tr>
+<tr><td class="dz-sticky" style="color:#81c784;font-weight:700">Green</td><td>135-150 cm</td><td>24-29 kg</td><td>7-9 yr</td><td>~4.5 hands</td></tr>
+<tr><td class="dz-sticky" style="color:#a1887f;font-weight:700">Brown</td><td>150-160 cm</td><td>30-36 kg</td><td>9-12 yr</td><td>~5 hands</td></tr>
+<tr><td class="dz-sticky" style="color:#b0bec5;font-weight:700">Gray</td><td>160-170 cm</td><td>37-46 kg</td><td>12-14 yr</td><td>~5.5 hands</td></tr>
+<tr><td class="dz-sticky" style="color:#90a4ae;font-weight:700">Adult</td><td>>170 cm</td><td>>47 kg</td><td>>14 yr</td><td>Adult protocols</td></tr>
+</tbody></table></div>
+
 <div class="admonition tip">
 <p class="admonition-title">Estimation Method</p>
 <p>To estimate length: lay the patient supine and place your hand(s) alongside the body from crown to heel. Compare to the hand breadth estimates above. The hand measurement is approximate — use the nearest zone.</p>
