@@ -164,6 +164,27 @@
   font-weight: 600;
 }
 
+/* Homepage recent-updates list */
+.recent-list { list-style: none; padding: 0; margin: 0; }
+.recent-list li { padding: .45em 0; border-bottom: 1px solid var(--md-default-bg-color--lighter); }
+.recent-date { color: #ffb84d; font-family: var(--md-code-font-family); font-size: .72rem; }
+.recent-sha { float: right; color: #9e9e9e; font-family: var(--md-code-font-family); font-size: .68rem; }
+.recent-files { font-size: .76rem; padding-left: .4em; }
+.recent-files a { color: var(--md-typeset-a-color); }
+.recent-more { color: #9e9e9e; font-size: .72rem; }
+
+/* Phone bottom menu: hamburger relocates to bottom-right thumb zone */
+@media only screen and (max-width: 760px) {
+  .md-header__button[for="__drawer"] {
+    position: fixed; top: auto; left: auto; bottom: 20px; right: 16px;
+    width: 54px; height: 54px; margin: 0; padding: 0; border-radius: 50%;
+    background: var(--md-primary-fg-color); color: #fff;
+    display: flex !important; align-items: center; justify-content: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .55); z-index: 30;
+  }
+  .md-header__button[for="__drawer"] svg { width: 26px; height: 26px; }
+  html .md-content { padding-bottom: 90px; }
+}
 /* Wide-table framing: scroll horizontally on phones instead of crushing columns */
 .md-typeset__table { display: block; overflow-x: auto; max-width: 100%; }
 

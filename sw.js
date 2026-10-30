@@ -1,8 +1,8 @@
 // Pre-Cache Service Worker for Poquoson Fire & Rescue Protocols
-// Generated: 20261030-030115
+// Generated: 20261030-034117
 // Caches ALL protocols on first visit for full offline access
 
-const CACHE_NAME = "pfd-protocols-v20261030-030115";
+const CACHE_NAME = "pfd-protocols-v20261030-034117";
 
 const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/404.html",
@@ -11,7 +11,52 @@ const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/pediatric-dosing/calculator.html",
     "/pfd-resources-and-quick-references/pediatric-dosing/dosing-tables.html",
     "/pfd-resources-and-quick-references/pediatric-dosing/index.html",
+    "/pfd-resources-and-quick-references/personnel-policies/index.html",
     "/pfd-resources-and-quick-references/personnel-policies/other/personnel-policy-manual.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/00-introduction.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/01-general-provisions.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/02-definitions.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/03-personnel-administration.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/04-code-of-ethics.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/05-equal-employment-opportunity.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/06-americans-with-disabilities-act.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/07-recruitment-hiring-promotion.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/08-types-of-employment.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/09-work-schedules-and-attendance.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/10-probationary-status.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/11-employee-performance-review.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/12-salary-increases.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/13-overtime-compensatory-time.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/14-administrative-leave.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/15-annual-leave-vrs-plan-1-plan-2-and.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/16-bereavement-leave.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/17-civil-leave.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/18-family-and-medical-leave.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/19-holidays.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/20-leave-donation.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/21-leave-without-pay.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/22-military-leave.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/23-sick-leave-vrs-plan-1-plan-2-and.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/24-workers-compensation-and-light-duty.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/25-employee-service-awards-program.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/26-hazardous-weather.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/27-computer-resources-internet-and.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/28-safety-program-procedures.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/29-vehicle-usage-and-driving-policy.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/30-travel-policy-and-procedures.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/31-outside-employment.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/32-safe-harbor-policy.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/33-sexual-harassment.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/34-training-and-career-development.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/35-tuition-reimbursement-education-assistance.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/36-uniforms-protective-clothing-and-effective-date.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/37-smoking-in-the-workplace.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/38-physical-examinations-for-high.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/39-employee-conduct-progressive-discipline.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/40-drug-and-alcohol-policy.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/41-grievance-procedure.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/42-resignations-and-separations.html",
+    "/pfd-resources-and-quick-references/personnel-policies/policies/43-retiree-health-insurance-coverage.html",
     "/pfd-resources-and-quick-references/pharmacology/Adenosine.html",
     "/pfd-resources-and-quick-references/pharmacology/Albuterol.html",
     "/pfd-resources-and-quick-references/pharmacology/Amiodarone.html",
@@ -300,4 +345,4 @@ self.addEventListener("fetch", event => {
     );
 });
 
-console.log("[SW] Poquoson Fire & Rescue — 217 pages ready for offline use");
+console.log("[SW] Poquoson Fire & Rescue — 262 pages ready for offline use");
