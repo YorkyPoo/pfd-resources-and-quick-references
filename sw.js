@@ -1,13 +1,20 @@
 // Pre-Cache Service Worker for Poquoson Fire & Rescue Protocols
-// Generated: 20261030-042147
+// Generated: 20261030-044000
 // Caches ALL protocols on first visit for full offline access
 
-const CACHE_NAME = "pfd-protocols-v20261030-042147";
+const CACHE_NAME = "pfd-protocols-v20261030-044000";
 
 const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/404.html",
+    "/pfd-resources-and-quick-references/fire-ems-references/frameworks/mnemonics.html",
+    "/pfd-resources-and-quick-references/fire-ems-references/frameworks/reference-cards.html",
+    "/pfd-resources-and-quick-references/fire-ems-references/frameworks/saw-css-receo-vss.html",
     "/pfd-resources-and-quick-references/fire-ems-references/index.html",
     "/pfd-resources-and-quick-references/fire-ems-references/initial-alarm-company-assignments.html",
+    "/pfd-resources-and-quick-references/fire-ems-references/strategies/defensive.html",
+    "/pfd-resources-and-quick-references/fire-ems-references/strategies/offensive.html",
+    "/pfd-resources-and-quick-references/fire-ems-references/strategies/signal-victim-profiling.html",
+    "/pfd-resources-and-quick-references/fire-ems-references/strategies/transitional.html",
     "/pfd-resources-and-quick-references/index.html",
     "/pfd-resources-and-quick-references/medications.html",
     "/pfd-resources-and-quick-references/pediatric-dosing/calculator.html",
@@ -347,4 +354,4 @@ self.addEventListener("fetch", event => {
     );
 });
 
-console.log("[SW] Poquoson Fire & Rescue — 264 pages ready for offline use");
+console.log("[SW] Poquoson Fire & Rescue — 271 pages ready for offline use");
