@@ -1,22 +1,20 @@
-# F.O.R.C.E.S. — First-Alarm Company Mnemonic
+# F.O.R.C.E.S. — First-Alarm Company Mnemonic (EO 6.00)
 
-> **Quick reference — EO 6.00 (First to Arrive Duties), study aid**
-
-A nested mnemonic where the top-level letters **F.O.R.C.E.S.** match the **arrival order** of the first-alarm companies, and each letter expands into that apparatus's chronological tactical checklist. Derived from [EO 6.00 First to Arrive Duties](EO-600-First-to-Arrive-Duties.md).
-
-!!! warning "Drill tool, not a fireground checklist"
-    On the street, run **CAN**, **RECEO-VS**, **SLICE-RS**, and **COAL WAS WEALTH** — single-level cues survive adrenaline. FORCES works because repetition turns the sub-lists into habits.
+!!! abstract "What this is"
+    A nested mnemonic where the top-level letters **F.O.R.C.E.S.** match the **arrival order** of the first-alarm companies, and each letter expands into that apparatus's chronological tactical checklist. Derived from [EO 6.00 First To Arrive Duties](EO-600-First-to-Arrive-Duties.md) and [Initial Alarm Company Assignments](../../fire-ems-references/initial-alarm-company-assignments.md).
+    
+    **It is a drill and teaching tool, not a fireground checklist.** On the street, run CAN, RECEO-VS, SLICE-RS, and COAL WAS WEALTH — single-level cues survive adrenaline; nested ones only work after repetition has made the sub-lists automatic.
 
 ## The Top Level
 
-| Letter | Sub-mnemonic | Unit & role |
-| :--- | :--- | :--- |
-| **F** | **F.A.S.T.E.R.** | 1st engine (Tower 1) — command & attack |
-| **O** | **O.P.E.N.S.** | 2nd engine (Squad 2) — water & backup line |
-| **R** | **R.A.I.L.** | 3rd engine (Engine 3) — RIT |
-| **C** | **C.L.E.A.R.** | Aerial interior (Ladder 1) — search & rescue |
-| **E** | **E.X.T.R.A.** | Aerial exterior (Ladder 1) — ladders & vent |
-| **S** | **S.T.A.T.** | Squad (Squad 3) — support priorities |
+| Letter | Sub-mnemonic     | Unit & role                                  |
+| :----- | :--------------- | :------------------------------------------- |
+| **F**  | **F.A.S.T.E.R.** | 1st engine (Tower 1) — command & attack      |
+| **O**  | **O.P.E.N.S.**   | 2nd engine (Squad 2) — water & backup line   |
+| **R**  | **R.A.I.L.**     | 3rd engine (Engine 3) — RIT                  |
+| **C**  | **C.L.E.A.R.**   | Aerial interior (Ladder 1) — search & rescue |
+| **E**  | **E.X.T.R.A.**   | Aerial exterior (Ladder 1) — ladders & vent  |
+| **S**  | **S.T.A.T.**     | Squad (Squad 3) — support priorities         |
 
 ## F.A.S.T.E.R. — First Engine
 
@@ -67,10 +65,11 @@ A nested mnemonic where the top-level letters **F.O.R.C.E.S.** match the **arriv
 
 ## Deliberate Exclusions & Caveats
 
-1. **Transfer of command and PAR** are *command* functions (§VI, §XIII), not company tasks — they stay outside a company mnemonic.
+1. **Transfer of command and PAR** are *command* functions (§VI, §XIII), not company tasks — they live in the Command note, not in a company mnemonic.
 2. **Sequence is apparatus-dependent.** FORCES describes the Poquoson first-alarm assignment. If the aerial arrives second or a tankered engine lands in the box, remap **by function, not by arrival letter**.
-3. **"X" is a mnemonic hack** (eXtend). Fine for recall — don't teach the letter as the lesson.
+3. **"X" is a mnemonic hack** (eXtend). Acceptable for recall, but don't teach the letter as the lesson.
 4. Utility control appears **once** (R.A.I.L. — I). The aerial driver *tracks*, never *terminates* — double-booked tasks are how utilities get missed or duplicated on the street.
 
 ---
-*Study aid derived from City of Poquoson Fire & Rescue SOP EO 6.00 (rev. 08/01/2026). Section references (§) point to EO 6.00.*
+*Formatted from **the source PDF** (vault note, last modified 2026-10-25). The signed PDF remains the authoritative document.*
+
