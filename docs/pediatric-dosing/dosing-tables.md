@@ -8,21 +8,21 @@ All doses below are calculated from **Poquoson Fire & Rescue Patient Care Protoc
 
 | Drug | Dose/kg | Max | Pink 3-5kg | Red 6-7kg | Purple 8-9kg | Yellow 10-11kg | White 12-14kg | Blue 15-18kg | Orange 19-23kg | Green 24-29kg | Brown 30-36kg | Gray 37-46kg |
 |------|:------:|:---:|:----------:|:---------:|:-----------:|:-------------:|:-------------:|:------------:|:--------------:|:-------------:|:-------------:|:------------:|
-| **Epinephrine** (1:10,000) IV/IO (0.01 mg/kg) | 1 mg | 0.04 | 0.1 | 0.1 | 0.1 | 0.1 | 0.2 | 0.2 | 0.3 | 0.3 | 0.4 |
-| **Amiodarone** IV/IO (VF/pVT) (5 mg/kg) | 300 mg | 20 | 32.5 | 42.5 | 52.5 | 65 | 82.5 | 105 | 132.5 | 165 | 207.5 |
-| **Calcium Chloride** IV/IO (special circ.) (20 mg/kg) | 1,000 mg | 80 | 130 | 170 | 210 | 260 | 330 | 420 | 530 | 660 | 830 |
-| **Sodium Bicarbonate** IV/IO (1 mEq/kg) | 50 mEq | 4 | 6.5 | 8.5 | 10.5 | 13 | 16.5 | 21 | 26.5 | 33 | 41.5 |
-| **Atropine** IV/IO (bradycardia) (0.02 mg/kg) | 0.5 mg | 0.1 | 0.1 | 0.2 | 0.2 | 0.3 | 0.3 | 0.4 | 0.5 | 0.5 | 0.5 |
-| **Methylprednisolone** IV/IO (2 mg/kg) | 125 mg | 8 | 13 | 17 | 21 | 26 | 33 | 42 | 53 | 66 | 83 |
-| **Magnesium Sulfate** IV/IO over 15min (40 mg/kg) | 2,000 mg | 160 | 260 | 340 | 420 | 520 | 660 | 840 | 1060 | 1320 | 1660 |
-| **Ondansetron** IV/IO/IM/PO (0.15 mg/kg) | 4 mg | 0.6 | 1 | 1.3 | 1.6 | 1.9 | 2.5 | 3.1 | **4** | **4** | **4** |
-| **Fentanyl** IV/IO/IN/IM (pain) (1 mcg/kg) | — | 4 mcg | 6 mcg | 8 mcg | 10 mcg | 13 mcg | 16 mcg | 21 mcg | 25 mcg | 25 mcg | 25 mcg |
-| **Fentanyl** IV/IO (post-intubation) (0.5-1 mcg/kg) | 25 mcg | 2 mcg | 3 mcg | 4 mcg | 5 mcg | 6 mcg | 8 mcg | 10 mcg | 13 mcg | 16 mcg | 21 mcg |
-| **Midazolam** IV/IO (sedation) (0.1 mg/kg) | 2.5 mg | 0.4 | 0.7 | 0.9 | 1.1 | 1.3 | 1.7 | 2.1 | **2** | **2** | **2** |
-| **Midazolam** IN/IM (sedation) (0.2 mg/kg) | 5 mg | 0.8 | 1.3 | 1.7 | 2.1 | 2.6 | 3.3 | 4.2 | **5** | **5** | **5** |
-| **Naloxone** IV/IO/IM/IN (overdose) (0.1 mg/kg) | 2 mg | 0.4 | 0.7 | 0.9 | 1.1 | 1.3 | 1.7 | **2** | **2** | **2** | **2** |
-| **Norepinephrine** infusion (mcg/min) (0.05-0.1 mcg/kg/min) | 2 mcg/kg/min | 0.3 | 0.5 | 0.6 | 0.8 | 1 | 1.2 | 1.6 | 2 | 2.5 | 3.1 |
-| **NS Fluid Bolus** (shock/resus) (20 mL/kg) | — | 80 | 130 | 170 | 210 | 260 | 330 | 420 | 530 | 660 | 830 |
+| **Epinephrine** (1:10,000) IV/IO | 0.01 mg/kg | 1 mg | 0.04 | 0.1 | 0.1 | 0.1 | 0.1 | 0.2 | 0.2 | 0.3 | 0.3 | 0.4 |
+| **Amiodarone** IV/IO (VF/pVT) | 5 mg/kg | 300 mg | 20 | 32.5 | 42.5 | 52.5 | 65 | 82.5 | 105 | 132.5 | 165 | 207.5 |
+| **Calcium Chloride** IV/IO (special circ.) | 20 mg/kg | 1,000 mg | 80 | 130 | 170 | 210 | 260 | 330 | 420 | 530 | 660 | 830 |
+| **Sodium Bicarbonate** IV/IO | 1 mEq/kg | 50 mEq | 4 | 6.5 | 8.5 | 10.5 | 13 | 16.5 | 21 | 26.5 | 33 | 41.5 |
+| **Atropine** IV/IO (bradycardia) | 0.02 mg/kg | 0.5 mg | 0.1 | 0.1 | 0.2 | 0.2 | 0.3 | 0.3 | 0.4 | 0.5 | 0.5 | 0.5 |
+| **Methylprednisolone** IV/IO | 2 mg/kg | 125 mg | 8 | 13 | 17 | 21 | 26 | 33 | 42 | 53 | 66 | 83 |
+| **Magnesium Sulfate** IV/IO over 15min | 40 mg/kg | 2,000 mg | 160 | 260 | 340 | 420 | 520 | 660 | 840 | 1060 | 1320 | 1660 |
+| **Ondansetron** IV/IO/IM/PO | 0.15 mg/kg | 4 mg | 0.6 | 1 | 1.3 | 1.6 | 1.9 | 2.5 | 3.1 | **4** | **4** | **4** |
+| **Fentanyl** IV/IO/IN/IM (pain) | 1 mcg/kg | — | 4 mcg | 6 mcg | 8 mcg | 10 mcg | 13 mcg | 16 mcg | 21 mcg | 25 mcg | 25 mcg | 25 mcg |
+| **Fentanyl** IV/IO (post-intubation) | 0.5-1 mcg/kg | 25 mcg | 2 mcg | 3 mcg | 4 mcg | 5 mcg | 6 mcg | 8 mcg | 10 mcg | 13 mcg | 16 mcg | 21 mcg |
+| **Midazolam** IV/IO (sedation) | 0.1 mg/kg | 2.5 mg | 0.4 | 0.7 | 0.9 | 1.1 | 1.3 | 1.7 | 2.1 | **2** | **2** | **2** |
+| **Midazolam** IN/IM (sedation) | 0.2 mg/kg | 5 mg | 0.8 | 1.3 | 1.7 | 2.1 | 2.6 | 3.3 | 4.2 | **5** | **5** | **5** |
+| **Naloxone** IV/IO/IM/IN (overdose) | 0.1 mg/kg | 2 mg | 0.4 | 0.7 | 0.9 | 1.1 | 1.3 | 1.7 | **2** | **2** | **2** | **2** |
+| **Norepinephrine** infusion (mcg/min) (0.05-0.1 mcg/kg/min) | — | 2 mcg/kg/min | 0.3 | 0.5 | 0.6 | 0.8 | 1 | 1.2 | 1.6 | 2 | 2.5 | 3.1 |
+| **NS Fluid Bolus** (shock/resus) (20 mL/kg) | — | — | 80 | 130 | 170 | 210 | 260 | 330 | 420 | 530 | 660 | 830 |
 
 ### Fixed Pediatric Doses (Same as Adult)
 

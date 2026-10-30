@@ -163,3 +163,10 @@
   color: var(--md-accent-fg-color) !important;
   font-weight: 600;
 }
+
+/* Wide-table framing: scroll horizontally on phones instead of crushing columns */
+.md-typeset__table { display: block; overflow-x: auto; max-width: 100%; }
+.md-typeset__table table { white-space: normal; }
+.md-typeset table:not([class]) th:first-child,
+.md-typeset table:not([class]) td:first-child { min-width: 160px; }
+.md-typeset table:not([class]) td { vertical-align: top; }
