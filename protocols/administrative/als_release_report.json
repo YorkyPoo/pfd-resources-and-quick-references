@@ -1,0 +1,22 @@
+{
+  "protocol": "ALS Release to BLS",
+  "status": "FIXABLE",
+  "discrepancies": [
+    {
+      "field": "Terminology/Committee Name",
+      "pems_original": "reported, quarterly, to the PEMS PI Committee.",
+      "converted_text": "reported quarterly to the Poquoson Fire and Rescue PI Committee.",
+      "severity": "MODERATE",
+      "recommendation": "Verify if the report should go to PEMS PI Committee (regional) or the local Poquoson PI Committee. If regional, revert to PEMS."
+    },
+    {
+      "field": "Structure/Formatting",
+      "pems_original": "Narrative procedure.",
+      "converted_text": "Table format.",
+      "severity": "MINOR",
+      "recommendation": "Maintain for consistency, but ensure all narrative steps are covered."
+    }
+  ],
+  "missing_sections": [],
+  "verified": false
+}

@@ -1,0 +1,15 @@
+{
+  "protocol": "Cold Exposure",
+  "status": "FIXABLE",
+  "discrepancies": [
+    {
+      "field": "Intervention Authority",
+      "pems_original": "No specific restriction on who can transport immediately.",
+      "converted_text": "Specifies 'Do not delay transport waiting for ALS' for Paramedics (P) and Intermediate (I) only.",
+      "severity": "MODERATE",
+      "recommendation": "Correct the table so that all levels of care (including EMR/EMT) are empowered to transport immediately without waiting for ALS, as per the original protocol."
+    }
+  ],
+  "missing_sections": [],
+  "verified": false
+}

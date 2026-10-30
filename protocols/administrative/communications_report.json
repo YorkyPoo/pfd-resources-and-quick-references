@@ -1,0 +1,24 @@
+{
+  "protocol": "Communications",
+  "status": "FIXABLE",
+  "discrepancies": [
+    {
+      "field": "Content/Contact Information",
+      "pems_original": "Contains specific lists of regional resources, air transport numbers, and hospital phone numbers.",
+      "converted_text": "Missing all regional resource lists and telephone numbers.",
+      "severity": "MODERATE",
+      "recommendation": "Include the list of regional resources and telephone numbers (Air transport, COR contacts, etc.) to ensure providers have the necessary contact information."
+    },
+    {
+      "field": "Terminology/Committee Name",
+      "pems_original": "Mentions PEMS Medical Advisors Committee (MAC).",
+      "converted_text": "Mentions Poquoson OMD/protocols.",
+      "severity": "MINOR",
+      "recommendation": "Ensure Poquoson specific protocols align with regional PEMS resource lists."
+    }
+  ],
+  "missing_sections": [
+    "Regional Resources & Telephone Numbers list"
+  ],
+  "verified": false
+}
