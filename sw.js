@@ -1,11 +1,13 @@
 // Pre-Cache Service Worker for Poquoson Fire & Rescue Protocols
-// Generated: 20261030-034859
+// Generated: 20261030-042147
 // Caches ALL protocols on first visit for full offline access
 
-const CACHE_NAME = "pfd-protocols-v20261030-034859";
+const CACHE_NAME = "pfd-protocols-v20261030-042147";
 
 const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/404.html",
+    "/pfd-resources-and-quick-references/fire-ems-references/index.html",
+    "/pfd-resources-and-quick-references/fire-ems-references/initial-alarm-company-assignments.html",
     "/pfd-resources-and-quick-references/index.html",
     "/pfd-resources-and-quick-references/medications.html",
     "/pfd-resources-and-quick-references/pediatric-dosing/calculator.html",
@@ -345,4 +347,4 @@ self.addEventListener("fetch", event => {
     );
 });
 
-console.log("[SW] Poquoson Fire & Rescue — 262 pages ready for offline use");
+console.log("[SW] Poquoson Fire & Rescue — 264 pages ready for offline use");
