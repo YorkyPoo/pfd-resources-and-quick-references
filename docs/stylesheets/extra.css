@@ -166,7 +166,16 @@
 
 /* Wide-table framing: scroll horizontally on phones instead of crushing columns */
 .md-typeset__table { display: block; overflow-x: auto; max-width: 100%; }
-.md-typeset__table table { white-space: normal; }
-.md-typeset table:not([class]) th:first-child,
-.md-typeset table:not([class]) td:first-child { min-width: 160px; }
-.md-typeset table:not([class]) td { vertical-align: top; }
+
+/* .dz — dosing-zone component: horizontal scroll + sticky drug column */
+.dz-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; margin: 1em 0; }
+.dz { border-collapse: separate; border-spacing: 0; font-size: .72rem; width: max-content; }
+.dz th, .dz td { white-space: nowrap; padding: .5em .65em; border-bottom: 1px solid #2a2a2a; text-align: center; }
+.dz-sticky { position: sticky; left: 0; z-index: 2; background: #1d1d23; border-right: 2px solid #4db8ff; }
+.dz-name { text-align: left !important; max-width: none; }
+.dz-sub { color: #9e9e9e; font-size: .66rem; font-weight: 400; }
+.dz-name b { color: #ff8a80; }  /* salmon on dark: readable, brand-family */
+.dz td:first-child:not(.dz-sticky) { text-align: left; }
+.dz thead th { background: #16161a; }
+.dz tbody tr:hover td { background: #26262e; }
+.dz tbody tr:hover .dz-sticky { background: #2b2b35; }

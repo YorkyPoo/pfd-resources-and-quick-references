@@ -39,7 +39,7 @@ OR
   <button onclick="resetCalc()" style="flex:1;padding:15px;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;background:#2e2e2e;color:#fff;transition:transform .1s">Reset</button>
 </div>
 
-## Results
+<h3>Results</h3>
 
 <div id="results" style="display:none">
 
@@ -285,26 +285,26 @@ function resetCalc() {
 
 ## Normal Pediatric Vitals Reference
 
-<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:14px">
+<div class="dz-wrap"><table class="dz">
 <thead><tr style="border-bottom:2px solid #4db8ff">
-<th style="text-align:left;padding:8px">Age</th>
+<th class="dz-sticky" style="text-align:left;padding:8px">Age</th>
 <th style="text-align:left;padding:8px">Weight (kg)</th>
 <th style="text-align:left;padding:8px">Resting HR (bpm)</th>
 <th style="text-align:left;padding:8px">Resting RR (/min)</th>
 <th style="text-align:left;padding:8px">Systolic BP (mmHg)</th>
 </tr></thead>
 <tbody>
-<tr style="border-bottom:1px solid #2a2a2a"><td style="padding:6px 8px">Neonate (&lt;28 days)</td><td style="padding:6px 8px">&lt;3</td><td style="padding:6px 8px">100–160</td><td style="padding:6px 8px">40–60</td><td style="padding:6px 8px">Difficult to measure</td></tr>
-<tr style="border-bottom:1px solid #2a2a2a"><td style="padding:6px 8px">3 months</td><td style="padding:6px 8px">5–7</td><td style="padding:6px 8px">100–180</td><td style="padding:6px 8px">30–45</td><td style="padding:6px 8px">65–100</td></tr>
-<tr style="border-bottom:1px solid #2a2a2a"><td style="padding:6px 8px">6 months</td><td style="padding:6px 8px">7–9</td><td style="padding:6px 8px">100–180</td><td style="padding:6px 8px">25–35</td><td style="padding:6px 8px">70–110</td></tr>
-<tr style="border-bottom:1px solid #2a2a2a"><td style="padding:6px 8px">12 months</td><td style="padding:6px 8px">10</td><td style="padding:6px 8px">100–180</td><td style="padding:6px 8px">20–30</td><td style="padding:6px 8px">70–110</td></tr>
-<tr style="border-bottom:1px solid #2a2a2a"><td style="padding:6px 8px">2 years</td><td style="padding:6px 8px">12</td><td style="padding:6px 8px">80–160</td><td style="padding:6px 8px">18–30</td><td style="padding:6px 8px">70–110</td></tr>
-<tr style="border-bottom:1px solid #2a2a2a"><td style="padding:6px 8px">3–4 years</td><td style="padding:6px 8px">14–16</td><td style="padding:6px 8px">70–130</td><td style="padding:6px 8px">18–24</td><td style="padding:6px 8px">75–110</td></tr>
-<tr style="border-bottom:1px solid #2a2a2a"><td style="padding:6px 8px">5–6 years</td><td style="padding:6px 8px">18–20</td><td style="padding:6px 8px">70–110</td><td style="padding:6px 8px">18–22</td><td style="padding:6px 8px">80–110</td></tr>
-<tr style="border-bottom:1px solid #2a2a2a"><td style="padding:6px 8px">7–8 years</td><td style="padding:6px 8px">22–24</td><td style="padding:6px 8px">70–110</td><td style="padding:6px 8px">18–22</td><td style="padding:6px 8px">80–110</td></tr>
-<tr style="border-bottom:1px solid #2a2a2a"><td style="padding:6px 8px">9–10 years</td><td style="padding:6px 8px">26–28</td><td style="padding:6px 8px">70–110</td><td style="padding:6px 8px">18–22</td><td style="padding:6px 8px">80–110</td></tr>
-<tr style="border-bottom:1px solid #2a2a2a"><td style="padding:6px 8px">11–12 years</td><td style="padding:6px 8px">30–32</td><td style="padding:6px 8px">70–110</td><td style="padding:6px 8px">16–20</td><td style="padding:6px 8px">90–120</td></tr>
-<tr><td style="padding:6px 8px">13 years &amp; older</td><td style="padding:6px 8px">&gt;32</td><td style="padding:6px 8px">60–100</td><td style="padding:6px 8px">12–20</td><td style="padding:6px 8px">120+</td></tr>
+<tr><td class="dz-sticky" style="padding:6px 8px">Neonate (&lt;28 days)</td><td style="padding:6px 8px">&lt;3</td><td style="padding:6px 8px">100–160</td><td style="padding:6px 8px">40–60</td><td style="padding:6px 8px">Difficult to measure</td></tr>
+<tr><td class="dz-sticky" style="padding:6px 8px">3 months</td><td style="padding:6px 8px">5–7</td><td style="padding:6px 8px">100–180</td><td style="padding:6px 8px">30–45</td><td style="padding:6px 8px">65–100</td></tr>
+<tr><td class="dz-sticky" style="padding:6px 8px">6 months</td><td style="padding:6px 8px">7–9</td><td style="padding:6px 8px">100–180</td><td style="padding:6px 8px">25–35</td><td style="padding:6px 8px">70–110</td></tr>
+<tr><td class="dz-sticky" style="padding:6px 8px">12 months</td><td style="padding:6px 8px">10</td><td style="padding:6px 8px">100–180</td><td style="padding:6px 8px">20–30</td><td style="padding:6px 8px">70–110</td></tr>
+<tr><td class="dz-sticky" style="padding:6px 8px">2 years</td><td style="padding:6px 8px">12</td><td style="padding:6px 8px">80–160</td><td style="padding:6px 8px">18–30</td><td style="padding:6px 8px">70–110</td></tr>
+<tr><td class="dz-sticky" style="padding:6px 8px">3–4 years</td><td style="padding:6px 8px">14–16</td><td style="padding:6px 8px">70–130</td><td style="padding:6px 8px">18–24</td><td style="padding:6px 8px">75–110</td></tr>
+<tr><td class="dz-sticky" style="padding:6px 8px">5–6 years</td><td style="padding:6px 8px">18–20</td><td style="padding:6px 8px">70–110</td><td style="padding:6px 8px">18–22</td><td style="padding:6px 8px">80–110</td></tr>
+<tr><td class="dz-sticky" style="padding:6px 8px">7–8 years</td><td style="padding:6px 8px">22–24</td><td style="padding:6px 8px">70–110</td><td style="padding:6px 8px">18–22</td><td style="padding:6px 8px">80–110</td></tr>
+<tr><td class="dz-sticky" style="padding:6px 8px">9–10 years</td><td style="padding:6px 8px">26–28</td><td style="padding:6px 8px">70–110</td><td style="padding:6px 8px">18–22</td><td style="padding:6px 8px">80–110</td></tr>
+<tr><td class="dz-sticky" style="padding:6px 8px">11–12 years</td><td style="padding:6px 8px">30–32</td><td style="padding:6px 8px">70–110</td><td style="padding:6px 8px">16–20</td><td style="padding:6px 8px">90–120</td></tr>
+<tr><td class="dz-sticky" style="padding:6px 8px">13 years &amp; older</td><td style="padding:6px 8px">&gt;32</td><td style="padding:6px 8px">60–100</td><td style="padding:6px 8px">12–20</td><td style="padding:6px 8px">120+</td></tr>
 </tbody></table></div>
 
 !!! warning "Hypotension is age-scaled — memorize the formula"

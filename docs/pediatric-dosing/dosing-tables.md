@@ -6,24 +6,25 @@ All doses below are calculated from **Poquoson Fire & Rescue Patient Care Protoc
 
 ## Medication Dosing by Weight Zone
 
-| Drug | Dose/kg | Max | Pink 3-5kg | Red 6-7kg | Purple 8-9kg | Yellow 10-11kg | White 12-14kg | Blue 15-18kg | Orange 19-23kg | Green 24-29kg | Brown 30-36kg | Gray 37-46kg |
-|------|:------:|:---:|:----------:|:---------:|:-----------:|:-------------:|:-------------:|:------------:|:--------------:|:-------------:|:-------------:|:------------:|
-| **Epinephrine** (1:10,000) IV/IO | 0.01 mg/kg | 1 mg | 0.04 | 0.1 | 0.1 | 0.1 | 0.1 | 0.2 | 0.2 | 0.3 | 0.3 | 0.4 |
-| **Amiodarone** IV/IO (VF/pVT) | 5 mg/kg | 300 mg | 20 | 32.5 | 42.5 | 52.5 | 65 | 82.5 | 105 | 132.5 | 165 | 207.5 |
-| **Calcium Chloride** IV/IO (special circ.) | 20 mg/kg | 1,000 mg | 80 | 130 | 170 | 210 | 260 | 330 | 420 | 530 | 660 | 830 |
-| **Sodium Bicarbonate** IV/IO | 1 mEq/kg | 50 mEq | 4 | 6.5 | 8.5 | 10.5 | 13 | 16.5 | 21 | 26.5 | 33 | 41.5 |
-| **Atropine** IV/IO (bradycardia) | 0.02 mg/kg | 0.5 mg | 0.1 | 0.1 | 0.2 | 0.2 | 0.3 | 0.3 | 0.4 | 0.5 | 0.5 | 0.5 |
-| **Methylprednisolone** IV/IO | 2 mg/kg | 125 mg | 8 | 13 | 17 | 21 | 26 | 33 | 42 | 53 | 66 | 83 |
-| **Magnesium Sulfate** IV/IO over 15min | 40 mg/kg | 2,000 mg | 160 | 260 | 340 | 420 | 520 | 660 | 840 | 1060 | 1320 | 1660 |
-| **Ondansetron** IV/IO/IM/PO | 0.15 mg/kg | 4 mg | 0.6 | 1 | 1.3 | 1.6 | 1.9 | 2.5 | 3.1 | **4** | **4** | **4** |
-| **Fentanyl** IV/IO/IN/IM (pain) | 1 mcg/kg | — | 4 mcg | 6 mcg | 8 mcg | 10 mcg | 13 mcg | 16 mcg | 21 mcg | 25 mcg | 25 mcg | 25 mcg |
-| **Fentanyl** IV/IO (post-intubation) | 0.5-1 mcg/kg | 25 mcg | 2 mcg | 3 mcg | 4 mcg | 5 mcg | 6 mcg | 8 mcg | 10 mcg | 13 mcg | 16 mcg | 21 mcg |
-| **Midazolam** IV/IO (sedation) | 0.1 mg/kg | 2.5 mg | 0.4 | 0.7 | 0.9 | 1.1 | 1.3 | 1.7 | 2.1 | **2** | **2** | **2** |
-| **Midazolam** IN/IM (sedation) | 0.2 mg/kg | 5 mg | 0.8 | 1.3 | 1.7 | 2.1 | 2.6 | 3.3 | 4.2 | **5** | **5** | **5** |
-| **Naloxone** IV/IO/IM/IN (overdose) | 0.1 mg/kg | 2 mg | 0.4 | 0.7 | 0.9 | 1.1 | 1.3 | 1.7 | **2** | **2** | **2** | **2** |
-| **Norepinephrine** infusion (mcg/min) (0.05-0.1 mcg/kg/min) | — | 2 mcg/kg/min | 0.3 | 0.5 | 0.6 | 0.8 | 1 | 1.2 | 1.6 | 2 | 2.5 | 3.1 |
-| **NS Fluid Bolus** (shock/resus) (20 mL/kg) | — | — | 80 | 130 | 170 | 210 | 260 | 330 | 420 | 530 | 660 | 830 |
-
+<div class="dz-wrap"><table class="dz">
+<thead><tr><th class="dz-sticky" style="text-align:left">Drug</th><th>Dose/kg</th><th>Max</th><th style="background:#f48fb1;color:#111">Pink<br><span style="font-size:.68rem">3–5 kg</span></th><th style="background:#e57373;color:#111">Red<br><span style="font-size:.68rem">6–7 kg</span></th><th style="background:#b39ddb;color:#111">Purple<br><span style="font-size:.68rem">8–9 kg</span></th><th style="background:#fff176;color:#111">Yellow<br><span style="font-size:.68rem">10–11 kg</span></th><th style="background:#eceff1;color:#111">White<br><span style="font-size:.68rem">12–14 kg</span></th><th style="background:#64b5f6;color:#111">Blue<br><span style="font-size:.68rem">15–18 kg</span></th><th style="background:#ffb74d;color:#111">Orange<br><span style="font-size:.68rem">19–23 kg</span></th><th style="background:#81c784;color:#111">Green<br><span style="font-size:.68rem">24–29 kg</span></th><th style="background:#a1887f;color:#111">Brown<br><span style="font-size:.68rem">30–36 kg</span></th><th style="background:#b0bec5;color:#111">Gray<br><span style="font-size:.68rem">37–46 kg</span></th></tr></thead>
+<tbody>
+  <td class="dz-sticky dz-name"><b>Epinephrine</b><br><span class="dz-sub">(1:10,000) IV/IO</span></td><td>0.01 mg/kg</td><td>1 mg</td><td>0.04</td><td>0.1</td><td>0.1</td><td>0.1</td><td>0.1</td><td>0.2</td><td>0.2</td><td>0.3</td><td>0.3</td><td>0.4</td></tr>
+  <td class="dz-sticky dz-name"><b>Amiodarone</b><br><span class="dz-sub">IV/IO (VF/pVT)</span></td><td>5 mg/kg</td><td>300 mg</td><td>20</td><td>32.5</td><td>42.5</td><td>52.5</td><td>65</td><td>82.5</td><td>105</td><td>132.5</td><td>165</td><td>207.5</td></tr>
+  <td class="dz-sticky dz-name"><b>Calcium Chloride</b><br><span class="dz-sub">IV/IO (special circ.)</span></td><td>20 mg/kg</td><td>1,000 mg</td><td>80</td><td>130</td><td>170</td><td>210</td><td>260</td><td>330</td><td>420</td><td>530</td><td>660</td><td>830</td></tr>
+  <td class="dz-sticky dz-name"><b>Sodium Bicarbonate</b><br><span class="dz-sub">IV/IO</span></td><td>1 mEq/kg</td><td>50 mEq</td><td>4</td><td>6.5</td><td>8.5</td><td>10.5</td><td>13</td><td>16.5</td><td>21</td><td>26.5</td><td>33</td><td>41.5</td></tr>
+  <td class="dz-sticky dz-name"><b>Atropine</b><br><span class="dz-sub">IV/IO (bradycardia)</span></td><td>0.02 mg/kg</td><td>0.5 mg</td><td>0.1</td><td>0.1</td><td>0.2</td><td>0.2</td><td>0.3</td><td>0.3</td><td>0.4</td><td>0.5</td><td>0.5</td><td>0.5</td></tr>
+  <td class="dz-sticky dz-name"><b>Methylprednisolone</b><br><span class="dz-sub">IV/IO</span></td><td>2 mg/kg</td><td>125 mg</td><td>8</td><td>13</td><td>17</td><td>21</td><td>26</td><td>33</td><td>42</td><td>53</td><td>66</td><td>83</td></tr>
+  <td class="dz-sticky dz-name"><b>Magnesium Sulfate</b><br><span class="dz-sub">IV/IO over 15min</span></td><td>40 mg/kg</td><td>2,000 mg</td><td>160</td><td>260</td><td>340</td><td>420</td><td>520</td><td>660</td><td>840</td><td>1060</td><td>1320</td><td>1660</td></tr>
+  <td class="dz-sticky dz-name"><b>Ondansetron</b><br><span class="dz-sub">IV/IO/IM/PO</span></td><td>0.15 mg/kg</td><td>4 mg</td><td>0.6</td><td>1</td><td>1.3</td><td>1.6</td><td>1.9</td><td>2.5</td><td>3.1</td><td>4</td><td>4</td><td>4</td></tr>
+  <td class="dz-sticky dz-name"><b>Fentanyl</b><br><span class="dz-sub">IV/IO/IN/IM (pain)</span></td><td>1 mcg/kg</td><td>—</td><td>4 mcg</td><td>6 mcg</td><td>8 mcg</td><td>10 mcg</td><td>13 mcg</td><td>16 mcg</td><td>21 mcg</td><td>25 mcg</td><td>25 mcg</td><td>25 mcg</td></tr>
+  <td class="dz-sticky dz-name"><b>Fentanyl</b><br><span class="dz-sub">IV/IO (post-intubation)</span></td><td>0.5-1 mcg/kg</td><td>25 mcg</td><td>2 mcg</td><td>3 mcg</td><td>4 mcg</td><td>5 mcg</td><td>6 mcg</td><td>8 mcg</td><td>10 mcg</td><td>13 mcg</td><td>16 mcg</td><td>21 mcg</td></tr>
+  <td class="dz-sticky dz-name"><b>Midazolam</b><br><span class="dz-sub">IV/IO (sedation)</span></td><td>0.1 mg/kg</td><td>2.5 mg</td><td>0.4</td><td>0.7</td><td>0.9</td><td>1.1</td><td>1.3</td><td>1.7</td><td>2.1</td><td>2</td><td>2</td><td>2</td></tr>
+  <td class="dz-sticky dz-name"><b>Midazolam</b><br><span class="dz-sub">IN/IM (sedation)</span></td><td>0.2 mg/kg</td><td>5 mg</td><td>0.8</td><td>1.3</td><td>1.7</td><td>2.1</td><td>2.6</td><td>3.3</td><td>4.2</td><td>5</td><td>5</td><td>5</td></tr>
+  <td class="dz-sticky dz-name"><b>Naloxone</b><br><span class="dz-sub">IV/IO/IM/IN (overdose)</span></td><td>0.1 mg/kg</td><td>2 mg</td><td>0.4</td><td>0.7</td><td>0.9</td><td>1.1</td><td>1.3</td><td>1.7</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+  <td class="dz-sticky dz-name"><b>Norepinephrine</b><br><span class="dz-sub">infusion (mcg/min) (0.05-0.1 mcg/kg/min)</span></td><td>—</td><td>2 mcg/kg/min</td><td>0.3</td><td>0.5</td><td>0.6</td><td>0.8</td><td>1</td><td>1.2</td><td>1.6</td><td>2</td><td>2.5</td><td>3.1</td></tr>
+  <td class="dz-sticky dz-name"><b>NS Fluid Bolus</b><br><span class="dz-sub">(shock/resus) (20 mL/kg)</span></td><td>—</td><td>—</td><td>80</td><td>130</td><td>170</td><td>210</td><td>260</td><td>330</td><td>420</td><td>530</td><td>660</td><td>830</td></tr>
+</tbody></table></div>
 ### Fixed Pediatric Doses (Same as Adult)
 
 These medications have the same dose for pediatric and adult patients per Poquoson protocols:
