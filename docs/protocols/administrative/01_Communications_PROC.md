@@ -26,12 +26,12 @@ This protocol outlines the procedures for effectively communicating with Medical
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | **Use HEAR for notification only**<br>Notify hospitals of BLS/ALS patients NOT requiring on-line physician intervention. | | • | | • | |
-| 2 | **Use COR for medical control/meds/alerts**<br>Direct contact with Medical Control for physician consultation. Used for Stroke, Trauma, STEMI alerts (providing Name/DOB). | | • | | • | |
-| 3 | **Transmit standard pre-arrival report**<br>Include Unit ID/ETA, patient age/gender/chief complaint, history of present illness/injury, pertinent medical history, significant physical findings, vital signs, and treatment. | | • | | • | |
-| 4 | **MCI comms suspension/supervisor relay**<br>Routine ambulance-to-ED communications suspended. Transport group supervisor communicates directly to coordinating ED. | | • | | • | |
-| 5 | **Comm Failure: act on standing orders**<br>Follow appropriate Poquoson Patient Care Protocols based on clinical situation. All orders within scope of practice become standing orders. | | • | | • | |
-| 6 | **Document comm failure**<br>Document time, nature of comms problem, clinical status, and protocols used on the PCR. Review with Officer/Acting Officer per department SOPs. | | • | | • | |
+| 1 | **Use HEAR for notification only**<br>Notify hospitals of BLS/ALS patients NOT requiring on-line physician intervention. |  | • | • | • | • |
+| 2 | **Use COR for medical control/meds/alerts**<br>Direct contact with Medical Control for physician consultation. Used for Stroke, Trauma, STEMI alerts (providing Name/DOB). |  | • | • | • | • |
+| 3 | **Transmit standard pre-arrival report**<br>Include Unit ID/ETA, patient age/gender/chief complaint, history of present illness/injury, pertinent medical history, significant physical findings, vital signs, and treatment. |  | • | • | • | • |
+| 4 | **MCI comms suspension/supervisor relay**<br>Routine ambulance-to-ED communications suspended. Transport group supervisor communicates directly to coordinating ED. |  | • | • | • | • |
+| 5 | **Comm Failure: act on standing orders**<br>Follow appropriate Poquoson Patient Care Protocols based on clinical situation. All orders within scope of practice become standing orders. |  | • | • | • | • |
+| 6 | **Document comm failure**<br>Document time, nature of comms problem, clinical status, and protocols used on the PCR. Review with Officer/Acting Officer per department SOPs. |  | • | • | • | • |
 
 </div>
 

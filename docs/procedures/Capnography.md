@@ -13,13 +13,13 @@ Continuous monitoring of end-tidal CO₂ (EtCO₂) is a mandatory procedure for 
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| 1 | **Adequate respiratory effort:** Apply EtCO₂ sampling nasal cannula to patient. | | • | | • | |
-| 2 | **Inadequate respiratory effort / Apnea:** Attach in-line EtCO₂ sampling device to BVM, CPAP, or ventilator. | | • | | • | |
-| 3 | **Continuous Monitoring:** Monitor reading and waveform continuously. | | • | | • | |
-| 4 | **Advanced Airway (ETT/SGA):** Continuous monitoring is mandatory. Sudden drop or loss of EtCO₂ signal requires immediate verification of airway device placement and ventilation. | | • | | • | |
-| 5 | **Cardiac Arrest:** If EtCO₂ < 10 mmHg or dropping during CPR, optimize compression rate, depth, and recoil. If ROSC is achieved, adjust ventilation to maintain EtCO₂ 35-45 mmHg. Do not hyperventilate. | | • | | • | |
-| 6 | **TBI / Stroke:** Adjust ventilation to maintain EtCO₂ 35-45 mmHg. Do not hyperventilate. | | • | | • | |
-| 7 | **Obstructive airway disease (Asthma/COPD):** Consider permissive hypercapnia. Prioritize oxygenation. | | • | | • | |
+| 1 | **Adequate respiratory effort:** Apply EtCO₂ sampling nasal cannula to patient. |  | • | • | • | • |
+| 2 | **Inadequate respiratory effort / Apnea:** Attach in-line EtCO₂ sampling device to BVM, CPAP, or ventilator. |  | • | • | • | • |
+| 3 | **Continuous Monitoring:** Monitor reading and waveform continuously. |  | • | • | • | • |
+| 4 | **Advanced Airway (ETT/SGA):** Continuous monitoring is mandatory. Sudden drop or loss of EtCO₂ signal requires immediate verification of airway device placement and ventilation. |  | • | • | • | • |
+| 5 | **Cardiac Arrest:** If EtCO₂ < 10 mmHg or dropping during CPR, optimize compression rate, depth, and recoil. If ROSC is achieved, adjust ventilation to maintain EtCO₂ 35-45 mmHg. Do not hyperventilate. |  | • | • | • | • |
+| 6 | **TBI / Stroke:** Adjust ventilation to maintain EtCO₂ 35-45 mmHg. Do not hyperventilate. |  | • | • | • | • |
+| 7 | **Obstructive airway disease (Asthma/COPD):** Consider permissive hypercapnia. Prioritize oxygenation. |  | • | • | • | • |
 
 </div>
 

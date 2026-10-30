@@ -21,14 +21,14 @@ Guidelines for managing life-threatening hemorrhage across various anatomical lo
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Follow Universal Care / Reassess bleeding after treatments performed. | | • | | • | |
-| 2 | **Head:** Apply direct pressure / Hemostatic dressing (avoid eyes/mouth). | | • | | • | |
-| 3 | **Neck:** Apply occlusive dressing / direct pressure (DO NOT pack). | | • | | • | |
-| 4 | **Extremity:** Apply direct pressure/packing ➔ Tourniquet 2-3" above wound ➔ 2nd Tourniquet if needed. | | • | | • | |
-| 5 | **Junctional (Axilla or femoral):** Pack tightly with hemostatic gauze / hold pressure x3 mins. | | • | | • | |
-| 6 | **Thoracoabdominal:** Apply direct pressure / chest seal (DO NOT pack). | | • | | • | |
-| 7 | Apply pelvic binder if unstable pelvis suspected. | | • | | • | |
-| 8 | Consider pain control per Poquoson Protocol(s). | | • | | • | |
+| 1 | Follow Universal Care / Reassess bleeding after treatments performed. |  | • | • | • | • |
+| 2 | **Head:** Apply direct pressure / Hemostatic dressing (avoid eyes/mouth). |  | • | • | • | • |
+| 3 | **Neck:** Apply occlusive dressing / direct pressure (DO NOT pack). |  | • | • | • | • |
+| 4 | **Extremity:** Apply direct pressure/packing ➔ Tourniquet 2-3" above wound ➔ 2nd Tourniquet if needed. |  | • | • | • | • |
+| 5 | **Junctional (Axilla or femoral):** Pack tightly with hemostatic gauze / hold pressure x3 mins. |  | • | • | • | • |
+| 6 | **Thoracoabdominal:** Apply direct pressure / chest seal (DO NOT pack). |  | • | • | • | • |
+| 7 | Apply pelvic binder if unstable pelvis suspected. |  | • | • | • | • |
+| 8 | Consider pain control per Poquoson Protocol(s). |  | • | • | • | • |
 | 9 | Contact Poquoson Medical Control if hemorrhage cannot be controlled and transport immediately. | MC | MC | MC | MC | MC |
 
 </div>

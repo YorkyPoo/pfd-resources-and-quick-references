@@ -43,18 +43,18 @@ Stridor in pediatric patients indicates upper airway obstruction requiring rapid
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
-| 1 | **Universal Patient Care / Initial Patient Contact**<br>• Follow Universal Patient Care Poquoson Protocol for all patients.| | • | | • | |
-| 2 | **Scene Management & Calm Environment**<br>• Keep child calm - agitation worsens obstruction<br>• Allow parent/caregiver to hold child<br>• Avoid unnecessary procedures<br>• Minimize stimulation and stranger anxiety | | • | | • | |
-| 3 | **Position of Comfort**<br>• Allow child to assume position of choice (usually upright or with parent)<br>• Do not force supine positioning<br>• Head-down positioning for infants <1 year if foreign body suspected | | • | | • | |
-| 4 | **High-Flow Oxygen**<br>• Apply high-flow oxygen via non-rebreather mask or blow-by<br>• Monitor SpO2 continuously<br>• Titrate to maintain SpO2 >94% | | | • | | • |
-| 5 | **Continuous Monitoring**<br>• Cardiac monitor<br>• Pulse oximetry<br>• EtCO2 when available | | | • | | • |
+| 1 | **Universal Patient Care / Initial Patient Contact**<br>• Follow Universal Patient Care Poquoson Protocol for all patients. |  | • | • | • | • |
+| 2 | **Scene Management & Calm Environment**<br>• Keep child calm - agitation worsens obstruction<br>• Allow parent/caregiver to hold child<br>• Avoid unnecessary procedures<br>• Minimize stimulation and stranger anxiety |  | • | • | • | • |
+| 3 | **Position of Comfort**<br>• Allow child to assume position of choice (usually upright or with parent)<br>• Do not force supine positioning<br>• Head-down positioning for infants <1 year if foreign body suspected |  | • | • | • | • |
+| 4 | **High-Flow Oxygen**<br>• Apply high-flow oxygen via non-rebreather mask or blow-by<br>• Monitor SpO2 continuously<br>• Titrate to maintain SpO2 >94% |  |  | • | • | • |
+| 5 | **Continuous Monitoring**<br>• Cardiac monitor<br>• Pulse oximetry<br>• EtCO2 when available |  |  | • | • | • |
 | 6 | **CPAP for Upper Airway Support**<br>• Consider CPAP for upper airway support if indicated<br>• Initial PEEP 5 cmH2O (titratable by I/P providers) |  |  |  |  | • |
 | 7 | **[Albuterol](../../pharmacology/Albuterol.md) Nebulizer**<br>• **[Albuterol](../../pharmacology/Albuterol.md)** 3 mL 0.083% solution nebulized<br>• May help with lower airway component<br>• Reassess after treatment |  |  |  |  | • |
 | 8 | **Systemic Corticosteroids**<br>• **[Methylprednisolone](../../pharmacology/Methylprednisolone.md) (Solu-Medrol)** per dosing table below:<br>   • Adult: **125 mg IV/IO** slow push<br>   • Pediatric: **2 mg/kg IV/IO** slow push (max **125 mg**)<br>• Steroids take 30-60 minutes to take effect |  |  |  |  | • |
 | 9 | **IV/IO Access**<br>• Obtain IV or IO access for medication administration<br>• Use largest appropriate catheter<br>• Do NOT delay [Epinephrine](../../pharmacology/Epinephrine.md) for IV/IO placement |  |  |  |  | • |
 | 10 | **Nebulized [Epinephrine](../../pharmacology/Epinephrine.md) for Moderate to Severe Stridor**<br>• **[Epinephrine](../../pharmacology/Epinephrine.md)** **3 mg** [1 mg/mL] nebulized<br>• May be repeated once if needed<br>• Same concentration as adults and pediatrics |  |  |  |  |  |
 | 11 | **Airway Protection - Advanced Airway**<br>• Prepare for advanced airway if impending respiratory failure<br>• Have appropriate sized equipment ready<br>• ⚠ Intubation of children <12 requires Paramedic skill |  |  |  |  | MC |
-| 12 | **Transport Considerations**<br>• Transport to pediatric-capable facility<br>• Alert receiving facility early<br>• Consider ALS intercept if BLS only<br>• Rapid transport if severe obstruction | | • | | • | |
+| 12 | **Transport Considerations**<br>• Transport to pediatric-capable facility<br>• Alert receiving facility early<br>• Consider ALS intercept if BLS only<br>• Rapid transport if severe obstruction |  | • | • | • | • |
 
 </div>
 

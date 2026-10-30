@@ -17,17 +17,17 @@ The Universal Patient Care / Initial Patient Contact protocol applies to all pat
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
-| 1 | **Scene Safety / PPE / Patient Contact:**<br>• Utilize appropriate agencies and resources as needed (lift assistance, ALS, law enforcement).<br>• Bring all necessary equipment to the patient’s side. | | • | | • | |
-| 2 | **Initial Assessment:**<br>• Perform Primary and Secondary Survey as indicated.<br>• Consider spinal motion restriction if indicated by MOI or history. | | • | | • | |
-| 3 | **Ensure Adequate Airway, Oxygenation, and Ventilation:**<br>• Manage airway by the least invasive means necessary.<br>• Maintain home oxygen unless symptoms indicate need for increase.<br>• Administer up to 15 LPM oxygen through an appropriate delivery device. | | • | | • | |
-| 4 | **Vital Signs:**<br>• Obtain BP, pulse rate, respirations, and GCS.<br>• Consider obtaining blood glucose level and temperature.<br>• Reassess Stable patients at least every 15 minutes.<br>• Reassess Unstable patients at least every 5 minutes. | | • | | • | |
-| 5 | **Assess SpO2:**<br>• Consider assessing EtCO2 and/or SpCO as indicated. | | | • | | • |
-| 6 | **Consider 12-Lead ECG:**<br>• Acquire within 5 minutes of patient contact.<br>• Transmit to receiving facility within 10 minutes of patient contact. | | | • | | • |
-| 7 | **Medication Administration:**<br>• Confirm all "Rights" (Patient, Medication, Dose, Route, Time).<br>• Ensure medications are not expired.<br>• Assess for drug-drug interactions and contraindications. | | | • | | • |
-| 8 | **Establish IV / IO access:**<br>• Establish access when indicated. | | | | • | |
-| 9 | **Consider continuous cardiac monitoring.** | | | | | • |
-| 10 | **Transport:**<br>• Base transport decisions on clinical condition and regional Field Triage policies.<br>• Deliver a pre-arrival report to the receiving facility as soon as practical.<br>• Consult with Medical Control regarding destination or clinical guidance. | | | • | | • |
-| 11 | **Refer to relevant protocols:**<br>• If no protocol applies, or for clinical guidance at any time, contact Medical Control. | | • | | • | |
+| 1 | **Scene Safety / PPE / Patient Contact:**<br>• Utilize appropriate agencies and resources as needed (lift assistance, ALS, law enforcement).<br>• Bring all necessary equipment to the patient’s side. |  | • | • | • | • |
+| 2 | **Initial Assessment:**<br>• Perform Primary and Secondary Survey as indicated.<br>• Consider spinal motion restriction if indicated by MOI or history. |  | • | • | • | • |
+| 3 | **Ensure Adequate Airway, Oxygenation, and Ventilation:**<br>• Manage airway by the least invasive means necessary.<br>• Maintain home oxygen unless symptoms indicate need for increase.<br>• Administer up to 15 LPM oxygen through an appropriate delivery device. |  | • | • | • | • |
+| 4 | **Vital Signs:**<br>• Obtain BP, pulse rate, respirations, and GCS.<br>• Consider obtaining blood glucose level and temperature.<br>• Reassess Stable patients at least every 15 minutes.<br>• Reassess Unstable patients at least every 5 minutes. |  | • | • | • | • |
+| 5 | **Assess SpO2:**<br>• Consider assessing EtCO2 and/or SpCO as indicated. |  |  | • | • | • |
+| 6 | **Consider 12-Lead ECG:**<br>• Acquire within 5 minutes of patient contact.<br>• Transmit to receiving facility within 10 minutes of patient contact. |  |  | • | • | • |
+| 7 | **Medication Administration:**<br>• Confirm all "Rights" (Patient, Medication, Dose, Route, Time).<br>• Ensure medications are not expired.<br>• Assess for drug-drug interactions and contraindications. |  |  | • | • | • |
+| 8 | **Establish IV / IO access:**<br>• Establish access when indicated. |  |  |  | • | • |
+| 9 | **Consider continuous cardiac monitoring.** |  |  |  |  | • |
+| 10 | **Transport:**<br>• Base transport decisions on clinical condition and regional Field Triage policies.<br>• Deliver a pre-arrival report to the receiving facility as soon as practical.<br>• Consult with Medical Control regarding destination or clinical guidance. |  |  | • | • | • |
+| 11 | **Refer to relevant protocols:**<br>• If no protocol applies, or for clinical guidance at any time, contact Medical Control. |  | • | • | • | • |
 
 </div>
 

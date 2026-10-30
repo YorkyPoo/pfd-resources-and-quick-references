@@ -32,12 +32,12 @@ Guidelines for managing acute submersion, non-fatal drowning, and decompression 
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Follow Universal Patient Care / Initial Patient Contact protocol. Remove the patient from the water. | | • | | • | |
-| 2 | Consider spinal motion restriction. Refer to Spinal Motion Restriction procedure. | | • | | • | |
-| 3 | Assess airway and ventilation. Refer to Airway Management and Ventilatory Support protocol. | | • | | • | |
-| 4 | Remove wet clothing and dry the skin. Keep the patient warm. | | • | | • | |
-| 5 | If hypothermia and hemodynamically unstable, focus effort on rewarming as well as resuscitation simultaneously. | | • | | • | |
-| 6 | Diving emergencies: Assess for pulmonary barotrauma, decompression sickness, and/or arterial gas embolism. Refer to appropriate Poquoson Protocol(s) as needed. | | • | | • | |
+| 1 | Follow Universal Patient Care / Initial Patient Contact protocol. Remove the patient from the water. |  | • | • | • | • |
+| 2 | Consider spinal motion restriction. Refer to Spinal Motion Restriction procedure. |  | • | • | • | • |
+| 3 | Assess airway and ventilation. Refer to Airway Management and Ventilatory Support protocol. |  | • | • | • | • |
+| 4 | Remove wet clothing and dry the skin. Keep the patient warm. |  | • | • | • | • |
+| 5 | If hypothermia and hemodynamically unstable, focus effort on rewarming as well as resuscitation simultaneously. |  | • | • | • | • |
+| 6 | Diving emergencies: Assess for pulmonary barotrauma, decompression sickness, and/or arterial gas embolism. Refer to appropriate Poquoson Protocol(s) as needed. |  | • | • | • | • |
 | 7 | Contact Poquoson Medical Control for hyperbaric transport destination guidance if decompression injury is suspected. | MC | MC | MC | MC | MC |
 
 </div>

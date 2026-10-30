@@ -38,12 +38,12 @@ Hypertensive crisis is characterized by severely elevated blood pressure with po
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
-| 1 | **Universal Patient Care / Initial Patient Contact:**<br>• Follow Universal Patient Care / Initial Patient Contact **Poquoson Protocol**.<br>• Ensure scene safety and utilize appropriate PPE. | | • | | • | |
-| 2 | **Primary Assessment:**<br>• Perform Primary and Secondary Survey.<br>• Obtain complete set of vital signs including bilateral BP if possible.<br>• Assess for signs of end-organ damage (neurological, cardiac, pulmonary, renal). | | • | | • | |
-| 3 | **Stroke Assessment:**<br>• Perform stroke screening (Cincinnati Prehospital Stroke Scale or equivalent).<br>• If stroke is suspected, refer to **Stroke / TIA Poquoson Protocol** immediately.<br>• Note time of symptom onset if applicable. | | • | | • | |
-| 4 | **Cardiac Assessment:**<br>• Assess for chest pain, pressure, or symptoms consistent with acute coronary syndrome.<br>• Obtain 12-lead ECG if available.<br>• If ACS is suspected, refer to **Chest Pain (Cardiac) Poquoson Protocol** immediately. |  | | • | | • |
-| 5 | **Respiratory Assessment:**<br>• Assess for respiratory distress, pulmonary edema, or hypoxia.<br>• Apply pulse oximetry and administer oxygen as indicated.<br>• If respiratory distress is present, refer to **Respiratory Distress Poquoson Protocol** and **Airway Management and Ventilatory Support Procedure**. | | • | | • | |
-| 6 | **Glucose Assessment:**<br>• Check blood glucose level.<br>• If hyperglycemia or hypoglycemia is present or suspected, refer to **Hyperglycemia / Hypoglycemia Poquoson Protocol**.<br>• Treat glucose abnormalities per appropriate protocol. |  | | • | | • |
+| 1 | **Universal Patient Care / Initial Patient Contact:**<br>• Follow Universal Patient Care / Initial Patient Contact **Poquoson Protocol**.<br>• Ensure scene safety and utilize appropriate PPE. |  | • | • | • | • |
+| 2 | **Primary Assessment:**<br>• Perform Primary and Secondary Survey.<br>• Obtain complete set of vital signs including bilateral BP if possible.<br>• Assess for signs of end-organ damage (neurological, cardiac, pulmonary, renal). |  | • | • | • | • |
+| 3 | **Stroke Assessment:**<br>• Perform stroke screening (Cincinnati Prehospital Stroke Scale or equivalent).<br>• If stroke is suspected, refer to **Stroke / TIA Poquoson Protocol** immediately.<br>• Note time of symptom onset if applicable. |  | • | • | • | • |
+| 4 | **Cardiac Assessment:**<br>• Assess for chest pain, pressure, or symptoms consistent with acute coronary syndrome.<br>• Obtain 12-lead ECG if available.<br>• If ACS is suspected, refer to **Chest Pain (Cardiac) Poquoson Protocol** immediately. |  |  | • | • | • |
+| 5 | **Respiratory Assessment:**<br>• Assess for respiratory distress, pulmonary edema, or hypoxia.<br>• Apply pulse oximetry and administer oxygen as indicated.<br>• If respiratory distress is present, refer to **Respiratory Distress Poquoson Protocol** and **Airway Management and Ventilatory Support Procedure**. |  | • | • | • | • |
+| 6 | **Glucose Assessment:**<br>• Check blood glucose level.<br>• If hyperglycemia or hypoglycemia is present or suspected, refer to **Hyperglycemia / Hypoglycemia Poquoson Protocol**.<br>• Treat glucose abnormalities per appropriate protocol. |  |  | • | • | • |
 | 7 | **Medical Control Consultation:**<br>• Contact **Poquoson Medical Control** for guidance on blood pressure management as needed.<br>• Do NOT attempt to aggressively lower blood pressure in the field without specific orders.<br>• Report all associated symptoms, vital signs, and suspected target organ involvement. | MC | MC | MC | MC | MC |
 
 </div>

@@ -9,12 +9,12 @@ Standardized procedures for the safe and accurate administration of medications 
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| 1 | Prepare medication. Refer to protocol-specific indications and pharmacology section. | | • | | • | |
-| 2 | **Cross-check:** Verify correct medication, patient, route, dose, and expiration with another provider. | | • | | • | |
-| 3 | **IV Administration:** Verify patency, administer at prescribed rate (Push=Rapid; Slow Push=30-60s; Infusion=per rate). | | | | • | |
-| 4 | **IO Administration:** Verify patency, follow IV administration steps. | | | | • | |
-| 5 | **IN Administration:** Administer ½ dose per naris using MAD. Max 1mL/naris. | | • | | • | |
-| 6 | **IM Administration:** Clean site, insert at 90° angle, administer, dispose in sharps. | | • | | • | |
+| 1 | Prepare medication. Refer to protocol-specific indications and pharmacology section. |  | • | • | • | • |
+| 2 | **Cross-check:** Verify correct medication, patient, route, dose, and expiration with another provider. |  | • | • | • | • |
+| 3 | **IV Administration:** Verify patency, administer at prescribed rate (Push=Rapid; Slow Push=30-60s; Infusion=per rate). |  |  |  | • | • |
+| 4 | **IO Administration:** Verify patency, follow IV administration steps. |  |  |  | • | • |
+| 5 | **IN Administration:** Administer ½ dose per naris using MAD. Max 1mL/naris. |  | • | • | • | • |
+| 6 | **IM Administration:** Clean site, insert at 90° angle, administer, dispose in sharps. |  | • | • | • | • |
 
 </div>
 

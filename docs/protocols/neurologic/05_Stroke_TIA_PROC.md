@@ -23,15 +23,15 @@ Guidelines for the rapid assessment and transport of patients with suspected Str
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Universal Care / Assess BEFAST | | • | | • | |
-| 2 | Assess RACE scale for Large Vessel Occlusion (LVO) | | • | | • | |
-| 3 | Record Time Last Seen Normal and family contact info | | • | | • | |
-| 4 | Assess blood glucose (Treat <60 per Hypoglycemia protocol) | | | • | | • |
-| 5 | Goal scene time <15 minutes / Initiate rapid transport | | | • | | • |
-| 6 | Triage: Symptoms <24 hrs & RACE 5-9 -> Transport to closest Comprehensive Stroke Center (if <30 min delay) | | | • | | • |
-| 7 | Triage: Symptoms >24 hrs OR RACE 0-4 -> Transport to closest Primary Stroke Center | | | • | | • |
-| 8 | Establish 18g IV in Right AC (preferred for rapid imaging) | | | | • | |
-| 9 | Call Poquoson COR at receiving facility with Name/DOB for rapid registration | | | • | | • |
+| 1 | Universal Care / Assess BEFAST |  | • | • | • | • |
+| 2 | Assess RACE scale for Large Vessel Occlusion (LVO) |  | • | • | • | • |
+| 3 | Record Time Last Seen Normal and family contact info |  | • | • | • | • |
+| 4 | Assess blood glucose (Treat <60 per Hypoglycemia protocol) |  |  | • | • | • |
+| 5 | Goal scene time <15 minutes / Initiate rapid transport |  |  | • | • | • |
+| 6 | Triage: Symptoms <24 hrs & RACE 5-9 -> Transport to closest Comprehensive Stroke Center (if <30 min delay) |  |  | • | • | • |
+| 7 | Triage: Symptoms >24 hrs OR RACE 0-4 -> Transport to closest Primary Stroke Center |  |  | • | • | • |
+| 8 | Establish 18g IV in Right AC (preferred for rapid imaging) |  |  |  | • | • |
+| 9 | Call Poquoson COR at receiving facility with Name/DOB for rapid registration |  |  | • | • | • |
 
 </div>
 

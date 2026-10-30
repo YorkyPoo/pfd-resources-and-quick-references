@@ -30,11 +30,11 @@ This protocol outlines the indications and legal requirements for withholding re
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | **Withhold CPR** for obvious mortal injury, rigor mortis, dependent lividity, decomposition, or valid DDNR. | | • | | • | |
-| 2 | **Initiate CPR** if doubt exists regarding the DNR validity, or if only a living will/advanced directive is present. | | • | | • | |
-| 3 | **Provide full BLS/ALS care** prior to termination (BLS: AED, pulse ox, EtCO2, supraglottic airway; ALS: advanced airway, IV/IO, meds per ACLS). | | • | | • | |
-| 4 | **Contact Medical Control** for termination decision or DNR questions. Provide thorough report of history, condition, and treatment. | | • | | • | |
-| 5 | **Remain on scene** and notify law enforcement and Medical Examiner if terminated on scene. Support bystanders and family. | | • | | • | |
+| 1 | **Withhold CPR** for obvious mortal injury, rigor mortis, dependent lividity, decomposition, or valid DDNR. |  | • | • | • | • |
+| 2 | **Initiate CPR** if doubt exists regarding the DNR validity, or if only a living will/advanced directive is present. |  | • | • | • | • |
+| 3 | **Provide full BLS/ALS care** prior to termination (BLS: AED, pulse ox, EtCO2, supraglottic airway; ALS: advanced airway, IV/IO, meds per ACLS). |  | • | • | • | • |
+| 4 | **Contact Medical Control** for termination decision or DNR questions. Provide thorough report of history, condition, and treatment. |  | • | • | • | • |
+| 5 | **Remain on scene** and notify law enforcement and Medical Examiner if terminated on scene. Support bystanders and family. |  | • | • | • | • |
 
 </div>
 

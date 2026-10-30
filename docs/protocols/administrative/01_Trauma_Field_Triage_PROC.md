@@ -35,14 +35,14 @@ This protocol establishes the criteria and routing instructions to rapidly triag
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | **Scene Time Management:** Maintain a goal scene time of < 10 minutes. | | • | | • | |
-| 2 | **Immediate Life-Threats Routing:** If unmanageable airway, uncontrolled hemorrhage, or traumatic cardiac arrest, transport immediately to closest ED. | | • | | • | |
-| 3 | **Physiologic Criteria Met Routing:** Transport to closest appropriate trauma center (Level I or II) within 30-min ground transport. | | • | | • | |
-| 4 | **Out of Range (Ground) / HEMS Consideration:** If not within 30-min ground transport, transport to closest hospital UNLESS Helicopter EMS (HEMS) can deliver to trauma center faster. | | • | | • | |
+| 1 | **Scene Time Management:** Maintain a goal scene time of < 10 minutes. |  | • | • | • | • |
+| 2 | **Immediate Life-Threats Routing:** If unmanageable airway, uncontrolled hemorrhage, or traumatic cardiac arrest, transport immediately to closest ED. |  | • | • | • | • |
+| 3 | **Physiologic Criteria Met Routing:** Transport to closest appropriate trauma center (Level I or II) within 30-min ground transport. |  | • | • | • | • |
+| 4 | **Out of Range (Ground) / HEMS Consideration:** If not within 30-min ground transport, transport to closest hospital UNLESS Helicopter EMS (HEMS) can deliver to trauma center faster. |  | • | • | • | • |
 | 5 | **Mechanism-Only Routing:** If patient meets mechanism criteria but NOT physiologic/anatomic criteria, contact Medical Control to determine destination. | MC | MC | MC | MC | MC |
-| 6 | **Burn Center Routing:** For burns meeting criteria absent other trauma, transport directly to Burn Center. | | • | | • | |
-| 7 | **Pediatric Trauma Routing:** Transport severely injured pediatric patients to a pediatric trauma center (CHKD or VCU). | | • | | • | |
-| 8 | **Trauma Alerts:** Establish early radio contact with the receiving trauma center. | | • | | • | |
+| 6 | **Burn Center Routing:** For burns meeting criteria absent other trauma, transport directly to Burn Center. |  | • | • | • | • |
+| 7 | **Pediatric Trauma Routing:** Transport severely injured pediatric patients to a pediatric trauma center (CHKD or VCU). |  | • | • | • | • |
+| 8 | **Trauma Alerts:** Establish early radio contact with the receiving trauma center. |  | • | • | • | • |
 
 </div>
 

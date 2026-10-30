@@ -26,13 +26,13 @@ Guidelines for assessing and managing pain using pharmacologic and non-pharmacol
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Follow Universal Patient Care / Initial Patient Contact protocol. | | • | | • | |
-| 2 | Assess baseline pain scale. Consider non-pharmacologic options (reassurance, distraction, positioning, splinting, cold therapy) first or as an adjunct. | | • | | • | |
-| 3 | Assess and monitor blood pressure to ensure patient is not hypotensive (see criteria). | | | • | | • |
-| 4 | Nausea:<br>• Adult: **[Ondansetron](../../pharmacology/Ondansetron.md) 4 mg** IV/IM/PO<br>• Pediatric [> 1 year]: **[Ondansetron](../../pharmacology/Ondansetron.md) 0.15 mg/kg** IV/IM/PO (Max dose: **4 mg**) | | | | • | |
-| 5 | Mild to Moderate Pain (2 - 5):<br>• Adult: **Ketorolac 15 mg** IV / **30 mg** IM | | | | • | |
-| 6 | Moderate to Severe Pain (6 - 10):<br>• Adult: **[Fentanyl](../../pharmacology/Fentanyl.md) 25-50 mcg** IV/IN/IM (Max total dose: **100 mcg**)<br>• Pediatric: **[Fentanyl](../../pharmacology/Fentanyl.md) 0.5-1 mcg/kg** IV/IN/IM (Max dose: **25 mcg**, Max total dose: **100 mcg**) | | | | • | |
-| 7 | OR Moderate to Severe Pain (6 - 10):<br>• Adult: **Morphine Sulfate 2.5-5 mg** IV/IM (Max total dose: **10 mg**)<br>• Pediatric: **Morphine Sulfate 0.1 mg/kg** IV/IM (Max dose: **2.5 mg**, Max total dose: **10 mg**) | | | | • | |
+| 1 | Follow Universal Patient Care / Initial Patient Contact protocol. |  | • | • | • | • |
+| 2 | Assess baseline pain scale. Consider non-pharmacologic options (reassurance, distraction, positioning, splinting, cold therapy) first or as an adjunct. |  | • | • | • | • |
+| 3 | Assess and monitor blood pressure to ensure patient is not hypotensive (see criteria). |  |  | • | • | • |
+| 4 | Nausea:<br>• Adult: **[Ondansetron](../../pharmacology/Ondansetron.md) 4 mg** IV/IM/PO<br>• Pediatric [> 1 year]: **[Ondansetron](../../pharmacology/Ondansetron.md) 0.15 mg/kg** IV/IM/PO (Max dose: **4 mg**) |  |  |  | • | • |
+| 5 | Mild to Moderate Pain (2 - 5):<br>• Adult: **Ketorolac 15 mg** IV / **30 mg** IM |  |  |  | • | • |
+| 6 | Moderate to Severe Pain (6 - 10):<br>• Adult: **[Fentanyl](../../pharmacology/Fentanyl.md) 25-50 mcg** IV/IN/IM (Max total dose: **100 mcg**)<br>• Pediatric: **[Fentanyl](../../pharmacology/Fentanyl.md) 0.5-1 mcg/kg** IV/IN/IM (Max dose: **25 mcg**, Max total dose: **100 mcg**) |  |  |  | • | • |
+| 7 | OR Moderate to Severe Pain (6 - 10):<br>• Adult: **Morphine Sulfate 2.5-5 mg** IV/IM (Max total dose: **10 mg**)<br>• Pediatric: **Morphine Sulfate 0.1 mg/kg** IV/IM (Max dose: **2.5 mg**, Max total dose: **10 mg**) |  |  |  | • | • |
 | 8 | If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact Poquoson Medical Control for guidance. | MC | MC | MC | MC | MC |
 
 </div>

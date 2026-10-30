@@ -22,13 +22,13 @@ Guidelines for managing heat-related illnesses, distinguishing between heat exha
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Place patient in cool environment | | • | | • | |
-| 2 | Remove excess clothing | | | • | | • |
-| 3 | Normal skin temp: Apply cool compresses | | | • | | • |
-| 4 | Hot skin temp (Heat Stroke): Treat as life-threatening/start rapid cooling (cool mist, ice packs to armpits/groin/neck, wet sheet) | | | • | | • |
-| 5 | Shivering: Slow the cooling process | | | • | | • |
-| 6 | Suspected heat stroke/hypovolemia: **0.9% Normal Saline 20 mL/kg up to 1000 mL bolus** IV/IO | | | | • | |
-| 7 | Continuously reassess patient | | | • | | • |
+| 1 | Place patient in cool environment |  | • | • | • | • |
+| 2 | Remove excess clothing |  |  | • | • | • |
+| 3 | Normal skin temp: Apply cool compresses |  |  | • | • | • |
+| 4 | Hot skin temp (Heat Stroke): Treat as life-threatening/start rapid cooling (cool mist, ice packs to armpits/groin/neck, wet sheet) |  |  | • | • | • |
+| 5 | Shivering: Slow the cooling process |  |  | • | • | • |
+| 6 | Suspected heat stroke/hypovolemia: **0.9% Normal Saline 20 mL/kg up to 1000 mL bolus** IV/IO |  |  |  | • | • |
+| 7 | Continuously reassess patient |  |  | • | • | • |
 
 </div>
 

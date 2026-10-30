@@ -23,16 +23,16 @@ Resuscitation guidelines for traumatic cardiac arrest, prioritizing hemorrhage c
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Control major active external bleeding / Begin CPR | | • | | • | |
-| 2 | Open the airway / Ventilate | | | • | | • |
-| 3 | Apply AED / Monitor (Assess rhythm before CPR if possible) | | | • | | • |
-| 4 | Asystole on arrival: Consider withholding CPR | | | • | | • |
-| 5 | PEA / VF / VT: Continue CPR / Defibrillate if indicated | | | • | | • |
-| 6 | Obtain IV/IO access (x2 preferred) | | | | • | |
-| 7 | If blood unavailable: **0.9% Sodium Chloride** up to **1 L** IV/IO (Adult) / **20 mL/kg** IV/IO (Ped) | | | | • | |
-| 8 | Assess Shock Index > 1 / Resuscitate prior to intubation | | | | | • |
-| 9 | Perform bilateral chest decompression for tension pneumo | | | | | • |
-| 10 | Rapid transport to Level I/II Trauma Center (Goal < 10 mins) | | • | | • | |
+| 1 | Control major active external bleeding / Begin CPR |  | • | • | • | • |
+| 2 | Open the airway / Ventilate |  |  | • | • | • |
+| 3 | Apply AED / Monitor (Assess rhythm before CPR if possible) |  |  | • | • | • |
+| 4 | Asystole on arrival: Consider withholding CPR |  |  | • | • | • |
+| 5 | PEA / VF / VT: Continue CPR / Defibrillate if indicated |  |  | • | • | • |
+| 6 | Obtain IV/IO access (x2 preferred) |  |  |  | • | • |
+| 7 | If blood unavailable: **0.9% Sodium Chloride** up to **1 L** IV/IO (Adult) / **20 mL/kg** IV/IO (Ped) |  |  |  | • | • |
+| 8 | Assess Shock Index > 1 / Resuscitate prior to intubation |  |  |  |  | • |
+| 9 | Perform bilateral chest decompression for tension pneumo |  |  |  |  | • |
+| 10 | Rapid transport to Level I/II Trauma Center (Goal < 10 mins) |  | • | • | • | • |
 | 11 | Contact Poquoson Medical Control for guidance / destination | MC | MC | MC | MC | MC |
 
 </div>

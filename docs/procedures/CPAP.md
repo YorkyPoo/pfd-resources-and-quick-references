@@ -14,12 +14,12 @@ Continuous Positive Airway Pressure (CPAP) provides positive pressure ventilatio
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| 1 | Explain procedure and indications to the patient. | | • | | • | |
-| 2 | Ensure adequate oxygen supply to the CPAP device. | | • | | • | |
-| 3 | Set positive end-expiratory pressure (PEEP) to 5 cmH2O. | | • | | • | |
-| 4 | Place mask over mouth/nose with oxygen flowing. Secure with straps, starting with lower straps. Minimize air leak. | | • | | • | |
-| 5 | Reassess patient (SpO2, EtCO2, work of breathing). | | • | | • | |
-| 6 | Consider titrating PEEP (5–15 cmH2O) as needed to improve ventilation. | | | | | • |
+| 1 | Explain procedure and indications to the patient. |  | • | • | • | • |
+| 2 | Ensure adequate oxygen supply to the CPAP device. |  | • | • | • | • |
+| 3 | Set positive end-expiratory pressure (PEEP) to 5 cmH2O. |  | • | • | • | • |
+| 4 | Place mask over mouth/nose with oxygen flowing. Secure with straps, starting with lower straps. Minimize air leak. |  | • | • | • | • |
+| 5 | Reassess patient (SpO2, EtCO2, work of breathing). |  | • | • | • | • |
+| 6 | Consider titrating PEEP (5–15 cmH2O) as needed to improve ventilation. |  |  |  |  | • |
 
 </div>
 

@@ -14,19 +14,21 @@ In pediatric emergencies, you may not have access to a scale. **Patient length i
 
 ## Length-to-Weight Estimation
 
-| Zone | Approx. Length | Est. Weight | Typical Age | Hand Breadth |
-|:----:|:--------------:|:-----------:|:-----------:|:------------:|
-| **Pink** | 50-60 cm | 3-5 kg | Newborn-2 mo | ~1 hand |
-| **Red** | 60-70 cm | 6-7 kg | 3-6 mo | ~1.5 hands |
-| **Purple** | 70-85 cm | 8-9 kg | 6-12 mo | ~2 hands |
-| **Yellow** | 85-95 cm | 10-11 kg | 12-18 mo | ~2.5 hands |
-| **White** | 95-105 cm | 12-14 kg | 2-3 yr | ~3 hands |
-| **Blue** | 105-120 cm | 15-18 kg | 3-5 yr | ~3.5 hands |
-| **Orange** | 120-135 cm | 19-23 kg | 5-7 yr | ~4 hands |
-| **Green** | 135-150 cm | 24-29 kg | 7-9 yr | ~4.5 hands |
-| **Brown** | 150-160 cm | 30-36 kg | 9-12 yr | ~5 hands |
-| **Gray** | 160-170 cm | 37-46 kg | 12-14 yr | ~5.5 hands |
-| **Adult** | >170 cm | >47 kg | >14 yr | Adult protocols |
+<div class="dz-wrap"><table class="dz">
+<thead><tr><th class="dz-sticky" style="text-align:left">Zone</th><th>Approx. Length</th><th>Est. Weight</th><th>Typical Age</th><th>Hand Breadth</th></tr></thead>
+<tbody>
+<tr><td class="dz-sticky" style="color:#f48fb1;font-weight:700">Pink</td><td>50-60 cm</td><td>3-5 kg</td><td>Newborn-2 mo</td><td>~1 hand</td></tr>
+<tr><td class="dz-sticky" style="color:#e57373;font-weight:700">Red</td><td>60-70 cm</td><td>6-7 kg</td><td>3-6 mo</td><td>~1.5 hands</td></tr>
+<tr><td class="dz-sticky" style="color:#b39ddb;font-weight:700">Purple</td><td>70-85 cm</td><td>8-9 kg</td><td>6-12 mo</td><td>~2 hands</td></tr>
+<tr><td class="dz-sticky" style="color:#fff176;font-weight:700">Yellow</td><td>85-95 cm</td><td>10-11 kg</td><td>12-18 mo</td><td>~2.5 hands</td></tr>
+<tr><td class="dz-sticky" style="color:#eceff1;font-weight:700">White</td><td>95-105 cm</td><td>12-14 kg</td><td>2-3 yr</td><td>~3 hands</td></tr>
+<tr><td class="dz-sticky" style="color:#64b5f6;font-weight:700">Blue</td><td>105-120 cm</td><td>15-18 kg</td><td>3-5 yr</td><td>~3.5 hands</td></tr>
+<tr><td class="dz-sticky" style="color:#ffb74d;font-weight:700">Orange</td><td>120-135 cm</td><td>19-23 kg</td><td>5-7 yr</td><td>~4 hands</td></tr>
+<tr><td class="dz-sticky" style="color:#81c784;font-weight:700">Green</td><td>135-150 cm</td><td>24-29 kg</td><td>7-9 yr</td><td>~4.5 hands</td></tr>
+<tr><td class="dz-sticky" style="color:#a1887f;font-weight:700">Brown</td><td>150-160 cm</td><td>30-36 kg</td><td>9-12 yr</td><td>~5 hands</td></tr>
+<tr><td class="dz-sticky" style="color:#b0bec5;font-weight:700">Gray</td><td>160-170 cm</td><td>37-46 kg</td><td>12-14 yr</td><td>~5.5 hands</td></tr>
+<tr><td class="dz-sticky" style="color:#90a4ae;font-weight:700">Adult</td><td>>170 cm</td><td>>47 kg</td><td>>14 yr</td><td>Adult protocols</td></tr>
+</tbody></table></div>
 
 !!! tip "Estimation Method"
     To estimate length: lay the patient supine and place your hand(s) alongside the body from crown to heel. Compare to the hand breadth estimates above. The hand measurement is approximate — use the nearest zone.

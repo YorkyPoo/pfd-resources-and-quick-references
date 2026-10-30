@@ -30,12 +30,12 @@ Guidelines for managing thermal, chemical, and radiation burns, emphasizing airw
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Stop the burning process safely and remove the patient from the source. Fully expose the injured area and remove constricting items including clothing. | | • | | • | |
-| 2 | Assess airway and respiratory effort. Refer to Airway Management and Ventilatory Support protocol. | | • | | • | |
-| 3 | Estimate depth of burns and Total Body Surface Area (TBSA) involved using Rule of 9s or patient's palm (1%). Only count partial (2nd degree) and full thickness (3rd degree) burns. | | | • | | • |
-| 4 | Apply clean, dry dressings to burns. Prevent loss of body heat and keep the patient warm. | | | • | | • |
-| 5 | Establish IV/IO access on a non-burned extremity, if possible (preferably obtain two sites of access). | | | | • | |
-| 6 | Hydrofluoric Acid (HF) Burns with Hypotension: Administer **[Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) 1 g** IV/IO over 3 mins (Repeat in 5 mins PRN). | | | | | |
+| 1 | Stop the burning process safely and remove the patient from the source. Fully expose the injured area and remove constricting items including clothing. |  | • | • | • | • |
+| 2 | Assess airway and respiratory effort. Refer to Airway Management and Ventilatory Support protocol. |  | • | • | • | • |
+| 3 | Estimate depth of burns and Total Body Surface Area (TBSA) involved using Rule of 9s or patient's palm (1%). Only count partial (2nd degree) and full thickness (3rd degree) burns. |  |  | • | • | • |
+| 4 | Apply clean, dry dressings to burns. Prevent loss of body heat and keep the patient warm. |  |  | • | • | • |
+| 5 | Establish IV/IO access on a non-burned extremity, if possible (preferably obtain two sites of access). |  |  |  | • | • |
+| 6 | Hydrofluoric Acid (HF) Burns with Hypotension: Administer **[Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) 1 g** IV/IO over 3 mins (Repeat in 5 mins PRN). |  |  |  |  |  |
 | 7 | Contact Poquoson Medical Control if the most appropriate transport destination is unclear based on criteria. | MC | MC | MC | MC | MC |
 
 </div>

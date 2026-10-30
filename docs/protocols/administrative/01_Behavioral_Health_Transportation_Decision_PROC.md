@@ -24,13 +24,13 @@ Appropriately identify patients experiencing a mental health crisis that can ben
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | **Assess decision-making capacity** | | • | | • | |
-| 2 | **Direct Transport:** Once identified, consider direct transport to a Mental Health Facility. | | • | | • | |
-| 3 | **Medical Control:** When in doubt regarding appropriate destination or patient status, contact Medical Control. | | • | | • | |
-| 4 | **Psychiatric Emergencies:** Acute psychiatric emergencies with significant risk of harm to self/others refusing treatment/transport: contact law enforcement regarding Emergency Custody Order (ECO) for psychiatric evaluation. | | • | | • | |
-| 5 | **Medical Emergencies:** Acute medical emergencies lacking decision-making capacity refusing treatment/transport: contact Medical Control regarding ECO for medical evaluation. MC must petition a magistrate. Contact law enforcement to assist. | | • | | • | |
-| 6 | **Law Enforcement Custody:** Patients in LE custody (including ECOs) or under arrest **MUST** have a law enforcement officer present at all times. | | • | | • | |
-| 7 | **Restraints:** If LE restraints utilized (handcuffs, flex-cuffs), LE officer **SHOULD** accompany the patient. | | • | | • | |
+| 1 | **Assess decision-making capacity** |  | • | • | • | • |
+| 2 | **Direct Transport:** Once identified, consider direct transport to a Mental Health Facility. |  | • | • | • | • |
+| 3 | **Medical Control:** When in doubt regarding appropriate destination or patient status, contact Medical Control. |  | • | • | • | • |
+| 4 | **Psychiatric Emergencies:** Acute psychiatric emergencies with significant risk of harm to self/others refusing treatment/transport: contact law enforcement regarding Emergency Custody Order (ECO) for psychiatric evaluation. |  | • | • | • | • |
+| 5 | **Medical Emergencies:** Acute medical emergencies lacking decision-making capacity refusing treatment/transport: contact Medical Control regarding ECO for medical evaluation. MC must petition a magistrate. Contact law enforcement to assist. |  | • | • | • | • |
+| 6 | **Law Enforcement Custody:** Patients in LE custody (including ECOs) or under arrest **MUST** have a law enforcement officer present at all times. |  | • | • | • | • |
+| 7 | **Restraints:** If LE restraints utilized (handcuffs, flex-cuffs), LE officer **SHOULD** accompany the patient. |  | • | • | • | • |
 
 </div>
 

@@ -33,11 +33,11 @@ Guidelines for assessing capacity, identifying surrogate decision makers, and ob
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Conduct a thorough assessment of the patient including vital signs and physical exam in accordance with relevant patient care protocols. | | • | | • | |
-| 2 | Assess right/capacity to refuse (≥ 14 years of age, fully oriented, understands risks/benefits/alternatives, no risk to self/others). | | • | | • | |
-| 3 | Identify appropriate surrogate decision maker (in descending order) if the patient lacks capacity or competence. | | • | | • | |
-| 4 | Clearly document information provided; obtain signatures for refusal from patient or surrogate and at least 1 adult witness. | | • | | • | |
-| 5 | Contact law enforcement regarding issuance of a Psychiatric ECO for patients with acute psychiatric emergencies risk of harm. | | • | | • | |
+| 1 | Conduct a thorough assessment of the patient including vital signs and physical exam in accordance with relevant patient care protocols. |  | • | • | • | • |
+| 2 | Assess right/capacity to refuse (≥ 14 years of age, fully oriented, understands risks/benefits/alternatives, no risk to self/others). |  | • | • | • | • |
+| 3 | Identify appropriate surrogate decision maker (in descending order) if the patient lacks capacity or competence. |  | • | • | • | • |
+| 4 | Clearly document information provided; obtain signatures for refusal from patient or surrogate and at least 1 adult witness. |  | • | • | • | • |
+| 5 | Contact law enforcement regarding issuance of a Psychiatric ECO for patients with acute psychiatric emergencies risk of harm. |  | • | • | • | • |
 | 6 | Contact **Poquoson Medical Control** regarding issuance of a Medical ECO for acute medical emergencies lacking capacity. | MC | MC | MC | MC | MC |
 | 7 | Contact **Poquoson Medical Control** for assistance if unsure of capacity, surrogate validity, or if patient refuses despite severe risk. | MC | MC | MC | MC | MC |
 

@@ -24,13 +24,13 @@ Respecting patient decision-making capacity while ensuring safe, appropriate med
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | **Transport to patient choice:** Transport capable patients to the ED of their choice (if no exceptions) | | • | | • | |
-| 2 | **Reroute for STEMI criteria:** Transport to STEMI Receiving Center per Poquoson Regional STEMI Plan | | • | | • | |
-| 3 | **Reroute for Stroke criteria:** Transport to designated stroke center per Poquoson Stroke Triage Plan | | • | | • | |
-| 4 | **Transport to closest:** Transport to the closest most appropriate hospital if no patient preference | | • | | • | |
-| 5 | **Document reason:** Document reason for any reroute or destination change on the PCR | | • | | • | |
-| 6 | **Contact HEMS:** Contact HEMS without Medical Control if beneficial to the patient | | • | | • | |
-| 7 | **Initiate ground transport:** Initiate ground transport to closest hospital/helispot if HEMS > 10 min delay | | • | | • | |
+| 1 | **Transport to patient choice:** Transport capable patients to the ED of their choice (if no exceptions) |  | • | • | • | • |
+| 2 | **Reroute for STEMI criteria:** Transport to STEMI Receiving Center per Poquoson Regional STEMI Plan |  | • | • | • | • |
+| 3 | **Reroute for Stroke criteria:** Transport to designated stroke center per Poquoson Stroke Triage Plan |  | • | • | • | • |
+| 4 | **Transport to closest:** Transport to the closest most appropriate hospital if no patient preference |  | • | • | • | • |
+| 5 | **Document reason:** Document reason for any reroute or destination change on the PCR |  | • | • | • | • |
+| 6 | **Contact HEMS:** Contact HEMS without Medical Control if beneficial to the patient |  | • | • | • | • |
+| 7 | **Initiate ground transport:** Initiate ground transport to closest hospital/helispot if HEMS > 10 min delay |  | • | • | • | • |
 
 </div>
 

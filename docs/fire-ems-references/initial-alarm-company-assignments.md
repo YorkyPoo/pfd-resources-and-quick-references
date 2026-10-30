@@ -6,7 +6,7 @@
     **Roadmaps:** SSG - First 5 Minutes Tactical Roadmap | SSG - RECEO VS Tactical Roadmap
 
 ---
-Single Family Initial Responce: 2 Medics, 1 Engine, 2 Aerials, 1 Squad, 1 Battalion
+Single Family Initial Response: 2 Medics, 1 Engine, 2 Aerials, 1 Squad, 1 Battalion
 Commercial +: 1 Engine
 2nd Alarm
 Medic, Engine, Aerial, Battalion

@@ -12,12 +12,12 @@ Removal of Taser barbs from patients requiring no other treatment and who are re
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Coordinate with law enforcement (scene/patient safe). | | • | | • | |
-| 2 | Ensure Taser cartridge removed/wires cut. | | • | | • | |
-| 3 | Assess for injuries (burns, electrocution, trauma). | | • | | • | |
-| 4 | **Leave in place and transport if in:** Eye, face, neck, breast, axilla, genitals, hands, or feet. | | • | | • | |
-| 5 | Hold skin taut. Grasp electrode shaft with hemostat/forceps. Pull straight out with quick motion. | | • | | • | |
-| 6 | Dispose in sharps container, provide wound care. | | • | | • | |
+| 1 | Coordinate with law enforcement (scene/patient safe). |  | • | • | • | • |
+| 2 | Ensure Taser cartridge removed/wires cut. |  | • | • | • | • |
+| 3 | Assess for injuries (burns, electrocution, trauma). |  | • | • | • | • |
+| 4 | **Leave in place and transport if in:** Eye, face, neck, breast, axilla, genitals, hands, or feet. |  | • | • | • | • |
+| 5 | Hold skin taut. Grasp electrode shaft with hemostat/forceps. Pull straight out with quick motion. |  | • | • | • | • |
+| 6 | Dispose in sharps container, provide wound care. |  | • | • | • | • |
 
 </div>
 

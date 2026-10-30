@@ -24,13 +24,13 @@ EMS providers act as mandated reporters under state law for suspected elder abus
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Assess and document psychological characteristics (passivity, fear, aggression, etc.). | | • | | • | |
-| 2 | Assess for physical signs or injuries that are inconsistent with the reported mechanism of injury (MOI). | | • | | • | |
-| 3 | Assess for signs of neglect (hygiene, clothing, malnutrition, absence of caregivers). | | • | | • | |
-| 4 | **Report Elder Abuse:** Notify local DSS or Adult Protective Services (APS). If imminent danger of death/serious injury or death occurred, report to medical examiner and law enforcement. | | • | | • | |
-| 5 | **Report Child Abuse:** Notify local DSS or Child Protective Services (CPS). If transporting, it is acceptable to report to the attending ED physician. | | • | | • | |
-| 6 | **Report Hunting Injuries:** Notify Dept of Game and Inland Fisheries (DGIF) for serious bodily injury or death. | | • | | • | |
-| 7 | Document all notifications (e.g., "made notification to Dr. [ ]", hotline calls) thoroughly on the PCR. | | • | | • | |
+| 1 | Assess and document psychological characteristics (passivity, fear, aggression, etc.). |  | • | • | • | • |
+| 2 | Assess for physical signs or injuries that are inconsistent with the reported mechanism of injury (MOI). |  | • | • | • | • |
+| 3 | Assess for signs of neglect (hygiene, clothing, malnutrition, absence of caregivers). |  | • | • | • | • |
+| 4 | **Report Elder Abuse:** Notify local DSS or Adult Protective Services (APS). If imminent danger of death/serious injury or death occurred, report to medical examiner and law enforcement. |  | • | • | • | • |
+| 5 | **Report Child Abuse:** Notify local DSS or Child Protective Services (CPS). If transporting, it is acceptable to report to the attending ED physician. |  | • | • | • | • |
+| 6 | **Report Hunting Injuries:** Notify Dept of Game and Inland Fisheries (DGIF) for serious bodily injury or death. |  | • | • | • | • |
+| 7 | Document all notifications (e.g., "made notification to Dr. [ ]", hotline calls) thoroughly on the PCR. |  | • | • | • | • |
 
 </div>
 

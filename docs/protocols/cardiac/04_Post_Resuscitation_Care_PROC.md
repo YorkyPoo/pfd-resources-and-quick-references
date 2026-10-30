@@ -21,14 +21,14 @@ Guidelines for managing patients following Return of Spontaneous Circulation (RO
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Airway management / Ventilatory support | | • | | • | |
-| 2 | Assess Blood Glucose (treat < 60 mg/dL per protocol) | | | • | | • |
-| 3 | Obtain / transmit 12-lead ECG (STEMI Triage if indicated) | | | • | | • |
-| 4 | Obtain IV/IO (Humeral IO preferred if IV unavailable) | | | | • | |
-| 5 | Fluid Bolus:<br>ADULT: **0.9% Sodium Chloride** up to **1 L** IV/IO in **250 - 500 mL** boluses<br>PEDIATRIC: **0.9% Sodium Chloride 20 mL/kg** IV/IO (up to **60 mL/kg** total) | | | | • | |
-| 6 | Maintain MAP > 65 mmHg:<br>ADULT: **[Norepinephrine](../../pharmacology/Norepinephrine.md) infusion 5 - 20 mcg/min** IV/IO<br>OR<br>ADULT: **[Epinephrine](../../pharmacology/Epinephrine.md) infusion 2 - 10 mcg/min** IV/IO | | | | | • |
-| 7 | Pediatric SBP Support:<br>PEDIATRIC: **[Epinephrine](../../pharmacology/Epinephrine.md) infusion 0.1 - 1 mcg/kg/min** IV/IO<br>*(Titrate to > 70 mmHg if < 1 yr, > 90 mmHg if > 1 yr. Max dose: **10 mcg/min**)* | | | | | • |
-| 8 | Bridge Therapy:<br>ADULT: **Push dose [Epinephrine](../../pharmacology/Epinephrine.md) 5 - 10 mcg** IV/IO every 2-3 minutes | | | | | |
+| 1 | Airway management / Ventilatory support |  | • | • | • | • |
+| 2 | Assess Blood Glucose (treat < 60 mg/dL per protocol) |  |  | • | • | • |
+| 3 | Obtain / transmit 12-lead ECG (STEMI Triage if indicated) |  |  | • | • | • |
+| 4 | Obtain IV/IO (Humeral IO preferred if IV unavailable) |  |  |  | • | • |
+| 5 | Fluid Bolus:<br>ADULT: **0.9% Sodium Chloride** up to **1 L** IV/IO in **250 - 500 mL** boluses<br>PEDIATRIC: **0.9% Sodium Chloride 20 mL/kg** IV/IO (up to **60 mL/kg** total) |  |  |  | • | • |
+| 6 | Maintain MAP > 65 mmHg:<br>ADULT: **[Norepinephrine](../../pharmacology/Norepinephrine.md) infusion 5 - 20 mcg/min** IV/IO<br>OR<br>ADULT: **[Epinephrine](../../pharmacology/Epinephrine.md) infusion 2 - 10 mcg/min** IV/IO |  |  |  |  | • |
+| 7 | Pediatric SBP Support:<br>PEDIATRIC: **[Epinephrine](../../pharmacology/Epinephrine.md) infusion 0.1 - 1 mcg/kg/min** IV/IO<br>*(Titrate to > 70 mmHg if < 1 yr, > 90 mmHg if > 1 yr. Max dose: **10 mcg/min**)* |  |  |  |  | • |
+| 8 | Bridge Therapy:<br>ADULT: **Push dose [Epinephrine](../../pharmacology/Epinephrine.md) 5 - 10 mcg** IV/IO every 2-3 minutes |  |  |  |  |  |
 
 </div>
 

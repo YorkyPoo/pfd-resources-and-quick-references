@@ -32,16 +32,17 @@ Instead of listing paragraphs of text for each certification level, intervention
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
-| 1 | **Perform general patient management.** | | • | | • | |
-| 2 | **Administer [Epinephrine](../../pharmacology/Epinephrine.md) Auto-injector** | | | • | | • |
-| 3 | **Obtain IV/IO access.** | | | | • | |
-| 4 | **Administer [Epinephrine](../../pharmacology/Epinephrine.md) Infusion** | | | | MC | |
+| 1 | **Perform general patient management.** |  | • | • | • | • |
+| 2 | **Administer [Epinephrine](../../pharmacology/Epinephrine.md) Auto-injector** |  |  | • | • | • |
+| 3 | **Obtain IV/IO access.** |  |  |  | • | • |
+| 4 | **Administer [Epinephrine](../../pharmacology/Epinephrine.md) Infusion** |  |  |  | MC | MC |
 
 </div>
 
 #### Matrix Key & Symbols:
 * **Dot (•):** You are authorized to perform that intervention as a **Standing Order**.
 * **Blank Space:** The intervention is **NOT** within your scope of practice or protocol authorization.
+* **Cumulative by level:** Provider levels are cumulative — every level includes all standing orders of the levels below it, unless the cell for that level is blank or modified (e.g., `MC`). If you spot a row that appears to break this rule, report it through the chain of command for OMD review.
 * **MC:** You must contact **Medical Control** for authorization prior to performing that intervention.
 * **Caution (⚠):** Special considerations, critical safety warnings, or contraindications apply to this step.
 

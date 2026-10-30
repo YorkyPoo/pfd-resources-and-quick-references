@@ -13,13 +13,13 @@ Needle decompression of the chest is a life-saving intervention for tension pneu
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| 1 | Administer oxygen at 15 LPM (100% FiO2). | | | | • | |
-| 2 | Locate 2nd intercostal space in the mid-clavicular line on the side of suspected pneumothorax (Alternate: 4th intercostal space, mid-axillary line). | | | | • | |
-| 3 | Clean the site. | | | | • | |
-| 4 | Attach a 10 mL syringe filled with 0.9% Sodium Chloride to a 14-gauge catheter needle (longest available). | | | | • | |
-| 5 | Aspirate the syringe while advancing over the rib, perpendicular to the skin, into the pleural space until a pop is felt or air/blood/fluid is freely aspirated. **Do not advance needle further.** | | | | • | |
-| 6 | Advance the catheter over the needle into the pleural space and remove the needle. | | | | • | |
-| 7 | Reassess the patient, including vitals and respiratory effort/compliance. Consider repeating for continued/recurrent instability. | | | | • | |
+| 1 | Administer oxygen at 15 LPM (100% FiO2). |  |  |  | • | • |
+| 2 | Locate 2nd intercostal space in the mid-clavicular line on the side of suspected pneumothorax (Alternate: 4th intercostal space, mid-axillary line). |  |  |  | • | • |
+| 3 | Clean the site. |  |  |  | • | • |
+| 4 | Attach a 10 mL syringe filled with 0.9% Sodium Chloride to a 14-gauge catheter needle (longest available). |  |  |  | • | • |
+| 5 | Aspirate the syringe while advancing over the rib, perpendicular to the skin, into the pleural space until a pop is felt or air/blood/fluid is freely aspirated. **Do not advance needle further.** |  |  |  | • | • |
+| 6 | Advance the catheter over the needle into the pleural space and remove the needle. |  |  |  | • | • |
+| 7 | Reassess the patient, including vitals and respiratory effort/compliance. Consider repeating for continued/recurrent instability. |  |  |  | • | • |
 
 </div>
 
