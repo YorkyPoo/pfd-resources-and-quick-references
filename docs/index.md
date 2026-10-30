@@ -6,19 +6,72 @@ Welcome to the digital protocol library. This system is designed for **Conscious
 
 ## Quick Links
 
-| Resource | Status |
-|----------|--------|
-| [Medications & Calculators](medications.md) | ✅ Live |
-| [Pediatric Dosing Reference](pediatric-dosing/index.md) | ✅ Live |
-| [Fire & Rescue SOPs](sops/emergency-operations/EO-10-Staffing-and-Equipment-Response-202406130909086447.md) | LIVE |
-| Apparatus Checks | 🚧 Coming Soon |
-| City Policies | 🚧 Coming Soon |
+<div class="grid cards" markdown="1">
+
+-   __Interactive Calculator__
+
+    Zone & weight selector for every pediatric standing order, plus normal vitals & hypotension thresholds.
+
+    [Open →](pediatric-dosing/calculator.md)
+
+-   __Dosing Tables__
+
+    All 15 pediatric drugs × 10 Broselow zones, pre-calculated. Scroll zones, drug column stays pinned.
+
+    [Open →](pediatric-dosing/dosing-tables.md)
+
+-   __Medications & Calculators__
+
+    Adult pharmacology cards: dose, max, route, and clinical pearls.
+
+    [Open →](medications.md)
+
+-   __Master Protocol Tracker__
+
+    The full protocol library index — every PROC at a glance.
+
+    [Open →](protocols/00 - Master Protocol Tracker.md)
+
+-   __EO 6.00 — First-to-Arrive Duties__
+
+    The front-and-back standard. Plus the FORCES mnemonic card.
+
+    [Open →](sops/emergency-operations/EO-600-First-to-Arrive-Duties.md)
+
+-   __PPE & Equipment SOPs__
+
+    PPE / equipment standards and inspection procedures (EA 500 / EA 800).
+
+    [Open →](sops/equipment-and-apparatus/EA-500-PPE-and-Equipment.md)
+
+-   __Personnel Policy Manual__
+
+    Split into 43 indexed policies with jumpable sections.
+
+    [Open →](personnel-policies/index.md)
+
+-   __Fire & EMS SOPs__
+
+    Full SOP library — open the menu (bottom-right on phones) under Fire SOPs.
+
+    [EO 10 · Staffing →](sops/emergency-operations/EO-10-Staffing-and-Equipment-Response-202406130909086447.md)
+
+</div>
+
+---
+
+## 🆕 New & Updated
+
+_Last 45 days, newest first — generated automatically from the site's change history._
+
+{! recent !}
 
 ---
 
 ## How to Use This Site
 
 - **Search:** Use the search bar at the top to instantly find any protocol, medication, or SOP.
+- **Menu:** On phones, the menu button lives **bottom-right** for thumb reach.
 - **Offline:** Once loaded, this site works with **zero cell service** — in basements, rural scenes, or steel buildings.
 - **Mobile:** Add to your home screen on iOS or Android for instant access like a native app.
 
@@ -33,4 +86,6 @@ Submit all corrections or suggestions through your department chain of command. 
 ---
 
 !!! info "Last Updated"
-    This site is actively maintained. If you encounter outdated information, report it immediately.
+    Site content last changed: **{! lastbuild !}**
+
+    If you encounter outdated information, report it immediately.

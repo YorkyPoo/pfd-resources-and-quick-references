@@ -5,6 +5,7 @@ site_url: "https://yorkypoo.github.io/pfd-resources-and-quick-references/"
 
 hooks:
   - scripts/mkdocs_post_build.py
+  - scripts/mkdocs_recent_updates.py
 use_directory_urls: false
 
 theme:
@@ -49,6 +50,7 @@ markdown_extensions:
       alternate_style: true
   - tables
   - attr_list
+  - md_in_html
 
 nav:
   - Home: index.md
@@ -287,5 +289,6 @@ nav:
       - SUAS (Drone) Operations: sops/special-operations/so-1200-suas-operations.md
       - Rescue Task Force Administration: sops/special-operations/so-1300-rescue-task-force-administration.md
   - Personnel Policies:
-    - Policy Manual: personnel-policies/other/personnel-policy-manual.md
+    - Policy Manual (Indexed): personnel-policies/index.md
+    - Full Text Archive: personnel-policies/other/personnel-policy-manual.md
 
