@@ -27,8 +27,9 @@ Guidelines and procedures for physical and chemical patient restraint to ensure 
     - Kind and location of restraints used
     - Frequency of respiratory/mental status change assessments
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | **Request Law Enforcement if needed**<br>Call for assistance prior to attempting restraint procedures. | | • | | • | |
@@ -39,6 +40,8 @@ Guidelines and procedures for physical and chemical patient restraint to ensure 
 | 6 | **Avoid impeding respiratory function with chest straps**<br>DO NOT tighten chest straps to the point of impeding respiratory function. | | • | | • | |
 | 7 | **Chemical Restraint: Assess vitals <5 mins then q10 mins**<br>And prior to any repeat dose. Monitor ECG, obtain 12-Lead, consider IN medications and establish IV/IO if possible. | | | | • | |
 | 8 | **Refer to Behavioral Emergencies Protocol for sedatives**<br>Sedative agents may be needed to restrain violently combative patients. (Refer to Poquoson Protocol(s) for Behavioral Emergencies). | | | | • | |
+
+</div>
 
 ### Pearls
 * ⚠ **NEVER restrain a patient prone.**

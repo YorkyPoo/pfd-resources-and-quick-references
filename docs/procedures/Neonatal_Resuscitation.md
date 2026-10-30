@@ -5,6 +5,8 @@
 Resuscitation protocol for newborns/neonates (<28 days) with heart rate <100/min, apnea, or lack of pulse.
 
 ### Procedure
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Warm, dry, stimulate. Position airway (sniffing). Clear secretions ONLY if obstructed or thick meconium. | • | • | • | • | • |
@@ -12,6 +14,8 @@ Resuscitation protocol for newborns/neonates (<28 days) with heart rate <100/min
 | 3 | Apply ECG and EtCO₂ monitoring. | | | | • | |
 | 4 | If HR <60/min or pulseless: Begin compressions (3:1 ratio, 30 breaths/min). | | • | | • | |
 | 5 | Obtain IV/IO access, administer [Epinephrine](../pharmacology/Epinephrine.md) 0.01 mg/kg (0.1 mg/mL). Repeat q3-5 mins. | | | | | • |
+
+</div>
 
 ### Pearls
 *   Routine suctioning is no longer recommended.

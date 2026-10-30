@@ -17,8 +17,9 @@ Guidelines for managing heat-related illnesses, distinguishing between heat exha
     - Heat stroke vs exhaustion
     - Hypovolemia
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Place patient in cool environment | | • | | • | |
@@ -28,6 +29,8 @@ Guidelines for managing heat-related illnesses, distinguishing between heat exha
 | 5 | Shivering: Slow the cooling process | | | • | | • |
 | 6 | Suspected heat stroke/hypovolemia: **0.9% Normal Saline 20 mL/kg up to 1000 mL bolus** IV/IO | | | | • | |
 | 7 | Continuously reassess patient | | | • | | • |
+
+</div>
 
 ### Pearls
 1. ⚠ Hot skin to touch indicates a life-threatening emergency (Heat Stroke) - begin rapid cooling immediately.

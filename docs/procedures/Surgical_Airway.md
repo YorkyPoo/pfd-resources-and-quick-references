@@ -10,6 +10,8 @@ Last-resort airway management for patients who cannot be oxygenated or intubated
 - **Needle Cricothyrotomy:** < 12 years old or < 35-40 kg.
 
 ### Procedure
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Position supine, expose/clean neck, palpate cricothyroid membrane. | | | | | • |
@@ -17,6 +19,8 @@ Last-resort airway management for patients who cannot be oxygenated or intubated
 | 3 | **Needle Cric:** 14g catheter with syringe. Aspirate while advancing until pop/air aspiration. Advance catheter, remove needle. | | | | | • |
 | 4 | Confirm/monitor placement with EtCO₂ and SpO₂. | | | | | • |
 | 5 | Contact Medical Control and transport to closest ED. | MC | MC | MC | MC | MC |
+
+</div>
 
 ### Pearls
 *   Needle cricothyrotomy is unlikely to provide adequate ventilation. Prioritize oxygenation and transport.

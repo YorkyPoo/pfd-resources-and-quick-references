@@ -24,8 +24,9 @@ This protocol outlines the assessment and management of obstetrical emergencies,
     - Placenta previa vs. Abruptio placenta
     - Uterine rupture
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Follow Universal Patient Care, don appropriate PPE, and visualize perineum for crowning or presenting part. | | • | | • | |
@@ -38,6 +39,8 @@ This protocol outlines the assessment and management of obstetrical emergencies,
 | 8 | **Bleeding / Rupture / Abruptio:** Place patient in left lateral recumbent position. | | • | | • | |
 | 9 | Establish IV access and administer **0.9% Normal Saline 20 mL/kg** up to **1,000 mL**. | | | | • | |
 | 10 | Contact Medical Control for guidance, especially for complications, eclampsia seizures, or difficult deliveries. | MC | MC | MC | MC | MC |
+
+</div>
 
 ### Pearls
 • ⚠ Pre-eclampsia and eclampsia can occur up to 8 weeks AFTER delivery. Always ask about recent pregnancies in female patients presenting with seizures.

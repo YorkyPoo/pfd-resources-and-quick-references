@@ -25,8 +25,9 @@ Respiratory arrest (apnea) and respiratory failure represent life-threatening em
     - Severe metabolic derangement
     - Cardiac arrest with respiratory component
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
 | 1 | **Universal Patient Care / Initial Patient Contact:**<br>• Follow Universal Patient Care / Initial Patient Contact Poquoson Protocol.<br>• Assess for life threats and mechanism of respiratory failure. | | • | | • | |
@@ -44,6 +45,8 @@ Respiratory arrest (apnea) and respiratory failure represent life-threatening em
 | 13 | **Ongoing Ventilation Monitoring:**<br>• Monitor ET tube placement and ventilation continuously with SpO2 and EtCO2.<br>• Reassess lung sounds and gastric sounds after any patient movement. | | | | | • |
 | 14 | **Post-Advanced Airway Analgesia – [Fentanyl](../../pharmacology/Fentanyl.md) (Sublimaze):**<br>• **ADULT:** **25–50 mcg** IV/IO over 2 minutes or IN/IM.<br>• **PEDIATRIC:** **0.5–1 mcg/kg** IV/IO over 2 minutes or IN/IM (Maximum dose **25 mcg**).<br>• Repeat every 10–15 minutes as needed. | | | | | |
 | 15 | **Post-Advanced Airway Sedation – [Midazolam](../../pharmacology/Midazolam.md) (Versed):**<br>• **ADULT:** **2.5 mg** IV/IO over 2 minutes or **5 mg** IN/IM.<br>• **PEDIATRIC:** **0.1 mg/kg** IV/IO over 2 minutes or **0.2 mg/kg** IN/IM (Maximum dose **2.5 mg** IV/IO or **5 mg** IN/IM).<br>• Repeat every 10–15 minutes as needed. | | | | | |
+
+</div>
 
 ### Pearls
 1. **EtCO2 Target:** Maintain continuous box-waveform EtCO2 at **35–45 mmHg** once advanced airway is placed. This is the definitive indicator of adequate ventilation and perfusion.

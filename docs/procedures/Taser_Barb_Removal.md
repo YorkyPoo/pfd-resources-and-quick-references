@@ -8,6 +8,8 @@ Removal of Taser barbs from patients requiring no other treatment and who are re
 - Barb imbedded in skin of patient refusing transport, requiring no other treatment.
 
 ### Procedure
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Coordinate with law enforcement (scene/patient safe). | | • | | • | |
@@ -16,6 +18,8 @@ Removal of Taser barbs from patients requiring no other treatment and who are re
 | 4 | **Leave in place and transport if in:** Eye, face, neck, breast, axilla, genitals, hands, or feet. | | • | | • | |
 | 5 | Hold skin taut. Grasp electrode shaft with hemostat/forceps. Pull straight out with quick motion. | | • | | • | |
 | 6 | Dispose in sharps container, provide wound care. | | • | | • | |
+
+</div>
 
 ### Pearls
 *   Consider shallow underlying structures before removal; if removal may damage nerves/tendons, do not attempt—transport instead.

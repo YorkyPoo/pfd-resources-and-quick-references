@@ -39,8 +39,9 @@ This protocol addresses exposure to choking agents and irritant gases causing ai
     - Co-existing thermal burns
     - Concomitant trauma
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
 | 1 | **Scene Safety / PPE / Initial Assessment:**<br>• Follow Universal Patient Care / Initial Patient Contact protocol.<br>• Decision to enter contaminated area rests with incident commander and organizational policy. | | • | | • | |
@@ -55,6 +56,8 @@ This protocol addresses exposure to choking agents and irritant gases causing ai
 | 10 | **Endotracheal Intubation:**<br>• Follow Endotracheal Intubation procedure.<br>• ⚠ Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended. | | | | | • |
 | 11 | **Poison Control Consultation:**<br>• Contact **Poison Control Center at 1-800-222-1222** with any questions.<br>(Note: Poison Control is not online medical control.) | | | | | • |
 | 12 | **Medical Control Contact:**<br>• Contact **Poquoson OMD** for guidance as needed.<br>• Report agent exposure, interventions performed, and patient status. | | | | MC | MC |
+
+</div>
 
 ### Pearls
 1. ⚠ **Decontamination Safety:** Victims must be decontaminated and/or confirmed "clean" prior to treatment and transport to prevent secondary contamination of EMS personnel and equipment.

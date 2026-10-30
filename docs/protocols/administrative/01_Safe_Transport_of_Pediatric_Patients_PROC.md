@@ -17,8 +17,9 @@ Best practices for the ambulance transportation of ill or injured pediatric pati
     - Passenger considerations (parents, caregivers, non-patients)
     - State child safety law compliance
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
 | 1 | **Secure Equipment:** Secure all monitoring devices and other equipment to prevent injury. | | • | | • | |
@@ -29,11 +30,12 @@ Best practices for the ambulance transportation of ill or injured pediatric pati
 | 6 | **Alternative Transport:** Attempt to arrange for transportation of adults and children who are not patients by alternative means. | | • | | • | |
 | 7 | **Comfort Measures:** For pediatric patients having medical conditions aggravated by stress, make every reasonable attempt to maximize safety while comforting the child. | | • | | • | |
 
+</div>
+
 ### Pearls
 • ⚠ NEVER hold, attempt to hold, or permit parents or caregivers to hold the pediatric patient during transport.
 • ⚠ Ambulances are NOT EXEMPT from state child safety laws. DO NOT allow parents, caregivers or any passenger to be unrestrained during transport.
 • ⚠ Infants and children meeting Trauma Triage criteria should be transported in a child restraint device unless requiring relocation to or placement on an immobilization device.
-
 
 !!! tip "Pediatric Dosing Reference"
     For pediatric weight-based dosing and equipment sizing during transport, see the [Pediatric Dosing Reference](../../pediatric-dosing/index.md).

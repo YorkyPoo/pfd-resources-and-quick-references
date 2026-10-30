@@ -9,6 +9,8 @@ Continuous monitoring of end-tidal CO₂ (EtCO₂) is a mandatory procedure for 
 - Mandatory for any patient with an ETT or SGA in place.
 
 ### Procedure
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
 | 1 | **Adequate respiratory effort:** Apply EtCO₂ sampling nasal cannula to patient. | | • | | • | |
@@ -18,6 +20,8 @@ Continuous monitoring of end-tidal CO₂ (EtCO₂) is a mandatory procedure for 
 | 5 | **Cardiac Arrest:** If EtCO₂ < 10 mmHg or dropping during CPR, optimize compression rate, depth, and recoil. If ROSC is achieved, adjust ventilation to maintain EtCO₂ 35-45 mmHg. Do not hyperventilate. | | • | | • | |
 | 6 | **TBI / Stroke:** Adjust ventilation to maintain EtCO₂ 35-45 mmHg. Do not hyperventilate. | | • | | • | |
 | 7 | **Obstructive airway disease (Asthma/COPD):** Consider permissive hypercapnia. Prioritize oxygenation. | | • | | • | |
+
+</div>
 
 ### Pearls
 *   In general, an EtCO₂ < 20 mmHg suggests inadequate pulmonary perfusion (e.g., hypotension/pulmonary embolism) and/or severe metabolic derangement (e.g., diabetic ketoacidosis).

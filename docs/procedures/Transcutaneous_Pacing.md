@@ -9,6 +9,8 @@ Management of unstable symptomatic bradycardia (HR <60 bpm).
 - Pediatric: Symptomatic bradycardia despite adequate ventilation, high-quality CPR, and appropriate pharmacological interventions ([Epinephrine](../pharmacology/Epinephrine.md)/[Atropine](../pharmacology/Atropine%20Sulfate.md)).
 
 ### Procedure
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Expose/clean chest, apply 4-lead ECG. | | | | • | • |
@@ -16,6 +18,8 @@ Management of unstable symptomatic bradycardia (HR <60 bpm).
 | 3 | Set rate at 80 bpm. Initial current 50mA. | | | | • | • |
 | 4 | Increase current (10mA/10s) until electrical capture achieved. | | | | • | • |
 | 5 | Palpate femoral pulse to confirm mechanical capture. | | | | • | • |
+
+</div>
 
 ### Pearls
 *   Consider sedation/pain control prior to pacing; do not use both opiates and benzodiazepines due to risk of over-sedation.

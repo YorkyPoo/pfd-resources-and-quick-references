@@ -5,6 +5,8 @@
 Management of life-threatening extremity hemorrhage uncontrolled by direct pressure or wound packing.
 
 ### Procedure
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Expose injury, assess for additional trauma. | • | • | • | • | • |
@@ -13,6 +15,8 @@ Management of life-threatening extremity hemorrhage uncontrolled by direct press
 | 4 | If bleeding continues, apply 2nd tourniquet proximal and adjacent. | • | • | • | • | • |
 | 5 | Indicate time/date of application; keep exposed/visible. | • | • | • | • | • |
 | 6 | DO NOT remove/loosen once applied. Consider pain control. | • | • | • | • | • |
+
+</div>
 
 ### Pearls
 *   Commercial device is preferred; BP cuff is an acceptable alternative; improvised tourniquets are unreliable.

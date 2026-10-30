@@ -4,8 +4,6 @@
 ### Overview
 Guidelines for managing witnessed or reported seizures, focusing on airway protection, preventing injury, and pharmacological intervention with benzodiazepines.
 
-
-
 !!! tip "Pediatric Dosing Reference"
     For pediatric weight-based dosing, equipment sizing, and length estimation, see the [Pediatric Dosing Reference](../../pediatric-dosing/index.md).
 
@@ -25,8 +23,9 @@ Guidelines for managing witnessed or reported seizures, focusing on airway prote
     - Exclude Eclampsia if pregnant >20 wks / <8 wks post-partum
     - Hypoglycemia
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Prevent injury (DO NOT restrain while seizing) | | • | | • | |
@@ -36,6 +35,8 @@ Guidelines for managing witnessed or reported seizures, focusing on airway prote
 | 5 | Actively seizing >5 mins:<br>**[Midazolam](../../pharmacology/Midazolam.md) 5 mg IV/IO** or **10 mg IM** (Adult & Ped >40kg)<br>\| **[Midazolam](../../pharmacology/Midazolam.md) 2.5 mg IV/IO** or **5 mg IM** (Ped <40kg)<br>(Repeat once in 5 mins) | | | | • | |
 | 6 | Use HALF dose **[Midazolam](../../pharmacology/Midazolam.md)** for frail/hypotensive/elderly >65y | | | | • | |
 | 7 | Contact Poquoson Medical Control and initiate transport if seizing >5 mins after 2nd dose of **[Midazolam](../../pharmacology/Midazolam.md)** | MC | MC | MC | MC | MC |
+
+</div>
 
 ### Pearls
 • ⚠ Both seizures and benzodiazepines cause significant respiratory depression - monitor airway closely.

@@ -31,8 +31,9 @@ Acute Coronary Syndrome (ACS) encompasses a spectrum of conditions resulting fro
     - **GERD/Esophageal spasm**
     - **Musculoskeletal pain**
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
 | 1 | **Scene Safety / Initial Assessment:**<br>• Follow Universal Patient Care / Initial Patient Contact Poquoson Protocol.<br>• If stroke suspected, refer to Stroke / TIA Poquoson Protocol. | | • | | • | |
@@ -49,6 +50,8 @@ Acute Coronary Syndrome (ACS) encompasses a spectrum of conditions resulting fro
 | 12 | **Analgesia:**<br>• Consider analgesia (refer to Pain Control Poquoson Protocol). | | | | | • |
 | 13 | **Medical Control Contact:**<br>• Contact Poquoson OMD for guidance as needed. | | | MC | MC | MC |
 | 14 | **Right-Sided / 15-Lead ECG:**<br>• Consider right-sided 12-Lead or 15-Lead ECG for additional assessment. | | | | MC | MC |
+
+</div>
 
 ### Pearls
 1. **Atypical Presentations:** ACS may present as abdominal pain, nausea/vomiting, syncope, dyspnea, back pain, neck/jaw pain, or arm pain/discomfort without classic chest pain. Maintain high index of suspicion in at-risk populations.

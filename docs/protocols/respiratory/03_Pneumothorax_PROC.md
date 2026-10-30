@@ -32,8 +32,9 @@ Tension pneumothorax is a life-threatening condition where air accumulates in th
     - Acute Respiratory Distress Syndrome (ARDS)
     - Airway Obstruction
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
 | 1 | **Universal Patient Care / Scene Safety:**<br>• Ensure scene safety and appropriate PPE.<br>• Bring all necessary equipment to patient side. | | • | | • | |
@@ -51,6 +52,8 @@ Tension pneumothorax is a life-threatening condition where air accumulates in th
 | 13 | **Advanced Airway Management (if indicated):**<br>• Prepare for or perform endotracheal intubation if respiratory failure.<br>• **⚠ Positive pressure ventilation (BVM/CPAP) may worsen or induce pneumothorax.** | | | | | • |
 | 14 | **Transport Considerations:**<br>• Transport to appropriate trauma center if traumatic etiology.<br>• Alert receiving facility of needle decompression performed.<br>• Consider air medical transport for severe cases. | | • | | • | |
 | 15 | **Close Monitoring En Route:**<br>• Continuous reassessment en route.<br>• Monitor for recurrent tension pneumothorax.<br>• Secure catheter to prevent dislodgement. | | • | | • | |
+
+</div>
 
 ### Pearls
 1. **⚠ CPAP is contraindicated in patients with pneumothorax.** Positive pressure ventilation may worsen the condition or cause tension physiology.

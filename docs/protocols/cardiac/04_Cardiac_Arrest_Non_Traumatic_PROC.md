@@ -34,8 +34,9 @@ Cardiac arrest is the cessation of cardiac mechanical activity resulting in the 
     - **Trauma**
     - **Tablets (overdose)**
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
 | 1 | **Scene Safety / Initial Contact:**<br>• Ensure scene safety and appropriate PPE.<br>• Determine DNR status (refer to Death and Criteria for Withholding Resuscitation protocol).<br>• Patients with valid durable DNR or injuries inconsistent with survival are excluded. | | • | | • | |
@@ -52,6 +53,8 @@ Cardiac arrest is the cessation of cardiac mechanical activity resulting in the 
 | 12 | **Identify and Treat Reversible Causes:**<br>• Continuously assess for H's and T's throughout resuscitation.<br>• Treat underlying cause if identified. | | • | | • | |
 | 13 | **Termination of Resuscitation (TOR):**<br>Contact Medical Control to request TOR if ALL criteria met:<br>• Arrest was not witnessed by EMS<br>• After **20 minutes** of continuous CPR with no ROSC<br>• AND no shocks were delivered | | | | • | MC |
 | 14 | **Post-Resuscitation:**<br>• If ROSC achieved, refer to Post Cardiac Arrest Care (ROSC) protocol.<br>• If ROSC not achieved, refer to Death and Criteria for Withholding Resuscitation protocol. | | • | | • | |
+
+</div>
 
 ### Pearls
 1. ⚠ **High-Quality CPR is Essential:** Push hard and fast at rate **100 – 120 bpm**. Allow complete chest recoil. Minimize interruptions. Change compressors every **2 minutes** or sooner if fatigued. Give continuous compressions with advanced airway.

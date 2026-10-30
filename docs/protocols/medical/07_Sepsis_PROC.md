@@ -27,8 +27,9 @@ This protocol outlines the identification and management of sepsis, focusing on 
     - Cardiogenic shock
     - Hypovolemia from other causes
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Follow Universal Patient Care | | • | | • | |
@@ -37,6 +38,8 @@ This protocol outlines the identification and management of sepsis, focusing on 
 | 4 | Maintain age adjusted SBP. **[Epinephrine](../../pharmacology/Epinephrine.md) 0.1 - 1 mcg/kg/min** infusion max **10 mcg/min** (Pediatric) | | | | | • |
 | 5 | Push dose **[Epinephrine](../../pharmacology/Epinephrine.md) 5-10 mcg** IV/IO every 2-3 mins to maintain MAP until infusion is ready (Adult) | | | | | |
 | 6 | Contact Poquoson Medical Control / Prehospital Sepsis Alert | | | MC | MC | MC |
+
+</div>
 
 ### Pearls
 * ⚠ **CAUTION:** Administer IV fluids carefully in patients with a history of CHF or decreased ejection fraction. Monitor closely for signs of fluid overload and pulmonary edema.

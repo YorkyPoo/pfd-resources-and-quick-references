@@ -17,8 +17,9 @@ This administrative protocol establishes the operational guidelines to rapidly i
     - Impending circulatory collapse
     - Atypical or indeterminate ECGs
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | **Acquire 12-Lead ECG**<br>Must be completed within 5 minutes of patient arrival. | | • | | • | |
@@ -28,6 +29,8 @@ This administrative protocol establishes the operational guidelines to rapidly i
 | 5 | **Routing - Closest ED**<br>Transport to the closest ED (regardless of PCI capability) if the patient has a compromised airway or impending circulatory collapse. | | • | | • | |
 | 6 | **Notifications**<br>Activate STEMI alert system to closest PCI center within 30 minutes. Call COR with "Pre-Hospital STEMI Alert" and patient Name/DOB. Transmit ECG and provide printed/electronic copy to facility/HEMS. | | • | | • | |
 | 7 | **Serial ECGs**<br>For atypical/indeterminate ECGs with high suspicion, transmit ECG, contact Medical Control, and obtain serial ECGs every 10 minutes. | | • | | • | |
+
+</div>
 
 ### Field STEMI Triage Decision Scheme
 

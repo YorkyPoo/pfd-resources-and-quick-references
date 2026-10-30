@@ -18,8 +18,9 @@ Guidelines for the rapid assessment and transport of patients with suspected Str
     - Calculate RACE scale (0-9)
     - Blood Glucose <60
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Universal Care / Assess BEFAST | | • | | • | |
@@ -31,6 +32,8 @@ Guidelines for the rapid assessment and transport of patients with suspected Str
 | 7 | Triage: Symptoms >24 hrs OR RACE 0-4 -> Transport to closest Primary Stroke Center | | | • | | • |
 | 8 | Establish 18g IV in Right AC (preferred for rapid imaging) | | | | • | |
 | 9 | Call Poquoson COR at receiving facility with Name/DOB for rapid registration | | | • | | • |
+
+</div>
 
 ### Pearls
 • ⚠ Immediate life-threats (uncontrolled airway/arrest) go to the nearest ED.

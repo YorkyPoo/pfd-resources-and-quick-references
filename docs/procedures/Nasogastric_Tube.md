@@ -5,6 +5,8 @@
 Used for gastric decompression in intubated patients, airway management in patients with massive hematemesis, or persistent large volume emesis.
 
 ### Procedure
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Measure length: Nose to ear to xiphoid process. | | | | | • |
@@ -13,6 +15,8 @@ Used for gastric decompression in intubated patients, airway management in patie
 | 4 | **Confirm placement:** Inject 20cc air and auscultate over epigastrium for bubbles. | | | | | • |
 | 5 | Secure to nose and attach to low/medium suction. | | | | | • |
 | 6 | Document indication, insertion depth, and output volume. | | | | | • |
+
+</div>
 
 ### Pearls
 *   Contraindicated for patients with known esophageal varices (without active hemorrhage), recent maxillofacial surgery, or acute maxillofacial trauma.

@@ -17,8 +17,9 @@ Guidelines for managing symptomatic hypoglycemia and hyperglycemia, utilizing **
 === "Differential Considerations"
     - Ability to swallow/protect airway for **oral glucose**
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
 | 1 | Follow Universal Patient Care / Initial Patient Contact protocol / Check blood glucose | | • | | • | |
@@ -26,6 +27,8 @@ Guidelines for managing symptomatic hypoglycemia and hyperglycemia, utilizing **
 | 3 | **Hypoglycemia (IV/IO access available)**:<br>Administer ADULT: **[Dextrose](../../pharmacology/Dextrose.md) 10% 125 mL (12.5 g) IV/IO**<br>PEDIATRIC: **[Dextrose](../../pharmacology/Dextrose.md) 10% 5 mL/kg IV/IO**. Maximum dose **125 mL (12.5 g)**.<br>*Repeat dose in 5 minutes if no response.* | | | | • | |
 | 4 | **Hypoglycemia (No IV/IO access)**:<br>Administer ADULT: **[Glucagon](../../pharmacology/Glucagon.md) 1 mg IM**<br>PEDIATRIC (< 25 kg): **[Glucagon](../../pharmacology/Glucagon.md) 0.2 mg/kg IM**. Maximum dose **1 mg**.<br>*Repeat dose in 10 minutes if no response.* | | | | • | |
 | 5 | **Symptomatic Hyperglycemia**:<br>Consider ADULT: **0.9% Sodium chloride up to 1 L IV/IO** in **250 – 500 mL** boluses<br>PEDIATRIC: **0.9% Sodium chloride 20 mL/kg IV/IO**.<br>*Repeat as needed to maintain adequate perfusion, up to **60 mL/kg** total.* | | | | • | |
+
+</div>
 
 ### Pearls
 1. ⚠ Ensure patient can swallow and protect airway before administering **oral glucose**.

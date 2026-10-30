@@ -19,8 +19,9 @@ Appropriately identify patients experiencing a mental health crisis that can ben
     - No concern for infectious process?
     - No indications of intentional overdose?
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | **Assess decision-making capacity** | | • | | • | |
@@ -30,6 +31,8 @@ Appropriately identify patients experiencing a mental health crisis that can ben
 | 5 | **Medical Emergencies:** Acute medical emergencies lacking decision-making capacity refusing treatment/transport: contact Medical Control regarding ECO for medical evaluation. MC must petition a magistrate. Contact law enforcement to assist. | | • | | • | |
 | 6 | **Law Enforcement Custody:** Patients in LE custody (including ECOs) or under arrest **MUST** have a law enforcement officer present at all times. | | • | | • | |
 | 7 | **Restraints:** If LE restraints utilized (handcuffs, flex-cuffs), LE officer **SHOULD** accompany the patient. | | • | | • | |
+
+</div>
 
 ### Pearls
 * ⚠ **Medical vs. Psychiatric ECO:** A Psychiatric ECO is obtained by Law Enforcement for psychiatric evaluations. A Medical ECO requires Medical Control to petition a magistrate for patients lacking decision-making capacity due to medical emergencies.

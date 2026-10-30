@@ -21,8 +21,9 @@ Guidelines for assessing and managing pain using pharmacologic and non-pharmacol
     - Associated factors affecting hemodynamics (trauma, intoxication, illness)
     - Nausea
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Follow Universal Patient Care / Initial Patient Contact protocol. | | • | | • | |
@@ -33,6 +34,8 @@ Guidelines for assessing and managing pain using pharmacologic and non-pharmacol
 | 6 | Moderate to Severe Pain (6 - 10):<br>• Adult: **[Fentanyl](../../pharmacology/Fentanyl.md) 25-50 mcg** IV/IN/IM (Max total dose: **100 mcg**)<br>• Pediatric: **[Fentanyl](../../pharmacology/Fentanyl.md) 0.5-1 mcg/kg** IV/IN/IM (Max dose: **25 mcg**, Max total dose: **100 mcg**) | | | | • | |
 | 7 | OR Moderate to Severe Pain (6 - 10):<br>• Adult: **Morphine Sulfate 2.5-5 mg** IV/IM (Max total dose: **10 mg**)<br>• Pediatric: **Morphine Sulfate 0.1 mg/kg** IV/IM (Max dose: **2.5 mg**, Max total dose: **10 mg**) | | | | • | |
 | 8 | If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact Poquoson Medical Control for guidance. | MC | MC | MC | MC | MC |
+
+</div>
 
 ### Pearls
 * ⚠ Opiates cause respiratory/CNS depression, bradycardia, and/or hypotension - monitor vitals closely following any administration.

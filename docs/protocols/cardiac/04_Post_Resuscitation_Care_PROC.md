@@ -16,8 +16,9 @@ Guidelines for managing patients following Return of Spontaneous Circulation (RO
     - Reversible causes: H's and T's
     - Target EtCO2 35-45 mmHg
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Airway management / Ventilatory support | | • | | • | |
@@ -28,6 +29,8 @@ Guidelines for managing patients following Return of Spontaneous Circulation (RO
 | 6 | Maintain MAP > 65 mmHg:<br>ADULT: **[Norepinephrine](../../pharmacology/Norepinephrine.md) infusion 5 - 20 mcg/min** IV/IO<br>OR<br>ADULT: **[Epinephrine](../../pharmacology/Epinephrine.md) infusion 2 - 10 mcg/min** IV/IO | | | | | • |
 | 7 | Pediatric SBP Support:<br>PEDIATRIC: **[Epinephrine](../../pharmacology/Epinephrine.md) infusion 0.1 - 1 mcg/kg/min** IV/IO<br>*(Titrate to > 70 mmHg if < 1 yr, > 90 mmHg if > 1 yr. Max dose: **10 mcg/min**)* | | | | | • |
 | 8 | Bridge Therapy:<br>ADULT: **Push dose [Epinephrine](../../pharmacology/Epinephrine.md) 5 - 10 mcg** IV/IO every 2-3 minutes | | | | | |
+
+</div>
 
 ### Pearls
 • Most patients will require at least some vasopressor support to maintain a MAP > 65 following cardiac arrest.

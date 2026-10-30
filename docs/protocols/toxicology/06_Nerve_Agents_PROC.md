@@ -33,8 +33,9 @@ This protocol outlines the pre-hospital management of patients with suspected ex
     - Differentiate from other toxicological emergencies (e.g., opioid overdose, cholinergic crisis from other medications)
     - Patients may require significant amounts of airway suctioning and ventilation support
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Follow Universal Patient Care | | • | | • | |
@@ -44,6 +45,8 @@ This protocol outlines the pre-hospital management of patients with suspected ex
 | 5 | **DuoDote Autoinjector** IM (Adult and Pediatric ≥ 40kg). Repeat in 5 mins up to 3 doses based on symptom severity. | | | • | | • |
 | 6 | **[Atropine](../../pharmacology/Atropine Sulfate.md) sulfate 2 mg** IV/IO/IM (Adult and Ped ≥ 40kg); **1 mg** IV/IO/IM (Ped < 40kg). Repeat every 5 mins up to 3 doses. (Use if DuoDote unavailable) | | | | | • |
 | 7 | Contact Poquoson Medical Control for additional guidance and dosing instructions | MC | MC | MC | MC | MC |
+
+</div>
 
 ### Pearls
 • **DuoDote** contains **[Atropine](../../pharmacology/Atropine Sulfate.md) 2.1 mg** and **Pralidoxime Chloride (2-PAM) 600 mg**.

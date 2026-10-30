@@ -25,8 +25,9 @@ This protocol outlines the indications and legal requirements for withholding re
     - No return of spontaneous circulation (ROSC)
     - No shocks delivered
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | **Withhold CPR** for obvious mortal injury, rigor mortis, dependent lividity, decomposition, or valid DDNR. | | • | | • | |
@@ -35,6 +36,7 @@ This protocol outlines the indications and legal requirements for withholding re
 | 4 | **Contact Medical Control** for termination decision or DNR questions. Provide thorough report of history, condition, and treatment. | | • | | • | |
 | 5 | **Remain on scene** and notify law enforcement and Medical Examiner if terminated on scene. Support bystanders and family. | | • | | • | |
 
+</div>
 
 ### Honoring DNR Orders in Healthcare Facilities
 

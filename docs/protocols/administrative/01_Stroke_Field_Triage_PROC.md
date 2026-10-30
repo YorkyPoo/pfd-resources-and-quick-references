@@ -18,8 +18,9 @@ To rapidly evaluate and get patients experiencing a suspected stroke to the most
     - **LVO Suspicion:** RACE Score 5-9 indicates suspected Large Vessel Occlusion
     - Immediate Life-Threats (e.g., uncontrolled airway, cardiac arrest)
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | **Time Management:** Maintain a goal scene time of less than 15 minutes. | | • | | • | |
@@ -30,6 +31,8 @@ To rapidly evaluate and get patients experiencing a suspected stroke to the most
 | 6 | **Routing (> 24 Hours OR No LVO):** If Symptoms > 24 Hours OR Low Suspicion for LVO (RACE Score 0-4), transport to closest Stroke Center (Acute Stroke Ready, Primary, or Comprehensive). | | • | | • | |
 | 7 | **Stroke Alert Activation:** If RACE ≥ 1, activate stroke alert system by notifying appropriate facility early. | | • | | • | |
 | 8 | **Communication:** Early notification to Medical Control and/or Stroke Center. During transport, call COR with Name and DOB for rapid registration. | | • | | • | |
+
+</div>
 
 ### Pearls
 1. ⚠ **Time is Brain:** It is critical to accurately record the "last seen normal" time to determine the appropriate treatment window.

@@ -20,8 +20,9 @@ Guidelines and indications for utilizing Helicopter EMS for patient transport an
 === "Differential Considerations"
     - The air ambulance service can provide needed medical capability at the scene
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | **Request HEMS:** Request air ambulance standby/response according to department procedure (no medical control authorization needed). | | • | | • | |
@@ -30,6 +31,8 @@ Guidelines and indications for utilizing Helicopter EMS for patient transport an
 | 4 | **Prepare Patient:** Trauma patients should be fully immobilized. **IV/IO** access should be established as time allows (within provider scope). | | • | | • | |
 | 5 | **Designate Reporter:** On scene, designate one individual who will be responsible for providing the patient report(s) to the flight crew upon arrival. | | • | | • | |
 | 6 | **Provide Documentation:** Ensure PCR is provided to receiving facility as per 12 VAC 5-31. | | • | | • | |
+
+</div>
 
 ### Pearls
 * ⚠ VAD patients require coordination with VAD Coordinator or Medical Control.

@@ -27,8 +27,9 @@ Management of acute cardiogenic pulmonary edema and congestion due to congestive
     - Myocardial Infarction / ACS
     - Anaphylaxis
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Follow Universal Patient Care / Initial Patient Contact protocol | | • | | • | |
@@ -44,6 +45,8 @@ Management of acute cardiogenic pulmonary edema and congestion due to congestive
 | 11 | **[Nitroglycerin](../../pharmacology/Nitroglycerin.md)** Repeat Administration:<br>May repeat every 5 minutes as needed if SBP remains > 100 mmHg / MAP > 65 mmHg (maximum 3 doses) | | | | • | |
 | 12 | **Furosemide (Lasix)**<br>Adult: **40 mg IV/IO slow push** | | | | | • |
 | 13 | Contact Poquoson Medical Control for guidance as needed | MC | MC | MC | MC | MC |
+
+</div>
 
 ### Pearls
 1. Early use of non-invasive positive pressure ventilation (**CPAP**) has been shown to reduce the need for intubation and improve outcomes.

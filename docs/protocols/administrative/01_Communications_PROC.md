@@ -22,6 +22,8 @@ This protocol outlines the procedures for effectively communicating with Medical
 ---
 
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | **Use HEAR for notification only**<br>Notify hospitals of BLS/ALS patients NOT requiring on-line physician intervention. | | • | | • | |
@@ -30,6 +32,8 @@ This protocol outlines the procedures for effectively communicating with Medical
 | 4 | **MCI comms suspension/supervisor relay**<br>Routine ambulance-to-ED communications suspended. Transport group supervisor communicates directly to coordinating ED. | | • | | • | |
 | 5 | **Comm Failure: act on standing orders**<br>Follow appropriate Poquoson Patient Care Protocols based on clinical situation. All orders within scope of practice become standing orders. | | • | | • | |
 | 6 | **Document comm failure**<br>Document time, nature of comms problem, clinical status, and protocols used on the PCR. Review with Officer/Acting Officer per department SOPs. | | • | | • | |
+
+</div>
 
 ### Pearls
 1. ⚠ **Communication Failure Standing Orders:** In the event of communications failure, act on standing orders within your scope of practice based on the clinical situation.

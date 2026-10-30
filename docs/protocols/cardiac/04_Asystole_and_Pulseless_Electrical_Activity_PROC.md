@@ -14,8 +14,9 @@ Resuscitation guidelines for Asystole and Pulseless Electrical Activity (PEA), e
 === "Differential Considerations"
     - Patients with a valid durable DNR, rigor mortis, lividity, decomposition, or injuries inconsistent with survival are excluded.
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Follow Universal Patient Care / Initial Patient Contact protocol. Determine DNR status. Refer to Death and Criteria for Withholding Resuscitation protocol. Consider spinal motion restriction. | | • | | • | |
@@ -30,6 +31,8 @@ Resuscitation guidelines for Asystole and Pulseless Electrical Activity (PEA), e
 | 10 | For cardiac arrest in renal dialysis patients, patients with crush injuries, suspected calcium channel blocker overdose, or suspected hyperkalemia only, also administer:<br>**ADULT: [Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) 1 g** IV/IO slow push followed by **20 mL 0.9% sodium chloride** flush.<br>**[Sodium Bicarbonate](../../pharmacology/Sodium%20Bicarbonate.md) 50 mEq** IV/IO slow push.<br>Repeat in 5 minutes if no change. | | | | | • |
 | 11 | For cardiac arrest in renal dialysis patients, patients with crush injuries, suspected calcium channel blocker overdose, or suspected hyperkalemia only, also administer:<br>**PEDIATRIC: [Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) 20 mg/kg** (max dose **1 g**) IV/IO slow push followed by **20 mL 0.9% sodium chloride** flush.<br>**[Sodium Bicarbonate](../../pharmacology/Sodium%20Bicarbonate.md) 1 mEq/kg** (max dose **50 mEq**) IV/IO slow push.<br>Repeat in 5 minutes if no change. | | | | | • |
 | 12 | If ROSC is achieved, refer to Post Cardiac Arrest Care (ROSC) protocol.<br><br>If ROSC is not achieved, refer to Death and Criteria for Withholding Resuscitation protocol. Contact **Poquoson Medical Control** for guidance as needed. Note: Once initiated, termination of resuscitative efforts is a **Poquoson Medical Control** decision only. | MC | MC | MC | MC | MC |
+
+</div>
 
 ### Pearls
 • ⚠ Push hard and fast: rate 100 – 120 bpm. Allow complete chest recoil.

@@ -10,6 +10,8 @@ Continuous Positive Airway Pressure (CPAP) provides positive pressure ventilatio
 - Signs of respiratory distress: Accessory muscle use, SpO2 <94%, Respiratory rate >24, Inability to speak in complete sentences.
 
 ### Procedure
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
 | 1 | Explain procedure and indications to the patient. | | • | | • | |
@@ -18,6 +20,8 @@ Continuous Positive Airway Pressure (CPAP) provides positive pressure ventilatio
 | 4 | Place mask over mouth/nose with oxygen flowing. Secure with straps, starting with lower straps. Minimize air leak. | | • | | • | |
 | 5 | Reassess patient (SpO2, EtCO2, work of breathing). | | • | | • | |
 | 6 | Consider titrating PEEP (5–15 cmH2O) as needed to improve ventilation. | | | | | • |
+
+</div>
 
 ### Contraindications
 - Apnea/agonal respirations

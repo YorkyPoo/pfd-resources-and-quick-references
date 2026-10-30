@@ -9,6 +9,8 @@ Needle decompression of the chest is a life-saving intervention for tension pneu
 - **Bilateral needle decompression:** Cardiac arrest with evidence of significant blunt or penetrating thoracoabdominal trauma.
 
 ### Procedure
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
 | 1 | Administer oxygen at 15 LPM (100% FiO2). | | | | • | |
@@ -18,6 +20,8 @@ Needle decompression of the chest is a life-saving intervention for tension pneu
 | 5 | Aspirate the syringe while advancing over the rib, perpendicular to the skin, into the pleural space until a pop is felt or air/blood/fluid is freely aspirated. **Do not advance needle further.** | | | | • | |
 | 6 | Advance the catheter over the needle into the pleural space and remove the needle. | | | | • | |
 | 7 | Reassess the patient, including vitals and respiratory effort/compliance. Consider repeating for continued/recurrent instability. | | | | • | |
+
+</div>
 
 ### Pearls
 *   Needle decompression has a failure rate of up to 50% due to catheter kinking, displacement, or lack of penetration. Use the longest 14-gauge catheter available.

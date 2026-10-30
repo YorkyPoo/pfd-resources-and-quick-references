@@ -27,8 +27,9 @@ Guidelines for managing acute submersion, non-fatal drowning, and decompression 
     - Arterial gas embolism
     - Decompression sickness
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Follow Universal Patient Care / Initial Patient Contact protocol. Remove the patient from the water. | | • | | • | |
@@ -38,6 +39,8 @@ Guidelines for managing acute submersion, non-fatal drowning, and decompression 
 | 5 | If hypothermia and hemodynamically unstable, focus effort on rewarming as well as resuscitation simultaneously. | | • | | • | |
 | 6 | Diving emergencies: Assess for pulmonary barotrauma, decompression sickness, and/or arterial gas embolism. Refer to appropriate Poquoson Protocol(s) as needed. | | • | | • | |
 | 7 | Contact Poquoson Medical Control for hyperbaric transport destination guidance if decompression injury is suspected. | MC | MC | MC | MC | MC |
+
+</div>
 
 ### Pearls
 1. ⚠ Do not initiate transport to a hyperbaric center without confirming chamber availability first.

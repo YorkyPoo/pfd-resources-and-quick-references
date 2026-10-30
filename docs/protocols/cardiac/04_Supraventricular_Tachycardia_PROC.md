@@ -31,8 +31,9 @@ Supraventricular tachycardia (SVT) is a rapid rhythm originating above the ventr
     - Multifocal atrial tachycardia
     - Concurrent CHF or decreased ejection fraction
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
 | 1 | Follow Universal Patient Care / Initial Patient Contact | | • | | • | |
@@ -51,6 +52,8 @@ Supraventricular tachycardia (SVT) is a rapid rhythm originating above the ventr
 | 14 | P: Perform **SYNCHRONIZED cardioversion**<br>**100 joules** initial dose (Adult) or **1 joule/kg** (Pediatric) | | | | | |
 | 15 | P: If unsuccessful, check pad placement and repeat at **200 joules** (Adult)<br>or **2 joules/kg** (Pediatric) | | | | | |
 | 16 | P: If unsuccessful after two attempts, MC: Contact Poquoson OMD | | | | | MC |
+
+</div>
 
 ### Pearls
 1. Many patients who experience tachyarrhythmias have concurrent congestive heart failure or decreased ejection fraction. Exercise caution when providing IV fluids – give only enough to improve perfusion and monitor for signs of pulmonary edema.

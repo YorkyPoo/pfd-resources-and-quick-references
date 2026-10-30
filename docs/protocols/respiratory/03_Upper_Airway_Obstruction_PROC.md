@@ -28,8 +28,9 @@ Management of acute or impending airway obstruction including expanding hematoma
     - Tumor or mass obstruction
     - Post-procedural airway edema
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
 | 1 | **Universal Patient Care:**<br>• Apply to all patients per Poquoson Protocols. | | • | | • | |
@@ -46,6 +47,8 @@ Management of acute or impending airway obstruction including expanding hematoma
 | 12 | **Unable to Ventilate - Endotracheal Intubation:**<br>• If apneic and unable to ventilate by less invasive means, consider endotracheal intubation.<br>• Visualize cords and pass ET tube under direct visualization.<br>⚠ Intubation of children <12 years is a Paramedic "red dot" skill only. | | | | | MC |
 | 13 | **Post-Obstruction Advanced Airway - Sedation:**<br>• If endotracheal intubation performed, refer to Sedation Post Advanced Airway protocol.<br>• **[Fentanyl](../../pharmacology/Fentanyl.md) (25 mcg)** and **[Midazolam](../../pharmacology/Midazolam.md) (2.5 mg)** per Respiratory Arrest protocol.<br>• Use half-doses in elderly or frail patients. | | | | MC | MC |
 | 14 | **Expanding Hematoma / Edema - Advanced Airway:**<br>• Early airway intervention before complete obstruction.<br>• Consider difficult airway algorithm; prepare surgical airway backup.<br>• Contact Medical Control for guidance in complex airways. | | | | MC | MC |
+
+</div>
 
 ### Pearls
 1. **Conscious vs. Unconscious Algorithm:**<br>Conscious patients receive mechanical relief (Heimlich/chest thrusts). Unconscious patients receive airway positioning, suctioning, BLS adjuncts, and advanced airway interventions as indicated.

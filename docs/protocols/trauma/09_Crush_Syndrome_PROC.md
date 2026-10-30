@@ -22,8 +22,9 @@ Guidelines for managing prolonged entrapment >30 minutes and crush injuries, foc
     - Risk of hemorrhage vs. fluid resuscitation.
     - Crush syndrome releases lethal amounts of potassium from ischemic muscle.
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Follow Universal Patient Care / Initial Patient Contact protocol. Refer to Trauma, Hemorrhage Control, and Pain Control protocols as needed. | | • | | • | |
@@ -35,6 +36,8 @@ Guidelines for managing prolonged entrapment >30 minutes and crush injuries, foc
 | 7 | Assess and continuously monitor cardiac rhythm. | | | • | | • |
 | 8 | Extricate patient from entrapment and transport per Administrative Policy – Trauma Field Triage. | | | • | | • |
 | 9 | If it is anticipated the patient will not be able to be promptly and safely extricated, contact Poquoson Medical Control at a regional trauma center for additional resources. | MC | MC | MC | MC | MC |
+
+</div>
 
 ### Pearls
 • ⚠ **Administer [Sodium Bicarbonate](../../pharmacology/Sodium%20Bicarbonate.md) and [Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) in separate lines to prevent precipitation** into Calcium Carbonate. If separate IV sites cannot be obtained, flush with at least **20 mL** saline between drugs.

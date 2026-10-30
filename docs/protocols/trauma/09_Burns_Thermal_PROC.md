@@ -25,8 +25,9 @@ Guidelines for managing thermal, chemical, and radiation burns, emphasizing airw
        - Burn Center -> Full thickness, partial thickness > 10% TBSA, circumferential, electrical/chemical, inhalation, or burns to face/hands/feet/genitalia/joints
     - Concomitant trauma or cyanide poisoning
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Stop the burning process safely and remove the patient from the source. Fully expose the injured area and remove constricting items including clothing. | | • | | • | |
@@ -36,6 +37,8 @@ Guidelines for managing thermal, chemical, and radiation burns, emphasizing airw
 | 5 | Establish IV/IO access on a non-burned extremity, if possible (preferably obtain two sites of access). | | | | • | |
 | 6 | Hydrofluoric Acid (HF) Burns with Hypotension: Administer **[Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) 1 g** IV/IO over 3 mins (Repeat in 5 mins PRN). | | | | | |
 | 7 | Contact Poquoson Medical Control if the most appropriate transport destination is unclear based on criteria. | MC | MC | MC | MC | MC |
+
+</div>
 
 ### Pearls
 • ⚠ Assess for airway / inhalation injury. Consider early definitive airway management for patients with respiratory distress, hoarse voice or stridor, carbonaceous sputum and/or facial burns. Prompt assessment by a qualified RSI paramedic, when available, is preferred.

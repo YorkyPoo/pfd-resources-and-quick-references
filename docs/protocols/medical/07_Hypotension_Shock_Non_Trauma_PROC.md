@@ -27,8 +27,9 @@ This protocol outlines the assessment and management of patients presenting with
     - Hypovolemic shock (Tank problem: hemorrhage, dehydration)
     - Obstructive shock (Pipe problem: pulmonary embolism, aortic dissection)
 
-
 ### Interventions
+
+<div class="sc-wrap" markdown="1">
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
@@ -42,6 +43,8 @@ This protocol outlines the assessment and management of patients presenting with
 | 8 | Maintain age adjusted SBP. Consider:<br>PEDIATRIC: **[Epinephrine](../../pharmacology/Epinephrine.md)** **0.1 - 1 mcg/kg/min** IV/IO infusion. Max dose: **10 mcg/min**.<br>Under 1 year old: Titrate to SBP > **70 mmHg**<br>Over 1 year old: Titrate to SBP > **90 mmHg**<br>(Add **1 mg** of **[Epinephrine](../../pharmacology/Epinephrine.md)** [**1 mg/mL**] to **100 mL** of **0.9% Sodium chloride** = **10 mcg/mL**)<br>Note: Infusion via IV pump is preferred if available. Monitor closely for signs of extravasation. | | | | | • |
 | 9 | To maintain MAP > **65 mmHg** until a vasopressor infusion is prepared, consider:<br>ADULT: Push dose **[Epinephrine](../../pharmacology/Epinephrine.md)** **5-10 mcg** IV/IO every **2-3 minutes**<br>(Add **100 mcg** **[Epinephrine](../../pharmacology/Epinephrine.md)** (**1 mL** of **0.1 mg/mL**) to **9 mL** of **0.9% Normal Saline** = **10 mcg / mL**) | | | | | |
 | 10 | Contact Medical Control for guidance as needed. | MC | MC | MC | MC | MC |
+
+</div>
 
 ### Pearls
 • This protocol is not intended for the management of patients with hypotension due to major trauma.

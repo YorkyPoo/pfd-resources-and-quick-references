@@ -67,8 +67,9 @@ Aortic Dissections usually occur in the thoracic cavity when the aortic intima i
     - **Pleural pain**
     - **Trauma vs. Medical**
 
-
 ### Interventions
+
+<div class="sc-wrap" markdown="1">
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
@@ -83,6 +84,8 @@ Aortic Dissections usually occur in the thoracic cavity when the aortic intima i
 | 9 | **Hypotension Management - Vasopressors:**<br>• Consider **[Norepinephrine (Levophed)](../../pharmacology/Norepinephrine.md)** Infusion 0.1-0.5 mcg/kg/minute for hypotension.<br>• Titrate to systolic B/P > 90 mmHg.<br>• Refer to Levophed Dosing Chart below.<br>• Administer vasopressors through the largest, most proximal IV site available (AC or higher preferable) or IO. Verify patency prior to initiating infusion and monitor closely for signs of extravasation. | | | | • | • |
 | 10 | **Transport:**<br>• Transport and perform ongoing assessment as indicated.<br>• Do not delay transport for any reason if possible; interventions should be done enroute to appropriate facility. | • | • | • | • | • |
 | 11 | **Medical Control Contact:**<br>• Contact Poquoson OMD for guidance as needed. | | | MC | MC | MC |
+
+</div>
 
 ### Pearls
 
@@ -113,7 +116,6 @@ Aortic Dissections usually occur in the thoracic cavity when the aortic intima i
 13. If law-enforcement restraints utilized, officer should accompany patient; consider exchanging for EMS-sanctioned restraints.
 
 14. Patients in law enforcement custody must have officer present at all times.
-
 
 ### Norepinephrine (Levophed) Dosing Chart
 

@@ -20,8 +20,9 @@ This protocol outlines the management of patients experiencing an acute allergic
     - Two or more severe symptoms rapidly after exposure to a likely allergen indicates anaphylaxis
     - Hypotension alone after exposure to a known allergen indicates anaphylaxis
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
 | 1 | **Universal Patient Care:**<br>• Follow Universal Patient Care / Initial Patient Contact protocol. | | • | | • | |
@@ -40,11 +41,12 @@ This protocol outlines the management of patients experiencing an acute allergic
 | 12 | **Anticholinergic (Wheezing):**<br>• If wheezing is present, administer:<br>• **ADULT & PEDIATRIC:** **[Ipratropium](../../pharmacology/Ipratropium Bromide.md) bromide (Atrovent) 3 mL** of 0.02% solution, nebulized, once. | | | | • | |
 | 13 | **Corticosteroid Administration:**<br>• **ADULT:** **[Methylprednisolone](../../pharmacology/Methylprednisolone.md) succinate (Solu-Medrol) 125 mg** IV/IO slow push.<br>• **PEDIATRIC:** **[Methylprednisolone](../../pharmacology/Methylprednisolone.md) succinate (Solu-Medrol) 2 mg/kg** IV/IO slow push (Maximum dose: **125 mg**). | | | | • | |
 
+</div>
+
 ### Pearls
 1. ⚠ EMTs must use either dose-specific clearly marked or color-coded syringes for **[Epinephrine](../../pharmacology/Epinephrine.md)** IM.
 2. ⚠ **[Epinephrine](../../pharmacology/Epinephrine.md)** is the definitive treatment for anaphylaxis and should be administered immediately. Delaying **[Epinephrine](../../pharmacology/Epinephrine.md)** administration can lead to poor outcomes.
 3. Anaphylaxis requires two or more rapid onset symptoms (skin/mucosal, respiratory distress, hypotension, GI symptoms) after exposure to a likely allergen, or hypotension alone after exposure to a known allergen.
-
 
 !!! tip "Pediatric Dosing Reference"
     For pediatric weight-based dosing, equipment sizing, and length estimation, see the [Pediatric Dosing Reference](../../pediatric-dosing/index.md).

@@ -5,6 +5,8 @@
 Standardized procedures for the safe and accurate administration of medications across IV, IO, IN, and IM routes.
 
 ### Procedure
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
 | 1 | Prepare medication. Refer to protocol-specific indications and pharmacology section. | | • | | • | |
@@ -13,6 +15,8 @@ Standardized procedures for the safe and accurate administration of medications 
 | 4 | **IO Administration:** Verify patency, follow IV administration steps. | | | | • | |
 | 5 | **IN Administration:** Administer ½ dose per naris using MAD. Max 1mL/naris. | | • | | • | |
 | 6 | **IM Administration:** Clean site, insert at 90° angle, administer, dispose in sharps. | | • | | • | |
+
+</div>
 
 ### Pearls
 *   Any medication administered IV can be administered IO if IV access is unavailable.

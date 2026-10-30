@@ -28,12 +28,16 @@ The following are your new protocols. These have been formatted to maximize clar
 
 Instead of listing paragraphs of text for each certification level, interventions are listed sequentially in a table. To determine your authorized actions, locate your certification level at the top of the columns (EMR, EMT, A, I, P) and read down the grid.
 
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
 | 1 | **Perform general patient management.** | | • | | • | |
 | 2 | **Administer [Epinephrine](../../pharmacology/Epinephrine.md) Auto-injector** | | | • | | • |
 | 3 | **Obtain IV/IO access.** | | | | • | |
 | 4 | **Administer [Epinephrine](../../pharmacology/Epinephrine.md) Infusion** | | | | MC | |
+
+</div>
 
 #### Matrix Key & Symbols:
 * **Dot (•):** You are authorized to perform that intervention as a **Standing Order**.

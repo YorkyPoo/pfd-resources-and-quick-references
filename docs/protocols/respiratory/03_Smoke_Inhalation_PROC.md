@@ -35,8 +35,9 @@ The management of smoke inhalation involves the assessment and treatment of airw
     - Pneumonitis/ARDS development
     - Consider concomitant burn injuries
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
 | 1 | **Universal Patient Care / Initial Patient Contact:**<br>• Follow Poquoson Protocols for Universal Patient Care<br>• Remove patient from source and ensure scene safety<br>• Initiate PPE appropriate for smoke/hazardous environment | | • | | • | |
@@ -53,6 +54,8 @@ The management of smoke inhalation involves the assessment and treatment of airw
 | 12 | **Medical Control Contact:**<br>• Contact Poquoson OMD for cyanide poisoning confirmation and specific **Hydroxocobalamin** dosing guidance<br>• Contact **Regional Burn Center** for significant burn injuries requiring specialized care<br>• Coordinate destination for combined airway/burn injuries |   |   |   | MC | MC |
 | 13 | **Monitoring and Reassessment:**<br>• Monitor SpO2, EtCO2, and respiratory rate continuously<br>• Reassess airway patency frequently; edema may progress rapidly<br>• Observe for signs of respiratory failure requiring immediate airway intervention | | • | | • | |
 | 14 | **Transport Considerations:**<br>• Expedited transport given risk of rapid airway compromise<br>• Transport to facility capable of managing combined trauma/burns if indicated<br>• Consider aeromedical evacuation for significant burn centers if prolonged ground transport | | • | | • | |
+
+</div>
 
 ### Pearls
 1. **Airway Injury Progression:** Airway edema from smoke inhalation can progress rapidly over minutes to hours following exposure. Frequent reassessment and a low threshold for advanced airway intervention is essential in patients with any indicators of airway injury.

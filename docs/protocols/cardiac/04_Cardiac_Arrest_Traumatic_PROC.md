@@ -18,8 +18,9 @@ Resuscitation guidelines for traumatic cardiac arrest, prioritizing hemorrhage c
     - Obvious signs of death (excluded from protocol)
     - Withholding CPR for Asystole on EMS arrival
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Control major active external bleeding / Begin CPR | | • | | • | |
@@ -33,6 +34,8 @@ Resuscitation guidelines for traumatic cardiac arrest, prioritizing hemorrhage c
 | 9 | Perform bilateral chest decompression for tension pneumo | | | | | • |
 | 10 | Rapid transport to Level I/II Trauma Center (Goal < 10 mins) | | • | | • | |
 | 11 | Contact Poquoson Medical Control for guidance / destination | MC | MC | MC | MC | MC |
+
+</div>
 
 ### Pearls
 • ⚠ **Asystole on arrival survival <1%**: Consider withholding resuscitation if the rhythm is asystole on EMS arrival, as survival rates are extremely low unless loss of pulses was witnessed by EMS with immediate intervention.

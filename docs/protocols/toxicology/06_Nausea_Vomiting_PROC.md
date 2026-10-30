@@ -29,8 +29,9 @@ This protocol outlines the assessment and management of patients experiencing pe
     - Pregnancy / Ectopic pregnancy
     - Vertigo / Motion sickness
 
-
 ### Interventions
+
+<div class="sc-wrap" markdown="1">
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -40,6 +41,8 @@ This protocol outlines the assessment and management of patients experiencing pe
 | 4 | **[Ondansetron](../../pharmacology/Ondansetron.md) (Zofran) 4 mg** ODT | | | • | | • |
 | 5 | Adult: **[Ondansetron](../../pharmacology/Ondansetron.md) (Zofran) 4 mg** IV/IO slow push, IM, or PO<br>Pediatric: **[Ondansetron](../../pharmacology/Ondansetron.md) (Zofran) 0.15 mg/kg** IV/IO/IM/PO (max **4 mg**) | | | | • | |
 | 6 | Contact Poquoson Medical Control for additional doses or orders | | | MC | MC | MC |
+
+</div>
 
 ### Pearls
 * ⚠ **[Ondansetron](../../pharmacology/Ondansetron.md) (Zofran)** must be administered as a SLOW IV push (over 2-5 minutes) to avoid syncope or other adverse reactions.

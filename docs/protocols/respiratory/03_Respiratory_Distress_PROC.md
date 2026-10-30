@@ -37,15 +37,14 @@ This protocol addresses respiratory distress from obstructive (asthma/COPD), inf
     - Smoke inhalation
     - Bronchiolitis (pediatric)
 
-
-
 !!! tip "Pediatric Dosing Reference"
     For pediatric weight-based dosing, equipment sizing, and length estimation, see the [Pediatric Dosing Reference](../../pediatric-dosing/index.md).
-
 
 ---
 
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | #   | Action / Intervention                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | EMR | EMT |  A  |  I  |  P  |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-: | :-: | :-: | :-: | :-: |
 | 1   | **Universal Patient Care / Initial Patient Contact Protocol:**<br>• Assess airway patency and breathing adequacy                                                                                                                                                                                                                                                                                                                                                                                                               |     |  •  |     |  •  |     |
@@ -64,6 +63,8 @@ This protocol addresses respiratory distress from obstructive (asthma/COPD), inf
 | 14  | **Severe Asthma/COPD:**<br>• Refer to Asthma specific protocol for comprehensive treatment<br>• **[Magnesium Sulfate](../../pharmacology/Magnesium%20Sulfate.md)** per Asthma protocol<br>⚠ Positive pressure may worsen pneumothorax or cause breath stacking                                                                                                                                                                                                                                                                 |     |     |     |     |     |
 | 15  | **Cardiac Ischemia Management:**<br>• Evaluate for cardiac origin<br>• Consider 12-lead ECG<br>• Refer to Chest Pain/ACS protocol if indicated                                                                                                                                                                                                                                                                                                                                                                                 |     |  •  |     |  •  |     |
 | 16  | **Respiratory Failure Management:**<br>• If apnea/agonal respirations or GCS ≤13:<br>• Prepare for immediate airway control<br>• Bag-valve-mask ventilation<br>• Consider advanced airway per provider level<br>• Transport without delay                                                                                                                                                                                                                                                                                      |     |     |     |     |  •  |
+
+</div>
 
 ---
 

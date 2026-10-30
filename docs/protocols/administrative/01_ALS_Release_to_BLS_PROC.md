@@ -18,8 +18,9 @@ This administrative protocol outlines the procedure for safely transferring pati
     - ALS care will likely not be necessary in the near future (including pain management)
     - BLS provider capability and willingness to accept patient
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | #   | Action / Intervention                                                                                                                                                | EMR | EMT | A   | I   | P   |
 | :-- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-- | :-- | :-- | :-- | :-- |
 | 1   | **Comprehensive Assessment**: Complete pertinent patient history, physical assessment, and full set of vital signs.                                                  |     |     |     | •   |     |
@@ -30,6 +31,8 @@ This administrative protocol outlines the procedure for safely transferring pati
 | 6   | **BLS Documentation**: Complete a Patient Care Report (PCR).                                                                                                         |     |     |     |     |     |
 | 7   | **ALS Documentation**: Complete documentation in, or as an addendum to, the PCR (physical findings, transfer of care, physician consultation).                       |     |     |     | •   |     |
 | 8   | **QA/QI Review**: Any ALS Release to BLS must be reviewed by the Officer or Acting Officer the following day, per departmental SOP.                                               |     |     | •   |     | •   |
+
+</div>
 
 ### Pearls
 1. ⚠ **Thorough Assessment**: The ALS provider is strictly responsible for a comprehensive clinical assessment before handoff to ensure no hidden acuity exists.

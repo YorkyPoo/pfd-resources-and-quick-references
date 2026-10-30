@@ -17,8 +17,9 @@ Guidelines for managing patients struck by lightning, emphasizing scene safety, 
     - Reverse triage
     - Airway obstruction vs. VF/VT
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Follow Universal Patient Care / Initial Patient Contact protocol. | | • | | • | |
@@ -30,6 +31,8 @@ Guidelines for managing patients struck by lightning, emphasizing scene safety, 
 | 7 | Obtain and transmit a 12-Lead ECG / Monitor rhythm. | | | • | | • |
 | 8 | Establish IV/IO access on a non-burned extremity if possible (preferably x2 sites on non-burned skin). Only if necessary, obtain IV/IO access through a burned area. | | | | • | |
 | 9 | For an adult patient with SBP less than 90 and TBSA greater than 20%, administer fluid resuscitation:<br>Adult: **0.9% Sodium Chloride** at **500 mL/hr** IV/IO<br>Pediatric (6-12 years): **0.9% Sodium Chloride** at **250 mL/hr** IV/IO<br>Pediatric (≤5 years): **0.9% Sodium Chloride** at **125 mL/hr** IV/IO | | | | • | |
+
+</div>
 
 ### Pearls
 * ⚠ Lightning strikes with multiple victims require REVERSE triage - treat pulseless/apneic patients first.

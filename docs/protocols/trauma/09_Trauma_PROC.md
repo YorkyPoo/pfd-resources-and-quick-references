@@ -17,13 +17,12 @@ Guidelines for the rapid assessment and management of suspected traumatic injuri
     - Calculate GCS (3-15)
     - Calculate Shock Index (HR/SBP)
 
-
-
 !!! tip "Pediatric Dosing Reference"
     For pediatric weight-based dosing, equipment sizing, and length estimation, see the [Pediatric Dosing Reference](../../pediatric-dosing/index.md).
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Follow Universal Patient Care / Initial Patient Contact protocol. | | • | | • | |
@@ -39,6 +38,8 @@ Guidelines for the rapid assessment and management of suspected traumatic injuri
 | 11 | Traumatic Cardiac Arrest: Refer to Cardiac Arrest: Traumatic protocol. | | | | | • |
 | 12 | If the patient meets the trauma triage criteria according to Administrative Policy – Trauma Field Triage, transport immediately to a Level 1 or Level II Trauma Center. Goal scene time: Less than 10 minutes. | | | • | | • |
 | 13 | Contact Poquoson Medical Control for guidance and/or optimal destination determination as needed. | MC | MC | MC | MC | MC |
+
+</div>
 
 ### Pearls
 • ⚠ Do not delay transport to establish IV lines or wait for ALS.

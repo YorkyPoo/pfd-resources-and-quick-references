@@ -27,8 +27,9 @@ This protocol addresses acute bronchospasm associated with asthma, COPD, and rea
     - **Upper Airway Obstruction / Stridor** (see Stridor below)
     - **Pulmonary Embolism**
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
 | 1 | **Universal Patient Care / Assessment:**<br>• Assess airway, breathing, circulation, and mental status.<br>• Apply pulse oximetry and cardiac monitoring.<br>• Assess severity: Moderate, Moderate to Severe, or Severe. | | • | | • | |
@@ -42,6 +43,8 @@ This protocol addresses acute bronchospasm associated with asthma, COPD, and rea
 | 9 | **Related Protocol – Stridor (Upper Airway Obstruction):**<br>• **[Epinephrine](../../pharmacology/Epinephrine.md):** **3 mg** [**1 mg/mL** solution] nebulized.<br>• May be repeated **once** if needed.<br>• **Adult AND Pediatric same dosing.**<br>• For anaphylaxis with stridor, follow Allergic Reaction Protocol. | | • | | • | |
 | 10 | **Methylprednisolone for Moderate to Severe Stridor:**<br>• Same dosing as above (Row 5).<br>• Administer after [Epinephrine](../../pharmacology/Epinephrine.md) nebulization for persistent symptoms. | | | | • | |
 | 11 | **Reassessment and Transport:**<br>• Continuously monitor respiratory status, auscultation, and SpO₂.<br>• Reassess after each bronchodilator treatment.<br>• Expedite transport for severe or deteriorating patients. | | • | | • | |
+
+</div>
 
 ### Pearls
 1. ⚠ **[Ipratropium](../../pharmacology/Ipratropium Bromide.md) Bromide is ONCE ONLY.** Do not administer repeat doses without consulting Poquoson OMD. Excessive anticholinergic dosing may worsen outcomes.
@@ -57,7 +60,6 @@ This protocol addresses acute bronchospasm associated with asthma, COPD, and rea
 6. **Severe Asthma Indicators:** Silent chest (no audible wheeze), tripod positioning, inability to speak in phrases, altered mental status, or SpO₂ < 90% despite supplemental oxygen warrant immediate escalation to **[Magnesium Sulfate](../../pharmacology/Magnesium%20Sulfate.md)** and preparation for airway support.
 
 7. **Steroids Take Time.** Methylprednisolone onset is 1-2 hours; do not delay transport waiting for clinical improvement. Early administration improves outcomes but is not immediately life-saving in acute crisis.
-
 
 !!! tip "Pediatric Dosing Reference"
     For pediatric weight-based dosing, equipment sizing, and length estimation, see the [Pediatric Dosing Reference](../../pediatric-dosing/index.md).

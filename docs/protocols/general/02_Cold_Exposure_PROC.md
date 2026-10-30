@@ -16,8 +16,9 @@ Guidelines for managing systemic hypothermia and localized cold injuries, emphas
 === "Differential Considerations"
     - Assess pulse and respiratory rate for at least 60 seconds.
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Follow General – Universal Patient Care/Initial Patient Contact Protocol. | | • | | • | |
@@ -29,6 +30,8 @@ Guidelines for managing systemic hypothermia and localized cold injuries, emphas
 | 7 | **Cardiac Arrest:** Make persistent attempts at resuscitation for victims of prolonged cold exposure. Begin CPR and continuous warming procedures. | • | • | • | • | • |
 | 8 | Rapid transport immediately with resuscitation efforts continued en route. Do not delay transport waiting for ALS. | • | • | • | • | • |
 | 9 | Contact Poquoson Medical Control prior to use of AED. | MC | MC | MC | MC | MC |
+
+</div>
 
 ### Pearls
 1. ⚠ Hypothermia patients are fragile: Rough handling, IV insertion, intubation, etc. might cause VF that is refractory to defibrillation and antiarrhythmic agents- use AHA guidelines for hypothermic arrest.

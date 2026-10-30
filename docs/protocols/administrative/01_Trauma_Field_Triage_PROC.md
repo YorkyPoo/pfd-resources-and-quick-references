@@ -30,8 +30,9 @@ This protocol establishes the criteria and routing instructions to rapidly triag
     - **Pregnancy:** >20 weeks pregnant → trauma center or OB-capable hospital.
     - **Pediatrics:** Severely injured go to pediatric trauma center (CHKD or VCU).
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | **Scene Time Management:** Maintain a goal scene time of < 10 minutes. | | • | | • | |
@@ -42,6 +43,8 @@ This protocol establishes the criteria and routing instructions to rapidly triag
 | 6 | **Burn Center Routing:** For burns meeting criteria absent other trauma, transport directly to Burn Center. | | • | | • | |
 | 7 | **Pediatric Trauma Routing:** Transport severely injured pediatric patients to a pediatric trauma center (CHKD or VCU). | | • | | • | |
 | 8 | **Trauma Alerts:** Establish early radio contact with the receiving trauma center. | | • | | • | |
+
+</div>
 
 ### Pearls
 - ⚠ **Provider Judgment:** Providers have the expertise to make clinical judgments on atypical presentations and route accordingly.

@@ -28,8 +28,9 @@ This protocol outlines the management of patients suffering from toxic ingestion
     - Seizure disorder or post-ictal state
     - Hypoxia
 
-
 ### Interventions
+
+<div class="sc-wrap" markdown="1">
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -43,6 +44,8 @@ This protocol outlines the management of patients suffering from toxic ingestion
 | 8 | **Organophosphate / Cholinergic Exposure (Adult & Pediatric >40kg):**<br>Administer **[Atropine](../../pharmacology/Atropine Sulfate.md) 2 mg** IV/IO/IM<br><br>**Organophosphate / Cholinergic Exposure (Pediatric <40kg):**<br>Administer **[Atropine](../../pharmacology/Atropine Sulfate.md) 1 mg** IV/IO/IM | | | | | • |
 | 9 | **Anti-Cholinergic / TCA Overdose:**<br>Initiate active cooling measures | | • | | • | |
 | 10 | **Anti-Cholinergic / TCA Overdose (Adult):**<br>Administer **[Sodium Bicarbonate](../../pharmacology/Sodium%20Bicarbonate.md) 50 mEq** IV/IO<br><br>**Anti-Cholinergic / TCA Overdose (Pediatric):**<br>Administer **[Sodium Bicarbonate](../../pharmacology/Sodium%20Bicarbonate.md) 1 mEq/kg** (max **50 mEq**) IV/IO | | | | | • |
+
+</div>
 
 ### Pearls
 • ⚠ **Provider Safety:** Ensure scene safety and utilize appropriate PPE. Do not become contaminated while attempting rescue or treatment.

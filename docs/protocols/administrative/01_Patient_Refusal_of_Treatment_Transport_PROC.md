@@ -28,8 +28,9 @@ Guidelines for assessing capacity, identifying surrogate decision makers, and ob
     - **Psychiatric ECO:** Acute psychiatric emergencies who present a significant risk of harm to themselves or others and are refusing treatment or transport.
     - **Medical ECO:** Acute medical emergencies who lack decision-making capacity or competence and are refusing treatment or transport.
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Conduct a thorough assessment of the patient including vital signs and physical exam in accordance with relevant patient care protocols. | | • | | • | |
@@ -39,6 +40,8 @@ Guidelines for assessing capacity, identifying surrogate decision makers, and ob
 | 5 | Contact law enforcement regarding issuance of a Psychiatric ECO for patients with acute psychiatric emergencies risk of harm. | | • | | • | |
 | 6 | Contact **Poquoson Medical Control** regarding issuance of a Medical ECO for acute medical emergencies lacking capacity. | MC | MC | MC | MC | MC |
 | 7 | Contact **Poquoson Medical Control** for assistance if unsure of capacity, surrogate validity, or if patient refuses despite severe risk. | MC | MC | MC | MC | MC |
+
+</div>
 
 ### Pearls
 • ⚠ **Medical ECOs:** For medical emergencies, issuance of an emergency custody order (ECO) for medical evaluation requires a licensed physician to petition a magistrate or special justice. Early discussion with **Poquoson Medical Control** to provide a detailed description of the current clinical situation, capacity assessment, and concerns is critical.

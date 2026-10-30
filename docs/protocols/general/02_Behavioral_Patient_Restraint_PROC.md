@@ -20,8 +20,9 @@ Guidelines for managing agitated or combative patients, emphasizing de-escalatio
     - Potential medical or traumatic causes (SMASHED2)
     - Patients less than 25 kg who cannot be safely managed with de-escalation require Poquoson Medical Control guidance
 
-
 ### Interventions
+
+<div class="sc-wrap" markdown="1">
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
@@ -33,6 +34,8 @@ Guidelines for managing agitated or combative patients, emphasizing de-escalatio
 | 6 | **SEVERE AGITATION** (not responding to above)<br>Administer **[Midazolam](../../pharmacology/Midazolam.md) (Versed) 5 mg IV/IO slow push or 10 mg IM**<br>*(Pediatric: **0.05 mg/kg IV/IO slow push or 0.1 mg/kg IN/IM**. Max dose: **2.5 mg IV/IO, 5 mg IN/IM**)*<br>*(Use half dose **2.5 mg IV/IO or 5 mg IM** for frail, hypotensive, underweight <50kg, and elderly >65yrs)*<br>⚠ *Do not mix Haloperidol and [Midazolam](../../pharmacology/Midazolam.md) in the same syringe.* | | | | | • |
 | 7 | **IMMINENT HARM** (Severely agitated with imminent risk of harm to self or others)<br>Administer **[Ketamine](../../pharmacology/Ketamine.md) (Ketalar) 4 mg/kg IM**<br>Be prepared to manage airway and support ventilation as needed. | | | | | |
 | 8 | Contact Poquoson Medical Control for guidance if unable to safely restrain or transport the patient. | MC | MC | MC | MC | MC |
+
+</div>
 
 ### Pearls
 1. ⚠ **Never place the patient prone** or in any position which compromises breathing, circulation, or constricts the neck or chest.

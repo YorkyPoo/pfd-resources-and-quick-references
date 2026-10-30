@@ -16,8 +16,9 @@ Guidelines for the management of pulseless ventricular tachycardia and ventricul
     - Valid DDNR/Obvious death exclusions
     - Reversible causes
 
-
 ### Interventions
+
+<div class="sc-wrap" markdown="1">
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -33,6 +34,8 @@ Guidelines for the management of pulseless ventricular tachycardia and ventricul
 | 10 | Dialysis/Crush/Hyperkalemia: **[Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) 1 g IV/IO** (Adult) / **20 mg/kg** (Ped max 1g) THEN flush THEN **[Sodium Bicarbonate](../../pharmacology/Sodium%20Bicarbonate.md) 50 mEq IV/IO** (Adult) / **1 mEq/kg** (Ped max 50 mEq) | | | | | • |
 | 11 | Proceed to Post ROSC Care if pulses return | | • | | • | |
 | 12 | Contact Poquoson Medical Control for guidance / termination of resuscitation | MC | MC | MC | MC | MC |
+
+</div>
 
 ### Pearls
 • High-quality, uninterrupted CPR is the most important intervention in cardiac arrest.

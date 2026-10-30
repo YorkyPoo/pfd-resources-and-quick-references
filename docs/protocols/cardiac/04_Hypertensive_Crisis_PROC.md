@@ -33,8 +33,9 @@ Hypertensive crisis is characterized by severely elevated blood pressure with po
     - Preeclampsia / Eclampsia (if pregnant)
     - Substance-induced hypertensive emergency
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
 | 1 | **Universal Patient Care / Initial Patient Contact:**<br>• Follow Universal Patient Care / Initial Patient Contact **Poquoson Protocol**.<br>• Ensure scene safety and utilize appropriate PPE. | | • | | • | |
@@ -44,6 +45,8 @@ Hypertensive crisis is characterized by severely elevated blood pressure with po
 | 5 | **Respiratory Assessment:**<br>• Assess for respiratory distress, pulmonary edema, or hypoxia.<br>• Apply pulse oximetry and administer oxygen as indicated.<br>• If respiratory distress is present, refer to **Respiratory Distress Poquoson Protocol** and **Airway Management and Ventilatory Support Procedure**. | | • | | • | |
 | 6 | **Glucose Assessment:**<br>• Check blood glucose level.<br>• If hyperglycemia or hypoglycemia is present or suspected, refer to **Hyperglycemia / Hypoglycemia Poquoson Protocol**.<br>• Treat glucose abnormalities per appropriate protocol. |  | | • | | • |
 | 7 | **Medical Control Consultation:**<br>• Contact **Poquoson Medical Control** for guidance on blood pressure management as needed.<br>• Do NOT attempt to aggressively lower blood pressure in the field without specific orders.<br>• Report all associated symptoms, vital signs, and suspected target organ involvement. | MC | MC | MC | MC | MC |
+
+</div>
 
 ### Pearls
 1. ⚠ **Cautious Blood Pressure Management:** In most hypertensive emergencies, the goal is NOT to normalize blood pressure rapidly. Aggressive reduction can precipitate cerebral, coronary, or renal hypoperfusion. Specific blood pressure targets and medications should be determined by **Poquoson OMD** based on the underlying cause.

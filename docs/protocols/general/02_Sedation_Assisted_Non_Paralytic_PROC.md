@@ -21,8 +21,9 @@ Guidelines for the pharmacological facilitation of airway management and post-in
       • Children & adults > 10 years: SBP > 100 mmHg
     - Asthma/COPD vs ACS
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
 | 1 | Follow Universal Patient Care / Initial Patient Contact protocol. Provide supplemental oxygen and/or ventilatory support. Refer to Airway Management and Ventilatory Support procedure. | | • | | • | |
@@ -31,6 +32,8 @@ Guidelines for the pharmacological facilitation of airway management and post-in
 | 4 | **Pre-Intubation Sedation**, consider ONE of the following:<br><br>• ADULT: **[Ketamine](../../pharmacology/Ketamine.md) (Ketalar) 1.5 - 2 mg/kg IV/IO** (Maximum single dose: **200 mg**) OR **4 - 5 mg/kg IM/IN** (Maximum single dose: **400 mg**). If administering IV, administer over 1-2 minutes.<br>• PEDIATRIC: **[Ketamine](../../pharmacology/Ketamine.md) (Ketalar) 1 - 2 mg/kg IV/IO** (Maximum single dose: **50 mg**) OR **2 - 5 mg/kg IM/IN** (Maximum single dose: **100 mg**). If administering IV, administer over 1-2 minutes.<br><br>**OR**<br><br>• ADULT: **[Midazolam](../../pharmacology/Midazolam.md) (Versed) 2.5 - 5 mg IV/IO** (Maximum single dose: **5 mg**) OR **5 - 10 mg IN/IM** (Maximum single dose: **10 mg**).<br>• PEDIATRIC: **[Midazolam](../../pharmacology/Midazolam.md) (Versed) 0.1 mg/kg IV/IO** (Maximum single dose: **2.5 mg**) OR **0.2 mg/kg IN/IM** (Maximum single dose: **5 mg**). | | | | | • |
 | 5 | **Post-Intubation Sedation**, consider ONE of the following:<br><br>• ADULT: **[Ketamine](../../pharmacology/Ketamine.md) (Ketalar) 1 mg/kg IV/IO** (Maximum single dose: **100 mg**). May repeat every 10-15 minutes as needed.<br>• PEDIATRIC: **[Ketamine](../../pharmacology/Ketamine.md) (Ketalar) 0.5 mg/kg IV/IO** (Maximum single dose: **25 mg**). May repeat every 10-15 minutes as needed. | | | | | • |
 | 6 | **OR Post-Intubation Sedation** ([Midazolam](../../pharmacology/Midazolam.md) / [Fentanyl](../../pharmacology/Fentanyl.md)):<br><br>• ADULT: **[Midazolam](../../pharmacology/Midazolam.md) (Versed) 2.5 mg IV/IO**. May repeat every 10-15 minutes as needed. (Maximum total dose: **10 mg**)<br>• PEDIATRIC: **[Midazolam](../../pharmacology/Midazolam.md) (Versed) 0.05 mg/kg IV/IO** (Maximum single dose: **2.5 mg**). May repeat every 10-15 minutes as needed. (Maximum total dose: **5 mg**)<br><br>**AND/OR**<br><br>• ADULT: **[Fentanyl](../../pharmacology/Fentanyl.md) (Sublimaze) 25 - 50 mcg IV/IO**. May repeat every 10-15 minutes as needed. (Maximum total dose: **150 mcg**)<br>• PEDIATRIC: **[Fentanyl](../../pharmacology/Fentanyl.md) (Sublimaze) 0.5 - 1 mcg/kg IV/IO**. May repeat every 10-15 minutes as needed. (Maximum total dose: **50 mcg**) | | | | | • |
+
+</div>
 
 ### Pearls
 • ⚠ Concurrent use of **[Fentanyl](../../pharmacology/Fentanyl.md)** and **[Midazolam](../../pharmacology/Midazolam.md)** significantly increases the risk of hypotension and respiratory depression.

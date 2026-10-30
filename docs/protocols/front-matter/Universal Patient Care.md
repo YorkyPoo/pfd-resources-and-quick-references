@@ -13,6 +13,8 @@ The Universal Patient Care / Initial Patient Contact protocol applies to all pat
 
 ### Interventions
 
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
 | 1 | **Scene Safety / PPE / Patient Contact:**<br>• Utilize appropriate agencies and resources as needed (lift assistance, ALS, law enforcement).<br>• Bring all necessary equipment to the patient’s side. | | • | | • | |
@@ -26,6 +28,8 @@ The Universal Patient Care / Initial Patient Contact protocol applies to all pat
 | 9 | **Consider continuous cardiac monitoring.** | | | | | • |
 | 10 | **Transport:**<br>• Base transport decisions on clinical condition and regional Field Triage policies.<br>• Deliver a pre-arrival report to the receiving facility as soon as practical.<br>• Consult with Medical Control regarding destination or clinical guidance. | | | • | | • |
 | 11 | **Refer to relevant protocols:**<br>• If no protocol applies, or for clinical guidance at any time, contact Medical Control. | | • | | • | |
+
+</div>
 
 ### Pearls
 

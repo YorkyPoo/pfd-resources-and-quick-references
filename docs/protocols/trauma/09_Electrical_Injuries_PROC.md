@@ -18,8 +18,9 @@ Guidelines for managing electrical contact and lightning injuries, emphasizing s
     - Scene safety
     - Reverse triage
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Follow Universal Patient Care / Initial Patient Contact protocol | | • | | • | |
@@ -31,6 +32,8 @@ Guidelines for managing electrical contact and lightning injuries, emphasizing s
 | 7 | Obtain 12-Lead ECG / Monitor rhythm continuously | | | • | | • |
 | 8 | Establish IV/IO (x2 preferred on non-burned skin) | | | | • | |
 | 9 | SBP < 90 & TBSA > 20%:<br>• Adult: **0.9% Sodium Chloride 500 mL/hr IV/IO**<br>• Ped (6-12y): **0.9% Sodium Chloride 250 mL/hr IV/IO**<br>• Ped (≤5y): **0.9% Sodium Chloride 125 mL/hr IV/IO** | | | | • | |
+
+</div>
 
 ### Pearls
 1. ⚠ Ensure scene safety and patient is not energized - DO NOT become a second victim.

@@ -19,8 +19,9 @@ Respecting patient decision-making capacity while ensuring safe, appropriate med
     - Time-Critical Exceptions
     - HEMS availability and ETA
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | **Transport to patient choice:** Transport capable patients to the ED of their choice (if no exceptions) | | • | | • | |
@@ -30,6 +31,8 @@ Respecting patient decision-making capacity while ensuring safe, appropriate med
 | 5 | **Document reason:** Document reason for any reroute or destination change on the PCR | | • | | • | |
 | 6 | **Contact HEMS:** Contact HEMS without Medical Control if beneficial to the patient | | • | | • | |
 | 7 | **Initiate ground transport:** Initiate ground transport to closest hospital/helispot if HEMS > 10 min delay | | • | | • | |
+
+</div>
 
 ### Pearls
 1. ⚠ **Destination Changes:** Any time a patient is transported to the most appropriate facility other than the one requested, the reason for the change and destination shall be documented on the Patient Care Report (PCR).

@@ -38,8 +38,9 @@ Stridor in pediatric patients indicates upper airway obstruction requiring rapid
     - **Bacterial tracheitis**
     - **Retropharyngeal abscess**
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
 | 1 | **Universal Patient Care / Initial Patient Contact**<br>• Follow Universal Patient Care Poquoson Protocol for all patients.| | • | | • | |
@@ -54,6 +55,8 @@ Stridor in pediatric patients indicates upper airway obstruction requiring rapid
 | 10 | **Nebulized [Epinephrine](../../pharmacology/Epinephrine.md) for Moderate to Severe Stridor**<br>• **[Epinephrine](../../pharmacology/Epinephrine.md)** **3 mg** [1 mg/mL] nebulized<br>• May be repeated once if needed<br>• Same concentration as adults and pediatrics |  |  |  |  |  |
 | 11 | **Airway Protection - Advanced Airway**<br>• Prepare for advanced airway if impending respiratory failure<br>• Have appropriate sized equipment ready<br>• ⚠ Intubation of children <12 requires Paramedic skill |  |  |  |  | MC |
 | 12 | **Transport Considerations**<br>• Transport to pediatric-capable facility<br>• Alert receiving facility early<br>• Consider ALS intercept if BLS only<br>• Rapid transport if severe obstruction | | • | | • | |
+
+</div>
 
 ### Pearls
 1. **⚠ Critical Intubation Warning:** Intubation of children under 12 years of age is a Paramedic "red dot" skill hazard only. Intermediate providers must contact Medical Control prior to attempting intubation in pediatric patients.

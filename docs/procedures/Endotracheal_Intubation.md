@@ -11,6 +11,8 @@ Endotracheal intubation is an advanced airway management technique for patients 
 - Altered level of consciousness with ineffective or inadequate spontaneous respirations
 
 ### Procedure
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
 | 1 | Pre-oxygenate: 100% O₂ via NRB or BVM for 3 mins. Monitor SpO₂. | | • | | • | |
@@ -23,6 +25,8 @@ Endotracheal intubation is an advanced airway management technique for patients 
 | 8 | Verify placement: Continuous box-waveform EtCO₂, bilateral lung sounds, absence of gastric sounds. | | | | • | |
 | 9 | Secure tube: Tape or commercial holder. Document depth. | | | | • | |
 | 10 | Administer analgesia/sedation as needed. | | | | | • |
+
+</div>
 
 ### Pearls
 *   Assume all intubations are potentially difficult.

@@ -16,8 +16,9 @@ Guidelines for managing life-threatening hemorrhage across various anatomical lo
     - Hemodialysis access bleeding
     - Airway/breathing
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Follow Universal Care / Reassess bleeding after treatments performed. | | • | | • | |
@@ -29,6 +30,8 @@ Guidelines for managing life-threatening hemorrhage across various anatomical lo
 | 7 | Apply pelvic binder if unstable pelvis suspected. | | • | | • | |
 | 8 | Consider pain control per Poquoson Protocol(s). | | • | | • | |
 | 9 | Contact Poquoson Medical Control if hemorrhage cannot be controlled and transport immediately. | MC | MC | MC | MC | MC |
+
+</div>
 
 ### Pearls
 * ⚠ Do NOT release tourniquet once applied.

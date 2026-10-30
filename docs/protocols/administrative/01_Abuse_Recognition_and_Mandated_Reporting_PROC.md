@@ -19,8 +19,9 @@ EMS providers act as mandated reporters under state law for suspected elder abus
     - **Elder/Child Abuse Types:** Physical, Sexual (or exploitation), Emotional/Psychological/Mental, Neglect, Abandonment.
     - **Hunting Reporting:** Must report within 5 days to Dept of Game and Inland Fisheries (DGIF).
 
-
 ### Interventions
+<div class="sc-wrap" markdown="1">
+
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Assess and document psychological characteristics (passivity, fear, aggression, etc.). | | • | | • | |
@@ -30,6 +31,8 @@ EMS providers act as mandated reporters under state law for suspected elder abus
 | 5 | **Report Child Abuse:** Notify local DSS or Child Protective Services (CPS). If transporting, it is acceptable to report to the attending ED physician. | | • | | • | |
 | 6 | **Report Hunting Injuries:** Notify Dept of Game and Inland Fisheries (DGIF) for serious bodily injury or death. | | • | | • | |
 | 7 | Document all notifications (e.g., "made notification to Dr. [ ]", hotline calls) thoroughly on the PCR. | | • | | • | |
+
+</div>
 
 ### Pearls
 1. ⚠ **Mandated Reporter Legal Penalties:** Failure to report child abuse leads to monetary penalties (§63.2-1509). Failure to report hunting accidents is a Class 4 misdemeanor.
