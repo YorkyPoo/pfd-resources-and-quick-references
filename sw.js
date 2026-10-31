@@ -1,8 +1,8 @@
 // Pre-Cache Service Worker for Poquoson Fire & Rescue Protocols
-// Generated: 20261030-135354
+// Generated: 20261031-145337
 // Caches ALL protocols on first visit for full offline access
 
-const CACHE_NAME = "pfd-protocols-v20261030-135354";
+const CACHE_NAME = "pfd-protocols-v20261031-145337";
 
 const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/404.html",
