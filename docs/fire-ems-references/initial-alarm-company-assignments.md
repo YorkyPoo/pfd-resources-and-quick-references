@@ -5,11 +5,19 @@
     **Frameworks:** [Mnemonics](frameworks/mnemonics.md) | [SAW CSS RECEO VSS](frameworks/saw-css-receo-vss.md) | [Reference cards](frameworks/reference-cards.md)  
     **Roadmaps:** SSG - First 5 Minutes Tactical Roadmap | SSG - RECEO VS Tactical Roadmap
 
+## Initial Alarm Unit Response by Call Type
+
+> **Provenance:** confirmed directly with the City of Poquoson dispatcher, October 2026. EO 10.00 (*Staffing and Equipment Response*) delegates the authoritative assignment list to a **Response Matrix approved by the Fire Chief and loaded into CAD** — attached to the SOP as an addendum, so this call-type breakdown exists nowhere else in written form.
+
+| Call type | Initial response |
+|---|---|
+| **Single-family residential fire** | 2 Medics · 1 Engine · 2 Aerials · 1 Squad · 1 Battalion |
+| **Commercial (addition to the above)** | +1 Engine |
+| **Second alarm (add-on set)** | 1 Medic · 1 Engine · 1 Aerial · 1 Battalion |
+
+Once the listed companies are committed, work each unit per the assignment matrix below (EO 6.00 §XII).
+
 ---
-Single Family Initial Response: 2 Medics, 1 Engine, 2 Aerials, 1 Squad, 1 Battalion
-Commercial +: 1 Engine
-2nd Alarm
-Medic, Engine, Aerial, Battalion
 
 <div class="fx-wrap md-typeset__table" markdown="1">
 
@@ -56,5 +64,5 @@ Medic, Engine, Aerial, Battalion
 ---
 
 ---
-*Formatted from **EO 6.00 First To Arrive Duties Revised.pdf** (vault note, last modified 2026-10-09). The signed PDF remains the authoritative document.*
+*Formatted from **EO 6.00 First To Arrive Duties Revised.pdf** (vault note, last modified 2026-10-31). The signed PDF remains the authoritative document.*
 
