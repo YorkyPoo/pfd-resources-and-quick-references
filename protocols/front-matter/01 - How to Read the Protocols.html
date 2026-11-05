@@ -8647,7 +8647,7 @@ if ('serviceWorker' in navigator) {
 <ul>
 <li><strong>Dot (•):</strong> You are authorized to perform that intervention as a <strong>Standing Order</strong>.</li>
 <li><strong>Blank Space:</strong> The intervention is <strong>NOT</strong> within your scope of practice or protocol authorization.</li>
-<li><strong>Cumulative by level:</strong> Provider levels are cumulative — every level includes all standing orders of the levels below it, unless the cell for that level is blank or modified (e.g., <code>MC</code>). If you spot a row that appears to break this rule, report it through the chain of command for OMD review.</li>
+<li><strong>Cumulative by level:</strong> A bullet (•) at any tier implies the same standing order at every HIGHER tier (EMR→EMT→A→I→P). <code>MC</code> is never implied — each tier that requires Medical Control for a step carries its own explicit <code>MC</code>. A blank cell excludes a tier only when no lower tier is authorized; any row that seems to violate these rules (for example a label reading "EMT and above" beside a blank EMT cell) is a source-data conflict — report it through the chain of command for OMD review.</li>
 <li><strong>MC:</strong> You must contact <strong>Medical Control</strong> for authorization prior to performing that intervention.</li>
 <li><strong>Caution (⚠):</strong> Special considerations, critical safety warnings, or contraindications apply to this step.</li>
 </ul>
