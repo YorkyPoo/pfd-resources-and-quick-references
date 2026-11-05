@@ -42,7 +42,7 @@ Instead of listing paragraphs of text for each certification level, intervention
 #### Matrix Key & Symbols:
 * **Dot (•):** You are authorized to perform that intervention as a **Standing Order**.
 * **Blank Space:** The intervention is **NOT** within your scope of practice or protocol authorization.
-* **Cumulative by level:** Provider levels are cumulative — every level includes all standing orders of the levels below it, unless the cell for that level is blank or modified (e.g., `MC`). If you spot a row that appears to break this rule, report it through the chain of command for OMD review.
+* **Cumulative by level:** A bullet (•) at any tier implies the same standing order at every HIGHER tier (EMR→EMT→A→I→P). `MC` is never implied — each tier that requires Medical Control for a step carries its own explicit `MC`. A blank cell excludes a tier only when no lower tier is authorized; any row that seems to violate these rules (for example a label reading "EMT and above" beside a blank EMT cell) is a source-data conflict — report it through the chain of command for OMD review.
 * **MC:** You must contact **Medical Control** for authorization prior to performing that intervention.
 * **Caution (⚠):** Special considerations, critical safety warnings, or contraindications apply to this step.
 
