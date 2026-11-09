@@ -38,18 +38,31 @@ These medications have the same dose for pediatric and adult patients per Poquos
 
 ## Equipment Sizing by Weight Zone
 
-| Zone | ETT (cuffed) | ETT (uncuffed) | LMA | Blade | OG/NG Tube | Foley | IO Needle |
-|:----:|:----------:|:-------------:|:---:|:----:|:---------:|:----:|:---------:|
-| **Pink** (3-5 kg) | 3.0 | 3.5 | 1.0 | 0 Miller | 5 Fr | 6 Fr | 15-18G |
-| **Red** (6-7 kg) | 3.5 | 4.0 | 1.5 | 1 Miller | 5 Fr | 8 Fr | 15-18G |
-| **Purple** (8-9 kg) | 4.0 | 4.5 | 1.5 | 1 Miller | 8 Fr | 8 Fr | 15-18G |
-| **Yellow** (10-11 kg) | 4.5 | 5.0 | 2.0 | 1 Miller | 8 Fr | 10 Fr | 15-18G |
-| **White** (12-14 kg) | 5.0 | 5.5 | 2.0 | 2 Miller | 10 Fr | 10 Fr | 15G |
-| **Blue** (15-18 kg) | 5.5 | 6.0 | 2.5 | 2 Miller | 10 Fr | 12 Fr | 15G |
-| **Orange** (19-23 kg) | 6.0 | 6.5 | 2.5 | 2-3 Mac | 14 Fr | 12 Fr | 15G |
-| **Green** (24-29 kg) | 6.5 cuffed | — | 3.0 | 2-3 Mac | 14 Fr | 14 Fr | 15G |
-| **Brown** (30-36 kg) | 7.0 cuffed | — | 3.0 | 3 Mac | 14 Fr | 14 Fr | 15G |
-| **Gray** (37-46 kg) | 7.0 cuffed | — | 3.0 | 3 Mac | 14 Fr | 14 Fr | 14-15G |
+<div class="dz-wrap"><table class="dz">
+
+<thead><tr><th class="dz-sticky" style="text-align:left">Zone</th><th>ETT<br>(cuffed)</th><th>ETT<br>(uncuffed)</th><th>LMA</th><th>Blade</th><th>OG/NG<br>Tube</th><th>Foley</th><th>IO<br>Needle</th></tr></thead>
+<tbody>
+  <tr><td class="dz-sticky dz-name" style="background:#f48fb1;color:#111"><b>Pink</b><br><span class="dz-sub">(3-5 kg)</span></td><td>3.0</td><td>3.5</td><td>1.0</td><td>0 Miller</td><td>5 Fr</td><td>6 Fr</td><td>15-18G</td></tr>
+
+  <tr><td class="dz-sticky dz-name" style="background:#e57373;color:#111"><b>Red</b><br><span class="dz-sub">(6-7 kg)</span></td><td>3.5</td><td>4.0</td><td>1.5</td><td>1 Miller</td><td>5 Fr</td><td>8 Fr</td><td>15-18G</td></tr>
+
+  <tr><td class="dz-sticky dz-name" style="background:#b39ddb;color:#111"><b>Purple</b><br><span class="dz-sub">(8-9 kg)</span></td><td>4.0</td><td>4.5</td><td>1.5</td><td>1 Miller</td><td>8 Fr</td><td>8 Fr</td><td>15-18G</td></tr>
+
+  <tr><td class="dz-sticky dz-name" style="background:#fff176;color:#111"><b>Yellow</b><br><span class="dz-sub">(10-11 kg)</span></td><td>4.5</td><td>5.0</td><td>2.0</td><td>1 Miller</td><td>8 Fr</td><td>10 Fr</td><td>15-18G</td></tr>
+
+  <tr><td class="dz-sticky dz-name" style="background:#eceff1;color:#111"><b>White</b><br><span class="dz-sub">(12-14 kg)</span></td><td>5.0</td><td>5.5</td><td>2.0</td><td>2 Miller</td><td>10 Fr</td><td>10 Fr</td><td>15G</td></tr>
+
+  <tr><td class="dz-sticky dz-name" style="background:#64b5f6;color:#111"><b>Blue</b><br><span class="dz-sub">(15-18 kg)</span></td><td>5.5</td><td>6.0</td><td>2.5</td><td>2 Miller</td><td>10 Fr</td><td>12 Fr</td><td>15G</td></tr>
+
+  <tr><td class="dz-sticky dz-name" style="background:#ffb74d;color:#111"><b>Orange</b><br><span class="dz-sub">(19-23 kg)</span></td><td>6.0</td><td>6.5</td><td>2.5</td><td>2-3 Mac</td><td>14 Fr</td><td>12 Fr</td><td>15G</td></tr>
+
+  <tr><td class="dz-sticky dz-name" style="background:#81c784;color:#111"><b>Green</b><br><span class="dz-sub">(24-29 kg)</span></td><td>6.5 cuffed</td><td>—</td><td>3.0</td><td>2-3 Mac</td><td>14 Fr</td><td>14 Fr</td><td>15G</td></tr>
+
+  <tr><td class="dz-sticky dz-name" style="background:#a1887f;color:#111"><b>Brown</b><br><span class="dz-sub">(30-36 kg)</span></td><td>7.0 cuffed</td><td>—</td><td>3.0</td><td>3 Mac</td><td>14 Fr</td><td>14 Fr</td><td>15G</td></tr>
+
+  <tr><td class="dz-sticky dz-name" style="background:#b0bec5;color:#111"><b>Gray</b><br><span class="dz-sub">(37-46 kg)</span></td><td>7.0 cuffed</td><td>—</td><td>3.0</td><td>3 Mac</td><td>14 Fr</td><td>14 Fr</td><td>14-15G</td></tr>
+
+</tbody></table></div>
 
 ## Defibrillation & Cardioversion
 
