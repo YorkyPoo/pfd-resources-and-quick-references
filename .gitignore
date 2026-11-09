@@ -11,3 +11,9 @@ venv/
 # OS
 .DS_Store
 Thumbs.db
+
+# Obsidian (this repo doubles as an Obsidian vault — see CONTRIBUTING.md)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.trash/
