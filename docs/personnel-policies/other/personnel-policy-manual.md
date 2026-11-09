@@ -773,9 +773,9 @@ related forms.
 HIRING FORMER EMPLOYEES:
 A former employee may be rehired providing that all of the following conditions are met:
 
-e His/her qualifications meet the requirements of the vacant position.
-e He/she had been an employee in good standing at the time of separation.
-e His/her work record as a City employee is determined by the City Manager to be
+- His/her qualifications meet the requirements of the vacant position.
+- He/she had been an employee in good standing at the time of separation.
+- His/her work record as a City employee is determined by the City Manager to be
 satisfactory.
 A former employee who is rehired after a break in service of more than 30 consecutive
 calendar days shall be considered a new hire for the purposes of employment benefits and
@@ -1330,13 +1330,13 @@ hour of compensatory time for each hour worked.
 
 ACCUMULATION OF COMPENSATORY LEAVE:
 
-e When an employee accumulates one hundred and twenty (120) hours or more of
+- When an employee accumulates one hundred and twenty (120) hours or more of
 compensatory leave (two hundred and forty (240) hours for law
 enforcement/public safety personnel), the Department Head/Constitutional
 Officer and employee shall develop a plan to reduce/eliminate the accrued
 compensatory leave which shall be approved by the City Manager.
 
-e Employees may not accrue more than two hundred and forty (240) hours of
+- Employees may not accrue more than two hundred and forty (240) hours of
 compensatory time during a calendar year (four hundred and eighty (480) for law
 enforcement/public safety personnel).
 
@@ -1344,12 +1344,12 @@ TREATMENT OF COMPENSATORY LEAVE UPON CHANGE IN STATUS:
 
 Change from Non-Exempt Status to Exempt Status
 
-e Upon change from non-exempt to exempt status, employees shall be paid a lump
+- Upon change from non-exempt to exempt status, employees shall be paid a lump
 sum for the unused portion of their accrued compensatory leave.
 
 ¢ The lump sum payment shall be calculated based on the non-exempt salary rate.
 
-e Upon change from non-exempt to exempt status or transfer to a new department,
+- Upon change from non-exempt to exempt status or transfer to a new department,
 employees shall be paid the lump sum for the unused portion of their accrued
 compensatory leave by their previous department.
 
@@ -1766,14 +1766,14 @@ Serious Health Condition: 12 weeks during a rolling 12-month period beginning
 
 on the first day leave is taken and looking back over the past 12 months.
 
-e Exigency Circumstances: 12 weeks during a rolling 12-month period beginning
+- Exigency Circumstances: 12 weeks during a rolling 12-month period beginning
 on the first day leave is taken and looking back over the past 12 months.
 
-e Care for Injured Service Member: 26 weeks to care for an incapacitated service
+- Care for Injured Service Member: 26 weeks to care for an incapacitated service
 member during the 12-month period beginning with the first day of leave and
 ending 12 months later.
 
-e Birth, Placement, Adoption: 12 weeks in the 12 months following the birth of a
+- Birth, Placement, Adoption: 12 weeks in the 12 months following the birth of a
 son or daughter or the placement of a son or daughter for adoption or foster care.
 
 Except for leave taken for the serious health condition of the employee or for exigent
@@ -1936,24 +1936,24 @@ Holidays
 The general government shall observe the following paid holidays, as well as any other
 days designated as holidays by City Council or by the Govemor.
 
-e New Year’s Day January 1
+- New Year’s Day January 1
 
-e Martin Luther King Day Third Monday in January
-e Presidents Day Third Monday in February
-e Memorial Day Last Monday in May
+- Martin Luther King Day Third Monday in January
+- Presidents Day Third Monday in February
+- Memorial Day Last Monday in May
 
-e Independence Day July 4
+- Independence Day July 4
 
-e Labor Day First Monday in September
-e Columbus Day Second Monday in October
-e Veteran’s Day November 11
+- Labor Day First Monday in September
+- Columbus Day Second Monday in October
+- Veteran’s Day November 11
 
 ¢ Thanksgiving Day Fourth Thursday in November
-e Day after Thanksgiving
+- Day after Thanksgiving
 
-e Christmas Eve December 24
+- Christmas Eve December 24
 
-e Christmas Day December 25
+- Christmas Day December 25
 
 Holidays Falling on a Weekend Day
 1. When a holiday falls on a Saturday, it shall be observed on the preceding Friday.
@@ -3266,7 +3266,7 @@ by the City. The City’s standards are as follows:
 
 e¢ No more than two (2) moving violations within the previous twelve (12) months.
 
-e No more than three (3) moving violations within the previous twenty-four (24)
+- No more than three (3) moving violations within the previous twenty-four (24)
 months.
 
 ¢ Norecord of convictions associated with drugs/intoxicants, driving under the
@@ -3513,16 +3513,16 @@ Accident Reporting. A City Vehicle Accident Report form is required and
 shall be completed by the operator or assigned driver of a City-insured vehicle
 involved in an accident when:
 
-e An injury occurs, regardless of property damage.
+- An injury occurs, regardless of property damage.
 
-e An accident or collision involves a vehicle or property not owned by the
+- An accident or collision involves a vehicle or property not owned by the
 City regardless of fault or damage sustained by either party.
 
-e Another City-owned vehicle or item of property is involved and the
+- Another City-owned vehicle or item of property is involved and the
 probable cost of total repairs (vehicle and/or property) will exceed $100 as
 determined by the City’s Fleet Manager.
 
-e Mysterious or unexplained damage to a City vehicle is clearly visible and
+- Mysterious or unexplained damage to a City vehicle is clearly visible and
 the probable cost of total repairs will exceed $100 as determined by the
 City’s Fleet Manager.
 
@@ -3804,10 +3804,10 @@ department head, depending on circumstances, may approve mileage
 reimbursement for the return trip at a rate equal to the latest per mile amount
 established by the Federal government.
 6. Daily travel in a personal vehicle is not eligible for reimbursement when:
-e Travel occurs between the City and/or School facilities located within the
+- Travel occurs between the City and/or School facilities located within the
 City.
 
-e Each trip does not exceed five (5) miles in total.
+- Each trip does not exceed five (5) miles in total.
 
 It is expected that the most economical and efficient mode and route of travel is used
 when travel is necessary to accomplish the City’s business. Transportation should be
@@ -4026,23 +4026,23 @@ deductions you voluntarily elect to have taken from your salary (e.g. participat
 
 Permissible deductions include:
 
-e Absence from work for one or more full days for personal reasons other than
+- Absence from work for one or more full days for personal reasons other than
 sickness or disability;
 
-e Absence for one or more full days due to sickness or disability if the deduction is
+- Absence for one or more full days due to sickness or disability if the deduction is
 made in accordance with a bona fide plan, policy or practice of providing
 compensation for salary lost due to illness;
 
-e Absence for Family and Medical Leave;
+- Absence for Family and Medical Leave;
 
-e Offsets for amounts received as witness or jury fees, or for military pay;
+- Offsets for amounts received as witness or jury fees, or for military pay;
 
-e Unpaid disciplinary suspensions of one or more full days imposed in good faith
+- Unpaid disciplinary suspensions of one or more full days imposed in good faith
 for workplace conduct rule infractions;
 
-e Days not worked during the first or last week of employment; or
+- Days not worked during the first or last week of employment; or
 
-e Suspensions imposed for an infraction of safety rules of major significance.
+- Suspensions imposed for an infraction of safety rules of major significance.
 
 Because the City provides a paid leave plan, employees will be required to use available
 paid leave for absences for personal reasons, sickness or disability.
@@ -4201,8 +4201,8 @@ comfortable, for whatever reason, reporting the incident to his/her immediate
 supervisor, the complainant may report the incident to any of the following
 individuals:
 
-e Department Head/Constitutional Officer
-e City Manager
+- Department Head/Constitutional Officer
+- City Manager
 
 For the purpose of this policy the City Manager shall be designated as the
 Equal Opportunity Officer for the City.
@@ -4408,27 +4408,27 @@ family support), such as grants, scholarships, etc.
 Education Plan
 The education plan shall list and describe:
 
-e The courses to be taken to achieve a degree or professional accreditation.
+- The courses to be taken to achieve a degree or professional accreditation.
 The courses and program listed must enhance the skills of the employee in
 his or her immediate position, or prepare the employee for another
 position in the city;
 
 ¢ The degree/accreditation program to be entered; and
 
-e The name of the institution where classes will be taken.
+- The name of the institution where classes will be taken.
 
 Eligible Courses
 
-e Courses that are directly related to an employee’s present position, a
+- Courses that are directly related to an employee’s present position, a
 promotional objective, or another position in the City as confirmed by the
 Department Head/Constitutional Officer’s concurrence, and are part of an
 undergraduate, graduate or professional accreditation program.
 
-e Eligible courses are available only through an accredited college,
+- Eligible courses are available only through an accredited college,
 university, business school, graduate school, trade school, or a
 technical/professional institute.
 
-e Electives which are necessary in order to obtain a degree, or other
+- Electives which are necessary in order to obtain a degree, or other
 professional accreditation, and complete the education plan but are not
 directly applicable to an employee’s occupation, are eligible for
 reimbursement.
@@ -4773,15 +4773,15 @@ candidates for employment and current employees who occupy high-risk positions.
 DEFINITIONS:
 High-Risk Positions
 A high-risk position is defined as:
-e Any position in which the employee’s sudden incapacitation shall likely
+- Any position in which the employee’s sudden incapacitation shall likely
 immediately result in additional injury to the employee, other employees and/or
 
 citizens.
 
-e Any position in which work assignments normally involve more than fifty (50)
+- Any position in which work assignments normally involve more than fifty (50)
 percent manual labor.
 
-e Any position that requires physical prowess.
+- Any position that requires physical prowess.
 
 PROCEDURES:
 
@@ -4903,10 +4903,10 @@ determined on a case-by-case basis and may proceed directly to suspension or dis
 in certain circumstances based upon the seriousness of the offense.
 
 Group One Offense:
-e First Offense - Documented Counseling
-e Second Offense - Written Reprimand
+- First Offense - Documented Counseling
+- Second Offense - Written Reprimand
 © Third Offense - 3 to 5 Day Suspension Without Pay
-e Fourth Offense -Termination
+- Fourth Offense -Termination
 
 1. Neglect or carelessness in observation of departmental safety rules or disregard of
 common safety practices including but not limited to the operation of equipment
@@ -4954,8 +4954,8 @@ procedure not otherwise specified in this policy.
 
 Group Two Offenses
 
-e First Offense -Written Notice and 3 to 5 day Suspension Without Pay
-e Second Offense -Dismissal
+- First Offense -Written Notice and 3 to 5 day Suspension Without Pay
+- Second Offense -Dismissal
 
 1. Reporting to work while intoxicated or under the influence of intoxicants or
 drugs.

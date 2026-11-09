@@ -1,6 +1,6 @@
 # GA 24.00 Applicant Guidelines and Disqualifiers
 
-<div class="sop-meta">**SOP** GA 24.00 Applicant Guidelines and All potential applicants for career and Disqualifiers volunteer staff. Title: &nbsp;·&nbsp; **Category:** General Administration</div>
+<div class="sop-meta"><strong>SOP</strong> GA 24.00 Applicant Guidelines and All potential applicants for career and Disqualifiers volunteer staff. Title: &nbsp;·&nbsp; <strong>Category:</strong> General Administration</div>
 
 ## I. Purpose
 City of Poquoson The purpose of this policy is to provide Fire and Rescue guidelines and disqualifiers with respect 830 P A to potential applicants for career and oquoson Ave. Poquoson, VA 23662 volunteer staff. -868-3510 : : . . Brny B68 a51A This SOP is not all-inclusive and cannot encompass all situations that may be encountered.
@@ -65,7 +65,7 @@ e NO overall driving record that shows a history of unsafe driving.
 
 e MUST have a Virginia driver’s license at the time of application, with a zero or positive point balance.
 
-e Applicant WILL NOT be considered when the applicant is uninsurable (i.e. if the Division of Motor Vehicle driving record report indicates the applicant is an uninsurable motorist).
+- Applicant WILL NOT be considered when the applicant is uninsurable (i.e. if the Division of Motor Vehicle driving record report indicates the applicant is an uninsurable motorist).
 
 Drugs e NOT have illegally sold or distributed any drug or controlled
 

@@ -1,6 +1,6 @@
 # EMS 4.00 Advanced Life Support Preceptorship
 
-<div class="sop-meta">**SOP** EMS 4.00 &nbsp;·&nbsp; **Category:** EMS Operations &nbsp;·&nbsp; **Effective:** 11/30/2008</div>
+<div class="sop-meta"><strong>SOP</strong> EMS 4.00 &nbsp;·&nbsp; <strong>Category:</strong> EMS Operations &nbsp;·&nbsp; <strong>Effective:</strong> 11/30/2008</div>
 
 ## I. Purpose
 
@@ -27,7 +27,7 @@ Preceptor: A medic who has been released in Poquoson for a minimum of three year
 ## IV. Procedures
 Advanced Life Support Preceptorship
 
-e Each Medic Student and Trainee will meet with the EMS Officer. At this time, the member will have a Preceptor designated to act as a mentor during training and preceptorship. While in class, the student will interact with his/her mentor concerning class progress and to coordinate field training.
+- Each Medic Student and Trainee will meet with the EMS Officer. At this time, the member will have a Preceptor designated to act as a mentor during training and preceptorship. While in class, the student will interact with his/her mentor concerning class progress and to coordinate field training.
 
 e A file shall be set up in the EMS Office on each trainee that is
 
@@ -37,11 +37,11 @@ Lif r EMS OPERATIONS
 
 ___CCSttanrnn lad Orpen Procedures Manual EMS 4.00 Advanced Life Support Preceptorship
 
-e Following completion of class and certification as an EMT- E/1/P, the trainee medic shall meet with the EMS Officer. At this time, the EMS Officer will give the trainee medic a preceptorship packet and go over the procedures with the trainee medic.
+- Following completion of class and certification as an EMT- E/1/P, the trainee medic shall meet with the EMS Officer. At this time, the EMS Officer will give the trainee medic a preceptorship packet and go over the procedures with the trainee medic.
 
 e A Field Preceptor Evaluation Form shall be completed by the Preceptor assigned to the trainee and the trainee medic at the completion of each cycle. A copy of the form will be kept by the trainee medic and original form will go to the EMS Officer for placement in the trainee medic’s file.
 
-e The precept process will be divided into 3 phases of training. The first phase will be orientation/observation, the second phase will develop team assist and team lead skills, and the third phase will be team leader evaluation.
+- The precept process will be divided into 3 phases of training. The first phase will be orientation/observation, the second phase will develop team assist and team lead skills, and the third phase will be team leader evaluation.
 
 o Phase One - This evaluation period is a minimum of 5 shifts (1 Cycle) and 10 calls. A Volunteer member will observe for a minimum of 40 documented hours or 10 calls. This phase is designed to provide the trainee an opportunity to familiarize themselves with the equipment on the medic unit and the members who will be evaluating their performance. During this time, the trainee will observe the preceptor and may be challenged with skills performance.
 
@@ -101,17 +101,17 @@ Team Leader 10 20
 
 Asterisks (*) — Can be performed in a controlled lab if not see in the field.
 
-e The trainee medic shall be scheduled to ride with at least two (2) different preceptors prior to being released.
+- The trainee medic shall be scheduled to ride with at least two (2) different preceptors prior to being released.
 
-e The trainee will be responsible for completing all ePCRs. The preceptor is overall responsible for reviewing the reports for accuracy prior to transmitting them.
+- The trainee will be responsible for completing all ePCRs. The preceptor is overall responsible for reviewing the reports for accuracy prior to transmitting them.
 
-e There will be 3 personnel assigned to the unit during the first two phases. Until the beginning of Phase 3, it will not be acceptable to precept any personnel while only 2 members are assigned to the Medic. If due to low manpower, the trainee medic is the only available driver, those calls will not count towards their minimum requirements.
+- There will be 3 personnel assigned to the unit during the first two phases. Until the beginning of Phase 3, it will not be acceptable to precept any personnel while only 2 members are assigned to the Medic. If due to low manpower, the trainee medic is the only available driver, those calls will not count towards their minimum requirements.
 
-e The EMS Officer shall counsel with the trainee at regular intervals (no less than once per month) during his/her preceptorship regarding that trainee’s progress.
+- The EMS Officer shall counsel with the trainee at regular intervals (no less than once per month) during his/her preceptorship regarding that trainee’s progress.
 
-e During the course of the preceptorship, the trainee medic shall interact with the Preceptor, who will interact with the EMS Officer, who will interact with the Operational Medical Director. At no time during the preceptorship shall the trainee medic approach the OMD. on matters involving his/her preceptorship without going through the aforementioned channels.
+- During the course of the preceptorship, the trainee medic shall interact with the Preceptor, who will interact with the EMS Officer, who will interact with the Operational Medical Director. At no time during the preceptorship shall the trainee medic approach the OMD. on matters involving his/her preceptorship without going through the aforementioned channels.
 
-e At the conclusion of the Preceptorship, the two main Preceptors shall provide to Fire Administration either a written
+- At the conclusion of the Preceptorship, the two main Preceptors shall provide to Fire Administration either a written
 
 EMS OPERATIONS
 

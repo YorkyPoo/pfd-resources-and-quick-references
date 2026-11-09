@@ -1,6 +1,6 @@
 # EA 5.00 PPE and Equipment
 
-<div class="sop-meta">**SOP** EA 5.00 &nbsp;·&nbsp; **Category:** Equipment And Apparatus &nbsp;·&nbsp; **Effective:** 01/01/2009 &nbsp;·&nbsp; **Revised:** 01/01/2009</div>
+<div class="sop-meta"><strong>SOP</strong> EA 5.00 &nbsp;·&nbsp; <strong>Category:</strong> Equipment And Apparatus &nbsp;·&nbsp; <strong>Effective:</strong> 01/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 01/01/2009</div>
 
 ## I. Purpose
 
@@ -30,11 +30,11 @@ All personnel shall keep issued protective clothing and equipment readily availa
 
 other hazardous scenes.
 
-e All personnel shall don proper protective clothing and equipment prior to the departure of the responding apparatus.
+- All personnel shall don proper protective clothing and equipment prior to the departure of the responding apparatus.
 
-e Drivers are not required to wear protective clothing / equipment that hinders movement or visibility while driving.
+- Drivers are not required to wear protective clothing / equipment that hinders movement or visibility while driving.
 
-e Personnel assigned to Medic Units shall don PPE when they arrive on scene.
+- Personnel assigned to Medic Units shall don PPE when they arrive on scene.
 
 OPERATING AT THE SCENE OF AN EMERGENCY
 
@@ -66,7 +66,7 @@ when the atmosphere may be hazardous, or potentially
 
 hazardous.
 
-e Breathing apparatus must be worn with Carbon Monoxide levels greater than 35 PPM and Oxygen Levels less than 19.5% as indicated by the use of atmospheric monitors.
+- Breathing apparatus must be worn with Carbon Monoxide levels greater than 35 PPM and Oxygen Levels less than 19.5% as indicated by the use of atmospheric monitors.
 
 NOTE: The decision to wear breathing apparatus on woods / brush fires shall be made by the IC.
 

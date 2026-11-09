@@ -1,6 +1,6 @@
 # EMS 10.00 ALS Engine Response
 
-<div class="sop-meta">**Category:** Als Engine Response</div>
+<div class="sop-meta"><strong>Category:</strong> Als Engine Response</div>
 
 ## I. Purpose
 City of Poquoson Provide Dispatch/Response Guidelines Fire and Rescue for ALS Medical Emergencies for the
@@ -29,9 +29,9 @@ Difficulty in breathing
 
 Second or third degree burns covering major portions of the body, especially the head and face
 
-e All Electrical Burns
+- All Electrical Burns
 
-e Serious blunt or any penetrating injuries
+- Serious blunt or any penetrating injuries
 
 EMS OPERATIONS
 
@@ -57,11 +57,11 @@ Any severe orthopedic emergency (spinal injuries, pelvic
 
 fractures, multiple fractures, etc.)
 
-e Excessive body temperatures with convulsions or deliriums including heat related disorders (exhaustion or heat stroke)
+- Excessive body temperatures with convulsions or deliriums including heat related disorders (exhaustion or heat stroke)
 
-e Possible DOA
+- Possible DOA
 
-e Auto accident described as:
+- Auto accident described as:
 
 Car/pedestrian
 
@@ -73,7 +73,7 @@ Serious in nature (car rolled over, person trapped, etc.)
 
 0000
 
-e Any child under 18 months exhibiting any of the above and/or:
+- Any child under 18 months exhibiting any of the above and/or:
 
 o Dehydration o Hypothermia/hyperthermia o Poor muscle tone
 

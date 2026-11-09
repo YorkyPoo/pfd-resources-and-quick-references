@@ -1,6 +1,6 @@
 # SO 10.00 Boat Operations
 
-<div class="sop-meta">**SOP** SO 10.00 &nbsp;·&nbsp; **Category:** Special Operations &nbsp;·&nbsp; **Effective:** 06/01/2009 &nbsp;·&nbsp; **Revised:** 08/12/2016</div>
+<div class="sop-meta"><strong>SOP</strong> SO 10.00 &nbsp;·&nbsp; <strong>Category:</strong> Special Operations &nbsp;·&nbsp; <strong>Effective:</strong> 06/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 08/12/2016</div>
 
 ## I. Purpose
 
@@ -58,19 +58,19 @@ SPECIAL OPERATIONS
 
 SO 10.00 Boat Operations
 
-e Must attend the Airboat Operators Course
+- Must attend the Airboat Operators Course
 
-e Effective January 1, 2017, all operators must conduct 10 additional hours of training under the supervision of a lead operator before being released as a lead operator
+- Effective January 1, 2017, all operators must conduct 10 additional hours of training under the supervision of a lead operator before being released as a lead operator
 
 The following criteria must be met in order to maintain your status as a Boat Captain: e Must complete 20 hrs of general boat training annually. e Must also complete 20 hrs of training while under way annually. e Must attend the S.A.R conference or equivalent once every two years.
 
 ## IV. Operational Checks
 
-e Operational readiness. checks of trailered boat(s) and the tow vehicle shall be conducted each shift. Both boat(s) and the tow vehicle shall be checked daily for all assigned equipment. Boat(s) will be operated for a minimum of 30 minutes per shift each month. After each monthly check, launch boat(s) shall be thoroughly rinsed and the engine shall be flushed with fresh water for no less than 5 minutes. This will be the responsibility of the assigned Boat Captain and his crew members on duty for the day.
+- Operational readiness. checks of trailered boat(s) and the tow vehicle shall be conducted each shift. Both boat(s) and the tow vehicle shall be checked daily for all assigned equipment. Boat(s) will be operated for a minimum of 30 minutes per shift each month. After each monthly check, launch boat(s) shall be thoroughly rinsed and the engine shall be flushed with fresh water for no less than 5 minutes. This will be the responsibility of the assigned Boat Captain and his crew members on duty for the day.
 
-e Any Department boat(s) moored in the water shall be checked daily for all assigned equipment, fluid levels checked, and appropriate vessel log entries made. All engines, pumps, and generators will be operated for a minimum of 30 minutes per shift cycle, except during extreme weather conditions in which boat(s) will be operated for a minimum of 1 hour per shift cycle. Boat(s) will be washed and rinsed after each run. This activity will be the responsibility of the Boat Captain and the assigned crew for the day.
+- Any Department boat(s) moored in the water shall be checked daily for all assigned equipment, fluid levels checked, and appropriate vessel log entries made. All engines, pumps, and generators will be operated for a minimum of 30 minutes per shift cycle, except during extreme weather conditions in which boat(s) will be operated for a minimum of 1 hour per shift cycle. Boat(s) will be washed and rinsed after each run. This activity will be the responsibility of the Boat Captain and the assigned crew for the day.
 
-e Preparation checks shall be completed as soon as possible at the beginning of each shift, and findings documented in the daily
+- Preparation checks shall be completed as soon as possible at the beginning of each shift, and findings documented in the daily
 
 SPECIAL OPERATIONS
 
@@ -80,7 +80,7 @@ check off. This activity will be the responsibility of the Boat Captain assigned
 
 ## V. Dispatch and Response
 
-e All boats shall respond with a minimum of 2 personnel. Minimum personnel staffing for operations shall be as follows:
+- All boats shall respond with a minimum of 2 personnel. Minimum personnel staffing for operations shall be as follows:
 
 o Maintenance and Fueling Operations: Captain of the Boat (COB), 1 crew
 
@@ -102,11 +102,11 @@ O°
 
 Note: The Battalion Chief, Company Officer, Officer in Charge, or the COB may supersede maximum staffing as the incident dictates.
 
-e The COB shall be responsible for all decisions involving operational safety and is authorized by law to abort any incident where safety of personnel may be jeopardized.
+- The COB shall be responsible for all decisions involving operational safety and is authorized by law to abort any incident where safety of personnel may be jeopardized.
 
-e While onboard Fire Department boat(s), all personnel shall wear personal flotation devices (PFDs), and shall monitor the VHF/FM Marine Band radio and a departmental radio on all incidents.
+- While onboard Fire Department boat(s), all personnel shall wear personal flotation devices (PFDs), and shall monitor the VHF/FM Marine Band radio and a departmental radio on all incidents.
 
-e If receiving a phone call at the station requesting the launch of PFD boat(s), the following information must be obtained:
+- If receiving a phone call at the station requesting the launch of PFD boat(s), the following information must be obtained:
 
 o Location and type of incident o Name of person calling
 
@@ -126,27 +126,27 @@ V-2 AIRBOAT RESPONSE/OPERATIONS The Airboat is a unique tool specially designed 
 
 e OUR TOP PRIORITY IS TO OPERATE WITH DUE REGARD TO SAFETY
 
-e Always operate the vessel in accordance with your training and skill level.
+- Always operate the vessel in accordance with your training and skill level.
 
-e Donot allow anybody to be in the danger areas created by the propeller.
+- Donot allow anybody to be in the danger areas created by the propeller.
 
-e An airboat is extremely noisy compared to other boats, keep this in mind and utilize idle speed when possible and use appropriate hearing protection.
+- An airboat is extremely noisy compared to other boats, keep this in mind and utilize idle speed when possible and use appropriate hearing protection.
 
-e You must keep in mind the potential for environmental impact. Only cross protected marshlands and private property when a life safety situation exists and there isn’t another viable option.
+- You must keep in mind the potential for environmental impact. Only cross protected marshlands and private property when a life safety situation exists and there isn’t another viable option.
 
-e When operating in an urban flooding environment, be mindful of hidden dangers (posts, fire hydrants, etc.) that can badly damage the vessel.
+- When operating in an urban flooding environment, be mindful of hidden dangers (posts, fire hydrants, etc.) that can badly damage the vessel.
 
-e When operating in an urban flooding environment, remember that the fan produces an extreme amount of wind that can potentially damage structures and property always operate at the slowest safe speed possible.
+- When operating in an urban flooding environment, remember that the fan produces an extreme amount of wind that can potentially damage structures and property always operate at the slowest safe speed possible.
 
 ## VI. Towing Guidelines
 
-e Under most conditions Fire Department boat(s) shall not be utilized for towing other boats. Only if the boat in distress is in imminent danger and within the tow capabilities of the Fire Department boat(s) shall it be towed.
+- Under most conditions Fire Department boat(s) shall not be utilized for towing other boats. Only if the boat in distress is in imminent danger and within the tow capabilities of the Fire Department boat(s) shall it be towed.
 
 SPECIAL OPERATIONS
 
 SO 10.00 Boat Operations
 
-e Imminent danger/distress shall be defined as any condition, which endangers the health, safety, welfare or life of the occupants of the vessel involved. Examples of these types of situations may include but are not limited to:
+- Imminent danger/distress shall be defined as any condition, which endangers the health, safety, welfare or life of the occupants of the vessel involved. Examples of these types of situations may include but are not limited to:
 
 o Person(s) in the water or vessel taking on water
 
@@ -158,13 +158,13 @@ o Threat of hazardous weather conditions
 
 o. The vessel posses a hazard to navigation
 
-e Ifthe boat in distress is in imminent danger and cannot be towed, the occupants of the boat shall be transferred to Fire Department boat(s) while the crew attempts to mitigate the situation. Under no circumstances should the occupants be allowed to re-board the boat in distress once they have been transferred to a Fire Department boat.
+- Ifthe boat in distress is in imminent danger and cannot be towed, the occupants of the boat shall be transferred to Fire Department boat(s) while the crew attempts to mitigate the situation. Under no circumstances should the occupants be allowed to re-board the boat in distress once they have been transferred to a Fire Department boat.
 
-e Ifthe boat in distress meets all of the below listed criteria, the responding MIRT officer or senior team member may contact the distressed boat operator’s choice of marine tow services.
+- Ifthe boat in distress meets all of the below listed criteria, the responding MIRT officer or senior team member may contact the distressed boat operator’s choice of marine tow services.
 
 o There are no emergency conditions present. o The vessel has the required Coast Guard safety equipment on board « Life jackets for all personnel on board o The vessel has an anchor that is capable of holding the vessel in position. o The vessel and/or operator have 2 ways of communicating should water conditions change. = Cell phone with a strong battery and functioning VHF radio o The vessel has functioning navigation lights if tow response will last 1 hour before sunset or later.
 
-e Ifthe above listed criteria are not met, the distressed boat and its personnel may not be left unattended. The on scene MIRT
+- Ifthe above listed criteria are not met, the distressed boat and its personnel may not be left unattended. The on scene MIRT
 
 SPECIAL OPERATIONS
 
@@ -184,15 +184,13 @@ o Ifthe boat operator is not requesting any assistance and does not want assista
 
 ## VII. Designations and Duties
 
-e Crew Designations: Crew designations/assignments shall be the responsibility of the company officer and shall be routinely assigned at the beginning of each shift.
+- Crew Designations: Crew designations/assignments shall be the responsibility of the company officer and shall be routinely assigned at the beginning of each shift.
 
 Designations/assignments will be dependent upon qualifications and accomplished so that assignments are rotated in order to acquire experience and training.
 
-e Captain of the Boat (COB): The COB shall be responsible for operational readiness of the boat, as well as the effective and safe deployment, employment, and operation of the boat. The COB is ultimately responsible for the safety of all departmental and non-departmental personnel aboard, the safety of any and all personnel in distress once on scene, the condition of the boat in all waters, situations, and weather conditions. The COB is responsible for the tow once lines have been passed to a vessel in distress. The COB is in charge of the boat and boat operations
+- Captain of the Boat (COB): The COB shall be responsible for operational readiness of the boat, as well as the effective and safe deployment, employment, and operation of the boat. The COB is ultimately responsible for the safety of all departmental and non-departmental personnel aboard, the safety of any and all personnel in distress once on scene, the condition of the boat in all waters, situations, and weather conditions. The COB is responsible for the tow once lines have been passed to a vessel in distress. The COB is in charge of the boat and boat operations
 
 SPECIAL OPERATIONS
-
-Pr SO 10.00 Boat Operations
 
 necessary to perform operational! duties. The COB shall report to the OIC during incidents and to the station officer if an OIC is not aboard.
 
@@ -232,17 +230,17 @@ staff.
 
 oo0o000
 
-e Lead Operator: The lead operator shall be responsible for training airboat crews and operators, conducting mission planning and supervising maintenance of airboat and related equipment.
+- Lead Operator: The lead operator shall be responsible for training airboat crews and operators, conducting mission planning and supervising maintenance of airboat and related equipment.
 
-e Marine Incident Response Team (MIRT) Members: Personnel assigned to the Marine Incident Response Team. Any team member not assigned as crew and under direction of the COB shall be assigned duties by the OIC so as to accomplish required mission tasks.
+- Marine Incident Response Team (MIRT) Members: Personnel assigned to the Marine Incident Response Team. Any team member not assigned as crew and under direction of the COB shall be assigned duties by the OIC so as to accomplish required mission tasks.
 
 SPECIAL OPERATIONS
 
 SO 10.00 Boat Operations
 
-e Incident Personnel: Department personnel not assigned as crew who are required for a marine incident, responsible to the OIC and COB as incident indicates.
+- Incident Personnel: Department personnel not assigned as crew who are required for a marine incident, responsible to the OIC and COB as incident indicates.
 
-e Guest: Departmental and non-departmental personnel aboard in an official or unofficial status, responsible to the COB.
+- Guest: Departmental and non-departmental personnel aboard in an official or unofficial status, responsible to the COB.
 
 VIII. Disciplinary Actions
 

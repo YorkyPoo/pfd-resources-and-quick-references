@@ -1,6 +1,6 @@
 # EA 1.00 Hose Testing and Maintenance
 
-<div class="sop-meta">**SOP** EA 1.00 &nbsp;·&nbsp; **Category:** Equipment And Apparatus &nbsp;·&nbsp; **Effective:** 06/06/2008 &nbsp;·&nbsp; **Revised:** 04/15/2014</div>
+<div class="sop-meta"><strong>SOP</strong> EA 1.00 &nbsp;·&nbsp; <strong>Category:</strong> Equipment And Apparatus &nbsp;·&nbsp; <strong>Effective:</strong> 06/06/2008 &nbsp;·&nbsp; <strong>Revised:</strong> 04/15/2014</div>
 
 ## I. Purpose
 
@@ -40,9 +40,9 @@ Hose should be tested in a place that has adequate room to lay out the hose in s
 
 Safety at the Test Site
 
-e Pressurized hose is potentially dangerous because of its tendency to whip back and forth if a break occurs such as when a coupling pulls loose. To prevent this occurrence, gate all working discharges, when using the pumper, back to only a quarter (1/4) open once pressurized.
+- Pressurized hose is potentially dangerous because of its tendency to whip back and forth if a break occurs such as when a coupling pulls loose. To prevent this occurrence, gate all working discharges, when using the pumper, back to only a quarter (1/4) open once pressurized.
 
-e Donot stand or walk near pressurized hose lines, unless necessary.
+- Donot stand or walk near pressurized hose lines, unless necessary.
 
 EQUIPMENT AND APPARATUS
 
@@ -76,7 +76,7 @@ EA 1.00 Hose Testing & Maintenance
 
 coupling should be taken out of service, marked and tagged, prior to testing.
 
-e Test pressures:
+- Test pressures:
 
 © 11/2,13/4, 2 1/2, 3 inch fire hose shall be tested to a minimum or 300 psi OR a pressure not to exceed the service test pressure marked on the hose.
 
@@ -86,15 +86,15 @@ e Test pressures:
 
 o Hose manufactured prior to July 1987 to meet the requirements of the 1979 and previous editions of NFPA 1961 shall be removed from service.
 
-e Increase the pump pressure to the required test pressure and then gate back all working discharges to one quarter (1/4) open if using the pumper. Personnel should monitor the connections for leakage as the pressure increases.
+- Increase the pump pressure to the required test pressure and then gate back all working discharges to one quarter (1/4) open if using the pumper. Personnel should monitor the connections for leakage as the pressure increases.
 
-e Maintain the test pressure for three minutes. Inspect all couplings to check for leakage at the point of attachment.
+- Maintain the test pressure for three minutes. Inspect all couplings to check for leakage at the point of attachment.
 
-e After three minutes, slowly reduce the pump pressure, close each discharge valve, and disengage the pump.
+- After three minutes, slowly reduce the pump pressure, close each discharge valve, and disengage the pump.
 
-e Slowly open each nozzle and bleed off the pressure in the test lengths. Break all hose connections and drain water away from the test area.
+- Slowly open each nozzle and bleed off the pressure in the test lengths. Break all hose connections and drain water away from the test area.
 
-e Observe marks placed on the hose at the couplings. Ifa coupling has moved during the test, tag the hose section out of
+- Observe marks placed on the hose at the couplings. Ifa coupling has moved during the test, tag the hose section out of
 
 EQUIPMENT AND APPARATUS
 
@@ -102,19 +102,19 @@ EA 1.00 Hose Testing & Maintenance
 
 service. Tag all hose out of service that has a leak or failed in any other way.
 
-e Record the test results for each section of hose.
+- Record the test results for each section of hose.
 
-e After testing, the hose should be properly drained and dried.
+- After testing, the hose should be properly drained and dried.
 
 Record Keeping
 
-e The Hose Record Forms will be filled out for each NEW section of hose at the time of hose testing. These forms will be filled out in detail and forwarded to Fire Administration.
+- The Hose Record Forms will be filled out for each NEW section of hose at the time of hose testing. These forms will be filled out in detail and forwarded to Fire Administration.
 
-e The Officer in charge of hose testing will designate the proper marking for each new hose section. The marking will be legibly stamped onto the male or female coupling of the hose or legibly and easily visible 3” down from the female coupling on one side, if possible.
+- The Officer in charge of hose testing will designate the proper marking for each new hose section. The marking will be legibly stamped onto the male or female coupling of the hose or legibly and easily visible 3” down from the female coupling on one side, if possible.
 
-e The Officer in charge of hose testing will inform each station which hose sections are due for annual testing. The information of each hose tested (including size, hose number, length, location, and pass/fail results) will be forwarded to Fire Administration.
+- The Officer in charge of hose testing will inform each station which hose sections are due for annual testing. The information of each hose tested (including size, hose number, length, location, and pass/fail results) will be forwarded to Fire Administration.
 
-e Acurrent record of all hose and hose testing shall be entered on the Firehouse Inventory Module. Records shall go back a
+- Acurrent record of all hose and hose testing shall be entered on the Firehouse Inventory Module. Records shall go back a
 
 minimum of three (3) years for hose testing and available for ISO review.
 
@@ -124,21 +124,21 @@ EQUIPMENT AND APPARATUS
 
 r EA 1.00 Hose Testing & Maintenance
 
-e Semi-annual examination of booster hose should be made for defects, such as chafing and cracking of the cover and exposed braid.
+- Semi-annual examination of booster hose should be made for defects, such as chafing and cracking of the cover and exposed braid.
 
-e Hose which has the braid exposed should not be used. It should be tagged, marked and taken out of service.
+- Hose which has the braid exposed should not be used. It should be tagged, marked and taken out of service.
 
 Forestry hose, soft sleeve suction, and hard sleeve suction:
 
 The aforementioned types of hose should be visually examined for defects, at least on a semi-annual basis and after use.
 
-e Hose should be examined for jacket defects, coupling damage and worn or defective gaskets. Any defects should be corrected if possible.
+- Hose should be examined for jacket defects, coupling damage and worn or defective gaskets. Any defects should be corrected if possible.
 
-e If damaged, the hose should be tagged, marked, and taken out of service.
+- If damaged, the hose should be tagged, marked, and taken out of service.
 
 Cleaning
 
-e Hard rubber booster line, hard suction, and rubber jacket collapsible hose require little more than rinsing with clear water. When hose is exposed to petroleum products, paints, acids, or alkalis, hose should be thoroughly cleaned as soon as possible.
+- Hard rubber booster line, hard suction, and rubber jacket collapsible hose require little more than rinsing with clear water. When hose is exposed to petroleum products, paints, acids, or alkalis, hose should be thoroughly cleaned as soon as possible.
 
 o Scrub hose with a mild soap to clean off foreign products and rinse thoroughly.
 

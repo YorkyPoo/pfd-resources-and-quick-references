@@ -79,7 +79,7 @@ procedure not otherwise specified in this policy.
 
 Group Two Offenses
 
-e First Offense -Written Notice and 3 to 5 day Suspension Without Pay e Second Offense -Dismissal
+- First Offense -Written Notice and 3 to 5 day Suspension Without Pay e Second Offense -Dismissal
 
 1. Reporting to work while intoxicated or under the influence of intoxicants or
 drugs.

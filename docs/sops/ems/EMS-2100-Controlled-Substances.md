@@ -1,6 +1,6 @@
 # EMS 21.00 Controlled Substances
 
-<div class="sop-meta">**SOP** EMS 21.00 &nbsp;·&nbsp; **Category:** EMS Operations &nbsp;·&nbsp; **Effective:** 09/01/2024</div>
+<div class="sop-meta"><strong>SOP</strong> EMS 21.00 &nbsp;·&nbsp; <strong>Category:</strong> EMS Operations &nbsp;·&nbsp; <strong>Effective:</strong> 09/01/2024</div>
 
 ## I. Purpose
 
@@ -10,7 +10,7 @@ Il. APPLICABILITY
 
 All Career and Volunteer personnel
 
-Ill. PROCUREMENT
+## III. Procurement
 
 Purchase of controlled substances will be completed by the EMS Chief using the Drug Enforcement Agency (DEA) Form 22° or through an established online vendor using the DEA’s Controlled Substance Ordering System (CSOS). The Department’s Supervising Practitioner (Medical Director) shall provide a copy of their current Virginia Medical License and DEA License to all approved vendors as required.
 
@@ -88,9 +88,9 @@ If a medication is unaccounted for at any time, all narcotics pouches and storag
 
 The following information is required to be retained in the EMS Pharmacy area as well as through the electronic tracking system used by the department:
 
-e Medications received by item description, quantity, and date
+- Medications received by item description, quantity, and date
 
-e Medications issued (given) by incident, date, and administering
+- Medications issued (given) by incident, date, and administering
 
 provider e Return of expired controlled substances e Routine inspection records
 

@@ -1,6 +1,6 @@
 # EMS 6.00 EMS Do Not Resuscitate
 
-<div class="sop-meta">**Category:** Ems Do Not Resuscitate</div>
+<div class="sop-meta"><strong>Category:</strong> Ems Do Not Resuscitate</div>
 
 ## I. Purpose
 City of Poquoson The purpose of this policy is to establish Fire and Rescue guidelines for terminating or withholding
@@ -28,17 +28,17 @@ Revised Date:
 
 e A valid Virginia Durable Do Not Resuscitate Order or an approved alternate form of Durable DNR identification
 
-e Avalid EMS DNR order issued on or after July 2, 1998 that includes the patient’s full name, physician’s signature and date issued
+- Avalid EMS DNR order issued on or after July 2, 1998 that includes the patient’s full name, physician’s signature and date issued
 
 EMS OPERATIONS
 
 n i res M: EMS 6.00 EMS Do Not Resuscitate
 
-e Decapitation or other obvious mortal injury e Rigor mortis
+- Decapitation or other obvious mortal injury e Rigor mortis
 
-e Advanced lividity
+- Advanced lividity
 
-e Decomposition
+- Decomposition
 
 During mass casualty incidents, it is assumed that resources must be directed toward viable patients.
 
@@ -50,11 +50,11 @@ A. Initial Assessment and Intervention
 
 Perform routine patient assessment and resuscitation or intervention until the Durable DNR Order or other DNR Order validity status is confirmed, as follows:
 
-e Determine the presence of a Durable DNR Order Form or an approved alternate form of Durable DNR identification.
+- Determine the presence of a Durable DNR Order Form or an approved alternate form of Durable DNR identification.
 
-e Determine that the Durable DNR item is not altered.
+- Determine that the Durable DNR item is not altered.
 
-e Verify, through Driver’s License or other identification with photograph and signature or by positive identification by a family member or other person that knows patient, that the patient in question is the one for whom the Durable DNR Order or other DNR Order was issued.
+- Verify, through Driver’s License or other identification with photograph and signature or by positive identification by a family member or other person that knows patient, that the patient in question is the one for whom the Durable DNR Order or other DNR Order was issued.
 
 EMS OPERATIONS
 
@@ -89,15 +89,15 @@ Procedures to Provide Comfort Care or to Alleviate Pain
 
 In order to provide comfort care or to alleviate pain for a patient with a valid Durable DNR Order or other DNR Order, the following interventions may be provided, depending on the needs of the particular patient.
 
-e Airway (excluding intubation or advanced airway management)
+- Airway (excluding intubation or advanced airway management)
 
-e Suction
+- Suction
 
-e Supplemental oxygen delivery devices e Pain medications or intravenous fluids e Bleeding control
+- Supplemental oxygen delivery devices e Pain medications or intravenous fluids e Bleeding control
 
-e Patient positioning or
+- Patient positioning or
 
-e Other therapies deemed necessary to provide comfort care or to alleviate pain
+- Other therapies deemed necessary to provide comfort care or to alleviate pain
 
 Revocation
 
@@ -115,15 +115,15 @@ E. Documentation
 
 When following a Durable DNR Order or other DNR Order for a particular patient, qualified health care personnel shall document in the patient’s medical record the care rendered or withheld in the following manner:
 
-e Use standard patient care reporting documents (i.e.patient’s chart, prehospital patient care report)
+- Use standard patient care reporting documents (i.e.patient’s chart, prehospital patient care report)
 
-e Describe assessment of patient’s status
+- Describe assessment of patient’s status
 
-e Document which identification (Durable DNR Order Form or other DNR Order or alternate form of identification) was used to confirm Durable DNR status and that it was intact, not altered, not canceled, or not officially revoked.
+- Document which identification (Durable DNR Order Form or other DNR Order or alternate form of identification) was used to confirm Durable DNR status and that it was intact, not altered, not canceled, or not officially revoked.
 
-e Record actual Durable DNR Order Number and name of patient’s physician.
+- Record actual Durable DNR Order Number and name of patient’s physician.
 
-e Ifthe patient is being transported, keep the Durable DNR Order with the patient.
+- Ifthe patient is being transported, keep the Durable DNR Order with the patient.
 
 F. General Considerations
 
@@ -147,7 +147,7 @@ NOTE: When EMS terminates resuscitation efforts in the
 
 field (Code Gray), they do so after receiving an order from the on-line Medical Control physician. Because this is a direct physician order and is not part of the standard PEMS protocols, PPCR reports for these runs should be cosigned by the physician that gave the Code Gray order. This should apply to all Code Gray orders regardless of whether ALS interventions were initiated.
 
-e Document physical findings and patient history on the
+- Document physical findings and patient history on the
 
 PPCR form.
 
@@ -155,8 +155,8 @@ EMS OPERATIONS
 
 —________—SStandard Operating Procedures Manual EMS 6.00 EMS Do Not Resuscitate
 
-e Ifthe patient is DOA or resuscitation efforts were ended before transport from the scene, follow local protocols concerning the notification of law enforcement and / or medical examiner.
+- Ifthe patient is DOA or resuscitation efforts were ended before transport from the scene, follow local protocols concerning the notification of law enforcement and / or medical examiner.
 
-e Be attentive to the emotional needs of any family members or bystanders present.
+- Be attentive to the emotional needs of any family members or bystanders present.
 
 EMS OPERATIONS

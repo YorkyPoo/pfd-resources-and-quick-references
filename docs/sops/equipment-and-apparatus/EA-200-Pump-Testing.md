@@ -1,6 +1,6 @@
 # EA 2.00 Pump Testing
 
-<div class="sop-meta">**SOP** EA 2.00 &nbsp;·&nbsp; **Category:** Equipment And Apparatus &nbsp;·&nbsp; **Effective:** 11/30/2008</div>
+<div class="sop-meta"><strong>SOP</strong> EA 2.00 &nbsp;·&nbsp; <strong>Category:</strong> Equipment And Apparatus &nbsp;·&nbsp; <strong>Effective:</strong> 11/30/2008</div>
 
 ## I. Purpose
 
@@ -26,22 +26,22 @@ ee
 
 EA 2.00 Pump Testing
 
-e It shall be the responsibility of the Operations Officer to observe the Annual Service Test and insure that all figures and facts are correct.
+- It shall be the responsibility of the Operations Officer to observe the Annual Service Test and insure that all figures and facts are correct.
 
-e It shall be the responsibility of the Officer-In-Charge to provide shift personnel to assist the Operations Officer during the annual service test.
+- It shall be the responsibility of the Officer-In-Charge to provide shift personnel to assist the Operations Officer during the annual service test.
 
 ## IV. Procedures
 
-e Service tests shall be conducted according to the procedures described in NFPA Standard 1911 and according to the manufactory’s recommendation.
+- Service tests shall be conducted according to the procedures described in NFPA Standard 1911 and according to the manufactory’s recommendation.
 
-e All tests shall be performed at a suitable drafting pit and tests performed at draft.
+- All tests shall be performed at a suitable drafting pit and tests performed at draft.
 
-e All main pumps on fire apparatus shall be tested.
+- All main pumps on fire apparatus shall be tested.
 
-e The entire Annual Service Test shall be re-instituted should a failure occur on any one test resulting in repairs to the apparatus.
+- The entire Annual Service Test shall be re-instituted should a failure occur on any one test resulting in repairs to the apparatus.
 
-e Apparatus undergoing annual pump testing shall be placed out- of-service.
+- Apparatus undergoing annual pump testing shall be placed out- of-service.
 
-e Documentation will be retained at Fire Administration for inspection by ISO representatives.
+- Documentation will be retained at Fire Administration for inspection by ISO representatives.
 
 EQUIPMENT AND APPARATUS

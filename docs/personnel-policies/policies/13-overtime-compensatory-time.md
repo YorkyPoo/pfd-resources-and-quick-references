@@ -31,19 +31,19 @@ Hours worked includes all time that an employee is required to be on duty and al
 
 ## Accumulation Of Compensatory Leave
 
-e When an employee accumulates one hundred and twenty (120) hours or more of compensatory leave (two hundred and forty (240) hours for law enforcement/public safety personnel), the Department Head/Constitutional Officer and employee shall develop a plan to reduce/eliminate the accrued compensatory leave which shall be approved by the City Manager.
+- When an employee accumulates one hundred and twenty (120) hours or more of compensatory leave (two hundred and forty (240) hours for law enforcement/public safety personnel), the Department Head/Constitutional Officer and employee shall develop a plan to reduce/eliminate the accrued compensatory leave which shall be approved by the City Manager.
 
-e Employees may not accrue more than two hundred and forty (240) hours of compensatory time during a calendar year (four hundred and eighty (480) for law enforcement/public safety personnel).
+- Employees may not accrue more than two hundred and forty (240) hours of compensatory time during a calendar year (four hundred and eighty (480) for law enforcement/public safety personnel).
 
 ## Treatment Of Compensatory Leave Upon Change In Status
 
 Change from Non-Exempt Status to Exempt Status
 
-e Upon change from non-exempt to exempt status, employees shall be paid a lump sum for the unused portion of their accrued compensatory leave.
+- Upon change from non-exempt to exempt status, employees shall be paid a lump sum for the unused portion of their accrued compensatory leave.
 
 ¢ The lump sum payment shall be calculated based on the non-exempt salary rate.
 
-e Upon change from non-exempt to exempt status or transfer to a new department, employees shall be paid the lump sum for the unused portion of their accrued compensatory leave by their previous department.
+- Upon change from non-exempt to exempt status or transfer to a new department, employees shall be paid the lump sum for the unused portion of their accrued compensatory leave by their previous department.
 
 Separation
 

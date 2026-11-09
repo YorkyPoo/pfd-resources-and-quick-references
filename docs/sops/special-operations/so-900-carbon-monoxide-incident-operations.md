@@ -1,6 +1,6 @@
 # SO 9.00 Carbon Monoxide Incident Operations
 
-<div class="sop-meta">**SOP** SO 9.00 &nbsp;·&nbsp; **Category:** Special Operations &nbsp;·&nbsp; **Effective:** 01/01/2009 &nbsp;·&nbsp; **Revised:** 01/01/2009</div>
+<div class="sop-meta"><strong>SOP</strong> SO 9.00 &nbsp;·&nbsp; <strong>Category:</strong> Special Operations &nbsp;·&nbsp; <strong>Effective:</strong> 01/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 01/01/2009</div>
 
 ## I. Purpose
 
@@ -33,13 +33,11 @@ If occupants are exhibiting any symptoms associated with carbon monoxide poisoni
 
 If occupants are not exhibiting any of the symptoms of carbon monoxide poisoning, fire department personnel may enter the affected area to further continue the investigation to determine if a positive carbon monoxide concentration level exists.
 
-e Zero the meter in fresh air and comply with all other start up procedures as recommended by the manufacturer of the monitoring device.
+- Zero the meter in fresh air and comply with all other start up procedures as recommended by the manufacturer of the monitoring device.
 
-e Testing should be taken within the occupied areas, at vent register or where otherwise appropriate. Test should be avoided in flue pipes, chimneys, heat exchangers, range vents or other places that would invalidate the test. Testing should also be performed in a smoke-free environment.
+- Testing should be taken within the occupied areas, at vent register or where otherwise appropriate. Test should be avoided in flue pipes, chimneys, heat exchangers, range vents or other places that would invalidate the test. Testing should also be performed in a smoke-free environment.
 
 SPECIAL OPERATIONS
-
-Pr SO 9.00 Carbon Monoxide Incident Operations
 
 The Officer-in-Charge should note whether the structure was ventilated prior to arrival and interview occupants to determine all sources of combustion within the structure.
 
@@ -51,15 +49,15 @@ If an atmospheric carbon monoxide concentration inside the affected area is 9 pa
 
 If an atmospheric carbon monoxide concentration inside the affected area is found to be between 10 PPM and 35 PPM, then proceed as follows:
 
-e Attempt to identify the cause of the carbon monoxide condition.
+- Attempt to identify the cause of the carbon monoxide condition.
 
-e If gas appliances are present, have Emergency Communications notify Virginia Natural Gas (VNG) to respond in reference to elevated carbon monoxide levels at the scene.
+- If gas appliances are present, have Emergency Communications notify Virginia Natural Gas (VNG) to respond in reference to elevated carbon monoxide levels at the scene.
 
 36 PPM OR MORE
 
 If an atmospheric carbon monoxide concentration inside the affected area exceeds 35 PPM, then proceed as follows: e All occupants and fire department personnel shall evacuate the affected area.
 
-e If gas appliances are present, have dispatch notify VNG to
+- If gas appliances are present, have dispatch notify VNG to
 
 respond due to a potentially dangerous level of carbon monoxide at the scene.
 
@@ -67,17 +65,17 @@ SPECIAL OPERATIONS
 
 ar SO 9.00 Carbon Monoxide Incident Operations
 
-e Fire Department personnel shall re-enter the affected area to ventilate and attempt to identify the cause of the carbon monoxide condition. FIRE DEPARTMENT PERSONEL SHALL WEAR FULL PROTECTIVE CLOTHING/EQUIPMENT AND SCBA.
+- Fire Department personnel shall re-enter the affected area to ventilate and attempt to identify the cause of the carbon monoxide condition. FIRE DEPARTMENT PERSONEL SHALL WEAR FULL PROTECTIVE CLOTHING/EQUIPMENT AND SCBA.
 
-e Occupants shall not be allowed to re-enter the affected area until the carbon monoxide concentration level is below 36 PPM.
+- Occupants shall not be allowed to re-enter the affected area until the carbon monoxide concentration level is below 36 PPM.
 
 MAINTENANCE OF CARBON MONOXIDE MONITORING DEVICE
 
 Carbon monoxide-monitoring devices should be operated in accordance with manufacturer’s operating instructions.
 
-e Four-gas monitors are the larger CO monitoring devices located at Stations 1 & 2 in the communication rooms.
+- Four-gas monitors are the larger CO monitoring devices located at Stations 1 & 2 in the communication rooms.
 
-e Mini-CO monitors are the smaller CO monitoring devices located on the Rescue Truck.
+- Mini-CO monitors are the smaller CO monitoring devices located on the Rescue Truck.
 
 Carbon monoxide monitoring devices are calibrated once a month and after repair or replacement of parts.
 

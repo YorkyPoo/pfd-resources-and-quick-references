@@ -1,20 +1,20 @@
 # SO 2.00 Hazardous Materials Incidents
 
-<div class="sop-meta">**SOP** SO 2.00 &nbsp;·&nbsp; **Category:** Special Operations &nbsp;·&nbsp; **Effective:** 06/06/2008</div>
+<div class="sop-meta"><strong>SOP</strong> SO 2.00 &nbsp;·&nbsp; <strong>Category:</strong> Special Operations &nbsp;·&nbsp; <strong>Effective:</strong> 06/06/2008</div>
 
 ## I. Purpose
 
 This is to provide guidelines for engine company response to possible hazardous material incidents. Areas addressed within this guideline cover five general areas.
 
-e Actions taken by the engine company upon receipt of and while en route to a possible hazardous materials incident.
+- Actions taken by the engine company upon receipt of and while en route to a possible hazardous materials incident.
 
-e Actions to be taken by the engine company upon arrival at and while on the scene of a possible hazardous materials incident in transportation at fixed facilities.
+- Actions to be taken by the engine company upon arrival at and while on the scene of a possible hazardous materials incident in transportation at fixed facilities.
 
-e Proper response to roadway spills.
+- Proper response to roadway spills.
 
-e The notification and possible response of the local Hazardous Materials Team.
+- The notification and possible response of the local Hazardous Materials Team.
 
-e Emergency Decontamination of contaminated personnel.
+- Emergency Decontamination of contaminated personnel.
 
 This SOP is not all-inclusive and cannot encompass all situations that may be encountered.
 
@@ -24,12 +24,12 @@ All Career and Volunteer Personnel
 
 n r’ SO 2.00 Hazardous Materials Incidents
 
-Ill. POLICY
+## III. Policy
 
 Upon receipt of a call identifying a possible hazardous materials incident, the first responding officer should use the following guidelines to assist in the initial size-up of the incident.
 
 1. Request all available information from the dispatcher.
-e Nature of the call e Who requested the Fire Department / number of calls e Type of facility or vehicle(s) involved ¢ Number of injured persons, and any outward signs and
+- Nature of the call e Who requested the Fire Department / number of calls e Type of facility or vehicle(s) involved ¢ Number of injured persons, and any outward signs and
 
 symptoms. e Any specific chemicals, if known
 
@@ -37,15 +37,15 @@ symptoms. e Any specific chemicals, if known
 
 3. Upon arrival
 
-e Determine that there is a problem
+- Determine that there is a problem
 
-e Look for signs of an intentional act; WMD
+- Look for signs of an intentional act; WMD
 
-e Isolate area of incident, deny entry.
+- Isolate area of incident, deny entry.
 
-e Refer to Emergency Response Guidebook for initial actions and isolation distances.
+- Refer to Emergency Response Guidebook for initial actions and isolation distances.
 
-e Make notifications as soon as possible, example: Police, Haz- Mat team, Hospitals etc.
+- Make notifications as soon as possible, example: Police, Haz- Mat team, Hospitals etc.
 
 Fixed Site Incidents
 
@@ -59,17 +59,17 @@ n rati Mi: SO 2.00 Hazardous Materials Incidents
 
 Establish Command and gather the following information:
 
-e Locate the person who requested the Fire Department and verify the reason for requesting assistance.
+- Locate the person who requested the Fire Department and verify the reason for requesting assistance.
 
-e Attempt to determine the chemicals involved.
+- Attempt to determine the chemicals involved.
 
-e Obtain all available information on the health hazards of the chemicals involved.
+- Obtain all available information on the health hazards of the chemicals involved.
 
-e Determine the quantity of chemicals involved.
+- Determine the quantity of chemicals involved.
 
-e Gather all available information on the physical and chemical properties of the chemicals involved. Including if the chemicals react to other products/chemicals.
+- Gather all available information on the physical and chemical properties of the chemicals involved. Including if the chemicals react to other products/chemicals.
 
-e Try to obtain MSDS sheets, Bill of Laden, Cargo Manifest or Shipping Papers on the chemicals involved.
+- Try to obtain MSDS sheets, Bill of Laden, Cargo Manifest or Shipping Papers on the chemicals involved.
 
 Based upon the information gathered, determine if the Engine Company is capable of providing the actions required to MITIGATE the hazard.
 
@@ -83,9 +83,9 @@ Attempt to locate the driver of the vehicle and ascertain what products are in t
 
 Observe the vehicle from a safe distance noting trailer style and construction.
 
-e Box trailer
+- Box trailer
 
-e Tank trailer and shape of the tank
+- Tank trailer and shape of the tank
 
 LOOK FOR PLACARDS, LABELS, U.N. / N.A. ID NUMBERS ON THE TANK AND RECORD THEM.
 
@@ -99,11 +99,11 @@ Determine the type and location of damage to vehicle. Observe vapor production a
 
 Attempt to obtain the Bill of Lading if it can be done SAFELY.
 
-e Normally located in the pouch on the driver’s door or on the driver’s seat when the driver is away from the vehicle.
+- Normally located in the pouch on the driver’s door or on the driver’s seat when the driver is away from the vehicle.
 
-e Iftwo trailers are being drawn in tandem (PIGGY-BACK) the Bill of Lading of the rear trailer may be locked in that trailer and unavailable.
+- Iftwo trailers are being drawn in tandem (PIGGY-BACK) the Bill of Lading of the rear trailer may be locked in that trailer and unavailable.
 
-e Intermodal tanks will have a tube secured to the tank with papers inside.
+- Intermodal tanks will have a tube secured to the tank with papers inside.
 
 If the vehicle is involved in fire and has liquid or vapor products burning;
 
@@ -127,11 +127,11 @@ Hazardous Materials Team
 
 The Hazardous Materials Team shall be dispatched, by dispatch, during any of the following incidents:
 
-e Any time an Incident Commander requires technical assistance concerning hazardous materials.
+- Any time an Incident Commander requires technical assistance concerning hazardous materials.
 
-e When a hazardous materials incident requires evacuation of the general public or when the incident exposes a hospital, nursing home, school, and/or day care center.
+- When a hazardous materials incident requires evacuation of the general public or when the incident exposes a hospital, nursing home, school, and/or day care center.
 
-e When personnel encounter products in excess of the following amounts:
+- When personnel encounter products in excess of the following amounts:
 
 o Poisons - any amount
 

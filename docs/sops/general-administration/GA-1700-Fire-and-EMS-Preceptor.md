@@ -1,6 +1,6 @@
 # GA 17.00 Fire and EMS Preceptor
 
-<div class="sop-meta">**Category:** Fire & Ems Preceptor</div>
+<div class="sop-meta"><strong>Category:</strong> Fire & Ems Preceptor</div>
 
 ## I. Purpose
 City of Poquoson The purpose of this policy is to identify the Fire and Rescue requirements for EMS and Fire Preceptors
@@ -36,7 +36,7 @@ o Must have current or past experience (documented) as an adult educator. Exampl
 
 o Can have NO disciplinary actions related to EMS other than a verbal reprimand (no more than 1) in the preceding 12 months.
 
-e Fire Preceptor
+- Fire Preceptor
 
 o Must have a minimum of 1 year experience with Poquoson Fire/Rescue AFTER they have been released from probation. Must also be certified and have a minimum of 1 year experience in any discipline they wish to precept. Examples include DPO or Aerial Operator.
 
@@ -60,7 +60,7 @@ After receiving this request, the EMS Officer and the Deputy Chief will make the
 
 The EMS Officer, Deputy Chief, and Fire Chief may also select personnel for the Preceptor program who demonstrate exceptional knowledge and ability and meet the minimum requirements as stated in the Policy portion.
 
-e Fire Preceptor
+- Fire Preceptor
 
 [e)
 

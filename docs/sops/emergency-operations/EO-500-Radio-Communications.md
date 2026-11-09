@@ -1,6 +1,6 @@
 # EO 5.00 Radio Communications
 
-<div class="sop-meta">**SOP** EO 5.00 &nbsp;·&nbsp; **Category:** Emergency Operations &nbsp;·&nbsp; **Effective:** 01/01/2009 &nbsp;·&nbsp; **Revised:** 91/01/2009</div>
+<div class="sop-meta"><strong>SOP</strong> EO 5.00 &nbsp;·&nbsp; <strong>Category:</strong> Emergency Operations &nbsp;·&nbsp; <strong>Effective:</strong> 01/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 91/01/2009</div>
 
 ## I. Purpose
 
@@ -120,7 +120,7 @@ the 911 ECC.
 
 o Talk group B - C are recorded when in use.
 
-e Initial Arrival
+- Initial Arrival
 
 o The first arriving unit will report their arrival to the 911 ECC and assume command of the incident utilizing
 
@@ -146,7 +146,7 @@ Radio Traffic
 
 The Incident Commander requires concise and timely information in order to ensure assigned tasks are completed and to address the resource needs of the situation. The following radio traffic is considered essential to the initiation and evaluation of strategic and tactical objectives.
 
-e Each unit announces arrival on scene and gives PAR e Ifassigned a task, identify your unit, repeat assignment and give your PAR (ex. Eng-207 to conduct primary
+- Each unit announces arrival on scene and gives PAR e Ifassigned a task, identify your unit, repeat assignment and give your PAR (ex. Eng-207 to conduct primary
 
 search on Division 2 — PAR 3).
 
@@ -168,7 +168,7 @@ Notify the Incident Commander of any additional resource requirements needed to 
 
 Emergency Request for Assistance
 
-e Ifthe radio operator feels that they or the crew is in
+- Ifthe radio operator feels that they or the crew is in
 
 personal danger, the orange button located on top of the XTS 2500 is an “emergency” call to the ECC. Be aware that if this button is depressed you will return to the primary dispatch channel.
 
@@ -182,9 +182,9 @@ EMERGENCY OPERATIONS
 
 r EO 5.00 Radio Communications
 
-e Ifthe “emergency” transmission is pressed on anything other than a fire scene, the telecommunicator will dispatch the police to respond to your last known location.
+- Ifthe “emergency” transmission is pressed on anything other than a fire scene, the telecommunicator will dispatch the police to respond to your last known location.
 
-e The ECC must be notified if a portable radio is taken out of service and replaced with a spare in order to track the radio identification and associate it with a specific operator.
+- The ECC must be notified if a portable radio is taken out of service and replaced with a spare in order to track the radio identification and associate it with a specific operator.
 
 Standard Radio Language
 

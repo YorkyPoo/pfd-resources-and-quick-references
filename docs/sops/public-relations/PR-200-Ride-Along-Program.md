@@ -1,6 +1,6 @@
 # PR 2.00 Ride Along Program
 
-<div class="sop-meta">**SOP** PR 2.00 &nbsp;·&nbsp; **Category:** Public Education And &nbsp;·&nbsp; **Effective:** 01/01/2009 &nbsp;·&nbsp; **Revised:** 01/01/2009</div>
+<div class="sop-meta"><strong>SOP</strong> PR 2.00 &nbsp;·&nbsp; <strong>Category:</strong> Public Education And &nbsp;·&nbsp; <strong>Effective:</strong> 01/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 01/01/2009</div>
 
 ## I. Purpose
 
@@ -10,43 +10,43 @@ This SOP is not all-inclusive and cannot encompass all situations that may be en
 
 ## II. Policy
 
-e Observers must be at least 18 years of age. 16 is acceptable with parental permission form completed or if a student in an EMT program with a ride along contract with Poquoson Fire/Rescue.
+- Observers must be at least 18 years of age. 16 is acceptable with parental permission form completed or if a student in an EMT program with a ride along contract with Poquoson Fire/Rescue.
 
-e There shall be no more than one observer per unit.
+- There shall be no more than one observer per unit.
 
-e The AIC assigned to that unit shall be responsible for the observer.
+- The AIC assigned to that unit shall be responsible for the observer.
 
-e The observer shall obey all orders or instructions issued by the Attendant in Charge on the unit.
+- The observer shall obey all orders or instructions issued by the Attendant in Charge on the unit.
 
 PUBLIC EDUCTATION AND RELATIONS
 
 Operati r Mi PR 2.00 Ride Along Program
 
-e The observer must be either affiliated with the media; a government official; a member of another fire department or EMS agency; a student in a Virginia Office of EMS approved EMS course; have an interest in pursuing a career as a career or volunteer firefighter; and provide a reason for wanting to observe emergency operations by the Division.
+- The observer must be either affiliated with the media; a government official; a member of another fire department or EMS agency; a student in a Virginia Office of EMS approved EMS course; have an interest in pursuing a career as a career or volunteer firefighter; and provide a reason for wanting to observe emergency operations by the Division.
 
-e The observer must read, understand, and sign the Department Liability Release form.
+- The observer must read, understand, and sign the Department Liability Release form.
 
-e The observer must read, understand, and sign the Department Observer Statement of Understanding.
+- The observer must read, understand, and sign the Department Observer Statement of Understanding.
 
-e The observer is there to observe only and not to participate (unless they are a student in a VA OEMS approved EMS course).
+- The observer is there to observe only and not to participate (unless they are a student in a VA OEMS approved EMS course).
 
-e The Officer in Charge shall assure that the observer understands all requirements and associated risks prior to riding.
+- The Officer in Charge shall assure that the observer understands all requirements and associated risks prior to riding.
 
-e The observer must be familiar with the State Rules and Regulations concerning the Privacy Act (see below) and may share information obtained on calls only for purposes approved by the Fire Chief.
+- The observer must be familiar with the State Rules and Regulations concerning the Privacy Act (see below) and may share information obtained on calls only for purposes approved by the Fire Chief.
 
-e All observers will report to the Officer in Charge who will then make a record of their presence in their Log Book.
+- All observers will report to the Officer in Charge who will then make a record of their presence in their Log Book.
 
-e The Officer in Charge shall notify the Deputy Fire Chief any time an observer is present for ride along.
+- The Officer in Charge shall notify the Deputy Fire Chief any time an observer is present for ride along.
 
-e All requests to participate in the observer program must be submitted to the Fire Chief's Office a minimum of (3) working days prior to the scheduled ride-along. Requests will be approved/denied within (2) working days after receipt. Any request not approved within this time frame should be considered denied.
+- All requests to participate in the observer program must be submitted to the Fire Chief's Office a minimum of (3) working days prior to the scheduled ride-along. Requests will be approved/denied within (2) working days after receipt. Any request not approved within this time frame should be considered denied.
 
 PUBLIC EDUCATION AND RELATIONS
 
 i res Man PR 2.00 Ride Along Program
 
-e All information must be filled out and signed before submission to the Chief's Office.
+- All information must be filled out and signed before submission to the Chief's Office.
 
-e Abackground check through the Virginia State Police must be completed at the observer’s expense prior to the ride along application being reviewed. If a background check has been completed within the past 365 days, proof of that check will be accepted.
+- Abackground check through the Virginia State Police must be completed at the observer’s expense prior to the ride along application being reviewed. If a background check has been completed within the past 365 days, proof of that check will be accepted.
 
 Excerpt from Rules and Regulations of the Board of Health Commonwealth of Virginia Governing Emergency Medical Services: Medical information concerning any individual is confidential and shall not be shared or disclosed except for continuing medical care or for investigations by the Department of Health.
 

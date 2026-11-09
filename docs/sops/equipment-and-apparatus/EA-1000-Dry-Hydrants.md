@@ -1,6 +1,6 @@
 # EA 10.00 Dry Hydrants
 
-<div class="sop-meta">**SOP** EA 10 Dry Hydrants &nbsp;·&nbsp; **Category:** Dry Hydrants</div>
+<div class="sop-meta"><strong>SOP</strong> EA 10 Dry Hydrants &nbsp;·&nbsp; <strong>Category:</strong> Dry Hydrants</div>
 
 ## I. Purpose
 City of Poquoson To provide guidance for testing and Fire and Rescue maintenance of dry hydrants.
@@ -19,9 +19,9 @@ SOP#: EA 10 be flushed twice per year (Spring/Fall) and monitored to ensure oper
 
 Effective Date: _ 5/23/2024 III. RESPONSIBILITIES
 
-e Shift Master Firefighters are responsible for ensuring that each of the dry hydrants is flushed twice per year and recorded in the departments RMS.
+- Shift Master Firefighters are responsible for ensuring that each of the dry hydrants is flushed twice per year and recorded in the departments RMS.
 
-e Any deficiencies must be reported to the Battalion that will report to Fire Admin for corrective action.
+- Any deficiencies must be reported to the Battalion that will report to Fire Admin for corrective action.
 
 EQUIPMENT & APPARATUS
 

@@ -1,6 +1,6 @@
 # SO 3.00 Elevator Entrapment Rescues
 
-<div class="sop-meta">**SOP** SO 3.00 &nbsp;·&nbsp; **Category:** Special Operations &nbsp;·&nbsp; **Effective:** 10/30/2008 &nbsp;·&nbsp; **Revised:** 10/30/2008</div>
+<div class="sop-meta"><strong>SOP</strong> SO 3.00 &nbsp;·&nbsp; <strong>Category:</strong> Special Operations &nbsp;·&nbsp; <strong>Effective:</strong> 10/30/2008 &nbsp;·&nbsp; <strong>Revised:</strong> 10/30/2008</div>
 
 ## I. Purpose
 
@@ -12,7 +12,7 @@ It. APPLICABILITY
 
 All career and volunteer personnel
 
-Ill. PROCEDURES
+## III. Procedures
 
 The Incident Commander (IC) will be responsible for the safe operation of elevators and extrication of trapped passengers. In the event of elevator extrication during a single company response, the Company Officer will assume the responsibility of Incident Command.
 
@@ -34,11 +34,11 @@ Shut off and maintain control of Main-Line Disconnect to affected elevator.
 
 Access bottom landing, using hoistway door key, open hoistway door and make visual inspection of hoistway:
 
-e Are elevator car doors open or closed?
+- Are elevator car doors open or closed?
 
-e Inform trapped people that the elevator will be lowering
+- Inform trapped people that the elevator will be lowering
 
-e Have trapped people stand away from the doors
+- Have trapped people stand away from the doors
 
 Locate manual lowering valve. MAKE SURE POWER IS OFF!
 
@@ -72,21 +72,21 @@ SO 3.00 Elevator Entrapment Rescues
 
 Car located at or near landing:
 
-e Attempt to open stalled elevator hoistway door by manipulating hoistway door interlock with elevator rescue tools. Use other door for reference.
+- Attempt to open stalled elevator hoistway door by manipulating hoistway door interlock with elevator rescue tools. Use other door for reference.
 
-e Or attempt to open stalled elevator hoistway door by poling across from controlled car to stalled car
+- Or attempt to open stalled elevator hoistway door by poling across from controlled car to stalled car
 
-e Open elevator car door and assist trapped passengers out
+- Open elevator car door and assist trapped passengers out
 
 Car located within 3’ of landing:
 
-e Attempt to open stalled elevator hoistway door by manipulating hoistway door interlock with elevator rescue tools
+- Attempt to open stalled elevator hoistway door by manipulating hoistway door interlock with elevator rescue tools
 
-e Or attempt to open stalled elevator hoistway door by poling up or down from controlled car to stalled car
+- Or attempt to open stalled elevator hoistway door by poling up or down from controlled car to stalled car
 
-e Once hoistway door is open, if car is located above landing, precautions must be taken to guard the hoistway opening
+- Once hoistway door is open, if car is located above landing, precautions must be taken to guard the hoistway opening
 
-e Open elevator car door and have 1 firefighter enter cab to aid in passenger evacuation
+- Open elevator car door and have 1 firefighter enter cab to aid in passenger evacuation
 
 Leave stalled elevator in the “OFF” position, close hoistway door, and
 

@@ -54,7 +54,7 @@ New employees shall report to their Department Head on the established start dat
 ## Hiring Former Employees
 A former employee may be rehired providing that all of the following conditions are met:
 
-e His/her qualifications meet the requirements of the vacant position. e He/she had been an employee in good standing at the time of separation. e His/her work record as a City employee is determined by the City Manager to be satisfactory. A former employee who is rehired after a break in service of more than 30 consecutive calendar days shall be considered a new hire for the purposes of employment benefits and shall be required to serve a new hire probationary period.
+- His/her qualifications meet the requirements of the vacant position. e He/she had been an employee in good standing at the time of separation. e His/her work record as a City employee is determined by the City Manager to be satisfactory. A former employee who is rehired after a break in service of more than 30 consecutive calendar days shall be considered a new hire for the purposes of employment benefits and shall be required to serve a new hire probationary period.
 
 A former employee who is rehired after a break in service of less than 31 consecutive calendar days may, at the discretion of the City Manager, be reinstated without a break in
 

@@ -15,19 +15,19 @@ Holidays
 
 The general government shall observe the following paid holidays, as well as any other days designated as holidays by City Council or by the Govemor.
 
-e New Year’s Day January 1
+- New Year’s Day January 1
 
-e Martin Luther King Day Third Monday in January e Presidents Day Third Monday in February e Memorial Day Last Monday in May
+- Martin Luther King Day Third Monday in January e Presidents Day Third Monday in February e Memorial Day Last Monday in May
 
-e Independence Day July 4
+- Independence Day July 4
 
-e Labor Day First Monday in September e Columbus Day Second Monday in October e Veteran’s Day November 11
+- Labor Day First Monday in September e Columbus Day Second Monday in October e Veteran’s Day November 11
 
 ¢ Thanksgiving Day Fourth Thursday in November e Day after Thanksgiving
 
-e Christmas Eve December 24
+- Christmas Eve December 24
 
-e Christmas Day December 25
+- Christmas Day December 25
 
 Holidays Falling on a Weekend Day
 1. When a holiday falls on a Saturday, it shall be observed on the preceding Friday.

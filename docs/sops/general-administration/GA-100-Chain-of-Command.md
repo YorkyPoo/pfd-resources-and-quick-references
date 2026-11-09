@@ -1,6 +1,6 @@
 # GA 1.00 Chain of Command
 
-<div class="sop-meta">**SOP** GA 1.00 &nbsp;·&nbsp; **Category:** General Administration &nbsp;·&nbsp; **Effective:** 01/01/2009 &nbsp;·&nbsp; **Revised:** 10/01/2018</div>
+<div class="sop-meta"><strong>SOP</strong> GA 1.00 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 01/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 10/01/2018</div>
 
 ## I. Purpose
 
@@ -10,7 +10,7 @@ To outline the organizational structure and function of the Poquoson Fire/Rescue
 
 A formal organizational structure serves as a foundation for Fire/Rescue Department activities. It unifies the organization by describing hierarchical relationship that assist in effective communication, policy development and strategy implementation. Therefore the Poquoson Fire/Rescue Dept. values the organized approach to daily functions outlined in the organizational structure.
 
-Ill. STRUCTURE
+## III. Structure
 
 The Fire Chief is the administrator head and director of the Fire Dept. The Fire Chief is responsible to the City Manager for proper administration, efficient use of expenditures, and the overall operations and functions of the Fire Dept.
 
@@ -22,13 +22,13 @@ The fire department is responsible for many functions. Being a small department,
 
 The Deputy Chief is responsible for the following:
 
-e Fire Suppression — Composed of Battalion Chiefs, Captains, Lieutenants, Master Firefighters/Medics. The function of fire suppression is to respond to Fire/EMS related emergencies, to prevent/minimize loss of life and injuries and property damage.
+- Fire Suppression — Composed of Battalion Chiefs, Captains, Lieutenants, Master Firefighters/Medics. The function of fire suppression is to respond to Fire/EMS related emergencies, to prevent/minimize loss of life and injuries and property damage.
 
-e Staff functions assigned to Battalion Chiefs, Captains and Lieutenants — This includes, but is not limited to, Fire Prevention, EMS, Training, Logistics, Haz-Mat, Breathing Air System Maintenance, Boat Operations.
+- Staff functions assigned to Battalion Chiefs, Captains and Lieutenants — This includes, but is not limited to, Fire Prevention, EMS, Training, Logistics, Haz-Mat, Breathing Air System Maintenance, Boat Operations.
 
-e Emergency Medical Services — Overseen by the EMS Chief. The functions of EMS are to provide professional, modern pre- hospital emergency care that includes basic and advanced procedures and transportation to a medical facility; to ensure all personnel are trained in new technology in the emergency medical field; to research and provide new equipment as needed; and to inform the public of the services provided by EMS.
+- Emergency Medical Services — Overseen by the EMS Chief. The functions of EMS are to provide professional, modern pre- hospital emergency care that includes basic and advanced procedures and transportation to a medical facility; to ensure all personnel are trained in new technology in the emergency medical field; to research and provide new equipment as needed; and to inform the public of the services provided by EMS.
 
-e Mutual Aid and Automatic Aid response with surrounding jurisdictions.
+- Mutual Aid and Automatic Aid response with surrounding jurisdictions.
 
 The organization chart outlines our rank structure. Succession of Command
 

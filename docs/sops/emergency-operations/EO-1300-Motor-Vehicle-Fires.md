@@ -1,6 +1,6 @@
 # EO 13.00 Motor Vehicle Fires
 
-<div class="sop-meta">**SOP** EO 13.00 &nbsp;·&nbsp; **Category:** General Administration</div>
+<div class="sop-meta"><strong>SOP</strong> EO 13.00 &nbsp;·&nbsp; <strong>Category:</strong> General Administration</div>
 
 ## I. Purpose
 

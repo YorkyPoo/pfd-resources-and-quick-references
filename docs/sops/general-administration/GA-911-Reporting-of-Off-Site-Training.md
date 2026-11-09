@@ -1,6 +1,6 @@
 # GA 9.11 Reporting of Off-Site Training
 
-<div class="sop-meta">**Category:** Reporting Off-Site Training</div>
+<div class="sop-meta"><strong>Category:</strong> Reporting Off-Site Training</div>
 
 ## I. Purpose
 City of Poquoson | To provide documentation for training to Fire and Rescue better support our high standard of
@@ -19,11 +19,11 @@ Effective Date: 8/18/2023 |
 
 ## III. Responsibilities
 
-e Whomever is the lead for the offsite training is responsible for ensuring the report is created.
+- Whomever is the lead for the offsite training is responsible for ensuring the report is created.
 
-e Shift officers, then Battalion Chiefs are responsible for making sure the report is correct, complete, and locked.
+- Shift officers, then Battalion Chiefs are responsible for making sure the report is correct, complete, and locked.
 
-e The Battalion Chief or designee shall approve off site training.
+- The Battalion Chief or designee shall approve off site training.
 
 City Manager's Signature
 

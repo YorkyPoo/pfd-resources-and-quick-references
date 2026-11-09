@@ -17,19 +17,19 @@ Allowable costs comprise registration fees, tuition, lab fees, and course books 
 
 Education Plan The education plan shall list and describe:
 
-e The courses to be taken to achieve a degree or professional accreditation. The courses and program listed must enhance the skills of the employee in his or her immediate position, or prepare the employee for another position in the city;
+- The courses to be taken to achieve a degree or professional accreditation. The courses and program listed must enhance the skills of the employee in his or her immediate position, or prepare the employee for another position in the city;
 
 ¢ The degree/accreditation program to be entered; and
 
-e The name of the institution where classes will be taken.
+- The name of the institution where classes will be taken.
 
 Eligible Courses
 
-e Courses that are directly related to an employee’s present position, a promotional objective, or another position in the City as confirmed by the Department Head/Constitutional Officer’s concurrence, and are part of an undergraduate, graduate or professional accreditation program.
+- Courses that are directly related to an employee’s present position, a promotional objective, or another position in the City as confirmed by the Department Head/Constitutional Officer’s concurrence, and are part of an undergraduate, graduate or professional accreditation program.
 
-e Eligible courses are available only through an accredited college, university, business school, graduate school, trade school, or a technical/professional institute.
+- Eligible courses are available only through an accredited college, university, business school, graduate school, trade school, or a technical/professional institute.
 
-e Electives which are necessary in order to obtain a degree, or other professional accreditation, and complete the education plan but are not directly applicable to an employee’s occupation, are eligible for reimbursement.
+- Electives which are necessary in order to obtain a degree, or other professional accreditation, and complete the education plan but are not directly applicable to an employee’s occupation, are eligible for reimbursement.
 
 Successful Completion of Coursework is defined as:
 

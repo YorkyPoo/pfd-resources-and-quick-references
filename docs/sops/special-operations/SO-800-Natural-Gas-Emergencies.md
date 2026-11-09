@@ -1,6 +1,6 @@
 # SO 8.00 Natural Gas Emergencies
 
-<div class="sop-meta">**SOP** SO 8.00 &nbsp;·&nbsp; **Category:** Special Operations &nbsp;·&nbsp; **Effective:** 10/30/2008</div>
+<div class="sop-meta"><strong>SOP</strong> SO 8.00 &nbsp;·&nbsp; <strong>Category:</strong> Special Operations &nbsp;·&nbsp; <strong>Effective:</strong> 10/30/2008</div>
 
 ## I. Purpose
 
@@ -23,11 +23,11 @@ A. INCIDENTS AT WHICH AN EXPLOSION HAS OCCURRED
 
 Units arriving at the scene of a structural explosion must consider natural gas as a possible cause. Explosions have occurred in structures which were not served by natural gas. Underground leaks may permit gas to travel considerable distances before entering a structure through the foundation, around pipes or through void spaces. In these circumstances, the cause of the explosion may be difficult to determine.
 
-e Until it can be determined that the area is safe from the danger of further explosions, evacuate all civilians and keep the number of Fire Department and/or other emergency personnel (i.e., gas company personnel) in the area, to the minimum number necessary to stabilize the situation. Take a pessimistic point of view.
+- Until it can be determined that the area is safe from the danger of further explosions, evacuate all civilians and keep the number of Fire Department and/or other emergency personnel (i.e., gas company personnel) in the area, to the minimum number necessary to stabilize the situation. Take a pessimistic point of view.
 
-e Do not rely on gas odor. Use combustible gas indicators to check all suspected areas. Both gas company personnel and the Hazardous Material Response Team have combustible gas indicators for this purpose.
+- Do not rely on gas odor. Use combustible gas indicators to check all suspected areas. Both gas company personnel and the Hazardous Material Response Team have combustible gas indicators for this purpose.
 
-e Check areas systematically using combustible gas indicators. Start outside of the area of the explosion, and move into the
+- Check areas systematically using combustible gas indicators. Start outside of the area of the explosion, and move into the
 
 SPECIAL OPERATIONS
 
@@ -35,11 +35,11 @@ n ing Pr SO 8.00 Natural Gas Emergencies
 
 area until readings indicate detectable concentration. Map the readings for the affected area.
 
-e Ifa gas concentration is encountered inside, adjacent to, or underneath any building, secure all possible sources of ignition in the affected area. Cut electricity from outside the affected area to avoid arcing. Ventilate buildings where gas is found with explosion proof equipment only.
+- Ifa gas concentration is encountered inside, adjacent to, or underneath any building, secure all possible sources of ignition in the affected area. Cut electricity from outside the affected area to avoid arcing. Ventilate buildings where gas is found with explosion proof equipment only.
 
-e Command shall provide for effective interaction between gas company personnel and the Fire Department. Gas company personnel are responsible for locating and eliminating leaks in the gas system. As industry specialists, they can provide Command with valuable assistance in the effective handling of these incidents. In most cases, a company officer with a portable radio will be required to supervise during on-site operations.
+- Command shall provide for effective interaction between gas company personnel and the Fire Department. Gas company personnel are responsible for locating and eliminating leaks in the gas system. As industry specialists, they can provide Command with valuable assistance in the effective handling of these incidents. In most cases, a company officer with a portable radio will be required to supervise during on-site operations.
 
-e Command must ensure the safety and stability of the structure. If further collapse is possible, the Trench Rescue Team/Heavy Rescue Team should be called to provide shoring, cribbing or other means of stabilizing the structure.
+- Command must ensure the safety and stability of the structure. If further collapse is possible, the Trench Rescue Team/Heavy Rescue Team should be called to provide shoring, cribbing or other means of stabilizing the structure.
 
 B. INCIDENTS INVOLVING A REPORTED GAS LEAK - NO FIRE
 OR EXPLOSION

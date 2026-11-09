@@ -1,6 +1,6 @@
 # SH 6.00 Bedbugs-Prevention-Detection-Treatment
 
-<div class="sop-meta">**SOP** SH 6.0 &nbsp;·&nbsp; **Category:** EMS Operations &nbsp;·&nbsp; **Effective:** 04/01/2014 &nbsp;·&nbsp; **Revised:** 08/05/2016</div>
+<div class="sop-meta"><strong>SOP</strong> SH 6.0 &nbsp;·&nbsp; <strong>Category:</strong> EMS Operations &nbsp;·&nbsp; <strong>Effective:</strong> 04/01/2014 &nbsp;·&nbsp; <strong>Revised:</strong> 08/05/2016</div>
 
 ## I. Purpose
 
@@ -157,7 +157,7 @@ In the emergency room bed bugs have the potential to arrive with every new patie
 
 Walk-in Patients:
 
-e The number of personal belongings that a patient is allowed to bring into the facility (computer bags, knap sacks, fanny packs and purses) should be limited to one or two.
+- The number of personal belongings that a patient is allowed to bring into the facility (computer bags, knap sacks, fanny packs and purses) should be limited to one or two.
 
 ° Patients must not be allowed to bring in personal bedding or pillows from home to use in the hospital.
 

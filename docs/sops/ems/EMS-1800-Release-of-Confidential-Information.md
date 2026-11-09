@@ -1,6 +1,6 @@
 # EMS 18.00 Release of Confidential Information
 
-<div class="sop-meta">**SOP** EMS 18.0 &nbsp;·&nbsp; **Category:** EMS Operations &nbsp;·&nbsp; **Effective:** 04/27/2012</div>
+<div class="sop-meta"><strong>SOP</strong> EMS 18.0 &nbsp;·&nbsp; <strong>Category:</strong> EMS Operations &nbsp;·&nbsp; <strong>Effective:</strong> 04/27/2012</div>
 
 ## I. Purpose
 
@@ -42,19 +42,19 @@ Subpoena (will be released to whomever is appointed by subpoena)
 
 Birth Certificate (for minor)
 
-e Insurance Card (for minor)
+- Insurance Card (for minor)
 
-e Immunization Records (for minor)
+- Immunization Records (for minor)
 
 EMS Operations
 
 n rating Pr res Man EMS 18.0 Release of Confidential Information
 
-e Income tax form showing minor is a legal dependant
+- Income tax form showing minor is a legal dependant
 
-e Court Order of Appointment as Guardian
+- Court Order of Appointment as Guardian
 
-e Written request from physician’s office (for minor, records will be sent directly to the physician’s office)
+- Written request from physician’s office (for minor, records will be sent directly to the physician’s office)
 
 Once the Authorization to Release Confidential Records form and acceptable proof has been received, the records may be released to the appropriate party. A Release Receipt form shall be completed and maintained at Fire Administration for no less than 5 years from the date of release.
 

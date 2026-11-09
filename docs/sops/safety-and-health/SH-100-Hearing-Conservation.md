@@ -1,6 +1,6 @@
 # SH 1.00 Hearing Conservation
 
-<div class="sop-meta">**Category:** Hearing Conservation</div>
+<div class="sop-meta"><strong>Category:</strong> Hearing Conservation</div>
 
 ## I. Purpose
 City of Poquoson To provide minimum requirements for Fire and Rescue establishing a hearing conservation
@@ -52,15 +52,15 @@ It is the policy of the Poquoson Fire/Rescue Department (PFD) to provide and to 
 ## V. Responsibility
 Management will:
 
-e Comply with and enforce the Department HCP.
+- Comply with and enforce the Department HCP.
 
-e Ensure all respective employees participating in the HCP receive baseline and annual audiometric testing and training.
+- Ensure all respective employees participating in the HCP receive baseline and annual audiometric testing and training.
 
-e Ensure, if possible, to obtain audiometric evaluation on exiting employees.
+- Ensure, if possible, to obtain audiometric evaluation on exiting employees.
 
-e Ensure all work areas and equipment that has the potential of being a noise hazard is identified as such, including all work performed off site.
+- Ensure all work areas and equipment that has the potential of being a noise hazard is identified as such, including all work performed off site.
 
-e Ensure hearing protectors are available for all employees or visitors that enter or work around noise hazards.
+- Ensure hearing protectors are available for all employees or visitors that enter or work around noise hazards.
 
 SAFETY AND HEALTH
 

@@ -1,6 +1,6 @@
 # GA 9.00 Training and Weather Conditions
 
-<div class="sop-meta">**Category:** Training And Weather</div>
+<div class="sop-meta"><strong>Category:</strong> Training And Weather</div>
 
 ## I. Purpose
 City of Poquoson Fire and Rescue To establish guidelines for outside 8 training activities during hot and cold 30 Poquoson Ave. Poquoson, VA 23662 weather months. 757-868-3510 F757-868-3514 This SOP is not all-inclusive and cannot encompass all situations that may be encountered. GENERAL ADMINISTRATION
@@ -30,9 +30,9 @@ All Personnel: Shall be responsible for adhering to policies and recommendations
 ## IV. Procedures
 Suspension of Outside Training Activities
 
-e Hot Weather Months —The information concluded from the Heat Stress Index, U.S. Fire Administration, FA-114, Emergency Incident Rehabilitation, is the criteria for determining the times of day when outside training activities are not to be conducted. This resource is also referenced in NFPA 1584 Recommended Practice on the Rehabilitation of Members Operating at Incident Scene Operations and Training Exercises. To use the Heat Stress Index table, determine the approximate outside air temperature and humidity. These readings can be found by using a weather based website or from assessing a weather channel.
+- Hot Weather Months —The information concluded from the Heat Stress Index, U.S. Fire Administration, FA-114, Emergency Incident Rehabilitation, is the criteria for determining the times of day when outside training activities are not to be conducted. This resource is also referenced in NFPA 1584 Recommended Practice on the Rehabilitation of Members Operating at Incident Scene Operations and Training Exercises. To use the Heat Stress Index table, determine the approximate outside air temperature and humidity. These readings can be found by using a weather based website or from assessing a weather channel.
 
-e Outside training activities, which require prolonged,
+- Outside training activities, which require prolonged,
 
 considerable physical exertion, shall not be conducted during times of day when the Heat Stress Index exceeds 105°.
 
@@ -40,9 +40,9 @@ GENERAL ADMINISTRATION
 
 r GA 9.00 Training and Weather Conditions
 
-e Cold Weather Months — The Information concluded from the NOAA/National Weather Service Wind Chill-Temperature (WCT) Index is the criteria for determining the times of day when outside training activities are not to be conducted. This resource is also reference in NFPA 1584 Recommended Practice on the Rehabilitation of Members Operating at Incident Scene Operations and Training Exercises. To use the WCT Index table, determine the approximate outside air temperature and wind speed. These readings can be found by using a weather based website or from assessing a weather channel.
+- Cold Weather Months — The Information concluded from the NOAA/National Weather Service Wind Chill-Temperature (WCT) Index is the criteria for determining the times of day when outside training activities are not to be conducted. This resource is also reference in NFPA 1584 Recommended Practice on the Rehabilitation of Members Operating at Incident Scene Operations and Training Exercises. To use the WCT Index table, determine the approximate outside air temperature and wind speed. These readings can be found by using a weather based website or from assessing a weather channel.
 
-e Outside training activities, which expose personnel to cold weather elements for extended periods of time, shall not be conducted during times of day when the temperature or the WCT Index drops to 30° Fahrenheit or below.
+- Outside training activities, which expose personnel to cold weather elements for extended periods of time, shall not be conducted during times of day when the temperature or the WCT Index drops to 30° Fahrenheit or below.
 
 HEAT STRESS INDEX
 

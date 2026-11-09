@@ -1,6 +1,6 @@
 # EMS 16.00 EMS Routine Transport
 
-<div class="sop-meta">**Category:** Ems Routine Transport</div>
+<div class="sop-meta"><strong>Category:</strong> Ems Routine Transport</div>
 
 ## I. Purpose
 City of Poquoson The purpose of this policy is to provide Fire and Rescue guidance for handling non-emergency 830 Poquoson Ave. requests for transport. P , VA 2366 : : 7 : oa57 868-3510 ° This SOP is not all-inclusive and cannot F757-868-3514 encompass all situations that may be encountered. EMS ROUTINE TRANSPORT
@@ -21,15 +21,15 @@ EMS 16.0 EMS Routine Transport
 
 ## IV. Definitions
 
-e Routine Transport — Any request for transport received through a non-emergency call, to Fire Administration or a Fire Station, to a destination other than an Emergency Room. Examples include private physicians office or nursing home.
+- Routine Transport — Any request for transport received through a non-emergency call, to Fire Administration or a Fire Station, to a destination other than an Emergency Room. Examples include private physicians office or nursing home.
 
-e Emergency Transport — Any 911 dispatched call. Also any request for transport, received through a non-emergency call to Fire Administration or a Fire Station, to an Emergency Room.
+- Emergency Transport — Any 911 dispatched call. Also any request for transport, received through a non-emergency call to Fire Administration or a Fire Station, to an Emergency Room.
 
 ## V. Procedures
 
-e Ifthe Department receives a request for Emergency Transport as defined above, the appropriate staff and equipment shall immediately respond as per EO 10.00. Should the caller or patient request transport at a later time or date, a Patient Refusal should be obtained as per local protocol.
+- Ifthe Department receives a request for Emergency Transport as defined above, the appropriate staff and equipment shall immediately respond as per EO 10.00. Should the caller or patient request transport at a later time or date, a Patient Refusal should be obtained as per local protocol.
 
-e Ifthe Department receives a request for Routine Transport as
+- Ifthe Department receives a request for Routine Transport as
 
 defined above, the following information should be obtained:
 

@@ -1,6 +1,6 @@
 # EMS 7.00 Failure to Comply with Regional Protocols
 
-<div class="sop-meta">**Category:** Failure To Comply With</div>
+<div class="sop-meta"><strong>Category:</strong> Failure To Comply With</div>
 
 ## I. Purpose
 City of Poquoson Fire and Rescue To provide guidance in reporting ,
@@ -17,7 +17,7 @@ Title:_Failure to Comply with Regional Protocols
 
 Effective Date: _ 91/01/2009 III. REPORTING PROCEDURES
 
-e Upon realization of an error in patient care, the Attendant in Charge shall notify the receiving hospital and their shift supervisor as
+- Upon realization of an error in patient care, the Attendant in Charge shall notify the receiving hospital and their shift supervisor as
 
 ire Chief's Signatur soon as possible.
 
@@ -59,6 +59,6 @@ rati r EMS 7.00 Failure to Comply with Regional Protocols e Disciplinary action 
 
 work, failure to comply with standard procedures, recurrent errors, and carelessness.
 
-e Disciplinary action will be filed in all responsible personnel’s Fire Department employee folder.
+- Disciplinary action will be filed in all responsible personnel’s Fire Department employee folder.
 
 EMS OPERATIONS

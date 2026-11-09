@@ -1,6 +1,6 @@
 # PR 4.00 Apparatus Displays-Standbys
 
-<div class="sop-meta">**SOP** PR 4.00 &nbsp;·&nbsp; **Category:** Public Education And &nbsp;·&nbsp; **Effective:** 02/01/2009 &nbsp;·&nbsp; **Revised:** 02/01/2009</div>
+<div class="sop-meta"><strong>SOP</strong> PR 4.00 &nbsp;·&nbsp; <strong>Category:</strong> Public Education And &nbsp;·&nbsp; <strong>Effective:</strong> 02/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 02/01/2009</div>
 
 ## I. Purpose
 

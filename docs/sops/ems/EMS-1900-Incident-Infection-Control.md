@@ -1,6 +1,6 @@
 # EMS 19.00 Incident Infection Control
 
-<div class="sop-meta">**SOP** EMS 19.00 &nbsp;·&nbsp; **Category:** General Administration &nbsp;·&nbsp; **Effective:** 10/17/2014</div>
+<div class="sop-meta"><strong>SOP</strong> EMS 19.00 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 10/17/2014</div>
 
 ## I. Purpose
 
@@ -26,33 +26,33 @@ General Precautions and Considerations
 
 When responding to, assessing, treating and/or transporting a patient(s) with a potential/suspected infectious/communicable disease, illness and/or virus, department members shall take any and/or all infection control precautions detailed below as applicable to the incident:
 
-e Limit the number of persons having contact with the potential patient to only those that must assist with patient assessment, treatment and/or transport.
+- Limit the number of persons having contact with the potential patient to only those that must assist with patient assessment, treatment and/or transport.
 
-e Asurgical mask, N95 mask or non-rebreather mask should be placed on potential patients as soon as possible during the triage/assessment process.
+- Asurgical mask, N95 mask or non-rebreather mask should be placed on potential patients as soon as possible during the triage/assessment process.
 
-e Notify the Shift Supervisor and consider requesting additignaly manpower to assist in preparing the medic unit to “att, transport a patient with a potential/suspected infectious/communicable disease. These preparations will with each suspected disease but may include such examplgee covering the interior of the patient compartment with plastic leaving only the necessary patient care equipment available to the AIC and covering the access between the patient
+- Notify the Shift Supervisor and consider requesting additignaly manpower to assist in preparing the medic unit to “att, transport a patient with a potential/suspected infectious/communicable disease. These preparations will with each suspected disease but may include such examplgee covering the interior of the patient compartment with plastic leaving only the necessary patient care equipment available to the AIC and covering the access between the patient
 
 EMS
 
 EMS 19.00 Incident Infection Control compartment and the cab of the medic unit.
 
-e Patients shall not be loaded into the medic unit until it has been prepared for the receipt of a potential/suspected infectious/communicable disease patient.
+- Patients shall not be loaded into the medic unit until it has been prepared for the receipt of a potential/suspected infectious/communicable disease patient.
 
-e The Shift Supervisor should consider making contact with the York County Battalion Chief. York County has the ability to provide on duty MMRS team members to respond and assist using Level B personal protective equipment and Powered Air- Purifying Respirator. The MMRS team members can take over patient care and transport if this level of personal protective equipment is determined to be necessary.
+- The Shift Supervisor should consider making contact with the York County Battalion Chief. York County has the ability to provide on duty MMRS team members to respond and assist using Level B personal protective equipment and Powered Air- Purifying Respirator. The MMRS team members can take over patient care and transport if this level of personal protective equipment is determined to be necessary.
 
-e The York County or Newport News Regional Haz-Mat team may also be considered to respond and assist using Level B and/or Level A personal protective equipment. The Haz-Mat team members can begin to isolate and quarantine the residence and/or any department equipment, as necessary.
+- The York County or Newport News Regional Haz-Mat team may also be considered to respond and assist using Level B and/or Level A personal protective equipment. The Haz-Mat team members can begin to isolate and quarantine the residence and/or any department equipment, as necessary.
 
-e Department members should consider the use of Self- Contained Breathing Apparatus in emergency situations.
+- Department members should consider the use of Self- Contained Breathing Apparatus in emergency situations.
 
-e The AIC shall contact Medical Control as soon as possible to determine the transport destination.
+- The AIC shall contact Medical Control as soon as possible to determine the transport destination.
 
-e The Shift Supervisor shall consider notifying the Virginia EOC to contact the Regional Haz-Mat Officer if necessary. The Shift Supervisor shall also consider notifying the Peninsula Health District.
+- The Shift Supervisor shall consider notifying the Virginia EOC to contact the Regional Haz-Mat Officer if necessary. The Shift Supervisor shall also consider notifying the Peninsula Health District.
 
 General Infection Control Precautions
 
-e Two-pair of gloves should be worn when assessing, treating, and/or transporting a patient with a potential/suspected infectious/communicable disease.
+- Two-pair of gloves should be worn when assessing, treating, and/or transporting a patient with a potential/suspected infectious/communicable disease.
 
-e Eye-protection (faceshield) should be worn when assessing, treating, and/or transporting a patient with a
+- Eye-protection (faceshield) should be worn when assessing, treating, and/or transporting a patient with a
 
 EMS
 
@@ -60,19 +60,19 @@ EMS 19.00 Incident Infection Control
 
 potential/suspected infectious/communicable disease.
 
-e Aminimum of an N-95 respirator shall be worn by department members during patient assessment, treatment and/or transport of a patient with a potential/suspected infectious/communicable disease.
+- Aminimum of an N-95 respirator shall be worn by department members during patient assessment, treatment and/or transport of a patient with a potential/suspected infectious/communicable disease.
 
-e Gowns, taped Tyvek suits, booties and/or other appropriate splash protection should be considered as PPE when assessing, treating and/or transporting a patient with a potential/suspected infectious/communicable disease.
+- Gowns, taped Tyvek suits, booties and/or other appropriate splash protection should be considered as PPE when assessing, treating and/or transporting a patient with a potential/suspected infectious/communicable disease.
 
-e Suspected patients with a potential/suspected infectious/communicable disease should be transported using the minimum number of department members and without other patients and/or passengers in the vehicle.
+- Suspected patients with a potential/suspected infectious/communicable disease should be transported using the minimum number of department members and without other patients and/or passengers in the vehicle.
 
-e Receiving facilities must be notified prior to arrival of a patient with a potential/suspected infectious/communicable disease.
+- Receiving facilities must be notified prior to arrival of a patient with a potential/suspected infectious/communicable disease.
 
-e Any positive pressure ventilation should be performed using a resuscitation bag-valve mask.
+- Any positive pressure ventilation should be performed using a resuscitation bag-valve mask.
 
-e Avoid aerosol-generating procedures, such as airway placement, administration of nebulized medications, tracheal suction, CPAP, etc. If it is necessary to perform these procedures, do so after the unit pulls to a safe location and stops and after donning the appropriate PPE including the N95.
+- Avoid aerosol-generating procedures, such as airway placement, administration of nebulized medications, tracheal suction, CPAP, etc. If it is necessary to perform these procedures, do so after the unit pulls to a safe location and stops and after donning the appropriate PPE including the N95.
 
-e If possible, avoid starting IV access during transport. IV access should be obtained after the unit pulls to a safe location and stops. Careful attention should be taken with the disposal of all sharps in the sharps container.
+- If possible, avoid starting IV access during transport. IV access should be obtained after the unit pulls to a safe location and stops. Careful attention should be taken with the disposal of all sharps in the sharps container.
 
 Detailed Guidelines for Medic Unit Patient Compartment Preparation
 
@@ -130,19 +130,19 @@ Facility Arrival
 
 The Operator will notify the receiving facility of arrival and don PPE. Throughout movement of the patient into the facility, the patient care crew will take steps to prevent secondary contamination of any surfaces, such as avoiding touching door handles with contaminated gloves.
 
-e The Operator should take all precautions to remain a safe distance from the patient to avoid contamination. The Operator may assist by opening doors and clearing the path for patient movement.
+- The Operator should take all precautions to remain a safe distance from the patient to avoid contamination. The Operator may assist by opening doors and clearing the path for patient movement.
 
-e The Operator will take a decontamination and disposal sheet and place it on the ground at the rear of the unit with a change of shoe coverings and gloves available for the patient crew.
+- The Operator will take a decontamination and disposal sheet and place it on the ground at the rear of the unit with a change of shoe coverings and gloves available for the patient crew.
 
-e Any body fluid contamination on stretcher wheels will be disinfected with a commercial disinfectant or a 1:10 bleach solution.
+- Any body fluid contamination on stretcher wheels will be disinfected with a commercial disinfectant or a 1:10 bleach solution.
 
-e Patient crew will unload patient and then remove current shoe covering and outer gloves and put on clean ones so as not to track potential contamination into the receiving facility. Dispose of PPE in Biohazard bags.
+- Patient crew will unload patient and then remove current shoe covering and outer gloves and put on clean ones so as not to track potential contamination into the receiving facility. Dispose of PPE in Biohazard bags.
 
-e The patient will be transferred into hospital by patient crew at the direction of hospital staff.
+- The patient will be transferred into hospital by patient crew at the direction of hospital staff.
 
-e Patient crew will remove and dispose of PPE in the hospital isolation area at the hospitals direction following infection control procedures or on the decontamination sheet at the rear of the unit.
+- Patient crew will remove and dispose of PPE in the hospital isolation area at the hospitals direction following infection control procedures or on the decontamination sheet at the rear of the unit.
 
-e The stretcher and all equipment will be considered potentially infectious and handled with the appropriate PPE until properly
+- The stretcher and all equipment will be considered potentially infectious and handled with the appropriate PPE until properly
 
 EMS
 
@@ -150,7 +150,7 @@ EMS 19.00 Incident Infection Control
 
 decontaminated.
 
-e The decontamination sheet, PPE, materials and equipment will be collected and double bagged with Red Biohazard Bags at the medic unit observing body fluid precautions and then placed in the rear of the medic unit for proper decontamination and disposal later.
+- The decontamination sheet, PPE, materials and equipment will be collected and double bagged with Red Biohazard Bags at the medic unit observing body fluid precautions and then placed in the rear of the medic unit for proper decontamination and disposal later.
 
 Medic Unit Decontamination
 
@@ -158,9 +158,9 @@ If the facility requests decontamination, the medic unit should be decontaminate
 
 Supplies:
 
-e Impermeable Decontamination Sheet or Plastic sheeting
+- Impermeable Decontamination Sheet or Plastic sheeting
 
-e Approved Tuberculocidal Disinfectant such as Sani-Sheets or 1:10 Solution of Bleach to Water Allowed to Dry for 10 minutes. Disposable rags Red Biohazard Bags Red Biohazard Containers PPE
+- Approved Tuberculocidal Disinfectant such as Sani-Sheets or 1:10 Solution of Bleach to Water Allowed to Dry for 10 minutes. Disposable rags Red Biohazard Bags Red Biohazard Containers PPE
 
 Decontamination and Waste Disposal Procedures
 

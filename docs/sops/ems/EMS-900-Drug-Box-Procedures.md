@@ -1,6 +1,6 @@
 # EMS 9.00 Drug Box Procedures
 
-<div class="sop-meta">**Category:** Drug Box Procedures</div>
+<div class="sop-meta"><strong>Category:</strong> Drug Box Procedures</div>
 
 ## I. Purpose
 City of Poquoson The purpose of this policy is to provide Fire and Rescue prompt and efficient exchange of drug

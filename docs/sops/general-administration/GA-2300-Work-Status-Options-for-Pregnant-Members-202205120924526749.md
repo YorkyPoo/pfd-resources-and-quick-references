@@ -1,6 +1,6 @@
 # GA 23.00 Work Status Options for Pregnant Members_202205120924526749
 
-<div class="sop-meta">**SOP** GA 23.00 &nbsp;·&nbsp; **Category:** General Administration &nbsp;·&nbsp; **Effective:** 04/27/2012</div>
+<div class="sop-meta"><strong>SOP</strong> GA 23.00 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 04/27/2012</div>
 
 ## I. Purpose
 
@@ -12,7 +12,7 @@ This SOP is not all-inclusive and cannot encompass all situations that may be en
 
 All career staff
 
-Ill. POLICY
+## III. Policy
 
 It shall be the policy of Poquoson Fire and Rescue to adhere to all federal and state policies and laws with respect to work status options during pregnancy.
 

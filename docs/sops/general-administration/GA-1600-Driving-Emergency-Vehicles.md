@@ -1,6 +1,6 @@
 # GA 16.00 Driving Emergency Vehicles
 
-<div class="sop-meta">**SOP** GA 16.00 &nbsp;·&nbsp; **Category:** General Administration &nbsp;·&nbsp; **Effective:** 94/01/2009 &nbsp;·&nbsp; **Revised:** 07/01/2016</div>
+<div class="sop-meta"><strong>SOP</strong> GA 16.00 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 94/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 07/01/2016</div>
 
 ## I. Purpose
 
@@ -13,8 +13,6 @@ This SOP is not all-inclusive and cannot encompass all situations that may be en
 ## II. Application
 
 All career and volunteer personnel
-
-GENERAL ADMINISTRATION Page 1of 5
 
 GA16.00 | oo Drivi
 

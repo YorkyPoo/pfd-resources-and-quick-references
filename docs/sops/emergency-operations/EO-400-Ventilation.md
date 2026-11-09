@@ -1,6 +1,6 @@
 # EO 4.00 Ventilation
 
-<div class="sop-meta">**SOP** EO 4.00 &nbsp;·&nbsp; **Category:** Emergency Operations &nbsp;·&nbsp; **Effective:** 01/01/2009 &nbsp;·&nbsp; **Revised:** 01/01/2009</div>
+<div class="sop-meta"><strong>SOP</strong> EO 4.00 &nbsp;·&nbsp; <strong>Category:</strong> Emergency Operations &nbsp;·&nbsp; <strong>Effective:</strong> 01/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 01/01/2009</div>
 
 ## I. Purpose
 
@@ -12,9 +12,9 @@ This standard applies to incidents involving structures and confined spaces wher
 
 ## II. General
 
-e Prompt and efficient ventilation is necessary to mitigate the potentially harmful effects of smoke, heat, and other contaminants within structures and confined spaces.
+- Prompt and efficient ventilation is necessary to mitigate the potentially harmful effects of smoke, heat, and other contaminants within structures and confined spaces.
 
-e If unchecked, smoke and heat will contribute to property damage and can injure and kill those who become trapped.
+- If unchecked, smoke and heat will contribute to property damage and can injure and kill those who become trapped.
 
 EMERGENCY OPERATIONS
 
@@ -22,13 +22,13 @@ ____mt_.___ Standard Operating Procedures Manual
 
 EO 4.00 Ventilation
 
-e Smoke and heat also hinder firefighters in their efforts to perform search and rescue operations as well as suppression.
+- Smoke and heat also hinder firefighters in their efforts to perform search and rescue operations as well as suppression.
 
-e Therefore, it is the policy of this Department to provide prompt and proper ventilation in all buildings and confined spaces in which smoke, heat, or other products of combustion are present unless otherwise ordered by the incident commander.
+- Therefore, it is the policy of this Department to provide prompt and proper ventilation in all buildings and confined spaces in which smoke, heat, or other products of combustion are present unless otherwise ordered by the incident commander.
 
 ## IV. Procedures
 
-e Ventilation shall always be performed whenever:
+- Ventilation shall always be performed whenever:
 
 o Heat, smoke, and other products of combustion are present.
 
@@ -36,7 +36,7 @@ o Hose crews cannot effectively make an interior attack due to excessive heat an
 
 o Heat, smoke, and other products of combustion block escape routes for the occupants of the structure.
 
-e When performing ventilation, the following safety precautions should be observed:
+- When performing ventilation, the following safety precautions should be observed:
 
 o Read the smoke. Observe conditions that might indicate that the potential for flashover or backdraft is present.
 

@@ -1,6 +1,6 @@
 # EMS 13.00 EMS Certifications
 
-<div class="sop-meta">**Category:** Ems Certifications</div>
+<div class="sop-meta"><strong>Category:</strong> Ems Certifications</div>
 
 ## I. Purpose
 City of Poquoson The purpose of this policy is to provide Fire and Rescue guidance with the recertification
@@ -38,11 +38,11 @@ EMS 12.00 EMS Certifications
 
 e BLS for Healthcare Provider (BLS for HCP) — This is mandatory for all providers. A recertification class is offered every 2 years prior to expiration at no charge to the provider.
 
-e Advanced Cardiac Life Support (ACLS) — This is mandatory for all ALS providers. A recertification class is offered every 2 years prior to expiration at no charge to the provider.
+- Advanced Cardiac Life Support (ACLS) — This is mandatory for all ALS providers. A recertification class is offered every 2 years prior to expiration at no charge to the provider.
 
-e Pediatric Advanced Life Support (PALS) -— This is optional for all ALS providers. If an provider wishes to further their education and acquire or maintain this certification, assistance will be provided if training funding is available and on an individual basis.
+- Pediatric Advanced Life Support (PALS) -— This is optional for all ALS providers. If an provider wishes to further their education and acquire or maintain this certification, assistance will be provided if training funding is available and on an individual basis.
 
-e Basic Trauma Life Support (BTLS/ITLS) - This is optional for all ALS providers. If an provider wishes to further their education and acquire or maintain this certification, assistance will be provided if training funding is available and on an individual basis.
+- Basic Trauma Life Support (BTLS/ITLS) - This is optional for all ALS providers. If an provider wishes to further their education and acquire or maintain this certification, assistance will be provided if training funding is available and on an individual basis.
 
 e EMT-Basic - This certification is mandatory for all providers as a minimum. Those providers not required to maintain an advanced certification must maintain EMT-Basic and recertify every 4 years. EMT-Basic providers must receive 36 hours of CEU training and a current BLS for HCP card before recertification. 2 months prior to expiration, the EMT-Basic must have a Virginia EMS Certification Application (Blue Form) completed and turned in to the EMS Officer.
 
@@ -60,7 +60,7 @@ Certification Application (Blue Form) will be completed and turned in to the EMS
 
 o EMT-Paramedic — Requires 72 hours of CEU training, current BLS for HCP, and current ACLS. When the provider meets these requirements, a Virginia EMS Certification Application (Blue Form) will be completed and turned in to the EMS Officer.
 
-e National Registry Certifications — These are optional certifications and are not required by the City of Poquoson Fire Department. They can be recertified with the same hours required for the state forms. If the provider wishes to recertify their National Registry, the paperwork must be turned in to the EMS Officer at the same time as the Virginia forms to be signed by the OMD. After receiving the OMD signature, the EMS Officer will return the form to the provider for the provider to send to National Registry.
+- National Registry Certifications — These are optional certifications and are not required by the City of Poquoson Fire Department. They can be recertified with the same hours required for the state forms. If the provider wishes to recertify their National Registry, the paperwork must be turned in to the EMS Officer at the same time as the Virginia forms to be signed by the OMD. After receiving the OMD signature, the EMS Officer will return the form to the provider for the provider to send to National Registry.
 
 After receiving the recertification forms from the providers, the EMS Officer will contact the OMD to have the recertification forms signed. After being signed, the forms will be kept at Fire Administration.
 

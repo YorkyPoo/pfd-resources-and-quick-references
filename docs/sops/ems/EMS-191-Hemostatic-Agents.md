@@ -1,6 +1,6 @@
 # EMS 19.1 Hemostatic Agents
 
-<div class="sop-meta">**Category:** Hemostatic Agents</div>
+<div class="sop-meta"><strong>Category:</strong> Hemostatic Agents</div>
 
 ## II. Applicability
 

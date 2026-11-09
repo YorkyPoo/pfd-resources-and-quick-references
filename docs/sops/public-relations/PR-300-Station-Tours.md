@@ -1,6 +1,6 @@
 # PR 3.00 Station Tours
 
-<div class="sop-meta">**SOP** PR 3.00 &nbsp;·&nbsp; **Category:** Public Education And</div>
+<div class="sop-meta"><strong>SOP</strong> PR 3.00 &nbsp;·&nbsp; <strong>Category:</strong> Public Education And</div>
 
 ## I. Purpose
 
@@ -39,6 +39,6 @@ Conducting Tours
 
 Important points to convey:
 
-e Introduce yourself and other personnel assisting Explain matches and lighters are NOT TOYS Explain Stop, Drop, and Roll if your clothes are on fire Put on and explain the purpose of turnout gear Explain crawl low in smoke Conduct Station / Apparatus Tour Explain the 911 Emergency Number Allow time to answer questions
+- Introduce yourself and other personnel assisting Explain matches and lighters are NOT TOYS Explain Stop, Drop, and Roll if your clothes are on fire Put on and explain the purpose of turnout gear Explain crawl low in smoke Conduct Station / Apparatus Tour Explain the 911 Emergency Number Allow time to answer questions
 
 PUBLIC EDUCATION AND RELATIONS

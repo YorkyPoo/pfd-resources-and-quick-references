@@ -1,6 +1,6 @@
 # EMS 14.00 Minimum Acceptable Training
 
-<div class="sop-meta">**SOP** _EMS 14.0 &nbsp;·&nbsp; **Category:** EMS Operations &nbsp;·&nbsp; **Effective:** 04/19/2011 &nbsp;·&nbsp; **Revised:** 05/25/2011</div>
+<div class="sop-meta"><strong>SOP</strong> _EMS 14.0 &nbsp;·&nbsp; <strong>Category:</strong> EMS Operations &nbsp;·&nbsp; <strong>Effective:</strong> 04/19/2011 &nbsp;·&nbsp; <strong>Revised:</strong> 05/25/2011</div>
 
 ## I. Purpose
 
@@ -26,23 +26,23 @@ Driver/Operator:
 
 e BLS for the Healthcare Provider
 
-e Documented training in Medical/Legal (to include HIPAA and confidentiality) and Infection Control/Bloodborne Pathogens
+- Documented training in Medical/Legal (to include HIPAA and confidentiality) and Infection Control/Bloodborne Pathogens
 
 e VAOEMS approved Emergency Vehicle Operator Course or Department of Fire Programs S-2 Certification
 
-e Approved to drive medic units by the Deputy Chief per department training policy
+- Approved to drive medic units by the Deputy Chief per department training policy
 
-e Amember serving as Driver/Operator who does not meet one of the below categories should NOT be involved in patient care.
+- Amember serving as Driver/Operator who does not meet one of the below categories should NOT be involved in patient care.
 
 Student:
 
 e BLS for the Healthcare Provider
 
-e Documented training in Medical/Legal (to include HIPPA and confidentiality) and Infection Control/Bloodborne Pathogens
+- Documented training in Medical/Legal (to include HIPPA and confidentiality) and Infection Control/Bloodborne Pathogens
 
-e Must be enrolled in a VAOEMS approved Emergency Medical Technician (EMT) course
+- Must be enrolled in a VAOEMS approved Emergency Medical Technician (EMT) course
 
-e May only perform under the direct supervision ofa released provider.
+- May only perform under the direct supervision ofa released provider.
 
 Certified Provider: e BLS for the Healthcare Provider e Documented training in Infection Control/Bloodborne Pathogens e Current VAOEMS or Department of Fire Programs S-2 certification, and EMT, EMT-Enhanced, Advanced EMT, Intermediate, or Paramedic
 

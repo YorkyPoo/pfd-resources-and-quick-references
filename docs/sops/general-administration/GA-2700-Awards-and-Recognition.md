@@ -1,6 +1,6 @@
 # GA 27.00 Awards and Recognition
 
-<div class="sop-meta">**SOP** GA 27.0 &nbsp;·&nbsp; **Category:** General Administration</div>
+<div class="sop-meta"><strong>SOP</strong> GA 27.0 &nbsp;·&nbsp; <strong>Category:</strong> General Administration</div>
 
 ## I. Purpose
 
@@ -21,8 +21,6 @@ The standard to achieve these awards has been purposefully set high. The Departm
 ¢ Outstanding service which is beyond that normally expected,
 
 ¢ Heroic or meritorious acts.
-
-GENERAL ADMINISTRATION Page 1of9
 
 GA 27.00 Awards/Recognition
 ## IV. Procedures

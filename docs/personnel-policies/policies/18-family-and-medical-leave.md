@@ -49,11 +49,11 @@ Amount of Leave An eligible employee is entitled to use the following amounts of
 
 on the first day leave is taken and looking back over the past 12 months.
 
-e Exigency Circumstances: 12 weeks during a rolling 12-month period beginning on the first day leave is taken and looking back over the past 12 months.
+- Exigency Circumstances: 12 weeks during a rolling 12-month period beginning on the first day leave is taken and looking back over the past 12 months.
 
-e Care for Injured Service Member: 26 weeks to care for an incapacitated service member during the 12-month period beginning with the first day of leave and ending 12 months later.
+- Care for Injured Service Member: 26 weeks to care for an incapacitated service member during the 12-month period beginning with the first day of leave and ending 12 months later.
 
-e Birth, Placement, Adoption: 12 weeks in the 12 months following the birth of a son or daughter or the placement of a son or daughter for adoption or foster care.
+- Birth, Placement, Adoption: 12 weeks in the 12 months following the birth of a son or daughter or the placement of a son or daughter for adoption or foster care.
 
 Except for leave taken for the serious health condition of the employee or for exigent circumstances, a husband and wife working for the same employer may not collectively use more than the allotment allowed if only one had been employed by the City (e.g. 12 or 26 weeks for both together).
 

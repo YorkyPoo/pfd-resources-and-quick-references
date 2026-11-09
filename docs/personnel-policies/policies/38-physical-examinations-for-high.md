@@ -17,9 +17,9 @@ High-Risk Positions A high-risk position is defined as: e Any position in which 
 
 citizens.
 
-e Any position in which work assignments normally involve more than fifty (50) percent manual labor.
+- Any position in which work assignments normally involve more than fifty (50) percent manual labor.
 
-e Any position that requires physical prowess.
+- Any position that requires physical prowess.
 
 ## Procedures
 

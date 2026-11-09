@@ -18,7 +18,7 @@ Effective Date:___91/01/2009
 
 Revised Date: __ 01/01/2009
 
-e Chief's Signatur.
+- Chief's Signatur.
 
 Manager’s Signature
 
@@ -114,7 +114,7 @@ necessary equipment to perform the task of RIT, conducted a recon of the structu
 
 ¢ Don full protective equipment including SCBA
 
-e Have the following equipment readily accessible where the RIT is staged: o RIT pack and/or spare SCBA o Two (2) portable radios o Forcible Exit/Entry Tools (Haligan & Axe) o Hand light for each team member
+- Have the following equipment readily accessible where the RIT is staged: o RIT pack and/or spare SCBA o Two (2) portable radios o Forcible Exit/Entry Tools (Haligan & Axe) o Hand light for each team member
 
 EMERGENCY OPERATIONS
 

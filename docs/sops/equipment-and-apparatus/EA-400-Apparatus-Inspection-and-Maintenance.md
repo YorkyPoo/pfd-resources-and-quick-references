@@ -1,6 +1,6 @@
 # EA 4.00 Apparatus Inspection and Maintenance
 
-<div class="sop-meta">**SOP** EA 4.00 &nbsp;·&nbsp; **Category:** Equipment And Apparatus &nbsp;·&nbsp; **Revised:** 01/01/2009</div>
+<div class="sop-meta"><strong>SOP</strong> EA 4.00 &nbsp;·&nbsp; <strong>Category:</strong> Equipment And Apparatus &nbsp;·&nbsp; <strong>Revised:</strong> 01/01/2009</div>
 
 ## I. Purpose
 
@@ -39,9 +39,9 @@ DAILY CHECKS -BEGINNING OF EACH SHIFT All apparatus e At the beginning of each s
 
 apparatus to the on coming shift.
 
-e Driver/Operators shall review the Firehouse Journal Log and review any specific problems and/or missing equipment.
+- Driver/Operators shall review the Firehouse Journal Log and review any specific problems and/or missing equipment.
 
-e As early as possible during each work shift, Driver/Operators shall inspect their assigned apparatus utilizing the Apparatus Checklist.
+- As early as possible during each work shift, Driver/Operators shall inspect their assigned apparatus utilizing the Apparatus Checklist.
 
 NOTE: Daily checks of apparatus that require the cab to be tilted/raised such as battery, belts and the engine compartment observation shall be deferred to once a week on Mondays.
 
@@ -49,21 +49,21 @@ EQUIPMENT AND APPARATUS
 
 EA 4.00 Apparatus Inspection and Maintenance Aerial apparatus e Start motor and engage power take off (PTO) and pump gear.
 
-e Operate stabilizers to ensure that the hydraulics are working properly. Visually check for leaks.
+- Operate stabilizers to ensure that the hydraulics are working properly. Visually check for leaks.
 
-e Ifapparatus has a pinned waterway, ensure ladder is set in Rescue Mode. Pumper apparatus e Place in pump gear. Open tank valve and check master discharge pressure gauge at 100 PSI. Check for water leaks. Don’t exceed 100 PSI unless a booster line is open to relieve the excess pressure buildup in the pump. Do not exceed 30 seconds. e Throttle back down and take pump out of gear. e Driver Operators shall operate all drain valves and master drain valves. Medic Units e Check the high idle for proper operation.
+- Ifapparatus has a pinned waterway, ensure ladder is set in Rescue Mode. Pumper apparatus e Place in pump gear. Open tank valve and check master discharge pressure gauge at 100 PSI. Check for water leaks. Don’t exceed 100 PSI unless a booster line is open to relieve the excess pressure buildup in the pump. Do not exceed 30 seconds. e Throttle back down and take pump out of gear. e Driver Operators shall operate all drain valves and master drain valves. Medic Units e Check the high idle for proper operation.
 
-e Check serpentine belt for lightness, cracks, and loose strands.
+- Check serpentine belt for lightness, cracks, and loose strands.
 
 Brakes
 
-e Air Brakes o Air pressure should remain steady at a maximum (120 PSD). If air pressure drops below (90 PSI), notify the Operations Officer or Deputy Chief of a possible leak.
+- Air Brakes o Air pressure should remain steady at a maximum (120 PSD). If air pressure drops below (90 PSI), notify the Operations Officer or Deputy Chief of a possible leak.
 
 EQUIPMENT AND APPARATUS
 
 EA 4.00 Apparatus Inspection and Maintenance e Hydraulic Brakes o Start engine and check brake pedal reserve. o Check master cylinder for proper fluid level. Contact the Public Works Maintenance Facility if fluid is needed o Check for fluid leaks around wheels.
 
-e Parking Brake: Check and set for proper operation.
+- Parking Brake: Check and set for proper operation.
 
 Generators/Power Equipment: Keep fuel levels full. If 2 cycle engine ensure proper fuel mixture. Maintain oil levels within proper levels. Adding fluid to apparatus: e Engine Oil
 
@@ -71,37 +71,37 @@ o Engine oil is available at the Public Works Maintenance Facility.
 
 o Engine oil is stored at both stations for use on weekends, nights and holidays.
 
-e Transmission fluid is available from the Public Works Maintenance Facility. Consult with the shop prior to adding transmission fluid to ensure that the proper type of fluid is added.
+- Transmission fluid is available from the Public Works Maintenance Facility. Consult with the shop prior to adding transmission fluid to ensure that the proper type of fluid is added.
 
-e Hydraulic fluid: Only the Public Works Maintenance Facility shall add Hydraulic fluid.
+- Hydraulic fluid: Only the Public Works Maintenance Facility shall add Hydraulic fluid.
 
 EQUIPMENT AND APPARATUS
 
 r rati r EA 4.00 Apparatus Inspection and Maintenance
 
-e Refueling
+- Refueling
 
 o Apparatus fuel levels shall be kept above 34 and are to be refueled at the Public Works Maintenance Facility.
 
-e Lights and bulbs: Stocks of common replacement bulbs may be kept at the fire stations. Station personnel may replace light bulbs. Public Works Maintenance Facility will order and will also replace bulbs.
+- Lights and bulbs: Stocks of common replacement bulbs may be kept at the fire stations. Station personnel may replace light bulbs. Public Works Maintenance Facility will order and will also replace bulbs.
 
 EVERY MONDAY Fire suppression apparatus
 
-e Every Monday, the Driver Operator should completely check apparatus as per the Apparatus Checklist and this SOP and shall check equipment utilizing inventory list.
+- Every Monday, the Driver Operator should completely check apparatus as per the Apparatus Checklist and this SOP and shall check equipment utilizing inventory list.
 
 Aerial apparatus
 
-e Start motor. Engage PTO and pump gear. Chock rear wheels on both sides and place stabilizers in down position.
+- Start motor. Engage PTO and pump gear. Chock rear wheels on both sides and place stabilizers in down position.
 
-e Raise aerial ladder/tower from bed and extend to maximum reach.
+- Raise aerial ladder/tower from bed and extend to maximum reach.
 
-e Rotate aerial ladder/tower 360 degrees in each direction. Operate from turntable and bucket.
+- Rotate aerial ladder/tower 360 degrees in each direction. Operate from turntable and bucket.
 
-e Check electrical or mechanical nozzle operation.
+- Check electrical or mechanical nozzle operation.
 
-e If apparatus has a pinned waterway, ensure ladder is set in Rescue Mode
+- If apparatus has a pinned waterway, ensure ladder is set in Rescue Mode
 
-e Observe hydraulic operating pressure during checks.
+- Observe hydraulic operating pressure during checks.
 
 EQUIPMENT AND APPARATUS
 
@@ -109,13 +109,13 @@ EA 4.00
 
 Apparatus Inspection and Maintenance
 
-e Check for any substantial or recurrent hydraulic fluid leaks.
+- Check for any substantial or recurrent hydraulic fluid leaks.
 
-e Check each level/switch/valve for proper operation.
+- Check each level/switch/valve for proper operation.
 
 Pumper apparatus
 
-e Pump Operation
+- Pump Operation
 
 [e)
 
@@ -133,7 +133,7 @@ If applicable, check the transfer/change-over valve operation from pressure to c
 
 Generators/Power equipment
 
-e Check fluid levels, start and allow to run until normal operating temperature is reached.
+- Check fluid levels, start and allow to run until normal operating temperature is reached.
 
 EQUIPMENT AND APPARATUS
 
@@ -141,11 +141,11 @@ Standard Operating Procedures Manual
 
 EA 4.00 Apparatus Inspection and Maintenance e Check operation of gauges and control devices.
 
-e Plug in electrical equipment to every outlet of the generator to ensure proper operation.
+- Plug in electrical equipment to every outlet of the generator to ensure proper operation.
 
-e Ensure auxiliary fuel cans are full. If 2 cycle engine ensure proper fuel mixture.
+- Ensure auxiliary fuel cans are full. If 2 cycle engine ensure proper fuel mixture.
 
-e If applicable, check apparatus inverter and plug in electric equipment to every outlet of the inverter system.
+- If applicable, check apparatus inverter and plug in electric equipment to every outlet of the inverter system.
 
 Battery Powered Equipment e Turn on and check operational readiness of all battery powered equipment to include Carbon Monoxide Monitors, Gamma Rae II Personal Radiation Monitors, Gas Monitors, Glucometers, Lifepak Monitors and suction units. AEDs do not have to be turned on but the operational readiness should be checked. FIRST DAY OF EVERY FIVE DAY CYCLE Medic Units e The Attendant-in-Charge should completely check apparatus as
 
@@ -161,11 +161,11 @@ n rating Pr res Man EA 4.00 Apparatus Inspection and Maintenance
 
 Nozzle Maintenance
 
-e Place nozzle in a bucket of warm soapy water and agitate, working all moving pieces while submerged.
+- Place nozzle in a bucket of warm soapy water and agitate, working all moving pieces while submerged.
 
-e Remove nozzle from soapy water and flush with clean water inside and out until surfaces are soap-free.
+- Remove nozzle from soapy water and flush with clean water inside and out until surfaces are soap-free.
 
-e Shake off all excess water. Lubricate with a silicon-based lubricant. Lubricate internally and externally as indicated in the maintenance literature supplied by the manufacturer. DO NOT USE LUBRICANTS such as WD-40.
+- Shake off all excess water. Lubricate with a silicon-based lubricant. Lubricate internally and externally as indicated in the maintenance literature supplied by the manufacturer. DO NOT USE LUBRICANTS such as WD-40.
 
 QUARTERLY MAINTENANCE
 
@@ -197,7 +197,7 @@ MINOR MECHANICAL MAINTENANCE
 
 Minor mechanical maintenance may be performed by station personnel such as replacing apparatus light bulbs (not to include LED and strobe warning lights) and adding specific fluids to apparatus.
 
-e Minor mechanical maintenance may include tightening loose bolts, nuts, and screws, and other tasks as authorized by the Operations Officer.
+- Minor mechanical maintenance may include tightening loose bolts, nuts, and screws, and other tasks as authorized by the Operations Officer.
 
 If station personnel have any doubt as to their ability or responsibility for performing any apparatus maintenance or repair task, advice and/or permission should be sought through the Operations Officer or Battalion Chief.
 

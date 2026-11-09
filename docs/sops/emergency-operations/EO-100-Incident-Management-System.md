@@ -1,6 +1,6 @@
 # EO 1.00 Incident Management System
 
-<div class="sop-meta">**SOP** EO 1.00 &nbsp;·&nbsp; **Category:** Emergency Operations &nbsp;·&nbsp; **Effective:** 1/01/2009 &nbsp;·&nbsp; **Revised:** 01/01/2009</div>
+<div class="sop-meta"><strong>SOP</strong> EO 1.00 &nbsp;·&nbsp; <strong>Category:</strong> Emergency Operations &nbsp;·&nbsp; <strong>Effective:</strong> 1/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 01/01/2009</div>
 
 ## IV. Operational Description
 
@@ -40,9 +40,9 @@ Multiple Vehicle Accidents
 
 Natural Emergencies (i.e., hurricanes, storms, etc.) Weapons of mass destruction, terrorism (consequence management)
 
-e Any incident at which the potential for, or imminent threat of fire, explosion, or release of hazardous materials exists (Virginia State Code #27-15.1)
+- Any incident at which the potential for, or imminent threat of fire, explosion, or release of hazardous materials exists (Virginia State Code #27-15.1)
 
-e Maritime Emergencies
+- Maritime Emergencies
 
 When command has been established by another agency or jurisdiction and the Fire/Rescue Dept. assists them, it shall be the responsibility of the senior responding Fire/Rescue Dept. individual to notify the Incident Commander, Liaison, or Staging Area Manager upon the arrival of Poquoson Fire/Rescue unit(s).
 
@@ -93,13 +93,13 @@ Plan evaluation and revision Operational command and control
 
 The Incident Commander shall evaluate the risk to personnel with respect to the purpose and potential results of their actions in each situation. The concept of risk management shall be utilized on the basis of the following principles:
 
-e Activities that present a significant risk to the safety of personnel shall be limited to situations where there is a potential to save endangered lives.
+- Activities that present a significant risk to the safety of personnel shall be limited to situations where there is a potential to save endangered lives.
 
-e Activities that are routinely employed to protect property shall be recognized as inherent risks to the safety of personnel, and actions shall be taken to reduce or avoid these risks.
+- Activities that are routinely employed to protect property shall be recognized as inherent risks to the safety of personnel, and actions shall be taken to reduce or avoid these risks.
 
-e Norisk to the safety of personnel shall be acceptable where there is no possibility to save lives or property.
+- Norisk to the safety of personnel shall be acceptable where there is no possibility to save lives or property.
 
-e The Incident Commander shall evaluate the risk to personnel with respect to the purpose and potential results of their actions in each situation. In situations where the risk to Fire Dept. personnel is excessive, as
+- The Incident Commander shall evaluate the risk to personnel with respect to the purpose and potential results of their actions in each situation. In situations where the risk to Fire Dept. personnel is excessive, as
 
 EMERGENCY OPERATIONS
 
@@ -107,35 +107,35 @@ Standard Operating Procedures Manual EO 1.00 Incident Management System
 
 defined above, activities shall be limited to defensive operations.
 
-e The minimum risk analysis for a structure fire shall consider the following:
+- The minimum risk analysis for a structure fire shall consider the following:
 
 Building Characteristics
 
-e Construction type and size e Structural condition e Occupancy and contents
+- Construction type and size e Structural condition e Occupancy and contents
 
 Fire Factors
 
-e Location and extent of fire e Estimated time of involvement e What are the smoke conditions telling us?
+- Location and extent of fire e Estimated time of involvement e What are the smoke conditions telling us?
 
 Risk to Building Occupants
 
-e Known or probable occupants e Occupant survival assessment
+- Known or probable occupants e Occupant survival assessment
 
 Fire Fighting Capabilities
 
 The risk to Fire Dept. personnel is the most important factor considered by the Incident Commander in determining the strategy to be employed in each situation. The management of risk levels involves the following factors:
 
-e Routinely evaluating risks in all situations
+- Routinely evaluating risks in all situations
 
-e Well-defined strategic options
+- Well-defined strategic options
 
-e Standard operating procedures
+- Standard operating procedures
 
-e Effective training
+- Effective training
 
-e Full protective clothing and equipment
+- Full protective clothing and equipment
 
-e Effective Incident management and
+- Effective Incident management and
 
 communications e Safety procedures and Safety Officers e Back-up crews for rapid intervention
 
@@ -143,15 +143,15 @@ Ne EMERGENCY OPERATIONS
 
 n ing P. EO 1.00 Incident Management System
 
-e Adequate resources
+- Adequate resources
 
-e Rest and rehabilitation
+- Rest and rehabilitation
 
-e Regular re-evaluation
+- Regular re-evaluation
 
-e Pessimistic evaluation of changing conditions e Experience based on previous incidents
+- Pessimistic evaluation of changing conditions e Experience based on previous incidents
 
-e Effective benchmarking of incident priorities
+- Effective benchmarking of incident priorities
 
 Arisk/benefit analysis shall be conducted by the Incident Commander during the initial size-up and as part of incident action planning. When effective benchmarks are met (i.e., primary search complete, all clear) and/or changes in tactical objectives are made, the Incident Commander must continually re-evaluate this process.
 
@@ -179,15 +179,13 @@ This system is effective in managing personnel and units at the scene of an emer
 
 ® All personnel shall become part of the accountability system and work for the Incident Commander or division. Freelancing (the performance of a task without the knowledge of the supervising officer) is prohibited.
 
-e Each supervisor shall have a clear understanding of the position and function of each person assigned to them.
+- Each supervisor shall have a clear understanding of the position and function of each person assigned to them.
 
 ° Each supervisor shall understand and be able to function within the framework of the system.
 
-e All personnel should go in together, stay together, and come out together.
+- All personnel should go in together, stay together, and come out together.
 
 Incident Management System EMERGENCY OPERATIONS
-
-Pr EO 1.00 Incident Management System
 
 System Components
 
@@ -296,7 +294,7 @@ AND TACTICAL BENCHMARKS
 
 Just as an Incident Management System has benchmarks (reference points) during an incident (fire safety, incident stabilization, and property conservation), the accountability system also has timely benchmarks when roll calls — PAR — of all personnel should be completed. PAR’s should be given face-to-face within the team included the number of personnel; and should be required in the following situations:
 
-e After marking on the scene e When the Incident Commander feels there is a need
+- After marking on the scene e When the Incident Commander feels there is a need
 
 to confirm the location and assignment of any team at an incident.
 
@@ -310,21 +308,21 @@ ae EMERGENCY OPERATIONS
 
 rating P Man EO 1.00 Incident Management System
 
-e By any team receiving an initial task assignment. PAR will be given after repeating assigned task.
+- By any team receiving an initial task assignment. PAR will be given after repeating assigned task.
 
-e By any team after completion of each task
+- By any team after completion of each task
 
-e By any team completing a primary or secondary search
+- By any team completing a primary or secondary search
 
-e Any report of a missing or trapped firefighter or officer
+- Any report of a missing or trapped firefighter or officer
 
-e When an evacuation is ordered.
+- When an evacuation is ordered.
 
-e Any change from an offensive to transitional or defensive mode of operation.
+- Any change from an offensive to transitional or defensive mode of operation.
 
-e Any sudden hazardous event at the incident (flashover, backdraft, explosion, or collapse.)
+- Any sudden hazardous event at the incident (flashover, backdraft, explosion, or collapse.)
 
-e By any team exiting the hazardous area or reporting to rehab.
+- By any team exiting the hazardous area or reporting to rehab.
 
 1. Rapid intervention Teams (RIT)
 
@@ -346,17 +344,17 @@ An absent member of any team should automatically be presumed missing or trapped
 
 Any personnel missing or trapped shall take the following actions to alert others of the need for immediate help:
 
-e Activate the Red Emergency Button on the radio.
+- Activate the Red Emergency Button on the radio.
 
-e The term MAY DAY shall be used to alert others of this dangerous situation. MAY DAY shall only be used when personnel believe they are in danger and need to be rescued from a potential life-threatening situation.
+- The term MAY DAY shall be used to alert others of this dangerous situation. MAY DAY shall only be used when personnel believe they are in danger and need to be rescued from a potential life-threatening situation.
 
-e Personnel giving the MAY DAY shall identify their unit (with PAR), provide their location, fire or hazard conditions, and the entry point used.
+- Personnel giving the MAY DAY shall identify their unit (with PAR), provide their location, fire or hazard conditions, and the entry point used.
 
 e PASS (Personal Alert Safety System) devices shall be turned to the ON position to provide rescuers with an audible signal for locating the position of the missing or trapped personnel.
 
 When notified of missing or trapped personnel, the Incident Commander and all other personnel on the scene shall focus their efforts in an attempt to protect and rescue those missing or trapped. The following actions shall be taken:
 
-e Aminimum of one additional alarm shall be requested by the Incident Commander to reinforce the efforts of those already performing rescue, in addition to the
+- Aminimum of one additional alarm shall be requested by the Incident Commander to reinforce the efforts of those already performing rescue, in addition to the
 
 Incident Management System EMERGENCY OPERATIONS
 
@@ -366,11 +364,11 @@ EO 1.00 Incident Management System
 
 personnel needs due to serious potential for fire or hazard extension.
 
-e Radio messages shall be restricted to emergency traffic only. With this in mind, those involved in the rescue operation should be assigned the tactical channel used by those needing rescue. Other operations shall be assigned different channels.
+- Radio messages shall be restricted to emergency traffic only. With this in mind, those involved in the rescue operation should be assigned the tactical channel used by those needing rescue. Other operations shall be assigned different channels.
 
 e A Rapid Intervention Team (RIT) or Teams shall immediately be assigned to the rescue operation. A hose line or lines shall be provided for this effort.
 
-e Hand lines and master streams (fog at 30-60 degrees) shall be carefully directed toward the position of the missing or trapped personnel in an effort to protect them from the effects of the fire or hazard if appropriate. This action shall be coordinated by the Incident Commander.
+- Hand lines and master streams (fog at 30-60 degrees) shall be carefully directed toward the position of the missing or trapped personnel in an effort to protect them from the effects of the fire or hazard if appropriate. This action shall be coordinated by the Incident Commander.
 
 In the event of a situation where personnel not at the incident hear a MAY DAY transmission and realize that those on the incident scene have not heard it, it shall be the responsibility of personnel who heard such a message to immediately alert the Incident Commander that a MAY DAY has been transmitted and provide any essential information.
 
@@ -384,13 +382,13 @@ Incident Management System EMERGENCY OPERATIONS
 
 n rating Pr res Man EO 1.00 Incident Management System
 
-e The Incident Commander shall advise all units on the scene that an evacuation is taking place.
+- The Incident Commander shall advise all units on the scene that an evacuation is taking place.
 
 Example: “Wythe Creek Command to all personnel-Evacuate the structure and meet at Engine 207 in front of the building!”
 
-e The Incident Commander shall have all apparatus drivers signal with rapid, continuous blasts of the vehicle air horn as a second means of alerting personnel to leave the hazardous area.
+- The Incident Commander shall have all apparatus drivers signal with rapid, continuous blasts of the vehicle air horn as a second means of alerting personnel to leave the hazardous area.
 
-e The Incident Commander shall advise Communications on the Fire Command channel of the evacuation.
+- The Incident Commander shall advise Communications on the Fire Command channel of the evacuation.
 
 Example: “Wythe Creek Command to Communications-I’ve ordered an evacuation of the structure at 868 Wythe Creek Road.”
 
@@ -398,11 +396,11 @@ Example: “Wythe Creek Command to Communications-I’ve ordered an evacuation o
 
 There will be times when important information needs to be heard by personnel at an incident. When personnel need to provide a critical message (other than a MAY DAY) to the Incident Commander, dispatcher or others, the term “Emergency Traffic” shall be used. The following procedures should be followed:
 
-e Personnel requesting Emergency Traffic shall identify themselves to Communications or the Incident Commander.
+- Personnel requesting Emergency Traffic shall identify themselves to Communications or the Incident Commander.
 
-e Communications shall restrict radio traffic for the specific personnel.
+- Communications shall restrict radio traffic for the specific personnel.
 
-e The personnel requesting Emergency Traffic shall proceed with the message.
+- The personnel requesting Emergency Traffic shall proceed with the message.
 
 = The message shall be repeated by the Incident Commander. Normal radio traffic shall then resume if allowed by the Incident Commander.
 
@@ -458,11 +456,11 @@ rating P M EO 1.00 Incident Management System
 
 The Command component of the Incident Command System is responsible for the overall management of incident operations. Implementation of the Incident Command System shall begin with the initial tactical operations and continue through the necessary build-up phases, depending on the size and complexity of the incident. The objective is to develop the Command organization in order to effectively manage assigned resources. The term “Command’ refers to both the person and the function. The Command component of the system is designed to:
 
-e Assign the responsibility and duties for Command to designated individuals, ensuring strong visible Command as early as possible, through the use of the Fire Department Incident Command System procedures.
+- Assign the responsibility and duties for Command to designated individuals, ensuring strong visible Command as early as possible, through the use of the Fire Department Incident Command System procedures.
 
-e Provide effective, efficient, and easily identifiable Command as early as possible on an incident.
+- Provide effective, efficient, and easily identifiable Command as early as possible on an incident.
 
-e Establish the strategic goals necessary to overcome the incident.
+- Establish the strategic goals necessary to overcome the incident.
 
 ## XII. Command Staff
 
@@ -611,13 +609,13 @@ TECHINICAL SPECIALISTS
 
 Roles and Responsibilities
 
-e Maintain resource status and situation status (personnel accountability)
+- Maintain resource status and situation status (personnel accountability)
 
-e Evaluate the current strategy and incident action plan with the Incident Commander
+- Evaluate the current strategy and incident action plan with the Incident Commander
 
-e Refine and recommend any needed changes to plan with input from the Operations Section (if utilized)
+- Refine and recommend any needed changes to plan with input from the Operations Section (if utilized)
 
-e Gather, update, improve, and manage situation status using a standard systematic approach Evaluate tactical priorities, specific critical factors, and safety Forecast possible outcomes Evaluate future resource requirements
+- Gather, update, improve, and manage situation status using a standard systematic approach Evaluate tactical priorities, specific critical factors, and safety Forecast possible outcomes Evaluate future resource requirements
 
 Incident Management System EMERGENCY OPERATIONS
 
@@ -625,9 +623,9 @@ _________ Standard Operating Procedures Manual EO 1.00 Incident Management Syste
 
 Maintain incident records Plan for incident demobilization
 
-e Coordinate with any needed outside agencies for planning needs
+- Coordinate with any needed outside agencies for planning needs
 
-e Utilize technical assistance as needed
+- Utilize technical assistance as needed
 
 3. Logistics Section
 
@@ -637,13 +635,13 @@ The Logistics Section provides for two branches within its area of responsibilit
 
 Roles and Responsibilities
 
-e Forecast and obtain future resource needs (coordinate with the Planning Section)
+- Forecast and obtain future resource needs (coordinate with the Planning Section)
 
-e Provide for a communications plan and any needed communications equipment
+- Provide for a communications plan and any needed communications equipment
 
-e Provide for medical aid for incident personnel and manage Responder Rehab
+- Provide for medical aid for incident personnel and manage Responder Rehab
 
-e Coordinate immediate critical incident stress debriefing
+- Coordinate immediate critical incident stress debriefing
 
 function
 
@@ -711,13 +709,13 @@ PROCUREMENT UNIT
 
 Roles and Responsibilities
 
-e Document for possible cost recovery involving services provided and overtime incurred by emergency personnel
+- Document for possible cost recovery involving services provided and overtime incurred by emergency personnel
 
-e Procure of services and/or supplies from sources within and/or outside the Fire Department or the City of Virginia Beach as requested by Command (coordinates with Logistics)
+- Procure of services and/or supplies from sources within and/or outside the Fire Department or the City of Virginia Beach as requested by Command (coordinates with Logistics)
 
-e Document of any injuries or fatalities related to an emergency incident due to the possible costs involved
+- Document of any injuries or fatalities related to an emergency incident due to the possible costs involved
 
-e Document all financial costs of the incident
+- Document all financial costs of the incident
 
 Incident Management System EMERGENCY OPERATIONS
 
@@ -738,7 +736,7 @@ Identify the strategy and develop an Incident Action Plan Develop an effective i
 
 Review, evaluate, and revise (as needed) the Incident Action Plan
 
-e Provide for the continuity, transfer, and termination of Command
+- Provide for the continuity, transfer, and termination of Command
 
 The Incident Commander is responsible for all of these functions. As Command is transferred, so is the responsibility for these functions. The first five functions should be addressed immediately from the initial assumption of Command.
 
@@ -752,19 +750,17 @@ For incidents that require the commitment of multiple companies, the first unit 
 
 Incident Management System EMERGENCY OPERATIONS
 
-P EO 1.00 Incident Management System
-
 “In Command,” and develop an incident management structure appropriate for the incident.
 
 In certain situations, it may be advantageous for the first-arriving Company Officer to transfer (pass) Command to the next officer on the scene. This is indicated when the first arriving officer must immediately commit to an operational task. However, Command responsibility rests with the initial arriving officer until the officer, who will assume Command, arrives on scene. “Passing” Command to the next arriving officer not on the scene creates a gap in the Command function. THE COMMAND POSITION CANNOT BE TRANSFERRED TO AN OFFICER WHO IS NOT ON SCENE. In situations where Command is passed from the first arriving officer, the transfer shall be confirmed by both officers via the radio.
 
 The first arriving unit or company shall activate the command process by giving an initial radio report. This report shall include:
 
-e Unit designation (i.e., “Engine 109 on scene.”)
+- Unit designation (i.e., “Engine 109 on scene.”)
 
-e Abrief description of the incident situation (building size, occupancy, HazMat release, multi-vehicle accident, etc.)
+- Abrief description of the incident situation (building size, occupancy, HazMat release, multi-vehicle accident, etc.)
 
-e Obvious condition (working, HazMat spill, multiple
+- Obvious condition (working, HazMat spill, multiple
 
 patients, etc.)
 
@@ -790,7 +786,7 @@ This radio transmission may be given in the initial report or later in the follo
 
 Key considerations when sizing up an incident are:
 
-e What is the problem (e.g., What is the situation in front of you [the big picture])?
+- What is the problem (e.g., What is the situation in front of you [the big picture])?
 
 Where is the problem?
 
@@ -877,29 +873,29 @@ Fast Attack Mode (Offensive)
 
 Prior to implementing an interior offensive attack, officers shall ensure the following:
 
-e The officer or acting officer has made a determination that a rescue is imminent or that the potential for a rescue exists. (Occupants are or may still be in the structure) Incident Managemen m EMERGENCY OPERATIONS
+- The officer or acting officer has made a determination that a rescue is imminent or that the potential for a rescue exists. (Occupants are or may still be in the structure) Incident Managemen m EMERGENCY OPERATIONS
 
 :
 
 r EO 1.00 Incident Management System
 
-e Ifno rescue is imminent or the potential for a rescue does not exist, officers shall ensure that the “2 in/2 out” procedures established by the department are followed
+- Ifno rescue is imminent or the potential for a rescue does not exist, officers shall ensure that the “2 in/2 out” procedures established by the department are followed
 
 These are situations that require immediate action to stabilize and cannot be accomplished without the ’s direct involvement in the fire attack or, in the case of a multi-casualty incident, triage and treatment of victims. In these situations, the Shift Supervisor goes with the team to provide the appropriate level of supervision while utilizing the portable radio to command the incident. Examples of these situations include:
 
-e Offensive fire attacks (especially in transitional situations)
+- Offensive fire attacks (especially in transitional situations)
 
-e Critical rescues which must be achieved in a compressed timeframe
+- Critical rescues which must be achieved in a compressed timeframe
 
-e Any incident where the safety and welfare of the firefighters is a major concern
+- Any incident where the safety and welfare of the firefighters is a major concern
 
-e Obvious working incidents that require further investigation by the shift supervisor.
+- Obvious working incidents that require further investigation by the shift supervisor.
 
 Where fast intervention is critical, using the portable radio will permit the company officer to be involved in the attack without neglecting command responsibilities. The offensive mode should not last more than a few minutes and will end with one of the following:
 
-e The situation is stabilized
+- The situation is stabilized
 
-e The situation is not stabilized and the company officer will need to withdraw to the exterior and establish a command post. At some point, the company officer must decide whether or not to withdraw the remainder of the company, based on their capabilities, experience, safety issues, and availability of portable radios. No company shall remain in a hazardous area without a portable radio.
+- The situation is not stabilized and the company officer will need to withdraw to the exterior and establish a command post. At some point, the company officer must decide whether or not to withdraw the remainder of the company, based on their capabilities, experience, safety issues, and availability of portable radios. No company shall remain in a hazardous area without a portable radio.
 
 Incident Management System EMERGENCY OPERATIONS
 
@@ -907,7 +903,7 @@ Standard Operating Procedures Manual
 
 EO 1.00 Incident Management System
 
-e Command is passed to another company officer (see passing command) or transferred to a higher-ranking officer. When a chief officer assumes command, the company officer may be returned to his/her company or assigned to the Incident Commander
+- Command is passed to another company officer (see passing command) or transferred to a higher-ranking officer. When a chief officer assumes command, the company officer may be returned to his/her company or assigned to the Incident Commander
 
 Command Mode (Defensive)
 
@@ -915,11 +911,11 @@ Certain incidents, by virtue of their size, complexity, or potential for rapid e
 
 If the company officer selects the command mode, the remaining company personnel can be assigned by utilizing the following options:
 
-e The company officer takes command and places the company into action with the remaining personnel, using a firefighter to serve as the acting company officer. This will depend on staffing, experience, and portable radio availability.
+- The company officer takes command and places the company into action with the remaining personnel, using a firefighter to serve as the acting company officer. This will depend on staffing, experience, and portable radio availability.
 
-e The company officer may assign company personnel to work under the supervision of another company officer. In this situation, the company/Incident Commander shall advise the second company officer indicating the addition of personnel to the second company.
+- The company officer may assign company personnel to work under the supervision of another company officer. In this situation, the company/Incident Commander shall advise the second company officer indicating the addition of personnel to the second company.
 
-e The company officer may elect to assign company personnel to perform staff functions to assist the Incident Commander.
+- The company officer may elect to assign company personnel to perform staff functions to assist the Incident Commander.
 
 The company officer assuming command has a choice of modes and degrees of personal involvement in the tactical activities but continues to be fully responsible for the command functions. The initiative and judgment of the company officer is of critical importance. The modes identified are guidelines to assist the company officer in planning appropriate actions.
 
@@ -939,25 +935,25 @@ Command is transferred to improve the quality of the command organization within
 
 e COMMAND SHALL NOT BE TRANSFERRED TO AN OFFICER WHO IS NOT ON THE SCENE!
 
-e The first Fire Department member or company arriving on scene will automatically assume Command. This will normally be a Company Officer, but could be any Fire Department member up to and including the Fire Chief.
+- The first Fire Department member or company arriving on scene will automatically assume Command. This will normally be a Company Officer, but could be any Fire Department member up to and including the Fire Chief.
 
-e The second arriving Company Officer will assume Command after the transfer of Command has been completed (assuming an equal or higher ranking officer has not already assumed Command).
+- The second arriving Company Officer will assume Command after the transfer of Command has been completed (assuming an equal or higher ranking officer has not already assumed Command).
 
 Incident Management System EMERGENCY OPERATIONS
 
 rati r M EO 1.00 Incident Management System
 
-e The first arriving chief officer should assume Command of the incident following transfer of Command procedures.
+- The first arriving chief officer should assume Command of the incident following transfer of Command procedures.
 
-e The second arriving chief officer should report to the Command Post for assignment.
+- The second arriving chief officer should report to the Command Post for assignment.
 
-e Later arriving, higher-ranking chief officers may choose to assume Command or assume advisory positions. Assumption of Command is discretionary for the Assistant Fire Chief or the Fire Chief.
+- Later arriving, higher-ranking chief officers may choose to assume Command or assume advisory positions. Assumption of Command is discretionary for the Assistant Fire Chief or the Fire Chief.
 
 Within the chain of command, the actual transfer of Command shall be regulated by the following procedures:
 
-e The officer assuming command shall communicate with the person being relieved by radio or face-to-face. Face-to-face is the preferred method of transfer command.
+- The officer assuming command shall communicate with the person being relieved by radio or face-to-face. Face-to-face is the preferred method of transfer command.
 
-e The person being relieved will brief the officer assuming command, indicating at least the following:
+- The person being relieved will brief the officer assuming command, indicating at least the following:
 
 o Incident conditions (fire location and extent, HazMat spill or leak, number of patients, etc.) Incident action plan
 
@@ -988,15 +984,15 @@ The last officer on the scene is responsible for notifying the dispatcher Comman
 
 When the Incident Commander or the Fire Investigator determines the structure or area involved in an incident can be returned to the control of a responsible party, the following procedures shall be followed:
 
-e The fire scene shall be inspected to ensure that all department equipment not required for safety or protection has been removed.
+- The fire scene shall be inspected to ensure that all department equipment not required for safety or protection has been removed.
 
-e All equipment and materials left shall be inspected to ensure any potential hazards are minimized.
+- All equipment and materials left shall be inspected to ensure any potential hazards are minimized.
 
-e Appropriate markings shall be provided to identify hazards. Materials such as streamers on rope or plastic fire line tape should be used.
+- Appropriate markings shall be provided to identify hazards. Materials such as streamers on rope or plastic fire line tape should be used.
 
-e Should a structure, in the opinion of the Incident Commander or deemed to be a safety hazard by the Building Inspector, the building shall be posted with an “Unsafe or Unfit for Occupancy Notice.
+- Should a structure, in the opinion of the Incident Commander or deemed to be a safety hazard by the Building Inspector, the building shall be posted with an “Unsafe or Unfit for Occupancy Notice.
 
-e Prior to the release of the structure or area, the individual receiving control shall be briefed on all known safety hazards and this person’s name, address, and phone number included on the Fire Incident Report.
+- Prior to the release of the structure or area, the individual receiving control shall be briefed on all known safety hazards and this person’s name, address, and phone number included on the Fire Incident Report.
 
 Incident Management System EMERGENCY OPERATIONS
 
@@ -1308,21 +1304,21 @@ The Incident Commander is responsible for the overall management of incident act
 
 Duties
 
-e Obtain briefing from Incident Commander being relieved
+- Obtain briefing from Incident Commander being relieved
 
-e Assess incident conditions and develop Incident Action Plan Brief personnel on incident
+- Assess incident conditions and develop Incident Action Plan Brief personnel on incident
 
-e Activate elements of Incident Command System
+- Activate elements of Incident Command System
 
-e Authorize implementation of Incident Action Plan
+- Authorize implementation of Incident Action Plan
 
-e Determine information needs and brief Public Information Officer
+- Determine information needs and brief Public Information Officer
 
-e Coordinate staff activity
+- Coordinate staff activity
 
-e Manage incident operations
+- Manage incident operations
 
-e Authorize release of information to the new media
+- Authorize release of information to the new media
 
 Public Information Officer
 
@@ -1338,9 +1334,9 @@ Duties
 
 Obtain briefing from the Incident Commander Establish area to meet with news media personnel
 
-e Release information about the incident according to department guidelines
+- Release information about the incident according to department guidelines
 
-e Meet with the news media at regular intervals
+- Meet with the news media at regular intervals
 
 Safety Officer
 
@@ -1350,7 +1346,7 @@ Duties
 
 Obtain briefing from Incident Commander Identify unsafe conditions associated with the incident and develop measures to ensure personnel safety
 
-e Prepare report of findings at close of incident
+- Prepare report of findings at close of incident
 
 iden n men m EMERGENCY OPERATIONS
 
@@ -1362,11 +1358,11 @@ The Liaison Officer is the point of contact for assisting and cooperating with o
 
 Duties
 
-e Obtain briefing from Incident Commander
+- Obtain briefing from Incident Commander
 
-e Provide contact point for assisting agencies
+- Provide contact point for assisting agencies
 
-e Assist Incident Commander in meetings with assisting agency representatives
+- Assist Incident Commander in meetings with assisting agency representatives
 
 XXIII. FUNCTIONAL POSITION DESCRIPTIONS AND OPERATIONAL GUIDELINES
 
@@ -1382,13 +1378,13 @@ Operations Officer shall be designated for each operational period (change of sh
 
 1. Branches
 
-e The branch level of the command structure is used to provide coordination between command, tactical, and task level resources. Depending on the magnitude and/or type of incident, the operational functions may require further division into smaller segments for efficient use of resources. However, they are not always essential to the organization of the operations section.
+- The branch level of the command structure is used to provide coordination between command, tactical, and task level resources. Depending on the magnitude and/or type of incident, the operational functions may require further division into smaller segments for efficient use of resources. However, they are not always essential to the organization of the operations section.
 
-e When the numbers of sectors exceed the recommended span-of-control for the operations section, then a multi-branch structure should be put in place and the sectors allocated within those branches. The branches are generally known as fire suppression, hazardous materials, emergency medical services, and technical rescue. Branch Officers should be located at operational locations and may be assigned names or numerical designations. Branch Officers communicate directly with the Sections Officer under whom they are assigned to operate.
+- When the numbers of sectors exceed the recommended span-of-control for the operations section, then a multi-branch structure should be put in place and the sectors allocated within those branches. The branches are generally known as fire suppression, hazardous materials, emergency medical services, and technical rescue. Branch Officers should be located at operational locations and may be assigned names or numerical designations. Branch Officers communicate directly with the Sections Officer under whom they are assigned to operate.
 
 2. Divisions or Groups
 
-e Division or Group establishment provides a system to divide an incident into manageable geographical or functional areas. Division or Group is responsible for achieving tactical objectives. Divisions or Groups reduce the overall need for incident radio communication. Most routine communications inside a division or group can be accomplished in a more effective face-to-face mode. This eliminates most tactical information exchanges from the radio.
+- Division or Group establishment provides a system to divide an incident into manageable geographical or functional areas. Division or Group is responsible for achieving tactical objectives. Divisions or Groups reduce the overall need for incident radio communication. Most routine communications inside a division or group can be accomplished in a more effective face-to-face mode. This eliminates most tactical information exchanges from the radio.
 
 Incident Management System EMERGENCY OPERATIONS
 
@@ -1396,25 +1392,25 @@ Standard Operating Procedures Manual
 
 EO 1.00 Incident Management System
 
-e Safety and accountability of Fire and Rescue personnel is a major reason for establishing divisions or groups. Division/Group commanders must have the ability to communicate with command and control the function of their division/group.
+- Safety and accountability of Fire and Rescue personnel is a major reason for establishing divisions or groups. Division/Group commanders must have the ability to communicate with command and control the function of their division/group.
 
-e Divisions or Groups give the Incident Commander the capability of dividing an incident into more manageable work areas and functions. By dividing the incident and delegating tactical responsibilities, the Incident Commander can concentrate on the overall strategy while remaining at the Command Post.
+- Divisions or Groups give the Incident Commander the capability of dividing an incident into more manageable work areas and functions. By dividing the incident and delegating tactical responsibilities, the Incident Commander can concentrate on the overall strategy while remaining at the Command Post.
 
-e Because Divisions or Groups are assigned based on the needs of an incident, Division or Group tasks can be performed by anyone on the incident, within the limitations of their apparatus and special training. This includes the assignment of officers as Division or Group commanders, wherever and whenever needed. Establishment of Divisions or Groups may be either geographical area or functional operations. The method of establishing Divisions or Groups shall be based on the needs of the incident as determined by the Incident Commander.
+- Because Divisions or Groups are assigned based on the needs of an incident, Division or Group tasks can be performed by anyone on the incident, within the limitations of their apparatus and special training. This includes the assignment of officers as Division or Group commanders, wherever and whenever needed. Establishment of Divisions or Groups may be either geographical area or functional operations. The method of establishing Divisions or Groups shall be based on the needs of the incident as determined by the Incident Commander.
 
 THESE FACTORS SHOULD BE GIVEN CONSIDERATION WHEN DETERMINING THE NEED FOR DIVISIONS OR GROUPS:
 
-e The situation has the potential for growing beyond the ability of Command to directly control incident resources
+- The situation has the potential for growing beyond the ability of Command to directly control incident resources
 
-e When companies are operating from tactical positions with which Command has little or no direct control
+- When companies are operating from tactical positions with which Command has little or no direct control
 
-e When companies are involved in complex operations
+- When companies are involved in complex operations
 
 Incident Management System EMERGENCY OPERATIONS
 
 ing Pr EO 1.00 Incident Management System
 
-e When the situation is hazardous and close control of operating resources is needed, Section Officers must be in a position to ensure the safety and accountability of the resources assigned to them
+- When the situation is hazardous and close control of operating resources is needed, Section Officers must be in a position to ensure the safety and accountability of the resources assigned to them
 
 3. Guidelines and Duties for Positions in the
 Operations Section
@@ -1424,17 +1420,17 @@ Duties
 
 Obtain briefing from Incident Commander Develop operations portion of Incident Action Plan
 
-e Brief and assign Fire and Rescue personnel involved in operation
+- Brief and assign Fire and Rescue personnel involved in operation
 
-e Supervise all incident operational functions (i.e., suppression, Haz Mat, EMS, etc.)
+- Supervise all incident operational functions (i.e., suppression, Haz Mat, EMS, etc.)
 
-e Determine resource needs and request or release resources as required
+- Determine resource needs and request or release resources as required
 
-e Track status of units assigned to incident
+- Track status of units assigned to incident
 
-e Report changes in incident conditions to Incident Commander on a regular basis
+- Report changes in incident conditions to Incident Commander on a regular basis
 
-e Establish branches, divisions, and sectors as required
+- Establish branches, divisions, and sectors as required
 
 b. — Staging Officer
 Duties
@@ -1451,7 +1447,7 @@ Incident Management System EMERGENCY OPERATIONS
 
 rating Pr EO 1.00 Incident Management System
 
-e Request food, water, shelter, and fuel, if required e Maintain accountability of resources assigned to Staging
+- Request food, water, shelter, and fuel, if required e Maintain accountability of resources assigned to Staging
 
 c. Water Supply Officer
 
@@ -1459,26 +1455,26 @@ The Water Supply Officer reports to and obtains briefing from the Operations Off
 
 Duties
 
-e Identify available water supplies
+- Identify available water supplies
 
-e Establish requirements of water needs to combat incident, compare Incident Action Plan to available water resources, and report inadequacies to Fire Suppression Officer
+- Establish requirements of water needs to combat incident, compare Incident Action Plan to available water resources, and report inadequacies to Fire Suppression Officer
 
-e Handle requests for information about water supply
+- Handle requests for information about water supply
 
-e Develop and monitor water supply operations
+- Develop and monitor water supply operations
 
 d.  Supply/Support Officer
 The Supply Officer shall be responsible for securing and distributing supplies and equipment necessary to keep resources functioning on a major incident (i.e., high-rise or mall).
 
 Duties
 
-e Report to and obtains briefing from Operations Officer
+- Report to and obtains briefing from Operations Officer
 
-e Determine personnel and resources needed to fulfill task
+- Determine personnel and resources needed to fulfill task
 
-e Arrange to obtain needed items
+- Arrange to obtain needed items
 
-e Receive and distribute required items
+- Receive and distribute required items
 
 nciden nagem m EMERGENCY OPERATIONS
 
@@ -1494,11 +1490,11 @@ The Base Officer shall be responsible for stockpiling and cataloging resources (
 
 Duties
 
-e Reports to and obtains briefing from Operations Officer, and selects location for base area
+- Reports to and obtains briefing from Operations Officer, and selects location for base area
 
-e Works with supply/support to get needed resources to the base area
+- Works with supply/support to get needed resources to the base area
 
-e Receives and distributes required resources as needed
+- Receives and distributes required resources as needed
 
 Branch Officer
 
@@ -1516,11 +1512,11 @@ n rating Pr Incident Management System
 
 Duties
 
-e Reports to and obtains briefing from Section Officer
+- Reports to and obtains briefing from Section Officer
 
-e Briefs and assigns resources, and supervises assigned section operations; determines and requests needed additional resources
+- Briefs and assigns resources, and supervises assigned section operations; determines and requests needed additional resources
 
-e Reports information on changes, progress, and needs to operational officer
+- Reports information on changes, progress, and needs to operational officer
 
 Emergency Medical Services Control Officer (Branch Officer)
 
@@ -1528,13 +1524,13 @@ The EMS Control Officer shall report to the Operations Officer and is responsibl
 
 Duties
 
-e Obtains briefing
+- Obtains briefing
 
-e Determines EMS needs, develops plan, and advises Operations Officer of needs and plan
+- Determines EMS needs, develops plan, and advises Operations Officer of needs and plan
 
-e Manages all EMS operations
+- Manages all EMS operations
 
-e Assigns appropriate EMS management positions to subordinates (e.g., triage, treatment disposition, transportation)
+- Assigns appropriate EMS management positions to subordinates (e.g., triage, treatment disposition, transportation)
 
 Suppression (Branch Officer) The Suppression Officer reports directly to the
 
@@ -1550,11 +1546,11 @@ control and extinguish the fire, reports changes, and requests or releases resou
 
 Duties
 
-e Reports to and obtains briefing from Operations Section
+- Reports to and obtains briefing from Operations Section
 
-e Briefs and assigns resources and supervises fire suppression operations; determines need for and requests additional resources
+- Briefs and assigns resources and supervises fire suppression operations; determines need for and requests additional resources
 
-e Provides Operations Section Officer with information on changes and progress of incident operations
+- Provides Operations Section Officer with information on changes and progress of incident operations
 
 1. Hazardous Materials (Branch Officer)
 
@@ -1562,17 +1558,17 @@ The Hazardous Materials Officer reports directly to the Operations Section Offic
 
 Duties
 
-e Reports to and obtains briefing from the Operations Section Officer
+- Reports to and obtains briefing from the Operations Section Officer
 
-e Briefs hazardous materials personnel on the action plan
+- Briefs hazardous materials personnel on the action plan
 
-e Assigns tasks to the hazardous materials unit
+- Assigns tasks to the hazardous materials unit
 
-e Gives situation reports and updates to the Operations Section Officer
+- Gives situation reports and updates to the Operations Section Officer
 
-e Requests additional or releases unneeded hazardous materials resources through the Operations Section Officers
+- Requests additional or releases unneeded hazardous materials resources through the Operations Section Officers
 
-e Prepares needed documentation for the Incident Commander
+- Prepares needed documentation for the Incident Commander
 
 Incident Management System EMERGENCY OPERATIONS
 
@@ -1626,15 +1622,15 @@ The Treatment Officer is responsible for overseeing the emergency treatment of p
 
 Duties
 
-e Reports to and obtains briefing from EMS Control Officer
+- Reports to and obtains briefing from EMS Control Officer
 
-e Establishes communications with Triage Officer
+- Establishes communications with Triage Officer
 
-e Determines needs and locates treatment area to provide patient care
+- Determines needs and locates treatment area to provide patient care
 
-e Requests needed personnel and medical treatment supplies through the EMS Control Officer
+- Requests needed personnel and medical treatment supplies through the EMS Control Officer
 
-e Secures processing of treated patients through Disposition Officer
+- Secures processing of treated patients through Disposition Officer
 
 Disposition Officer
 
@@ -1642,17 +1638,17 @@ This position coordinates patient routing to medical facilities and works with t
 
 Duties
 
-e Reports to and obtains briefing from EMS Control Officer
+- Reports to and obtains briefing from EMS Control Officer
 
-e Establishes work area and requests needed communications
+- Establishes work area and requests needed communications
 
-e Coordinates activities with Treatment Officer and Transportation Officer
+- Coordinates activities with Treatment Officer and Transportation Officer
 
 Incident Management System EMERGENCY OPERATIONS
 
 rating P. res M EO 1.00 Incident Management System
 
-e Contacts hospitals, determines capacity, and advises of number of patients en route Makes patient assignments Gives assignments to Transportation Officer Maintains required records
+- Contacts hospitals, determines capacity, and advises of number of patients en route Makes patient assignments Gives assignments to Transportation Officer Maintains required records
 
 n. Transportation Officer
 
@@ -1660,7 +1656,7 @@ This officer is responsible for the coordination of patient transportation to va
 
 Duties
 
-e Reports to and obtains briefing from EMS Control Officer
+- Reports to and obtains briefing from EMS Control Officer
 
 Determines needs
 
@@ -1682,15 +1678,15 @@ Inci m. EMERGENCY OPERATIONS
 
 rating Pr M EO 1.00 Incident Management System
 
-e Assigns tasks to units
+- Assigns tasks to units
 
-e Reports to next level of supervision when the action plan is changed, additional resources are needed, or the resources are available for reassignment
+- Reports to next level of supervision when the action plan is changed, additional resources are needed, or the resources are available for reassignment
 
-e Gives situation status reports as required and tracks assigned resources
+- Gives situation status reports as required and tracks assigned resources
 
-e Maintains the accountability Passports for all units assigned to his/her Division or Group
+- Maintains the accountability Passports for all units assigned to his/her Division or Group
 
-e Provides written summary of functions as required to the Operations Officer
+- Provides written summary of functions as required to the Operations Officer
 
 Planning Section
 
@@ -1706,19 +1702,19 @@ the Planning Section
 a. Planning Section Officer
 Duties
 
-e Reports to and obtains briefing from Incident Commander
+- Reports to and obtains briefing from Incident Commander
 
 Incident Management System EMERGENCY OPERATIONS
 
 rating P r EO 1.00 Incident Management System
 
-e Participates in the development of the Incident Action Plan
+- Participates in the development of the Incident Action Plan
 
-e Assembles information on alternative strategies Identifies need for specialized resources Performs operational planning jointly with operations functions Predicts incident potential Compiles incident status information and documents all incident activity for permanent historical record of incident
+- Assembles information on alternative strategies Identifies need for specialized resources Performs operational planning jointly with operations functions Predicts incident potential Compiles incident status information and documents all incident activity for permanent historical record of incident
 
-e Secures technical specialists as required by Incident Commander
+- Secures technical specialists as required by Incident Commander
 
-e Maintains information on status of various resources at the incident
+- Maintains information on status of various resources at the incident
 
 b. Technical Specialists
 
@@ -1738,13 +1734,13 @@ n ing Pr EO 1.00 Incident Management System
 a. Logistics Section Officer
 Duties
 
-e Reports to and obtains briefing from Incident Commander
+- Reports to and obtains briefing from Incident Commander
 
-e Assembles needed resources
+- Assembles needed resources
 
-e Identifies service and support functions needed on the incident
+- Identifies service and support functions needed on the incident
 
-e Maintains log of requests for and of, any materials received and used
+- Maintains log of requests for and of, any materials received and used
 
 b. Rehabilitation Officer
 
@@ -1752,15 +1748,15 @@ The Rehabilitation Officer is responsible for providing an organized response fo
 
 Duties
 
-e Obtains briefing from the Logistics Officer
+- Obtains briefing from the Logistics Officer
 
-e Determines the rehabilitation needs for emergency personnel
+- Determines the rehabilitation needs for emergency personnel
 
-e Establishes Rehabilitation Sector when ordered to do so and appoints a Sector Officer if required (as outlined in rehabilitation sector section).
+- Establishes Rehabilitation Sector when ordered to do so and appoints a Sector Officer if required (as outlined in rehabilitation sector section).
 
-e Coordinates with Logistics Officer to obtain food, fluids, medical evaluation and protection from the elements
+- Coordinates with Logistics Officer to obtain food, fluids, medical evaluation and protection from the elements
 
-e Secures, as needed, area of refuge for emergency personnel requiring rehabilitation
+- Secures, as needed, area of refuge for emergency personnel requiring rehabilitation
 
 Incident Management System EMERGENCY OPERATIONS
 
@@ -1770,7 +1766,7 @@ EO 1.00
 
 Incident Management System
 
-e Provides personnel in rehabilitation with:
+- Provides personnel in rehabilitation with:
 
 1) Medical evaluation upon entering the
 rehabilitation area and every 15 minutes until they are within acceptable guidelines
@@ -1788,15 +1784,15 @@ The Welfare Officer is responsible for providing an organized response for the p
 
 Duties
 
-e Obtains briefing from the Logistics Officer
+- Obtains briefing from the Logistics Officer
 
-e Determines the welfare needs for civilian evacuees
+- Determines the welfare needs for civilian evacuees
 
-e Establishes refuge area and/or evacuation center
+- Establishes refuge area and/or evacuation center
 
-e Coordinates with Logistics Officer to obtain food and fluids
+- Coordinates with Logistics Officer to obtain food and fluids
 
-e Works through Liaison Officer to obtain assistance from outside agencies (e.g., Red Cross, Salvation Army, Canteen Unit)
+- Works through Liaison Officer to obtain assistance from outside agencies (e.g., Red Cross, Salvation Army, Canteen Unit)
 
 Communications Officer
 
@@ -1816,11 +1812,11 @@ Incident Management System Duties
 
 Obtains briefing from Logistics Section Officer
 
-e Determines the communications equipment and personnel needs
+- Determines the communications equipment and personnel needs
 
-e Oversees the set-up and supervises the operation of an incident communications center
+- Oversees the set-up and supervises the operation of an incident communications center
 
-e Maintains a record of the operation of the communications unit
+- Maintains a record of the operation of the communications unit
 
 Supply Unit Officer
 
@@ -1830,7 +1826,7 @@ Duties
 
 Obtains briefing from Logistics Section Officer Determines the type and amount of supplies needed and/or en route to the incident and orders additional supplies as needed to support incident operations.
 
-e Arranges for receiving supplies Maintains inventory of supplies Maintains adequate record of all supplies ordered and used on the incident
+- Arranges for receiving supplies Maintains inventory of supplies Maintains adequate record of all supplies ordered and used on the incident
 
 Equipment Maintenance Officer The Apparatus and Equipment Maintenance Officer is responsible for the proper maintenance of all
 
@@ -1867,7 +1863,7 @@ Duties
 
 Obtains briefing from Incident Commander
 
-e Assembles needed resources
+- Assembles needed resources
 
 Documents and records incident activities for cost recovery efforts
 
@@ -1885,11 +1881,11 @@ Standard Operating Procedures Manual
 
 EO 1.00 Incident Management System Duties
 
-e Obtains briefing from Administration Section Officer
+- Obtains briefing from Administration Section Officer
 
-e Coordinates cost reporting procedures Obtains and records all expense data Maintains accurate cumulative incident cost records
+- Coordinates cost reporting procedures Obtains and records all expense data Maintains accurate cumulative incident cost records
 
-e Provides report of incident cost to Administration Section Officer at close of incident
+- Provides report of incident cost to Administration Section Officer at close of incident
 
 XXIV. COMMAND
 

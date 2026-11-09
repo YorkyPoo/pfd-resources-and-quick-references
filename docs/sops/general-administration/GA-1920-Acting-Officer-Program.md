@@ -1,6 +1,6 @@
 # GA 19.20 Acting Officer Program
 
-<div class="sop-meta">**SOP** GA 19.20 &nbsp;·&nbsp; **Category:** General Administration &nbsp;·&nbsp; **Effective:** 11/01/2018 &nbsp;·&nbsp; **Revised:** 5/22/2020</div>
+<div class="sop-meta"><strong>SOP</strong> GA 19.20 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 11/01/2018 &nbsp;·&nbsp; <strong>Revised:</strong> 5/22/2020</div>
 
 ## I. Purpose
 
@@ -12,7 +12,7 @@ Il. APPLICABILITY
 
 All Career Personnel
 
-Ill. POLICY
+## III. Policy
 
 It shall be the policy of the Poquoson Fire/Rescue Department to allow interested staff to participate in the Acting Officer program. This program is considered voluntary and no monetary compensation will be awarded for successful completion of the program.
 
@@ -24,7 +24,7 @@ Upon successful completion of the Acting Officer program, the staff member may b
 
 ## IV. Procedure
 
-e Any interested personnel may begin the Acting Officer Taskbook provided they meet the following criteria:
+- Any interested personnel may begin the Acting Officer Taskbook provided they meet the following criteria:
 
 o The staff member must have completed forty-eight (48) consecutive months as a Firefighter with the Poquoson Fire/Rescue Department. Consideration may be given for previous experience with another department.
 
@@ -32,22 +32,22 @@ o Must meet the current Education requirement for Lieutenant as listed in GA 19.
 
 o Must meet the current Evaluations, Conduct, Disciplinary Actions requirement for Lieutenant as listed in GA 19.00.
 
-e The Taskbook will be issued to the interested personnel by their current Battalion Chief with the issue date documented.
+- The Taskbook will be issued to the interested personnel by their current Battalion Chief with the issue date documented.
 
-e The Taskbook must be completed, in full, within 1 year (365 days) of being issued. Failure to complete the program within 1 year will result in all current progress being lost.
+- The Taskbook must be completed, in full, within 1 year (365 days) of being issued. Failure to complete the program within 1 year will result in all current progress being lost.
 
-e Some tasks may be waived if the candidate has successfully completed the Hampton Roads Fire Officer Academy or equivalent structured training. These tasks are identified in the Acting Officer Taskbook. Documentation of successful completion of the Fire Officer Academy (or equivalent) must be on file for any tasks to be waived.
+- Some tasks may be waived if the candidate has successfully completed the Hampton Roads Fire Officer Academy or equivalent structured training. These tasks are identified in the Acting Officer Taskbook. Documentation of successful completion of the Fire Officer Academy (or equivalent) must be on file for any tasks to be waived.
 
 See ——————————— GENERAL ADMINISTRATION
 
 ndar rating Pr res Manual GA 19.20 Acting Officer Program
 
-e The Acting Officer candidate will complete no less than 5 full shifts (120 hours) of supervised mentorship in an acting position.
+- The Acting Officer candidate will complete no less than 5 full shifts (120 hours) of supervised mentorship in an acting position.
 
-e After satisfactory completion of all tasks, the Taskbook will be submitted to the employee’s current Battalion Chief for review and approval. It is at the Battalion Chief's discretion to determine if a candidate has successfully completed the Taskbook in its entirety.
+- After satisfactory completion of all tasks, the Taskbook will be submitted to the employee’s current Battalion Chief for review and approval. It is at the Battalion Chief's discretion to determine if a candidate has successfully completed the Taskbook in its entirety.
 
-e The employee’s Battalion Chief must submit a Letter of Recommendation along with the Taskbook to Fire Administration for review.
+- The employee’s Battalion Chief must submit a Letter of Recommendation along with the Taskbook to Fire Administration for review.
 
-e Fire Administration will make the final approvals and either release the candidate as an Acting Officer or deny the application. If the application is denied, feedback will be provided to the candidate by the Battalion Chief on areas of improvement.
+- Fire Administration will make the final approvals and either release the candidate as an Acting Officer or deny the application. If the application is denied, feedback will be provided to the candidate by the Battalion Chief on areas of improvement.
 
 GENERAL ADMINISTRATION

@@ -19,7 +19,7 @@ Effective Date:___01/01/2009 The following procedures are to be
 
 followed when towing the S.A.F.E. House: Revised Date: 01/01/2009
 
-e Visually inspect unit for any loosely
+- Visually inspect unit for any loosely
 
 sf attached items that may fall off ire Chief's Signatur during towing. If items cannot be secured, they are to be removed.
 

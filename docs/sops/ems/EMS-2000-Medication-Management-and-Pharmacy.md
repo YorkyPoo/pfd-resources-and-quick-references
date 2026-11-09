@@ -1,6 +1,6 @@
 # EMS 20.00 Medication Management and Pharmacy
 
-<div class="sop-meta">**SOP** EMS 20.00 &nbsp;·&nbsp; **Category:** EMS Operations &nbsp;·&nbsp; **Effective:** 09/01/2024</div>
+<div class="sop-meta"><strong>SOP</strong> EMS 20.00 &nbsp;·&nbsp; <strong>Category:</strong> EMS Operations &nbsp;·&nbsp; <strong>Effective:</strong> 09/01/2024</div>
 
 ## I. Purpose
 
@@ -12,11 +12,9 @@ Il. APPLICABILITY
 
 All Career and Volunteer personnel
 
-Ill. PROCUREMENT
+## III. Procurement
 
 Purchase of routine pharmaceuticals is made through ordering from an established pharmaceutical vendor. The Department’s Supervising Practitioner (Medical Director) shall provide a copy of their current Virginia Medical License and Drug Enforcement Administration (DEA)
-
-Page 1of5
 
 ndar rating Pr res Man EMS 20.00 Medication Management and Pharmacy
 
@@ -87,9 +85,9 @@ If a medication is unaccounted for at any time, all boxes and storage areas must
 
 The following information is required to be retained in the EMS Pharmacy area as well as through the electronic tracking system used by the department:
 
-e Medications received by item description, quantity, and date
+- Medications received by item description, quantity, and date
 
-e Medications issued (given) by incident, date, and administering
+- Medications issued (given) by incident, date, and administering
 
 provider e Return of expired controlled substances e Routine inspection records
 

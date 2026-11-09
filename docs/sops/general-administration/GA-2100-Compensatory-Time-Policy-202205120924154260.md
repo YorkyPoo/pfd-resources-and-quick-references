@@ -1,6 +1,6 @@
 # GA 21.00 Compensatory Time Policy_202205120924154260
 
-<div class="sop-meta">**SOP** GA 21.00 &nbsp;·&nbsp; **Category:** General Administration &nbsp;·&nbsp; **Effective:** 93/14/2011</div>
+<div class="sop-meta"><strong>SOP</strong> GA 21.00 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 93/14/2011</div>
 
 ## I. Purpose
 
@@ -12,7 +12,7 @@ This SOP is not all-inclusive and cannot encompass all situations that may be en
 
 All career staff
 
-Ill. POLICY
+## III. Policy
 
 Section 22.2 of the City of Poquoson Personnel Policy Manual provides us with the basis for this policy covering all personnel that are hourly and all employees who are non-exempt from the provisions of the Fair Labor Standards Act (FLSA).
 

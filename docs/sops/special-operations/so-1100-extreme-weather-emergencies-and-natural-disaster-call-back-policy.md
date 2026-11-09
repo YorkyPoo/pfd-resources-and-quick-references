@@ -1,6 +1,6 @@
 # SO 11.00 Extreme Weather Emergencies and Natural Disaster Call-Back Policy
 
-<div class="sop-meta">**SOP** SO 11.00 &nbsp;·&nbsp; **Category:** Special Operations &nbsp;·&nbsp; **Effective:** 08/12/2011</div>
+<div class="sop-meta"><strong>SOP</strong> SO 11.00 &nbsp;·&nbsp; <strong>Category:</strong> Special Operations &nbsp;·&nbsp; <strong>Effective:</strong> 08/12/2011</div>
 
 ## I. Purpose
 
@@ -26,7 +26,7 @@ e 48 hours in advance of event: Continue your normal activities and continue to 
 
 e 24 hours in advance of event: Make sure you have your assigned radio with you in the event phones are not working. Continue to monitor the event and be prepared. Be in the area fora possible call back to duty. If call backs are authorized they will take place during this period. You will be expected to return to duty if ordered to do so. For significant events, if personnel are called back for an “all hands” response all leave shall be considered cancelled. For lesser emergencies, should it become necessary to augment a shift with additional personnel; first all leave would be cancelled then overtime personnel would be used.
 
-e Itis your responsibility to take whatever steps necessary to return
+- Itis your responsibility to take whatever steps necessary to return
 
 SPECIAL OPERATIONS
 
@@ -34,14 +34,14 @@ rating Pr SO 11.00 Extreme Weather Call Back Policy
 
 to duty at the requested time and place. Failure to return will be dealt with in the most severe manner under the City’s Personnel Policy Manual.
 
-e Once the EOC is activated, the Chief and the Deputy Chief will be located there.
+- Once the EOC is activated, the Chief and the Deputy Chief will be located there.
 
-e The on duty Battalion Chief will be in-charge of operations in the field. This responsibility will change to the next Battalion Chief with the rotation of shifts.
+- The on duty Battalion Chief will be in-charge of operations in the field. This responsibility will change to the next Battalion Chief with the rotation of shifts.
 
-e Keep in mind that three shifts may be divided into two shifts and staff placed on 12 hour rotations depending on the expected duration of the event.
+- Keep in mind that three shifts may be divided into two shifts and staff placed on 12 hour rotations depending on the expected duration of the event.
 
-e Ifthis is an extended event other Officers may be requested to pull duty in the EOC.
+- Ifthis is an extended event other Officers may be requested to pull duty in the EOC.
 
-e Come prepared to take care of all your personal needs for 3 days/72 hours (meds, clothes, food, etc.)
+- Come prepared to take care of all your personal needs for 3 days/72 hours (meds, clothes, food, etc.)
 
 SPECIAL OPERATIONS

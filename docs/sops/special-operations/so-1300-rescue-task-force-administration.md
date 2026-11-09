@@ -1,6 +1,6 @@
 # SO 13.00 Rescue Task Force Administration
 
-<div class="sop-meta">**SOP** SO 13.00 &nbsp;·&nbsp; **Category:** Special Operations</div>
+<div class="sop-meta"><strong>SOP</strong> SO 13.00 &nbsp;·&nbsp; <strong>Category:</strong> Special Operations</div>
 
 ## I. Purpose
 
@@ -88,11 +88,11 @@ In support of Law Enforcement operations during an ASHI, interagency operations 
 
 The following components must be understood and agreed to by all involved agencies and individuals participating as part of the RTF:
 
-e Fire and EMS personnel will not be permitted to operate within a Hot Zone.
+- Fire and EMS personnel will not be permitted to operate within a Hot Zone.
 
 e EMS and Fire components operate under Law Enforcement direction at all times for patient rescue and removal from a Warm Zone.
 
-e Law Enforcement escort(s) will be available whenever possible.
+- Law Enforcement escort(s) will be available whenever possible.
 
 Special Operations
 
@@ -176,25 +176,25 @@ r rating Pr SO 13.00 Rescue Task Force Policy
 
 Dispatch & Response Activation/Notification
 
-e Poquoson Police Departmentwill receive notification from Communications indicating a response to a potential ASHI situation.
+- Poquoson Police Departmentwill receive notification from Communications indicating a response to a potential ASHI situation.
 
-e Poquoson Police Departmentwill assess the need for Fire and EMS response, along with the potential activation of the RTF.
+- Poquoson Police Departmentwill assess the need for Fire and EMS response, along with the potential activation of the RTF.
 
-e Ifthe incident requires a RTF response, a minimum of the on duty RTF members and the RTF leader will be notified. If additional resources are required off duty personnel can be requested.
+- Ifthe incident requires a RTF response, a minimum of the on duty RTF members and the RTF leader will be notified. If additional resources are required off duty personnel can be requested.
 
 Staging
 
-e For immediate RTF deployment, staging should be unified, integrated, and located as close to the incident as possible, but at a distance that is determined safe by Law Enforcement.
+- For immediate RTF deployment, staging should be unified, integrated, and located as close to the incident as possible, but at a distance that is determined safe by Law Enforcement.
 
-e When arriving on scene, EMS, Fire, and related RTF components, will stage in a specific location, ready for immediate deployment at the direction of Law Enforcement, through a dispatch request or direct communications with the Law Enforcement.
+- When arriving on scene, EMS, Fire, and related RTF components, will stage in a specific location, ready for immediate deployment at the direction of Law Enforcement, through a dispatch request or direct communications with the Law Enforcement.
 
 Health and Safety
 
-e Fire and EMS personnel are not permitted to enter the scene unless directed by Law Enforcement personnel responsible for command of the event.
+- Fire and EMS personnel are not permitted to enter the scene unless directed by Law Enforcement personnel responsible for command of the event.
 
-e All Fire and EMS personnel must have a Law Enforcement escort(s) in order to operate outside of the Cold Zone, unless the circumstances of the event prevent this and Law Enforcement command directs otherwise.
+- All Fire and EMS personnel must have a Law Enforcement escort(s) in order to operate outside of the Cold Zone, unless the circumstances of the event prevent this and Law Enforcement command directs otherwise.
 
-e Consider the possibility of primary and secondary IEDs at the scene and maintain situational awareness of your surroundings at all times.
+- Consider the possibility of primary and secondary IEDs at the scene and maintain situational awareness of your surroundings at all times.
 
 Special Operations
 
@@ -202,23 +202,23 @@ ndar i n SO 13.00 Rescue Task Force Policy
 
 Hazardous Materials Response Team
 
-e At the request of Law Enforcement, HazMat may be required to assist responders with on-site operations.
+- At the request of Law Enforcement, HazMat may be required to assist responders with on-site operations.
 
-e Chemical, biological, radiological, nuclear, and/or explosive (CBRNE) incidents may require HazMat related integration into the response.
+- Chemical, biological, radiological, nuclear, and/or explosive (CBRNE) incidents may require HazMat related integration into the response.
 
-e Responders using a Self-Contained Breathing Apparatus (SCBA), other higher level protective respiratory equipment, or other equipment in such incidents, may be monitored for proper usage by the HazMat Response Team.
+- Responders using a Self-Contained Breathing Apparatus (SCBA), other higher level protective respiratory equipment, or other equipment in such incidents, may be monitored for proper usage by the HazMat Response Team.
 
 Lack of Law Enforcement Escorts
 
-e Inthe event that Law Enforcement escort(s) are unavailable, the RTF Team should be capable of entering the unsecured scene when directed to do so to perform lifesaving and rescue operations. This movement must be solely at the direction of Law Enforcement.
+- Inthe event that Law Enforcement escort(s) are unavailable, the RTF Team should be capable of entering the unsecured scene when directed to do so to perform lifesaving and rescue operations. This movement must be solely at the direction of Law Enforcement.
 
 Casualty Collection Points (CCP)
 
-e Victim rescue and removal may be to a Warm Zone CCP, ora Cold Zone CCP, or to an armored tactical vehicle for extraction operations.
+- Victim rescue and removal may be to a Warm Zone CCP, ora Cold Zone CCP, or to an armored tactical vehicle for extraction operations.
 
-e The preferred CCP will be located at a safe distance away from the incident scene in a Cold Zone.
+- The preferred CCP will be located at a safe distance away from the incident scene in a Cold Zone.
 
-e If egress to a Cold Zone is not immediately attainable, a Warm Zone CCP can be established, at the direction of Law Enforcement.
+- If egress to a Cold Zone is not immediately attainable, a Warm Zone CCP can be established, at the direction of Law Enforcement.
 
 Deployment e Law Enforcement will contact dispatch to relay deployment requests, and instruction, for RTF members. e Law Enforcement will continually reassess the deployment of assets. e RTF members must be prepared for redeployment as areas of needs change as it is determined by Law Enforcement.
 
@@ -258,15 +258,15 @@ Special Operations
 
 ndar rating Pr SO 13.00 Rescue Task Force Policy
 
-e Ininstances where unconscious patients cannot be immediately extricated, responders should place patient in a left or right rescue position.
+- Ininstances where unconscious patients cannot be immediately extricated, responders should place patient in a left or right rescue position.
 
-e Walking wounded should be escorted immediately out of the Warm Zone, only when it is determined by Law Enforcement that the scene is safe enough to do so.
+- Walking wounded should be escorted immediately out of the Warm Zone, only when it is determined by Law Enforcement that the scene is safe enough to do so.
 
 Tactical Emergency Casualty Care (TECC)
 
 e EMS will address life threatening injuries to stabilize and ready the patient for transportation away from the scene.
 
-e Lifesaving techniques performed, when necessary, within the Warm Zone will be used with the ultimate purpose of transporting the patient to the Cold Zone CCP for further treatment, evaluation, and if necessary, transportation to a medical facility.
+- Lifesaving techniques performed, when necessary, within the Warm Zone will be used with the ultimate purpose of transporting the patient to the Cold Zone CCP for further treatment, evaluation, and if necessary, transportation to a medical facility.
 
 Each RTF Team may be authorized to operate with issued equipment consisting of the following, as directed by Law Enforcement:
 
@@ -284,9 +284,9 @@ Incident Documentation
 
 Post-Operations Documentation
 
-e Once the immediate threat has been eliminated, and the RTF has successfully completed their primary objective of life safety, RTF members must begin the documentation process.
+- Once the immediate threat has been eliminated, and the RTF has successfully completed their primary objective of life safety, RTF members must begin the documentation process.
 
-e Documentation includes the record of events leading up to, and including, RTF operations. RTF members will complete associated paperwork indicating the following:
+- Documentation includes the record of events leading up to, and including, RTF operations. RTF members will complete associated paperwork indicating the following:
 
 o RTF Team Number (ie. Team 1 or Team 2 designated for a particular incident)
 
@@ -300,21 +300,21 @@ o Contact with Patients/Patient Extraction o Account of Notable Events/Incidents
 
 RTF Debriefing
 
-e Once RTF operations have ceased, and the response folds into a traditional, operational ICS structure, RTF members must be debriefed by the Incident Commander and Operations Section Chief.
+- Once RTF operations have ceased, and the response folds into a traditional, operational ICS structure, RTF members must be debriefed by the Incident Commander and Operations Section Chief.
 
 e RTF members will be provided with information regarding Critical Incident Stress Debriefing (CISD) and mental health awareness, and/or counseling and offered services, if necessary.
 
-e The Incident Commander, or Operations Section Chief, may mandate CISD, or appropriate mental health referrals, if it is determined to be warranted.
+- The Incident Commander, or Operations Section Chief, may mandate CISD, or appropriate mental health referrals, if it is determined to be warranted.
 
-e Appropriate referrals can be done in consult with the Fire and Police Chiefs.
+- Appropriate referrals can be done in consult with the Fire and Police Chiefs.
 
 Training and Exercise
 
 e RTF members from all disciplines are to attend mandatory training as requested by theRTF leadership.
 
-e Acceptable training programs for RTF participation will be reviewed and approved by Poquoson Police Dept. and Fire/Rescue training staff
+- Acceptable training programs for RTF participation will be reviewed and approved by Poquoson Police Dept. and Fire/Rescue training staff
 
-e Personnel may be trained in the following areas
+- Personnel may be trained in the following areas
 
 o Bleeding Control for the Injured (BCon) o Law Enforcement and First Responder- Tactical Casualty Care (LEFR-TCC) Tactical Combat Casualty Care (TCCC) Tactical Emergency Casualty Care (TECC) Ballistic Shield Principles Tactical Movement and Team Discipline
 
@@ -334,7 +334,7 @@ Operating with an IFAK
 
 e RTF members will train using the equipment necessary to provide lifesaving skills, as well as the basic techniques for rescue and extraction procedures.
 
-e Team members will be required to attend 6 hours monthly (on duty) proficiency training in one or more of the following areas.
+- Team members will be required to attend 6 hours monthly (on duty) proficiency training in one or more of the following areas.
 
 o Planning
 
@@ -352,15 +352,15 @@ oOoO000
 
 Practical Scenario Training
 
-e These scenarios should not be considered functional exercises, but rather responder-tailored scenarios that focus on the practical application of skills learned in the RTF Training Program.
+- These scenarios should not be considered functional exercises, but rather responder-tailored scenarios that focus on the practical application of skills learned in the RTF Training Program.
 
-e Practical Scenario Training may be conducted in a private facility, educational facility, or City operated property.
+- Practical Scenario Training may be conducted in a private facility, educational facility, or City operated property.
 
-e These scenarios will not use members of the public during training, unless the individual has been approved by Police or Fire Department leadership.
+- These scenarios will not use members of the public during training, unless the individual has been approved by Police or Fire Department leadership.
 
 e A catalog of available training resources, and appropriate RTF operational equipment is provided in the RTF Program.
 
-e When applicable, Law Enforcement and Fire and EMS may invite stakeholders from private organizations and school districts to participate in training opportunities related to public capability to respond to ASHIs.
+- When applicable, Law Enforcement and Fire and EMS may invite stakeholders from private organizations and school districts to participate in training opportunities related to public capability to respond to ASHIs.
 
 Special Operations
 
@@ -390,11 +390,11 @@ n rati SO 13.00 Rescue Task Force Policy
 
 Equipment
 
-e Ballistic Protective Equipment (BPE)
+- Ballistic Protective Equipment (BPE)
 
-e This SOP only addresses the BPE that may be issued to EMS and Fire.
+- This SOP only addresses the BPE that may be issued to EMS and Fire.
 
-e The BPE that may be issued to Law Enforcement will include equipment normally used during operations, as per Law Enforcement protocol.
+- The BPE that may be issued to Law Enforcement will include equipment normally used during operations, as per Law Enforcement protocol.
 
 e RTF members are required to wear BPE during RTF operations and training when directed to do so.
 
@@ -402,13 +402,13 @@ e BPE for Fire and EMS will include, at a minimum: o Ballistic Vests — minimum
 
 Shields
 
-e If available, shields will be used during RTF operations. Shields, if available, will be provided by Law Enforcement.
+- If available, shields will be used during RTF operations. Shields, if available, will be provided by Law Enforcement.
 
 e EMS and Fire should practice utilizing a shield to support RTF rescue and extraction within a Warm Zone, as directed by Law Enforcement.
 
 Equipment Return Due to Unsatisfactory Participation
 
-e Ifthe participating members are not engaging in RTF training to the satisfaction of the team leader or his/her designee, all issued RTF equipment will be returned to the purchasing agency.
+- Ifthe participating members are not engaging in RTF training to the satisfaction of the team leader or his/her designee, all issued RTF equipment will be returned to the purchasing agency.
 
 Administration and Logistics
 
@@ -420,7 +420,7 @@ Standard Operating Procedures Manual
 
 SO 13.00 Rescue Task Force Policy
 
-e It will be the responsibility of the individual participating agency to replace any expired equipment and to maintain all equipment in working order to ensure equipment is ready for deployment and use.
+- It will be the responsibility of the individual participating agency to replace any expired equipment and to maintain all equipment in working order to ensure equipment is ready for deployment and use.
 
 Records e All agency specific documentation from RTF members will take place according to individual agency protocol.
 
@@ -432,9 +432,9 @@ After Action Review and Report e After Action Reviews are vital for post-inciden
 
 Development and Maintenance
 
-e Poquoson Fire/Rescue is responsible for the maintenance of the RTF SOP, and for ensuring that necessary changes and revisions to the SOP are prepared, coordinated, approved, and distributed.
+- Poquoson Fire/Rescue is responsible for the maintenance of the RTF SOP, and for ensuring that necessary changes and revisions to the SOP are prepared, coordinated, approved, and distributed.
 
-e Poquoson Fire/Rescue is responsible for the coordination of the review and update of the SOP, attachments, and appendices based on issues identified through drills, exercises, and actual incidents on an annual basis.
+- Poquoson Fire/Rescue is responsible for the coordination of the review and update of the SOP, attachments, and appendices based on issues identified through drills, exercises, and actual incidents on an annual basis.
 
 e¢ Poquoson Police Department personnel assigned to the RTF, are responsible for assisting Poquoson Fire/Rescue in the review and update of this SOP.
 

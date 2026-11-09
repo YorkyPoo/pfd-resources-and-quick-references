@@ -1,6 +1,6 @@
 # SH 3.00 Station Conduct and Safety
 
-<div class="sop-meta">**SOP** SH 3.00 &nbsp;·&nbsp; **Category:** Safety And Health &nbsp;·&nbsp; **Effective:** 01/01/2009</div>
+<div class="sop-meta"><strong>SOP</strong> SH 3.00 &nbsp;·&nbsp; <strong>Category:</strong> Safety And Health &nbsp;·&nbsp; <strong>Effective:</strong> 01/01/2009</div>
 
 ## I. Purpose
 
@@ -24,7 +24,7 @@ Station Officers shall have the authority to establish and enforce additional ru
 
 STATION CONDUCT
 
-e Housekeeping
+- Housekeeping
 
 [e) [e)
 
@@ -42,7 +42,7 @@ All tools and equipment shall be maintained in a clean and serviceable condition
 
 All flammable and combustible liquids and gases shall be stored in the flammable liquids cabinet/safety cans/designated location. The designated area shall be maintained in a clean and orderly manner and shall be kept free of obstructions.
 
-e Personal Property and Lockers
+- Personal Property and Lockers
 
 [e)
 
@@ -74,7 +74,7 @@ without that employee’s permission. If the employee cannot be reached to give 
 
 Personal property that may affect station security or operations shall not be brought into a station.
 
-e Beds and Sleeping
+- Beds and Sleeping
 
 [e)
 
@@ -86,7 +86,7 @@ Beds of the shift going off duty shall be stripped or made up by 0700 hours.
 
 Personnel shall not sleep between the hours of 0800 and 1600. The Station Officer shall use his/her discretion in allowing employees to lie down during working hours, if they are ill or have been involved in long, physically exhausting fire/rescue work. In all cases, someone will be available to greet the public. On weekends and holidays, the company officer shall allow personnel to rest after 1200 hours if all station and company duties have been completed. Bedroom areas must be used for resting during these times. Sleeping quarters is an area of rest. All televisions and computers shall be turned off no later than 2200 hours.
 
-e Magazines and Reading Material
+- Magazines and Reading Material
 
 [e)
 
@@ -106,13 +106,13 @@ No lewd, offensive or inappropriate magazine or printed material shall be brough
 
 Trade journals provided by the Department shall be stored separately and made available to all employees.
 
-e Respect for Privacy
+- Respect for Privacy
 
 °
 
 Respect for the privacy of employees shall be promoted when possible.
 
-e Noise
+- Noise
 
 [e)
 
@@ -122,7 +122,7 @@ Noise inside stations shall be regulated so that normal conversations and commun
 
 Audible warning devices, such as air horns and sirens, are not to be tested within the confines of the station or when personnel or citizens are standing in front of the vehicles.
 
-e Personal Vehicles
+- Personal Vehicles
 
 [e)
 
@@ -144,7 +144,7 @@ o Personal vehicles shall not be repaired or washed
 
 inside a fire station during normal working hours.
 
-e Televisions and Radios
+- Televisions and Radios
 
 o Televisions in fire stations shall be tuned to a news or
 
@@ -164,7 +164,7 @@ regulated to promote conservation of natural resources and utilities.
 
 Heat and air-conditioning shall be used as necessary, and doors and windows shall be closed when heat or air-conditioning is in operation.
 
-e Station Bay Doors
+- Station Bay Doors
 
 o Bay Doors will be closed immediately upon exiting or
 
@@ -180,37 +180,37 @@ ing Pr res Manual SH 3.00 Station Conduct and Safety
 
 VISITORS
 
-e Visitors shall always be escorted when in the Station. No children will be unattended.
+- Visitors shall always be escorted when in the Station. No children will be unattended.
 
 Children will not be permitted to be in the vehicles without their parents.
 
-e Visitors are not permitted in the bunk rooms.
+- Visitors are not permitted in the bunk rooms.
 
 No private meetings are allowed within the stations.
 
-e Visitors should not be left inside the station when all personnel have departed on emergency responses and/or department business.
+- Visitors should not be left inside the station when all personnel have departed on emergency responses and/or department business.
 
-e Visitors are prohibited after 2200 hours.
+- Visitors are prohibited after 2200 hours.
 
 APPRENTICES (Members under the age of 18)
 
-e Apprentice members may ride as an assisting member on apparatus if they have a minimum of FF I or enrolled in an EMT class, Apprentice members shall not count towards minimum staffing.
+- Apprentice members may ride as an assisting member on apparatus if they have a minimum of FF I or enrolled in an EMT class, Apprentice members shall not count towards minimum staffing.
 
-e Apprentice members may not spend overnight hours at a Fire Station and should not be present after 2200 hours.
+- Apprentice members may not spend overnight hours at a Fire Station and should not be present after 2200 hours.
 
 STATION SAFETY
 
-e Stations shall comply with all applicable health, safety, building and fire code requirements.
+- Stations shall comply with all applicable health, safety, building and fire code requirements.
 
-e Prior to each use, all electrical equipment such as extension cords shall be inspected to prevent the possibility of shock or electrocution.
+- Prior to each use, all electrical equipment such as extension cords shall be inspected to prevent the possibility of shock or electrocution.
 
-e Horseplay is strictly forbidden.
+- Horseplay is strictly forbidden.
 
-e Proper care shall be exercised when using any chemical product, pesticide, solvent, or other harmful or toxic substance.
+- Proper care shall be exercised when using any chemical product, pesticide, solvent, or other harmful or toxic substance.
 
-e Caution shall be exercised when using a ladder for cleaning, painting, and etc.
+- Caution shall be exercised when using a ladder for cleaning, painting, and etc.
 
-e Allsmoke detectors, fire extinguishers, exit signs, and other safety equipment shall be maintained in proper working order.
+- Allsmoke detectors, fire extinguishers, exit signs, and other safety equipment shall be maintained in proper working order.
 
 SAFETY AND HEALTH
 
@@ -218,12 +218,12 @@ _________ Standard Operating Procedures Manual
 
 SH 3.00 Station Conduct and Safety
 
-e Running inside the station is prohibited.
+- Running inside the station is prohibited.
 
-e Any defective equipment or unsafe condition shall be reported immediately.
+- Any defective equipment or unsafe condition shall be reported immediately.
 
-e Automatic overhead door closures shall not be activated until the apparatus has completely cleared the door.
+- Automatic overhead door closures shall not be activated until the apparatus has completely cleared the door.
 
-e Apparatus will not be run in the engine bay unless the exhaust system is on to allow for the removal of engine exhaust.
+- Apparatus will not be run in the engine bay unless the exhaust system is on to allow for the removal of engine exhaust.
 
 SAFETY AND HEALTH

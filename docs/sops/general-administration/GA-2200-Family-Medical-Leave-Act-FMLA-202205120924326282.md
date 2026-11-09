@@ -1,6 +1,6 @@
 # GA 22.00 Family Medical Leave Act (FMLA)_202205120924326282
 
-<div class="sop-meta">**SOP** GA 22.00 &nbsp;·&nbsp; **Category:** General Administration &nbsp;·&nbsp; **Effective:** 04/27/2012</div>
+<div class="sop-meta"><strong>SOP</strong> GA 22.00 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 04/27/2012</div>
 
 ## I. Purpose
 
@@ -12,7 +12,7 @@ Il. APPLICABILITY
 
 All career staff
 
-Ill. POLICY
+## III. Policy
 
 FMLA is covered in detail in the City of Poquoson Personnel Policy Manual and is compliant with all applicable federal laws.
 
@@ -38,7 +38,7 @@ e FMLA can be requested by the employee or assigned by the City.
 
 e FMLA (for covered events) will be reviewed by Fire Administration and the City Manager’s Office for any request for extended leave on a case by case basis.
 
-e Depending on the length of the employee’s approved FMLA leave, Fire Administration and/or the City Manager’s Office may recommend that the employee’s schedule be modified to a 40 hour week. In the event that an employee is moved to a 40 hour week, they will no longer receive their 6 hours of overtime per cycle. This overtime will be restored when the employee resumes their standard Fire Department schedule.
+- Depending on the length of the employee’s approved FMLA leave, Fire Administration and/or the City Manager’s Office may recommend that the employee’s schedule be modified to a 40 hour week. In the event that an employee is moved to a 40 hour week, they will no longer receive their 6 hours of overtime per cycle. This overtime will be restored when the employee resumes their standard Fire Department schedule.
 
 FMLA provides: e Job protected leave for up to 12 weeks in a 12 month period (26 weeks for the care of service members). e Continuation of health plan benefits on same terms of employee participating in plan at time of leave. e Protection from retaliation.
 
@@ -50,17 +50,17 @@ r GA 22.00 Family Medical Leave Act
 
 When requesting FMLA you must:
 
-e Have worked 1250 hours for the same employer in the last 12 months.
+- Have worked 1250 hours for the same employer in the last 12 months.
 
-e Give sufficient notice to employer (30 days advance notice if leave is foreseeable or as soon as possible/practicable under the circumstances).
+- Give sufficient notice to employer (30 days advance notice if leave is foreseeable or as soon as possible/practicable under the circumstances).
 
-e Give reasons for the request with enough specificity to allow the employer to know if leave qualifies. Leave request can be denied if not enough information is given.
+- Give reasons for the request with enough specificity to allow the employer to know if leave qualifies. Leave request can be denied if not enough information is given.
 
-e Provide a doctor’s note or certification from health care provider explaining necessity for leave.
+- Provide a doctor’s note or certification from health care provider explaining necessity for leave.
 
-e Use all available sick leave, annual leave and other time.
+- Use all available sick leave, annual leave and other time.
 
-e Once all leave is exhausted, you will go on leave without pay for the remainder of your approved leave and must make arrangements with the Finance Department to pay your portion of your health insurance.
+- Once all leave is exhausted, you will go on leave without pay for the remainder of your approved leave and must make arrangements with the Finance Department to pay your portion of your health insurance.
 
 While out on FMLA leave you will provide the following: e Periodic updates to Fire Administration. e Intent to return to work at the end of leave. e Fitness for full duty certificate before you may return to work.
 

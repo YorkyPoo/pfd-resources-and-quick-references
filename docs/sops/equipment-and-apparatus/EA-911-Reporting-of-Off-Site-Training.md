@@ -1,6 +1,6 @@
 # EA 9.11 Reporting of Off-Site Training
 
-<div class="sop-meta">**SOP** EA 9.11 &nbsp;·&nbsp; **Category:** General Administration &nbsp;·&nbsp; **Effective:** 8/18/2023</div>
+<div class="sop-meta"><strong>SOP</strong> EA 9.11 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 8/18/2023</div>
 
 ## I. Purpose
 
@@ -14,11 +14,11 @@ Fire/Rescue Personnel shall document all off-site training with a CAD generated 
 
 ## III. Responsibilities
 
-e Whomever is the lead for the offsite training is responsible for ensuring the report is created.
+- Whomever is the lead for the offsite training is responsible for ensuring the report is created.
 
-e Shift officers, then Battalion Chiefs are responsible for making sure the report is correct, complete, and locked.
+- Shift officers, then Battalion Chiefs are responsible for making sure the report is correct, complete, and locked.
 
-e The Battalion Chief or designee shall approve off site training.
+- The Battalion Chief or designee shall approve off site training.
 
 GENERAL ADMINISTRATION
 

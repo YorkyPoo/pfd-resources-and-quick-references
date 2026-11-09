@@ -1,6 +1,6 @@
 # EMS 8.00 BLS Preceptorship Program
 
-<div class="sop-meta">**SOP** EMS 8.00 &nbsp;·&nbsp; **Category:** EMS Operations &nbsp;·&nbsp; **Effective:** 11/30/2008</div>
+<div class="sop-meta"><strong>SOP</strong> EMS 8.00 &nbsp;·&nbsp; <strong>Category:</strong> EMS Operations &nbsp;·&nbsp; <strong>Effective:</strong> 11/30/2008</div>
 
 ## I. Purpose
 
@@ -18,15 +18,13 @@ All career and volunteer personnel
 
 It shall be the policy of the Department that prior to promotion to Attendant In Charge all personnel shall have demonstrated a specified combination of training and hands-on experience.
 
-Page 1of5
-
 r res M EMS 8.00 BLS Preceptorship Program
 
 Basic Training Requirements: All of the following must be completed:
 
-e Possess a current American Heart Association Basic Life Support for Health Care Providers card (or equivalent). A list of currently acceptable cards is available on the VA OEMS website.
+- Possess a current American Heart Association Basic Life Support for Health Care Providers card (or equivalent). A list of currently acceptable cards is available on the VA OEMS website.
 
-e Possess a current Commonwealth of Virginia Office of Emergency Medical Services Emergency Medical Technician certificate.
+- Possess a current Commonwealth of Virginia Office of Emergency Medical Services Emergency Medical Technician certificate.
 
 The AIC precepting shall consist of 3 phases:
 

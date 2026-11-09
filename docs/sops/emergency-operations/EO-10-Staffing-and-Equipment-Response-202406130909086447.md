@@ -1,6 +1,6 @@
 # EO 10 Staffing and Equipment Response_202406130909086447
 
-<div class="sop-meta">**SOP** EO 10 Staffing and Equipment Response &nbsp;·&nbsp; **Category:** Staffing And Equipment</div>
+<div class="sop-meta"><strong>SOP</strong> EO 10 Staffing and Equipment Response &nbsp;·&nbsp; <strong>Category:</strong> Staffing And Equipment</div>
 
 ## I. Purpose
 City of Poquoson Fire and Rescue To provide uniform deployment of 830 Poquoson Ave equipment and personnel to maintain Poquoson VA 23662 adequate staffing on emergency calls and 757-868-3510 to ensure the public's safety as well as the F757-868-3514 safety of our personnel. It is not the
@@ -21,7 +21,7 @@ EMERGENCY OPERATIONS Page lof 4
 
 EO 10.00 Staffing and Equipment Response
 
-Ill. PROCEDURES
+## III. Procedures
 
 Staffing
 

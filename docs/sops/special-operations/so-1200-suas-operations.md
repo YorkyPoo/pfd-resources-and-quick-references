@@ -1,6 +1,6 @@
 # SO 12.00 sUAS Operations
 
-<div class="sop-meta">**SOP** SO 12.00 &nbsp;·&nbsp; **Category:** Special Operations</div>
+<div class="sop-meta"><strong>SOP</strong> SO 12.00 &nbsp;·&nbsp; <strong>Category:</strong> Special Operations</div>
 
 ## I. Purpose
 
@@ -32,7 +32,7 @@ Special Operations
 
 i M SO 11.00 sUAS Operations
 
-Ill. POLICY
+## III. Policy
 
 The mission of the sUAS program is to provide aerial support and assistance to Poquoson Fire/Rescue in situations where the operating environment is hazardous or unreachable due to environmental interference.
 

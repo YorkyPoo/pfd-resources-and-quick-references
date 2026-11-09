@@ -15,19 +15,19 @@ If you are an employee in an exempt salaried position (bona fide executive, admi
 
 Permissible deductions include:
 
-e Absence from work for one or more full days for personal reasons other than sickness or disability;
+- Absence from work for one or more full days for personal reasons other than sickness or disability;
 
-e Absence for one or more full days due to sickness or disability if the deduction is made in accordance with a bona fide plan, policy or practice of providing compensation for salary lost due to illness;
+- Absence for one or more full days due to sickness or disability if the deduction is made in accordance with a bona fide plan, policy or practice of providing compensation for salary lost due to illness;
 
-e Absence for Family and Medical Leave;
+- Absence for Family and Medical Leave;
 
-e Offsets for amounts received as witness or jury fees, or for military pay;
+- Offsets for amounts received as witness or jury fees, or for military pay;
 
-e Unpaid disciplinary suspensions of one or more full days imposed in good faith for workplace conduct rule infractions;
+- Unpaid disciplinary suspensions of one or more full days imposed in good faith for workplace conduct rule infractions;
 
-e Days not worked during the first or last week of employment; or
+- Days not worked during the first or last week of employment; or
 
-e Suspensions imposed for an infraction of safety rules of major significance.
+- Suspensions imposed for an infraction of safety rules of major significance.
 
 Because the City provides a paid leave plan, employees will be required to use available paid leave for absences for personal reasons, sickness or disability.
 

@@ -1,6 +1,6 @@
 # EO 11.0 Elevator Emergencies
 
-<div class="sop-meta">**SOP** _ EO 11.0 &nbsp;·&nbsp; **Category:** Emergency Operations</div>
+<div class="sop-meta"><strong>SOP</strong> _ EO 11.0 &nbsp;·&nbsp; <strong>Category:</strong> Emergency Operations</div>
 
 ## I. Purpose
 
@@ -36,9 +36,9 @@ EMERGENCY: A situation where one or more of the following exist: e Fire endanger
 
 wait-time). The following situations will prohibit PFD members in waiting for an elevator mechanic:
 
-e Emergency situation (see above)
+- Emergency situation (see above)
 
-e Availability & response time of elevator mechanic. e PFD apparatus availability & call volume.
+- Availability & response time of elevator mechanic. e PFD apparatus availability & call volume.
 
 Operating Procedures:
 
@@ -50,7 +50,7 @@ ndar rating Pr res Manual Policy # EO 11.0 Elevator Emergencies
 
 stalled elevators, prior to passenger removal, if initial response steps fail (see below).
 
-e The power to the stalled elevator shall never be restored by FD members. Lock-out/tag-out shall remain in place and the key shall be stored in the Knox Box.
+- The power to the stalled elevator shall never be restored by FD members. Lock-out/tag-out shall remain in place and the key shall be stored in the Knox Box.
 
 e FD members shall set up and utilize a fall arrest system for the removal of the passenger(s) and for firefighter safety, when a passenger is removed via an emergency exit.
 
@@ -86,21 +86,21 @@ before opening any doors. Opening the door to the running elevator may create a 
 
 ways to determine the car’s position:
 
-e Use the position indicator.
+- Use the position indicator.
 
-e Speak to the occupant(s) through the hoist way door.
+- Speak to the occupant(s) through the hoist way door.
 
-e Speak to the occupant(s) via the intercom.
+- Speak to the occupant(s) via the intercom.
 
-e Use the adjacent car.
+- Use the adjacent car.
 
-e Look up the shaft-way without physically entering. (Power must be off if you enter the hoistway)
+- Look up the shaft-way without physically entering. (Power must be off if you enter the hoistway)
 
-e The machine room team can look down the hoistway through the smoke hole in the machine room (traction elevator).
+- The machine room team can look down the hoistway through the smoke hole in the machine room (traction elevator).
 
-e Use floor selector in machine room (if available)
+- Use floor selector in machine room (if available)
 
-e Usea laser tape (if available).
+- Usea laser tape (if available).
 
 7. The Incident Commander shall establish contact with the cars occupant(s) and
 attempt to determine how many people are inside, if any medical conditions are present and then advise them to do the following:
@@ -117,7 +117,7 @@ GaAWPY
 Command shall immediately request the dispatch of EMS.
 
 g. Passenger assist procedures shall be implemented as follows:
-e Have the occupant(s) cycle the stop switch a few times, to ensure the
+- Have the occupant(s) cycle the stop switch a few times, to ensure the
 
 switch is not in the stop position. e Have the occupant(s) push a couple of floor buttons.
 
@@ -125,11 +125,11 @@ EMERGENCY OPERATIONS
 
 ndar rating Pr Manual Policy # EO 11.0 Elevator Emergencies
 
-e Have the occupant(s) push the door open button,
+- Have the occupant(s) push the door open button,
 
-e Have the occupant(s) push close the car door.
+- Have the occupant(s) push close the car door.
 
-e Make sure all hoistway doors are fully closed (front/rear/side). Check in the immediate vicinity of the stalled elevator (at the floor, floor above and floor below).
+- Make sure all hoistway doors are fully closed (front/rear/side). Check in the immediate vicinity of the stalled elevator (at the floor, floor above and floor below).
 
 10. If the elevator service is equipped with Phase I Fire Recall service, attempt to
 recall the elevator. Caution: Occupant(s) must be notified before activating Phase 1. If they are attempting self-rescue, you can injure or kill the occupant(s) if fire recall activates.

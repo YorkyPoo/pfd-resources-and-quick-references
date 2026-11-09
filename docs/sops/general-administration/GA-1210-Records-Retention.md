@@ -1,6 +1,6 @@
 # GA 12.10 Records Retention
 
-<div class="sop-meta">**SOP** GA 12.10 &nbsp;·&nbsp; **Category:** General Administration &nbsp;·&nbsp; **Effective:** 92/21/2019</div>
+<div class="sop-meta"><strong>SOP</strong> GA 12.10 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 92/21/2019</div>
 
 ## I. Purpose
 

@@ -1,6 +1,6 @@
 # GA 6.00 Shift Trades
 
-<div class="sop-meta">**SOP** GA 6.00 &nbsp;·&nbsp; **Category:** General Administration &nbsp;·&nbsp; **Effective:** 01/01/2009 &nbsp;·&nbsp; **Revised:** 10/01/2018</div>
+<div class="sop-meta"><strong>SOP</strong> GA 6.00 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 01/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 10/01/2018</div>
 
 ## I. Purpose
 
@@ -14,33 +14,29 @@ Because of staffing requirements and personnel shortages, this Department recogn
 
 It is up to the individuals trading shifts to honor these agreements and to protect this privilege.
 
-Ill. RESPONSIBILITIES
+## III. Responsibilities
 
-e Personnel are responsible for following the procedures as contained within this directive.
+- Personnel are responsible for following the procedures as contained within this directive.
 
-e Shift trading shall not impair the operational effectiveness, nor create a logistical or financial burden to the department.
+- Shift trading shall not impair the operational effectiveness, nor create a logistical or financial burden to the department.
 
-GENERAL ADMINISTRATION Page 1 0f 3
+- Shift trading is an agreement solely between the trading individuals and is allowed for their convenience.
 
-P r GA 6.00 Shift Trades
+- The employee agreeing to work shall accept all responsibilities and obligations of the employee who is scheduled to work.
 
-e Shift trading is an agreement solely between the trading individuals and is allowed for their convenience.
+- The trading individuals are responsible for tracking traded time. The department assumes no responsibility for tracking hours owed to individuals.
 
-e The employee agreeing to work shall accept all responsibilities and obligations of the employee who is scheduled to work.
+- As required under [air Labor Standards Act (FLSA) provisions, shift/time trades shall be “paid back” within 12 months of the traded time.
 
-e The trading individuals are responsible for tracking traded time. The department assumes no responsibility for tracking hours owed to individuals.
+- The trading of shifts may result in a work period that exceeds that which is allowed by FLSA. For your convenience, however, the City of Poquoson will be relieved of any and all overtime payment for on-duty time in excess of the allowed work period.
 
-e As required under [air Labor Standards Act (FLSA) provisions, shift/time trades shall be “paid back” within 12 months of the traded time.
+- The shift will be supervised by either one of the two officers or the next senior person assigned to the shift. Shift trades cannot and will not be allowed to disrupt this chain of command.
 
-e The trading of shifts may result in a work period that exceeds that which is allowed by FLSA. For your convenience, however, the City of Poquoson will be relieved of any and all overtime payment for on-duty time in excess of the allowed work period.
+- The trade shall be limited to individuals of equivalent positions and competency (i.e. Firefighter/medic — Firefighter/medic, Officer — Officer, etc).
 
-e The shift will be supervised by either one of the two officers or the next senior person assigned to the shift. Shift trades cannot and will not be allowed to disrupt this chain of command.
+- Any employee with an approved exchange of duty (shift trade) shall not be relieved from duty until his/her teplagement has reported to duty.
 
-e The trade shall be limited to individuals of equivalent positions and competency (i.e. Firefighter/medic — Firefighter/medic, Officer — Officer, etc).
-
-e Any employee with an approved exchange of duty (shift trade) shall not be relieved from duty until his/her teplagement has reported to duty.
-
-e There will be no third party involvement.
+- There will be no third party involvement.
 
 GENERAL ADMINISTRATION
 

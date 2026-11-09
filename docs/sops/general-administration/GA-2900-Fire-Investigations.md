@@ -1,6 +1,6 @@
 # GA 29.00 Fire Investigations
 
-<div class="sop-meta">**SOP** GA 29.00</div>
+<div class="sop-meta"><strong>SOP</strong> GA 29.00</div>
 
 ## I. Purpose
 
@@ -11,8 +11,6 @@ This SOP is not all-inclusive and cannot encompass all situations that may be en
 ## II. Objective
 
 Establish a clear and efficient process for notifying and coordinating the involvement of Fire Investigators in fire incidents and ensuring collaboration with law enforcement when required.
-
-Page 1of 4
 
 .
 

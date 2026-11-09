@@ -1,6 +1,6 @@
 # SO 4.00 Structural Collapse Search and Rescue
 
-<div class="sop-meta">**Category:** Structural Collapse Search</div>
+<div class="sop-meta"><strong>Category:</strong> Structural Collapse Search</div>
 
 ## I. Purpose
 City of Poquoson Fire and Rescue The purpose of this SOP is to provide Fire
@@ -11,7 +11,7 @@ SPECIAL OPERATIONS involving injured or trapped victims. This SOP is not all-inc
 
 Revised Date: _01/01/2009 _ | ty¥ PROCEDURES Scene Preparation ire Chief's Signaiure
 
-e Upon arrival at a “structural oe collapse incident” the first arriving Manager’s Signature unit shall establish command
+- Upon arrival at a “structural oe collapse incident” the first arriving Manager’s Signature unit shall establish command
 
 utilizing the Incident Command System.
 
@@ -19,29 +19,29 @@ Structural Collapse Search and Rescue SPECIAL OPERATIONS
 
 Standard Operating Procedures Manual SO 4.00 Structural Collapse Search and Rescue
 
-e Assure the response of the York County or Newport News Technical Rescue Team if person(s) may be injured or trapped.
+- Assure the response of the York County or Newport News Technical Rescue Team if person(s) may be injured or trapped.
 
-e Assess the need for additional resources e.g., Police, EMS, Hazmat, Codes Compliance, Dominion Power, VNG, Public Works, and Public Utilities.
+- Assess the need for additional resources e.g., Police, EMS, Hazmat, Codes Compliance, Dominion Power, VNG, Public Works, and Public Utilities.
 
 General Assessment e Assure all utilities and fires are controlled.
 
-e Assess structural stability of structures from outside.
+- Assess structural stability of structures from outside.
 
-e Recon the structure and identify types of structures, use, and possible number of victims.
+- Recon the structure and identify types of structures, use, and possible number of victims.
 
-e Remove surface victims first. e Await arrival of the Technical Rescue Team.
+- Remove surface victims first. e Await arrival of the Technical Rescue Team.
 
-e Fora single structure secure the area within 500’, allow only needed personnel in hot zone.
+- Fora single structure secure the area within 500’, allow only needed personnel in hot zone.
 
-e Fora damaged area secure area at natural landmarks allow only needed personnel inside hot zone.
+- Fora damaged area secure area at natural landmarks allow only needed personnel inside hot zone.
 
 The IC or the officer assigned to the Operations Section should determine the following:
 
 1. Is the building:
 
-e Unframed: structure in which the weight of the floor and roof are supported by bearing walls
+- Unframed: structure in which the weight of the floor and roof are supported by bearing walls
 
-e Framed: structures that are erected by constructing structural steel or reinforced
+- Framed: structures that are erected by constructing structural steel or reinforced
 
 ‘ 3 ‘deli EMERGENCY OPERATIONS
 
@@ -73,7 +73,7 @@ Tactical /Strategic Guideli EMERGENCY OPERATIONS
 
 Standard Operating Procedures Manual SO 4.00 Structural Collapse Search and Rescue
 
-e Be able to spot certain types of collapses and identify the following types of voids:
+- Be able to spot certain types of collapses and identify the following types of voids:
 
 o Lean-to-floor collapse: occurs when one of the supporting walls fails or when floor joists break at one end. This type of collapse usually creates a large void.
 
@@ -94,7 +94,7 @@ Tactical/Strategic Guidelines EMERGENCY OPERATIONS
 
 Standard Operating Procedures Manual SO 4.00 Structural Collapse Search and Rescue STAGEI Reconnaissance
 
-e Provide for a general survey of the area and size up of the damage. Find out the following information:
+- Provide for a general survey of the area and size up of the damage. Find out the following information:
 
 o Building's use o Number of occupants o Number of victims trapped and the probable location o Status of rescue operations underway o Presence of hazards = Gas and utilities Flammables Electrical
 
@@ -104,19 +104,19 @@ o Structural stability of adjoining buildings
 
 Immediate Rescue of Surface Casualties
 
-e Victims found on top of the debris or lightly buried should be removed first.
+- Victims found on top of the debris or lightly buried should be removed first.
 
-e All rescue efforts should be directed to the victims who can be seen or heard.
+- All rescue efforts should be directed to the victims who can be seen or heard.
 
-e Rescue efforts should also be directed to reach those victims whose location is known even if you cannot see or hear them.
+- Rescue efforts should also be directed to reach those victims whose location is known even if you cannot see or hear them.
 
 EMERGENCY OPERATIONS
 
 Standard Operating Procedures Manual SO 4.00 Structural Collapse Search and Rescue Scene Organization and Management
 
-e Working within the Incident Command System is essential to a successful operation.
+- Working within the Incident Command System is essential to a successful operation.
 
-e The following checklist may assist:
+- The following checklist may assist:
 
 Turn off all utilities.
 
@@ -138,9 +138,9 @@ Listening devices Fiber-optic video Infrared detectors
 
 000000
 
-e Seek out casualties by looking in places that could have afforded a reasonable chance for survival.
+- Seek out casualties by looking in places that could have afforded a reasonable chance for survival.
 
-e Typical areas that should be searched are: o Spaces under stairways
+- Typical areas that should be searched are: o Spaces under stairways
 
 o Basement and cellar locations o Locations near chimneys or fireplaces
 
@@ -166,7 +166,7 @@ o Once communications with the victim has been established, it should be constan
 
 Breaching and Shoring
 
-e Insome instances victims may be reached by breaching and shoring.
+- Insome instances victims may be reached by breaching and shoring.
 
 o Initially try to avoid the breaching of walls. This may undermine the structural integrity of the rest of the building.
 
@@ -180,7 +180,7 @@ SO 4.00
 
 m r rr Structural Collapse Search and Rescue
 
-e Shoring may be used to support weakening walls or floors.
+- Shoring may be used to support weakening walls or floors.
 
 °
 
@@ -220,21 +220,21 @@ ______ Standard Operating Procedures Manual SO 4.00 Structural Collapse Search a
 
 STAGE IV General Debris Removal
 
-e This should be employed after all other methods have been used.
+- This should be employed after all other methods have been used.
 
-e This should be used only after the decision has been made by the Incident Commander that no other victims may be found alive.
+- This should be used only after the decision has been made by the Incident Commander that no other victims may be found alive.
 
-e This basically amounts to the demolition phase.
+- This basically amounts to the demolition phase.
 
 General e Itis safer to reach entrapped victims from above. e Diagram the building on command board.
 
-e Assure control of all accesses to the site.
+- Assure control of all accesses to the site.
 
-e Beware of "at will" response by volunteers or citizens.
+- Beware of "at will" response by volunteers or citizens.
 
 BUILDING COLLAPSE TACTICAL CHECKLIST e Assure all water, gas and utilities are secured. e Provide for sufficient scene illumination. e Provide for ventilation at site of extrication.
 
-e Clear the area of personnel not directly involved in the search and rescue operation.
+- Clear the area of personnel not directly involved in the search and rescue operation.
 
 Tactical /Strategic Guideli EMERGENCY OPERATIONS
 
@@ -278,7 +278,7 @@ SO 4.00
 
 Structural Collapse Search and Rescue
 
-e When working around a victim, remove debris by hand to avoid further injury.
+- When working around a victim, remove debris by hand to avoid further injury.
 
 e IF THIS IS A LARGE CONCRETE REINFORCED STRUCTURE THAT HAS COLLAPSED, CONSIDER THE FOLLOWING:
 

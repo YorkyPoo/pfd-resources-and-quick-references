@@ -1,6 +1,6 @@
 # EO 3.00 Safe Apparatus Positioning
 
-<div class="sop-meta">**Category:** Safe Apparatus Positioning</div>
+<div class="sop-meta"><strong>Category:</strong> Safe Apparatus Positioning</div>
 
 ## I. Purpose
 City of Poquoson Identifies parking practices for Fire Fire and Rescue Department apparatus and vehicles that
@@ -15,7 +15,7 @@ Effective Date: 02/01/2009 Il. APPLICABILITY
 
 All career and volunteer personnel Revised Date: ___ 92/01/2009
 
-Ill. POLICY
+## III. Policy
 
 It shall be the policy of the Poquoson Fire/Rescue Department to position Manager’s Signature apparatus and other emergency vehicles at an emergency incident in a manner
 
@@ -28,17 +28,17 @@ that best protects the incident scene and the work area. Such positioning shall 
 ## IV. Procedures
 Fire Scene Positioning
 
-e The first arriving engine company at a fire should normally proceed just past the front of the fire, laying a supply line if necessary. Driving past the structure this way will enable the crew to see three sides of the fire building.
+- The first arriving engine company at a fire should normally proceed just past the front of the fire, laying a supply line if necessary. Driving past the structure this way will enable the crew to see three sides of the fire building.
 
-e Position the engine to use its deck guns, floodlights, and etc. Take care to leave room for the truck company or other support apparatus. If the building has wide frontage, position the engine at the entrance that provides the best access to the fire.
+- Position the engine to use its deck guns, floodlights, and etc. Take care to leave room for the truck company or other support apparatus. If the building has wide frontage, position the engine at the entrance that provides the best access to the fire.
 
 © Unless otherwise directed, the first engine company at a working fire should provide a water supply.
 
-e Ifnothing is showing, the second arriving engine company should stage at the nearest hydrant and await orders if the first in engine company did not lay a line.
+- Ifnothing is showing, the second arriving engine company should stage at the nearest hydrant and await orders if the first in engine company did not lay a line.
 
-e Additional arriving companies should stage at least one block away and await orders from the incident commander in a uncommitted position that will not congest the incident site. Upon arrival, the company shall notify the incident commander of their location and the number of personnel (PAR count).
+- Additional arriving companies should stage at least one block away and await orders from the incident commander in a uncommitted position that will not congest the incident site. Upon arrival, the company shall notify the incident commander of their location and the number of personnel (PAR count).
 
-e Do not park to close to another emergency vehicle. Allow sufficient room to deploy hoselines and to remove stretchers, ladders, and other equipment from the vehicle.
+- Do not park to close to another emergency vehicle. Allow sufficient room to deploy hoselines and to remove stretchers, ladders, and other equipment from the vehicle.
 
 EMERGENCY OPERATIONS
 
@@ -96,21 +96,21 @@ ____SSCSSCsCSttaanndlasr Operating Procedures Manual EO 3.00 Safe Apparatus Posi
 
 of the blocking apparatus with the furthest traffic cone approximately 75 feet upstream to allow adequate advance warning to drivers
 
-e Turn off all sources of vision impairment to approaching motorists at nighttime incidents including vehicle headlights and spotlights.
+- Turn off all sources of vision impairment to approaching motorists at nighttime incidents including vehicle headlights and spotlights.
 
-e Protective clothing, Class III safety vest, and helmet must be donned prior to exiting the emergency vehicle.
+- Protective clothing, Class III safety vest, and helmet must be donned prior to exiting the emergency vehicle.
 
 o During normal daylight lighting conditions, don helmet and class III safety vest or structural PPE and Class III vest when operating in or near moving traffic.
 
 o During dusk to dawn operations or when ambient lighting is reduced due to inclement weather conditions, don helmet, full protective clothing and Class III vest.
 
-e Always look before opening doors and stepping out of apparatus or emergency vehicle into any moving traffic areas. When walking around fire apparatus or emergency vehicle, be alert to your proximity to moving traffic.
+- Always look before opening doors and stepping out of apparatus or emergency vehicle into any moving traffic areas. When walking around fire apparatus or emergency vehicle, be alert to your proximity to moving traffic.
 
 o Stop at the corner of the unit, check for traffic, and than proceed along the unit remaining as close to the emergency vehicle as possible.
 
-e Personnel arriving in crew cabs of fire apparatus should exit and enter the apparatus from the protected side, away from moving traffic.
+- Personnel arriving in crew cabs of fire apparatus should exit and enter the apparatus from the protected side, away from moving traffic.
 
-e Placing flares, where safe to do so, adjacent to and in
+- Placing flares, where safe to do so, adjacent to and in
 
 combination with traffic cones for nighttime operations greatly enhances scene safety. Where safe and appropriate to
 
@@ -120,7 +120,7 @@ Standard Operating Procedures Manual EO 3.00 Safe Apparatus Positioning
 
 do so, place warning flares to slow and direct approaching traffic.
 ## V. Staging
-e Level I Staging.
+- Level I Staging.
 
 o First two engines and truck on scene.
 
@@ -128,7 +128,7 @@ o Additional apparatus one block away.
 
 o Privately owned vehicles (POVs) shall park at least one block away, not blocking the street, driveways, or hydrants.
 
-e Level II Staging: Large scale incidents.
+- Level II Staging: Large scale incidents.
 
 o The incident commander designates the staging area and assigns a member the position of staging officer.
 

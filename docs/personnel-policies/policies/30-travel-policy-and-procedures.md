@@ -67,9 +67,9 @@ If an employee is required to return to work after going home for the day, the d
 
 reimbursement for the return trip at a rate equal to the latest per mile amount established by the Federal government.
 6. Daily travel in a personal vehicle is not eligible for reimbursement when:
-e Travel occurs between the City and/or School facilities located within the City.
+- Travel occurs between the City and/or School facilities located within the City.
 
-e Each trip does not exceed five (5) miles in total.
+- Each trip does not exceed five (5) miles in total.
 
 It is expected that the most economical and efficient mode and route of travel is used when travel is necessary to accomplish the City’s business. Transportation should be shared by employees traveling together whenever possible.
 

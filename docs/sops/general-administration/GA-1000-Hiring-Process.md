@@ -1,6 +1,6 @@
 # GA 10.00 Hiring Process
 
-<div class="sop-meta">**Category:** Hiring Process</div>
+<div class="sop-meta"><strong>Category:</strong> Hiring Process</div>
 
 ## I. Purpose
 City of Poquoson This policy is designed to outline the Fire and Rescue required procedures and testing for the
@@ -25,9 +25,9 @@ GENERAL ADMINISTRATION
 
 __CCCSttannnddard Operating Procedures Manual GA 10.00 Hiring Process
 
-Ill. MINIMUM QUALIFICATIONS
+## III. Minimum Qualifications
 
-e Must have a High School Diploma or GED e Must possess a valid Virginia Driver’s license
+- Must have a High School Diploma or GED e Must possess a valid Virginia Driver’s license
 
 ## IV. Procedures
 

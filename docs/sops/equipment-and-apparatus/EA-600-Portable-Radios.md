@@ -1,6 +1,6 @@
 # EA 6.00 Portable Radios
 
-<div class="sop-meta">**SOP** EA 6.00 &nbsp;·&nbsp; **Category:** Equipment And Apparatus &nbsp;·&nbsp; **Effective:** 01/01/2009</div>
+<div class="sop-meta"><strong>SOP</strong> EA 6.00 &nbsp;·&nbsp; <strong>Category:</strong> Equipment And Apparatus &nbsp;·&nbsp; <strong>Effective:</strong> 01/01/2009</div>
 
 ## I. Purpose
 
@@ -30,11 +30,11 @@ It will be the responsibilities of each Company Officer to ensure that all perso
 
 The Motorola radios in use by the department allow for routine radio traffic along with scanning of multiple channels.
 
-e All personnel are assigned with a portable radio. The radio shall be carried and be operational at all time.
+- All personnel are assigned with a portable radio. The radio shall be carried and be operational at all time.
 
-e All personnel portable radios shall be accounted for each morning by the Company Officer and be recorded in the Daily Log.
+- All personnel portable radios shall be accounted for each morning by the Company Officer and be recorded in the Daily Log.
 
-e Portable Radios shall be secured when carried on the person. This may be accomplished through the use of:
+- Portable Radios shall be secured when carried on the person. This may be accomplished through the use of:
 
 o Belt Clips
 

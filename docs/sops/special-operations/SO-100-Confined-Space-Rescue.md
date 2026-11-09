@@ -1,6 +1,6 @@
 # SO 1.00 Confined Space Rescue
 
-<div class="sop-meta">**SOP** SO 1.00 &nbsp;·&nbsp; **Category:** Special Operations &nbsp;·&nbsp; **Effective:** 10/30/2008 &nbsp;·&nbsp; **Revised:** 10/30/2008</div>
+<div class="sop-meta"><strong>SOP</strong> SO 1.00 &nbsp;·&nbsp; <strong>Category:</strong> Special Operations &nbsp;·&nbsp; <strong>Effective:</strong> 10/30/2008 &nbsp;·&nbsp; <strong>Revised:</strong> 10/30/2008</div>
 
 ## I. Purpose
 
@@ -30,15 +30,15 @@ PHASE I: ARRIVE ON SCENE. TAKE COMMAND. SIZE UP. The Poquoson Fire/Rescue Depart
 
 Primary Assessment
 
-e Command should attempt to secure a site foreman or witness to the accident to determine exactly what happened.
+- Command should attempt to secure a site foreman or witness to the accident to determine exactly what happened.
 
-e Animmediate assessment of the hazards present to rescuers should be done.
+- Animmediate assessment of the hazards present to rescuers should be done.
 
-e Ifno witness is present, Command may have to look for clues on the scene that may indicate what has happened.
+- Ifno witness is present, Command may have to look for clues on the scene that may indicate what has happened.
 
-e Anassessment of the victim(s) should be done.
+- Anassessment of the victim(s) should be done.
 
-e Command should determine how many victims have been affected.
+- Command should determine how many victims have been affected.
 
 SPECIAL OPERATIONS
 
@@ -72,19 +72,19 @@ SPECIAL OPERATIONS
 
 SO 1.00 Confined Space Rescue On-Scene Personnel and Equipment
 
-e Command should determine if there is an adequate number of trained personnel on scene to do the rescue/recovery
+- Command should determine if there is an adequate number of trained personnel on scene to do the rescue/recovery
 
-e Determine whether a Technical Rescue Team is needed. If needed, call York County first for availability, then Newport News, then Hampton.
+- Determine whether a Technical Rescue Team is needed. If needed, call York County first for availability, then Newport News, then Hampton.
 
 Note: For any rescuer to perform rescue in a confined space they must have completed the Virginia Department of Fire Program Heavy and Tactical Rescue Standard 16-hour course.
 
-e Assure adequate air supply, bottles, request a cascade truck, if needed.
+- Assure adequate air supply, bottles, request a cascade truck, if needed.
 
-e Assure sufficient rehab area is established. e Assure visible Incident Command and/or Operations section is established. Make the General Area Safe
+- Assure sufficient rehab area is established. e Assure visible Incident Command and/or Operations section is established. Make the General Area Safe
 
-e Establish a perimeter with tape and assign police to assure an access point. Assure that an access control officer is assigned.
+- Establish a perimeter with tape and assign police to assure an access point. Assure that an access control officer is assigned.
 
-e Ventilate the general area if needed. e Ventilate the space with positive pressure from Electrical Fans Only. There may be times when positive pressure will not work
+- Ventilate the general area if needed. e Ventilate the space with positive pressure from Electrical Fans Only. There may be times when positive pressure will not work
 
 as needed. Continually assess the effectiveness of your ventilation process by:
 
@@ -96,7 +96,7 @@ r i r
 
 SO 1.00 Confined Space Rescue
 
-e If possible, open all additional openings into the space to assist with the ventilation process. Monitor the opens during the operation and report any evacuee’s. i.e.:
+- If possible, open all additional openings into the space to assist with the ventilation process. Monitor the opens during the operation and report any evacuee’s. i.e.:
 
 Manholes
 
@@ -106,13 +106,13 @@ Natural openings Doorways and Windows
 
 o0o000
 
-e Assure fire control measures if needed.
+- Assure fire control measures if needed.
 
-e Do not allow sources of ignition on site.
+- Do not allow sources of ignition on site.
 
 PHASE IT: ENTRY PREPARATION
 
-e Assure the following has been done:
+- Assure the following has been done:
 
 [e)
 
@@ -134,7 +134,7 @@ SO 1.00
 
 Confined Space Rescue
 
-e Post non-essential personnel at those areas tagged.
+- Post non-essential personnel at those areas tagged.
 
 o Assure that all personnel who enter the site are equipped
 
@@ -142,13 +142,13 @@ with SCBA or SABA Units. If you must remove your standard SCBA to fit in the ope
 
 If you enter with standard SCBA, go no more than 25 feet from the entrance. Entrance with standard SCBA should be limited to reconnaissance only, unless the victim is easily accessible.
 
-e Assure one qualified backup team for every entry team.
+- Assure one qualified backup team for every entry team.
 
-e Noone shall enter a confined space alone, always work in teams (two minimum).
+- Noone shall enter a confined space alone, always work in teams (two minimum).
 
-e No team shall enter a space with pagers or other “non- intrinsically safe devices” unless approved prior to entry, based on atmospheric monitoring.
+- No team shall enter a space with pagers or other “non- intrinsically safe devices” unless approved prior to entry, based on atmospheric monitoring.
 
-e Each entry team shall be equipped with the following items:
+- Each entry team shall be equipped with the following items:
 
 oO
 
@@ -170,11 +170,11 @@ rating P SO 1.00 Confined Space Rescue
 
 PHASE III: ATMOSPHERIC MONITORING
 
-e Atmospheric monitoring shall occur prior to and during all entries into a confined space. It should be stressed that the lack of positive or alarm level readings does not eliminate the requirement for proper respiratory protection!
+- Atmospheric monitoring shall occur prior to and during all entries into a confined space. It should be stressed that the lack of positive or alarm level readings does not eliminate the requirement for proper respiratory protection!
 
-e Atmospheric monitoring should be accomplished at high and low areas of the space.
+- Atmospheric monitoring should be accomplished at high and low areas of the space.
 
-e All atmospheres shall be tested for:
+- All atmospheres shall be tested for:
 
 o Oxygen deficiency o Oxygen excess
 
@@ -182,7 +182,7 @@ o Toxicity
 
 o Flammability
 
-e The following levels shall be considered as immediately dangerous to life and health (DLH) environments:
+- The following levels shall be considered as immediately dangerous to life and health (DLH) environments:
 
 o Oxygen Deficient < 19.5%
 
@@ -192,9 +192,9 @@ o Flammability at 10% of Lower Flammable Limit (LFL).
 
 o Toxicity shall be any limit whose numerical value exceeds the Permissible Exposure Limit (PEL).
 
-e Atmospheric monitoring shall occur during occupancy at intervals dependent on the possibility of changing conditions, but in no case less than hourly.
+- Atmospheric monitoring shall occur during occupancy at intervals dependent on the possibility of changing conditions, but in no case less than hourly.
 
-e Inthe event that, in the opinion of the incident commander designee, the atmospheric readings become unsafe to continue operations, all entry teams shall be removed from the space immediately until such time as the atmospheric conditions are corrected.
+- Inthe event that, in the opinion of the incident commander designee, the atmospheric readings become unsafe to continue operations, all entry teams shall be removed from the space immediately until such time as the atmospheric conditions are corrected.
 
 SPECIAL OPERATIONS
 
@@ -202,19 +202,19 @@ ___________ Standard Operating Procedures Manual
 
 SO 1.00 Confined Space Rescue PHASE IV: ENTRY
 
-e Once the best method and location for entry has been determined, teams shall begin entry and reconnaissance / rescue / recovery operations in the space.
+- Once the best method and location for entry has been determined, teams shall begin entry and reconnaissance / rescue / recovery operations in the space.
 
-e Entry decisions shall be made based on known locations of the victims, safety of the opening, atmospheric readings, and ease of recovery points.
+- Entry decisions shall be made based on known locations of the victims, safety of the opening, atmospheric readings, and ease of recovery points.
 
-e If possible, attempt a two-prong attack to reach the victim (s) if their location is known or suspected.
+- If possible, attempt a two-prong attack to reach the victim (s) if their location is known or suspected.
 
-e Prior to entry, each team member shall have his or her time of entry logged. This function shall be assigned to one technician who shall keep the IC or Operations Officer apprised of the status of each team.
+- Prior to entry, each team member shall have his or her time of entry logged. This function shall be assigned to one technician who shall keep the IC or Operations Officer apprised of the status of each team.
 
-e Teams shall be limited to thirty (30) minutes in any space.
+- Teams shall be limited to thirty (30) minutes in any space.
 
-e Each team shall be assigned to rehab upon removal from the space until re-hydrated and vital signs are within normal limits.
+- Each team shall be assigned to rehab upon removal from the space until re-hydrated and vital signs are within normal limits.
 
-e Once inside the space:
+- Once inside the space:
 
 o Assure adequate interior team communications.
 
@@ -232,7 +232,7 @@ SO 1.00
 
 n rating Pr M Confined Space Rescue
 
-e Once the victim has been located, decide:
+- Once the victim has been located, decide:
 
 [e) °
 
@@ -248,7 +248,7 @@ Can the victim be easily moved towards the opening with current equipment carrie
 
 Is an additional team needed to make the move? Communicate your decision to the outside command.
 
-e Once the victim has been attached to a removal device and is in the process of being rescued/recovered. Assure that if the victim is to be moved through an opening either vertical or horizontal which presents team members the only way out, that the following guidelines are followed.
+- Once the victim has been attached to a removal device and is in the process of being rescued/recovered. Assure that if the victim is to be moved through an opening either vertical or horizontal which presents team members the only way out, that the following guidelines are followed.
 
 [e)
 
@@ -256,7 +256,7 @@ e Once the victim has been attached to a removal device and is in the process of
 
 Whenever possible, assure that all team members are stationed to the egress side of the hole/opening in the event the victim becomes lodged. Always try to avoid being blocked in by a victim. If this is not possible, assure the following: = When the move is made, assure it is made quickly and smoothly, leaving the time the space is blocked for egress as minimal as possible. = Assure that the exterior personnel as well as interior teams are aware of the move and a plan is agreed upon prior to blocking the space.
 
-e Assure that all air lines and connections are clear of the victim and his movement path to assure that no air line problems develop as a result of the entangled or pinching off the lines.
+- Assure that all air lines and connections are clear of the victim and his movement path to assure that no air line problems develop as a result of the entangled or pinching off the lines.
 
 SPECIAL OPERATIONS
 
@@ -276,7 +276,7 @@ o Decide if the victim is to be removed head first or feet first.
 
 o Avoid the use of wristlets on patients with burns to the extremities.
 
-e Once the victim is clear from the space, remove all entry team personnel and equipment.
+- Once the victim is clear from the space, remove all entry team personnel and equipment.
 
 PHASE VI: SAFETY CONSIDERATIONS e If rigging, hauling, or use of rope hardware is needed in the
 
@@ -292,15 +292,15 @@ o Never leave a partner in trouble unless you must clear the way for his exit.
 
 PHASE VII: TERMINATION
 
-e Double check personnel list and assure all personnel are accounted for.
+- Double check personnel list and assure all personnel are accounted for.
 
-e Inventory all equipment.
+- Inventory all equipment.
 
-e Place any equipment damaged or potentially unfit for further confined space use out-of-service until repaired.
+- Place any equipment damaged or potentially unfit for further confined space use out-of-service until repaired.
 
-e Have contractor or responsible party seal entry points to assure no additional entry.
+- Have contractor or responsible party seal entry points to assure no additional entry.
 
-e Remove all Lockout Tag-out systems once the area has been
+- Remove all Lockout Tag-out systems once the area has been
 
 cleared and deemed safe and/or replace it with the Contractor or Responsible Party system.
 

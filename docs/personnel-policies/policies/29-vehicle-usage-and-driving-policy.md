@@ -34,7 +34,7 @@ All current and prospective City of Poquoson employees or volunteers who are req
 
 e¢ No more than two (2) moving violations within the previous twelve (12) months.
 
-e No more than three (3) moving violations within the previous twenty-four (24) months.
+- No more than three (3) moving violations within the previous twenty-four (24) months.
 
 ¢ Norecord of convictions associated with drugs/intoxicants, driving under the influence (DUD), reckless driving, eluding police, leaving the scene of an accident, or manslaughter (voluntary or involuntary) within the previous sixty (60) months.
 
@@ -141,13 +141,13 @@ measures to prevent other vehicles from becoming involved in the accident. When 
 
 Accident Reporting. A City Vehicle Accident Report form is required and shall be completed by the operator or assigned driver of a City-insured vehicle involved in an accident when:
 
-e An injury occurs, regardless of property damage.
+- An injury occurs, regardless of property damage.
 
-e An accident or collision involves a vehicle or property not owned by the City regardless of fault or damage sustained by either party.
+- An accident or collision involves a vehicle or property not owned by the City regardless of fault or damage sustained by either party.
 
-e Another City-owned vehicle or item of property is involved and the probable cost of total repairs (vehicle and/or property) will exceed $100 as determined by the City’s Fleet Manager.
+- Another City-owned vehicle or item of property is involved and the probable cost of total repairs (vehicle and/or property) will exceed $100 as determined by the City’s Fleet Manager.
 
-e Mysterious or unexplained damage to a City vehicle is clearly visible and the probable cost of total repairs will exceed $100 as determined by the City’s Fleet Manager.
+- Mysterious or unexplained damage to a City vehicle is clearly visible and the probable cost of total repairs will exceed $100 as determined by the City’s Fleet Manager.
 
 The accident report shall be reviewed by the Department Head or other supervisor who shall forward copies of the report to the Finance Department and the Fleet Manager prior to the close of the next City workday after the accident.
 

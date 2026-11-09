@@ -1,6 +1,6 @@
 # EA 8.00 PPE Inspections
 
-<div class="sop-meta">**SOP** EA 8.00 &nbsp;·&nbsp; **Category:** Equipment And Apparatus &nbsp;·&nbsp; **Effective:** 92/01/2009 &nbsp;·&nbsp; **Revised:** 02/01/2009</div>
+<div class="sop-meta"><strong>SOP</strong> EA 8.00 &nbsp;·&nbsp; <strong>Category:</strong> Equipment And Apparatus &nbsp;·&nbsp; <strong>Effective:</strong> 92/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 02/01/2009</div>
 
 ## I. Purpose
 
@@ -33,11 +33,11 @@ Shift Commanders shall make the Deputy Chief aware of all PPE issues in writing 
 ## V. Procedures
 Protective clothing to be inspected includes:
 
-e Helmet/Goggles - including liner and chinstrap
+- Helmet/Goggles - including liner and chinstrap
 
-e Turnout coat — including moisture barrier, and cuffs with the thumb hook intact
+- Turnout coat — including moisture barrier, and cuffs with the thumb hook intact
 
-e Structural Firefighting Boots
+- Structural Firefighting Boots
 
 Turnout pants — including moisture barrier and
 
@@ -59,29 +59,29 @@ P EA 8.00 PPE Inspections
 
 All personal protective equipment shall be inspected to determine if it is suitable for use.
 
-e All material should be free from tears, embrittlement, and fraying.
+- All material should be free from tears, embrittlement, and fraying.
 
-e Seams should be intact and show no signs of excessive wear.
+- Seams should be intact and show no signs of excessive wear.
 
-e Reflective trim should show no signs of abrasion or loss of reflectivity due to heat exposure.
+- Reflective trim should show no signs of abrasion or loss of reflectivity due to heat exposure.
 
-e All pockets, kneepads, and other accessory items should be firmly attached to the garment and show no signs of excessive wear.
+- All pockets, kneepads, and other accessory items should be firmly attached to the garment and show no signs of excessive wear.
 
-e Sleeve and pants cuffs should show no signs of fraying (indicates the pants are to long or improperly worn).
+- Sleeve and pants cuffs should show no signs of fraying (indicates the pants are to long or improperly worn).
 
-e The garment should be free from excessive dirt and stains.
+- The garment should be free from excessive dirt and stains.
 
-e Where a fabric color change is noted, a condition that could be caused by high heat exposure or ultraviolet exposure, the entire area should be checked for loss of tear strength.
+- Where a fabric color change is noted, a condition that could be caused by high heat exposure or ultraviolet exposure, the entire area should be checked for loss of tear strength.
 
-e Pants and coats shall be washed in accordance with manufactures recommendations at least once every six months (if clothing is not worn within the preceding six months, washing is not required.
+- Pants and coats shall be washed in accordance with manufactures recommendations at least once every six months (if clothing is not worn within the preceding six months, washing is not required.
 
 Helmets should be inspected for: e Cleanliness
 
-e Loss of integrity due to severe impact e Wearing/fraying of chinstrap
+- Loss of integrity due to severe impact e Wearing/fraying of chinstrap
 
 Protective clothing (coats, pants and gloves) shall be evaluated for proper fit semiannually.
 
-e There shall be at least a 2-inch overlap of all layers of the protective coat and the protective trousers so there
+- There shall be at least a 2-inch overlap of all layers of the protective coat and the protective trousers so there
 
 EQUIPMENT AND APPARATUS
 

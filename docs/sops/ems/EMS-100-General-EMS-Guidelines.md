@@ -1,6 +1,6 @@
 # EMS 1.00 General EMS Guidelines
 
-<div class="sop-meta">**Category:** General Ems Guidelines</div>
+<div class="sop-meta"><strong>Category:</strong> General Ems Guidelines</div>
 
 ## I. Purpose
 City of Poquoson The purpose of this policy is to provide Fire and Rescue prompt and efficient treatment and

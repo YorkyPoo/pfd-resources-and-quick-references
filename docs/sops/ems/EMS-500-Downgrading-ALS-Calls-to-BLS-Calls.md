@@ -1,6 +1,6 @@
 # EMS 5.00 Downgrading ALS Calls to BLS Calls
 
-<div class="sop-meta">**SOP** EMS 5.00 &nbsp;·&nbsp; **Category:** EMS Operations &nbsp;·&nbsp; **Effective:** 11/30/2008 &nbsp;·&nbsp; **Revised:** 11/30/2008</div>
+<div class="sop-meta"><strong>SOP</strong> EMS 5.00 &nbsp;·&nbsp; <strong>Category:</strong> EMS Operations &nbsp;·&nbsp; <strong>Effective:</strong> 11/30/2008 &nbsp;·&nbsp; <strong>Revised:</strong> 11/30/2008</div>
 
 ## I. Purpose
 
@@ -25,9 +25,9 @@ All Electrical Burns
 
 Standard Operating Procedures Manual EMS 5.00 Downgrading ALS calls to BLS calls
 
-e Patients with altered levels of consciousness
+- Patients with altered levels of consciousness
 
-e Cerebral vascular accident (stroke)
+- Cerebral vascular accident (stroke)
 
 Imminent or post childbirth, including miscarriages or complications relating to the pregnancy or labor
 
@@ -43,7 +43,7 @@ Diabetic Emergencies
 
 Repeated or extended seizing, first time seizure, febrile seizure Excessive body temperatures with convulsions or deliriums including heat related disorders (exhaustion or heat stroke) Possible DOA
 
-e Auto accident described as:
+- Auto accident described as:
 
 o Car/pedestrian
 
@@ -53,7 +53,7 @@ o Motorcycle and/or car/motorcycle
 
 o Serious in nature (car rolled over, person trapped, etc.)
 
-e Any child under 18 months exhibiting any of the above and/or:
+- Any child under 18 months exhibiting any of the above and/or:
 
 o Dehydration o Hypothermia/hyperthermia o Poor muscle tone
 

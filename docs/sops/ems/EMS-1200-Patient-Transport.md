@@ -22,11 +22,11 @@ Ill. POLICY Effective Date:__ 06/06/2008 It shall be the policy of Poquoson
 
 05/09/2014 Fire/Rescue Department to transport EMS patients to any of the local service area Peninsula hospitals requested by the patient, family, or physician. These hospitals include:
 
-e Sentara Careplex Hospital
+- Sentara Careplex Hospital
 
-e Riverside Regional Medical Center
+- Riverside Regional Medical Center
 
-e Mary Immaculate Hospital
+- Mary Immaculate Hospital
 
 e VA Medical Center (Hampton)
 

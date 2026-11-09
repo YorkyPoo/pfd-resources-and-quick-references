@@ -1,6 +1,6 @@
 # SH 2.00 Respiratory Protection Program_202103251459187916
 
-<div class="sop-meta">**SOP** SH 2.00 &nbsp;·&nbsp; **Category:** Safety And Health</div>
+<div class="sop-meta"><strong>SOP</strong> SH 2.00 &nbsp;·&nbsp; <strong>Category:</strong> Safety And Health</div>
 
 ## I. Purpose
 
@@ -46,23 +46,23 @@ SAFETY AND HEALTH
 
 ndar rating Pr res Manual SH 2.00 Respiratory Protection Program
 
-e Additional fit test may be required if it is reported or noticed that firefighter’s physical conditions have changed in a way that may affect the respirator fit. Such physical conditions may include facial scarring, dental changes, cosmetic surgery or an obvious change in body weight.
+- Additional fit test may be required if it is reported or noticed that firefighter’s physical conditions have changed in a way that may affect the respirator fit. Such physical conditions may include facial scarring, dental changes, cosmetic surgery or an obvious change in body weight.
 
 PROPER RESPIRATOR USE
 
-e Allrespirators shall be used in accordance with manufacturer recommendations. Limitations for all respirators shall be noted before selection and use.
+- Allrespirators shall be used in accordance with manufacturer recommendations. Limitations for all respirators shall be noted before selection and use.
 
-e Before hooking up to air, each SCBA wearer will perform a negative pressure check by covering the face piece inlet or breathing tube and inhaling lightly.
+- Before hooking up to air, each SCBA wearer will perform a negative pressure check by covering the face piece inlet or breathing tube and inhaling lightly.
 
 o Ifa leak is detected, the firefighter will readjust the face piece and repeat the test. If a seal cannot be achieved, the firefighter will notify his or her company officer.
 
 o Should the face piece require maintenance, it will be returned to the SCBA maintenance shop. If after inspection, no problem is found, the firefighter shall receive another fit test.
 
-e Nothing shall be permitted to come between the face piece and face of the respirator wearer; this includes facial hair, hoods, corrective lenses, etc.
+- Nothing shall be permitted to come between the face piece and face of the respirator wearer; this includes facial hair, hoods, corrective lenses, etc.
 
-e During the actual use of the respirator (SCBA, etc.), the firefighter must be aware of any face piece leakage. If the firefighter can smell or taste contaminants or feels air leaking around the face piece, he or she must leave the area immediately if the leak cannot be corrected.
+- During the actual use of the respirator (SCBA, etc.), the firefighter must be aware of any face piece leakage. If the firefighter can smell or taste contaminants or feels air leaking around the face piece, he or she must leave the area immediately if the leak cannot be corrected.
 
-e All areas where contaminants are either unknown or in unknown quantities shall be treated as IDLH atmospheres.
+- All areas where contaminants are either unknown or in unknown quantities shall be treated as IDLH atmospheres.
 
 ee SAFETY AND HEALTH
 
@@ -72,47 +72,47 @@ SH 2.00 Respiratory Protection Program
 
 Medical evaluations will not be required when respirator use is no longer part of the job.
 
-e Medical evaluations shall be performed during the annual physicals.
+- Medical evaluations shall be performed during the annual physicals.
 
-e Supplemental information such as respirator type, weight, duration and use conditions shall be considered during the medical evaluation.
+- Supplemental information such as respirator type, weight, duration and use conditions shall be considered during the medical evaluation.
 
-e Follow-up medical examinations shall be required if: o Fire personnel report symptoms related to his or her ability to use a respirator. o Asupervisor or the respirator program manager feels the firefighter shall be reevaluated.
+- Follow-up medical examinations shall be required if: o Fire personnel report symptoms related to his or her ability to use a respirator. o Asupervisor or the respirator program manager feels the firefighter shall be reevaluated.
 
-e Observations made during the fit test or program evaluation indicate a need for reevaluation.
+- Observations made during the fit test or program evaluation indicate a need for reevaluation.
 
-e Achange occurs in workplace conditions such as increased physical requirements or new protective clothing and SCBA.
+- Achange occurs in workplace conditions such as increased physical requirements or new protective clothing and SCBA.
 
 FIT TESTING
 
-e All persons required to wear an SCBA or other respirator will be fit tested at least annually using the qualitative fit test method covered in the OSHA Respiratory Protection Standard 1910.134.
+- All persons required to wear an SCBA or other respirator will be fit tested at least annually using the qualitative fit test method covered in the OSHA Respiratory Protection Standard 1910.134.
 
-e Fire personnel shall be fit tested in their own issued face pieces.
+- Fire personnel shall be fit tested in their own issued face pieces.
 
-e All department personnel required to wear disposable respirators shall be fit tested for the N95 Mask by a certified tester.
+- All department personnel required to wear disposable respirators shall be fit tested for the N95 Mask by a certified tester.
 
-e Fit test shall be administered and respirators shall not be worn if conditions exist which may interfere with the face piece seal or operation of the exhalation value. Facial hair and other conditions that may affect the face piece seal shall not be allowed.
+- Fit test shall be administered and respirators shall not be worn if conditions exist which may interfere with the face piece seal or operation of the exhalation value. Facial hair and other conditions that may affect the face piece seal shall not be allowed.
 
 SAFETY AND HEALTH
 
 ndar rating Procedures Manual SH 2.00 Respiratory Protection Program
 
-e When working in an IDLH atmosphere, sufficient back up personnel must be available. Visual, voice or signal line communications must be maintained.
+- When working in an IDLH atmosphere, sufficient back up personnel must be available. Visual, voice or signal line communications must be maintained.
 
-e For interior structure fire fighting operations, OSHA “two in, two out” rule shall apply. OSHA Standard 1910.134 Paragraph (g) (4) (i), states, “at least two employees enter the IDLH atmosphere and remain in visual or voice contact at all times; (ii) at least two employees are located outside the IDLH atmosphere; and (iii) all employees engaged in interior structural fire fighting use SCBA’s.”
+- For interior structure fire fighting operations, OSHA “two in, two out” rule shall apply. OSHA Standard 1910.134 Paragraph (g) (4) (i), states, “at least two employees enter the IDLH atmosphere and remain in visual or voice contact at all times; (ii) at least two employees are located outside the IDLH atmosphere; and (iii) all employees engaged in interior structural fire fighting use SCBA’s.”
 
 SELF CONTAINED BREATHING APPARUTUS USE
 
-e Prior to use of an SCBA, each firefighter assigned to a face piece will complete the manufacturer’s course through Target Solutions annually.
+- Prior to use of an SCBA, each firefighter assigned to a face piece will complete the manufacturer’s course through Target Solutions annually.
 
-e Each SCBA assigned to a piece of equipment will be checked off accordingly to its specific checklist.
+- Each SCBA assigned to a piece of equipment will be checked off accordingly to its specific checklist.
 
-e If deficiencies are found with an SCBA, the SCBA will immediately be removed from service and replaced with a properly functioning SCBA. Any SCBA that is placed out of service will be tagged with all deficiencies. The SCBA technician and station officer on duty will be notified for proper reassignment, maintenance and repair.
+- If deficiencies are found with an SCBA, the SCBA will immediately be removed from service and replaced with a properly functioning SCBA. Any SCBA that is placed out of service will be tagged with all deficiencies. The SCBA technician and station officer on duty will be notified for proper reassignment, maintenance and repair.
 
 BREATHING AIR TEST
 
-e Samples of SCBA breathing air will be taken from the fire department air supply system quarterly and evaluated.
+- Samples of SCBA breathing air will be taken from the fire department air supply system quarterly and evaluated.
 
-e Breathing air must be Grade “D” or better.
+- Breathing air must be Grade “D” or better.
 
 e SCBA will be flow tested annually and whenever a unit is sent in for repairs.
 

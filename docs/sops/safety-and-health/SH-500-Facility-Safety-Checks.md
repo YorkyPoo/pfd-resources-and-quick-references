@@ -1,6 +1,6 @@
 # SH 5.00 Facility Safety Checks
 
-<div class="sop-meta">**SOP** SH 5.00 &nbsp;·&nbsp; **Category:** Safety And Health</div>
+<div class="sop-meta"><strong>SOP</strong> SH 5.00 &nbsp;·&nbsp; <strong>Category:</strong> Safety And Health</div>
 
 ## I. Purpose
 
@@ -18,14 +18,14 @@ Shift Commanders/Company Officers are responsible for the safe condition in thei
 
 this the following shall be completed:
 
-e Conduct monthly inspections of all stations and grounds.
+- Conduct monthly inspections of all stations and grounds.
 
 SH 5.00 Facility Safety Checks
 
-e Conduct daily inspections of equipment, work practices, work sites, materials under their supervision to ensure a safe workplace.
+- Conduct daily inspections of equipment, work practices, work sites, materials under their supervision to ensure a safe workplace.
 
-e Ifrecognized, immediately stop any unsafe work condition or practice.
+- Ifrecognized, immediately stop any unsafe work condition or practice.
 
-e All inspection reports are to be forwarded to the Deputy Fire Chief or their designated representative for follow up, record keeping and final disposition. Notification of unsafe conditions shall immediately be made to the Deputy Chief of Operations by email and/or phone.
+- All inspection reports are to be forwarded to the Deputy Fire Chief or their designated representative for follow up, record keeping and final disposition. Notification of unsafe conditions shall immediately be made to the Deputy Chief of Operations by email and/or phone.
 
 SAFETY AND HEALTH

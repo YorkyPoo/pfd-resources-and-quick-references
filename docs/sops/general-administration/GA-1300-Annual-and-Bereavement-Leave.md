@@ -1,6 +1,6 @@
 # GA 13.00 Annual and Bereavement Leave
 
-<div class="sop-meta">**SOP** GA 13.00 &nbsp;·&nbsp; **Category:** General Administration &nbsp;·&nbsp; **Effective:** 02/01/2009 &nbsp;·&nbsp; **Revised:** 04/24/2023</div>
+<div class="sop-meta"><strong>SOP</strong> GA 13.00 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 02/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 04/24/2023</div>
 
 ## I. Purpose
 

@@ -93,7 +93,7 @@ a,
 
 It is recommended that the employee alleging sexual harassment (the complainant) report the incident to his/her immediate supervisor (if the immediate supervisor is not the accused). If the complainant is not comfortable, for whatever reason, reporting the incident to his/her immediate supervisor, the complainant may report the incident to any of the following individuals:
 
-e Department Head/Constitutional Officer e City Manager
+- Department Head/Constitutional Officer e City Manager
 
 For the purpose of this policy the City Manager shall be designated as the Equal Opportunity Officer for the City.
 

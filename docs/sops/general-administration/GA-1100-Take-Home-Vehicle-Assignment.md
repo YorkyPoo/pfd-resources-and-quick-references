@@ -1,6 +1,6 @@
 # GA 11.00 Take-Home Vehicle Assignment
 
-<div class="sop-meta">**SOP** GA 11.00 &nbsp;·&nbsp; **Category:** General Administration &nbsp;·&nbsp; **Revised:** 01/01/2009</div>
+<div class="sop-meta"><strong>SOP</strong> GA 11.00 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Revised:</strong> 01/01/2009</div>
 
 ## I. Purpose
 
@@ -23,32 +23,32 @@ GENERAL ADMINISTRATION
 
 Standard Operating Procedures Manual GA 11.00 Take-Home Vehicle Assignment
 
-e The Deputy Chief may permit or restrict any vehicle assignment.
+- The Deputy Chief may permit or restrict any vehicle assignment.
 
 All policies and procedures of the Poquoson Fire/Rescue Department shall remain in effect while assigned vehicles are operated either on or off-duty.
 
 Operation e Only authorized personnel shall operate department vehicles.
 
-e When called out to respond during off duty ours, personnel shall respond in accordance with all city policies and procedures applicable to on-duty personnel.
+- When called out to respond during off duty ours, personnel shall respond in accordance with all city policies and procedures applicable to on-duty personnel.
 
-e Special privileges such as exceeding posted speed limits, parking in restricted zones, or violating traffic regulation are not to be assumed.
+- Special privileges such as exceeding posted speed limits, parking in restricted zones, or violating traffic regulation are not to be assumed.
 
-e Personnel are permitted to use their take-home vehicle to attend departmental training classes/courses.
+- Personnel are permitted to use their take-home vehicle to attend departmental training classes/courses.
 
 Maintenance
 
-e Personnel with assigned take home vehicles are responsible for the cleanliness of their vehicle and will keep their vehicles maintained per Poquoson Fire/Rescue Department policies and procedures.
+- Personnel with assigned take home vehicles are responsible for the cleanliness of their vehicle and will keep their vehicles maintained per Poquoson Fire/Rescue Department policies and procedures.
 
-e Personnel shall notify their supervisor and appropriate City authorities immediately after discovering damage to their assigned vehicle and/or when involved in a motor vehicle accident.
+- Personnel shall notify their supervisor and appropriate City authorities immediately after discovering damage to their assigned vehicle and/or when involved in a motor vehicle accident.
 
 GENERAL ADMINISTRATION
 
 fandgard ating Procedures Manua GA 11.00 Take-Home Vehicle Assignment
 
-e The use of tobacco products will not be tolerated while in operation of assigned take-home vehicle.
+- The use of tobacco products will not be tolerated while in operation of assigned take-home vehicle.
 
 Availability
 
-e Off-duty personnel shall be available for responses when necessary or called to duty.
+- Off-duty personnel shall be available for responses when necessary or called to duty.
 
 GENERAL ADMINISTRATION

@@ -1,6 +1,6 @@
 # GA 9.10 Training Administration
 
-<div class="sop-meta">**SOP** GA 9.10 &nbsp;·&nbsp; **Category:** Training &nbsp;·&nbsp; **Effective:** 04/21/2011</div>
+<div class="sop-meta"><strong>SOP</strong> GA 9.10 &nbsp;·&nbsp; <strong>Category:</strong> Training &nbsp;·&nbsp; <strong>Effective:</strong> 04/21/2011</div>
 
 ## I. Purpose
 
@@ -14,7 +14,7 @@ The Fire/Rescue Department shall provide a regular and continuous standardized t
 
 Standard Operating Procedures Manual GA 9.10 Training Policy
 
-Ill. OBJECTIVE
+## III. Objective
 
 Iv.
 
@@ -104,7 +104,7 @@ knowledge levels required of their respective classification and position within
 
 ## V. Training Records and Codes
 
-e Training records shall be processed and maintained in both electronic and hard copy format.
+- Training records shall be processed and maintained in both electronic and hard copy format.
 
 1.
 

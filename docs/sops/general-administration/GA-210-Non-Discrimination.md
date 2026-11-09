@@ -1,14 +1,12 @@
 # GA 2.10 Non-Discrimination
 
-<div class="sop-meta">**SOP** GA2.10 &nbsp;·&nbsp; **Category:** Fire Suppression &nbsp;·&nbsp; **Effective:** 09/18/2023</div>
+<div class="sop-meta"><strong>SOP</strong> GA2.10 &nbsp;·&nbsp; <strong>Category:</strong> Fire Suppression &nbsp;·&nbsp; <strong>Effective:</strong> 09/18/2023</div>
 
 ## I. Purpose
 
 The City of Poquoson Fire/Rescue (PFR) is committed to ensuring that no person is excluded from participation in, denied the benefits of, or subjected to discrimination under any program, activity, or service that it provides. The City of Poquoson Fire/Rescue will not tolerate intimidation, threats, coercion, or discrimination against any individual or group.
 
 This policy establishes a framework for taking reasonable steps to ensure access to all services provided by PFR for all citizens and establishes procedures whereby City of Poquoson Fire/Rescue will receive and investigate allegations of discrimination.
-
-GENERAL ADMINISTRATION Page 1of5
 
 ndar rating Pr res Manual GA 2.10 Non-Discrimination
 
@@ -111,8 +109,8 @@ A file containing all allegations of civil rights violations and their dispositi
 
 Access to Persons with Limited English Proficiency (LEP) or Disability
 
-e The City of Poquoson Fire/Rescue will take reasonable steps ensure access to all people, and that accommodation is available to facilitate the participation of those persons with English language proficiency and/or disability.
+- The City of Poquoson Fire/Rescue will take reasonable steps ensure access to all people, and that accommodation is available to facilitate the participation of those persons with English language proficiency and/or disability.
 
-e The City of Poquoson Fire/Rescue will seek to provide at no cost appropriate auxiliary aids and services to LEP persons, to disabled persons who are deaf or hard of hearing, and other individuals as necessary to ensure effective communication or an equal opportunity to participate fully in the decision-making process.
+- The City of Poquoson Fire/Rescue will seek to provide at no cost appropriate auxiliary aids and services to LEP persons, to disabled persons who are deaf or hard of hearing, and other individuals as necessary to ensure effective communication or an equal opportunity to participate fully in the decision-making process.
 
 GENERAL ADMINISTRATION
