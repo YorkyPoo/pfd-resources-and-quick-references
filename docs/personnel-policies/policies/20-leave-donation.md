@@ -4,8 +4,7 @@ _**Section No.: 20**_
 
 ## Purpose
 
-It is the objective of the City of Poquoson, Virginia that employees be permitted to
-participate in a leave donation program.
+It is the objective of the City of Poquoson, Virginia that employees be permitted to participate in a leave donation program.
 
 ## Scope
 
@@ -14,8 +13,7 @@ This policy applies to all City of Poquoson permanent full-time employees.
 
 Serious Medical Condition
 
-A serious medical condition is defined as any illness or non-work related injury which, as
-certified by a physician, requires medical attention.
+A serious medical condition is defined as any illness or non-work related injury which, as certified by a physician, requires medical attention.
 
 ## Procedures
 Leave Donation Guidelines
@@ -33,9 +31,7 @@ or annual leave to a seriously ill co-worker.
 Eligibility to Receive Leave Donations
 
 1. To be eligible to receive leave donations, an employee must exhaust all accrued
-annual and compensatory leave balances, and all but one week of accrued sick
-leave. One week of sick leave shall be calculated based upon the employee’s
-normally scheduled workweek.
+annual and compensatory leave balances, and all but one week of accrued sick leave. One week of sick leave shall be calculated based upon the employee’s normally scheduled workweek.
 
 2. Anemployee’s continued eligibility to receive leave donations shall be reviewed
 and monitored by the City Manager
@@ -48,21 +44,14 @@ Head/Constitutional Officer.
 2. The employee must provide medical certification from a physician.
 
 3. The Department Head/Constitutional Officer shall review the employee’s leave
-record and medical certification with the City Manager to determine the
-appropriateness of the request and present a recommendation.
+record and medical certification with the City Manager to determine the appropriateness of the request and present a recommendation.
 
 4. In the event that the employee is physically or mentally unable to initiate a
-request, a family member, person holding power of attorney, court appointed
-guardian or the employee’s Department Head/Constitutional Officer may file the
-request.
+request, a family member, person holding power of attorney, court appointed guardian or the employee’s Department Head/Constitutional Officer may file the request.
 
 Request Processing
 
-Following a determination that the leave request is appropriate and is approved by the
-City Manager, a request for leave donation shall be communicated to all potential donors
-(either within a specific Department or to all general government Departments, as
-requested by the recipient) but will not reveal the identity of the requesting employee
-unless the employee gives his or her permission.
+Following a determination that the leave request is appropriate and is approved by the City Manager, a request for leave donation shall be communicated to all potential donors (either within a specific Department or to all general government Departments, as requested by the recipient) but will not reveal the identity of the requesting employee unless the employee gives his or her permission.
 
 Donor Guidelines
 

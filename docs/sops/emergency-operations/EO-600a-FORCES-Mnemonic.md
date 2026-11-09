@@ -1,9 +1,9 @@
 # F.O.R.C.E.S. — First-Alarm Company Mnemonic (EO 6.00)
 
 !!! abstract "What this is"
-    A nested mnemonic where the top-level letters **F.O.R.C.E.S.** match the **arrival order** of the first-alarm companies, and each letter expands into that apparatus's chronological tactical checklist. Derived from [EO 6.00 First To Arrive Duties](EO-600-First-to-Arrive-Duties.md) and [Initial Alarm Company Assignments](../../fire-ems-references/initial-alarm-company-assignments.md).
-    
-    **It is a drill and teaching tool, not a fireground checklist.** On the street, run CAN, RECEO-VS, SLICE-RS, and COAL WAS WEALTH — single-level cues survive adrenaline; nested ones only work after repetition has made the sub-lists automatic.
+A nested mnemonic where the top-level letters **F.O.R.C.E.S.** match the **arrival order** of the first-alarm companies, and each letter expands into that apparatus's chronological tactical checklist. Derived from [EO 6.00 First To Arrive Duties](EO-600-First-to-Arrive-Duties.md) and [Initial Alarm Company Assignments](../../fire-ems-references/initial-alarm-company-assignments.md).
+
+**It is a drill and teaching tool, not a fireground checklist.** On the street, run CAN, RECEO-VS, SLICE-RS, and COAL WAS WEALTH — single-level cues survive adrenaline; nested ones only work after repetition has made the sub-lists automatic.
 
 ## The Top Level
 
@@ -70,6 +70,5 @@
 3. **"X" is a mnemonic hack** (eXtend). Acceptable for recall, but don't teach the letter as the lesson.
 4. Utility control appears **once** (R.A.I.L. — I). The aerial driver *tracks*, never *terminates* — double-booked tasks are how utilities get missed or duplicated on the street.
 
----
-*Formatted from **the source PDF** (vault note, last modified 2026-10-25). The signed PDF remains the authoritative document.*
+--- *Formatted from **the source PDF** (vault note, last modified 2026-10-25). The signed PDF remains the authoritative document.*
 

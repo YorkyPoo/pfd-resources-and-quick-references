@@ -4,15 +4,11 @@ _**Section No.: 25**_
 
 ## Purpose
 
-It is the objective of the City of Poquoson, Virginia to recognize and commend faithful
-service performed by employees; to emphasize that each individual plays a key role in the
-City’s progress; to recognize that an employee’s contribution grows with each additional
-year of service and to encourage career employment with the City of Poquoson.
+It is the objective of the City of Poquoson, Virginia to recognize and commend faithful service performed by employees; to emphasize that each individual plays a key role in the City’s progress; to recognize that an employee’s contribution grows with each additional year of service and to encourage career employment with the City of Poquoson.
 
 ## Scope
 
-This policy applies to all City of Poquoson permanent full-time and permanent part-time
-employees.
+This policy applies to all City of Poquoson permanent full-time and permanent part-time employees.
 
 ## Procedures
 

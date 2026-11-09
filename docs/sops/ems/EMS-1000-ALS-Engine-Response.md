@@ -1,29 +1,21 @@
 # EMS 10.00 ALS Engine Response
 
-City of Poquoson Fire and Rescue
+<div class="sop-meta">**Category:** Als Engine Response</div>
 
-ALS ENGINE RESPONSE
-I. PURPOSE
-City of Poquoson Provide Dispatch/Response Guidelines
-Fire and Rescue for ALS Medical Emergencies for the
+## I. Purpose
+City of Poquoson Provide Dispatch/Response Guidelines Fire and Rescue for ALS Medical Emergencies for the
 
 830 Poquoson Ave. Poquoson Fire/Rescue Department.
 
 Poquoson, VA 23662
 
-757-868-3510 This SOP is not all-inclusive and cannot
-F 757-868-3514 encompass all situations that may be
-encountered.
-EMS OPERATIONS
+757-868-3510 This SOP is not all-inclusive and cannot F 757-868-3514 encompass all situations that may be encountered. EMS OPERATIONS
 
 Il. APPLICABILITY
 
-SOP#: EMS 10.00 All career and volunteer personnel
-Title:_ALS Engine Response Ill. PROCEDURE
-Effective Date: 01/01/2009 The following medical emergencies will
+SOP#: EMS 10.00 All career and volunteer personnel Title:_ALS Engine Response Ill. PROCEDURE Effective Date: 01/01/2009 The following medical emergencies will
 
-receive a response of a fire suppression
-unit along with the medic unit.
+receive a response of a fire suppression unit along with the medic unit.
 
 Revised Date: __01/01/2009
 
@@ -35,16 +27,13 @@ Chest pain
 
 Difficulty in breathing
 
-Second or third degree burns
-covering major portions of the body,
-especially the head and face
+Second or third degree burns covering major portions of the body, especially the head and face
 
 e All Electrical Burns
 
-e Serious blunt or any penetrating
-injuries
+e Serious blunt or any penetrating injuries
 
-EMS OPERATIONS 
+EMS OPERATIONS
 
 EMS 10.00 ALS Engine Response
 
@@ -68,8 +57,7 @@ Any severe orthopedic emergency (spinal injuries, pelvic
 
 fractures, multiple fractures, etc.)
 
-e Excessive body temperatures with convulsions or deliriums
-including heat related disorders (exhaustion or heat stroke)
+e Excessive body temperatures with convulsions or deliriums including heat related disorders (exhaustion or heat stroke)
 
 e Possible DOA
 
@@ -87,18 +75,10 @@ Serious in nature (car rolled over, person trapped, etc.)
 
 e Any child under 18 months exhibiting any of the above and/or:
 
-o Dehydration
-o Hypothermia/hyperthermia
-o Poor muscle tone
+o Dehydration o Hypothermia/hyperthermia o Poor muscle tone
 
-In the event there is no medic unit available in district when
-any medical emergency occurs, a fire suppression unit will
-respond and render treatment until the next closest medic
-unit arrives.
+In the event there is no medic unit available in district when any medical emergency occurs, a fire suppression unit will respond and render treatment until the next closest medic unit arrives.
 
-The fire suppression unit may be cancelled en route or
-released from the scene at the discretion of the senior
-medical personnel on scene, the EMS Supervisor or the
-Officer in Charge on scene.
+The fire suppression unit may be cancelled en route or released from the scene at the discretion of the senior medical personnel on scene, the EMS Supervisor or the Officer in Charge on scene.
 
 EMS OPERATIONS

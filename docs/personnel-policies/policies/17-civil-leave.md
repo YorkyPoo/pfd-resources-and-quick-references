@@ -4,8 +4,7 @@ _**Section No.: 17**_
 
 ## Purpose
 
-It is the objective of the City of Poquoson, Virginia to provide employees with paid civil
-leave to perform certain civic responsibilities when called upon.
+It is the objective of the City of Poquoson, Virginia to provide employees with paid civil leave to perform certain civic responsibilities when called upon.
 
 ## Scope
 
@@ -14,8 +13,7 @@ This policy applies to all City of Poquoson permanent full-time employees.
 
 Civil Leave
 
-Civil leave is defined as an approved employee absence during regularly scheduled work
-hours for the following reasons:
+Civil leave is defined as an approved employee absence during regularly scheduled work hours for the following reasons:
 
 1. to serve on a jury; or
 
@@ -52,8 +50,7 @@ reimbursement of daily expenses.
 
 D. Work Time Not Charged to Civil Leave
 
-Time spent in court by the following categories of employees is considered work
-time and docs not have to be charged to civil leave:
+Time spent in court by the following categories of employees is considered work time and docs not have to be charged to civil leave:
 
 a. law enforcement officers;
 b. employees attending court as part of their job duties;

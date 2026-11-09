@@ -1,61 +1,33 @@
 # EA 10.00 Dry Hydrants
 
-City of Poquoson Fire/Rescue
+<div class="sop-meta">**SOP** EA 10 Dry Hydrants &nbsp;·&nbsp; **Category:** Dry Hydrants</div>
 
-830 Poquoson Avenue, Poquoson, Virginia 23662
-(757) 868-3510 Fax (757) 868-3514
+## I. Purpose
+City of Poquoson To provide guidance for testing and Fire and Rescue maintenance of dry hydrants.
 
-Schedule of Changes- SOP’s
+830 Poquoson Ave. : ; : . Poquoson, VA 23662 This SOP is not all-inclusive and cannot
 
-SOP: EA 10 Dry Hydrants
-DATE: May 23, 2024
-
-e This is a completely new SOP. It provides direction on the annual maintenance
-of dry hydrants.
-
-ndar rating Pro r ]
-City of Poquoson Fire and Rescue
-
-DRY HYDRANTS
-I. PURPOSE
-City of Poquoson To provide guidance for testing and
-Fire and Rescue maintenance of dry hydrants.
-
-830 Poquoson Ave. : ; : .
-Poquoson, VA 23662 This SOP is not all-inclusive and cannot
-
-757-868-3510 encompass all situations that may be
-F757-868-3514 encountered.
+757-868-3510 encompass all situations that may be F757-868-3514 encountered.
 
 GENERAL ADMINISTRATION
 
-II. POLICY/POSITION
+## II. Policy/Position
 
 The City of Poquoson Dry Hydrants shall
 
-SOP#: EA 10 be flushed twice per year (Spring/Fall)
-and monitored to ensure operational
-Dry Hydrants readiness.
-Title:
+SOP#: EA 10 be flushed twice per year (Spring/Fall) and monitored to ensure operational Dry Hydrants readiness. Title:
 
 Effective Date: _ 5/23/2024 III. RESPONSIBILITIES
 
-e Shift Master Firefighters are
-responsible for ensuring that each of
-the dry hydrants is flushed twice per
-year and recorded in the
-departments RMS.
+e Shift Master Firefighters are responsible for ensuring that each of the dry hydrants is flushed twice per year and recorded in the departments RMS.
 
-e Any deficiencies must be reported to
-the Battalion that will report to Fire
-Admin for corrective action.
+e Any deficiencies must be reported to the Battalion that will report to Fire Admin for corrective action.
 
-EQUIPMENT & APPARATUS 
+EQUIPMENT & APPARATUS
 
-rating Pr r
-Policy # EA 10 Dry Hydrants
+rating Pr r Policy # EA 10 Dry Hydrants
 
-IV. PROCEDURES
+## IV. Procedures
 
 1. Shift Master Firefighters will determine which shift will be
 responsible for each dry hydrant both spring and fall cycles.
@@ -72,7 +44,7 @@ they will report to Fire Admin.
 5. Fire Admin will then work on any items that need corrective
 action(s).
 
-V. DEFINITIONS
+## V. Definitions
 
 RMS- resource management system
 

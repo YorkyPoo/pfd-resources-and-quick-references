@@ -1,12 +1,7 @@
 # EO 6.00 - First To Arrive Duties
 
 !!! info "SOP Header"
-    **SOP #:** EO 6.00  
-    **Category:** Emergency Operations  
-    **Department:** City of Poquoson Fire & Rescue  
-    **Effective Date:** 01/01/2009  
-    **Revised Date:** 08/01/2026  
-    **Subject:** First Arriving Unit Duties and Initial Alarm Company Assignments
+**SOP #:** EO 6.00 **Category:** Emergency Operations **Department:** City of Poquoson Fire & Rescue **Effective Date:** 01/01/2009 **Revised Date:** 08/01/2026 **Subject:** First Arriving Unit Duties and Initial Alarm Company Assignments
 
 !!! abstract "Connected Notes"
     - Detailed company-by-company breakdown: [Initial Alarm Company Assignments](../../fire-ems-references/initial-alarm-company-assignments.md)
@@ -125,9 +120,7 @@ Covers: Single-Family Residential Fires, Commercial Residential Occupancies, Com
 - Water supply planning shall begin at the first indication of a working fire.
 - Maintain situational awareness until the incident is terminated.
 
----
-*Extracted from the City of Poquoson Fire & Rescue SOP manual (EO 6.00). Source PDF: "EO 6.00 First To Arrive Duties Revised.pdf".*
+--- *Extracted from the City of Poquoson Fire & Rescue SOP manual (EO 6.00). Source PDF: "EO 6.00 First To Arrive Duties Revised.pdf".*
 
----
-*Formatted from **EO 6.00 First To Arrive Duties Revised.pdf** (vault note, last modified 2026-10-09). The signed PDF remains the authoritative document.*
+--- *Formatted from **EO 6.00 First To Arrive Duties Revised.pdf** (vault note, last modified 2026-10-09). The signed PDF remains the authoritative document.*
 

@@ -4,8 +4,7 @@ _**Section No.: 16**_
 
 ## Purpose
 
-It is the objective of the City of Poquoson, Virginia to provide employees with paid
-bereavement leave due to the death of a member of the employee’s immediate family.
+It is the objective of the City of Poquoson, Virginia to provide employees with paid bereavement leave due to the death of a member of the employee’s immediate family.
 
 ## Scope
 
@@ -14,13 +13,11 @@ This policy applies to all City of Poquoson permanent full-time employees.
 
 Bereavement Leave
 
-Bereavement leave is defined as an approved employee absence during regularly
-scheduled work hours due to the death of a member of the employee’s immediate family.
+Bereavement leave is defined as an approved employee absence during regularly scheduled work hours due to the death of a member of the employee’s immediate family.
 
 Immediate Family
 
-For the purposes of bereavement leave, an employee’s immediate family shall be defined
-as the employee’s:
+For the purposes of bereavement leave, an employee’s immediate family shall be defined as the employee’s:
 
 L. spouse;
 
@@ -51,9 +48,7 @@ Bereavement Leave Requests and Approval
 supervisor, or supervisor’s designee.
 
 2. For any one incident, bereavement leave shall be limited to three (3) consecutive
-workdays or 72 consecutive hours for Fire Department employees and shall be
-taken within a reasonable time frame immediately following the death of the
-immediate family member.
+workdays or 72 consecutive hours for Fire Department employees and shall be taken within a reasonable time frame immediately following the death of the immediate family member.
 
 3. In the event of multiple deaths in the employee’s immediate family, each death
 shall be treated separately and the bereavement leave shall be granted accordingly.

@@ -1,68 +1,30 @@
 # EA 9.11 Reporting of Off-Site Training
 
-n
+<div class="sop-meta">**SOP** EA 9.11 &nbsp;·&nbsp; **Category:** General Administration &nbsp;·&nbsp; **Effective:** 8/18/2023</div>
 
-r erating Procedures Manual
+## I. Purpose
 
-City of Poquoson Fire and Rescue
+To provide documentation for training to better support our high standard of service and care.
 
-City of Poquoson
-Fire and Rescue
-
-830 Poquoson Ave.
-Poquoson, VA 23662
-757-868-3510
-F757-868-3514
-
-GENERAL ADMINISTRATION
-
-SOP#: EA 9.11
-Reporting of Off-Site
-Title: Training
-
-Effective Date: 8/18/2023
-
-Revised Date:
-
-REPORTING OFF-SITE TRAINING
-
-I. PURPOSE
-
-To provide documentation for training to
-better support our high standard of
-service and care.
-
-This SOP is not all-inclusive and cannot
-encompass all situations that may be
-encountered.
+This SOP is not all-inclusive and cannot encompass all situations that may be encountered.
 
 II, POLICY/POSITION
 
-Fire/Rescue Personnel shall document all
-off-site training with a CAD generated
-incident number under the Fire Module in
-ESO.
+Fire/Rescue Personnel shall document all off-site training with a CAD generated incident number under the Fire Module in ESO.
 
-III. RESPONSIBILITIES
+## III. Responsibilities
 
-e Whomever is the lead for the offsite
-training is responsible for ensuring
-the report is created.
+e Whomever is the lead for the offsite training is responsible for ensuring the report is created.
 
-e Shift officers, then Battalion Chiefs
-are responsible for making sure the
-report is correct, complete, and
-locked.
+e Shift officers, then Battalion Chiefs are responsible for making sure the report is correct, complete, and locked.
 
-e The Battalion Chief or designee shall
-approve off site training.
+e The Battalion Chief or designee shall approve off site training.
 
-GENERAL ADMINISTRATION 
+GENERAL ADMINISTRATION
 
-ndar rating Pr res Manual
-Policy # 9.11 Reporting Off-Site Training Policy
+ndar rating Pr res Manual Policy # 9.11 Reporting Off-Site Training Policy
 
-IV. PROCEDURES
+## IV. Procedures
 
 1. Contact dispatch and request a CAD incident number be
 generated at the beginning of training.
@@ -74,17 +36,15 @@ mark the incident over.
 training.
 
 4. Provide brief description of the location and training subject
-in the narrative. Note any injuries, equipment failures, or
-damages as well.
+in the narrative. Note any injuries, equipment failures, or damages as well.
 
 5. Training should be coded 900 for NFIRS purposes.
 
 6. Shift Battalion ensures the report is complete and locked.
 
-V. DEFINITIONS
+## V. Definitions
 Off-site- Training is considered off-site when personnel and
 
-apparatus leaves its assigned station to go to another physical
-location whether in district or not.
+apparatus leaves its assigned station to go to another physical location whether in district or not.
 
 GENERAL ADMINISTRATION
