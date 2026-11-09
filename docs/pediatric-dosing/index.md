@@ -76,3 +76,4 @@ These Poquoson protocols contain pediatric dosing guidance that this reference i
 
 !!! info "Source of Dosing Values"
     All dosing values in this reference come from the Poquoson Fire & Rescue Patient Care Protocols. They represent mg/kg doses calculated for standard pediatric weight bands using the department's own clinical guidelines. Always verify with the current published protocol and medical direction.
+<!-- deploy nudge 23:16 -->
