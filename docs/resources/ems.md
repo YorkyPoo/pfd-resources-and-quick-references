@@ -4,7 +4,7 @@ Everything attached to the **EMS side** — protocols, skills procedures, medica
 
 <div class="qljump" markdown="1">
 
-**Jump:** [Cardiac](#cardiac) [Respiratory](#respiratory) [Trauma](#trauma) [Medical](#medical) [Administrative](#administrative) [Procedures](#procedures) [Toxicology](#toxicology) [Neurologic](#neurologic) [General](#general) [Pharmacology](#pharmacology) [Medications & Calculators](#medications-calculators) [Pediatric Dosing Reference](#pediatric-dosing-reference) [EMS SOPs](#ems-sops) [Front Matter](#front-matter) [Protocol Tracker](#protocol-tracker)
+**Jump:** [Cardiac](#cardiac) [Respiratory](#respiratory) [Trauma](#trauma) [Medical](#medical) [Administrative](#administrative) [Procedures](#procedures) [Toxicology](#toxicology) [Neurologic](#neurologic) [General](#general) [Pharmacology](#pharmacology) [Medications & Calculators](#medications-calculators) [Pediatric Dosing Reference](#pediatric-dosing-reference) [EMS SOPs](#ems-sops) [Front Matter](#front-matter)
 
 </div>
 
@@ -180,7 +180,3 @@ Everything attached to the **EMS side** — protocols, skills procedures, medica
 - [Introduction](../protocols/front-matter/00 - Introduction.md)
 - [How to Read the Protocols](../protocols/front-matter/01 - How to Read the Protocols.md)
 - [Universal Patient Care](../protocols/front-matter/Universal Patient Care.md)
-
-## Protocol Tracker
-
-- [Overview](../protocols/00 - Master Protocol Tracker.md)

@@ -302,8 +302,6 @@ nav:
     - Introduction: protocols/front-matter/00 - Introduction.md
     - How to Read the Protocols: protocols/front-matter/01 - How to Read the Protocols.md
     - Universal Patient Care: protocols/front-matter/Universal Patient Care.md
-  - Protocol Tracker:
-    - Overview: protocols/00 - Master Protocol Tracker.md
 - Personnel Policies:
   - Policy Manual (Indexed): personnel-policies/index.md
   - Full Text Archive: personnel-policies/other/personnel-policy-manual.md

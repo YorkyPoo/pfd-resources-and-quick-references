@@ -14,7 +14,7 @@
 
 <div class="qltools" markdown="1">
 
-[Dosing Calculator](pediatric-dosing/calculator.md) [Dosing Tables](pediatric-dosing/dosing-tables.md) [Drugs & Calculators](medications.md) [Protocol Index](protocols/00 - Master Protocol Tracker.md) [Alarm Assignments](fire-ems-references/initial-alarm-company-assignments.md) [First to Arrive (EO 6.00)](sops/emergency-operations/EO-600-First-to-Arrive-Duties.md)
+[Dosing Calculator](pediatric-dosing/calculator.md) [Dosing Tables](pediatric-dosing/dosing-tables.md) [Drugs & Calculators](medications.md) [Skills Procedures](resources/ems.md#procedures) [Alarm Assignments](fire-ems-references/initial-alarm-company-assignments.md) [First to Arrive (EO 6.00)](sops/emergency-operations/EO-600-First-to-Arrive-Duties.md)
 
 </div>
 
@@ -32,13 +32,13 @@
 
 <div class="qlone" markdown="1">
 
-**[EMS Resources](resources/ems.md)** <span class="qlcount">132 pages · procedures inside</span>
+**[EMS Resources](resources/ems.md)** <span class="qlcount">131 pages · procedures inside</span>
 
 </div>
 
 <div class="qljump" markdown="1">
 
-**EMS:** [Cardiac](resources/ems.md#cardiac) [Respiratory](resources/ems.md#respiratory) [Trauma](resources/ems.md#trauma) [Medical](resources/ems.md#medical) [Administrative](resources/ems.md#administrative) [Procedures](resources/ems.md#procedures) [Toxicology](resources/ems.md#toxicology) [Neurologic](resources/ems.md#neurologic) [General](resources/ems.md#general) [Pharmacology](resources/ems.md#pharmacology) [Medications & Calculators](resources/ems.md#medications-calculators) [Pediatric Dosing Reference](resources/ems.md#pediatric-dosing-reference) [EMS SOPs](resources/ems.md#ems-sops) [Front Matter](resources/ems.md#front-matter) [Protocol Tracker](resources/ems.md#protocol-tracker)
+**EMS:** [Cardiac](resources/ems.md#cardiac) [Respiratory](resources/ems.md#respiratory) [Trauma](resources/ems.md#trauma) [Medical](resources/ems.md#medical) [Administrative](resources/ems.md#administrative) [Procedures](resources/ems.md#procedures) [Toxicology](resources/ems.md#toxicology) [Neurologic](resources/ems.md#neurologic) [General](resources/ems.md#general) [Pharmacology](resources/ems.md#pharmacology) [Medications & Calculators](resources/ems.md#medications-calculators) [Pediatric Dosing Reference](resources/ems.md#pediatric-dosing-reference) [EMS SOPs](resources/ems.md#ems-sops) [Front Matter](resources/ems.md#front-matter)
 
 </div>
 

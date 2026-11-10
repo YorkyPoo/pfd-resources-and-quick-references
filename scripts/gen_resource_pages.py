@@ -40,7 +40,6 @@ QL_END = "<!-- QUICKLINKS:END -->"
 GROUP_RENAME = {
     ("EMS", "EMS"): "EMS SOPs",                    # was buried under "Fire SOPs"
     ("Fire & EMS References", "FIRE"): "Field References",
-    ("EMS Protocols", "EMS"): "Protocol Tracker",
 }
 
 # display order inside each hub AND in the homepage jump strips — highest-traffic
@@ -51,8 +50,8 @@ FIRE_ORDER = ["Emergency Operations", "Field References", "Strategies", "Framewo
               "General Administration", "Public Relations"]
 EMS_ORDER = ["Cardiac", "Respiratory", "Trauma", "Medical", "Administrative",
              "Procedures", "Toxicology", "Neurologic", "General", "Pharmacology",
-             "Medications & Calculators", "Pediatric Dosing Reference", "EMS SOPs",
-             "Front Matter", "Protocol Tracker"]
+             "Medications & Calculators", "Pediatric Dosing Reference",
+             "EMS SOPs", "Front Matter"]
 
 # Static one-tap tools on the homepage: no scrolling, no menu. Labels are ours
 # (the source pages carry truncated PDF-dump titles). Every path is validated
@@ -62,7 +61,7 @@ SCENE_TOOLS = [
     ("Dosing Calculator", "pediatric-dosing/calculator.md"),
     ("Dosing Tables", "pediatric-dosing/dosing-tables.md"),
     ("Drugs & Calculators", "medications.md"),
-    ("Protocol Index", "protocols/00 - Master Protocol Tracker.md"),
+    ("Skills Procedures", "resources/ems.md#procedures"),
     ("Alarm Assignments", "fire-ems-references/initial-alarm-company-assignments.md"),
     ("First to Arrive (EO 6.00)", "sops/emergency-operations/EO-600-First-to-Arrive-Duties.md"),
 ]
@@ -225,7 +224,7 @@ def quicklinks_block(records):
                          "EMS", EMS_ORDER)
 
     nav_paths = {r["file"] for r in records if r["file"]}
-    missing = [p for _l, p in SCENE_TOOLS if p not in nav_paths]
+    missing = [p for _l, p in SCENE_TOOLS if p.split("#")[0] not in nav_paths]
     missing += [p for _l, p in POLICY_CHIPS if not (DOCS / p).exists()]
     if missing:
         raise SystemExit(f"curated link target no longer exists: {missing}")
