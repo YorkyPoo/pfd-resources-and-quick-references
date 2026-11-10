@@ -6,61 +6,29 @@ Welcome to the digital protocol library. This system is designed for **Conscious
 
 ## Quick Links
 
-<div class="grid cards" markdown="1">
+<!-- QUICKLINKS:START (generated — scripts/gen_resource_pages.py; do not hand-edit) -->
 
--   __Interactive Calculator__
+<div class="qlinks" markdown="1">
 
-    Zone & weight selector for every pediatric standing order, plus normal vitals & hypotension thresholds.
-
-    [Open →](pediatric-dosing/calculator.md)
-
--   __Dosing Tables__
-
-    All 15 pediatric drugs × 10 Broselow zones, pre-calculated. Scroll zones, drug column stays pinned.
-
-    [Open →](pediatric-dosing/dosing-tables.md)
-
--   __Medications & Calculators__
-
-    Adult pharmacology cards: dose, max, route, and clinical pearls.
-
-    [Open →](medications.md)
-
--   __Master Protocol Tracker__
-
-    The full protocol library index — every PROC at a glance.
-
-    [Open →](protocols/00 - Master Protocol Tracker.md)
-
--   __Initial Alarm Company Assignments__
-
-    Company-by-company duties on the first alarm — single-family, commercial, high-rise, extrication (EO 6.00 §XII).
-
-    [Open →](fire-ems-references/initial-alarm-company-assignments.md)
-
--   __PPE & Equipment SOPs__
-
-    PPE / equipment standards and inspection procedures (EA 500 / EA 800).
-
-    [Open →](sops/equipment-and-apparatus/EA-500-PPE-and-Equipment.md)
-
--   __Personnel Policy Manual__
-
-    Split into 43 indexed policies with jumpable sections.
-
-    [Open →](personnel-policies/index.md)
-
--   __Fire & EMS SOPs__
-
-    Full SOP library — open the menu (bottom-right on phones) under Fire SOPs.
-
-    [EO 10 · Staffing →](sops/emergency-operations/EO-10-Staffing-and-Equipment-Response-202406130909086447.md)
+- **[Fire Resources](resources/fire.md)** <span class="qlcount">90 pages</span>
+- **[EMS Resources](resources/ems.md)** <span class="qlcount">132 pages · procedures inside</span>
+- **[Personnel Policies](personnel-policies/index.md)** <span class="qlcount">indexed manual</span>
 
 </div>
 
+<div class="qljump" markdown="1">
+
+**Fire:** [Field References](resources/fire.md#field-references) [Frameworks](resources/fire.md#frameworks) [Strategies](resources/fire.md#strategies) [Emergency Operations](resources/fire.md#emergency-operations) [Equipment & Apparatus](resources/fire.md#equipment-apparatus) [Special Operations](resources/fire.md#special-operations) [Safety & Health](resources/fire.md#safety-health) [Public Relations](resources/fire.md#public-relations) [General Administration](resources/fire.md#general-administration)
+
+**EMS:** [Protocol Tracker](resources/ems.md#protocol-tracker) [Front Matter](resources/ems.md#front-matter) [Respiratory](resources/ems.md#respiratory) [Cardiac](resources/ems.md#cardiac) [Trauma](resources/ems.md#trauma) [Medical](resources/ems.md#medical) [Neurologic](resources/ems.md#neurologic) [Toxicology](resources/ems.md#toxicology) [General](resources/ems.md#general) [Administrative](resources/ems.md#administrative) [Pharmacology](resources/ems.md#pharmacology) [Medications & Calculators](resources/ems.md#medications-calculators) [Procedures](resources/ems.md#procedures) [Pediatric Dosing Reference](resources/ems.md#pediatric-dosing-reference) [EMS SOPs](resources/ems.md#ems-sops)
+
+</div>
+
+<!-- QUICKLINKS:END -->
+
 ---
 
-## 🆕 New & Updated
+## New & Updated
 
 _Last 45 days, newest first — generated automatically from the site's change history._
 
