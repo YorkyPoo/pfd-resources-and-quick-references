@@ -27,9 +27,13 @@
 - **0.1 mg/kg** rapid IV push — (max **6 mg** first dose) followed immediately by a rapid flush.
 
 ## Pharmacokinetics
+<div class="sc-wrap tw" markdown="1">
+
 | Onset | Duration |
 | :--- | :--- |
 | Seconds | 1 - 2 minutes |
+
+</div>
 
 ## Side Effects
 - Brief facial flushing

@@ -308,11 +308,15 @@ function resetCalc() {
 </tbody></table></div>
 
 !!! warning "Hypotension is age-scaled — memorize the formula"
+<div class="sc-wrap tw" markdown="1">
+
     | Age | Systolic hypotensive below |
     |---|---|
     | 1 month – 1 year | **70 mmHg** |
     | 1 – 10 years | **70 + (2 × age-in-years) mmHg** |
     | 11 years – adult | **90 mmHg** |
+
+</div>
 
     Anaphylaxis generally drops systolic BP **30% or more** — in a known-allergen call the downward trend is the shock signal, even while the absolute number still looks acceptable.
 

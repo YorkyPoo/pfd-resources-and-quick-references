@@ -29,12 +29,16 @@ All doses below are calculated from **Poquoson Fire & Rescue Patient Care Protoc
 
 These medications have the same dose for pediatric and adult patients per Poquoson protocols:
 
+<div class="sc-wrap tw" markdown="1">
+
 | Medication | Dose | Protocol |
 |------------|:----:|:--------:|
 | Albuterol Nebulized | 3 mL of 0.083% solution | Respiratory Distress / Asthma |
 | Ipratropium Bromide Nebulized | 3 mL of 0.02% solution | Asthma / COPD |
 | Epinephrine Nebulized (Stridor) | 3 mg [1 mg/mL] | Pediatric Stridor / Respiratory Distress |
 | NS Nebulized (Bronchiolitis) | 6 mL | Respiratory Distress |
+
+</div>
 
 ## Equipment Sizing by Weight Zone
 
@@ -66,6 +70,8 @@ These medications have the same dose for pediatric and adult patients per Poquos
 
 ## Defibrillation & Cardioversion
 
+<div class="sc-wrap tw" markdown="1">
+
 | Rhythm | Energy | Notes |
 |--------|:------:|-------|
 | **VF/Pulseless VT** (Defib) | 2 J/kg initial, then 4 J/kg | Biphasic defibrillator |
@@ -73,10 +79,14 @@ These medications have the same dose for pediatric and adult patients per Poquos
 | **Unstable SVT** | 1-2 J/kg | Increase if ineffective |
 | **Atrial Fib/Flutter** | 0.5-1 J/kg | Synchronized |
 
+</div>
+
 ## Quick Reference Cards (by Zone)
 
 ---
 ### Pink (3-5 kg) — 50-60 cm
+
+<div class="sc-wrap tw" markdown="1">
 
 | Medication | Dose | Route |
 |:-----------|:----:|:-----:|
@@ -94,12 +104,16 @@ These medications have the same dose for pediatric and adult patients per Poquos
 | Calcium Chloride | 80 mg IV/IO | Special circ. (max 1 g) |
 | Sodium Bicarbonate | 4 mEq IV/IO | Special circ. (max 50 mEq) |
 
+</div>
+
 **Equipment:** ETT 3.0 cuffed / LMA 1.0 / Blade 0 Miller / NG 5 Fr / Foley 6 Fr
 
 **Defib:** 2 J/kg (8 J) → 4 J/kg (16 J) | **CVD:** 0.5-1 J/kg (4 J)
 
 ---
 ### Red (6-7 kg) — 60-70 cm
+
+<div class="sc-wrap tw" markdown="1">
 
 | Medication | Dose | Route |
 |:-----------|:----:|:-----:|
@@ -117,12 +131,16 @@ These medications have the same dose for pediatric and adult patients per Poquos
 | Calcium Chloride | 130 mg IV/IO | Special circ. (max 1 g) |
 | Sodium Bicarbonate | 6 mEq IV/IO | Special circ. (max 50 mEq) |
 
+</div>
+
 **Equipment:** ETT 3.5 cuffed / LMA 1.5 / Blade 1 Miller / NG 5 Fr / Foley 8 Fr
 
 **Defib:** 2 J/kg (13 J) → 4 J/kg (26 J) | **CVD:** 0.5-1 J/kg (6 J)
 
 ---
 ### Purple (8-9 kg) — 70-85 cm
+
+<div class="sc-wrap tw" markdown="1">
 
 | Medication | Dose | Route |
 |:-----------|:----:|:-----:|
@@ -140,12 +158,16 @@ These medications have the same dose for pediatric and adult patients per Poquos
 | Calcium Chloride | 170 mg IV/IO | Special circ. (max 1 g) |
 | Sodium Bicarbonate | 8 mEq IV/IO | Special circ. (max 50 mEq) |
 
+</div>
+
 **Equipment:** ETT 4.0 cuffed / LMA 1.5 / Blade 1 Miller / NG 8 Fr / Foley 8 Fr
 
 **Defib:** 2 J/kg (17 J) → 4 J/kg (34 J) | **CVD:** 0.5-1 J/kg (8 J)
 
 ---
 ### Yellow (10-11 kg) — 85-95 cm
+
+<div class="sc-wrap tw" markdown="1">
 
 | Medication | Dose | Route |
 |:-----------|:----:|:-----:|
@@ -163,12 +185,16 @@ These medications have the same dose for pediatric and adult patients per Poquos
 | Calcium Chloride | 210 mg IV/IO | Special circ. (max 1 g) |
 | Sodium Bicarbonate | 10 mEq IV/IO | Special circ. (max 50 mEq) |
 
+</div>
+
 **Equipment:** ETT 4.5 cuffed / LMA 2.0 / Blade 1 Miller / NG 8 Fr / Foley 10 Fr
 
 **Defib:** 2 J/kg (21 J) → 4 J/kg (42 J) | **CVD:** 0.5-1 J/kg (10 J)
 
 ---
 ### White (12-14 kg) — 95-105 cm
+
+<div class="sc-wrap tw" markdown="1">
 
 | Medication | Dose | Route |
 |:-----------|:----:|:-----:|
@@ -186,12 +212,16 @@ These medications have the same dose for pediatric and adult patients per Poquos
 | Calcium Chloride | 260 mg IV/IO | Special circ. (max 1 g) |
 | Sodium Bicarbonate | 13 mEq IV/IO | Special circ. (max 50 mEq) |
 
+</div>
+
 **Equipment:** ETT 5.0 cuffed / LMA 2.0 / Blade 2 Miller / NG 10 Fr / Foley 10 Fr
 
 **Defib:** 2 J/kg (26 J) → 4 J/kg (52 J) | **CVD:** 0.5-1 J/kg (13 J)
 
 ---
 ### Blue (15-18 kg) — 105-120 cm
+
+<div class="sc-wrap tw" markdown="1">
 
 | Medication | Dose | Route |
 |:-----------|:----:|:-----:|
@@ -209,12 +239,16 @@ These medications have the same dose for pediatric and adult patients per Poquos
 | Calcium Chloride | 330 mg IV/IO | Special circ. (max 1 g) |
 | Sodium Bicarbonate | 16 mEq IV/IO | Special circ. (max 50 mEq) |
 
+</div>
+
 **Equipment:** ETT 5.5 cuffed / LMA 2.5 / Blade 2 Miller / NG 10 Fr / Foley 12 Fr
 
 **Defib:** 2 J/kg (33 J) → 4 J/kg (66 J) | **CVD:** 0.5-1 J/kg (16 J)
 
 ---
 ### Orange (19-23 kg) — 120-135 cm
+
+<div class="sc-wrap tw" markdown="1">
 
 | Medication | Dose | Route |
 |:-----------|:----:|:-----:|
@@ -232,12 +266,16 @@ These medications have the same dose for pediatric and adult patients per Poquos
 | Calcium Chloride | 420 mg IV/IO | Special circ. (max 1 g) |
 | Sodium Bicarbonate | 21 mEq IV/IO | Special circ. (max 50 mEq) |
 
+</div>
+
 **Equipment:** ETT 6.0 cuffed / LMA 2.5 / Blade 2-3 Mac / NG 14 Fr / Foley 12 Fr
 
 **Defib:** 2 J/kg (42 J) → 4 J/kg (84 J) | **CVD:** 0.5-1 J/kg (21 J)
 
 ---
 ### Green (24-29 kg) — 135-150 cm
+
+<div class="sc-wrap tw" markdown="1">
 
 | Medication | Dose | Route |
 |:-----------|:----:|:-----:|
@@ -256,12 +294,16 @@ These medications have the same dose for pediatric and adult patients per Poquos
 | Calcium Chloride | 530 mg IV/IO | Special circ. (max 1 g) |
 | Sodium Bicarbonate | 26 mEq IV/IO | Special circ. (max 50 mEq) |
 
+</div>
+
 **Equipment:** ETT 6.5 cuffed / LMA 3.0 / Blade 2-3 Mac / NG 14 Fr / Foley 14 Fr
 
 **Defib:** 2 J/kg (53 J) → 4 J/kg (106 J) | **CVD:** 0.5-1 J/kg (26 J)
 
 ---
 ### Brown (30-36 kg) — 150-160 cm
+
+<div class="sc-wrap tw" markdown="1">
 
 | Medication | Dose | Route |
 |:-----------|:----:|:-----:|
@@ -280,12 +322,16 @@ These medications have the same dose for pediatric and adult patients per Poquos
 | Calcium Chloride | 660 mg IV/IO | Special circ. (max 1 g) |
 | Sodium Bicarbonate | 33 mEq IV/IO | Special circ. (max 50 mEq) |
 
+</div>
+
 **Equipment:** ETT 7.0 cuffed / LMA 3.0 / Blade 3 Mac / NG 14 Fr / Foley 14 Fr
 
 **Defib:** 2 J/kg (66 J) → 4 J/kg (132 J) | **CVD:** 0.5-1 J/kg (33 J)
 
 ---
 ### Gray (37-46 kg) — 160-170 cm
+
+<div class="sc-wrap tw" markdown="1">
 
 | Medication | Dose | Route |
 |:-----------|:----:|:-----:|
@@ -303,6 +349,8 @@ These medications have the same dose for pediatric and adult patients per Poquos
 | NS Bolus | 830 mL IV/IO | Shock/Resuscitation (20 mL/kg) |
 | Calcium Chloride | 830 mg IV/IO | Special circ. (max 1 g) |
 | Sodium Bicarbonate | 41 mEq IV/IO | Special circ. (max 50 mEq) |
+
+</div>
 
 **Equipment:** ETT 7.0 cuffed / LMA 3.0 / Blade 3 Mac / NG 14 Fr / Foley 14 Fr
 

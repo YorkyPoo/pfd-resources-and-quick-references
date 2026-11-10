@@ -5,6 +5,8 @@ mobile navigation. Each page carries jumpable sub-section headings in the right 
 (table of contents). The complete original text remains available in the
 [Full Text Archive](other/personnel-policy-manual.md).
 
+<div class="sc-wrap tw" markdown="1">
+
 | Sec | Policy | Sections |
 |:---:|--------|:---:|
 | 00 | [Introduction](policies/00-introduction.md) | 1 |
@@ -51,3 +53,6 @@ mobile navigation. Each page carries jumpable sub-section headings in the right 
 | 41 | [Grievance Procedure](policies/41-grievance-procedure.md) | 5 |
 | 42 | [Resignations and Separations](policies/42-resignations-and-separations.md) | 5 |
 | 43 | [Retiree Health Insurance Coverage](policies/43-retiree-health-insurance-coverage.md) | 1 |
+
+</div>
+

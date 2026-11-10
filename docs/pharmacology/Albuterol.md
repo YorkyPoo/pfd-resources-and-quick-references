@@ -24,9 +24,13 @@
 - **2.5 mg** in **3 mL** Nebulized — May repeat as needed.
 
 ## Pharmacokinetics
+<div class="sc-wrap tw" markdown="1">
+
 | Onset | Duration |
 | :--- | :--- |
 | 5 - 15 minutes | 3 - 4 hours |
+
+</div>
 
 ## Side Effects
 - Tremor, nervousness
@@ -42,7 +46,6 @@
 ## Pearls
 - ⚠ **Warning:** Monitor closely for tachycardia, especially when used in combination with other sympathomimetic agents such as **[Epinephrine](Epinephrine.md)**.
 - May be used in crush injuries to assist with decreasing serum potassium.
-
 
 !!! info "Pediatric Dosing"
     For length-based pediatric dosing, see the [Pediatric Dosing Reference](../pediatric-dosing/index.md).

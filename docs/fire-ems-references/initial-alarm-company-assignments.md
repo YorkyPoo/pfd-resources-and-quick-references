@@ -9,11 +9,15 @@
 
 > **Provenance:** confirmed directly with the City of Poquoson dispatcher, October 2026. EO 10.00 (*Staffing and Equipment Response*) delegates the authoritative assignment list to a **Response Matrix approved by the Fire Chief and loaded into CAD** — attached to the SOP as an addendum, so this call-type breakdown exists nowhere else in written form.
 
+<div class="sc-wrap tw" markdown="1">
+
 | Call type | Initial response |
 |---|---|
 | **Single-family residential fire** | 2 Medics · 1 Engine · 2 Aerials · 1 Squad · 1 Battalion |
 | **Commercial (addition to the above)** | +1 Engine |
 | **Second alarm (add-on set)** | 1 Medic · 1 Engine · 1 Aerial · 1 Battalion |
+
+</div>
 
 Once the listed companies are committed, work each unit per the assignment matrix below (EO 6.00 §XII).
 

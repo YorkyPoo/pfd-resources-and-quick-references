@@ -6,11 +6,17 @@ These pages are **formatted references, not the authority**. Where a reference d
 
 ## Company Assignments
 
+<div class="sc-wrap tw" markdown="1">
+
 | Reference | Source | Use |
 |---|---|---|
 | [Initial Alarm Company Assignments](initial-alarm-company-assignments.md) | EO 6.00 §XII | Company-by-company duties: single-family, commercial residential, commercial non-residential, high/mid-rise, extrication |
 
+</div>
+
 ## Frameworks
+
+<div class="sc-wrap tw" markdown="1">
 
 | Reference | Use |
 |---|---|
@@ -18,7 +24,11 @@ These pages are **formatted references, not the authority**. Where a reference d
 | [SAW CSS RECEO VSS](frameworks/saw-css-receo-vss.md) | Priorities and action models with source literature |
 | [Reference Cards](frameworks/reference-cards.md) | Seven-side size-up cards and quick field cards |
 
+</div>
+
 ## Strategies
+
+<div class="sc-wrap tw" markdown="1">
 
 | Reference | Source protocol |
 |---|---|
@@ -26,6 +36,8 @@ These pages are **formatted references, not the authority**. Where a reference d
 | [Defensive](strategies/defensive.md) | EO 6.00 §IX |
 | [Transitional](strategies/transitional.md) | EO 6.00 §IX |
 | [SIGNAL Victim Profiling](strategies/signal-victim-profiling.md) | EO 6.00 §XV survivability profiling |
+
+</div>
 
 ## Submit a reference
 

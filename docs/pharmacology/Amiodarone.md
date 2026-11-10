@@ -25,9 +25,13 @@
 - **5 mg/kg** IV/IO — for Cardiac Arrest (max **300 mg**).
 
 ## Pharmacokinetics
+<div class="sc-wrap tw" markdown="1">
+
 | Onset | Duration |
 | :--- | :--- |
 | Immediate | Variable (days to weeks) |
+
+</div>
 
 ## Side Effects
 - Hypotension
