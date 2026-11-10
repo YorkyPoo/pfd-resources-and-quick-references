@@ -25,9 +25,13 @@
 - **Not specified in protocol**
 
 ## Pharmacokinetics
+<div class="sc-wrap tw" markdown="1">
+
 | Onset | Duration |
 | :--- | :--- |
 | 75-90 seconds | 30-60 minutes |
+
+</div>
 
 ## Side Effects
 - Bradycardia (rare)

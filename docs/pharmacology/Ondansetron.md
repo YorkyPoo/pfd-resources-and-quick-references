@@ -38,10 +38,14 @@
 
 ## Pharmacokinetics
 
+<div class="sc-wrap tw" markdown="1">
+
 | Route | Onset / Peak Effect | Duration |
 | :--- | :--- | :--- |
 | IV/IM | Rapid; peak effect in 15-30 minutes | IV: 2-4 hours |
 | ODT | Rapid; peak effect in 1-2 hours | ODT: 12-24 hours |
+
+</div>
 
 ## Side Effects
 

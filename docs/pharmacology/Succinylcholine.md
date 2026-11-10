@@ -30,9 +30,13 @@
 - **Not specified in protocol**
 
 ## Pharmacokinetics
+<div class="sc-wrap tw" markdown="1">
+
 | Onset | Duration |
 | :--- | :--- |
 | 30 – 45 seconds | 5 to 10 minutes |
+
+</div>
 
 ## Side Effects
 - Fasciculations / myoclonus
