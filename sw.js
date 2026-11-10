@@ -1,8 +1,8 @@
 // Pre-Cache Service Worker for Poquoson Fire & Rescue Protocols
-// Generated: 20261110-135445
+// Generated: 20261110-223415
 // Caches ALL protocols on first visit for full offline access
 
-const CACHE_NAME = "pfd-protocols-v20261110-135445";
+const CACHE_NAME = "pfd-protocols-v20261110-223415";
 
 const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/404.html",
@@ -113,7 +113,6 @@ const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/procedures/Tourniquet_Application.html",
     "/pfd-resources-and-quick-references/procedures/Transcutaneous_Pacing.html",
     "/pfd-resources-and-quick-references/procedures/Vaccination.html",
-    "/pfd-resources-and-quick-references/protocols/00 - Master Protocol Tracker.html",
     "/pfd-resources-and-quick-references/protocols/administrative/01_ALS_Release_to_BLS_PROC.html",
     "/pfd-resources-and-quick-references/protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.html",
     "/pfd-resources-and-quick-references/protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.html",
