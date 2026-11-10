@@ -122,6 +122,8 @@ Aortic Dissections usually occur in the thoracic cavity when the aortic intima i
 **Preparation:** 4 mg Norepinephrine / 250 mL Normal Saline
 **Adult Dosing Range:** Starting at 0.1-0.5 mcg/kg/minute. Titrate to desired response.
 
+<div class="sc-wrap tw" markdown="1">
+
 | Weight Range (kg) | mcg/min range (min-max) | mL/min range (min-max) | drops/min range (min-max) |
 | :---: | :---: | :---: | :---: |
 | 45-50 | 4.50-25.00 | 0.28-1.56 | 3-16 |
@@ -141,6 +143,8 @@ Aortic Dissections usually occur in the thoracic cavity when the aortic intima i
 | 116-120 | 11.60-60.00 | 0.73-3.75 | 7-38 |
 | 121-125 | 12.10-62.50 | 0.76-3.91 | 8-39 |
 | 126-130 | 12.60-65.00 | 0.79-4.06 | 8-41 |
+
+</div>
 
 **Pediatric Dose Range:** 0.05-0.1 mcg/kg/minute. Titrate to desired effect.
 **Maximum Dose:** 2 mcg/kg/minute

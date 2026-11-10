@@ -44,6 +44,8 @@ This administrative protocol establishes the operational guidelines to rapidly i
 
 ### PCI Capable Receiving Centers
 
+<div class="sc-wrap tw" markdown="1">
+
 | Hospital | Phone | Surgical | Notes |
 | :--- | :--- | :---: | :--- |
 | Bon Secours Mary Immaculate Hospital | (757) 875-5202 | No | PCI only |
@@ -57,6 +59,9 @@ This administrative protocol establishes the operational guidelines to rapidly i
 | Mary Washington Hospital (REMS) | (540) 373-0348 | Yes | PCI + Surgical |
 | Spotsylvania RMC (REMS) | (540) 898-1751 | No | PCI only |
 | VCU Medical Center (ODEMSA) | (804) 828-3989 | Yes | PCI + Surgical |
+
+</div>
+
 ### Pearls
 1. ⚠ Do NOT provide patient identifiers (Name/DOB) over the HEAR radio system. Call COR with "Pre-Hospital STEMI Alert" and identifiers.
 2. Time targets are critical: Acquire 12-lead within 5 minutes of arrival, and activate the STEMI alert system to the closest PCI center within 30 minutes.

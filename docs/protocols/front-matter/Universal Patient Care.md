@@ -7,9 +7,13 @@ The Universal Patient Care / Initial Patient Contact protocol applies to all pat
 
 ### Assessment & Criteria
 
+<div class="sc-wrap tw" markdown="1">
+
 | History of Present Illness (HPI) | Signs and Symptoms | Considerations (Differential) |
 | :--- | :--- | :--- |
 | • Obtain chief complaint<br>• Determine mechanism of injury or nature of illness<br>• Obtain patient history and medication list | • Assess baseline vital signs<br>• Perform Primary and Secondary Survey<br>• Assess Glasgow Coma Scale (GCS) | • **AEIOU TIPS** (See Pearls for Altered Mental Status)<br>• **SMASHED 2** (See Pearls for Altered Mental Status)<br>• Consider underlying medical vs. traumatic etiology |
+
+</div>
 
 ### Interventions
 

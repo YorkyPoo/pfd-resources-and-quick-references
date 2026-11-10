@@ -62,6 +62,8 @@ This protocol outlines the assessment and management of patients presenting with
 *To mix, add **4 mg** [Norepinephrine](../../pharmacology/Norepinephrine.md) to **250 mL** **0.9% Sodium Chloride***
 *Final Concentration: **16 mcg/mL***
 
+<div class="sc-wrap tw" markdown="1">
+
 | Dose | Drops per minute with 60-drop set |
 | :--- | :--- |
 | **5 mcg/min** | 19 |
@@ -75,9 +77,13 @@ This protocol outlines the assessment and management of patients presenting with
 | **17.5 mcg/min** | 65 |
 | **20 mcg/min** | 75 |
 
+</div>
+
 ### [Epinephrine](../../pharmacology/Epinephrine.md) Drip Chart
 *To mix, add **1 mg (1 mg/mL)** [Epinephrine](../../pharmacology/Epinephrine.md) to **100 mL** **0.9% Sodium Chloride***
 *Final Concentration: **10 mcg/mL***
+
+<div class="sc-wrap tw" markdown="1">
 
 | Dose | Drops per minute with 60-drop set |
 | :--- | :--- |
@@ -91,3 +97,6 @@ This protocol outlines the assessment and management of patients presenting with
 | **8 mcg/min** | 48 |
 | **9 mcg/min** | 54 |
 | **10 mcg/min** | 60 |
+
+</div>
+

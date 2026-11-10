@@ -7,6 +7,8 @@ A nested mnemonic where the top-level letters **F.O.R.C.E.S.** match the **arriv
 
 ## The Top Level
 
+<div class="sc-wrap tw" markdown="1">
+
 | Letter | Sub-mnemonic     | Unit & role                                  |
 | :----- | :--------------- | :------------------------------------------- |
 | **F**  | **F.A.S.T.E.R.** | 1st engine (Tower 1) — command & attack      |
@@ -15,6 +17,8 @@ A nested mnemonic where the top-level letters **F.O.R.C.E.S.** match the **arriv
 | **C**  | **C.L.E.A.R.**   | Aerial interior (Ladder 1) — search & rescue |
 | **E**  | **E.X.T.R.A.**   | Aerial exterior (Ladder 1) — ladders & vent  |
 | **S**  | **S.T.A.T.**     | Squad (Squad 3) — support priorities         |
+
+</div>
 
 ## F.A.S.T.E.R. — First Engine
 

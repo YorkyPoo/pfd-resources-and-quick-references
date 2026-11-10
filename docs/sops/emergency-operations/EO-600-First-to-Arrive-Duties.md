@@ -52,11 +52,15 @@ Firefighter safety shall remain a primary consideration in all operational decis
 ## VII. Size-Up
 The first arriving officer shall conduct a continuous size-up evaluating:
 
+<div class="sc-wrap tw" markdown="1">
+
 | Group | Factors |
 | :--- | :--- |
 | **Building** | Occupancy, construction type, size and configuration, number of stories, access and egress, exposures, utilities |
 | **Incident** | Location and extent of fire, smoke conditions, victim survivability profile, collapse potential, hazardous conditions, fire spread potential |
 | **Resource** | Staffing, water supply, apparatus placement, additional resource needs |
+
+</div>
 
 A 360-degree assessment shall be completed whenever conditions and staffing permit. See [Mnemonics](../../fire-ems-references/frameworks/mnemonics.md) for the COAL WAS WEALTH size-up model.
 
@@ -68,11 +72,15 @@ The first arriving unit shall provide: unit identification, confirmation of arri
 
 ## IX. Strategic Decision-Making
 
+<div class="sc-wrap tw" markdown="1">
+
 | Strategy | Used When |
 |---|---|
 | **[Offensive](../../fire-ems-references/strategies/offensive.md)** | Conditions support interior operations; viable rescue profile; adequate staffing; building stability reasonably assured |
 | **[Defensive](../../fire-ems-references/strategies/defensive.md)** | Collapse imminent; fire conditions exceed resources; no survivable space; unacceptable risk to personnel |
 | **[Transitional](../../fire-ems-references/strategies/transitional.md)** | Exterior cooling will improve conditions; rapid reduction required before interior attack; conditions support transition to offensive operations |
+
+</div>
 
 ## X. Water Supply
 When smoke or fire conditions are reported or observed:

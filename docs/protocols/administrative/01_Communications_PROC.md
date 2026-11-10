@@ -44,6 +44,8 @@ This protocol outlines the procedures for effectively communicating with Medical
 ### Regional Resources & Telephone Numbers
 
 #### Air Transport
+<div class="sc-wrap tw" markdown="1">
+
 | Service | Phone |
 | :--- | :--- |
 | Nightingale Air Ambulance (Norfolk) | (800) 572-4354 / (757) 388-5597 |
@@ -53,7 +55,11 @@ This protocol outlines the procedures for effectively communicating with Medical
 | Air-Care Air Ambulance (Fredericksburg/Fairfax) | (800) 258-8181 / (703) 698-2980 |
 | UVA Pegasus Air Ambulance (Charlottesville) | (800) 552-1826 / (434) 978-4426 |
 
+</div>
+
 #### COR (Consultation, Order, Refusal)
+<div class="sc-wrap tw" markdown="1">
+
 | Facility | Phone |
 | :--- | :--- |
 | Sentara Careplex | (757) 224-4188 |
@@ -67,7 +73,11 @@ This protocol outlines the procedures for effectively communicating with Medical
 | VCU Children\u2019s Hospital | (804) 828-3989 |
 | VCU Tappahannock | (804) 442-6297 |
 
+</div>
+
 #### Other Resources
+<div class="sc-wrap tw" markdown="1">
+
 | Resource | Phone |
 | :--- | :--- |
 | PEMS CISM Team | (757) 220-4356 |
@@ -82,4 +92,7 @@ This protocol outlines the procedures for effectively communicating with Medical
 | U.S. Coast Guard (Helicopter) | (757) 398-6231 |
 | Peninsula Regional Technical Rescue Team | (757) 890-3621 / (757) 890-3622 |
 | Tidewater Regional Technical Rescue Team | (757) 427-5033 / (757) 427-5943 |
+
+</div>
+
 5. **Regional Resources:** For contact information regarding air transport, specialized hospitals, and other regional resources, refer to the department’s internal contact list.
