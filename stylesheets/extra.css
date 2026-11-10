@@ -264,3 +264,10 @@
 /* zone-colored sticky cells (equipment matrix): dark text on light chips */
 .dz-zone b, .dz-zone { color: #111 !important; }
 .dz-zone .dz-sub { color: #2b2b2b; font-weight: 600; }
+
+/* .tw — prose tables inside the sc-wrap chassis: breathable columns, single sticky first col */
+.sc-wrap.tw table th:first-child, .sc-wrap.tw table td:first-child { width: auto; min-width: 10em; }
+.sc-wrap.tw table th:nth-child(n+2), .sc-wrap.tw table td:nth-child(n+2) { width: auto; min-width: 7em; text-align: left; padding: .4em .7em; }
+@media only screen and (max-width: 760px) {
+  .sc-wrap.tw table th:nth-child(2), .sc-wrap.tw table td:nth-child(2) { position: static; left: auto; min-width: 7em; border-right: none; }
+}
