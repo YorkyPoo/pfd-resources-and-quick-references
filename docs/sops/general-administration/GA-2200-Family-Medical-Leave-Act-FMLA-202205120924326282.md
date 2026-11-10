@@ -1,6 +1,7 @@
 # GA 22.00 Family Medical Leave Act (FMLA)_202205120924326282
 
-<div class="sop-meta"><strong>SOP</strong> GA 22.00 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 04/27/2012</div>
+!!! info "SOP Header"
+    **SOP** GA 22.00  ·  **Category:** General Administration  ·  **Effective:** 04/27/2012
 
 ## I. Purpose
 

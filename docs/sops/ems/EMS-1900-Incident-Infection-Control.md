@@ -1,6 +1,7 @@
 # EMS 19.00 Incident Infection Control
 
-<div class="sop-meta"><strong>SOP</strong> EMS 19.00 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 10/17/2014</div>
+!!! info "SOP Header"
+    **SOP** EMS 19.00  ·  **Category:** General Administration  ·  **Effective:** 10/17/2014
 
 ## I. Purpose
 

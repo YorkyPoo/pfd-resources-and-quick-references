@@ -1,6 +1,7 @@
 # EMS 8.00 BLS Preceptorship Program
 
-<div class="sop-meta"><strong>SOP</strong> EMS 8.00 &nbsp;·&nbsp; <strong>Category:</strong> EMS Operations &nbsp;·&nbsp; <strong>Effective:</strong> 11/30/2008</div>
+!!! info "SOP Header"
+    **SOP** EMS 8.00  ·  **Category:** EMS Operations  ·  **Effective:** 11/30/2008
 
 ## I. Purpose
 

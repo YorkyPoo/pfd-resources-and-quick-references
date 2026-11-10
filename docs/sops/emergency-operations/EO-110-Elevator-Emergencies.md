@@ -1,6 +1,7 @@
 # EO 11.0 Elevator Emergencies
 
-<div class="sop-meta"><strong>SOP</strong> _ EO 11.0 &nbsp;·&nbsp; <strong>Category:</strong> Emergency Operations</div>
+!!! info "SOP Header"
+    **SOP** EO 11.0  ·  **Category:** Emergency Operations
 
 ## I. Purpose
 

@@ -1,6 +1,14 @@
 # SO 12.00 sUAS Operations
 
-<div class="sop-meta"><strong>SOP</strong> SO 12.00 &nbsp;·&nbsp; <strong>Category:</strong> Special Operations</div>
+!!! info "SOP Header"
+    **SOP** SO 12.00  ·  **Category:** Special Operations
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Referenced SOPs:** [Extreme Weather & Natural Disaster Call-Back](so-1100-extreme-weather-emergencies-and-natural-disaster-call-back-policy.md)
+    - **Named on this page:** [Radio Communications](../emergency-operations/EO-500-Radio-Communications.md) &nbsp;|&nbsp; [Records Retention](../general-administration/GA-1210-Records-Retention.md)
+    - **Browse the rest of this side:** [Fire Resources · Special Operations](../../resources/fire.md#special-operations)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 

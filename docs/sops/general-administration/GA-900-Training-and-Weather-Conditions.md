@@ -1,6 +1,13 @@
 # GA 9.00 Training and Weather Conditions
 
-<div class="sop-meta"><strong>Category:</strong> Training And Weather</div>
+!!! info "SOP Header"
+    **Category:** Training And Weather
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Named on this page:** [Emergency Incident Rehabilitation](../emergency-operations/EO-900-Emergency-Incident-Rehabilitation.md)
+    - **Browse the rest of this side:** [Fire Resources · General Administration](../../resources/fire.md#general-administration)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 City of Poquoson Fire and Rescue To establish guidelines for outside 8 training activities during hot and cold 30 Poquoson Ave. Poquoson, VA 23662 weather months. 757-868-3510 F757-868-3514 This SOP is not all-inclusive and cannot encompass all situations that may be encountered. GENERAL ADMINISTRATION

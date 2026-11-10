@@ -1,6 +1,13 @@
 # GA 19.20 Acting Officer Program
 
-<div class="sop-meta"><strong>SOP</strong> GA 19.20 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 11/01/2018 &nbsp;·&nbsp; <strong>Revised:</strong> 5/22/2020</div>
+!!! info "SOP Header"
+    **SOP** GA 19.20  ·  **Category:** General Administration  ·  **Effective:** 11/01/2018  ·  **Revised:** 5/22/2020
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Referenced SOPs:** [Promotional Process - Fire Lieutenant](GA-1900-Promotional-Process-for-Fire-Lieutenant-202407120905160146.md)
+    - **Browse the rest of this side:** [Fire Resources · General Administration](../../resources/fire.md#general-administration)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 

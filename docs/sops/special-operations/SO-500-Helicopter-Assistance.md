@@ -1,6 +1,7 @@
 # SO 5.00 Helicopter Assistance
 
-<div class="sop-meta"><strong>SOP</strong> SO 5.00 &nbsp;·&nbsp; <strong>Category:</strong> Special Operations &nbsp;·&nbsp; <strong>Effective:</strong> 01/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 01/01/2009</div>
+!!! info "SOP Header"
+    **SOP** SO 5.00  ·  **Category:** Special Operations  ·  **Effective:** 01/01/2009  ·  **Revised:** 01/01/2009
 
 ## I. Purpose
 

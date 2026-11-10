@@ -1,6 +1,13 @@
 # SO 13.00 Rescue Task Force Administration
 
-<div class="sop-meta"><strong>SOP</strong> SO 13.00 &nbsp;·&nbsp; <strong>Category:</strong> Special Operations</div>
+!!! info "SOP Header"
+    **SOP** SO 13.00  ·  **Category:** Special Operations
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Named on this page:** [Incident Management System](../emergency-operations/EO-100-Incident-Management-System.md)
+    - **Browse the rest of this side:** [Fire Resources · Special Operations](../../resources/fire.md#special-operations)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 
@@ -168,7 +175,7 @@ Candidate must have proven record of being able to effectively adapt and perform
 
 The successful applicant must hold a current State of Virginia EMS certification (ALS Preferred), American Heart Association CPR certification, Basic Trauma Life Support or equivalent certification and HAZMAT operations certification. Additional training in courses such as Tactical EMS, PALS, ACLS, etc. is not a requirement for applicants but will be considered beneficial in consideration.
 
-**Note Law Enforcement may appoint non-EMS certified individuals to the team to act as security and provide tactical training to the rest of the team. All members will be taught basic Self Aid/Buddy Aid techniques in accordance with TCCC guidelines
+**Note Law Enforcement may appoint non-EMS certified individuals to the team to act as security and provide tactical training to the rest of the team. All members will be taught basic Self Aid/Buddy Aid techniques in accordance with TCCC guidelines**
 
 Special Operations
 

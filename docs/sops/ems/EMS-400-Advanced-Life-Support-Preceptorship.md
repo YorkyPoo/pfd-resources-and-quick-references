@@ -1,6 +1,13 @@
 # EMS 4.00 Advanced Life Support Preceptorship
 
-<div class="sop-meta"><strong>SOP</strong> EMS 4.00 &nbsp;·&nbsp; <strong>Category:</strong> EMS Operations &nbsp;·&nbsp; <strong>Effective:</strong> 11/30/2008</div>
+!!! info "SOP Header"
+    **SOP** EMS 4.00  ·  **Category:** EMS Operations  ·  **Effective:** 11/30/2008
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Named on this page:** [Endotracheal Intubation](../../procedures/Endotracheal_Intubation.md) &nbsp;|&nbsp; [Chest Pain](../../protocols/cardiac/04_Chest_Pain_ACS_PROC.md)
+    - **Browse the rest of this side:** [EMS Resources · EMS SOPs](../../resources/ems.md#ems-sops)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 

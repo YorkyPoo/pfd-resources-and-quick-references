@@ -1,6 +1,7 @@
 # EO 12.0 Lock Out Tag Out
 
-<div class="sop-meta"><strong>SOP</strong> EO 12.0 &nbsp;·&nbsp; <strong>Category:</strong> General Administration</div>
+!!! info "SOP Header"
+    **SOP** EO 12.0  ·  **Category:** General Administration
 
 ## I. Purpose
 

@@ -1,6 +1,7 @@
 # EMS 17.00 Mandatory Reporting
 
-<div class="sop-meta"><strong>SOP</strong> EMS 17.0 &nbsp;·&nbsp; <strong>Category:</strong> EMS Operations &nbsp;·&nbsp; <strong>Effective:</strong> 94/19/2011</div>
+!!! info "SOP Header"
+    **SOP** EMS 17.0  ·  **Category:** EMS Operations  ·  **Effective:** 94/19/2011
 
 ## I. Purpose
 

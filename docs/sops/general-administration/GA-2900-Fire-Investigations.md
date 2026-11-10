@@ -1,6 +1,7 @@
 # GA 29.00 Fire Investigations
 
-<div class="sop-meta"><strong>SOP</strong> GA 29.00</div>
+!!! info "SOP Header"
+    **SOP** GA 29.00
 
 ## I. Purpose
 

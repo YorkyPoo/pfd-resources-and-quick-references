@@ -1,6 +1,7 @@
 # EA 1.00 Hose Testing and Maintenance
 
-<div class="sop-meta"><strong>SOP</strong> EA 1.00 &nbsp;·&nbsp; <strong>Category:</strong> Equipment And Apparatus &nbsp;·&nbsp; <strong>Effective:</strong> 06/06/2008 &nbsp;·&nbsp; <strong>Revised:</strong> 04/15/2014</div>
+!!! info "SOP Header"
+    **SOP** EA 1.00  ·  **Category:** Equipment And Apparatus  ·  **Effective:** 06/06/2008  ·  **Revised:** 04/15/2014
 
 ## I. Purpose
 

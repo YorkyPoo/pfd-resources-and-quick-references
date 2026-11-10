@@ -1,6 +1,7 @@
 # EMS 15.00 Regional Protocol Testing
 
-<div class="sop-meta"><strong>SOP</strong> _EMS 15.0 _ &nbsp;·&nbsp; <strong>Category:</strong> EMS Operations &nbsp;·&nbsp; <strong>Effective:</strong> 04/19/2011</div>
+!!! info "SOP Header"
+    **SOP** _EMS 15.0 ·  **Category:** EMS Operations  ·  **Effective:** 04/19/2011
 
 ## I. Purpose
 

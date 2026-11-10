@@ -1,6 +1,13 @@
 # EMS 13.00 EMS Certifications
 
-<div class="sop-meta"><strong>Category:</strong> Ems Certifications</div>
+!!! info "SOP Header"
+    **Category:** Ems Certifications
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Referenced SOPs:** [Release of Confidential Information](EMS-1800-Release-of-Confidential-Information.md) &nbsp;|&nbsp; [Patient Transport](EMS-1200-Patient-Transport.md)
+    - **Browse the rest of this side:** [EMS Resources · EMS SOPs](../../resources/ems.md#ems-sops)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 City of Poquoson The purpose of this policy is to provide Fire and Rescue guidance with the recertification

@@ -1,6 +1,7 @@
 # EA 5.00 PPE and Equipment
 
-<div class="sop-meta"><strong>SOP</strong> EA 5.00 &nbsp;·&nbsp; <strong>Category:</strong> Equipment And Apparatus &nbsp;·&nbsp; <strong>Effective:</strong> 01/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 01/01/2009</div>
+!!! info "SOP Header"
+    **SOP** EA 5.00  ·  **Category:** Equipment And Apparatus  ·  **Effective:** 01/01/2009  ·  **Revised:** 01/01/2009
 
 ## I. Purpose
 

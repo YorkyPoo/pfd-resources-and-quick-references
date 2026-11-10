@@ -1,6 +1,7 @@
 # GA 15.00 Software Copyright Violation
 
-<div class="sop-meta"><strong>SOP</strong> GA 15.00 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Revised:</strong> 02/01/2009</div>
+!!! info "SOP Header"
+    **SOP** GA 15.00  ·  **Category:** General Administration  ·  **Revised:** 02/01/2009
 
 ## I. Purpose
 

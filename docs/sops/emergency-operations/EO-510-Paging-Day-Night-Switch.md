@@ -1,6 +1,7 @@
 # EO 5.10 Paging-Day Night Switch
 
-<div class="sop-meta"><strong>SOP</strong> EO 5.10 &nbsp;·&nbsp; <strong>Category:</strong> General Administration</div>
+!!! info "SOP Header"
+    **SOP** EO 5.10  ·  **Category:** General Administration
 
 ## I. Purpose
 

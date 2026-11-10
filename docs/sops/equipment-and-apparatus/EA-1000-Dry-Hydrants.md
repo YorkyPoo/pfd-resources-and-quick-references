@@ -1,6 +1,7 @@
 # EA 10.00 Dry Hydrants
 
-<div class="sop-meta"><strong>SOP</strong> EA 10 Dry Hydrants &nbsp;·&nbsp; <strong>Category:</strong> Dry Hydrants</div>
+!!! info "SOP Header"
+    **SOP** EA 10 Dry Hydrants  ·  **Category:** Dry Hydrants
 
 ## I. Purpose
 City of Poquoson To provide guidance for testing and Fire and Rescue maintenance of dry hydrants.

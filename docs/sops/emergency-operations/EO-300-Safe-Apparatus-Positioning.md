@@ -1,6 +1,7 @@
 # EO 3.00 Safe Apparatus Positioning
 
-<div class="sop-meta"><strong>Category:</strong> Safe Apparatus Positioning</div>
+!!! info "SOP Header"
+    **Category:** Safe Apparatus Positioning
 
 ## I. Purpose
 City of Poquoson Identifies parking practices for Fire Fire and Rescue Department apparatus and vehicles that

@@ -1,6 +1,7 @@
 # GA 10.00 Hiring Process
 
-<div class="sop-meta"><strong>Category:</strong> Hiring Process</div>
+!!! info "SOP Header"
+    **Category:** Hiring Process
 
 ## I. Purpose
 City of Poquoson This policy is designed to outline the Fire and Rescue required procedures and testing for the

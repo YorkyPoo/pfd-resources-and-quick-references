@@ -1,6 +1,7 @@
 # SO 4.00 Structural Collapse Search and Rescue
 
-<div class="sop-meta"><strong>Category:</strong> Structural Collapse Search</div>
+!!! info "SOP Header"
+    **Category:** Structural Collapse Search
 
 ## I. Purpose
 City of Poquoson Fire and Rescue The purpose of this SOP is to provide Fire

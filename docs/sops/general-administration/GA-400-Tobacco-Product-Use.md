@@ -1,6 +1,7 @@
 # GA 4.00 Tobacco Product Use
 
-<div class="sop-meta"><strong>SOP</strong> GA 4.00 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Revised:</strong> 01/01/2009</div>
+!!! info "SOP Header"
+    **SOP** GA 4.00  ·  **Category:** General Administration  ·  **Revised:** 01/01/2009
 
 ## I. Purpose
 

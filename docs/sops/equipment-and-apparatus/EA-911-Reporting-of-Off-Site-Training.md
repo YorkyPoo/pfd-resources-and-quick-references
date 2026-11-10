@@ -1,6 +1,13 @@
 # EA 9.11 Reporting of Off-Site Training
 
-<div class="sop-meta"><strong>SOP</strong> EA 9.11 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 8/18/2023</div>
+!!! info "SOP Header"
+    **SOP** EA 9.11  ·  **Category:** General Administration  ·  **Effective:** 8/18/2023
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Named on this page:** [Reporting Off-Site Training](../general-administration/GA-911-Reporting-of-Off-Site-Training.md)
+    - **Browse the rest of this side:** [Fire Resources · Equipment & Apparatus](../../resources/fire.md#equipment-apparatus)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 

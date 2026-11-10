@@ -1,6 +1,13 @@
 # SO 1.00 Confined Space Rescue
 
-<div class="sop-meta"><strong>SOP</strong> SO 1.00 &nbsp;·&nbsp; <strong>Category:</strong> Special Operations &nbsp;·&nbsp; <strong>Effective:</strong> 10/30/2008 &nbsp;·&nbsp; <strong>Revised:</strong> 10/30/2008</div>
+!!! info "SOP Header"
+    **SOP** SO 1.00  ·  **Category:** Special Operations  ·  **Effective:** 10/30/2008  ·  **Revised:** 10/30/2008
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Named on this page:** [Pre-Incident Planning](../general-administration/GA-1400-Pre-Incident-Planning.md)
+    - **Browse the rest of this side:** [Fire Resources · Special Operations](../../resources/fire.md#special-operations)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 

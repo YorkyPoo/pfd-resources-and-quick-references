@@ -1,6 +1,7 @@
 # SO 11.00 Extreme Weather Emergencies and Natural Disaster Call-Back Policy
 
-<div class="sop-meta"><strong>SOP</strong> SO 11.00 &nbsp;·&nbsp; <strong>Category:</strong> Special Operations &nbsp;·&nbsp; <strong>Effective:</strong> 08/12/2011</div>
+!!! info "SOP Header"
+    **SOP** SO 11.00  ·  **Category:** Special Operations  ·  **Effective:** 08/12/2011
 
 ## I. Purpose
 

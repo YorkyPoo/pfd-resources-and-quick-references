@@ -1,6 +1,7 @@
 # GA 24.00 Applicant Guidelines and Disqualifiers
 
-<div class="sop-meta"><strong>SOP</strong> GA 24.00 Applicant Guidelines and All potential applicants for career and Disqualifiers volunteer staff. Title: &nbsp;·&nbsp; <strong>Category:</strong> General Administration</div>
+!!! info "SOP Header"
+    **SOP** GA 24.00 Applicant Guidelines and All potential applicants for career and Disqualifiers volunteer staff. Title:  ·  **Category:** General Administration
 
 ## I. Purpose
 City of Poquoson The purpose of this policy is to provide Fire and Rescue guidelines and disqualifiers with respect 830 P A to potential applicants for career and oquoson Ave. Poquoson, VA 23662 volunteer staff. -868-3510 : : . . Brny B68 a51A This SOP is not all-inclusive and cannot encompass all situations that may be encountered.

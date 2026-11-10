@@ -1,6 +1,7 @@
 # EA 4.00 Apparatus Inspection and Maintenance
 
-<div class="sop-meta"><strong>SOP</strong> EA 4.00 &nbsp;·&nbsp; <strong>Category:</strong> Equipment And Apparatus &nbsp;·&nbsp; <strong>Revised:</strong> 01/01/2009</div>
+!!! info "SOP Header"
+    **SOP** EA 4.00  ·  **Category:** Equipment And Apparatus  ·  **Revised:** 01/01/2009
 
 ## I. Purpose
 

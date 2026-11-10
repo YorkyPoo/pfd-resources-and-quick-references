@@ -24,6 +24,12 @@ Manager’s Signature
 
 Emergency Operations in Atmosphere Immediately Dangerous to Life and Health
 
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Named on this page:** [Portable Radios](../equipment-and-apparatus/EA-600-Portable-Radios.md)
+    - **Browse the rest of this side:** [Fire Resources · Emergency Operations](../../resources/fire.md#emergency-operations)
+<!-- CONNECTED:END -->
+
 ## I. Purpose
 
 To establish standard procedures for conducting emergency operations in interior spaces where atmospheres are considered to be immediately dangerous to life and health (IDLH) as established by provisions of the Virginia Occupational Safety and Health regulations.

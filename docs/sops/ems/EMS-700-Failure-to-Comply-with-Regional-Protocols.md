@@ -1,6 +1,7 @@
 # EMS 7.00 Failure to Comply with Regional Protocols
 
-<div class="sop-meta"><strong>Category:</strong> Failure To Comply With</div>
+!!! info "SOP Header"
+    **Category:** Failure To Comply With
 
 ## I. Purpose
 City of Poquoson Fire and Rescue To provide guidance in reporting ,

@@ -1,6 +1,13 @@
 # EMS 20.00 Medication Management and Pharmacy
 
-<div class="sop-meta"><strong>SOP</strong> EMS 20.00 &nbsp;·&nbsp; <strong>Category:</strong> EMS Operations &nbsp;·&nbsp; <strong>Effective:</strong> 09/01/2024</div>
+!!! info "SOP Header"
+    **SOP** EMS 20.00  ·  **Category:** EMS Operations  ·  **Effective:** 09/01/2024
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Referenced SOPs:** [Controlled Substances](EMS-2100-Controlled-Substances.md)
+    - **Browse the rest of this side:** [EMS Resources · EMS SOPs](../../resources/ems.md#ems-sops)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 

@@ -1,6 +1,13 @@
 # EA 7.00 Ladder Maintenance
 
-<div class="sop-meta"><strong>SOP</strong> EA 7.00 &nbsp;·&nbsp; <strong>Category:</strong> Equipment And Apparatus &nbsp;·&nbsp; <strong>Revised:</strong> 01/01/2009</div>
+!!! info "SOP Header"
+    **SOP** EA 7.00  ·  **Category:** Equipment And Apparatus  ·  **Revised:** 01/01/2009
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Named on this page:** [Heat Exposure](../../protocols/general/02_Heat_Exposure_PROC.md)
+    - **Browse the rest of this side:** [Fire Resources · Equipment & Apparatus](../../resources/fire.md#equipment-apparatus)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 

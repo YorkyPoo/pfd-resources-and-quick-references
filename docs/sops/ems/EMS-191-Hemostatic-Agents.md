@@ -1,6 +1,13 @@
 # EMS 19.1 Hemostatic Agents
 
-<div class="sop-meta"><strong>Category:</strong> Hemostatic Agents</div>
+!!! info "SOP Header"
+    **Category:** Hemostatic Agents
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Referenced SOPs:** [Incident Infection Control](EMS-1900-Incident-Infection-Control.md)
+    - **Browse the rest of this side:** [EMS Resources · EMS SOPs](../../resources/ems.md#ems-sops)
+<!-- CONNECTED:END -->
 
 ## II. Applicability
 

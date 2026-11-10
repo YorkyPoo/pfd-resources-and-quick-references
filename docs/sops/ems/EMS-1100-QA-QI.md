@@ -1,6 +1,7 @@
 # EMS 11.00 QA-QI
 
-<div class="sop-meta"><strong>SOP</strong> EMS 11.00 All Career and Volunteer Personnel &nbsp;·&nbsp; <strong>Category:</strong> EMS Operations</div>
+!!! info "SOP Header"
+    **SOP** EMS 11.00 All Career and Volunteer Personnel  ·  **Category:** EMS Operations
 
 ## I. Purpose
 City of Poquoson Fire and Rescue The purpose of this policy is to define the

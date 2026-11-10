@@ -1,6 +1,7 @@
 # EMS 21.00 Controlled Substances
 
-<div class="sop-meta"><strong>SOP</strong> EMS 21.00 &nbsp;·&nbsp; <strong>Category:</strong> EMS Operations &nbsp;·&nbsp; <strong>Effective:</strong> 09/01/2024</div>
+!!! info "SOP Header"
+    **SOP** EMS 21.00  ·  **Category:** EMS Operations  ·  **Effective:** 09/01/2024
 
 ## I. Purpose
 

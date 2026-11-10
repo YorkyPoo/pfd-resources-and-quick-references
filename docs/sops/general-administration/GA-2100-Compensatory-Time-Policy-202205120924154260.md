@@ -1,6 +1,7 @@
 # GA 21.00 Compensatory Time Policy_202205120924154260
 
-<div class="sop-meta"><strong>SOP</strong> GA 21.00 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 93/14/2011</div>
+!!! info "SOP Header"
+    **SOP** GA 21.00  ·  **Category:** General Administration  ·  **Effective:** 93/14/2011
 
 ## I. Purpose
 

@@ -1,6 +1,7 @@
 # PR 3.00 Station Tours
 
-<div class="sop-meta"><strong>SOP</strong> PR 3.00 &nbsp;·&nbsp; <strong>Category:</strong> Public Education And</div>
+!!! info "SOP Header"
+    **SOP** PR 3.00  ·  **Category:** Public Education And
 
 ## I. Purpose
 

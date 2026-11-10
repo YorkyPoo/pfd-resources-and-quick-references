@@ -1,6 +1,7 @@
 # EMS 14.00 Minimum Acceptable Training
 
-<div class="sop-meta"><strong>SOP</strong> _EMS 14.0 &nbsp;·&nbsp; <strong>Category:</strong> EMS Operations &nbsp;·&nbsp; <strong>Effective:</strong> 04/19/2011 &nbsp;·&nbsp; <strong>Revised:</strong> 05/25/2011</div>
+!!! info "SOP Header"
+    **SOP** _EMS 14.0  ·  **Category:** EMS Operations  ·  **Effective:** 04/19/2011  ·  **Revised:** 05/25/2011
 
 ## I. Purpose
 

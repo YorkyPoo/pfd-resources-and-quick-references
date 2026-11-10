@@ -1,6 +1,7 @@
 # EO 7.00 Engine Company Operations
 
-<div class="sop-meta"><strong>SOP</strong> EO 7.00 &nbsp;·&nbsp; <strong>Category:</strong> Emergency Operations</div>
+!!! info "SOP Header"
+    **SOP** EO 7.00  ·  **Category:** Emergency Operations
 
 ## I. Purpose
 

@@ -1,6 +1,7 @@
 # SO 7.00 Explosive Device Incidents
 
-<div class="sop-meta"><strong>Category:</strong> Explosive Device Incidents</div>
+!!! info "SOP Header"
+    **Category:** Explosive Device Incidents
 
 ## I. Purpose
 City of Poquoson The purpose of this SOP is to establish Fire and Rescue procedures governing the response to

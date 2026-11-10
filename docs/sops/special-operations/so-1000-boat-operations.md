@@ -1,6 +1,7 @@
 # SO 10.00 Boat Operations
 
-<div class="sop-meta"><strong>SOP</strong> SO 10.00 &nbsp;·&nbsp; <strong>Category:</strong> Special Operations &nbsp;·&nbsp; <strong>Effective:</strong> 06/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 08/12/2016</div>
+!!! info "SOP Header"
+    **SOP** SO 10.00  ·  **Category:** Special Operations  ·  **Effective:** 06/01/2009  ·  **Revised:** 08/12/2016
 
 ## I. Purpose
 

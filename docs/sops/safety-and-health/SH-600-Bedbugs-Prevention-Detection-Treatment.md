@@ -1,6 +1,13 @@
 # SH 6.00 Bedbugs-Prevention-Detection-Treatment
 
-<div class="sop-meta"><strong>SOP</strong> SH 6.0 &nbsp;·&nbsp; <strong>Category:</strong> EMS Operations &nbsp;·&nbsp; <strong>Effective:</strong> 04/01/2014 &nbsp;·&nbsp; <strong>Revised:</strong> 08/05/2016</div>
+!!! info "SOP Header"
+    **SOP** SH 6.0  ·  **Category:** EMS Operations  ·  **Effective:** 04/01/2014  ·  **Revised:** 08/05/2016
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Named on this page:** [Patient Transport](../ems/EMS-1200-Patient-Transport.md)
+    - **Browse the rest of this side:** [Fire Resources · Safety & Health](../../resources/fire.md#safety-health)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 

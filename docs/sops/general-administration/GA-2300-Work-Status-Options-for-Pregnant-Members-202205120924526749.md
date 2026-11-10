@@ -1,6 +1,14 @@
 # GA 23.00 Work Status Options for Pregnant Members_202205120924526749
 
-<div class="sop-meta"><strong>SOP</strong> GA 23.00 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 04/27/2012</div>
+!!! info "SOP Header"
+    **SOP** GA 23.00  ·  **Category:** General Administration  ·  **Effective:** 04/27/2012
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Referenced SOPs:** [Family Medical Leave Act (FMLA)](GA-2200-Family-Medical-Leave-Act-FMLA-202205120924326282.md)
+    - **Named on this page:** [Heat Exposure](../../protocols/general/02_Heat_Exposure_PROC.md)
+    - **Browse the rest of this side:** [Fire Resources · General Administration](../../resources/fire.md#general-administration)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 

@@ -1,6 +1,7 @@
 # EA 2.00 Pump Testing
 
-<div class="sop-meta"><strong>SOP</strong> EA 2.00 &nbsp;·&nbsp; <strong>Category:</strong> Equipment And Apparatus &nbsp;·&nbsp; <strong>Effective:</strong> 11/30/2008</div>
+!!! info "SOP Header"
+    **SOP** EA 2.00  ·  **Category:** Equipment And Apparatus  ·  **Effective:** 11/30/2008
 
 ## I. Purpose
 

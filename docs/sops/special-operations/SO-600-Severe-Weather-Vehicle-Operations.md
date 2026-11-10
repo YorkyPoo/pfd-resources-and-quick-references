@@ -1,6 +1,7 @@
 # SO 6.00 Severe Weather Vehicle Operations
 
-<div class="sop-meta"><strong>SOP</strong> SO 6.00 &nbsp;·&nbsp; <strong>Category:</strong> Special Operations</div>
+!!! info "SOP Header"
+    **SOP** SO 6.00  ·  **Category:** Special Operations
 
 ## I. Purpose
 

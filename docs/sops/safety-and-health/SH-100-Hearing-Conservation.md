@@ -1,6 +1,7 @@
 # SH 1.00 Hearing Conservation
 
-<div class="sop-meta"><strong>Category:</strong> Hearing Conservation</div>
+!!! info "SOP Header"
+    **Category:** Hearing Conservation
 
 ## I. Purpose
 City of Poquoson To provide minimum requirements for Fire and Rescue establishing a hearing conservation

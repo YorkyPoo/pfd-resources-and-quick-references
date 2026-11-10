@@ -1,6 +1,7 @@
 # GA 19.10 Promotional Process for Master Firefighter_202407120905411525
 
-<div class="sop-meta"><strong>Category:</strong> Promotional Process For</div>
+!!! info "SOP Header"
+    **Category:** Promotional Process For
 
 ## I. Purpose
 City of Poquoson Fire and Rescue The promotional process for Master

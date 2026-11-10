@@ -1,6 +1,13 @@
 # GA 12.10 Records Retention
 
-<div class="sop-meta"><strong>SOP</strong> GA 12.10 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 92/21/2019</div>
+!!! info "SOP Header"
+    **SOP** GA 12.10  ·  **Category:** General Administration  ·  **Effective:** 92/21/2019
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Named on this page:** [Radio Communications](../emergency-operations/EO-500-Radio-Communications.md)
+    - **Browse the rest of this side:** [Fire Resources · General Administration](../../resources/fire.md#general-administration)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 

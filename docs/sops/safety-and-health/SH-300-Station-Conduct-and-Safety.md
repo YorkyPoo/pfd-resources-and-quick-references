@@ -1,6 +1,7 @@
 # SH 3.00 Station Conduct and Safety
 
-<div class="sop-meta"><strong>SOP</strong> SH 3.00 &nbsp;·&nbsp; <strong>Category:</strong> Safety And Health &nbsp;·&nbsp; <strong>Effective:</strong> 01/01/2009</div>
+!!! info "SOP Header"
+    **SOP** SH 3.00  ·  **Category:** Safety And Health  ·  **Effective:** 01/01/2009
 
 ## I. Purpose
 

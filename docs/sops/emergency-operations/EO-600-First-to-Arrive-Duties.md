@@ -1,14 +1,19 @@
 # EO 6.00 - First To Arrive Duties
 
 !!! info "SOP Header"
-**SOP #:** EO 6.00 **Category:** Emergency Operations **Department:** City of Poquoson Fire & Rescue **Effective Date:** 01/01/2009 **Revised Date:** 08/01/2026 **Subject:** First Arriving Unit Duties and Initial Alarm Company Assignments
+    **SOP #:** EO 6.00  
+    **Category:** Emergency Operations  
+    **Department:** City of Poquoson Fire & Rescue  
+    **Effective Date:** 01/01/2009  
+    **Revised Date:** 08/01/2026  
+    **Subject:** First Arriving Unit Duties and Initial Alarm Company Assignments
 
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
 !!! abstract "Connected Notes"
-    - Detailed company-by-company breakdown: [Initial Alarm Company Assignments](../../fire-ems-references/initial-alarm-company-assignments.md)
-    - Study mnemonic (arrival-order checklist): [EO 6.00 FORCES Mnemonic](EO-600a-FORCES-Mnemonic.md)
-    - Department SOP index: Poquoson_SOPs_Summary | Critical SOPs
-    - Tactical frameworks: [Mnemonics](../../fire-ems-references/frameworks/mnemonics.md) | [SAW CSS RECEO VSS](../../fire-ems-references/frameworks/saw-css-receo-vss.md) | [Reference cards](../../fire-ems-references/frameworks/reference-cards.md)
-    - Study roadmaps: SSG - First 5 Minutes Tactical Roadmap | SSG - RECEO VS Tactical Roadmap
+    - **Same SOP family:** [FORCES Mnemonic (Study Aid)](EO-600a-FORCES-Mnemonic.md)
+    - **Named on this page:** [Initial Alarm Company Assignments](../../fire-ems-references/initial-alarm-company-assignments.md) &nbsp;|&nbsp; [SAW CSS RECEO VSS](../../fire-ems-references/frameworks/saw-css-receo-vss.md) &nbsp;|&nbsp; [Reference Cards](../../fire-ems-references/frameworks/reference-cards.md)
+    - **Browse the rest of this side:** [Fire Resources · Emergency Operations](../../resources/fire.md#emergency-operations)
+<!-- CONNECTED:END -->
 
 ---
 
@@ -54,11 +59,11 @@ The first arriving officer shall conduct a continuous size-up evaluating:
 
 <div class="sc-wrap tw" markdown="1">
 
-| Group | Factors |
-| :--- | :--- |
-| **Building** | Occupancy, construction type, size and configuration, number of stories, access and egress, exposures, utilities |
+| Group        | Factors                                                                                                                                      |
+| :----------- | :------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Building** | Occupancy, construction type, size and configuration, number of stories, access and egress, exposures, utilities                             |
 | **Incident** | Location and extent of fire, smoke conditions, victim survivability profile, collapse potential, hazardous conditions, fire spread potential |
-| **Resource** | Staffing, water supply, apparatus placement, additional resource needs |
+| **Resource** | Staffing, water supply, apparatus placement, additional resource needs                                                                       |
 
 </div>
 
@@ -75,7 +80,7 @@ The first arriving unit shall provide: unit identification, confirmation of arri
 <div class="sc-wrap tw" markdown="1">
 
 | Strategy | Used When |
-|---|---|
+| :--- | :--- |
 | **[Offensive](../../fire-ems-references/strategies/offensive.md)** | Conditions support interior operations; viable rescue profile; adequate staffing; building stability reasonably assured |
 | **[Defensive](../../fire-ems-references/strategies/defensive.md)** | Collapse imminent; fire conditions exceed resources; no survivable space; unacceptable risk to personnel |
 | **[Transitional](../../fire-ems-references/strategies/transitional.md)** | Exterior cooling will improve conditions; rapid reduction required before interior attack; conditions support transition to offensive operations |
@@ -128,7 +133,9 @@ Covers: Single-Family Residential Fires, Commercial Residential Occupancies, Com
 - Water supply planning shall begin at the first indication of a working fire.
 - Maintain situational awareness until the incident is terminated.
 
---- *Extracted from the City of Poquoson Fire & Rescue SOP manual (EO 6.00). Source PDF: "EO 6.00 First To Arrive Duties Revised.pdf".*
+---
+*Extracted from the City of Poquoson Fire & Rescue SOP manual (EO 6.00). Source PDF: "EO 6.00 First To Arrive Duties Revised.pdf".*
 
---- *Formatted from **EO 6.00 First To Arrive Duties Revised.pdf** (vault note, last modified 2026-10-09). The signed PDF remains the authoritative document.*
+---
+*Formatted from **EO 6.00 First To Arrive Duties Revised.pdf** (vault note, last modified 2026-10-09). The signed PDF remains the authoritative document.*
 

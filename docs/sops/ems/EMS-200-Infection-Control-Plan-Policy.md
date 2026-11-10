@@ -1,6 +1,7 @@
 # EMS 2.00 Infection Control Plan Policy
 
-<div class="sop-meta"><strong>SOP</strong> EMS 2.00 &nbsp;·&nbsp; <strong>Category:</strong> Emergency Medical &nbsp;·&nbsp; <strong>Effective:</strong> 09/30/2008 &nbsp;·&nbsp; <strong>Revised:</strong> 09/30/2008</div>
+!!! info "SOP Header"
+    **SOP** EMS 2.00  ·  **Category:** Emergency Medical  ·  **Effective:** 09/30/2008  ·  **Revised:** 09/30/2008
 
 ## I. Purpose
 

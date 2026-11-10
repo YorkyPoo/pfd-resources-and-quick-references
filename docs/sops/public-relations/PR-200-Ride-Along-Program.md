@@ -1,6 +1,7 @@
 # PR 2.00 Ride Along Program
 
-<div class="sop-meta"><strong>SOP</strong> PR 2.00 &nbsp;·&nbsp; <strong>Category:</strong> Public Education And &nbsp;·&nbsp; <strong>Effective:</strong> 01/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 01/01/2009</div>
+!!! info "SOP Header"
+    **SOP** PR 2.00  ·  **Category:** Public Education And  ·  **Effective:** 01/01/2009  ·  **Revised:** 01/01/2009
 
 ## I. Purpose
 
@@ -98,7 +99,7 @@ IN WITNESS WHEREOF, I have hereunto set my hand and seal this day of, , 20 Signa
 
 *Return this completed form to the Fire Chiefs Office before riding unit.
 
-**This Release Form is effective from: / / to: /__/__. Poquoson Fire/Rescue Department
+**This Release Form is effective from: / / to: /__/__. Poquoson Fire/Rescue Department**
 
 PUBLIC EDUCATION AND RELATIONS
 

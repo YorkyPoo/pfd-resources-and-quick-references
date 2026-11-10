@@ -1,6 +1,7 @@
 # GA 5.00 Energy Conservation
 
-<div class="sop-meta"><strong>SOP</strong> GA 5.00 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 11/30/2008 &nbsp;·&nbsp; <strong>Revised:</strong> 11/30/2008</div>
+!!! info "SOP Header"
+    **SOP** GA 5.00  ·  **Category:** General Administration  ·  **Effective:** 11/30/2008  ·  **Revised:** 11/30/2008
 
 ## I. Purpose
 

@@ -25,6 +25,9 @@ def wikilink_repl(out_dir, m):
     else:
         target = disp = inner
     target = target.split("#")[0].strip()
+    # a wikilink inside a table cell is written [[Note\|Label]] — the pipe is
+    # ESCAPED, so the backslash survives the split and the lookup misses the map
+    target = target.replace("\\", "").strip()
     key = target.replace("_", " ").strip()
     if key in SITE_MAP:
         rel = posixpath.relpath("docs/" + SITE_MAP[key], start=out_dir)
@@ -87,6 +90,26 @@ def convert(src_path, out_path):
     raw = re.sub(r"\n{3,}", "\n\n", raw).strip() + prov
     Path(out_path).parent.mkdir(parents=True, exist_ok=True)
     Path(out_path).write_text(raw + "\n")
+    # the site copy carries phone-framing + cross-link fixes that the vault note
+    # cannot express; re-apply them deterministically or a re-port silently
+    # regresses them (tables clip at 390px, links vanish)
+    try:
+        import wrap_tables
+        wrapped = wrap_tables.wrap(Path(out_path))
+        if wrapped:
+            print(f"phone framing: {wrapped} table block(s) wrapped")
+    except Exception as e:
+        print("  table framing skipped:", type(e).__name__, e)
+    # connected notes are script-picked here too: if the sweep wrote a box into a
+    # porter-owned page, a plain re-port would silently delete it.
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import gen_connected_notes as cn
+        rel = Path(out_path).resolve().relative_to(Path(__file__).resolve().parent.parent / "docs")
+        n = cn.apply_to_page(str(rel).replace("\\", "/"))
+        print("connected notes: %d link(s) on %s" % (n, rel))
+    except Exception as e:
+        print("  connected notes skipped:", type(e).__name__, e)
     print("ported ->", out_path, f"({len(raw)} chars)")
 
 if __name__ == "__main__":

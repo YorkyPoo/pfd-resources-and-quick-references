@@ -1,6 +1,7 @@
 # SO 2.00 Hazardous Materials Incidents
 
-<div class="sop-meta"><strong>SOP</strong> SO 2.00 &nbsp;·&nbsp; <strong>Category:</strong> Special Operations &nbsp;·&nbsp; <strong>Effective:</strong> 06/06/2008</div>
+!!! info "SOP Header"
+    **SOP** SO 2.00  ·  **Category:** Special Operations  ·  **Effective:** 06/06/2008
 
 ## I. Purpose
 

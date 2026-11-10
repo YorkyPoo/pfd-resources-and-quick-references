@@ -1,6 +1,7 @@
 # SH 4.00 Critical Incident Stress Management
 
-<div class="sop-meta"><strong>SOP</strong> SH 4.00 &nbsp;·&nbsp; <strong>Category:</strong> Safety And Health &nbsp;·&nbsp; <strong>Effective:</strong> 11/30/2008</div>
+!!! info "SOP Header"
+    **SOP** SH 4.00  ·  **Category:** Safety And Health  ·  **Effective:** 11/30/2008
 
 ## I. Purpose
 

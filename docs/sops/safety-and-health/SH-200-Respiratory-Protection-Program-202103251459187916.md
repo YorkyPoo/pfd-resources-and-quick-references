@@ -1,6 +1,13 @@
 # SH 2.00 Respiratory Protection Program_202103251459187916
 
-<div class="sop-meta"><strong>SOP</strong> SH 2.00 &nbsp;·&nbsp; <strong>Category:</strong> Safety And Health</div>
+!!! info "SOP Header"
+    **SOP** SH 2.00  ·  **Category:** Safety And Health
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Named on this page:** [Fire Investigations](../general-administration/GA-2900-Fire-Investigations.md)
+    - **Browse the rest of this side:** [Fire Resources · Safety & Health](../../resources/fire.md#safety-health)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 

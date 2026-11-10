@@ -1,6 +1,7 @@
 # EA 3.00 Map Books
 
-<div class="sop-meta"><strong>Category:</strong> Map Books</div>
+!!! info "SOP Header"
+    **Category:** Map Books
 
 ## I. Purpose
 City of Poquoson To provide guidance and information Fire and Rescue regarding the responsibilities, 830 Poquoson Ave distribution, maintenance, and updates to Poquoson, VA 23662 department map books.

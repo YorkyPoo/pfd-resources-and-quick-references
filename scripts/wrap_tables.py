@@ -29,7 +29,8 @@ def blocks(text):
         i += 1
     return out
 
-def wrap(path):
+def wrap(path, dry=None):
+    dry = DRY if dry is None else dry
     text = path.read_text()
     bl = blocks(text)
     if not bl:
@@ -42,7 +43,7 @@ def wrap(path):
         lines.insert(start, f'<div class="{cls}" markdown="1">\n')
     new = "\n".join(lines)
     new = re.sub(r"\n{3,}", "\n\n", new)
-    if not DRY:
+    if not dry:
         path.write_text(new)
     return len(bl)
 

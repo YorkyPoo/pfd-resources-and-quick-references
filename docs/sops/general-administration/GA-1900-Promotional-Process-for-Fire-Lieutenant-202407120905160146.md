@@ -1,6 +1,7 @@
 # GA 19.00 Promotional Process for Fire Lieutenant_202407120905160146
 
-<div class="sop-meta"><strong>SOP</strong> GA 19.00 &nbsp;·&nbsp; <strong>Category:</strong> General Administration</div>
+!!! info "SOP Header"
+    **SOP** GA 19.00  ·  **Category:** General Administration
 
 ## I. Purpose
 The promotional process for Fire

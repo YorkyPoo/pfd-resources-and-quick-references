@@ -1,6 +1,13 @@
 # EO 1.00 Incident Management System
 
-<div class="sop-meta"><strong>SOP</strong> EO 1.00 &nbsp;·&nbsp; <strong>Category:</strong> Emergency Operations &nbsp;·&nbsp; <strong>Effective:</strong> 1/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 01/01/2009</div>
+!!! info "SOP Header"
+    **SOP** EO 1.00  ·  **Category:** Emergency Operations  ·  **Effective:** 1/01/2009  ·  **Revised:** 01/01/2009
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Named on this page:** [Elevator Emergencies](EO-110-Elevator-Emergencies.md) &nbsp;|&nbsp; [Chain of Command](../general-administration/GA-100-Chain-of-Command.md) &nbsp;|&nbsp; [Portable Radios](../equipment-and-apparatus/EA-600-Portable-Radios.md)
+    - **Browse the rest of this side:** [Fire Resources · Emergency Operations](../../resources/fire.md#emergency-operations)
+<!-- CONNECTED:END -->
 
 ## IV. Operational Description
 

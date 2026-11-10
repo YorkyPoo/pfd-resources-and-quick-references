@@ -1,6 +1,7 @@
 # GA 9.10 Training Administration
 
-<div class="sop-meta"><strong>SOP</strong> GA 9.10 &nbsp;·&nbsp; <strong>Category:</strong> Training &nbsp;·&nbsp; <strong>Effective:</strong> 04/21/2011</div>
+!!! info "SOP Header"
+    **SOP** GA 9.10  ·  **Category:** Training  ·  **Effective:** 04/21/2011
 
 ## I. Purpose
 

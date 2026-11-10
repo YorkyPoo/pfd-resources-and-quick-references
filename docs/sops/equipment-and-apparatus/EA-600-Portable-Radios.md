@@ -1,6 +1,7 @@
 # EA 6.00 Portable Radios
 
-<div class="sop-meta"><strong>SOP</strong> EA 6.00 &nbsp;·&nbsp; <strong>Category:</strong> Equipment And Apparatus &nbsp;·&nbsp; <strong>Effective:</strong> 01/01/2009</div>
+!!! info "SOP Header"
+    **SOP** EA 6.00  ·  **Category:** Equipment And Apparatus  ·  **Effective:** 01/01/2009
 
 ## I. Purpose
 

@@ -1,6 +1,7 @@
 # EO 4.00 Ventilation
 
-<div class="sop-meta"><strong>SOP</strong> EO 4.00 &nbsp;·&nbsp; <strong>Category:</strong> Emergency Operations &nbsp;·&nbsp; <strong>Effective:</strong> 01/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 01/01/2009</div>
+!!! info "SOP Header"
+    **SOP** EO 4.00  ·  **Category:** Emergency Operations  ·  **Effective:** 01/01/2009  ·  **Revised:** 01/01/2009
 
 ## I. Purpose
 

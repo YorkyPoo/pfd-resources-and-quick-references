@@ -1,6 +1,13 @@
 # EO 9.00 Emergency Incident Rehabilitation
 
-<div class="sop-meta"><strong>Category:</strong> Emergency Incident</div>
+!!! info "SOP Header"
+    **Category:** Emergency Incident
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Named on this page:** [Chest Pain](../../protocols/cardiac/04_Chest_Pain_ACS_PROC.md)
+    - **Browse the rest of this side:** [Fire Resources · Emergency Operations](../../resources/fire.md#emergency-operations)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 City of Poquoson Fire and Rescue To establish uniform procedures for 830 Poquoson Ave. proper Emergency Incident Rehabilitation Poquoson, VA 23662 (REHAB). 757-868-3510 . : . 7 F757-868-3514 This SOP is not all inclusive and cannot encompass all situations which may be encountered. EMERGENCY OPERATIONS

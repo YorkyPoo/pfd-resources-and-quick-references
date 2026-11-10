@@ -1,6 +1,7 @@
 # EMS 3.00 EMS Supplies and Equipment
 
-<div class="sop-meta"><strong>SOP</strong> EMS 3.00 &nbsp;·&nbsp; <strong>Category:</strong> Ems Operation</div>
+!!! info "SOP Header"
+    **SOP** EMS 3.00  ·  **Category:** Ems Operation
 
 ## I. Purpose
 

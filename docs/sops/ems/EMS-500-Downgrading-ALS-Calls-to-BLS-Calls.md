@@ -1,6 +1,13 @@
 # EMS 5.00 Downgrading ALS Calls to BLS Calls
 
-<div class="sop-meta"><strong>SOP</strong> EMS 5.00 &nbsp;·&nbsp; <strong>Category:</strong> EMS Operations &nbsp;·&nbsp; <strong>Effective:</strong> 11/30/2008 &nbsp;·&nbsp; <strong>Revised:</strong> 11/30/2008</div>
+!!! info "SOP Header"
+    **SOP** EMS 5.00  ·  **Category:** EMS Operations  ·  **Effective:** 11/30/2008  ·  **Revised:** 11/30/2008
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Named on this page:** [Respiratory Arrest](../../protocols/respiratory/03_Respiratory_Arrest_PROC.md) &nbsp;|&nbsp; [Allergic Reaction](../../protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md) &nbsp;|&nbsp; [Chest Pain](../../protocols/cardiac/04_Chest_Pain_ACS_PROC.md)
+    - **Browse the rest of this side:** [EMS Resources · EMS SOPs](../../resources/ems.md#ems-sops)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 

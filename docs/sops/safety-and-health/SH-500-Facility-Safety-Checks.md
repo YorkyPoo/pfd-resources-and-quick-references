@@ -1,6 +1,7 @@
 # SH 5.00 Facility Safety Checks
 
-<div class="sop-meta"><strong>SOP</strong> SH 5.00 &nbsp;·&nbsp; <strong>Category:</strong> Safety And Health</div>
+!!! info "SOP Header"
+    **SOP** SH 5.00  ·  **Category:** Safety And Health
 
 ## I. Purpose
 

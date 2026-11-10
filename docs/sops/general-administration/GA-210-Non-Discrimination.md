@@ -1,6 +1,7 @@
 # GA 2.10 Non-Discrimination
 
-<div class="sop-meta"><strong>SOP</strong> GA2.10 &nbsp;·&nbsp; <strong>Category:</strong> Fire Suppression &nbsp;·&nbsp; <strong>Effective:</strong> 09/18/2023</div>
+!!! info "SOP Header"
+    **SOP** GA2.10  ·  **Category:** Fire Suppression  ·  **Effective:** 09/18/2023
 
 ## I. Purpose
 

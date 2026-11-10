@@ -1,6 +1,13 @@
 # EMS 10.00 ALS Engine Response
 
-<div class="sop-meta"><strong>Category:</strong> Als Engine Response</div>
+!!! info "SOP Header"
+    **Category:** Als Engine Response
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Named on this page:** [Respiratory Arrest](../../protocols/respiratory/03_Respiratory_Arrest_PROC.md) &nbsp;|&nbsp; [Chest Pain](../../protocols/cardiac/04_Chest_Pain_ACS_PROC.md)
+    - **Browse the rest of this side:** [EMS Resources · EMS SOPs](../../resources/ems.md#ems-sops)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 City of Poquoson Provide Dispatch/Response Guidelines Fire and Rescue for ALS Medical Emergencies for the

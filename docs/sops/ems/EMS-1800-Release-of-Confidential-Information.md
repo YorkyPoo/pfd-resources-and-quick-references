@@ -1,6 +1,7 @@
 # EMS 18.00 Release of Confidential Information
 
-<div class="sop-meta"><strong>SOP</strong> EMS 18.0 &nbsp;·&nbsp; <strong>Category:</strong> EMS Operations &nbsp;·&nbsp; <strong>Effective:</strong> 04/27/2012</div>
+!!! info "SOP Header"
+    **SOP** EMS 18.0  ·  **Category:** EMS Operations  ·  **Effective:** 04/27/2012
 
 ## I. Purpose
 

@@ -1,6 +1,13 @@
 # GA 6.00 Shift Trades
 
-<div class="sop-meta"><strong>SOP</strong> GA 6.00 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 01/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 10/01/2018</div>
+!!! info "SOP Header"
+    **SOP** GA 6.00  ·  **Category:** General Administration  ·  **Effective:** 01/01/2009  ·  **Revised:** 10/01/2018
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Named on this page:** [Chain of Command](GA-100-Chain-of-Command.md)
+    - **Browse the rest of this side:** [Fire Resources · General Administration](../../resources/fire.md#general-administration)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 

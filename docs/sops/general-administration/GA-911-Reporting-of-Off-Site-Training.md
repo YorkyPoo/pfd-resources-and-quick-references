@@ -1,6 +1,13 @@
 # GA 9.11 Reporting of Off-Site Training
 
-<div class="sop-meta"><strong>Category:</strong> Reporting Off-Site Training</div>
+!!! info "SOP Header"
+    **Category:** Reporting Off-Site Training
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Named on this page:** [Reporting Off-Site Training](../equipment-and-apparatus/EA-911-Reporting-of-Off-Site-Training.md)
+    - **Browse the rest of this side:** [Fire Resources · General Administration](../../resources/fire.md#general-administration)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 City of Poquoson | To provide documentation for training to Fire and Rescue better support our high standard of

@@ -1,6 +1,7 @@
 # SO 3.00 Elevator Entrapment Rescues
 
-<div class="sop-meta"><strong>SOP</strong> SO 3.00 &nbsp;·&nbsp; <strong>Category:</strong> Special Operations &nbsp;·&nbsp; <strong>Effective:</strong> 10/30/2008 &nbsp;·&nbsp; <strong>Revised:</strong> 10/30/2008</div>
+!!! info "SOP Header"
+    **SOP** SO 3.00  ·  **Category:** Special Operations  ·  **Effective:** 10/30/2008  ·  **Revised:** 10/30/2008
 
 ## I. Purpose
 

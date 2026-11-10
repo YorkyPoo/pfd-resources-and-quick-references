@@ -1,6 +1,7 @@
 # GA 18.00 Promotional Process for Battalion Chief_202407090842463106
 
-<div class="sop-meta"><strong>SOP</strong> GA 18.00 &nbsp;·&nbsp; <strong>Category:</strong> General Administration &nbsp;·&nbsp; <strong>Effective:</strong> 06/06/2008</div>
+!!! info "SOP Header"
+    **SOP** GA 18.00  ·  **Category:** General Administration  ·  **Effective:** 06/06/2008
 
 ## I. Purpose
 

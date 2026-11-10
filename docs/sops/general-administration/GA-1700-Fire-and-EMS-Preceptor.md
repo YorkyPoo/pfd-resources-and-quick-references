@@ -1,6 +1,7 @@
 # GA 17.00 Fire and EMS Preceptor
 
-<div class="sop-meta"><strong>Category:</strong> Fire & Ems Preceptor</div>
+!!! info "SOP Header"
+    **Category:** Fire & Ems Preceptor
 
 ## I. Purpose
 City of Poquoson The purpose of this policy is to identify the Fire and Rescue requirements for EMS and Fire Preceptors

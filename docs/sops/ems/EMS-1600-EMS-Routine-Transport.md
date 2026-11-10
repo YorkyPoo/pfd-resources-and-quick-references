@@ -1,6 +1,13 @@
 # EMS 16.00 EMS Routine Transport
 
-<div class="sop-meta"><strong>Category:</strong> Ems Routine Transport</div>
+!!! info "SOP Header"
+    **Category:** Ems Routine Transport
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Referenced SOPs:** [Incident Management System](../emergency-operations/EO-100-Incident-Management-System.md)
+    - **Browse the rest of this side:** [EMS Resources · EMS SOPs](../../resources/ems.md#ems-sops)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 City of Poquoson The purpose of this policy is to provide Fire and Rescue guidance for handling non-emergency 830 Poquoson Ave. requests for transport. P , VA 2366 : : 7 : oa57 868-3510 ° This SOP is not all-inclusive and cannot F757-868-3514 encompass all situations that may be encountered. EMS ROUTINE TRANSPORT

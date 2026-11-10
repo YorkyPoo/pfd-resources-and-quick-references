@@ -1,6 +1,14 @@
 # EO 5.00 Radio Communications
 
-<div class="sop-meta"><strong>SOP</strong> EO 5.00 &nbsp;·&nbsp; <strong>Category:</strong> Emergency Operations &nbsp;·&nbsp; <strong>Effective:</strong> 01/01/2009 &nbsp;·&nbsp; <strong>Revised:</strong> 91/01/2009</div>
+!!! info "SOP Header"
+    **SOP** EO 5.00  ·  **Category:** Emergency Operations  ·  **Effective:** 01/01/2009  ·  **Revised:** 91/01/2009
+
+<!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
+!!! abstract "Connected Notes"
+    - **Referenced SOPs:** [General EMS Guidelines](../ems/EMS-100-General-EMS-Guidelines.md) &nbsp;|&nbsp; [Infection Control Plan](../ems/EMS-200-Infection-Control-Plan-Policy.md) &nbsp;|&nbsp; [EMS Supplies & Equipment](../ems/EMS-300-EMS-Supplies-and-Equipment.md)
+    - **Named on this page:** [Incident Management System](EO-100-Incident-Management-System.md)
+    - **Browse the rest of this side:** [Fire Resources · Emergency Operations](../../resources/fire.md#emergency-operations)
+<!-- CONNECTED:END -->
 
 ## I. Purpose
 
