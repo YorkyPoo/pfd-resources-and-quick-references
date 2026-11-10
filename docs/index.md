@@ -14,7 +14,7 @@
 
 <div class="qltools" markdown="1">
 
-[Dosing Calculator](pediatric-dosing/calculator.md) [Dosing Tables](pediatric-dosing/dosing-tables.md) [Drugs & Calculators](medications.md) [Skills Procedures](resources/ems.md#procedures) [Alarm Assignments](fire-ems-references/initial-alarm-company-assignments.md) [First to Arrive (EO 6.00)](sops/emergency-operations/EO-600-First-to-Arrive-Duties.md)
+[Pediatric Dosing Calculator](pediatric-dosing/calculator.md) [Pediatric Dosing Tables](pediatric-dosing/dosing-tables.md) [Drugs & Calculators](medications.md) [Skills Procedures](resources/ems.md#procedures) [Alarm Assignments](fire-ems-references/initial-alarm-company-assignments.md) [First to Arrive (EO 6.00)](sops/emergency-operations/EO-600-First-to-Arrive-Duties.md)
 
 </div>
 

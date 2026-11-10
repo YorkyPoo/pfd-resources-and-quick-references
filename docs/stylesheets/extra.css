@@ -218,7 +218,7 @@
 .qlcap p { margin: 0; }
 
 /* static one-tap tools */
-.qltools { display: flex; flex-wrap: wrap; gap: .4em; margin: 0 0 1.1em; }
+.qltools { display: flex; flex-wrap: wrap; gap: .4em; margin: 0 0 .75em; }
 .qltools p { display: contents; }
 .qltools a {
   flex: 1 1 46%; text-align: center; text-decoration: none;
@@ -231,7 +231,7 @@
 @media only screen and (min-width: 761px) { .qltools a { flex: 0 0 auto; } }
 
 /* door row: full-width, one line, big target */
-.qlone { margin: .1em 0 .45em; }
+.qlone { margin: .1em 0 .35em; }
 .qlone p { margin: 0; }
 .qlone a {
   display: block; min-height: 58px; padding: .85em .9em; border-radius: 10px;
@@ -244,10 +244,10 @@
 
 /* Group jump: horizontal chip strips (homepage + each hub page). One row per
    bucket; scrolls sideways instead of stacking into a wall of pills. */
-.qljump { margin: .4em 0 1.1em; font-size: .84em; }
+.qljump { margin: .3em 0 .8em; font-size: .84em; }
 .qljump p {
-  display: flex; align-items: center; gap: .38em; margin: 0 0 .4em;
-  padding: .55em .6em; border-radius: 10px; background: var(--md-code-bg-color);
+  display: flex; align-items: center; gap: .38em; margin: 0 0 .3em;
+  padding: .5em .6em; border-radius: 10px; background: var(--md-code-bg-color);
   overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap;
   /* thin, quiet scrollbar + right-edge fade so "there is more" is visible
      without a thick grey track running under the row */
@@ -284,6 +284,13 @@
 [data-md-color-scheme="slate"] .qljump a:hover { background: rgba(255, 138, 128, .26); }
 [data-md-color-scheme="slate"] .qljump p::-webkit-scrollbar-thumb { background: rgba(255,138,128,.5); }
 
+/* Home page only: the site name already sits in the top bar, so the page title
+   costs a screen of scroll for nothing. Compress it when the quick-links block
+   is present (:has() — degrades to the normal title on older engines). */
+article:has(.qltools) h1:first-of-type { font-size: 1.25em; margin: .1em 0 .3em; }
+article:has(.qltools) h1:first-of-type + p { margin: 0 0 .45em; font-size: .9em; }
+article:has(.qltools) h2:first-of-type { font-size: 1.15em; margin: .45em 0 .3em; }
+
 /* Homepage recent-updates list */
 .recent-list { list-style: none; padding: 0; margin: 0; }
 .recent-list li { padding: .45em 0; border-bottom: 1px solid var(--md-default-bg-color--lighter); }
@@ -291,6 +298,8 @@
 .recent-sha { float: right; color: #9e9e9e; font-family: var(--md-code-font-family); font-size: .68rem; }
 .recent-files { font-size: .76rem; padding-left: .4em; }
 .recent-files a { color: var(--md-typeset-a-color); }
+/* pages a commit removed: named in the changelog, but never linked */
+.recent-removed { color: var(--md-default-fg-color--lighter); text-decoration: line-through; }
 .recent-more { color: #9e9e9e; font-size: .72rem; }
 
 /* Phone bottom menu: hamburger relocates to bottom-right thumb zone */

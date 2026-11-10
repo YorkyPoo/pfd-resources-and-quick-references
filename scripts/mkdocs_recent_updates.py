@@ -38,12 +38,17 @@ def _recent_html(config):
             if len(items) >= 12:
                 break
     out = ['<ul class="recent-list">']
+    root = Path(_git_root(config))
     for it in items:
         links = []
         for f in it["files"][:4]:
-            url = f[:-3] + ".html"
             label = Path(f).stem.replace("-", " ").replace("_", " ")
-            links.append('<a href="{}">{}</a>'.format(url, label))
+            # --name-only lists DELETIONS too; linking a removed page 404s and the
+            # nav regex even treats it as a live nav entry. Show it as plain text.
+            if (root / "docs" / f).exists():
+                links.append('<a href="{}">{}</a>'.format(f[:-3] + ".html", label))
+            else:
+                links.append('<span class="recent-removed">{}</span>'.format(label))
         more = "<span class='recent-more'>+{} more</span>".format(len(it["files"]) - 4) if len(it["files"]) > 4 else ""
         out.append(
             '<li><span class="recent-date">{d}</span> <b>{m}</b>'

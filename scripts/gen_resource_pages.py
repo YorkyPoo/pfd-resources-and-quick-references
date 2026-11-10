@@ -58,8 +58,8 @@ EMS_ORDER = ["Cardiac", "Respiratory", "Trauma", "Medical", "Administrative",
 # against the live nav, so a renamed page breaks the build instead of shipping
 # a dead tile.
 SCENE_TOOLS = [
-    ("Dosing Calculator", "pediatric-dosing/calculator.md"),
-    ("Dosing Tables", "pediatric-dosing/dosing-tables.md"),
+    ("Pediatric Dosing Calculator", "pediatric-dosing/calculator.md"),
+    ("Pediatric Dosing Tables", "pediatric-dosing/dosing-tables.md"),
     ("Drugs & Calculators", "medications.md"),
     ("Skills Procedures", "resources/ems.md#procedures"),
     ("Alarm Assignments", "fire-ems-references/initial-alarm-company-assignments.md"),
