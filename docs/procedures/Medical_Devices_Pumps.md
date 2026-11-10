@@ -5,6 +5,8 @@
 Management of patients with implanted, wearable, or attached medication or cardiac support devices.
 
 ### Procedures
+<div class="sc-wrap tw" markdown="1">
+
 | Device | Action / Intervention |
 | :--- | :--- |
 | **VAD** | Assess VAD (alarms/hum). If batteries depleted, replace one at a time (never both). If unable to restart: Begin CPR, follow Cardiac Arrest protocol. |
@@ -13,6 +15,8 @@ Management of patients with implanted, wearable, or attached medication or cardi
 | **LifeVest** | Do not remove unless impeding care. Stand clear if alarm is sounding. If removed, monitor rhythm. |
 | **Insulin Pump** | If blood glucose <60 mg/dL, turn pump off or remove. |
 | **PICC/Med Port** | Access PICC only if emergently needed and IV access fails (2 attempts). Do not access central catheters/ports. |
+
+</div>
 
 ### Pearls
 *   VAD/TAH patients usually have extensive experience and contact info for device coordinators. Coordinators are extremely helpful but cannot provide binding medical control orders.
