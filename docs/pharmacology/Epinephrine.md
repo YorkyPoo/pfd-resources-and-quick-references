@@ -28,9 +28,13 @@
 - Not specified in protocol
 
 ## Pharmacokinetics
+<div class="sc-wrap tw" markdown="1">
+
 | Onset | Duration |
 | :--- | :--- |
 | Not specified in protocol | Not specified in protocol |
+
+</div>
 
 ## Side Effects
 - Anxiety
@@ -45,7 +49,6 @@
 - ⚠ **Warning:** May induce tachyarrhythmias and/or ACS. Continuous monitoring of vitals is required. Monitoring of cardiac rhythm is also preferred.
 - ⚠ **Warning:** May cause tissue ischemia / necrosis with extravasation. Use proximal IV site (Antecubital or higher) and verify patency prior to IV administration/infusion.
 - Protect from exposure to light.
-
 
 !!! info "Pediatric Dosing"
     For length-based pediatric dosing, see the [Pediatric Dosing Reference](../pediatric-dosing/index.md).

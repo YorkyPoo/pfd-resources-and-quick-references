@@ -27,9 +27,13 @@
 - Not specified in protocol
 
 ## Pharmacokinetics
+<div class="sc-wrap tw" markdown="1">
+
 | Onset | Duration |
 | :--- | :--- |
 | Not specified | Not specified |
+
+</div>
 
 ## Side Effects
 - Palpitations
