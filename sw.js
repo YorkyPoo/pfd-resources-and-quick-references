@@ -1,8 +1,8 @@
 // Pre-Cache Service Worker for Poquoson Fire & Rescue Protocols
-// Generated: 20261110-023747
+// Generated: 20261110-131754
 // Caches ALL protocols on first visit for full offline access
 
-const CACHE_NAME = "pfd-protocols-v20261110-023747";
+const CACHE_NAME = "pfd-protocols-v20261110-131754";
 
 const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/404.html",
@@ -173,6 +173,8 @@ const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/protocols/trauma/09_Hemorrhage_Control_PROC.html",
     "/pfd-resources-and-quick-references/protocols/trauma/09_Lightning_Injuries_PROC.html",
     "/pfd-resources-and-quick-references/protocols/trauma/09_Trauma_PROC.html",
+    "/pfd-resources-and-quick-references/resources/ems.html",
+    "/pfd-resources-and-quick-references/resources/fire.html",
     "/pfd-resources-and-quick-references/sops/emergency-operations/EO-10-Staffing-and-Equipment-Response-202406130909086447.html",
     "/pfd-resources-and-quick-references/sops/emergency-operations/EO-100-Incident-Management-System.html",
     "/pfd-resources-and-quick-references/sops/emergency-operations/EO-110-Elevator-Emergencies.html",
