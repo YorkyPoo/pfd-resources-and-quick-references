@@ -29,9 +29,13 @@
 - **Not specified in protocol**
 
 ## Pharmacokinetics
+<div class="sc-wrap tw" markdown="1">
+
 | Onset | Duration |
 | :--- | :--- |
 | Not specified in protocol | Not specified in protocol |
+
+</div>
 
 ## Side Effects
 - Tachycardia
@@ -52,7 +56,6 @@
 - ⚠ **Warning:** May increase the risk of post-intubation hypotension.
 - ⚠ **Warning:** Do not inject more than **5 mL** per IM site. Use multiple sites simultaneously if necessary.
 - Emergence reactions (bizarre, agitated behavior) may occur as dissociation lifts. **Benzodiazepines** are generally effective.
-
 
 !!! info "Pediatric Dosing"
     For length-based pediatric dosing, see the [Pediatric Dosing Reference](../pediatric-dosing/index.md).

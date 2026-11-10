@@ -29,9 +29,13 @@
 - **Not specified in protocol**
 
 ## Pharmacokinetics
+<div class="sc-wrap tw" markdown="1">
+
 | Onset | Duration |
 | :--- | :--- |
 | Not specified in protocol | Not specified in protocol |
+
+</div>
 
 ## Side Effects
 - Respiratory depression
@@ -50,7 +54,6 @@
 - ⚠ **Warning:** May cause or exacerbate hypotension, particularly in pediatric, underweight (<50kg), frail, elderly (≥65 years), or hemodynamically unstable patients. Use minimum dose necessary and only when potential benefit outweighs the risk.
 - Paradoxical reactions (agitated/aggressive behavior) have been reported.
 - Half-life may be prolonged in patients with renal impairment.
-
 
 !!! info "Pediatric Dosing"
     For length-based pediatric dosing, see the [Pediatric Dosing Reference](../pediatric-dosing/index.md).

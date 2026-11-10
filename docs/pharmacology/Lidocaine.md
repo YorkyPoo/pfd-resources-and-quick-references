@@ -41,9 +41,13 @@
 
 ## Pharmacokinetics
 
+<div class="sc-wrap tw" markdown="1">
+
 | Onset | Duration |
 | :--- | :--- |
 | IV: 1-3 minutes | 2-6 hours (dose dependent) |
+
+</div>
 
 ## Side Effects
 

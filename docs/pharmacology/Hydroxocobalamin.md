@@ -24,9 +24,13 @@
 - **Not specified in protocol**
 
 ## Pharmacokinetics
+<div class="sc-wrap tw" markdown="1">
+
 | Onset | Duration |
 | :--- | :--- |
 | Not specified in protocol | Not specified in protocol |
+
+</div>
 
 ## Side Effects
 - Hypertension
