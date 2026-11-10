@@ -1,26 +1,56 @@
 # Poquoson Fire & Rescue Protocol Dashboard
 
-Welcome to the digital protocol library. This system is designed for **Conscious Vigilance** — getting you the exact information you need on a call with zero friction.
-
----
+**Conscious Vigilance** — the exact information you need on a call, zero friction.
 
 ## Quick Links
 
 <!-- QUICKLINKS:START (generated — scripts/gen_resource_pages.py; do not hand-edit) -->
 
-<div class="qlinks" markdown="1">
+<div class="qlcap" markdown="1">
 
-- **[Fire Resources](resources/fire.md)** <span class="qlcount">90 pages</span>
-- **[EMS Resources](resources/ems.md)** <span class="qlcount">132 pages · procedures inside</span>
-- **[Personnel Policies](personnel-policies/index.md)** <span class="qlcount">indexed manual</span>
+**On-scene tools — one tap**
+
+</div>
+
+<div class="qltools" markdown="1">
+
+[Dosing Calculator](pediatric-dosing/calculator.md) [Dosing Tables](pediatric-dosing/dosing-tables.md) [Drugs & Calculators](medications.md) [Protocol Index](protocols/00 - Master Protocol Tracker.md) [Alarm Assignments](fire-ems-references/initial-alarm-company-assignments.md) [First to Arrive (EO 6.00)](sops/emergency-operations/EO-600-First-to-Arrive-Duties.md)
+
+</div>
+
+<div class="qlone" markdown="1">
+
+**[Fire Resources](resources/fire.md)** <span class="qlcount">90 pages</span>
 
 </div>
 
 <div class="qljump" markdown="1">
 
-**Fire:** [Field References](resources/fire.md#field-references) [Frameworks](resources/fire.md#frameworks) [Strategies](resources/fire.md#strategies) [Emergency Operations](resources/fire.md#emergency-operations) [Equipment & Apparatus](resources/fire.md#equipment-apparatus) [Special Operations](resources/fire.md#special-operations) [Safety & Health](resources/fire.md#safety-health) [Public Relations](resources/fire.md#public-relations) [General Administration](resources/fire.md#general-administration)
+**Fire:** [Emergency Operations](resources/fire.md#emergency-operations) [Field References](resources/fire.md#field-references) [Strategies](resources/fire.md#strategies) [Frameworks](resources/fire.md#frameworks) [Special Operations](resources/fire.md#special-operations) [Equipment & Apparatus](resources/fire.md#equipment-apparatus) [Safety & Health](resources/fire.md#safety-health) [General Administration](resources/fire.md#general-administration) [Public Relations](resources/fire.md#public-relations)
 
-**EMS:** [Protocol Tracker](resources/ems.md#protocol-tracker) [Front Matter](resources/ems.md#front-matter) [Respiratory](resources/ems.md#respiratory) [Cardiac](resources/ems.md#cardiac) [Trauma](resources/ems.md#trauma) [Medical](resources/ems.md#medical) [Neurologic](resources/ems.md#neurologic) [Toxicology](resources/ems.md#toxicology) [General](resources/ems.md#general) [Administrative](resources/ems.md#administrative) [Pharmacology](resources/ems.md#pharmacology) [Medications & Calculators](resources/ems.md#medications-calculators) [Procedures](resources/ems.md#procedures) [Pediatric Dosing Reference](resources/ems.md#pediatric-dosing-reference) [EMS SOPs](resources/ems.md#ems-sops)
+</div>
+
+<div class="qlone" markdown="1">
+
+**[EMS Resources](resources/ems.md)** <span class="qlcount">132 pages · procedures inside</span>
+
+</div>
+
+<div class="qljump" markdown="1">
+
+**EMS:** [Cardiac](resources/ems.md#cardiac) [Respiratory](resources/ems.md#respiratory) [Trauma](resources/ems.md#trauma) [Medical](resources/ems.md#medical) [Administrative](resources/ems.md#administrative) [Procedures](resources/ems.md#procedures) [Toxicology](resources/ems.md#toxicology) [Neurologic](resources/ems.md#neurologic) [General](resources/ems.md#general) [Pharmacology](resources/ems.md#pharmacology) [Medications & Calculators](resources/ems.md#medications-calculators) [Pediatric Dosing Reference](resources/ems.md#pediatric-dosing-reference) [EMS SOPs](resources/ems.md#ems-sops) [Front Matter](resources/ems.md#front-matter) [Protocol Tracker](resources/ems.md#protocol-tracker)
+
+</div>
+
+<div class="qlone" markdown="1">
+
+**[Personnel Policies](personnel-policies/index.md)** <span class="qlcount">43 indexed</span>
+
+</div>
+
+<div class="qljump" markdown="1">
+
+**Policies:** [Hazardous Weather](personnel-policies/policies/26-hazardous-weather.md) [Overtime / Comp Time](personnel-policies/policies/13-overtime-compensatory-time.md) [Work Schedules](personnel-policies/policies/09-work-schedules-and-attendance.md) [Annual Leave](personnel-policies/policies/15-annual-leave-vrs-plan-1-plan-2-and.md) [Sick Leave](personnel-policies/policies/23-sick-leave-vrs-plan-1-plan-2-and.md) [Family & Medical Leave](personnel-policies/policies/18-family-and-medical-leave.md) [Uniforms](personnel-policies/policies/36-uniforms-protective-clothing-and-effective-date.md) [Workers' Comp](personnel-policies/policies/24-workers-compensation-and-light-duty.md) [Conduct & Discipline](personnel-policies/policies/39-employee-conduct-progressive-discipline.md) [Grievance Procedure](personnel-policies/policies/41-grievance-procedure.md) [Hiring & Promotion](personnel-policies/policies/07-recruitment-hiring-promotion.md) [Vehicles & Driving](personnel-policies/policies/29-vehicle-usage-and-driving-policy.md) [Full Policy Manual](personnel-policies/index.md) [Full Text Archive](personnel-policies/other/personnel-policy-manual.md)
 
 </div>
 

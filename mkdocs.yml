@@ -56,18 +56,6 @@ nav:
 - Home: index.md
 - Fire Resources:
   - Fire Resources Home: resources/fire.md
-  - Field References:
-    - Overview: fire-ems-references/index.md
-    - Initial Alarm Company Assignments: fire-ems-references/initial-alarm-company-assignments.md
-  - Frameworks:
-    - Mnemonics: fire-ems-references/frameworks/mnemonics.md
-    - SAW CSS RECEO VSS: fire-ems-references/frameworks/saw-css-receo-vss.md
-    - Reference Cards: fire-ems-references/frameworks/reference-cards.md
-  - Strategies:
-    - Offensive: fire-ems-references/strategies/offensive.md
-    - Defensive: fire-ems-references/strategies/defensive.md
-    - Transitional: fire-ems-references/strategies/transitional.md
-    - SIGNAL Victim Profiling: fire-ems-references/strategies/signal-victim-profiling.md
   - Emergency Operations:
     - Staffing & Equipment Response: sops/emergency-operations/EO-10-Staffing-and-Equipment-Response-202406130909086447.md
     - Incident Management System: sops/emergency-operations/EO-100-Incident-Management-System.md
@@ -84,17 +72,18 @@ nav:
     - Engine Company Operations: sops/emergency-operations/EO-700-Engine-Company-Operations.md
     - Ladder Company Operations: sops/emergency-operations/EO-800-Ladder-Company-Operations.md
     - Emergency Incident Rehabilitation: sops/emergency-operations/EO-900-Emergency-Incident-Rehabilitation.md
-  - Equipment & Apparatus:
-    - Hose Testing & Maintenance: sops/equipment-and-apparatus/EA-100-Hose-Testing-and-Maintenance.md
-    - Dry Hydrants: sops/equipment-and-apparatus/EA-1000-Dry-Hydrants.md
-    - Pump Testing: sops/equipment-and-apparatus/EA-200-Pump-Testing.md
-    - Map Books: sops/equipment-and-apparatus/EA-300-Map-Books.md
-    - Apparatus Inspection & Maintenance: sops/equipment-and-apparatus/EA-400-Apparatus-Inspection-and-Maintenance.md
-    - PPE & Equipment: sops/equipment-and-apparatus/EA-500-PPE-and-Equipment.md
-    - Portable Radios: sops/equipment-and-apparatus/EA-600-Portable-Radios.md
-    - Ladder Maintenance: sops/equipment-and-apparatus/EA-700-Ladder-Maintenance.md
-    - PPE Inspections: sops/equipment-and-apparatus/EA-800-PPE-Inspections.md
-    - Reporting Off-Site Training: sops/equipment-and-apparatus/EA-911-Reporting-of-Off-Site-Training.md
+  - Field References:
+    - Overview: fire-ems-references/index.md
+    - Initial Alarm Company Assignments: fire-ems-references/initial-alarm-company-assignments.md
+  - Strategies:
+    - Offensive: fire-ems-references/strategies/offensive.md
+    - Defensive: fire-ems-references/strategies/defensive.md
+    - Transitional: fire-ems-references/strategies/transitional.md
+    - SIGNAL Victim Profiling: fire-ems-references/strategies/signal-victim-profiling.md
+  - Frameworks:
+    - Mnemonics: fire-ems-references/frameworks/mnemonics.md
+    - SAW CSS RECEO VSS: fire-ems-references/frameworks/saw-css-receo-vss.md
+    - Reference Cards: fire-ems-references/frameworks/reference-cards.md
   - Special Operations:
     - Confined Space Rescue: sops/special-operations/SO-100-Confined-Space-Rescue.md
     - Hazardous Materials Incidents: sops/special-operations/SO-200-Hazardous-Materials-Incidents.md
@@ -109,6 +98,17 @@ nav:
     - Extreme Weather & Natural Disaster Call-Back: sops/special-operations/so-1100-extreme-weather-emergencies-and-natural-disaster-call-back-policy.md
     - SUAS (Drone) Operations: sops/special-operations/so-1200-suas-operations.md
     - Rescue Task Force Administration: sops/special-operations/so-1300-rescue-task-force-administration.md
+  - Equipment & Apparatus:
+    - Hose Testing & Maintenance: sops/equipment-and-apparatus/EA-100-Hose-Testing-and-Maintenance.md
+    - Dry Hydrants: sops/equipment-and-apparatus/EA-1000-Dry-Hydrants.md
+    - Pump Testing: sops/equipment-and-apparatus/EA-200-Pump-Testing.md
+    - Map Books: sops/equipment-and-apparatus/EA-300-Map-Books.md
+    - Apparatus Inspection & Maintenance: sops/equipment-and-apparatus/EA-400-Apparatus-Inspection-and-Maintenance.md
+    - PPE & Equipment: sops/equipment-and-apparatus/EA-500-PPE-and-Equipment.md
+    - Portable Radios: sops/equipment-and-apparatus/EA-600-Portable-Radios.md
+    - Ladder Maintenance: sops/equipment-and-apparatus/EA-700-Ladder-Maintenance.md
+    - PPE Inspections: sops/equipment-and-apparatus/EA-800-PPE-Inspections.md
+    - Reporting Off-Site Training: sops/equipment-and-apparatus/EA-911-Reporting-of-Off-Site-Training.md
   - Safety & Health:
     - Hearing Conservation: sops/safety-and-health/SH-100-Hearing-Conservation.md
     - Respiratory Protection Program: sops/safety-and-health/SH-200-Respiratory-Protection-Program-202103251459187916.md
@@ -116,11 +116,6 @@ nav:
     - Critical Incident Stress Management: sops/safety-and-health/SH-400-Critical-Incident-Stress-Management.md
     - Facility Safety Checks: sops/safety-and-health/SH-500-Facility-Safety-Checks.md
     - Bedbugs Prevention, Detection & Treatment: sops/safety-and-health/SH-600-Bedbugs-Prevention-Detection-Treatment.md
-  - Public Relations:
-    - SAFE House Policy: sops/public-relations/PR-100-SAFE-House-Policy.md
-    - Ride-Along Program: sops/public-relations/PR-200-Ride-Along-Program.md
-    - Station Tours: sops/public-relations/PR-300-Station-Tours.md
-    - Apparatus Displays & Standbys: sops/public-relations/PR-400-Apparatus-Displays-Standbys.md
   - General Administration:
     - Chain of Command: sops/general-administration/GA-100-Chain-of-Command.md
     - Code of Ethics: sops/general-administration/GA-200-Code-of-Ethics.md
@@ -155,24 +150,13 @@ nav:
     - Awards & Recognition: sops/general-administration/GA-2700-Awards-and-Recognition.md
     - Overtime: sops/general-administration/GA-2800-Overtime-202406130906401118.md
     - Fire Investigations: sops/general-administration/GA-2900-Fire-Investigations.md
+  - Public Relations:
+    - SAFE House Policy: sops/public-relations/PR-100-SAFE-House-Policy.md
+    - Ride-Along Program: sops/public-relations/PR-200-Ride-Along-Program.md
+    - Station Tours: sops/public-relations/PR-300-Station-Tours.md
+    - Apparatus Displays & Standbys: sops/public-relations/PR-400-Apparatus-Displays-Standbys.md
 - EMS Resources:
   - EMS Resources Home: resources/ems.md
-  - Protocol Tracker:
-    - Overview: protocols/00 - Master Protocol Tracker.md
-  - Front Matter:
-    - Introduction: protocols/front-matter/00 - Introduction.md
-    - How to Read the Protocols: protocols/front-matter/01 - How to Read the Protocols.md
-    - Universal Patient Care: protocols/front-matter/Universal Patient Care.md
-  - Respiratory:
-    - Airway / Inhalation Irritants: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
-    - Asthma / COPD / Reactive Airway: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
-    - Pediatric Stridor: protocols/respiratory/03_Pediatric_Stridor_PROC.md
-    - Pneumothorax: protocols/respiratory/03_Pneumothorax_PROC.md
-    - Pulmonary Edema / Congestion: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
-    - Respiratory Arrest: protocols/respiratory/03_Respiratory_Arrest_PROC.md
-    - Respiratory Distress: protocols/respiratory/03_Respiratory_Distress_PROC.md
-    - Smoke Inhalation: protocols/respiratory/03_Smoke_Inhalation_PROC.md
-    - Upper Airway Obstruction: protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md
   - Cardiac:
     - Asystole / PEA: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
     - Bradycardia: protocols/cardiac/04_Bradycardia_PROC.md
@@ -184,6 +168,16 @@ nav:
     - Supraventricular Tachycardia: protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md
     - V-Fib / Pulseless V-Tach: protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md
     - Aortic Dissection & AAA: protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md
+  - Respiratory:
+    - Airway / Inhalation Irritants: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
+    - Asthma / COPD / Reactive Airway: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
+    - Pediatric Stridor: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+    - Pneumothorax: protocols/respiratory/03_Pneumothorax_PROC.md
+    - Pulmonary Edema / Congestion: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
+    - Respiratory Arrest: protocols/respiratory/03_Respiratory_Arrest_PROC.md
+    - Respiratory Distress: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    - Smoke Inhalation: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    - Upper Airway Obstruction: protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md
   - Trauma:
     - Burns (Thermal): protocols/trauma/09_Burns_Thermal_PROC.md
     - Crush Syndrome: protocols/trauma/09_Crush_Syndrome_PROC.md
@@ -196,21 +190,6 @@ nav:
     - Hypotension / Shock (Non-Trauma): protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md
     - OB Emergencies: protocols/medical/07_OB_Emergencies_PROC.md
     - Sepsis: protocols/medical/07_Sepsis_PROC.md
-  - Neurologic:
-    - Hypoglycemia / Hyperglycemia: protocols/neurologic/05_Hypoglycemia_Hyperglycemia_PROC.md
-    - Seizure: protocols/neurologic/05_Seizure_PROC.md
-    - Stroke / TIA: protocols/neurologic/05_Stroke_TIA_PROC.md
-  - Toxicology:
-    - Nausea & Vomiting: protocols/toxicology/06_Nausea_Vomiting_PROC.md
-    - Nerve Agents: protocols/toxicology/06_Nerve_Agents_PROC.md
-    - Overdose / Poisoning: protocols/toxicology/06_Overdose_Poisoning_PROC.md
-  - General:
-    - Behavioral Patient Restraint: protocols/general/02_Behavioral_Patient_Restraint_PROC.md
-    - Cold Exposure: protocols/general/02_Cold_Exposure_PROC.md
-    - Diving & Drowning: protocols/general/02_Diving_and_Drowning_Emergencies_PROC.md
-    - Heat Exposure: protocols/general/02_Heat_Exposure_PROC.md
-    - Pain Control: protocols/general/02_Pain_Control_PROC.md
-    - Sedation (Non-Paralytic): protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md
   - Administrative:
     - Abuse Recognition & Mandated Reporting: protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md
     - ALS Release to BLS: protocols/administrative/01_ALS_Release_to_BLS_PROC.md
@@ -226,6 +205,37 @@ nav:
     - Stroke Field Triage: protocols/administrative/01_Stroke_Field_Triage_PROC.md
     - Transportation & Destination: protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md
     - Trauma Field Triage: protocols/administrative/01_Trauma_Field_Triage_PROC.md
+  - Procedures:
+    - Capnography: procedures/Capnography.md
+    - Chest Decompression: procedures/Chest_Decompression.md
+    - CPAP/BiPAP/PEEP: procedures/CPAP.md
+    - Endotracheal Intubation: procedures/Endotracheal_Intubation.md
+    - Intraosseous (IO) Access: procedures/Intraosseous_Access.md
+    - Medical Devices and Pumps: procedures/Medical_Devices_Pumps.md
+    - Medication Administration: procedures/Medication_Administration.md
+    - Nasogastric Tube Insertion: procedures/Nasogastric_Tube.md
+    - Neonatal Resuscitation: procedures/Neonatal_Resuscitation.md
+    - Spinal Motion Restriction: procedures/Spinal_Motion_Restriction.md
+    - Surgical Airway: procedures/Surgical_Airway.md
+    - Taser Barb Removal: procedures/Taser_Barb_Removal.md
+    - Tourniquet Application: procedures/Tourniquet_Application.md
+    - Transcutaneous Pacing: procedures/Transcutaneous_Pacing.md
+    - Vaccination Administration: procedures/Vaccination.md
+  - Toxicology:
+    - Nausea & Vomiting: protocols/toxicology/06_Nausea_Vomiting_PROC.md
+    - Nerve Agents: protocols/toxicology/06_Nerve_Agents_PROC.md
+    - Overdose / Poisoning: protocols/toxicology/06_Overdose_Poisoning_PROC.md
+  - Neurologic:
+    - Hypoglycemia / Hyperglycemia: protocols/neurologic/05_Hypoglycemia_Hyperglycemia_PROC.md
+    - Seizure: protocols/neurologic/05_Seizure_PROC.md
+    - Stroke / TIA: protocols/neurologic/05_Stroke_TIA_PROC.md
+  - General:
+    - Behavioral Patient Restraint: protocols/general/02_Behavioral_Patient_Restraint_PROC.md
+    - Cold Exposure: protocols/general/02_Cold_Exposure_PROC.md
+    - Diving & Drowning: protocols/general/02_Diving_and_Drowning_Emergencies_PROC.md
+    - Heat Exposure: protocols/general/02_Heat_Exposure_PROC.md
+    - Pain Control: protocols/general/02_Pain_Control_PROC.md
+    - Sedation (Non-Paralytic): protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md
   - Pharmacology:
     - Adenosine: pharmacology/Adenosine.md
     - Albuterol: pharmacology/Albuterol.md
@@ -261,22 +271,6 @@ nav:
     - Ziprasidone: pharmacology/Ziprasidone.md
   - Medications & Calculators:
     - Medications & Calculators: medications.md
-  - Procedures:
-    - Capnography: procedures/Capnography.md
-    - Chest Decompression: procedures/Chest_Decompression.md
-    - CPAP/BiPAP/PEEP: procedures/CPAP.md
-    - Endotracheal Intubation: procedures/Endotracheal_Intubation.md
-    - Intraosseous (IO) Access: procedures/Intraosseous_Access.md
-    - Medical Devices and Pumps: procedures/Medical_Devices_Pumps.md
-    - Medication Administration: procedures/Medication_Administration.md
-    - Nasogastric Tube Insertion: procedures/Nasogastric_Tube.md
-    - Neonatal Resuscitation: procedures/Neonatal_Resuscitation.md
-    - Spinal Motion Restriction: procedures/Spinal_Motion_Restriction.md
-    - Surgical Airway: procedures/Surgical_Airway.md
-    - Taser Barb Removal: procedures/Taser_Barb_Removal.md
-    - Tourniquet Application: procedures/Tourniquet_Application.md
-    - Transcutaneous Pacing: procedures/Transcutaneous_Pacing.md
-    - Vaccination Administration: procedures/Vaccination.md
   - Pediatric Dosing Reference:
     - Overview: pediatric-dosing/index.md
     - Pre-Calculated Dosing Tables: pediatric-dosing/dosing-tables.md
@@ -304,6 +298,12 @@ nav:
     - Failure to Comply with Regional Protocols: sops/ems/EMS-700-Failure-to-Comply-with-Regional-Protocols.md
     - BLS Preceptorship Program: sops/ems/EMS-800-BLS-Preceptorship-Program.md
     - Drug Box Procedures: sops/ems/EMS-900-Drug-Box-Procedures.md
+  - Front Matter:
+    - Introduction: protocols/front-matter/00 - Introduction.md
+    - How to Read the Protocols: protocols/front-matter/01 - How to Read the Protocols.md
+    - Universal Patient Care: protocols/front-matter/Universal Patient Care.md
+  - Protocol Tracker:
+    - Overview: protocols/00 - Master Protocol Tracker.md
 - Personnel Policies:
   - Policy Manual (Indexed): personnel-policies/index.md
   - Full Text Archive: personnel-policies/other/personnel-policy-manual.md

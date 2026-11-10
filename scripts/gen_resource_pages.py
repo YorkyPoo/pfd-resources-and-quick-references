@@ -43,14 +43,48 @@ GROUP_RENAME = {
     ("EMS Protocols", "EMS"): "Protocol Tracker",
 }
 
-# display order inside each hub (menu order = scan order on a scene)
-FIRE_ORDER = ["Field References", "Frameworks", "Strategies", "Emergency Operations",
-              "Equipment & Apparatus", "Special Operations", "Safety & Health",
-              "Public Relations", "General Administration"]
-EMS_ORDER = ["Protocol Tracker", "Front Matter", "Respiratory", "Cardiac", "Trauma",
-             "Medical", "Neurologic", "Toxicology", "General", "Administrative",
-             "Pharmacology", "Medications & Calculators", "Procedures",
-             "Pediatric Dosing Reference", "EMS SOPs"]
+# display order inside each hub AND in the homepage jump strips — highest-traffic
+# first (owner ruling 2026-11-10: "the more important things need to be a higher
+# hierarchy to the left"). Reorder here and both hubs + strips follow.
+FIRE_ORDER = ["Emergency Operations", "Field References", "Strategies", "Frameworks",
+              "Special Operations", "Equipment & Apparatus", "Safety & Health",
+              "General Administration", "Public Relations"]
+EMS_ORDER = ["Cardiac", "Respiratory", "Trauma", "Medical", "Administrative",
+             "Procedures", "Toxicology", "Neurologic", "General", "Pharmacology",
+             "Medications & Calculators", "Pediatric Dosing Reference", "EMS SOPs",
+             "Front Matter", "Protocol Tracker"]
+
+# Static one-tap tools on the homepage: no scrolling, no menu. Labels are ours
+# (the source pages carry truncated PDF-dump titles). Every path is validated
+# against the live nav, so a renamed page breaks the build instead of shipping
+# a dead tile.
+SCENE_TOOLS = [
+    ("Dosing Calculator", "pediatric-dosing/calculator.md"),
+    ("Dosing Tables", "pediatric-dosing/dosing-tables.md"),
+    ("Drugs & Calculators", "medications.md"),
+    ("Protocol Index", "protocols/00 - Master Protocol Tracker.md"),
+    ("Alarm Assignments", "fire-ems-references/initial-alarm-company-assignments.md"),
+    ("First to Arrive (EO 6.00)", "sops/emergency-operations/EO-600-First-to-Arrive-Duties.md"),
+]
+
+# Personnel policies are not in the nav (only the index page is), so the strip
+# names the high-traffic ones explicitly and each is checked against disk.
+POLICY_CHIPS = [
+    ("Hazardous Weather", "personnel-policies/policies/26-hazardous-weather.md"),
+    ("Overtime / Comp Time", "personnel-policies/policies/13-overtime-compensatory-time.md"),
+    ("Work Schedules", "personnel-policies/policies/09-work-schedules-and-attendance.md"),
+    ("Annual Leave", "personnel-policies/policies/15-annual-leave-vrs-plan-1-plan-2-and.md"),
+    ("Sick Leave", "personnel-policies/policies/23-sick-leave-vrs-plan-1-plan-2-and.md"),
+    ("Family & Medical Leave", "personnel-policies/policies/18-family-and-medical-leave.md"),
+    ("Uniforms", "personnel-policies/policies/36-uniforms-protective-clothing-and-effective-date.md"),
+    ("Workers' Comp", "personnel-policies/policies/24-workers-compensation-and-light-duty.md"),
+    ("Conduct & Discipline", "personnel-policies/policies/39-employee-conduct-progressive-discipline.md"),
+    ("Grievance Procedure", "personnel-policies/policies/41-grievance-procedure.md"),
+    ("Hiring & Promotion", "personnel-policies/policies/07-recruitment-hiring-promotion.md"),
+    ("Vehicles & Driving", "personnel-policies/policies/29-vehicle-usage-and-driving-policy.md"),
+    ("Full Policy Manual", "personnel-policies/index.md"),
+    ("Full Text Archive", "personnel-policies/other/personnel-policy-manual.md"),
+]
 
 
 # ------------------------------------------------------------------ nav reading
@@ -183,40 +217,45 @@ def nav_paths(nav):
 
 # --------------------------------------------------------------- homepage block
 def quicklinks_block(records):
+    """Three pairings: one big door row directly above its own jump strip, plus a
+    static tool row that needs no scrolling and no menu (owner ruling 2026-11-10)."""
     fire = ordered_groups([r for r in records if bucket_of(r) == "FIRE" and r["file"]],
                           "FIRE", FIRE_ORDER)
     ems = ordered_groups([r for r in records if bucket_of(r) == "EMS" and r["file"]],
                          "EMS", EMS_ORDER)
 
-    def chips(groups, hub, label=None):
+    nav_paths = {r["file"] for r in records if r["file"]}
+    missing = [p for _l, p in SCENE_TOOLS if p not in nav_paths]
+    missing += [p for _l, p in POLICY_CHIPS if not (DOCS / p).exists()]
+    if missing:
+        raise SystemExit(f"curated link target no longer exists: {missing}")
+
+    def chips(groups, hub, label):
         # space-separated: .qljump is a flex row, CSS gap supplies the spacing
-        row = " ".join(f"[{g}]({hub}#{slugify(g)})" for g, _ in groups)
-        return f"**{label}:** {row}" if label else row
+        return f"**{label}:** " + " ".join(f"[{g}]({hub}#{slugify(g)})" for g, _ in groups)
 
     n_fire = sum(len(g[1]) for g in fire)
     n_ems = sum(len(g[1]) for g in ems)
 
-    return "\n".join([
-        QL_START,
-        "",
-        '<div class="qlinks" markdown="1">',
-        "",
-        f"- **[Fire Resources](resources/fire.md)** <span class=\"qlcount\">{n_fire} pages</span>",
-        f"- **[EMS Resources](resources/ems.md)** <span class=\"qlcount\">{n_ems} pages · procedures inside</span>",
-        "- **[Personnel Policies](personnel-policies/index.md)** <span class=\"qlcount\">indexed manual</span>",
-        "",
-        "</div>",
-        "",
-        '<div class="qljump" markdown="1">',
-        "",
-        chips(fire, "resources/fire.md", "Fire"),
-        "",
-        chips(ems, "resources/ems.md", "EMS"),
-        "",
-        "</div>",
-        "",
-        QL_END,
-    ])
+    parts = [QL_START, "",
+             '<div class="qlcap" markdown="1">', "", "**On-scene tools — one tap**", "", "</div>",
+             "",
+             '<div class="qltools" markdown="1">', "",
+             " ".join(f"[{l}]({p})" for l, p in SCENE_TOOLS), "", "</div>", ""]
+
+    doors = [("Fire Resources", "resources/fire.md", f"{n_fire} pages",
+              chips(fire, "resources/fire.md", "Fire")),
+             ("EMS Resources", "resources/ems.md", f"{n_ems} pages · procedures inside",
+              chips(ems, "resources/ems.md", "EMS")),
+             ("Personnel Policies", "personnel-policies/index.md", "43 indexed",
+              "**Policies:** " + " ".join(f"[{l}]({p})" for l, p in POLICY_CHIPS))]
+
+    for title, href, sub, strip in doors:
+        parts += ['<div class="qlone" markdown="1">', "",
+                  f'**[{title}]({href})** <span class="qlcount">{sub}</span>', "", "</div>", "",
+                  '<div class="qljump" markdown="1">', "", strip, "", "</div>", ""]
+    parts += [QL_END]
+    return "\n".join(parts)
 
 
 def splice_index(text, block):

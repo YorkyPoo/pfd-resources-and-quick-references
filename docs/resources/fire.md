@@ -4,27 +4,9 @@ Everything attached to the **fire side** — tactical references, emergency oper
 
 <div class="qljump" markdown="1">
 
-**Jump:** [Field References](#field-references) [Frameworks](#frameworks) [Strategies](#strategies) [Emergency Operations](#emergency-operations) [Equipment & Apparatus](#equipment-apparatus) [Special Operations](#special-operations) [Safety & Health](#safety-health) [Public Relations](#public-relations) [General Administration](#general-administration)
+**Jump:** [Emergency Operations](#emergency-operations) [Field References](#field-references) [Strategies](#strategies) [Frameworks](#frameworks) [Special Operations](#special-operations) [Equipment & Apparatus](#equipment-apparatus) [Safety & Health](#safety-health) [General Administration](#general-administration) [Public Relations](#public-relations)
 
 </div>
-
-## Field References
-
-- [Overview](../fire-ems-references/index.md)
-- [Initial Alarm Company Assignments](../fire-ems-references/initial-alarm-company-assignments.md)
-
-## Frameworks
-
-- [Mnemonics](../fire-ems-references/frameworks/mnemonics.md)
-- [SAW CSS RECEO VSS](../fire-ems-references/frameworks/saw-css-receo-vss.md)
-- [Reference Cards](../fire-ems-references/frameworks/reference-cards.md)
-
-## Strategies
-
-- [Offensive](../fire-ems-references/strategies/offensive.md)
-- [Defensive](../fire-ems-references/strategies/defensive.md)
-- [Transitional](../fire-ems-references/strategies/transitional.md)
-- [SIGNAL Victim Profiling](../fire-ems-references/strategies/signal-victim-profiling.md)
 
 ## Emergency Operations
 
@@ -44,18 +26,23 @@ Everything attached to the **fire side** — tactical references, emergency oper
 - [Ladder Company Operations](../sops/emergency-operations/EO-800-Ladder-Company-Operations.md)
 - [Emergency Incident Rehabilitation](../sops/emergency-operations/EO-900-Emergency-Incident-Rehabilitation.md)
 
-## Equipment & Apparatus
+## Field References
 
-- [Hose Testing & Maintenance](../sops/equipment-and-apparatus/EA-100-Hose-Testing-and-Maintenance.md)
-- [Dry Hydrants](../sops/equipment-and-apparatus/EA-1000-Dry-Hydrants.md)
-- [Pump Testing](../sops/equipment-and-apparatus/EA-200-Pump-Testing.md)
-- [Map Books](../sops/equipment-and-apparatus/EA-300-Map-Books.md)
-- [Apparatus Inspection & Maintenance](../sops/equipment-and-apparatus/EA-400-Apparatus-Inspection-and-Maintenance.md)
-- [PPE & Equipment](../sops/equipment-and-apparatus/EA-500-PPE-and-Equipment.md)
-- [Portable Radios](../sops/equipment-and-apparatus/EA-600-Portable-Radios.md)
-- [Ladder Maintenance](../sops/equipment-and-apparatus/EA-700-Ladder-Maintenance.md)
-- [PPE Inspections](../sops/equipment-and-apparatus/EA-800-PPE-Inspections.md)
-- [Reporting Off-Site Training](../sops/equipment-and-apparatus/EA-911-Reporting-of-Off-Site-Training.md)
+- [Overview](../fire-ems-references/index.md)
+- [Initial Alarm Company Assignments](../fire-ems-references/initial-alarm-company-assignments.md)
+
+## Strategies
+
+- [Offensive](../fire-ems-references/strategies/offensive.md)
+- [Defensive](../fire-ems-references/strategies/defensive.md)
+- [Transitional](../fire-ems-references/strategies/transitional.md)
+- [SIGNAL Victim Profiling](../fire-ems-references/strategies/signal-victim-profiling.md)
+
+## Frameworks
+
+- [Mnemonics](../fire-ems-references/frameworks/mnemonics.md)
+- [SAW CSS RECEO VSS](../fire-ems-references/frameworks/saw-css-receo-vss.md)
+- [Reference Cards](../fire-ems-references/frameworks/reference-cards.md)
 
 ## Special Operations
 
@@ -73,6 +60,19 @@ Everything attached to the **fire side** — tactical references, emergency oper
 - [SUAS (Drone) Operations](../sops/special-operations/so-1200-suas-operations.md)
 - [Rescue Task Force Administration](../sops/special-operations/so-1300-rescue-task-force-administration.md)
 
+## Equipment & Apparatus
+
+- [Hose Testing & Maintenance](../sops/equipment-and-apparatus/EA-100-Hose-Testing-and-Maintenance.md)
+- [Dry Hydrants](../sops/equipment-and-apparatus/EA-1000-Dry-Hydrants.md)
+- [Pump Testing](../sops/equipment-and-apparatus/EA-200-Pump-Testing.md)
+- [Map Books](../sops/equipment-and-apparatus/EA-300-Map-Books.md)
+- [Apparatus Inspection & Maintenance](../sops/equipment-and-apparatus/EA-400-Apparatus-Inspection-and-Maintenance.md)
+- [PPE & Equipment](../sops/equipment-and-apparatus/EA-500-PPE-and-Equipment.md)
+- [Portable Radios](../sops/equipment-and-apparatus/EA-600-Portable-Radios.md)
+- [Ladder Maintenance](../sops/equipment-and-apparatus/EA-700-Ladder-Maintenance.md)
+- [PPE Inspections](../sops/equipment-and-apparatus/EA-800-PPE-Inspections.md)
+- [Reporting Off-Site Training](../sops/equipment-and-apparatus/EA-911-Reporting-of-Off-Site-Training.md)
+
 ## Safety & Health
 
 - [Hearing Conservation](../sops/safety-and-health/SH-100-Hearing-Conservation.md)
@@ -81,13 +81,6 @@ Everything attached to the **fire side** — tactical references, emergency oper
 - [Critical Incident Stress Management](../sops/safety-and-health/SH-400-Critical-Incident-Stress-Management.md)
 - [Facility Safety Checks](../sops/safety-and-health/SH-500-Facility-Safety-Checks.md)
 - [Bedbugs Prevention, Detection & Treatment](../sops/safety-and-health/SH-600-Bedbugs-Prevention-Detection-Treatment.md)
-
-## Public Relations
-
-- [SAFE House Policy](../sops/public-relations/PR-100-SAFE-House-Policy.md)
-- [Ride-Along Program](../sops/public-relations/PR-200-Ride-Along-Program.md)
-- [Station Tours](../sops/public-relations/PR-300-Station-Tours.md)
-- [Apparatus Displays & Standbys](../sops/public-relations/PR-400-Apparatus-Displays-Standbys.md)
 
 ## General Administration
 
@@ -124,3 +117,10 @@ Everything attached to the **fire side** — tactical references, emergency oper
 - [Awards & Recognition](../sops/general-administration/GA-2700-Awards-and-Recognition.md)
 - [Overtime](../sops/general-administration/GA-2800-Overtime-202406130906401118.md)
 - [Fire Investigations](../sops/general-administration/GA-2900-Fire-Investigations.md)
+
+## Public Relations
+
+- [SAFE House Policy](../sops/public-relations/PR-100-SAFE-House-Policy.md)
+- [Ride-Along Program](../sops/public-relations/PR-200-Ride-Along-Program.md)
+- [Station Tours](../sops/public-relations/PR-300-Station-Tours.md)
+- [Apparatus Displays & Standbys](../sops/public-relations/PR-400-Apparatus-Displays-Standbys.md)
