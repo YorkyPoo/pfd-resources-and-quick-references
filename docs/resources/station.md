@@ -4,15 +4,15 @@
 
 <div class="qljump" markdown="1">
 
-**Jump:** [Station Hub](#station-hub) [Crew Links](#crew-links) [Training](#training)
+**Jump:** [Orientation](#orientation) [Portals & Systems](#portals-systems) [Training](#training)
 
 </div>
 
-## Station Hub
+## Orientation
 
 - [How to Use & Recent Updates](../station-info.md)
 
-## Crew Links
+## Portals & Systems
 
 - [Crew Links & Portals](links.md)
 

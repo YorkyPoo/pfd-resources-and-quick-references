@@ -42,6 +42,12 @@ QL_END = "<!-- QUICKLINKS:END -->"
 GROUP_RENAME = {
     ("EMS", "EMS"): "EMS SOPs",                    # was buried under "Fire SOPs"
     ("Fire & EMS References", "FIRE"): "Field References",
+    # A page placed flat under a section inherits that section's own label as its group,
+    # which put "Station Hub" INSIDE "Station Hub" in the drawer (owner report 2026-11-11) and
+    # repeated the page title as an H2 on the hub. Give those groups names that describe the
+    # content instead of restating the section.
+    ("Station Hub", "STATION"): "Orientation",
+    ("Crew Links", "STATION"): "Portals & Systems",
 }
 
 # display order inside each hub AND in the homepage jump strips — highest-traffic
@@ -55,9 +61,10 @@ EMS_ORDER = ["Cardiac", "Respiratory", "Trauma", "Medical", "Administrative",
              "Pharmacology", "Medications & Calculators", "Pediatric Dosing Reference",
              "EMS SOPs", "Front Matter"]
 
-# Station groups in display order. Unknown groups are appended by ordered_groups(), so a
-# new station page never fails the build — it just lands last.
-STATION_ORDER = ["Station Hub", "Crew Links", "Training"]
+# Station groups in display order. These are the RENAMED group labels (see GROUP_RENAME):
+# naming the section's own word here would re-render "Station Hub" inside "Station Hub".
+# Unknown groups are appended by ordered_groups(), so a new station page never fails the build.
+STATION_ORDER = ["Orientation", "Portals & Systems", "Training"]
 
 # Static one-tap tools on the homepage: no scrolling, no menu. Labels are ours
 # (the source pages carry truncated PDF-dump titles). Every path is validated
