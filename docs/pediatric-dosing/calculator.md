@@ -32,11 +32,37 @@ OR
   <input type="number" id="weight-input" oninput="updateFromWeight()" placeholder="Enter weight in kg" style="width:100%;background:#000;color:#fff;border:1px solid #ffb84d;border-radius:8px;padding:12px 14px;font-size:16px;outline:none;box-sizing:border-box">
 </div>
 
+<!-- One-tap weight presets. The page already recalculates on every keystroke
+     (oninput="updateFromWeight()"), so these are wired to the same function: a medic gets
+     full weight-based dosing without ever opening the phone keyboard. 44px+ targets per the
+     owner's glove/one-hand rule. -->
+<style>
+  .wp-chips { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 2px 0 16px; }
+  .wp-chips button {
+    min-height: 44px; border: 1px solid #ffb84d55; border-radius: 9px; background: #1d1d1d;
+    color: #ffb84d; font: 700 15px/1.1 sans-serif; cursor: pointer; padding: 6px 4px;
+    -webkit-tap-highlight-color: transparent; }
+  .wp-chips button:hover { background: #2a2113; }
+  .wp-chips button.on { background: #ffb84d; color: #000; border-color: #ffb84d; }
+  .wp-lbl { font-size: 12px; font-weight: 600; color: #9a9a9a; display: block; margin-bottom: 6px; }
+  @media (min-width: 620px) { .wp-chips { grid-template-columns: repeat(6, 1fr); } }
+</style>
+<div class="wp-chips-wrap">
+  <span class="wp-lbl">Common weights — one tap</span>
+  <div class="wp-chips">
+    <button type="button" onclick="setWeight(5)">5 kg</button>
+    <button type="button" onclick="setWeight(10)">10 kg</button>
+    <button type="button" onclick="setWeight(15)">15 kg</button>
+    <button type="button" onclick="setWeight(20)">20 kg</button>
+    <button type="button" onclick="setWeight(25)">25 kg</button>
+    <button type="button" onclick="setWeight(30)">30 kg</button>
+  </div>
+</div>
+
 <div id="err-msg" style="background:rgba(255,82,82,0.1);color:#ff5252;border:1px solid #ff5252;padding:15px;border-radius:8px;text-align:center;margin-bottom:20px;font-weight:600;display:none"></div>
 
-<div class="btn-row" style="display:flex;gap:12px;margin:20px 0 16px">
-  <button onclick="calculate()" style="flex:1;padding:15px;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;background:#4db8ff;color:#000;transition:transform .1s">Calculate</button>
-  <button onclick="resetCalc()" style="flex:1;padding:15px;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;background:#2e2e2e;color:#fff;transition:transform .1s">Reset</button>
+<div class="btn-row" style="display:flex;justify-content:flex-end;margin:12px 0 16px">
+  <button onclick="resetCalc()" style="padding:10px 18px;border:1px solid #3a3a3a;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;background:transparent;color:#9a9a9a;-webkit-tap-highlight-color:transparent;min-height:44px">Clear</button>
 </div>
 
 <h3>Results</h3>
@@ -208,6 +234,18 @@ function updateFromWeight() {
   calculate();
 }
 
+function setWeight(kg) {
+  // Reuse the live path: updateFromWeight() clears the zone select and calls calculate(),
+  // so a preset behaves exactly like typing the number — no second code path to drift.
+  document.getElementById("weight-input").value = kg;
+  updateFromWeight();
+  var chips = document.querySelectorAll(".wp-chips button");
+  for (var i = 0; i < chips.length; i++) {
+    var v = parseFloat(chips[i].textContent);
+    chips[i].classList.toggle("on", v === kg);
+  }
+}
+
 function calculate() {
   var errEl = document.getElementById("err-msg");
   var wt = parseFloat(document.getElementById("weight-input").value);
@@ -278,6 +316,9 @@ function resetCalc() {
   document.getElementById("weight-input").value = "";
   document.getElementById("results").style.display = "none";
   document.getElementById("err-msg").style.display = "none";
+  // clear the preset highlight too, or a stale chip looks like the active selection
+  var chips = document.querySelectorAll(".wp-chips button.on");
+  for (var i = 0; i < chips.length; i++) chips[i].classList.remove("on");
 }
 </script>
 
