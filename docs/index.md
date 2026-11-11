@@ -62,7 +62,7 @@
 
 <div class="qljump" markdown="1">
 
-**Portals:** [Daily Station Ops](resources/links.md#ops) [Clinical & Reporting](resources/links.md#clinical) [City & Administration](resources/links.md#admin) [Station Hub](resources/station.md)
+**Portals:** [Maps &amp; Danger](resources/links.md#response) [Run Docs](resources/links.md#doc) [Apparatus](resources/links.md#readiness) [Training](resources/links.md#training) [City](resources/links.md#city) [Station Hub](resources/station.md)
 
 </div>
 
