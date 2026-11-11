@@ -12,4 +12,3 @@ User-agent: *
 Disallow: /pfd-resources-and-quick-references/resources/links.html
 
 Sitemap: https://yorkypoo.github.io/pfd-resources-and-quick-references/sitemap.xml
-Disallow: /pfd-resources-and-quick-references/prototype/
