@@ -199,7 +199,7 @@
 .fx-wrap table { border-collapse: separate !important; border-spacing: 0; }  /* Chrome kills sticky cells under collapse */
 .md-typeset__table:has(> table:first-child) { } /* no-op guard */
 .md-typeset .fx-wrap > table, .md-typeset .fx-wrap table, .fx-wrap table {
-  display: table !important; table-layout: fixed !important; width: 1048px !important; min-width: 100%; }
+  display: table !important; table-layout: fixed !important; width: 1088px !important; min-width: 100%; }
 .fx-wrap th, .fx-wrap td { vertical-align: top; text-align: left; font-size: .74rem; white-space: normal; overflow-wrap: normal; }
 /* Verified against site/assets/stylesheets/main.*.min.css:
    `.md-typeset table:not([class]) th { min-width: 5rem; padding: .9375em 1.25em }`.
@@ -207,15 +207,21 @@
    min-width+padding out-specify a plain `width`, so the unit-label column rendered
    262px (67% of a 390px screen) while the tactical columns starved at 122px.
    !important pins on the header row are what hold; padding is trimmed so the width
-   buys duty text instead of whitespace. Sum must equal the table width (104+300+214*3=1046). */
+   buys duty text instead of whitespace. Duty columns are 246px so label+one
+   column = 104+246 = 350px fits the 358px visible width at 390px: each swipe lands on
+   a WHOLE column instead of cutting a sentence mid-word. Sum 104+246*4 = 1088 = width. */
 .fx-wrap table th, .fx-wrap table td { padding: .5em .5em !important; }
+/* The scroller was carrying 16px of padding TWICE — ours plus Material's nested
+   .md-typeset__table — leaving only 294px of real width at 390px, and a 16px gutter
+   through which the second column visibly slid beside the sticky label column.
+   A horizontal-scroll chassis with a sticky first cell wants zero inner padding. */
+.fx-wrap, .fx-wrap .md-typeset__table, .fx-wrap .md-typeset__scrollwrap {
+  padding-left: 0 !important; padding-right: 0 !important; }
 .fx-wrap table th:nth-child(1), .fx-wrap table td:nth-child(1) {
   min-width: 104px !important; max-width: 104px !important; width: 104px !important;
   overflow-wrap: anywhere; }
-.fx-wrap table th:nth-child(2), .fx-wrap table td:nth-child(2) {
-  width: 300px !important; min-width: 300px !important; max-width: 300px !important; }
-.fx-wrap table th:nth-child(n+3), .fx-wrap table td:nth-child(n+3) {
-  width: 214px !important; min-width: 214px !important; max-width: 214px !important; }
+.fx-wrap table th:nth-child(n+2), .fx-wrap table td:nth-child(n+2) {
+  width: 246px !important; min-width: 246px !important; max-width: 246px !important; }
 /* hoisted fallback: table sits inside .md-typeset__table.fx-wrap */
 .md-typeset table:not([class]) { }
 @media only screen and (max-width: 760px) {
@@ -232,10 +238,8 @@
    never disagree with the primary pins above if Material's nesting ever changes */
 .md-typeset__table.fx-wrap > table th:nth-child(1), .md-typeset__table.fx-wrap > table td:nth-child(1) {
   width: 104px !important; min-width: 104px !important; max-width: 104px !important; overflow-wrap: anywhere; }
-.md-typeset__table.fx-wrap > table th:nth-child(2), .md-typeset__table.fx-wrap > table td:nth-child(2) {
-  width: 300px !important; min-width: 300px !important; max-width: 300px !important; }
-.md-typeset__table.fx-wrap > table th:nth-child(n+3), .md-typeset__table.fx-wrap > table td:nth-child(n+3) {
-  width: 214px !important; min-width: 214px !important; max-width: 214px !important; }
+.md-typeset__table.fx-wrap > table th:nth-child(n+2), .md-typeset__table.fx-wrap > table td:nth-child(n+2) {
+  width: 246px !important; min-width: 246px !important; max-width: 246px !important; }
 @media only screen and (max-width: 760px) {
   .md-typeset__table.fx-wrap > table th:first-child, .md-typeset__table.fx-wrap > table td:first-child {
     position: sticky; left: 0; z-index: 2; background: var(--md-default-bg-color);
