@@ -15,6 +15,7 @@ Design constraints this satisfies, and why each one is here:
    four destinations, the FAB still holds the full menu and search. Overlapping them would
    put a 54px circle on top of a live tab.
 """
+import os
 import posixpath
 import re
 
@@ -35,9 +36,8 @@ ITEMS = [
 ICON = {"Home": "⌂", "EMS": "✚", "Fire": "▲", "Station": "▦"}
 
 
-def on_post_page(output, *, page, config):
-    # depth of this page's own output file, so ../.. resolves from wherever we are
-    here = posixpath.dirname(getattr(page.file, "dest_path", "") or "") or "."
+def render_bar(here="."):
+    """Bar markup for a page sitting in output directory `here`."""
     cells = []
     for label, target in ITEMS:
         href = posixpath.relpath(target, here)
@@ -45,8 +45,35 @@ def on_post_page(output, *, page, config):
             f'<a class="bbitem" href="{href}"><span class="bbico">{ICON[label]}</span>'
             f'<span class="bbtxt">{label}</span></a>'
         )
-    bar = f'<nav class="bbnav" aria-label="Field navigation">{"".join(cells)}</nav>'
+    return f'<nav class="bbnav" aria-label="Field navigation">{"".join(cells)}</nav>'
+
+
+def on_post_page(output, *, page, config):
+    # depth of this page's own output file, so ../.. resolves from wherever we are
+    here = posixpath.dirname(getattr(page.file, "dest_path", "") or "") or "."
     m = re.search(r"</body>", output)
     if not m:
         return output
-    return output[:m.start()] + bar + output[m.end():]
+    return output[:m.start()] + render_bar(here) + output[m.end():]
+
+
+def on_post_build(config, **kwargs):
+    """Give the 404 page its bar too.
+
+    404.html is rendered from the theme's template, not from a Page object, so on_post_page
+    never fires for it — and the error page is exactly where a field user lands from a bad
+    bookmark or a stale service-worker hit. Without the bar it is the only screen in the app
+    with no way to get back to a protocol except the browser's own controls.
+    """
+    path = os.path.join(config["site_dir"], "404.html")
+    if not os.path.exists(path):
+        return
+    with open(path, encoding="utf-8") as fh:
+        html = fh.read()
+    if 'class="bbnav"' in html:  # idempotent: never double-inject on a re-run
+        return
+    m = re.search(r"</body>", html)
+    if not m:
+        return
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.write(html[: m.start()] + render_bar(".") + html[m.end():])
