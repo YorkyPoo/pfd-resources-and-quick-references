@@ -1,0 +1,15 @@
+{
+  "protocol": "Behavioral Patient Restraint",
+  "status": "MANUAL",
+  "discrepancies": [
+    {
+      "field": "Content",
+      "pems_original": "PEMS full text contains general restraint guidelines and chemical restraint notes.",
+      "converted_text": "The Poquoson protocol adds extensive, highly specific drug dosing tables for chemical restraint that are not present in the PEMS source file.",
+      "severity": "CRITICAL",
+      "recommendation": "Review these chemical restraint dosages against the Poquoson OMD's standing orders. If they are Poquoson-specific, this needs to be clearly indicated as a local modification, as it exceeds the base PEMS protocol provided."
+    }
+  ],
+  "missing_sections": [],
+  "verified": false
+}

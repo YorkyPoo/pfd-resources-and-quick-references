@@ -1,0 +1,545 @@
+/* ============================================================
+   Poquoson Fire & Rescue - Mobile-Responsive Table Styles
+   ============================================================ */
+
+/* --- 1. Wrap all tables in a scrollable container --- */
+.md-typeset table:not([class]) {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+/* --- 2. Base cell styles --- */
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  white-space: normal;
+  word-break: break-word;
+  vertical-align: top;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* --- 3. Intervention tables only (7 columns: # | Action | EMR | EMT | A | I | P)
+   Scope narrow first-column ONLY to 7-column intervention tables           */
+.md-typeset table:not([class]):has(th:nth-child(7)) td:first-child,
+.md-typeset table:not([class]):has(th:nth-child(7)) th:first-child {
+  min-width: 28px;
+  max-width: 36px;
+  text-align: center;
+  padding: 0.5rem 0.3rem;
+}
+
+/* Action/Intervention column - second column gets most space */
+.md-typeset table:not([class]) td:nth-child(2),
+.md-typeset table:not([class]) th:nth-child(2) {
+  min-width: 180px;
+  max-width: 260px;
+}
+
+/* Provider-level columns (3+): compact, centered */
+.md-typeset table:not([class]) td:nth-child(n+3),
+.md-typeset table:not([class]) th:nth-child(n+3) {
+  min-width: 36px;
+  max-width: 52px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* --- 4. Mobile fine-tuning --- */
+@media screen and (max-width: 640px) {
+
+  .md-typeset table:not([class]) {
+    font-size: 0.78rem;
+  }
+
+  /* Slightly tighten padding on mobile */
+  .md-typeset table:not([class]) th,
+  .md-typeset table:not([class]) td {
+    padding: 0.35rem 0.4rem;
+  }
+
+  /* Action column can be narrower on small screens */
+  .md-typeset table:not([class]) td:nth-child(2),
+  .md-typeset table:not([class]) th:nth-child(2) {
+    min-width: 140px;
+    max-width: 180px;
+  }
+}
+
+/* --- 5. Visual improvements --- */
+
+/* Sticky header row */
+.md-typeset table:not([class]) thead tr th {
+  position: sticky;
+  top: 0;
+  background-color: var(--md-default-bg-color);
+  z-index: 1;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Zebra striping for readability */
+.md-typeset table:not([class]) tbody tr:nth-child(even) {
+  background-color: var(--md-code-bg-color);
+}
+
+/* Highlight table rows on hover */
+.md-typeset table:not([class]) tbody tr:hover {
+  background-color: var(--md-accent-fg-color--transparent);
+}
+
+/* Bold sub-headings in action cells: INLINE so bullet char stays attached.
+   display:block was causing orphan bullets to float on their own line.     */
+.md-typeset table:not([class]) td strong {
+  display: inline;
+  color: var(--md-primary-fg-color);
+  font-weight: 700;
+}
+
+/* ============================================================
+   MAROON & GOLD BRAND COLORS
+   ============================================================ */
+
+/* Light mode — Maroon primary */
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color:        #800000;
+  --md-primary-fg-color--light: #a03030;
+  --md-primary-fg-color--dark:  #5a0000;
+  --md-primary-bg-color:        #ffffff;
+  --md-primary-bg-color--light: rgba(255,255,255,0.7);
+}
+
+/* Gold accent */
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color:              #CFB53B;
+  --md-accent-fg-color--transparent: rgba(207,181,59,0.12);
+  --md-accent-bg-color:              #ffffff;
+  --md-accent-bg-color--light:       rgba(255,255,255,0.7);
+}
+
+/* Dark mode (slate) — maroon header stays, brighter gold accent */
+[data-md-color-scheme="slate"][data-md-color-primary="custom"] {
+  --md-primary-fg-color:        #800000;
+  --md-primary-fg-color--light: #a03030;
+  --md-primary-fg-color--dark:  #5a0000;
+  --md-primary-bg-color:        #ffffff;
+}
+
+[data-md-color-scheme="slate"][data-md-color-accent="custom"] {
+  --md-accent-fg-color:              #F0CC45;
+  --md-accent-fg-color--transparent: rgba(240,204,69,0.15);
+}
+
+/* ============================================================
+   NAV SECTION HEADER READABILITY
+   ============================================================ */
+
+/* Section group labels: "EMS Protocols", "Administrative", etc. */
+.md-nav__item--section > .md-nav__link,
+.md-nav__item--section > label {
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--md-accent-fg-color) !important;
+  padding-top: 0.6rem;
+  padding-bottom: 0.2rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  margin-top: 0.3rem;
+}
+
+/* First section — no top border */
+.md-nav__item--section:first-child > .md-nav__link,
+.md-nav__item--section:first-child > label {
+  border-top: none;
+}
+
+/* Active nav item — gold highlight */
+.md-nav__link--active {
+  color: var(--md-accent-fg-color) !important;
+  font-weight: 600;
+}
+
+/* .sc — scope-matrix framing for protocol tables (70 files): pin # + Action columns, squeeze role columns */
+.sc-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1em 0; }
+.sc-wrap table { width: 100%; margin: 0; }
+.sc-wrap th:nth-child(n+3), .sc-wrap td:nth-child(n+3) { width: 2.5em; min-width: 2.5em; text-align: center; padding-left: .35em; padding-right: .35em; }
+.sc-wrap th:first-child, .sc-wrap td:first-child { width: 2.1em; min-width: 2.1em; text-align: center; }
+@media only screen and (max-width: 760px) {
+  .sc-wrap th:nth-child(1), .sc-wrap td:nth-child(1) { position: sticky; left: 0; z-index: 2; background: var(--md-default-bg-color); }
+  .sc-wrap th:nth-child(2), .sc-wrap td:nth-child(2) { position: sticky; left: 2.1em; z-index: 2; background: var(--md-default-bg-color); min-width: 42vw; border-right: 2px solid var(--md-primary-fg-color); }
+}
+
+/* .fx — wide reference matrices (alarm assignments). NOTE: Material's JS
+   hoists markdown tables out of custom wrappers into .md-typeset__table, so
+   the porter emits BOTH classes on the wrapper and rules target the hoisted path. */
+.fx-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1em 0;
+  /* Affordance so a cut-off right edge reads as scrollable, not truncated (owner
+     ruling: clipped column with no hint is a defect). The thin tinted scrollbar is
+     always on and is what hints on desktop — where this table DOES still scroll
+     (1048px of columns inside a ~700px content column). The extra right-edge fade is
+     phone-only because touch browsers hide scrollbars behind overlays, so on a phone
+     the scrollbar hint usually isn't visible at all. */
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--md-primary-fg-color) 60%, transparent) transparent; }
+.fx-wrap::-webkit-scrollbar { height: 5px; }
+.fx-wrap::-webkit-scrollbar-track { background: transparent; }
+.fx-wrap::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--md-primary-fg-color) 60%, transparent); border-radius: 3px; }
+@media only screen and (max-width: 760px) {
+  .fx-wrap { mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 30px), rgba(0,0,0,.4));
+    -webkit-mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 30px), rgba(0,0,0,.4)); }
+}
+/* Material nests its own scrollers inside our wrapper; neutralize so .fx-wrap is the
+   single scroll container and sticky cells pin against it, not the inner box. */
+.fx-wrap .md-typeset__table, .fx-wrap .md-typeset__scrollwrap { overflow: visible !important; display: block !important; width: max-content !important; min-width: 100%; max-width: none !important; }
+.fx-wrap table { border-collapse: separate !important; border-spacing: 0; }  /* Chrome kills sticky cells under collapse */
+.md-typeset__table:has(> table:first-child) { } /* no-op guard */
+.md-typeset .fx-wrap > table, .md-typeset .fx-wrap table, .fx-wrap table {
+  display: table !important; table-layout: fixed !important; width: 1088px !important; min-width: 100%; }
+.fx-wrap th, .fx-wrap td { vertical-align: top; text-align: left; font-size: .74rem; white-space: normal; overflow-wrap: normal; }
+/* Verified against site/assets/stylesheets/main.*.min.css:
+   `.md-typeset table:not([class]) th { min-width: 5rem; padding: .9375em 1.25em }`.
+   Under table-layout:fixed Chrome sizes columns from the FIRST ROW, and that Material
+   min-width+padding out-specify a plain `width`, so the unit-label column rendered
+   262px (67% of a 390px screen) while the tactical columns starved at 122px.
+   !important pins on the header row are what hold; padding is trimmed so the width
+   buys duty text instead of whitespace. Duty columns are 246px so label+one
+   column = 104+246 = 350px fits the 358px visible width at 390px: each swipe lands on
+   a WHOLE column instead of cutting a sentence mid-word. Sum 104+246*4 = 1088 = width. */
+.fx-wrap table th, .fx-wrap table td { padding: .5em .5em !important; }
+/* The scroller was carrying 16px of padding TWICE — ours plus Material's nested
+   .md-typeset__table — leaving only 294px of real width at 390px, and a 16px gutter
+   through which the second column visibly slid beside the sticky label column.
+   A horizontal-scroll chassis with a sticky first cell wants zero inner padding. */
+.fx-wrap, .fx-wrap .md-typeset__table, .fx-wrap .md-typeset__scrollwrap {
+  padding-left: 0 !important; padding-right: 0 !important;
+  /* Material also gives .md-typeset__scrollwrap a NEGATIVE margin, which pulled the
+     table 15px left so every duty column started underneath the sticky label column
+     (measured col starts [0, 89, 335...] against a 104px label => clear_of_sticky 0).
+     Zeroing it is what makes one-column-per-swipe actually land clean. */
+  margin-left: 0 !important; margin-right: 0 !important; }
+.fx-wrap table th:nth-child(1), .fx-wrap table td:nth-child(1) {
+  min-width: 104px !important; max-width: 104px !important; width: 104px !important;
+  overflow-wrap: anywhere; }
+.fx-wrap table th:nth-child(n+2), .fx-wrap table td:nth-child(n+2) {
+  width: 246px !important; min-width: 246px !important; max-width: 246px !important; }
+/* hoisted fallback: table sits inside .md-typeset__table.fx-wrap */
+.md-typeset table:not([class]) { }
+@media only screen and (max-width: 760px) {
+  .fx-wrap th:first-child, .fx-wrap td:first-child {
+    position: sticky; left: 0; z-index: 2; background: var(--md-default-bg-color);
+    border-right: 2px solid var(--md-primary-fg-color);
+  }
+}
+/* the hoisted table is no longer a descendant of the custom class — style via :has on the container carrying fx-wrap */
+.md-typeset__table.fx-wrap { display: block !important; overflow-x: auto; }
+.md-typeset__table.fx-wrap > table { width: 1050px !important; table-layout: fixed !important; display: table !important; }
+.md-typeset__table.fx-wrap > table th, .md-typeset__table.fx-wrap > table td { font-size: .74rem; vertical-align: top; text-align: left; }
+/* hoisted-structure fallback: keep identical values + !important so this block can
+   never disagree with the primary pins above if Material's nesting ever changes */
+.md-typeset__table.fx-wrap > table th:nth-child(1), .md-typeset__table.fx-wrap > table td:nth-child(1) {
+  width: 104px !important; min-width: 104px !important; max-width: 104px !important; overflow-wrap: anywhere; }
+.md-typeset__table.fx-wrap > table th:nth-child(n+2), .md-typeset__table.fx-wrap > table td:nth-child(n+2) {
+  width: 246px !important; min-width: 246px !important; max-width: 246px !important; }
+@media only screen and (max-width: 760px) {
+  .md-typeset__table.fx-wrap > table th:first-child, .md-typeset__table.fx-wrap > table td:first-child {
+    position: sticky; left: 0; z-index: 2; background: var(--md-default-bg-color);
+    border-right: 2px solid var(--md-primary-fg-color); }
+}
+
+/* Homepage quick links: one big door row (.qlone) above its own jump strip
+   (.qljump). No cards — the hub pages carry the depth. Sized for a thumb on a
+   phone (owner: "those bars need to be a little bit larger"). */
+.qlcap { margin: .2em 0 .35em; font-size: .74em; letter-spacing: .06em;
+  text-transform: uppercase; opacity: .62; }
+.qlcap p { margin: 0; }
+
+/* static one-tap tools */
+.qltools { display: flex; flex-wrap: wrap; gap: .4em; margin: 0 0 .75em; }
+.qltools p { display: contents; }
+.qltools a {
+  flex: 1 1 46%; text-align: center; text-decoration: none;
+  display: flex; align-items: center; justify-content: center; min-height: 52px;
+  padding: .6em .5em; border-radius: 10px; font-weight: 700; font-size: .88em;
+  line-height: 1.25; color: var(--md-typeset-a-color);
+  background: color-mix(in srgb, var(--md-primary-fg-color) 13%, var(--md-default-bg-color));
+  border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 26%, transparent); }
+.qltools a:hover { background: color-mix(in srgb, var(--md-primary-fg-color) 24%, var(--md-default-bg-color)); }
+@media only screen and (min-width: 761px) { .qltools a { flex: 0 0 auto; } }
+
+/* door row: full-width, one line, big target */
+.qlone { margin: .1em 0 .35em; }
+.qlone p { margin: 0; }
+.qlone a {
+  display: block; min-height: 58px; padding: .85em .9em; border-radius: 10px;
+  background: color-mix(in srgb, var(--md-primary-fg-color) 11%, var(--md-default-bg-color));
+  border-left: 5px solid var(--md-primary-fg-color);
+  font-size: 1.02em; font-weight: 700; line-height: 1.35; text-decoration: none; }
+.qlone a:hover { background: color-mix(in srgb, var(--md-primary-fg-color) 19%, var(--md-default-bg-color)); }
+.qlcount { float: right; font-weight: 400; font-size: .76em; opacity: .8; line-height: 2.4; }
+@media only screen and (max-width: 600px) { .qlcount { display: none; } }
+
+/* Group jump: horizontal chip strips (homepage + each hub page). One row per
+   bucket; scrolls sideways instead of stacking into a wall of pills. */
+.qljump { margin: .3em 0 .8em; font-size: .84em; }
+.qljump p {
+  display: flex; align-items: center; gap: .38em; margin: 0 0 .3em;
+  padding: .5em .6em; border-radius: 10px; background: var(--md-code-bg-color);
+  overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap;
+  /* thin, quiet scrollbar + right-edge fade so "there is more" is visible
+     without a thick grey track running under the row */
+  scrollbar-width: thin; scrollbar-color: var(--md-primary-fg-color) transparent;
+  mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 28px), transparent);
+  -webkit-mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 28px), transparent); }
+.qljump p::-webkit-scrollbar { height: 4px; }
+.qljump p::-webkit-scrollbar-track { background: transparent; }
+.qljump p::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--md-primary-fg-color) 55%, transparent); border-radius: 2px; }
+.qljump strong { flex: 0 0 auto; opacity: .6; letter-spacing: .04em; text-transform: uppercase;
+  font-size: .9em; }
+.qljump a { flex: 0 0 auto; text-decoration: none; white-space: nowrap;
+  display: inline-flex; align-items: center; min-height: 44px;
+  padding: .35em .95em; border-radius: 999px; font-weight: 600;
+  background: color-mix(in srgb, var(--md-primary-fg-color) 12%, var(--md-default-bg-color)); }
+.qljump a:hover { background: color-mix(in srgb, var(--md-primary-fg-color) 26%, var(--md-default-bg-color)); }
+
+/* Dark scheme: --md-primary-fg-color is #800000 maroon, which is ~1.5:1 on the
+   dark tiles (unreadable). Same failure class the dosing tables already patch:
+   override component link text explicitly, not with primary. #ffab91 measures
+   7.2:1 (tools) / 7.5:1 (doors) / 6.7:1 (chips) against the tinted dark tiles,
+   chosen over the barely-passing salmon because this app gets read in daylight. */
+[data-md-color-scheme="slate"] .qlcap { color: rgba(226, 228, 233, .78); opacity: 1; }
+[data-md-color-scheme="slate"] .qltools a {
+  color: #ffab91; background: rgba(255, 171, 145, .10);
+  border-color: rgba(255, 171, 145, .38); }
+[data-md-color-scheme="slate"] .qltools a:hover { background: rgba(255, 138, 128, .20); }
+[data-md-color-scheme="slate"] .qlone a {
+  color: #ffab91; background: rgba(255, 171, 145, .08); border-left-color: #b04040; }
+[data-md-color-scheme="slate"] .qlone a:hover { background: rgba(255, 138, 128, .17); }
+[data-md-color-scheme="slate"] .qlcount { color: rgba(226, 228, 233, .62); }
+[data-md-color-scheme="slate"] .qljump strong { color: rgba(226, 228, 233, .62); }
+[data-md-color-scheme="slate"] .qljump a { color: #ffab91; background: rgba(255, 171, 145, .14); }
+[data-md-color-scheme="slate"] .qljump a:hover { background: rgba(255, 138, 128, .26); }
+[data-md-color-scheme="slate"] .qljump p::-webkit-scrollbar-thumb { background: rgba(255,138,128,.5); }
+
+/* Home page only: the site name already sits in the top bar, so the page title
+   costs a screen of scroll for nothing. Compress it when the quick-links block
+   is present (:has() — degrades to the normal title on older engines). */
+article:has(.qltools) h1:first-of-type { font-size: 1.25em; margin: .1em 0 .3em; }
+article:has(.qltools) h1:first-of-type + p { margin: 0 0 .45em; font-size: .9em; }
+article:has(.qltools) h2:first-of-type { font-size: 1.15em; margin: .45em 0 .3em; }
+
+/* Homepage recent-updates list */
+.recent-list { list-style: none; padding: 0; margin: 0; }
+.recent-list li { padding: .45em 0; border-bottom: 1px solid var(--md-default-bg-color--lighter); }
+.recent-date { color: #ffb84d; font-family: var(--md-code-font-family); font-size: .72rem; }
+.recent-sha { float: right; color: #9e9e9e; font-family: var(--md-code-font-family); font-size: .68rem; }
+.recent-files { font-size: .76rem; padding-left: .4em; }
+.recent-files a { color: var(--md-typeset-a-color); }
+/* pages a commit removed: named in the changelog, but never linked */
+.recent-removed { color: var(--md-default-fg-color--lighter); text-decoration: line-through; }
+.recent-more { color: #9e9e9e; font-size: .72rem; }
+
+/* Phone bottom menu: hamburger relocates to bottom-right thumb zone */
+@media only screen and (max-width: 760px) {
+  .md-header__button[for="__drawer"] {
+    position: fixed; top: auto; left: auto; bottom: 20px; right: 16px;
+    width: 54px; height: 54px; margin: 0; padding: 0; border-radius: 50%;
+    background: var(--md-primary-fg-color); color: #fff;
+    display: flex !important; align-items: center; justify-content: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .55); z-index: 30;
+  }
+  .md-header__button[for="__drawer"] svg { width: 26px; height: 26px; }
+  html .md-content { padding-bottom: 90px; }
+}
+/* Wide-table framing: scroll horizontally on phones instead of crushing columns */
+.md-typeset__table { display: block; overflow-x: auto; max-width: 100%; }
+
+/* .dz — dosing-zone component: horizontal scroll + sticky drug column */
+.dz-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; margin: 1em 0; }
+.dz { border-collapse: separate; border-spacing: 0; font-size: .72rem; width: max-content; }
+.dz th, .dz td { white-space: nowrap; padding: .5em .65em; border-bottom: 1px solid #2a2a2a; text-align: center; }
+.dz-sticky { position: sticky; left: 0; z-index: 2; background: var(--md-default-bg-color); border-right: 2px solid var(--md-primary-fg-color); }
+.dz-name { text-align: left !important; max-width: none; }
+.dz-sub { color: #9e9e9e; font-size: .66rem; font-weight: 400; }
+.dz-name b { color: #ff8a80; }  /* salmon on dark: readable, brand-family */
+.dz td:first-child:not(.dz-sticky) { text-align: left; }
+.dz thead th { background: var(--md-default-bg-color); }
+.dz tbody tr:hover td { background: var(--md-code-bg-color); }
+.dz tbody tr:hover .dz-sticky { background: var(--md-code-bg-color); }
+
+/* SOP metadata card (tidy_sops.py output) */
+.sop-meta {
+  display: block;
+  margin: .6em 0 1.4em;
+  padding: .65em 1em;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--md-primary-fg-color) 12%, var(--md-default-bg-color));
+  border-left: 4px solid var(--md-primary-fg-color);
+  font-size: .8em;
+  line-height: 1.7;
+  color: var(--md-default-fg-color--light);
+}
+.sop-meta strong { color: var(--md-default-fg-color); }
+
+/* zone-colored sticky cells (equipment matrix): dark text on light chips */
+.dz-zone b, .dz-zone { color: #111 !important; }
+.dz-zone .dz-sub { color: #2b2b2b; font-weight: 600; }
+
+/* .tw — prose tables inside the sc-wrap chassis: breathable columns, single sticky first col */
+.sc-wrap.tw table th:first-child, .sc-wrap.tw table td:first-child { width: auto; min-width: 10em; }
+.sc-wrap.tw table th:nth-child(n+2), .sc-wrap.tw table td:nth-child(n+2) { width: auto; min-width: 7em; text-align: left; padding: .4em .7em; }
+@media only screen and (max-width: 760px) {
+  .sc-wrap.tw table th:nth-child(2), .sc-wrap.tw table td:nth-child(2) { position: static; left: auto; min-width: 7em; border-right: none; }
+}
+
+/* ============================================================
+   CORRECTION INTAKE (scripts/mkdocs_report_link.py)
+   Touch targets >= 44px per owner rule; maroon on slate fails
+   contrast, so the dark-mode block switches to the site salmon.
+   ============================================================ */
+.report-line {
+  margin: 1.7em 0 0; padding-top: 1em;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5em 1em; }
+.report-btn {
+  display: inline-flex; align-items: center; min-height: 44px;
+  padding: .5em 1.05em; border-radius: .25rem;
+  border: 1px solid var(--md-primary-fg-color--light);
+  font-size: .78rem; font-weight: 700; text-decoration: none;
+  color: var(--md-primary-fg-color--light); }
+.report-btn:hover { border-color: var(--md-accent-fg-color); color: var(--md-accent-fg-color); }
+.report-note { flex: 1 1 15rem; font-size: .72rem; color: var(--md-default-fg-color--light); }
+[data-md-color-scheme="slate"] .report-btn { color: #ff8a80; border-color: rgba(255,138,128,.5); }
+[data-md-color-scheme="slate"] .report-btn:hover { color: #F0CC45; border-color: #F0CC45; }
+
+/* homepage intake button — bigger sibling of the per-page one.
+   !important is REQUIRED, not stylistic: this site's own `.md-typeset a { color:
+   var(--md-primary-fg-color) }` is (0,1,1) and beats a bare class selector (0,1,0),
+   which rendered this button maroon-on-maroon — measured color and backgroundColor both
+   rgb(128,0,0). Material's `.md-typeset a` has the same specificity problem for any
+   classed anchor. Computed contrast: #fff on #800000 = 10.95:1, hover #fff on #a03030
+   = 7.09:1, and the slate .report-btn #ff8a80 on #1e2129 = 7.05:1 — all pass AA. */
+.md-button--big {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 52px; padding: .7em 1.4em; margin: .6em 0;
+  border-radius: .3rem; background: var(--md-primary-fg-color) !important;
+  color: #fff !important; font-weight: 700; text-decoration: none; }
+.md-button--big:hover { background: var(--md-primary-fg-color--light) !important; color: #fff !important; }
+/* the per-page button carries its own border, so give it the same protection */
+[data-md-color-scheme="default"] .report-btn { color: var(--md-primary-fg-color) !important; }
+
+/* ============================================================
+   FIELD ERGONOMICS (owner ruling 2026-11-11, 390px + one hand)
+   Selector discipline: every rule below that colours a LINK is written
+   `.md-typeset <sel>` (0,2,0) or uses scheme scoping, because this file's own
+   `.md-typeset a {…}` is (0,1,1) and silently beats a bare class (0,1,0) —
+   that exact bug made today's intake button render maroon-on-maroon.
+   ============================================================ */
+
+/* --- on-scene tool row: 2-column grid on phones, >=54px targets --- */
+@media only screen and (max-width: 600px) {
+  .qltools { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .qltools a { flex: none; min-height: 54px; font-size: .92em; padding: .55em .4em; }
+}
+
+/* --- crew portal cards --- */
+.lgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: .9em 0 1.3em; }
+@media only screen and (min-width: 900px) { .lgrid { grid-template-columns: repeat(3, 1fr); } }
+.md-typeset .lcard {
+  display: flex; flex-direction: column; justify-content: center; gap: .2em;
+  min-height: 78px; padding: .75em .9em; border-radius: 12px; text-decoration: none; }
+.lcard-t { font-weight: 700; font-size: .95em; line-height: 1.25; }
+.lcard-s { font-size: .74em; opacity: .8; }
+.md-typeset .lcard--live {
+  color: var(--md-primary-fg-color) !important;
+  background: color-mix(in srgb, var(--md-primary-fg-color) 10%, var(--md-default-bg-color));
+  border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 30%, transparent); }
+.md-typeset .lcard--live:hover {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 20%, var(--md-default-bg-color)); }
+.lcard--pending {
+  border: 1px dashed var(--md-default-fg-color--lighter); color: var(--md-default-fg-color--light);
+  background: transparent; opacity: .85; }
+[data-md-color-scheme="slate"] .md-typeset .lcard--live { color: #ff8a80 !important; }
+
+/* --- quick-reference chip strip (scripts/mkdocs_field_blocks.py) --- */
+.qrefbar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .4em;
+  margin: .7em 0 1.3em; padding: .45em .55em; border-radius: 10px;
+  background: color-mix(in srgb, var(--md-primary-fg-color) 8%, var(--md-default-bg-color));
+  border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 18%, transparent); }
+.qref-lbl {
+  font-size: .66rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+  color: var(--md-default-fg-color--light); margin-right: .25em; }
+.md-typeset .qref {
+  display: inline-flex; align-items: center; min-height: 44px; padding: .35em .8em;
+  border-radius: 9px; font-weight: 700; font-size: .8rem; text-decoration: none;
+  color: var(--md-primary-fg-color) !important; background: var(--md-default-bg-color);
+  border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 26%, transparent); }
+.md-typeset .qref:hover { background: color-mix(in srgb, var(--md-primary-fg-color) 16%, var(--md-default-bg-color)); }
+[data-md-color-scheme="slate"] .md-typeset .qref { color: #ff8a80 !important; }
+
+/* --- training banner + flashcards --- */
+.md-typeset .trainbar {
+  position: sticky; top: 48px; z-index: 6; margin: 0 0 1em; padding: .7em .9em;
+  border-radius: 10px; background: var(--md-primary-fg-color); border: 0; }
+.md-typeset .trainbar, .md-typeset .trainbar strong { color: #fff !important; }
+@media only screen and (min-width: 761px) { .md-typeset .trainbar { top: 96px; } }
+details.fc {
+  margin: .5em 0; padding: .2em .9em; border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 22%, transparent);
+  background: color-mix(in srgb, var(--md-primary-fg-color) 5%, var(--md-default-bg-color)); }
+details.fc > summary {
+  cursor: pointer; list-style: none; min-height: 48px; display: flex; align-items: center;
+  font-weight: 700; padding: .3em 0; }
+details.fc > summary::-webkit-details-marker { display: none; }
+details.fc > summary::before {
+  content: "+"; margin-right: .6em; font-size: 1.2em; line-height: 1;
+  color: var(--md-primary-fg-color); }
+[data-md-color-scheme="slate"] details.fc > summary::before { color: #ff8a80; }
+details.fc[open] > summary::before { content: "\2212"; }
+details.fc p { margin: .2em 0 .9em; }
+
+/* --- drug links inside protocol tables become pill chips (owner: mis-tap risk) --- */
+.md-typeset table td a[href*="pharmacology"],
+.md-typeset table th a[href*="pharmacology"] {
+  display: inline-block; padding: 3px 8px; border-radius: 6px; font-weight: 600;
+  text-decoration: none; line-height: 1.5;
+  background: color-mix(in srgb, var(--md-primary-fg-color) 12%, var(--md-default-bg-color));
+  border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 26%, transparent); }
+[data-md-color-scheme="slate"] .md-typeset table td a[href*="pharmacology"] { color: #ff8a80 !important; }
+
+/* --- EMR|EMT|A|I|P scope matrix: contrast + vertical padding, NOT horizontal.
+   The bullet columns are pinned at 2.5em so the 7-column matrix fits 390px with no
+   horizontal scroll; adding left/right padding here would push it into the scroller
+   and re-create the clipping defect the owner already ruled on. --- */
+.md-typeset .sc-wrap table td:nth-child(n+3),
+.md-typeset .sc-wrap table th:nth-child(n+3) { padding-top: .8em; padding-bottom: .8em; }
+.md-typeset .sc-wrap table td:nth-child(n+3) { font-weight: 700; font-size: .95em; }
+.md-typeset .sc-wrap table tr:nth-child(even) td:nth-child(n+3) {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 7%, var(--md-default-bg-color)); }
+.md-typeset .sc-wrap table thead th:nth-child(n+3) {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 14%, var(--md-default-bg-color)); }
+
+/* --- nested Material padding leaks into the scroll range on .sc and .dz too ---
+   Measured on the asystole scope matrix: table is 358px inside a 358px scroller, yet
+   scrollWidth reported 374 — 16px of DEAD horizontal scroll, because Material's inner
+   .md-typeset__table still carries 16px padding. The same trap I fixed on .fx-wrap the
+   same day; a table that "fits" still drags. Zero it so the scroller's range equals
+   the content, and sticky first columns pin to the true left edge. */
+.sc-wrap, .dz-wrap,
+.sc-wrap .md-typeset__table, .dz-wrap .md-typeset__table,
+.sc-wrap .md-typeset__scrollwrap, .dz-wrap .md-typeset__scrollwrap {
+  padding-left: 0 !important; padding-right: 0 !important;
+  margin-left: 0 !important; margin-right: 0 !important; }
+
+/* --- training banner: keep it persistent, keep it small ---
+   First cut rendered 106px tall at 390px (12% of the viewport pinned forever), which is
+   the vertical space this whole exercise is trying to give back. Tighter copy + size
+   holds it under ~64px for one line of text on a phone. */
+.md-typeset .trainbar { padding: .45em .8em; font-size: .78rem; line-height: 1.3; }
+.md-typeset .trainbar p { margin: 0; }
+.md-typeset .trainbar strong { font-size: .95em; letter-spacing: .02em; }
