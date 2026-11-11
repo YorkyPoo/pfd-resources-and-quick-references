@@ -32,16 +32,23 @@
   padding: 0.5rem 0.3rem;
 }
 
-/* Action/Intervention column - second column gets most space */
-.md-typeset table:not([class]) td:nth-child(2),
-.md-typeset table:not([class]) th:nth-child(2) {
+/* Action/Intervention column - second column gets most space.
+   GUARDED to 7-column intervention tables: this rule used to apply to EVERY unclassed
+   table, which squeezed the prose alarm-assignment matrix (its col 2 is multi-line duty
+   text) to the same 180-260px the bullet columns need. */
+.md-typeset table:not([class]):has(th:nth-child(7)) td:nth-child(2),
+.md-typeset table:not([class]):has(th:nth-child(7)) th:nth-child(2) {
   min-width: 180px;
   max-width: 260px;
 }
 
-/* Provider-level columns (3+): compact, centered */
-.md-typeset table:not([class]) td:nth-child(n+3),
-.md-typeset table:not([class]) th:nth-child(n+3) {
+/* Provider-level columns (3+): compact, centered.
+   Guarded for the same reason, and this is the line that BROKE the alarm matrix: at
+   (0,3,1) its `white-space: nowrap` out-specified `.fx-wrap th, .fx-wrap td` at (0,1,1),
+   so columns 4-5 could not wrap and 47-119px of text ran out of every cell (owner
+   screenshot 2026-11-11). Widths here are only correct for bullet columns. */
+.md-typeset table:not([class]):has(th:nth-child(7)) td:nth-child(n+3),
+.md-typeset table:not([class]):has(th:nth-child(7)) th:nth-child(n+3) {
   min-width: 36px;
   max-width: 52px;
   text-align: center;
@@ -226,9 +233,19 @@
   min-width: 104px !important; max-width: 104px !important; width: 104px !important;
   overflow-wrap: anywhere; }
 .fx-wrap table th:nth-child(n+2), .fx-wrap table td:nth-child(n+2) {
-  width: 246px !important; min-width: 246px !important; max-width: 246px !important; }
-/* hoisted fallback: table sits inside .md-typeset__table.fx-wrap */
-.md-typeset table:not([class]) { }
+  width: 246px !important; min-width: 246px !important; max-width: 246px !important;
+  /* The two properties the legacy bullet-column rule leaked onto this table. Declared
+     !important deliberately: that rule sits at (0,3,1) and these chassis rules sit at
+     (0,1,2), so without !important `white-space: nowrap` and `text-align: center` win
+     again and prose columns bleed 50-120px out of their cells. This table is PROSE —
+     multi-sentence duty lists, not one-character bullets. */
+  white-space: normal !important; text-align: left !important;
+  overflow-wrap: break-word;
+}
+/* hoisted fallback: table sits inside .md-typeset__table.fx-wrap. Width must equal the
+   sum of the pinned columns (104 + 246*4 = 1088) or table-layout:fixed silently shaves
+   the deficit off every column and the swipe alignment drifts. */
+.md-typeset__table.fx-wrap > table { width: 1088px !important; }
 @media only screen and (max-width: 760px) {
   .fx-wrap th:first-child, .fx-wrap td:first-child {
     position: sticky; left: 0; z-index: 2; background: var(--md-default-bg-color);
