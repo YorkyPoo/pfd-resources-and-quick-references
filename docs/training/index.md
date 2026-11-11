@@ -12,7 +12,7 @@ title: Training & Drills
 
 Tap a card to reveal the answer. Every answer points at the **ratified page** that carries
 the authority — if this card and the protocol ever disagree, the protocol wins and the card
-is a bug: [report it](../index.md#submit-an-update-or-correction).
+is a bug: [report it](../station-info.md#field-basics).
 
 !!! danger "Not a field reference"
     Nothing on this page is an authorization, a dose, or a decision rule. It exists for

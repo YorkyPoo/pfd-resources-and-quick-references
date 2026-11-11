@@ -276,9 +276,11 @@ def quicklinks_block(records):
              # Anchors are hand-written {#ids} in links.md, so they cannot drift with a
              # title rename the way an auto-slug would.
              ("Crew Links & Portals", LINKS_PAGE, "department portals",
-              "**Portals:** [Daily Station Ops](resources/links.md#ops) "
-              "[Clinical & Reporting](resources/links.md#clinical) "
-              "[City & Administration](resources/links.md#admin) "
+              "**Portals:** [Maps &amp; Danger](resources/links.md#response) "
+              "[Run Docs](resources/links.md#doc) "
+              "[Apparatus](resources/links.md#readiness) "
+              "[Training](resources/links.md#training) "
+              "[City](resources/links.md#city) "
               "[Station Hub](resources/station.md)")]
 
     for title, href, sub, strip in doors:
