@@ -177,18 +177,45 @@
 /* .fx — wide reference matrices (alarm assignments). NOTE: Material's JS
    hoists markdown tables out of custom wrappers into .md-typeset__table, so
    the porter emits BOTH classes on the wrapper and rules target the hoisted path. */
-.fx-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1em 0; }
+.fx-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1em 0;
+  /* Affordance so a cut-off right edge reads as scrollable, not truncated (owner
+     ruling: clipped column with no hint is a defect). The thin tinted scrollbar is
+     always on and is what hints on desktop — where this table DOES still scroll
+     (1048px of columns inside a ~700px content column). The extra right-edge fade is
+     phone-only because touch browsers hide scrollbars behind overlays, so on a phone
+     the scrollbar hint usually isn't visible at all. */
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--md-primary-fg-color) 60%, transparent) transparent; }
+.fx-wrap::-webkit-scrollbar { height: 5px; }
+.fx-wrap::-webkit-scrollbar-track { background: transparent; }
+.fx-wrap::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--md-primary-fg-color) 60%, transparent); border-radius: 3px; }
+@media only screen and (max-width: 760px) {
+  .fx-wrap { mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 30px), rgba(0,0,0,.4));
+    -webkit-mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 30px), rgba(0,0,0,.4)); }
+}
 /* Material nests its own scrollers inside our wrapper; neutralize so .fx-wrap is the
    single scroll container and sticky cells pin against it, not the inner box. */
 .fx-wrap .md-typeset__table, .fx-wrap .md-typeset__scrollwrap { overflow: visible !important; display: block !important; width: max-content !important; min-width: 100%; max-width: none !important; }
 .fx-wrap table { border-collapse: separate !important; border-spacing: 0; }  /* Chrome kills sticky cells under collapse */
 .md-typeset__table:has(> table:first-child) { } /* no-op guard */
 .md-typeset .fx-wrap > table, .md-typeset .fx-wrap table, .fx-wrap table {
-  display: table !important; table-layout: fixed !important; width: 1050px !important; min-width: 100%; }
+  display: table !important; table-layout: fixed !important; width: 1048px !important; min-width: 100%; }
 .fx-wrap th, .fx-wrap td { vertical-align: top; text-align: left; font-size: .74rem; white-space: normal; overflow-wrap: normal; }
-.fx-wrap th:nth-child(1), .fx-wrap td:nth-child(1) { width: 150px; }
-.fx-wrap th:nth-child(2), .fx-wrap td:nth-child(2) { width: 210px; }
-.fx-wrap th:nth-child(n+3), .fx-wrap td:nth-child(n+3) { width: 172px; }
+/* Verified against site/assets/stylesheets/main.*.min.css:
+   `.md-typeset table:not([class]) th { min-width: 5rem; padding: .9375em 1.25em }`.
+   Under table-layout:fixed Chrome sizes columns from the FIRST ROW, and that Material
+   min-width+padding out-specify a plain `width`, so the unit-label column rendered
+   262px (67% of a 390px screen) while the tactical columns starved at 122px.
+   !important pins on the header row are what hold; padding is trimmed so the width
+   buys duty text instead of whitespace. Sum must equal the table width (104+300+214*3=1046). */
+.fx-wrap table th, .fx-wrap table td { padding: .5em .5em !important; }
+.fx-wrap table th:nth-child(1), .fx-wrap table td:nth-child(1) {
+  min-width: 104px !important; max-width: 104px !important; width: 104px !important;
+  overflow-wrap: anywhere; }
+.fx-wrap table th:nth-child(2), .fx-wrap table td:nth-child(2) {
+  width: 300px !important; min-width: 300px !important; max-width: 300px !important; }
+.fx-wrap table th:nth-child(n+3), .fx-wrap table td:nth-child(n+3) {
+  width: 214px !important; min-width: 214px !important; max-width: 214px !important; }
 /* hoisted fallback: table sits inside .md-typeset__table.fx-wrap */
 .md-typeset table:not([class]) { }
 @media only screen and (max-width: 760px) {
@@ -201,9 +228,14 @@
 .md-typeset__table.fx-wrap { display: block !important; overflow-x: auto; }
 .md-typeset__table.fx-wrap > table { width: 1050px !important; table-layout: fixed !important; display: table !important; }
 .md-typeset__table.fx-wrap > table th, .md-typeset__table.fx-wrap > table td { font-size: .74rem; vertical-align: top; text-align: left; }
-.md-typeset__table.fx-wrap > table th:nth-child(1), .md-typeset__table.fx-wrap > table td:nth-child(1) { width: 150px; }
-.md-typeset__table.fx-wrap > table th:nth-child(2), .md-typeset__table.fx-wrap > table td:nth-child(2) { width: 210px; }
-.md-typeset__table.fx-wrap > table th:nth-child(n+3), .md-typeset__table.fx-wrap > table td:nth-child(n+3) { width: 172px; }
+/* hoisted-structure fallback: keep identical values + !important so this block can
+   never disagree with the primary pins above if Material's nesting ever changes */
+.md-typeset__table.fx-wrap > table th:nth-child(1), .md-typeset__table.fx-wrap > table td:nth-child(1) {
+  width: 104px !important; min-width: 104px !important; max-width: 104px !important; overflow-wrap: anywhere; }
+.md-typeset__table.fx-wrap > table th:nth-child(2), .md-typeset__table.fx-wrap > table td:nth-child(2) {
+  width: 300px !important; min-width: 300px !important; max-width: 300px !important; }
+.md-typeset__table.fx-wrap > table th:nth-child(n+3), .md-typeset__table.fx-wrap > table td:nth-child(n+3) {
+  width: 214px !important; min-width: 214px !important; max-width: 214px !important; }
 @media only screen and (max-width: 760px) {
   .md-typeset__table.fx-wrap > table th:first-child, .md-typeset__table.fx-wrap > table td:first-child {
     position: sticky; left: 0; z-index: 2; background: var(--md-default-bg-color);
