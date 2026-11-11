@@ -216,7 +216,12 @@
    through which the second column visibly slid beside the sticky label column.
    A horizontal-scroll chassis with a sticky first cell wants zero inner padding. */
 .fx-wrap, .fx-wrap .md-typeset__table, .fx-wrap .md-typeset__scrollwrap {
-  padding-left: 0 !important; padding-right: 0 !important; }
+  padding-left: 0 !important; padding-right: 0 !important;
+  /* Material also gives .md-typeset__scrollwrap a NEGATIVE margin, which pulled the
+     table 15px left so every duty column started underneath the sticky label column
+     (measured col starts [0, 89, 335...] against a 104px label => clear_of_sticky 0).
+     Zeroing it is what makes one-column-per-swipe actually land clean. */
+  margin-left: 0 !important; margin-right: 0 !important; }
 .fx-wrap table th:nth-child(1), .fx-wrap table td:nth-child(1) {
   min-width: 104px !important; max-width: 104px !important; width: 104px !important;
   overflow-wrap: anywhere; }
