@@ -395,3 +395,39 @@ article:has(.qltools) h2:first-of-type { font-size: 1.15em; margin: .45em 0 .3em
 @media only screen and (max-width: 760px) {
   .sc-wrap.tw table th:nth-child(2), .sc-wrap.tw table td:nth-child(2) { position: static; left: auto; min-width: 7em; border-right: none; }
 }
+
+/* ============================================================
+   CORRECTION INTAKE (scripts/mkdocs_report_link.py)
+   Touch targets >= 44px per owner rule; maroon on slate fails
+   contrast, so the dark-mode block switches to the site salmon.
+   ============================================================ */
+.report-line {
+  margin: 1.7em 0 0; padding-top: 1em;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5em 1em; }
+.report-btn {
+  display: inline-flex; align-items: center; min-height: 44px;
+  padding: .5em 1.05em; border-radius: .25rem;
+  border: 1px solid var(--md-primary-fg-color--light);
+  font-size: .78rem; font-weight: 700; text-decoration: none;
+  color: var(--md-primary-fg-color--light); }
+.report-btn:hover { border-color: var(--md-accent-fg-color); color: var(--md-accent-fg-color); }
+.report-note { flex: 1 1 15rem; font-size: .72rem; color: var(--md-default-fg-color--light); }
+[data-md-color-scheme="slate"] .report-btn { color: #ff8a80; border-color: rgba(255,138,128,.5); }
+[data-md-color-scheme="slate"] .report-btn:hover { color: #F0CC45; border-color: #F0CC45; }
+
+/* homepage intake button — bigger sibling of the per-page one.
+   !important is REQUIRED, not stylistic: this site's own `.md-typeset a { color:
+   var(--md-primary-fg-color) }` is (0,1,1) and beats a bare class selector (0,1,0),
+   which rendered this button maroon-on-maroon — measured color and backgroundColor both
+   rgb(128,0,0). Material's `.md-typeset a` has the same specificity problem for any
+   classed anchor. Computed contrast: #fff on #800000 = 10.95:1, hover #fff on #a03030
+   = 7.09:1, and the slate .report-btn #ff8a80 on #1e2129 = 7.05:1 — all pass AA. */
+.md-button--big {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 52px; padding: .7em 1.4em; margin: .6em 0;
+  border-radius: .3rem; background: var(--md-primary-fg-color) !important;
+  color: #fff !important; font-weight: 700; text-decoration: none; }
+.md-button--big:hover { background: var(--md-primary-fg-color--light) !important; color: #fff !important; }
+/* the per-page button carries its own border, so give it the same protection */
+[data-md-color-scheme="default"] .report-btn { color: var(--md-primary-fg-color) !important; }

@@ -77,9 +77,22 @@ _Last 45 days, newest first — generated automatically from the site's change h
 
 ## Submit an Update or Correction
 
-If you notice a discrepancy or have input for a protocol, do not edit this page directly.
+Found a discrepancy? Every protocol and SOP page ends with a **Report a correction** button that
+pre-fills the page name for you — use that instead of the link below and you cannot get the
+location wrong.
 
-Submit all corrections or suggestions through your department chain of command. Updates are reviewed and integrated during daily maintenance.
+Use this form only for corrections to the written material. For anything patient-specific, use
+your normal documentation channels.
+
+**Never enter a patient name, MRN, call number, or case details in this form.**
+
+<a class="md-button--big" href="https://docs.google.com/forms/d/e/1FAIpQLSdB-Pcd-hoZ9TMA09J7tUSkzpGtr_cOoLJi2w-JVZycWexa6g/viewform" target="_blank" rel="noopener">Submit an update or correction</a>
+
+**Where it goes:** corrections are reviewed by the Operational Medical Director and the chain of
+command before anything is published. **Nothing changes on this site until the OMD approves it.**
+Submissions that cite a source (PEMS, NREMT, AHA, a manufacturer insert, or a written OMD
+directive) move fastest — an unsourced correction is an opinion, and clinical scope cannot be
+granted on an opinion.
 
 ---
 
