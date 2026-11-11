@@ -431,3 +431,115 @@ article:has(.qltools) h2:first-of-type { font-size: 1.15em; margin: .45em 0 .3em
 .md-button--big:hover { background: var(--md-primary-fg-color--light) !important; color: #fff !important; }
 /* the per-page button carries its own border, so give it the same protection */
 [data-md-color-scheme="default"] .report-btn { color: var(--md-primary-fg-color) !important; }
+
+/* ============================================================
+   FIELD ERGONOMICS (owner ruling 2026-11-11, 390px + one hand)
+   Selector discipline: every rule below that colours a LINK is written
+   `.md-typeset <sel>` (0,2,0) or uses scheme scoping, because this file's own
+   `.md-typeset a {…}` is (0,1,1) and silently beats a bare class (0,1,0) —
+   that exact bug made today's intake button render maroon-on-maroon.
+   ============================================================ */
+
+/* --- on-scene tool row: 2-column grid on phones, >=54px targets --- */
+@media only screen and (max-width: 600px) {
+  .qltools { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .qltools a { flex: none; min-height: 54px; font-size: .92em; padding: .55em .4em; }
+}
+
+/* --- crew portal cards --- */
+.lgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: .9em 0 1.3em; }
+@media only screen and (min-width: 900px) { .lgrid { grid-template-columns: repeat(3, 1fr); } }
+.md-typeset .lcard {
+  display: flex; flex-direction: column; justify-content: center; gap: .2em;
+  min-height: 78px; padding: .75em .9em; border-radius: 12px; text-decoration: none; }
+.lcard-t { font-weight: 700; font-size: .95em; line-height: 1.25; }
+.lcard-s { font-size: .74em; opacity: .8; }
+.md-typeset .lcard--live {
+  color: var(--md-primary-fg-color) !important;
+  background: color-mix(in srgb, var(--md-primary-fg-color) 10%, var(--md-default-bg-color));
+  border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 30%, transparent); }
+.md-typeset .lcard--live:hover {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 20%, var(--md-default-bg-color)); }
+.lcard--pending {
+  border: 1px dashed var(--md-default-fg-color--lighter); color: var(--md-default-fg-color--light);
+  background: transparent; opacity: .85; }
+[data-md-color-scheme="slate"] .md-typeset .lcard--live { color: #ff8a80 !important; }
+
+/* --- quick-reference chip strip (scripts/mkdocs_field_blocks.py) --- */
+.qrefbar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .4em;
+  margin: .7em 0 1.3em; padding: .45em .55em; border-radius: 10px;
+  background: color-mix(in srgb, var(--md-primary-fg-color) 8%, var(--md-default-bg-color));
+  border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 18%, transparent); }
+.qref-lbl {
+  font-size: .66rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+  color: var(--md-default-fg-color--light); margin-right: .25em; }
+.md-typeset .qref {
+  display: inline-flex; align-items: center; min-height: 44px; padding: .35em .8em;
+  border-radius: 9px; font-weight: 700; font-size: .8rem; text-decoration: none;
+  color: var(--md-primary-fg-color) !important; background: var(--md-default-bg-color);
+  border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 26%, transparent); }
+.md-typeset .qref:hover { background: color-mix(in srgb, var(--md-primary-fg-color) 16%, var(--md-default-bg-color)); }
+[data-md-color-scheme="slate"] .md-typeset .qref { color: #ff8a80 !important; }
+
+/* --- training banner + flashcards --- */
+.md-typeset .trainbar {
+  position: sticky; top: 48px; z-index: 6; margin: 0 0 1em; padding: .7em .9em;
+  border-radius: 10px; background: var(--md-primary-fg-color); border: 0; }
+.md-typeset .trainbar, .md-typeset .trainbar strong { color: #fff !important; }
+@media only screen and (min-width: 761px) { .md-typeset .trainbar { top: 96px; } }
+details.fc {
+  margin: .5em 0; padding: .2em .9em; border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 22%, transparent);
+  background: color-mix(in srgb, var(--md-primary-fg-color) 5%, var(--md-default-bg-color)); }
+details.fc > summary {
+  cursor: pointer; list-style: none; min-height: 48px; display: flex; align-items: center;
+  font-weight: 700; padding: .3em 0; }
+details.fc > summary::-webkit-details-marker { display: none; }
+details.fc > summary::before {
+  content: "+"; margin-right: .6em; font-size: 1.2em; line-height: 1;
+  color: var(--md-primary-fg-color); }
+[data-md-color-scheme="slate"] details.fc > summary::before { color: #ff8a80; }
+details.fc[open] > summary::before { content: "\2212"; }
+details.fc p { margin: .2em 0 .9em; }
+
+/* --- drug links inside protocol tables become pill chips (owner: mis-tap risk) --- */
+.md-typeset table td a[href*="pharmacology"],
+.md-typeset table th a[href*="pharmacology"] {
+  display: inline-block; padding: 3px 8px; border-radius: 6px; font-weight: 600;
+  text-decoration: none; line-height: 1.5;
+  background: color-mix(in srgb, var(--md-primary-fg-color) 12%, var(--md-default-bg-color));
+  border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 26%, transparent); }
+[data-md-color-scheme="slate"] .md-typeset table td a[href*="pharmacology"] { color: #ff8a80 !important; }
+
+/* --- EMR|EMT|A|I|P scope matrix: contrast + vertical padding, NOT horizontal.
+   The bullet columns are pinned at 2.5em so the 7-column matrix fits 390px with no
+   horizontal scroll; adding left/right padding here would push it into the scroller
+   and re-create the clipping defect the owner already ruled on. --- */
+.md-typeset .sc-wrap table td:nth-child(n+3),
+.md-typeset .sc-wrap table th:nth-child(n+3) { padding-top: .8em; padding-bottom: .8em; }
+.md-typeset .sc-wrap table td:nth-child(n+3) { font-weight: 700; font-size: .95em; }
+.md-typeset .sc-wrap table tr:nth-child(even) td:nth-child(n+3) {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 7%, var(--md-default-bg-color)); }
+.md-typeset .sc-wrap table thead th:nth-child(n+3) {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 14%, var(--md-default-bg-color)); }
+
+/* --- nested Material padding leaks into the scroll range on .sc and .dz too ---
+   Measured on the asystole scope matrix: table is 358px inside a 358px scroller, yet
+   scrollWidth reported 374 — 16px of DEAD horizontal scroll, because Material's inner
+   .md-typeset__table still carries 16px padding. The same trap I fixed on .fx-wrap the
+   same day; a table that "fits" still drags. Zero it so the scroller's range equals
+   the content, and sticky first columns pin to the true left edge. */
+.sc-wrap, .dz-wrap,
+.sc-wrap .md-typeset__table, .dz-wrap .md-typeset__table,
+.sc-wrap .md-typeset__scrollwrap, .dz-wrap .md-typeset__scrollwrap {
+  padding-left: 0 !important; padding-right: 0 !important;
+  margin-left: 0 !important; margin-right: 0 !important; }
+
+/* --- training banner: keep it persistent, keep it small ---
+   First cut rendered 106px tall at 390px (12% of the viewport pinned forever), which is
+   the vertical space this whole exercise is trying to give back. Tighter copy + size
+   holds it under ~64px for one line of text on a phone. */
+.md-typeset .trainbar { padding: .45em .8em; font-size: .78rem; line-height: 1.3; }
+.md-typeset .trainbar p { margin: 0; }
+.md-typeset .trainbar strong { font-size: .95em; letter-spacing: .02em; }
