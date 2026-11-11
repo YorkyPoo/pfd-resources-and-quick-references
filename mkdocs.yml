@@ -8,6 +8,7 @@ hooks:
   - scripts/mkdocs_recent_updates.py
   - scripts/mkdocs_report_link.py
   - scripts/mkdocs_field_blocks.py
+  - scripts/mkdocs_bottom_bar.py   # PROTOTYPE branch only — not on main
 # Deliberately NOT set (probed): repo_url adds a header icon on every page linking the
 # GitHub repo, and `git ls-files` shows that public repo's root carries internal working
 # notes (KANBAN.md, AUDIT_STARTUP.md, hermes_skill_audit.md, Pharmacology_Correction_
@@ -47,6 +48,7 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/bottom-bar-prototype.css   # PROTOTYPE branch only — not on main
 
 plugins:
   - search
