@@ -1,15 +1,15 @@
-"""PROTOTYPE ONLY (branch prototype/mobile-bottom-bar) — fixed 4-item mobile bottom bar.
+"""Fixed 4-item mobile bottom bar (Home / EMS / Fire / Station).
 
-Injected at build time so removing the prototype is deleting one line from mkdocs.yml; no
-page source is touched. NOT on main.
+Injected at build time so removing it later is deleting one line from mkdocs.yml; no page
+source is touched. Merged to main 2026-11-11 after the phone hand-test of /prototype/.
 
 Design constraints this satisfies, and why each one is here:
  - 4 items (Home / EMS / Fire / Station), equal width, min 44px hit area, glyph + label each.
  - padding-bottom: env(safe-area-inset-bottom) so the home-indicator band on iPhone does not
    eat half of the tap target — a bar measured at 56px in a browser can be effectively 24px
    on a notched phone without it.
- - max-width 768px only: desktop keeps the tabs bar it already has; two nav systems is worse
-   than either one.
+ - <=760px only (matching the existing FAB media query, not a new 768px one): desktop
+   keeps the tabs bar it already has; two nav systems at once is worse than either one.
  - Paths are computed per page with relpath because protocol pages live at depths 1-3.
  - The existing drawer FAB at (320,770) is RAISED above the bar, not removed: the bar holds
    four destinations, the FAB still holds the full menu and search. Overlapping them would
