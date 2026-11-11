@@ -4,7 +4,7 @@ Everything attached to the **EMS side** — protocols, skills procedures, medica
 
 <div class="qljump" markdown="1">
 
-**Jump:** [Cardiac](#cardiac) [Respiratory](#respiratory) [Trauma](#trauma) [Medical](#medical) [Administrative](#administrative) [Procedures](#procedures) [Toxicology](#toxicology) [Neurologic](#neurologic) [General](#general) [Pharmacology](#pharmacology) [Medications & Calculators](#medications-calculators) [Pediatric Dosing Reference](#pediatric-dosing-reference) [EMS SOPs](#ems-sops) [Front Matter](#front-matter)
+**Jump:** [Cardiac](#cardiac) [Respiratory](#respiratory) [Trauma](#trauma) [Medical](#medical) [Administrative](#administrative) [Procedures](#procedures) [Quick References](#quick-references) [Toxicology](#toxicology) [Neurologic](#neurologic) [General](#general) [Pharmacology](#pharmacology) [Medications & Calculators](#medications-calculators) [Pediatric Dosing Reference](#pediatric-dosing-reference) [EMS SOPs](#ems-sops) [Front Matter](#front-matter)
 
 </div>
 
@@ -83,6 +83,13 @@ Everything attached to the **EMS side** — protocols, skills procedures, medica
 - [Tourniquet Application](../procedures/Tourniquet_Application.md)
 - [Transcutaneous Pacing](../procedures/Transcutaneous_Pacing.md)
 - [Vaccination Administration](../procedures/Vaccination.md)
+
+## Quick References
+
+- [Glasgow Coma Scale (Adult & Pediatric)](../quick-refs/glasgow-coma-scale.md)
+- [APGAR Scoring](../quick-refs/apgar-scoring.md)
+- [Burn TBSA Estimation](../quick-refs/burn-tbsa-estimation.md)
+- [12-Lead ECG Placement & Territories](../quick-refs/ecg-12-lead-placement.md)
 
 ## Toxicology
 

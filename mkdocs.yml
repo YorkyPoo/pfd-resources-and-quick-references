@@ -7,6 +7,7 @@ hooks:
   - scripts/mkdocs_post_build.py
   - scripts/mkdocs_recent_updates.py
   - scripts/mkdocs_report_link.py
+  - scripts/mkdocs_field_blocks.py
 # Deliberately NOT set (probed): repo_url adds a header icon on every page linking the
 # GitHub repo, and `git ls-files` shows that public repo's root carries internal working
 # notes (KANBAN.md, AUDIT_STARTUP.md, hermes_skill_audit.md, Pharmacology_Correction_
@@ -230,6 +231,11 @@ nav:
     - Tourniquet Application: procedures/Tourniquet_Application.md
     - Transcutaneous Pacing: procedures/Transcutaneous_Pacing.md
     - Vaccination Administration: procedures/Vaccination.md
+  - Quick References:
+    - Glasgow Coma Scale (Adult & Pediatric): quick-refs/glasgow-coma-scale.md
+    - APGAR Scoring: quick-refs/apgar-scoring.md
+    - Burn TBSA Estimation: quick-refs/burn-tbsa-estimation.md
+    - 12-Lead ECG Placement & Territories: quick-refs/ecg-12-lead-placement.md
   - Toxicology:
     - Nausea & Vomiting: protocols/toxicology/06_Nausea_Vomiting_PROC.md
     - Nerve Agents: protocols/toxicology/06_Nerve_Agents_PROC.md
@@ -314,3 +320,11 @@ nav:
 - Personnel Policies:
   - Policy Manual (Indexed): personnel-policies/index.md
   - Full Text Archive: personnel-policies/other/personnel-policy-manual.md
+- Station Hub:
+  - Station Hub Home: resources/station.md
+  - Station Hub:
+    - How to Use & Recent Updates: station-info.md
+  - Crew Links:
+    - Crew Links & Portals: resources/links.md
+  - Training:
+    - Training & Drills: training/index.md

@@ -31,6 +31,8 @@ CONFIG = ROOT / "mkdocs.yml"
 HOME_PAGE = "index.md"
 FIRE_HUB = "resources/fire.md"
 EMS_HUB = "resources/ems.md"
+STATION_HUB = "resources/station.md"
+LINKS_PAGE = "resources/links.md"
 
 QL_START = "<!-- QUICKLINKS:START (generated — scripts/gen_resource_pages.py; do not hand-edit) -->"
 QL_END = "<!-- QUICKLINKS:END -->"
@@ -49,9 +51,13 @@ FIRE_ORDER = ["Emergency Operations", "Field References", "Strategies", "Framewo
               "Special Operations", "Equipment & Apparatus", "Safety & Health",
               "General Administration", "Public Relations"]
 EMS_ORDER = ["Cardiac", "Respiratory", "Trauma", "Medical", "Administrative",
-             "Procedures", "Toxicology", "Neurologic", "General", "Pharmacology",
-             "Medications & Calculators", "Pediatric Dosing Reference",
+             "Procedures", "Quick References", "Toxicology", "Neurologic", "General",
+             "Pharmacology", "Medications & Calculators", "Pediatric Dosing Reference",
              "EMS SOPs", "Front Matter"]
+
+# Station groups in display order. Unknown groups are appended by ordered_groups(), so a
+# new station page never fails the build — it just lands last.
+STATION_ORDER = ["Station Hub", "Crew Links", "Training"]
 
 # Static one-tap tools on the homepage: no scrolling, no menu. Labels are ours
 # (the source pages carry truncated PDF-dump titles). Every path is validated
@@ -94,8 +100,13 @@ def load_cfg():
 # Classification is PATH-based, not menu-label-based, so the script stays
 # idempotent after it has rewritten the nav into Fire/EMS hubs.
 EMS_PATHS = ("protocols/", "procedures/", "pharmacology/", "medications.md",
-             "pediatric-dosing/", "sops/ems/")
+             "pediatric-dosing/", "sops/ems/", "quick-refs/")
 FIRE_PATHS = ("fire-ems-references/", "sops/")
+# Station = non-clinical, non-fireground utility pages (the "station mode" tempo).
+# bucket_of checks the HUB constants first, so resources/station.md classifies as HUB
+# even though it also starts with "resources/"; this tuple therefore lists only member
+# pages, never the hub itself.
+STATION_PATHS = ("station-info.md", "resources/links.md", "training/")
 
 
 def flatten(nav, parents=(), top=None, out=None):
@@ -122,8 +133,10 @@ def bucket_of(rec):
     path = rec["file"] or ""
     if path == HOME_PAGE:
         return "HOME"
-    if path in (FIRE_HUB, EMS_HUB):
+    if path in (FIRE_HUB, EMS_HUB, STATION_HUB):
         return "HUB"
+    if path.startswith(STATION_PATHS):
+        return "STATION"
     if path.startswith("personnel-policies/"):
         return "DEPT"
     if path.startswith(EMS_PATHS):
@@ -168,6 +181,10 @@ HUB_LEAD = {
     "EMS": ("Everything attached to the **EMS side** — protocols, skills "
             "procedures, medications, pediatric dosing, and EMS administration. "
             "Fire content lives on the [Fire Resources](fire.md) page."),
+    "STATION": ("**Station mode** — the things you look up between calls, not during "
+                "one: how this site works, what changed recently, training drills, and "
+                "the [Crew Links & Portals](links.md) launchpad. Clinical decisions live "
+                "on the [EMS Resources](ems.md) and [Fire Resources](fire.md) pages."),
 }
 
 
@@ -197,7 +214,9 @@ def build_nav(records):
     return [{"Home": HOME_PAGE},
             {"Fire Resources": [{"Fire Resources Home": FIRE_HUB}, *group_nodes("FIRE", FIRE_ORDER)]},
             {"EMS Resources": [{"EMS Resources Home": EMS_HUB}, *group_nodes("EMS", EMS_ORDER)]},
-            {"Personnel Policies": [{r["label"]: r["file"]} for r in dept]}]
+            {"Personnel Policies": [{r["label"]: r["file"]} for r in dept]},
+            {"Station Hub": [{"Station Hub Home": STATION_HUB},
+                             *group_nodes("STATION", STATION_ORDER)]}]
 
 
 def nav_paths(nav):
@@ -226,6 +245,10 @@ def quicklinks_block(records):
     nav_paths = {r["file"] for r in records if r["file"]}
     missing = [p for _l, p in SCENE_TOOLS if p.split("#")[0] not in nav_paths]
     missing += [p for _l, p in POLICY_CHIPS if not (DOCS / p).exists()]
+    # The 4th door's targets are curated constants, not nav-derived like the fire/EMS
+    # chips, so they need the same guard: a renamed page must break the build here
+    # rather than ship a dead tile on the home page.
+    missing += [p for p in (LINKS_PAGE, STATION_HUB) if p not in nav_paths]
     if missing:
         raise SystemExit(f"curated link target no longer exists: {missing}")
 
@@ -247,7 +270,16 @@ def quicklinks_block(records):
              ("EMS Resources", "resources/ems.md", f"{n_ems} pages · procedures inside",
               chips(ems, "resources/ems.md", "EMS")),
              ("Personnel Policies", "personnel-policies/index.md", "43 indexed",
-              "**Policies:** " + " ".join(f"[{l}]({p})" for l, p in POLICY_CHIPS))]
+              "**Policies:** " + " ".join(f"[{l}]({p})" for l, p in POLICY_CHIPS)),
+             # 4th door = the "station mode" launchpad (owner ruling 2026-11-11: this PWA
+             # is the department's shared operational hub, not a personal bookmark list).
+             # Anchors are hand-written {#ids} in links.md, so they cannot drift with a
+             # title rename the way an auto-slug would.
+             ("Crew Links & Portals", LINKS_PAGE, "department portals",
+              "**Portals:** [Daily Station Ops](resources/links.md#ops) "
+              "[Clinical & Reporting](resources/links.md#clinical) "
+              "[City & Administration](resources/links.md#admin) "
+              "[Station Hub](resources/station.md)")]
 
     for title, href, sub, strip in doors:
         parts += ['<div class="qlone" markdown="1">', "",
@@ -285,7 +317,7 @@ def main():
     cfg = load_cfg()
     records = flatten(cfg["nav"])
     old = [r["file"] for r in records if r["file"] and bucket_of(r) != "HUB"]
-    old_set, hub_set = set(old), {FIRE_HUB, EMS_HUB}
+    old_set, hub_set = set(old), {FIRE_HUB, EMS_HUB, STATION_HUB}
 
     nav = build_nav(records)
     new = nav_paths(nav)
@@ -301,7 +333,9 @@ def main():
                             "FIRE", FIRE_ORDER)
     ems_g = ordered_groups([r for r in records if bucket_of(r) == "EMS" and r["file"]],
                            "EMS", EMS_ORDER)
-    placed = [r["file"] for _, gs in (("FIRE", fire_g), ("EMS", ems_g))
+    station_g = ordered_groups([r for r in records if bucket_of(r) == "STATION" and r["file"]],
+                               "STATION", STATION_ORDER)
+    placed = [r["file"] for _, gs in (("FIRE", fire_g), ("EMS", ems_g), ("STATION", station_g))
               for _g, recs in gs for r in recs]
     non_hub = {r["file"] for r in records if bucket_of(r) in ("HOME", "DEPT")}
     hub_missing = old_set - set(placed) - non_hub
@@ -313,6 +347,7 @@ def main():
     files = {
         "docs/" + FIRE_HUB: build_hub("FIRE", "Fire Resources", fire_g),
         "docs/" + EMS_HUB: build_hub("EMS", "EMS Resources", ems_g),
+        "docs/" + STATION_HUB: build_hub("STATION", "Station Hub", station_g),
         "docs/index.md": splice_index((DOCS / "index.md").read_text(), quicklinks_block(records)),
         "mkdocs.yml": splice_nav(CONFIG.read_text(), nav),
     }
@@ -321,7 +356,8 @@ def main():
              if not (ROOT / rel).exists() or (ROOT / rel).read_text() != text]
     print(f"pages: {len(old_set)}  fire groups: {len(fire_g)} "
           f"({sum(len(g[1]) for g in fire_g)})  ems groups: {len(ems_g)} "
-          f"({sum(len(g[1]) for g in ems_g)})")
+          f"({sum(len(g[1]) for g in ems_g)})  station groups: {len(station_g)} "
+          f"({sum(len(g[1]) for g in station_g)})")
     print("drift:", ", ".join(drift) or "none — all files current")
     if dry:
         for rel in drift:

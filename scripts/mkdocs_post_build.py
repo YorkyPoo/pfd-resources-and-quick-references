@@ -1,11 +1,42 @@
 # mkdocs_post_build.py — generate pre-cache service worker after MkDocs build
 import os
+import re
 import json
 from datetime import datetime, timezone
 
 def on_post_build(config, **kwargs):
     site_dir = config["site_dir"]
-    
+
+    # --- sitemap hygiene, derived not hardcoded ------------------------------------
+    # Any built page carrying <meta name="robots" content="noindex...> is dropped from
+    # sitemap.xml. Reading the rendered HTML means this can never disagree with the
+    # front-matter flag that overrides/main.html turns into that tag — add a new noindex
+    # page and it self-registers. (MkDocs 1.6.1 has no exclude_from_sitemap option; probed:
+    # the string is absent from the installed package. A meta tag alone still leaves the URL
+    # discoverable in the sitemap, which is exactly the leak this closes.)
+    noindex = []
+    for root, dirs, files in os.walk(site_dir):
+        dirs[:] = [d for d in dirs if d not in (".git", "__pycache__", "assets")]
+        for fn in files:
+            if not fn.endswith(".html"):
+                continue
+            fp = os.path.join(root, fn)
+            with open(fp, encoding="utf-8", errors="replace") as fh:
+                head = fh.read(4000)          # the meta tag is in <head>, near the top
+            if re.search(r'name="robots"[^>]*noindex', head):
+                noindex.append("/" + os.path.relpath(fp, site_dir).replace("\\", "/"))
+
+    sm = os.path.join(site_dir, "sitemap.xml")
+    if noindex and os.path.exists(sm):
+        with open(sm, encoding="utf-8") as fh:
+            xml = fh.read()
+        for url_path in noindex:
+            xml = re.sub(r"<url>(?:(?!</url>).)*?" + re.escape(url_path)
+                         + r"(?:(?!</url>).)*?</url>", "", xml, flags=re.S)
+        with open(sm, "w", encoding="utf-8") as fh:
+            fh.write(xml)
+        print(f"[post_build] sitemap: dropped {len(noindex)} noindex page(s): {noindex}")
+
     # Find all HTML files
     html_files = []
     for root, dirs, files in os.walk(site_dir):

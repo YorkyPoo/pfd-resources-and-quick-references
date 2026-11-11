@@ -2,6 +2,13 @@
 
 {% block extrahead %}
   {{ super() }}
+  {# Crew Links & Portals carries department portal addresses: any page whose front matter
+     sets `robots: noindex` gets the crawl directive that actually works on a GitHub Pages
+     project site (the sub-path robots.txt cannot govern a host-root crawl). Kept in sync
+     with the sitemap exclusion in scripts/mkdocs_post_build.py. #}
+  {% if page.meta and page.meta.get('robots') == 'noindex' %}
+  <meta name="robots" content="noindex, nofollow" />
+  {% endif %}
   <link rel="manifest" href="{{ 'manifest.webmanifest' | url }}" />
   <meta name="theme-color" content="#16213e" />
   <script>
