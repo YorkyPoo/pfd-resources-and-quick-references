@@ -1,0 +1,31 @@
+/* PROTOTYPE (branch only): fixed 4-item bottom bar at <=768px for phone hand-test. */
+.bbnav {
+  display: none; }
+@media only screen and (max-width: 768px) {
+  .bbnav {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 18; display: flex;
+    background: var(--md-primary-fg-color);
+    border-top: 1px solid rgba(255,255,255,.22);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    box-shadow: 0 -2px 10px rgba(0,0,0,.35); }
+  .md-typeset .bbitem, .bbitem {
+    flex: 1 1 0; min-height: 56px; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 2px; padding: 4px 2px;
+    text-decoration: none; color: #fff; font-weight: 700; }
+  .bbitem:active { background: rgba(255,255,255,.16); }
+  .bbico { font-size: 1.15rem; line-height: 1; }
+  .bbtxt { font-size: .66rem; letter-spacing: .03em; line-height: 1.1; }
+
+  /* the page must not run under the bar: 56px + the safe-area band.
+     Selector MUST be `html .md-content`: extra.css line 356 already sets
+     `html .md-content { padding-bottom: 90px }` at (0,1,1), so a bare `.md-content`
+     rule (0,1,0) loses and the last row of content hides under the bar. */
+  html .md-content { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
+
+  /* raise the existing drawer FAB above the bar instead of removing it.
+     Measured original position: bottom 20px / right 16px => centre at (320,770) with
+     54px diameter. Selector keeps the `label` element so it out-specifies the existing
+     `.md-header__button[for="__drawer"]` rule at (0,2,0). */
+  label.md-header__button[for="__drawer"] {
+    bottom: calc(70px + env(safe-area-inset-bottom, 0px)) !important; }
+}
