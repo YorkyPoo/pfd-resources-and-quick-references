@@ -1,8 +1,8 @@
 // Pre-Cache Service Worker for Poquoson Fire & Rescue Protocols
-// Generated: 20261111-054313
+// Generated: 20261111-070500
 // Caches ALL protocols on first visit for full offline access
 
-const CACHE_NAME = "pfd-protocols-v20261111-054313";
+const CACHE_NAME = "pfd-protocols-v20261111-070500";
 
 const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/404.html",
@@ -172,8 +172,14 @@ const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/protocols/trauma/09_Hemorrhage_Control_PROC.html",
     "/pfd-resources-and-quick-references/protocols/trauma/09_Lightning_Injuries_PROC.html",
     "/pfd-resources-and-quick-references/protocols/trauma/09_Trauma_PROC.html",
+    "/pfd-resources-and-quick-references/quick-refs/apgar-scoring.html",
+    "/pfd-resources-and-quick-references/quick-refs/burn-tbsa-estimation.html",
+    "/pfd-resources-and-quick-references/quick-refs/ecg-12-lead-placement.html",
+    "/pfd-resources-and-quick-references/quick-refs/glasgow-coma-scale.html",
     "/pfd-resources-and-quick-references/resources/ems.html",
     "/pfd-resources-and-quick-references/resources/fire.html",
+    "/pfd-resources-and-quick-references/resources/links.html",
+    "/pfd-resources-and-quick-references/resources/station.html",
     "/pfd-resources-and-quick-references/sops/emergency-operations/EO-10-Staffing-and-Equipment-Response-202406130909086447.html",
     "/pfd-resources-and-quick-references/sops/emergency-operations/EO-100-Incident-Management-System.html",
     "/pfd-resources-and-quick-references/sops/emergency-operations/EO-110-Elevator-Emergencies.html",
@@ -276,7 +282,9 @@ const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/sops/special-operations/so-1100-extreme-weather-emergencies-and-natural-disaster-call-back-policy.html",
     "/pfd-resources-and-quick-references/sops/special-operations/so-1200-suas-operations.html",
     "/pfd-resources-and-quick-references/sops/special-operations/so-1300-rescue-task-force-administration.html",
-    "/pfd-resources-and-quick-references/sops/special-operations/so-900-carbon-monoxide-incident-operations.html"
+    "/pfd-resources-and-quick-references/sops/special-operations/so-900-carbon-monoxide-incident-operations.html",
+    "/pfd-resources-and-quick-references/station-info.html",
+    "/pfd-resources-and-quick-references/training/index.html"
 ];
 
 // Install: download and cache every page
