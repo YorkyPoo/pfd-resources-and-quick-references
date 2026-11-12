@@ -59,6 +59,8 @@ duty, for your ticket, then the city. Every link opens in its own tab.
     <span class="lcard-t">Poquoson Fire &amp; Rescue</span><span class="lcard-s">Department page on the city site</span></a>
   <a class="lcard lcard--live" href="https://www.poquoson-va.gov/" target="_blank" rel="noopener noreferrer">
     <span class="lcard-t">City of Poquoson</span><span class="lcard-s">Government, utilities, agendas</span></a>
+  <a class="lcard lcard--live" href="https://owa.poquoson-va.gov/owa/" target="_blank" rel="noopener noreferrer">
+    <span class="lcard-t">City Email (Outlook)</span><span class="lcard-s">Poquoson webmail sign-in</span></a>
   <a class="lcard lcard--live" href="../personnel-policies/index.html">
     <span class="lcard-t">Personnel Policy Manual</span><span class="lcard-s">Leave, pay, conduct, promotion</span></a>
 </div>
@@ -78,6 +80,12 @@ duty, for your ticket, then the city. Every link opens in its own tab.
        Auth0 handoff (it decodes to a tenant id and client id — no credentials, but it
        expires). The site's own root, `ems.vendnovation.com/`, mints a fresh one by itself,
        which is why the root is what is published here.
+       The Outlook webmail link arrived the same way:
+       `/owa/auth/logon.aspx?url=https%3a%2f%2fowa…%2fowa%2f&reason=0#path=/mail`. That is the
+       login page **after** a bounce — `url=` is the return target and `reason=0` is a
+       session-failure code, and `#path=/mail` is a deep link to whoever's mailbox was open.
+       `https://owa.poquoson-va.gov/owa/` was checked instead: it generates that redirect on
+       its own and lands on the same sign-in form, so the clean path is what is published.
     2. **Publish the destination, not the redirect.** Three of these moved: the city's site is
        now `poquoson-va.gov` (the old `ci.poquoson.va.us` still redirects), `vafire.com` lands
        on the Dept. of Fire Programs, and SizeUp settles on `/auth/signin-v2`. Links were
