@@ -28,7 +28,7 @@ This administrative protocol outlines the procedure for safely transferring pati
 | 3 | **BLS Verification**: Verify BLS provider is willing to accept responsibility and capable of providing a level of care that meets the assessed and documented needs. |  |  |  | • | • |
 | 4 | **Transfer of Care**: Transfer Attendant in Charge (AIC) responsibilities to the BLS provider. |  |  | • | • | • |
 | 5 | **Medical Control**: Contact Medical Control when there is a concern of the appropriateness of the release. |  |  | MC | MC | MC |
-| 6 | **BLS Documentation**: Complete a Patient Care Report (PCR). |  |  |  |  |  |
+| 6 | **BLS Documentation**: Complete a Patient Care Report (PCR). | • | • | • | • | • |
 | 7 | **ALS Documentation**: Complete documentation in, or as an addendum to, the PCR (physical findings, transfer of care, physician consultation). |  |  |  | • | • |
 | 8 | **QA/QI Review**: Any ALS Release to BLS must be reviewed by the Officer or Acting Officer the following day, per departmental SOP. |  |  | • | • | • |
 
