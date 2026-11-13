@@ -35,7 +35,7 @@ Instead of listing paragraphs of text for each certification level, intervention
 | 1 | **Perform general patient management.** |  | • | • | • | • |
 | 2 | **Administer [Epinephrine](../../pharmacology/Epinephrine.md) Auto-injector** |  |  | • | • | • |
 | 3 | **Obtain IV/IO access.** |  |  |  | • | • |
-| 4 | **Administer [Epinephrine](../../pharmacology/Epinephrine.md) Infusion** |  |  |  | MC | MC |
+| 4 | **Administer [Epinephrine](../../pharmacology/Epinephrine.md) Infusion** |  |  |  | [I] | • |
 
 </div>
 

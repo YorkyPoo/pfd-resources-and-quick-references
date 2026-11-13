@@ -83,7 +83,7 @@ Aortic Dissections usually occur in the thoracic cavity when the aortic intima i
 | 8 | **Nausea Management:**<br>• Administer **[Ondansetron](../../pharmacology/Ondansetron.md)** (Zofran) 0.1 mg/kg slow IVP as needed per Nausea and Vomiting Poquoson Protocol. |  |  |  | • | • |
 | 9 | **Hypotension Management - Vasopressors:**<br>• Consider **[Norepinephrine (Levophed)](../../pharmacology/Norepinephrine.md)** Infusion 0.1-0.5 mcg/kg/minute for hypotension.<br>• Titrate to systolic B/P > 90 mmHg.<br>• Refer to Levophed Dosing Chart below.<br>• Administer vasopressors through the largest, most proximal IV site available (AC or higher preferable) or IO. Verify patency prior to initiating infusion and monitor closely for signs of extravasation. |  |  |  | • | • |
 | 10 | **Transport:**<br>• Transport and perform ongoing assessment as indicated.<br>• Do not delay transport for any reason if possible; interventions should be done enroute to appropriate facility. | • | • | • | • | • |
-| 11 | **Medical Control Contact:**<br>• Contact Poquoson OMD for guidance as needed. |  |  | MC | MC | MC |
+| 11 | **Medical Control Contact:**<br>• Contact Poquoson OMD for guidance as needed. |  |  | [A] | • | • |
 
 </div>
 

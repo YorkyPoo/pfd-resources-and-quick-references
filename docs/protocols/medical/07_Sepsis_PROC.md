@@ -37,7 +37,7 @@ This protocol outlines the identification and management of sepsis, focusing on 
 | 3 | Maintain MAP > 65 mmHg. **[Norepinephrine](../../pharmacology/Norepinephrine.md)** infusion **5-20 mcg/min** OR **[Epinephrine](../../pharmacology/Epinephrine.md)** infusion **2-10 mcg/min** (Adult) |  |  |  |  | • |
 | 4 | Maintain age adjusted SBP. **[Epinephrine](../../pharmacology/Epinephrine.md) 0.1 - 1 mcg/kg/min** infusion max **10 mcg/min** (Pediatric) |  |  |  |  | • |
 | 5 | Push dose **[Epinephrine](../../pharmacology/Epinephrine.md) 5-10 mcg** IV/IO every 2-3 mins to maintain MAP until infusion is ready (Adult) |  |  |  |  |  |
-| 6 | Contact Poquoson Medical Control / Prehospital Sepsis Alert |  |  | MC | MC | MC |
+| 6 | Contact Poquoson Medical Control / Prehospital Sepsis Alert |  |  | [A] | • | • |
 
 </div>
 

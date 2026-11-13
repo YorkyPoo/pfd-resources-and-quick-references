@@ -55,7 +55,7 @@ This protocol addresses exposure to choking agents and irritant gases causing ai
 | 9 | **Advanced Airway Assessment:**<br>• Consider endotracheal intubation if signs of airway injury develop.<br>• Assess for impending airway compromise (worsening stridor, respiratory failure). |  |  |  |  | • |
 | 10 | **Endotracheal Intubation:**<br>• Follow Endotracheal Intubation procedure.<br>• ⚠ Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended. |  |  |  |  | • |
 | 11 | **Poison Control Consultation:**<br>• Contact **Poison Control Center at 1-800-222-1222** with any questions.<br>(Note: Poison Control is not online medical control.) |  |  |  |  | • |
-| 12 | **Medical Control Contact:**<br>• Contact **Poquoson OMD** for guidance as needed.<br>• Report agent exposure, interventions performed, and patient status. |  |  |  | MC | MC |
+| 12 | **Medical Control Contact:**<br>• Contact **Poquoson OMD** for guidance as needed.<br>• Report agent exposure, interventions performed, and patient status. |  |  |  | [I] | • |
 
 </div>
 

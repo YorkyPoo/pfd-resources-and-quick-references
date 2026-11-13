@@ -53,7 +53,7 @@ Stridor in pediatric patients indicates upper airway obstruction requiring rapid
 | 8 | **Systemic Corticosteroids**<br>• **[Methylprednisolone](../../pharmacology/Methylprednisolone.md) (Solu-Medrol)** per dosing table below:<br>   • Adult: **125 mg IV/IO** slow push<br>   • Pediatric: **2 mg/kg IV/IO** slow push (max **125 mg**)<br>• Steroids take 30-60 minutes to take effect |  |  |  |  | • |
 | 9 | **IV/IO Access**<br>• Obtain IV or IO access for medication administration<br>• Use largest appropriate catheter<br>• Do NOT delay [Epinephrine](../../pharmacology/Epinephrine.md) for IV/IO placement |  |  |  |  | • |
 | 10 | **Nebulized [Epinephrine](../../pharmacology/Epinephrine.md) for Moderate to Severe Stridor**<br>• **[Epinephrine](../../pharmacology/Epinephrine.md)** **3 mg** [1 mg/mL] nebulized<br>• May be repeated once if needed<br>• Same concentration as adults and pediatrics |  |  |  |  |  |
-| 11 | **Airway Protection - Advanced Airway**<br>• Prepare for advanced airway if impending respiratory failure<br>• Have appropriate sized equipment ready<br>• ⚠ Intubation of children <12 requires Paramedic skill |  |  |  |  | MC |
+| 11 | **Airway Protection - Advanced Airway**<br>• Prepare for advanced airway if impending respiratory failure<br>• Have appropriate sized equipment ready<br>• ⚠ Intubation of children <12 requires Paramedic skill |  |  |  |  | [P] |
 | 12 | **Transport Considerations**<br>• Transport to pediatric-capable facility<br>• Alert receiving facility early<br>• Consider ALS intercept if BLS only<br>• Rapid transport if severe obstruction |  | • | • | • | • |
 
 </div>
