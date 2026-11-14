@@ -1,6 +1,0 @@
-pages: 59 (57 with a level table) | rows: 531
-ok: 236 | mismatch: 37 (inferred 37) | UNMATCHED: 154 | dividers: 4 | local: 1
-wrote audit/level-scan/2026-11-14-findings.json and audit/level-scan/2026-11-14-report.md
-wrote audit/level-scan/needs-authoring.md (489 out-of-scope audit items)
-rewrote 0 rows in 0 files
-post-apply: ok 236 | mismatch 37 (inferred 37) | UNMATCHED 154
