@@ -17,3 +17,7 @@ Thumbs.db
 .obsidian/workspace-mobile.json
 .obsidian/cache
 .trash/
+
+# Level-scan: cached PDF extraction and .bak backups
+*.bak
+audit/level-scan/.cache/

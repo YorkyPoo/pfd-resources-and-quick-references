@@ -1,0 +1,1067 @@
+{
+ "top20": [
+  {
+   "file": "general/02_Cold_Exposure_PROC.md",
+   "folder": "clinical",
+   "gated": true,
+   "row": "8",
+   "key": "8",
+   "bucket": "site_broader",
+   "cells": [
+    {
+     "level": "EMR",
+     "site": "•",
+     "vault": "",
+     "site_kind": "dot",
+     "vault_kind": "blank",
+     "site_eff": "S",
+     "vault_eff": "N",
+     "literal": "site_broader",
+     "effective": "site_broader"
+    }
+   ],
+   "site_line": 31,
+   "vault_line": 21,
+   "site_raw": "| 8 | Rapid transport immediately with resuscitation efforts continued en route. Do not delay transport waiting for ALS. | • | • | • | • | • |",
+   "vault_raw": "| 8 | Rapid transport immediately with resuscitation efforts continued en route. Do not delay transport waiting for ALS. | | • | • | • | • |",
+   "action": "Rapid transport immediately with resuscitation efforts continued en route. Do not delay transport waiting for ALS.",
+   "site_lv": [
+    "•",
+    "•",
+    "•",
+    "•",
+    "•"
+   ],
+   "vault_lv": [
+    "",
+    "•",
+    "•",
+    "•",
+    "•"
+   ],
+   "score": 110
+  },
+  {
+   "file": "cardiac/04_Bradycardia_PROC.md",
+   "folder": "clinical",
+   "gated": true,
+   "row": "8",
+   "key": "8",
+   "bucket": "site_broader",
+   "cells": [
+    {
+     "level": "A",
+     "site": "[A]",
+     "vault": "MC",
+     "site_kind": "br",
+     "vault_kind": "mc",
+     "site_eff": "M",
+     "vault_eff": "M",
+     "literal": "bracket_shape",
+     "effective": null
+    },
+    {
+     "level": "I",
+     "site": "•",
+     "vault": "MC",
+     "site_kind": "dot",
+     "vault_kind": "mc",
+     "site_eff": "S",
+     "vault_eff": "M",
+     "literal": "site_broader",
+     "effective": "site_broader"
+    },
+    {
+     "level": "P",
+     "site": "•",
+     "vault": "MC",
+     "site_kind": "dot",
+     "vault_kind": "mc",
+     "site_eff": "S",
+     "vault_eff": "M",
+     "literal": "site_broader",
+     "effective": "site_broader"
+    }
+   ],
+   "site_line": 42,
+   "vault_line": 22,
+   "site_raw": "| 8 | Contact Medical Control for guidance as needed<br>Consider contacting Medical Control at a pediatric specialty center (VCU CHoR or CHKD) for children and infants with symptomatic bradycardia |  |  | [A] | • | • |",
+   "vault_raw": "| 8 | Contact Medical Control for guidance as needed<br>Consider contacting Medical Control at a pediatric specialty center (VCU CHoR or CHKD) for children and infants with symptomatic bradycardia | | | MC | MC | MC |",
+   "action": "Contact Medical Control for guidance as needed<br>Consider contacting Medical Control at a pediatric specialty center (VCU CHoR or CHKD) for children and infants with symptomatic bradycardia",
+   "site_lv": [
+    "",
+    "",
+    "[A]",
+    "•",
+    "•"
+   ],
+   "vault_lv": [
+    "",
+    "",
+    "MC",
+    "MC",
+    "MC"
+   ],
+   "score": 100
+  },
+  {
+   "file": "cardiac/04_Chest_Pain_ACS_PROC.md",
+   "folder": "clinical",
+   "gated": true,
+   "row": "13",
+   "key": "13",
+   "bucket": "site_broader",
+   "cells": [
+    {
+     "level": "A",
+     "site": "[A]",
+     "vault": "MC",
+     "site_kind": "br",
+     "vault_kind": "mc",
+     "site_eff": "M",
+     "vault_eff": "M",
+     "literal": "bracket_shape",
+     "effective": null
+    },
+    {
+     "level": "I",
+     "site": "•",
+     "vault": "MC",
+     "site_kind": "dot",
+     "vault_kind": "mc",
+     "site_eff": "S",
+     "vault_eff": "M",
+     "literal": "site_broader",
+     "effective": "site_broader"
+    },
+    {
+     "level": "P",
+     "site": "•",
+     "vault": "MC",
+     "site_kind": "dot",
+     "vault_kind": "mc",
+     "site_eff": "S",
+     "vault_eff": "M",
+     "literal": "site_broader",
+     "effective": "site_broader"
+    }
+   ],
+   "site_line": 51,
+   "vault_line": 27,
+   "site_raw": "| 13 | **Medical Control Contact:**<br>• Contact Poquoson OMD for guidance as needed. |  |  | [A] | • | • |",
+   "vault_raw": "| 13 | **Medical Control Contact:**<br>• Contact Poquoson OMD for guidance as needed. | | | MC | MC | MC |",
+   "action": "**Medical Control Contact:**<br>• Contact Poquoson OMD for guidance as needed.",
+   "site_lv": [
+    "",
+    "",
+    "[A]",
+    "•",
+    "•"
+   ],
+   "vault_lv": [
+    "",
+    "",
+    "MC",
+    "MC",
+    "MC"
+   ],
+   "score": 100
+  },
+  {
+   "file": "cardiac/04_Chest_Pain_ACS_PROC.md",
+   "folder": "clinical",
+   "gated": true,
+   "row": "14",
+   "key": "14",
+   "bucket": "site_broader",
+   "cells": [
+    {
+     "level": "I",
+     "site": "[I]",
+     "vault": "MC",
+     "site_kind": "br",
+     "vault_kind": "mc",
+     "site_eff": "M",
+     "vault_eff": "M",
+     "literal": "bracket_shape",
+     "effective": null
+    },
+    {
+     "level": "P",
+     "site": "•",
+     "vault": "MC",
+     "site_kind": "dot",
+     "vault_kind": "mc",
+     "site_eff": "S",
+     "vault_eff": "M",
+     "literal": "site_broader",
+     "effective": "site_broader"
+    }
+   ],
+   "site_line": 52,
+   "vault_line": 28,
+   "site_raw": "| 14 | **Right-Sided / 15-Lead ECG:**<br>• Consider right-sided 12-Lead or 15-Lead ECG for additional assessment. |  |  |  | [I] | • |",
+   "vault_raw": "| 14 | **Right-Sided / 15-Lead ECG:**<br>• Consider right-sided 12-Lead or 15-Lead ECG for additional assessment. | | | | MC | MC |",
+   "action": "**Right-Sided / 15-Lead ECG:**<br>• Consider right-sided 12-Lead or 15-Lead ECG for additional assessment.",
+   "site_lv": [
+    "",
+    "",
+    "",
+    "[I]",
+    "•"
+   ],
+   "vault_lv": [
+    "",
+    "",
+    "",
+    "MC",
+    "MC"
+   ],
+   "score": 100
+  },
+  {
+   "file": "cardiac/04_Chest_Pain_ACS_PROC.md",
+   "folder": "clinical",
+   "gated": true,
+   "row": "7",
+   "key": "7",
+   "bucket": "site_broader",
+   "cells": [
+    {
+     "level": "I",
+     "site": "[I]",
+     "vault": "MC",
+     "site_kind": "br",
+     "vault_kind": "mc",
+     "site_eff": "M",
+     "vault_eff": "M",
+     "literal": "bracket_shape",
+     "effective": null
+    },
+    {
+     "level": "P",
+     "site": "•",
+     "vault": "MC",
+     "site_kind": "dot",
+     "vault_kind": "mc",
+     "site_eff": "S",
+     "vault_eff": "M",
+     "literal": "site_broader",
+     "effective": "site_broader"
+    }
+   ],
+   "site_line": 45,
+   "vault_line": 21,
+   "site_raw": "| 7 | **Extended ECG Assessment:**<br>• If 12-Lead ECG is indeterminate or high suspicion for cardiac ischemia, obtain serial ECGs at 10-minute intervals.<br>• Contact Poquoson OMD for guidance. |  |  |  | [I] | • |",
+   "vault_raw": "| 7 | **Extended ECG Assessment:**<br>• If 12-Lead ECG is indeterminate or high suspicion for cardiac ischemia, obtain serial ECGs at 10-minute intervals.<br>• Contact Poquoson OMD for guidance. | | | | MC | MC |",
+   "action": "**Extended ECG Assessment:**<br>• If 12-Lead ECG is indeterminate or high suspicion for cardiac ischemia, obtain serial ECGs at 10-minute intervals.<br>• Contact Poquoson OMD for guidance.",
+   "site_lv": [
+    "",
+    "",
+    "",
+    "[I]",
+    "•"
+   ],
+   "vault_lv": [
+    "",
+    "",
+    "",
+    "MC",
+    "MC"
+   ],
+   "score": 100
+  },
+  {
+   "file": "cardiac/04_Supraventricular_Tachycardia_PROC.md",
+   "folder": "clinical",
+   "gated": true,
+   "row": "10",
+   "key": "10",
+   "bucket": "site_broader",
+   "cells": [
+    {
+     "level": "I",
+     "site": "[I]",
+     "vault": "MC",
+     "site_kind": "br",
+     "vault_kind": "mc",
+     "site_eff": "M",
+     "vault_eff": "M",
+     "literal": "bracket_shape",
+     "effective": null
+    },
+    {
+     "level": "P",
+     "site": "•",
+     "vault": "MC",
+     "site_kind": "dot",
+     "vault_kind": "mc",
+     "site_eff": "S",
+     "vault_eff": "M",
+     "literal": "site_broader",
+     "effective": "site_broader"
+    }
+   ],
+   "site_line": 48,
+   "vault_line": 24,
+   "site_raw": "| 10 | MC: Contact Poquoson OMD for guidance<br>Ensure 12-Lead ECG transmitted |  |  |  | [I] | • |",
+   "vault_raw": "| 10 | MC: Contact Poquoson OMD for guidance<br>Ensure 12-Lead ECG transmitted | | | | MC | MC |",
+   "action": "MC: Contact Poquoson OMD for guidance<br>Ensure 12-Lead ECG transmitted",
+   "site_lv": [
+    "",
+    "",
+    "",
+    "[I]",
+    "•"
+   ],
+   "vault_lv": [
+    "",
+    "",
+    "",
+    "MC",
+    "MC"
+   ],
+   "score": 100
+  },
+  {
+   "file": "respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+   "folder": "clinical",
+   "gated": true,
+   "row": "12",
+   "key": "12",
+   "bucket": "site_broader",
+   "cells": [
+    {
+     "level": "I",
+     "site": "[I]",
+     "vault": "MC",
+     "site_kind": "br",
+     "vault_kind": "mc",
+     "site_eff": "M",
+     "vault_eff": "M",
+     "literal": "bracket_shape",
+     "effective": null
+    },
+    {
+     "level": "P",
+     "site": "•",
+     "vault": "MC",
+     "site_kind": "dot",
+     "vault_kind": "mc",
+     "site_eff": "S",
+     "vault_eff": "M",
+     "literal": "site_broader",
+     "effective": "site_broader"
+    }
+   ],
+   "site_line": 58,
+   "vault_line": 26,
+   "site_raw": "| 12 | **Medical Control Contact:**<br>• Contact **Poquoson OMD** for guidance as needed.<br>• Report agent exposure, interventions performed, and patient status. |  |  |  | [I] | • |",
+   "vault_raw": "| 12 | **Medical Control Contact:**<br>• Contact **Poquoson OMD** for guidance as needed.<br>• Report agent exposure, interventions performed, and patient status. | | | | MC | MC |",
+   "action": "**Medical Control Contact:**<br>• Contact **Poquoson OMD** for guidance as needed.<br>• Report agent exposure, interventions performed, and patient status.",
+   "site_lv": [
+    "",
+    "",
+    "",
+    "[I]",
+    "•"
+   ],
+   "vault_lv": [
+    "",
+    "",
+    "",
+    "MC",
+    "MC"
+   ],
+   "score": 100
+  },
+  {
+   "file": "respiratory/03_Smoke_Inhalation_PROC.md",
+   "folder": "clinical",
+   "gated": true,
+   "row": "12",
+   "key": "12",
+   "bucket": "site_broader",
+   "cells": [
+    {
+     "level": "I",
+     "site": "[I]",
+     "vault": "MC",
+     "site_kind": "br",
+     "vault_kind": "mc",
+     "site_eff": "M",
+     "vault_eff": "M",
+     "literal": "bracket_shape",
+     "effective": null
+    },
+    {
+     "level": "P",
+     "site": "•",
+     "vault": "MC",
+     "site_kind": "dot",
+     "vault_kind": "mc",
+     "site_eff": "S",
+     "vault_eff": "M",
+     "literal": "site_broader",
+     "effective": "site_broader"
+    }
+   ],
+   "site_line": 54,
+   "vault_line": 26,
+   "site_raw": "| 12 | **Medical Control Contact:**<br>• Contact Poquoson OMD for cyanide poisoning confirmation and specific **Hydroxocobalamin** dosing guidance<br>• Contact **Regional Burn Center** for significant burn injuries requiring specialized care<br>• Coordinate destination for combined airway/burn injuries |  |  |  | [I] | • |",
+   "vault_raw": "| 12 | **Medical Control Contact:**<br>• Contact Poquoson OMD for cyanide poisoning confirmation and specific **Hydroxocobalamin** dosing guidance<br>• Contact **Regional Burn Center** for significant burn injuries requiring specialized care<br>• Coordinate destination for combined airway/burn injuries |   |   |   | MC | MC |",
+   "action": "**Medical Control Contact:**<br>• Contact Poquoson OMD for cyanide poisoning confirmation and specific **Hydroxocobalamin** dosing guidance<br>• Contact **Regional Burn Center** for significant burn injuries requiring specialized care<br>• Coordinate destination for combined airway/burn injuries",
+   "site_lv": [
+    "",
+    "",
+    "",
+    "[I]",
+    "•"
+   ],
+   "vault_lv": [
+    "",
+    "",
+    "",
+    "MC",
+    "MC"
+   ],
+   "score": 100
+  },
+  {
+   "file": "respiratory/03_Smoke_Inhalation_PROC.md",
+   "folder": "clinical",
+   "gated": true,
+   "row": "6",
+   "key": "6",
+   "bucket": "site_broader",
+   "cells": [
+    {
+     "level": "I",
+     "site": "[I]",
+     "vault": "MC",
+     "site_kind": "br",
+     "vault_kind": "mc",
+     "site_eff": "M",
+     "vault_eff": "M",
+     "literal": "bracket_shape",
+     "effective": null
+    },
+    {
+     "level": "P",
+     "site": "•",
+     "vault": "MC",
+     "site_kind": "dot",
+     "vault_kind": "mc",
+     "site_eff": "S",
+     "vault_eff": "M",
+     "literal": "site_broader",
+     "effective": "site_broader"
+    }
+   ],
+   "site_line": 48,
+   "vault_line": 20,
+   "site_raw": "| 6 | **Endotracheal Intubation (If Indicated):**<br>• Perform endotracheal intubation per procedure<br>⚠ Intubation of spontaneously breathing patients without RSI is generally not recommended<br>⚠ Intubation of children under 12 years old is a Paramedic \"red dot\" skill only |  |  |  | [I] | • |",
+   "vault_raw": "| 6 | **Endotracheal Intubation (If Indicated):**<br>• Perform endotracheal intubation per procedure<br>⚠ Intubation of spontaneously breathing patients without RSI is generally not recommended<br>⚠ Intubation of children under 12 years old is a Paramedic \"red dot\" skill only |   |   |   | MC | MC |",
+   "action": "**Endotracheal Intubation (If Indicated):**<br>• Perform endotracheal intubation per procedure<br>⚠ Intubation of spontaneously breathing patients without RSI is generally not recommended<br>⚠ Intubation of children under 12 years old is a Paramedic \"red dot\" skill only",
+   "site_lv": [
+    "",
+    "",
+    "",
+    "[I]",
+    "•"
+   ],
+   "vault_lv": [
+    "",
+    "",
+    "",
+    "MC",
+    "MC"
+   ],
+   "score": 100
+  },
+  {
+   "file": "respiratory/03_Smoke_Inhalation_PROC.md",
+   "folder": "clinical",
+   "gated": true,
+   "row": "7",
+   "key": "7",
+   "bucket": "site_broader",
+   "cells": [
+    {
+     "level": "I",
+     "site": "[I]",
+     "vault": "MC",
+     "site_kind": "br",
+     "vault_kind": "mc",
+     "site_eff": "M",
+     "vault_eff": "M",
+     "literal": "bracket_shape",
+     "effective": null
+    },
+    {
+     "level": "P",
+     "site": "•",
+     "vault": "MC",
+     "site_kind": "dot",
+     "vault_kind": "mc",
+     "site_eff": "S",
+     "vault_eff": "M",
+     "literal": "site_broader",
+     "effective": "site_broader"
+    }
+   ],
+   "site_line": 49,
+   "vault_line": 21,
+   "site_raw": "| 7 | **Hydroxocobalamin (Cyanide Antidote) - Indication Assessment:**<br>• Assess for exposure to combustion products/fire in an enclosed space with ANY of the following:<br>  - Altered mental status<br>  - Seizures<br>  - Hypotension<br>  - Cardiac arrest |  |  |  | [I] | • |",
+   "vault_raw": "| 7 | **Hydroxocobalamin (Cyanide Antidote) - Indication Assessment:**<br>• Assess for exposure to combustion products/fire in an enclosed space with ANY of the following:<br>  - Altered mental status<br>  - Seizures<br>  - Hypotension<br>  - Cardiac arrest |   |   |   | MC | MC |",
+   "action": "**Hydroxocobalamin (Cyanide Antidote) - Indication Assessment:**<br>• Assess for exposure to combustion products/fire in an enclosed space with ANY of the following:<br>  - Altered mental status<br>  - Seizures<br>  - Hypotension<br>  - Cardiac arrest",
+   "site_lv": [
+    "",
+    "",
+    "",
+    "[I]",
+    "•"
+   ],
+   "vault_lv": [
+    "",
+    "",
+    "",
+    "MC",
+    "MC"
+   ],
+   "score": 100
+  },
+  {
+   "file": "respiratory/03_Smoke_Inhalation_PROC.md",
+   "folder": "clinical",
+   "gated": true,
+   "row": "9",
+   "key": "9",
+   "bucket": "site_broader",
+   "cells": [
+    {
+     "level": "I",
+     "site": "[I]",
+     "vault": "MC",
+     "site_kind": "br",
+     "vault_kind": "mc",
+     "site_eff": "M",
+     "vault_eff": "M",
+     "literal": "bracket_shape",
+     "effective": null
+    },
+    {
+     "level": "P",
+     "site": "•",
+     "vault": "MC",
+     "site_kind": "dot",
+     "vault_kind": "mc",
+     "site_eff": "S",
+     "vault_eff": "M",
+     "literal": "site_broader",
+     "effective": "site_broader"
+    }
+   ],
+   "site_line": 51,
+   "vault_line": 23,
+   "site_raw": "| 9 | **Hydroxocobalamin Administration:**<br>• **Administer per Poquoson OMD guidance**<br>• Monitor for increase in blood pressure<br>• Inform receiving facility of administration<br>• Prepare for possible red/purple urine discoloration in patient |  |  |  | [I] | • |",
+   "vault_raw": "| 9 | **Hydroxocobalamin Administration:**<br>• **Administer per Poquoson OMD guidance**<br>• Monitor for increase in blood pressure<br>• Inform receiving facility of administration<br>• Prepare for possible red/purple urine discoloration in patient |   |   |   | MC | MC |",
+   "action": "**Hydroxocobalamin Administration:**<br>• **Administer per Poquoson OMD guidance**<br>• Monitor for increase in blood pressure<br>• Inform receiving facility of administration<br>• Prepare for possible red/purple urine discoloration in patient",
+   "site_lv": [
+    "",
+    "",
+    "",
+    "[I]",
+    "•"
+   ],
+   "vault_lv": [
+    "",
+    "",
+    "",
+    "MC",
+    "MC"
+   ],
+   "score": 100
+  },
+  {
+   "file": "respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "folder": "clinical",
+   "gated": true,
+   "row": "13",
+   "key": "13",
+   "bucket": "site_broader",
+   "cells": [
+    {
+     "level": "I",
+     "site": "[I]",
+     "vault": "MC",
+     "site_kind": "br",
+     "vault_kind": "mc",
+     "site_eff": "M",
+     "vault_eff": "M",
+     "literal": "bracket_shape",
+     "effective": null
+    },
+    {
+     "level": "P",
+     "site": "•",
+     "vault": "MC",
+     "site_kind": "dot",
+     "vault_kind": "mc",
+     "site_eff": "S",
+     "vault_eff": "M",
+     "literal": "site_broader",
+     "effective": "site_broader"
+    }
+   ],
+   "site_line": 48,
+   "vault_line": 27,
+   "site_raw": "| 13 | **Post-Obstruction Advanced Airway - Sedation:**<br>• If endotracheal intubation performed, refer to Sedation Post Advanced Airway protocol.<br>• **[Fentanyl](../../pharmacology/Fentanyl.md) (25 mcg)** and **[Midazolam](../../pharmacology/Midazolam.md) (2.5 mg)** per Respiratory Arrest protocol.<br>• Use half-doses in elderly or frail patients. |  |  |  | [I] | • |",
+   "vault_raw": "| 13 | **Post-Obstruction Advanced Airway - Sedation:**<br>• If endotracheal intubation performed, refer to Sedation Post Advanced Airway protocol.<br>• **Fentanyl (25 mcg)** and **Midazolam (2.5 mg)** per Respiratory Arrest protocol.<br>• Use half-doses in elderly or frail patients. | | | | MC | MC |",
+   "action": "**Post-Obstruction Advanced Airway - Sedation:**<br>• If endotracheal intubation performed, refer to Sedation Post Advanced Airway protocol.<br>• **[Fentanyl](../../pharmacology/Fentanyl.md) (25 mcg)** and **[Midazolam](../../pharmacology/Midazolam.md) (2.5 mg)** per Respiratory Arrest protocol.<br>• Use half-doses in elderly or frail patients.",
+   "site_lv": [
+    "",
+    "",
+    "",
+    "[I]",
+    "•"
+   ],
+   "vault_lv": [
+    "",
+    "",
+    "",
+    "MC",
+    "MC"
+   ],
+   "score": 100
+  },
+  {
+   "file": "respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "folder": "clinical",
+   "gated": true,
+   "row": "14",
+   "key": "14",
+   "bucket": "site_broader",
+   "cells": [
+    {
+     "level": "I",
+     "site": "[I]",
+     "vault": "MC",
+     "site_kind": "br",
+     "vault_kind": "mc",
+     "site_eff": "M",
+     "vault_eff": "M",
+     "literal": "bracket_shape",
+     "effective": null
+    },
+    {
+     "level": "P",
+     "site": "•",
+     "vault": "MC",
+     "site_kind": "dot",
+     "vault_kind": "mc",
+     "site_eff": "S",
+     "vault_eff": "M",
+     "literal": "site_broader",
+     "effective": "site_broader"
+    }
+   ],
+   "site_line": 49,
+   "vault_line": 28,
+   "site_raw": "| 14 | **Expanding Hematoma / Edema - Advanced Airway:**<br>• Early airway intervention before complete obstruction.<br>• Consider difficult airway algorithm; prepare surgical airway backup.<br>• Contact Medical Control for guidance in complex airways. |  |  |  | [I] | • |",
+   "vault_raw": "| 14 | **Expanding Hematoma / Edema - Advanced Airway:**<br>• Early airway intervention before complete obstruction.<br>• Consider difficult airway algorithm; prepare surgical airway backup.<br>• Contact Medical Control for guidance in complex airways. | | | | MC | MC |",
+   "action": "**Expanding Hematoma / Edema - Advanced Airway:**<br>• Early airway intervention before complete obstruction.<br>• Consider difficult airway algorithm; prepare surgical airway backup.<br>• Contact Medical Control for guidance in complex airways.",
+   "site_lv": [
+    "",
+    "",
+    "",
+    "[I]",
+    "•"
+   ],
+   "vault_lv": [
+    "",
+    "",
+    "",
+    "MC",
+    "MC"
+   ],
+   "score": 100
+  },
+  {
+   "file": "respiratory/03_Respiratory_Distress_PROC.md",
+   "folder": "clinical",
+   "gated": true,
+   "row": "7",
+   "key": "7",
+   "bucket": "site_narrower",
+   "cells": [
+    {
+     "level": "EMT",
+     "site": "",
+     "vault": "•",
+     "site_kind": "blank",
+     "vault_kind": "dot",
+     "site_eff": "N",
+     "vault_eff": "S",
+     "literal": "site_narrower",
+     "effective": "site_narrower"
+    },
+    {
+     "level": "A",
+     "site": "",
+     "vault": "",
+     "site_kind": "blank",
+     "vault_kind": "blank",
+     "site_eff": "N",
+     "vault_eff": "S",
+     "literal": "eff_only",
+     "effective": "site_narrower"
+    },
+    {
+     "level": "I",
+     "site": "",
+     "vault": "",
+     "site_kind": "blank",
+     "vault_kind": "blank",
+     "site_eff": "N",
+     "vault_eff": "S",
+     "literal": "eff_only",
+     "effective": "site_narrower"
+    },
+    {
+     "level": "P",
+     "site": "",
+     "vault": "•",
+     "site_kind": "blank",
+     "vault_kind": "dot",
+     "site_eff": "N",
+     "vault_eff": "S",
+     "literal": "site_narrower",
+     "effective": "site_narrower"
+    }
+   ],
+   "site_line": 56,
+   "vault_line": 24,
+   "site_raw": "| 7 | **Supraglottic Airways (SGA):**<br>• Consider if patient continues to deteriorate and cannot tolerate CPAP<br>• Maintains airway patency while avoiding invasive procedures |  |  |  |  |  |",
+   "vault_raw": "| 7 | **Supraglottic Airways (SGA):**<br>• Consider if patient continues to deteriorate and cannot tolerate CPAP<br>• Maintains airway patency while avoiding invasive procedures |  | • |  |  | • |",
+   "action": "**Supraglottic Airways (SGA):**<br>• Consider if patient continues to deteriorate and cannot tolerate CPAP<br>• Maintains airway patency while avoiding invasive procedures",
+   "site_lv": [
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "vault_lv": [
+    "",
+    "•",
+    "",
+    "",
+    "•"
+   ],
+   "score": 70
+  },
+  {
+   "file": "cardiac/04_Bradycardia_PROC.md",
+   "folder": "clinical",
+   "gated": true,
+   "row": "3",
+   "key": "3",
+   "bucket": "site_narrower",
+   "cells": [
+    {
+     "level": "I",
+     "site": "",
+     "vault": "•",
+     "site_kind": "blank",
+     "vault_kind": "dot",
+     "site_eff": "N",
+     "vault_eff": "S",
+     "literal": "site_narrower",
+     "effective": "site_narrower"
+    },
+    {
+     "level": "P",
+     "site": "",
+     "vault": "",
+     "site_kind": "blank",
+     "vault_kind": "blank",
+     "site_eff": "N",
+     "vault_eff": "S",
+     "literal": "eff_only",
+     "effective": "site_narrower"
+    }
+   ],
+   "site_line": 37,
+   "vault_line": 17,
+   "site_raw": "| 3 | **[Atropine](../../pharmacology/Atropine Sulfate.md) sulfate**<br>ADULT: **1 mg IV/IO**<br>PEDIATRIC: **0.02 mg/kg IV/IO**<br>Minimum dose: **0.1 mg**, Maximum dose: **0.5 mg**<br>May repeat once after 5 minutes, if needed |  |  |  |  |  |",
+   "vault_raw": "| 3 | **Atropine sulfate**<br>ADULT: **1 mg IV/IO**<br>PEDIATRIC: **0.02 mg/kg IV/IO**<br>Minimum dose: **0.1 mg**, Maximum dose: **0.5 mg**<br>May repeat once after 5 minutes, if needed | | | | • | |",
+   "action": "**[Atropine](../../pharmacology/Atropine Sulfate.md) sulfate**<br>ADULT: **1 mg IV/IO**<br>PEDIATRIC: **0.02 mg/kg IV/IO**<br>Minimum dose: **0.1 mg**, Maximum dose: **0.5 mg**<br>May repeat once after 5 minutes, if needed",
+   "site_lv": [
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "vault_lv": [
+    "",
+    "",
+    "",
+    "•",
+    ""
+   ],
+   "score": 70
+  },
+  {
+   "file": "cardiac/04_Bradycardia_PROC.md",
+   "folder": "clinical",
+   "gated": true,
+   "row": "5",
+   "key": "5",
+   "bucket": "site_narrower",
+   "cells": [
+    {
+     "level": "I",
+     "site": "",
+     "vault": "•",
+     "site_kind": "blank",
+     "vault_kind": "dot",
+     "site_eff": "N",
+     "vault_eff": "S",
+     "literal": "site_narrower",
+     "effective": "site_narrower"
+    },
+    {
+     "level": "P",
+     "site": "",
+     "vault": "",
+     "site_kind": "blank",
+     "vault_kind": "blank",
+     "site_eff": "N",
+     "vault_eff": "S",
+     "literal": "eff_only",
+     "effective": "site_narrower"
+    }
+   ],
+   "site_line": 39,
+   "vault_line": 19,
+   "site_raw": "| 5 | Maintain mean arterial pressure (MAP) above 65 mmHg. If pacing is ineffective, administer:<br>**[Epinephrine](../../pharmacology/Epinephrine.md) infusion 2 – 10 mcg/min IV/IO**<br>(Add **1 mg of [Epinephrine](../../pharmacology/Epinephrine.md) [1mg/mL]** to **100 mL of 0.9% Sodium chloride** = **10 mcg/mL**) |  |  |  |  |  |",
+   "vault_raw": "| 5 | Maintain mean arterial pressure (MAP) above 65 mmHg. If pacing is ineffective, administer:<br>**Epinephrine infusion 2 – 10 mcg/min IV/IO**<br>(Add **1 mg of Epinephrine [1mg/mL]** to **100 mL of 0.9% Sodium chloride** = **10 mcg/mL**) | | | | • | |",
+   "action": "Maintain mean arterial pressure (MAP) above 65 mmHg. If pacing is ineffective, administer:<br>**[Epinephrine](../../pharmacology/Epinephrine.md) infusion 2 – 10 mcg/min IV/IO**<br>(Add **1 mg of [Epinephrine](../../pharmacology/Epinephrine.md) [1mg/mL]** to **100 mL of 0.9% Sodium chloride** = **10 mcg/mL**)",
+   "site_lv": [
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "vault_lv": [
+    "",
+    "",
+    "",
+    "•",
+    ""
+   ],
+   "score": 70
+  },
+  {
+   "file": "cardiac/04_Bradycardia_PROC.md",
+   "folder": "clinical",
+   "gated": true,
+   "row": "6",
+   "key": "6",
+   "bucket": "site_narrower",
+   "cells": [
+    {
+     "level": "I",
+     "site": "",
+     "vault": "•",
+     "site_kind": "blank",
+     "vault_kind": "dot",
+     "site_eff": "N",
+     "vault_eff": "S",
+     "literal": "site_narrower",
+     "effective": "site_narrower"
+    },
+    {
+     "level": "P",
+     "site": "",
+     "vault": "",
+     "site_kind": "blank",
+     "vault_kind": "blank",
+     "site_eff": "N",
+     "vault_eff": "S",
+     "literal": "eff_only",
+     "effective": "site_narrower"
+    }
+   ],
+   "site_line": 40,
+   "vault_line": 20,
+   "site_raw": "| 6 | Maintain age adjusted SBP. If pacing is ineffective, administer:<br>PEDIATRIC: **[Epinephrine](../../pharmacology/Epinephrine.md) 0.1 - 1 mcg/kg/min IV/IO infusion**<br>Max dose: **10 mcg/min**<br>Under 1 year old: Titrate to SBP > 70 mmHg<br>Over 1 year old: Titrate to SBP > 90 mmHg |  |  |  |  |  |",
+   "vault_raw": "| 6 | Maintain age adjusted SBP. If pacing is ineffective, administer:<br>PEDIATRIC: **Epinephrine 0.1 - 1 mcg/kg/min IV/IO infusion**<br>Max dose: **10 mcg/min**<br>Under 1 year old: Titrate to SBP > 70 mmHg<br>Over 1 year old: Titrate to SBP > 90 mmHg | | | | • | |",
+   "action": "Maintain age adjusted SBP. If pacing is ineffective, administer:<br>PEDIATRIC: **[Epinephrine](../../pharmacology/Epinephrine.md) 0.1 - 1 mcg/kg/min IV/IO infusion**<br>Max dose: **10 mcg/min**<br>Under 1 year old: Titrate to SBP > 70 mmHg<br>Over 1 year old: Titrate to SBP > 90 mmHg",
+   "site_lv": [
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "vault_lv": [
+    "",
+    "",
+    "",
+    "•",
+    ""
+   ],
+   "score": 70
+  },
+  {
+   "file": "respiratory/03_Respiratory_Distress_PROC.md",
+   "folder": "clinical",
+   "gated": true,
+   "row": "6",
+   "key": "6",
+   "bucket": "site_narrower",
+   "cells": [
+    {
+     "level": "EMT",
+     "site": "",
+     "vault": "•",
+     "site_kind": "blank",
+     "vault_kind": "dot",
+     "site_eff": "N",
+     "vault_eff": "S",
+     "literal": "site_narrower",
+     "effective": "site_narrower"
+    },
+    {
+     "level": "P",
+     "site": "",
+     "vault": "•",
+     "site_kind": "blank",
+     "vault_kind": "dot",
+     "site_eff": "N",
+     "vault_eff": "S",
+     "literal": "site_narrower",
+     "effective": "site_narrower"
+    }
+   ],
+   "site_line": 55,
+   "vault_line": 23,
+   "site_raw": "| 6 | ****CPAP** (Continuous Positive Airway Pressure):**<br>• **Indications:** Adults with respiratory distress due to pulmonary edema, infection, or near-drowning<br>• **Initial Settings:** PEEP 5 cmH2O<br>• **Titration:** Up to 10 cmH2O<br>• Close monitoring for hypotension or pneumothorax<br>⚠ **See Pearls for all contraindications** |  |  | MC | MC |  |",
+   "vault_raw": "| 6 | ****CPAP** (Continuous Positive Airway Pressure):**<br>• **Indications:** Adults with respiratory distress due to pulmonary edema, infection, or near-drowning<br>• **Initial Settings:** PEEP 5 cmH2O<br>• **Titration:** Up to 10 cmH2O<br>• Close monitoring for hypotension or pneumothorax<br>⚠ **See Pearls for all contraindications** |  | • | MC | MC | • |",
+   "action": "****CPAP** (Continuous Positive Airway Pressure):**<br>• **Indications:** Adults with respiratory distress due to pulmonary edema, infection, or near-drowning<br>• **Initial Settings:** PEEP 5 cmH2O<br>• **Titration:** Up to 10 cmH2O<br>• Close monitoring for hypotension or pneumothorax<br>⚠ **See Pearls for all contraindications**",
+   "site_lv": [
+    "",
+    "",
+    "MC",
+    "MC",
+    ""
+   ],
+   "vault_lv": [
+    "",
+    "•",
+    "MC",
+    "MC",
+    "•"
+   ],
+   "score": 70
+  },
+  {
+   "file": "respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "folder": "clinical",
+   "gated": true,
+   "row": "12",
+   "key": "12",
+   "bucket": "site_narrower",
+   "cells": [
+    {
+     "level": "I",
+     "site": "",
+     "vault": "•",
+     "site_kind": "blank",
+     "vault_kind": "dot",
+     "site_eff": "N",
+     "vault_eff": "S",
+     "literal": "site_narrower",
+     "effective": "site_narrower"
+    },
+    {
+     "level": "P",
+     "site": "[P]",
+     "vault": "MC",
+     "site_kind": "br",
+     "vault_kind": "mc",
+     "site_eff": "M",
+     "vault_eff": "M",
+     "literal": "bracket_shape",
+     "effective": null
+    }
+   ],
+   "site_line": 47,
+   "vault_line": 26,
+   "site_raw": "| 12 | **Unable to Ventilate - Endotracheal Intubation:**<br>• If apneic and unable to ventilate by less invasive means, consider endotracheal intubation.<br>• Visualize cords and pass ET tube under direct visualization.<br>⚠ Intubation of children <12 years is a Paramedic \"red dot\" skill only. |  |  |  |  | [P] |",
+   "vault_raw": "| 12 | **Unable to Ventilate - Endotracheal Intubation:**<br>• If apneic and unable to ventilate by less invasive means, consider endotracheal intubation.<br>• Visualize cords and pass ET tube under direct visualization.<br>⚠ Intubation of children <12 years is a Paramedic \"red dot\" skill only. | | | | • | MC |",
+   "action": "**Unable to Ventilate - Endotracheal Intubation:**<br>• If apneic and unable to ventilate by less invasive means, consider endotracheal intubation.<br>• Visualize cords and pass ET tube under direct visualization.<br>⚠ Intubation of children <12 years is a Paramedic \"red dot\" skill only.",
+   "site_lv": [
+    "",
+    "",
+    "",
+    "",
+    "[P]"
+   ],
+   "vault_lv": [
+    "",
+    "",
+    "",
+    "•",
+    "MC"
+   ],
+   "score": 70
+  },
+  {
+   "file": "cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
+   "folder": "clinical",
+   "gated": true,
+   "row": "1",
+   "key": "1",
+   "bucket": "site_narrower",
+   "cells": [
+    {
+     "level": "EMR",
+     "site": "",
+     "vault": "•",
+     "site_kind": "blank",
+     "vault_kind": "dot",
+     "site_eff": "N",
+     "vault_eff": "S",
+     "literal": "site_narrower",
+     "effective": "site_narrower"
+    }
+   ],
+   "site_line": 22,
+   "vault_line": 14,
+   "site_raw": "| 1 | Follow Universal Patient Care / Initial Patient Contact protocol. Determine DNR status. Refer to Death and Criteria for Withholding Resuscitation protocol. Consider spinal motion restriction. |  | • | • | • | • |",
+   "vault_raw": "| 1 | Follow Universal Patient Care / Initial Patient Contact protocol. Determine DNR status. Refer to Death and Criteria for Withholding Resuscitation protocol. Consider spinal motion restriction. | • | • | • | • | • |",
+   "action": "Follow Universal Patient Care / Initial Patient Contact protocol. Determine DNR status. Refer to Death and Criteria for Withholding Resuscitation protocol. Consider spinal motion restriction.",
+   "site_lv": [
+    "",
+    "•",
+    "•",
+    "•",
+    "•"
+   ],
+   "vault_lv": [
+    "•",
+    "•",
+    "•",
+    "•",
+    "•"
+   ],
+   "score": 70
+  }
+ ],
+ "pool_size": 488
+}

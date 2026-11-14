@@ -1,0 +1,12 @@
+{
+ "files_with_fills": 65,
+ "total_fills_docs_wide": 699,
+ "fills_by_source_kind": {
+  "dot": 695,
+  "mc": 4
+ },
+ "replay_vs_post_mismatches": 0,
+ "effective_changes_by_source": {
+  "mc N->M": 4
+ }
+}

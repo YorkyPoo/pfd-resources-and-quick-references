@@ -21,9 +21,9 @@ Guidelines for managing systemic hypothermia and localized cold injuries, emphas
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Follow General – Universal Patient Care/Initial Patient Contact Protocol. |  | • | • | • | • |
-| 2 | Remove all wet clothing, place in a warm environment, prevent further heat loss, and replace with warm blankets. |  | • | • | • | • |
-| 3 | Handle the patient gently and avoid excessive movement (risk of cardiac arrest/VF). |  | • | • | • | • |
+| 1 | Follow General – Universal Patient Care/Initial Patient Contact Protocol. | • | • | • | • | • |
+| 2 | Remove all wet clothing, place in a warm environment, prevent further heat loss, and replace with warm blankets. | • | • | • | • | • |
+| 3 | Handle the patient gently and avoid excessive movement (risk of cardiac arrest/VF). | • | • | • | • | • |
 | 4 | Apply warmed and humidified **O2** if available. |  | • | • | • | • |
 | 5 | **Localized cold injury:** Apply loose, sterile dressings to the affected part. |  | • | • | • | • |
 | 6 | If patient is alert and responsive: Use active external rewarming with heat packs, warm blankets, etc. |  | • | • | • | • |

@@ -1,0 +1,64 @@
+- [CRITICAL] B2-ST-05 | docs/protocols/neurologic/05_Stroke_TIA_PROC.md | row 5 | current: "A+" | correct: "EMT+" | set EMT cell to •
+- [CRITICAL] B2-ST-06 | docs/protocols/neurologic/05_Stroke_TIA_PROC.md | row 6 | current: "A+" | correct: "EMT+" | set EMT cell to •
+- [CRITICAL] B2-ST-07 | docs/protocols/neurologic/05_Stroke_TIA_PROC.md | row 6 | current: "Symptoms <24 hrs & RACE 5-9" | correct: "<24 hours (or unknown)" | add "or unknown" onset
+- [CRITICAL] B2-ST-08 | docs/protocols/neurologic/05_Stroke_TIA_PROC.md | row 7 | current: "A+" | correct: "EMT+" | set EMT cell to •
+- [MODERATE] B2-ST-01 | docs/protocols/neurologic/05_Stroke_TIA_PROC.md | row 1 | current: "EMT+" | correct: "EMR+" | set EMR cell to •
+- [MODERATE] B2-ST-02 | docs/protocols/neurologic/05_Stroke_TIA_PROC.md | row 2 | current: "EMT+" | correct: "EMR+" | set EMR cell to •
+- [MODERATE] B2-ST-03 | docs/protocols/neurologic/05_Stroke_TIA_PROC.md | row 3 | current: "EMT+" | correct: "EMR+" | set EMR cell to •
+- [MODERATE] B2-ST-04 | docs/protocols/neurologic/05_Stroke_TIA_PROC.md | row 4 | current: "A+" | correct: "EMT+" | set EMT cell to •
+- [MODERATE] B2-ST-09 | docs/protocols/neurologic/05_Stroke_TIA_PROC.md | row 7 | current: "closest Primary Stroke Center" | correct: "closest stroke center" | change destination wording
+- [MODERATE] B2-ST-10 | docs/protocols/neurologic/05_Stroke_TIA_PROC.md | absent | current: "(absent)" | correct: "MC contact row, MC all levels" | add MC row
+- [MODERATE] B2-ST-11 | docs/protocols/neurologic/05_Stroke_TIA_PROC.md | absent | current: "(absent)" | correct: "RACE scoring table 0-9" | add RACE table
+- [MODERATE] B2-ST-14 | docs/protocols/neurologic/05_Stroke_TIA_PROC.md | absent | current: "(absent)" | correct: "onset-time pearl with symptom list" | add pearl
+- [MINOR] B2-ST-12 | docs/protocols/neurologic/05_Stroke_TIA_PROC.md | row 8 | current: "I+" | correct: "no level in PEMS (pearl)" | confirm or remove level
+- [MINOR] B2-ST-13 | docs/protocols/neurologic/05_Stroke_TIA_PROC.md | row 9 | current: "A+" | correct: "no level in PEMS (pearl)" | confirm level
+- [MINOR] B2-ST-15 | docs/protocols/neurologic/05_Stroke_TIA_PROC.md | absent | current: "no comprehensive-only restriction" | correct: "endovascular therapy only at comprehensive centers" | add restriction
+- [CRITICAL] B2-SZ-06 | docs/protocols/neurologic/05_Seizure_PROC.md | row 5 | current: "I+ (A blank)" | correct: "[A] bracketed" | set A cell to •, mark [A] (verify in PDF)
+- [CRITICAL] B2-SZ-07 | docs/protocols/neurologic/05_Seizure_PROC.md | row 6 | current: "I+ (A blank)" | correct: "A+" | set A cell to •
+- [CRITICAL] B2-SZ-08 | docs/protocols/neurologic/05_Seizure_PROC.md | row 6 | current: "frail/hypotensive/elderly >65y" | correct: "frail, hypotensive, underweight, and/or elderly >65y" | add "underweight"
+- [MODERATE] B2-SZ-01 | docs/protocols/neurologic/05_Seizure_PROC.md | absent | current: "(absent)" | correct: "universal care, EMR" | add row
+- [MODERATE] B2-SZ-02 | docs/protocols/neurologic/05_Seizure_PROC.md | row 1 | current: "EMT+" | correct: "EMR+" | set EMR cell to •
+- [MODERATE] B2-SZ-03 | docs/protocols/neurologic/05_Seizure_PROC.md | row 2 | current: "EMT+" | correct: "EMR+" | set EMR cell to •
+- [MODERATE] B2-SZ-04 | docs/protocols/neurologic/05_Seizure_PROC.md | row 4 | current: "EMT+" | correct: "EMR+" | set EMR cell to •
+- [MODERATE] B2-SZ-05 | docs/protocols/neurologic/05_Seizure_PROC.md | row 3 | current: "A+" | correct: "EMT+" | set EMT cell to • (assessment)
+- [MINOR] B2-SZ-09 | docs/protocols/neurologic/05_Seizure_PROC.md | row 7 | current: "initiate transport" | correct: "initiate transport to closest emergency department" | add destination
+- [CRITICAL] B2-OD-07 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | row 5 | current: "A+" | correct: "EMT+" | set EMT cell to •
+- [CRITICAL] B2-OD-09 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | row 6 | current: "I+" | correct: "A+" | set A cell to •
+- [CRITICAL] B2-OD-11 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | row 7 | current: "P only" | correct: "I+" | set I cell to •
+- [CRITICAL] B2-OD-12 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | row 7 | current: "Calcium Chloride 20 mg/kg" | correct: "20 mg/kg, max 1 g, then 20 mL NS" | add max 1 g and flush
+- [CRITICAL] B2-OD-13 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | row 7 | current: "Glucagon 0.5-1 mg" | correct: "<25 kg 0.5 mg; ≥25 kg 1 mg" | split into weight bands
+- [CRITICAL] B2-OD-15 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | row 8 | current: "P only" | correct: "I+" | set I cell to •
+- [CRITICAL] B2-OD-19 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | row 10 | current: "P only" | correct: "I+" | set I cell to •
+- [CRITICAL] B2-OD-22 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | absent | current: "(absent)" | correct: "Hydroxocobalamin 5 g IV/IO over 15 min (adult), 70 mg/kg (ped), I" | add cyanide row
+- [MODERATE] B2-OD-01 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | row 1 | current: "EMT+" | correct: "EMR+" | set EMR cell to •
+- [MODERATE] B2-OD-02 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | row 2 | current: "EMT+" | correct: "EMR+" | set EMR cell to •
+- [MODERATE] B2-OD-03 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | row 3 | current: "EMT+" | correct: "EMR+" | set EMR cell to •
+- [MODERATE] B2-OD-04 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | row 3 | current: "no SpO2 target" | correct: "SpO2 94-98%" | add target
+- [MODERATE] B2-OD-05 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | absent | current: "(absent)" | correct: "EMR refer to Seizure protocol" | add row
+- [MODERATE] B2-OD-06 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | row 4 | current: "A+" | correct: "EMT+" | set EMT cell to •
+- [MODERATE] B2-OD-08 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | row 5 | current: "no apnea trigger, no repeat" | correct: "if apneic/bradypneic; repeat at double after 5 min" | add trigger and repeat
+- [MODERATE] B2-OD-10 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | row 6 | current: "no repeat" | correct: "repeat at double after 5 min" | add repeat
+- [MODERATE] B2-OD-14 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | row 7 | current: "no indication" | correct: "if hypotensive with poor perfusion; else Hypotension protocol" | add indication
+- [MODERATE] B2-OD-16 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | row 8 | current: "no trigger, no repeat" | correct: "bronchorrhea trigger; q5min until secretions reduce" | add trigger and repeat
+- [MODERATE] B2-OD-18 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | row 9 | current: "EMT+" | correct: "EMR+ at >104F / 40C" | set EMR cell to •, add threshold
+- [MODERATE] B2-OD-20 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | row 10 | current: ">100 ms" | correct: "adult >120 ms / ped >90 ms or arrhythmia" | correct pearl
+- [MODERATE] B2-OD-21 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | row 10 | current: "no repeat" | correct: "repeat once in 5-10 min" | add repeat
+- [MODERATE] B2-OD-23 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | absent | current: "(absent)" | correct: "MC row, all levels" | add MC row
+- [MODERATE] B2-OD-24 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | absent | current: "(absent)" | correct: "Poison Control 1-800-222-1222" | add pearl
+- [MODERATE] B2-OD-25 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | absent | current: "(absent)" | correct: "low threshold to transport children" | add pearl
+- [MINOR] B2-OD-17 | docs/protocols/toxicology/06_Overdose_Poisoning_PROC.md | row 8 | current: ">40kg" | correct: "≥40kg" | change operator
+- [CRITICAL] B2-NA-03 | docs/protocols/toxicology/06_Nerve_Agents_PROC.md | row 3 | current: "EMT+ with 'consider early intubation'" | correct: "EMR+; intubation at I" | set EMR cell to •, restrict intubation
+- [CRITICAL] B2-NA-05 | docs/protocols/toxicology/06_Nerve_Agents_PROC.md | row 5 | current: "A+" | correct: "EMT+" | set EMT cell to •
+- [CRITICAL] B2-NA-07 | docs/protocols/toxicology/06_Nerve_Agents_PROC.md | row 6 | current: "P only" | correct: "I+" | set I cell to •
+- [CRITICAL] B2-NA-08 | docs/protocols/toxicology/06_Nerve_Agents_PROC.md | row 6 | current: "(Use if DuoDote unavailable)" | correct: "if symptoms persist, or DuoDote unavailable" | restore trigger
+- [CRITICAL] B2-NA-10 | docs/protocols/toxicology/06_Nerve_Agents_PROC.md | absent | current: "weight-based dosing guidelines (no doses)" | correct: "Yellow <7 kg 0.25 mg; Blue 7-18 kg 0.5 mg; Red 18-41 kg 1 mg; Green >41 kg 2 mg" | insert AtroPen bands
+- [CRITICAL] B2-NA-11 | docs/protocols/toxicology/06_Nerve_Agents_PROC.md | absent | current: "Large and repeated doses may be required" | correct: "repeat q5 min up to three doses" | delete or cap at three doses
+- [MODERATE] B2-NA-01 | docs/protocols/toxicology/06_Nerve_Agents_PROC.md | row 1 | current: "EMT+" | correct: "EMR+" | set EMR cell to •
+- [MODERATE] B2-NA-02 | docs/protocols/toxicology/06_Nerve_Agents_PROC.md | row 2 | current: "EMT+" | correct: "EMR+" | set EMR cell to •
+- [MODERATE] B2-NA-04 | docs/protocols/toxicology/06_Nerve_Agents_PROC.md | row 4 | current: "EMT+" | correct: "EMR+" | set EMR cell to •
+- [MODERATE] B2-NA-09 | docs/protocols/toxicology/06_Nerve_Agents_PROC.md | absent | current: "4 military agent examples" | correct: "pesticide OP/carbamates; Novichok" | add examples
+- [MODERATE] B2-NA-12 | docs/protocols/toxicology/06_Nerve_Agents_PROC.md | absent | current: "decon must occur prior to transport" | correct: "decon, do not proceed until safe; SCBA/chem PPE" | use PEMS wording
+- [MODERATE] B2-NA-13 | docs/protocols/toxicology/06_Nerve_Agents_PROC.md | absent | current: "(absent)" | correct: "off-gassing after decon; SCBA" | add pearl
+- [MODERATE] B2-NA-14 | docs/protocols/toxicology/06_Nerve_Agents_PROC.md | absent | current: "(absent)" | correct: "≤1 mL symptomatic; onset up to 18 h" | add pearl
+- [MODERATE] B2-NA-15 | docs/protocols/toxicology/06_Nerve_Agents_PROC.md | absent | current: "(absent)" | correct: "recovery position if non-ambulatory" | add pearl
+- [MINOR] B2-NA-06 | docs/protocols/toxicology/06_Nerve_Agents_PROC.md | row 5 | current: "based on symptom severity" | correct: "If symptoms persist" | use PEMS wording

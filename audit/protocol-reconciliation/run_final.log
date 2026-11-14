@@ -1,0 +1,32 @@
+{
+ "paired_basenames": 54,
+ "files_compared_both_have_matrix": 54,
+ "stats": {
+  "rows_compared": 474,
+  "rows_with_cell_discrepancy": 468,
+  "text_differs": 21,
+  "row_missing_site": 1,
+  "unparseable_vault": 6,
+  "vault_internal_dot_below_mc_rows": 5,
+  "site_internal_dot_below_mc_rows": 3,
+  "divider": 4
+ },
+ "cell_counts": {
+  "effective|site_broader|admin": 1,
+  "effective|site_broader|gated": 15,
+  "effective|site_narrower|admin": 88,
+  "effective|site_narrower|gated": 372,
+  "literal|bracket_shape|gated": 14,
+  "literal|eff_only|gated": 5,
+  "literal|site_broader|admin": 4,
+  "literal|site_broader|gated": 15,
+  "literal|site_narrower|admin": 88,
+  "literal|site_narrower|gated": 367
+ },
+ "internal_conflicts": {
+  "site_rows_dot_below_explicit_MC_or_bracket": 3,
+  "vault_rows_dot_below_explicit_MC_or_bracket": 5
+ }
+}
+site_only 1 vault_only 33 pool 488 top20 20
+provenance {"files_with_fills": 65, "total_fills_docs_wide": 699, "fills_by_source_kind": {"dot": 695, "mc": 4}, "replay_vs_post_mismatches": 0, "effective_changes_by_source": {"mc N->M": 4}}

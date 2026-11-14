@@ -40,7 +40,7 @@ The management of smoke inhalation involves the assessment and treatment of airw
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
-| 1 | **Universal Patient Care / Initial Patient Contact:**<br>• Follow Poquoson Protocols for Universal Patient Care<br>• Remove patient from source and ensure scene safety<br>• Initiate PPE appropriate for smoke/hazardous environment |  | • | • | • | • |
+| 1 | **Universal Patient Care / Initial Patient Contact:**<br>• Follow Poquoson Protocols for Universal Patient Care<br>• Remove patient from source and ensure scene safety<br>• Initiate PPE appropriate for smoke/hazardous environment | • | • | • | • | • |
 | 2 | **Scene Safety and Scene Time Considerations:**<br>• Assess scene for ongoing hazard exposure<br>• Limit scene time; prepare for rapid transport<br>• Coordinate with fire department/hazmat as needed |  | • | • | • | • |
 | 3 | **Airway Assessment:**<br>• Inspect for singed facial/nasal hairs<br>• Examine face, nose, and mouth for burns or soot<br>• Auscultate for stridor, hoarseness, or voice changes<br>• Assess sputum for carbonaceous material<br>• Monitor respiratory effort and work of breathing |  | • | • | • | • |
 | 4 | **Initial Airway Management:**<br>• Position patient to optimize ventilation<br>• Suction oropharynx as needed for soot/secretions<br>• Apply high-flow **oxygen** via appropriate delivery device |  | • | • | • | • |

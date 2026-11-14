@@ -35,11 +35,11 @@ This protocol outlines the assessment and management of patients experiencing pe
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Follow Universal Patient Care |  | • | • | • | • |
-| 2 | Place in position of comfort / recovery position if unresponsive; suction as needed |  | • | • | • | • |
+| 1 | Follow Universal Patient Care | • | • | • | • | • |
+| 2 | Place in position of comfort / recovery position if unresponsive; suction as needed | • | • | • | • | • |
 | 3 | Refer to Airway and Hypotension protocols as needed |  | • | • | • | • |
-| 4 | **[Ondansetron](../../pharmacology/Ondansetron.md) (Zofran) 4 mg** ODT |  |  | • | • | • |
-| 5 | Adult: **[Ondansetron](../../pharmacology/Ondansetron.md) (Zofran) 4 mg** IV/IO slow push, IM, or PO<br>Pediatric: **[Ondansetron](../../pharmacology/Ondansetron.md) (Zofran) 0.15 mg/kg** IV/IO/IM/PO (max **4 mg**) |  |  |  | • | • |
+| 4 | **[Ondansetron](../../pharmacology/Ondansetron.md) (Zofran) 4 mg** ODT |  | • | • | • | • |
+| 5 | Adult: **[Ondansetron](../../pharmacology/Ondansetron.md) (Zofran) 4 mg** IV/IO slow push, IM, or PO<br>Pediatric: **[Ondansetron](../../pharmacology/Ondansetron.md) (Zofran) 0.15 mg/kg** IV/IO/IM/PO (max **4 mg**) |  |  | • | • | • |
 | 6 | Contact Poquoson Medical Control for additional doses or orders |  |  | [A] | • | • |
 
 </div>

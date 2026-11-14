@@ -1,0 +1,42 @@
+# Batch A2 fixlist (PEMS2024 vs published site)
+
+- [CRITICAL] A2-07 | docs/protocols/cardiac/04_Post_Resuscitation_Care_PROC.md | row 6 | current: "P only (I blank)" | correct: "I and P (PEMS: A I Maintain MAP … NE/epi infusion)" | Set the I column to • on row 6.
+- [MODERATE] A2-01 | docs/protocols/cardiac/04_Post_Resuscitation_Care_PROC.md | row absent | current: "absent" | correct: "EMR+ Follow Universal Patient Care / Initial Patient Contact protocol" | Add a Universal Patient Care row with EMR •.
+- [MODERATE] A2-02 | docs/protocols/cardiac/04_Post_Resuscitation_Care_PROC.md | row 1 | current: "EMT+" | correct: "EMR+" | Set EMR • on row 1 (Airway management).
+- [MODERATE] A2-03 | docs/protocols/cardiac/04_Post_Resuscitation_Care_PROC.md | row 2 | current: "A+" | correct: "EMT+" | Set EMT • on row 2 (Assess blood glucose).
+- [MODERATE] A2-04 | docs/protocols/cardiac/04_Post_Resuscitation_Care_PROC.md | row 3 | current: "A+" | correct: "EMT+" | Set EMT • on row 3 (12-lead ECG).
+- [MODERATE] A2-05 | docs/protocols/cardiac/04_Post_Resuscitation_Care_PROC.md | row 4 | current: "I+" | correct: "A+" | Set A • on row 4 (IV/IO access).
+- [MODERATE] A2-06 | docs/protocols/cardiac/04_Post_Resuscitation_Care_PROC.md | row 5 | current: "I+" | correct: "A+" | Set A • on row 5 (NS fluid bolus).
+- [MODERATE] A2-08 | docs/protocols/cardiac/04_Post_Resuscitation_Care_PROC.md | row 6 | current: "no concentration stated" | correct: "NE 4 mg/250 mL NS = 16 mcg/mL; epi 1 mg/100 mL NS = 10 mcg/mL" | Add both concentrations to row 6.
+- [CRITICAL] A2-09 | docs/protocols/cardiac/04_Post_Resuscitation_Care_PROC.md | row 7 | current: "P only, no MC" | correct: "[I] (I must contact MC; P standing)" | Set [I] at I on row 7 (pediatric epinephrine infusion).
+- [MODERATE] A2-10 | docs/protocols/cardiac/04_Post_Resuscitation_Care_PROC.md | row 7 | current: "no concentration stated" | correct: "epinephrine 1 mg in 100 mL NS = 10 mcg/mL" | Add the pediatric concentration to row 7.
+- [CRITICAL] A2-11 | docs/protocols/cardiac/04_Post_Resuscitation_Care_PROC.md | row 8 | current: "no level for any provider" | correct: "P+ (push-dose epinephrine 5-10 mcg IV/IO q2-3 min)" | Set P • on row 8.
+- [MODERATE] A2-12 | docs/protocols/cardiac/04_Post_Resuscitation_Care_PROC.md | row 8 | current: "no concentration stated" | correct: "100 mcg epi (1 mL of 0.1 mg/mL) in 9 mL NS = 10 mcg/mL" | Add the push-dose preparation to row 8.
+- [CRITICAL] A2-13 | docs/protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md | row 1 | current: "EMT+" | correct: "EMR+ (bleeding control and CPR)" | Set EMR • on row 1.
+- [MODERATE] A2-14 | docs/protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md | row 2 | current: "A+" | correct: "EMT+" | Set EMT • on row 2 (open airway).
+- [CRITICAL] A2-15 | docs/protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md | row 3 | current: "A+" | correct: "EMT+" | Set EMT • on row 3 (apply AED / monitor).
+- [MODERATE] A2-16 | docs/protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md | row 4 | current: "A+" | correct: "EMT+ (inferred)" | Set EMT • on row 4 (withholding on asystole), or cross-reference the Withholding protocol.
+- [CRITICAL] A2-17 | docs/protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md | row 5 | current: "A+" | correct: "EMT+ (inferred)" | Set EMT • on row 5 (defibrillate VF/VT).
+- [MODERATE] A2-18 | docs/protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md | row 6 | current: "I+" | correct: "A+" | Set A • on row 6 (IV/IO access).
+- [MODERATE] A2-19 | docs/protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md | row 7 | current: "I+" | correct: "A+ (inferred)" | Set A • on row 7 (saline if blood unavailable).
+- [MODERATE] A2-20 | docs/protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md | row 8 | current: "P only" | correct: "I (PEMS Trauma p.84), or remove the row from this protocol" | Remove row 8 or set I • to match PEMS Trauma p.84.
+- [CRITICAL] A2-21 | docs/protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md | row absent | current: "absent" | correct: "I+ endotracheal intubation (adult and 12+); P only under 12 (red dot)" | Add an intubation row with the PEMS level and red-dot note.
+- [CRITICAL] A2-22 | docs/protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md | row 9 | current: "P only; indication 'tension pneumo'" | correct: "I+; indication: signs or suspicion of thoracoabdominal trauma (blunt or penetrating)" | Set I • on row 9 and use the PEMS indication wording.
+- [CRITICAL] A2-23 | docs/protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md | row absent | current: "absent" | correct: "A+ epinephrine for PEA after no ROSC: adult 1 mg 0.1 mg/mL IV/IO; peds 0.01 mg/kg IV/IO; single dose only" | Add the epinephrine row.
+- [MODERATE] A2-24 | docs/protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md | row 10 | current: "EMT+; Level I/II Trauma Center (goal < 10 min)" | correct: "EMR+; closest Emergency Department or Trauma Center (inferred)" | Set EMR • on row 10 and use the PEMS destination wording.
+- [MODERATE] A2-25 | docs/protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md | row 11 | current: "MC all levels; no trigger" | correct: "MC all levels; trigger no signs of life after 15-20 min" | Add the 15–20 minute trigger to row 11.
+- [MODERATE] A2-26 | docs/protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md | row absent | current: "absent" | correct: "Pearls: CPR must not impede procedural interventions; weigh resuscitation and transport risks" | Add both PEMS statements to Pearls.
+- [MODERATE] A2-27 | docs/protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md | row 1 | current: "EMT+" | correct: "EMR+" | Set EMR • on row 1 (Universal).
+- [MODERATE] A2-28 | docs/protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md | row 4 | current: "A+" | correct: "EMT+" | Set EMT • on row 4 (12-lead ECG).
+- [MODERATE] A2-29 | docs/protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md | row 5 | current: "I+" | correct: "A+" | Set A • on row 5 (IV access).
+- [MODERATE] A2-30 | docs/protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md | row 6 | current: "I+" | correct: "A+ (inferred)" | Set A • on row 6 (saline bolus).
+- [CRITICAL] A2-31 | docs/protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md | row 7 | current: "P only" | correct: "I+ (adenosine 6 mg, PEMS I)" | Set I • on row 7.
+- [CRITICAL] A2-32 | docs/protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md | row 8 | current: "P only; no 'one time' limit" | correct: "I+; repeat ONE time only at double initial dose (inferred)" | Set I • on row 8 and add "one time only".
+- [MODERATE] A2-33 | docs/protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md | row 9 | current: "P only" | correct: "I+ (irregular/AF transport and monitor)" | Set I • on row 9.
+- [MODERATE] A2-34 | docs/protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md | row 10 | current: "[I] at I, • at P; EMR/EMT/A blank" | correct: "MC in all five cells (bare MC)" | Set MC in all five level cells on row 10.
+- [CRITICAL] A2-35 | docs/protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md | row 12 | current: "I blank; P = MC" | correct: "I+ midazolam sedation, no MC bracket" | Set I • on row 12 and remove the P-only MC.
+- [MODERATE] A2-36 | docs/protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md | row 13 | current: "no level" | correct: "I+ (monitor SpO2/EtCO2 during sedation; inferred)" | Set I • on row 13.
+- [CRITICAL] A2-37 | docs/protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md | row 14 | current: "P only" | correct: "I+ (synchronized cardioversion 100 J; PEMS I)" | Set I • on row 14.
+- [CRITICAL] A2-38 | docs/protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md | row 15 | current: "P only" | correct: "I+ (repeat 200 J / 2 J/kg; inferred)" | Set I • on row 15.
+- [MODERATE] A2-39 | docs/protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md | row 16 | current: "[P] at P; I blank" | correct: "I • (contact MC for guidance, no bracket; inferred)" | Set I • on row 16 and remove the P-only bracket.
+- [MODERATE] A2-40 | docs/protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md | row absent | current: "absent" | correct: "Criteria/pearls: wide complex → VT with a Pulse; unstable-vs-stable definition; potential-causes pearl" | Add the three PEMS statements.
