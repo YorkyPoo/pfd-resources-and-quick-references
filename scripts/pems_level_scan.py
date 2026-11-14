@@ -888,12 +888,12 @@ def git_dirty_tracked() -> list[str]:
 
 
 def apply_changes(results: list[dict], dry_run: bool) -> int:
-    dirty = git_dirty_tracked()
-    if dirty and not dry_run:
-        print("ABORT: tracked files already modified; commit or stash first:", file=sys.stderr)
-        for d in dirty[:20]:
-            print("  " + d, file=sys.stderr)
-        return 3
+    """Rewrite level cells for every mismatch that is not `inferred`.
+
+    The clean-tree precondition is enforced once, in `main`, before any file is
+    written (the report itself is tracked, so checking again here would abort on
+    this run's own output).
+    """
     changed_files = 0
     changed_rows = 0
     log = []
@@ -954,6 +954,15 @@ def main(argv=None) -> int:
     args = ap.parse_args(argv)
 
     date = _dt.date.today().isoformat()
+    # --apply rewrites tracked files: refuse before writing anything (the report
+    # is also tracked, so a late check would abort on our own output).
+    if args.apply and not args.dry_run:
+        dirty = git_dirty_tracked()
+        if dirty:
+            print("ABORT: tracked files already modified; commit or stash first:", file=sys.stderr)
+            for d in dirty[:20]:
+                print("  " + d, file=sys.stderr)
+            return 3
     pems = build_pems(args.rebuild_pems)
     if not pems:
         sys.exit("no PEMS protocol pages could be extracted — check pdftotext and the PDF path")
@@ -996,6 +1005,14 @@ def main(argv=None) -> int:
         hard = summ["mismatch"] + summ["unmatched"] + summ["divider_undeclared"]
         return 1 if hard else 0
     rc = apply_changes(results, args.dry_run)
+    if rc == 0 and not args.dry_run:
+        # Re-scan so the committed report describes the tree AFTER the rewrite
+        # (the first pass necessarily described the pre-apply state).
+        after = [analyse(read_page(f), docs, exc["pages"].get(read_page(f)["rel"]), False) for f in files]
+        summ = summarise(after)
+        write_report(after, summ, date)
+        print(f"post-apply: ok {summ['ok']} | mismatch {summ['mismatch']} "
+              f"(inferred {summ['inferred_mismatch']}) | UNMATCHED {summ['unmatched']}")
     return rc
 
 

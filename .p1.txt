@@ -1,0 +1,2 @@
+ABORT: tracked files already modified; commit or stash first:
+   M scripts/pems_level_scan.py
