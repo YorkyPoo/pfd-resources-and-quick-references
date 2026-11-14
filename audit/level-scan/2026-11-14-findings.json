@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-14T22:17:47",
+ "generated": "2026-11-14T22:18:58",
  "summary": {
   "pages": 59,
   "pages_with_table": 57,
   "rows": 531,
-  "ok": 20,
-  "mismatch": 253,
+  "ok": 236,
+  "mismatch": 37,
   "inferred_mismatch": 37,
   "unmatched": 154,
   "divider": 4,
@@ -1793,13 +1793,13 @@
      "action": "Follow Universal Patient Care / Initial Patient Contact protocol. Determine DNR status. Refer to Death and Criteria for Withholding Resuscitation protocol. Consider spinal motion restriction.",
      "idx": 21,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 57,
@@ -1826,13 +1826,13 @@
      "action": "Begin chest compressions. Refer to Adult / Pediatric Cardiopulmonary Resuscitation (CPR) procedure. Children/Infants ONLY: If unconscious and hypotensive, with HR less than 60, begin chest compressions. Alternate compres",
      "idx": 22,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 57,
@@ -1859,13 +1859,13 @@
      "action": "Identify and treat potentially reversible causes. See Pearls below.",
      "idx": 23,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 57,
@@ -1928,11 +1928,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 57,
@@ -2012,11 +2012,11 @@
      "cells": [
       "",
       "",
-      "",
-      "",
+      "\u2022",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 57,
@@ -2046,10 +2046,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 57,
@@ -2144,13 +2144,13 @@
      "action": "Follow Universal Patient Care / Initial Patient Contact protocol",
      "idx": 34,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 103,
@@ -2213,10 +2213,10 @@
       "",
       "",
       "",
-      "",
-      ""
+      "\u2022",
+      "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 103,
@@ -2246,10 +2246,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 104,
@@ -2279,10 +2279,10 @@
       "",
       "",
       "",
-      "",
-      ""
+      "\u2022",
+      "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 104,
@@ -2312,10 +2312,10 @@
       "",
       "",
       "",
-      "",
-      ""
+      "[I]",
+      "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 104,
@@ -2346,9 +2346,9 @@
       "",
       "",
       "",
-      ""
+      "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 104,
@@ -2375,13 +2375,13 @@
      "action": "Contact Medical Control for guidance as needed Consider contacting Medical Control at a pediatric specialty center (VCU CHoR or CHKD) for children and infants with symptomatic bradycardia",
      "idx": 41,
      "cells": [
-      "",
-      "",
-      "[A]",
-      "\u2022",
-      "\u2022"
+      "MC",
+      "MC",
+      "MC",
+      "MC",
+      "MC"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 104,
@@ -2476,13 +2476,13 @@
      "action": "Scene Safety / Initial Contact: \u2022 Ensure scene safety and appropriate PPE. \u2022 Determine DNR status (refer to Death and Criteria for Withholding Resuscitation protocol). \u2022 Patients with valid durable DNR or injuries incons",
      "idx": 41,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 57,
@@ -2594,12 +2594,12 @@
      "idx": 46,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 57,
@@ -2628,11 +2628,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 57,
@@ -2661,11 +2661,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 63,
@@ -2696,9 +2696,9 @@
       "",
       "",
       "\u2022",
-      "MC"
+      "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 64,
@@ -2746,9 +2746,9 @@
       "",
       "",
       "\u2022",
-      "MC"
+      "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 64,
@@ -2792,13 +2792,13 @@
      "action": "Termination of Resuscitation (TOR): Contact Medical Control to request TOR if ALL criteria met: \u2022 Arrest was not witnessed by EMS \u2022 After 20 minutes of continuous CPR with no ROSC \u2022 AND no shocks were delivered",
      "idx": 53,
      "cells": [
-      "",
-      "",
-      "",
-      "\u2022",
+      "MC",
+      "MC",
+      "MC",
+      "MC",
       "MC"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 64,
@@ -2991,13 +2991,13 @@
      "action": "Control major active external bleeding / Begin CPR",
      "idx": 25,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 61,
@@ -3025,12 +3025,12 @@
      "idx": 26,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 61,
@@ -3075,12 +3075,12 @@
      "idx": 28,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 61,
@@ -3143,11 +3143,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 61,
@@ -3325,13 +3325,13 @@
      "action": "Scene Safety / Initial Assessment: \u2022 Follow Universal Patient Care / Initial Patient Contact Poquoson Protocol. \u2022 If stroke suspected, refer to Stroke / TIA Poquoson Protocol.",
      "idx": 38,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 107,
@@ -3358,13 +3358,13 @@
      "action": "Airway / Respiratory Management: \u2022 If respiratory distress, refer to Airway Management and Ventilatory Support procedure and Respiratory Distress Poquoson Protocol. \u2022 Assess SpO2.",
      "idx": 39,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 107,
@@ -3409,12 +3409,12 @@
      "idx": 41,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 107,
@@ -3579,10 +3579,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 107,
@@ -3609,13 +3609,13 @@
      "action": "Medical Control Contact: \u2022 Contact Poquoson OMD for guidance as needed.",
      "idx": 50,
      "cells": [
-      "",
-      "",
-      "[A]",
-      "\u2022",
-      "\u2022"
+      "MC",
+      "MC",
+      "MC",
+      "MC",
+      "MC"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 107,
@@ -3710,13 +3710,13 @@
      "action": "Universal Patient Care / Initial Patient Contact: \u2022 Follow Universal Patient Care / Initial Patient Contact Poquoson Protocol. \u2022 Ensure scene safety and utilize appropriate PPE.",
      "idx": 40,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 109,
@@ -3760,13 +3760,13 @@
      "action": "Stroke Assessment: \u2022 Perform stroke screening (Cincinnati Prehospital Stroke Scale or equivalent). \u2022 If stroke is suspected, refer to Stroke / TIA Poquoson Protocol immediately. \u2022 Note time of symptom onset if applicable",
      "idx": 42,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 109,
@@ -3793,13 +3793,13 @@
      "action": "Cardiac Assessment: \u2022 Assess for chest pain, pressure, or symptoms consistent with acute coronary syndrome. \u2022 Obtain 12-lead ECG if available. \u2022 If ACS is suspected, refer to Chest Pain (Cardiac) Poquoson Protocol immedi",
      "idx": 43,
      "cells": [
-      "",
-      "",
+      "\u2022",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 109,
@@ -3826,13 +3826,13 @@
      "action": "Respiratory Assessment: \u2022 Assess for respiratory distress, pulmonary edema, or hypoxia. \u2022 Apply pulse oximetry and administer oxygen as indicated. \u2022 If respiratory distress is present, refer to Respiratory Distress Poquo",
      "idx": 44,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 109,
@@ -3859,13 +3859,13 @@
      "action": "Glucose Assessment: \u2022 Check blood glucose level. \u2022 If hyperglycemia or hypoglycemia is present or suspected, refer to Hyperglycemia / Hypoglycemia Poquoson Protocol. \u2022 Treat glucose abnormalities per appropriate protocol",
      "idx": 45,
      "cells": [
-      "",
-      "",
+      "\u2022",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 109,
@@ -3943,13 +3943,13 @@
      "action": "Airway management / Ventilatory support",
      "idx": 23,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 59,
@@ -3977,12 +3977,12 @@
      "idx": 24,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 59,
@@ -4010,12 +4010,12 @@
      "idx": 25,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 59,
@@ -4044,11 +4044,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 59,
@@ -4077,11 +4077,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 59,
@@ -4111,10 +4111,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 59,
@@ -4144,10 +4144,10 @@
       "",
       "",
       "",
-      "",
+      "[I]",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 59,
@@ -4178,9 +4178,9 @@
       "",
       "",
       "",
-      ""
+      "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 59,
@@ -4268,13 +4268,13 @@
      "action": "Follow Universal Patient Care / Initial Patient Contact",
      "idx": 38,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 135,
@@ -4319,12 +4319,12 @@
      "idx": 41,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 135,
@@ -4370,11 +4370,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 135,
@@ -4404,10 +4404,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 135,
@@ -4454,10 +4454,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 135,
@@ -4504,10 +4504,10 @@
       "",
       "",
       "",
-      "",
-      "MC"
+      "\u2022",
+      "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 135,
@@ -4571,10 +4571,10 @@
       "",
       "",
       "",
-      "",
-      ""
+      "\u2022",
+      "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 136,
@@ -4671,12 +4671,12 @@
      "idx": 25,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 63,
@@ -4705,11 +4705,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 63,
@@ -4738,11 +4738,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 63,
@@ -4804,11 +4804,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 63,
@@ -4904,10 +4904,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 64,
@@ -4937,10 +4937,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 64,
@@ -4967,13 +4967,13 @@
      "action": "Proceed to Post ROSC Care if pulses return",
      "idx": 34,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 64,
@@ -5379,13 +5379,13 @@
      "action": "Scene Safety / PPE / Patient Contact: \u2022 Utilize appropriate agencies and resources as needed (lift assistance, ALS, law enforcement). \u2022 Bring all necessary equipment to the patient\u2019s side.",
      "idx": 23,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 49,
@@ -5412,13 +5412,13 @@
      "action": "Initial Assessment: \u2022 Perform Primary and Secondary Survey as indicated. \u2022 Consider spinal motion restriction if indicated by MOI or history.",
      "idx": 24,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 49,
@@ -5445,13 +5445,13 @@
      "action": "Ensure Adequate Airway, Oxygenation, and Ventilation: \u2022 Manage airway by the least invasive means necessary. \u2022 Maintain home oxygen unless symptoms indicate need for increase. \u2022 Administer up to 15 LPM oxygen through an ",
      "idx": 25,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 49,
@@ -5478,13 +5478,13 @@
      "action": "Vital Signs: \u2022 Obtain BP, pulse rate, respirations, and GCS. \u2022 Consider obtaining blood glucose level and temperature. \u2022 Reassess Stable patients at least every 15 minutes. \u2022 Reassess Unstable patients at least every 5 m",
      "idx": 26,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 49,
@@ -5512,12 +5512,12 @@
      "idx": 27,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 49,
@@ -5545,12 +5545,12 @@
      "idx": 28,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 50,
@@ -5578,12 +5578,12 @@
      "idx": 29,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 50,
@@ -5612,11 +5612,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 50,
@@ -5646,10 +5646,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 50,
@@ -5677,12 +5677,12 @@
      "idx": 32,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 50,
@@ -5762,13 +5762,13 @@
      "action": "Assess capacity and treat potential underlying causes of agitation / altered mental status. Refer to administrative policy Patient Refusals.",
      "idx": 28,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 71,
@@ -5812,13 +5812,13 @@
      "action": "Apply least restrictive physical restraints necessary. Refer to administrative policy Patient Restraint.",
      "idx": 30,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 71,
@@ -5848,10 +5848,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 71,
@@ -5881,10 +5881,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 71,
@@ -5914,10 +5914,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 72,
@@ -5948,9 +5948,9 @@
       "",
       "",
       "",
-      ""
+      "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 72,
@@ -6062,13 +6062,13 @@
      "action": "Follow General \u2013 Universal Patient Care/Initial Patient Contact Protocol.",
      "idx": 23,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 67,
@@ -6095,13 +6095,13 @@
      "action": "Remove all wet clothing, place in a warm environment, prevent further heat loss, and replace with warm blankets.",
      "idx": 24,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 67,
@@ -6128,13 +6128,13 @@
      "action": "Handle the patient gently and avoid excessive movement (risk of cardiac arrest/VF).",
      "idx": 25,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 67,
@@ -6330,13 +6330,13 @@
      "action": "Follow Universal Patient Care / Initial Patient Contact protocol. Remove the patient from the water.",
      "idx": 34,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 93,
@@ -6363,13 +6363,13 @@
      "action": "Consider spinal motion restriction. Refer to Spinal Motion Restriction procedure.",
      "idx": 35,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 93,
@@ -6396,13 +6396,13 @@
      "action": "Assess airway and ventilation. Refer to Airway Management and Ventilatory Support protocol.",
      "idx": 36,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 93,
@@ -6429,13 +6429,13 @@
      "action": "Remove wet clothing and dry the skin. Keep the patient warm.",
      "idx": 37,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 93,
@@ -6462,13 +6462,13 @@
      "action": "If hypothermia and hemodynamically unstable, focus effort on rewarming as well as resuscitation simultaneously.",
      "idx": 38,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 93,
@@ -6495,13 +6495,13 @@
      "action": "Diving emergencies: Assess for pulmonary barotrauma, decompression sickness, and/or arterial gas embolism. Refer to appropriate Poquoson Protocol(s) as needed.",
      "idx": 39,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 93,
@@ -6572,13 +6572,13 @@
      "action": "Place patient in cool environment",
      "idx": 24,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 69,
@@ -6691,11 +6691,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 69,
@@ -6723,12 +6723,12 @@
      "idx": 30,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 69,
@@ -6782,13 +6782,13 @@
      "action": "Follow Universal Patient Care / Initial Patient Contact protocol.",
      "idx": 28,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 77,
@@ -6849,12 +6849,12 @@
      "idx": 30,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 77,
@@ -6883,11 +6883,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 77,
@@ -6916,11 +6916,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 77,
@@ -7049,13 +7049,13 @@
      "action": "Follow Universal Patient Care / Initial Patient Contact protocol. Provide supplemental oxygen and/or ventilatory support. Refer to Airway Management and Ventilatory Support procedure.",
      "idx": 28,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 55,
@@ -7119,10 +7119,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 55,
@@ -7260,13 +7260,13 @@
      "action": "Universal Patient Care: \u2022 Follow Universal Patient Care / Initial Patient Contact protocol.",
      "idx": 27,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 99,
@@ -7294,12 +7294,12 @@
      "idx": 28,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 99,
@@ -7328,11 +7328,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 99,
@@ -7361,11 +7361,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 99,
@@ -7394,11 +7394,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 99,
@@ -7427,11 +7427,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 99,
@@ -7459,12 +7459,12 @@
      "idx": 35,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 100,
@@ -7493,11 +7493,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 100,
@@ -7526,11 +7526,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 100,
@@ -7559,11 +7559,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 100,
@@ -7592,11 +7592,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 100,
@@ -7625,11 +7625,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 100,
@@ -7658,11 +7658,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 100,
@@ -7742,13 +7742,13 @@
      "action": "Follow Universal Patient Care / Initial Patient Contact protocol.",
      "idx": 35,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 113,
@@ -7775,13 +7775,13 @@
      "action": "Obtain relevant history and perform a focused assessment to determine the potential cause.",
      "idx": 36,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 113,
@@ -7808,13 +7808,13 @@
      "action": "Maintain SpO2 94 \u2013 98%. Refer to Airway Management and Ventilatory Support procedure.",
      "idx": 37,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 113,
@@ -7842,12 +7842,12 @@
      "idx": 38,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 113,
@@ -7876,11 +7876,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 113,
@@ -7910,10 +7910,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 113,
@@ -7943,10 +7943,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 113,
@@ -7976,10 +7976,10 @@
       "",
       "",
       "",
-      "",
+      "[I]",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 114,
@@ -8010,9 +8010,9 @@
       "",
       "",
       "",
-      ""
+      "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 114,
@@ -8091,13 +8091,13 @@
      "action": "Follow Universal Patient Care, don appropriate PPE, and visualize perineum for crowning or presenting part.",
      "idx": 31,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 141,
@@ -8157,13 +8157,13 @@
      "action": "Shoulder Dystocia: Place mother in McRobert's position (knees to chest) and apply suprapubic pressure.",
      "idx": 33,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 141,
@@ -8259,10 +8259,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 147,
@@ -8292,10 +8292,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 147,
@@ -8322,13 +8322,13 @@
      "action": "Bleeding / Rupture / Abruptio: Place patient in left lateral recumbent position.",
      "idx": 38,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 149,
@@ -8357,11 +8357,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 149,
@@ -8555,13 +8555,13 @@
      "action": "Follow Universal Patient Care",
      "idx": 34,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 129,
@@ -8590,11 +8590,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 129,
@@ -8624,10 +8624,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 129,
@@ -8657,10 +8657,10 @@
       "",
       "",
       "",
-      "",
+      "[I]",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 130,
@@ -8691,9 +8691,9 @@
       "",
       "",
       "",
-      ""
+      "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 130,
@@ -8720,13 +8720,13 @@
      "action": "Contact Poquoson Medical Control / Prehospital Sepsis Alert",
      "idx": 39,
      "cells": [
-      "",
-      "",
-      "[A]",
-      "\u2022",
-      "\u2022"
+      "MC",
+      "MC",
+      "MC",
+      "MC",
+      "MC"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 130,
@@ -8772,13 +8772,13 @@
      "action": "Follow Universal Patient Care / Initial Patient Contact protocol / Check blood glucose",
      "idx": 24,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 111,
@@ -8806,12 +8806,12 @@
      "idx": 25,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 111,
@@ -8840,11 +8840,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 111,
@@ -8873,11 +8873,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 111,
@@ -8906,11 +8906,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 111,
@@ -8955,13 +8955,13 @@
      "action": "Prevent injury (DO NOT restrain while seizing)",
      "idx": 30,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 127,
@@ -8988,13 +8988,13 @@
      "action": "Provide supplemental O2/protect airway",
      "idx": 31,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 127,
@@ -9022,12 +9022,12 @@
      "idx": 32,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 127,
@@ -9189,13 +9189,13 @@
      "action": "Universal Care / Assess BEFAST",
      "idx": 25,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 131,
@@ -9222,13 +9222,13 @@
      "action": "Assess RACE scale for Large Vessel Occlusion (LVO)",
      "idx": 26,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 131,
@@ -9255,13 +9255,13 @@
      "action": "Record Time Last Seen Normal and family contact info",
      "idx": 27,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 131,
@@ -9306,12 +9306,12 @@
      "idx": 29,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 131,
@@ -9339,12 +9339,12 @@
      "idx": 30,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 131,
@@ -9449,13 +9449,13 @@
      "action": "Scene Safety / PPE / Initial Assessment: \u2022 Follow Universal Patient Care / Initial Patient Contact protocol. \u2022 Decision to enter contaminated area rests with incident commander and organizational policy.",
      "idx": 46,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 153,
@@ -9550,12 +9550,12 @@
      "idx": 50,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 153,
@@ -9584,11 +9584,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 153,
@@ -9617,11 +9617,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 153,
@@ -9648,13 +9648,13 @@
      "action": "Sodium Bicarbonate - Chlorine Gas Exposure Only: \u2022 Adult: 2 mL diluted with 2 mL 0.9% Sodium chloride, nebulized (ONCE only) \u2022 Pediatric: 2 mL diluted with 2 mL 0.9% Sodium chloride, nebulized (ONCE only)",
      "idx": 53,
      "cells": [
-      "",
-      "",
-      "",
-      "\u2022",
-      "\u2022"
+      "MC",
+      "MC",
+      "MC",
+      "MC",
+      "MC"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 153,
@@ -9869,11 +9869,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 123,
@@ -9903,10 +9903,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 124,
@@ -10134,13 +10134,13 @@
      "action": "Universal Patient Care / Initial Patient Contact \u2022 Follow Universal Patient Care Poquoson Protocol for all patients.",
      "idx": 45,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 123,
@@ -10303,11 +10303,11 @@
      "cells": [
       "",
       "",
-      "",
-      "",
+      "\u2022",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 123,
@@ -10353,11 +10353,11 @@
      "cells": [
       "",
       "",
-      "",
-      "",
-      ""
+      "\u2022",
+      "\u2022",
+      "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 124,
@@ -10781,13 +10781,13 @@
      "action": "Follow Universal Patient Care / Initial Patient Contact protocol",
      "idx": 34,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 123,
@@ -10814,13 +10814,13 @@
      "action": "Perform focused evaluation including assessment of airway and lung sounds",
      "idx": 35,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 123,
@@ -10847,13 +10847,13 @@
      "action": "Provide supplemental oxygen to maintain SpO2 > 94%",
      "idx": 36,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 123,
@@ -11001,11 +11001,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 124,
@@ -11035,10 +11035,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 124,
@@ -11182,13 +11182,13 @@
      "action": "Universal Patient Care / Initial Patient Contact: \u2022 Follow Universal Patient Care / Initial Patient Contact Poquoson Protocol. \u2022 Assess for life threats and mechanism of respiratory failure.",
      "idx": 32,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 239,
@@ -11317,12 +11317,12 @@
      "idx": 38,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 239,
@@ -11352,10 +11352,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 239,
@@ -11386,9 +11386,9 @@
       "",
       "",
       "",
-      ""
+      "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 239,
@@ -11584,13 +11584,13 @@
      "action": "Universal Patient Care / Initial Patient Contact Protocol: \u2022 Assess airway patency and breathing adequacy",
      "idx": 49,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 123,
@@ -11651,13 +11651,13 @@
      "action": "Oxygen Administration (if SpO2 <94%): \u2022 Supplemental Oxygen titrated to maintain SpO2 >94% \u2022 Start with nasal cannula or non-rebreather as needed \u2022 Avoid excessive FiO2 in COPD patients (target 88-92%)",
      "idx": 52,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 123,
@@ -11788,11 +11788,11 @@
      "cells": [
       "",
       "",
-      "MC",
-      "MC",
-      ""
+      "\u2022",
+      "\u2022",
+      "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 124,
@@ -11821,11 +11821,11 @@
      "cells": [
       "",
       "",
-      "",
-      "",
-      ""
+      "\u2022",
+      "\u2022",
+      "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 124,
@@ -12028,13 +12028,13 @@
      "action": "Universal Patient Care / Initial Patient Contact: \u2022 Follow Poquoson Protocols for Universal Patient Care \u2022 Remove patient from source and ensure scene safety \u2022 Initiate PPE appropriate for smoke/hazardous environment",
      "idx": 42,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 153,
@@ -12446,13 +12446,13 @@
      "action": "Universal Patient Care: \u2022 Apply to all patients per Poquoson Protocols.",
      "idx": 35,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 239,
@@ -12667,10 +12667,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 239,
@@ -12700,10 +12700,10 @@
       "",
       "",
       "",
-      "",
-      "[P]"
+      "\u2022",
+      "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 239,
@@ -12831,13 +12831,13 @@
      "action": "Follow Universal Patient Care",
      "idx": 37,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 117,
@@ -12864,13 +12864,13 @@
      "action": "Place in position of comfort / recovery position if unresponsive; suction as needed",
      "idx": 38,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 117,
@@ -12931,12 +12931,12 @@
      "idx": 40,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 117,
@@ -12965,11 +12965,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 117,
@@ -13047,13 +13047,13 @@
      "action": "Follow Universal Patient Care",
      "idx": 40,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 159,
@@ -13146,13 +13146,13 @@
      "action": "Refer to Nausea/Vomiting, Seizure, and Hypotension protocols as needed",
      "idx": 43,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 159,
@@ -13215,10 +13215,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 159,
@@ -13296,13 +13296,13 @@
      "action": "Follow Universal Patient Care",
      "idx": 36,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 119,
@@ -13329,13 +13329,13 @@
      "action": "Remove from source / decontaminate patient",
      "idx": 37,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 119,
@@ -13362,13 +13362,13 @@
      "action": "Ensure adequate ventilation / administer supplemental oxygen",
      "idx": 38,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 119,
@@ -13396,12 +13396,12 @@
      "idx": 39,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 119,
@@ -13465,10 +13465,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 120,
@@ -13498,10 +13498,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 120,
@@ -13663,13 +13663,13 @@
      "action": "Stop the burning process safely and remove the patient from the source. Fully expose the injured area and remove constricting items including clothing.",
      "idx": 32,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 87,
@@ -13696,13 +13696,13 @@
      "action": "Assess airway and respiratory effort. Refer to Airway Management and Ventilatory Support protocol.",
      "idx": 33,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 87,
@@ -13730,12 +13730,12 @@
      "idx": 34,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 87,
@@ -13763,12 +13763,12 @@
      "idx": 35,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 87,
@@ -13797,11 +13797,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 87,
@@ -13930,13 +13930,13 @@
      "action": "Follow Universal Patient Care / Initial Patient Contact protocol. Refer to Trauma, Hemorrhage Control, and Pain Control protocols as needed.",
      "idx": 29,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 91,
@@ -13964,12 +13964,12 @@
      "idx": 30,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 91,
@@ -13998,11 +13998,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 91,
@@ -14031,11 +14031,11 @@
      "cells": [
       "",
       "",
-      "",
+      "[A]",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 91,
@@ -14065,10 +14065,10 @@
       "",
       "",
       "",
-      "",
+      "[I]",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 91,
@@ -14146,12 +14146,12 @@
      "idx": 36,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 91,
@@ -14238,13 +14238,13 @@
      "action": "Follow Universal Patient Care / Initial Patient Contact protocol",
      "idx": 25,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 96,
@@ -14271,13 +14271,13 @@
      "action": "Ensure scene safety / patient not energized. Expose area and remove constricting items.",
      "idx": 26,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 96,
@@ -14304,13 +14304,13 @@
      "action": "Multiple patients: Treat cardiac arrest FIRST (reverse triage)",
      "idx": 27,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 96,
@@ -14337,13 +14337,13 @@
      "action": "Assess airway (manage by least invasive means necessary)",
      "idx": 28,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 96,
@@ -14404,12 +14404,12 @@
      "idx": 30,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 96,
@@ -14471,11 +14471,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 96,
@@ -14504,11 +14504,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 96,
@@ -14562,13 +14562,13 @@
      "action": "Follow Universal Care / Reassess bleeding after treatments performed.",
      "idx": 23,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 75,
@@ -14595,13 +14595,13 @@
      "action": "Head: Apply direct pressure / Hemostatic dressing (avoid eyes/mouth).",
      "idx": 24,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 75,
@@ -14628,13 +14628,13 @@
      "action": "Neck: Apply occlusive dressing / direct pressure (DO NOT pack).",
      "idx": 25,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 75,
@@ -14694,13 +14694,13 @@
      "action": "Junctional (Axilla or femoral): Pack tightly with hemostatic gauze / hold pressure x3 mins.",
      "idx": 27,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 75,
@@ -14727,13 +14727,13 @@
      "action": "Thoracoabdominal: Apply direct pressure / chest seal (DO NOT pack).",
      "idx": 28,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 75,
@@ -14760,13 +14760,13 @@
      "action": "Apply pelvic binder if unstable pelvis suspected.",
      "idx": 29,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 75,
@@ -14854,13 +14854,13 @@
      "action": "Follow Universal Patient Care / Initial Patient Contact protocol.",
      "idx": 24,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 96,
@@ -14887,13 +14887,13 @@
      "action": "Ensure scene safety and that the patient is not energized (avoid second victim). Fully expose the injured area. Remove constricting items including clothing.",
      "idx": 25,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 96,
@@ -14920,13 +14920,13 @@
      "action": "If multiple patients are present: Treat cardiac arrest FIRST (reverse triage).",
      "idx": 26,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 96,
@@ -14953,13 +14953,13 @@
      "action": "Assess airway and respiratory effort. Ventilate using least invasive means necessary.",
      "idx": 27,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 96,
@@ -14987,12 +14987,12 @@
      "idx": 28,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 96,
@@ -15020,12 +15020,12 @@
      "idx": 29,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 96,
@@ -15053,12 +15053,12 @@
      "idx": 30,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 96,
@@ -15087,11 +15087,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 96,
@@ -15120,11 +15120,11 @@
      "cells": [
       "",
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 96,
@@ -15178,13 +15178,13 @@
      "action": "Follow Universal Patient Care / Initial Patient Contact protocol.",
      "idx": 27,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 83,
@@ -15228,13 +15228,13 @@
      "action": "Maintain cervical spine stabilization/immobilization per Spinal Motion Restriction protocol.",
      "idx": 29,
      "cells": [
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 83,
@@ -15397,10 +15397,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 84,
@@ -15430,10 +15430,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 84,
@@ -15463,10 +15463,10 @@
       "",
       "",
       "",
-      "",
+      "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 84,
@@ -15494,12 +15494,12 @@
      "idx": 38,
      "cells": [
       "",
-      "",
+      "\u2022",
       "\u2022",
       "\u2022",
       "\u2022"
      ],
-     "status": "level_mismatch",
+     "status": "ok",
      "confidence": "strong",
      "pems": {
       "page": 84,

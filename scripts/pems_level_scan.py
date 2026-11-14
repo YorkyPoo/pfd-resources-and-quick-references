@@ -807,8 +807,7 @@ def write_report(results: list[dict], summ: dict, date: str) -> tuple[str, str]:
     jpath = os.path.join(OUTDIR, f"{date}-findings.json")
     mpath = os.path.join(OUTDIR, f"{date}-report.md")
     with open(jpath, "w", encoding="utf-8") as fh:
-        json.dump({"generated": _dt.datetime.now().isoformat(timespec="seconds"),
-                   "summary": summ, "pages": results}, fh, indent=1)
+        json.dump({"scan_date": date, "summary": summ, "pages": results}, fh, indent=1)
     L = []
     A = L.append
     A(f"# PEMS provider-level scan — {date}\n\n")
