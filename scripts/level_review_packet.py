@@ -133,15 +133,22 @@ FILE_NOTES = {
    "p.63 as two protocols; your page runs one arrest algorithm covering both (rows 5 and 9 are the "
    "VF/pVT half, row 10 the asystole/PEA half). Level evidence must come from BOTH pages, row by row.",
  "protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md":
-   "Rows 3 and 11 ('STABLE SVT PATHWAY' / 'UNSTABLE SVT PATHWAY') are section headings that were put "
-   "into the table as rows. They need no level — they need to stop being rows.",
+   "Rows 3 and 11 ('STABLE SVT PATHWAY' / 'UNSTABLE SVT PATHWAY') are deliberate DIVIDERS that "
+   "separate the stable and unstable halves. They are kept as divider rows by design and are "
+   "tracked here as `divider`, not counted as discrepancies.",
  "protocols/respiratory/03_Respiratory_Arrest_PROC.md":
    "Check the regional Airway Management and Ventilatory Support procedure (p.239) and the arrest "
    "pages: this site page overlaps both, which is why the title matcher found no single source.",
+ "protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md":
+   "DIVIDERS at the two unnumbered rows ('Acute Allergic Reaction (non-Anaphylaxis)', 'Anaphylaxis') "
+   "split one grid into the two severity halves. KEPT by design. Seven drug rows (3,4,5,6 and "
+   "10,11,12,13) are published at `I` but PEMS2024 codes them `A` — an OVER-RESTRICTION; see the "
+   "batch ruling below.",
 }
 
-ORDER = ["no_level", "run_stops_before_P", "mc_only_partial", "mc_mixed_in", "non_contiguous"]
+ORDER = ["divider", "no_level", "run_stops_before_P", "mc_only_partial", "mc_mixed_in", "non_contiguous"]
 LABEL = {
+    "divider": "section-label row — spans the grid, authorizes nothing, no ruling needed",
     "no_level": "no level cell filled — a provider cannot tell who may do this",
     "run_stops_before_P": "grant stops before Paramedic — the ladder reads inverted",
     "mc_only_partial": "MC in some levels, standing in none",
@@ -150,10 +157,69 @@ LABEL = {
 }
 
 
-def classify(raw):
-    marks = [bool(x) and ("MC" not in x.upper()) for x in raw]
-    mcs = [("MC" in x.upper()) for x in raw]
+BRACKET = re.compile(r"^\[(EMR|EMT|A|I|P)\]$")
+
+
+def _cell_kind(c):
+    """one level cell -> 'grant' | 'mc' | 'bracketed' | 'empty'"""
+    s = c.strip().upper()
+    if not s:
+        return "empty"
+    if BRACKET.match(s):
+        return "bracketed"
+    if "MC" in s:
+        return "mc"
+    return "grant"
+
+
+DIVIDER_WORDS = re.compile(r"\b(pathway|anaphylaxis|non-anaphylaxis)\b", re.I)
+
+
+def _is_divider(num, action):
+    """A divider is a section LABEL, not an intervention.
+
+    Two shapes exist on the site:
+      - unnumbered row whose action is the label itself ("Anaphylaxis")
+      - a label typed into a numbered row ("STABLE SVT PATHWAY" at row 3)
+    The test is deliberately narrow: all five level cells blank AND the action reads as a
+    label, not a step. Anything with a dose, a route, or a verb is an intervention whose
+    level cells are genuinely missing — that is a real `no_level` gap, never a divider.
+    """
+    a = action.strip()
+    if not a:
+        return True
+    if num:
+        # numbered rows only qualify when the text is short and carries a divider word
+        return len(a) <= 32 and bool(DIVIDER_WORDS.search(a))
+    return len(a) <= 48 and not re.search(r"\d|\b(administer|apply|consider|obtain|monitor|repeat)\b",
+                                          a, re.I)
+
+
+def classify(raw, action="", num=""):
+    """Classify a site row's five level cells.
+
+    Returns None when the row converts mechanically, else a kind needing a ruling.
+
+    DIVIDER ROWS: a section label merged across the grid (e.g. "Anaphylaxis",
+    "Stable SVT PATHWAY") carries no level cells at all. Blank across EMR..P is NOT the
+    same as a gap when the row is a label — it authorizes nothing and must never be
+    counted as a provider-scope discrepancy.
+    """
+    kinds = [_cell_kind(c) for c in raw]
+    if all(k == "empty" for k in kinds):
+        return "divider" if _is_divider(num, action or "") else "no_level"
+    marks = [k == "grant" for k in kinds]
+    brackets = [k == "bracketed" for k in kinds]
+    mcs = [k == "mc" for k in kinds]
     pos = [i for i, v in enumerate(marks) if v]
+    bpos = [i for i, v in enumerate(brackets) if v]
+    if bpos:
+        # [A] = that level calls MC, levels ABOVE act standing, levels BELOW excluded.
+        # Any lower level carrying a grant alongside a bracket is a real conflict.
+        low = [i for i in pos if i < bpos[0]]
+        if low:
+            return "non_contiguous"
+        return None                                # converts: bracket + standing above
     if not pos and not any(mcs):
         return "no_level"
     if all(mcs) and not pos:
@@ -163,7 +229,8 @@ def classify(raw):
     if pos == list(range(pos[0], 5)):
         return "mc_mixed_in" if any(mcs) else None
     if pos == list(range(pos[0], pos[-1] + 1)):
-        return "run_stops_before_P"
+        # MC in the top cell(s) is an escalation step, not a stop before P.
+        return "run_stops_before_P" if any(mcs[pos[-1] + 1:]) else None
     return "non_contiguous"
 
 
@@ -213,9 +280,12 @@ def build_rows():
             c = cells(s)
             if len(c) != n or len(c) < 7:
                 continue
-            kind = classify(c[2:7])
+            kind = classify(c[2:7], clean(c[1]), c[0])
             if kind:
-                site[rel]["rows"].append({"row": c[0], "kind": kind, "action": clean(c[1]), "cells": c[2:7]})
+                # a divider row has no row number of its own; key it by its label so the
+                # merge can still match it run to run instead of emitting "row " nameless.
+                key = c[0] if c[0] else "divider:" + nz(clean(c[1]))[:40]
+                site[rel]["rows"].append({"row": key, "kind": kind, "action": clean(c[1]), "cells": c[2:7]})
     return site
 
 
@@ -229,12 +299,22 @@ def load_existing(path):
     try:
         t = open(path, encoding="utf-8").read()
     except (FileNotFoundError, TypeError):
-        return {}, []
+        return {}, [], []
     out, log, cur, block = {}, [], None, None
+    log_table = []                                 # hand-maintained | file | row | ruling | rows
     for line in t.split("\n"):
         m = FILE_RE.match(line)
         if m:
             cur, block = m.group(1), None
+            continue
+        # the Rulings log table is hand-maintained in the packet header and carries rulings
+        # whose item rows were never ticked. Regenerating it purely from inline RULED: lines
+        # wipes them, so harvest it as a durable audit trail in its own right.
+        mt = re.match(r"^\|\s*`([^`]+)`\s*\|\s*([^|]+?)\s*\|\s*(.+?)\s*\|\s*$", line)
+        if mt and mt.group(1).startswith(("administrative/", "cardiac/", "front-matter/",
+                                           "general/", "medical/", "neurologic/", "respiratory/",
+                                           "toxicology/", "trauma/", "protocols/")):
+            log_table.append((mt.group(1), mt.group(2), mt.group(3)))
             continue
         m = ITEM_RE.match(line)
         if m and cur:
@@ -266,13 +346,13 @@ def load_existing(path):
             v = re.search(r"standing/MC:\s*`([^`]*)`", line)
             if v and v.group(1).strip(" _"):
                 out[block]["mode"] = v.group(1).strip()
-    return out, log
+    return out, log, log_table
 
 
 def main():
     args = sys.argv[1:]
     site = build_rows()
-    tot = sum(len(v["rows"]) for v in site.values())
+    tot = sum(1 for v in site.values() for r in v["rows"] if r["kind"] != "divider")
     rest = [a for a in args if not a.startswith("--")]
     if "--fresh" in args:
         out_path = args[args.index("--fresh") + 1]
@@ -286,7 +366,7 @@ def main():
             out_path = rest[0] if rest else "level-review.md"
             merge_src = rest[1] if len(rest) > 1 else (out_path if os.path.exists(out_path) else None)
 
-    prior, prior_log = load_existing(merge_src)
+    prior, prior_log, prior_table = load_existing(merge_src)
     out = []
     A = out.append
     kc = collections.Counter(r["kind"] for v in site.values() for r in v["rows"])
@@ -304,17 +384,31 @@ def main():
     A("| a level row (e.g. `A`) | that level **and every level above it** may perform the step as a "
       "standing order |\n")
     A("| bracketed entry level `[A]` | the `A` **must contact Medical Control for permission**; I and "
-      "P above them do not need to call |\n")
+      "P above them do not need to call; **no level below A may perform it** |\n")
+    A("| bracketed level at the top (`[P]`) | only the Paramedic, and only after calling |\n")
     A("| `MC` in every cell | **every** level must contact Medical Control before acting |\n")
+    A("| divider row (`divider`) | a section label spanning the grid (\"Anaphylaxis\", "
+      "\"STABLE SVT PATHWAY\"); authorizes nothing, never counted as a discrepancy |\n")
     A("| administrative protocol rows | not level-gated at all (owner ruling 2026-11-11) |\n\n")
+    A("> **The bracket is a floor, not just a phone call** (owner ruling 2026-11-14). `[I]` means the "
+      "Intermediate calls for permission, the Paramedic performs it standing, and **EMT / A may not "
+      "perform it at all**. Never read a bracket as permission for the levels below it.\n\n")
     A("> So an `mc_only_partial` row like `· · MC MC MC` is almost always **`[A]` written without its "
       "bracket**: A calls, I and P stand. Confirm that and the row is done.\n\n")
 
     A("## Rulings log\n\n")
     A("The audit trail the OMD packet needs: a ticked box without a line here is not a ruling.\n\n")
-    if prior_log:
+    if prior_log or prior_table:
         A("| file | row | ruling |\n|---|---|---|\n")
+        seen = set()
+        for f, r, d in prior_table:
+            key = (f.replace("protocols/", ""), r)
+            seen.add(key)
+            A(f"| `{f.replace('protocols/','')}` | {r} | {d} |\n")
         for (f, r), d in prior_log:
+            key = (f.replace("protocols/", ""), r)
+            if key in seen:
+                continue
             A(f"| `{f.replace('protocols/','')}` | {r} | {d} |\n")
     else:
         A("_No rulings recorded yet._\n")
@@ -324,8 +418,9 @@ def main():
     for k in ORDER:
         if kc[k]:
             A(f"| {k} | {kc[k]} | {LABEL[k]} |\n")
-    A(f"\n**531 rows audited across {len(site)} protocol pages; {tot} need a ruling — "
-      f"{len(ruled_now)} already ruled.** The other {531-tot} convert mechanically and are not listed.\n\n")
+    A(f"\n**{tot} rows need a ruling — {len(ruled_now)} already ruled.** "
+      f"Rows that convert mechanically are not listed. Divider rows are tracked "
+      f"({kc['divider']}) but never counted as discrepancies.\n\n")
     A("> `*` beside a level in the reference lists means the line is wrapped under the printed step "
       "above it in the PDF — it carries that step's level, not its own.\n\n")
     A("> **The title matcher is a hint, not an authority.** It paired Bradycardia with the wrong page "
@@ -341,7 +436,8 @@ def main():
         if not v["rows"]:
             continue
         p, conf, sc, top3 = match_pems(v["title"])
-        A(f"\n## {rel}\n\nSite page title: **{v['title']}** · rows needing a ruling: **{len(v['rows'])}**\n\n")
+        A(f"\n## {rel}\n\nSite page title: **{v['title']}** · rows needing a ruling: "
+          f"**{sum(1 for r in v['rows'] if r['kind'] != 'divider')}**\n\n")
         if rel in FILE_NOTES:
             A(f"> **Structural note (hand-checked, not matcher output):** {FILE_NOTES[rel]}\n\n")
         for r in sorted(v["rows"], key=lambda x: (x["kind"], x["row"])):
