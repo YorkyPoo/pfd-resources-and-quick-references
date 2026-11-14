@@ -737,8 +737,8 @@ def needs_authoring() -> list[dict]:
     return items
 
 
-def write_needs_authoring(items: list[dict]) -> str:
-    path = os.path.join(OUTDIR, "needs-authoring.md")
+def write_needs_authoring(items: list[dict], tag: str = "") -> str:
+    path = os.path.join(OUTDIR, f"needs-authoring{tag}.md")
     by_file: dict[str, list[dict]] = {}
     for it in items:
         by_file.setdefault(it["file"], []).append(it)
@@ -802,10 +802,15 @@ def summarise(results: list[dict]) -> dict:
     return c
 
 
-def write_report(results: list[dict], summ: dict, date: str) -> tuple[str, str]:
+def write_report(results: list[dict], summ: dict, date: str, tag: str = "") -> tuple[str, str]:
+    """Write findings + markdown report.
+
+    `tag` keeps a filtered (`--only`) run from overwriting the full-scan
+    artifacts, which are the ones the board and the changelog refer to.
+    """
     os.makedirs(OUTDIR, exist_ok=True)
-    jpath = os.path.join(OUTDIR, f"{date}-findings.json")
-    mpath = os.path.join(OUTDIR, f"{date}-report.md")
+    jpath = os.path.join(OUTDIR, f"{date}-findings{tag}.json")
+    mpath = os.path.join(OUTDIR, f"{date}-report{tag}.md")
     with open(jpath, "w", encoding="utf-8") as fh:
         json.dump({"scan_date": date, "summary": summ, "pages": results}, fh, indent=1)
     L = []
@@ -988,8 +993,9 @@ def main(argv=None) -> int:
                 print(f"   row {r['row']:>3} {r['status']:<18} {r['confidence']:<8} {r['action'][:70]}")
 
     summ = summarise(results)
-    jpath, mpath = write_report(results, summ, date)
-    npath = write_needs_authoring(needs_authoring())
+    tag = "-only" if args.only else ""
+    jpath, mpath = write_report(results, summ, date, tag)
+    npath = write_needs_authoring(needs_authoring(), tag)
 
     undeclared = [p["file"] for p in results if any(r["status"] == "divider-undeclared" for r in p["rows"])]
     print(f"pages: {summ['pages']} ({summ['pages_with_table']} with a level table) | rows: {summ['rows']}")
@@ -1009,7 +1015,7 @@ def main(argv=None) -> int:
         # (the first pass necessarily described the pre-apply state).
         after = [analyse(read_page(f), docs, exc["pages"].get(read_page(f)["rel"]), False) for f in files]
         summ = summarise(after)
-        write_report(after, summ, date)
+        write_report(after, summ, date, tag)
         print(f"post-apply: ok {summ['ok']} | mismatch {summ['mismatch']} "
               f"(inferred {summ['inferred_mismatch']}) | UNMATCHED {summ['unmatched']}")
     return rc
