@@ -255,7 +255,9 @@ def all_row_keys():
                 continue
             c = cells(s2)
             if len(c) == n and len(c) >= 7:
-                keys.add((rel, c[0]))
+                # MUST match build_rows()' key derivation or divider rows orphan themselves:
+                # a divider has no row number, so it keys by its label.
+                keys.add((rel, c[0] if c[0] else "divider:" + nz(clean(c[1]))[:40]))
     return keys
 
 
@@ -334,7 +336,11 @@ def load_existing(path):
         if not block:
             continue
         if line.startswith(RULED_PREFIX):
-            txt = line.strip()[len(RULED_PREFIX):].strip()
+            # slice with the prefix length as-is: the source line is NOT indent-stripped, because
+            # RULED_PREFIX itself contains the two leading spaces. Stripping first and then cutting
+            # len(RULED_PREFIX) chars ate the first real character of every ruling (the '*' in
+            # "*VOID by ...", the ']' in "P] = P must contact MC").
+            txt = line[len(RULED_PREFIX):].strip()
             out[block]["ruled"] = txt
             out[block]["tick"] = True
             log.append((block, txt))
