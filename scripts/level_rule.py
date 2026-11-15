@@ -274,6 +274,7 @@ def load_json(name):
 RULINGS_YAML = os.path.join(AUD, 'level-rulings.yaml')
 BINDINGS_YAML = os.path.join(AUD, 'row-bindings.yaml')
 WORDING_YAML = os.path.join(AUD, 'wording-rulings.yaml')
+STYLESHEET_YAML = os.path.join(AUD, 'stylesheet-changes.yaml')
 
 
 def load_wording_rulings():
@@ -292,6 +293,21 @@ def load_wording_rulings():
                 raise SystemExit(f'wording-rulings.yaml: incomplete ruling {rec!r}')
         if rec.get('status') != 'owner_ruled':
             raise SystemExit(f'wording-rulings.yaml: status must be "owner_ruled" ({rec}')
+        out.append(rec)
+    return out
+
+
+def load_stylesheet_changes():
+    """Deliberate cross-page CSS changes, so a reviewer does not read them as accidents."""
+    import yaml
+    if not os.path.exists(STYLESHEET_YAML):
+        return []
+    doc = yaml.safe_load(open(STYLESHEET_YAML, encoding='utf-8')) or {}
+    out = []
+    for rec in doc.get('changes') or []:
+        for k in ('date', 'files', 'why'):
+            if not rec.get(k):
+                raise SystemExit(f'stylesheet-changes.yaml: incomplete entry {rec!r}')
         out.append(rec)
     return out
 
@@ -643,6 +659,11 @@ def plan(rel):
                 before = {'leftmost': prior_b.get('leftmost'), 'markers': prior_b.get('markers') or [],
                           'text_label': prior_b.get('text_label'),
                           'text_tokens': before['text_tokens'] or prior_b.get('text_tokens') or []}
+                if (status == 'OWNER_REQUIRED' and prior_b.get('leftmost')
+                        and level != prior_b['leftmost']):
+                    # an uncited row keeps the level the page published before conversion —
+                    # never a level that only a now-withdrawn binding justified
+                    level = prior_b['leftmost']
             stripped = before['text_tokens'] or prior_tok.get((rel, str(row['ordinal'])), [])
             before['text_tokens'] = stripped
             if level is None:
@@ -805,6 +826,28 @@ def plan_pending(rel, spec):
     return regions_out, ledger, problems, lines, regions
 
 
+def strip_trailing_notes(chunk):
+    """Drop note paragraphs at the tail of a preserved slice.
+
+    The pending renderer emits the Pending OMD Authorization note itself, so a note that
+    already sits directly above the table (written by an earlier run or by hand) would be
+    duplicated on every --write. Strip it from the preserved slice and let the renderer
+    own the note, which keeps --write idempotent.
+    """
+    i = len(chunk)
+    stripped = False
+    while True:
+        j = i
+        while j > 0 and chunk[j - 1].strip() == '':
+            j -= 1
+        if j > 0 and chunk[j - 1].startswith('<p class="lv-note">') and '</p>' in chunk[j - 1]:
+            i = j - 1
+            stripped = True
+        else:
+            break
+    return chunk[:i] if stripped else chunk
+
+
 def splice_pending(rel, spec):
     """Rewrite every level-table region of a pending page; leave every other line as-is."""
     regions_out, ledger, problems, lines, regions = plan_pending(rel, spec)
@@ -815,7 +858,7 @@ def splice_pending(rel, spec):
     note = pending_note(spec)
     out, last = [], 0
     for reg, reg_out in zip(regions, regions_out):
-        out += lines[last:reg['start']]
+        out += strip_trailing_notes(lines[last:reg['start']])
         pieces = []
         for bi, block in enumerate(reg_out['blocks']):
             if bi:
@@ -928,6 +971,22 @@ def emit_md(ledger):
         lines.append(f"- `{rec['file']}` — source prints \"{rec.get('source_prints') or '—'}\"; "
                      f"the page reads **\"{rec['page_reads']}\"** ({rec.get('date')})")
         lines.append(f"  - ruling: {rec['ruling'].strip()}")
+
+    sheet = load_stylesheet_changes()
+    lines += ['', '## SHARED STYLESHEET CHANGES (not protocol content)', '',
+              'Deliberate CSS changes made during conversion work. They affect **every** page',
+              'that uses the `.lv-wrap` chassis, not only the batch that introduced them. They',
+              'are styling fixes, not level decisions and not accidental diffs.', '']
+    if not sheet:
+        lines.append('None.')
+    for rec in sheet:
+        lines.append(f"- **{rec['date']}** — `" + '`, `'.join(rec['files']) + '`')
+        for sel in rec.get('selectors') or []:
+            lines.append(f"  - rule: `{sel}`")
+        lines.append(f"  - affects: {rec['affects'].strip()}")
+        lines.append(f"  - why: {rec['why'].strip()}")
+        if rec.get('scope_note'):
+            lines.append(f"  - scope: {rec['scope_note'].strip()}")
 
     pending = [e for e in ledger if e['status'] == 'pending_omd']
     pend_files = sorted({e['file'] for e in pending})

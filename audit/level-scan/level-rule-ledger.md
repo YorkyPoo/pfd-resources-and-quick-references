@@ -175,7 +175,7 @@ the action text.
 | `05_Stroke_TIA_PROC.md` | 6 | EMT | p.131#4 | Initiate transport. Goal scene time < 15 minutes: Symptoms less than 24 hours (or unknown) AND suspected LVO (RACE = 5 - 9) : Transport to the clos… | adjudicated:held_split_review | OK |
 | `05_Stroke_TIA_PROC.md` | 7 | EMT | p.131#4 | Initiate transport. Goal scene time < 15 minutes: Symptoms less than 24 hours (or unknown) AND suspected LVO (RACE = 5 - 9) : Transport to the clos… | adjudicated:site_split_of_pems | OK |
 | `05_Stroke_TIA_PROC.md` | 8 | I | — | — | — | OWNER_REQUIRED |
-| `05_Stroke_TIA_PROC.md` | 9 | EMR | p.131#2 | Record time the patient last seen normal and family contact information, if available.* Provide this information to the receiving facility. | adjudicated:set_cells | OK |
+| `05_Stroke_TIA_PROC.md` | 9 | A | p.131#2 | Record time the patient last seen normal and family contact information, if available.* Provide this information to the receiving facility. | adjudicated:set_cells | OWNER_REQUIRED |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 1 | PENDING | — | — | — | pending_omd |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 2 | PENDING | — | — | — | pending_omd |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 3 | PENDING | — | — | — | pending_omd |
@@ -190,7 +190,7 @@ the action text.
 
 ## OWNER_REQUIRED
 
-**17 row(s).** No PEMS 2024 row authorises a provider level for these
+**18 row(s).** No PEMS 2024 row authorises a provider level for these
 actions. The chip keeps the level the page already published and carries the flag.
 Nothing here was invented. Each entry records why it could not be cited.
 
@@ -233,6 +233,9 @@ Nothing here was invented. Each entry records why it could not be cited.
   - reason: p.63#7 is the compound row named in this card as an unresolved inline badge contradiction: PEMS prints one badge (I) on "If VF or VT is present, or AED is advising to shock [EMR], immediately defibrillate". The page's own row text "(AED for EMR/EMT, Manual for I/P)" encodes both levels, so neither I nor EMT is the whole answer. audit/level-scan/badge-overrides.yaml is still empty.
 - `protocols/neurologic/05_Stroke_TIA_PROC.md` row 8 — **I** kept from the page, not from the source. Establish 18g IV in Right AC (preferred for rapid imaging)
   - reason: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
+- `protocols/neurologic/05_Stroke_TIA_PROC.md` row 9 — **A** kept from the page, not from the source. Call COR at the receiving facility with Name/DOB for rapid registration
+  - nearest PEMS row, NOT cited as authority: p.131#2
+  - reason: Bound to p.131#2 on weak text similarity only; the PEMS row's text is "Record time the patient last seen normal and family contact information, if available. Provide this information to the receiving facility." That does not authorise calling the receiving facility with Name/DOB for rapid registration, and no other PEMS 2024 row on p.131 does. Site-authored action with no matching PEMS row.
 
 ## OWNER_RULED
 
@@ -250,6 +253,19 @@ the ruling. A later pass must not "restore" the source wording.
 
 - `docs/sops/ems/EMS-100-General-EMS-Guidelines.md` — source prints "eliminate in hospital delays"; the page reads **"eliminate in-hospital delays"** (2026-11-15)
   - ruling: Owner ruling 2026-11-15 ("I like the change to in-hospital delays"): the compound is hyphenated. The SOP as printed carries no hyphen. This is an OWNER RULING, not a source reading — do not revert the page to the un-hyphenated form on the grounds that the source prints it that way.
+
+## SHARED STYLESHEET CHANGES (not protocol content)
+
+Deliberate CSS changes made during conversion work. They affect **every** page
+that uses the `.lv-wrap` chassis, not only the batch that introduced them. They
+are styling fixes, not level decisions and not accidental diffs.
+
+- **2026-11-15** — `docs/stylesheets/extra.css`
+  - rule: `.md-typeset .lv-wrap .md-typeset__scrollwrap { margin: 0; }`
+  - rule: `.md-typeset .lv-wrap .md-typeset__table { padding: 0; }`
+  - affects: every page that renders the .lv-wrap level chassis — the Batch 1 cardiac pages as well as every page converted in Batch 2 and later. Not page-local.
+  - why: Material wraps every table in .md-typeset__scrollwrap with margin: 0 -16px and pads .md-typeset__table by 0 16px. Inside .lv-wrap that 32px bleed is wider than the container, so it clipped the Action column at a 390px viewport and produced a stray horizontal scroll. Measured on the built site at 390x844 DPR 2: .lv-wrap client width == scroll width, document.scrollWidth == 390, action column not clipped.
+  - scope: Made during the Batch 2 conversion (task t_2df73318), but broader than "convert seven pages": it changes the rendering of every lv-wrap page, including Batch 1. It is intentional and required for the 390px no-horizontal-scroll criterion, not an accidental styling edit.
 
 ## PENDING_OMD — Pending OMD Authorization
 
@@ -292,7 +308,7 @@ source.
 
 ## Level moved by the source (page level -> PEMS printed level)
 
-27 row(s). These are rows where the page under- or over-granted the
+26 row(s). These are rows where the page under- or over-granted the
 level the cited PEMS row prints. Review them first.
 
 - `protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 9: **I -> A** (p.57#6) — Children/Infants ONLY: If unconscious and hypotensive, with HR less than 60, administer: P
@@ -321,7 +337,6 @@ level the cited PEMS row prints. Review them first.
 - `protocols/neurologic/05_Seizure_PROC.md` row 6: **I -> A** (p.127#5) — Use HALF dose Midazolam for frail/hypotensive/elderly >65y
 - `protocols/neurologic/05_Stroke_TIA_PROC.md` row 4: **A -> EMT** (p.131#3) — Assess blood glucose (Treat <60 per Hypoglycemia protocol)
 - `protocols/neurologic/05_Stroke_TIA_PROC.md` row 7: **A -> EMT** (p.131#4) — Triage: Symptoms >24 hrs OR RACE 0-4 -> Transport to closest Primary Stroke Center
-- `protocols/neurologic/05_Stroke_TIA_PROC.md` row 9: **A -> EMR** (p.131#2) — Call COR at the receiving facility with Name/DOB for rapid registration
 
 ## OPEN OWNER QUESTIONS
 

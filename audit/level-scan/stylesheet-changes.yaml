@@ -1,0 +1,31 @@
+# Shared stylesheet changes made by the level-rule conversion work.
+#
+# Recorded here so a later reviewer does not mistake a deliberate, cross-page styling
+# change for an accidental diff. These are NOT protocol content and NOT level decisions:
+# they are CSS rules that change how every .lv-wrap table renders.
+#
+# Consumed by scripts/level_rule.py (--write prints them in audit/level-scan/level-rule-ledger.md).
+
+changes:
+
+  - date: "2026-11-15"
+    status: recorded
+    files:
+      - docs/stylesheets/extra.css
+    selectors:
+      - ".md-typeset .lv-wrap .md-typeset__scrollwrap { margin: 0; }"
+      - ".md-typeset .lv-wrap .md-typeset__table { padding: 0; }"
+    affects: >-
+      every page that renders the .lv-wrap level chassis — the Batch 1 cardiac pages as
+      well as every page converted in Batch 2 and later. Not page-local.
+    why: >-
+      Material wraps every table in .md-typeset__scrollwrap with margin: 0 -16px and pads
+      .md-typeset__table by 0 16px. Inside .lv-wrap that 32px bleed is wider than the
+      container, so it clipped the Action column at a 390px viewport and produced a stray
+      horizontal scroll. Measured on the built site at 390x844 DPR 2: .lv-wrap client
+      width == scroll width, document.scrollWidth == 390, action column not clipped.
+    scope_note: >-
+      Made during the Batch 2 conversion (task t_2df73318), but broader than "convert
+      seven pages": it changes the rendering of every lv-wrap page, including Batch 1.
+      It is intentional and required for the 390px no-horizontal-scroll criterion, not an
+      accidental styling edit.

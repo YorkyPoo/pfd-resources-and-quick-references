@@ -144,6 +144,22 @@ bindings:
       PEMS 2024 p.107 prints no right-sided / 15-lead ECG row; serial 12-leads appear
       inside the MC-badged p.107#9, and no row authorises a 15-lead.
 
+  # ---------------------------------------------------------------- Stroke / TIA
+  # Row 9 was chipped EMR off the adjudicated set_cells read of p.131#2. That PEMS row
+  # prints "Record time the patient last seen normal and family contact information" —
+  # it authorises recording a last-known-well time and a contact, not calling the
+  # receiving facility with a name/DOB for pre-registration. A binding by resemblance
+  # is not a citation, so the row is owner_required instead.
+  - file: protocols/neurologic/05_Stroke_TIA_PROC.md
+    row: 9
+    status: owner_required
+    reason: >-
+      Bound to p.131#2 on weak text similarity only; the PEMS row's text is "Record time
+      the patient last seen normal and family contact information, if available. Provide
+      this information to the receiving facility." That does not authorise calling the
+      receiving facility with Name/DOB for rapid registration, and no other PEMS 2024 row
+      on p.131 does. Site-authored action with no matching PEMS row.
+
   # ---------------------------------------------------------------- Hypertensive crisis
   - file: protocols/cardiac/04_Hypertensive_Crisis_PROC.md
     row: 2

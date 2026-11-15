@@ -71,8 +71,6 @@ Aortic Dissections usually occur in the thoracic cavity when the aortic intima i
 
 <p class="lv-note"><strong>Pending OMD Authorization</strong> — this protocol is sourced from ODEMSA Regional Patient Care Protocols, Section 2.5, Revised 06/2015. PEMS 2024 does not publish this protocol. Levels below are carried from the agency's existing page and are <strong>not verified against a regional source</strong>.</p>
 
-<p class="lv-note"><strong>Pending OMD Authorization</strong> — this protocol is sourced from ODEMSA Regional Patient Care Protocols, Section 2.5, Revised 06/2015. PEMS 2024 does not publish this protocol. Levels below are carried from the agency's existing page and are <strong>not verified against a regional source</strong>.</p>
-
 <div class="lv-wrap pending" markdown="1">
 
 | # | Level | Action / Intervention |
