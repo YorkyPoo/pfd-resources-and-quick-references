@@ -1,0 +1,153 @@
+# Row-level bindings for the batch conversion of protocol pages.
+#
+# Two kinds of entry — machine-checked by scripts/level_rule.py:
+#
+#   - a BINDING: this site row is authorised by this PEMS 2024 row.
+#       pems_page / pems_ordinal   -> resolved in audit/level-scan/pems_table.json
+#       evidence                   -> why this site row is that PEMS row
+#     The chip becomes the leftmost level that PEMS prints on that row. A binding is
+#     a source citation, never a level decision: if the PEMS row does not badge the
+#     action, no binding may be written here.
+#
+#   - an OWNER_REQUIRED declaration: no PEMS 2024 row authorises this row's provider
+#     level. The page keeps the level it already published and the chip is flagged.
+#     `reason` is required and is published in audit/level-scan/level-rule-ledger.md.
+#
+# Nothing here is a level the audit invented. Every level comes from a printed PEMS
+# badge (binding) or from the page itself (owner_required).
+#
+# Status: Batch 1 (protocols/cardiac/). Batches 2-5 add their own entries.
+
+bindings:
+
+  # ---------------------------------------------------------------- Asystole / PEA
+  - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
+    row: 4
+    status: owner_required
+    reason: >-
+      PEMS 2024 p.57 prints no oxygenation row. The row refers to the Airway Management
+      and Ventilatory Support procedure (PEMS p.239), a different protocol whose rows
+      are not this page's source; binding it there would be inventing a citation.
+  - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
+    row: 5
+    status: owner_required
+    reason: >-
+      PEMS 2024 p.57 prints no 12-Lead ECG row for the Asystole/PEA protocol
+      (12-Lead acquisition is p.107#3, on Chest Pain, and p.231 in the procedure section).
+  - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
+    row: 7
+    status: owner_required
+    reason: >-
+      PEMS 2024 p.57 prints no EtCO2 row. Capnography is PEMS p.241, a separate
+      procedure; p.57 carries no row for it.
+  - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
+    row: 8
+    status: owner_required
+    reason: >-
+      PEMS 2024 p.57 prints no AED / rhythm-assessment row. Defibrillation is p.63#7,
+      which is a compound row (badge I with an inline [EMR] token) and belongs to the
+      V-Fib/V-Tach protocol, not this one.
+
+  # ---------------------------------------------------------------- V-Fib / pVT
+  - file: protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md
+    row: 5
+    status: owner_required
+    reason: >-
+      p.63#7 is the compound row named in this card as an unresolved inline badge
+      contradiction: PEMS prints one badge (I) on "If VF or VT is present, or AED is
+      advising to shock [EMR], immediately defibrillate". The page's own row text
+      "(AED for EMR/EMT, Manual for I/P)" encodes both levels, so neither I nor EMT is
+      the whole answer. audit/level-scan/badge-overrides.yaml is still empty.
+
+  # ---------------------------------------------------------------- Traumatic arrest
+  - file: protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md
+    row: 5
+    status: owner_required
+    reason: >-
+      p.61#4 is the second row named in this card as an unresolved inline badge
+      contradiction: badge EMT, with "(I / P)" scoping the rhythm-assessment clauses.
+      This site row (PEA/VF/VT: continue CPR / defibrillate) is not one of the two
+      splits C2 adjudicated (rows 3 and 4), so no single chip is printed for it.
+  - file: protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md
+    row: 8
+    status: owner_required
+    reason: >-
+      PEMS 2024 p.61 prints no shock-index / "resuscitate prior to intubation" row;
+      it is local authoring.
+  - file: protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md
+    row: 10
+    status: owner_required
+    reason: >-
+      PEMS 2024 p.61#2 prints "consider immediate transport to the closest Emergency
+      Department or Trauma Center" (badge EMR); it does not print a Level I/II trauma
+      centre destination or a 10-minute goal, so this row has no PEMS counterpart and
+      must not inherit EMR from a row that says something else.
+
+  # ---------------------------------------------------------------- Non-traumatic arrest
+  - file: protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
+    row: 3
+    status: owner_required
+    reason: >-
+      PEMS 2024 prints no BVM / EtCO2-titration row on p.57, p.63 or p.64; the Airway
+      Management and Ventilatory Support procedure (p.239) is a different protocol.
+  - file: protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
+    row: 4
+    status: owner_required
+    reason: >-
+      Compound p.63#7 again (badge I, inline [EMR] for AED). C2 upheld the site's
+      EMT-level AED application as an authoring difference but wrote no cell decision,
+      so this page's row is printed with its existing level and flagged.
+  - file: protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
+    row: 5
+    status: owner_required
+    reason: >-
+      Same compound p.63#7 (the defibrillation half). A chip of I would contradict the
+      AED clause PEMS brackets as [EMR]; a chip of EMT would contradict the printed
+      badge. Owner decision needed.
+
+  # ---------------------------------------------------------------- Chest Pain / ACS
+  - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
+    row: 3
+    status: owner_required
+    reason: >-
+      PEMS 2024 p.107 prints no blood-glucose row for Chest Pain (glucose is p.109#4,
+      on the Hypertension protocol).
+  - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
+    row: 5
+    status: owner_required
+    pems_page: 107
+    pems_ordinal: 4
+    reason: >-
+      No PEMS row of its own: C2 records r5 as a site-authored interpretation step and
+      p.107#4 (badge EMT) as owned by r6. p.107#4 badges the EMT for acting on a
+      STEMI 12-lead, not for interpreting one, so citing it here would authorise EMT
+      interpretation that PEMS does not print.
+  - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
+    row: 9
+    pems_page: 107
+    pems_ordinal: 7
+    evidence: >-
+      p.107#7 "Monitor cardiac rhythm. Refer to Tachyarrhythmias or Bradycardia
+      protocol, as needed." badge I — the only cardiac-monitoring row printed for
+      Chest Pain. The page had resolved the alignment as no-counterpart; the PEMS row
+      is unambiguous.
+  - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
+    row: 8
+    status: owner_required
+    reason: >-
+      PEMS 2024 p.107 prints no IV/IO access row (access is p.231's procedure section
+      and the arrest protocols); this page's row has no PEMS counterpart.
+  - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
+    row: 14
+    status: owner_required
+    reason: >-
+      PEMS 2024 p.107 prints no right-sided / 15-lead ECG row; serial 12-leads appear
+      inside the MC-badged p.107#9, and no row authorises a 15-lead.
+
+  # ---------------------------------------------------------------- Hypertensive crisis
+  - file: protocols/cardiac/04_Hypertensive_Crisis_PROC.md
+    row: 2
+    status: owner_required
+    reason: >-
+      PEMS 2024 p.109 prints no primary/secondary-survey or vital-signs row; its six
+      rows are cross-references and the MC contact row. Local authoring.

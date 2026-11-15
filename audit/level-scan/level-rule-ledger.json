@@ -3,7 +3,14 @@
  "rule": "one marker per action = the lowest provider level PEMS 2024 prints for that action",
  "targets": [
   "protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md",
-  "protocols/cardiac/04_Post_Resuscitation_Care_PROC.md"
+  "protocols/cardiac/04_Post_Resuscitation_Care_PROC.md",
+  "protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
+  "protocols/cardiac/04_Bradycardia_PROC.md",
+  "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+  "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+  "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+  "protocols/cardiac/04_Hypertensive_Crisis_PROC.md",
+  "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md"
  ],
  "rows": [
   {
@@ -12,12 +19,15 @@
    "action": "Follow Universal Patient Care / Initial Patient Contact",
    "level_published": "EMR",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 135,
    "pems_ordinal": 0,
    "pems_badge": "EMR",
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+   "binding_evidence": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -33,6 +43,7 @@
    "action": "Assess patient stability (chest pain, dyspnea, AMS, shock)",
    "level_published": "EMR",
    "status": "owner_ruled",
+   "reason": null,
    "owner_ruling": {
     "date": "2026-11-15",
     "ruling": "EMR \u2014 any provider may assess stability.",
@@ -41,8 +52,10 @@
    "pems_page": null,
    "pems_ordinal": null,
    "pems_badge": null,
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": null,
+   "binding_evidence": null,
    "basis": null,
    "before": {
     "leftmost": "EMR",
@@ -58,12 +71,15 @@
    "action": "Obtain and transmit 12-Lead ECG",
    "level_published": "EMT",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 135,
    "pems_ordinal": 1,
    "pems_badge": "EMT",
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": "Obtain and transmit a 12-Lead ECG.",
+   "binding_evidence": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -81,12 +97,15 @@
    "action": "Obtain IV access",
    "level_published": "A",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 135,
    "pems_ordinal": 2,
    "pems_badge": "A",
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": "Obtain IV access. Consider: ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 \u2013 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO Repeat as needed to maintain adequate perfusion, up to 60 mL/kg total.",
+   "binding_evidence": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "A",
@@ -104,12 +123,15 @@
    "action": "0.9% Sodium chloride up to 1 L IV/IO (Adult) 250 \u2013 500 mL boluses or 20 mL/kg IV/IO (Pediatric) Repeat as needed, max 60 mL/kg total",
    "level_published": "A",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 135,
    "pems_ordinal": 2,
    "pems_badge": "A",
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": "Obtain IV access. Consider: ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 \u2013 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO Repeat as needed to maintain adequate perfusion, up to 60 mL/kg total.",
+   "binding_evidence": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -127,12 +149,15 @@
    "action": "If rhythm regular, Adenosine (Adenocard) 6 mg IV/IO (Adult) or 0.1 mg/kg IV/IO (Pediatric, max 6 mg) Followed by 20 mL (Adult) or 10\u201320 mL (Ped) 0.9% ",
    "level_published": "I",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 135,
    "pems_ordinal": 3,
    "pems_badge": "I",
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": "If the rhythm is regular, consider: ADULT: Adenosine (Adenocard) 6 mg IV/IO followed by a 20 mL 0.9% Sodium chloride flush. PEDIATRIC: Adenosine (Adenocard) 0.1 mg/kg IV/IO followed by a 10 \u2013 20 mL 0.9% Sodium chloride flush. Maximum dose 6 mg. If no conversion within 2 minutes, consider repeating one time at double the initial dose.",
+   "binding_evidence": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -150,12 +175,15 @@
    "action": "If no conversion after 2 minutes, repeat Adenosine at DOUBLE initial dose",
    "level_published": "I",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 135,
    "pems_ordinal": 3,
    "pems_badge": "I",
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": "If the rhythm is regular, consider: ADULT: Adenosine (Adenocard) 6 mg IV/IO followed by a 20 mL 0.9% Sodium chloride flush. PEDIATRIC: Adenosine (Adenocard) 0.1 mg/kg IV/IO followed by a 10 \u2013 20 mL 0.9% Sodium chloride flush. Maximum dose 6 mg. If no conversion within 2 minutes, consider repeating one time at double the initial dose.",
+   "binding_evidence": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "I",
@@ -173,12 +201,15 @@
    "action": "If rhythm irregular/atrial fibrillation, initiate transport Monitor for signs of poor perfusion",
    "level_published": "I",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 135,
    "pems_ordinal": 4,
    "pems_badge": "I",
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": "If the rhythm is irregular/atrial fibrillation, initiate transport to an appropriate facility. Monitor for signs of poor perfusion.",
+   "binding_evidence": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -196,12 +227,15 @@
    "action": "Contact Medical Control for guidance Ensure 12-Lead ECG transmitted",
    "level_published": "MC",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 136,
    "pems_ordinal": 7,
    "pems_badge": "MC",
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": "Contact Medical Control if uncertain regarding rhythm, most appropriate therapy, and for guidance as needed. Ensure a 12-Lead ECG is transmitted.",
+   "binding_evidence": null,
    "basis": "alignment:merged_into_site_row",
    "before": {
     "leftmost": "MC",
@@ -219,12 +253,15 @@
    "action": "For light sedation, consider Midazolam (Versed) 2.5 mg IV/IO or 5 mg IN/IM (Adult) 0.05 mg/kg IV/IO or 0.1 mg/kg IM (Pediatric) Max: 2.5 mg IV/IO or 5",
    "level_published": "I",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 135,
    "pems_ordinal": 5,
    "pems_badge": "I",
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": "For light sedation, if time and patient condition permit, consider: ADULT: Midazolam (Versed) 2.5 mg IV/IO or 5 mg IN/IM PEDIATRIC: Midazolam (Versed) 0.05 mg/kg IV/IO or 0.1 mg/kg IM. Maximum dose 2.5 mg IV/IO or 5 mg IM. Monitor SpO2 and EtCO2.",
+   "binding_evidence": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -242,12 +279,15 @@
    "action": "Monitor SpO\u2082 and EtCO\u2082 during sedation",
    "level_published": "I",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 135,
    "pems_ordinal": 5,
    "pems_badge": "I",
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": "For light sedation, if time and patient condition permit, consider: ADULT: Midazolam (Versed) 2.5 mg IV/IO or 5 mg IN/IM PEDIATRIC: Midazolam (Versed) 0.05 mg/kg IV/IO or 0.1 mg/kg IM. Maximum dose 2.5 mg IV/IO or 5 mg IM. Monitor SpO2 and EtCO2.",
+   "binding_evidence": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "I",
@@ -265,12 +305,15 @@
    "action": "Perform SYNCHRONIZED cardioversion 100 joules initial dose (Adult) or 1 joule/kg (Pediatric)",
    "level_published": "I",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 136,
    "pems_ordinal": 6,
    "pems_badge": "I",
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": "Perform synchronized cardioversion. ADULT: 100 joules initial dose If cardioversion is unsuccessful, check pad placement and repeat at 200 joules. PEDIATRIC: 1 joule/kg initial dose If cardioversion is unsuccessful, check pad placement and repeat at 2 joules/kg. If cardioversion is unsuccessful after two attempts, contact Medical Control for guidance.",
+   "binding_evidence": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -288,12 +331,15 @@
    "action": "If unsuccessful, check pad placement and repeat at 200 joules (Adult) or 2 joules/kg (Pediatric)",
    "level_published": "I",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 136,
    "pems_ordinal": 6,
    "pems_badge": "I",
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": "Perform synchronized cardioversion. ADULT: 100 joules initial dose If cardioversion is unsuccessful, check pad placement and repeat at 200 joules. PEDIATRIC: 1 joule/kg initial dose If cardioversion is unsuccessful, check pad placement and repeat at 2 joules/kg. If cardioversion is unsuccessful after two attempts, contact Medical Control for guidance.",
+   "binding_evidence": null,
    "basis": "adjudicated:confirm",
    "before": {
     "leftmost": "I",
@@ -311,12 +357,15 @@
    "action": "If unsuccessful after two attempts, contact Medical Control",
    "level_published": "I",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 136,
    "pems_ordinal": 6,
    "pems_badge": "I",
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": "Perform synchronized cardioversion. ADULT: 100 joules initial dose If cardioversion is unsuccessful, check pad placement and repeat at 200 joules. PEDIATRIC: 1 joule/kg initial dose If cardioversion is unsuccessful, check pad placement and repeat at 2 joules/kg. If cardioversion is unsuccessful after two attempts, contact Medical Control for guidance.",
+   "binding_evidence": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "I",
@@ -335,12 +384,15 @@
    "action": "Airway management / Ventilatory support",
    "level_published": "EMR",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 59,
    "pems_ordinal": 1,
    "pems_badge": "EMR",
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": "Follow Airway Management and Ventilatory Support procedure.",
+   "binding_evidence": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -356,12 +408,15 @@
    "action": "Assess Blood Glucose (treat < 60 mg/dL per protocol)",
    "level_published": "EMT",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 59,
    "pems_ordinal": 2,
    "pems_badge": "EMT",
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": "Assess blood glucose. If less than 60 mg/dL, refer to Hypoglycemia protocol.",
+   "binding_evidence": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -377,12 +432,15 @@
    "action": "Obtain / transmit 12-lead ECG (STEMI Triage if indicated)",
    "level_published": "EMT",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 59,
    "pems_ordinal": 3,
    "pems_badge": "EMT",
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": "Obtain and transmit a 12-Lead ECG. If STEMI is identified, follow Administrative Policy - STEMI Field Triage.",
+   "binding_evidence": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -398,12 +456,15 @@
    "action": "Obtain IV/IO (Humeral IO preferred if IV unavailable)",
    "level_published": "A",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 59,
    "pems_ordinal": 4,
    "pems_badge": "A",
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": "Obtain IV/IO access (humeral IO preferred if IV unavailable).",
+   "binding_evidence": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -419,12 +480,15 @@
    "action": "Fluid Bolus: ADULT: 0.9% Sodium Chloride up to 1 L IV/IO in 250 - 500 mL boluses PEDIATRIC: 0.9% Sodium Chloride 20 mL/kg IV/IO (up to 60 mL/kg total)",
    "level_published": "A",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 59,
    "pems_ordinal": 5,
    "pems_badge": "A",
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": "Consider: ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 \u2013 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO Repeat as needed to maintain adequate perfusion, up to 60 mL/kg total.",
+   "binding_evidence": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -440,12 +504,15 @@
    "action": "Maintain MAP > 65 mmHg: ADULT: Norepinephrine infusion 5 - 20 mcg/min IV/IO OR ADULT: Epinephrine infusion 2 - 10 mcg/min IV/IO",
    "level_published": "I",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 59,
    "pems_ordinal": 6,
    "pems_badge": "I",
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": "Maintain mean arterial pressure (MAP) above 65 mmHg. Consider: ADULT: Norepinephrine (Levophed) infusion 5 \u2013 20 mcg/min IV/IO (Add 4 mg of Norepinephrine to 250 mL 0.9% Sodium chloride = 16 mcg/mL) OR ADULT: Epinephrine infusion 2 \u2013 10 mcg/min IV/IO (Add 1 mg of Epinephrine [1mg/mL] to 100 mL of 0.9% Sodium chloride = 10 mcg/mL)",
+   "binding_evidence": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -461,12 +528,15 @@
    "action": "Pediatric SBP Support: PEDIATRIC: Epinephrine infusion 0.1 - 1 mcg/kg/min IV/IO *(Titrate to > 70 mmHg if < 1 yr, > 90 mmHg if > 1 yr. Max dose: 10 mc",
    "level_published": "I",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 59,
    "pems_ordinal": 7,
    "pems_badge": "I",
+   "compound_tokens": [],
    "bracketed": true,
    "pems_text": "Maintain age adjusted SBP. Consider: PEDIATRIC: Epinephrine 0.1 - 1 mcg/kg/min IV/IO infusion. Max dose: 10 mcg/min. Under 1 year old: Titrate to SBP > 70 mmHg Over 1 year old: Titrate to SBP > 90 mmHg (Add 1 mg of Epinephrine [1mg/mL] to 100 mL of 0.9% Sodium chloride = 10 mcg/mL) Note: Infusion via IV pump is preferred is available. Monitor closely for signs of extravasation.",
+   "binding_evidence": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -482,16 +552,2242 @@
    "action": "Bridge Therapy: ADULT: Push dose Epinephrine 5 - 10 mcg IV/IO every 2-3 minutes",
    "level_published": "P",
    "status": "OK",
+   "reason": null,
    "owner_ruling": null,
    "pems_page": 59,
    "pems_ordinal": 8,
    "pems_badge": "P",
+   "compound_tokens": [],
    "bracketed": false,
    "pems_text": "To maintain MAP > 65 until a vasopressor infusion is prepared, consider: ADULT: Push dose Epinephrine 5-10 mcg IV/IO every 2-3 minutes (Add 100 mcg Epinephrine (1mL of 0.1 mg/mL) to 9mL of 0.9% Normal Saline = 10 mcg / mL)",
+   "binding_evidence": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "P",
     "markers": [],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
+   "row": 1,
+   "action": "Follow Universal Patient Care / Initial Patient Contact protocol. Determine DNR status. Refer to Death and Criteria for Withholding Resuscitation prot",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 57,
+   "pems_ordinal": 1,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Determine DNR status. Refer to Death and Criteria for Withholding Resuscitation protocol.",
+   "binding_evidence": null,
+   "basis": "adjudicated:confirm",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "Site row merges p.57#0 and p.57#1, both badge EMR (all five columns); site prints all five. Confirm."
+  },
+  {
+   "file": "protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
+   "row": 2,
+   "action": "Begin chest compressions. Refer to Adult / Pediatric Cardiopulmonary Resuscitation (CPR) procedure. Children/Infants ONLY: If unconscious and hypotens",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 57,
+   "pems_ordinal": 2,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Begin chest compressions. Refer to Adult / Pediatric Cardiopulmonary Resuscitation (CPR) procedure.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
+   "row": 3,
+   "action": "Identify and treat potentially reversible causes. See Pearls below.",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 57,
+   "pems_ordinal": 3,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Identify and treat potentially reversible causes. See Pearls below.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
+   "row": 4,
+   "action": "Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure.",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "PEMS 2024 p.57 prints no oxygenation row. The row refers to the Airway Management and Ventilatory Support procedure (PEMS p.239), a different protocol whose rows are not this page's source; binding it there would be inventing a citation.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
+   "row": 5,
+   "action": "Obtain and transmit a 12-Lead ECG.",
+   "level_published": "A",
+   "status": "OWNER_REQUIRED",
+   "reason": "PEMS 2024 p.57 prints no 12-Lead ECG row for the Asystole/PEA protocol (12-Lead acquisition is p.107#3, on Chest Pain, and p.231 in the procedure section).",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
+   "row": 6,
+   "action": "Obtain IV/IO access.",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 57,
+   "pems_ordinal": 5,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Obtain IV/IO access (humeral IO preferred if IV unavailable).",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
+   "row": 7,
+   "action": "Monitor ETCO2. If ETCO2 < 10 or dropping, reassess and optimize compression rate, depth, and recoil.",
+   "level_published": "A",
+   "status": "OWNER_REQUIRED",
+   "reason": "PEMS 2024 p.57 prints no EtCO2 row. Capnography is PEMS p.241, a separate procedure; p.57 carries no row for it.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
+   "row": 8,
+   "action": "Apply AED / Assess cardiac rhythm every 2 minutes. If AED is advising to shock or rhythm is VF or VT (as determined by EMT-I or P), defibrillate at ma",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "PEMS 2024 p.57 prints no AED / rhythm-assessment row. Defibrillation is p.63#7, which is a compound row (badge I with an inline [EMR] token) and belongs to the V-Fib/V-Tach protocol, not this one.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
+   "row": 9,
+   "action": "Children/Infants ONLY: If unconscious and hypotensive, with HR less than 60, administer: PEDIATRIC: Epinephrine 0.01 mg/kg IV/IO [0.1 mg/mL] every 3 \u2013",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 57,
+   "pems_ordinal": 6,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Epinephrine 1 mg IV/IO [0.1 mg/mL concentration] PEDIATRIC: Epinephrine 0.01 mg/kg IV/IO [0.1 mg/mL concentration] Repeat every 3-5 minutes during cardiac arrest.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
+   "row": 10,
+   "action": "For cardiac arrest in renal dialysis patients, patients with crush injuries, suspected calcium channel blocker overdose, or suspected hyperkalemia onl",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 57,
+   "pems_ordinal": 7,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "For cardiac arrest in renal dialysis patients, patients with crush injuries, suspected calcium channel blocker overdose, or suspected hyperkalemia only, also administer: ADULT: Calcium Chloride 1 g IV/IO slow push Followed by 20 mL 0.9% sodium chloride flush ADULT: Sodium Bicarbonate 50 mEq IV/IO slow push PEDIATRIC: Calcium Chloride 20mg/kg (max dose 1g) IV/IO slow push Followed by 20 mL 0.9% sodium chloride flush PEDIATRIC: Sodium Bicarbonate 1 mEq/kg (max dose 50 mEq) IV/IO slow push Repeat in 5 minutes if no change.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
+   "row": 11,
+   "action": "For cardiac arrest in renal dialysis patients, patients with crush injuries, suspected calcium channel blocker overdose, or suspected hyperkalemia onl",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 57,
+   "pems_ordinal": 7,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "For cardiac arrest in renal dialysis patients, patients with crush injuries, suspected calcium channel blocker overdose, or suspected hyperkalemia only, also administer: ADULT: Calcium Chloride 1 g IV/IO slow push Followed by 20 mL 0.9% sodium chloride flush ADULT: Sodium Bicarbonate 50 mEq IV/IO slow push PEDIATRIC: Calcium Chloride 20mg/kg (max dose 1g) IV/IO slow push Followed by 20 mL 0.9% sodium chloride flush PEDIATRIC: Sodium Bicarbonate 1 mEq/kg (max dose 50 mEq) IV/IO slow push Repeat in 5 minutes if no change.",
+   "binding_evidence": null,
+   "basis": "adjudicated:confirm",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "PEMS p.57#7 badge I -> I/P; site I/P. Confirm. Note: site r10 (adult half, 'matched', out of queue) prints A/I/P where the same I-badged row authorises I/P \u2014 broader than the badge."
+  },
+  {
+   "file": "protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
+   "row": 12,
+   "action": "If ROSC is achieved, refer to Post Cardiac Arrest Care (ROSC) protocol.  If ROSC is not achieved, refer to Death and Criteria for Withholding Resuscit",
+   "level_published": "MC",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 57,
+   "pems_ordinal": 8,
+   "pems_badge": "MC",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Contact Medical Control for guidance as needed. See Pearls below regarding Termination of Resuscitation.",
+   "binding_evidence": null,
+   "basis": "adjudicated:confirm",
+   "before": {
+    "leftmost": "MC",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "Site prints MC in every cell, matching p.57#8 (MC). The row also contains the ROSC / withholding referral, which PEMS badges EMR (p.57#0-#3, p.64#13), so all-MC under-grants that half. Matches the row it is bound to; authoring flag only."
+  },
+  {
+   "file": "protocols/cardiac/04_Bradycardia_PROC.md",
+   "row": 1,
+   "action": "Follow Universal Patient Care / Initial Patient Contact protocol",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 103,
+   "pems_ordinal": 0,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Bradycardia_PROC.md",
+   "row": 2,
+   "action": "Assess and continuously monitor cardiac rhythm",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 103,
+   "pems_ordinal": 7,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Assess and continuously monitor cardiac rhythm.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Bradycardia_PROC.md",
+   "row": 3,
+   "action": "Atropine sulfate ADULT: 1 mg IV/IO PEDIATRIC: 0.02 mg/kg IV/IO Minimum dose: 0.1 mg, Maximum dose: 0.5 mg May repeat once after 5 minutes, if needed",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 103,
+   "pems_ordinal": 8,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Consider: ADULT: Atropine sulfate 1 mg IV/IO PEDIATRIC: Atropine sulfate 0.02 mg/kg IV/IO. Minimum dose: 0.1mg, Maximum dose: 0.5 mg May repeat once after 5 minutes, if needed.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Bradycardia_PROC.md",
+   "row": 4,
+   "action": "If hypotensive or in shock, initiate transcutaneous pacing. Follow Transcutaneous Pacing procedure",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 104,
+   "pems_ordinal": 9,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If hypotensive or in shock, initiate transcutaneous pacing. Follow Transcutaneous Pacing procedure.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Bradycardia_PROC.md",
+   "row": 5,
+   "action": "Maintain mean arterial pressure (MAP) above 65 mmHg. If pacing is ineffective, administer: Epinephrine infusion 2 \u2013 10 mcg/min IV/IO (Add 1 mg of Epin",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 104,
+   "pems_ordinal": 10,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Maintain mean arterial pressure (MAP) above 65 mmHg. If pacing is ineffective, administer: ADULT: Epinephrine infusion 2 \u2013 10 mcg/min IV/IO (Add 1 mg of Epinephrine [1mg/mL] to 100 mL of 0.9% Sodium chloride = 10 mcg/mL)",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Bradycardia_PROC.md",
+   "row": 6,
+   "action": "Maintain age adjusted SBP. If pacing is ineffective, administer: PEDIATRIC: Epinephrine 0.1 - 1 mcg/kg/min IV/IO infusion Max dose: 10 mcg/min Under 1",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 104,
+   "pems_ordinal": 11,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": true,
+   "pems_text": "Maintain age adjusted SBP. If pacing is ineffective, administer: PEDIATRIC: Epinephrine 0.1 - 1 mcg/kg/min IV/IO infusion. Max dose: 10 mcg/min. Under 1 year old: Titrate to SBP > 70 mmHg Over 1 year old: Titrate to SBP > 90 mmHg (Add 1 mg of Epinephrine [1mg/mL] to 100 mL of 0.9% Sodium chloride = 10 mcg/mL) Note: Infusion via IV pump is preferred is available. Monitor closely for signs of extravasation.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Bradycardia_PROC.md",
+   "row": 7,
+   "action": "To maintain MAP > 65 until a vasopressor infusion is prepared, consider: ADULT: Push dose Epinephrine 5-10 mcg IV/IO every 2-3 minutes (Add 100 mcg Ep",
+   "level_published": "P",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 104,
+   "pems_ordinal": 12,
+   "pems_badge": "P",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "To maintain MAP > 65 until a vasopressor infusion is prepared, consider: ADULT: Push dose Epinephrine 5-10 mcg IV/IO every 2-3 minutes",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Bradycardia_PROC.md",
+   "row": 8,
+   "action": "Contact Medical Control for guidance as needed Consider contacting Medical Control at a pediatric specialty center (VCU CHoR or CHKD) for children and",
+   "level_published": "MC",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 104,
+   "pems_ordinal": 13,
+   "pems_badge": "MC",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "(Add 100 mcg Epinephrine (1mL of 0.1 mg/mL) to 9mL of 0.9% Normal Saline = 10 mcg / mL) Contact Medical Control for guidance as needed. Consider contacting Medical Control at a pediatric specialty center (VCU CHoR or CHKD) for children and infants with symptomatic bradycardia. Children\u2019s Hospital of the King\u2019s Daughters, COR: (757) 668 \u2013 8000 VCU Children\u2019s Hospital of Richmond, Communications Room: (804) 828 \u2013 3989",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "MC",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": 1,
+   "action": "Scene Safety / Initial Contact: \u2022 Ensure scene safety and appropriate PPE. \u2022 Determine DNR status (refer to Death and Criteria for Withholding Resusci",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 57,
+   "pems_ordinal": 1,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Determine DNR status. Refer to Death and Criteria for Withholding Resuscitation protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": 2,
+   "action": "Begin High-Quality CPR: \u2022 Push hard and fast at rate 100 \u2013 120 bpm. \u2022 Allow complete chest recoil. \u2022 Minimize interruptions in chest compressions. \u2022 C",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 57,
+   "pems_ordinal": 2,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Begin chest compressions. Refer to Adult / Pediatric Cardiopulmonary Resuscitation (CPR) procedure.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": 3,
+   "action": "Airway Management: \u2022 Apply BVM with high-flow O\u2082. \u2022 Use quantitative EtCO\u2082 monitoring with BVM:   - If EtCO\u2082 < 10 mmHg, improve compressions   - If su",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "PEMS 2024 prints no BVM / EtCO2-titration row on p.57, p.63 or p.64; the Airway Management and Ventilatory Support procedure (p.239) is a different protocol.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": 4,
+   "action": "AED / Rhythm Assessment: \u2022 Apply AED and assess cardiac rhythm every 2 minutes. \u2022 Identify rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shock",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "Compound p.63#7 again (badge I, inline [EMR] for AED). C2 upheld the site's EMT-level AED application as an authoring difference but wrote no cell decision, so this page's row is printed with its existing level and flagged.",
+   "owner_ruling": null,
+   "pems_page": 63,
+   "pems_ordinal": 7,
+   "pems_badge": "I",
+   "compound_tokens": [
+    "EMR"
+   ],
+   "bracketed": false,
+   "pems_text": "If VF or VT is present, or AED is advising to shock [EMR], immediately defibrillate: ADULT: 200 joules Biphasic / 360 joules Monophasic, or manufacturer\u2019s recommendation. PEDIATRIC: 2 joules/kg initial, 4 joules/kg subsequent After each defibrillation, perform 2 minutes of CPR, followed by rhythm assessment. If VF / VT persists, defibrillate again, then consider medication therapy as listed below.",
+   "binding_evidence": null,
+   "basis": "adjudicated:site_split_of_pems",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "Compound row. Badge I is printed once for the whole defibrillation row; the inline '[EMR]' puts the AED in the EMR's hands ('or AED is advising to shock [EMR]'). Site rows 4 (AED application) and 5 (defibrillation) split this one PEMS row. r4's EMT/A cells are supported by that inline annotation, not by the badge, so no cell change and the provisional site_broader flag is withdrawn as an authoring difference."
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": 5,
+   "action": "Defibrillation - V-Fib/V-Tach Only: \u2022 ADULT: 200 joules Biphasic / 360 joules Monophasic, or manufacturer's recommendation \u2022 PEDIATRIC: 2 joules/kg in",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "Same compound p.63#7 (the defibrillation half). A chip of I would contradict the AED clause PEMS brackets as [EMR]; a chip of EMT would contradict the printed badge. Owner decision needed.",
+   "owner_ruling": null,
+   "pems_page": 63,
+   "pems_ordinal": 7,
+   "pems_badge": "I",
+   "compound_tokens": [
+    "EMR"
+   ],
+   "bracketed": false,
+   "pems_text": "If VF or VT is present, or AED is advising to shock [EMR], immediately defibrillate: ADULT: 200 joules Biphasic / 360 joules Monophasic, or manufacturer\u2019s recommendation. PEDIATRIC: 2 joules/kg initial, 4 joules/kg subsequent After each defibrillation, perform 2 minutes of CPR, followed by rhythm assessment. If VF / VT persists, defibrillate again, then consider medication therapy as listed below.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": 6,
+   "action": "Spinal Motion Restriction: \u2022 Consider spinal motion restriction if indicated.",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 57,
+   "pems_ordinal": 4,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Consider spinal motion restriction.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": 7,
+   "action": "IV/IO Access: \u2022 Obtain IV/IO access (humeral IO preferred if IV unavailable). \u2022 Administer fluids and medications.",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 57,
+   "pems_ordinal": 5,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Obtain IV/IO access (humeral IO preferred if IV unavailable).",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": 8,
+   "action": "Epinephrine - All Rhythms: \u2022 ADULT: 1 mg IV/IO [0.1 mg/mL concentration] \u2022 PEDIATRIC: 0.01 mg/kg IV/IO [0.1 mg/mL concentration] \u2022 Frequency: Repeat e",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 57,
+   "pems_ordinal": 6,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Epinephrine 1 mg IV/IO [0.1 mg/mL concentration] PEDIATRIC: Epinephrine 0.01 mg/kg IV/IO [0.1 mg/mL concentration] Repeat every 3-5 minutes during cardiac arrest.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": 9,
+   "action": "Amiodarone - V-Fib/V-Tach Only (if persists after defibrillation and Epinephrine): \u2022 ADULT: 300 mg IV/IO slow push \u2022 PEDIATRIC: 5 mg/kg IV/IO slow pus",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 64,
+   "pems_ordinal": 9,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If VF / VT persists, administer: ADULT: Amiodarone (Cordarone) 300 mg IV/IO slow push PEDIATRIC: Amiodarone (Cordarone) 5 mg/kg IV/IO slow push. Maximum dose 300 mg. OR, if Amiodarone is unavailable, administer: ADULT: Lidocaine (Xylocaine) 1 mg/kg IV/IO slow push. Maximum dose 100 mg. PEDIATRIC: Lidocaine (Xylocaine) 1 mg/kg IV/IO slow push. Maximum dose 50 mg.",
+   "binding_evidence": null,
+   "basis": "adjudicated:confirm",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "C1 bound this row to p.64#11 (magnesium). The 300 mg amiodarone text is p.64#9, badge I -> I/P, which is exactly what the site prints. Confirm on the corrected key."
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": 10,
+   "action": "Fluid Administration - Asystole/PEA Only: \u2022 ADULT: 0.9% Sodium Chloride up to 1 L in 250 \u2013 500 mL boluses \u2022 PEDIATRIC: 0.9% Sodium Chloride 20 mL/kg \u2022",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 63,
+   "pems_ordinal": 6,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: 0.9% Sodium Chloride IV/IO up to 1 L in 250 \u2013 500 mL boluses PEDIATRIC: 0.9% Sodium Chloride 20 mL/kg IV/IO Repeat as needed to maintain adequate perfusion, up to 60 mL/kg total.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": 11,
+   "action": "Calcium Chloride and Sodium Bicarbonate - Special Circumstances Only: (For cardiac arrest in renal dialysis patients, crush injuries, suspected calciu",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 57,
+   "pems_ordinal": 7,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "For cardiac arrest in renal dialysis patients, patients with crush injuries, suspected calcium channel blocker overdose, or suspected hyperkalemia only, also administer: ADULT: Calcium Chloride 1 g IV/IO slow push Followed by 20 mL 0.9% sodium chloride flush ADULT: Sodium Bicarbonate 50 mEq IV/IO slow push PEDIATRIC: Calcium Chloride 20mg/kg (max dose 1g) IV/IO slow push Followed by 20 mL 0.9% sodium chloride flush PEDIATRIC: Sodium Bicarbonate 1 mEq/kg (max dose 50 mEq) IV/IO slow push Repeat in 5 minutes if no change.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": 12,
+   "action": "Identify and Treat Reversible Causes: \u2022 Continuously assess for H's and T's throughout resuscitation. \u2022 Treat underlying cause if identified.",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 57,
+   "pems_ordinal": 3,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Identify and treat potentially reversible causes. See Pearls below.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": 13,
+   "action": "Termination of Resuscitation (TOR): Contact Medical Control to request TOR if ALL criteria met: \u2022 Arrest was not witnessed by EMS \u2022 After 20 minutes o",
+   "level_published": "MC",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 57,
+   "pems_ordinal": 8,
+   "pems_badge": "MC",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Contact Medical Control for guidance as needed. See Pearls below regarding Termination of Resuscitation.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "MC",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": 14,
+   "action": "Post-Resuscitation: \u2022 If ROSC achieved, refer to Post Cardiac Arrest Care (ROSC) protocol. \u2022 If ROSC not achieved, refer to Death and Criteria for Wit",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 64,
+   "pems_ordinal": 13,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If return of spontaneous circulation (ROSC) is achieved, refer to Cardiac Arrest: Post ROSC Care.",
+   "binding_evidence": null,
+   "basis": "adjudicated:set_cells",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "p.64#13 'If ROSC is achieved, refer to Post ROSC Care' is badge EMR = every column; the no-ROSC half is p.57#1, also EMR. Site prints EMT..P (narrower by EMR)."
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+   "row": 1,
+   "action": "Control major active external bleeding / Begin CPR",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 61,
+   "pems_ordinal": 1,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Control sites of major active external bleeding. Refer to Hemorrhage Control procedure.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+   "row": 2,
+   "action": "Open the airway / Ventilate",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 61,
+   "pems_ordinal": 3,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Open the airway. Refer to Airway Management and Ventilatory Support procedure.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+   "row": 3,
+   "action": "Apply AED / Monitor (Assess rhythm before CPR if possible)",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 61,
+   "pems_ordinal": 4,
+   "pems_badge": "EMT",
+   "compound_tokens": [
+    "I",
+    "P"
+   ],
+   "bracketed": false,
+   "pems_text": "Apply AED or cardiac monitor. Assess rhythm (I / P): For Asystole at the time of EMS arrival: Consider withholding / terminating resuscitation. For PEA/Witnessed Asystole: Continue CPR. For VF/VT: Continue CPR and defibrillate.",
+   "binding_evidence": null,
+   "basis": "adjudicated:set_cells",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "C1 bound this row to p.61#8 (epinephrine). 'Apply AED or cardiac monitor' is p.61#4, badge EMT -> EMT/A/I/P. Site prints A/I/P (narrower by EMT)."
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+   "row": 4,
+   "action": "Asystole on arrival: Consider withholding CPR",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 61,
+   "pems_ordinal": 4,
+   "pems_badge": "EMT",
+   "compound_tokens": [
+    "I",
+    "P"
+   ],
+   "bracketed": false,
+   "pems_text": "Apply AED or cardiac monitor. Assess rhythm (I / P): For Asystole at the time of EMS arrival: Consider withholding / terminating resuscitation. For PEA/Witnessed Asystole: Continue CPR. For VF/VT: Continue CPR and defibrillate.",
+   "binding_evidence": null,
+   "basis": "adjudicated:set_cells",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "Raster: the row is 'Apply AED or cardiac monitor. Assess rhythm (I / P): For Asystole at the time of EMS arrival: Consider withholding / terminating resuscitation...'. The (I / P) token governs the rhythm assessment and the withhold/continue clauses, which is exactly what this site row states. Site prints EMT/A/I/P -> should be I/P."
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+   "row": 5,
+   "action": "PEA / VF / VT: Continue CPR / Defibrillate if indicated",
+   "level_published": "A",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.61#4 is the second row named in this card as an unresolved inline badge contradiction: badge EMT, with \"(I / P)\" scoping the rhythm-assessment clauses. This site row (PEA/VF/VT: continue CPR / defibrillate) is not one of the two splits C2 adjudicated (rows 3 and 4), so no single chip is printed for it.",
+   "owner_ruling": null,
+   "pems_page": 61,
+   "pems_ordinal": 4,
+   "pems_badge": "EMT",
+   "compound_tokens": [
+    "I",
+    "P"
+   ],
+   "bracketed": false,
+   "pems_text": "Apply AED or cardiac monitor. Assess rhythm (I / P): For Asystole at the time of EMS arrival: Consider withholding / terminating resuscitation. For PEA/Witnessed Asystole: Continue CPR. For VF/VT: Continue CPR and defibrillate.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+   "row": 6,
+   "action": "Obtain IV/IO access (x2 preferred)",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 61,
+   "pems_ordinal": 5,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Obtain IV/IO access. Establish secondary IV/IO access if possible. If blood products are not available, administer: ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 \u2013 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO Repeat as needed to maintain adequate perfusion, up to 60 mL/kg total.",
+   "binding_evidence": null,
+   "basis": "adjudicated:set_cells",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "PEMS p.61#5 badge A opens with 'Obtain IV/IO access. Establish secondary IV/IO access if possible.' Access is authorised at A; corroborated by p.57#5, p.63#5 and p.135#2, all badge A on an access row. Site prints I/P (narrower by A)."
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+   "row": 7,
+   "action": "If blood unavailable: 0.9% Sodium Chloride up to 1 L IV/IO (Adult) / 20 mL/kg IV/IO (Ped)",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 61,
+   "pems_ordinal": 5,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Obtain IV/IO access. Establish secondary IV/IO access if possible. If blood products are not available, administer: ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 \u2013 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO Repeat as needed to maintain adequate perfusion, up to 60 mL/kg total.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+   "row": 8,
+   "action": "Assess Shock Index > 1 / Resuscitate prior to intubation",
+   "level_published": "P",
+   "status": "OWNER_REQUIRED",
+   "reason": "PEMS 2024 p.61 prints no shock-index / \"resuscitate prior to intubation\" row; it is local authoring.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+   "row": 9,
+   "action": "Perform bilateral chest decompression for tension pneumo",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 61,
+   "pems_ordinal": 7,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If signs or suspicion of thoracoabdominal trauma are present (blunt or penetrating), perform bilateral chest decompression. Follow Chest Decompression procedure. Note: CPR should NOT impede procedural interventions when treating traumatic cardiac arrest.*",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+   "row": 10,
+   "action": "Rapid transport to Level I/II Trauma Center (Goal < 10 mins)",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "PEMS 2024 p.61#2 prints \"consider immediate transport to the closest Emergency Department or Trauma Center\" (badge EMR); it does not print a Level I/II trauma centre destination or a 10-minute goal, so this row has no PEMS counterpart and must not inherit EMR from a row that says something else.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+   "row": 11,
+   "action": "Contact Medical Control for guidance / destination",
+   "level_published": "MC",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 61,
+   "pems_ordinal": 9,
+   "pems_badge": "MC",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If there are no signs of life after 15-20 minutes of resuscitation, or at any time for additional guidance including optimal destination determination, contact Medical Control. If transporting and the patient is in cardiac arrest, transport to the closest Emergency Department.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "MC",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+   "row": 1,
+   "action": "Scene Safety / Initial Assessment: \u2022 Follow the Universal Patient Care / Initial Patient Contact protocol. \u2022 If stroke suspected, refer to the Stroke ",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 107,
+   "pems_ordinal": 0,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+   "row": 2,
+   "action": "Airway / Respiratory Management: \u2022 If respiratory distress, refer to Airway Management and Ventilatory Support procedure and the Respiratory Distress ",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 107,
+   "pems_ordinal": 1,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Maintain SpO2 94 \u2013 98%. Refer to Airway Management and Ventilatory Support protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+   "row": 3,
+   "action": "Glucose Assessment: \u2022 Check blood glucose level. \u2022 Refer to the Hyperglycemia / Hypoglycemia protocol if indicated.",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "PEMS 2024 p.107 prints no blood-glucose row for Chest Pain (glucose is p.109#4, on the Hypertension protocol).",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+   "row": 4,
+   "action": "12-Lead ECG Acquisition (EMT): \u2022 Consider assessing EtCO2 and/or SpCO as indicated. \u2022 Acquire 12-Lead ECG within 5 minutes of patient contact. \u2022 Trans",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 107,
+   "pems_ordinal": 3,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Obtain and transmit 12 \u2013 Lead ECG within 5 minutes of patient contact.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+   "row": 5,
+   "action": "12-Lead ECG Interpretation - STEMI Criteria: \u2022 Intermediate and Paramedic providers may interpret as STEMI if:   - Symptoms consistent with ACS/myocar",
+   "level_published": "P",
+   "status": "OWNER_REQUIRED",
+   "reason": "No PEMS row of its own: C2 records r5 as a site-authored interpretation step and p.107#4 (badge EMT) as owned by r6. p.107#4 badges the EMT for acting on a STEMI 12-lead, not for interpreting one, so citing it here would authorise EMT interpretation that PEMS does not print.",
+   "owner_ruling": null,
+   "pems_page": 107,
+   "pems_ordinal": 4,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If 12-Lead ECG reads \u201cSTEMI\u201d or \u201cACUTE MI\u201d, initiate transport to the nearest PCI capable hospital. Notify the receiving facility of a \u201cPre-Hospital STEMI Alert.\u201d* Refer to PEMS Administrative Policy: STEMI Field Triage.",
+   "binding_evidence": null,
+   "basis": "row-bindings:bound",
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "p.107#4 is owned by site r6 (STEMI alert / notification). r5 is a site-authored interpretation step with no PEMS row of its own; PEMS badges the EMT for acting on the 12-lead, so the site's P-only gate is narrower than the source. Authoring question, no cell change."
+  },
+  {
+   "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+   "row": 6,
+   "action": "STEMI Alert / Notification: \u2022 Contact receiving facility via COR and provide \"Pre-Hospital STEMI Alert\" with patient's name and date of birth to facil",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 107,
+   "pems_ordinal": 4,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If 12-Lead ECG reads \u201cSTEMI\u201d or \u201cACUTE MI\u201d, initiate transport to the nearest PCI capable hospital. Notify the receiving facility of a \u201cPre-Hospital STEMI Alert.\u201d* Refer to PEMS Administrative Policy: STEMI Field Triage.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+   "row": 7,
+   "action": "Extended ECG Assessment: \u2022 If 12-Lead ECG is indeterminate or high suspicion for cardiac ischemia, obtain serial ECGs at 10-minute intervals. \u2022 Contac",
+   "level_published": "MC",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 107,
+   "pems_ordinal": 9,
+   "pems_badge": "MC",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Contact Medical Control for guidance as needed. If 12-Lead ECG is indeterminate or there is high suspicion for cardiac ischemia, obtain serial ECGs at 10-minute intervals and contact Medical Control for guidance.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+   "row": 8,
+   "action": "IV/IO Access: \u2022 Establish IV / IO access when indicated (refer to Intraosseous Access procedure).",
+   "level_published": "I",
+   "status": "OWNER_REQUIRED",
+   "reason": "PEMS 2024 p.107 prints no IV/IO access row (access is p.231's procedure section and the arrest protocols); this page's row has no PEMS counterpart.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+   "row": 9,
+   "action": "Cardiac Monitoring: \u2022 Consider continuous cardiac monitoring.",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 107,
+   "pems_ordinal": 7,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Monitor cardiac rhythm. Refer to Tachyarrhythmias or Bradycardia protocol, as needed.",
+   "binding_evidence": "p.107#7 \"Monitor cardiac rhythm. Refer to Tachyarrhythmias or Bradycardia protocol, as needed.\" badge I \u2014 the only cardiac-monitoring row printed for Chest Pain. The page had resolved the alignment as no-counterpart; the PEMS row is unambiguous.",
+   "basis": "row-bindings:bound",
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+   "row": 10,
+   "action": "Aspirin Administration (for ACS/STEMI): \u2022 Aspirin (NSAID - inhibits platelet action preventing clot formation) \u2022 Indication: Acute coronary syndromes ",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 107,
+   "pems_ordinal": 5,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Aspirin 324 mg PO chewed",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+   "row": 11,
+   "action": "Nitroglycerin Administration: \u2022 Administer Nitroglycerin per the Pain Control protocol for chest pain. \u2022 Confirm all \"Rights\" prior to administration.",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 107,
+   "pems_ordinal": 6,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If systolic blood pressure remains above 100 mmHg and MAP \u2265 65, consider: ADULT: Nitroglycerine 0.4 mg SL. May repeat every 5 minutes as needed for relief of chest pain, up to three doses.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+   "row": 12,
+   "action": "Analgesia: \u2022 Consider analgesia (refer to the Pain Control protocol).",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 107,
+   "pems_ordinal": 8,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Consider analgesia. Refer to Pain Control protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+   "row": 13,
+   "action": "Medical Control Contact: \u2022 Contact Medical Control for guidance as needed.",
+   "level_published": "MC",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 107,
+   "pems_ordinal": 9,
+   "pems_badge": "MC",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Contact Medical Control for guidance as needed. If 12-Lead ECG is indeterminate or there is high suspicion for cardiac ischemia, obtain serial ECGs at 10-minute intervals and contact Medical Control for guidance.",
+   "binding_evidence": null,
+   "basis": "adjudicated:held_split_review",
+   "before": {
+    "leftmost": "MC",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "PEMS MC in every column; site MC in every column. Level already correct; goes to the split review list. Do not set to matched."
+  },
+  {
+   "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+   "row": 14,
+   "action": "Right-Sided / 15-Lead ECG: \u2022 Consider right-sided 12-Lead or 15-Lead ECG for additional assessment.",
+   "level_published": "I",
+   "status": "OWNER_REQUIRED",
+   "reason": "PEMS 2024 p.107 prints no right-sided / 15-lead ECG row; serial 12-leads appear inside the MC-badged p.107#9, and no row authorises a 15-lead.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Hypertensive_Crisis_PROC.md",
+   "row": 1,
+   "action": "Universal Patient Care / Initial Patient Contact: \u2022 Follow the Universal Patient Care / Initial Patient Contact protocol. \u2022 Ensure scene safety and ut",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 109,
+   "pems_ordinal": 0,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Hypertensive_Crisis_PROC.md",
+   "row": 2,
+   "action": "Primary Assessment: \u2022 Perform Primary and Secondary Survey. \u2022 Obtain complete set of vital signs including bilateral BP if possible. \u2022 Assess for sign",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "PEMS 2024 p.109 prints no primary/secondary-survey or vital-signs row; its six rows are cross-references and the MC contact row. Local authoring.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Hypertensive_Crisis_PROC.md",
+   "row": 3,
+   "action": "Stroke Assessment: \u2022 Perform stroke screening (Cincinnati Prehospital Stroke Scale or equivalent). \u2022 If stroke is suspected, refer to the Stroke / TIA",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 109,
+   "pems_ordinal": 1,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If stroke is suspected, refer to Stroke / TIA protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Hypertensive_Crisis_PROC.md",
+   "row": 4,
+   "action": "Cardiac Assessment: \u2022 Assess for chest pain, pressure, or symptoms consistent with acute coronary syndrome. \u2022 Obtain 12-lead ECG if available. \u2022 If AC",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 109,
+   "pems_ordinal": 2,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If the patient is experiencing chest pain / discomfort, or symptoms consistent with an acute coronary syndrome, refer to Chest Pain (Cardiac) protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Hypertensive_Crisis_PROC.md",
+   "row": 5,
+   "action": "Respiratory Assessment: \u2022 Assess for respiratory distress, pulmonary edema, or hypoxia. \u2022 Apply pulse oximetry and administer oxygen as indicated. \u2022 I",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 109,
+   "pems_ordinal": 3,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If the patient is experiencing respiratory distress, refer to Airway Management and Ventilatory Support procedure and Respiratory Distress protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Hypertensive_Crisis_PROC.md",
+   "row": 6,
+   "action": "Glucose Assessment: \u2022 Check blood glucose level. \u2022 If hyperglycemia or hypoglycemia is present or suspected, refer to the Hyperglycemia / Hypoglycemia",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 109,
+   "pems_ordinal": 4,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Check blood glucose level. Refer to Hyperglycemia / Hypoglycemia protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_Hypertensive_Crisis_PROC.md",
+   "row": 7,
+   "action": "Medical Control Consultation: \u2022 Contact Medical Control for guidance on blood pressure management as needed. \u2022 Do NOT attempt to aggressively lower bl",
+   "level_published": "MC",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 109,
+   "pems_ordinal": 5,
+   "pems_badge": "MC",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Contact Medical Control for guidance as needed.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "MC",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+   "row": 1,
+   "action": "Begin high-quality CPR / determine DNR status",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 63,
+   "pems_ordinal": 1,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Determine DNR status. Refer to Death and Criteria for Withholding Resuscitation protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+   "row": 2,
+   "action": "Consider spinal motion restriction",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 63,
+   "pems_ordinal": 4,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Consider spinal motion restriction.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+   "row": 3,
+   "action": "Establish IV/IO (Humeral IO preferred)",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 63,
+   "pems_ordinal": 5,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Obtain IV/IO access (humeral IO preferred is IV unavailable).",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+   "row": 4,
+   "action": "Fluid Resuscitation: 0.9% Sodium Chloride up to 1 L (Adult) / 20 mL/kg (Ped)",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 63,
+   "pems_ordinal": 6,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: 0.9% Sodium Chloride IV/IO up to 1 L in 250 \u2013 500 mL boluses PEDIATRIC: 0.9% Sodium Chloride 20 mL/kg IV/IO Repeat as needed to maintain adequate perfusion, up to 60 mL/kg total.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+   "row": 5,
+   "action": "Defibrillation: 200 J Biphasic / 360 J Monophasic (Adult) / 2 J/kg initial, 4 J/kg subsequent (Ped) (AED for EMR/EMT, Manual for I/P)",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.63#7 is the compound row named in this card as an unresolved inline badge contradiction: PEMS prints one badge (I) on \"If VF or VT is present, or AED is advising to shock [EMR], immediately defibrillate\". The page's own row text \"(AED for EMR/EMT, Manual for I/P)\" encodes both levels, so neither I nor EMT is the whole answer. audit/level-scan/badge-overrides.yaml is still empty.",
+   "owner_ruling": null,
+   "pems_page": 63,
+   "pems_ordinal": 7,
+   "pems_badge": "I",
+   "compound_tokens": [
+    "EMR"
+   ],
+   "bracketed": false,
+   "pems_text": "If VF or VT is present, or AED is advising to shock [EMR], immediately defibrillate: ADULT: 200 joules Biphasic / 360 joules Monophasic, or manufacturer\u2019s recommendation. PEDIATRIC: 2 joules/kg initial, 4 joules/kg subsequent After each defibrillation, perform 2 minutes of CPR, followed by rhythm assessment. If VF / VT persists, defibrillate again, then consider medication therapy as listed below.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+   "row": 6,
+   "action": "Epinephrine 1 mg (0.1mg/mL) IV/IO (Adult) / 0.01 mg/kg IV/IO (Ped) q3-5 mins",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 63,
+   "pems_ordinal": 8,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Epinephrine 1 mg IV/IO [0.1 mg/mL concentration] PEDIATRIC: Epinephrine 0.01 mg/kg IV/IO [0.1 mg/mL concentration] Repeat every 3-5 minutes during cardiac arrest.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+   "row": 7,
+   "action": "First Antiarrhythmic: Amiodarone 300 mg IV/IO (Adult) / 5 mg/kg (Ped max 300mg) OR Lidocaine 1 mg/kg IV/IO (Adult max 100mg, Ped max 50mg)",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 64,
+   "pems_ordinal": 9,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If VF / VT persists, administer: ADULT: Amiodarone (Cordarone) 300 mg IV/IO slow push PEDIATRIC: Amiodarone (Cordarone) 5 mg/kg IV/IO slow push. Maximum dose 300 mg. OR, if Amiodarone is unavailable, administer: ADULT: Lidocaine (Xylocaine) 1 mg/kg IV/IO slow push. Maximum dose 100 mg. PEDIATRIC: Lidocaine (Xylocaine) 1 mg/kg IV/IO slow push. Maximum dose 50 mg.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+   "row": 8,
+   "action": "Second Antiarrhythmic: Amiodarone 150 mg IV/IO (Adult) / [MC] 5 mg/kg (Ped max 150mg) OR Lidocaine 0.5 mg/kg IV/IO (Adult max 100mg) / 1 mg/kg (Ped ma",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 64,
+   "pems_ordinal": 10,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If VF / VT persists, ensure optimal defibrillator pad placement, then administer: ADULT: Amiodarone (Cordarone) 150 mg IV/IO slow push PEDIATRIC: [Contact Medical Control] Amiodarone (Cordarone) 5 mg/kg IV/IO slow push. Maximum dose 150 mg. OR, if Amiodarone is unavailable, administer: ADULT: Lidocaine (Xylocaine) 0.5 mg/kg IV/IO slow push. Maximum dose 100 mg. PEDIATRIC: Lidocaine (Xylocaine) 1 mg/kg IV/IO slow push. Maximum dose 50 mg.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+   "row": 9,
+   "action": "Persistent VF/VT: Magnesium Sulfate 2 g IV/IO (Adult) / [MC] 40 mg/kg (Ped max 2g)",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 64,
+   "pems_ordinal": 11,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If VF / VT persists, administer: ADULT: Magnesium Sulfate 2 g IV/IO slow push PEDIATRIC: [Contact Medical Control] Magnesium Sulfate 40 mg/kg IV/IO slow push. Maximum dose 2 g.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+   "row": 10,
+   "action": "Dialysis/Crush/Hyperkalemia: Calcium Chloride 1 g IV/IO (Adult) / 20 mg/kg (Ped max 1g) THEN flush THEN Sodium Bicarbonate 50 mEq IV/IO (Adult) / 1 mE",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 64,
+   "pems_ordinal": 12,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "For cardiac arrest in renal dialysis patients, patients with crush injuries, suspected calcium channel blocker overdose or hyperkalemia only, also administer (preferably via separate lines): ADULT: Calcium Chloride 1 g IV/IO slow push Followed by 20 mL 0.9% sodium chloride flush ADULT: Sodium Bicarbonate 50 mEq IV/IO slow push PEDIATRIC: Calcium Chloride 20mg/kg (max dose 1g) IV/IO slow push Followed by 20 mL 0.9% sodium chloride flush PEDIATRIC: Sodium Bicarbonate 1 mEq/kg (max dose 50 mEq) IV/IO slow push Repeat in 5 minutes if no change.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+   "row": 11,
+   "action": "Proceed to Post ROSC Care if pulses return",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 64,
+   "pems_ordinal": 13,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If return of spontaneous circulation (ROSC) is achieved, refer to Cardiac Arrest: Post ROSC Care.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+   "row": 12,
+   "action": "Contact Medical Control for guidance / termination of resuscitation",
+   "level_published": "MC",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 64,
+   "pems_ordinal": 14,
+   "pems_badge": "MC",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Contact Medical Control for guidance as needed. See Pearls below regarding Termination of Resuscitation.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "MC",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
     "text_label": null,
     "text_tokens": []
    },

@@ -34,19 +34,21 @@ Hypertensive crisis is characterized by severely elevated blood pressure with po
     - Substance-induced hypertensive emergency
 
 ### Interventions
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-|---|---|:---:|:---:|:---:|:---:|:---:|
-| 1 | **Universal Patient Care / Initial Patient Contact:**<br>• Follow the **Universal Patient Care / Initial Patient Contact** protocol.<br>• Ensure scene safety and utilize appropriate PPE. | • | • | • | • | • |
-| 2 | **Primary Assessment:**<br>• Perform Primary and Secondary Survey.<br>• Obtain complete set of vital signs including bilateral BP if possible.<br>• Assess for signs of end-organ damage (neurological, cardiac, pulmonary, renal). |  | • | • | • | • |
-| 3 | **Stroke Assessment:**<br>• Perform stroke screening (Cincinnati Prehospital Stroke Scale or equivalent).<br>• If stroke is suspected, refer to the **Stroke / TIA** protocol immediately.<br>• Note time of symptom onset if applicable. | • | • | • | • | • |
-| 4 | **Cardiac Assessment:**<br>• Assess for chest pain, pressure, or symptoms consistent with acute coronary syndrome.<br>• Obtain 12-lead ECG if available.<br>• If ACS is suspected, refer to the **Chest Pain (Cardiac)** protocol immediately. | • | • | • | • | • |
-| 5 | **Respiratory Assessment:**<br>• Assess for respiratory distress, pulmonary edema, or hypoxia.<br>• Apply pulse oximetry and administer oxygen as indicated.<br>• If respiratory distress is present, refer to the **Respiratory Distress** protocol and **Airway Management and Ventilatory Support Procedure**. | • | • | • | • | • |
-| 6 | **Glucose Assessment:**<br>• Check blood glucose level.<br>• If hyperglycemia or hypoglycemia is present or suspected, refer to the **Hyperglycemia / Hypoglycemia** protocol.<br>• Treat glucose abnormalities per appropriate protocol. | • | • | • | • | • |
-| 7 | **Medical Control Consultation:**<br>• Contact **Medical Control** for guidance on blood pressure management as needed.<br>• Do NOT attempt to aggressively lower blood pressure in the field without specific orders.<br>• Report all associated symptoms, vital signs, and suspected target organ involvement. | MC | MC | MC | MC | MC |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emr">EMR</span> | **Universal Patient Care / Initial Patient Contact:**<br>• Follow the **Universal Patient Care / Initial Patient Contact** protocol.<br>• Ensure scene safety and utilize appropriate PPE. |
+| 2 | <span class="lvl lvl-emt">EMT</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | **Primary Assessment:**<br>• Perform Primary and Secondary Survey.<br>• Obtain complete set of vital signs including bilateral BP if possible.<br>• Assess for signs of end-organ damage (neurological, cardiac, pulmonary, renal). |
+| 3 | <span class="lvl lvl-emr">EMR</span> | **Stroke Assessment:**<br>• Perform stroke screening (Cincinnati Prehospital Stroke Scale or equivalent).<br>• If stroke is suspected, refer to the **Stroke / TIA** protocol immediately.<br>• Note time of symptom onset if applicable. |
+| 4 | <span class="lvl lvl-emr">EMR</span> | **Cardiac Assessment:**<br>• Assess for chest pain, pressure, or symptoms consistent with acute coronary syndrome.<br>• Obtain 12-lead ECG if available.<br>• If ACS is suspected, refer to the **Chest Pain (Cardiac)** protocol immediately. |
+| 5 | <span class="lvl lvl-emr">EMR</span> | **Respiratory Assessment:**<br>• Assess for respiratory distress, pulmonary edema, or hypoxia.<br>• Apply pulse oximetry and administer oxygen as indicated.<br>• If respiratory distress is present, refer to the **Respiratory Distress** protocol and **Airway Management and Ventilatory Support Procedure**. |
+| 6 | <span class="lvl lvl-emr">EMR</span> | **Glucose Assessment:**<br>• Check blood glucose level.<br>• If hyperglycemia or hypoglycemia is present or suspected, refer to the **Hyperglycemia / Hypoglycemia** protocol.<br>• Treat glucose abnormalities per appropriate protocol. |
+| 7 | <span class="lvl lvl-mc">MC</span> | **Medical Control Consultation:**<br>• Contact **Medical Control** for guidance on blood pressure management as needed.<br>• Do NOT attempt to aggressively lower blood pressure in the field without specific orders.<br>• Report all associated symptoms, vital signs, and suspected target organ involvement. |
 
 </div>
+
+<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — row 2: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
 ### Pearls
 1. ⚠ **Cautious Blood Pressure Management:** In most hypertensive emergencies, the goal is NOT to normalize blood pressure rapidly. Aggressive reduction can precipitate cerebral, coronary, or renal hypoperfusion. Specific blood pressure targets and medications should be determined by **Poquoson OMD** based on the underlying cause.
