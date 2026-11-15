@@ -1,16 +1,36 @@
 # PEMS interventions with no site row (`absent_from_site`)
+
 Every PEMS 2024 intervention that has no counterpart on the Poquoson protocol page it belongs to. These are content gaps: the site documents the protocol but not this intervention, and nothing downstream will notice because the site row it should live on simply is not there.
+
 **Total: 87 rows across 27 pages.** (matched 288, ambiguous 129, site rows 417)
 
-## Exact bridge to the prior scan's 152
+## Reconciliation with the previous scan's 152, by cause
 
-The 2026-11-14 report listed **152** (site page, PEMS page, PEMS row) triples as having no site row. Both numbers are reconciled here as set arithmetic, not as a list of reasons; every row of the difference is named in `reconciliation.json`.
+The 2026-11-14 scan reported **152** PEMS rows with no site row. This run reports **87**. The delta is accounted for below by cause, with every row named in `reconciliation.json` (`prior_to_now.rows`). Rows are matched by verbatim text, not row number: the two scans number rows differently.
 
-- **83 of those 152 rows are still unpaired** in this run: 63 are still `absent_from_site` and listed below, 20 are now classed as a duplicate copy or as merged into a site row.
-- **69 of those 152 rows the new aligner now pairs or covers.** The old scan's text-only DP called them gaps; the structural key (section + ordinal, then the site row's own intervention label) pairs them, or a site row demonstrably contains the intervention. These are the rows the rebuild was for.
-- **44 rows this run leaves unpaired were not on the old list.** 24 are listed below as absent and 20 as duplicate/merged: the old scan had paired them on text similarity, and this one will not pair a row without a structural key. They are the rows most worth a human glance.
+| what happened to the prior scan's 152 rows | rows |
+|---|---|
+| still `absent_from_site` | 81 |
+| paired to a site row on section + ordinal | 0 |
+| paired to a site row on its label | 7 |
+| paired to a site row on text evidence | 22 |
+| paired by the section-fallback scoring (this fix) | 0 |
+| a duplicate copy inside the merged PEMS source | 7 |
+| the site does write it, inside a wider site row | 21 |
+| explained by an ambiguous site row (not a gap) | 12 |
+| not found in this run's scope (needs a look) | 1 |
+| two prior claims that this run's parse merges into one PEMS row | 1 |
+| page not aligned this run | 0 |
 
-**Check:** 152 prior = 83 still unpaired + 69 now paired/covered; absent 87 = 63 still absent + 24 newly absent. Prior pages: 31; pages aligned here: 41.
+Of the 29 rows that now pair, the mechanical screen trusts 10 outright (0 section+ordinal, 2 distinctive label, 8 text evidence) and finds **19 too weak to accept without a human**. All 19 were read against both texts and are recorded in `reconciliation.json` under `prior_to_now.rows[*].human_verdict` / `human_note`:
+
+- **13 correct** — same intervention, wording or dose split differs.
+- **3 correct but partial** — the site row merges this PEMS intervention with another, and the PEMS row covers part of it.
+- **3 suspect** — the two rows are about different interventions and the binding rests on one shared word: 07_OB_Emergencies_PROC.md p.141#3; 03_Upper_Airway_Obstruction_PROC.md p.239#10; 09_Trauma_PROC.md p.83#3. These are counted as paired here only because that is what the aligner did; they are adjudication work for C2, not settled matches.
+
+Going the other way, **18 rows** this run leaves unpaired were not on the old list (6 absent, 3 duplicate, 9 merged): the old scan paired them on text similarity alone, and this one will not pair a row without structural evidence. They are the rows most worth a human glance and are named in `reconciliation.json` (`new_unpaired.rows`).
+
+**Check:** absent now 87 = 81 prior rows still absent + 6 newly absent. Of the 152 prior rows, the 71 that left the gap list are: 29 paired to a site row (0 section+ordinal, 7 label, 22 text, 0 section-fallback), 12 explained by an ambiguous site row, 21 merged inside a wider site row, 7 duplicate copies, 1 not in this run's scope and 1 collapsed into a single parse row.
 
 ## `protocols/cardiac/04_Bradycardia_PROC.md` — 4 missing (PEMS p.103, p.104)
 - p.103 row 1 [base section #1] badge `EMR` — Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure.

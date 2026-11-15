@@ -54,6 +54,7 @@ Nothing here writes into `docs/`. Stage 1+2 only.
 from __future__ import annotations
 
 import argparse
+import collections
 import datetime as _dt
 import difflib
 import glob
@@ -705,7 +706,13 @@ def align_page(pg: dict, docs: list[dict], seed_pages: list[int]) -> dict:
     # anchored section-for-section on the heading text.
     flat = len(s_secs) <= 1
     mapped = {0: 0} if flat else match_sections(s_secs, p_secs)
-    unresolved: list[dict] = []
+    # A section with no single PEMS counterpart is NOT a dead end. Its rows are
+    # scored against the whole page, exactly as a divider-less page's rows are:
+    # "A: Obtain IV access" is an ordinary intervention with an ordinary PEMS
+    # counterpart, and dumping it unexamined is how real gaps get lost. The
+    # missing section map is recorded as an ANNOTATION on the row; the row's
+    # disposition is still decided on its own evidence below.
+    section_fallback: dict[int, str] = {}      # id(site row) -> why the map is absent
 
     # ---- per site row: every PEMS row in scope, scored
     site_index: list[tuple[str, dict, int, list[int]]] = []   # (section, row, k, scope)
@@ -715,16 +722,16 @@ def align_page(pg: dict, docs: list[dict], seed_pages: list[int]) -> dict:
         else:
             pi = mapped.get(si)
             if pi is None:
+                # page-flat fallback: same scope, same sim(), same ordinal bonus,
+                # same floor as the `flat` branch above.
+                scope = list(range(len(prow)))
+                note = (f"site section '{sname}' has no single PEMS counterpart "
+                        f"(PEMS sections: {res['pems_sections']}); rows scored "
+                        f"against page-flat scope")
                 for r in srows:
-                    unresolved.append({
-                        "site_row": r["num"], "section": sname,
-                        "action": P.clean(r["action"])[:200],
-                        "cells": [c.strip() for c in r["cells"]],
-                        "status": "ambiguous", "reason_kind": "unresolved_section",
-                        "reason": (f"site section '{sname}' has no single PEMS counterpart "
-                                   f"(PEMS sections: {res['pems_sections']})")})
-                continue
-            scope = [_POS[id(p)] for p in p_secs[pi][1]]
+                    section_fallback[id(r)] = note
+            else:
+                scope = [_POS[id(p)] for p in p_secs[pi][1]]
         for k, r in enumerate(srows):
             site_index.append((sname, r, k, scope))
 
@@ -783,6 +790,7 @@ def align_page(pg: dict, docs: list[dict], seed_pages: list[int]) -> dict:
     # glance. Two competing PEMS rows, or two site rows claiming one PEMS row,
     # are left for adjudication rather than guessed.
     label_fixed: set[int] = set()
+    label_key_map: dict[int, list[str]] = {}
     fallen = [i for i in range(len(site_index)) if i not in picked and i not in ambiguous]
     free = [gi for gi in range(len(prow)) if gi not in taken]
     claims: dict[int, list[int]] = {}
@@ -810,6 +818,7 @@ def align_page(pg: dict, docs: list[dict], seed_pages: list[int]) -> dict:
         picked[i] = (gi, s, False)
         taken.add(gi)
         label_fixed.add(i)
+        label_key_map[i] = sorted(distinctive(label_keys(site_index[i][1]["action"])))
 
     # ---- order repair for near-duplicate PEMS rows.
     # p.239 prints the adult and the paediatric endotracheal-intubation row as
@@ -844,6 +853,13 @@ def align_page(pg: dict, docs: list[dict], seed_pages: list[int]) -> dict:
     for i, (sname, r, k, scope) in enumerate(site_index):
         base = {"site_row": r["num"], "section": sname,
                 "action": P.clean(r["action"])[:200], "cells": [c.strip() for c in r["cells"]]}
+        # annotation, not disposition: the row's status is decided below on its own
+        # evidence whether or not its section heading could be mapped.
+        fallback_note = section_fallback.get(id(r))
+        if fallback_note:
+            base["section_fallback"] = True
+            base["section_note"] = fallback_note
+        flat_scope = flat or bool(fallback_note)
         if i in ambiguous:
             base.update(status="ambiguous", reason_kind="multiple_candidates",
                         reason=ambiguous[i])
@@ -875,7 +891,7 @@ def align_page(pg: dict, docs: list[dict], seed_pages: list[int]) -> dict:
                 out_rows.append(base)
                 continue
             base.update(status="ambiguous", reason_kind="no_counterpart",
-                        reason=(f"no PEMS row in {'the page grid' if flat else repr(sname)} "
+                        reason=(f"no PEMS row in {'the page grid' if flat_scope else repr(sname)} "
                                 f"reaches the text floor and no label word binds it; the site "
                                 f"row has no PEMS counterpart (local addition, or a PEMS row "
                                 f"worded beyond recognition)"))
@@ -883,18 +899,20 @@ def align_page(pg: dict, docs: list[dict], seed_pages: list[int]) -> dict:
             continue
         gi, s, exact = picked[i]
         p = prow[gi]
+        if i in label_fixed:
+            base["label_keys"] = label_key_map.get(i, [])
         base.update(status="matched", pems_section_ordinal=p["section_ordinal"],
                     pems_page=p["page"], pems_ordinal=p["ordinal"],
                     pems_section=p["section_heading"],
                     pems_text=p["verbatim_text"][:240],
                     badges=p["badge_tokens"], similarity=round(s, 3),
                     match_basis=("label+keyword" if i in label_fixed else
-                                 ("page-flat+ordinal" if flat and exact else
+                                 ("page-flat+ordinal" if flat_scope and exact else
                                   "section+ordinal" if exact else
-                                  "page-flat+text" if flat else "section+text")
+                                  "page-flat+text" if flat_scope else "section+text")
                                  + (" +order (near-duplicate rows)" if i in fixed_ids else "")))
         out_rows.append(base)
-    res["rows"] = unresolved + out_rows
+    res["rows"] = out_rows
 
     claimed_pems = set(taken)
     for gis in claimed_by_ambiguous.values():
@@ -930,6 +948,41 @@ def align_page(pg: dict, docs: list[dict], seed_pages: list[int]) -> dict:
             res.setdefault("merged_into_site_row", []).append(rec)
         else:
             res["absent"].append(rec)
+
+    # ---- ledger: one entry per PEMS row in scope, with its disposition.
+    # Without this, a PEMS row that an ambiguous site row was explaining vanishes
+    # from every list (it is neither matched nor absent nor duplicate), and a
+    # missing row is exactly what a human can never spot by reading the site.
+    matched_by_gi = {gi: site_index[i][1]["num"] for i, (gi, _s, _e) in picked.items()}
+    amb_claim: dict[int, list] = {}
+    for i, gis in claimed_by_ambiguous.items():
+        for gi in gis:
+            amb_claim.setdefault(gi, []).append(site_index[i][1]["num"])
+    disp: dict[tuple[int, int], tuple[str, object]] = {}
+    for a in res["absent"]:
+        disp[(a["pems_page"], a["ordinal"])] = ("absent", None)
+    for d in res.get("duplicates") or []:
+        disp[(d["pems_page"], d["ordinal"])] = ("duplicate_in_source",
+                                                d.get("duplicate_of_matched_row"))
+    for m in res.get("merged_into_site_row") or []:
+        disp[(m["pems_page"], m["ordinal"])] = ("merged_into_site_row",
+                                                m.get("best_similarity_to_a_site_row"))
+    ledger, page_pos = [], {}
+    for gi, p in enumerate(prow):
+        pos = page_pos.get(p["page"], 0)
+        page_pos[p["page"]] = pos + 1
+        if gi in matched_by_gi:
+            kind, note = "matched", None
+        elif gi in amb_claim:
+            kind, note = "claimed_by_ambiguous_site_row", None
+        else:
+            kind, note = disp.get((p["page"], p["ordinal"]), ("unaccounted", None))
+        ledger.append({"pems_page": p["page"], "page_ordinal": pos,
+                       "ordinal": p["ordinal"], "section": p["section_heading"],
+                       "verbatim_text": p["verbatim_text"], "badges": p["badge_tokens"],
+                       "disposition": kind, "site_row": matched_by_gi.get(gi),
+                       "claimed_by_site_rows": amb_claim.get(gi, []), "note": note})
+    res["pems_row_ledger"] = ledger
     return res
 
 
@@ -1025,8 +1078,13 @@ def label_keys(action: str) -> set[str]:
     """
     head = re.split(r"<br\s*/?>|•", action or "", maxsplit=1)[0]
     head = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", head)     # markdown links
-    head = re.split(r"[:(/]| - ", head, maxsplit=1)[0]       # head noun phrase only
     head = re.sub(r"[*_#]", " ", head)
+    # A row can open with the level it applies from ("A: Obtain IV access",
+    # "P: Perform SYNCHRONIZED cardioversion"). That prefix is a badge, not the
+    # head noun; left in place, the head-noun split below stopped at its colon and
+    # the row lost its label key entirely.
+    head = re.sub(r"^\s*(?:EMR|EMT|MC|A|I|P)\s*:\s*", "", head)
+    head = re.split(r"[:(/]| - ", head, maxsplit=1)[0]       # head noun phrase only
     return {t[:6] for t in _sig(_drug_norm(head)) if len(t) >= 4 and t not in LABEL_GENERIC}
 
 
@@ -1057,7 +1115,7 @@ def stage2(seed: dict) -> dict:
             continue
         results.append(align_page(pg, docs, d.get("pems_pages") or []))
 
-    tot = {"site_rows": 0, "matched": 0, "ambiguous": 0, "absent_from_site": 0}
+    tot: dict = {"site_rows": 0, "matched": 0, "ambiguous": 0, "absent_from_site": 0}
     kinds: dict[str, int] = {}
     for r in results:
         for row in r["rows"]:
@@ -1072,8 +1130,14 @@ def stage2(seed: dict) -> dict:
             r.get("merged_into_site_row") or [])
     tot["total_accounted"] = tot["matched"] + tot["ambiguous"] + tot["absent_from_site"]
     tot["site_rows_plus_absent"] = tot["site_rows"] + tot["absent_from_site"]
-    tot["pems_rows_in_scope"] = (tot["matched"] + tot["absent_from_site"]
-                                 + tot["duplicate_in_source"] + tot["merged_into_site_row"])
+    # Every PEMS row in scope carries exactly one disposition in the per-page
+    # ledger; the census is read from the ledger, never inferred by addition.
+    led: collections.Counter = collections.Counter()
+    for r in results:
+        for e in r.get("pems_row_ledger") or []:
+            led[e["disposition"]] += 1
+    tot["pems_rows_by_disposition"] = dict(sorted(led.items()))
+    tot["pems_rows_in_scope"] = sum(led.values())
 
     totals = dict(tot)
     totals["ambiguous_by_kind"] = kinds
@@ -1085,21 +1149,78 @@ def stage2(seed: dict) -> dict:
     tot = totals
     with open(ALIGN_JSON, "w", encoding="utf-8") as fh:
         json.dump(out, fh, indent=1, ensure_ascii=False)
-    write_missing(results, tot, table)
-    write_reconciliation(results, tot)
+    delta = delta_buckets(results, tot, seed["docs"])
+    write_missing(results, tot, table, delta)
+    write_reconciliation(results, tot, delta)
     write_ambiguous(results, tot)
     return out
 
 
-PRIOR_ABSENT = 152   # audit/level-scan/2026-11-14-report.md, "PEMS rows with no site row"
+PRIOR_ABSENT = 152   # audit/level-scan/2026-11-14-report.md, "PEMS rows with no site counterpart"
+
+UNPAIRED = ("absent", "duplicate_in_source", "merged_into_site_row")
+
+# Human review of every pairing the mechanical screen flags, recorded separately
+# from the classification: a verdict here never changes a row's status, it only
+# stops a weak pairing from being reported as a quiet win. Each entry was read
+# against both texts. `suspect` means the two rows are about DIFFERENT
+# interventions and the binding rests on a shared word.
+REVIEW_VERDICTS: dict[tuple[str, int, int], tuple[str, str]] = {
+    ("protocols/cardiac/04_Chest_Pain_ACS_PROC.md", 107, 5): (
+        "correct", "same intervention: site row is Aspirin Administration, PEMS row gives the 324 mg PO dose"),
+    ("protocols/cardiac/04_Chest_Pain_ACS_PROC.md", 107, 6): (
+        "correct", "same intervention: Nitroglycerin vs Nitroglycerine 0.4 mg SL (dose/spelling only)"),
+    ("protocols/medical/07_OB_Emergencies_PROC.md", 141, 3): (
+        "suspect", "site row details breech DELIVERY technique; PEMS row only says 'refer to guidance below' — shared word 'breech', different content"),
+    ("protocols/neurologic/05_Seizure_PROC.md", 127, 3): (
+        "correct", "both are the referral-to-Overdose/Poisoning instruction; wording differs only"),
+    ("protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md", 239, 10): (
+        "suspect", "site row is BVM ventilation for an apneic patient; PEMS row is paediatric endotracheal intubation — bound on 'apneic' alone"),
+    ("protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md", 57, 3): (
+        "correct", "both are 'identify and treat potentially reversible causes'"),
+    ("protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md", 57, 8): (
+        "correct", "PEMS row is explicitly 'regarding Termination of Resuscitation'"),
+    ("protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md", 63, 7): (
+        "correct", "both are the defibrillation row, same joules and dose split"),
+    ("protocols/general/02_Behavioral_Patient_Restraint_PROC.md", 71, 3): (
+        "correct", "both assess capacity and treat causes of agitation/altered mental status"),
+    ("protocols/general/02_Diving_and_Drowning_Emergencies_PROC.md", 93, 6): (
+        "correct", "both are contact medical control for hyperbaric transport destination"),
+    ("protocols/medical/07_OB_Emergencies_PROC.md", 147, 4): (
+        "correct_partial", "both are medical-control contact in eclampsia; the PEMS row scopes it to continued seizures"),
+    ("protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md", 123, 2): (
+        "correct", "both are supplemental oxygen to a SpO2 target"),
+    ("protocols/respiratory/03_Pediatric_Stridor_PROC.md", 123, 3): (
+        "correct", "both are non-invasive (CPAP) ventilatory support"),
+    ("protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md", 123, 3): (
+        "correct", "both are CPAP for severe respiratory distress"),
+    ("protocols/respiratory/03_Respiratory_Arrest_PROC.md", 239, 6): (
+        "correct", "PEMS row names 'BLS airway adjuncts (OPA/NPA/SGA)' explicitly"),
+    ("protocols/toxicology/06_Overdose_Poisoning_PROC.md", 119, 5): (
+        "correct_partial", "site row merges glucose + 12-lead ECG; the PEMS row covers the ECG half"),
+    ("protocols/toxicology/06_Overdose_Poisoning_PROC.md", 119, 7): (
+        "correct", "both are the naloxone administration row with the same dose ranges"),
+    ("protocols/trauma/09_Electrical_Injuries_PROC.md", 96, 11): (
+        "correct_partial", "site row merges 12-lead + rhythm monitoring; the PEMS row covers the monitoring half"),
+    ("protocols/trauma/09_Trauma_PROC.md", 83, 3): (
+        "suspect", "site row is 'assess for shock, refer to Shock protocol'; PEMS row is 'keep the patient warm' — bound on the word 'shock'"),
+}
 
 
-def _prior_absent() -> dict[str, set[tuple[int, int]]]:
-    """Parse the 2026-11-14 report's "PEMS rows with no site counterpart" list
-    into {site_page: {(pems_page, ordinal)}}. The prior count is a claim until it
-    is turned into a set that can be intersected with this run's."""
+def _norm(s: str) -> str:
+    return re.sub(r"\s+", " ", s or "").strip().lower()
+
+
+def _prior_absent() -> list[dict]:
+    """Parse the 2026-11-14 report's missing list, keeping each row's TEXT.
+
+    The prior scan numbered rows per PAGE; this run numbers them per DOCUMENT and
+    splits merged pages differently, so a row number is not an identity. The
+    verbatim text is: every prior claim is re-identified by text inside that
+    page's own in-scope PEMS rows, never by row number.
+    """
     prior = os.path.join(OUTDIR, "2026-11-14-report.md")
-    out: dict[str, set[tuple[int, int]]] = {}
+    out: list[dict] = []
     if not os.path.exists(prior):
         return out
     md = open(prior, encoding="utf-8").read()
@@ -1107,86 +1228,338 @@ def _prior_absent() -> dict[str, set[tuple[int, int]]]:
     if marker not in md:
         return out
     for line in md.split(marker, 1)[1].splitlines():
-        m = re.match(r"- `([^`]+)` ← p\.(\d+) row (\d+)", line.strip())
+        m = re.match(r"- `([^`]+)` ← p\.(\d+) row (\d+) badge `([^`]*)`: (.*)$", line.strip())
         if m:
-            out.setdefault(m.group(1), set()).add((int(m.group(2)), int(m.group(3))))
+            out.append({"site_page": m.group(1), "pems_page": int(m.group(2)),
+                        "prior_row": int(m.group(3)), "prior_badges": m.group(4),
+                        "prior_text": m.group(5).strip()})
     return out
 
 
-def write_reconciliation(results: list[dict], tot: dict) -> None:
-    """Bridge the prior scan's 152 to this run's absent count as SET arithmetic.
+def _row_overlap(prior_text: str, row_text: str) -> int:
+    """Characters of agreement at the START of a PEMS row.
 
-    "152 vs N, three reasons why" is an excuse; a reader cannot check it. This
-    intersects the prior report's (site page, PEMS page, PEMS row) triples with
-    this run's unpaired triples, so every row of the difference is named in
-    `reconciliation.json` and the totals must add up.
+    The old scan emitted a 140-character window per row and cut its rows at
+    different boundaries: the window usually opens with the tail of the previous
+    row and stops mid-row. So the identifying evidence is "a suffix of the window
+    is a prefix of this row". Returns the longest such agreement.
     """
-    old = _prior_absent()
-    old_set = {(p, pp, po) for p, s in old.items() for (pp, po) in s}
-    unpaired: dict[str, set[tuple[int, int]]] = {}
-    absent: dict[str, set[tuple[int, int]]] = {}
+    key, t = _norm(prior_text), _norm(row_text)
+    best = 0
+    for cut in range(0, min(len(key), 120)):
+        k = key[cut:]
+        l = 0
+        while l < len(k) and l < len(t) and k[l] == t[l]:
+            l += 1
+        if l > best:
+            best = l
+    return best
+
+
+def _find_ledger_row(prior: dict, ledger_by_page: dict[str, list[dict]]) -> dict | None:
+    """Locate a prior claim in this run's ledger by page + verbatim text."""
+    cands = [e for e in ledger_by_page.get(prior["site_page"], [])
+             if e["pems_page"] == prior["pems_page"]]
+    key = _norm(prior["prior_text"])
+    for e in cands:
+        if _norm(e["verbatim_text"]) == key:
+            return e
+    if len(key) >= 40:
+        inside = [e for e in cands
+                  if _norm(e["verbatim_text"]) in key or key in _norm(e["verbatim_text"])]
+        if len(inside) == 1:
+            return inside[0]
+    scored = sorted(((_row_overlap(key, e["verbatim_text"]), e) for e in cands),
+                    key=lambda x: -x[0])
+    if scored and scored[0][0] >= 40:
+        if len(scored) == 1 or scored[0][0] - scored[1][0] >= 10:
+            return scored[0][1]
+    return None
+
+
+def _site_row_for(results: list[dict], page: str, row_num) -> dict:
     for r in results:
-        u = unpaired.setdefault(r["site_page"], set())
-        for k in ("absent", "duplicates", "merged_into_site_row"):
-            for x in r.get(k) or []:
-                u.add((x["pems_page"], x["ordinal"]))
-        absent[r["site_page"]] = {(x["pems_page"], x["ordinal"]) for x in r["absent"]}
-    unpaired_set = {(p, pp, po) for p, s in unpaired.items() for (pp, po) in s}
-    absent_set = {(p, pp, po) for p, s in absent.items() for (pp, po) in s}
+        if r["site_page"] != page:
+            continue
+        for row in r["rows"]:
+            if row["site_row"] == row_num:
+                return row
+    return {}
 
-    still = sorted(old_set & unpaired_set)
-    now_covered = sorted(old_set - unpaired_set)
-    newly_unpaired = sorted(unpaired_set - old_set)
-    still_absent = [t for t in still if t in absent_set]
-    still_dup = [t for t in still if t not in absent_set]
-    new_absent = [t for t in newly_unpaired if t in absent_set]
-    new_dup = [t for t in newly_unpaired if t not in absent_set]
-    assert len(still_absent) + len(still_dup) == len(still), (len(still_absent), len(still_dup), len(still))
-    bridge = {
-        "prior_reported": len(old_set),
-        "now_absent": tot["absent_from_site"],
-        "still_unpaired_from_prior": len(still),
-        "of_that_still_absent": len(still_absent),
-        "of_that_duplicate_or_merged": len(still_dup),
-        "prior_missing_now_paired_or_covered": len(now_covered),
-        "newly_unpaired_not_in_prior_list": len(newly_unpaired),
-        "of_that_now_absent": len(new_absent),
-        "of_that_newly_duplicate_or_merged": len(new_dup),
-        "prior_pages": len(old),
+
+def _trust(row: dict) -> str:
+    """Did the pairing this run makes hold up on its own evidence?
+
+    A structural basis (section + ordinal) or a label binding on a distinctive
+    head noun is evidence in itself. A pure text pairing is only trusted when the
+    symmetric score is high; the rest are flagged for a human, never counted as
+    a silent win.
+    """
+    basis = (row.get("match_basis") or "").split(" +order")[0]
+    sim = row.get("similarity") or 0.0
+    if basis == "section+ordinal":
+        return "correct_structural"
+    if basis == "label+keyword":
+        # A label binding already required EVERY distinctive label word to appear
+        # in the PEMS row. A multi-word key is therefore evidence on its own; a
+        # single-word key with a low symmetric score is the weak case that a human
+        # should confirm.
+        n = len(row.get("label_keys") or [])
+        return "correct_label" if (n >= 2 or sim >= 0.30) else "needs_a_human_eye"
+    return "correct_text" if sim >= 0.75 else "needs_a_human_eye"
+
+
+def _where_else(prior: dict, docs: list[dict]) -> dict | None:
+    """Where does this PEMS row live, if not in this page's scope?
+
+    A prior claim can name a PEMS row this site page no longer governs (the scope
+    comes from exceptions.yaml / title match). Naming the document and page it does
+    live on turns "not found" into a checkable statement.
+    """
+    key = _norm(prior["prior_text"])
+    best, best_score = None, 0
+    for d in docs:
+        for r in d["rows"]:
+            score = (40 if _norm(r["verbatim_text"]) == key
+                     else _row_overlap(key, r["verbatim_text"]))
+            if score > best_score:
+                best, best_score = (d, r), score
+    if best and best_score >= 40:
+        d, r = best
+        return {"pems_doc": d["title"], "pems_pages": d["pages"],
+                "pems_page": r["page"], "pems_text": r["verbatim_text"][:200]}
+    return None
+
+
+def delta_buckets(results: list[dict], tot: dict, docs: list[dict] | None = None) -> dict:
+    """Account for the 152 -> N absent delta BY CAUSE, naming every row.
+
+    Three lists, all derived from this run's per-page PEMS ledger:
+      * prior_to_now   — what happened to each of the 152 rows the old scan
+                         called gaps (still absent, paired, covered, gone);
+      * new_unpaired   — rows this run leaves unpaired that were not on the old
+                         list, i.e. the part of the delta that went the other way;
+      * absent_arithmetic — the identity that must close.
+    """
+    prior = _prior_absent()
+    ledger_by_page = {r["site_page"]: r.get("pems_row_ledger") or [] for r in results}
+    aligned = {r["site_page"] for r in results}
+    buckets: dict[str, list[dict]] = collections.defaultdict(list)
+    identified_by: dict[tuple[str, int, int], dict] = {}
+    for pr in prior:
+        if pr["site_page"] not in aligned:
+            buckets["page_not_aligned_this_run"].append(pr)
+            continue
+        e = _find_ledger_row(pr, ledger_by_page)
+        if e is None:
+            rec = dict(pr)
+            rec["elsewhere"] = _where_else(pr, docs or [])
+            rec["pems_page_has_rows_now"] = any(
+                r["page"] == pr["pems_page"] for d in (docs or []) for r in d["rows"])
+            buckets["prior_row_not_in_current_scope"].append(rec)
+            continue
+        key = (pr["site_page"], e["pems_page"], e["ordinal"])
+        if key in identified_by:
+            earlier = identified_by[key]
+            buckets["prior_claims_collapsed_into_one_current_row"].append(
+                {**pr, "pems_page_now": e["pems_page"], "pems_ordinal_now": e["ordinal"],
+                 "pems_text_now": e["verbatim_text"],
+                 "earlier_claim_text": earlier["prior_text"]})
+            continue
+        identified_by[key] = pr
+        disp = e["disposition"]
+        rec = {**pr, "current_disposition": disp,
+               "pems_page_now": e["pems_page"], "pems_ordinal_now": e["ordinal"],
+               "pems_text_now": e["verbatim_text"]}
+        if disp == "matched":
+            row = _site_row_for(results, pr["site_page"], e["site_row"])
+            rec.update(site_row_now=e["site_row"], site_action=row.get("action"),
+                       similarity=row.get("similarity"),
+                       match_basis=row.get("match_basis"),
+                       label_keys=row.get("label_keys"),
+                       section_fallback=bool(row.get("section_fallback")))
+            if row.get("section_fallback"):
+                buckets["resolved_by_section_fallback"].append(rec)
+            elif row.get("match_basis", "").startswith("label+keyword"):
+                buckets["paired_to_site_row_label"].append(rec)
+            elif row.get("match_basis", "").startswith("section+ordinal"):
+                buckets["paired_to_site_row_section_ordinal"].append(rec)
+            else:
+                buckets["paired_to_site_row_text"].append(rec)
+            rec["verdict"] = _trust(row)
+            hv = REVIEW_VERDICTS.get((pr["site_page"], e["pems_page"], e["ordinal"]))
+            if hv:
+                rec["human_verdict"], rec["human_note"] = hv
+        elif disp == "claimed_by_ambiguous_site_row":
+            rec["claimed_by_site_rows"] = e.get("claimed_by_site_rows") or []
+            buckets["claimed_by_an_ambiguous_site_row"].append(rec)
+        elif disp == "duplicate_in_source":
+            buckets["duplicate_copy_in_merged_source"].append(rec)
+        elif disp == "merged_into_site_row":
+            rec["best_similarity_to_a_site_row"] = e.get("note")
+            buckets["merged_into_a_site_row"].append(rec)
+        else:
+            buckets["still_absent"].append(rec)
+
+    new_unpaired: list[dict] = []
+    for r in results:
+        for e in r.get("pems_row_ledger") or []:
+            if e["disposition"] not in UNPAIRED:
+                continue
+            if (r["site_page"], e["pems_page"], e["ordinal"]) in identified_by:
+                continue
+            new_unpaired.append({"site_page": r["site_page"], "pems_page": e["pems_page"],
+                                 "ordinal": e["ordinal"], "pems_text": e["verbatim_text"],
+                                 "section": e["section"], "cause": e["disposition"],
+                                 "note": e.get("note")})
+
+    counts = {k: len(v) for k, v in sorted(buckets.items())}
+    new_counts = dict(sorted(collections.Counter(x["cause"] for x in new_unpaired).items()))
+    absent_after = counts.get("still_absent", 0) + new_counts.get("absent", 0)
+    if absent_after != tot["absent_from_site"]:
+        raise AssertionError(f"absent arithmetic does not close: {absent_after} != "
+                             f"{tot['absent_from_site']}")
+    if sum(counts.values()) != len(prior):
+        raise AssertionError(f"prior rows not fully accounted: {sum(counts.values())} "
+                             f"of {len(prior)}")
+    paired_total = (counts.get("paired_to_site_row_section_ordinal", 0)
+                    + counts.get("paired_to_site_row_label", 0)
+                    + counts.get("paired_to_site_row_text", 0)
+                    + counts.get("resolved_by_section_fallback", 0))
+    left_gap = len(prior) - counts.get("still_absent", 0)
+    return {
+        "prior_reported": len(prior),
+        "prior_pages": len({p["site_page"] for p in prior}),
         "pages_aligned_this_run": len(results),
-        "identity": (f"{len(old_set)} prior = {len(still)} still unpaired + "
-                     f"{len(now_covered)} now paired/covered; "
-                     f"absent {tot['absent_from_site']} = "
-                     f"{len(still_absent)} still absent + {len(new_absent)} newly absent"),
+        "prior_to_now": {"counts": counts, "rows": {k: v for k, v in buckets.items()}},
+        "new_unpaired": {"count": len(new_unpaired), "counts": new_counts,
+                         "rows": new_unpaired},
+        "absent_arithmetic": {
+            "prior_absent": len(prior),
+            "still_absent_from_prior": counts.get("still_absent", 0),
+            "newly_absent_not_on_prior_list": new_counts.get("absent", 0),
+            "now_absent": tot["absent_from_site"],
+            "identity": (
+                f"absent now {tot['absent_from_site']} = "
+                f"{counts.get('still_absent', 0)} prior rows still absent + "
+                f"{new_counts.get('absent', 0)} newly absent. "
+                f"Of the {len(prior)} prior rows, the {left_gap} that left the gap list are: "
+                f"{paired_total} paired to a site row "
+                f"({counts.get('paired_to_site_row_section_ordinal', 0)} section+ordinal, "
+                f"{counts.get('paired_to_site_row_label', 0)} label, "
+                f"{counts.get('paired_to_site_row_text', 0)} text, "
+                f"{counts.get('resolved_by_section_fallback', 0)} section-fallback), "
+                f"{counts.get('claimed_by_an_ambiguous_site_row', 0)} explained by an ambiguous "
+                f"site row, {counts.get('merged_into_a_site_row', 0)} merged inside a wider site "
+                f"row, {counts.get('duplicate_copy_in_merged_source', 0)} duplicate copies, "
+                f"{counts.get('prior_row_not_in_current_scope', 0)} not in this run's scope and "
+                f"{counts.get('prior_claims_collapsed_into_one_current_row', 0)} collapsed into a "
+                f"single parse row"),
+        },
     }
-    data = {"bridge": bridge,
-            "still_unpaired_from_prior": ["|".join(map(str, t)) for t in still],
-            "prior_missing_now_paired_or_covered": ["|".join(map(str, t)) for t in now_covered],
-            "newly_unpaired_not_in_prior_list": ["|".join(map(str, t)) for t in newly_unpaired]}
-    with open(os.path.join(OUTDIR, "reconciliation.json"), "w", encoding="utf-8") as fh:
-        json.dump(data, fh, indent=1)
 
+
+def write_reconciliation(results: list[dict], tot: dict, delta: dict) -> None:
+    """Write `reconciliation.json` and the matching section of `missing-rows.md`."""
+    counts = delta["prior_to_now"]["counts"]
+    new_counts = delta["new_unpaired"]["counts"]
+    ident = delta["absent_arithmetic"]["identity"]
+    paired = (counts.get("paired_to_site_row_section_ordinal", 0)
+              + counts.get("paired_to_site_row_label", 0)
+              + counts.get("paired_to_site_row_text", 0)
+              + counts.get("resolved_by_section_fallback", 0))
+    verdicts = collections.Counter(r["verdict"]
+                                   for k in counts if k.startswith(("paired_to_site_row", "resolved_by"))
+                                   for r in delta["prior_to_now"]["rows"][k])
+    reviewed = collections.Counter(r["human_verdict"]
+                                   for k in counts if k.startswith(("paired_to_site_row", "resolved_by"))
+                                   for r in delta["prior_to_now"]["rows"][k] if r.get("human_verdict"))
+    delta["prior_to_now"]["verdicts"] = dict(sorted(verdicts.items()))
+    delta["prior_to_now"]["human_review"] = dict(sorted(reviewed.items()))
+    delta["prior_to_now"]["paired_total"] = paired
+    delta["identity"] = ident
+    data = {"bridge": {
+        "prior_reported": delta["prior_reported"],
+        "now_absent": tot["absent_from_site"],
+        "still_absent_from_prior": counts.get("still_absent", 0),
+        "prior_missing_now_paired": paired,
+        "prior_missing_now_paired_reviewed_correct": reviewed.get("correct", 0),
+        "prior_missing_now_paired_reviewed_partial": reviewed.get("correct_partial", 0),
+        "prior_missing_now_paired_reviewed_suspect": reviewed.get("suspect", 0),
+        "prior_missing_now_paired_unreviewed": paired - sum(reviewed.values()),
+        "prior_missing_now_duplicate_or_merged":
+            counts.get("duplicate_copy_in_merged_source", 0)
+            + counts.get("merged_into_a_site_row", 0),
+        "prior_missing_now_claimed_by_ambiguous":
+            counts.get("claimed_by_an_ambiguous_site_row", 0),
+        "prior_rows_not_found_in_current_scope":
+            counts.get("prior_row_not_in_current_scope", 0),
+        "prior_claims_collapsed_into_one_current_row":
+            counts.get("prior_claims_collapsed_into_one_current_row", 0),
+        "newly_unpaired_not_in_prior_list": delta["new_unpaired"]["count"],
+        "identity": ident,
+    }, **delta}
+    with open(os.path.join(OUTDIR, "reconciliation.json"), "w", encoding="utf-8") as fh:
+        json.dump(data, fh, indent=1, ensure_ascii=False)
+
+    weak = [r for k in counts if k.startswith(("paired_to_site_row", "resolved_by"))
+            for r in delta["prior_to_now"]["rows"][k] if r.get("verdict") == "needs_a_human_eye"]
     section = [
-        "## Exact bridge to the prior scan's 152\n\n",
-        f"The 2026-11-14 report listed **{len(old_set)}** (site page, PEMS page, PEMS row) "
-        "triples as having no site row. Both numbers are reconciled here as set arithmetic, "
-        "not as a list of reasons; every row of the difference is named in "
-        "`reconciliation.json`.\n\n",
-        f"- **{len(still)} of those {len(old_set)} rows are still unpaired** in this run: "
-        f"{len(still_absent)} are still `absent_from_site` and listed "
-        f"below, {len(still_dup)} are now classed as a duplicate "
-        f"copy or as merged into a site row.\n",
-        f"- **{len(now_covered)} of those {len(old_set)} rows the new aligner now pairs or "
-        "covers.** The old scan's text-only DP called them gaps; the structural key "
-        "(section + ordinal, then the site row's own intervention label) pairs them, or a site "
-        "row demonstrably contains the intervention. These are the rows the rebuild was for.\n",
-        f"- **{len(newly_unpaired)} rows this run leaves unpaired were not on the old list.** "
-        f"{len(new_absent)} are listed below as absent and "
-        f"{len(new_dup)} as duplicate/merged: the old "
-        "scan had paired them on text similarity, and this one will not pair a row "
-        "without a structural key. They are the rows most worth a human glance.\n\n",
-        f"**Check:** {bridge['identity']}. Prior pages: {len(old)}; pages aligned here: "
-        f"{len(results)}.\n",
+        "## Reconciliation with the previous scan's 152, by cause\n\n",
+        f"The 2026-11-14 scan reported **{delta['prior_reported']}** PEMS rows with no site "
+        f"row. This run reports **{tot['absent_from_site']}**. The delta is accounted for "
+        "below by cause, with every row named in `reconciliation.json` "
+        "(`prior_to_now.rows`). Rows are matched by verbatim text, not row number: the two "
+        "scans number rows differently.\n\n",
+        "| what happened to the prior scan's 152 rows | rows |\n|---|---|\n",
+        f"| still `absent_from_site` | {counts.get('still_absent', 0)} |\n",
+        f"| paired to a site row on section + ordinal | "
+        f"{counts.get('paired_to_site_row_section_ordinal', 0)} |\n",
+        f"| paired to a site row on its label | {counts.get('paired_to_site_row_label', 0)} |\n",
+        f"| paired to a site row on text evidence | {counts.get('paired_to_site_row_text', 0)} |\n",
+        f"| paired by the section-fallback scoring (this fix) | "
+        f"{counts.get('resolved_by_section_fallback', 0)} |\n",
+        f"| a duplicate copy inside the merged PEMS source | "
+        f"{counts.get('duplicate_copy_in_merged_source', 0)} |\n",
+        f"| the site does write it, inside a wider site row | "
+        f"{counts.get('merged_into_a_site_row', 0)} |\n",
+        f"| explained by an ambiguous site row (not a gap) | "
+        f"{counts.get('claimed_by_an_ambiguous_site_row', 0)} |\n",
+        f"| not found in this run's scope (needs a look) | "
+        f"{counts.get('prior_row_not_in_current_scope', 0)} |\n",
+        f"| two prior claims that this run's parse merges into one PEMS row | "
+        f"{counts.get('prior_claims_collapsed_into_one_current_row', 0)} |\n",
+        f"| page not aligned this run | {counts.get('page_not_aligned_this_run', 0)} |\n",
+        f"\nOf the {paired} rows that now pair, the mechanical screen trusts "
+        f"{verdicts.get('correct_label', 0) + verdicts.get('correct_text', 0) + verdicts.get('correct_structural', 0)} "
+        f"outright ({verdicts.get('correct_structural', 0)} section+ordinal, "
+        f"{verdicts.get('correct_label', 0)} distinctive label, "
+        f"{verdicts.get('correct_text', 0)} text evidence) and finds "
+        f"**{len(weak)} too weak to accept without a human**. All {len(weak)} were read "
+        "against both texts and are recorded in `reconciliation.json` under "
+        "`prior_to_now.rows[*].human_verdict` / `human_note`:\n\n",
+        f"- **{reviewed.get('correct', 0)} correct** — same intervention, wording or dose split "
+        "differs.\n",
+        f"- **{reviewed.get('correct_partial', 0)} correct but partial** — the site row merges "
+        "this PEMS intervention with another, and the PEMS row covers part of it.\n",
+        f"- **{reviewed.get('suspect', 0)} suspect** — the two rows are about different "
+        "interventions and the binding rests on one shared word: "
+        + "; ".join(f"{r['site_page'].split('/')[-1]} p.{r['pems_page_now']}"
+                    f"#{r['pems_ordinal_now']}" for k in counts
+                    if k.startswith(("paired_to_site_row", "resolved_by"))
+                    for r in delta["prior_to_now"]["rows"][k]
+                    if r.get("human_verdict") == "suspect")
+        + ". These are counted as paired here only because that is what the aligner did; "
+        "they are adjudication work for C2, not settled matches.\n\n",
+        f"Going the other way, **{delta['new_unpaired']['count']} rows** this run leaves "
+        f"unpaired were not on the old list "
+        f"({new_counts.get('absent', 0)} absent, "
+        f"{new_counts.get('duplicate_in_source', 0)} duplicate, "
+        f"{new_counts.get('merged_into_site_row', 0)} merged): the old scan paired them on "
+        "text similarity alone, and this one will not pair a row without structural "
+        "evidence. They are the rows most worth a human glance and are named in "
+        "`reconciliation.json` (`new_unpaired.rows`).\n\n",
+        f"**Check:** {ident}.\n",
     ]
     md = open(MISSING_MD, encoding="utf-8").read()
     start = md.find("## Reconciliation with the previous scan's 152")
@@ -1196,40 +1569,50 @@ def write_reconciliation(results: list[dict], tot: dict) -> None:
         open(MISSING_MD, "w", encoding="utf-8").write(md)
 
 
-def write_missing(results: list[dict], tot: dict, table: dict) -> None:
+def write_missing(results: list[dict], tot: dict, table: dict, delta: dict) -> None:
     n_pages = sum(1 for r in results if r["absent"])
-    L = ["# PEMS interventions with no site row (`absent_from_site`)\n",
+    c = delta["prior_to_now"]["counts"]
+    nc = delta["new_unpaired"]["counts"]
+    L = ["# PEMS interventions with no site row (`absent_from_site`)\n\n",
          "Every PEMS 2024 intervention that has no counterpart on the Poquoson "
          "protocol page it belongs to. These are content gaps: the site documents "
          "the protocol but not this intervention, and nothing downstream will "
-         "notice because the site row it should live on simply is not there.\n",
+         "notice because the site row it should live on simply is not there.\n\n",
          f"**Total: {tot['absent_from_site']} rows across {n_pages} pages.** "
          f"(matched {tot['matched']}, ambiguous {tot['ambiguous']}, "
          f"site rows {tot['site_rows']})\n",
          "\n## Reconciliation with the previous scan's 152\n",
          f"The 2026-11-14 scan reported **{PRIOR_ABSENT}** PEMS rows with no site row. "
-         f"This table reports **{tot['absent_from_site']}**. The counts are not meant "
-         "to match, for three reasons, and the difference is the point of the rebuild:\n",
-         f"1. **Rows the site does write, inside a row that carries more than one PEMS "
-         f"intervention, are no longer counted as gaps.** {tot['merged_into_site_row']} such "
-         "rows are listed in `alignment.json` under `merged_into_site_row` with their "
-         "best similarity to a site row. The site merges aggressively (Chest Pain puts "
-         "aspirin, nitroglycerin and monitoring in one row), and the old scan counted "
-         "every unpaired PEMS row as missing.\n",
-         f"2. **Duplicate copies in merged sources are not gaps.** "
-         f"{tot['duplicate_in_source']} rows are the same intervention printed twice "
-         "(p.57 and p.63 both open with *Follow Universal Patient Care*); they are in "
-         "`alignment.json` under `duplicates`.\n",
-         "3. **The row census itself changed.** The previous scan examined 531 site "
-         f"rows over 40 aligned pages; this one accounts for {tot['site_rows']} site rows "
-         f"plus {tot['absent_from_site']} absent PEMS rows = {tot['total_accounted']}, "
-         "because merged pages are now aligned against the union of every PEMS protocol "
-         "they govern (57+63+64 for Non-Traumatic Cardiac Arrest) instead of one page, "
-         "and the procedure pages (p.239/243/247/261/263) that govern Respiratory "
-         "Arrest, Upper Airway Obstruction and Pneumothorax are in scope.\n",
-         "\nNo row is lost between the two numbers: every PEMS row in scope is either "
-         "matched, absent (listed below), a duplicate, or merged into a site row, and "
-         "`alignment.json` totals prove the sum.\n"]
+         f"This run reports **{tot['absent_from_site']}**. The difference is accounted for "
+         "by cause, and every row in every bucket is named in `reconciliation.json` "
+         "(`prior_to_now.rows`, `new_unpaired.rows`).\n",
+         f"- **{c.get('still_absent', 0)} of the {PRIOR_ABSENT} are still absent** and are "
+         "listed below.\n",
+         f"- **{(c.get('paired_to_site_row_section_ordinal', 0) + c.get('paired_to_site_row_label', 0) + c.get('paired_to_site_row_text', 0) + c.get('resolved_by_section_fallback', 0))} of them now pair to a site row** "
+        f"(section+ordinal {c.get('paired_to_site_row_section_ordinal', 0)}, label "
+        f"{c.get('paired_to_site_row_label', 0)}, text {c.get('paired_to_site_row_text', 0)}, "
+        f"section-fallback {c.get('resolved_by_section_fallback', 0)}); each carries its "
+        "similarity and basis in `reconciliation.json`, and any pairing below the trust "
+        "threshold is flagged there for a human.\n",
+        f"- **{c.get('duplicate_copy_in_merged_source', 0)} are duplicate copies inside a "
+        f"merged PEMS source and {c.get('merged_into_a_site_row', 0)} sit inside a wider site "
+        "row**: the site does write them, the old text-only scan could not see it.\n",
+        f"- **{c.get('claimed_by_an_ambiguous_site_row', 0)} are explained by an ambiguous "
+        "site row** and are an adjudication item, not a gap.\n",
+        f"- **{c.get('prior_row_not_in_current_scope', 0)} could not be re-identified "
+        "in this run's scope** and are named there with the document and page they do "
+        "live on, and whether that PEMS page yields any level row in this parse (a "
+        "non-zero number here is a scope/parse finding, not a rounding difference); "
+        f"**{c.get('prior_claims_collapsed_into_one_current_row', 0)}** prior claims map "
+        "onto a single PEMS row in this run's parse.\n",
+        f"- **{delta['new_unpaired']['count']} rows are unpaired in this run but were not on "
+        f"the old list** ({nc.get('absent', 0)} absent, {nc.get('duplicate_in_source', 0)} "
+        f"duplicate, {nc.get('merged_into_site_row', 0)} merged) — the other direction of the "
+        "delta, named in `reconciliation.json`.\n",
+        "\nNo PEMS row in scope is lost between the two runs: every one carries exactly one "
+        "disposition in `alignment.json`'s per-page `pems_row_ledger` (matched / claimed by an "
+        "ambiguous site row / duplicate / merged / absent), and the ledger totals prove the "
+        "sum.\n"]
     for r in results:
         if not r["absent"]:
             continue
@@ -1274,8 +1657,10 @@ def write_ambiguous(results: list[dict], tot: dict) -> None:
          "- `shared_pems_row` — the site row's label names an intervention whose "
          "PEMS row already backs a different site row: PEMS merges two site rows "
          "into one line (CPAP and SGA share p.123 row 3).\n",
-         "- `unresolved_section` — the site prints a section heading with no single "
-         "PEMS counterpart, so none of its rows can be anchored.\n",
+         "\nRows that carry `section_fallback: true` sit under a site section heading "
+         "with no single PEMS counterpart, so they were scored against the whole page "
+         "grid instead. That is an annotation on the row, never a disposition: the row "
+         "is still `matched`, `ambiguous` or a gap on its own evidence.\n",
          f"**Total: {tot['ambiguous']} rows** ("
          + ", ".join(f"{k} {v}" for k, v in sorted(kinds.items()))
          + f") across {sum(1 for r in results if any(x['status'] == 'ambiguous' for x in r['rows']))} pages.\n",

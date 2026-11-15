@@ -17,6 +17,8 @@ import sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(REPO, "audit", "level-scan")
+sys.path.insert(0, os.path.join(REPO, "scripts"))
+import pems_canonical as C  # noqa: E402  (for the human-review table)
 fails: list[str] = []
 
 
@@ -96,8 +98,14 @@ def main() -> int:
     check(len(amb) == tot["ambiguous"], f"{len(amb)} ambiguous rows are all listed")
     check(all(r.get("reason") for r in amb), "every ambiguous row states why")
     check(all(r.get("reason_kind") in ("multiple_candidates", "no_counterpart",
-                                      "unresolved_section", "shared_pems_row", "other") for r in amb),
-          "every ambiguous row carries a reason_kind")
+                                      "shared_pems_row", "other") for r in amb),
+          "every ambiguous row carries a classification reason_kind")
+    check(not [r for p in align["pages"] for r in p["rows"]
+               if r.get("reason_kind") == "unresolved_section"],
+          "unresolved_section is never a terminal disposition")
+    fb = [r for p in align["pages"] for r in p["rows"] if r.get("section_fallback")]
+    check(all(r.get("section_note") and r["status"] in ("matched", "ambiguous") for r in fb),
+          f"every section-fallback row ({len(fb)}) is classified and carries its note")
     matched = [r for p in align["pages"] for r in p["rows"] if r["status"] == "matched"]
     check(all(r.get("pems_page") and r.get("badges") for r in matched),
           "every matched row cites a PEMS page and badge")
@@ -131,24 +139,53 @@ def main() -> int:
     if os.path.exists(rec_path):
         rec = json.load(open(rec_path, encoding="utf-8"))
         b = rec["bridge"]
+        c = rec["prior_to_now"]["counts"]
+        nc = rec["new_unpaired"]["counts"]
         check(b["prior_reported"] == 152, f"prior reported total is 152 ({b['prior_reported']})")
-        check(b["still_unpaired_from_prior"] + b["prior_missing_now_paired_or_covered"] == 152,
-              "every prior row is either still unpaired or now paired")
-        check(b["of_that_still_absent"] + b["of_that_duplicate_or_merged"]
-              == b["still_unpaired_from_prior"],
-              "prior rows still unpaired split into absent + duplicate/merged")
-        check(b["of_that_now_absent"] + b["of_that_newly_duplicate_or_merged"]
-              == b["newly_unpaired_not_in_prior_list"],
-              "newly unpaired rows split into absent + duplicate/merged")
-        check(b["of_that_still_absent"] + b["of_that_now_absent"] == tot["absent_from_site"],
-              f"absent {tot['absent_from_site']} = still absent + newly absent "
-              f"({b['of_that_still_absent']} + {b['of_that_now_absent']})")
-        check(len(rec["still_unpaired_from_prior"]) == b["still_unpaired_from_prior"]
-              and len(rec["prior_missing_now_paired_or_covered"])
-              == b["prior_missing_now_paired_or_covered"]
-              and len(rec["newly_unpaired_not_in_prior_list"])
-              == b["newly_unpaired_not_in_prior_list"],
-              "reconciliation.json names every row in each bucket")
+        check(sum(c.values()) == 152, f"every prior row lands in exactly one cause bucket "
+                                      f"({sum(c.values())} of 152)")
+        paired = (c.get("paired_to_site_row_section_ordinal", 0)
+                  + c.get("paired_to_site_row_label", 0)
+                  + c.get("paired_to_site_row_text", 0)
+                  + c.get("resolved_by_section_fallback", 0))
+        check(paired == b["prior_missing_now_paired"],
+              f"paired count {paired} equals the bridge's paired count")
+        check(c.get("still_absent", 0) + nc.get("absent", 0) == tot["absent_from_site"],
+              f"absent {tot['absent_from_site']} = still absent {c.get('still_absent', 0)} + "
+              f"newly absent {nc.get('absent', 0)}")
+        check(rec["new_unpaired"]["count"] == b["newly_unpaired_not_in_prior_list"],
+              "newly unpaired total matches its bridge entry")
+        check(len(rec["prior_to_now"]["rows"].get("still_absent", [])) == c.get("still_absent", 0),
+              "the still-absent bucket names every row it counts")
+        for k, v in rec["prior_to_now"]["rows"].items():
+            check(len(v) == c[k], f"bucket '{k}' names {len(v)} rows and counts {c[k]}")
+        check(len(rec["new_unpaired"]["rows"]) == rec["new_unpaired"]["count"],
+              "newly unpaired bucket names every row it counts")
+        check(rec["prior_to_now"]["verdicts"] and
+              sum(rec["prior_to_now"]["verdicts"].values()) == paired,
+              "every paired row carries a trust verdict")
+        hr = rec["prior_to_now"].get("human_review") or {}
+        check(sum(hr.values()) + b["prior_missing_now_paired_unreviewed"] == paired,
+              "reviewed pairings + unreviewed pairings = all pairings")
+        stale = set(C.REVIEW_VERDICTS) - {
+            (r["site_page"], r["pems_page_now"], r["pems_ordinal_now"])
+            for k in rec["prior_to_now"]["rows"] if k.startswith(("paired_to_site_row", "resolved_by"))
+            for r in rec["prior_to_now"]["rows"][k]}
+        check(not stale, f"every recorded human review still maps to a pairing ({len(stale)} stale)")
+        check(b["prior_missing_now_paired_reviewed_suspect"] == hr.get("suspect", 0),
+              f"{hr.get('suspect', 0)} pairings are recorded as suspect, not as settled")
+        # a pairing counted as a win must show its evidence
+        weak = [r for k, v in rec["prior_to_now"]["rows"].items()
+                if k.startswith(("paired_to_site_row", "resolved_by"))
+                for r in v if r.get("verdict") == "needs_a_human_eye"]
+        check(all(r.get("similarity") is not None and r.get("pems_text_now") for r in weak),
+              f"the {len(weak)} flagged pairings show similarity and PEMS text")
+        led = align["totals"]["pems_rows_by_disposition"]
+        check(align["totals"]["pems_rows_in_scope"] == sum(
+            len(p.get("pems_row_ledger") or []) for p in align["pages"]),
+              "the ledger covers every in-scope PEMS row")
+        check(led.get("unaccounted", 0) == 0,
+              f"no PEMS row in scope is unaccounted for ({led.get('unaccounted', 0)})")
     amd = open(os.path.join(OUT, "ambiguous-rows.md"), encoding="utf-8").read()
     check(f"**Total: {tot['ambiguous']} rows**" in amd,
           f"ambiguous-rows.md states the same total ({tot['ambiguous']})")
