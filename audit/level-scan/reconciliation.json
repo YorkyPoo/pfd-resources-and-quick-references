@@ -12,7 +12,7 @@
   "prior_missing_now_claimed_by_ambiguous": 12,
   "prior_rows_not_found_in_current_scope": 1,
   "prior_claims_collapsed_into_one_current_row": 1,
-  "newly_unpaired_not_in_prior_list": 18,
+  "newly_unpaired_not_in_prior_list": 17,
   "identity": "absent now 87 = 81 prior rows still absent + 6 newly absent. Of the 152 prior rows, the 71 that left the gap list are: 29 paired to a site row (0 section+ordinal, 7 label, 22 text, 0 section-fallback), 12 explained by an ambiguous site row, 21 merged inside a wider site row, 7 duplicate copies, 1 not in this run's scope and 1 collapsed into a single parse row"
  },
  "prior_reported": 152,
@@ -2044,11 +2044,11 @@
   "paired_total": 29
  },
  "new_unpaired": {
-  "count": 18,
+  "count": 17,
   "counts": {
    "absent": 6,
    "duplicate_in_source": 3,
-   "merged_into_site_row": 9
+   "merged_into_site_row": 8
   },
   "rows": [
    {
@@ -2081,18 +2081,9 @@
    {
     "site_page": "protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md",
     "pems_page": 136,
-    "ordinal": 6,
-    "pems_text": "Perform synchronized cardioversion. ADULT: 100 joules initial dose If cardioversion is unsuccessful, check pad placement and repeat at 200 joules. PEDIATRIC: 1 joule/kg initial dose If cardioversion is unsuccessful, check pad placement and repeat at 2 joules/kg. If cardioversion is unsuccessful after two attempts, contact Medical Control for guidance.",
-    "section": "",
-    "cause": "merged_into_site_row",
-    "note": 0.841
-   },
-   {
-    "site_page": "protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md",
-    "pems_page": 136,
     "ordinal": 7,
     "pems_text": "Contact Medical Control if uncertain regarding rhythm, most appropriate therapy, and for guidance as needed. Ensure a 12-Lead ECG is transmitted.",
-    "section": "",
+    "section": "Unstable Supraventricular Tachycardia",
     "cause": "merged_into_site_row",
     "note": 0.78
    },

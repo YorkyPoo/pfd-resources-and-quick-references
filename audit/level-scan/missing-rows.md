@@ -2,7 +2,7 @@
 
 Every PEMS 2024 intervention that has no counterpart on the Poquoson protocol page it belongs to. These are content gaps: the site documents the protocol but not this intervention, and nothing downstream will notice because the site row it should live on simply is not there.
 
-**Total: 87 rows across 27 pages.** (matched 288, ambiguous 129, site rows 417)
+**Total: 87 rows across 27 pages.** (matched 289, ambiguous 128, site rows 417)
 
 ## Reconciliation with the previous scan's 152, by cause
 
@@ -28,7 +28,7 @@ Of the 29 rows that now pair, the mechanical screen trusts 10 outright (0 sectio
 - **3 correct but partial** — the site row merges this PEMS intervention with another, and the PEMS row covers part of it.
 - **3 suspect** — the two rows are about different interventions and the binding rests on one shared word: 07_OB_Emergencies_PROC.md p.141#3; 03_Upper_Airway_Obstruction_PROC.md p.239#10; 09_Trauma_PROC.md p.83#3. These are counted as paired here only because that is what the aligner did; they are adjudication work for C2, not settled matches.
 
-Going the other way, **18 rows** this run leaves unpaired were not on the old list (6 absent, 3 duplicate, 9 merged): the old scan paired them on text similarity alone, and this one will not pair a row without structural evidence. They are the rows most worth a human glance and are named in `reconciliation.json` (`new_unpaired.rows`).
+Going the other way, **17 rows** this run leaves unpaired were not on the old list (6 absent, 3 duplicate, 8 merged): the old scan paired them on text similarity alone, and this one will not pair a row without structural evidence. They are the rows most worth a human glance and are named in `reconciliation.json` (`new_unpaired.rows`).
 
 **Check:** absent now 87 = 81 prior rows still absent + 6 newly absent. Of the 152 prior rows, the 71 that left the gap list are: 29 paired to a site row (0 section+ordinal, 7 label, 22 text, 0 section-fallback), 12 explained by an ambiguous site row, 21 merged inside a wider site row, 7 duplicate copies, 1 not in this run's scope and 1 collapsed into a single parse row.
 
@@ -78,10 +78,10 @@ Going the other way, **18 rows** this run leaves unpaired were not on the old li
 - p.55 row 4 [base section #4] badge `MC` — Contact Medical Control for guidance if unable to adequately manage patient agitation or discomfort.
 
 ## `protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md` — 4 missing (PEMS p.99, p.100, p.101)
-- p.101 row 13 [base section #0] badge `I` — Maintain mean arterial pressure (MAP) above 65 mmHg. If the patient has not responded to repeat IM Epinephrine injections, consider: ADULT: Epinephrine infusion 2 – 10 mcg/min IV/IO (Add 1 mg of Epinephrine [1mg/mL] to 100 mL of 0.9% Sodium chloride = 10 mcg/mL)
-- p.101 row 14 [base section #1] badge `[I]` — Maintain age adjusted SBP. If the patient has not responded to repeat IM Epinephrine injections, consider: PEDIATRIC: Epinephrine 0.1 - 1 mcg/kg/min IV/IO infusion. Max dose: 10 mcg/min. Under 1 year old: Titrate to SBP > 70 mmHg Over 1 year old: Titrate to SBP > 90 mmHg (Add 1 mg of Epinephrine [1mg/mL] to 100 mL of 0.9% Sodium chloride = 10 mcg/mL) Note: Infusion via IV pump is preferred is available. Monitor closely for signs of extravasation.
-- p.101 row 15 [base section #2] badge `P` — To maintain MAP > 65 until a vasopressor infusion is prepared, consider: ADULT: Push dose Epinephrine 5-10 mcg IV/IO every 2-3 minutes (Add 100 mcg Epinephrine (1mL of 0.1 mg/mL) to 9mL of 0.9% Normal Saline = 10 mcg / mL)
-- p.101 row 16 [base section #3] badge `MC` — Contact Medical Control for guidance as needed.
+- p.101 row 13 [Anaphylaxis #7] badge `I` — Maintain mean arterial pressure (MAP) above 65 mmHg. If the patient has not responded to repeat IM Epinephrine injections, consider: ADULT: Epinephrine infusion 2 – 10 mcg/min IV/IO (Add 1 mg of Epinephrine [1mg/mL] to 100 mL of 0.9% Sodium chloride = 10 mcg/mL)
+- p.101 row 14 [Anaphylaxis #8] badge `[I]` — Maintain age adjusted SBP. If the patient has not responded to repeat IM Epinephrine injections, consider: PEDIATRIC: Epinephrine 0.1 - 1 mcg/kg/min IV/IO infusion. Max dose: 10 mcg/min. Under 1 year old: Titrate to SBP > 70 mmHg Over 1 year old: Titrate to SBP > 90 mmHg (Add 1 mg of Epinephrine [1mg/mL] to 100 mL of 0.9% Sodium chloride = 10 mcg/mL) Note: Infusion via IV pump is preferred is available. Monitor closely for signs of extravasation.
+- p.101 row 15 [Anaphylaxis #9] badge `P` — To maintain MAP > 65 until a vasopressor infusion is prepared, consider: ADULT: Push dose Epinephrine 5-10 mcg IV/IO every 2-3 minutes (Add 100 mcg Epinephrine (1mL of 0.1 mg/mL) to 9mL of 0.9% Normal Saline = 10 mcg / mL)
+- p.101 row 16 [Anaphylaxis #10] badge `MC` — Contact Medical Control for guidance as needed.
 
 ## `protocols/medical/07_OB_Emergencies_PROC.md` — 9 missing (PEMS p.141, p.142, p.147, p.149)
 - p.141 row 0 [base section #0] badge `EMR` — Follow Universal Patient Care / Initial Patient Contact protocol. Don appropriate PPE including gloves (sterile if available), gown, and eye protection.
@@ -120,7 +120,7 @@ Going the other way, **18 rows** this run leaves unpaired were not on the old li
 ## `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` — 5 missing (PEMS p.123, p.124)
 - p.123 row 4 [base section #4] badge `I` — Consider invasive ventilatory support via endotracheal intubation. Refer to Endotracheal Intubation procedure. Note: Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended. RSI is not addressed in PEMS regional protocols – refer to agency specific protocols for guidance.
 - p.123 row 5 [Asthma, COPD, Reactive Airway Disease #0] badge `EMT` — Administer: ADULT: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. ADULT: Ipratropium Bromide 3 mL of 0.02% solution, nebulized. Once. PEDIATRIC: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. PEDIATRIC: Ipratropium Bromide 3 mL of 0.02% solution, nebulized. Once.
-- p.124 row 7 [base section #0] badge `I` — For severe symptoms, also administer: ADULT: Magnesium Sulfate 2 g IV/IO infusion over 15 minutes PEDIATRIC: Magnesium Sulfate 40 mg/kg IV/IO over 15 minutes. Maximum dose: 2,000 mg (2 g)
+- p.124 row 7 [Asthma, COPD, Reactive Airway Disease #2] badge `I` — For severe symptoms, also administer: ADULT: Magnesium Sulfate 2 g IV/IO infusion over 15 minutes PEDIATRIC: Magnesium Sulfate 40 mg/kg IV/IO over 15 minutes. Maximum dose: 2,000 mg (2 g)
 - p.124 row 8 [Stridor #0] badge `A` — Administer: ADULT: Epinephrine 3 mg [1 mg/mL] nebulized PEDIATRIC: Epinephrine 3 mg [1 mg/mL] nebulized May repeat once, if needed.
 - p.124 row 10 [Bronchiolitis #0] badge `A` — Provide suctioning as needed and consider: PEDIATRIC: 0.9% Sodium Chloride, 6 mL nebulized. Repeat as needed for increased work of breathing due to secretions.
 

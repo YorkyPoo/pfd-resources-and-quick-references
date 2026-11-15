@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T01:32:14",
+ "generated": "2026-11-15T01:41:30",
  "sources": {
   "bbox_xml": "audit/level-scan/.cache/pems_bbox.xml",
   "text_layer": "pems_chunks/PEMS2024_full.txt",
@@ -830,6 +830,7 @@
     7
    ],
    "n_rows": 3,
+   "section_continuations": [],
    "rows": [
     {
      "page": 7,
@@ -900,6 +901,7 @@
     15
    ],
    "n_rows": 0,
+   "section_continuations": [],
    "rows": [],
    "orphans": [
     {
@@ -916,6 +918,7 @@
     18
    ],
    "n_rows": 0,
+   "section_continuations": [],
    "rows": [],
    "orphans": [
     {
@@ -937,6 +940,7 @@
     22
    ],
    "n_rows": 13,
+   "section_continuations": [],
    "rows": [
     {
      "page": 21,
@@ -1213,6 +1217,7 @@
     23
    ],
    "n_rows": 0,
+   "section_continuations": [],
    "rows": [],
    "orphans": [
     {
@@ -1228,6 +1233,7 @@
     25
    ],
    "n_rows": 0,
+   "section_continuations": [],
    "rows": [],
    "orphans": [
     {
@@ -1244,6 +1250,7 @@
     28
    ],
    "n_rows": 14,
+   "section_continuations": [],
    "rows": [
     {
      "page": 27,
@@ -1534,6 +1541,7 @@
     33
    ],
    "n_rows": 0,
+   "section_continuations": [],
    "rows": [],
    "orphans": [
     {
@@ -1550,6 +1558,7 @@
     37
    ],
    "n_rows": 0,
+   "section_continuations": [],
    "rows": [],
    "orphans": [
     {
@@ -1600,6 +1609,7 @@
     39
    ],
    "n_rows": 0,
+   "section_continuations": [],
    "rows": [],
    "orphans": [
     {
@@ -1615,6 +1625,7 @@
     41
    ],
    "n_rows": 0,
+   "section_continuations": [],
    "rows": [],
    "orphans": [
     {
@@ -1630,6 +1641,7 @@
     43
    ],
    "n_rows": 1,
+   "section_continuations": [],
    "rows": [
     {
      "page": 43,
@@ -1662,6 +1674,7 @@
     52
    ],
    "n_rows": 16,
+   "section_continuations": [],
    "rows": [
     {
      "page": 49,
@@ -2008,6 +2021,7 @@
     55
    ],
    "n_rows": 5,
+   "section_continuations": [],
    "rows": [
     {
      "page": 55,
@@ -2118,6 +2132,7 @@
     57
    ],
    "n_rows": 9,
+   "section_continuations": [],
    "rows": [
     {
      "page": 57,
@@ -2308,6 +2323,7 @@
     59
    ],
    "n_rows": 9,
+   "section_continuations": [],
    "rows": [
     {
      "page": 59,
@@ -2498,6 +2514,7 @@
     61
    ],
    "n_rows": 10,
+   "section_continuations": [],
    "rows": [
     {
      "page": 61,
@@ -2709,6 +2726,7 @@
     64
    ],
    "n_rows": 15,
+   "section_continuations": [],
    "rows": [
     {
      "page": 63,
@@ -3019,6 +3037,7 @@
     67
    ],
    "n_rows": 6,
+   "section_continuations": [],
    "rows": [
     {
      "page": 67,
@@ -3156,6 +3175,7 @@
     69
    ],
    "n_rows": 5,
+   "section_continuations": [],
    "rows": [
     {
      "page": 69,
@@ -3267,6 +3287,7 @@
     72
    ],
    "n_rows": 11,
+   "section_continuations": [],
    "rows": [
     {
      "page": 71,
@@ -3497,6 +3518,7 @@
     75
    ],
    "n_rows": 8,
+   "section_continuations": [],
    "rows": [
     {
      "page": 75,
@@ -3667,6 +3689,7 @@
     77
    ],
    "n_rows": 6,
+   "section_continuations": [],
    "rows": [
     {
      "page": 77,
@@ -3797,6 +3820,7 @@
     81
    ],
    "n_rows": 4,
+   "section_continuations": [],
    "rows": [
     {
      "page": 81,
@@ -3888,6 +3912,7 @@
     84
    ],
    "n_rows": 16,
+   "section_continuations": [],
    "rows": [
     {
      "page": 83,
@@ -4219,6 +4244,7 @@
     88
    ],
    "n_rows": 10,
+   "section_continuations": [],
    "rows": [
     {
      "page": 87,
@@ -4429,6 +4455,7 @@
     91
    ],
    "n_rows": 9,
+   "section_continuations": [],
    "rows": [
     {
      "page": 91,
@@ -4619,6 +4646,7 @@
     93
    ],
    "n_rows": 7,
+   "section_continuations": [],
    "rows": [
     {
      "page": 93,
@@ -4770,6 +4798,7 @@
     96
    ],
    "n_rows": 12,
+   "section_continuations": [],
    "rows": [
     {
      "page": 95,
@@ -5022,6 +5051,14 @@
     101
    ],
    "n_rows": 17,
+   "section_continuations": [
+    {
+     "heading": "Anaphylaxis",
+     "from_page": 100,
+     "to_page": 101,
+     "rows": 4
+    }
+   ],
    "rows": [
     {
      "page": 99,
@@ -5285,9 +5322,9 @@
     },
     {
      "page": 101,
-     "section_heading": "",
+     "section_heading": "Anaphylaxis",
      "ordinal": 13,
-     "section_ordinal": 0,
+     "section_ordinal": 7,
      "verbatim_text": "Maintain mean arterial pressure (MAP) above 65 mmHg. If the patient has not responded to repeat IM Epinephrine injections, consider: ADULT: Epinephrine infusion 2 – 10 mcg/min IV/IO (Add 1 mg of Epinephrine [1mg/mL] to 100 mL of 0.9% Sodium chloride = 10 mcg/mL)",
      "x": 77.3,
      "y": 148.6,
@@ -5301,13 +5338,14 @@
       "I": "•",
       "P": "•"
      },
-     "side": "both"
+     "side": "both",
+     "section_continued": true
     },
     {
      "page": 101,
-     "section_heading": "",
+     "section_heading": "Anaphylaxis",
      "ordinal": 14,
-     "section_ordinal": 1,
+     "section_ordinal": 8,
      "verbatim_text": "Maintain age adjusted SBP. If the patient has not responded to repeat IM Epinephrine injections, consider: PEDIATRIC: Epinephrine 0.1 - 1 mcg/kg/min IV/IO infusion. Max dose: 10 mcg/min. Under 1 year old: Titrate to SBP > 70 mmHg Over 1 year old: Titrate to SBP > 90 mmHg (Add 1 mg of Epinephrine [1mg/mL] to 100 mL of 0.9% Sodium chloride = 10 mcg/mL) Note: Infusion via IV pump is preferred is available. Monitor closely for signs of extravasation.",
      "x": 77.3,
      "y": 250.1,
@@ -5321,13 +5359,14 @@
       "I": "[I]",
       "P": "•"
      },
-     "side": "both"
+     "side": "both",
+     "section_continued": true
     },
     {
      "page": 101,
-     "section_heading": "",
+     "section_heading": "Anaphylaxis",
      "ordinal": 15,
-     "section_ordinal": 2,
+     "section_ordinal": 9,
      "verbatim_text": "To maintain MAP > 65 until a vasopressor infusion is prepared, consider: ADULT: Push dose Epinephrine 5-10 mcg IV/IO every 2-3 minutes (Add 100 mcg Epinephrine (1mL of 0.1 mg/mL) to 9mL of 0.9% Normal Saline = 10 mcg / mL)",
      "x": 77.3,
      "y": 349.0,
@@ -5341,13 +5380,14 @@
       "I": "",
       "P": "•"
      },
-     "side": "both"
+     "side": "both",
+     "section_continued": true
     },
     {
      "page": 101,
-     "section_heading": "",
+     "section_heading": "Anaphylaxis",
      "ordinal": 16,
-     "section_ordinal": 3,
+     "section_ordinal": 10,
      "verbatim_text": "Contact Medical Control for guidance as needed.",
      "x": 77.3,
      "y": 400.8,
@@ -5361,7 +5401,8 @@
       "I": "MC",
       "P": "MC"
      },
-     "side": "both"
+     "side": "both",
+     "section_continued": true
     }
    ],
    "orphans": []
@@ -5373,6 +5414,7 @@
     104
    ],
    "n_rows": 14,
+   "section_continuations": [],
    "rows": [
     {
      "page": 103,
@@ -5663,6 +5705,7 @@
     107
    ],
    "n_rows": 10,
+   "section_continuations": [],
    "rows": [
     {
      "page": 107,
@@ -5873,6 +5916,7 @@
     109
    ],
    "n_rows": 6,
+   "section_continuations": [],
    "rows": [
     {
      "page": 109,
@@ -6003,6 +6047,7 @@
     111
    ],
    "n_rows": 5,
+   "section_continuations": [],
    "rows": [
     {
      "page": 111,
@@ -6114,6 +6159,7 @@
     114
    ],
    "n_rows": 10,
+   "section_continuations": [],
    "rows": [
     {
      "page": 113,
@@ -6324,6 +6370,7 @@
     117
    ],
    "n_rows": 6,
+   "section_continuations": [],
    "rows": [
     {
      "page": 117,
@@ -6456,6 +6503,7 @@
     121
    ],
    "n_rows": 14,
+   "section_continuations": [],
    "rows": [
     {
      "page": 119,
@@ -6747,6 +6795,14 @@
     124
    ],
    "n_rows": 14,
+   "section_continuations": [
+    {
+     "heading": "Asthma, COPD, Reactive Airway Disease",
+     "from_page": 123,
+     "to_page": 124,
+     "rows": 1
+    }
+   ],
    "rows": [
     {
      "page": 123,
@@ -6890,9 +6946,9 @@
     },
     {
      "page": 124,
-     "section_heading": "",
+     "section_heading": "Asthma, COPD, Reactive Airway Disease",
      "ordinal": 7,
-     "section_ordinal": 0,
+     "section_ordinal": 2,
      "verbatim_text": "For severe symptoms, also administer: ADULT: Magnesium Sulfate 2 g IV/IO infusion over 15 minutes PEDIATRIC: Magnesium Sulfate 40 mg/kg IV/IO over 15 minutes. Maximum dose: 2,000 mg (2 g)",
      "x": 80.2,
      "y": 150.5,
@@ -6906,7 +6962,8 @@
       "I": "•",
       "P": "•"
      },
-     "side": "both"
+     "side": "both",
+     "section_continued": true
     },
     {
      "page": 124,
@@ -7037,6 +7094,7 @@
     127
    ],
    "n_rows": 7,
+   "section_continuations": [],
    "rows": [
     {
      "page": 127,
@@ -7188,6 +7246,7 @@
     130
    ],
    "n_rows": 6,
+   "section_continuations": [],
    "rows": [
     {
      "page": 129,
@@ -7318,6 +7377,7 @@
     131
    ],
    "n_rows": 6,
+   "section_continuations": [],
    "rows": [
     {
      "page": 131,
@@ -7449,6 +7509,14 @@
     136
    ],
    "n_rows": 8,
+   "section_continuations": [
+    {
+     "heading": "Unstable Supraventricular Tachycardia",
+     "from_page": 135,
+     "to_page": 136,
+     "rows": 2
+    }
+   ],
    "rows": [
     {
      "page": 135,
@@ -7572,9 +7640,9 @@
     },
     {
      "page": 136,
-     "section_heading": "",
+     "section_heading": "Unstable Supraventricular Tachycardia",
      "ordinal": 6,
-     "section_ordinal": 0,
+     "section_ordinal": 1,
      "verbatim_text": "Perform synchronized cardioversion. ADULT: 100 joules initial dose If cardioversion is unsuccessful, check pad placement and repeat at 200 joules. PEDIATRIC: 1 joule/kg initial dose If cardioversion is unsuccessful, check pad placement and repeat at 2 joules/kg. If cardioversion is unsuccessful after two attempts, contact Medical Control for guidance.",
      "x": 77.3,
      "y": 166.8,
@@ -7588,13 +7656,14 @@
       "I": "•",
       "P": "•"
      },
-     "side": "both"
+     "side": "both",
+     "section_continued": true
     },
     {
      "page": 136,
-     "section_heading": "",
+     "section_heading": "Unstable Supraventricular Tachycardia",
      "ordinal": 7,
-     "section_ordinal": 1,
+     "section_ordinal": 2,
      "verbatim_text": "Contact Medical Control if uncertain regarding rhythm, most appropriate therapy, and for guidance as needed. Ensure a 12-Lead ECG is transmitted.",
      "x": 77.3,
      "y": 241.5,
@@ -7608,7 +7677,8 @@
       "I": "MC",
       "P": "MC"
      },
-     "side": "both"
+     "side": "both",
+     "section_continued": true
     }
    ],
    "orphans": []
@@ -7620,6 +7690,14 @@
     138
    ],
    "n_rows": 9,
+   "section_continuations": [
+    {
+     "heading": "Unstable Ventricular Tachycardia with a Pulse",
+     "from_page": 137,
+     "to_page": 138,
+     "rows": 3
+    }
+   ],
    "rows": [
     {
      "page": 137,
@@ -7743,9 +7821,9 @@
     },
     {
      "page": 138,
-     "section_heading": "",
+     "section_heading": "Unstable Ventricular Tachycardia with a Pulse",
      "ordinal": 6,
-     "section_ordinal": 0,
+     "section_ordinal": 2,
      "verbatim_text": "If wide complex and irregular/polymorphic, perform defibrillation: ADULT: 100 joules initial dose If defibrillation is unsuccessful, check pad placement and repeat at 200 joules. PEDIATRIC: 1 joules/kg initial dose If cardioversion is unsuccessful, check pad placement and repeat at 2 joules/kg.",
      "x": 77.3,
      "y": 160.1,
@@ -7759,13 +7837,14 @@
       "I": "•",
       "P": "•"
      },
-     "side": "both"
+     "side": "both",
+     "section_continued": true
     },
     {
      "page": 138,
-     "section_heading": "",
+     "section_heading": "Unstable Ventricular Tachycardia with a Pulse",
      "ordinal": 7,
-     "section_ordinal": 1,
+     "section_ordinal": 3,
      "verbatim_text": "Administer: ADULT: Amiodarone (Cordarone) 150 mg IV/IO in 100 mL 0.9% Sodium chloride. Infuse over 10 minutes. PEDIATRIC: Contact Medical Control for guidance.",
      "x": 79.8,
      "y": 251.1,
@@ -7779,13 +7858,14 @@
       "I": "•",
       "P": "•"
      },
-     "side": "both"
+     "side": "both",
+     "section_continued": true
     },
     {
      "page": 138,
-     "section_heading": "",
+     "section_heading": "Unstable Ventricular Tachycardia with a Pulse",
      "ordinal": 8,
-     "section_ordinal": 2,
+     "section_ordinal": 4,
      "verbatim_text": "Contact Medical Control if uncertain regarding rhythm, most appropriate therapy, and for guidance as needed. Ensure a 12-Lead ECG is transmitted.",
      "x": 77.3,
      "y": 312.3,
@@ -7799,7 +7879,8 @@
       "I": "MC",
       "P": "MC"
      },
-     "side": "both"
+     "side": "both",
+     "section_continued": true
     }
    ],
    "orphans": []
@@ -7811,6 +7892,7 @@
     142
    ],
    "n_rows": 12,
+   "section_continuations": [],
    "rows": [
     {
      "page": 141,
@@ -8067,6 +8149,7 @@
     147
    ],
    "n_rows": 5,
+   "section_continuations": [],
    "rows": [
     {
      "page": 147,
@@ -8177,6 +8260,7 @@
     149
    ],
    "n_rows": 5,
+   "section_continuations": [],
    "rows": [
     {
      "page": 149,
@@ -8287,6 +8371,7 @@
     153
    ],
    "n_rows": 6,
+   "section_continuations": [],
    "rows": [
     {
      "page": 153,
@@ -8417,6 +8502,7 @@
     155
    ],
    "n_rows": 5,
+   "section_continuations": [],
    "rows": [
     {
      "page": 155,
@@ -8527,6 +8613,7 @@
     157
    ],
    "n_rows": 5,
+   "section_continuations": [],
    "rows": [
     {
      "page": 157,
@@ -8637,6 +8724,7 @@
     159
    ],
    "n_rows": 7,
+   "section_continuations": [],
    "rows": [
     {
      "page": 159,
@@ -8787,6 +8875,7 @@
     161
    ],
    "n_rows": 6,
+   "section_continuations": [],
    "rows": [
     {
      "page": 161,
@@ -8917,6 +9006,7 @@
     231
    ],
    "n_rows": 8,
+   "section_continuations": [],
    "rows": [
     {
      "page": 231,
@@ -9087,6 +9177,7 @@
     235
    ],
    "n_rows": 9,
+   "section_continuations": [],
    "rows": [
     {
      "page": 235,
@@ -9277,6 +9368,7 @@
     239
    ],
    "n_rows": 11,
+   "section_continuations": [],
    "rows": [
     {
      "page": 239,
@@ -9507,6 +9599,7 @@
     241
    ],
    "n_rows": 7,
+   "section_continuations": [],
    "rows": [
     {
      "page": 241,
@@ -9657,6 +9750,7 @@
     243
    ],
    "n_rows": 5,
+   "section_continuations": [],
    "rows": [
     {
      "page": 243,
@@ -9767,6 +9861,7 @@
     245
    ],
    "n_rows": 5,
+   "section_continuations": [],
    "rows": [
     {
      "page": 245,
@@ -9877,6 +9972,7 @@
     247
    ],
    "n_rows": 12,
+   "section_continuations": [],
    "rows": [
     {
      "page": 247,
@@ -10127,6 +10223,7 @@
     249
    ],
    "n_rows": 7,
+   "section_continuations": [],
    "rows": [
     {
      "page": 249,
@@ -10278,6 +10375,7 @@
     252
    ],
    "n_rows": 18,
+   "section_continuations": [],
    "rows": [
     {
      "page": 251,
@@ -10461,7 +10559,7 @@
     },
     {
      "page": 252,
-     "section_heading": "",
+     "section_heading": "Total Artificial Heart (TAH)",
      "ordinal": 9,
      "section_ordinal": 0,
      "verbatim_text": "If hypotensive or showing signs of inadequate perfusion, refer to Hypotension and Shock protocol. Contact device coordinator and/or Medical Control immediately for guidance. Do not administer vasopressors. Do not obtain ECG. Do not attempt pacing.",
@@ -10481,7 +10579,7 @@
     },
     {
      "page": 252,
-     "section_heading": "",
+     "section_heading": "Total Artificial Heart (TAH)",
      "ordinal": 10,
      "section_ordinal": 1,
      "verbatim_text": "If unresponsive and without palpable pulses, assist ventilations. Ensure the drive line and power source are connected. Ensure batteries have charge and replace if necessary. Contact the device coordinator and/or Medical Control for guidance.",
@@ -10501,7 +10599,7 @@
     },
     {
      "page": 252,
-     "section_heading": "",
+     "section_heading": "Total Artificial Heart (TAH)",
      "ordinal": 11,
      "section_ordinal": 2,
      "verbatim_text": "Do not begin chest compressions. Do not obtain ECG. Do not cardiovert/defibrillate. For all other device issues contact the device coordinator and/or Medical Control for guidance. Automated Implantable Cardioverter Defibrillator (AICD) / Pacemaker",
@@ -10521,7 +10619,7 @@
     },
     {
      "page": 252,
-     "section_heading": "",
+     "section_heading": "Total Artificial Heart (TAH)",
      "ordinal": 12,
      "section_ordinal": 3,
      "verbatim_text": "If the patient reports a shock was delivered, assess cardiac rhythm. Follow standard protocols.",
@@ -10649,6 +10747,7 @@
     258
    ],
    "n_rows": 12,
+   "section_continuations": [],
    "rows": [
     {
      "page": 257,
@@ -10832,7 +10931,7 @@
     },
     {
      "page": 258,
-     "section_heading": "",
+     "section_heading": "INTRAMUSCULAR (IM)",
      "ordinal": 9,
      "section_ordinal": 0,
      "verbatim_text": "Locate and expose an appropriate administration site (Deltoid or anterolateral thigh). Cleanse the site with an alcohol pad or disinfectant swab. Avoid any area of injury or infection.",
@@ -10852,7 +10951,7 @@
     },
     {
      "page": 258,
-     "section_heading": "",
+     "section_heading": "INTRAMUSCULAR (IM)",
      "ordinal": 10,
      "section_ordinal": 1,
      "verbatim_text": "Attach an appropriately sized needle to a syringe containing the dose of medication to be administered. Hold vertically (needle tip up) and depress the plunger to expel any air in the syringe.",
@@ -10872,7 +10971,7 @@
     },
     {
      "page": 258,
-     "section_heading": "",
+     "section_heading": "INTRAMUSCULAR (IM)",
      "ordinal": 11,
      "section_ordinal": 2,
      "verbatim_text": "Insert the needle perpendicular to the skin to the depth of the targeted muscle. Depress the plunger slowly, ensuring the full intended dose is administered, then withdraw and dispose of the needle.",
@@ -10899,6 +10998,7 @@
     259
    ],
    "n_rows": 6,
+   "section_continuations": [],
    "rows": [
     {
      "page": 259,
@@ -11029,6 +11129,7 @@
     261
    ],
    "n_rows": 14,
+   "section_continuations": [],
    "rows": [
     {
      "page": 261,
@@ -11319,6 +11420,7 @@
     263
    ],
    "n_rows": 8,
+   "section_continuations": [],
    "rows": [
     {
      "page": 263,
@@ -11496,6 +11598,7 @@
     267
    ],
    "n_rows": 7,
+   "section_continuations": [],
    "rows": [
     {
      "page": 267,
@@ -11646,6 +11749,7 @@
     269
    ],
    "n_rows": 13,
+   "section_continuations": [],
    "rows": [
     {
      "page": 269,
@@ -11916,6 +12020,7 @@
     271
    ],
    "n_rows": 8,
+   "section_continuations": [],
    "rows": [
     {
      "page": 271,
@@ -12086,6 +12191,7 @@
     273
    ],
    "n_rows": 8,
+   "section_continuations": [],
    "rows": [
     {
      "page": 273,
@@ -12256,6 +12362,7 @@
     275
    ],
    "n_rows": 5,
+   "section_continuations": [],
    "rows": [
     {
      "page": 275,
@@ -12366,6 +12473,7 @@
     278
    ],
    "n_rows": 0,
+   "section_continuations": [],
    "rows": [],
    "orphans": [
     {

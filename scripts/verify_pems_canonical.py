@@ -19,6 +19,7 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(REPO, "audit", "level-scan")
 sys.path.insert(0, os.path.join(REPO, "scripts"))
 import pems_canonical as C  # noqa: E402  (for the human-review table)
+import pems_level_scan as P  # noqa: E402  (text cleaning, same tokeniser as the aligner)
 fails: list[str] = []
 
 
@@ -85,6 +86,46 @@ def main() -> int:
     check(all(v == list(range(len(v))) for v in runs),
           "section ordinals are contiguous from 0 within every section run")
 
+    # A section that runs past the bottom of a page resumes on the next page with
+    # no heading reprinted; those rows must be carried back into the section they
+    # interrupt, or the site section they belong to never reaches them (p.136 of
+    # the SVT protocol: cardioversion rows outside every site section's scope).
+    mid_empty, bad_cont, cont_rows = [], [], 0
+    for d in table["pems_docs"]:
+        drows = d["rows"]
+        seen_pages: set[int] = set()
+        run_no = -1
+        i = 0
+        while i < len(drows):
+            j = i
+            while j < len(drows) and drows[j]["section_heading"] == drows[i]["section_heading"]:
+                j += 1
+            run, run_no = drows[i:j], run_no + 1
+            if not run[0]["section_heading"] and run_no > 0:
+                mid_empty.append((d["title"], run[0]["page"], run[0]["ordinal"]))
+            i = j
+        for k, r in enumerate(drows):
+            if r.get("section_continued"):
+                cont_rows += 1
+                starts_block = k == 0 or not drows[k - 1].get("section_continued")
+                # the block opens its page and keeps the heading printed above it
+                # on the previous page; the rows after it follow on that page
+                if starts_block and r["page"] in seen_pages:
+                    bad_cont.append((d["title"], r["page"], r["ordinal"],
+                                     "not the first row of its page"))
+                if k and r["section_heading"] != drows[k - 1]["section_heading"]:
+                    bad_cont.append((d["title"], r["page"], r["ordinal"], "heading changed"))
+            seen_pages.add(r["page"])
+    check(not mid_empty, "no PEMS document has an unnamed section in the middle "
+                         f"({len(mid_empty)} left)")
+    for m in mid_empty[:10]:
+        print("        unnamed section:", m)
+    check(not bad_cont, "every page-break continuation row starts its page and keeps the "
+                        f"heading it continues ({len(bad_cont)} bad)")
+    noted = sum(c["rows"] for d in table["pems_docs"] for c in d.get("section_continuations") or [])
+    check(noted == cont_rows,
+          f"the {cont_rows} continuation rows are the ones the documents record ({noted})")
+
     print("stage 2 — alignment")
     tot = align["totals"]
     check(tot["matched"] + tot["ambiguous"] == tot["site_rows"],
@@ -125,6 +166,59 @@ def main() -> int:
     check(not clashes, f"no PEMS row backs two site rows on the same page ({len(clashes)} clashes)")
     for c in clashes[:10]:
         print("        clash:", c)
+
+    # The 0.40 floor is the contract of the aligner. A text or section pairing
+    # below it would mean some later repair quietly promoted a weak pair (the
+    # split repair does re-assign a PEMS row, and must not move it below the
+    # floor). Label bindings are the documented exception: they pair on a
+    # structural key, and their `similarity` is reported, not required.
+    floor_breach = [r for r in matched
+                    if not (r.get("match_basis") or "").startswith("label+keyword")
+                    and (r.get("similarity") or 0.0) < 0.40]
+    check(not floor_breach,
+          f"no text/section pairing sits below the 0.40 floor ({len(floor_breach)} below)")
+    for r in floor_breach[:10]:
+        print("        below floor:", r["site_row"], r.get("similarity"), r["action"][:70])
+
+    # A site row that splits a PEMS row another site row already took is reported
+    # as `shared_pems_row` WITH the containing row and the overlap. Check the
+    # evidence against the table itself: every claimed token really is in the
+    # named PEMS row, the counts add up, and that row really is held elsewhere.
+    C._build_df(table["pems_docs"])
+    pems_row = {(r["page"], r["ordinal"]): r
+                for d in table["pems_docs"] for r in d["rows"]}
+    evidence, bad_ev = [], []
+    for p in align["pages"]:
+        holders = {(r["pems_page"], r["pems_ordinal"]): r["site_row"]
+                   for r in p["rows"] if r["status"] == "matched"}
+        for r in p["rows"]:
+            ev = r.get("contained_in_pems")
+            if not ev:
+                continue
+            evidence.append((p["site_page"], r["site_row"], ev["pems_page"], ev["pems_ordinal"]))
+            src = pems_row.get((ev["pems_page"], ev["pems_ordinal"]))
+            if src is None:
+                bad_ev.append((r["site_row"], "no such PEMS row"))
+                continue
+            if r.get("reason_kind") != "shared_pems_row":
+                bad_ev.append((r["site_row"], "evidence on a non-shared row"))
+            toks = set(ev["overlap_tokens"])
+            if not toks or not toks <= C._sig(P.clean(src["verbatim_text"])):
+                bad_ev.append((r["site_row"], "token not in the named PEMS row"))
+            if ev["tokens_in_site_row"] != len(toks):
+                bad_ev.append((r["site_row"], "site token count does not match the token list"))
+            n_pems = len(C._sig(P.clean(src["verbatim_text"])))
+            if ev["tokens_in_pems_row"] != n_pems:
+                bad_ev.append((r["site_row"], "PEMS token count is wrong"))
+            if ev["containment"] != round(len(toks) / n_pems, 3):
+                bad_ev.append((r["site_row"], "containment ratio does not add up"))
+            if holders.get((ev["pems_page"], ev["pems_ordinal"])) in (None, r["site_row"]):
+                bad_ev.append((r["site_row"], "the named PEMS row is not held by another site row"))
+            if C.distinctive(C.label_keys(r["action"])):
+                bad_ev.append((r["site_row"], "row has a distinctive label key (rule must not fire)"))
+    check(not bad_ev, f"the {len(evidence)} containment claims all check out ({len(bad_ev)} bad)")
+    for b in bad_ev[:10]:
+        print("        bad evidence:", b)
 
     print("deliverables")
     for name in ("missing-rows.md", "ambiguous-rows.md", "alignment.json",

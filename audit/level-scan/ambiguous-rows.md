@@ -2,10 +2,10 @@
 Input to C2. A row is ambiguous when the structure cannot settle it. `reason_kind` says which of the four shapes it is:
 - `multiple_candidates` — two or more different PEMS rows explain the site row about equally well (the site row merges them, or a dose/badge differs only in the PEMS row it was pulled from).
 - `no_counterpart` — no PEMS row in the mapped source reaches the text floor and no label word binds it: a local addition, or (for pages whose PEMS counterpart is a policy page rather than a grid) a row with no upstream at all.
-- `shared_pems_row` — the site row's label names an intervention whose PEMS row already backs a different site row: PEMS merges two site rows into one line (CPAP and SGA share p.123 row 3).
+- `shared_pems_row` — one PEMS row backs the site's TWO rows. Either the site row's label names an intervention whose PEMS row already backs a different site row (CPAP and SGA share p.123 row 3), or the site row has no distinctive label word and its every word is inside a PEMS row another site row already holds ("A: Obtain IV access" is the head of p.135 row 2, whose fluid-bolus tail the next row matched). The containment case carries `contained_in_pems` with the PEMS row, the overlapping words and the ratio.
 
 Rows that carry `section_fallback: true` sit under a site section heading with no single PEMS counterpart, so they were scored against the whole page grid instead. That is an annotation on the row, never a disposition: the row is still `matched`, `ambiguous` or a gap on its own evidence.
-**Total: 129 rows** (multiple_candidates 11, no_counterpart 87, shared_pems_row 31) across 28 pages.
+**Total: 128 rows** (multiple_candidates 11, no_counterpart 86, shared_pems_row 31) across 28 pages.
 
 Raster crops already exist in `audit/level-scan/evidence/` for the six known hard cases (`vfib_p63`, `vfib_p64`, `crush_p91`, `crush_p92`, `cpap_p245`, `respdist_p125`); where an entry below names one, look at the crop instead of re-rastering.
 
@@ -66,21 +66,19 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 - row **2** (base section) [`no_counterpart`] — Primary Assessment: • Perform Primary and Secondary Survey. • Obtain complete set of vital signs including bilateral BP if possible. • Assess for sign
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
 
-## `protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md` — 8 ambiguous
+## `protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md` — 7 ambiguous
 - row **10** (STABLE SVT PATHWAY) [`no_counterpart`] — MC: Contact Poquoson OMD for guidance Ensure 12-Lead ECG transmitted
   - why: no PEMS row in 'STABLE SVT PATHWAY' reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
 - row **2** (base section) [`no_counterpart`] — Assess patient stability (chest pain, dyspnea, AMS, shock)
   - why: no PEMS row in '' reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
-- row **5** (STABLE SVT PATHWAY) [`no_counterpart`] — A: Obtain IV access
-  - why: no PEMS row in 'STABLE SVT PATHWAY' reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
 - row **13** (UNSTABLE SVT PATHWAY) [`shared_pems_row`] — I: Monitor SpO₂ and EtCO₂ during sedation
   - why: site row label names an intervention that p.135 row 5 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
-- row **14** (UNSTABLE SVT PATHWAY) [`shared_pems_row`] — P: Perform SYNCHRONIZED cardioversion 100 joules initial dose (Adult) or 1 joule/kg (Pediatric)
-  - why: two site rows name this same PEMS intervention; p.136 row 6 merges what the site splits — adjudicate which site row's cells that PEMS badge governs
 - row **15** (UNSTABLE SVT PATHWAY) [`shared_pems_row`] — P: If unsuccessful, check pad placement and repeat at 200 joules (Adult) or 2 joules/kg (Pediatric)
   - why: two site rows name this same PEMS intervention; p.136 row 6 merges what the site splits — adjudicate which site row's cells that PEMS badge governs
 - row **16** (UNSTABLE SVT PATHWAY) [`shared_pems_row`] — P: If unsuccessful after two attempts, MC: Contact Poquoson OMD
-  - why: two site rows name this same PEMS intervention; p.136 row 6 merges what the site splits — adjudicate which site row's cells that PEMS badge governs
+  - why: site row label names an intervention that p.136 row 6 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
+- row **5** (STABLE SVT PATHWAY) [`shared_pems_row`] — A: Obtain IV access
+  - why: every word of this row (access) occurs in p.135 row 2 — 1 of that row's 15 significant words — which site row 6 already holds; the site splits one PEMS row into two
 - row **8** (STABLE SVT PATHWAY) [`shared_pems_row`] — I: If no conversion after 2 minutes, repeat Adenosine at DOUBLE initial dose
   - why: site row label names an intervention that p.135 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
 

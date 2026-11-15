@@ -1,26 +1,26 @@
 {
- "generated": "2026-11-15T01:32:15",
+ "generated": "2026-11-15T01:41:31",
  "method": "primary key = section heading + ordinal within section, then the site row's own intervention label (bold head noun); text similarity only breaks ties and never creates a pair on its own",
  "totals": {
   "site_rows": 417,
-  "matched": 288,
-  "ambiguous": 129,
+  "matched": 289,
+  "ambiguous": 128,
   "absent_from_site": 87,
   "duplicate_in_source": 10,
-  "merged_into_site_row": 30,
+  "merged_into_site_row": 29,
   "total_accounted": 504,
   "site_rows_plus_absent": 504,
   "pems_rows_by_disposition": {
    "absent": 87,
    "claimed_by_ambiguous_site_row": 19,
    "duplicate_in_source": 10,
-   "matched": 288,
-   "merged_into_site_row": 30
+   "matched": 289,
+   "merged_into_site_row": 29
   },
   "pems_rows_in_scope": 434,
   "ambiguous_by_kind": {
    "multiple_candidates": 11,
-   "no_counterpart": 87,
+   "no_counterpart": 86,
    "shared_pems_row": 31
   }
  },
@@ -3309,8 +3309,19 @@
       "•"
      ],
      "status": "ambiguous",
-     "reason_kind": "no_counterpart",
-     "reason": "no PEMS row in 'STABLE SVT PATHWAY' reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)"
+     "reason_kind": "shared_pems_row",
+     "contained_in_pems": {
+      "pems_page": 135,
+      "pems_ordinal": 2,
+      "pems_text": "Obtain IV access. Consider: ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 – 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO Repeat as needed to maintain adequate perfusion, up to 60 mL/kg total.",
+      "overlap_tokens": [
+       "access"
+      ],
+      "tokens_in_site_row": 1,
+      "tokens_in_pems_row": 15,
+      "containment": 0.067
+     },
+     "reason": "every word of this row (access) occurs in p.135 row 2 — 1 of that row's 15 significant words — which site row 6 already holds; the site splits one PEMS row into two"
     },
     {
      "site_row": "6",
@@ -3460,9 +3471,17 @@
       "",
       ""
      ],
-     "status": "ambiguous",
-     "reason_kind": "shared_pems_row",
-     "reason": "two site rows name this same PEMS intervention; p.136 row 6 merges what the site splits — adjudicate which site row's cells that PEMS badge governs"
+     "status": "matched",
+     "pems_section_ordinal": 1,
+     "pems_page": 136,
+     "pems_ordinal": 6,
+     "pems_section": "Unstable Supraventricular Tachycardia",
+     "pems_text": "Perform synchronized cardioversion. ADULT: 100 joules initial dose If cardioversion is unsuccessful, check pad placement and repeat at 200 joules. PEDIATRIC: 1 joule/kg initial dose If cardioversion is unsuccessful, check pad placement and ",
+     "badges": [
+      "I"
+     ],
+     "similarity": 0.832,
+     "match_basis": "section+text"
     },
     {
      "site_row": "15",
@@ -3492,7 +3511,7 @@
      ],
      "status": "ambiguous",
      "reason_kind": "shared_pems_row",
-     "reason": "two site rows name this same PEMS intervention; p.136 row 6 merges what the site splits — adjudicate which site row's cells that PEMS badge governs"
+     "reason": "site row label names an intervention that p.136 row 6 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs"
     }
    ],
    "absent": [],
@@ -3510,34 +3529,14 @@
    "pems_sections": [
     "",
     "Stable Supraventricular Tachycardia",
-    "Unstable Supraventricular Tachycardia",
-    ""
+    "Unstable Supraventricular Tachycardia"
    ],
    "merged_into_site_row": [
     {
      "pems_page": 136,
-     "ordinal": 6,
-     "section": "",
-     "section_ordinal": 0,
-     "verbatim_text": "Perform synchronized cardioversion. ADULT: 100 joules initial dose If cardioversion is unsuccessful, check pad placement and repeat at 200 joules. PEDIATRIC: 1 joule/kg initial dose If cardioversion is unsuccessful, check pad placement and repeat at 2 joules/kg. If cardioversion is unsuccessful after two attempts, contact Medical Control for guidance.",
-     "badges": [
-      "I"
-     ],
-     "columns": {
-      "EMR": "",
-      "EMT": "",
-      "A": "",
-      "I": "•",
-      "P": "•"
-     },
-     "best_similarity_to_a_site_row": 0.841,
-     "label_key_match": 3
-    },
-    {
-     "pems_page": 136,
      "ordinal": 7,
-     "section": "",
-     "section_ordinal": 1,
+     "section": "Unstable Supraventricular Tachycardia",
+     "section_ordinal": 2,
      "verbatim_text": "Contact Medical Control if uncertain regarding rhythm, most appropriate therapy, and for guidance as needed. Ensure a 12-Lead ECG is transmitted.",
      "badges": [
       "MC"
@@ -3641,21 +3640,21 @@
      "pems_page": 136,
      "page_ordinal": 0,
      "ordinal": 6,
-     "section": "",
+     "section": "Unstable Supraventricular Tachycardia",
      "verbatim_text": "Perform synchronized cardioversion. ADULT: 100 joules initial dose If cardioversion is unsuccessful, check pad placement and repeat at 200 joules. PEDIATRIC: 1 joule/kg initial dose If cardioversion is unsuccessful, check pad placement and repeat at 2 joules/kg. If cardioversion is unsuccessful after two attempts, contact Medical Control for guidance.",
      "badges": [
       "I"
      ],
-     "disposition": "merged_into_site_row",
-     "site_row": null,
+     "disposition": "matched",
+     "site_row": "14",
      "claimed_by_site_rows": [],
-     "note": 0.841
+     "note": null
     },
     {
      "pems_page": 136,
      "page_ordinal": 1,
      "ordinal": 7,
-     "section": "",
+     "section": "Unstable Supraventricular Tachycardia",
      "verbatim_text": "Contact Medical Control if uncertain regarding rhythm, most appropriate therapy, and for guidance as needed. Ensure a 12-Lead ECG is transmitted.",
      "badges": [
       "MC"
@@ -6860,8 +6859,8 @@
     {
      "pems_page": 101,
      "ordinal": 13,
-     "section": "",
-     "section_ordinal": 0,
+     "section": "Anaphylaxis",
+     "section_ordinal": 7,
      "verbatim_text": "Maintain mean arterial pressure (MAP) above 65 mmHg. If the patient has not responded to repeat IM Epinephrine injections, consider: ADULT: Epinephrine infusion 2 – 10 mcg/min IV/IO (Add 1 mg of Epinephrine [1mg/mL] to 100 mL of 0.9% Sodium chloride = 10 mcg/mL)",
      "badges": [
       "I"
@@ -6877,8 +6876,8 @@
     {
      "pems_page": 101,
      "ordinal": 14,
-     "section": "",
-     "section_ordinal": 1,
+     "section": "Anaphylaxis",
+     "section_ordinal": 8,
      "verbatim_text": "Maintain age adjusted SBP. If the patient has not responded to repeat IM Epinephrine injections, consider: PEDIATRIC: Epinephrine 0.1 - 1 mcg/kg/min IV/IO infusion. Max dose: 10 mcg/min. Under 1 year old: Titrate to SBP > 70 mmHg Over 1 year old: Titrate to SBP > 90 mmHg (Add 1 mg of Epinephrine [1mg/mL] to 100 mL of 0.9% Sodium chloride = 10 mcg/mL) Note: Infusion via IV pump is preferred is available. Monitor closely for signs of extravasation.",
      "badges": [
       "[I]"
@@ -6894,8 +6893,8 @@
     {
      "pems_page": 101,
      "ordinal": 15,
-     "section": "",
-     "section_ordinal": 2,
+     "section": "Anaphylaxis",
+     "section_ordinal": 9,
      "verbatim_text": "To maintain MAP > 65 until a vasopressor infusion is prepared, consider: ADULT: Push dose Epinephrine 5-10 mcg IV/IO every 2-3 minutes (Add 100 mcg Epinephrine (1mL of 0.1 mg/mL) to 9mL of 0.9% Normal Saline = 10 mcg / mL)",
      "badges": [
       "P"
@@ -6911,8 +6910,8 @@
     {
      "pems_page": 101,
      "ordinal": 16,
-     "section": "",
-     "section_ordinal": 3,
+     "section": "Anaphylaxis",
+     "section_ordinal": 10,
      "verbatim_text": "Contact Medical Control for guidance as needed.",
      "badges": [
       "MC"
@@ -6941,8 +6940,7 @@
    "pems_sections": [
     "",
     "Acute Allergic Reaction (non-Anaphylaxis)",
-    "Anaphylaxis",
-    ""
+    "Anaphylaxis"
    ],
    "pems_row_ledger": [
     {
@@ -7131,7 +7129,7 @@
      "pems_page": 101,
      "page_ordinal": 0,
      "ordinal": 13,
-     "section": "",
+     "section": "Anaphylaxis",
      "verbatim_text": "Maintain mean arterial pressure (MAP) above 65 mmHg. If the patient has not responded to repeat IM Epinephrine injections, consider: ADULT: Epinephrine infusion 2 – 10 mcg/min IV/IO (Add 1 mg of Epinephrine [1mg/mL] to 100 mL of 0.9% Sodium chloride = 10 mcg/mL)",
      "badges": [
       "I"
@@ -7145,7 +7143,7 @@
      "pems_page": 101,
      "page_ordinal": 1,
      "ordinal": 14,
-     "section": "",
+     "section": "Anaphylaxis",
      "verbatim_text": "Maintain age adjusted SBP. If the patient has not responded to repeat IM Epinephrine injections, consider: PEDIATRIC: Epinephrine 0.1 - 1 mcg/kg/min IV/IO infusion. Max dose: 10 mcg/min. Under 1 year old: Titrate to SBP > 70 mmHg Over 1 year old: Titrate to SBP > 90 mmHg (Add 1 mg of Epinephrine [1mg/mL] to 100 mL of 0.9% Sodium chloride = 10 mcg/mL) Note: Infusion via IV pump is preferred is available. Monitor closely for signs of extravasation.",
      "badges": [
       "[I]"
@@ -7159,7 +7157,7 @@
      "pems_page": 101,
      "page_ordinal": 2,
      "ordinal": 15,
-     "section": "",
+     "section": "Anaphylaxis",
      "verbatim_text": "To maintain MAP > 65 until a vasopressor infusion is prepared, consider: ADULT: Push dose Epinephrine 5-10 mcg IV/IO every 2-3 minutes (Add 100 mcg Epinephrine (1mL of 0.1 mg/mL) to 9mL of 0.9% Normal Saline = 10 mcg / mL)",
      "badges": [
       "P"
@@ -7173,7 +7171,7 @@
      "pems_page": 101,
      "page_ordinal": 3,
      "ordinal": 16,
-     "section": "",
+     "section": "Anaphylaxis",
      "verbatim_text": "Contact Medical Control for guidance as needed.",
      "badges": [
       "MC"
@@ -9810,10 +9808,10 @@
       "•"
      ],
      "status": "matched",
-     "pems_section_ordinal": 0,
+     "pems_section_ordinal": 2,
      "pems_page": 124,
      "pems_ordinal": 7,
-     "pems_section": "",
+     "pems_section": "Asthma, COPD, Reactive Airway Disease",
      "pems_text": "For severe symptoms, also administer: ADULT: Magnesium Sulfate 2 g IV/IO infusion over 15 minutes PEDIATRIC: Magnesium Sulfate 40 mg/kg IV/IO over 15 minutes. Maximum dose: 2,000 mg (2 g)",
      "badges": [
       "I"
@@ -10029,7 +10027,6 @@
    "pems_sections": [
     "",
     "Asthma, COPD, Reactive Airway Disease",
-    "",
     "Stridor",
     "Bronchiolitis",
     "Pulmonary Edema"
@@ -10157,7 +10154,7 @@
      "pems_page": 124,
      "page_ordinal": 0,
      "ordinal": 7,
-     "section": "",
+     "section": "Asthma, COPD, Reactive Airway Disease",
      "verbatim_text": "For severe symptoms, also administer: ADULT: Magnesium Sulfate 2 g IV/IO infusion over 15 minutes PEDIATRIC: Magnesium Sulfate 40 mg/kg IV/IO over 15 minutes. Maximum dose: 2,000 mg (2 g)",
      "badges": [
       "I"
@@ -10567,7 +10564,6 @@
    "pems_sections": [
     "",
     "Asthma, COPD, Reactive Airway Disease",
-    "",
     "Stridor",
     "Bronchiolitis",
     "Pulmonary Edema"
@@ -10576,8 +10572,8 @@
     {
      "pems_page": 124,
      "ordinal": 7,
-     "section": "",
-     "section_ordinal": 0,
+     "section": "Asthma, COPD, Reactive Airway Disease",
+     "section_ordinal": 2,
      "verbatim_text": "For severe symptoms, also administer: ADULT: Magnesium Sulfate 2 g IV/IO infusion over 15 minutes PEDIATRIC: Magnesium Sulfate 40 mg/kg IV/IO over 15 minutes. Maximum dose: 2,000 mg (2 g)",
      "badges": [
       "I"
@@ -10753,7 +10749,7 @@
      "pems_page": 124,
      "page_ordinal": 0,
      "ordinal": 7,
-     "section": "",
+     "section": "Asthma, COPD, Reactive Airway Disease",
      "verbatim_text": "For severe symptoms, also administer: ADULT: Magnesium Sulfate 2 g IV/IO infusion over 15 minutes PEDIATRIC: Magnesium Sulfate 40 mg/kg IV/IO over 15 minutes. Maximum dose: 2,000 mg (2 g)",
      "badges": [
       "I"
@@ -11506,8 +11502,8 @@
     {
      "pems_page": 124,
      "ordinal": 7,
-     "section": "",
-     "section_ordinal": 0,
+     "section": "Asthma, COPD, Reactive Airway Disease",
+     "section_ordinal": 2,
      "verbatim_text": "For severe symptoms, also administer: ADULT: Magnesium Sulfate 2 g IV/IO infusion over 15 minutes PEDIATRIC: Magnesium Sulfate 40 mg/kg IV/IO over 15 minutes. Maximum dose: 2,000 mg (2 g)",
      "badges": [
       "I"
@@ -11567,7 +11563,6 @@
    "pems_sections": [
     "",
     "Asthma, COPD, Reactive Airway Disease",
-    "",
     "Stridor",
     "Bronchiolitis",
     "Pulmonary Edema"
@@ -11713,7 +11708,7 @@
      "pems_page": 124,
      "page_ordinal": 0,
      "ordinal": 7,
-     "section": "",
+     "section": "Asthma, COPD, Reactive Airway Disease",
      "verbatim_text": "For severe symptoms, also administer: ADULT: Magnesium Sulfate 2 g IV/IO infusion over 15 minutes PEDIATRIC: Magnesium Sulfate 40 mg/kg IV/IO over 15 minutes. Maximum dose: 2,000 mg (2 g)",
      "badges": [
       "I"
@@ -12716,7 +12711,6 @@
    "pems_sections": [
     "",
     "Asthma, COPD, Reactive Airway Disease",
-    "",
     "Stridor",
     "Bronchiolitis",
     "Pulmonary Edema"
@@ -12763,8 +12757,8 @@
     {
      "pems_page": 124,
      "ordinal": 7,
-     "section": "",
-     "section_ordinal": 0,
+     "section": "Asthma, COPD, Reactive Airway Disease",
+     "section_ordinal": 2,
      "verbatim_text": "For severe symptoms, also administer: ADULT: Magnesium Sulfate 2 g IV/IO infusion over 15 minutes PEDIATRIC: Magnesium Sulfate 40 mg/kg IV/IO over 15 minutes. Maximum dose: 2,000 mg (2 g)",
      "badges": [
       "I"
@@ -12902,7 +12896,7 @@
      "pems_page": 124,
      "page_ordinal": 0,
      "ordinal": 7,
-     "section": "",
+     "section": "Asthma, COPD, Reactive Airway Disease",
      "verbatim_text": "For severe symptoms, also administer: ADULT: Magnesium Sulfate 2 g IV/IO infusion over 15 minutes PEDIATRIC: Magnesium Sulfate 40 mg/kg IV/IO over 15 minutes. Maximum dose: 2,000 mg (2 g)",
      "badges": [
       "I"

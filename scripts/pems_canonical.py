@@ -263,7 +263,24 @@ def parse_page(pno: int, body: str, title: str) -> dict:
     ws = P._words(body)
     caps = [w for w in ws if w["t"].strip().upper() in GRID_START
             and w["x0"] < 80 and 60 < w["y0"] < 700]
-    start = min(w["y0"] for w in caps) if caps else 88.0
+    if caps:
+        start = min(w["y0"] for w in caps)
+    else:
+        # A continuation page prints no PROTOCOL heading, and its grid can open
+        # with a SECTION heading a few points above the default 88pt start
+        # (p.252 "Total Artificial Heart (TAH)", p.258 "INTRAMUSCULAR (IM)").
+        # That heading belongs to the grid: dropped, the rows under it read as an
+        # unnamed section continuing the previous page's section, and the site
+        # section they really belong to loses them. Page furniture in the same
+        # band ("CLASS: ...", "CRITERIA", table-of-contents lines) starts at
+        # x<155 and is not heading-shaped, so it is not picked up here.
+        start = 88.0
+        band = [ln for ln in _lines(ws, 55.0, 88.0)
+                if ln["x0"] >= 155 and _is_heading(ln)]
+        if band:
+            # -2 because the grid slice below starts at `start + 2`; the heading
+            # itself must be inside the slice to open the section.
+            start = min(ln["y"] for ln in band) - 2.0
     stops = [w["y0"] for w in ws if w["t"].strip().upper() in GRID_STOP
              and w["x0"] < 80 and w["y0"] > start + 2]
     # the running footer sits at y=715.7 on every page; it is not grid content
@@ -359,6 +376,54 @@ def parse_pdf() -> dict[int, dict]:
 # documents: a protocol runs over consecutive pages (continuation pages carry
 # no PROTOCOL heading of their own) -> one row sequence with sections carried on
 # ---------------------------------------------------------------------------
+def _merge_page_break_sections(doc: dict) -> None:
+    """Give a section that resumes after a page break back to the section it
+    interrupts.
+
+    PEMS prints a section heading once. When the section runs past the bottom of
+    the page it resumes at the top of the next page with NO heading, so read
+    literally it is a new, unnamed section. That is not a cosmetic difference:
+    the site's UNSTABLE SVT section maps to the p.135 half only, and the
+    cardioversion rows printed on p.136 then belong to no site section at all —
+    they are never scored against the site rows that describe them.
+
+    The test is structural, never per-protocol: the run's heading is empty, its
+    first row is the first row of its page in this document (so it starts a new
+    page), and the heading printed above it is a named one. A heading that the
+    page really prints (p.252 "Total Artificial Heart (TAH)", p.258
+    "INTRAMUSCULAR (IM)") is parsed as a heading by `parse_page`, so it never
+    looks like a continuation.
+    """
+    rows = doc["rows"]
+    merged: list[dict] = []
+    notes: list[dict] = []
+    pages_seen: set[int] = set()
+    i = 0
+    while i < len(rows):
+        j = i + 1
+        while j < len(rows) and rows[j]["section_heading"] == rows[i]["section_heading"]:
+            j += 1
+        run = rows[i:j]
+        head = run[0]["section_heading"]
+        prev_head = merged[-1]["section_heading"] if merged else ""
+        if not head and prev_head and run[0]["page"] not in pages_seen:
+            from_page = merged[-1]["page"]
+            for r in run:
+                r = dict(r)
+                r["section_heading"] = prev_head
+                r["section_continued"] = True
+                merged.append(r)
+            notes.append({"heading": prev_head, "from_page": from_page,
+                          "to_page": run[0]["page"], "rows": len(run)})
+        else:
+            merged.extend(run)
+        pages_seen.update(r["page"] for r in run)
+        i = j
+    doc["rows"] = merged
+    if notes:
+        doc["section_continuations"] = notes
+
+
 def build_docs(pages: dict[int, dict]) -> list[dict]:
     docs: list[dict] = []
     for pno in sorted(pages):
@@ -380,6 +445,7 @@ def build_docs(pages: dict[int, dict]) -> list[dict]:
             docs.append({"title": head_title, "pages": [pno],
                          "rows": list(p["rows"]), "orphans": list(p["orphans"])})
     for d in docs:
+        _merge_page_break_sections(d)
         sec = None
         cnt = 0
         for i, r in enumerate(d["rows"]):
@@ -510,8 +576,13 @@ def decide(pg: dict, exc: dict, docs: list[dict]) -> dict:
 
 
 def _row_record(r: dict) -> dict:
-    return {k: r.get(k) for k in ("page", "section_heading", "ordinal", "section_ordinal",
-                                  "verbatim_text", "x", "y", "badge_tokens", "columns", "side")}
+    rec = {k: r.get(k) for k in ("page", "section_heading", "ordinal", "section_ordinal",
+                                 "verbatim_text", "x", "y", "badge_tokens", "columns", "side")}
+    if r.get("section_continued"):
+        # the heading printed above this row is on an earlier page: the section
+        # resumes here without reprinting it (see _merge_page_break_sections)
+        rec["section_continued"] = True
+    return rec
 
 
 def stage1(verbose: bool = False) -> dict:
@@ -562,6 +633,7 @@ def _write_table(decisions: list[dict], docs: list[dict], pages: dict[int, dict]
         "page_decisions": decisions,
         "pems_docs": [{"title": d["title"], "pages": d["pages"],
                        "n_rows": len(d["rows"]),
+                       "section_continuations": d.get("section_continuations") or [],
                        "rows": [_row_record(r) for r in d["rows"]],
                        "orphans": d["orphans"]} for d in docs],
         "stale_exception_paths": sorted(repairs),
@@ -820,6 +892,37 @@ def align_page(pg: dict, docs: list[dict], seed_pages: list[int]) -> dict:
         label_fixed.add(i)
         label_key_map[i] = sorted(distinctive(label_keys(site_index[i][1]["action"])))
 
+    # ---- split repair: the site row that OPENS an intervention owns it.
+    # A site that splits one PEMS row into consecutive rows can lose that row to
+    # its own continuation, because sim() divides the overlap by the SHORTER side
+    # and every word of a continuation is inside the PEMS row: "If unsuccessful,
+    # check pad placement and repeat at 200 joules" scores 0.841 against p.136 row
+    # 6 while "Perform SYNCHRONIZED cardioversion 100 joules initial dose" scores
+    # 0.832. Within SPLIT_EPS the two are the same reading of the row, and the
+    # site's own order is the evidence that separates them: the earlier row of the
+    # same section owns the PEMS row, the later one is the split it is, reported
+    # as `shared_pems_row` rather than silently taking the match.
+    SPLIT_EPS = 0.02
+    owners = [(gi, i, s) for i, (gi, s, _e) in picked.items() if i not in label_fixed]
+    for gi, owner, owner_s in owners:
+        earlier = []
+        for i in range(len(site_index)):
+            if i == owner or i in picked or i in ambiguous or i in label_fixed:
+                continue
+            if site_index[i][0] != site_index[owner][0] or i > owner:
+                continue
+            for sc, g, e in cands[i]:
+                base = sc - (0.04 if e else 0.0)
+                if g == gi and base >= 0.40 and abs(base - owner_s) <= SPLIT_EPS:
+                    earlier.append((i, base))
+                    break
+        if not earlier:
+            continue
+        i, sc = min(earlier)
+        picked[i] = (gi, sc, False)
+        del picked[owner]
+        collided[owner] = gi
+
     # ---- order repair for near-duplicate PEMS rows.
     # p.239 prints the adult and the paediatric endotracheal-intubation row as
     # two lines that differ only in "≥ 12 years" vs "< 12 years", which strips to
@@ -848,6 +951,9 @@ def align_page(pg: dict, docs: list[dict], seed_pages: list[int]) -> dict:
         for score, gi, exact in cands[i][:4]:
             if score - (0.04 if exact else 0.0) >= 0.40:
                 claimed_by_ambiguous.setdefault(i, []).append(gi)
+
+    # which site row holds each taken PEMS row (for the containment evidence)
+    matched_by_gi = {gi: site_index[i][1]["num"] for i, (gi, _s, _e) in picked.items()}
 
     out_rows = []
     for i, (sname, r, k, scope) in enumerate(site_index):
@@ -888,6 +994,23 @@ def align_page(pg: dict, docs: list[dict], seed_pages: list[int]) -> dict:
                                     f"row {p['ordinal']} already backs with another site row; "
                                     f"PEMS merges what the site splits (or the labels collide) — "
                                     f"adjudicate which cell source governs"))
+                out_rows.append(base)
+                continue
+            # A row with no distinctive label word can still be the other half of
+            # a PEMS row the site splits: "A: Obtain IV access" is the head of
+            # p.135 row 2, whose fluid-bolus tail the next site row matched.
+            contained = None if keys else _contained_in_taken(r["action"], prow, taken)
+            if contained:
+                ev = {k: v for k, v in contained.items() if k != "pems_gi"}
+                base.update(status="ambiguous", reason_kind="shared_pems_row",
+                            contained_in_pems=ev,
+                            reason=(f"every word of this row "
+                                    f"({', '.join(contained['overlap_tokens'])}) occurs in "
+                                    f"p.{contained['pems_page']} row {contained['pems_ordinal']} — "
+                                    f"{contained['tokens_in_site_row']} of that row's "
+                                    f"{contained['tokens_in_pems_row']} significant words — which "
+                                    f"site row {matched_by_gi.get(contained['pems_gi'])} already "
+                                    f"holds; the site splits one PEMS row into two"))
                 out_rows.append(base)
                 continue
             base.update(status="ambiguous", reason_kind="no_counterpart",
@@ -953,7 +1076,6 @@ def align_page(pg: dict, docs: list[dict], seed_pages: list[int]) -> dict:
     # Without this, a PEMS row that an ambiguous site row was explaining vanishes
     # from every list (it is neither matched nor absent nor duplicate), and a
     # missing row is exactly what a human can never spot by reading the site.
-    matched_by_gi = {gi: site_index[i][1]["num"] for i, (gi, _s, _e) in picked.items()}
     amb_claim: dict[int, list] = {}
     for i, gis in claimed_by_ambiguous.items():
         for gi in gis:
@@ -1101,6 +1223,41 @@ def sim(a: str, b: str) -> float:
         v = 0.65 * jac + 0.35 * ratio
     _SIM_CACHE[key] = v
     return v
+
+
+def _contained_in_taken(action: str, prow: list[dict], taken: set[int]) -> dict | None:
+    """Is this site row one half of a PEMS row another site row already took?
+
+    The site splits a PEMS row it governs into two of its own: "Obtain IV access.
+    Consider: ADULT: 0.9% Sodium Chloride up to 1 L IV/IO ..." becomes "A: Obtain
+    IV access" and the fluid-bolus row. The first half carries no distinctive
+    label word ("access" appears in more than _DISTINCT_MAX PEMS rows), so the
+    label binding cannot see it and it reads as "no counterpart" while its other
+    half holds the PEMS row.
+
+    The test is CONTAINMENT, not overlap: every significant word of the site row
+    must occur in the taken PEMS row, and the PEMS row must say more (proper
+    subset), so a row that merely shares a generic word with a taken row cannot
+    fire. When more than one taken PEMS row contains it the evidence does not
+    name a single source, and nothing is claimed.
+    """
+    A = _sig(P.clean(action))
+    if not A:
+        return None
+    hits: list[tuple[float, int]] = []
+    for gi in sorted(taken):
+        B = _sig(P.clean(prow[gi]["verbatim_text"]))
+        if A < B:
+            hits.append((len(A) / len(B), gi))
+    if len(hits) != 1:
+        return None
+    ratio, gi = hits[0]
+    p = prow[gi]
+    return {"pems_page": p["page"], "pems_ordinal": p["ordinal"], "pems_gi": gi,
+            "pems_text": p["verbatim_text"][:240], "overlap_tokens": sorted(A),
+            "tokens_in_site_row": len(A),
+            "tokens_in_pems_row": len(_sig(P.clean(p["verbatim_text"]))),
+            "containment": round(ratio, 3)}
 
 
 def stage2(seed: dict) -> dict:
@@ -1654,9 +1811,13 @@ def write_ambiguous(results: list[dict], tot: dict) -> None:
          "floor and no label word binds it: a local addition, or (for pages whose "
          "PEMS counterpart is a policy page rather than a grid) a row with no "
          "upstream at all.\n",
-         "- `shared_pems_row` — the site row's label names an intervention whose "
-         "PEMS row already backs a different site row: PEMS merges two site rows "
-         "into one line (CPAP and SGA share p.123 row 3).\n",
+         "- `shared_pems_row` — one PEMS row backs the site's TWO rows. Either the "
+         "site row's label names an intervention whose PEMS row already backs a "
+         "different site row (CPAP and SGA share p.123 row 3), or the site row has "
+         "no distinctive label word and its every word is inside a PEMS row another "
+         "site row already holds (\"A: Obtain IV access\" is the head of p.135 row 2, "
+         "whose fluid-bolus tail the next row matched). The containment case carries "
+         "`contained_in_pems` with the PEMS row, the overlapping words and the ratio.\n",
          "\nRows that carry `section_fallback: true` sit under a site section heading "
          "with no single PEMS counterpart, so they were scored against the whole page "
          "grid instead. That is an annotation on the row, never a disposition: the row "
