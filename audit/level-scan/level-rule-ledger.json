@@ -10,7 +10,17 @@
   "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
   "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
   "protocols/cardiac/04_Hypertensive_Crisis_PROC.md",
-  "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md"
+  "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+  "protocols/medical/07_Sepsis_PROC.md",
+  "protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md",
+  "protocols/medical/07_OB_Emergencies_PROC.md",
+  "protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md",
+  "protocols/neurologic/05_Seizure_PROC.md",
+  "protocols/neurologic/05_Hypoglycemia_Hyperglycemia_PROC.md",
+  "protocols/neurologic/05_Stroke_TIA_PROC.md"
+ ],
+ "pending_targets": [
+  "protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md"
  ],
  "rows": [
   {
@@ -2792,6 +2802,2005 @@
     "text_tokens": []
    },
    "note": null
+  },
+  {
+   "file": "protocols/medical/07_Sepsis_PROC.md",
+   "row": 1,
+   "action": "Follow Universal Patient Care",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 129,
+   "pems_ordinal": 0,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Sepsis_PROC.md",
+   "row": 2,
+   "action": "Obtain IV/IO access and administer 0.9% Normal Saline up to 1 L in 250-500 mL boluses (Adult) or 20 mL/kg (Pediatric) max 60 mL/kg",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 129,
+   "pems_ordinal": 1,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Obtain IV/IO access. Administer:* ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 \u2013 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO Repeat as needed to maintain adequate perfusion, up to 60 mL/kg total.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Sepsis_PROC.md",
+   "row": 3,
+   "action": "Maintain MAP > 65 mmHg. Norepinephrine infusion 5-20 mcg/min OR Epinephrine infusion 2-10 mcg/min (Adult)",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 129,
+   "pems_ordinal": 2,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Maintain mean arterial pressure (MAP) above 65 mmHg. Consider: ADULT: Norepinephrine (Levophed) infusion 5 \u2013 20 mcg/min IV/IO (Add 4 mg of Norepinephrine to 250 mL 0.9% Sodium chloride = 16 mcg/mL) OR ADULT: Epinephrine infusion 2 \u2013 10 mcg/min IV/IO (Add 1 mg of Epinephrine [1mg/mL] to 100 mL of 0.9% Sodium chloride = 10 mcg/mL)",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Sepsis_PROC.md",
+   "row": 4,
+   "action": "Maintain age adjusted SBP. Epinephrine 0.1 - 1 mcg/kg/min infusion max 10 mcg/min (Pediatric)",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 130,
+   "pems_ordinal": 3,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": true,
+   "pems_text": "Maintain age adjusted SBP. Consider: PEDIATRIC: Epinephrine 0.1 - 1 mcg/kg/min IV/IO infusion. Max dose: 10 mcg/min. Under 1 year old: Titrate to SBP > 70 mmHg Over 1 year old: Titrate to SBP > 90 mmHg (Add 1 mg of Epinephrine [1mg/mL] to 100 mL of 0.9% Sodium chloride = 10 mcg/mL) Note: Infusion via IV pump is preferred is available. Monitor closely for signs of extravasation.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Sepsis_PROC.md",
+   "row": 5,
+   "action": "Push dose Epinephrine 5-10 mcg IV/IO every 2-3 mins to maintain MAP until infusion is ready (Adult)",
+   "level_published": "P",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 130,
+   "pems_ordinal": 4,
+   "pems_badge": "P",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "To maintain MAP > 65 mmHg until a vasopressor infusion is prepared, consider: ADULT: Push dose Epinephrine 5-10 mcg IV/IO every 2-3 minutes (Add 100 mcg Epinephrine (1mL of 0.1 mg/mL) to 9mL of 0.9% Normal Saline = 10 mcg / mL)",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Sepsis_PROC.md",
+   "row": 6,
+   "action": "Contact Medical Control / Prehospital Sepsis Alert",
+   "level_published": "MC",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 130,
+   "pems_ordinal": 5,
+   "pems_badge": "MC",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Contact Medical Control for guidance as needed, and advise of a \u201cPrehospital Sepsis Alert.\u201d",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "MC",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md",
+   "row": 1,
+   "action": "Universal Patient Care: \u2022 Follow Universal Patient Care / Initial Patient Contact protocol.",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 99,
+   "pems_ordinal": 0,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md",
+   "row": 2,
+   "action": "Stinger Removal: \u2022 Remove stinger if present. Do not squeeze stinger. Scrape it away with a flat surface.",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 99,
+   "pems_ordinal": 1,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Remove stinger if present. Do not squeeze stinger. Scrape it away with a flat surface.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md",
+   "row": 3,
+   "action": "Antihistamine Administration: \u2022 ADULT: Diphenhydramine (Benadryl) 50 mg IV/IO slow push or IM. \u2022 PEDIATRIC: Diphenhydramine (Benadryl) 1 mg/kg IV/IO s",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 99,
+   "pems_ordinal": 2,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Diphenhydramine (Benadryl) 50 mg IV/IO slow push or IM PEDIATRIC: Diphenhydramine (Benadryl) 1 mg/kg IV/IO slow push or IM. Maximum dose: 50 mg.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md",
+   "row": 4,
+   "action": "Bronchodilator (Wheezing): \u2022 If wheezing is present, administer: \u2022 ADULT & PEDIATRIC: Albuterol sulfate (Proventil) 3 mL of 0.083% solution, nebulized",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 99,
+   "pems_ordinal": 3,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If wheezing is present, administer: ADULT: Albuterol sulfate (Proventil) 3 mL of 0.083% solution, nebulized PEDIATRIC: Albuterol sulfate (Proventil) 3 mL of 0.083% solution, nebulized Repeat as needed for wheezing.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md",
+   "row": 5,
+   "action": "Anticholinergic (Wheezing): \u2022 If wheezing is present, administer: \u2022 ADULT & PEDIATRIC: Ipratropium bromide (Atrovent) 3 mL of 0.02% solution, nebulize",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 99,
+   "pems_ordinal": 4,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If wheezing is present, administer: ADULT: Ipratropium bromide (Atrovent) 3 mL of 0.02% solution, nebulized, once. PEDIATRIC: Ipratropium bromide (Atrovent) 3 mL of 0.02% solution, nebulized, once.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md",
+   "row": 6,
+   "action": "Corticosteroid (Consideration): \u2022 Consider administering: \u2022 ADULT: Methylprednisolone Succinate (Solu-Medrol) 125 mg slow IV push. \u2022 PEDIATRIC: Methyl",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 99,
+   "pems_ordinal": 5,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Consider: ADULT: Methylprednisolone Succinate (Solu-Medrol) 125 mg slow IV push. PEDIATRIC: Methylprednisolone Succinate (Solu-Medrol) 2 mg/kg slow IV push. Maximum dose 125mg.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md",
+   "row": 7,
+   "action": "Epinephrine Administration: \u2022 Administer IM using either dose-specific clearly marked or color-coded syringe. \u2022 ADULT: Epinephrine autoinjector or 0.3",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 100,
+   "pems_ordinal": 6,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Epinephrine autoinjector or 0.3 mg [1 mg/mL] IM PEDIATRIC (< 30 kg): Pediatric Epinephrine autoinjector or 0.15 mg [1 mg/mL] IM PEDIATRIC (> 30 kg): Epinephrine autoinjector or 0.3 mg [1 mg/mL] IM EMT must use either dose-specific clearly marked or color-coded syringe. Repeat every 5-15 minutes for up to 3 injections as needed.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md",
+   "row": 8,
+   "action": "Vascular Access: \u2022 Obtain IV/IO access.",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 100,
+   "pems_ordinal": 7,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Obtain IV/IO access.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md",
+   "row": 9,
+   "action": "Fluid Resuscitation (Hypotension): \u2022 If patient is hypotensive, administer: \u2022 ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 \u2013 500 mL boluses. \u2022 P",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 100,
+   "pems_ordinal": 8,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If the patient is hypotensive, administer: ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 \u2013 500 mL boluses. PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO. Repeat as needed to maintain adequate perfusion, up to 60 mL/kg total.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md",
+   "row": 10,
+   "action": "Antihistamine Administration: \u2022 ADULT: Diphenhydramine (Benadryl) 50 mg IV/IO slow push or IM. \u2022 PEDIATRIC: Diphenhydramine (Benadryl) 1 mg/kg IV/IO s",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 100,
+   "pems_ordinal": 9,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Diphenhydramine (Benadryl) 50 mg IV/IO slow push or IM PEDIATRIC: Diphenhydramine (Benadryl) 1 mg/kg IV/IO slow push or IM. Maximum dose: 50 mg.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md",
+   "row": 11,
+   "action": "Bronchodilator (Wheezing): \u2022 If wheezing is present, administer: \u2022 ADULT & PEDIATRIC: Albuterol sulfate (Proventil) 3 mL of 0.083% solution, nebulized",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 100,
+   "pems_ordinal": 10,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If wheezing is present, administer: ADULT: Albuterol sulfate (Proventil) 3 mL of 0.083% solution, nebulized PEDIATRIC: Albuterol sulfate (Proventil) 3 mL of 0.083% solution, nebulized May repeat as needed.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md",
+   "row": 12,
+   "action": "Anticholinergic (Wheezing): \u2022 If wheezing is present, administer: \u2022 ADULT & PEDIATRIC: Ipratropium bromide (Atrovent) 3 mL of 0.02% solution, nebulize",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 100,
+   "pems_ordinal": 11,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If wheezing is present, administer: ADULT: Ipratropium bromide (Atrovent) 3 mL of 0.02% solution, nebulized, once. PEDIATRIC: Ipratropium bromide (Atrovent) 3 mL of 0.02% solution, nebulized, once.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md",
+   "row": 13,
+   "action": "Corticosteroid Administration: \u2022 ADULT: Methylprednisolone succinate (Solu-Medrol) 125 mg IV/IO slow push. \u2022 PEDIATRIC: Methylprednisolone succinate (",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 100,
+   "pems_ordinal": 12,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Methylprednisolone succinate (Solu-Medrol) 125 mg IV/IO slow push PEDIATRIC: Methylprednisolone succinate (Solu-Medrol) 2 mg/kg IV/IO slow push Maximum dose: 125 mg",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_OB_Emergencies_PROC.md",
+   "row": 1,
+   "action": "Follow Universal Patient Care, don appropriate PPE, and visualize perineum for crowning or presenting part.",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 147,
+   "pems_ordinal": 0,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+   "binding_evidence": null,
+   "basis": "adjudicated:confirm",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "Universal patient care row, badge EMR (all five); site all five. Confirm."
+  },
+  {
+   "file": "protocols/medical/07_OB_Emergencies_PROC.md",
+   "row": 2,
+   "action": "Normal Delivery: Apply gentle pressure on infant's skull to prevent explosive delivery. Check for nuchal cord. Dry, warm, and stimulate the neonate. D",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 141,
+   "pems_ordinal": 4,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If crowning, apply gentle pressure on the bony part of the skull (not fontanel) for controlled delivery.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_OB_Emergencies_PROC.md",
+   "row": 3,
+   "action": "Shoulder Dystocia: Place mother in McRobert's position (knees to chest) and apply suprapubic pressure.",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 141,
+   "pems_ordinal": 6,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Support the head while delivering the shoulders and torso. Shoulder Dystocia If unable to deliver the anterior shoulder, place the patient in McRobert\u2019s position (see image below) and apply suprapubic pressure. If no progress, contact Medical Control immediately for guidance.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_OB_Emergencies_PROC.md",
+   "row": 4,
+   "action": "Umbilical Cord Prolapse: Wrap exposed cord in saline-moistened gauze. Elevate mother's hips or place in Trendelenburg position. Insert gloved hand to ",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 141,
+   "pems_ordinal": 3,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If breech presentation or cord prolapse, refer to guidance below.",
+   "binding_evidence": null,
+   "basis": "adjudicated:set_cells",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "'If breech presentation or cord prolapse, refer to guidance below' is badge EMR = every column. Site prints EMT..P (narrower by EMR)."
+  },
+  {
+   "file": "protocols/medical/07_OB_Emergencies_PROC.md",
+   "row": 5,
+   "action": "Breech Delivery: Allow controlled, spontaneous delivery to the umbilicus. Deliver the legs and support the body.",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 141,
+   "pems_ordinal": 3,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If breech presentation or cord prolapse, refer to guidance below.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_OB_Emergencies_PROC.md",
+   "row": 6,
+   "action": "Eclampsia (Seizures): Administer Magnesium Sulfate 4 g IV/IO infusion over 10 minutes.",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 147,
+   "pems_ordinal": 2,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If actively seizing or a seizure has occurred (Eclampsia), administer: ADULT: Magnesium Sulfate 4 g IV/IO infusion over 10 minutes.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_OB_Emergencies_PROC.md",
+   "row": 7,
+   "action": "If seizures persist > 5 minutes, administer Midazolam 5 mg IV/IO or 10 mg IM.",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 147,
+   "pems_ordinal": 3,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If seizure continues for more than five minutes, also administer: ADULT: Midazolam (Versed) 5 mg IV/IO or 10 mg IM Use half dose Midazolam for frail, hypotensive, and/or underweight patients.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_OB_Emergencies_PROC.md",
+   "row": 8,
+   "action": "Bleeding / Rupture / Abruptio: Place patient in left lateral recumbent position.",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 149,
+   "pems_ordinal": 3,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Place patient in left lateral recumbent position and transport immediately.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_OB_Emergencies_PROC.md",
+   "row": 9,
+   "action": "Establish IV access and administer 0.9% Normal Saline 20 mL/kg up to 1,000 mL.",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 149,
+   "pems_ordinal": 4,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Establish IV access and administer 20 mL/kg 0.9% Normal Saline bolus up to A 1,000 mL; continuously reassessing need for further fluid administration.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_OB_Emergencies_PROC.md",
+   "row": 10,
+   "action": "Contact Medical Control for guidance, especially for complications, eclampsia seizures, or difficult deliveries.",
+   "level_published": "MC",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 147,
+   "pems_ordinal": 4,
+   "pems_badge": "MC",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If seizures continue or reoccur, contact medical control for guidance including transport destination.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "MC",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md",
+   "row": 1,
+   "action": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 113,
+   "pems_ordinal": 0,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md",
+   "row": 2,
+   "action": "Obtain relevant history and perform a focused assessment to determine the potential cause.*",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 113,
+   "pems_ordinal": 1,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Obtain relevant history and perform a focused assessment to determine the potential cause.*",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md",
+   "row": 3,
+   "action": "Maintain SpO2 94 \u2013 98%. Refer to Airway Management and Ventilatory Support procedure.",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 113,
+   "pems_ordinal": 2,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Maintain SpO2 94 \u2013 98%. Refer to Airway Management and Ventilatory Support procedure.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md",
+   "row": 4,
+   "action": "Obtain and transmit a 12-Lead ECG.",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 113,
+   "pems_ordinal": 3,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Obtain and transmit a 12-Lead ECG.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md",
+   "row": 5,
+   "action": "Obtain IV/IO access. Administer: ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 \u2013 500 mL boluses. PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO. ",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 113,
+   "pems_ordinal": 4,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Obtain IV/IO access. Administer:** ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 \u2013 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO Repeat as needed to maintain adequate perfusion, up to 60 mL/kg total.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md",
+   "row": 6,
+   "action": "Assess and continuously monitor cardiac rhythm. Refer to the Tachyarrhythmias and Symptomatic Bradycardia protocols as needed.",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 113,
+   "pems_ordinal": 5,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Assess and continuously monitor cardiac rhythm. Refer to Tachyarrhythmias and Symptomatic Bradycardia protocols as needed.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md",
+   "row": 7,
+   "action": "Maintain mean arterial pressure (MAP) above 65 mmHg. Consider: ADULT: Norepinephrine (Levophed) infusion 5 \u2013 20 mcg/min IV/IO (Add 4 mg of Norepinephr",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 113,
+   "pems_ordinal": 6,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Maintain mean arterial pressure (MAP) above 65 mmHg. Consider: ADULT: Norepinephrine (Levophed) infusion 5 \u2013 20 mcg/min IV/IO (Add 4 mg of Norepinephrine to 250 mL 0.9% Sodium chloride = 16 mcg/mL) OR ADULT: Epinephrine infusion 2 \u2013 10 mcg/min IV/IO (Add 1 mg of Epinephrine [1mg/mL] to 100 mL of 0.9% Sodium chloride = 10 mcg/mL)",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md",
+   "row": 8,
+   "action": "Maintain age adjusted SBP. Consider: PEDIATRIC: Epinephrine 0.1 - 1 mcg/kg/min IV/IO infusion. Max dose: 10 mcg/min. Under 1 year old: Titrate to SBP ",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 114,
+   "pems_ordinal": 7,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": true,
+   "pems_text": "Maintain age adjusted SBP. Consider: PEDIATRIC: Epinephrine 0.1 - 1 mcg/kg/min IV/IO infusion. Max dose: 10 mcg/min. Under 1 year old: Titrate to SBP > 70 mmHg Over 1 year old: Titrate to SBP > 90 mmHg (Add 1 mg of Epinephrine [1mg/mL] to 100 mL of 0.9% Sodium chloride = 10 mcg/mL) Note: Infusion via IV pump is preferred if available. Monitor closely for signs of extravasation.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md",
+   "row": 9,
+   "action": "To maintain MAP > 65 mmHg until a vasopressor infusion is prepared, consider: ADULT: Push dose Epinephrine 5-10 mcg IV/IO every 2-3 minutes (Add 100 m",
+   "level_published": "P",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 114,
+   "pems_ordinal": 8,
+   "pems_badge": "P",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "To maintain MAP > 65 mmHg until a vasopressor infusion is prepared, consider: ADULT: Push dose Epinephrine 5-10 mcg IV/IO every 2-3 minutes (Add 100 mcg Epinephrine (1mL of 0.1 mg/mL) to 9mL of 0.9% Normal Saline = 10 mcg / mL)",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md",
+   "row": 10,
+   "action": "Contact Medical Control for guidance as needed.",
+   "level_published": "MC",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 114,
+   "pems_ordinal": 9,
+   "pems_badge": "MC",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Contact Medical Control for guidance as needed.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "MC",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/neurologic/05_Seizure_PROC.md",
+   "row": 1,
+   "action": "Prevent injury (DO NOT restrain while seizing)",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 127,
+   "pems_ordinal": 1,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Prevent the patient from sustaining injury, but do not restrain while actively seizing.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/neurologic/05_Seizure_PROC.md",
+   "row": 2,
+   "action": "Provide supplemental O2/protect airway",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 127,
+   "pems_ordinal": 2,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Provide supplemental oxygen. Refer to Airway Management and Ventilatory Support procedure.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/neurologic/05_Seizure_PROC.md",
+   "row": 3,
+   "action": "Assess blood glucose (Treat per protocol)",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 127,
+   "pems_ordinal": 4,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Assess blood glucose level. Refer to Hypoglycemia / Hyperglycemia protocol, as needed.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/neurologic/05_Seizure_PROC.md",
+   "row": 4,
+   "action": "Refer to Overdose/Poisoning protocol if indicated",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 127,
+   "pems_ordinal": 3,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Refer to Overdose / Poisoning / Toxic Ingestion protocol, as needed.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/neurologic/05_Seizure_PROC.md",
+   "row": 5,
+   "action": "Actively seizing >5 mins: Midazolam 5 mg IV/IO or 10 mg IM (Adult & Ped >40kg) \\",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 127,
+   "pems_ordinal": 5,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": true,
+   "pems_text": "If actively seizing for over 5 minutes, administer: ADULT: Midazolam (Versed) 5 mg IV/IO or 10 mg IM PEDIATRIC (< 40 kg): Midazolam (Versed) 2.5 mg IV/IO or 5 mg IM PEDIATRIC (> 40 kg): Midazolam (Versed) 5 mg IV/IO or 10 mg IM Repeat the initial dose once in 5 minutes if seizure activity continues. Use half dose Midazolam for frail, hypotensive, underweight, and/or elderly ( > 65 years) patients.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/neurologic/05_Seizure_PROC.md",
+   "row": 6,
+   "action": "Use HALF dose Midazolam for frail/hypotensive/elderly >65y",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 127,
+   "pems_ordinal": 5,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": true,
+   "pems_text": "If actively seizing for over 5 minutes, administer: ADULT: Midazolam (Versed) 5 mg IV/IO or 10 mg IM PEDIATRIC (< 40 kg): Midazolam (Versed) 2.5 mg IV/IO or 5 mg IM PEDIATRIC (> 40 kg): Midazolam (Versed) 5 mg IV/IO or 10 mg IM Repeat the initial dose once in 5 minutes if seizure activity continues. Use half dose Midazolam for frail, hypotensive, underweight, and/or elderly ( > 65 years) patients.",
+   "binding_evidence": null,
+   "basis": "adjudicated:set_cells",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "Raster: the midazolam row prints a single bracketed badge [A]. The half-dose line is the last sentence of that row, so it is [A]/I/P. Site prints I/P (narrower by A, and drops the bracket)."
+  },
+  {
+   "file": "protocols/neurologic/05_Seizure_PROC.md",
+   "row": 7,
+   "action": "Contact Medical Control and initiate transport if seizing >5 mins after 2nd dose of Midazolam",
+   "level_published": "MC",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 127,
+   "pems_ordinal": 6,
+   "pems_badge": "MC",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If seizure activity continues for more than 5 minutes following administration of the second dose of Midazolam, initiate transport to the closest emergency department and contact medical control for guidance.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "MC",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/neurologic/05_Hypoglycemia_Hyperglycemia_PROC.md",
+   "row": 1,
+   "action": "Follow Universal Patient Care / Initial Patient Contact protocol / Check blood glucose",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 111,
+   "pems_ordinal": 0,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/neurologic/05_Hypoglycemia_Hyperglycemia_PROC.md",
+   "row": 2,
+   "action": "Hypoglycemia (Conscious, able to swallow): Administer Oral glucose 1 tube PO (Adult & Ped > 1 year). *Repeat dose in 5 minutes if no response.*",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 111,
+   "pems_ordinal": 1,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If the patient is conscious, and able to swallow, administer: ADULT: Oral glucose, 1 tube, PO PEDIATRIC (> 1 year): Oral glucose, 1 tube, PO Repeat dose in 5 minutes if no response.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/neurologic/05_Hypoglycemia_Hyperglycemia_PROC.md",
+   "row": 3,
+   "action": "Hypoglycemia (IV/IO access available): Administer ADULT: Dextrose 10% 125 mL (12.5 g) IV/IO PEDIATRIC: Dextrose 10% 5 mL/kg IV/IO. Maximum dose 125 mL",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 111,
+   "pems_ordinal": 2,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Dextrose 10% 125 mL (12.5 g) IV/IO PEDIATRIC: Dextrose 10% 5 mL/kg IV/IO. Maximum dose 125 mL (12.5 g) Repeat dose in 5 minutes if no response.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/neurologic/05_Hypoglycemia_Hyperglycemia_PROC.md",
+   "row": 4,
+   "action": "Hypoglycemia (No IV/IO access): Administer ADULT: Glucagon 1 mg IM PEDIATRIC (< 25 kg): Glucagon 0.2 mg/kg IM. Maximum dose 1 mg. *Repeat dose in 10 m",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 111,
+   "pems_ordinal": 3,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If unable to obtain IV/IO access, administer*: ADULT: Glucagon 1 mg IM PEDIATRIC (< 25 kg): Glucagon 0.2 mg/kg IM. Maximum dose 1 mg. Repeat dose in 10 minutes if no response.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/neurologic/05_Hypoglycemia_Hyperglycemia_PROC.md",
+   "row": 5,
+   "action": "Symptomatic Hyperglycemia: Consider ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 \u2013 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 111,
+   "pems_ordinal": 4,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Consider: ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 \u2013 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO Repeat as needed to maintain adequate perfusion, up to 60 mL/kg total.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/neurologic/05_Stroke_TIA_PROC.md",
+   "row": 1,
+   "action": "Universal Care / Assess BEFAST",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 131,
+   "pems_ordinal": 0,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/neurologic/05_Stroke_TIA_PROC.md",
+   "row": 2,
+   "action": "Assess RACE scale for Large Vessel Occlusion (LVO)",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 131,
+   "pems_ordinal": 1,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Assess probability of large vessel occlusion (LVO) using RACE stroke scale. See table below.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/neurologic/05_Stroke_TIA_PROC.md",
+   "row": 3,
+   "action": "Record Time Last Seen Normal and family contact info",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 131,
+   "pems_ordinal": 2,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Record time the patient last seen normal and family contact information, if available.* Provide this information to the receiving facility.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/neurologic/05_Stroke_TIA_PROC.md",
+   "row": 4,
+   "action": "Assess blood glucose (Treat <60 per Hypoglycemia protocol)",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 131,
+   "pems_ordinal": 3,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Obtain blood glucose level. If less than 60 mg/dL, refer to Hypoglycemia protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/neurologic/05_Stroke_TIA_PROC.md",
+   "row": 5,
+   "action": "Goal scene time <15 minutes / Initiate rapid transport",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 131,
+   "pems_ordinal": 4,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Initiate transport. Goal scene time < 15 minutes: Symptoms less than 24 hours (or unknown) AND suspected LVO (RACE = 5 - 9) : Transport to the closest comprehensive stroke center as long as transport time is not increased by greater than 30 minutes. Symptoms greater than 24 hours OR low suspicion for LVO (RACE = 0 - 4): Transport to the closest stroke center.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/neurologic/05_Stroke_TIA_PROC.md",
+   "row": 6,
+   "action": "Triage: Symptoms <24 hrs & RACE 5-9 -> Transport to closest Comprehensive Stroke Center (if <30 min delay)",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 131,
+   "pems_ordinal": 4,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Initiate transport. Goal scene time < 15 minutes: Symptoms less than 24 hours (or unknown) AND suspected LVO (RACE = 5 - 9) : Transport to the closest comprehensive stroke center as long as transport time is not increased by greater than 30 minutes. Symptoms greater than 24 hours OR low suspicion for LVO (RACE = 0 - 4): Transport to the closest stroke center.",
+   "binding_evidence": null,
+   "basis": "adjudicated:held_split_review",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "PEMS EMT/A/I/P; site EMT/A/I/P. Level correct; split review list. Do not set to matched."
+  },
+  {
+   "file": "protocols/neurologic/05_Stroke_TIA_PROC.md",
+   "row": 7,
+   "action": "Triage: Symptoms >24 hrs OR RACE 0-4 -> Transport to closest Primary Stroke Center",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 131,
+   "pems_ordinal": 4,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Initiate transport. Goal scene time < 15 minutes: Symptoms less than 24 hours (or unknown) AND suspected LVO (RACE = 5 - 9) : Transport to the closest comprehensive stroke center as long as transport time is not increased by greater than 30 minutes. Symptoms greater than 24 hours OR low suspicion for LVO (RACE = 0 - 4): Transport to the closest stroke center.",
+   "binding_evidence": null,
+   "basis": "adjudicated:site_split_of_pems",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "One PEMS transport row with two triage branches, badge EMT. r6 (comprehensive centre, EMT..P) plus r7 (primary centre, A/I/P) union to EMT/A/I/P = the badge spread, so the split invariant holds and r7's cells are correct as authored."
+  },
+  {
+   "file": "protocols/neurologic/05_Stroke_TIA_PROC.md",
+   "row": 8,
+   "action": "Establish 18g IV in Right AC (preferred for rapid imaging)",
+   "level_published": "I",
+   "status": "OWNER_REQUIRED",
+   "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/neurologic/05_Stroke_TIA_PROC.md",
+   "row": 9,
+   "action": "Call COR at the receiving facility with Name/DOB for rapid registration",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 131,
+   "pems_ordinal": 2,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Record time the patient last seen normal and family contact information, if available.* Provide this information to the receiving facility.",
+   "binding_evidence": null,
+   "basis": "adjudicated:set_cells",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "'Record time last seen normal ... provide to the receiving facility' is badge EMR = all five. Site prints A/I/P."
+  },
+  {
+   "file": "protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md",
+   "row": 1,
+   "action": "Scene Safety / Initial Assessment: \u2022 Follow the Universal Patient Care / Initial Patient Contact protocol. \u2022 Perform general patient management.",
+   "level_published": "PENDING",
+   "status": "pending_omd",
+   "reason": "this protocol is not published in PEMS 2024; its source prints no PEMS row to cite, so the level is not verified against a regional source",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "carried_from_page": "EMR",
+   "pending_source": "ODEMSA Regional Patient Care Protocols, Section 2.5, Revised 06/2015",
+   "before": {
+    "leftmost": "PENDING",
+    "markers": [],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "not PEMS 2024 \u2014 pending OMD authorization"
+  },
+  {
+   "file": "protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md",
+   "row": 2,
+   "action": "Airway / Respiratory Management: \u2022 Support life-threatening problems associated with airway, breathing, and circulation. \u2022 If respiratory distress, re",
+   "level_published": "PENDING",
+   "status": "pending_omd",
+   "reason": "this protocol is not published in PEMS 2024; its source prints no PEMS row to cite, so the level is not verified against a regional source",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "carried_from_page": "EMR",
+   "pending_source": "ODEMSA Regional Patient Care Protocols, Section 2.5, Revised 06/2015",
+   "before": {
+    "leftmost": "PENDING",
+    "markers": [],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "not PEMS 2024 \u2014 pending OMD authorization"
+  },
+  {
+   "file": "protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md",
+   "row": 3,
+   "action": "Oxygen Administration: \u2022 Administer oxygen to maintain SpO2 94-99%.",
+   "level_published": "PENDING",
+   "status": "pending_omd",
+   "reason": "this protocol is not published in PEMS 2024; its source prints no PEMS row to cite, so the level is not verified against a regional source",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "carried_from_page": "EMR",
+   "pending_source": "ODEMSA Regional Patient Care Protocols, Section 2.5, Revised 06/2015",
+   "before": {
+    "leftmost": "PENDING",
+    "markers": [],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "not PEMS 2024 \u2014 pending OMD authorization"
+  },
+  {
+   "file": "protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md",
+   "row": 4,
+   "action": "Vital Signs / 12-Lead ECG: \u2022 Obtain VS in both arms and assess distal pulses. \u2022 Place patient on monitor and obtain (BLS) / interpret (ALS) 12-lead EC",
+   "level_published": "PENDING",
+   "status": "pending_omd",
+   "reason": "this protocol is not published in PEMS 2024; its source prints no PEMS row to cite, so the level is not verified against a regional source",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "carried_from_page": "EMR",
+   "pending_source": "ODEMSA Regional Patient Care Protocols, Section 2.5, Revised 06/2015",
+   "before": {
+    "leftmost": "PENDING",
+    "markers": [],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "not PEMS 2024 \u2014 pending OMD authorization"
+  },
+  {
+   "file": "protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md",
+   "row": 5,
+   "action": "Glucose Assessment: \u2022 Check blood glucose level. \u2022 Refer to the Hyperglycemia / Hypoglycemia protocol if indicated.",
+   "level_published": "PENDING",
+   "status": "pending_omd",
+   "reason": "this protocol is not published in PEMS 2024; its source prints no PEMS row to cite, so the level is not verified against a regional source",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "carried_from_page": "EMT",
+   "pending_source": "ODEMSA Regional Patient Care Protocols, Section 2.5, Revised 06/2015",
+   "before": {
+    "leftmost": "PENDING",
+    "markers": [],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "not PEMS 2024 \u2014 pending OMD authorization"
+  },
+  {
+   "file": "protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md",
+   "row": 6,
+   "action": "IV/IO Access: \u2022 Establish two IV of normal saline and titrate to a systolic B/P > 90 mmHg. \u2022 Do not delay transport to establish second IV. \u2022 Refer to",
+   "level_published": "PENDING",
+   "status": "pending_omd",
+   "reason": "this protocol is not published in PEMS 2024; its source prints no PEMS row to cite, so the level is not verified against a regional source",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "carried_from_page": "A",
+   "pending_source": "ODEMSA Regional Patient Care Protocols, Section 2.5, Revised 06/2015",
+   "before": {
+    "leftmost": "PENDING",
+    "markers": [],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "not PEMS 2024 \u2014 pending OMD authorization"
+  },
+  {
+   "file": "protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md",
+   "row": 7,
+   "action": "Pain Management: \u2022 Administer Fentanyl 1 mcg/kg IN/IV/IM or Morphine Sulfate 2.5-5.0 mg IV/IM as needed, per the Pain Control protocol. \u2022 Confirm all ",
+   "level_published": "PENDING",
+   "status": "pending_omd",
+   "reason": "this protocol is not published in PEMS 2024; its source prints no PEMS row to cite, so the level is not verified against a regional source",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "carried_from_page": "I",
+   "pending_source": "ODEMSA Regional Patient Care Protocols, Section 2.5, Revised 06/2015",
+   "before": {
+    "leftmost": "PENDING",
+    "markers": [],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "not PEMS 2024 \u2014 pending OMD authorization"
+  },
+  {
+   "file": "protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md",
+   "row": 8,
+   "action": "Nausea Management: \u2022 Administer Ondansetron (Zofran) 0.1 mg/kg slow IVP as needed per the Nausea and Vomiting protocol.",
+   "level_published": "PENDING",
+   "status": "pending_omd",
+   "reason": "this protocol is not published in PEMS 2024; its source prints no PEMS row to cite, so the level is not verified against a regional source",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "carried_from_page": "I",
+   "pending_source": "ODEMSA Regional Patient Care Protocols, Section 2.5, Revised 06/2015",
+   "before": {
+    "leftmost": "PENDING",
+    "markers": [],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "not PEMS 2024 \u2014 pending OMD authorization"
+  },
+  {
+   "file": "protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md",
+   "row": 9,
+   "action": "Hypotension Management - Vasopressors: \u2022 Consider Norepinephrine (Levophed) Infusion 0.1-0.5 mcg/kg/minute for hypotension. \u2022 Titrate to systolic B/P ",
+   "level_published": "PENDING",
+   "status": "pending_omd",
+   "reason": "this protocol is not published in PEMS 2024; its source prints no PEMS row to cite, so the level is not verified against a regional source",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "carried_from_page": "I",
+   "pending_source": "ODEMSA Regional Patient Care Protocols, Section 2.5, Revised 06/2015",
+   "before": {
+    "leftmost": "PENDING",
+    "markers": [],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "not PEMS 2024 \u2014 pending OMD authorization"
+  },
+  {
+   "file": "protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md",
+   "row": 10,
+   "action": "Transport: \u2022 Transport and perform ongoing assessment as indicated. \u2022 Do not delay transport for any reason if possible; interventions should be done ",
+   "level_published": "PENDING",
+   "status": "pending_omd",
+   "reason": "this protocol is not published in PEMS 2024; its source prints no PEMS row to cite, so the level is not verified against a regional source",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "carried_from_page": "EMR",
+   "pending_source": "ODEMSA Regional Patient Care Protocols, Section 2.5, Revised 06/2015",
+   "before": {
+    "leftmost": "PENDING",
+    "markers": [],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "not PEMS 2024 \u2014 pending OMD authorization"
+  },
+  {
+   "file": "protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md",
+   "row": 11,
+   "action": "Medical Control Contact: \u2022 Contact Medical Control for guidance as needed.",
+   "level_published": "PENDING",
+   "status": "pending_omd",
+   "reason": "this protocol is not published in PEMS 2024; its source prints no PEMS row to cite, so the level is not verified against a regional source",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "carried_from_page": "A",
+   "pending_source": "ODEMSA Regional Patient Care Protocols, Section 2.5, Revised 06/2015",
+   "before": {
+    "leftmost": "PENDING",
+    "markers": [],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "not PEMS 2024 \u2014 pending OMD authorization"
   }
  ]
 }

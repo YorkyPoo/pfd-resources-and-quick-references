@@ -116,10 +116,81 @@ the action text.
 | `04_V_Fib_Pulseless_V_Tach_PROC.md` | 10 | I | p.64#12 | For cardiac arrest in renal dialysis patients, patients with crush injuries, suspected calcium channel blocker overdose or hyperkalemia only, also … | alignment:matched | OK |
 | `04_V_Fib_Pulseless_V_Tach_PROC.md` | 11 | EMR | p.64#13 | If return of spontaneous circulation (ROSC) is achieved, refer to Cardiac Arrest: Post ROSC Care. | alignment:matched | OK |
 | `04_V_Fib_Pulseless_V_Tach_PROC.md` | 12 | MC | p.64#14 | Contact Medical Control for guidance as needed. See Pearls below regarding Termination of Resuscitation. | alignment:matched | OK |
+| `07_Sepsis_PROC.md` | 1 | EMR | p.129#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `07_Sepsis_PROC.md` | 2 | A | p.129#1 | Obtain IV/IO access. Administer:* ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 – 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/I… | alignment:matched | OK |
+| `07_Sepsis_PROC.md` | 3 | I | p.129#2 | Maintain mean arterial pressure (MAP) above 65 mmHg. Consider: ADULT: Norepinephrine (Levophed) infusion 5 – 20 mcg/min IV/IO (Add 4 mg of Norepine… | alignment:matched | OK |
+| `07_Sepsis_PROC.md` | 4 | I | p.130#3 | Maintain age adjusted SBP. Consider: PEDIATRIC: Epinephrine 0.1 - 1 mcg/kg/min IV/IO infusion. Max dose: 10 mcg/min. Under 1 year old: Titrate to S… | alignment:matched | OK |
+| `07_Sepsis_PROC.md` | 5 | P | p.130#4 | To maintain MAP > 65 mmHg until a vasopressor infusion is prepared, consider: ADULT: Push dose Epinephrine 5-10 mcg IV/IO every 2-3 minutes (Add 10… | alignment:matched | OK |
+| `07_Sepsis_PROC.md` | 6 | MC | p.130#5 | Contact Medical Control for guidance as needed, and advise of a “Prehospital Sepsis Alert.” | alignment:matched | OK |
+| `07_Allergic_Reaction_Anaphylaxis_PROC.md` | 1 | EMR | p.99#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `07_Allergic_Reaction_Anaphylaxis_PROC.md` | 2 | EMT | p.99#1 | Remove stinger if present. Do not squeeze stinger. Scrape it away with a flat surface. | alignment:matched | OK |
+| `07_Allergic_Reaction_Anaphylaxis_PROC.md` | 3 | A | p.99#2 | Administer: ADULT: Diphenhydramine (Benadryl) 50 mg IV/IO slow push or IM PEDIATRIC: Diphenhydramine (Benadryl) 1 mg/kg IV/IO slow push or IM. Maxi… | alignment:matched | OK |
+| `07_Allergic_Reaction_Anaphylaxis_PROC.md` | 4 | A | p.99#3 | If wheezing is present, administer: ADULT: Albuterol sulfate (Proventil) 3 mL of 0.083% solution, nebulized PEDIATRIC: Albuterol sulfate (Proventil… | alignment:matched | OK |
+| `07_Allergic_Reaction_Anaphylaxis_PROC.md` | 5 | A | p.99#4 | If wheezing is present, administer: ADULT: Ipratropium bromide (Atrovent) 3 mL of 0.02% solution, nebulized, once. PEDIATRIC: Ipratropium bromide (… | alignment:matched | OK |
+| `07_Allergic_Reaction_Anaphylaxis_PROC.md` | 6 | A | p.99#5 | Consider: ADULT: Methylprednisolone Succinate (Solu-Medrol) 125 mg slow IV push. PEDIATRIC: Methylprednisolone Succinate (Solu-Medrol) 2 mg/kg slow… | alignment:matched | OK |
+| `07_Allergic_Reaction_Anaphylaxis_PROC.md` | 7 | EMT | p.100#6 | Administer: ADULT: Epinephrine autoinjector or 0.3 mg [1 mg/mL] IM PEDIATRIC (< 30 kg): Pediatric Epinephrine autoinjector or 0.15 mg [1 mg/mL] IM … | alignment:matched | OK |
+| `07_Allergic_Reaction_Anaphylaxis_PROC.md` | 8 | A | p.100#7 | Obtain IV/IO access. | alignment:matched | OK |
+| `07_Allergic_Reaction_Anaphylaxis_PROC.md` | 9 | A | p.100#8 | If the patient is hypotensive, administer: ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 – 500 mL boluses. PEDIATRIC: 0.9% Sodium chloride 20 … | alignment:matched | OK |
+| `07_Allergic_Reaction_Anaphylaxis_PROC.md` | 10 | A | p.100#9 | Administer: ADULT: Diphenhydramine (Benadryl) 50 mg IV/IO slow push or IM PEDIATRIC: Diphenhydramine (Benadryl) 1 mg/kg IV/IO slow push or IM. Maxi… | alignment:matched | OK |
+| `07_Allergic_Reaction_Anaphylaxis_PROC.md` | 11 | A | p.100#10 | If wheezing is present, administer: ADULT: Albuterol sulfate (Proventil) 3 mL of 0.083% solution, nebulized PEDIATRIC: Albuterol sulfate (Proventil… | alignment:matched | OK |
+| `07_Allergic_Reaction_Anaphylaxis_PROC.md` | 12 | A | p.100#11 | If wheezing is present, administer: ADULT: Ipratropium bromide (Atrovent) 3 mL of 0.02% solution, nebulized, once. PEDIATRIC: Ipratropium bromide (… | alignment:matched | OK |
+| `07_Allergic_Reaction_Anaphylaxis_PROC.md` | 13 | A | p.100#12 | Administer: ADULT: Methylprednisolone succinate (Solu-Medrol) 125 mg IV/IO slow push PEDIATRIC: Methylprednisolone succinate (Solu-Medrol) 2 mg/kg … | alignment:matched | OK |
+| `07_OB_Emergencies_PROC.md` | 1 | EMR | p.147#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | adjudicated:confirm | OK |
+| `07_OB_Emergencies_PROC.md` | 2 | EMR | p.141#4 | If crowning, apply gentle pressure on the bony part of the skull (not fontanel) for controlled delivery. | alignment:matched | OK |
+| `07_OB_Emergencies_PROC.md` | 3 | EMR | p.141#6 | Support the head while delivering the shoulders and torso. Shoulder Dystocia If unable to deliver the anterior shoulder, place the patient in McRob… | alignment:matched | OK |
+| `07_OB_Emergencies_PROC.md` | 4 | EMR | p.141#3 | If breech presentation or cord prolapse, refer to guidance below. | adjudicated:set_cells | OK |
+| `07_OB_Emergencies_PROC.md` | 5 | EMR | p.141#3 | If breech presentation or cord prolapse, refer to guidance below. | alignment:matched | OK |
+| `07_OB_Emergencies_PROC.md` | 6 | I | p.147#2 | If actively seizing or a seizure has occurred (Eclampsia), administer: ADULT: Magnesium Sulfate 4 g IV/IO infusion over 10 minutes. | alignment:matched | OK |
+| `07_OB_Emergencies_PROC.md` | 7 | I | p.147#3 | If seizure continues for more than five minutes, also administer: ADULT: Midazolam (Versed) 5 mg IV/IO or 10 mg IM Use half dose Midazolam for frai… | alignment:matched | OK |
+| `07_OB_Emergencies_PROC.md` | 8 | EMR | p.149#3 | Place patient in left lateral recumbent position and transport immediately. | alignment:matched | OK |
+| `07_OB_Emergencies_PROC.md` | 9 | A | p.149#4 | Establish IV access and administer 20 mL/kg 0.9% Normal Saline bolus up to A 1,000 mL; continuously reassessing need for further fluid administration. | alignment:matched | OK |
+| `07_OB_Emergencies_PROC.md` | 10 | MC | p.147#4 | If seizures continue or reoccur, contact medical control for guidance including transport destination. | alignment:matched | OK |
+| `07_Hypotension_Shock_Non_Trauma_PROC.md` | 1 | EMR | p.113#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `07_Hypotension_Shock_Non_Trauma_PROC.md` | 2 | EMR | p.113#1 | Obtain relevant history and perform a focused assessment to determine the potential cause.* | alignment:matched | OK |
+| `07_Hypotension_Shock_Non_Trauma_PROC.md` | 3 | EMR | p.113#2 | Maintain SpO2 94 – 98%. Refer to Airway Management and Ventilatory Support procedure. | alignment:matched | OK |
+| `07_Hypotension_Shock_Non_Trauma_PROC.md` | 4 | EMT | p.113#3 | Obtain and transmit a 12-Lead ECG. | alignment:matched | OK |
+| `07_Hypotension_Shock_Non_Trauma_PROC.md` | 5 | A | p.113#4 | Obtain IV/IO access. Administer:** ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 – 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/… | alignment:matched | OK |
+| `07_Hypotension_Shock_Non_Trauma_PROC.md` | 6 | I | p.113#5 | Assess and continuously monitor cardiac rhythm. Refer to Tachyarrhythmias and Symptomatic Bradycardia protocols as needed. | alignment:matched | OK |
+| `07_Hypotension_Shock_Non_Trauma_PROC.md` | 7 | I | p.113#6 | Maintain mean arterial pressure (MAP) above 65 mmHg. Consider: ADULT: Norepinephrine (Levophed) infusion 5 – 20 mcg/min IV/IO (Add 4 mg of Norepine… | alignment:matched | OK |
+| `07_Hypotension_Shock_Non_Trauma_PROC.md` | 8 | I | p.114#7 | Maintain age adjusted SBP. Consider: PEDIATRIC: Epinephrine 0.1 - 1 mcg/kg/min IV/IO infusion. Max dose: 10 mcg/min. Under 1 year old: Titrate to S… | alignment:matched | OK |
+| `07_Hypotension_Shock_Non_Trauma_PROC.md` | 9 | P | p.114#8 | To maintain MAP > 65 mmHg until a vasopressor infusion is prepared, consider: ADULT: Push dose Epinephrine 5-10 mcg IV/IO every 2-3 minutes (Add 10… | alignment:matched | OK |
+| `07_Hypotension_Shock_Non_Trauma_PROC.md` | 10 | MC | p.114#9 | Contact Medical Control for guidance as needed. | alignment:matched | OK |
+| `05_Seizure_PROC.md` | 1 | EMR | p.127#1 | Prevent the patient from sustaining injury, but do not restrain while actively seizing. | alignment:matched | OK |
+| `05_Seizure_PROC.md` | 2 | EMR | p.127#2 | Provide supplemental oxygen. Refer to Airway Management and Ventilatory Support procedure. | alignment:matched | OK |
+| `05_Seizure_PROC.md` | 3 | EMT | p.127#4 | Assess blood glucose level. Refer to Hypoglycemia / Hyperglycemia protocol, as needed. | alignment:matched | OK |
+| `05_Seizure_PROC.md` | 4 | EMR | p.127#3 | Refer to Overdose / Poisoning / Toxic Ingestion protocol, as needed. | alignment:matched | OK |
+| `05_Seizure_PROC.md` | 5 | A | p.127#5 | If actively seizing for over 5 minutes, administer: ADULT: Midazolam (Versed) 5 mg IV/IO or 10 mg IM PEDIATRIC (< 40 kg): Midazolam (Versed) 2.5 mg… | alignment:matched | OK |
+| `05_Seizure_PROC.md` | 6 | A | p.127#5 | If actively seizing for over 5 minutes, administer: ADULT: Midazolam (Versed) 5 mg IV/IO or 10 mg IM PEDIATRIC (< 40 kg): Midazolam (Versed) 2.5 mg… | adjudicated:set_cells | OK |
+| `05_Seizure_PROC.md` | 7 | MC | p.127#6 | If seizure activity continues for more than 5 minutes following administration of the second dose of Midazolam, initiate transport to the closest e… | alignment:matched | OK |
+| `05_Hypoglycemia_Hyperglycemia_PROC.md` | 1 | EMR | p.111#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `05_Hypoglycemia_Hyperglycemia_PROC.md` | 2 | EMT | p.111#1 | If the patient is conscious, and able to swallow, administer: ADULT: Oral glucose, 1 tube, PO PEDIATRIC (> 1 year): Oral glucose, 1 tube, PO Repeat… | alignment:matched | OK |
+| `05_Hypoglycemia_Hyperglycemia_PROC.md` | 3 | A | p.111#2 | Administer: ADULT: Dextrose 10% 125 mL (12.5 g) IV/IO PEDIATRIC: Dextrose 10% 5 mL/kg IV/IO. Maximum dose 125 mL (12.5 g) Repeat dose in 5 minutes … | alignment:matched | OK |
+| `05_Hypoglycemia_Hyperglycemia_PROC.md` | 4 | A | p.111#3 | If unable to obtain IV/IO access, administer*: ADULT: Glucagon 1 mg IM PEDIATRIC (< 25 kg): Glucagon 0.2 mg/kg IM. Maximum dose 1 mg. Repeat dose i… | alignment:matched | OK |
+| `05_Hypoglycemia_Hyperglycemia_PROC.md` | 5 | A | p.111#4 | Consider: ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 – 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO Repeat as needed to ma… | alignment:matched | OK |
+| `05_Stroke_TIA_PROC.md` | 1 | EMR | p.131#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `05_Stroke_TIA_PROC.md` | 2 | EMR | p.131#1 | Assess probability of large vessel occlusion (LVO) using RACE stroke scale. See table below. | alignment:matched | OK |
+| `05_Stroke_TIA_PROC.md` | 3 | EMR | p.131#2 | Record time the patient last seen normal and family contact information, if available.* Provide this information to the receiving facility. | alignment:matched | OK |
+| `05_Stroke_TIA_PROC.md` | 4 | EMT | p.131#3 | Obtain blood glucose level. If less than 60 mg/dL, refer to Hypoglycemia protocol. | alignment:matched | OK |
+| `05_Stroke_TIA_PROC.md` | 5 | EMT | p.131#4 | Initiate transport. Goal scene time < 15 minutes: Symptoms less than 24 hours (or unknown) AND suspected LVO (RACE = 5 - 9) : Transport to the clos… | alignment:matched | OK |
+| `05_Stroke_TIA_PROC.md` | 6 | EMT | p.131#4 | Initiate transport. Goal scene time < 15 minutes: Symptoms less than 24 hours (or unknown) AND suspected LVO (RACE = 5 - 9) : Transport to the clos… | adjudicated:held_split_review | OK |
+| `05_Stroke_TIA_PROC.md` | 7 | EMT | p.131#4 | Initiate transport. Goal scene time < 15 minutes: Symptoms less than 24 hours (or unknown) AND suspected LVO (RACE = 5 - 9) : Transport to the clos… | adjudicated:site_split_of_pems | OK |
+| `05_Stroke_TIA_PROC.md` | 8 | I | — | — | — | OWNER_REQUIRED |
+| `05_Stroke_TIA_PROC.md` | 9 | EMR | p.131#2 | Record time the patient last seen normal and family contact information, if available.* Provide this information to the receiving facility. | adjudicated:set_cells | OK |
+| `04b_Aortic_Dissection_AAA_PROC.md` | 1 | PENDING | — | — | — | pending_omd |
+| `04b_Aortic_Dissection_AAA_PROC.md` | 2 | PENDING | — | — | — | pending_omd |
+| `04b_Aortic_Dissection_AAA_PROC.md` | 3 | PENDING | — | — | — | pending_omd |
+| `04b_Aortic_Dissection_AAA_PROC.md` | 4 | PENDING | — | — | — | pending_omd |
+| `04b_Aortic_Dissection_AAA_PROC.md` | 5 | PENDING | — | — | — | pending_omd |
+| `04b_Aortic_Dissection_AAA_PROC.md` | 6 | PENDING | — | — | — | pending_omd |
+| `04b_Aortic_Dissection_AAA_PROC.md` | 7 | PENDING | — | — | — | pending_omd |
+| `04b_Aortic_Dissection_AAA_PROC.md` | 8 | PENDING | — | — | — | pending_omd |
+| `04b_Aortic_Dissection_AAA_PROC.md` | 9 | PENDING | — | — | — | pending_omd |
+| `04b_Aortic_Dissection_AAA_PROC.md` | 10 | PENDING | — | — | — | pending_omd |
+| `04b_Aortic_Dissection_AAA_PROC.md` | 11 | PENDING | — | — | — | pending_omd |
 
 ## OWNER_REQUIRED
 
-**16 row(s).** No PEMS 2024 row authorises a provider level for these
+**17 row(s).** No PEMS 2024 row authorises a provider level for these
 actions. The chip keeps the level the page already published and carries the flag.
 Nothing here was invented. Each entry records why it could not be cited.
 
@@ -160,6 +231,8 @@ Nothing here was invented. Each entry records why it could not be cited.
 - `protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md` row 5 — **EMT** kept from the page, not from the source. Defibrillation: 200 J Biphasic / 360 J Monophasic (Adult) / 2 J/kg initial, 4 J/kg subsequent (Ped) (AED for EMR/EMT, Manual for I/P)
   - nearest PEMS row, NOT cited as authority: p.63#7
   - reason: p.63#7 is the compound row named in this card as an unresolved inline badge contradiction: PEMS prints one badge (I) on "If VF or VT is present, or AED is advising to shock [EMR], immediately defibrillate". The page's own row text "(AED for EMR/EMT, Manual for I/P)" encodes both levels, so neither I nor EMT is the whole answer. audit/level-scan/badge-overrides.yaml is still empty.
+- `protocols/neurologic/05_Stroke_TIA_PROC.md` row 8 — **I** kept from the page, not from the source. Establish 18g IV in Right AC (preferred for rapid imaging)
+  - reason: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
 
 ## OWNER_RULED
 
@@ -168,6 +241,37 @@ no PEMS 2024 row badges the action, the row is not PEMS-verified, and the
 PEMS row column above is empty on purpose.
 
 - `protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md` row 2 — **EMR** — status `owner_ruled`. Owner ruling 2026-11-15: EMR — any provider may assess stability. No PEMS 2024 row badges this action; this is an owner decision, not a source citation. Do not cite p.135 for it.
+
+## OWNER_RULED — wording (not level)
+
+Decisions the OWNER made about how a phrase reads. These are **rulings, not
+source readings**: the source prints something else, and the page is right by
+the ruling. A later pass must not "restore" the source wording.
+
+- `docs/sops/ems/EMS-100-General-EMS-Guidelines.md` — source prints "eliminate in hospital delays"; the page reads **"eliminate in-hospital delays"** (2026-11-15)
+  - ruling: Owner ruling 2026-11-15 ("I like the change to in-hospital delays"): the compound is hyphenated. The SOP as printed carries no hyphen. This is an OWNER RULING, not a source reading — do not revert the page to the un-hyphenated form on the grounds that the source prints it that way.
+
+## PENDING_OMD — Pending OMD Authorization
+
+**11 row(s) across 1 page(s).** These protocols are
+not published in PEMS 2024, so no row on them can be cited to PEMS. Every row is
+chipped `PENDING`; `carried_from_page` records the level the agency page already
+published and is **provenance only, not a citation**. No PEMS page or row is
+named for any of these rows, and none may be added without a real regional
+source.
+
+- `protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md` — 11 row(s); source: **ODEMSA Regional Patient Care Protocols, Section 2.5, Revised 06/2015**
+  - row 1: PENDING (carried from the page as **EMR**) — Scene Safety / Initial Assessment: • Follow the Universal Patient Care / Initial Patient C
+  - row 2: PENDING (carried from the page as **EMR**) — Airway / Respiratory Management: • Support life-threatening problems associated with airwa
+  - row 3: PENDING (carried from the page as **EMR**) — Oxygen Administration: • Administer oxygen to maintain SpO2 94-99%.
+  - row 4: PENDING (carried from the page as **EMR**) — Vital Signs / 12-Lead ECG: • Obtain VS in both arms and assess distal pulses. • Place pati
+  - row 5: PENDING (carried from the page as **EMT**) — Glucose Assessment: • Check blood glucose level. • Refer to the Hyperglycemia / Hypoglycem
+  - row 6: PENDING (carried from the page as **A**) — IV/IO Access: • Establish two IV of normal saline and titrate to a systolic B/P > 90 mmHg.
+  - row 7: PENDING (carried from the page as **I**) — Pain Management: • Administer Fentanyl 1 mcg/kg IN/IV/IM or Morphine Sulfate 2.5-5.0 mg IV
+  - row 8: PENDING (carried from the page as **I**) — Nausea Management: • Administer Ondansetron (Zofran) 0.1 mg/kg slow IVP as needed per the 
+  - row 9: PENDING (carried from the page as **I**) — Hypotension Management - Vasopressors: • Consider Norepinephrine (Levophed) Infusion 0.1-0
+  - row 10: PENDING (carried from the page as **EMR**) — Transport: • Transport and perform ongoing assessment as indicated. • Do not delay transpo
+  - row 11: PENDING (carried from the page as **A**) — Medical Control Contact: • Contact Medical Control for guidance as needed.
 
 ## Level tokens removed from action text
 
@@ -188,7 +292,7 @@ PEMS row column above is empty on purpose.
 
 ## Level moved by the source (page level -> PEMS printed level)
 
-18 row(s). These are rows where the page under- or over-granted the
+27 row(s). These are rows where the page under- or over-granted the
 level the cited PEMS row prints. Review them first.
 
 - `protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 9: **I -> A** (p.57#6) — Children/Infants ONLY: If unconscious and hypotensive, with HR less than 60, administer: P
@@ -209,6 +313,15 @@ level the cited PEMS row prints. Review them first.
 - `protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md` row 1: **EMT -> EMR** (p.63#1) — Begin high-quality CPR / determine DNR status
 - `protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md` row 7: **P -> I** (p.64#9) — First Antiarrhythmic: Amiodarone 300 mg IV/IO (Adult) / 5 mg/kg (Ped max 300mg) OR Lidocai
 - `protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md` row 8: **P -> I** (p.64#10) — Second Antiarrhythmic: Amiodarone 150 mg IV/IO (Adult) / [MC] 5 mg/kg (Ped max 150mg) OR L
+- `protocols/medical/07_OB_Emergencies_PROC.md` row 2: **EMT -> EMR** (p.141#4) — Normal Delivery: Apply gentle pressure on infant's skull to prevent explosive delivery. Ch
+- `protocols/medical/07_OB_Emergencies_PROC.md` row 4: **EMT -> EMR** (p.141#3) — Umbilical Cord Prolapse: Wrap exposed cord in saline-moistened gauze. Elevate mother's hip
+- `protocols/medical/07_OB_Emergencies_PROC.md` row 5: **EMT -> EMR** (p.141#3) — Breech Delivery: Allow controlled, spontaneous delivery to the umbilicus. Deliver the legs
+- `protocols/neurologic/05_Seizure_PROC.md` row 4: **EMT -> EMR** (p.127#3) — Refer to Overdose/Poisoning protocol if indicated
+- `protocols/neurologic/05_Seizure_PROC.md` row 5: **EMR -> A** (p.127#5) — Actively seizing >5 mins: Midazolam 5 mg IV/IO or 10 mg IM (Adult & Ped >40kg) \
+- `protocols/neurologic/05_Seizure_PROC.md` row 6: **I -> A** (p.127#5) — Use HALF dose Midazolam for frail/hypotensive/elderly >65y
+- `protocols/neurologic/05_Stroke_TIA_PROC.md` row 4: **A -> EMT** (p.131#3) — Assess blood glucose (Treat <60 per Hypoglycemia protocol)
+- `protocols/neurologic/05_Stroke_TIA_PROC.md` row 7: **A -> EMT** (p.131#4) — Triage: Symptoms >24 hrs OR RACE 0-4 -> Transport to closest Primary Stroke Center
+- `protocols/neurologic/05_Stroke_TIA_PROC.md` row 9: **A -> EMR** (p.131#2) — Call COR at the receiving facility with Name/DOB for rapid registration
 
 ## OPEN OWNER QUESTIONS
 
@@ -220,6 +333,7 @@ decision before the page is treated as final.
 - **p.61#4 and p.63#7 are compound rows** (one badge, plus an inline level token
   scoping a clause). Every site row bound to them without a C2 `resolved_cells`
   decision is flagged OWNER_REQUIRED rather than given a chip.
-- **Aortic Dissection & AAA (`04b`) is not converted**: its cited source is ODEMSA
-  Section 2.5 (Revised 06/2015), and PEMS 2024 prints no Aortic Dissection or AAA
-  protocol, so no row on that page can be cited.
+- **Aortic Dissection & AAA (`04b`) has no PEMS 2024 protocol**: its source is
+  ODEMSA Section 2.5 (Revised 06/2015). It is converted to the 3-column chassis
+  with every row chipped `PENDING` (Pending OMD Authorization); see PENDING_OMD
+  above. The page must not be given a PEMS citation by any later pass.

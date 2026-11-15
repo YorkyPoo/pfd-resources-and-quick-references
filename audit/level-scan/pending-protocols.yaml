@@ -1,0 +1,35 @@
+# Protocols sourced from OUTSIDE PEMS 2024 — every action row is PENDING OMD Authorization.
+#
+# A page listed here has no PEMS 2024 protocol to cite: the regional source prints no
+# equivalent, so NO row on the page can be verified against PEMS and NONE may claim a PEMS
+# citation. The chip is `PENDING`; the ledger status is `pending_omd`; and the level the
+# agency's page already published is recorded here as `carried_levels` (the ledger field
+# `carried_from_page`). That record is provenance for the reader, never a citation.
+#
+# Machine-checked by scripts/level_rule.py (--write / --check):
+#   * `source` is required and is printed in the page's note and in the ledger;
+#   * `pems_page` / `pems_ordinal` / `pems_badge` may not appear (a pending row that names
+#     a PEMS row would be exactly the fake citation this file exists to prevent);
+#   * `carried_levels` must cover every action row, and the level recorded must equal the
+#     level the page published before conversion.
+#
+# Status: Batch 2 (owner ruling 2026-11-15: "Just add pending OMD Authorization on stuff
+# like that"). Batches 3-5 add their own entries.
+
+protocols:
+
+  - file: protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md
+    source: ODEMSA Regional Patient Care Protocols, Section 2.5, Revised 06/2015
+    pems_equivalent: none — PEMS 2024 publishes no Aortic Dissection or AAA protocol
+    carried_levels:
+      1: EMR
+      2: EMR
+      3: EMR
+      4: EMR
+      5: EMT
+      6: A
+      7: I
+      8: I
+      9: I
+      10: EMR
+      11: A

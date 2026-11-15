@@ -599,6 +599,11 @@ details.fc p { margin: .2em 0 .9em; }
 
 .lv-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1em 0; }
 .md-typeset .lv-wrap table { width: 100%; margin: 0; }
+/* Material bleeds its table wrapper by -16px each side (and pads it back by 16px). Inside
+   .lv-wrap that bleed is wider than the container, so it clipped the action column on a
+   390px phone and forced a stray horizontal scroll. Neutralise it here. */
+.md-typeset .lv-wrap .md-typeset__scrollwrap { margin: 0; }
+.md-typeset .lv-wrap .md-typeset__table { padding: 0; }
 .md-typeset .lv-wrap table th,
 .md-typeset .lv-wrap table td { vertical-align: top; padding-top: .5em; padding-bottom: .5em; }
 .md-typeset .lv-wrap table th:nth-child(1),
@@ -623,6 +628,15 @@ details.fc p { margin: .2em 0 .9em; }
 .lvl-i   { background: #a9c8e4; }
 .lvl-p   { background: #8fbf4d; }
 .lvl-mc  { background: #c62828; color: #ffffff; }
+/* PENDING — Pending OMD Authorization. Not a provider level and not a PEMS badge: this
+   protocol's source (ODEMSA) is not published in PEMS 2024, so no level can be verified.
+   Deliberately dashed and unfilled so it never reads as an EMR/EMT/A/I/P/MC badge. */
+.lvl-pending {
+  background: transparent; border: 1.5px dashed var(--md-default-fg-color--light);
+  color: var(--md-default-fg-color--light); min-width: 5.6em; font-size: .62rem; }
+.md-typeset .lv-wrap.pending table th:nth-child(2),
+.md-typeset .lv-wrap.pending table td:nth-child(2) {
+  width: 7em; min-width: 7em; max-width: 7em; }
 
 .md-typeset .lvl-own,
 .md-typeset .lvl-req {

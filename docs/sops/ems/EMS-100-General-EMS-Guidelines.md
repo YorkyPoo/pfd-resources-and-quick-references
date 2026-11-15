@@ -11,7 +11,7 @@
 
 ## I. Purpose
 
-The purpose of this policy is to provide prompt and efficient treatment and transportation of patients and to eliminate in hospital delays for emergency ambulance crews.
+The purpose of this policy is to provide prompt and efficient treatment and transportation of patients and to eliminate in-hospital delays for emergency ambulance crews.
 
 This SOP is not all-inclusive and cannot encompass all situations that may be encountered.
 

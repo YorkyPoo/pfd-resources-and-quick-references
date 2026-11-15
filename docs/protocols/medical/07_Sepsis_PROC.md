@@ -28,18 +28,20 @@ This protocol outlines the identification and management of sepsis, focusing on 
     - Hypovolemia from other causes
 
 ### Interventions
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Follow Universal Patient Care | • | • | • | • | • |
-| 2 | Obtain IV/IO access and administer **0.9% Normal Saline** up to **1 L** in **250-500 mL** boluses (Adult) or **20 mL/kg** (Pediatric) max **60 mL/kg** |  |  | • | • | • |
-| 3 | Maintain MAP > 65 mmHg. **[Norepinephrine](../../pharmacology/Norepinephrine.md)** infusion **5-20 mcg/min** OR **[Epinephrine](../../pharmacology/Epinephrine.md)** infusion **2-10 mcg/min** (Adult) |  |  |  | • | • |
-| 4 | Maintain age adjusted SBP. **[Epinephrine](../../pharmacology/Epinephrine.md) 0.1 - 1 mcg/kg/min** infusion max **10 mcg/min** (Pediatric) |  |  |  | [I] | • |
-| 5 | Push dose **[Epinephrine](../../pharmacology/Epinephrine.md) 5-10 mcg** IV/IO every 2-3 mins to maintain MAP until infusion is ready (Adult) |  |  |  |  | • |
-| 6 | Contact Medical Control / Prehospital Sepsis Alert | MC | MC | MC | MC | MC |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emr">EMR</span> | Follow Universal Patient Care |
+| 2 | <span class="lvl lvl-a">A</span> | Obtain IV/IO access and administer **0.9% Normal Saline** up to **1 L** in **250-500 mL** boluses (Adult) or **20 mL/kg** (Pediatric) max **60 mL/kg** |
+| 3 | <span class="lvl lvl-i">I</span> | Maintain MAP > 65 mmHg. **[Norepinephrine](../../pharmacology/Norepinephrine.md)** infusion **5-20 mcg/min** OR **[Epinephrine](../../pharmacology/Epinephrine.md)** infusion **2-10 mcg/min** (Adult) |
+| 4 | <span class="lvl lvl-i">I</span><sup class="lvl-req" title="PEMS 2024 prints this badge in brackets: agency training documentation and Medical Control written authorization required">*</sup> | Maintain age adjusted SBP. **[Epinephrine](../../pharmacology/Epinephrine.md) 0.1 - 1 mcg/kg/min** infusion max **10 mcg/min** (Pediatric) |
+| 5 | <span class="lvl lvl-p">P</span> | Push dose **[Epinephrine](../../pharmacology/Epinephrine.md) 5-10 mcg** IV/IO every 2-3 mins to maintain MAP until infusion is ready (Adult) |
+| 6 | <span class="lvl lvl-mc">MC</span> | Contact Medical Control / Prehospital Sepsis Alert |
 
 </div>
+
+<p class="lv-note">* <strong>[ ] badge in PEMS 2024</strong> — the source prints this level in brackets: agency post-affiliation training documentation on file, plus the Medical Control written authorization for that skill. The bracketing is the source's, not this page's.</p>
 
 ### Pearls
 * ⚠ **CAUTION:** Administer IV fluids carefully in patients with a history of CHF or decreased ejection fraction. Monitor closely for signs of fluid overload and pulmonary edema.
