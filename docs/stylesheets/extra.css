@@ -582,3 +582,57 @@ details.fc p { margin: .2em 0 .9em; }
 .md-typeset .trainbar { padding: .45em .8em; font-size: .78rem; line-height: 1.3; }
 .md-typeset .trainbar p { margin: 0; }
 .md-typeset .trainbar strong { font-size: .95em; letter-spacing: .02em; }
+
+/* ============================================================
+   .lv — one provider level per action (scripts/level_rule.py)
+   ============================================================
+   PEMS 2024 prints a single provider badge beside each action; the site used to print
+   a 7-column EMR|EMT|A|I|P dot matrix, which published every level the action is
+   permitted at instead of the lowest one, and disagreed with the level typed into the
+   action text. This chassis prints exactly one badge and then the action, so the page
+   reads "EMT — Obtain and transmit 12-Lead ECG" with nothing to reconcile.
+
+   Column 3 carries the action text and keeps the width; # and Level are pinned narrow
+   so a 390px phone shows the badge and the whole sentence without horizontal scroll.
+   Chip colours mirror the badges PEMS prints (grey EMR, yellow EMT, orange A, blue I,
+   green P, red MC) so a provider reading the source sees the same colour here. */
+
+.lv-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1em 0; }
+.md-typeset .lv-wrap table { width: 100%; margin: 0; }
+.md-typeset .lv-wrap table th,
+.md-typeset .lv-wrap table td { vertical-align: top; padding-top: .5em; padding-bottom: .5em; }
+.md-typeset .lv-wrap table th:nth-child(1),
+.md-typeset .lv-wrap table td:nth-child(1) {
+  width: 2.6em; min-width: 2.6em; max-width: 2.6em; text-align: center;
+  padding-left: .2em; padding-right: .2em; }
+.md-typeset .lv-wrap table th:nth-child(2),
+.md-typeset .lv-wrap table td:nth-child(2) {
+  width: 4.8em; min-width: 4.8em; max-width: 4.8em; text-align: center;
+  white-space: nowrap; padding-left: .2em; padding-right: .2em; }
+.md-typeset .lv-wrap table th:nth-child(3),
+.md-typeset .lv-wrap table td:nth-child(3) { width: auto; text-align: left; }
+.md-typeset .lv-wrap table td:nth-child(3) strong { display: inline; }
+
+.md-typeset .lvl {
+  display: inline-block; min-width: 2.8em; padding: .16em .3em;
+  border-radius: .28em; font-size: .68rem; font-weight: 800; letter-spacing: .04em;
+  line-height: 1.4; text-align: center; color: #12161c; }
+.lvl-emr { background: #b9c2cb; }
+.lvl-emt { background: #f2d64b; }
+.lvl-a   { background: #eda646; }
+.lvl-i   { background: #a9c8e4; }
+.lvl-p   { background: #8fbf4d; }
+.lvl-mc  { background: #c62828; color: #ffffff; }
+
+.md-typeset .lvl-own,
+.md-typeset .lvl-req {
+  font-size: .68rem; font-weight: 800; vertical-align: super; line-height: 0;
+  margin-left: .1em; }
+.md-typeset .lvl-own { color: #b3261e; }
+.md-typeset .lvl-req { color: var(--md-default-fg-color--light); }
+[data-md-color-scheme="slate"] .md-typeset .lvl-own { color: #ff8a80; }
+
+.md-typeset .lv-note {
+  margin: .1em 0 0; font-size: .72rem; line-height: 1.5;
+  color: var(--md-default-fg-color--light); }
+.md-typeset .lv-note strong { color: var(--md-primary-fg-color); }

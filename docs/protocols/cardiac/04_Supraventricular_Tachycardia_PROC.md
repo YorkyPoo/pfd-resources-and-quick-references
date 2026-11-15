@@ -32,28 +32,46 @@ Supraventricular tachycardia (SVT) is a rapid rhythm originating above the ventr
     - Concurrent CHF or decreased ejection fraction
 
 ### Interventions
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-|---|---|:---:|:---:|:---:|:---:|:---:|
-| 1 | Follow Universal Patient Care / Initial Patient Contact | • | • | • | • | • |
-| 2 | Assess patient stability (chest pain, dyspnea, AMS, shock) |  | • | • | • | • |
-| 3 | **STABLE SVT PATHWAY** |  |  |  |  |  |
-| 4 | EMT: Obtain and transmit 12-Lead ECG |  | • | • | • | • |
-| 5 | A: Obtain IV access |  |  |  | • | • |
-| 6 | A: **0.9% Sodium chloride** up to 1 L IV/IO (Adult)<br>250 – 500 mL boluses or **20 mL/kg** IV/IO (Pediatric)<br>Repeat as needed, max 60 mL/kg total |  |  | • | • | • |
-| 7 | I: If rhythm regular, **[Adenosine](../../pharmacology/Adenosine.md) (Adenocard)** **6 mg** IV/IO (Adult)<br>or **0.1 mg/kg** IV/IO (Pediatric, max 6 mg)<br>Followed by 20 mL (Adult) or 10–20 mL (Ped) **0.9% Sodium chloride** flush |  |  |  | • | • |
-| 8 | I: If no conversion after 2 minutes, repeat [Adenosine](../../pharmacology/Adenosine.md) at DOUBLE initial dose |  |  |  |  | • |
-| 9 | I: If rhythm irregular/atrial fibrillation, initiate transport<br>Monitor for signs of poor perfusion |  |  |  | • | • |
-| 10 | MC: Contact Poquoson OMD for guidance<br>Ensure 12-Lead ECG transmitted |  |  |  | [I] | • |
-| 11 | **UNSTABLE SVT PATHWAY** |  |  |  |  |  |
-| 12 | I: For light sedation, consider **[Midazolam](../../pharmacology/Midazolam.md) (Versed)**<br>**2.5 mg** IV/IO or **5 mg** IN/IM (Adult)<br>**0.05 mg/kg** IV/IO or **0.1 mg/kg** IM (Pediatric)<br>Max: 2.5 mg IV/IO or 5 mg IM |  |  |  | • | • |
-| 13 | I: Monitor SpO₂ and EtCO₂ during sedation |  |  |  |  |  |
-| 14 | P: Perform **SYNCHRONIZED cardioversion**<br>**100 joules** initial dose (Adult) or **1 joule/kg** (Pediatric) |  |  |  |  |  |
-| 15 | P: If unsuccessful, check pad placement and repeat at **200 joules** (Adult)<br>or **2 joules/kg** (Pediatric) |  |  |  | • | • |
-| 16 | P: If unsuccessful after two attempts, MC: Contact Poquoson OMD |  |  |  |  | [P] |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emr">EMR</span> | Follow Universal Patient Care / Initial Patient Contact |
+| 2 | <span class="lvl lvl-emt">EMT</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | Assess patient stability (chest pain, dyspnea, AMS, shock) |
 
 </div>
+
+#### STABLE SVT PATHWAY
+
+<div class="lv-wrap" markdown="1">
+
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 4 | <span class="lvl lvl-emt">EMT</span> | Obtain and transmit 12-Lead ECG |
+| 5 | <span class="lvl lvl-a">A</span> | Obtain IV access |
+| 6 | <span class="lvl lvl-a">A</span> | **0.9% Sodium chloride** up to 1 L IV/IO (Adult)<br>250 – 500 mL boluses or **20 mL/kg** IV/IO (Pediatric)<br>Repeat as needed, max 60 mL/kg total |
+| 7 | <span class="lvl lvl-i">I</span> | If rhythm regular, **[Adenosine](../../pharmacology/Adenosine.md) (Adenocard)** **6 mg** IV/IO (Adult)<br>or **0.1 mg/kg** IV/IO (Pediatric, max 6 mg)<br>Followed by 20 mL (Adult) or 10–20 mL (Ped) **0.9% Sodium chloride** flush |
+| 8 | <span class="lvl lvl-i">I</span> | If no conversion after 2 minutes, repeat [Adenosine](../../pharmacology/Adenosine.md) at DOUBLE initial dose |
+| 9 | <span class="lvl lvl-i">I</span> | If rhythm irregular/atrial fibrillation, initiate transport<br>Monitor for signs of poor perfusion |
+| 10 | <span class="lvl lvl-mc">MC</span> | Contact Poquoson OMD for guidance<br>Ensure 12-Lead ECG transmitted |
+
+</div>
+
+#### UNSTABLE SVT PATHWAY
+
+<div class="lv-wrap" markdown="1">
+
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 12 | <span class="lvl lvl-i">I</span> | For light sedation, consider **[Midazolam](../../pharmacology/Midazolam.md) (Versed)**<br>**2.5 mg** IV/IO or **5 mg** IN/IM (Adult)<br>**0.05 mg/kg** IV/IO or **0.1 mg/kg** IM (Pediatric)<br>Max: 2.5 mg IV/IO or 5 mg IM |
+| 13 | <span class="lvl lvl-i">I</span> | Monitor SpO₂ and EtCO₂ during sedation |
+| 14 | <span class="lvl lvl-i">I</span> | Perform **SYNCHRONIZED cardioversion**<br>**100 joules** initial dose (Adult) or **1 joule/kg** (Pediatric) |
+| 15 | <span class="lvl lvl-i">I</span> | If unsuccessful, check pad placement and repeat at **200 joules** (Adult)<br>or **2 joules/kg** (Pediatric) |
+| 16 | <span class="lvl lvl-i">I</span> | If unsuccessful after two attempts, contact Poquoson OMD |
+
+</div>
+
+<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — row 2: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source.</p>
 
 ### Pearls
 1. Many patients who experience tachyarrhythmias have concurrent congestive heart failure or decreased ejection fraction. Exercise caution when providing IV fluids – give only enough to improve perfusion and monitor for signs of pulmonary edema.
