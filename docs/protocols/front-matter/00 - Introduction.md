@@ -3,7 +3,7 @@
 ## Patient Care Protocols, Policies, and Procedures
 
 **Effective:** 05/01/2026  
-**Approved by:** Poquoson Fire and Rescue Operational Medical Director (OMD)
+**Pending approval by:** Poquoson Fire and Rescue Operational Medical Director (OMD)
 
 ---
 
@@ -43,4 +43,4 @@ These protocols apply exclusively to EMS providers operating under the medical d
 
 ---
 
-*Document maintained by Poquoson Fire and Rescue. For questions or clarifications, contact the OMD.*
+*Document maintained by Poquoson Fire and Rescue. For questions, contact their administration.*

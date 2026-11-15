@@ -25,7 +25,7 @@ Ill. POLICY Effective Date:__ 04/19/2011
 
 It shall be the policy of the Fire/Rescue
 
-Department basic and advanced life Revised Date: ______________ | support providers to follow the protocols to the level of their certification and training as established and approved by Avy Uurt, the Operational Medical Director and the . Peninsulas Emergency Medical Services Council (PEMS) Regional Protocols. In instances of conflict between Departmental and PEMS policies, the provider shall follow the policy established by the Department and the Operational Medical Director.
+Department basic and advanced life Revised Date: ______________ | support providers to follow the protocols to the level of their certification and training as established and approved by the Operational Medical Director and the Peninsula's Emergency Medical Services Council (PEMS) Regional Protocols. In instances of conflict between Departmental and PEMS policies, the provider shall follow the policy established by the Department and the Operational Medical Director.
 
 gnature
 
