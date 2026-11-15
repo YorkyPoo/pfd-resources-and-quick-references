@@ -15,12 +15,41 @@ import os
 import subprocess
 import sys
 
+import yaml
+
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(REPO, "audit", "level-scan")
 sys.path.insert(0, os.path.join(REPO, "scripts"))
 import pems_canonical as C  # noqa: E402  (for the human-review table)
 import pems_level_scan as P  # noqa: E402  (text cleaning, same tokeniser as the aligner)
 fails: list[str] = []
+
+LV = ["EMR", "EMT", "A", "I", "P"]
+
+# Manifest of the checks this verifier runs. Every entry must be reached by a
+# section() call during main(), and the last check asserts exactly that, so a
+# check cannot be dropped from the run without the run failing.
+MANIFEST = [
+    ("stage1.pems_table",
+     "PEMS table integrity: page decisions, row fields, badges, ordinals, "
+     "page-break continuations"),
+    ("stage2.alignment",
+     "alignment integrity: totals, ambiguity classifications, containment "
+     "evidence, 0.40 floor, text-binding verdicts"),
+    ("c2.split_map",
+     "split-map invariant: the union of the levels published by the site rows "
+     "that split a PEMS row equals the PEMS badge level and every level above "
+     "it, and each listed row still exists"),
+    ("deliverables",
+     "deliverables exist and state the same totals as the artifacts"),
+    ("docs_clean", "no protocol page under docs/ is modified"),
+]
+_ran: set[str] = set()
+
+
+def section(cid: str) -> None:
+    assert cid in dict(MANIFEST), f"unlisted check section {cid}"
+    _ran.add(cid)
 
 
 def check(cond: bool, msg: str) -> None:
@@ -29,7 +58,115 @@ def check(cond: bool, msg: str) -> None:
         fails.append(msg)
 
 
+def levels(cells) -> set[str]:
+    """The levels a site row authorises.
+
+    A non-blank cell at level X grants X and every level above it (the same
+    spread `pems_table.json` records in `columns{}`). `MC` in every cell means
+    all levels contact Medical Control, i.e. the full set. A blank cell grants
+    nothing.
+    """
+    cells = [(c or "").strip() for c in cells]
+    if len(cells) != len(LV):
+        raise ValueError(f"expected {len(LV)} level cells, got {len(cells)}: {cells}")
+    if all(c and "MC" in c.upper() for c in cells):
+        return set(LV)
+    got: set[str] = set()
+    for i, c in enumerate(cells):
+        if c:
+            got |= set(LV[i:])
+    return got
+
+
+def expected_levels(badge: str) -> set[str]:
+    """The PEMS badge level and every level above it (`MC` = the full set)."""
+    badge = (badge or "").strip().strip("[]").upper()
+    if badge == "MC":
+        return set(LV)
+    if badge not in LV:
+        raise ValueError(f"badge {badge!r} is neither a level nor MC")
+    return set(LV[LV.index(badge):])
+
+
+def fmt_levels(s: set[str]) -> str:
+    return "/".join(L for L in LV if L in s) or "·"
+
+
+def check_split_map(pems_row: dict) -> None:
+    """Re-derive the split invariant from the site pages.
+
+    A `held_level_correct` row is a site row that splits a PEMS row the region
+    merges. Its levels are right only while every site row that splits the PEMS
+    row still publishes exactly the PEMS badge spread. `audit/level-scan/
+    split-map.yaml` records those pairings (derived by scripts/build_split_map.py);
+    this check re-parses each named row on every run and FAILS when the union
+    stops equalling the expected set, when a named row no longer exists (renumbered
+    or merged away — the change the OMD must be told about), or when the yaml's
+    badge has drifted from `pems_table.json`.
+    """
+    path = os.path.join(OUT, "split-map.yaml")
+    check(os.path.exists(path), "split-map.yaml exists")
+    if not os.path.exists(path):
+        return
+    doc = yaml.safe_load(open(path, encoding="utf-8")) or {}
+    splits = doc.get("splits") or []
+    check(len(splits) == 7, f"split-map.yaml records all 7 held splits ({len(splits)} listed)")
+    ids = [s.get("id") for s in splits]
+    check(len(ids) == len(set(ids)) and all(ids), "every split carries a unique id")
+
+    for s in splits:
+        sid = s.get("id")
+        pems = s.get("pems") or {}
+        key = (int(str(pems.get("page"))), int(str(pems.get("ordinal"))))
+        badge = pems.get("badge")
+        src = pems_row.get(key)
+        # 6. the yaml must not drift from the table
+        if src is None:
+            check(False, f"split {sid}: PEMS p.{key[0]} #{key[1]} is not in pems_table.json")
+            continue
+        tbl_badge = (src.get("badge_tokens") or [None])[0]
+        check(badge == tbl_badge,
+              f"split {sid}: badge {badge!r} matches pems_table.json for "
+              f"p.{key[0]} #{key[1]} ({tbl_badge!r})")
+
+        site_rows = s.get("site_rows") or []
+        check(bool(site_rows), f"split {sid}: names at least one site row")
+        # 1. read every named row with the scanner's own parser
+        union, producers, missing = set(), [], []
+        for sr in site_rows:
+            rel, num = sr.get("file"), sr.get("row")
+            page = P.read_page(os.path.join(REPO, "docs", rel))
+            hits = [r for r in page.get("rows") or []
+                    if str(r.get("num", "")).strip() == str(num)]
+            if len(hits) != 1:
+                missing.append((rel, num, len(hits)))
+                continue
+            got = levels(hits[0]["cells"])
+            union |= got
+            producers.append(f"{os.path.basename(rel)} r{num} → {fmt_levels(got)}")
+        # 5. a row that vanished is a failure, not silence
+        for rel, num, n in missing:
+            check(False,
+                  f"split {sid}: site row {rel} r{num} no longer exists on the page "
+                  f"({n} rows carry that number) — renumbered or merged away; "
+                  f"update split-map.yaml and tell the OMD")
+        if missing:
+            continue
+        # 2-4. the union must be exactly the PEMS badge spread
+        exp = expected_levels(str(badge or ""))
+        check(union == exp,
+              f"split {sid}: PEMS p.{key[0]} #{key[1]} badge {badge} expects "
+              f"{{{fmt_levels(exp)}}}; site rows publish {{{fmt_levels(union)}}} "
+              f"({'; '.join(producers)})")
+
+
+
 def main() -> int:
+    print(f"verifier manifest — {len(MANIFEST)} checks")
+    for cid, desc in MANIFEST:
+        print(f"  [{cid}] {desc}")
+    print()
+    section("stage1.pems_table")
     table = json.load(open(os.path.join(OUT, "pems_table.json"), encoding="utf-8"))
     align = json.load(open(os.path.join(OUT, "alignment.json"), encoding="utf-8"))
 
@@ -126,6 +263,7 @@ def main() -> int:
     check(noted == cont_rows,
           f"the {cont_rows} continuation rows are the ones the documents record ({noted})")
 
+    section("stage2.alignment")
     print("stage 2 — alignment")
     tot = align["totals"]
     check(tot["matched"] + tot["ambiguous"] == tot["site_rows"],
@@ -306,6 +444,13 @@ def main() -> int:
     check(f"**{len(tb_rows)} rows**" in tbmd,
           f"text-binding.md states the same row total ({len(tb_rows)})")
 
+    # ---- C2d: the split map. The 7 held rows split a PEMS row the region
+    # merges; the pairing is data in split-map.yaml, not a word in a handoff
+    # note, and the union invariant is re-derived from the site pages here.
+    section("c2.split_map")
+    check_split_map(pems_row)
+
+    section("deliverables")
     print("deliverables")
     for name in ("missing-rows.md", "ambiguous-rows.md", "alignment.json",
                  "pems_table.json", ".cache/pems_rows.jsonl"):
@@ -371,10 +516,18 @@ def main() -> int:
     check(f"**Total: {tot['ambiguous']} rows**" in amd,
           f"ambiguous-rows.md states the same total ({tot['ambiguous']})")
 
+    section("docs_clean")
     print("no protocol pages touched")
     st = subprocess.run(["git", "status", "--porcelain", "--", "docs/"], cwd=REPO,
                         capture_output=True, text=True).stdout.strip()
     check(st == "", "git status shows no modified files under docs/")
+
+    # The manifest is the contract: every listed check ran, and nothing ran
+    # that is not listed.
+    print()
+    check(_ran == {cid for cid, _ in MANIFEST},
+          f"verifier manifest covers the run ({len(_ran)} of {len(MANIFEST)} checks reached: "
+          + ", ".join(cid for cid, _ in MANIFEST if cid not in _ran) + ")")
 
     print()
     if fails:
