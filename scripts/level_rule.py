@@ -93,6 +93,19 @@ PENDING_CHIP = '<span class="lvl lvl-pending">PENDING</span>'
 PENDING_REASON = ('this protocol is not published in PEMS 2024; its source prints no PEMS '
                   'row to cite, so the level is not verified against a regional source')
 TEXT_TOKEN = re.compile(r'(?<![A-Za-z0-9])(EMR|EMT|A|I|P|MC)\s*:\s*')
+# Level words that can survive inside action text. TEXT_TOKEN above only sees the
+# "LEVEL:" prefixes the stripper removes, so a check built on it cannot see
+# "(as determined by EMT-I or P)" or "(AED for EMR/EMT, Manual for I/P)" — the very
+# tokens the conversion was supposed to settle. These four patterns do, and every hit
+# they make must be covered by an explicit keep decision in token-decisions.yaml.
+LEVEL_WORD = re.compile(r'\b(?:EMR|EMT|AEMT|Paramedic|Intermediate)\b', re.I)
+LEVEL_PAREN = re.compile(r'\([^)]*\b(?:A|I|P)\b[^)]*\)')
+LEVEL_PAIR = re.compile(r'(?<![A-Za-z0-9])(?:A|I|P|EMR|EMT)\s*/\s*(?:A|I|P|EMR|EMT)'
+                        r'(?![A-Za-z0-9])')
+LEVEL_RANGE = re.compile(r'(?<![A-Za-z0-9])(?:EMR|EMT|A|I|P)\s*(?:-|or)\s*(?:A|I|P)'
+                         r'(?![A-Za-z0-9])')
+LEVEL_HIT_RES = (LEVEL_WORD, LEVEL_PAREN, LEVEL_PAIR, LEVEL_RANGE)
+TOKEN_DECISIONS_YAML = os.path.join(AUD, 'token-decisions.yaml')
 SEPARATOR = re.compile(r'^\|[\s:|-]+\|$')
 NEW_HEADER = '| # | Level | Action / Intervention |'
 DIV_OPEN = '<div class="lv-wrap" markdown="1">'
@@ -263,6 +276,56 @@ def strip_tokens(action):
         pos = m.end() + 1
     out.append(action[pos:])
     return ''.join(out), found
+
+
+def level_hits(action):
+    """Every provider-level expression left in an action text, as merged spans.
+
+    Deliberately independent of strip_tokens: it does not care who put the word
+    there, only that a level word is in the published sentence. Overlapping matches
+    from the four patterns collapse to the widest span, so one parenthetical counts
+    once even though LEVEL_WORD, LEVEL_PAIR and LEVEL_RANGE all fire inside it.
+    """
+    spans = []
+    for rx in LEVEL_HIT_RES:
+        for m in rx.finditer(action):
+            spans.append((m.start(), m.end()))
+    merged = []
+    for start, end in sorted(spans):
+        if merged and start < merged[-1][1]:
+            merged[-1][1] = max(merged[-1][1], end)
+        else:
+            merged.append([start, end])
+    return [action[s:e] for s, e in merged]
+
+
+def load_token_decisions():
+    """Explicit keep/remove decisions for level words that survive in action text.
+
+    Returns (kept, removed): kept is keyed (file, row) -> list of hit strings, removed
+    is a list of records. A level word left on a page is a failure unless a `kept`
+    record names it, and a `kept` record that no longer matches the page is a failure
+    too, so the file cannot rot into a rubber stamp.
+    """
+    import yaml
+    if not os.path.exists(TOKEN_DECISIONS_YAML):
+        return {}, []
+    doc = yaml.safe_load(open(TOKEN_DECISIONS_YAML, encoding='utf-8')) or {}
+    kept, removed = {}, []
+    for rec in doc.get('kept') or []:
+        if not rec.get('file') or rec.get('row') is None:
+            raise SystemExit(f'token-decisions.yaml: incomplete kept record {rec!r}')
+        for k in ('hits', 'reason'):
+            if not rec.get(k):
+                raise SystemExit(f'token-decisions.yaml: {rec["file"]} row {rec["row"]} '
+                                 f'kept record has no {k}')
+        kept.setdefault((rec['file'], str(rec['row'])), []).extend(rec['hits'])
+    for rec in doc.get('removed') or []:
+        for k in ('file', 'row', 'hit', 'reason'):
+            if rec.get(k) in (None, ''):
+                raise SystemExit(f'token-decisions.yaml: incomplete removed record {rec!r}')
+        removed.append(rec)
+    return kept, removed
 
 
 # ----------------------------------------------------------------- level source
@@ -1013,6 +1076,23 @@ def emit_md(ledger):
     lines.append('')
     for f, row, toks in tokens:
         lines.append(f"- `{f.split('/')[-1]}` row {row}: removed {', '.join(toks)}")
+    kept, removed = load_token_decisions()
+    lines += ['', '## Level words kept in action text (deliberate)', '',
+              'Provider-level words a sweep of the action text still finds. Each is a clinical',
+              'qualifier, decided and recorded in `audit/level-scan/token-decisions.yaml`; a',
+              'later pass must not strip them. The sweep (`audit/level-scan/token_sweep.py`)',
+              'sees 0 such words on every Batch-2, neurologic and Aortic page.', '']
+    if not kept:
+        lines.append('None.')
+    for (f, row), hits in sorted(kept.items()):
+        lines.append(f"- `{f.split('/')[-1]}` row {row}: kept {', '.join(hits)}")
+    if removed:
+        lines.append('')
+        lines.append('Removed by decision (not restated by the chip, so not left to a later '
+                     'pass):')
+        for rec in removed:
+            lines.append(f"- `{rec['file'].split('/')[-1]}` row {rec['row']}: removed "
+                         f"{rec['hit']}")
     changed = [e for e in ledger if e['status'] == 'OK' and e['before']['leftmost']
                and e['before']['leftmost'] != e['level_published']]
     lines += ['', '## Level moved by the source (page level -> PEMS printed level)', '',
@@ -1033,7 +1113,17 @@ def emit_md(ledger):
               '- **Aortic Dissection & AAA (`04b`) has no PEMS 2024 protocol**: its source is',
               '  ODEMSA Section 2.5 (Revised 06/2015). It is converted to the 3-column chassis',
               '  with every row chipped `PENDING` (Pending OMD Authorization); see PENDING_OMD',
-              '  above. The page must not be given a PEMS citation by any later pass.']
+              '  above. The page must not be given a PEMS citation by any later pass.',
+              '- **Aortic Dissection row 11 (Medical Control contact) is chipped `PENDING`, not',
+              '  `MC`**, because this project\'s rule is one `PENDING` chip on every action row of',
+              '  a page with no PEMS protocol. Owner ruling needed: is `PENDING` alone correct on',
+              '  such a page, or should a Medical-Control row read `MC` + `PENDING` (both chips)?',
+              '  Nothing on the page changes until the owner rules.',
+              '- **`05_Stroke_TIA` row 9 is `OWNER_REQUIRED` with chip `A`** — the level the page',
+              '  published before conversion. The EMR it had been given rested only on PEMS',
+              '  p.131#2 by text resemblance, and that resemblance was withdrawn (the PEMS row',
+              '  records a last-known-well time and a contact, not a pre-registration call).',
+              '  Owner ruling needed: should the row read `EMR` *uncited* instead of `A`?']
     return '\n'.join(lines) + '\n'
 
 
@@ -1048,6 +1138,8 @@ def check():
     led = {(e['file'], str(e['row'])): e for e in ledger_rows}
 
     fails, report = [], []
+    kept_words, removed_words = load_token_decisions()
+    seen_kept = {}
     for rel in TARGETS:
         path = os.path.join(DOCS, rel)
         raw = open(path, encoding='utf-8').read()
@@ -1071,6 +1163,19 @@ def check():
             level = chips[0][1]
             if TEXT_TOKEN.search(row['action']):
                 fails.append(f'{rel} row {row["ordinal"]}: level token left in the action text')
+            hits = level_hits(row['action'])
+            allowed = kept_words.get((rel, str(row['ordinal'])), [])
+            for hit in hits:
+                if hit not in allowed:
+                    fails.append(f'{rel} row {row["ordinal"]}: level word {hit!r} left in the '
+                                 f'action text with no keep decision in '
+                                 f'audit/level-scan/token-decisions.yaml')
+            for a in allowed:
+                if a in hits:
+                    seen_kept[(rel, str(row['ordinal']), a)] = True
+                else:
+                    fails.append(f'{rel} row {row["ordinal"]}: token-decisions.yaml keeps {a!r} '
+                                 f'but the action text no longer contains it (stale decision)')
             ruled = rulings.get((rel, str(row['ordinal'])))
             if ruled:
                 if level != ruled['level']:
@@ -1169,6 +1274,19 @@ def check():
                              f'marker (OWNER_REQUIRED / bracketed)')
             if TEXT_TOKEN.search(row['action']):
                 fails.append(f'{rel} row {row["ordinal"]}: level token left in the action text')
+            allowed = kept_words.get((rel, str(row['ordinal'])), [])
+            pending_hits = level_hits(row['action'])
+            for hit in pending_hits:
+                if hit not in allowed:
+                    fails.append(f'{rel} row {row["ordinal"]}: level word {hit!r} left in the '
+                                 f'action text with no keep decision in '
+                                 f'audit/level-scan/token-decisions.yaml')
+            for a in allowed:
+                if a in pending_hits:
+                    seen_kept[(rel, str(row['ordinal']), a)] = True
+                else:
+                    fails.append(f'{rel} row {row["ordinal"]}: token-decisions.yaml keeps {a!r} '
+                                 f'but the action text no longer contains it (stale decision)')
             if re.search(r'\bp\.\s?\d+', row['action']):
                 fails.append(f'{rel} row {row["ordinal"]}: action text names a PEMS page — a '
                              f'pending row may not claim a PEMS citation')
@@ -1215,6 +1333,16 @@ def check():
     if mc.returncode != 0:
         fails += ['mc_wording: ' + l.strip() for l in mc.stdout.splitlines() if l.strip()]
 
+    # a keep decision may not point at a page or row that is not in scope
+    for (f, row), words in kept_words.items():
+        if f not in set(TARGETS + PENDING_TARGETS):
+            fails.append(f'token-decisions.yaml: {f} is not a converted page')
+            continue
+        for w in words:
+            if (f, row, w) not in seen_kept:
+                fails.append(f'token-decisions.yaml: {f} row {row} keeps {w!r} but that text '
+                             f'was not found in that row on the page')
+
     changed = [e for e in ledger_rows if e['status'] == 'OK' and e['before']['leftmost']
                and e['before']['leftmost'] != e['level_published']]
     text_tokens = [(e['file'], e['row'], e['before']['text_tokens'])
@@ -1235,6 +1363,10 @@ def check():
                                  'pems': f"p.{e['pems_page']}#{e['pems_ordinal']}"}
                                 for e in changed],
         'tokens_stripped': text_tokens,
+        'level_words_kept': [{'file': f, 'row': row, 'hit': hit}
+                             for (f, row, hit) in sorted(seen_kept)],
+        'level_words_removed': [{'file': r['file'], 'row': r['row'], 'hit': r['hit']}
+                                for r in removed_words],
     }
     print(json.dumps(summary, indent=1))
     if fails:
@@ -1245,8 +1377,10 @@ def check():
     print(f"\nOK — {summary['rows_total']} action rows across {summary['pages']} pages: "
           f"{summary['rows_verified']} carry exactly one marker equal to the level printed by the "
           f"cited PEMS 2024 row, {summary['rows_owner_required']} are flagged OWNER_REQUIRED with a "
-          f"recorded reason, {summary['rows_owner_ruled']} are owner_ruled. No level token remains "
-          f"in any action text.")
+          f"recorded reason, {summary['rows_owner_ruled']} are owner_ruled. "
+          f"{len(seen_kept)} level word(s) survive in action text as recorded clinical "
+          f"qualifiers (audit/level-scan/token-decisions.yaml); every other level token found by "
+          f"an independent sweep of the action text is either kept there or gone.")
     print(f"OK — {summary['rows_pending_omd']} action rows across "
           f"{summary['pending_pages']} page(s) are chipped PENDING (Pending OMD Authorization) "
           f"because PEMS 2024 publishes no such protocol; 0 of them claim a PEMS citation.")

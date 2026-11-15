@@ -306,6 +306,20 @@ source.
 - `04_Supraventricular_Tachycardia_PROC.md` row 15: removed P
 - `04_Supraventricular_Tachycardia_PROC.md` row 16: removed P, MC
 
+## Level words kept in action text (deliberate)
+
+Provider-level words a sweep of the action text still finds. Each is a clinical
+qualifier, decided and recorded in `audit/level-scan/token-decisions.yaml`; a
+later pass must not strip them. The sweep (`audit/level-scan/token_sweep.py`)
+sees 0 such words on every Batch-2, neurologic and Aortic page.
+
+- `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 8: kept (as determined by EMT-I or P)
+- `04_Chest_Pain_ACS_PROC.md` row 5: kept Intermediate, Paramedic
+- `04_V_Fib_Pulseless_V_Tach_PROC.md` row 5: kept (AED for EMR/EMT, Manual for I/P)
+
+Removed by decision (not restated by the chip, so not left to a later pass):
+- `04_Chest_Pain_ACS_PROC.md` row 4: removed (EMT)
+
 ## Level moved by the source (page level -> PEMS printed level)
 
 26 row(s). These are rows where the page under- or over-granted the
@@ -352,3 +366,13 @@ decision before the page is treated as final.
   ODEMSA Section 2.5 (Revised 06/2015). It is converted to the 3-column chassis
   with every row chipped `PENDING` (Pending OMD Authorization); see PENDING_OMD
   above. The page must not be given a PEMS citation by any later pass.
+- **Aortic Dissection row 11 (Medical Control contact) is chipped `PENDING`, not
+  `MC`**, because this project's rule is one `PENDING` chip on every action row of
+  a page with no PEMS protocol. Owner ruling needed: is `PENDING` alone correct on
+  such a page, or should a Medical-Control row read `MC` + `PENDING` (both chips)?
+  Nothing on the page changes until the owner rules.
+- **`05_Stroke_TIA` row 9 is `OWNER_REQUIRED` with chip `A`** — the level the page
+  published before conversion. The EMR it had been given rested only on PEMS
+  p.131#2 by text resemblance, and that resemblance was withdrawn (the PEMS row
+  records a last-known-well time and a contact, not a pre-registration call).
+  Owner ruling needed: should the row read `EMR` *uncited* instead of `A`?

@@ -1960,7 +1960,7 @@
   {
    "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
    "row": 4,
-   "action": "12-Lead ECG Acquisition (EMT): \u2022 Consider assessing EtCO2 and/or SpCO as indicated. \u2022 Acquire 12-Lead ECG within 5 minutes of patient contact. \u2022 Trans",
+   "action": "12-Lead ECG Acquisition: \u2022 Consider assessing EtCO2 and/or SpCO as indicated. \u2022 Acquire 12-Lead ECG within 5 minutes of patient contact. \u2022 Transmit to",
    "level_published": "EMT",
    "status": "OK",
    "reason": null,

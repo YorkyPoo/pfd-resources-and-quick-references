@@ -1,0 +1,70 @@
+# Explicit decisions for provider-level words that survive INSIDE action text.
+#
+# scripts/level_rule.py --check sweeps every action row for level words with patterns
+# that are independent of the conversion's own stripper (TEXT_TOKEN only sees the
+# "LEVEL:" prefixes it removes, so it cannot see a parenthetical). Any level word found
+# in an action text must be named here, or the check fails. A `kept` entry whose text is
+# no longer on the page also fails, so this file cannot silently rot into a rubber stamp.
+#
+# Two outcomes, and only two:
+#
+#   kept     the level word is a CLINICAL QUALIFIER: it changes what the action means and
+#            is intrinsic to the sentence. A later pass must not strip it.
+#   removed  the level word only restated the chip. The page has been edited; the record
+#            stays here so the removal is auditable and nobody "restores" it.
+#
+# Sweep evidence: audit/level-scan/token_sweep.py (same four patterns, run independently
+# of the checker). At the time of writing it finds 14 raw matches collapsing to 5
+# distinct expressions on 3 Batch-1 cardiac pages, and 0 on every Batch-2, neurologic and
+# Aortic page.
+
+kept:
+
+  - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
+    row: 8
+    hits:
+      - "(as determined by EMT-I or P)"
+    reason: >-
+      CLINICAL QUALIFIER. The parenthetical appears twice and both times names WHO may
+      make the rhythm determination the AED is advising on ("If AED is advising to shock
+      or rhythm is VF or VT (as determined by EMT-I or P), defibrillate..."). It does not
+      restate this row's chip (EMT): the row is an AED/rhythm-assessment row the EMR/EMT
+      can perform, and the EMT-I-or-P phrase scopes the interpretation that follows.
+      Stripping it would widen who may determine the rhythm. Deliberate, kept.
+
+  - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
+    row: 5
+    hits:
+      - Intermediate
+      - Paramedic
+    reason: >-
+      CLINICAL QUALIFIER. "Intermediate and Paramedic providers may interpret as STEMI
+      if: ..." names the providers whose interpretation counts, and states the criteria
+      they apply. Removing the words would leave "may interpret as STEMI", which grants
+      the interpretation to anyone. Deliberate, kept.
+      NOTE for the owner: this row's chip is P (the level the page published; the row is
+      OWNER_REQUIRED) while the sentence also names Intermediate. The chip/text
+      difference is part of the existing OWNER_REQUIRED flag on this row, not a level
+      this sweep may settle.
+
+  - file: protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md
+    row: 5
+    hits:
+      - "(AED for EMR/EMT, Manual for I/P)"
+    reason: >-
+      CLINICAL QUALIFIER. "(AED for EMR/EMT, Manual for I/P)" splits the defibrillation
+      action by the device each level may use; it is a device-scope instruction, not a
+      duplicate of the chip. The row is OWNER_REQUIRED precisely because PEMS p.63#7 is a
+      compound row (badge I with an inline [EMR]), and the ledger note for this row already
+      explains that neither I nor EMT is the whole answer. Deliberate, kept.
+
+removed:
+
+  - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
+    row: 4
+    hit: "(EMT)"
+    replaced_with: "**12-Lead ECG Acquisition:**"
+    reason: >-
+      LEFTOVER TOKEN. The parenthetical only restated the row's own chip (EMT) in the
+      bolded heading "**12-Lead ECG Acquisition (EMT):**". Removed; the heading, the
+      chip and every bullet are unchanged.
