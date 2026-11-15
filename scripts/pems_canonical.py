@@ -1264,13 +1264,23 @@ def stage2(seed: dict) -> dict:
     docs = seed["docs"]
     table = seed["table"]
     _build_df(docs)
+    import pems_text_binding as TB      # deferred: it imports this module
+    # C1d text-binding pass: the level columns of every PEMS row, so the pass can
+    # record what the row it cites actually prints in each provider column.
+    cols = {(r["page"], r["ordinal"]): r["columns"]
+            for d in docs for r in d["rows"]}
     dec = {d["site_page"]: d for d in table["page_decisions"]}
     results = []
     for pg in site_pages():
         d = dec.get(pg["rel"])
         if not d or d["decision"] != "level_gated":
             continue
-        results.append(align_page(pg, docs, d.get("pems_pages") or []))
+        res = align_page(pg, docs, d.get("pems_pages") or [])
+        # Structure has had its say; give the leftovers one text pass over the
+        # same page scope before the row's disposition is final.
+        TB.apply(res, {r["num"]: r["action"] for r in pg["rows"] if not r["divider"]},
+                 cols)
+        results.append(res)
 
     tot: dict = {"site_rows": 0, "matched": 0, "ambiguous": 0, "absent_from_site": 0}
     kinds: dict[str, int] = {}
@@ -1298,6 +1308,7 @@ def stage2(seed: dict) -> dict:
 
     totals = dict(tot)
     totals["ambiguous_by_kind"] = kinds
+    totals["text_binding"] = TB.counts(results)
     out = {"generated": _dt.datetime.now().isoformat(timespec="seconds"),
            "method": ("primary key = section heading + ordinal within section, then the "
                       "site row's own intervention label (bold head noun); text similarity "
@@ -1310,6 +1321,7 @@ def stage2(seed: dict) -> dict:
     write_missing(results, tot, table, delta)
     write_reconciliation(results, tot, delta)
     write_ambiguous(results, tot)
+    TB.write_md(results, os.path.join(OUTDIR, "text-binding.md"))
     return out
 
 
@@ -1456,6 +1468,11 @@ def _trust(row: dict) -> str:
     sim = row.get("similarity") or 0.0
     if basis == "section+ordinal":
         return "correct_structural"
+    if basis.startswith("text-binding"):
+        # The C1d pass never binds on similarity: it binds on a phrase that
+        # occurs upstream, or on a cleared coverage floor plus a drug/dose/label
+        # anchor. The evidence, not a score, is what makes it trustworthy.
+        return "correct_text_binding"
     if basis == "label+keyword":
         # A label binding already required EVERY distinctive label word to appear
         # in the PEMS row. A multi-word key is therefore evidence on its own; a
@@ -1539,6 +1556,11 @@ def delta_buckets(results: list[dict], tot: dict, docs: list[dict] | None = None
                 buckets["resolved_by_section_fallback"].append(rec)
             elif row.get("match_basis", "").startswith("label+keyword"):
                 buckets["paired_to_site_row_label"].append(rec)
+            elif row.get("match_basis", "").startswith("text-binding"):
+                # C1d: a row the structural pass left in the ambiguous pile and
+                # the text pass bound afterwards. Kept in its own bucket so the
+                # window of ambiguity this card closed is visible by name.
+                buckets["paired_to_site_row_text_binding"].append(rec)
             elif row.get("match_basis", "").startswith("section+ordinal"):
                 buckets["paired_to_site_row_section_ordinal"].append(rec)
             else:
@@ -1582,6 +1604,7 @@ def delta_buckets(results: list[dict], tot: dict, docs: list[dict] | None = None
     paired_total = (counts.get("paired_to_site_row_section_ordinal", 0)
                     + counts.get("paired_to_site_row_label", 0)
                     + counts.get("paired_to_site_row_text", 0)
+                    + counts.get("paired_to_site_row_text_binding", 0)
                     + counts.get("resolved_by_section_fallback", 0))
     left_gap = len(prior) - counts.get("still_absent", 0)
     return {
@@ -1605,6 +1628,7 @@ def delta_buckets(results: list[dict], tot: dict, docs: list[dict] | None = None
                 f"({counts.get('paired_to_site_row_section_ordinal', 0)} section+ordinal, "
                 f"{counts.get('paired_to_site_row_label', 0)} label, "
                 f"{counts.get('paired_to_site_row_text', 0)} text, "
+                f"{counts.get('paired_to_site_row_text_binding', 0)} text-binding pass, "
                 f"{counts.get('resolved_by_section_fallback', 0)} section-fallback), "
                 f"{counts.get('claimed_by_an_ambiguous_site_row', 0)} explained by an ambiguous "
                 f"site row, {counts.get('merged_into_a_site_row', 0)} merged inside a wider site "
@@ -1624,6 +1648,7 @@ def write_reconciliation(results: list[dict], tot: dict, delta: dict) -> None:
     paired = (counts.get("paired_to_site_row_section_ordinal", 0)
               + counts.get("paired_to_site_row_label", 0)
               + counts.get("paired_to_site_row_text", 0)
+              + counts.get("paired_to_site_row_text_binding", 0)
               + counts.get("resolved_by_section_fallback", 0))
     verdicts = collections.Counter(r["verdict"]
                                    for k in counts if k.startswith(("paired_to_site_row", "resolved_by"))
@@ -1674,6 +1699,8 @@ def write_reconciliation(results: list[dict], tot: dict, delta: dict) -> None:
         f"{counts.get('paired_to_site_row_section_ordinal', 0)} |\n",
         f"| paired to a site row on its label | {counts.get('paired_to_site_row_label', 0)} |\n",
         f"| paired to a site row on text evidence | {counts.get('paired_to_site_row_text', 0)} |\n",
+        f"| paired to a site row by the C1d text-binding pass (this fix) | "
+        f"{counts.get('paired_to_site_row_text_binding', 0)} |\n",
         f"| paired by the section-fallback scoring (this fix) | "
         f"{counts.get('resolved_by_section_fallback', 0)} |\n",
         f"| a duplicate copy inside the merged PEMS source | "
@@ -1688,10 +1715,11 @@ def write_reconciliation(results: list[dict], tot: dict, delta: dict) -> None:
         f"{counts.get('prior_claims_collapsed_into_one_current_row', 0)} |\n",
         f"| page not aligned this run | {counts.get('page_not_aligned_this_run', 0)} |\n",
         f"\nOf the {paired} rows that now pair, the mechanical screen trusts "
-        f"{verdicts.get('correct_label', 0) + verdicts.get('correct_text', 0) + verdicts.get('correct_structural', 0)} "
+        f"{verdicts.get('correct_label', 0) + verdicts.get('correct_text', 0) + verdicts.get('correct_structural', 0) + verdicts.get('correct_text_binding', 0)} "
         f"outright ({verdicts.get('correct_structural', 0)} section+ordinal, "
         f"{verdicts.get('correct_label', 0)} distinctive label, "
-        f"{verdicts.get('correct_text', 0)} text evidence) and finds "
+        f"{verdicts.get('correct_text', 0)} text evidence, "
+        f"{verdicts.get('correct_text_binding', 0)} text-binding pass) and finds "
         f"**{len(weak)} too weak to accept without a human**. All {len(weak)} were read "
         "against both texts and are recorded in `reconciliation.json` under "
         "`prior_to_now.rows[*].human_verdict` / `human_note`:\n\n",
@@ -1745,9 +1773,10 @@ def write_missing(results: list[dict], tot: dict, table: dict, delta: dict) -> N
          "(`prior_to_now.rows`, `new_unpaired.rows`).\n",
          f"- **{c.get('still_absent', 0)} of the {PRIOR_ABSENT} are still absent** and are "
          "listed below.\n",
-         f"- **{(c.get('paired_to_site_row_section_ordinal', 0) + c.get('paired_to_site_row_label', 0) + c.get('paired_to_site_row_text', 0) + c.get('resolved_by_section_fallback', 0))} of them now pair to a site row** "
+         f"- **{(c.get('paired_to_site_row_section_ordinal', 0) + c.get('paired_to_site_row_label', 0) + c.get('paired_to_site_row_text', 0) + c.get('paired_to_site_row_text_binding', 0) + c.get('resolved_by_section_fallback', 0))} of them now pair to a site row** "
         f"(section+ordinal {c.get('paired_to_site_row_section_ordinal', 0)}, label "
         f"{c.get('paired_to_site_row_label', 0)}, text {c.get('paired_to_site_row_text', 0)}, "
+        f"text-binding pass {c.get('paired_to_site_row_text_binding', 0)}, "
         f"section-fallback {c.get('resolved_by_section_fallback', 0)}); each carries its "
         "similarity and basis in `reconciliation.json`, and any pairing below the trust "
         "threshold is flagged there for a human.\n",
@@ -1836,10 +1865,16 @@ def write_ambiguous(results: list[dict], tot: dict) -> None:
         L.append(f"\n## `{r['site_page']}` — {len(amb)} ambiguous\n")
         for a in sorted(amb, key=lambda x: (x.get("reason_kind") or "", str(x["site_row"]))):
             ev = _evidence_for(r["site_page"], a["action"])
+            tb = a.get("text_binding")
             L.append(f"- row **{a['site_row']}** ({a.get('section') or 'base section'}) "
                      f"[`{a.get('reason_kind', 'other')}`] — {a['action'][:150]}\n"
                      f"  - why: {a['reason']}\n"
-                     + (f"  - evidence: `{'`, `'.join(ev)}`\n" if ev else ""))
+                     + (f"  - evidence: `{'`, `'.join(ev)}`\n" if ev else "")
+                     + (f"  - text pass: `{tb['verdict']}` / `{tb.get('subtype', tb.get('method'))}`"
+                        f" — {tb.get('note') or ('bound: ' + tb.get('matched_phrase', ''))}"
+                        f" (best coverage {tb['coverage']:.2f}, p.{tb['pems_page']} row "
+                        f"{tb['pems_ordinal']}; see `text-binding.md`)\n"
+                        if tb else ""))
     open(AMBIG_MD, "w", encoding="utf-8").write("".join(L))
 
 

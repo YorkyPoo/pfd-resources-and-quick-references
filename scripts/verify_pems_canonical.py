@@ -172,13 +172,25 @@ def main() -> int:
     # split repair does re-assign a PEMS row, and must not move it below the
     # floor). Label bindings are the documented exception: they pair on a
     # structural key, and their `similarity` is reported, not required.
+    # C1d's text-binding pairs are the second documented exception, and they pay
+    # for it: a `token_binding` row must clear 0.40 on COVERAGE (the fraction of
+    # the site row's significant tokens present in the PEMS row), which is the
+    # floor the pass itself applies. `verbatim` rows bind on a phrase that occurs
+    # upstream and need no score at all. Both are checked below.
+    is_tb = lambda r: (r.get("match_basis") or "").startswith("text-binding")
     floor_breach = [r for r in matched
                     if not (r.get("match_basis") or "").startswith("label+keyword")
+                    and not is_tb(r)
                     and (r.get("similarity") or 0.0) < 0.40]
     check(not floor_breach,
           f"no text/section pairing sits below the 0.40 floor ({len(floor_breach)} below)")
     for r in floor_breach[:10]:
         print("        below floor:", r["site_row"], r.get("similarity"), r["action"][:70])
+    tb_floor = [r for r in matched if is_tb(r)
+                and (r.get("text_binding") or {}).get("method") == "token_binding"
+                and (r["text_binding"]["coverage"] or 0.0) < 0.40]
+    check(not tb_floor,
+          f"every text-binding token binding clears 0.40 coverage ({len(tb_floor)} below)")
 
     # A site row that splits a PEMS row another site row already took is reported
     # as `shared_pems_row` WITH the containing row and the overlap. Check the
@@ -220,6 +232,80 @@ def main() -> int:
     for b in bad_ev[:10]:
         print("        bad evidence:", b)
 
+    # ---- C1d: the text-binding pass over the `no_counterpart` rows.
+    # Every row the structural pass left as `no_counterpart` must now carry
+    # exactly one verdict with its evidence, and a `bound_by_text` row's
+    # `matched_phrase` must really occur in the PEMS row it names — the binding is
+    # only worth anything if the phrase is genuinely upstream. A bound row's
+    # badge must also be the badge of the row it cites, not one it inherited.
+    import pems_text_binding as TB  # noqa: E402
+    tb_rows, tb_bad = [], []
+    for p in align["pages"]:
+        for r in p["rows"]:
+            tb = r.get("text_binding")
+            if not tb:
+                continue
+            tb_rows.append((p["site_page"], r))
+            if tb["verdict"] not in ("bound_by_text", "no_evidence_local"):
+                tb_bad.append((r["site_row"], "verdict is not one of the two"))
+            if "coverage_row" not in tb or "coverage" not in tb:
+                tb_bad.append((r["site_row"], "coverage not recorded"))
+            if tb["verdict"] == "no_evidence_local" and not tb.get("subtype"):
+                tb_bad.append((r["site_row"], "no_evidence_local without a subtype"))
+            if not (tb.get("query") or tb.get("pages_searched") or
+                    tb["verdict"] == "bound_by_text"):
+                tb_bad.append((r["site_row"], "no negative search recorded"))
+            if tb["verdict"] == "bound_by_text":
+                src = None
+                for d in table["pems_docs"]:
+                    for s in d["rows"]:
+                        if (s["page"], s["ordinal"]) == (tb["pems_page"], tb["pems_ordinal"]):
+                            src = s
+                if src is None:
+                    tb_bad.append((r["site_row"], "names a PEMS row that does not exist"))
+                    continue
+                if src["verbatim_text"] != tb["pems_row_text"]:
+                    tb_bad.append((r["site_row"], "pems_row_text is not verbatim"))
+                if list(src["badge_tokens"]) != list(tb["badge_tokens"]):
+                    tb_bad.append((r["site_row"], "badge_tokens are not the source row's"))
+                phrase = tb["matched_phrase"]
+                if tb["method"] == "verbatim":
+                    if phrase.lower() not in src["verbatim_text"].lower():
+                        tb_bad.append((r["site_row"], "verbatim phrase not in the PEMS row"))
+                else:
+                    words = set(TB._words(src["verbatim_text"]))
+                    if not all(w in words for w in TB._words(phrase)):
+                        tb_bad.append((r["site_row"], "token anchor not in the PEMS row"))
+                if r["status"] != "matched":
+                    tb_bad.append((r["site_row"], "bound row is not matched"))
+                if (r.get("pems_page"), r.get("pems_ordinal")) != (tb["pems_page"],
+                                                                  tb["pems_ordinal"]):
+                    tb_bad.append((r["site_row"], "matched against a different PEMS row"))
+            else:
+                if r["status"] == "matched":
+                    tb_bad.append((r["site_row"], "no_evidence_local row is marked matched"))
+    # every leftover row of the aligner has a verdict: the pass may not skip one
+    unbind = [r for p in align["pages"] for r in p["rows"]
+              if r.get("reason_kind") == "no_counterpart" and not r.get("text_binding")]
+    check(not unbind, f"every no_counterpart row carries a text-binding verdict "
+                      f"({len(unbind)} without)")
+    check(not tb_bad, f"the {len(tb_rows)} text-binding verdicts check out "
+                      f"({len(tb_bad)} bad)")
+    for b in tb_bad[:10]:
+        print("        bad text binding:", b)
+    tbc = tot.get("text_binding") or {}
+    bound_n = sum(1 for _p, r in tb_rows if r["text_binding"]["verdict"] == "bound_by_text")
+    check(tbc.get("bound_by_text") == bound_n,
+          f"totals count {tbc.get('bound_by_text')} bound rows, the pages carry {bound_n}")
+    check(sum(tbc.get("no_evidence_local_by_subtype", {}).values())
+          == tbc.get("no_evidence_local", -1),
+          "every no_evidence_local row is counted under exactly one subtype")
+    check(os.path.exists(os.path.join(OUT, "text-binding.md")),
+          "text-binding.md exists")
+    tbmd = open(os.path.join(OUT, "text-binding.md"), encoding="utf-8").read()
+    check(f"**{len(tb_rows)} rows**" in tbmd,
+          f"text-binding.md states the same row total ({len(tb_rows)})")
+
     print("deliverables")
     for name in ("missing-rows.md", "ambiguous-rows.md", "alignment.json",
                  "pems_table.json", ".cache/pems_rows.jsonl"):
@@ -241,6 +327,7 @@ def main() -> int:
         paired = (c.get("paired_to_site_row_section_ordinal", 0)
                   + c.get("paired_to_site_row_label", 0)
                   + c.get("paired_to_site_row_text", 0)
+                  + c.get("paired_to_site_row_text_binding", 0)
                   + c.get("resolved_by_section_fallback", 0))
         check(paired == b["prior_missing_now_paired"],
               f"paired count {paired} equals the bridge's paired count")
