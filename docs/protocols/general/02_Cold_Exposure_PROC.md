@@ -29,7 +29,7 @@ Guidelines for managing systemic hypothermia and localized cold injuries, emphas
 | 6 | If patient is alert and responsive: Use active external rewarming with heat packs, warm blankets, etc. |  | • | • | • | • |
 | 7 | **Cardiac Arrest:** Make persistent attempts at resuscitation for victims of prolonged cold exposure. Begin CPR and continuous warming procedures. | • | • | • | • | • |
 | 8 | Rapid transport immediately with resuscitation efforts continued en route. Do not delay transport waiting for ALS. | • | • | • | • | • |
-| 9 | Contact Poquoson Medical Control prior to use of AED. | MC | MC | MC | MC | MC |
+| 9 | Contact Medical Control prior to use of AED. | MC | MC | MC | MC | MC |
 
 </div>
 

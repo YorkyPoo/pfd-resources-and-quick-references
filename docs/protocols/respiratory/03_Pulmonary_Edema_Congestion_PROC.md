@@ -44,7 +44,7 @@ Management of acute cardiogenic pulmonary edema and congestion due to congestive
 | 10 | **[Nitroglycerin](../../pharmacology/Nitroglycerin.md)**<br>Adult: **0.4 mg SL** |  |  |  | • | • |
 | 11 | **[Nitroglycerin](../../pharmacology/Nitroglycerin.md)** Repeat Administration:<br>May repeat every 5 minutes as needed if SBP remains > 100 mmHg / MAP > 65 mmHg (maximum 3 doses) |  |  | • | • | • |
 | 12 | **Furosemide (Lasix)**<br>Adult: **40 mg IV/IO slow push** |  |  |  | • | • |
-| 13 | Contact Poquoson Medical Control for guidance as needed | MC | MC | MC | MC | MC |
+| 13 | Contact Medical Control for guidance as needed | MC | MC | MC | MC | MC |
 
 </div>
 

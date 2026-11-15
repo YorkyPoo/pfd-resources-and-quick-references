@@ -29,7 +29,7 @@ Guidelines for managing life-threatening hemorrhage across various anatomical lo
 | 6 | **Thoracoabdominal:** Apply direct pressure / chest seal (DO NOT pack). | • | • | • | • | • |
 | 7 | Apply pelvic binder if unstable pelvis suspected. | • | • | • | • | • |
 | 8 | Consider pain control per Poquoson Protocol(s). |  | • | • | • | • |
-| 9 | Contact Poquoson Medical Control if hemorrhage cannot be controlled and transport immediately. | MC | MC | MC | MC | MC |
+| 9 | Contact Medical Control if hemorrhage cannot be controlled and transport immediately. | MC | MC | MC | MC | MC |
 
 </div>
 

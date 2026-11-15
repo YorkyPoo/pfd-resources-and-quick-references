@@ -53,3 +53,14 @@ the action text.
 - `04_Supraventricular_Tachycardia_PROC.md` row 14: removed P
 - `04_Supraventricular_Tachycardia_PROC.md` row 15: removed P
 - `04_Supraventricular_Tachycardia_PROC.md` row 16: removed P, MC
+
+## OPEN OWNER QUESTIONS
+
+Recorded, not fixed. Neither item is verified against PEMS 2024; both need the
+owner's decision before the page is treated as final.
+
+- **SVT row 2 "Assess patient stability (chest pain, dyspnea, AMS, shock)"** — no
+  PEMS 2024 row authorises a level. Currently `EMT` inherited from the old page,
+  flagged OWNER_REQUIRED. Awaiting the owner's decision; not verified.
+- **Post-ROSC has no row for PEMS p.59#0** ("Follow Universal Patient Care…", badge
+  EMR) — missing row, not a level defect.

@@ -37,7 +37,7 @@ Guidelines for the rapid assessment and management of suspected traumatic injuri
 | 10 | Tension pneumothorax: Decompress the affected side(s). Refer to Chest Decompression procedure. |  |  |  | • | • |
 | 11 | Traumatic Cardiac Arrest: Refer to Cardiac Arrest: Traumatic protocol. |  |  |  | • | • |
 | 12 | If the patient meets the trauma triage criteria according to Administrative Policy – Trauma Field Triage, transport immediately to a Level 1 or Level II Trauma Center. Goal scene time: Less than 10 minutes. |  | • | • | • | • |
-| 13 | Contact Poquoson Medical Control for guidance and/or optimal destination determination as needed. | MC | MC | MC | MC | MC |
+| 13 | Contact Medical Control for guidance and/or optimal destination determination as needed. | MC | MC | MC | MC | MC |
 
 </div>
 

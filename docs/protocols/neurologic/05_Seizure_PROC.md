@@ -34,7 +34,7 @@ Guidelines for managing witnessed or reported seizures, focusing on airway prote
 | 4 | Refer to Overdose/Poisoning protocol if indicated |  | • | • | • | • |
 | 5 | Actively seizing >5 mins:<br>**[Midazolam](../../pharmacology/Midazolam.md) 5 mg IV/IO** or **10 mg IM** (Adult & Ped >40kg)<br>\| **[Midazolam](../../pharmacology/Midazolam.md) 2.5 mg IV/IO** or **5 mg IM** (Ped <40kg)<br>(Repeat once in 5 mins) |  |  |  | • | • |
 | 6 | Use HALF dose **[Midazolam](../../pharmacology/Midazolam.md)** for frail/hypotensive/elderly >65y |  |  |  | • | • |
-| 7 | Contact Poquoson Medical Control and initiate transport if seizing >5 mins after 2nd dose of **[Midazolam](../../pharmacology/Midazolam.md)** | MC | MC | MC | MC | MC |
+| 7 | Contact Medical Control and initiate transport if seizing >5 mins after 2nd dose of **[Midazolam](../../pharmacology/Midazolam.md)** | MC | MC | MC | MC | MC |
 
 </div>
 

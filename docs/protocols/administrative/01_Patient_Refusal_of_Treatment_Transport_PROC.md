@@ -38,8 +38,8 @@ Guidelines for assessing capacity, identifying surrogate decision makers, and ob
 | 3 | Identify appropriate surrogate decision maker (in descending order) if the patient lacks capacity or competence. |  | • | • | • | • |
 | 4 | Clearly document information provided; obtain signatures for refusal from patient or surrogate and at least 1 adult witness. |  | • | • | • | • |
 | 5 | Contact law enforcement regarding issuance of a Psychiatric ECO for patients with acute psychiatric emergencies risk of harm. |  | • | • | • | • |
-| 6 | Contact **Poquoson Medical Control** regarding issuance of a Medical ECO for acute medical emergencies lacking capacity. | MC | MC | MC | MC | MC |
-| 7 | Contact **Poquoson Medical Control** for assistance if unsure of capacity, surrogate validity, or if patient refuses despite severe risk. | MC | MC | MC | MC | MC |
+| 6 | Contact **Medical Control** regarding issuance of a Medical ECO for acute medical emergencies lacking capacity. | MC | MC | MC | MC | MC |
+| 7 | Contact **Medical Control** for assistance if unsure of capacity, surrogate validity, or if patient refuses despite severe risk. | MC | MC | MC | MC | MC |
 
 </div>
 

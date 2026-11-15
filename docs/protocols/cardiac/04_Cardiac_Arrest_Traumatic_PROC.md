@@ -33,7 +33,7 @@ Resuscitation guidelines for traumatic cardiac arrest, prioritizing hemorrhage c
 | 8 | Assess Shock Index > 1 / Resuscitate prior to intubation |  |  |  |  | • |
 | 9 | Perform bilateral chest decompression for tension pneumo |  |  |  |  | • |
 | 10 | Rapid transport to Level I/II Trauma Center (Goal < 10 mins) |  | • | • | • | • |
-| 11 | Contact Poquoson Medical Control for guidance / destination | MC | MC | MC | MC | MC |
+| 11 | Contact Medical Control for guidance / destination | MC | MC | MC | MC | MC |
 
 </div>
 

@@ -36,7 +36,7 @@ Guidelines for managing thermal, chemical, and radiation burns, emphasizing airw
 | 4 | Apply clean, dry dressings to burns. Prevent loss of body heat and keep the patient warm. |  | • | • | • | • |
 | 5 | Establish IV/IO access on a non-burned extremity, if possible (preferably obtain two sites of access). |  |  | • | • | • |
 | 6 | Hydrofluoric Acid (HF) Burns with Hypotension: Administer **[Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) 1 g** IV/IO over 3 mins (Repeat in 5 mins PRN). |  |  |  |  |  |
-| 7 | Contact Poquoson Medical Control if the most appropriate transport destination is unclear based on criteria. | MC | MC | MC | MC | MC |
+| 7 | Contact Medical Control if the most appropriate transport destination is unclear based on criteria. | MC | MC | MC | MC | MC |
 
 </div>
 

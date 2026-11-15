@@ -437,6 +437,14 @@ def emit_md(ledger):
     lines.append('')
     for f, row, toks in tokens:
         lines.append(f"- `{f.split('/')[-1]}` row {row}: removed {', '.join(toks)}")
+    lines += ['', '## OPEN OWNER QUESTIONS', '',
+              'Recorded, not fixed. Neither item is verified against PEMS 2024; both need the',
+              "owner's decision before the page is treated as final.", '',
+              '- **SVT row 2 "Assess patient stability (chest pain, dyspnea, AMS, shock)"** — no',
+              '  PEMS 2024 row authorises a level. Currently `EMT` inherited from the old page,',
+              '  flagged OWNER_REQUIRED. Awaiting the owner\'s decision; not verified.',
+              '- **Post-ROSC has no row for PEMS p.59#0** ("Follow Universal Patient Care…", badge',
+              '  EMR) — missing row, not a level defect.']
     return '\n'.join(lines) + '\n'
 
 
@@ -483,6 +491,13 @@ def check():
             ok_rows.append((row['ordinal'], level))
         report.append({'file': rel, 'rows': len(rows), 'verified': len(ok_rows),
                        'owner_required': owner_rows})
+
+    # the MC wording guard sweeps the whole docs tree, not just TARGETS: an MC-badged row
+    # must name the function "Medical Control", never a local office or a named person.
+    mc = subprocess.run([sys.executable, os.path.join(ROOT, 'scripts', 'mc_wording.py'),
+                         '--check'], capture_output=True, text=True)
+    if mc.returncode != 0:
+        fails += ['mc_wording: ' + l.strip() for l in mc.stdout.splitlines() if l.strip()]
 
     # what the collapse actually changed, counted from the ledger (never hand-counted)
     try:

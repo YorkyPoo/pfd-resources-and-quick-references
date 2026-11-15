@@ -53,7 +53,7 @@ Supraventricular tachycardia (SVT) is a rapid rhythm originating above the ventr
 | 7 | <span class="lvl lvl-i">I</span> | If rhythm regular, **[Adenosine](../../pharmacology/Adenosine.md) (Adenocard)** **6 mg** IV/IO (Adult)<br>or **0.1 mg/kg** IV/IO (Pediatric, max 6 mg)<br>Followed by 20 mL (Adult) or 10–20 mL (Ped) **0.9% Sodium chloride** flush |
 | 8 | <span class="lvl lvl-i">I</span> | If no conversion after 2 minutes, repeat [Adenosine](../../pharmacology/Adenosine.md) at DOUBLE initial dose |
 | 9 | <span class="lvl lvl-i">I</span> | If rhythm irregular/atrial fibrillation, initiate transport<br>Monitor for signs of poor perfusion |
-| 10 | <span class="lvl lvl-mc">MC</span> | Contact Poquoson OMD for guidance<br>Ensure 12-Lead ECG transmitted |
+| 10 | <span class="lvl lvl-mc">MC</span> | Contact Medical Control for guidance<br>Ensure 12-Lead ECG transmitted |
 
 </div>
 

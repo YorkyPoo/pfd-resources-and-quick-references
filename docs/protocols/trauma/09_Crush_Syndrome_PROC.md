@@ -35,7 +35,7 @@ Guidelines for managing prolonged entrapment >30 minutes and crush injuries, foc
 | 6 | Administer, preferably via separate lines (when able, initiate prior to release):<br>- ADULT: **[Calcium Chloride](../../pharmacology/Calcium%20Chloride.md)** **1 g** IV/IO over 3 minutes.<br>- PEDIATRIC: **[Calcium Chloride](../../pharmacology/Calcium%20Chloride.md)** **20 mg/kg** IV/IO over 3 minutes. Maximum dose **1,000 mg (1 g)**.<br>*For persistent ECG changes suggestive of crush syndrome or cardiac arrest, repeat once.* |  |  |  |  | • |
 | 7 | Assess and continuously monitor cardiac rhythm. |  |  | • | • | • |
 | 8 | Extricate patient from entrapment and transport per Administrative Policy – Trauma Field Triage. |  | • | • | • | • |
-| 9 | If it is anticipated the patient will not be able to be promptly and safely extricated, contact Poquoson Medical Control at a regional trauma center for additional resources. | MC | MC | MC | MC | MC |
+| 9 | If it is anticipated the patient will not be able to be promptly and safely extricated, contact Medical Control at a regional trauma center for additional resources. | MC | MC | MC | MC | MC |
 
 </div>
 

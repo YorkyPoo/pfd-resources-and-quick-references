@@ -33,7 +33,7 @@ Guidelines for the management of pulseless ventricular tachycardia and ventricul
 | 9 | Persistent VF/VT: **[Magnesium Sulfate](../../pharmacology/Magnesium%20Sulfate.md) 2 g IV/IO** (Adult) / [MC] **40 mg/kg** (Ped max 2g) |  |  |  | • | • |
 | 10 | Dialysis/Crush/Hyperkalemia: **[Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) 1 g IV/IO** (Adult) / **20 mg/kg** (Ped max 1g) THEN flush THEN **[Sodium Bicarbonate](../../pharmacology/Sodium%20Bicarbonate.md) 50 mEq IV/IO** (Adult) / **1 mEq/kg** (Ped max 50 mEq) |  |  |  | • | • |
 | 11 | Proceed to Post ROSC Care if pulses return | • | • | • | • | • |
-| 12 | Contact Poquoson Medical Control for guidance / termination of resuscitation | MC | MC | MC | MC | MC |
+| 12 | Contact Medical Control for guidance / termination of resuscitation | MC | MC | MC | MC | MC |
 
 </div>
 
