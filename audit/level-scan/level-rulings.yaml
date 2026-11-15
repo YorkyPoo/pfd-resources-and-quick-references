@@ -1,0 +1,21 @@
+# Owner rulings on provider level
+#
+# A ruling here is the OWNER'S DECISION about the level of an action that no PEMS 2024
+# row badges. It is not a source citation: the ledger reports it as `owner_ruled`,
+# distinct from `OK` (PEMS-verified), and `level_rule.py --check` refuses to treat it
+# as verified. Never cite a PEMS page for a ruled row.
+#
+# Consumed by scripts/level_rule.py (--write / --check).
+
+rulings:
+  - file: protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md
+    row: 2
+    level: EMR                       # chip on the page
+    status: owner_ruled
+    date: "2026-11-15"
+    ruling: "EMR — any provider may assess stability."
+    action: "Assess patient stability (chest pain, dyspnea, AMS, shock)"
+    note: >-
+      Owner ruling 2026-11-15: EMR — any provider may assess stability. No PEMS 2024 row
+      badges this action; this is an owner decision, not a source citation. Do not cite
+      p.135 for it.

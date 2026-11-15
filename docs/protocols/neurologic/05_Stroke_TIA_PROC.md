@@ -31,7 +31,7 @@ Guidelines for the rapid assessment and transport of patients with suspected Str
 | 6 | Triage: Symptoms <24 hrs & RACE 5-9 -> Transport to closest Comprehensive Stroke Center (if <30 min delay) |  | • | • | • | • |
 | 7 | Triage: Symptoms >24 hrs OR RACE 0-4 -> Transport to closest Primary Stroke Center |  |  | • | • | • |
 | 8 | Establish 18g IV in Right AC (preferred for rapid imaging) |  |  |  | • | • |
-| 9 | Call Poquoson COR at receiving facility with Name/DOB for rapid registration |  |  | • | • | • |
+| 9 | Call COR at the receiving facility with Name/DOB for rapid registration |  |  | • | • | • |
 
 </div>
 

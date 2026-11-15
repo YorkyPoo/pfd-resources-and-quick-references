@@ -12,6 +12,7 @@
    "action": "Follow Universal Patient Care / Initial Patient Contact",
    "level_published": "EMR",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 135,
    "pems_ordinal": 0,
    "pems_badge": "EMR",
@@ -20,13 +21,7 @@
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
-    "markers": [
-     "EMR",
-     "EMT",
-     "A",
-     "I",
-     "P"
-    ],
+    "markers": [],
     "text_label": null,
     "text_tokens": []
    },
@@ -36,8 +31,13 @@
    "file": "protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md",
    "row": 2,
    "action": "Assess patient stability (chest pain, dyspnea, AMS, shock)",
-   "level_published": "EMT",
-   "status": "OWNER_REQUIRED",
+   "level_published": "EMR",
+   "status": "owner_ruled",
+   "owner_ruling": {
+    "date": "2026-11-15",
+    "ruling": "EMR \u2014 any provider may assess stability.",
+    "note": "Owner ruling 2026-11-15: EMR \u2014 any provider may assess stability. No PEMS 2024 row badges this action; this is an owner decision, not a source citation. Do not cite p.135 for it."
+   },
    "pems_page": null,
    "pems_ordinal": null,
    "pems_badge": null,
@@ -45,13 +45,8 @@
    "pems_text": null,
    "basis": null,
    "before": {
-    "leftmost": "EMT",
-    "markers": [
-     "EMT",
-     "A",
-     "I",
-     "P"
-    ],
+    "leftmost": "EMR",
+    "markers": [],
     "text_label": null,
     "text_tokens": []
    },
@@ -63,6 +58,7 @@
    "action": "Obtain and transmit 12-Lead ECG",
    "level_published": "EMT",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 135,
    "pems_ordinal": 1,
    "pems_badge": "EMT",
@@ -71,13 +67,8 @@
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
-    "markers": [
-     "EMT",
-     "A",
-     "I",
-     "P"
-    ],
-    "text_label": "EMT",
+    "markers": [],
+    "text_label": null,
     "text_tokens": [
      "EMT"
     ]
@@ -90,6 +81,7 @@
    "action": "Obtain IV access",
    "level_published": "A",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 135,
    "pems_ordinal": 2,
    "pems_badge": "A",
@@ -97,12 +89,9 @@
    "pems_text": "Obtain IV access. Consider: ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 \u2013 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO Repeat as needed to maintain adequate perfusion, up to 60 mL/kg total.",
    "basis": "adjudicated:set_cells",
    "before": {
-    "leftmost": "I",
-    "markers": [
-     "I",
-     "P"
-    ],
-    "text_label": "A",
+    "leftmost": "A",
+    "markers": [],
+    "text_label": null,
     "text_tokens": [
      "A"
     ]
@@ -115,6 +104,7 @@
    "action": "0.9% Sodium chloride up to 1 L IV/IO (Adult) 250 \u2013 500 mL boluses or 20 mL/kg IV/IO (Pediatric) Repeat as needed, max 60 mL/kg total",
    "level_published": "A",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 135,
    "pems_ordinal": 2,
    "pems_badge": "A",
@@ -123,12 +113,8 @@
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
-    "markers": [
-     "A",
-     "I",
-     "P"
-    ],
-    "text_label": "A",
+    "markers": [],
+    "text_label": null,
     "text_tokens": [
      "A"
     ]
@@ -141,6 +127,7 @@
    "action": "If rhythm regular, Adenosine (Adenocard) 6 mg IV/IO (Adult) or 0.1 mg/kg IV/IO (Pediatric, max 6 mg) Followed by 20 mL (Adult) or 10\u201320 mL (Ped) 0.9% ",
    "level_published": "I",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 135,
    "pems_ordinal": 3,
    "pems_badge": "I",
@@ -149,11 +136,8 @@
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
-    "markers": [
-     "I",
-     "P"
-    ],
-    "text_label": "I",
+    "markers": [],
+    "text_label": null,
     "text_tokens": [
      "I"
     ]
@@ -166,6 +150,7 @@
    "action": "If no conversion after 2 minutes, repeat Adenosine at DOUBLE initial dose",
    "level_published": "I",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 135,
    "pems_ordinal": 3,
    "pems_badge": "I",
@@ -173,11 +158,9 @@
    "pems_text": "If the rhythm is regular, consider: ADULT: Adenosine (Adenocard) 6 mg IV/IO followed by a 20 mL 0.9% Sodium chloride flush. PEDIATRIC: Adenosine (Adenocard) 0.1 mg/kg IV/IO followed by a 10 \u2013 20 mL 0.9% Sodium chloride flush. Maximum dose 6 mg. If no conversion within 2 minutes, consider repeating one time at double the initial dose.",
    "basis": "adjudicated:set_cells",
    "before": {
-    "leftmost": "P",
-    "markers": [
-     "P"
-    ],
-    "text_label": "I",
+    "leftmost": "I",
+    "markers": [],
+    "text_label": null,
     "text_tokens": [
      "I"
     ]
@@ -190,6 +173,7 @@
    "action": "If rhythm irregular/atrial fibrillation, initiate transport Monitor for signs of poor perfusion",
    "level_published": "I",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 135,
    "pems_ordinal": 4,
    "pems_badge": "I",
@@ -198,11 +182,8 @@
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
-    "markers": [
-     "I",
-     "P"
-    ],
-    "text_label": "I",
+    "markers": [],
+    "text_label": null,
     "text_tokens": [
      "I"
     ]
@@ -212,9 +193,10 @@
   {
    "file": "protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md",
    "row": 10,
-   "action": "Contact Poquoson OMD for guidance Ensure 12-Lead ECG transmitted",
+   "action": "Contact Medical Control for guidance Ensure 12-Lead ECG transmitted",
    "level_published": "MC",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 136,
    "pems_ordinal": 7,
    "pems_badge": "MC",
@@ -222,12 +204,9 @@
    "pems_text": "Contact Medical Control if uncertain regarding rhythm, most appropriate therapy, and for guidance as needed. Ensure a 12-Lead ECG is transmitted.",
    "basis": "alignment:merged_into_site_row",
    "before": {
-    "leftmost": "I",
-    "markers": [
-     "I",
-     "P"
-    ],
-    "text_label": "MC",
+    "leftmost": "MC",
+    "markers": [],
+    "text_label": null,
     "text_tokens": [
      "MC"
     ]
@@ -240,6 +219,7 @@
    "action": "For light sedation, consider Midazolam (Versed) 2.5 mg IV/IO or 5 mg IN/IM (Adult) 0.05 mg/kg IV/IO or 0.1 mg/kg IM (Pediatric) Max: 2.5 mg IV/IO or 5",
    "level_published": "I",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 135,
    "pems_ordinal": 5,
    "pems_badge": "I",
@@ -248,11 +228,8 @@
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
-    "markers": [
-     "I",
-     "P"
-    ],
-    "text_label": "I",
+    "markers": [],
+    "text_label": null,
     "text_tokens": [
      "I"
     ]
@@ -265,6 +242,7 @@
    "action": "Monitor SpO\u2082 and EtCO\u2082 during sedation",
    "level_published": "I",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 135,
    "pems_ordinal": 5,
    "pems_badge": "I",
@@ -272,9 +250,9 @@
    "pems_text": "For light sedation, if time and patient condition permit, consider: ADULT: Midazolam (Versed) 2.5 mg IV/IO or 5 mg IN/IM PEDIATRIC: Midazolam (Versed) 0.05 mg/kg IV/IO or 0.1 mg/kg IM. Maximum dose 2.5 mg IV/IO or 5 mg IM. Monitor SpO2 and EtCO2.",
    "basis": "adjudicated:set_cells",
    "before": {
-    "leftmost": null,
+    "leftmost": "I",
     "markers": [],
-    "text_label": "I",
+    "text_label": null,
     "text_tokens": [
      "I"
     ]
@@ -287,6 +265,7 @@
    "action": "Perform SYNCHRONIZED cardioversion 100 joules initial dose (Adult) or 1 joule/kg (Pediatric)",
    "level_published": "I",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 136,
    "pems_ordinal": 6,
    "pems_badge": "I",
@@ -294,9 +273,9 @@
    "pems_text": "Perform synchronized cardioversion. ADULT: 100 joules initial dose If cardioversion is unsuccessful, check pad placement and repeat at 200 joules. PEDIATRIC: 1 joule/kg initial dose If cardioversion is unsuccessful, check pad placement and repeat at 2 joules/kg. If cardioversion is unsuccessful after two attempts, contact Medical Control for guidance.",
    "basis": "alignment:matched",
    "before": {
-    "leftmost": null,
+    "leftmost": "I",
     "markers": [],
-    "text_label": "P",
+    "text_label": null,
     "text_tokens": [
      "P"
     ]
@@ -309,6 +288,7 @@
    "action": "If unsuccessful, check pad placement and repeat at 200 joules (Adult) or 2 joules/kg (Pediatric)",
    "level_published": "I",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 136,
    "pems_ordinal": 6,
    "pems_badge": "I",
@@ -317,11 +297,8 @@
    "basis": "adjudicated:confirm",
    "before": {
     "leftmost": "I",
-    "markers": [
-     "I",
-     "P"
-    ],
-    "text_label": "P",
+    "markers": [],
+    "text_label": null,
     "text_tokens": [
      "P"
     ]
@@ -331,9 +308,10 @@
   {
    "file": "protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md",
    "row": 16,
-   "action": "If unsuccessful after two attempts, contact Poquoson OMD",
+   "action": "If unsuccessful after two attempts, contact Medical Control",
    "level_published": "I",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 136,
    "pems_ordinal": 6,
    "pems_badge": "I",
@@ -341,11 +319,9 @@
    "pems_text": "Perform synchronized cardioversion. ADULT: 100 joules initial dose If cardioversion is unsuccessful, check pad placement and repeat at 200 joules. PEDIATRIC: 1 joule/kg initial dose If cardioversion is unsuccessful, check pad placement and repeat at 2 joules/kg. If cardioversion is unsuccessful after two attempts, contact Medical Control for guidance.",
    "basis": "adjudicated:set_cells",
    "before": {
-    "leftmost": "P",
-    "markers": [
-     "P"
-    ],
-    "text_label": "P",
+    "leftmost": "I",
+    "markers": [],
+    "text_label": null,
     "text_tokens": [
      "P",
      "MC"
@@ -359,6 +335,7 @@
    "action": "Airway management / Ventilatory support",
    "level_published": "EMR",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 59,
    "pems_ordinal": 1,
    "pems_badge": "EMR",
@@ -367,13 +344,7 @@
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
-    "markers": [
-     "EMR",
-     "EMT",
-     "A",
-     "I",
-     "P"
-    ],
+    "markers": [],
     "text_label": null,
     "text_tokens": []
    },
@@ -385,6 +356,7 @@
    "action": "Assess Blood Glucose (treat < 60 mg/dL per protocol)",
    "level_published": "EMT",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 59,
    "pems_ordinal": 2,
    "pems_badge": "EMT",
@@ -393,12 +365,7 @@
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
-    "markers": [
-     "EMT",
-     "A",
-     "I",
-     "P"
-    ],
+    "markers": [],
     "text_label": null,
     "text_tokens": []
    },
@@ -410,6 +377,7 @@
    "action": "Obtain / transmit 12-lead ECG (STEMI Triage if indicated)",
    "level_published": "EMT",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 59,
    "pems_ordinal": 3,
    "pems_badge": "EMT",
@@ -418,12 +386,7 @@
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
-    "markers": [
-     "EMT",
-     "A",
-     "I",
-     "P"
-    ],
+    "markers": [],
     "text_label": null,
     "text_tokens": []
    },
@@ -435,6 +398,7 @@
    "action": "Obtain IV/IO (Humeral IO preferred if IV unavailable)",
    "level_published": "A",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 59,
    "pems_ordinal": 4,
    "pems_badge": "A",
@@ -443,11 +407,7 @@
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
-    "markers": [
-     "A",
-     "I",
-     "P"
-    ],
+    "markers": [],
     "text_label": null,
     "text_tokens": []
    },
@@ -459,6 +419,7 @@
    "action": "Fluid Bolus: ADULT: 0.9% Sodium Chloride up to 1 L IV/IO in 250 - 500 mL boluses PEDIATRIC: 0.9% Sodium Chloride 20 mL/kg IV/IO (up to 60 mL/kg total)",
    "level_published": "A",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 59,
    "pems_ordinal": 5,
    "pems_badge": "A",
@@ -467,11 +428,7 @@
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
-    "markers": [
-     "A",
-     "I",
-     "P"
-    ],
+    "markers": [],
     "text_label": null,
     "text_tokens": []
    },
@@ -483,6 +440,7 @@
    "action": "Maintain MAP > 65 mmHg: ADULT: Norepinephrine infusion 5 - 20 mcg/min IV/IO OR ADULT: Epinephrine infusion 2 - 10 mcg/min IV/IO",
    "level_published": "I",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 59,
    "pems_ordinal": 6,
    "pems_badge": "I",
@@ -491,10 +449,7 @@
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
-    "markers": [
-     "I",
-     "P"
-    ],
+    "markers": [],
     "text_label": null,
     "text_tokens": []
    },
@@ -506,6 +461,7 @@
    "action": "Pediatric SBP Support: PEDIATRIC: Epinephrine infusion 0.1 - 1 mcg/kg/min IV/IO *(Titrate to > 70 mmHg if < 1 yr, > 90 mmHg if > 1 yr. Max dose: 10 mc",
    "level_published": "I",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 59,
    "pems_ordinal": 7,
    "pems_badge": "I",
@@ -514,10 +470,7 @@
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
-    "markers": [
-     "I",
-     "P"
-    ],
+    "markers": [],
     "text_label": null,
     "text_tokens": []
    },
@@ -529,6 +482,7 @@
    "action": "Bridge Therapy: ADULT: Push dose Epinephrine 5 - 10 mcg IV/IO every 2-3 minutes",
    "level_published": "P",
    "status": "OK",
+   "owner_ruling": null,
    "pems_page": 59,
    "pems_ordinal": 8,
    "pems_badge": "P",
@@ -537,9 +491,7 @@
    "basis": "alignment:matched",
    "before": {
     "leftmost": "P",
-    "markers": [
-     "P"
-    ],
+    "markers": [],
     "text_label": null,
     "text_tokens": []
    },

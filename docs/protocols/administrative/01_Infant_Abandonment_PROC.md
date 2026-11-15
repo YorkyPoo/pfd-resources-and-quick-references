@@ -22,7 +22,7 @@ Procedures for receiving a surrendered infant under the Virginia Safe Haven Law 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Receive infant if safely surrendered to attended rescue squad |  | • | • | • | • |
-| 2 | Assess infant and provide medical care per Poquoson Protocols |  | • | • | • | • |
+| 2 | Assess infant and provide medical care per these Protocols |  | • | • | • | • |
 | 3 | Contact Child Protective Services or local Law Enforcement |  | • | • | • | • |
 | 4 | Transport to appropriate facility if indicated |  | • | • | • | • |
 

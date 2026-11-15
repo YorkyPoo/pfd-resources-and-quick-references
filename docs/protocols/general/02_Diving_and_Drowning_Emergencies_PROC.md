@@ -37,7 +37,7 @@ Guidelines for managing acute submersion, non-fatal drowning, and decompression 
 | 3 | Assess airway and ventilation. Refer to Airway Management and Ventilatory Support protocol. | • | • | • | • | • |
 | 4 | Remove wet clothing and dry the skin. Keep the patient warm. | • | • | • | • | • |
 | 5 | If hypothermia and hemodynamically unstable, focus effort on rewarming as well as resuscitation simultaneously. | • | • | • | • | • |
-| 6 | Diving emergencies: Assess for pulmonary barotrauma, decompression sickness, and/or arterial gas embolism. Refer to appropriate Poquoson Protocol(s) as needed. | • | • | • | • | • |
+| 6 | Diving emergencies: Assess for pulmonary barotrauma, decompression sickness, and/or arterial gas embolism. Refer to the appropriate protocol(s) as needed. | • | • | • | • | • |
 | 7 | Contact Medical Control for hyperbaric transport destination guidance if decompression injury is suspected. | MC | MC | MC | MC | MC |
 
 </div>

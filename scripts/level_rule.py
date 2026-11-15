@@ -157,6 +157,26 @@ def load_json(name):
         return json.load(fh)
 
 
+RULINGS_YAML = os.path.join(AUD, 'level-rulings.yaml')
+
+
+def load_rulings():
+    """Owner rulings keyed (file, row). A ruling is a decision, never a source citation."""
+    import yaml
+    if not os.path.exists(RULINGS_YAML):
+        return {}
+    doc = yaml.safe_load(open(RULINGS_YAML, encoding='utf-8')) or {}
+    out = {}
+    for rec in doc.get('rulings') or []:
+        if not rec.get('file') or rec.get('row') is None or not rec.get('level'):
+            raise SystemExit(f'level-rulings.yaml: incomplete ruling {rec!r}')
+        if rec.get('status') != 'owner_ruled':
+            raise SystemExit(f'level-rulings.yaml: status must be "owner_ruled" (row {rec}')
+        out[(rec['file'], str(rec['row']))] = rec
+    return out
+
+
+
 def pems_index(table):
     idx = {}
     for doc in table['pems_docs']:
@@ -238,7 +258,7 @@ def chip(level, bracketed=False, owner=False):
     html = f'<span class="lvl lvl-{CHIP_CLASS.get(level, "na")}">{level}</span>'
     if bracketed:
         html += ('<sup class="lvl-req" title="PEMS 2024 prints this badge in brackets: agency '
-                 'training documentation and OMD written authorization required">*</sup>')
+                 'training documentation and Medical Control written authorization required">*</sup>')
     if owner:
         html += ('<sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this '
                  'action\'s provider level">&#9873;</sup>')
@@ -263,6 +283,20 @@ def heading_for(text):
     return '#### ' + plain[:1].upper() + plain[1:]
 
 
+def prior_tokens():
+    """Level tokens a previous run already stripped, keyed (file, row).
+
+    The page no longer carries them, so a re-run of --write would otherwise report
+    "0 row(s)" and silently erase the record of what the collapse changed.
+    """
+    try:
+        rows = load_json('level-rule-ledger.json')['rows']
+    except (FileNotFoundError, KeyError):
+        return {}
+    return {(e['file'], str(e['row'])): (e.get('before') or {}).get('text_tokens') or []
+            for e in rows}
+
+
 # ------------------------------------------------------------------- the build
 def plan(rel):
     """Return (blocks_out, ledger, problems) for one page, without writing."""
@@ -272,9 +306,11 @@ def plan(rel):
     blocks = parse_page(path)
     actions = [r for b in blocks for r in b['rows'] if not is_banner(r)]
     res = resolve(rel, actions, align, adjudicated, pems)
+    prior = prior_tokens()
 
     ledger, problems = [], []
     blocks_out, cursor = [], 0
+    rulings = load_rulings()
     for block in blocks:
         new_rows = []
         for row in block['rows']:
@@ -286,11 +322,16 @@ def plan(rel):
             marked = marked_levels(row['cells'])
             label = text_label(row['action'])
             new_text, stripped = strip_tokens(row['action'])
+            stripped = stripped or prior.get((rel, str(row['ordinal'])), [])
 
             owner = r['badge'] is None
             if r['adjudicated'] and r['adjudicated'].get('decision') == 'UNRESOLVED':
                 owner = True
             level = r['badge'] if r['badge'] else before_low
+            ruled = rulings.get((rel, str(row['ordinal'])))
+            if ruled:
+                # the owner's decision replaces the inherited level; it is NOT PEMS-verified
+                level, owner = ruled['level'], False
             if level is None:
                 problems.append(f'{rel} row {row["ordinal"]}: no PEMS level and no existing '
                                 'marker — cannot place a marker')
@@ -301,7 +342,9 @@ def plan(rel):
                 'row': int(row['ordinal']),
                 'action': re.sub(r'\[([^\]]*)\]\([^)]*\)', r'\1', new_text).replace('**', '').replace('<br>', ' ')[:150],
                 'level_published': level,
-                'status': 'OWNER_REQUIRED' if owner else 'OK',
+                'status': 'owner_ruled' if ruled else ('OWNER_REQUIRED' if owner else 'OK'),
+                'owner_ruling': ({'date': ruled['date'], 'ruling': ruled['ruling'],
+                                  'note': ruled.get('note')} if ruled else None),
                 'pems_page': r['ptr'][0] if r['ptr'] else None,
                 'pems_ordinal': r['ptr'][1] if r['ptr'] else None,
                 'pems_badge': r['badge'],
@@ -347,7 +390,7 @@ def splice(path, blocks_out, ledger):
     if any(e['bracketed'] for e in ledger):
         notes.append('* **[ ] badge in PEMS 2024** — the source prints this level in brackets: '
                      'agency post-affiliation training documentation on file, plus the '
-                     "OMD's written authorization for that skill. The bracketing is the source's, "
+                     "Medical Control written authorization for that skill. The bracketing is the source's, "
                      'not this page\'s.')
     page_note = '\n\n'.join(notes) if notes else None
 
@@ -426,10 +469,21 @@ def emit_md(ledger):
     owner = [e for e in ledger if e['status'] == 'OWNER_REQUIRED']
     lines += ['', '## OWNER_REQUIRED', '']
     if not owner:
-        lines.append('None — every action row is authorised by a PEMS 2024 row.')
+        lines.append('None — no action row is left without a level decision.')
     for e in owner:
         lines.append(f"- `{e['file']}` row {e['row']} — **{e['level_published']}** kept from the "
                      f"page, not from the source: {e['action']}")
+    ruled = [e for e in ledger if e['status'] == 'owner_ruled']
+    lines += ['', '## OWNER_RULED', '',
+              'The owner decided these levels. They are **decisions, not source citations**:',
+              'no PEMS 2024 row badges the action, the row is not PEMS-verified, and the',
+              'PEMS row column above is empty on purpose.', '']
+    if not ruled:
+        lines.append('None — every action row is either PEMS-verified or OWNER_REQUIRED.')
+    for e in ruled:
+        r = e.get('owner_ruling') or {}
+        lines.append(f"- `{e['file']}` row {e['row']} — **{e['level_published']}** — "
+                     f"status `owner_ruled`. {r.get('note') or r.get('ruling')}")
     tokens = [(e['file'], e['row'], e['before']['text_tokens']) for e in ledger
               if e['before']['text_tokens']]
     lines += ['', '## Level tokens removed from action text', '']
@@ -438,11 +492,8 @@ def emit_md(ledger):
     for f, row, toks in tokens:
         lines.append(f"- `{f.split('/')[-1]}` row {row}: removed {', '.join(toks)}")
     lines += ['', '## OPEN OWNER QUESTIONS', '',
-              'Recorded, not fixed. Neither item is verified against PEMS 2024; both need the',
-              "owner's decision before the page is treated as final.", '',
-              '- **SVT row 2 "Assess patient stability (chest pain, dyspnea, AMS, shock)"** — no',
-              '  PEMS 2024 row authorises a level. Currently `EMT` inherited from the old page,',
-              '  flagged OWNER_REQUIRED. Awaiting the owner\'s decision; not verified.',
+              'Recorded, not fixed. Not verified against PEMS 2024; needs the owner\'s',
+              'decision before the page is treated as final.', '',
               '- **Post-ROSC has no row for PEMS p.59#0** ("Follow Universal Patient Care…", badge',
               '  EMR) — missing row, not a level defect.']
     return '\n'.join(lines) + '\n'
@@ -465,7 +516,8 @@ def check():
             fails.append(f'{rel}: section banner still encoded as a table row')
         # rebuild the citation map from the same derive path to confirm each chip
         res = resolve(rel, rows, align, adjudicated, pems)
-        owner_rows, ok_rows = [], []
+        rulings = load_rulings()
+        owner_rows, ok_rows, ruled_rows = [], [], []
         for row, r in zip(rows, res):
             chips = CHIP_RE.findall(row['level_cell'])
             if len(chips) != 1:
@@ -474,6 +526,23 @@ def check():
             level = chips[0][1]
             if TEXT_TOKEN.search(row['action']):
                 fails.append(f'{rel} row {row["ordinal"]}: level token left in the action text')
+            ruled = rulings.get((rel, str(row['ordinal'])))
+            if ruled:
+                # an owner ruling is a DECISION: it must match the ruling, carry no
+                # OWNER_REQUIRED marker, and must never be reported as PEMS-verified.
+                if level != ruled['level']:
+                    fails.append(f'{rel} row {row["ordinal"]}: marker {level} != owner ruling '
+                                 f'{ruled["level"]}')
+                if 'lvl-own' in (row['level_cell'] or ''):
+                    fails.append(f'{rel} row {row["ordinal"]}: owner-ruled row still carries '
+                                 f'the OWNER_REQUIRED marker')
+                if r['badge'] is not None:
+                    fails.append(f'{rel} row {row["ordinal"]}: owner ruling recorded but PEMS '
+                                 f'row {r["ptr"]} already badges it — ruling is stale')
+                ruled_rows.append({'row': row['ordinal'], 'level': level,
+                                   'status': 'owner_ruled',
+                                   'ruling': ruled['ruling'], 'date': ruled['date']})
+                continue
             if r['badge'] is None:
                 owner_rows.append((row['ordinal'], level))
                 continue
@@ -490,7 +559,7 @@ def check():
                                  f'{filled[0]}, badge says {level}')
             ok_rows.append((row['ordinal'], level))
         report.append({'file': rel, 'rows': len(rows), 'verified': len(ok_rows),
-                       'owner_required': owner_rows})
+                       'owner_required': owner_rows, 'owner_ruled': ruled_rows})
 
     # the MC wording guard sweeps the whole docs tree, not just TARGETS: an MC-badged row
     # must name the function "Medical Control", never a local office or a named person.
@@ -523,7 +592,9 @@ def check():
             print(' -', f)
         return 1
     print('\nOK — every action row in both protocols has exactly one marker, no level token '
-          'in its text, and a marker equal to the level printed by the cited PEMS row.')
+          'in its text, and a marker equal to the level printed by the cited PEMS row '
+          '(owner_ruled rows are checked against the owner ruling instead, and are NOT '
+          'reported as PEMS-verified).')
     return 0
 
 

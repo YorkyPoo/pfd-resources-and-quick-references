@@ -33,7 +33,7 @@ Management of acute or impending airway obstruction including expanding hematoma
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
-| 1 | **Universal Patient Care:**<br>• Apply to all patients per Poquoson Protocols. | • | • | • | • | • |
+| 1 | **Universal Patient Care:**<br>• Apply to all patients per protocol. | • | • | • | • | • |
 | 2 | **Scene Safety / Recognition:**<br>• Rapidly identify complete vs partial obstruction.<br>• Recognize universal choking sign (hands to throat).<br>• Determine conscious vs unconscious status. |  | • | • | • | • |
 | 3 | **Conscious Adult (≥12 years) - Abdominal Thrusts:**<br>• Stand behind patient, wrap arms around waist.<br>• Make fist with one hand; thumb side against patient's abdomen.<br>• Position fist midline, below xiphoid process and above navel.<br>• Grasp fist with other hand and deliver quick, upward thrusts.<br>• Repeat until obstruction clears or patient becomes unconscious. |  | • | • | • | • |
 | 4 | **Conscious Obese Adult / Pregnant Woman - Chest Thrusts:**<br>• Stand behind patient, arms under patient's armpits.<br>• Make fist with one hand; thumb side against sternum.<br>• Position fist midline on lower half of sternum.<br>• Grasp fist with other hand and deliver backward thrusts.<br>• Repeat until obstruction clears or patient becomes unconscious. |  | • | • | • | • |

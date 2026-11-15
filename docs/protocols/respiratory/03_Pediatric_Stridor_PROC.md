@@ -43,7 +43,7 @@ Stridor in pediatric patients indicates upper airway obstruction requiring rapid
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
-| 1 | **Universal Patient Care / Initial Patient Contact**<br>• Follow Universal Patient Care Poquoson Protocol for all patients. | • | • | • | • | • |
+| 1 | **Universal Patient Care / Initial Patient Contact**<br>• Follow the Universal Patient Care protocol for all patients. | • | • | • | • | • |
 | 2 | **Scene Management & Calm Environment**<br>• Keep child calm - agitation worsens obstruction<br>• Allow parent/caregiver to hold child<br>• Avoid unnecessary procedures<br>• Minimize stimulation and stranger anxiety |  | • | • | • | • |
 | 3 | **Position of Comfort**<br>• Allow child to assume position of choice (usually upright or with parent)<br>• Do not force supine positioning<br>• Head-down positioning for infants <1 year if foreign body suspected |  | • | • | • | • |
 | 4 | **High-Flow Oxygen**<br>• Apply high-flow oxygen via non-rebreather mask or blow-by<br>• Monitor SpO2 continuously<br>• Titrate to maintain SpO2 >94% |  |  | • | • | • |

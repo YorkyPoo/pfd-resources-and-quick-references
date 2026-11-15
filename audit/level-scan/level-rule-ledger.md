@@ -11,7 +11,7 @@ the action text.
 | file | row | level | PEMS row | PEMS printed row text | basis | status |
 |---|---:|---|---|---|---|---|
 | `04_Supraventricular_Tachycardia_PROC.md` | 1 | EMR | p.135#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
-| `04_Supraventricular_Tachycardia_PROC.md` | 2 | EMT | — | — | — | OWNER_REQUIRED |
+| `04_Supraventricular_Tachycardia_PROC.md` | 2 | EMR | — | — | — | owner_ruled |
 | `04_Supraventricular_Tachycardia_PROC.md` | 4 | EMT | p.135#1 | Obtain and transmit a 12-Lead ECG. | alignment:matched | OK |
 | `04_Supraventricular_Tachycardia_PROC.md` | 5 | A | p.135#2 | Obtain IV access. Consider: ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 – 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO Repe… | adjudicated:set_cells | OK |
 | `04_Supraventricular_Tachycardia_PROC.md` | 6 | A | p.135#2 | Obtain IV access. Consider: ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 – 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO Repe… | alignment:matched | OK |
@@ -35,7 +35,15 @@ the action text.
 
 ## OWNER_REQUIRED
 
-- `protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md` row 2 — **EMT** kept from the page, not from the source: Assess patient stability (chest pain, dyspnea, AMS, shock)
+None — no action row is left without a level decision.
+
+## OWNER_RULED
+
+The owner decided these levels. They are **decisions, not source citations**:
+no PEMS 2024 row badges the action, the row is not PEMS-verified, and the
+PEMS row column above is empty on purpose.
+
+- `protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md` row 2 — **EMR** — status `owner_ruled`. Owner ruling 2026-11-15: EMR — any provider may assess stability. No PEMS 2024 row badges this action; this is an owner decision, not a source citation. Do not cite p.135 for it.
 
 ## Level tokens removed from action text
 
@@ -56,11 +64,8 @@ the action text.
 
 ## OPEN OWNER QUESTIONS
 
-Recorded, not fixed. Neither item is verified against PEMS 2024; both need the
-owner's decision before the page is treated as final.
+Recorded, not fixed. Not verified against PEMS 2024; needs the owner's
+decision before the page is treated as final.
 
-- **SVT row 2 "Assess patient stability (chest pain, dyspnea, AMS, shock)"** — no
-  PEMS 2024 row authorises a level. Currently `EMT` inherited from the old page,
-  flagged OWNER_REQUIRED. Awaiting the owner's decision; not verified.
 - **Post-ROSC has no row for PEMS p.59#0** ("Follow Universal Patient Care…", badge
   EMR) — missing row, not a level defect.

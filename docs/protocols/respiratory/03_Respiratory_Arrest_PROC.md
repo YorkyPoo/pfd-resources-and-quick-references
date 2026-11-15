@@ -30,7 +30,7 @@ Respiratory arrest (apnea) and respiratory failure represent life-threatening em
 
 | # | Action / Intervention | EMR | EMT | A | I | P |
 |---|---|:---:|:---:|:---:|:---:|:---:|
-| 1 | **Universal Patient Care / Initial Patient Contact:**<br>• Follow Universal Patient Care / Initial Patient Contact Poquoson Protocol.<br>• Assess for life threats and mechanism of respiratory failure. | • | • | • | • | • |
+| 1 | **Universal Patient Care / Initial Patient Contact:**<br>• Follow the Universal Patient Care / Initial Patient Contact protocol.<br>• Assess for life threats and mechanism of respiratory failure. | • | • | • | • | • |
 | 2 | **Position Patient and Open Airway:**<br>• Position the patient appropriately (supine for intubation, recovery position if vomiting).<br>• Open the airway using head-tilt chin-lift or jaw-thrust maneuver. |  | • | • | • | • |
 | 3 | **Continuous Monitoring:**<br>• Apply continuous pulse oximetry (SpO2).<br>• Apply continuous box-waveform capnography (EtCO2) once airway placed. |  | • | • | • | • |
 | 4 | **BLS Airway Adjuncts (EMR/EMT):**<br>• Insert oropharyngeal airway (OPA) as indicated.<br>• Insert nasopharyngeal airway (NPA) if gag reflex present.<br>• Use supraglottic airway (SGA) as necessary. |  | • | • | • | • |
@@ -40,7 +40,7 @@ Respiratory arrest (apnea) and respiratory failure represent life-threatening em
 | 8 | **Endotracheal Intubation – Adult (≥12 years):**<br>• If apneic and unable to ventilate adequately by less invasive means, consider endotracheal intubation.<br>• Verify placement with continuous box-waveform capnography and auscultation. |  |  |  | • | • |
 | 9 | **Endotracheal Intubation – Pediatric (<12 years):**<br>• ⚠ **RED DOT SKILL:** Intubation of children <12 years is a Paramedic "red dot" skill only.<br>• If apneic and <12 years old, consider intubation if unable to ventilate adequately by less invasive means. |  |  |  |  | • |
 | 10 | **Foreign Body Airway Obstruction:**<br>• If foreign body airway obstruction suspected and unable to ventilate, perform laryngoscopy.<br>• Remove foreign body with Magill forceps under direct visualization. |  |  |  |  | • |
-| 11 | **Surgical Airway (Cricothyrotomy):**<br>• If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway.<br>• Use 14G, 3.25" catheter or surgical cricothyrotomy kit per Poquoson Protocols. |  |  |  |  |  |
+| 11 | **Surgical Airway (Cricothyrotomy):**<br>• If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway.<br>• Use 14G, 3.25" catheter or surgical cricothyrotomy kit per protocol. |  |  |  |  |  |
 | 12 | **Post-Intubation Airway Management:**<br>• Verify tube placement with continuous box-waveform capnography AND auscultation (bilateral lung sounds, absence of gastric sounds).<br>• Secure tube with tape or commercial tube holder.<br>• Document depth of placement at teeth/gums. |  |  |  |  | • |
 | 13 | **Ongoing Ventilation Monitoring:**<br>• Monitor ET tube placement and ventilation continuously with SpO2 and EtCO2.<br>• Reassess lung sounds and gastric sounds after any patient movement. |  |  |  |  | • |
 | 14 | **Post-Advanced Airway Analgesia – [Fentanyl](../../pharmacology/Fentanyl.md) (Sublimaze):**<br>• **ADULT:** **25–50 mcg** IV/IO over 2 minutes or IN/IM.<br>• **PEDIATRIC:** **0.5–1 mcg/kg** IV/IO over 2 minutes or IN/IM (Maximum dose **25 mcg**).<br>• Repeat every 10–15 minutes as needed. |  |  |  |  |  |

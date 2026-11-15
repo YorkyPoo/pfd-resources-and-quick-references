@@ -39,7 +39,7 @@ Guidelines and procedures for physical and chemical patient restraint to ensure 
 | 5 | **Apply SpO2 and monitor respiratory status**<br>Evaluate respiratory/cardiac status to assure no airway compromise exists; apply supplemental oxygen if indicated. |  | • | • | • | • |
 | 6 | **Avoid impeding respiratory function with chest straps**<br>DO NOT tighten chest straps to the point of impeding respiratory function. |  | • | • | • | • |
 | 7 | **Chemical Restraint: Assess vitals <5 mins then q10 mins**<br>And prior to any repeat dose. Monitor ECG, obtain 12-Lead, consider IN medications and establish IV/IO if possible. |  |  |  | • | • |
-| 8 | **Refer to Behavioral Emergencies Protocol for sedatives**<br>Sedative agents may be needed to restrain violently combative patients. (Refer to Poquoson Protocol(s) for Behavioral Emergencies). |  |  |  | • | • |
+| 8 | **Refer to Behavioral Emergencies Protocol for sedatives**<br>Sedative agents may be needed to restrain violently combative patients. (Refer to the Behavioral Emergencies Protocol). |  |  |  | • | • |
 
 </div>
 

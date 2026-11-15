@@ -37,7 +37,7 @@ Supraventricular tachycardia (SVT) is a rapid rhythm originating above the ventr
 | # | Level | Action / Intervention |
 |:---:|---|---|
 | 1 | <span class="lvl lvl-emr">EMR</span> | Follow Universal Patient Care / Initial Patient Contact |
-| 2 | <span class="lvl lvl-emt">EMT</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | Assess patient stability (chest pain, dyspnea, AMS, shock) |
+| 2 | <span class="lvl lvl-emr">EMR</span> | Assess patient stability (chest pain, dyspnea, AMS, shock) |
 
 </div>
 
@@ -67,11 +67,9 @@ Supraventricular tachycardia (SVT) is a rapid rhythm originating above the ventr
 | 13 | <span class="lvl lvl-i">I</span> | Monitor SpO₂ and EtCO₂ during sedation |
 | 14 | <span class="lvl lvl-i">I</span> | Perform **SYNCHRONIZED cardioversion**<br>**100 joules** initial dose (Adult) or **1 joule/kg** (Pediatric) |
 | 15 | <span class="lvl lvl-i">I</span> | If unsuccessful, check pad placement and repeat at **200 joules** (Adult)<br>or **2 joules/kg** (Pediatric) |
-| 16 | <span class="lvl lvl-i">I</span> | If unsuccessful after two attempts, contact Poquoson OMD |
+| 16 | <span class="lvl lvl-i">I</span> | If unsuccessful after two attempts, contact Medical Control |
 
 </div>
-
-<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — row 2: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source.</p>
 
 ### Pearls
 1. Many patients who experience tachyarrhythmias have concurrent congestive heart failure or decreased ejection fraction. Exercise caution when providing IV fluids – give only enough to improve perfusion and monitor for signs of pulmonary edema.

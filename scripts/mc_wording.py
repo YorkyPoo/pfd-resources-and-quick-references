@@ -1,17 +1,25 @@
 #!/usr/bin/env python3
-"""MC row wording: the level chip says MC, so the action text must name the function
-"Medical Control" — never a local office ("Poquoson OMD", "Poquoson Medical Control")
-and never a named individual.
+"""Protocol rows must name the FUNCTION "Medical Control" — never a local office
+("Poquoson OMD", "Poquoson Medical Control"), never a Medical Director, never a named
+individual, and never the local agency's name inside a protocol table row.
 
-Two directions are derived from the docs tree, never hand-listed:
+This guard is LEVEL-INDEPENDENT (owner ruling 2026-11-15): every protocol table row at
+every provider level (EMR / EMT / A / I / P / MC) is checked, not just MC-badged rows.
 
-  * MC rows whose text contains a forbidden token  -> must be fixed
-  * non-MC rows whose text mentions the OMD        -> reported, NOT touched (owner decides)
-  * prose (non-table) lines mentioning the OMD     -> reported separately, NOT touched
+Two directions, both derived from the docs tree, never hand-listed:
+
+  * every table row (any level) whose action text names the office/person/agency
+    -> a violation; `--check` exits 1
+  * prose (non-table) lines mentioning the office -> reported, NOT touched (out of scope)
+
+`--write-rows` emits `audit/mc-wording/mc-rows.json`: one record per MC-badged row with
+its status derived against the pre-sweep revision, so the MC-row total is
+`len(records)`, never a hand-sum.
 
 Usage:
     python3 scripts/mc_wording.py --list          # derive and print the sweep
-    python3 scripts/mc_wording.py --check         # exit 1 if any MC row is bad
+    python3 scripts/mc_wording.py --check         # exit 1 if ANY protocol row is bad
+    python3 scripts/mc_wording.py --write-rows    # write audit/mc-wording/mc-rows.json
     python3 scripts/mc_wording.py --check --root X   # point the guard at another docs tree
 """
 from __future__ import annotations
@@ -20,19 +28,19 @@ import argparse
 import json
 import os
 import re
+import subprocess
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEFAULT_DOCS = os.path.join(ROOT, 'docs')
+MC_ROWS = os.path.join(ROOT, 'audit', 'mc-wording', 'mc-rows.json')
 
 LV = ['EMR', 'EMT', 'A', 'I', 'P']
-OLD_HEADER = re.compile(r'^\|\s*#\s*\|\s*Action\s*/\s*Intervention\s*\|\s*EMR\s*\|', re.M)
-NEW_HEADER = re.compile(r'^\|\s*#\s*\|\s*Level\s*\|\s*Action\s*/\s*Intervention\s*\|', re.M)
 HEADER_ANY = re.compile(r'^\|\s*#\s*\|')
 SEPARATOR = re.compile(r'^\|[\s:|-]+\|$')
 CHIP_RE = re.compile(r'<span class="lvl lvl-([a-z]+)">([A-Z]+)</span>')
 
-# the naming ban for MC rows
+# The naming ban. Level-independent: these apply to every row, whatever its badge.
 FORBIDDEN = [
     (re.compile(r'\bPoquoson\b', re.I), 'Poquoson'),
     (re.compile(r'\bOMD\b'), 'OMD'),
@@ -42,11 +50,9 @@ FORBIDDEN = [
 # named individuals: Dr. <Name>, <Name>, MD/DO after a capitalised name
 NAMED = re.compile(r'\b(?:Dr\.?|Doctor)\s+[A-Z][a-z]+|\b[A-Z][a-z]+\s*,?\s*(?:MD|DO)\b')
 
-# what a non-MC OMD mention looks like (reported, not edited)
+# what a prose (non-table) mention of the office looks like — reported, not edited
 OMD_MENTION = re.compile(r'\bOMD\b|\bOperational Medical Director\b|\bMedical Director\b',
                          re.I)
-OMD_ROW = re.compile(r'\bOMD\b|\bOperational Medical Director\b|\bMedical Director\b|'
-                     r'\bPoquoson Medical Control\b', re.I)
 
 
 def split_cells(line):
@@ -128,7 +134,8 @@ def walk(docs):
 
 
 def derive(docs=DEFAULT_DOCS):
-    mc_bad, mc_ok, non_mc_omd, prose_omd, pages = [], [], [], [], set()
+    """Every violating table row (any level), every MC row, every prose mention."""
+    bad, mc_rows, prose, pages = [], [], [], set()
     for rel in walk(docs):
         path = os.path.join(docs, rel)
         text = open(path, encoding='utf-8').read()
@@ -139,22 +146,89 @@ def derive(docs=DEFAULT_DOCS):
             if is_banner(row):
                 continue
             hits = forbidden_hits(row['action'])
+            # the whole row line is checked too: a chip tooltip or other cell markup is
+            # still part of the row the provider reads.
+            raw_line = lines[lineno - 1] if lineno - 1 < len(lines) else ''
+            for rx, name in FORBIDDEN:
+                if name not in hits and rx.search(raw_line):
+                    hits.append(name)
+            rec = {'file': rel, 'line': lineno, 'row': row['ordinal'],
+                   'level': row['level'], 'text': row['action'], 'hits': hits}
+            if hits:
+                bad.append(rec)
+                rec['line_text'] = raw_line
             if row['level'] == 'MC':
                 pages.add(rel)
-                rec = {'file': rel, 'line': lineno, 'row': row['ordinal'],
-                       'text': row['action'], 'hits': hits}
-                (mc_bad if hits else mc_ok).append(rec)
-            elif OMD_ROW.search(strip_md(row['action'])):
-                non_mc_omd.append({'file': rel, 'line': lineno, 'row': row['ordinal'],
-                                   'level': row['level'], 'text': row['action'],
-                                   'hits': sorted({m.group(0) for m in OMD_ROW.finditer(strip_md(row['action']))})})
+                mc_rows.append(rec)
         for lineno, line in enumerate(lines, 1):
             if lineno in table_lines or line.lstrip().startswith('|'):
                 continue
             if OMD_MENTION.search(line):
-                prose_omd.append({'file': rel, 'line': lineno, 'text': line.strip()})
-    return {'mc_bad': mc_bad, 'mc_ok': mc_ok, 'non_mc_omd': non_mc_omd,
-            'prose_omd': prose_omd, 'pages': sorted(pages)}
+                prose.append({'file': rel, 'line': lineno, 'text': line.strip()})
+    return {'bad': bad, 'mc_rows': mc_rows, 'prose': prose, 'pages': sorted(pages)}
+
+
+# --------------------------------------------------------------- mc-rows artifact
+def base_rev():
+    """The revision the MC sweep started from: the parent of the commit that added
+    audit/mc-wording/sweep.json. Derived from git, never typed in."""
+    try:
+        out = subprocess.run(['git', '-C', ROOT, 'log', '--diff-filter=A', '--format=%H',
+                              '--', 'audit/mc-wording/sweep.json'],
+                             capture_output=True, text=True, check=True).stdout.split()
+        return (out[-1] + '^') if out else 'HEAD^'
+    except subprocess.CalledProcessError:
+        return 'HEAD^'
+
+
+def base_mc_texts(rev, docs=DEFAULT_DOCS):
+    """{file: {ordinal: action}} for MC rows as they read at `rev`."""
+    out = {}
+    for rel in walk(docs):
+        try:
+            text = subprocess.run(['git', '-C', ROOT, 'show', f'{rev}:docs/{rel}'],
+                                  capture_output=True, text=True, check=True).stdout
+        except subprocess.CalledProcessError:
+            continue
+        for _lineno, row in parse_tables(text):
+            if is_banner(row) or row['level'] != 'MC':
+                continue
+            out.setdefault(rel, {})[str(row['ordinal'])] = row['action']
+    return out
+
+
+def write_rows(docs=DEFAULT_DOCS, rev=None):
+    d = derive(docs)
+    rev = rev or base_rev()
+    before = base_mc_texts(rev)
+    records = []
+    for rec in d['mc_rows']:
+        old = before.get(rec['file'], {}).get(str(rec['row']))
+        if old is None:
+            status = 'unknown_base'
+        elif forbidden_hits(old):
+            status = 'rewritten'
+        else:
+            status = 'already_correct'
+        records.append({'file': rec['file'], 'row': rec['row'], 'line': rec['line'],
+                        'text': rec['text'], 'status': status,
+                        'text_before': old})
+    payload = {
+        'generated_by': 'scripts/mc_wording.py --write-rows',
+        'rule': 'every MC-badged row says "Contact Medical Control"; no MC row names a local '
+                'office, a Medical Director, or a named individual',
+        'base_rev': rev,
+        'total': len(records),
+        'pages': len(d['pages']),
+        'counts': {s: sum(1 for r in records if r['status'] == s)
+                   for s in ('rewritten', 'already_correct', 'unknown_base')},
+        'records': records,
+    }
+    os.makedirs(os.path.dirname(MC_ROWS), exist_ok=True)
+    with open(MC_ROWS, 'w', encoding='utf-8') as fh:
+        json.dump(payload, fh, indent=1, ensure_ascii=False)
+        fh.write('\n')
+    return payload
 
 
 def main():
@@ -162,40 +236,54 @@ def main():
     ap.add_argument('--list', action='store_true')
     ap.add_argument('--json', action='store_true')
     ap.add_argument('--check', action='store_true')
+    ap.add_argument('--write-rows', action='store_true')
+    ap.add_argument('--base-rev', default=None,
+                    help='revision mc-rows.json derives "rewritten" against')
     ap.add_argument('--root', default=DEFAULT_DOCS,
                     help='docs tree to sweep (default: docs/)')
     args = ap.parse_args()
+
+    if args.write_rows:
+        p = write_rows(args.root, args.base_rev)
+        print(f"wrote {os.path.relpath(MC_ROWS, ROOT)}")
+        print(f"total (len(records)) = {p['total']}   pages = {p['pages']}   "
+              f"counts = {p['counts']}   base_rev = {p['base_rev']}")
+        return 0
+
     d = derive(args.root)
     if args.json:
-        print(json.dumps(d, indent=1))
+        print(json.dumps(d, indent=1, ensure_ascii=False))
         return 0
-    if args.list or not args.check:
-        print(f"pages with MC rows: {len(d['pages'])}")
-        for p in d['pages']:
-            print('  ', p)
-        print(f"\nMC rows bad: {len(d['mc_bad'])}")
-        for r in d['mc_bad']:
-            print(f"  {r['file']}:{r['line']} row {r['row']}  [{', '.join(r['hits'])}]  {strip_md(r['text'])}")
-        print(f"\nMC rows already naming only Medical Control: {len(d['mc_ok'])}")
-        for r in d['mc_ok']:
-            print(f"  {r['file']}:{r['line']} row {r['row']}  {strip_md(r['text'])[:120]}")
-        print(f"\nNON-MC rows mentioning the OMD (report only, not touched): {len(d['non_mc_omd'])}")
-        for r in d['non_mc_omd']:
-            print(f"  {r['file']}:{r['line']} row {r['row']} level={r['level']}  {strip_md(r['text'])[:140]}")
-        print(f"\nPROSE mentions of the OMD (report only, not touched): {len(d['prose_omd'])}")
-        for r in d['prose_omd']:
-            print(f"  {r['file']}:{r['line']}  {r['text'][:140]}")
+
+    if args.check:
+        if d['bad']:
+            print(f'FAIL — {len(d["bad"])} protocol table row(s) name a local office, a '
+                  f'Medical Director, a named individual, or the local agency instead of the '
+                  f'function "Medical Control". Guard is level-independent: every row, '
+                  f'every level.')
+            for r in d['bad']:
+                print(f" - {r['file']}:{r['line']} row {r['row']} [{r['level'] or '-'}]: "
+                      f"{strip_md(r['text'])[:160]}")
+                print(f"     forbidden: {', '.join(r['hits'])}")
+            return 1
+        print(f"OK — {len(d['mc_rows'])} MC row(s) on {len(d['pages'])} page(s) plus every other "
+              f"protocol table row (all levels): none name OMD / Poquoson / a Medical "
+              f"Director / a named individual.")
+        print(f"     prose lines still mentioning the office (out of scope, not edited): "
+              f"{len(d['prose'])}")
         return 0
-    fails = d['mc_bad']
-    if fails:
-        print(f'FAIL — {len(fails)} MC-badged row(s) name a local office or person instead of '
-              f'"Medical Control":')
-        for r in fails:
-            print(f" - {r['file']}:{r['line']} row {r['row']}: {strip_md(r['text'])[:160]}")
-            print(f"     forbidden: {', '.join(r['hits'])}")
-        return 1
-    print(f'OK — {len(d["mc_ok"])} MC-badged row(s) across {len(d["pages"])} page(s), none name '
-          f'OMD / Poquoson / a named individual.')
+
+    print(f"pages with MC rows: {len(d['pages'])}")
+    for p in d['pages']:
+        print('  ', p)
+    print(f"\nPROTOCOL ROWS violating the naming ban (any level): {len(d['bad'])}")
+    for r in d['bad']:
+        print(f"  {r['file']}:{r['line']} row {r['row']} level={r['level']}  "
+              f"[{', '.join(r['hits'])}]  {strip_md(r['text'])[:130]}")
+    print(f"\nMC rows: {len(d['mc_rows'])}")
+    print(f"\nPROSE mentions of the office (report only, not touched): {len(d['prose'])}")
+    for r in d['prose']:
+        print(f"  {r['file']}:{r['line']}  {r['text'][:140]}")
     return 0
 
 
