@@ -72,6 +72,7 @@ OUTDIR = os.path.join(REPO, "audit", "level-scan")
 CACHE = os.path.join(OUTDIR, ".cache")
 ROWS_CACHE = os.path.join(CACHE, "pems_rows.jsonl")
 TABLE_JSON = os.path.join(OUTDIR, "pems_table.json")
+OVERRIDES_YAML = os.path.join(OUTDIR, "badge-overrides.yaml")
 ALIGN_JSON = os.path.join(OUTDIR, "alignment.json")
 MISSING_MD = os.path.join(OUTDIR, "missing-rows.md")
 AMBIG_MD = os.path.join(OUTDIR, "ambiguous-rows.md")
@@ -617,11 +618,120 @@ def stage1(verbose: bool = False) -> dict:
     return {"pages": pages, "docs": docs, "table": out}
 
 
+def _load_badge_overrides() -> tuple[dict, list[str]]:
+    """badge-overrides.yaml -> ({(page, ordinal): entry}, problems).
+
+    A human resolution recorded only in an adjudication output is not durable:
+    the next C1 regeneration reintroduces the PDF badge and the contradiction
+    returns. This file is what the parser reads, so an override lives in the
+    canonical table itself.
+
+    Hard errors, same rule as exceptions.yaml: an override with no `reason` or
+    no `evidence` is refused at parse time (not merely reported later), and so
+    is a duplicate key or a resolved token that is not a level. A missing file
+    is an empty override set, never a crash.
+    """
+    import yaml
+    if not os.path.exists(OVERRIDES_YAML):
+        return {}, []
+    doc = yaml.safe_load(open(OVERRIDES_YAML, encoding="utf-8")) or {}
+    raw = doc.get("overrides")
+    if raw is None:
+        raw = []
+    if not isinstance(raw, list):
+        raise SystemExit("badge-overrides.yaml: `overrides` must be a list")
+    out: dict[tuple[int, int], dict] = {}
+    problems: list[str] = []
+    for i, ent in enumerate(raw):
+        if not isinstance(ent, dict):
+            problems.append(f"override #{i}: not a mapping")
+            continue
+        try:
+            key = (int(ent["page"]), int(ent["ordinal"]))
+        except (KeyError, TypeError, ValueError):
+            problems.append(f"override #{i}: page/ordinal missing or not integers")
+            continue
+        for fld in ("badge_token_from_pdf", "resolved", "resolved_by"):
+            if not str(ent.get(fld) or "").strip():
+                problems.append(f"override p.{key[0]} #{key[1]}: `{fld}` is empty")
+        for fld in ("reason", "evidence"):
+            if not str(ent.get(fld) or "").strip():
+                problems.append(f"override p.{key[0]} #{key[1]}: `{fld}` is mandatory")
+        resolved = str(ent.get("resolved") or "").strip().strip("[]").upper()
+        if resolved and resolved not in list(LEVELS) + ["MC"]:
+            problems.append(f"override p.{key[0]} #{key[1]}: resolved {resolved!r} "
+                            "is neither a level nor MC")
+        if key in out:
+            problems.append(f"override p.{key[0]} #{key[1]}: duplicate entry")
+        ent = dict(ent)
+        ent["resolved"] = resolved
+        out[key] = ent
+    if problems:
+        raise SystemExit("badge-overrides.yaml is invalid:\n  " + "\n  ".join(problems))
+    return out, []
+
+
+def _apply_overrides(rows: list[dict], overrides: dict,
+                     applied: list[dict], remaining: set | None = None) -> list[dict]:
+    """Apply the human-resolved badge to row records, keeping the PDF token.
+
+    `remaining` is the set of override keys not yet matched; the caller checks it
+    is empty once every document has been walked (validating it per document
+    would reject an override for a row that lives in the next document).
+    """
+    if not overrides:
+        return rows
+    out = []
+    unknown = remaining if remaining is not None else set(overrides)
+    for rec in rows:
+        key = (rec["page"], rec["ordinal"])
+        ov = overrides.get(key)
+        if not ov:
+            out.append(rec)
+            continue
+        unknown.discard(key)
+        rec = dict(rec)
+        pdf_token = list(rec.get("badge_tokens") or [])
+        rec["badge_token_from_pdf"] = pdf_token
+        rec["badge_tokens"] = [ov["resolved"]]
+        rec["badge_override_applied"] = True
+        rec["badge_override"] = {k: ov.get(k) for k in
+                                 ("resolved", "resolved_by", "evidence", "reason")}
+        # the badge spread the override implies, for consumers that level rows
+        # from the badge rather than from the printed columns
+        rec["columns_from_badge"] = _columns([ov["resolved"]])
+        applied.append({"page": key[0], "ordinal": key[1],
+                        "badge_token_from_pdf": pdf_token,
+                        "resolved": ov["resolved"],
+                        "resolved_by": ov.get("resolved_by"),
+                        "evidence": ov.get("evidence"),
+                        "reason": ov.get("reason")})
+        out.append(rec)
+    return out
+
+
 def _write_table(decisions: list[dict], docs: list[dict], pages: dict[int, dict],
                  exc: dict, repairs: dict) -> dict:
     counts: dict[str, int] = {}
     for d in decisions:
         counts[d["decision"]] = counts.get(d["decision"], 0) + 1
+    overrides, _ = _load_badge_overrides()
+    applied: list[dict] = []
+    remaining = set(overrides)
+    doc_records = []
+    for d in docs:
+        recs = _apply_overrides([_row_record(r) for r in d["rows"]], overrides,
+                                applied, remaining)
+        doc_records.append({"title": d["title"], "pages": d["pages"],
+                            "n_rows": len(d["rows"]),
+                            "section_continuations": d.get("section_continuations") or [],
+                            "rows": recs,
+                            "orphans": d["orphans"]})
+    if remaining:
+        # an override naming a row the parser never produced is otherwise a
+        # silent no-op, and the next reader believes the badge was corrected
+        raise SystemExit("badge-overrides.yaml names PEMS rows the parser did not "
+                         f"produce: {sorted(remaining)}")
     out = {
         "generated": _dt.datetime.now().isoformat(timespec="seconds"),
         "sources": {"bbox_xml": os.path.relpath(P.CACHE, REPO),
@@ -631,11 +741,10 @@ def _write_table(decisions: list[dict], docs: list[dict], pages: dict[int, dict]
                        "verbatim_text", "x", "y", "badge_tokens", "columns"],
         "counts": {"site_pages_with_level_table": len(decisions), **counts},
         "page_decisions": decisions,
-        "pems_docs": [{"title": d["title"], "pages": d["pages"],
-                       "n_rows": len(d["rows"]),
-                       "section_continuations": d.get("section_continuations") or [],
-                       "rows": [_row_record(r) for r in d["rows"]],
-                       "orphans": d["orphans"]} for d in docs],
+        "badge_overrides": {"file": os.path.relpath(OVERRIDES_YAML, REPO),
+                            "count": len(overrides),
+                            "applied": applied},
+        "pems_docs": doc_records,
         "stale_exception_paths": sorted(repairs),
         "pems_pages_parsed": sorted({p for d in docs for p in d["pages"]}),
     }

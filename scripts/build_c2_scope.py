@@ -147,6 +147,24 @@ EXPECTED_DISPOSITIONS = {
     "named_item": 3,
 }
 
+# Instruction recorded for whoever adjudicates the two badge contradictions.
+# Verbatim in substance, because it decides WHICH question is being asked: if a
+# contradiction text is compound, the row is a PEMS row the site split (the
+# `held_level_correct` class) and the fix is an authoring decision, not a level.
+NOTES_FOR_ADJUDICATOR = [
+    "**Test \"one row or two\" before choosing a level.** Both contradiction "
+    "texts look compound:",
+    "- `Apply AED or cardiac monitor. Assess rhythm (I / P)` may mean EMT applies "
+    "the AED while I/P assess rhythm.",
+    "- `or AED is advising to shock [EMR], immediately defibrillate` may mean EMR "
+    "may use the AED, with the badge covering the advanced step.",
+    "If either is compound, these are **PEMS rows the site split**, not "
+    "mis-decoded badges — which puts them in the `held_level_correct` class and "
+    "makes the fix an **authoring decision, not a level fix**. Settle the shape "
+    "before the number. Do not write a level until you know whether you are "
+    "writing one row or two.",
+]
+
 DISPOSITION_LEGEND = {
     "held_level_correct": ("level is right; the open question is which site row "
                            "owns the PEMS row. Split-review list. NOT matched, "
@@ -434,6 +452,37 @@ ADJUDICATION = {
 }
 
 
+def pems_keys_of(rec: dict, align_idx: dict) -> list[tuple[int, int]]:
+    """Every PEMS (page, ordinal) a queue row is joined to.
+
+    pems_page/pems_ordinal is the primary key; a `multiple_candidates` row also
+    names alternates; the aligner's record adds the container of a
+    `shared_pems_row` and the row a text binding cites. Used to decide which rows
+    depend on an unresolved badge — a row is provisional if ANY of its keys is.
+    """
+    keys: list[tuple[int, int]] = []
+
+    def push(p, o):
+        if p is None or o is None:
+            return
+        k = (int(p), int(o))
+        if k not in keys:
+            keys.append(k)
+
+    push(rec.get("pems_page"), rec.get("pems_ordinal"))
+    for c in rec.get("pems_candidates") or []:
+        push(c.get("pems_page"), c.get("pems_ordinal"))
+    if rec.get("row") is not None:
+        a = align_idx.get((rec["file"], rec["row"])) or {}
+        ci = a.get("contained_in_pems") or {}
+        push(ci.get("pems_page"), ci.get("pems_ordinal"))
+        tb = a.get("text_binding") or {}
+        push(tb.get("pems_page"), tb.get("pems_ordinal"))
+        for pp, oo in KEY_RE.findall(a.get("reason") or ""):
+            push(pp, oo)
+    return keys
+
+
 def build():
     rows, seen, dropped = [], set(), []
     pems_idx = load_pems_index()
@@ -601,6 +650,34 @@ def build():
             rec["direction"] = direction
         add(rec)
 
+    # ---- provisional direction, at-risk rows, adjudicator notes -----------
+    # A verdict that turns on an unresolved badge is PROVISIONAL: p.63 #7 prints
+    # `[EMR]` inline but carries badge `I`, so `04_Cardiac_Arrest_Non_Traumatic`
+    # r4 reads `site_broader` today and would read `site_narrower` if the raster
+    # settles EMR. C3 and the handoff must be able to filter those out instead of
+    # applying a direction that is about to invert.
+    import recheck_ambiguous_badges as RC  # lazy: RC imports this module
+
+    resolved_keys = set(RC.load_overrides())
+    unresolved = {k for k, pems in pems_idx.items()
+                  if k not in resolved_keys and badge_ambiguity(pems)[0]}
+    for x in rows:
+        hit = [k for k in pems_keys_of(x, align_idx) if k in unresolved]
+        if hit:
+            x["provisional"] = True
+            x["provisional_reason"] = ("depends on unresolved badge for PEMS "
+                                       + ", ".join(f"p.{p}#{o}" for p, o in hit))
+    provisional = [{"file": x["file"], "row": x["row"],
+                    "pems_keys": [f"p.{p}#{o}" for p, o in
+                                  pems_keys_of(x, align_idx) if (p, o) in unresolved],
+                    "verdict": x.get("verdict"),
+                    "direction": x.get("direction"),
+                    "provisional_reason": x["provisional_reason"]}
+                   for x in rows if x.get("provisional")]
+    # every site row mapped to p.61#4 / p.63#7 that is NOT already in this queue:
+    # after a raster lands these are the rows that can silently flip
+    at_risk = RC.at_risk_rows(exclude={(x["file"], x["row"]) for x in rows})
+
     # ---- derived totals --------------------------------------------------
     held = [x for x in rows if x["source_bucket"].startswith("held_")]
     agrees = [x for x in held if x["verdict"] == "agrees"]
@@ -664,8 +741,17 @@ def build():
             "c3_apply_candidates": len(rows) - len(split_review),
             "needs_vision_count": len(needs_vision),
             "needs_vision": needs_vision,
+            # rows whose verdict/direction turns on a badge that is still
+            # internally contradictory — C3 and the handoff filter on this
+            "provisional_count": len(provisional),
+            "provisional": provisional,
+            # every site row mapped to p.61#4 / p.63#7 that is NOT in this queue;
+            # currently `matched`, invisible today, defect if the badge settles
+            "at_risk_matched_rows_count": len(at_risk),
+            "at_risk_matched_rows": at_risk,
             "dedupe_dropped": dropped,
         },
+        "notes_for_adjudicator": NOTES_FOR_ADJUDICATOR,
         "excluded": [{"file": f, "row": r, "why": w} for f, r, w in EXCLUDED],
         "rows": rows,
     }
@@ -678,6 +764,7 @@ def main():
     print(json.dumps({k: v for k, v in c.items()
                       if k not in ("site_broader", "split_review_list",
                                    "c3_apply_excluded", "needs_vision",
+                                   "provisional", "at_risk_matched_rows",
                                    "dedupe_dropped", "disposition_legend")}, indent=2))
     print()
     print("rows enumerated       :", c["rows_listed_here"])
@@ -703,6 +790,19 @@ def main():
     for n in c["needs_vision"]:
         print(f"  - {os.path.basename(n['file'])} row {n['row']} "
               f"(PEMS p.{n['pems_page']} #{n['pems_ordinal']}): {n['why']}")
+    print()
+    print(f"PROVISIONAL  : {c['provisional_count']} (verdict/direction depends on "
+          "an unresolved badge)")
+    for n in c["provisional"]:
+        print(f"  - {os.path.basename(n['file'])} row {n['row']} "
+              f"{n['verdict'] or ''} {n['direction'] or ''} — {n['provisional_reason']}")
+    print()
+    print(f"AT_RISK (matched, not queued): {c['at_risk_matched_rows_count']}")
+    for n in c["at_risk_matched_rows"]:
+        print(f"  - {os.path.basename(n['file'])} row {n['row']} "
+              f"(PEMS p.{n['pems_page']} #{n['pems_ordinal']}) flips to "
+              f"{'/'.join(n['directions']) or '—'} if badge settles "
+              f"{'/'.join(n['flips_if_badge'])}")
     print()
     print("DEDUPE       :", "none — no (file, row) appears in two buckets"
           if not c["dedupe_dropped"] else c["dedupe_dropped"])
@@ -878,6 +978,57 @@ def verify(doc):
         assert r["reason_kind"] == a["reason_kind"]
         assert r["detail"] == a["reason"], (
             f"{r['file']} row {r['row']}: detail is not the md's why line")
+
+    # 7. provisional flags, at-risk matched rows, adjudicator notes ---------
+    # A provisional verdict is one whose direction inverts if an unresolved
+    # badge settles the other way (Non_Traumatic r4 reads site_broader today and
+    # site_narrower under EMR). It is derived from the table, never hand-set.
+    import recheck_ambiguous_badges as RC  # lazy: RC imports this module
+    resolved_keys = set(RC.load_overrides())
+    unresolved = {k for k, p in pems_idx.items()
+                  if k not in resolved_keys and badge_ambiguity(p)[0]}
+    expect_flags = [(r["file"], r["row"]) for r in rows
+                    if any(k in unresolved for k in pems_keys_of(r, align_idx))]
+    flagged = [(r["file"], r["row"]) for r in rows if r.get("provisional")]
+    assert flagged == expect_flags, (
+        f"provisional flags {flagged} != rows joined to an unresolved badge {expect_flags}")
+    assert c["provisional_count"] == len(flagged)
+    assert [(p["file"], p["row"]) for p in c["provisional"]] == flagged
+    for r in rows:
+        assert ("provisional" in r) == ("provisional_reason" in r), (
+            f"{r['file']} row {r['row']}: provisional without a reason")
+        if r.get("provisional"):
+            assert r["provisional_reason"].startswith("depends on unresolved badge")
+    if (63, 7) in unresolved:
+        assert ("protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md", 4) in flagged, (
+            "the single site_broader row must be provisional — its direction rests on "
+            "the unresolved p.63#7 badge")
+    else:
+        assert ("protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md", 4) not in flagged, (
+            "p.63#7 is resolved; the row must not still be flagged provisional")
+
+    # the at-risk list is the recheck script's own output, not a hand list
+    ar = RC.at_risk_rows(exclude={(r["file"], r["row"]) for r in rows})
+    assert c["at_risk_matched_rows"] == ar, "counts.at_risk_matched_rows != recheck output"
+    assert c["at_risk_matched_rows_count"] == len(ar)
+    ar_keys = {(os.path.basename(a["file"]), a["row"]) for a in ar}
+    for named, pkey in ((("04_Cardiac_Arrest_Non_Traumatic_PROC.md", 5), (63, 7)),
+                        (("04_Cardiac_Arrest_Traumatic_PROC.md", 5), (61, 4))):
+        if pkey in unresolved:
+            assert named in ar_keys, f"{named} is mapped to an ambiguous badge but not at risk"
+        else:
+            assert named not in ar_keys, (
+                f"{named}: its badge is resolved, so it is a settled flip, not at risk")
+    for a in ar:
+        assert a["old_verdict"] == "matched", (
+            f"{a['file']} row {a['row']}: at-risk rows must be currently matched")
+        assert a["flips_if_badge"], f"{a['file']} row {a['row']}: at risk but never flips"
+
+    notes = doc.get("notes_for_adjudicator") or []
+    assert notes, "notes_for_adjudicator is missing"
+    assert any('one row or two' in n for n in notes), (
+        "notes_for_adjudicator must carry the 'one row or two' test")
+    assert any("authoring decision, not a level fix" in n for n in notes)
 
 
 if __name__ == "__main__":

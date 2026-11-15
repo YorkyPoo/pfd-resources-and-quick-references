@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T02:21:02",
+ "generated": "2026-11-15T03:33:34",
  "sources": {
   "bbox_xml": "audit/level-scan/.cache/pems_bbox.xml",
   "text_layer": "pems_chunks/PEMS2024_full.txt",
@@ -823,6 +823,11 @@
    "decision": "level_gated"
   }
  ],
+ "badge_overrides": {
+  "file": "audit/level-scan/badge-overrides.yaml",
+  "count": 0,
+  "applied": []
+ },
  "pems_docs": [
   {
    "title": "How to Read the Protocols",

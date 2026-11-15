@@ -40,6 +40,14 @@ MANIFEST = [
      "split-map invariant: the union of the levels published by the site rows "
      "that split a PEMS row equals the PEMS badge level and every level above "
      "it, and each listed row still exists"),
+    ("c2.badge_overrides",
+     "badge-overrides.yaml: every override names an existing PEMS row, keeps a "
+     "reason and evidence, cannot drift from the PDF token, and is actually "
+     "applied by pems_table.json (original token retained)"),
+    ("c2.recheck",
+     "badge re-check: at_risk matched rows in c2-scope.json equal the recheck "
+     "script's output, both p.61#4/p.63#7 mapped rows are named, provisional "
+     "flags are derived, and the adjudicator note is present"),
     ("deliverables",
      "deliverables exist and state the same totals as the artifacts"),
     ("docs_clean", "no protocol page under docs/ is modified"),
@@ -159,6 +167,167 @@ def check_split_map(pems_row: dict) -> None:
               f"{{{fmt_levels(exp)}}}; site rows publish {{{fmt_levels(union)}}} "
               f"({'; '.join(producers)})")
 
+
+
+def check_badge_overrides(table: dict, pems_row: dict) -> None:
+    """badge-overrides.yaml is the durable home of a badge resolution.
+
+    A resolution written only into an adjudication output is not durable: the
+    next C1 regeneration reintroduces the PDF badge and the contradiction
+    returns. So the file is checked as strictly as exceptions.yaml: reason and
+    evidence are mandatory, a row that does not exist is a failure, an override
+    that the table did not apply is a failure, and `badge_token_from_pdf` must
+    agree with the token the table parsed — an override may correct the badge,
+    never drift from the source it is correcting.
+    """
+    path = os.path.join(OUT, "badge-overrides.yaml")
+    check(os.path.exists(path), "badge-overrides.yaml exists")
+    if not os.path.exists(path):
+        return
+    doc = yaml.safe_load(open(path, encoding="utf-8")) or {}
+    ovs = doc.get("overrides")
+    check(isinstance(ovs, list), "badge-overrides.yaml carries an `overrides` list")
+    ovs = ovs or []
+    bad = []
+    applied_rows = {}
+    for d in table["pems_docs"]:
+        for r in d["rows"]:
+            if r.get("badge_override_applied"):
+                applied_rows[(r["page"], r["ordinal"])] = r
+    for ov in ovs:
+        key = (int(ov.get("page")), int(ov.get("ordinal")))
+        label = f"p.{key[0]} #{key[1]}"
+        for fld in ("reason", "evidence"):
+            if not str(ov.get(fld) or "").strip():
+                bad.append(f"{label}: `{fld}` is mandatory")
+        src = pems_row.get(key)
+        if src is None:
+            bad.append(f"{label}: no such PEMS row in pems_table.json")
+            continue
+        if not src.get("badge_override_applied"):
+            bad.append(f"{label}: override is not applied by pems_table.json")
+            continue
+        pdf = src.get("badge_token_from_pdf") or []
+        if not pdf or pdf[0] != ov.get("badge_token_from_pdf"):
+            bad.append(f"{label}: badge_token_from_pdf {ov.get('badge_token_from_pdf')!r} "
+                       f"disagrees with the parsed token {pdf[:1]}")
+        resolved = str(ov.get("resolved") or "").strip().strip("[]").upper()
+        if src.get("badge_tokens") != [resolved]:
+            bad.append(f"{label}: resolved badge {resolved!r} is not the table's badge")
+        if not str(ov.get("resolved_by") or "").strip():
+            bad.append(f"{label}: `resolved_by` is mandatory")
+    check(not bad, f"the {len(ovs)} badge overrides are complete and applied "
+                   f"({len(bad)} problems)")
+    for b in bad[:10]:
+        print("        bad override:", b)
+    # the other direction: a table row cannot claim an override nobody declared
+    declared = {(int(o.get("page")), int(o.get("ordinal"))) for o in ovs}
+    undeclared = sorted(set(applied_rows) - declared)
+    check(not undeclared,
+          f"every row the table marks badge_override_applied is declared in the yaml "
+          f"({len(undeclared)} undeclared)")
+    # the retained token is what makes a resolution reversible
+    check(all(r.get("badge_token_from_pdf") for r in applied_rows.values()),
+          "every overridden row retains the PDF token in badge_token_from_pdf")
+    check(table.get("badge_overrides", {}).get("count", -1) == len(ovs),
+          f"pems_table.json records {table.get('badge_overrides', {}).get('count')} "
+          f"applied overrides, the yaml declares {len(ovs)}")
+
+
+def check_recheck(table: dict, pems_row: dict, align: dict) -> None:
+    """The re-check must cover every row mapped to the ambiguous badges.
+
+    Only one of the three site rows mapped to p.61#4 / p.63#7 is in the C2 queue;
+    the other two carry `matched` and are flagged nowhere. c2-scope.json records
+    them as `at_risk_matched_rows`, and the value is checked against the recheck
+    script's own output rather than trusted.
+    """
+    import recheck_ambiguous_badges as RC  # noqa: E402
+    scope_path = os.path.join(OUT, "c2-scope.json")
+    check(os.path.exists(scope_path), "c2-scope.json exists")
+    if not os.path.exists(scope_path):
+        return
+    scope = json.load(open(scope_path, encoding="utf-8"))
+    counts = scope.get("counts") or {}
+    rows = scope.get("rows") or []
+    queued = {(r["file"], r["row"]) for r in rows}
+
+    ar = RC.at_risk_rows(exclude=queued)
+
+    # provisional flags are derived from the table, not hand-set: a row is
+    # provisional when it is joined to a badge that is still contradictory
+    unresolved = set()
+    for d in table["pems_docs"]:
+        for r in d["rows"]:
+            # an applied override resolves the contradiction; still-contradictory
+            # rows are the ones that make a verdict provisional
+            if not r.get("badge_override_applied") and row_badge_conflict(r):
+                unresolved.add((r["page"], r["ordinal"]))
+
+    listed = counts.get("at_risk_matched_rows")
+    check(isinstance(listed, list), "c2-scope.json carries counts.at_risk_matched_rows")
+    check(listed == ar, "at_risk_matched_rows equals the recheck script's output "
+                        f"({len(listed or [])} listed, {len(ar)} derived)")
+    check(counts.get("at_risk_matched_rows_count") == len(ar),
+          "at_risk_matched_rows_count matches the list length")
+    named = {(os.path.basename(a["file"]), a["row"]) for a in ar}
+    for want, pkey in ((("04_Cardiac_Arrest_Non_Traumatic_PROC.md", 5), (63, 7)),
+                       (("04_Cardiac_Arrest_Traumatic_PROC.md", 5), (61, 4))):
+        if pkey in unresolved:
+            check(want in named,
+                  f"at-risk list names {want[0]} r{want[1]} (mapped to an ambiguous badge)")
+        else:
+            check(want not in named,
+                  f"{want[0]} r{want[1]}: p.{pkey[0]}#{pkey[1]} is resolved, so it is "
+                  "a settled flip, not an at-risk row")
+
+    # provisional flags are derived from the table, not hand-set
+    expect = set()
+    import build_c2_scope as B  # noqa: E402
+    align_idx = {(p["site_page"], int(r["site_row"])): r
+                 for p in align["pages"] for r in p["rows"]}
+    for r in rows:
+        if r.get("row") is None:
+            continue
+        keys = set(B.pems_keys_of(r, align_idx))
+        if keys & unresolved:
+            expect.add((r["file"], r["row"]))
+    flagged = {(r["file"], r["row"]) for r in rows if r.get("provisional")}
+    check(flagged == expect,
+          f"provisional flags equal the rows joined to a still-contradictory badge "
+          f"({len(flagged)} flagged, {len(expect)} derived)")
+    check(counts.get("provisional_count") == len(flagged),
+          f"counts.provisional_count {counts.get('provisional_count')} matches the "
+          f"{len(flagged)} flagged rows")
+    check([(p["file"], p["row"]) for p in counts.get("provisional") or []] ==
+          [(r["file"], r["row"]) for r in rows if r.get("provisional")],
+          "counts.provisional enumerates exactly the provisional rows")
+    broad = ("protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md", 4)
+    if (63, 7) in unresolved:
+        check(broad in flagged,
+              "the single site_broader row is provisional (its direction rests on p.63#7)")
+    else:
+        check(broad not in flagged,
+              "p.63#7 is resolved, so no row is provisional on it any more")
+
+    notes = scope.get("notes_for_adjudicator") or []
+    check(bool(notes), "c2-scope.json carries notes_for_adjudicator")
+    check(any("one row or two" in n for n in notes),
+          "notes_for_adjudicator carries the 'one row or two' test")
+    check(any("authoring decision, not a level fix" in n for n in notes),
+          "notes_for_adjudicator says the compound case is an authoring decision")
+
+
+def row_badge_conflict(row: dict) -> bool:
+    """Does this PEMS row's inline level token still contradict its badge?
+
+    Delegates to the scope builder's detector, which knows all three marker
+    shapes ([X], (X / Y), "X/Y only"). An applied override changes the row's
+    badge, so a resolved row stops conflicting on its own.
+    """
+    import build_c2_scope as B  # noqa: E402
+    flag, _reason = B.badge_ambiguity(row)
+    return flag
 
 
 def main() -> int:
@@ -449,6 +618,15 @@ def main() -> int:
     # note, and the union invariant is re-derived from the site pages here.
     section("c2.split_map")
     check_split_map(pems_row)
+
+    # ---- C2e: durable badge overrides + the widened re-check.
+    # A badge resolution that lives only in an adjudication output is not
+    # durable; it must live where the parser reads it.
+    section("c2.badge_overrides")
+    check_badge_overrides(table, pems_row)
+
+    section("c2.recheck")
+    check_recheck(table, pems_row, align)
 
     section("deliverables")
     print("deliverables")

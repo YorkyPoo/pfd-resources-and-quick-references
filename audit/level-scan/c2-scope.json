@@ -266,8 +266,92 @@
     "why": "PEMS p.61 #4: badge EMT authorises EMT/A/I/P but the line prints '(I / P)'"
    }
   ],
+  "provisional_count": 4,
+  "provisional": [
+   {
+    "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+    "row": 4,
+    "pems_keys": [
+     "p.63#7"
+    ],
+    "verdict": "disagrees",
+    "direction": "site_broader",
+    "provisional_reason": "depends on unresolved badge for PEMS p.63#7"
+   },
+   {
+    "file": "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+    "row": 5,
+    "pems_keys": [
+     "p.63#7"
+    ],
+    "verdict": "disagrees",
+    "direction": "site_broader",
+    "provisional_reason": "depends on unresolved badge for PEMS p.63#7"
+   },
+   {
+    "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+    "row": 3,
+    "pems_keys": [
+     "p.61#4"
+    ],
+    "verdict": "ambiguous",
+    "direction": null,
+    "provisional_reason": "depends on unresolved badge for PEMS p.61#4"
+   },
+   {
+    "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+    "row": 4,
+    "pems_keys": [
+     "p.61#4"
+    ],
+    "verdict": "agrees",
+    "direction": null,
+    "provisional_reason": "depends on unresolved badge for PEMS p.61#4"
+   }
+  ],
+  "at_risk_matched_rows_count": 2,
+  "at_risk_matched_rows": [
+   {
+    "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+    "row": 5,
+    "old_verdict": "matched",
+    "pems_page": 63,
+    "pems_ordinal": 7,
+    "pdf_badge": "I",
+    "flips_if_badge": [
+     "EMR",
+     "I"
+    ],
+    "directions": [
+     "site_broader",
+     "site_narrower"
+    ]
+   },
+   {
+    "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+    "row": 5,
+    "old_verdict": "matched",
+    "pems_page": 61,
+    "pems_ordinal": 4,
+    "pdf_badge": "EMT",
+    "flips_if_badge": [
+     "EMT",
+     "I"
+    ],
+    "directions": [
+     "site_broader",
+     "site_narrower"
+    ]
+   }
+  ],
   "dedupe_dropped": []
  },
+ "notes_for_adjudicator": [
+  "**Test \"one row or two\" before choosing a level.** Both contradiction texts look compound:",
+  "- `Apply AED or cardiac monitor. Assess rhythm (I / P)` may mean EMT applies the AED while I/P assess rhythm.",
+  "- `or AED is advising to shock [EMR], immediately defibrillate` may mean EMR may use the AED, with the badge covering the advanced step.",
+  "If either is compound, these are **PEMS rows the site split**, not mis-decoded badges \u2014 which puts them in the `held_level_correct` class and makes the fix an **authoring decision, not a level fix**. Settle the shape before the number. Do not write a level until you know whether you are writing one row or two."
+ ],
  "excluded": [
   {
    "file": "protocols/toxicology/06_Overdose_Poisoning_PROC.md",
@@ -309,7 +393,9 @@
    ],
    "site_action": "**AED / Rhythm Assessment:**<br>\u2022 Apply AED and assess cardiac rhythm every **2 minutes**.<br>\u2022 Identify rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-s",
    "verdict": "disagrees",
-   "direction": "site_broader"
+   "direction": "site_broader",
+   "provisional": true,
+   "provisional_reason": "depends on unresolved badge for PEMS p.63#7"
   },
   {
    "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
@@ -862,7 +948,9 @@
    ],
    "site_action": "Defibrillation: **200 J Biphasic / 360 J Monophasic** (Adult) / **2 J/kg initial, 4 J/kg subsequent** (Ped) (AED for EMR/EMT, Manual for I/P)",
    "verdict": "disagrees",
-   "direction": "site_broader"
+   "direction": "site_broader",
+   "provisional": true,
+   "provisional_reason": "depends on unresolved badge for PEMS p.63#7"
   },
   {
    "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
@@ -1342,7 +1430,9 @@
      "detail": "site grants A/I/P; PEMS A/I/P",
      "needs_vision": false
     }
-   ]
+   ],
+   "provisional": true,
+   "provisional_reason": "depends on unresolved badge for PEMS p.61#4"
   },
   {
    "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
@@ -1376,7 +1466,9 @@
     "\u2022"
    ],
    "site_action": "Asystole on arrival: Consider withholding CPR",
-   "verdict": "agrees"
+   "verdict": "agrees",
+   "provisional": true,
+   "provisional_reason": "depends on unresolved badge for PEMS p.61#4"
   },
   {
    "file": "protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md",

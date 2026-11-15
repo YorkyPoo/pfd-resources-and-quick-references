@@ -1,0 +1,28 @@
+# Human-resolved badge contradictions. Read by pems_canonical.py when it
+# builds pems_table.json. An override WITHOUT a reason or evidence is a
+# hard error, same rule as exceptions.yaml.
+#
+# Schema (one entry per PEMS row whose printed badge is contradicted by a level
+# token printed inside the row text, and which a human has since resolved):
+#
+#   page:                 PEMS page number, integer
+#   ordinal:              the row's ordinal within its section, integer
+#   badge_token_from_pdf: the badge the PDF actually prints. MANDATORY and
+#                         checked against the parsed table: the override must
+#                         not drift from the source it is correcting. It is
+#                         copied onto the row as `badge_token_from_pdf`, so the
+#                         original token is never lost.
+#   resolved:             the level the adjudicator settled on (EMR|EMT|A|I|P|MC)
+#   resolved_by:          who settled it
+#   evidence:             path or citation for the raster/evidence that settled it
+#   reason:               one line, mandatory
+#
+# Nothing is overridden until rasters land evidence; the file ships empty.
+overrides: []
+#  - page: 63
+#    ordinal: 7
+#    badge_token_from_pdf: I
+#    resolved: EMR
+#    resolved_by: "<adjudicator>"
+#    evidence: audit/level-scan/evidence/...
+#    reason: "row text says '[EMR]' — EMR may use AED; badge covers the advanced step"
