@@ -1,0 +1,177 @@
+{
+ "note": "C2 queue. Total is len(rows) + core; nothing here is a hand sum. Dedupe is by (file, row). Core ambiguous rows are not enumerated individually because ambiguous-rows.md moves; they are counted live from that file.",
+ "counts": {
+  "rows_listed_here": 19,
+  "held_total": 16,
+  "held_agrees_rule_cleared": 0,
+  "held_disagrees_raster": 16,
+  "extra_named": 3,
+  "core_ambiguous": 42,
+  "core_ambiguous_by_kind": {
+   "multiple_candidates": 11,
+   "shared_pems_row": 31
+  },
+  "derived_total": 61
+ },
+ "excluded": [
+  {
+   "file": "protocols/toxicology/06_Overdose_Poisoning_PROC.md",
+   "row": 5,
+   "why": "text-binding settled: site A+ vs PEMS EMT -> fix list, not queue"
+  }
+ ],
+ "rows": [
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": 4,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "known disagreement",
+   "adjudication": "raster"
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+   "row": 6,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "known disagreement",
+   "adjudication": "raster"
+  },
+  {
+   "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+   "row": 13,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "published unknown does not contain PEMS p.107/#9 MC; fail closed",
+   "adjudication": "raster"
+  },
+  {
+   "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+   "row": 5,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "published unknown does not contain PEMS p.107/#4 EMT; fail closed",
+   "adjudication": "raster"
+  },
+  {
+   "file": "protocols/neurologic/05_Stroke_TIA_PROC.md",
+   "row": 6,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "published unknown does not contain PEMS p.131/#4 EMT; fail closed",
+   "adjudication": "raster"
+  },
+  {
+   "file": "protocols/neurologic/05_Stroke_TIA_PROC.md",
+   "row": 7,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "known disagreement",
+   "adjudication": "raster"
+  },
+  {
+   "file": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+   "row": 3,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "published unknown does not contain PEMS p.153/#2 EMT; fail closed",
+   "adjudication": "raster"
+  },
+  {
+   "file": "protocols/respiratory/03_Pneumothorax_PROC.md",
+   "row": 11,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "published unknown does not contain PEMS p.243/#4 I; fail closed",
+   "adjudication": "raster"
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Arrest_PROC.md",
+   "row": 11,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "published unknown does not contain PEMS p.239/#2 EMR; fail closed",
+   "adjudication": "raster"
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 10,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "known disagreement",
+   "adjudication": "raster"
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 8,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "published unknown does not contain PEMS p.123/#1 EMR; fail closed",
+   "adjudication": "raster"
+  },
+  {
+   "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+   "row": 11,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "published unknown does not contain PEMS p.153/#2 EMT; fail closed",
+   "adjudication": "raster"
+  },
+  {
+   "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+   "row": 4,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "published unknown does not contain PEMS p.153/#2 EMT; fail closed",
+   "adjudication": "raster"
+  },
+  {
+   "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "row": 3,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "published unknown does not contain PEMS p.239/#3 EMT; fail closed",
+   "adjudication": "raster"
+  },
+  {
+   "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "row": 8,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "published unknown does not contain PEMS p.239/#6 EMT; fail closed",
+   "adjudication": "raster"
+  },
+  {
+   "file": "protocols/trauma/09_Trauma_PROC.md",
+   "row": 7,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "known disagreement",
+   "adjudication": "raster"
+  },
+  {
+   "file": "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+   "row": 5,
+   "source_bucket": "extra_named",
+   "reason_kind": "named_item",
+   "detail": "PEMS p.63 badge I but the line says 'AED is advising to shock [EMR]' inline",
+   "adjudication": "raster"
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": null,
+   "source_bucket": "extra_named",
+   "reason_kind": "named_item",
+   "detail": "PEMS p.125 pearl tail truncated in every text extraction",
+   "adjudication": "raster"
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": null,
+   "source_bucket": "extra_named",
+   "reason_kind": "named_item",
+   "detail": "amiodarone 300 mg vs 150 mg row pairing (C1 false-confidence case)",
+   "adjudication": "raster"
+  }
+ ]
+}
