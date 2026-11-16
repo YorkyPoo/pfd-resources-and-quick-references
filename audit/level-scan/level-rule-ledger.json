@@ -14785,7 +14785,7 @@
    "action": "Law Enforcement Custody: Patients in LE custody (including ECOs) or under arrest MUST have a law enforcement officer present at all times.",
    "level_published": "PENDING",
    "status": "pending_row_omd",
-   "reason": "PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol restraint guidelines (p.71-72: \"Patients in law enforcement custody (including emergency custody orders) or under arrest must have a law enforcement officer present at all times\"), not as an administrative policy and not as a level-badged row. No policy and no level is published; the wording on this page is the agency policy.",
+   "reason": "PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol restraint guidelines (p.73: \"Patients in law enforcement custody (including emergency custody orders) or under arrest must have a law enforcement officer present at all times\"), not as an administrative policy and not as a level-badged row. No policy and no level is published; the wording on this page is the agency policy.",
    "owner_ruling": null,
    "pems_page": null,
    "pems_ordinal": null,
@@ -14812,7 +14812,7 @@
    },
    "note": "agency addition \u2014 pending OMD authorization",
    "carried_from_page": "EMT",
-   "pending_note": "<strong>PENDING</strong> \u2014 row 6: PEMS 2024 does not print this rule in any administrative policy; it appears only as prose in the Behavioral Emergencies restraint guidelines (p.71-72), which carries no level-badged row. No policy and no provider level is published for it. <strong>Pending OMD authorization</strong> \u2014 no provider level applies until the OMD authorizes it. See <code>audit/level-scan/level-rule-ledger.md</code>.",
+   "pending_note": "<strong>PENDING</strong> \u2014 row 6: PEMS 2024 does not print this rule in any administrative policy; it appears only as prose in the Behavioral Emergencies restraint guidelines (p.73), which carries no level-badged row. No policy and no provider level is published for it. <strong>Pending OMD authorization</strong> \u2014 no provider level applies until the OMD authorizes it. See <code>audit/level-scan/level-rule-ledger.md</code>.",
    "status_before": null
   },
   {
@@ -14821,7 +14821,7 @@
    "action": "Restraints: If LE restraints utilized (handcuffs, flex-cuffs), LE officer SHOULD accompany the patient.",
    "level_published": "PENDING",
    "status": "pending_row_omd",
-   "reason": "PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol restraint guidelines (p.71-72: \"If law-enforcement restraints have been utilized (for example handcuffs or flex-cuffs), a law enforcement officer should accompany the patient\"), not as an administrative policy and not as a level-badged row. No policy and no level is published; the wording on this page is the agency policy.",
+   "reason": "PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol restraint guidelines (p.73: \"If law-enforcement restraints have been utilized (for example handcuffs or flex-cuffs), a law enforcement officer should accompany the patient\"), not as an administrative policy and not as a level-badged row. No policy and no level is published; the wording on this page is the agency policy.",
    "owner_ruling": null,
    "pems_page": null,
    "pems_ordinal": null,
@@ -14848,7 +14848,7 @@
    },
    "note": "agency addition \u2014 pending OMD authorization",
    "carried_from_page": "EMT",
-   "pending_note": "<strong>PENDING</strong> \u2014 row 7: PEMS 2024 does not print this rule in any administrative policy; it appears only as prose in the Behavioral Emergencies restraint guidelines (p.71-72), which carries no level-badged row. No policy and no provider level is published for it. <strong>Pending OMD authorization</strong> \u2014 no provider level applies until the OMD authorizes it. See <code>audit/level-scan/level-rule-ledger.md</code>.",
+   "pending_note": "<strong>PENDING</strong> \u2014 row 7: PEMS 2024 does not print this rule in any administrative policy; it appears only as prose in the Behavioral Emergencies restraint guidelines (p.73), which carries no level-badged row. No policy and no provider level is published for it. <strong>Pending OMD authorization</strong> \u2014 no provider level applies until the OMD authorizes it. See <code>audit/level-scan/level-rule-ledger.md</code>.",
    "status_before": null
   },
   {

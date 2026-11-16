@@ -1937,7 +1937,7 @@ def emit_md(ledger):
               '- **Batch 6 — the 5 administrative PENDING rows, for the owner\'s one-pass ruling.**',
               '  Behavioral Health rows 6-7 (law-enforcement custody; handcuffed transport): PEMS',
               '  prints the rule only as prose in the Behavioral Emergencies restraint guidelines',
-              '  (p.71-72), not in any administrative policy and not as a level-badged row.',
+              '  (p.73), not in any administrative policy and not as a level-badged row.',
               '  Infant Abandonment row 2 ("assess infant and provide medical care"): the policy',
               '  prints no assessment/treatment step. Stroke Field Triage rows 1 and 4 (15-minute',
               '  scene time; life-threats route to nearest ED): the Stroke policy prints neither.',
