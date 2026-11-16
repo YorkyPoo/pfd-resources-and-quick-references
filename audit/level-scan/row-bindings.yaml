@@ -1840,6 +1840,19 @@ bindings:
       Monitor SpO2." badge EMT.
 
   - file: procedures/Endotracheal_Intubation.md
+    row: 2
+    pems_page: 247
+    pems_ordinal: 2
+    evidence: >-
+      p.247#2 "Position the patient: Ear to sternal notch." badge EMT — the position step
+      this row opens with, printed at exactly the level the page publishes. The row's second
+      sentence, "Maintain in-line C-spine stabilization if trauma suspected", is the first
+      clause of p.247#3 ("Maintain in-line cervical spine stabilization if there is concern
+      for trauma.") at badge I, a different level inside the same site row; the EMT chip
+      carries the position step only, and the C-spine sentence's I level is stated here
+      rather than folded into the chip.
+
+  - file: procedures/Endotracheal_Intubation.md
     row: 3
     pems_page: 247
     pems_ordinal: 3
@@ -1863,6 +1876,20 @@ bindings:
     pems_ordinal: 5
     evidence: >-
       p.247#5 "Orally Intubate. Patients < 12 years old." badge P.
+
+  - file: procedures/Endotracheal_Intubation.md
+    row: 6
+    pems_page: 247
+    pems_ordinal: 7
+    evidence: >-
+      p.247#7 "After two failed attempts, airway must be managed by the most experienced
+      provider available." badge P — the escalation this row's second sentence prints, at
+      exactly the level the page publishes. The row's first sentence, "re-oxygenate with 100%
+      O2" between attempts, is printed at badge I in p.247#6 ("If unsuccessful, reoxygenate
+      between attempts with 100% Oxygen. Adjust positioning/technique/equipment as necessary
+      prior to any further attempt."), a different level inside the same site row; the P chip
+      carries the failed-attempt escalation, and the re-oxygenate sentence's I level is
+      stated here rather than folded into the chip.
 
   - file: procedures/Endotracheal_Intubation.md
     row: 7
@@ -2093,6 +2120,17 @@ bindings:
       the move is listed for owner review.
 
   - file: procedures/Neonatal_Resuscitation.md
+    row: 3
+    pems_page: 261
+    pems_ordinal: 7
+    evidence: >-
+      p.261#7 "Apply ECG monitoring." badge I — the ECG step this row opens with, printed at
+      exactly the level the page publishes. The row's second half, EtCO2 monitoring, is
+      printed at badge EMT in p.261#6 ("Place supraglottic airway if necessary. Apply ETCO2
+      monitoring."), a lower level inside the same site row; the I chip carries the ECG step,
+      and the EtCO2 sub-step's EMT level is stated here rather than folded into the chip.
+
+  - file: procedures/Neonatal_Resuscitation.md
     row: 4
     pems_page: 261
     pems_ordinal: 9
@@ -2320,36 +2358,6 @@ bindings:
     evidence: >-
       Same PEMS row also prints "Confirm mechanical capture by palpating femoral pulses. Reassess
       the patient." badge I.
-
-  - file: procedures/Endotracheal_Intubation.md
-    row: 2
-    status: owner_required
-    reason: >-
-      The row bundles two actions printed on two PEMS rows at two different levels: "Position the
-      patient: Ear to sternal notch." (p.247#2, badge EMT) and "Maintain in-line cervical spine
-      stabilization if there is concern for trauma." (p.247#3, badge I). No single PEMS row prints
-      the whole action, and one chip cannot carry both levels without over- or under-granting one
-      half. The level this page published (EMT) is kept and flagged.
-
-  - file: procedures/Endotracheal_Intubation.md
-    row: 6
-    status: owner_required
-    reason: >-
-      The row bundles two actions printed on two PEMS rows at two different levels: "If
-      unsuccessful, reoxygenate between attempts with 100% Oxygen. Adjust
-      positioning/technique/equipment as necessary prior to any further attempt." (p.247#6, badge
-      I) and "After two failed attempts, airway must be managed by the most experienced provider
-      available." (p.247#7, badge P). One chip cannot carry both; the level this page published
-      (P) is kept and flagged.
-
-  - file: procedures/Neonatal_Resuscitation.md
-    row: 3
-    status: owner_required
-    reason: >-
-      The row bundles two monitoring actions printed on two PEMS rows at two different levels:
-      "Apply ECG monitoring." (p.261#7, badge I) and "Apply ETCO2 monitoring." (p.261#6 "Place
-      supraglottic airway if necessary. Apply ETCO2 monitoring.", badge EMT). One chip cannot
-      carry both; the level this page published (I) is kept and flagged.
 
   - file: procedures/Neonatal_Resuscitation.md
     row: 5

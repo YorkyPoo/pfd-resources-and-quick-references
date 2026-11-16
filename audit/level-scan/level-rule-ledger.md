@@ -455,11 +455,11 @@ the action text.
 | `Chest_Decompression.md` | 6 | I | p.243#3 | Advance the catheter over the needle into the pleural space and remove the needle. | row-bindings:bound | OK |
 | `Chest_Decompression.md` | 7 | I | p.243#4 | Reassess the patient, including vital signs and respiratory effort / compliance. Consider repeating the above steps for continued or recurrent hemo… | row-bindings:bound | OK |
 | `Endotracheal_Intubation.md` | 1 | EMT | p.247#1 | Pre-oxygenate the patient: Provide 100% Oxygen via NRB or BVM for 3 minutes. Monitor SpO2. Refer to Airway Management and Ventilatory Support proto… | row-bindings:bound | OK |
-| `Endotracheal_Intubation.md` | 2 | EMT | — | — | — | OWNER_REQUIRED |
+| `Endotracheal_Intubation.md` | 2 | EMT | p.247#2 | Position the patient: Ear to sternal notch. | row-bindings:bound | OK |
 | `Endotracheal_Intubation.md` | 3 | I | p.247#3 | Maintain in-line cervical spine stabilization if there is concern for trauma. Prepare equipment: o IV/IO access o ET tube of appropriate size + 1 s… | row-bindings:bound | OK |
 | `Endotracheal_Intubation.md` | 4 | I | p.247#3 | Maintain in-line cervical spine stabilization if there is concern for trauma. Prepare equipment: o IV/IO access o ET tube of appropriate size + 1 s… | row-bindings:bound | OK |
 | `Endotracheal_Intubation.md` | 5 | P | p.247#5 | Orally Intubate. Patients < 12 years old. | row-bindings:bound | OK |
-| `Endotracheal_Intubation.md` | 6 | P | — | — | — | OWNER_REQUIRED |
+| `Endotracheal_Intubation.md` | 6 | P | p.247#7 | After two failed attempts, airway must be managed by the most experienced provider available. If unable to intubate and unable to oxygenate, procee… | row-bindings:bound | OK |
 | `Endotracheal_Intubation.md` | 7 | P | p.247#7 | After two failed attempts, airway must be managed by the most experienced provider available. If unable to intubate and unable to oxygenate, procee… | row-bindings:bound | OK |
 | `Endotracheal_Intubation.md` | 8 | I | p.247#9 | Ensure the presence of continuous box-waveform capnography. o Auscultate for bilateral lung sounds & absence of gastric sounds Secure the tube. Use… | row-bindings:bound | OK |
 | `Endotracheal_Intubation.md` | 9 | I | p.247#9 | Ensure the presence of continuous box-waveform capnography. o Auscultate for bilateral lung sounds & absence of gastric sounds Secure the tube. Use… | row-bindings:bound | OK |
@@ -486,7 +486,7 @@ the action text.
 | `Nasogastric_Tube.md` | 6 | I | p.259#5 | Document the indication, depth of insertion, and volume of any output. | row-bindings:bound | OK |
 | `Neonatal_Resuscitation.md` | 1 | EMR | p.261#1 | Post delivery  Warm and maintain normal temperature.  Position / open airway (in a sniffing position – ear to sternal notch)  Dry and stimulate … | row-bindings:bound | OK |
 | `Neonatal_Resuscitation.md` | 2 | EMR | p.261#5 | Begin positive pressure ventilation with BVM and 21% oxygen for 30 seconds, then increase to 100% oxygen. Ensure adequate chest rise. 40-60 breaths… | row-bindings:bound | OK |
-| `Neonatal_Resuscitation.md` | 3 | I | — | — | — | OWNER_REQUIRED |
+| `Neonatal_Resuscitation.md` | 3 | I | p.261#7 | Apply ECG monitoring. | row-bindings:bound | OK |
 | `Neonatal_Resuscitation.md` | 4 | EMR | p.261#9 | Begin chest compressions. Coordinate with ventilation. 3 compressions for each breath. 30 breaths per minute with chest compressions. | row-bindings:bound | OK |
 | `Neonatal_Resuscitation.md` | 5 | P | — | — | — | OWNER_REQUIRED |
 | `Spinal_Motion_Restriction.md` | 1 | EMR | p.267#0 | Maintain a patent airway while manually stabilizing the cervical spine until an appropriately sized cervical collar or alternative is applied. Main… | row-bindings:bound | OK |
@@ -879,11 +879,11 @@ recorded decision — the citation that cleared it is listed above and in the ta
 | `CPAP.md` | 0 | 0 | new | 0 |
 | `Capnography.md` | 0 | 0 | new | 0 |
 | `Chest_Decompression.md` | 0 | 0 | new | 0 |
-| `Endotracheal_Intubation.md` | 0 | 2 | new | 0 |
+| `Endotracheal_Intubation.md` | 0 | 0 | new | 0 |
 | `Intraosseous_Access.md` | 0 | 0 | new | 0 |
 | `Medication_Administration.md` | 0 | 0 | new | 0 |
 | `Nasogastric_Tube.md` | 0 | 0 | new | 0 |
-| `Neonatal_Resuscitation.md` | 0 | 2 | new | 0 |
+| `Neonatal_Resuscitation.md` | 0 | 1 | new | 0 |
 | `Spinal_Motion_Restriction.md` | 0 | 0 | new | 0 |
 | `Surgical_Airway.md` | 0 | 0 | new | 0 |
 | `Taser_Barb_Removal.md` | 0 | 0 | new | 0 |
@@ -905,12 +905,12 @@ recorded decision — the citation that cleared it is listed above and in the ta
 | `01_Trauma_Field_Triage_PROC.md` | 0 | 0 | new | 0 |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 11 | 11 | 0 | 0 |
 
-**Total: 77 flagged before, 60 after (17 cleared).**
+**Total: 77 flagged before, 57 after (20 cleared).**
 
 
 ## OWNER_REQUIRED
 
-**41 row(s).** No PEMS 2024 row authorises a provider level for these
+**38 row(s).** No PEMS 2024 row authorises a provider level for these
 actions, after the cross-page search (a row is only cleared when a PEMS row
 actually prints the action — see *Cross-page citations* above). The chip keeps the
 level the page already published and carries the flag. Nothing here was invented:
@@ -1007,12 +1007,6 @@ prints it and why its badge contradicts the row's own words.
 - `protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md` row 5 — **P** kept from the page, not from the source. Post-Intubation Sedation, consider ONE of the following:  • ADULT: Ketamine (Ketalar) 1 mg/kg IV/IO (Maximum single dose: 100 mg). May repeat every 10
   - nearest PEMS row, NOT cited as authority: p.55#2
   - reason: The act is printed at I (p.55#2 fentanyl, p.55#3 midazolam, both badge I) but the drug this row names is not printed anywhere as a sedative: ketamine occurs in exactly one PEMS 2024 row, p.72#9 (behavioral restraint, badge P). The C2 adjudication bound this row to p.55#2 and levelled it I — that is the class level, and chipping it I would widen the authority for ketamine post-intubation sedation from the P this page published to I on a citation that does not name the drug. The page's P is kept and flagged: is post-intubation ketamine to sit at I on the strength of the p.55 sedation rows, or is it agency-specific like RSI (p.123#4)?
-- `procedures/Endotracheal_Intubation.md` row 2 — **EMT** kept from the page, not from the source. Position patient: Ear to sternal notch. Maintain in-line C-spine stabilization if trauma suspected.
-  - reason: The row bundles two actions printed on two PEMS rows at two different levels: "Position the patient: Ear to sternal notch." (p.247#2, badge EMT) and "Maintain in-line cervical spine stabilization if there is concern for trauma." (p.247#3, badge I). No single PEMS row prints the whole action, and one chip cannot carry both levels without over- or under-granting one half. The level this page published (EMT) is kept and flagged.
-- `procedures/Endotracheal_Intubation.md` row 6 — **P** kept from the page, not from the source. If unsuccessful, re-oxygenate with 100% O₂. After 2 failed attempts, manage via most experienced provider or alternative airway.
-  - reason: The row bundles two actions printed on two PEMS rows at two different levels: "If unsuccessful, reoxygenate between attempts with 100% Oxygen. Adjust positioning/technique/equipment as necessary prior to any further attempt." (p.247#6, badge I) and "After two failed attempts, airway must be managed by the most experienced provider available." (p.247#7, badge P). One chip cannot carry both; the level this page published (P) is kept and flagged.
-- `procedures/Neonatal_Resuscitation.md` row 3 — **I** kept from the page, not from the source. Apply ECG and EtCO₂ monitoring.
-  - reason: The row bundles two monitoring actions printed on two PEMS rows at two different levels: "Apply ECG monitoring." (p.261#7, badge I) and "Apply ETCO2 monitoring." (p.261#6 "Place supraglottic airway if necessary. Apply ETCO2 monitoring.", badge EMT). One chip cannot carry both; the level this page published (I) is kept and flagged.
 - `procedures/Neonatal_Resuscitation.md` row 5 — **P** kept from the page, not from the source. Obtain IV/IO access, administer Epinephrine 0.01 mg/kg (0.1 mg/mL). Repeat q3-5 mins.
   - reason: The row bundles two actions printed on two PEMS rows at two different levels: "Obtain IV/IO access if not already obtained." (p.261#10, badge A) and "Administer: Epinephrine (Adrenaline) 0.01mg/kg (0.1mg/mL) IV/IO" (p.261#12, badge I). One chip cannot carry both; the level this page published (P) is kept and flagged.
 
@@ -1439,7 +1433,7 @@ decision before the page is treated as final.
   PENDING_OMD — row-level above. This is NOT the whole-page case: the rest of the
   Stroke page is PEMS-cited.
 - **Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.** The
-  owner was asked and did not rule, so the other 41 OWNER_REQUIRED rows keep their
+  owner was asked and did not rule, so the other 38 OWNER_REQUIRED rows keep their
   level + ⚑ flag exactly as they were. Do not convert them without a ruling.
 - **Respiratory pages — the OWNER_REQUIRED rows that remain after the cross-page
   pass.** PEMS 2024 prints one respiratory protocol (p.123-124) and one
@@ -1615,11 +1609,25 @@ decision before the page is treated as final.
   Nasogastric Tube r1-r6 `P -> I` (the whole procedure is badge I on p.259); Neonatal
   Resuscitation r2 and r4 `EMT -> EMR` (BVM and chest compressions, p.261#5/#9 badge
   EMR). No row moved *up*, and no row was left with a cumulative dot grid.
-- **Batch 7 — 4 rows are OWNER_REQUIRED bundles** (ETT r2, ETT r6, Neonatal r3,
-  Neonatal r5): each prints two actions that PEMS prints on two rows at two different
-  levels, so no single chip can carry the row without over- or under-granting one
-  half. Each keeps the level the page published and states the two source rows in
-  `row-bindings.yaml`.
+- **Batch 7 — ETT r2, ETT r6 and Neonatal r3 are CITED, not OWNER_REQUIRED.** Each
+  row's published level matches a PEMS row exactly, so each now cites it and takes
+  its badge: p.247#2 (EMT) "Position the patient: Ear to sternal notch.", p.247#7
+  (P) "After two failed attempts, airway must be managed by the most experienced
+  provider available.", p.261#7 (I) "Apply ECG monitoring." Each row also carries a
+  second sentence that PEMS prints at a different level inside the same site row
+  (ETT r2 C-spine sentence p.247#3 badge I; ETT r6 re-oxygenate sentence p.247#6
+  badge I; Neonatal r3 EtCO2 sub-step p.261#6 badge EMT). That split is stated in
+  each row's `evidence` in `row-bindings.yaml` and is not folded into the chip.
+- **Batch 7 — Neonatal r5 is the one OWNER_REQUIRED row left.** The page prints P;
+  its two PEMS rows are IV/IO access at badge A (p.261#10) and epinephrine at badge
+  I (p.261#12). Neither is P and no other p.261 row badges the bundle, so the row
+  keeps the published P and stays flagged.
+- **Batch 7 — ETT r2 needs an owner ruling on its C-spine sentence.** The row is
+  chipped EMT on p.247#2 (positioning), but the sentence it also prints ("Maintain
+  in-line C-spine stabilization if trauma suspected") is badge I at p.247#3. An EMT
+  chip on a row that contains an I-level sentence over-grants that half; owner to
+  confirm whether the C-spine sentence should become its own I-level row (a split)
+  or stays inside the EMT step.
 - **Batch 7 — CPAP units disagree with the source, and the action text was not
   edited.** The page reads PEEP "5 cmH2O" (r3) and "5-15 cmH2O" (r6); PEMS p.245#1
   prints "5 mmHg" and p.245#4 extracts as "titratingPEEP9%-15mmHg)". Reconciliation
@@ -1654,11 +1662,11 @@ new defect. Source of truth: `audit/level-scan/verifier-exceptions.yaml`.
 | converted pages — protocol/procedure chassis | 55 |
 | converted pages — administrative policy (POLICY/PENDING) | 14 |
 | action rows — total | 604 |
-| cited to a PEMS protocol row (incl. cross-page) | 454 |
+| cited to a PEMS protocol row (incl. cross-page) | 457 |
 | cross-page citations | 46 |
 | POLICY (PEMS administrative policy) | 89 |
 | PENDING (no PEMS source: whole page + row-level + administrative) | 19 |
-| OWNER_REQUIRED | 41 |
+| OWNER_REQUIRED | 38 |
 | OWNER_RULED | 1 |
 | +MC markers | 8 |
 
