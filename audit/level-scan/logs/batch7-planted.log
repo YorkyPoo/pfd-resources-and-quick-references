@@ -1,0 +1,23 @@
+Batch 7 — planted-defect probe (scripts/level_rule.py --check)
+
+Run in a fresh clone of level-rule-collapse at 17f5b9f (17f5b9f).
+--check shells out to git (base_brackets / git show), so the probe is run in a
+.git-bearing copy; the real working tree is never touched.
+
+A provider-level matrix back inside an sc-wrap (procedures/CPAP.md)            EXIT=1
+    - procedures/CPAP.md (line 44): a provider-level matrix is still wrapped in sc-wrap
+A provider-level matrix back inside an sc-wrap (procedures/CPAP.md) [after revert] EXIT=0
+B chip P where the cited row p.259#0 prints I (Nasogastric_Tube row 1)         EXIT=1
+    - procedures/Nasogastric_Tube.md row 1: marker P != expected I (p.259#0)
+B chip P where the cited row p.259#0 prints I (Nasogastric_Tube row 1) [after revert] EXIT=0
+C OWNER_REQUIRED flag removed (Neonatal_Resuscitation row 3)                   EXIT=1
+    - procedures/Neonatal_Resuscitation.md row 3: no citable PEMS level but the chip is not flagged OWNER_REQUIRED
+C OWNER_REQUIRED flag removed (Neonatal_Resuscitation row 3) [after revert]    EXIT=0
+D binding repointed to p.257#3 (badge A) for a row chipped EMT                 EXIT=1
+    - procedures/Medication_Administration.md row 5: marker EMT != expected A (p.257#3)
+D binding repointed to p.257#3 (badge A) for a row chipped EMT [after revert]  EXIT=0
+
+Each defect turns the gate red (EXIT=1) with a message naming the defect; each revert
+returns it to EXIT=0, so the gate is not passing on a page it does not read.
+
+EXIT=0

@@ -1,0 +1,49 @@
+Batch 7 — 390px check (Emulation.setDeviceMetricsOverride 390x844, DPR 2) on 17f5b9f
+
+Served site/ from the mkdocs build of 17f5b9f on 127.0.0.1:8123; measured in Chromium via CDP
+in one tab at a true 390px viewport: documentElement.scrollWidth vs clientWidth, and inside
+every .lv-wrap table body row the count of .lvl chips, the chip text, and td.scrollWidth vs
+td.clientWidth on every cell (action column included).
+
+page                                                      scrollW clientW rows chips POLICY PEND MC LEVEL actClip
+CPAP.html                                                     390     390     6     6      0    0  0     6   False
+Capnography.html                                              390     390     7     7      0    0  0     7   False
+Chest_Decompression.html                                      390     390     7     7      0    0  0     7   False
+Endotracheal_Intubation.html                                  390     390    10    10      0    0  0    10   False
+Intraosseous_Access.html                                      390     390     8     8      0    0  0     8   False
+Medication_Administration.html                                390     390     6     6      0    0  0     6   False
+Nasogastric_Tube.html                                         390     390     6     6      0    0  0     6   False
+Neonatal_Resuscitation.html                                   390     390     5     5      0    0  0     5   False
+Spinal_Motion_Restriction.html                                390     390     4     4      0    0  0     4   False
+Surgical_Airway.html                                          390     390     5     5      0    0  1     4   False
+Taser_Barb_Removal.html                                       390     390     6     6      0    0  0     6   False
+Tourniquet_Application.html                                   390     390     6     6      0    0  0     6   False
+Transcutaneous_Pacing.html                                    390     390     5     5      0    0  0     5   False
+01_ALS_Release_to_BLS_PROC.html                               390     390     8     8      8    0  0     0   False
+01_Abuse_Recognition_and_Mandated_Reporting_PROC.html         390     390     7     7      7    0  0     0   False
+01_Behavioral_Health_Transportation_Decision_PROC.html        390     390     7     7      5    2  0     0   False
+01_Communications_PROC.html                                   390     390     6     6      6    0  0     0   False
+01_Death_Criteria_for_Withholding_Resuscitation_PROC.html     390     390     5     5      5    0  0     0   False
+01_Helicopter_EMS_HEMS_PROC.html                              390     390     6     6      6    0  0     0   False
+01_Infant_Abandonment_PROC.html                               390     390     4     4      3    1  0     0   False
+01_Patient_Refusal_of_Treatment_Transport_PROC.html           390     390     7     7      7    0  0     0   False
+01_Patient_Restraint_PROC.html                                390     390     8     8      8    0  0     0   False
+01_STEMI_Field_Triage_PROC.html                               390     390     7     7      6    0  1     0   False
+01_Safe_Transport_of_Pediatric_Patients_PROC.html             390     390     7     7      7    0  0     0   False
+01_Stroke_Field_Triage_PROC.html                              390     390     8     8      6    2  0     0   False
+01_Transportation_and_Destination_Determination_PROC.html     390     390     7     7      7    0  0     0   False
+01_Trauma_Field_Triage_PROC.html                              390     390     8     8      8    0  0     0   False
+Universal Patient Care.html                                   390     390    11    11      0    0  0    11   False
+
+OVERFLOW: none — scrollWidth == clientWidth on all 28 pages
+One chip per action row on every page: 187 rows / 187 chips (procedures 81/81, previously
+converted pages 106/106 re-measured unchanged).
+Action column not clipped on any page (td.scrollWidth == td.clientWidth on every cell).
+MC chips: 1 (Surgical Airway row 5, MC row cited to p.269#6) — the procedures pages carry
+no POLICY/PENDING chips, which is correct: every one of their rows is bound to a PEMS 2024
+procedure row or flagged OWNER_REQUIRED on the page.
+
+Screenshot captured at 390px: audit/level-scan/evidence/batch7-390/neonatal-390px.png —
+Neonatal Resuscitation, the page with the most OWNER_REQUIRED rows: header, chip column,
+the ⚑ flags on rows 3 and 5 and the lv-note paragraph all render inside 390px.
+EXIT=0

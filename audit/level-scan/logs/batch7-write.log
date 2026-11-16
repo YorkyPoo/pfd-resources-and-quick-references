@@ -1,0 +1,18 @@
+Batch 7 — `--write` idempotency and tree equality on 17f5b9f
+
+run 1: python3 scripts/level_rule.py --write
+  wrote audit/level-scan/level-rule-ledger.json (604 rows)
+  wrote audit/level-scan/level-rule-ledger.md
+  EXIT=0
+run 2: python3 scripts/level_rule.py --write (immediately after run 1)
+  wrote audit/level-scan/level-rule-ledger.json (604 rows)
+  wrote audit/level-scan/level-rule-ledger.md
+  EXIT=0
+
+docs/**/*.md files hashed: 279
+run 1 changed 0 file(s); run 2 changed 0 file(s)
+written tree == committed tree (HEAD): yes
+
+So a re-run is a no-op: the pages are already in the collapsed format and the
+ledger it writes is byte-identical to the one committed at HEAD.
+EXIT=0
