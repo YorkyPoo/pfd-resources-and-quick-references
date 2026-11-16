@@ -1,0 +1,32 @@
+Outstanding Decisions — 390px phone check (Emulation.setDeviceMetricsOverride 390x844, DPR 2)
+on the mkdocs build of the committed page, served from site/ on 127.0.0.1:8123 and measured
+in Chromium over CDP.
+
+URL: /protocols/outstanding-decisions.html
+Method: documentElement.scrollWidth vs clientWidth; every element's getBoundingClientRect().width
+against clientWidth; every .od-card and descendant checked for scrollWidth > clientWidth with a
+non-visible overflow (i.e. actually clipped text); card counts per section; nav entry present.
+
+metric                                              measured
+documentElement.scrollWidth                              390
+documentElement.clientWidth                              390
+scrollWidth == clientWidth                              true
+elements wider than the viewport                          0
+clipped elements (overflow != visible, sw > cw)           0
+cards: OWNER_REQUIRED (od-cat-nowhere + od-cat-conflict)  38   (17 "PEMS prints this nowhere" + 21 "badge contradicts")
+cards: PENDING (od-cat-pending)                           19   (11 whole-page + 3 clinical agency + 5 administrative)
+cards: OPEN OWNER QUESTIONS (od-cat-question)              33
+protocol-page headings / live links                        32
+"Outstanding Decisions" present in the nav template     true
+
+PASS — no horizontal scroll, no wide table, no clipped text at 390px.
+
+One note, measured not assumed: a single paragraph (the Batch 3 open question) has a 334px
+line box inside a 331px content box — 3px of a long `file_name_PROC.md` token reaching into the
+card's own 11px padding. documentElement.scrollWidth is still 390 and no glyph is clipped or
+covered, so it is not an overflow; recorded here so the green verdict is not overstated.
+
+Link check: clicked the first protocol-page heading link in the same 390px tab ->
+/protocols/cardiac/04_Chest_Pain_ACS_PROC.html, h2 "Cardiac - Chest Pain / ACS", 15 table rows.
+The links are markdown links, so `mkdocs build --strict` fails on a broken target — proven by
+audit/level-scan/logs/adpage-planted.log (EXIT=1 with the retargeted link named).

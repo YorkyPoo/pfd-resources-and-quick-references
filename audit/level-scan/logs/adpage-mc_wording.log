@@ -1,0 +1,4 @@
+GATE: mc_wording.py --check on dfb4b6d
+OK — 27 MC row(s) on 26 page(s) plus every other protocol table row (all levels): none name OMD / Poquoson / a Medical Director / a named individual.
+     prose lines still mentioning the office (out of scope, not edited): 75
+EXIT=0
