@@ -31,16 +31,16 @@ This protocol outlines the assessment and management of patients experiencing pe
 
 ### Interventions
 
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Follow Universal Patient Care | • | • | • | • | • |
-| 2 | Place in position of comfort / recovery position if unresponsive; suction as needed | • | • | • | • | • |
-| 3 | Refer to Airway and Hypotension protocols as needed |  | • | • | • | • |
-| 4 | **[Ondansetron](../../pharmacology/Ondansetron.md) (Zofran) 4 mg** ODT |  | • | • | • | • |
-| 5 | Adult: **[Ondansetron](../../pharmacology/Ondansetron.md) (Zofran) 4 mg** IV/IO slow push, IM, or PO<br>Pediatric: **[Ondansetron](../../pharmacology/Ondansetron.md) (Zofran) 0.15 mg/kg** IV/IO/IM/PO (max **4 mg**) |  |  | • | • | • |
-| 6 | Contact Medical Control for additional doses or orders |  |  | [A] | • | • |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emr">EMR</span> | Follow Universal Patient Care |
+| 2 | <span class="lvl lvl-emr">EMR</span> | Place in position of comfort / recovery position if unresponsive; suction as needed |
+| 3 | <span class="lvl lvl-emr">EMR</span> | Refer to Airway and Hypotension protocols as needed |
+| 4 | <span class="lvl lvl-emt">EMT</span> | **[Ondansetron](../../pharmacology/Ondansetron.md) (Zofran) 4 mg** ODT |
+| 5 | <span class="lvl lvl-a">A</span> | Adult: **[Ondansetron](../../pharmacology/Ondansetron.md) (Zofran) 4 mg** IV/IO slow push, IM, or PO<br>Pediatric: **[Ondansetron](../../pharmacology/Ondansetron.md) (Zofran) 0.15 mg/kg** IV/IO/IM/PO (max **4 mg**) |
+| 6 | <span class="lvl lvl-mc">MC</span> | Contact Medical Control for additional doses or orders |
 
 </div>
 

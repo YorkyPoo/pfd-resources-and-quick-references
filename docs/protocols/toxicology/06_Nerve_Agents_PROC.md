@@ -34,17 +34,17 @@ This protocol outlines the pre-hospital management of patients with suspected ex
     - Patients may require significant amounts of airway suctioning and ventilation support
 
 ### Interventions
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Follow Universal Patient Care | • | • | • | • | • |
-| 2 | Don appropriate PPE; decontaminate patient prior to transport |  | • | • | • | • |
-| 3 | Follow Airway Management (Consider early intubation due to copious secretions) |  | • | • | • | • |
-| 4 | Refer to Nausea/Vomiting, Seizure, and Hypotension protocols as needed | • | • | • | • | • |
-| 5 | **DuoDote Autoinjector** IM (Adult and Pediatric ≥ 40kg). Repeat in 5 mins up to 3 doses based on symptom severity. |  |  | • | • | • |
-| 6 | **[Atropine](../../pharmacology/Atropine Sulfate.md) sulfate 2 mg** IV/IO/IM (Adult and Ped ≥ 40kg); **1 mg** IV/IO/IM (Ped < 40kg). Repeat every 5 mins up to 3 doses. (Use if DuoDote unavailable) |  |  |  | • | • |
-| 7 | Contact Medical Control for additional guidance and dosing instructions | MC | MC | MC | MC | MC |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emr">EMR</span> | Follow Universal Patient Care |
+| 2 | <span class="lvl lvl-emr">EMR</span> | Don appropriate PPE; decontaminate patient prior to transport |
+| 3 | <span class="lvl lvl-emr">EMR</span> | Follow Airway Management (Consider early intubation due to copious secretions) |
+| 4 | <span class="lvl lvl-emr">EMR</span> | Refer to Nausea/Vomiting, Seizure, and Hypotension protocols as needed |
+| 5 | <span class="lvl lvl-emt">EMT</span> | **DuoDote Autoinjector** IM (Adult and Pediatric ≥ 40kg). Repeat in 5 mins up to 3 doses based on symptom severity. |
+| 6 | <span class="lvl lvl-i">I</span> | **[Atropine](../../pharmacology/Atropine Sulfate.md) sulfate 2 mg** IV/IO/IM (Adult and Ped ≥ 40kg); **1 mg** IV/IO/IM (Ped < 40kg). Repeat every 5 mins up to 3 doses. (Use if DuoDote unavailable) |
+| 7 | <span class="lvl lvl-mc">MC</span> | Contact Medical Control for additional guidance and dosing instructions |
 
 </div>
 

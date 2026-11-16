@@ -299,6 +299,85 @@ the action text.
 | `03_Upper_Airway_Obstruction_PROC.md` | 12 | I | p.239#9 | If apneic and ≥ 12 years old: Consider endotracheal intubation if unable to ventilate adequately by less invasive means. Follow Endotracheal Intuba… | row-bindings:bound | OK |
 | `03_Upper_Airway_Obstruction_PROC.md` | 13 | I | p.55#2 **×page** +MC | Administer: ADULT: Fentanyl (Sublimaze) 25 – 50 mcg IV/IO over 2 minutes or IN/IM PEDIATRIC: Fentanyl (Sublimaze) 0.5 – 1 mcg/kg IV/IO over 2 minut… | row-bindings:bound | OK |
 | `03_Upper_Airway_Obstruction_PROC.md` | 14 | P | p.247#7 **×page** | After two failed attempts, airway must be managed by the most experienced provider available. If unable to intubate and unable to oxygenate, procee… | row-bindings:bound | OK |
+| `09_Burns_Thermal_PROC.md` | 1 | EMR | p.87#1 | Safely remove patient from source of the burn. Fully expose the injured area. Remove constricting items including clothing. | alignment:matched | OK |
+| `09_Burns_Thermal_PROC.md` | 2 | EMR | p.87#2 | Assess airway and respiratory effort. Refer to Airway Management and Ventilatory Support protocol. | alignment:matched | OK |
+| `09_Burns_Thermal_PROC.md` | 3 | EMT | p.87#3 | Estimate depth of burns and body surface area involved using the chart provided below and/or estimated by 1% BSA = the area of the patient’s palm. … | alignment:matched | OK |
+| `09_Burns_Thermal_PROC.md` | 4 | EMT | p.87#4 | Apply clean, dry dressings to burns. Prevent loss of body heat. Keep the patient warm. | alignment:matched | OK |
+| `09_Burns_Thermal_PROC.md` | 5 | A | p.87#5 | Establish IV/IO access on a non-burned extremity, if possible (preferably obtain two sites of access). | alignment:matched | OK |
+| `09_Burns_Thermal_PROC.md` | 6 | PENDING | — | — | — | pending_row_omd |
+| `09_Burns_Thermal_PROC.md` | 7 | MC | p.88#9 | Contact Medical Control if most appropriate transport destination is unclear: Cardiac arrest, impending arrest, or airway compromise à Closest emer… | alignment:matched | OK |
+| `09_Crush_Syndrome_PROC.md` | 1 | EMR | p.91#1 | Refer to Trauma, Hemorrhage Control, and Pain Control protocols as needed. | adjudicated:confirm | OK |
+| `09_Crush_Syndrome_PROC.md` | 2 | EMT | p.91#2 | If possible, obtain an ECG prior to and after release of the crushed part. | alignment:matched | OK |
+| `09_Crush_Syndrome_PROC.md` | 3 | A | p.91#3 | Administer (when able, initiate prior to release): ADULT: 0.9% Sodium chloride 1 L IV/IO in 250 – 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20… | alignment:matched | OK |
+| `09_Crush_Syndrome_PROC.md` | 4 | A | p.91#4 +MC | Administer (when able, initiate prior to release): ADULT: Continuous Albuterol Sulfate (Proventil) 0.083% solution via nebulizer or BVM PEDIATRIC: … | alignment:matched | OK |
+| `09_Crush_Syndrome_PROC.md` | 5 | I | p.91#5 +MC | Administer, preferably via separate lines (when able, initiate prior to release): ADULT: Sodium bicarbonate 1 mEq/kg IV/IO slow push. Maximum dose … | alignment:matched | OK |
+| `09_Crush_Syndrome_PROC.md` | 6 | I | p.91#5 | Administer, preferably via separate lines (when able, initiate prior to release): ADULT: Sodium bicarbonate 1 mEq/kg IV/IO slow push. Maximum dose … | adjudicated:set_cells | OK |
+| `09_Crush_Syndrome_PROC.md` | 7 | I | p.91#6 | Assess and continuously monitor cardiac rhythm. | alignment:matched | OK |
+| `09_Crush_Syndrome_PROC.md` | 8 | EMT | p.91#7 | Extricate patient from entrapment and transport per Administrative Policy – Trauma Field Triage. | alignment:matched | OK |
+| `09_Crush_Syndrome_PROC.md` | 9 | MC | p.91#8 | If it is anticipated the patient will not be able to be promptly and safely extricate, contact Medical Control at a regional trauma center for addi… | alignment:matched | OK |
+| `09_Electrical_Injuries_PROC.md` | 1 | EMR | p.96#2 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `09_Electrical_Injuries_PROC.md` | 2 | EMR | p.96#3 | Ensure scene safety and that the patient is not energized. Do not become a second victim. Fully expose the injured area. Remove constricting items … | alignment:matched | OK |
+| `09_Electrical_Injuries_PROC.md` | 3 | EMR | p.96#4 | If multiple patients are present, patients in cardiac arrest should be treated first. | alignment:matched | OK |
+| `09_Electrical_Injuries_PROC.md` | 4 | EMR | p.96#5 | Assess airway and respiratory effort. Refer to Airway Management and Ventilatory Support procedure. Manage airway by the least invasive means neces… | alignment:matched | OK |
+| `09_Electrical_Injuries_PROC.md` | 5 | EMT | p.96#6 | Estimate depth of burns and body surface area involved using the chart provided below and/or estimated by 1% BSA = the area of the patient’s palm. … | alignment:matched | OK |
+| `09_Electrical_Injuries_PROC.md` | 6 | EMT | p.96#7 | Apply clean, dry dressings to burns. Prevent loss of body heat. Keep the patient warm. | alignment:matched | OK |
+| `09_Electrical_Injuries_PROC.md` | 7 | A | p.96#11 | Assess and continuously monitor cardiac rhythm. | alignment:matched | OWNER_REQUIRED |
+| `09_Electrical_Injuries_PROC.md` | 8 | A | p.96#9 | Establish IV/IO access on a non-burned extremity, if possible (preferably obtain two sites of access). | alignment:matched | OK |
+| `09_Electrical_Injuries_PROC.md` | 9 | A | p.96#10 | For an adult patient with SBP less than 90 and TBSA greater than 20%, administer: ADULT: 0.9% Sodium chloride at 500 mL/hr IV/IO PEDIATRIC, 6 to 12… | alignment:matched | OK |
+| `09_Hemorrhage_Control_PROC.md` | 1 | EMR | p.75#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | adjudicated:confirm | OK |
+| `09_Hemorrhage_Control_PROC.md` | 2 | EMR | p.75#1 | Head Apply direct pressure to the injury if there is no depressed skull fracture. If direct pressure is ineffective, hemostatic dressing may be app… | alignment:matched | OK |
+| `09_Hemorrhage_Control_PROC.md` | 3 | EMR | p.75#2 | Neck Apply occlusive dressing and direct pressure. Do not pack the wound. | alignment:matched | OK |
+| `09_Hemorrhage_Control_PROC.md` | 4 | EMR | p.75#3 | Extremity Apply direct pressure, pack with roller gauze (use hemostatic dressing if available), and pressure dressing. If direct pressure/pressure … | alignment:matched | OK |
+| `09_Hemorrhage_Control_PROC.md` | 5 | EMR | p.75#4 | Junctional injury (Axilla or femoral) Pack dressing with roller gauze (use hemostatic dressing if available) tightly into wound and directly onto t… | alignment:matched | OK |
+| `09_Hemorrhage_Control_PROC.md` | 6 | EMR | p.75#5 | Thoracoabdominal Injury Apply direct pressure. Do not pack thoracoabdominal wounds. Cover sucking chest wounds with a vented or three-sided occlusi… | alignment:matched | OK |
+| `09_Hemorrhage_Control_PROC.md` | 7 | EMR | p.75#6 | Assess pelvic stability. If unstable and pelvic hemorrhage is suspected, apply pelvic binder, either commercial or improvised. | alignment:matched | OK |
+| `09_Hemorrhage_Control_PROC.md` | 8 | EMR | p.273#6 **×page** | Consider pain control. Refer to Pain Control protocol. | row-bindings:bound | OK |
+| `09_Hemorrhage_Control_PROC.md` | 9 | MC | p.273#7 **×page** | If hemorrhage cannot be controlled, transport immediately to the nearest emergency department and contact Medical Control for guidance. | row-bindings:bound | OK |
+| `09_Lightning_Injuries_PROC.md` | 1 | EMR | p.96#2 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `09_Lightning_Injuries_PROC.md` | 2 | EMR | p.96#3 | Ensure scene safety and that the patient is not energized. Do not become a second victim. Fully expose the injured area. Remove constricting items … | alignment:matched | OK |
+| `09_Lightning_Injuries_PROC.md` | 3 | EMR | p.96#4 | If multiple patients are present, patients in cardiac arrest should be treated first. | alignment:matched | OK |
+| `09_Lightning_Injuries_PROC.md` | 4 | EMR | p.96#5 | Assess airway and respiratory effort. Refer to Airway Management and Ventilatory Support procedure. Manage airway by the least invasive means neces… | alignment:matched | OK |
+| `09_Lightning_Injuries_PROC.md` | 5 | EMT | p.96#6 | Estimate depth of burns and body surface area involved using the chart provided below and/or estimated by 1% BSA = the area of the patient’s palm. … | alignment:matched | OK |
+| `09_Lightning_Injuries_PROC.md` | 6 | EMT | p.96#7 | Apply clean, dry dressings to burns. Prevent loss of body heat. Keep the patient warm. | alignment:matched | OK |
+| `09_Lightning_Injuries_PROC.md` | 7 | EMT | p.96#8 | Obtain and transmit a 12-Lead ECG. | alignment:matched | OWNER_REQUIRED |
+| `09_Lightning_Injuries_PROC.md` | 8 | A | p.96#9 | Establish IV/IO access on a non-burned extremity, if possible (preferably obtain two sites of access). | alignment:matched | OK |
+| `09_Lightning_Injuries_PROC.md` | 9 | A | p.96#10 | For an adult patient with SBP less than 90 and TBSA greater than 20%, administer: ADULT: 0.9% Sodium chloride at 500 mL/hr IV/IO PEDIATRIC, 6 to 12… | alignment:matched | OK |
+| `09_Trauma_PROC.md` | 1 | EMR | p.83#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `09_Trauma_PROC.md` | 2 | EMT | — | — | — | OWNER_REQUIRED |
+| `09_Trauma_PROC.md` | 3 | EMR | p.83#2 | Consider spinal motion restriction. Refer to Spinal Motion Restriction procedure. | alignment:matched | OK |
+| `09_Trauma_PROC.md` | 4 | EMT | p.83#8 | Manage airway by the least invasive means possible. | alignment:matched | OK |
+| `09_Trauma_PROC.md` | 5 | EMR | p.83#1 | Control major bleeding. Refer to Hemorrhage Control protocol. | alignment:matched | OK |
+| `09_Trauma_PROC.md` | 6 | A | p.83#3 | If shock or potential for shock is present, keep the patient warm. | alignment:matched | OWNER_REQUIRED |
+| `09_Trauma_PROC.md` | 7 | A | p.50#9 **×page** | Establish IV / IO access when indicated. Refer to Intraosseous (IO) Access procedure, as needed. | row-bindings:bound | OK |
+| `09_Trauma_PROC.md` | 8 | A | p.83#10 | If hypovolemia is suspected, consider: ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250-500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg I… | alignment:matched | OK |
+| `09_Trauma_PROC.md` | 9 | I | p.84#11 | If considering intubation, assess Shock Index (Heart Rate / Systolic Blood Pressure).* If Shock Index is greater than 1, consider resuscitation pri… | alignment:matched | OK |
+| `09_Trauma_PROC.md` | 10 | I | p.84#12 | Tension pneumothorax: Decompress the affected side(s). Refer to Chest Decompression procedure. | alignment:matched | OK |
+| `09_Trauma_PROC.md` | 11 | I | p.84#13 | Traumatic Cardiac Arrest: Refer to Cardiac Arrest: Traumatic protocol. | alignment:matched | OK |
+| `09_Trauma_PROC.md` | 12 | EMT | p.84#14 | If the patient meets the trauma triage criteria according to Administrative Policy – Trauma Field Triage, transport immediately to a Level 1 or Lev… | alignment:matched | OK |
+| `09_Trauma_PROC.md` | 13 | MC | p.84#15 | Contact Medical Control for guidance and/or optimal destination determination as needed. | alignment:matched | OK |
+| `06_Nausea_Vomiting_PROC.md` | 1 | EMR | p.117#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `06_Nausea_Vomiting_PROC.md` | 2 | EMR | p.117#1 | Place patient in a position of comfort. If unresponsive, place in recovery position and provide suctioning. Refer to Airway Management and Ventilat… | alignment:matched | OK |
+| `06_Nausea_Vomiting_PROC.md` | 3 | EMR | p.117#2 | Refer to Hypotension and Shock protocol, as needed. | alignment:matched | OK |
+| `06_Nausea_Vomiting_PROC.md` | 4 | EMT | p.117#3 | Consider: ADULT: Ondansetron (Zofran) 4 mg ODT. May repeat in 10 - 15 minutes, as needed. | alignment:matched | OK |
+| `06_Nausea_Vomiting_PROC.md` | 5 | A | p.117#4 | Consider: ADULT: Ondansetron (Zofran) 4 mg IV/IO slow push, IM or PO. PEDIATRIC: Ondansetron (Zofran) 0.15 mg/kg IV/IO slow push, IM or PO. Maximum… | alignment:matched | OK |
+| `06_Nausea_Vomiting_PROC.md` | 6 | MC | p.117#5 | Contact Medical Control for guidance as needed. | alignment:matched | OK |
+| `06_Nerve_Agents_PROC.md` | 1 | EMR | p.159#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `06_Nerve_Agents_PROC.md` | 2 | EMR | p.159#1 | Don appropriate PPE and decontaminate the patient. Do not proceed until it is reasonably safe to do so. | alignment:matched | OK |
+| `06_Nerve_Agents_PROC.md` | 3 | EMR | p.159#2 | Follow Airway Management and Ventilatory Support procedure. | alignment:matched | OK |
+| `06_Nerve_Agents_PROC.md` | 4 | EMR | p.159#3 | Refer to Nausea / Vomiting, Seizure, and/or Hypotension and Shock protocols, as needed. | alignment:matched | OK |
+| `06_Nerve_Agents_PROC.md` | 5 | EMT | p.159#4 | If available, administer: ADULT: DuoDote Autoinjector IM PEDIATRIC (≥ 40 kg): DuoDote Autoinjector IM If symptoms persist, repeat in 5 minutes up t… | alignment:matched | OK |
+| `06_Nerve_Agents_PROC.md` | 6 | I | p.159#5 | If symptoms persist, or if DuoDote Autoinjector is unavailable, administer: ADULT: Atropine sulfate 2 mg IV/IO/IM PEDIATRIC (< 40 kg): Atropine sul… | alignment:matched | OK |
+| `06_Nerve_Agents_PROC.md` | 7 | MC | p.159#6 | Contact Medical Control for guidance as needed. | alignment:matched | OK |
+| `06_Overdose_Poisoning_PROC.md` | 1 | EMR | p.119#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `06_Overdose_Poisoning_PROC.md` | 2 | EMR | p.119#1 | Remove patient from the source of exposure. Decontaminate if necessary. Brush of powders. Irrigate / dilute liquids. | alignment:matched | OK |
+| `06_Overdose_Poisoning_PROC.md` | 3 | EMR | p.119#2 | Ensure adequate ventilation. Provide supplemental oxygen as needed to maintain SpO2 94 – 98%. Refer to Airway Management and Ventilatory Support pr… | alignment:matched | OK |
+| `06_Overdose_Poisoning_PROC.md` | 4 | EMT | p.119#5 | Obtain and transmit a 12-Lead ECG. | alignment:matched | OK |
+| `06_Overdose_Poisoning_PROC.md` | 5 | EMT | p.119#6 | If apneic/bradypneic, provide respiratory support and administer: ADULT: Naloxone (Narcan) 1 – 2 mg IN PEDIATRIC: Naloxone (Narcan) 1 -2 mg IN Repe… | alignment:matched | OK |
+| `06_Overdose_Poisoning_PROC.md` | 6 | A | p.119#7 | If apneic/bradypneic, provide respiratory support and administer: ADULT: Naloxone (Narcan) 0.5 – 2 mg IV/IO slow push or IM/IN PEDIATRIC: Naloxone … | alignment:matched | OK |
+| `06_Overdose_Poisoning_PROC.md` | 7 | I | p.120#8 | If hypotensive with signs of poor perfusion, administer: ADULT: Calcium chloride 1 g IV/IO slow push Followed by a 20 mL 0.9% sodium chloride flush… | alignment:matched | OK |
+| `06_Overdose_Poisoning_PROC.md` | 8 | I | p.120#9 | For respiratory distress due to bronchorrhea, administer: ADULT: Atropine sulfate 2 mg IV/IO/IM PEDIATRIC (< 40 kg): Atroprine sulfate 1mg IV/IO/IM… | alignment:matched | OK |
+| `06_Overdose_Poisoning_PROC.md` | 9 | EMR | p.120#10 | Anti-Cholinergic & Tricyclic Antidepressant (TCA) Begin active cooling if temperature is greater than 104F / 40C. Refer to Heat stroke / Hypertherm… | alignment:matched | OK |
+| `06_Overdose_Poisoning_PROC.md` | 10 | I | p.120#11 | administer: ADULT: Sodium bicarbonate 50 mEq IV/IO slow push PEDIATRIC: Sodium bicarbonate 1 mEq/kg IV/IO slow push. Maximum dose 50 mEq. Repeat on… | alignment:matched | OK |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 1 | PENDING | — | — | — | pending_omd |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 2 | PENDING | — | — | — | pending_omd |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 3 | PENDING | — | — | — | pending_omd |
@@ -321,7 +400,7 @@ the verbatim span from the cited row that the checker re-reads out of
 `pems_table.json` — a citation whose quote the cited row does not print fails
 `--check`. The chip is the badge that row prints, not the page's old level.
 
-**40 row(s).**
+**43 row(s).**
 
 - `protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 4: **EMR** from p.103#1 (was OWNER_REQUIRED) — quoted: "Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure."
   - action: Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure.
@@ -443,6 +522,15 @@ the verbatim span from the cited row that the checker re-reads out of
 - `protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md` row 14: **P** from p.247#7 (was OWNER_REQUIRED) — quoted: "After two failed attempts, airway must be managed by the most experienced provider available."
   - action: Expanding Hematoma / Edema - Advanced Airway: • Early airway intervention before complete obstruction. • Consider difficult airway algorithm; prepare 
   - evidence: p.247#7 prints 'After two failed attempts, airway must be managed by the most experienced provider available. If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway.' badged P — the difficult-airway/surgical-airway fallback this row prepares. Cross-page: p.239 prints no difficult-airway row.
+- `protocols/trauma/09_Hemorrhage_Control_PROC.md` row 8: **EMR** from p.273#6 (was EMT) — quoted: "Consider pain control. Refer to Pain Control protocol."
+  - action: Consider pain control per the Pain Control protocol.
+  - evidence: p.273#6 (Tourniquet Application) prints 'Consider pain control. Refer to Pain Control protocol.' badged EMR — the same referral this row makes. Cross-page: p.75 prints no pain-control row.
+- `protocols/trauma/09_Hemorrhage_Control_PROC.md` row 9: **MC** from p.273#7 (was MC) — quoted: "If hemorrhage cannot be controlled, transport immediately to the nearest emergency department and contact Medical Control for guidance."
+  - action: Contact Medical Control if hemorrhage cannot be controlled and transport immediately.
+  - evidence: p.273#7 (Tourniquet Application) prints this exact escalation badged MC. Cross-page: p.75 prints no Medical Control row. The C2 adjudication had resolved this row to p.75#3 (badge EMR), which would chip an MC contact as EMR; the binding overrides it.
+- `protocols/trauma/09_Trauma_PROC.md` row 7: **A** from p.50#9 (was I) — quoted: "Establish IV / IO access when indicated."
+  - action: Obtain IV/IO access.
+  - evidence: p.50#9 (Universal Patient Care) prints 'Establish IV / IO access when indicated. Refer to Intraosseous (IO) Access procedure, as needed.' badged A — the IV/IO access step this row names. Cross-page: p.83 prints no access row (p.83#10 is the fluid bolus, which is row 8). The C2 adjudication had resolved this row to p.83#10 (the fluid row); the binding overrides it.
 
 ## `+MC` — Medical-Control-required marker (owner ruling 2026-11-16)
 
@@ -453,11 +541,13 @@ second marker beside the level chip. It is deliberately not a second level chip,
 and it is styled distinctly from the `MC` chip, which means the action *is* a
 Medical Control contact. Source of truth is `mc_required: true` in
 `row-bindings.yaml` (never a hand-written span); `--check` fails if the marker is
-missing or doubled, and it re-derives the bracketed rows from the
-pre-conversion pages at `768ad68` so a bracketed row cannot be silently
+missing or doubled, and it re-derives the bracketed rows from each page's
+pre-conversion revision (`768ad68` by default, or the page's recorded
+`base_rev` in `exceptions.yaml` when the bracket notation was added on the
+level-scan branch after that base) so a bracketed row cannot be silently
 dropped.
 
-**6 row(s).**
+**8 row(s).**
 
 - `protocols/cardiac/04_Chest_Pain_ACS_PROC.md` row 14: **I** +MC
   - evidence: The pre-conversion page printed this row's level cell as [I] in the I column (git show 768ad68), i.e. I performs this action only with Medical Control authorisation; the row is chipped I, so +MC carries exactly that meaning.
@@ -471,6 +561,10 @@ dropped.
   - evidence: p.88#8 prints the hydroxocobalamin administration order ('administer (if available): ADULT: Hydroxocobalamin (CYANOKIT) 5 g IV/IO, infuse over 15 minutes ...') badged I — the same drug step this row expands. Cross-page: p.153 prints no hydroxocobalamin row.
 - `protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md` row 13: **I** +MC
   - evidence: p.55#2 prints 'Administer: ADULT: Fentanyl (Sublimaze) 25 - 50 mcg IV/IO over 2 minutes ...' badged I — the sedation drug row this row administers under, in the Sedation Post Advanced Airway protocol the row names. Cross-page: p.239 prints no sedation row.
+- `protocols/trauma/09_Crush_Syndrome_PROC.md` row 4: **A** +MC
+  - evidence: the page printed the A cell in brackets ([A]) in its pre-conversion revision (cf8af7a); PEMS p.91#4 prints the continuous albuterol order with badge [A], so the chip is A and the bracket means A performs it only with Medical Control authorisation.
+- `protocols/trauma/09_Crush_Syndrome_PROC.md` row 5: **I** +MC
+  - evidence: the page printed the I cell in brackets ([I]) in its pre-conversion revision (cf8af7a); PEMS p.91#5 prints the sodium bicarbonate order with badge [I], so the chip is I and the bracket means I performs it only with Medical Control authorisation.
 
 ### Bracketed rows whose bracket cannot be carried
 
@@ -489,6 +583,7 @@ fails on a bracketed row that is neither `mc_required` nor `mc_bracket_excluded`
 - `protocols/medical/07_Sepsis_PROC.md` row 6: the page bracketed the A cell ([A]) but the row is chipped `MC` — it is the Medical Control contact / sepsis-alert row itself. The chip already states the MC requirement.
 - `protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md` row 12: the page bracketed the I cell ([I]) but the row is chipped `MC` — it is the Medical Control contact row. The chip already states the MC requirement.
 - `protocols/respiratory/03_Smoke_Inhalation_PROC.md` row 12: the page bracketed the I cell ([I]) but the row is chipped `MC` — it is the Medical Control contact row. The chip already states the MC requirement.
+- `protocols/toxicology/06_Nausea_Vomiting_PROC.md` row 6: the page bracketed the A cell ([A]) but the row is chipped MC (PEMS p.117#5 is the Medical Control contact). The chip already states the MC requirement, so a +MC marker would duplicate it.
 
 ## Flagged rows before -> after, per page (derived, not typed)
 
@@ -524,14 +619,23 @@ recorded decision — the citation that cleared it is listed above and in the ta
 | `03_Respiratory_Distress_PROC.md` | 6 | 2 | 4 | 4 |
 | `03_Smoke_Inhalation_PROC.md` | 8 | 2 | 6 | 6 |
 | `03_Upper_Airway_Obstruction_PROC.md` | 3 | 1 | 2 | 2 |
+| `09_Burns_Thermal_PROC.md` | 0 | 1 | -1 | 0 |
+| `09_Crush_Syndrome_PROC.md` | 0 | 0 | 0 | 0 |
+| `09_Electrical_Injuries_PROC.md` | 0 | 1 | -1 | 0 |
+| `09_Hemorrhage_Control_PROC.md` | 0 | 0 | 0 | 0 |
+| `09_Lightning_Injuries_PROC.md` | 0 | 1 | -1 | 0 |
+| `09_Trauma_PROC.md` | 0 | 2 | -2 | 0 |
+| `06_Nausea_Vomiting_PROC.md` | 0 | 0 | 0 | 0 |
+| `06_Nerve_Agents_PROC.md` | 0 | 0 | 0 | 0 |
+| `06_Overdose_Poisoning_PROC.md` | 0 | 0 | 0 | 0 |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 11 | 11 | 0 | 0 |
 
-**Total: 77 flagged before, 41 after (36 cleared).**
+**Total: 77 flagged before, 46 after (31 cleared).**
 
 
 ## OWNER_REQUIRED
 
-**28 row(s).** No PEMS 2024 row authorises a provider level for these
+**32 row(s).** No PEMS 2024 row authorises a provider level for these
 actions, after the cross-page search (a row is only cleared when a PEMS row
 actually prints the action — see *Cross-page citations* above). The chip keeps the
 level the page already published and carries the flag. Nothing here was invented:
@@ -605,6 +709,17 @@ prints it and why its badge contradicts the row's own words.
   - reason: No single PEMS 2024 row prints this monitoring bundle: routine reassessment is p.49#4 (badge EMR), continuous cardiac monitoring p.50#10 (badge I) and continuous ETCO2 waveform p.241#3 (badge EMT). Multiple levels, so the page's EMT is kept and flagged.
 - `protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md` row 2 — **EMT** kept from the page, not from the source. Scene Safety / Recognition: • Rapidly identify complete vs partial obstruction. • Recognize universal choking sign (hands to throat). • Determine cons
   - reason: No PEMS 2024 row prints recognition. p.239#3 and p.239#8 print the obstruction-relief actions, not 'rapidly identify complete vs partial obstruction'; citing either would chip a level for an action the row does not name. The page's EMT is kept and flagged.
+- `protocols/trauma/09_Electrical_Injuries_PROC.md` row 7 — **A** kept from the page, not from the source. Obtain 12-Lead ECG / Monitor rhythm continuously
+  - nearest PEMS row, NOT cited as authority: p.96#11
+  - reason: No single PEMS 2024 row prints this 12-lead-plus-continuous-monitoring bundle: p.96#8 badges 'Obtain and transmit a 12-Lead ECG' EMT and p.96#11 badges 'Assess and continuously monitor cardiac rhythm' I. Two levels, so the page's A is kept and flagged rather than chipped off one row that would contradict the other.
+- `protocols/trauma/09_Lightning_Injuries_PROC.md` row 7 — **EMT** kept from the page, not from the source. Obtain and transmit a 12-Lead ECG / Monitor rhythm.
+  - nearest PEMS row, NOT cited as authority: p.96#8
+  - reason: No single PEMS 2024 row prints this 12-lead-plus-monitoring bundle: p.96#8 badges 'Obtain and transmit a 12-Lead ECG' EMT and p.96#11 badges 'Assess and continuously monitor cardiac rhythm' I. Two levels, so the page's EMT is kept and flagged.
+- `protocols/trauma/09_Trauma_PROC.md` row 2 — **EMT** kept from the page, not from the source. Ensure scene safety. Extricate/move patient to safety if necessary.
+  - reason: No PEMS 2024 row prints scene safety plus extrication/movement to safety. p.49#1 prints scene safety/PPE (badge EMR) but not extrication; p.91#7 prints extrication from entrapment (badge EMT) but not scene safety. Two rows, two levels, so the page's EMT is kept and flagged.
+- `protocols/trauma/09_Trauma_PROC.md` row 6 — **A** kept from the page, not from the source. Assess for shock. Refer to Shock (Hypoperfusion) protocol.
+  - nearest PEMS row, NOT cited as authority: p.83#3
+  - reason: No PEMS 2024 row prints 'assess for shock and refer to the Shock protocol'. p.83#3 prints 'If shock or potential for shock is present, keep the patient warm' (badge EMR) — the intervention, not the assessment/referral this row names. The page's A is kept and flagged.
 
 ## OWNER_RULED
 
@@ -666,12 +781,14 @@ source.
 
 ## PENDING_OMD — row-level (agency additions on PEMS-cited pages)
 
-**2 row(s).** The page is PEMS-cited and every other row on it names the PEMS 2024 row that authorizes it. These rows do not: the agency added them and PEMS publishes no such action, so no provider level is published for them until the OMD authorizes one. The chip is `PENDING`; `carried_from_page` records the level the page published before conversion and is **provenance only**.
+**3 row(s).** The page is PEMS-cited and every other row on it names the PEMS 2024 row that authorizes it. These rows do not: the agency added them and PEMS publishes no such action, so no provider level is published for them until the OMD authorizes one. The chip is `PENDING`; `carried_from_page` records the level the page published before conversion and is **provenance only**.
 
 - `protocols/neurologic/05_Stroke_TIA_PROC.md` row 8: PENDING (carried from the page as **I**) — Establish 18g IV in Right AC (preferred for rapid imaging)
   - reason: Agency addition; PEMS 2024 p.131 publishes no such action. Pending OMD authorization.
 - `protocols/neurologic/05_Stroke_TIA_PROC.md` row 9: PENDING (carried from the page as **A**) — Call COR at the receiving facility with Name/DOB for rapid registration
   - reason: Agency addition; PEMS 2024 p.131 publishes no such action. Pending OMD authorization.
+- `protocols/trauma/09_Burns_Thermal_PROC.md` row 6: PENDING (carried from the page as **NONE**) — Hydrofluoric Acid (HF) Burns with Hypotension: Administer Calcium Chloride 1 g IV/IO over 
+  - reason: Agency addition. PEMS 2024 prints 'Treat hypotension with 1 g Calcium Chloride IV/IO over 3 minutes' for hydrofluoric acid burns only in the Burns protocol's PEARLS (p.87-88 prose), not as a level-badged table row; the only table rows printing calcium chloride 1 g IV/IO over 3 minutes are p.91#5 (crush syndrome, badge [I]) and p.120#8 (CCB/BB overdose, badge I), whose indications differ. No PEMS row authorises this action's provider level, and the page published none. Pending OMD authorization.
 
 ## Level tokens removed from action text
 
@@ -714,7 +831,7 @@ Removed by decision (not restated by the chip, so not left to a later pass):
 
 ## Level moved by the source (page level -> PEMS printed level)
 
-69 row(s). These are rows where the page under- or over-granted the
+86 row(s). These are rows where the page under- or over-granted the
 level the cited PEMS row prints. Review them first.
 
 - `protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 4: **EMT -> EMR** (p.103#1) — Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure.
@@ -786,6 +903,23 @@ level the cited PEMS row prints. Review them first.
 - `protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md` row 9: **EMT -> EMR** (p.239#2) — Suctioning: • Provide oropharyngeal suctioning as needed for secretions, blood, or vomit. 
 - `protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md` row 10: **A -> EMT** (p.239#7) — Apneic Patient - BVM Ventilation: • Support respirations with BVM and appropriate airway a
 - `protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md` row 14: **I -> P** (p.247#7) — Expanding Hematoma / Edema - Advanced Airway: • Early airway intervention before complete 
+- `protocols/trauma/09_Crush_Syndrome_PROC.md` row 6: **P -> I** (p.91#5) — Administer, preferably via separate lines (when able, initiate prior to release): - ADULT:
+- `protocols/trauma/09_Crush_Syndrome_PROC.md` row 7: **A -> I** (p.91#6) — Assess and continuously monitor cardiac rhythm.
+- `protocols/trauma/09_Electrical_Injuries_PROC.md` row 5: **A -> EMT** (p.96#6) — Estimate TBSA/burn depth (2nd/3rd degree only)
+- `protocols/trauma/09_Hemorrhage_Control_PROC.md` row 4: **EMT -> EMR** (p.75#3) — Extremity: Apply direct pressure/packing ➔ Tourniquet 2-3" above wound ➔ 2nd Tourniquet if
+- `protocols/trauma/09_Hemorrhage_Control_PROC.md` row 8: **EMT -> EMR** (p.273#6) — Consider pain control per the Pain Control protocol.
+- `protocols/trauma/09_Trauma_PROC.md` row 5: **EMT -> EMR** (p.83#1) — Control hemorrhage. Refer to Hemorrhage Control protocol.
+- `protocols/trauma/09_Trauma_PROC.md` row 7: **I -> A** (p.50#9) — Obtain IV/IO access.
+- `protocols/trauma/09_Trauma_PROC.md` row 8: **I -> A** (p.83#10) — Fluid Resuscitation: ADULT: 0.9% Sodium chloride IV/IO wide open. (Maximum 2L) PEDIATRIC: 
+- `protocols/toxicology/06_Nausea_Vomiting_PROC.md` row 3: **EMT -> EMR** (p.117#2) — Refer to Airway and Hypotension protocols as needed
+- `protocols/toxicology/06_Nausea_Vomiting_PROC.md` row 6: **A -> MC** (p.117#5) — Contact Medical Control for additional doses or orders
+- `protocols/toxicology/06_Nerve_Agents_PROC.md` row 2: **EMT -> EMR** (p.159#1) — Don appropriate PPE; decontaminate patient prior to transport
+- `protocols/toxicology/06_Nerve_Agents_PROC.md` row 3: **EMT -> EMR** (p.159#2) — Follow Airway Management (Consider early intubation due to copious secretions)
+- `protocols/toxicology/06_Nerve_Agents_PROC.md` row 5: **A -> EMT** (p.159#4) — DuoDote Autoinjector IM (Adult and Pediatric ≥ 40kg). Repeat in 5 mins up to 3 doses based
+- `protocols/toxicology/06_Overdose_Poisoning_PROC.md` row 5: **A -> EMT** (p.119#6) — Opiate Overdose: Administer Naloxone 1-2 mg IN
+- `protocols/toxicology/06_Overdose_Poisoning_PROC.md` row 6: **I -> A** (p.119#7) — Opiate Overdose (Adult): Administer Naloxone 0.5-2 mg IV/IO/IM/IN  Opiate Overdose (Pediat
+- `protocols/toxicology/06_Overdose_Poisoning_PROC.md` row 9: **EMT -> EMR** (p.120#10) — Anti-Cholinergic / TCA Overdose: Initiate active cooling measures
+- `protocols/toxicology/06_Overdose_Poisoning_PROC.md` row 10: **P -> I** (p.120#11) — Anti-Cholinergic / TCA Overdose (Adult): Administer Sodium Bicarbonate 50 mEq IV/IO  Anti-
 
 ## OPEN OWNER QUESTIONS
 
@@ -815,7 +949,7 @@ decision before the page is treated as final.
   PENDING_OMD — row-level above. This is NOT the whole-page case: the rest of the
   Stroke page is PEMS-cited.
 - **Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.** The
-  owner was asked and did not rule, so the other 28 OWNER_REQUIRED rows keep their
+  owner was asked and did not rule, so the other 32 OWNER_REQUIRED rows keep their
   level + ⚑ flag exactly as they were. Do not convert them without a ruling.
 - **Respiratory pages — the OWNER_REQUIRED rows that remain after the cross-page
   pass.** PEMS 2024 prints one respiratory protocol (p.123-124) and one
@@ -833,13 +967,39 @@ decision before the page is treated as final.
   the row now publishes, or a row that is itself a Medical Control contact, cannot
   carry `+MC` without changing its meaning — those rows say so explicitly under
   *Bracketed rows whose bracket cannot be carried* above.
+- **Batch 4 — Burns row 6 (HF-burn calcium) is PENDING, not OWNER_REQUIRED.** The
+  page published no level at all, so there is no level to keep and flag. PEMS 2024
+  prints the HF calcium treatment only in the Burns protocol's PEARLS (p.87-88
+  prose), not as a level-badged row; the only table rows printing calcium chloride
+  1 g IV/IO over 3 minutes are p.91#5 (crush syndrome, badge [I]) and p.120#8
+  (CCB/BB overdose, badge I), whose indications differ. Confirm PENDING is preferred
+  over citing one of those rows across indications.
+- **Batch 4 — Electrical row 7 and Lightning row 7 are OWNER_REQUIRED bundles.**
+  Each row prints a 12-lead ECG (p.96#8, badge EMT) and continuous rhythm
+  monitoring (p.96#11, badge I) as one action. One chip cannot carry both without
+  over- or under-granting one half; the page levels (A and EMT) are kept and
+  flagged. Owner to decide whether to split the rows or accept one level.
+- **Batch 4 — Trauma row 2 (scene safety + extrication) and row 6 (assess shock /
+  refer to Shock protocol) are OWNER_REQUIRED.** No PEMS row prints either bundle:
+  scene safety is p.49#1 (EMR) and extrication is p.91#7 (EMT); the shock row
+  p.83#3 prints "keep the patient warm" (EMR), not the assessment/referral the page
+  names. The page levels (EMT and A) are kept and flagged.
+- **Batch 4 — Crush rows 4-5 carry `+MC` from brackets added on the level-scan
+  branch.** The [A]/[I] notation was added by ef540f9 after the branch base
+  768ad68, so this page's pre-conversion bracket set is recorded as `base_rev:
+  cf8af7a` in `exceptions.yaml`. Confirm the branch-added brackets are the owner's
+  intended notation and not a scanner artifact.
+- **Batch 4 — three cross-page citations reach procedures.** Hemorrhage rows 8-9
+  cite the Tourniquet Application procedure (p.273#6 EMR, p.273#7 MC) and Trauma
+  row 7 cites Universal Patient Care (p.50#9 A). Each cited row prints the action
+  verbatim; confirm citing a procedure for a protocol-page row is intended.
 - **Batch 3 — 3 row(s) lost a Medical-Control requirement the page printed.** Each is now chipped at the level PEMS prints:
   `03_Airway_Inhalation_Irritants_PROC.md` row 8 was `MC`, now `A` (p.153#4).
   `03_Respiratory_Distress_PROC.md` row 6 was `MC`, now `EMT` (p.123#3).
   `03_Respiratory_Distress_PROC.md` row 10 was `MC`, now `A` (p.113#4).
   The rule is "chip = the level PEMS prints", and the source grants these actions on standing order, but the owner should confirm that dropping a page-printed MC requirement is intended.
-  Row(s) in the converted set that moved *to* MC, now matching the source's MC row: `04_Chest_Pain_ACS_PROC.md` row 7 `I` -> `MC` (p.107#9); `03_Airway_Inhalation_Irritants_PROC.md` row 12 `I` -> `MC` (p.153#5); `03_Smoke_Inhalation_PROC.md` row 12 `I` -> `MC` (p.153#5).
-  Already `MC` on the page and matching the source, so not moved (converted set, whole list): `04_Supraventricular_Tachycardia_PROC.md` row 10 (p.136#7); `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 12 (p.57#8); `04_Bradycardia_PROC.md` row 8 (p.104#13); `04_Cardiac_Arrest_Non_Traumatic_PROC.md` row 13 (p.57#8); `04_Cardiac_Arrest_Traumatic_PROC.md` row 11 (p.61#9); `04_Chest_Pain_ACS_PROC.md` row 13 (p.107#9); `04_Hypertensive_Crisis_PROC.md` row 7 (p.109#5); `04_V_Fib_Pulseless_V_Tach_PROC.md` row 12 (p.64#14); `07_Sepsis_PROC.md` row 6 (p.130#5); `07_OB_Emergencies_PROC.md` row 10 (p.147#4); `07_Hypotension_Shock_Non_Trauma_PROC.md` row 10 (p.114#9); `05_Seizure_PROC.md` row 7 (p.127#6); `03_Pulmonary_Edema_Congestion_PROC.md` row 13 (p.124#13).
+  Row(s) in the converted set that moved *to* MC, now matching the source's MC row: `04_Chest_Pain_ACS_PROC.md` row 7 `I` -> `MC` (p.107#9); `03_Airway_Inhalation_Irritants_PROC.md` row 12 `I` -> `MC` (p.153#5); `03_Smoke_Inhalation_PROC.md` row 12 `I` -> `MC` (p.153#5); `06_Nausea_Vomiting_PROC.md` row 6 `A` -> `MC` (p.117#5).
+  Already `MC` on the page and matching the source, so not moved (converted set, whole list): `04_Supraventricular_Tachycardia_PROC.md` row 10 (p.136#7); `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 12 (p.57#8); `04_Bradycardia_PROC.md` row 8 (p.104#13); `04_Cardiac_Arrest_Non_Traumatic_PROC.md` row 13 (p.57#8); `04_Cardiac_Arrest_Traumatic_PROC.md` row 11 (p.61#9); `04_Chest_Pain_ACS_PROC.md` row 13 (p.107#9); `04_Hypertensive_Crisis_PROC.md` row 7 (p.109#5); `04_V_Fib_Pulseless_V_Tach_PROC.md` row 12 (p.64#14); `07_Sepsis_PROC.md` row 6 (p.130#5); `07_OB_Emergencies_PROC.md` row 10 (p.147#4); `07_Hypotension_Shock_Non_Trauma_PROC.md` row 10 (p.114#9); `05_Seizure_PROC.md` row 7 (p.127#6); `03_Pulmonary_Edema_Congestion_PROC.md` row 13 (p.124#13); `09_Burns_Thermal_PROC.md` row 7 (p.88#9); `09_Crush_Syndrome_PROC.md` row 9 (p.91#8); `09_Hemorrhage_Control_PROC.md` row 9 (p.273#7); `09_Trauma_PROC.md` row 13 (p.84#15); `06_Nerve_Agents_PROC.md` row 7 (p.159#6).
 - **Batch 3 — four rows published no level at all** (Respiratory Arrest r11, r14,
   r15; Smoke Inhalation r8). There was nothing to keep, so each is bound to the row
   that prints the action: p.269#0 (Surgical Airway, already a C2 ruling), p.55#2

@@ -60,3 +60,17 @@ rows:
       - row: 9
         carried_from_page: A
         reason: Agency addition; PEMS 2024 p.131 publishes no such action. Pending OMD authorization.
+
+  - file: protocols/trauma/09_Burns_Thermal_PROC.md
+    pems_equivalent: PEMS 2024 prints the HF calcium treatment only in the Burns protocol's PEARLS (p.87-88 prose), not as a level-badged row
+    rows:
+      - row: 6
+        carried_from_page: NONE
+        reason: >-
+          Agency addition. PEMS 2024 prints 'Treat hypotension with 1 g Calcium Chloride
+          IV/IO over 3 minutes' for hydrofluoric acid burns only in the Burns protocol's
+          PEARLS (p.87-88 prose), not as a level-badged table row; the only table rows
+          printing calcium chloride 1 g IV/IO over 3 minutes are p.91#5 (crush syndrome,
+          badge [I]) and p.120#8 (CCB/BB overdose, badge I), whose indications differ. No
+          PEMS row authorises this action's provider level, and the page published none.
+          Pending OMD authorization.

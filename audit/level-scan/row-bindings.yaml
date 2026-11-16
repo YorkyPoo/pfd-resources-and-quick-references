@@ -865,3 +865,108 @@ bindings:
       enclosed space or suspected cyanide poisoning, administer (if available): ADULT:
       Hydroxocobalamin (CYANOKIT) 5 g IV/IO, infuse over 15 minutes'. Marked cross_page now
       that the checker enforces it (owner ruling 2026-11-16).
+
+  # ================================================================ BATCH 4 — trauma + toxicology
+  # protocols/trauma/ (6 pages) + protocols/toxicology/ (3 pages). Derived from the tree.
+  # Cross-page citations carry the cited row's words in `quoted_row_text`; `+MC` markers
+  # carry a page-side bracketed level cell; owner_required rows say why no PEMS row
+  # authorises the action.
+
+  # ---------------------------------------------------------------- Crush Syndrome (p.91)
+  - file: protocols/trauma/09_Crush_Syndrome_PROC.md
+    row: 4
+    mc_required: true
+    evidence: >-
+      the page printed the A cell in brackets ([A]) in its pre-conversion revision
+      (cf8af7a); PEMS p.91#4 prints the continuous albuterol order with badge [A], so the
+      chip is A and the bracket means A performs it only with Medical Control authorisation.
+  - file: protocols/trauma/09_Crush_Syndrome_PROC.md
+    row: 5
+    mc_required: true
+    evidence: >-
+      the page printed the I cell in brackets ([I]) in its pre-conversion revision
+      (cf8af7a); PEMS p.91#5 prints the sodium bicarbonate order with badge [I], so the
+      chip is I and the bracket means I performs it only with Medical Control authorisation.
+
+  # ---------------------------------------------------------------- Electrical Injuries (p.95-96)
+  - file: protocols/trauma/09_Electrical_Injuries_PROC.md
+    row: 7
+    status: owner_required
+    reason: >-
+      No single PEMS 2024 row prints this 12-lead-plus-continuous-monitoring bundle:
+      p.96#8 badges 'Obtain and transmit a 12-Lead ECG' EMT and p.96#11 badges 'Assess and
+      continuously monitor cardiac rhythm' I. Two levels, so the page's A is kept and
+      flagged rather than chipped off one row that would contradict the other.
+
+  # ---------------------------------------------------------------- Hemorrhage Control (p.75)
+  - file: protocols/trauma/09_Hemorrhage_Control_PROC.md
+    row: 8
+    pems_page: 273
+    pems_ordinal: 6
+    cross_page: true
+    quoted_row_text: >-
+      Consider pain control. Refer to Pain Control protocol.
+    evidence: >-
+      p.273#6 (Tourniquet Application) prints 'Consider pain control. Refer to Pain Control
+      protocol.' badged EMR — the same referral this row makes. Cross-page: p.75 prints no
+      pain-control row.
+  - file: protocols/trauma/09_Hemorrhage_Control_PROC.md
+    row: 9
+    pems_page: 273
+    pems_ordinal: 7
+    cross_page: true
+    quoted_row_text: >-
+      If hemorrhage cannot be controlled, transport immediately to the nearest emergency
+      department and contact Medical Control for guidance.
+    evidence: >-
+      p.273#7 (Tourniquet Application) prints this exact escalation badged MC. Cross-page:
+      p.75 prints no Medical Control row. The C2 adjudication had resolved this row to
+      p.75#3 (badge EMR), which would chip an MC contact as EMR; the binding overrides it.
+
+  # ---------------------------------------------------------------- Lightning Injuries (p.96)
+  - file: protocols/trauma/09_Lightning_Injuries_PROC.md
+    row: 7
+    status: owner_required
+    reason: >-
+      No single PEMS 2024 row prints this 12-lead-plus-monitoring bundle: p.96#8 badges
+      'Obtain and transmit a 12-Lead ECG' EMT and p.96#11 badges 'Assess and continuously
+      monitor cardiac rhythm' I. Two levels, so the page's EMT is kept and flagged.
+
+  # ---------------------------------------------------------------- Trauma (p.83-84)
+  - file: protocols/trauma/09_Trauma_PROC.md
+    row: 2
+    status: owner_required
+    reason: >-
+      No PEMS 2024 row prints scene safety plus extrication/movement to safety. p.49#1
+      prints scene safety/PPE (badge EMR) but not extrication; p.91#7 prints extrication
+      from entrapment (badge EMT) but not scene safety. Two rows, two levels, so the page's
+      EMT is kept and flagged.
+  - file: protocols/trauma/09_Trauma_PROC.md
+    row: 7
+    pems_page: 50
+    pems_ordinal: 9
+    cross_page: true
+    quoted_row_text: >-
+      Establish IV / IO access when indicated.
+    evidence: >-
+      p.50#9 (Universal Patient Care) prints 'Establish IV / IO access when indicated.
+      Refer to Intraosseous (IO) Access procedure, as needed.' badged A — the IV/IO access
+      step this row names. Cross-page: p.83 prints no access row (p.83#10 is the fluid
+      bolus, which is row 8). The C2 adjudication had resolved this row to p.83#10 (the
+      fluid row); the binding overrides it.
+
+  # ---------------------------------------------------------------- Nausea / Vomiting (p.117)
+  - file: protocols/toxicology/06_Nausea_Vomiting_PROC.md
+    row: 6
+    mc_bracket_excluded: >-
+      the page bracketed the A cell ([A]) but the row is chipped MC (PEMS p.117#5 is the
+      Medical Control contact). The chip already states the MC requirement, so a +MC
+      marker would duplicate it.
+  - file: protocols/trauma/09_Trauma_PROC.md
+    row: 6
+    status: owner_required
+    reason: >-
+      No PEMS 2024 row prints 'assess for shock and refer to the Shock protocol'. p.83#3
+      prints 'If shock or potential for shock is present, keep the patient warm' (badge
+      EMR) — the intervention, not the assessment/referral this row names. The page's A is
+      kept and flagged.

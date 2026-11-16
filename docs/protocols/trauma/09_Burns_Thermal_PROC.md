@@ -26,19 +26,21 @@ Guidelines for managing thermal, chemical, and radiation burns, emphasizing airw
     - Concomitant trauma or cyanide poisoning
 
 ### Interventions
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Stop the burning process safely and remove the patient from the source. Fully expose the injured area and remove constricting items including clothing. | • | • | • | • | • |
-| 2 | Assess airway and respiratory effort. Refer to Airway Management and Ventilatory Support protocol. | • | • | • | • | • |
-| 3 | Estimate depth of burns and Total Body Surface Area (TBSA) involved using Rule of 9s or patient's palm (1%). Only count partial (2nd degree) and full thickness (3rd degree) burns. |  | • | • | • | • |
-| 4 | Apply clean, dry dressings to burns. Prevent loss of body heat and keep the patient warm. |  | • | • | • | • |
-| 5 | Establish IV/IO access on a non-burned extremity, if possible (preferably obtain two sites of access). |  |  | • | • | • |
-| 6 | Hydrofluoric Acid (HF) Burns with Hypotension: Administer **[Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) 1 g** IV/IO over 3 mins (Repeat in 5 mins PRN). |  |  |  |  |  |
-| 7 | Contact Medical Control if the most appropriate transport destination is unclear based on criteria. | MC | MC | MC | MC | MC |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emr">EMR</span> | Stop the burning process safely and remove the patient from the source. Fully expose the injured area and remove constricting items including clothing. |
+| 2 | <span class="lvl lvl-emr">EMR</span> | Assess airway and respiratory effort. Refer to Airway Management and Ventilatory Support protocol. |
+| 3 | <span class="lvl lvl-emt">EMT</span> | Estimate depth of burns and Total Body Surface Area (TBSA) involved using Rule of 9s or patient's palm (1%). Only count partial (2nd degree) and full thickness (3rd degree) burns. |
+| 4 | <span class="lvl lvl-emt">EMT</span> | Apply clean, dry dressings to burns. Prevent loss of body heat and keep the patient warm. |
+| 5 | <span class="lvl lvl-a">A</span> | Establish IV/IO access on a non-burned extremity, if possible (preferably obtain two sites of access). |
+| 6 | <span class="lvl lvl-pending">PENDING</span> | Hydrofluoric Acid (HF) Burns with Hypotension: Administer **[Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) 1 g** IV/IO over 3 mins (Repeat in 5 mins PRN). |
+| 7 | <span class="lvl lvl-mc">MC</span> | Contact Medical Control if the most appropriate transport destination is unclear based on criteria. |
 
 </div>
+
+<p class="lv-note"><strong>PENDING</strong> — row 6: this action has no counterpart in PEMS 2024. It is an agency addition, so the level it used to show was never verified against the regional source and is not published as a level now. Every other row on this page is cited to its PEMS 2024 row. This is not the same case as a whole protocol sourced outside PEMS (e.g. Aortic Dissection, which comes from ODEMSA and is PENDING on every row): here only the row(s) named are pending, and the rest of the protocol stands on PEMS. <strong>Pending OMD authorization</strong> — no provider level applies until the OMD authorizes it. See <code>audit/level-scan/pending-protocols.yaml</code> and <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
 ### Pearls
 • ⚠ Assess for airway / inhalation injury. Consider early definitive airway management for patients with respiratory distress, hoarse voice or stridor, carbonaceous sputum and/or facial burns. Prompt assessment by a qualified RSI paramedic, when available, is preferred.

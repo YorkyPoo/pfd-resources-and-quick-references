@@ -120,7 +120,8 @@ pages:
     reason: "regional 'Burns Injuries' p.87"
   - file: protocols/trauma/09_Crush_Syndrome_PROC.md
     pems_pages: [91]
-    reason: "regional 'Crush Injuries' p.91"
+    base_rev: cf8af7a
+    reason: "regional 'Crush Injuries' p.91; the [A]/[I] bracket notation on rows 4-5 was added on the level-scan branch (ef540f9) after the branch base 768ad68, so this page's pre-conversion bracket set is the branch tip cf8af7a, not main"
   - file: protocols/trauma/09_Trauma_PROC.md
     pems_pages: [83]
     reason: "regional 'Trauma' p.83-84"

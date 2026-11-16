@@ -30,20 +30,20 @@ This protocol outlines the management of patients suffering from toxic ingestion
 
 ### Interventions
 
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Follow Universal Patient Care | • | • | • | • | • |
-| 2 | Remove from source / decontaminate patient | • | • | • | • | • |
-| 3 | Ensure adequate ventilation / administer supplemental oxygen | • | • | • | • | • |
-| 4 | Assess blood glucose / 12-lead ECG |  | • | • | • | • |
-| 5 | **Opiate Overdose:**<br>Administer **[Naloxone](../../pharmacology/Naloxone.md) 1-2 mg** IN |  |  | • | • | • |
-| 6 | **Opiate Overdose (Adult):**<br>Administer **[Naloxone](../../pharmacology/Naloxone.md) 0.5-2 mg** IV/IO/IM/IN<br><br>**Opiate Overdose (Pediatric):**<br>Administer **[Naloxone](../../pharmacology/Naloxone.md) 0.1 mg/kg** (max **2 mg**) IV/IO/IM/IN |  |  |  | • | • |
-| 7 | **Calcium Channel Blocker / Beta Blocker Overdose (Adult):**<br>Administer **[Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) 1g** IV/IO AND **[Glucagon](../../pharmacology/Glucagon.md) 1mg** IV/IO<br><br>**Calcium Channel Blocker / Beta Blocker Overdose (Pediatric):**<br>Administer **[Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) 20 mg/kg** IV/IO AND **[Glucagon](../../pharmacology/Glucagon.md) 0.5-1 mg** IV/IO |  |  |  | • | • |
-| 8 | **Organophosphate / Cholinergic Exposure (Adult & Pediatric >40kg):**<br>Administer **[Atropine](../../pharmacology/Atropine Sulfate.md) 2 mg** IV/IO/IM<br><br>**Organophosphate / Cholinergic Exposure (Pediatric <40kg):**<br>Administer **[Atropine](../../pharmacology/Atropine Sulfate.md) 1 mg** IV/IO/IM |  |  |  | • | • |
-| 9 | **Anti-Cholinergic / TCA Overdose:**<br>Initiate active cooling measures |  | • | • | • | • |
-| 10 | **Anti-Cholinergic / TCA Overdose (Adult):**<br>Administer **[Sodium Bicarbonate](../../pharmacology/Sodium%20Bicarbonate.md) 50 mEq** IV/IO<br><br>**Anti-Cholinergic / TCA Overdose (Pediatric):**<br>Administer **[Sodium Bicarbonate](../../pharmacology/Sodium%20Bicarbonate.md) 1 mEq/kg** (max **50 mEq**) IV/IO |  |  |  |  | • |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emr">EMR</span> | Follow Universal Patient Care |
+| 2 | <span class="lvl lvl-emr">EMR</span> | Remove from source / decontaminate patient |
+| 3 | <span class="lvl lvl-emr">EMR</span> | Ensure adequate ventilation / administer supplemental oxygen |
+| 4 | <span class="lvl lvl-emt">EMT</span> | Assess blood glucose / 12-lead ECG |
+| 5 | <span class="lvl lvl-emt">EMT</span> | **Opiate Overdose:**<br>Administer **[Naloxone](../../pharmacology/Naloxone.md) 1-2 mg** IN |
+| 6 | <span class="lvl lvl-a">A</span> | **Opiate Overdose (Adult):**<br>Administer **[Naloxone](../../pharmacology/Naloxone.md) 0.5-2 mg** IV/IO/IM/IN<br><br>**Opiate Overdose (Pediatric):**<br>Administer **[Naloxone](../../pharmacology/Naloxone.md) 0.1 mg/kg** (max **2 mg**) IV/IO/IM/IN |
+| 7 | <span class="lvl lvl-i">I</span> | **Calcium Channel Blocker / Beta Blocker Overdose (Adult):**<br>Administer **[Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) 1g** IV/IO AND **[Glucagon](../../pharmacology/Glucagon.md) 1mg** IV/IO<br><br>**Calcium Channel Blocker / Beta Blocker Overdose (Pediatric):**<br>Administer **[Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) 20 mg/kg** IV/IO AND **[Glucagon](../../pharmacology/Glucagon.md) 0.5-1 mg** IV/IO |
+| 8 | <span class="lvl lvl-i">I</span> | **Organophosphate / Cholinergic Exposure (Adult & Pediatric >40kg):**<br>Administer **[Atropine](../../pharmacology/Atropine Sulfate.md) 2 mg** IV/IO/IM<br><br>**Organophosphate / Cholinergic Exposure (Pediatric <40kg):**<br>Administer **[Atropine](../../pharmacology/Atropine Sulfate.md) 1 mg** IV/IO/IM |
+| 9 | <span class="lvl lvl-emr">EMR</span> | **Anti-Cholinergic / TCA Overdose:**<br>Initiate active cooling measures |
+| 10 | <span class="lvl lvl-i">I</span> | **Anti-Cholinergic / TCA Overdose (Adult):**<br>Administer **[Sodium Bicarbonate](../../pharmacology/Sodium%20Bicarbonate.md) 50 mEq** IV/IO<br><br>**Anti-Cholinergic / TCA Overdose (Pediatric):**<br>Administer **[Sodium Bicarbonate](../../pharmacology/Sodium%20Bicarbonate.md) 1 mEq/kg** (max **50 mEq**) IV/IO |
 
 </div>
 

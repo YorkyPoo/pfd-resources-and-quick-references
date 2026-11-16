@@ -86,6 +86,18 @@ TARGETS = [
     'protocols/respiratory/03_Respiratory_Distress_PROC.md',
     'protocols/respiratory/03_Smoke_Inhalation_PROC.md',
     'protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md',
+    # Batch 4 — protocols/trauma/ + protocols/toxicology/. Derived from the tree: every
+    # .md file in those two directories (6 trauma + 3 toxicology = 9 pages), nothing
+    # hand-picked. The card estimated 8; the tree says 9.
+    'protocols/trauma/09_Burns_Thermal_PROC.md',
+    'protocols/trauma/09_Crush_Syndrome_PROC.md',
+    'protocols/trauma/09_Electrical_Injuries_PROC.md',
+    'protocols/trauma/09_Hemorrhage_Control_PROC.md',
+    'protocols/trauma/09_Lightning_Injuries_PROC.md',
+    'protocols/trauma/09_Trauma_PROC.md',
+    'protocols/toxicology/06_Nausea_Vomiting_PROC.md',
+    'protocols/toxicology/06_Nerve_Agents_PROC.md',
+    'protocols/toxicology/06_Overdose_Poisoning_PROC.md',
 ]
 
 # Pages sourced from OUTSIDE PEMS 2024. PEMS prints no equivalent protocol, so no row on
@@ -852,7 +864,11 @@ def prior_before():
     out = {}
     for e in rows:
         b = e.get('before') or {}
-        if b.get('leftmost') is not None or b.get('markers'):
+        if (b.get('leftmost') is not None or b.get('markers')
+                or e.get('status') == 'pending_row_omd'):
+            # a pending row may have published no level at all (leftmost None); its
+            # before-record still has to be carried forward or a re-run reads the
+            # PENDING chip as the pre-conversion level and the provenance check fails
             out[(e['file'], str(e['row']))] = b
     return out
 
@@ -1194,6 +1210,24 @@ BASE_REV = '768ad68'
 BRACKET_CELL = re.compile(r'^\[(EMR|EMT|A|I|P)\]$')
 
 
+def page_base_rev(rel):
+    """The revision whose page is this page's pre-conversion state.
+
+    Defaults to BASE_REV (the branch base, `main`). A page whose bracket notation was
+    added on the level-scan branch *after* that base needs its own pre-conversion
+    revision, recorded as `base_rev` on its exceptions.yaml entry — otherwise
+    `base_brackets()` reads a revision that never carried the brackets and the `+MC`
+    check silently passes on a row whose bracket was dropped.
+    """
+    import yaml
+    if os.path.exists(EXCEPTIONS_YAML):
+        doc = yaml.safe_load(open(EXCEPTIONS_YAML, encoding='utf-8')) or {}
+        for rec in doc.get('pages') or []:
+            if rec.get('file') == rel and rec.get('base_rev'):
+                return str(rec['base_rev'])
+    return BASE_REV
+
+
 def base_brackets(rel):
     """{row ordinal: bracketed level} from the page's pre-conversion revision.
 
@@ -1202,7 +1236,7 @@ def base_brackets(rel):
     deleted that notation, so `--check` re-derives the set and demands each row either
     carry the `+MC` marker or record why it cannot.
     """
-    text = git_show(BASE_REV, rel)
+    text = git_show(page_base_rev(rel), rel)
     if not text:
         return {}
     out = {}
@@ -1312,8 +1346,10 @@ def emit_md(ledger):
               'and it is styled distinctly from the `MC` chip, which means the action *is* a',
               'Medical Control contact. Source of truth is `mc_required: true` in',
               '`row-bindings.yaml` (never a hand-written span); `--check` fails if the marker is',
-              'missing or doubled, and it re-derives the bracketed rows from the',
-              f'pre-conversion pages at `{BASE_REV}` so a bracketed row cannot be silently',
+              'missing or doubled, and it re-derives the bracketed rows from each page\'s',
+              f'pre-conversion revision (`{BASE_REV}` by default, or the page\'s recorded',
+              '`base_rev` in `exceptions.yaml` when the bracket notation was added on the',
+              'level-scan branch after that base) so a bracketed row cannot be silently',
               'dropped.', '',
               f'**{len(mcrows)} row(s).**', '']
     if not mcrows:
@@ -1526,7 +1562,33 @@ def emit_md(ledger):
               '  rows from the pre-conversion pages. A bracketed cell whose level is not the level',
               '  the row now publishes, or a row that is itself a Medical Control contact, cannot',
               '  carry `+MC` without changing its meaning — those rows say so explicitly under',
-              '  *Bracketed rows whose bracket cannot be carried* above.']
+              '  *Bracketed rows whose bracket cannot be carried* above.',
+              '- **Batch 4 — Burns row 6 (HF-burn calcium) is PENDING, not OWNER_REQUIRED.** The',
+              '  page published no level at all, so there is no level to keep and flag. PEMS 2024',
+              '  prints the HF calcium treatment only in the Burns protocol\'s PEARLS (p.87-88',
+              '  prose), not as a level-badged row; the only table rows printing calcium chloride',
+              '  1 g IV/IO over 3 minutes are p.91#5 (crush syndrome, badge [I]) and p.120#8',
+              '  (CCB/BB overdose, badge I), whose indications differ. Confirm PENDING is preferred',
+              '  over citing one of those rows across indications.',
+              '- **Batch 4 — Electrical row 7 and Lightning row 7 are OWNER_REQUIRED bundles.**',
+              '  Each row prints a 12-lead ECG (p.96#8, badge EMT) and continuous rhythm',
+              '  monitoring (p.96#11, badge I) as one action. One chip cannot carry both without',
+              '  over- or under-granting one half; the page levels (A and EMT) are kept and',
+              '  flagged. Owner to decide whether to split the rows or accept one level.',
+              '- **Batch 4 — Trauma row 2 (scene safety + extrication) and row 6 (assess shock /',
+              '  refer to Shock protocol) are OWNER_REQUIRED.** No PEMS row prints either bundle:',
+              '  scene safety is p.49#1 (EMR) and extrication is p.91#7 (EMT); the shock row',
+              '  p.83#3 prints "keep the patient warm" (EMR), not the assessment/referral the page',
+              '  names. The page levels (EMT and A) are kept and flagged.',
+              '- **Batch 4 — Crush rows 4-5 carry `+MC` from brackets added on the level-scan',
+              '  branch.** The [A]/[I] notation was added by ef540f9 after the branch base',
+              '  768ad68, so this page\'s pre-conversion bracket set is recorded as `base_rev:',
+              '  cf8af7a` in `exceptions.yaml`. Confirm the branch-added brackets are the owner\'s',
+              '  intended notation and not a scanner artifact.',
+              '- **Batch 4 — three cross-page citations reach procedures.** Hemorrhage rows 8-9',
+              '  cite the Tourniquet Application procedure (p.273#6 EMR, p.273#7 MC) and Trauma',
+              '  row 7 cites Universal Patient Care (p.50#9 A). Each cited row prints the action',
+              '  verbatim; confirm citing a procedure for a protocol-page row is intended.']
     # Derived from `changed` so the prose can never disagree with the table above:
     # an MC -> other move and an other -> MC move are counted and named from data.
     lost_mc = [e for e in changed
