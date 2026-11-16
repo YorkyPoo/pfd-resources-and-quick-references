@@ -1,0 +1,109 @@
+Batch 6 — whole-site totals, derived from audit/level-scan/level-rule-ledger.json
+
+ADMINISTRATIVE PAGES (14, derived from exceptions.yaml kind: administrative)
+  01_ALS_Release_to_BLS_PROC.md                                  rows= 8 POLICY= 8 PENDING=0 cross=0
+  01_Abuse_Recognition_and_Mandated_Reporting_PROC.md            rows= 7 POLICY= 7 PENDING=0 cross=0
+  01_Behavioral_Health_Transportation_Decision_PROC.md           rows= 7 POLICY= 5 PENDING=2 cross=0
+  01_Communications_PROC.md                                      rows= 6 POLICY= 6 PENDING=0 cross=0
+  01_Death_Criteria_for_Withholding_Resuscitation_PROC.md        rows= 5 POLICY= 5 PENDING=0 cross=0
+  01_Helicopter_EMS_HEMS_PROC.md                                 rows= 6 POLICY= 6 PENDING=0 cross=0
+  01_Infant_Abandonment_PROC.md                                  rows= 4 POLICY= 3 PENDING=1 cross=0
+  01_Patient_Refusal_of_Treatment_Transport_PROC.md              rows= 7 POLICY= 7 PENDING=0 cross=0
+  01_Patient_Restraint_PROC.md                                   rows= 8 POLICY= 8 PENDING=0 cross=0
+  01_STEMI_Field_Triage_PROC.md                                  rows= 7 POLICY= 6 PENDING=0 cross=1
+  01_Safe_Transport_of_Pediatric_Patients_PROC.md                rows= 7 POLICY= 7 PENDING=0 cross=0
+  01_Stroke_Field_Triage_PROC.md                                 rows= 8 POLICY= 6 PENDING=2 cross=0
+  01_Transportation_and_Destination_Determination_PROC.md        rows= 7 POLICY= 7 PENDING=0 cross=0
+  01_Trauma_Field_Triage_PROC.md                                 rows= 8 POLICY= 8 PENDING=0 cross=0
+  TOTAL administrative rows 95 — POLICY 89, PENDING 5, cross-page protocol 1
+
+UNIVERSAL PATIENT CARE (own line, as the card requires)
+  protocols/front-matter/Universal Patient Care.md  rows=11 cited=11 flagged=0 cross=0
+
+BATCH 6 SCOPE TOTAL: 106 rows on 15 pages
+
+WHOLE SITE (all batches, from the same ledger): 523 action rows
+  OK                   377
+  policy               89
+  owner_ruled          1
+  OWNER_REQUIRED       37
+  pending_omd          11
+  pending_row_omd      8
+  +MC                  8
+  cross_page           46
+
+POLICIES CITED (14/14):
+  abuse-recognition                 7 row(s)
+  als-release                       8 row(s)
+  behavioral-health-transport       2 row(s)
+  communications                    6 row(s)
+  death-withholding                 5 row(s)
+  hems                              6 row(s)
+  infant-abandonment                3 row(s)
+  patient-refusal                  10 row(s)
+  patient-restraint                 8 row(s)
+  safe-transport-pediatric          7 row(s)
+  stemi-field-triage                6 row(s)
+  stroke-field-triage               6 row(s)
+  transport-destination             7 row(s)
+  trauma-field-triage               8 row(s)
+
+RESIDUAL — every OWNER_REQUIRED / PENDING row left for the owner, by page:
+  04_Asystole_and_Pulseless_Electrical_Activity_PROC.md      r8   OWNER_REQUIRED   Apply AED / Assess cardiac rhythm every 2 minutes. If AED is
+  04_Cardiac_Arrest_Non_Traumatic_PROC.md                    r4   OWNER_REQUIRED   AED / Rhythm Assessment: • Apply AED and assess cardiac rhyt
+  04_Cardiac_Arrest_Non_Traumatic_PROC.md                    r5   OWNER_REQUIRED   Defibrillation - V-Fib/V-Tach Only: • ADULT: 200 joules Biph
+  04_Cardiac_Arrest_Traumatic_PROC.md                        r5   OWNER_REQUIRED   PEA / VF / VT: Continue CPR / Defibrillate if indicated
+  04_Chest_Pain_ACS_PROC.md                                  r5   OWNER_REQUIRED   12-Lead ECG Interpretation - STEMI Criteria: • Intermediate 
+  04_Chest_Pain_ACS_PROC.md                                  r14  OWNER_REQUIRED   Right-Sided / 15-Lead ECG: • Consider right-sided 12-Lead or
+  04_V_Fib_Pulseless_V_Tach_PROC.md                          r5   OWNER_REQUIRED   Defibrillation: 200 J Biphasic / 360 J Monophasic (Adult) / 
+  05_Stroke_TIA_PROC.md                                      r8   pending_row_omd  Establish 18g IV in Right AC (preferred for rapid imaging)
+  05_Stroke_TIA_PROC.md                                      r9   pending_row_omd  Call COR at the receiving facility with Name/DOB for rapid r
+  03_Airway_Inhalation_Irritants_PROC.md                     r3   OWNER_REQUIRED   Airway Assessment: • Assess for signs of airway injury (sing
+  03_Airway_Inhalation_Irritants_PROC.md                     r10  OWNER_REQUIRED   Endotracheal Intubation: • Follow Endotracheal Intubation pr
+  03_Airway_Inhalation_Irritants_PROC.md                     r11  OWNER_REQUIRED   Poison Control Consultation: • Contact Poison Control Center
+  03_Asthma_COPD_Reactive_Airway_PROC.md                     r8   OWNER_REQUIRED   Continuous Positive Airway Pressure (CPAP): • Consider for C
+  03_Asthma_COPD_Reactive_Airway_PROC.md                     r11  OWNER_REQUIRED   Reassessment and Transport: • Continuously monitor respirato
+  03_Pediatric_Stridor_PROC.md                               r2   OWNER_REQUIRED   Scene Management & Calm Environment • Keep child calm - agit
+  03_Pediatric_Stridor_PROC.md                               r5   OWNER_REQUIRED   Continuous Monitoring • Cardiac monitor • Pulse oximetry • E
+  03_Pneumothorax_PROC.md                                    r4   OWNER_REQUIRED   Positioning and Monitoring: • Position patient for comfort (
+  03_Pneumothorax_PROC.md                                    r5   OWNER_REQUIRED   Suction and Airway Management: • Prepare suction and airway 
+  03_Pneumothorax_PROC.md                                    r12  OWNER_REQUIRED   Hemodynamic Support: • 0.9% Sodium Chloride fluid bolus if h
+  03_Pneumothorax_PROC.md                                    r13  OWNER_REQUIRED   Advanced Airway Management (if indicated): • Prepare for or 
+  03_Pneumothorax_PROC.md                                    r15  OWNER_REQUIRED   Close Monitoring En Route: • Continuous reassessment en rout
+  03_Pulmonary_Edema_Congestion_PROC.md                      r6   OWNER_REQUIRED   CPAP CONTRAINDICATIONS (⚠️): • Apnea/agonal respirations • G
+  03_Pulmonary_Edema_Congestion_PROC.md                      r7   OWNER_REQUIRED   CPAP CONTRAINDICATIONS (⚠️): • Facial trauma/burns/recent su
+  03_Pulmonary_Edema_Congestion_PROC.md                      r8   OWNER_REQUIRED   CPAP CONTRAINDICATIONS (⚠️): • Hypotension (SBP < 90 mmHg, M
+  03_Pulmonary_Edema_Congestion_PROC.md                      r9   OWNER_REQUIRED   CPAP Titration: Adjust PEEP up to 10 cmH2O to support ventil
+  03_Respiratory_Distress_PROC.md                            r3   OWNER_REQUIRED   Continuous Monitoring: • Continuous EtCO2 monitoring to guid
+  03_Respiratory_Distress_PROC.md                            r16  OWNER_REQUIRED   Respiratory Failure Management: • If apnea/agonal respiratio
+  03_Smoke_Inhalation_PROC.md                                r3   OWNER_REQUIRED   Airway Assessment: • Inspect for singed facial/nasal hairs •
+  03_Smoke_Inhalation_PROC.md                                r13  OWNER_REQUIRED   Monitoring and Reassessment: • Monitor SpO2, EtCO2, and resp
+  03_Upper_Airway_Obstruction_PROC.md                        r2   OWNER_REQUIRED   Scene Safety / Recognition: • Rapidly identify complete vs p
+  09_Burns_Thermal_PROC.md                                   r6   pending_row_omd  Hydrofluoric Acid (HF) Burns with Hypotension: Administer Ca
+  09_Electrical_Injuries_PROC.md                             r7   OWNER_REQUIRED   Obtain 12-Lead ECG / Monitor rhythm continuously
+  09_Lightning_Injuries_PROC.md                              r7   OWNER_REQUIRED   Obtain and transmit a 12-Lead ECG / Monitor rhythm.
+  09_Trauma_PROC.md                                          r2   OWNER_REQUIRED   Ensure scene safety. Extricate/move patient to safety if nec
+  09_Trauma_PROC.md                                          r6   OWNER_REQUIRED   Assess for shock. Refer to Shock (Hypoperfusion) protocol.
+  02_Cold_Exposure_PROC.md                                   r6   OWNER_REQUIRED   If patient is alert and responsive: Use active external rewa
+  02_Cold_Exposure_PROC.md                                   r9   OWNER_REQUIRED   Contact Medical Control prior to use of AED.
+  02_Pain_Control_PROC.md                                    r8   OWNER_REQUIRED   If unable to adequately control pain or safely and humanely 
+  02_Sedation_Assisted_Non_Paralytic_PROC.md                 r4   OWNER_REQUIRED   Pre-Intubation Sedation, consider ONE of the following:  • A
+  02_Sedation_Assisted_Non_Paralytic_PROC.md                 r5   OWNER_REQUIRED   Post-Intubation Sedation, consider ONE of the following:  • 
+  01_Behavioral_Health_Transportation_Decision_PROC.md       r6   pending_row_omd  Law Enforcement Custody: Patients in LE custody (including E
+  01_Behavioral_Health_Transportation_Decision_PROC.md       r7   pending_row_omd  Restraints: If LE restraints utilized (handcuffs, flex-cuffs
+  01_Infant_Abandonment_PROC.md                              r2   pending_row_omd  Assess infant and provide medical care per these Protocols
+  01_Stroke_Field_Triage_PROC.md                             r1   pending_row_omd  Time Management: Maintain a goal scene time of less than 15 
+  01_Stroke_Field_Triage_PROC.md                             r4   pending_row_omd  Immediate Life-Threats: If uncontrolled airway, cardiac arre
+  04b_Aortic_Dissection_AAA_PROC.md                          r1   pending_omd      Scene Safety / Initial Assessment: • Follow the Universal Pa
+  04b_Aortic_Dissection_AAA_PROC.md                          r2   pending_omd      Airway / Respiratory Management: • Support life-threatening 
+  04b_Aortic_Dissection_AAA_PROC.md                          r3   pending_omd      Oxygen Administration: • Administer oxygen to maintain SpO2 
+  04b_Aortic_Dissection_AAA_PROC.md                          r4   pending_omd      Vital Signs / 12-Lead ECG: • Obtain VS in both arms and asse
+  04b_Aortic_Dissection_AAA_PROC.md                          r5   pending_omd      Glucose Assessment: • Check blood glucose level. • Refer to 
+  04b_Aortic_Dissection_AAA_PROC.md                          r6   pending_omd      IV/IO Access: • Establish two IV of normal saline and titrat
+  04b_Aortic_Dissection_AAA_PROC.md                          r7   pending_omd      Pain Management: • Administer Fentanyl 1 mcg/kg IN/IV/IM or 
+  04b_Aortic_Dissection_AAA_PROC.md                          r8   pending_omd      Nausea Management: • Administer Ondansetron (Zofran) 0.1 mg/
+  04b_Aortic_Dissection_AAA_PROC.md                          r9   pending_omd      Hypotension Management - Vasopressors: • Consider Norepineph
+  04b_Aortic_Dissection_AAA_PROC.md                          r10  pending_omd      Transport: • Transport and perform ongoing assessment as ind
+  04b_Aortic_Dissection_AAA_PROC.md                          r11  pending_omd      Medical Control Contact: • Contact Medical Control for guida
+
+EXIT=0
