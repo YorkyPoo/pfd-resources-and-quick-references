@@ -594,21 +594,21 @@ recorded decision — the citation that cleared it is listed above and in the ta
 
 | page | flagged before | flagged after | cleared | of which cross-page |
 |---|---:|---:|---:|---:|
-| `04_Supraventricular_Tachycardia_PROC.md` | 0 | 0 | 0 | 0 |
-| `04_Post_Resuscitation_Care_PROC.md` | 0 | 0 | 0 | 0 |
+| `04_Supraventricular_Tachycardia_PROC.md` | 0 | 0 | new | 0 |
+| `04_Post_Resuscitation_Care_PROC.md` | 0 | 0 | new | 0 |
 | `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` | 4 | 1 | 3 | 3 |
-| `04_Bradycardia_PROC.md` | 0 | 0 | 0 | 0 |
+| `04_Bradycardia_PROC.md` | 0 | 0 | new | 0 |
 | `04_Cardiac_Arrest_Non_Traumatic_PROC.md` | 3 | 2 | 1 | 1 |
 | `04_Cardiac_Arrest_Traumatic_PROC.md` | 3 | 1 | 2 | 2 |
 | `04_Chest_Pain_ACS_PROC.md` | 4 | 2 | 2 | 2 |
 | `04_Hypertensive_Crisis_PROC.md` | 1 | 0 | 1 | 1 |
 | `04_V_Fib_Pulseless_V_Tach_PROC.md` | 1 | 1 | 0 | 0 |
-| `07_Sepsis_PROC.md` | 0 | 0 | 0 | 0 |
-| `07_Allergic_Reaction_Anaphylaxis_PROC.md` | 0 | 0 | 0 | 0 |
-| `07_OB_Emergencies_PROC.md` | 0 | 0 | 0 | 0 |
-| `07_Hypotension_Shock_Non_Trauma_PROC.md` | 0 | 0 | 0 | 0 |
-| `05_Seizure_PROC.md` | 0 | 0 | 0 | 0 |
-| `05_Hypoglycemia_Hyperglycemia_PROC.md` | 0 | 0 | 0 | 0 |
+| `07_Sepsis_PROC.md` | 0 | 0 | new | 0 |
+| `07_Allergic_Reaction_Anaphylaxis_PROC.md` | 0 | 0 | new | 0 |
+| `07_OB_Emergencies_PROC.md` | 0 | 0 | new | 0 |
+| `07_Hypotension_Shock_Non_Trauma_PROC.md` | 0 | 0 | new | 0 |
+| `05_Seizure_PROC.md` | 0 | 0 | new | 0 |
+| `05_Hypoglycemia_Hyperglycemia_PROC.md` | 0 | 0 | new | 0 |
 | `05_Stroke_TIA_PROC.md` | 2 | 2 | 0 | 0 |
 | `03_Airway_Inhalation_Irritants_PROC.md` | 5 | 3 | 2 | 2 |
 | `03_Asthma_COPD_Reactive_Airway_PROC.md` | 3 | 2 | 1 | 1 |
@@ -619,15 +619,15 @@ recorded decision — the citation that cleared it is listed above and in the ta
 | `03_Respiratory_Distress_PROC.md` | 6 | 2 | 4 | 4 |
 | `03_Smoke_Inhalation_PROC.md` | 8 | 2 | 6 | 6 |
 | `03_Upper_Airway_Obstruction_PROC.md` | 3 | 1 | 2 | 2 |
-| `09_Burns_Thermal_PROC.md` | 0 | 1 | -1 | 0 |
-| `09_Crush_Syndrome_PROC.md` | 0 | 0 | 0 | 0 |
-| `09_Electrical_Injuries_PROC.md` | 0 | 1 | -1 | 0 |
-| `09_Hemorrhage_Control_PROC.md` | 0 | 0 | 0 | 0 |
-| `09_Lightning_Injuries_PROC.md` | 0 | 1 | -1 | 0 |
-| `09_Trauma_PROC.md` | 0 | 2 | -2 | 0 |
-| `06_Nausea_Vomiting_PROC.md` | 0 | 0 | 0 | 0 |
-| `06_Nerve_Agents_PROC.md` | 0 | 0 | 0 | 0 |
-| `06_Overdose_Poisoning_PROC.md` | 0 | 0 | 0 | 0 |
+| `09_Burns_Thermal_PROC.md` | 0 | 1 | new | 0 |
+| `09_Crush_Syndrome_PROC.md` | 0 | 0 | new | 0 |
+| `09_Electrical_Injuries_PROC.md` | 0 | 1 | new | 0 |
+| `09_Hemorrhage_Control_PROC.md` | 0 | 0 | new | 0 |
+| `09_Lightning_Injuries_PROC.md` | 0 | 1 | new | 0 |
+| `09_Trauma_PROC.md` | 0 | 2 | new | 0 |
+| `06_Nausea_Vomiting_PROC.md` | 0 | 0 | new | 0 |
+| `06_Nerve_Agents_PROC.md` | 0 | 0 | new | 0 |
+| `06_Overdose_Poisoning_PROC.md` | 0 | 0 | new | 0 |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 11 | 11 | 0 | 0 |
 
 **Total: 77 flagged before, 46 after (31 cleared).**

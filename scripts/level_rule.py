@@ -1391,7 +1391,10 @@ def emit_md(ledger):
         after = sum(1 for e in rows if _flagged(e['status']))
         cross_n = sum(1 for e in rows if e.get('cross_page')
                       and _flagged(e.get('status_before')))
-        lines.append(f"| `{f.split('/')[-1]}` | {before} | {after} | {before - after} | "
+        # A page with no prior ledger record is newly converted: it had no flags to
+        # clear, so "before - after" would print a negative. Say "new" instead.
+        cleared = str(before - after) if before else 'new'
+        lines.append(f"| `{f.split('/')[-1]}` | {before} | {after} | {cleared} | "
                      f"{cross_n} |")
     tot_before = sum(1 for e in ledger if _flagged(e.get('status_before')))
     tot_after = sum(1 for e in ledger if _flagged(e['status']))
@@ -2113,7 +2116,10 @@ def main():
             all_ledger += ledger
         for e in all_ledger:
             key = (e['file'], str(e['row']))
-            e['status_before'] = carried.get(key) or prior.get(key)
+            # A row already in the ledger keeps the status_before it recorded, even when
+            # that value is None (a newly converted page had no flags to clear). Only a
+            # row absent from the ledger falls back to the status at HEAD.
+            e['status_before'] = carried[key] if key in carried else prior.get(key)
         out = os.path.join(AUD, 'level-rule-ledger.json')
         with open(out, 'w', encoding='utf-8') as fh:
             json.dump({'generated_by': 'scripts/level_rule.py',
