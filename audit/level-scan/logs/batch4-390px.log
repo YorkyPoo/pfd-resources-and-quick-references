@@ -1,0 +1,21 @@
+Batch 4 — 390px check (Emulation.setDeviceMetricsOverride 390x844, DPR 2)
+Served site/ on http://127.0.0.1:8123, measured documentElement.scrollWidth vs clientWidth
+and counted .lv-wrap .lvl chips against table rows.
+
+page                                                          scrollW clientW rows chips +MC OWNER PENDING
+protocols/trauma/09_Burns_Thermal_PROC.html                   390     390     7    7     0   0     1
+protocols/trauma/09_Crush_Syndrome_PROC.html                  390     390     9    11    2   0     0
+protocols/trauma/09_Electrical_Injuries_PROC.html             390     390     9    9     0   1     0
+protocols/trauma/09_Hemorrhage_Control_PROC.html              390     390     9    9     0   0     0
+protocols/trauma/09_Lightning_Injuries_PROC.html              390     390     9    9     0   1     0
+protocols/trauma/09_Trauma_PROC.html                          390     390     13   13    0   2     0
+protocols/toxicology/06_Nausea_Vomiting_PROC.html             390     390     6    6     0   0     0
+protocols/toxicology/06_Nerve_Agents_PROC.html                390     390     7    7     0   0     0
+protocols/toxicology/06_Overdose_Poisoning_PROC.html          390     390     10   10    0   0     0
+
+OVERFLOW: none (scrollWidth == clientWidth on all 9 pages).
+Crush rows 4-5 carry 2 chips each (level + outlined +MC), so 11 chips for 9 rows; every
+other page has exactly one chip per row.
+Screenshots viewed: Crush (rows 4-5: A/I chip with outlined +MC beneath, distinct from the
+filled level chip, no clipping), Trauma (OWNER_REQUIRED flags on rows 2 and 6), Overdose
+(one chip per row, no overflow).
