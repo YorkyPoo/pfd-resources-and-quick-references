@@ -111,6 +111,11 @@ TARGETS = [
     'protocols/general/02_Heat_Exposure_PROC.md',
     'protocols/general/02_Pain_Control_PROC.md',
     'protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md',
+    # Batch 6 — front-matter/Universal Patient Care.md. It is a PEMS 2024 PROTOCOL
+    # (p.49-50, every row level-badged), not an administrative policy, so it is converted
+    # with the ordinary chip chassis; its second `sc-wrap` block is a 3-column
+    # HPI / Signs / Differential table with no action rows and stays untouched.
+    'protocols/front-matter/Universal Patient Care.md',
 ]
 
 # Pages sourced from OUTSIDE PEMS 2024. PEMS prints no equivalent protocol, so no row on
@@ -123,9 +128,28 @@ PENDING_TARGETS = [
 
 LV = ['EMR', 'EMT', 'A', 'I', 'P']
 CHIP_CLASS = {'EMR': 'emr', 'EMT': 'emt', 'A': 'a', 'I': 'i', 'P': 'p', 'MC': 'mc',
-              'PENDING': 'pending'}
+              'PENDING': 'pending', 'POLICY': 'policy'}
 PENDING_YAML = os.path.join(AUD, 'pending-protocols.yaml')
 PENDING_CHIP = '<span class="lvl lvl-pending">PENDING</span>'
+
+# ----------------------------------------------------------------- POLICY class
+# The owner's ruling on administrative pages (2026-11-16): "Treat admin pages as policy:
+# cite PEMS administrative policies where they exist, PENDING where the policy is ours."
+#
+# A POLICY row's authority is one of the 14 PEMS 2024 ADMINISTRATIVE POLICIES (the p.9
+# table of contents), not a protocol row: PEMS prints those rules as policy prose, and the
+# existing exceptions.yaml already declares these pages `kind: administrative` — "not
+# level-gated". So on these pages a row is either
+#   * POLICY  — printed in a PEMS administrative policy, cited by policy id + a verbatim
+#               quote out of that policy's own pages, or
+#   * PENDING — not printed in any PEMS administrative policy; the rule is the agency's.
+# The POLICY chip is deliberately NOT a provider level: no badge can be inferred from a
+# policy, so none is published.
+POLICY_YAML = os.path.join(AUD, 'pems-policies.yaml')
+POLICY_SOURCE = os.path.join(ROOT, 'pems_chunks', 'PEMS2024_full.txt')
+POLICY_CHIP = '<span class="lvl lvl-policy">POLICY</span>'
+POLICY_HEADER = '| # | Basis | Action / Intervention |'
+DIV_POLICY_OPEN = '<div class="lv-wrap policy" markdown="1">'
 PENDING_REASON = ('this protocol is not published in PEMS 2024; its source prints no PEMS '
                   'row to cite, so the level is not verified against a regional source')
 TEXT_TOKEN = re.compile(r'(?<![A-Za-z0-9])(EMR|EMT|A|I|P|MC)\s*:\s*')
@@ -165,6 +189,9 @@ def is_level_header(line):
     if 'EMR' in line:
         return 'old'
     if 'Level' in line:
+        return 'new'
+    if 'Basis' in line:
+        # an administrative-policy page: the column carries POLICY/PENDING, not a level
         return 'new'
     return None
 
@@ -390,6 +417,61 @@ WORDING_YAML = os.path.join(AUD, 'wording-rulings.yaml')
 STYLESHEET_YAML = os.path.join(AUD, 'stylesheet-changes.yaml')
 
 
+def policy_pages_text(pages):
+    """Verbatim PEMS 2024 text of the given pages, page markers excluded."""
+    keep, cur = [], None
+    with open(POLICY_SOURCE, encoding='utf-8') as fh:
+        for line in fh:
+            m = re.match(r'--- PAGE (\d+) ---', line)
+            if m:
+                cur = int(m.group(1))
+                continue
+            if cur in pages:
+                keep.append(line)
+    return '\n'.join(keep)
+
+
+def load_policies():
+    """The PEMS 2024 administrative policies the site may cite, keyed by id.
+
+    Validated loudly, and self-verifying: the recorded quote must be a verbatim span of
+    the pages the entry claims, read out of pems_chunks/PEMS2024_full.txt. A policy that
+    the source does not print cannot be cited, exactly as a protocol citation cannot rest
+    on prose the cited row does not print.
+    """
+    import yaml
+    if not os.path.exists(POLICY_YAML):
+        return {}
+    doc = yaml.safe_load(open(POLICY_YAML, encoding='utf-8')) or {}
+    out = {}
+    for rec in doc.get('policies') or []:
+        missing = [k for k in ('id', 'title', 'pages', 'effective', 'quote')
+                   if rec.get(k) in (None, '', [])]
+        if missing:
+            raise SystemExit(f'pems-policies.yaml: entry {rec!r} is missing {missing}')
+        if not isinstance(rec['pages'], list) or not all(isinstance(p, int) for p in rec['pages']):
+            raise SystemExit(f'pems-policies.yaml: {rec["id"]} pages must be a list of ints')
+        text = norm_quote(policy_pages_text(set(rec['pages'])))
+        if norm_quote(rec['quote']) not in text:
+            raise SystemExit(f'pems-policies.yaml: {rec["id"]} quote is not a verbatim span '
+                             f'of PEMS pages {rec["pages"]} — the policy citation does not '
+                             f'rest on the source\'s own words')
+        if rec['id'] in out:
+            raise SystemExit(f'pems-policies.yaml: {rec["id"]} listed twice')
+        out[rec['id']] = rec
+    return out
+
+
+_POLICY_CACHE = {}
+
+
+def policies():
+    """Cached `load_policies()` — read once per process."""
+    if not _POLICY_CACHE:
+        _POLICY_CACHE.update(load_policies())
+    return _POLICY_CACHE
+
+
 def load_wording_rulings():
     """Owner rulings on wording (not level): decisions the source text does not support.
 
@@ -477,6 +559,39 @@ def load_bindings():
                              f'level — a binding cites the source, it never sets a level')
         status = rec.get('status')
         mc = rec.get('mc_required')
+        # --- POLICY citation: the rule is printed in a PEMS administrative policy -------
+        pol_id = rec.get('policy')
+        if pol_id:
+            pol = policies().get(pol_id)
+            if pol is None:
+                raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} cites '
+                                 f'policy {pol_id!r}, which is not in '
+                                 f'audit/level-scan/pems-policies.yaml — a policy citation '
+                                 f'must name a policy PEMS 2024 publishes')
+            if rec.get('pems_page') is not None or rec.get('pems_ordinal') is not None:
+                raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} is a '
+                                 f'POLICY row and also names pems_page '
+                                 f'{rec.get("pems_page")!r}/pems_ordinal '
+                                 f'{rec.get("pems_ordinal")!r} — an administrative-policy '
+                                 f'row may not also carry a protocol citation')
+            if status not in (None, 'bound'):
+                raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} cites a '
+                                 f'policy and also declares status {status!r}')
+            q = str(rec.get('policy_quote') or '').strip()
+            if not q:
+                raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} cites '
+                                 f'policy {pol_id!r} without policy_quote — the policy\'s own '
+                                 f'words are the only proof it prints the rule')
+            if norm_quote(q) not in norm_quote(policy_pages_text(set(pol['pages']))):
+                raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]}: '
+                                 f'policy_quote is not a verbatim span of {pol_id} '
+                                 f'(PEMS p.{"/".join(str(p) for p in pol["pages"])}) — the '
+                                 f'citation does not rest on the source\'s own words')
+            key = (rec['file'], str(rec['row']))
+            if key in out:
+                raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} listed twice')
+            out[key] = rec
+            continue
         if mc is not None and not isinstance(mc, bool):
             raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} has '
                              f'mc_required={mc!r} — it must be true or false')
@@ -647,6 +762,48 @@ def pems_index(table):
 
 
 EXCEPTIONS_YAML = os.path.join(AUD, 'exceptions.yaml')
+
+
+def sc_wrap_audit():
+    """Every docs/ page that still carries an `sc-wrap` block, and whether it is a level
+    matrix. `sc-wrap` is the shared wide-table wrapper, so its presence is NOT a defect —
+    a provider-level matrix still wrapped in `sc-wrap` is. Derived by walking docs/, not
+    from a list."""
+    header = re.compile(r'^\|\s*#\s*\|\s*Action\s*/\s*Intervention\s*\|\s*EMR\s*\|')
+    files, blocks, matrices = [], [], []
+    for root, _dirs, names in os.walk(DOCS):
+        for name in sorted(names):
+            if not name.endswith('.md'):
+                continue
+            path = os.path.join(root, name)
+            rel = os.path.relpath(path, DOCS).replace(os.sep, '/')
+            lines = open(path, encoding='utf-8').read().split('\n')
+            n = 0
+            for i, line in enumerate(lines):
+                if line.strip().startswith('<div class="sc-wrap'):
+                    n += 1
+                    j = i + 1
+                    while j < len(lines) and not lines[j].strip().startswith('</div>'):
+                        if header.match(lines[j]):
+                            matrices.append(f'{rel} (line {j + 1})')
+                            break
+                        j += 1
+            if n:
+                files.append(rel)
+                blocks.append(n)
+    return files, sum(blocks), matrices
+
+
+def policy_targets():
+    """The administrative-policy pages, derived — every exceptions.yaml entry whose
+    `kind` is `administrative`. Never a hand-picked list: the file already declares
+    which pages are policy rather than clinical procedure."""
+    import yaml
+    if not os.path.exists(EXCEPTIONS_YAML):
+        return []
+    doc = yaml.safe_load(open(EXCEPTIONS_YAML, encoding='utf-8')) or {}
+    return [rec['file'] for rec in doc.get('pages') or []
+            if rec.get('kind') == 'administrative' and rec.get('file')]
 
 
 def governing_pages(rel, align):
@@ -827,11 +984,11 @@ def chip(level, bracketed=False, owner=False, mc_required=False):
     return html
 
 
-def render_block(rows, note=None, banner=None):
+def render_block(rows, note=None, banner=None, header=NEW_HEADER, div_open=DIV_OPEN):
     out = []
     if banner:
         out += [banner, '']
-    out += [DIV_OPEN, '', NEW_HEADER, '|:---:|---|---|']
+    out += [div_open, '', header, '|:---:|---|---|']
     for r in rows:
         cell = r.get('level_cell') or chip(r['level'], r.get('bracketed', False),
                                            r.get('owner', False), r.get('mc_required', False))
@@ -904,6 +1061,11 @@ def _decide(row, r, ruled_for_row, pending_row=None):
         # the level the page used to publish is recorded as provenance only
         return ('PENDING', False, 'pending_row_omd', pending_row['reason'], new_text,
                 before, None)
+    if extra.get('binding', {}).get('policy'):
+        # an administrative-policy row: the authority is a PEMS policy, not a protocol row,
+        # so there is no printed provider badge to publish — the chip says POLICY and the
+        # ledger cites the policy id + the verbatim span out of that policy's own pages
+        return ('POLICY', False, 'policy', None, new_text, before, None)
     if ruled_for_row:
         # the owner's decision replaces the inherited level; it is NOT PEMS-verified
         return ruled_for_row['level'], False, 'owner_ruled', None, new_text, before, ruled_for_row
@@ -1018,6 +1180,19 @@ def plan(rel):
                               'carried_from_page': rp['carried_from_page'],
                               'pending_note': rp.get('note'),
                               'note': 'agency addition — pending OMD authorization'})
+            pol_b = r['extra'].get('binding') or {}
+            if pol_b.get('policy'):
+                # a POLICY row cites a policy, never a protocol row: the ledger carries the
+                # policy id, its pages and the verbatim span, and NO pems_page/ordinal
+                pol = policies()[pol_b['policy']]
+                entry.update({'pems_page': None, 'pems_ordinal': None, 'pems_badge': None,
+                              'pems_text': None, 'compound_tokens': [], 'basis': None,
+                              'policy': pol['id'], 'policy_title': pol['title'],
+                              'policy_pages': pol['pages'],
+                              'policy_effective': pol['effective'],
+                              'policy_quote': pol_b['policy_quote'],
+                              'policy_note': pol_b.get('policy_note'),
+                              'note': 'PEMS administrative policy — ' + pol['title']})
             ledger.append(entry)
         if reg['banner']:
             blocks[0]['banner'] = heading_for(reg['banner'])
@@ -1025,8 +1200,50 @@ def plan(rel):
     return regions_out, ledger, problems, lines, regions
 
 
+def _row_ranges(nums):
+    """'18-20, 23' from [18,19,20,23] — keeps page notes short."""
+    out, start, prev = [], None, None
+    for n in nums:
+        if start is None:
+            start = prev = n
+        elif prev is not None and n == prev + 1:
+            prev = n
+        else:
+            out.append((start, prev))
+            start = prev = n
+    if start is not None:
+        out.append((start, prev))
+    return ', '.join(str(a) if a == b else f'{a}-{b}' for a, b in out)
+
+
 def page_note_for(ledger):
     notes = []
+    pol_rows = [e for e in ledger if e['status'] == 'policy']
+    if pol_rows:
+        ids = []
+        for e in pol_rows:
+            if e['policy'] not in ids:
+                ids.append(e['policy'])
+        rows = [e['row'] for e in pol_rows]
+        label = ('row ' + str(rows[0]) if len(rows) == 1 else 'rows ' + _row_ranges(rows))
+        cites = '; '.join(
+            f"<em>{policies()[i]['title']}</em> (PEMS p."
+            + ', '.join(str(p) for p in policies()[i]['pages']) + ')' for i in ids)
+        notes.append('<strong>POLICY</strong> — ' + label + ': this is not a provider level. '
+                     'This page is a PEMS administrative policy, not a clinical protocol: '
+                     'each row is cited to the PEMS 2024 administrative policy that prints '
+                     'it — ' + cites + ' — and no provider level is published, because PEMS '
+                     'prints these rules as policy rather than as level-badged protocol rows. '
+                     'The policy and the verbatim span for every row are recorded in '
+                     '<code>audit/level-scan/level-rule-ledger.md</code>.')
+        xp = [e for e in ledger if e.get('cross_page')]
+        if xp:
+            notes.append('A PEMS level on this page does not make it a protocol: '
+                         + '; '.join(
+                             f"row {e['row']} is printed as row p.{e['pems_page']}#"
+                             f"{e['pems_ordinal']} of the PEMS 2024 protocol and is cited "
+                             f"there, so its chip is that row's level ({e['level_published']})"
+                             for e in xp) + '. No administrative policy prints it.')
     pending_rows = [e for e in ledger if e['status'] == 'pending_row_omd']
     if pending_rows:
         custom = [e.get('pending_note') for e in pending_rows if e.get('pending_note')]
@@ -1069,6 +1286,10 @@ def splice(rel):
             print('PROBLEM:', p)
         raise SystemExit(2)
     page_note = page_note_for(ledger)
+    if rel in policy_targets():
+        header, div_open = POLICY_HEADER, DIV_POLICY_OPEN
+    else:
+        header, div_open = NEW_HEADER, DIV_OPEN
 
     out, last = [], 0
     for ri, (reg, reg_out) in enumerate(zip(regions, regions_out)):
@@ -1079,7 +1300,7 @@ def splice(rel):
             if bi:
                 pieces.append('')
             pieces += render_block(block['rows'], note=(page_note if last_block else None),
-                                   banner=block['banner'])
+                                   banner=block['banner'], header=header, div_open=div_open)
         out += pieces
         last = reg['end'] + 1
     out += lines[last:]
@@ -1509,6 +1730,44 @@ def emit_md(ledger):
         lines.append(f"- `{e['file']}` row {e['row']}: PENDING (carried from the page as "
                      f"**{e['carried_from_page']}**) — {e['action'][:90]}")
         lines.append(f"  - reason: {e['reason']}")
+    policed = [e for e in ledger if e['status'] == 'policy']
+    pol_files = sorted({e['file'] for e in policed})
+    cited_ids = []
+    for e in policed:
+        if e['policy'] not in cited_ids:
+            cited_ids.append(e['policy'])
+    lines += ['', '## POLICY — PEMS 2024 administrative policy (owner ruling 2026-11-16)', '',
+              'The owner ruled: *"Treat admin pages as policy: cite PEMS administrative',
+              'policies where they exist, PENDING where the policy is ours."* An administrative',
+              'page is therefore chipped **`POLICY`** where a PEMS 2024 administrative policy',
+              'prints the rule, and **`PENDING`** where no PEMS policy prints it. A `POLICY` row',
+              'publishes **no provider level**: PEMS prints these rules as policy prose, not as',
+              'level-badged protocol rows, and `exceptions.yaml` already declares these pages',
+              '`kind: administrative` — not level-gated. Each row below names the policy, its',
+              'PEMS pages and a verbatim span of that policy; `audit/level-scan/pems-policies.yaml`',
+              'is the only list of citable policies, and `--check` fails on an unknown policy id,',
+              'on a `POLICY` row that also carries a protocol citation, on a `PENDING` row that',
+              'carries a policy reference, and on a quote the policy pages do not print.', '',
+              f'**{len(policed)} row(s) across {len(pol_files)} page(s), citing {len(cited_ids)} '
+              f'of the 14 PEMS 2024 administrative policies.**', '']
+    lines += ['| policy id | title | PEMS pages | effective | rows |', '|---|---|---|---|---:|']
+    for pid in cited_ids:
+        pol = policies()[pid]
+        n = sum(1 for e in policed if e['policy'] == pid)
+        lines.append(f"| `{pid}` | {pol['title']} | p."
+                     + ', '.join(str(p) for p in pol['pages'])
+                     + f" | {pol['effective']} | {n} |")
+    lines.append('')
+    for rel in pol_files:
+        rows = [e for e in policed if e['file'] == rel]
+        lines.append(f'- `{rel}` — {len(rows)} POLICY row(s)')
+        for e in rows:
+            pol = policies()[e['policy']]
+            lines.append(f"  - row {e['row']}: `{e['policy']}` (p."
+                         + ', '.join(str(p) for p in pol['pages'])
+                         + f') — "{e["policy_quote"]}"')
+            if e.get('policy_note'):
+                lines.append(f"    - note: {e['policy_note']}")
     tokens = [(e['file'], e['row'], e['before']['text_tokens']) for e in ledger
               if e['before']['text_tokens']]
     lines += ['', '## Level tokens removed from action text', '']
@@ -1657,7 +1916,68 @@ def emit_md(ledger):
               '  Row 9 (Medical Control before AED) is printed nowhere in the cold protocol, and',
               '  no other PEMS row gates AED use on Medical Control (p.21#0, p.63#7, p.235#4,',
               '  p.263#4 apply an AED at EMT/EMR with no pre-use contact). Page levels EMT and MC',
-              '  are kept and flagged.']
+              '  are kept and flagged.',
+              '- **Batch 6 — administrative pages are chipped POLICY / PENDING, not levelled.**',
+              '  Owner ruling 2026-11-16: *"Treat admin pages as policy."* All 14 administrative',
+              '  pages are now 3-column tables whose marker column says `POLICY` (the rule is',
+              '  printed in one of the 14 PEMS 2024 administrative policies) or `PENDING` (no',
+              '  PEMS policy prints it). No provider level is published on those pages, so the',
+              '  levels they used to show (mostly the cumulative EMR-through-P dot grid, which',
+              '  was the same re-encoding defect the conversion removed elsewhere) are gone.',
+              '  Every removed level is still recorded per row as `before.leftmost` above.',
+              '- **Batch 6 — three of the 14 administrative policies ARE printed with provider',
+              '  badges, and those badges are not republished.** PEMS prints Death & Criteria for',
+              '  Withholding Resuscitation (p.21-22), Patient Refusal (p.27-28) and Trauma Field',
+              '  Triage (p.43) as level-badged policy tables, not only as prose. Under the ruling',
+              '  those rows are chipped `POLICY` like the rest, so the badge a reader could have',
+              '  seen (EMT/I/MC on the Death and Refusal rows) is not on the site page. If the',
+              '  owner wants those three pages levelled from the policy\'s own badges, that is a',
+              '  second ruling and a small change: the badges are in pems_table.json and every',
+              '  row prints its policy id here.',
+              '- **Batch 6 — the 5 administrative PENDING rows, for the owner\'s one-pass ruling.**',
+              '  Behavioral Health rows 6-7 (law-enforcement custody; handcuffed transport): PEMS',
+              '  prints the rule only as prose in the Behavioral Emergencies restraint guidelines',
+              '  (p.71-72), not in any administrative policy and not as a level-badged row.',
+              '  Infant Abandonment row 2 ("assess infant and provide medical care"): the policy',
+              '  prints no assessment/treatment step. Stroke Field Triage rows 1 and 4 (15-minute',
+              '  scene time; life-threats route to nearest ED): the Stroke policy prints neither.',
+              '  Each carries its reason in `pending-protocols.yaml` and on the page.',
+              '- **Batch 6 — the STEMI page has one PEMS level, cited where printed.** STEMI row 7',
+              '  (serial ECGs every 10 minutes) is not in the STEMI Field Triage policy; it is',
+              '  printed verbatim as row p.107#9 of the Chest Pain protocol, badge MC, and is cited',
+              '  there (`cross_page: true`). It is the only level chip left on an administrative',
+              '  page, and the page note says why. Owner to confirm a protocol-row citation on a',
+              '  policy page is preferable to a PENDING chip on a rule PEMS does print.',
+              '- **Batch 6 — `07_Hypotension_Shock_Non_Trauma` needs no further conversion.** The',
+              '  card inherited it for two remaining `sc-wrap` blocks; both are the',
+              '  Norepinephrine/Epinephrine DRIP CHARTS (columns: Dose | Drops per minute with a',
+              '  60-drop set). They are dose tables with no action row and no provider-level',
+              '  column, so there is nothing to chip. The card premise (sc-wrap == unconverted',
+              '  level matrix) is wrong here, exactly as Batch 5 reported.',
+              '- **Batch 6 — "grep -rn sc-wrap docs/ returns nothing" cannot be the criterion.**',
+              '  `sc-wrap` is the shared stylesheet wrapper for any wide table, used by ~80',
+              '  non-level tables (pediatric dosing grids, COR phone lists, GCS tables, the SOP',
+              '  pages). Converting or deleting them would edit clinical content the task forbids',
+              '  touching. The check this batch enforces and reports instead: **zero level',
+              '  matrices remain on `sc-wrap` anywhere under docs/** — i.e. no table whose header',
+              '  is `| # | Action / Intervention | EMR | EMT | A | I | P |` still sits inside an',
+              '  `sc-wrap`. That is the defect the criterion was aimed at, and it is now 0.',
+              '- **Batch 6 — `rows_mc_required` = 8 is correct; the two "bracketed" Batch 5 rows',
+              '  are a DIFFERENT bracket.** The 8 are page-cell brackets (`[X]` in the',
+              '  pre-conversion site page) carrying the `+MC` marker. Pain Control rows 6-7 carry',
+              '  an asterisk instead because the bracket is PEMS\'s, not the page\'s:',
+              '  pems_table.json records p.77#5 `badge_tokens: ["[A]"]`, so the chip is `A` plus',
+              '  the `*` source-bracket marker, and `+MC` (which means "this page printed the',
+              '  level cell in brackets") would be a false statement about that row. Both',
+              '  conventions are derived from data, not typed: `*` from the PEMS badge token,',
+              '  `+MC` from row-bindings.yaml `mc_required` re-checked against the page\'s base',
+              '  revision. No marker failed to apply.',
+              '- **Batch 6 — Universal Patient Care row 11 moves EMT -> EMR.** The page printed',
+              '  EMT-and-above for "Refer to relevant protocols / consider contacting Medical',
+              '  Control"; PEMS p.49#5 badges the same sentence EMR. Chip follows the source, and',
+              '  the move is listed under *Level moved by the source*. Its 11 row numbers are',
+              '  unchanged, so the 34 inbound references from other pages (none of which point at',
+              '  a row number or anchor) cannot break.']
 
     # Derived from `changed` so the prose can never disagree with the table above:
     # an MC -> other move and an other -> MC move are counted and named from data.
@@ -1710,6 +2030,41 @@ def emit_md(ledger):
         lines.append(f"- **p.{e.get('page')} #{e.get('ordinal')}** "
                      f"({e.get('section_heading') or 'unnamed section'}): the PEMS margin badge "
                      f"word bleeds into the recorded row text. {e.get('reason')}")
+
+    # --------------------------------------------------------------- whole-site totals
+    sw_files, sw_blocks, sw_matrices = sc_wrap_audit()
+    pol_rows_all = [e for e in ledger if e['status'] == 'policy']
+    lines += ['', '## Whole-site totals (derived from the ledger, not typed)', '',
+              '| metric | value |', '|---|---:|',
+              f'| converted pages — protocol/procedure chassis | {len(TARGETS) + len(PENDING_TARGETS)} |',
+              f'| converted pages — administrative policy (POLICY/PENDING) | '
+              f'{len(policy_targets())} |',
+              f'| action rows — total | {len(ledger)} |',
+              f'| cited to a PEMS protocol row (incl. cross-page) | '
+              f"{sum(1 for e in ledger if e['status'] == 'OK')} |",
+              f'| cross-page citations | {sum(1 for e in ledger if e.get("cross_page"))} |',
+              f'| POLICY (PEMS administrative policy) | {len(pol_rows_all)} |',
+              f'| PENDING (no PEMS source: whole page + row-level + administrative) | '
+              f"{sum(1 for e in ledger if e['status'] in ('pending_omd', 'pending_row_omd'))} |",
+              f'| OWNER_REQUIRED | {sum(1 for e in ledger if e["status"] == "OWNER_REQUIRED")} |',
+              f'| OWNER_RULED | {sum(1 for e in ledger if e["status"] == "owner_ruled")} |',
+              f'| +MC markers | {sum(1 for e in ledger if e.get("mc_required"))} |',
+              '', '### `sc-wrap` — whole `docs/` tree, walked (not a directory list)', '',
+              f'{sw_blocks} `sc-wrap` block(s) in {len(sw_files)} file(s). `sc-wrap` is the '
+              'shared stylesheet wrapper for any wide table, so its presence is not a defect: '
+              'the defect is a provider-level matrix still inside one. '
+              f'**Provider-level matrices inside `sc-wrap`: {len(sw_matrices)}** — '
+              + str(sum(1 for m in sw_matrices
+                        if m.split(' (line')[0]
+                        in set(TARGETS + PENDING_TARGETS + policy_targets())))
+              + ' on a page this project has converted (0 expected; `--check` fails on any), '
+              'the rest on pages outside every batch\'s scope and reported, not gated.', '']
+    for m in sw_matrices:
+        lines.append(f'- {m}')
+    lines.append('')
+    lines.append('Files still carrying `sc-wrap` (all non-level tables — dose charts, phone '
+                 'lists, SOP grids, GCS and screening tables): ' +
+                 ', '.join(f'`{f}`' for f in sw_files) + '.')
     return '\n'.join(lines) + '\n'
 
 
@@ -1934,6 +2289,166 @@ def check():
                        'owner_required': owner_rows, 'owner_ruled': ruled_rows,
                        'mc_required': mc_rows, 'cross_page': cross_rows})
 
+    # ------------------------------------------------- administrative-policy pages
+    # Owner ruling 2026-11-16: "Treat admin pages as policy: cite PEMS administrative
+    # policies where they exist, PENDING where the policy is ours." So on these pages the
+    # marker is POLICY (a PEMS administrative policy prints the rule) or PENDING (no PEMS
+    # policy prints it), and never a provider level: there is no protocol row to badge.
+    policy_report = []
+    for rel in policy_targets():
+        path = os.path.join(DOCS, rel)
+        if not os.path.exists(path):
+            fails.append(f'{rel}: administrative page listed in exceptions.yaml but missing')
+            continue
+        raw = open(path, encoding='utf-8').read()
+        if POLICY_HEADER not in raw:
+            fails.append(f'{rel}: no policy table ({POLICY_HEADER!r} missing)')
+        if NEW_HEADER in raw:
+            fails.append(f'{rel}: administrative page carries the provider-level header '
+                         f'{NEW_HEADER!r} — its rows are POLICY or PENDING, not a level')
+        if DIV_OPEN in raw:
+            fails.append(f'{rel}: administrative page still uses the provider-level '
+                         f'{DIV_OPEN!r} chassis')
+        if re.search(r'^\|\s*#\s*\|\s*Action\s*/\s*Intervention\s*\|\s*EMR\s*\|', raw, re.M):
+            fails.append(f'{rel}: legacy 5-column level matrix still present')
+        regions = find_regions(raw.split('\n'))
+        if not regions:
+            fails.append(f'{rel}: no level-table region found')
+        if any(is_banner(r) for reg in regions for r in reg['rows']):
+            fails.append(f'{rel}: section banner still encoded as a table row')
+        rows = [r for reg in regions for r in reg['rows'] if not is_banner(r)]
+        if not rows:
+            fails.append(f'{rel}: no action rows found')
+        pol_rows, pend_rows, xpage_rows, seen = [], [], [], set()
+        for row in rows:
+            ordn = str(row['ordinal'])
+            seen.add(ordn)
+            chips = CHIP_RE.findall(row['level_cell'] or '')
+            if len(chips) != 1:
+                fails.append(f'{rel} row {ordn}: {len(chips)} markers, expected 1')
+                continue
+            level, cell = chips[0][1], row['level_cell'] or ''
+            for mark in ('lvl-own', 'lvl-req', 'lvl-mc-req'):
+                if mark in cell:
+                    fails.append(f'{rel} row {ordn}: a POLICY/PENDING chip may not carry the '
+                                 f'provider-level marker {mark}')
+            b = bindings.get((rel, ordn)) or {}
+            rp = row_pending.get((rel, ordn))
+            e = led.get((rel, ordn))
+            if TEXT_TOKEN.search(row['action']):
+                fails.append(f'{rel} row {ordn}: level token left in the action text')
+            hits = level_hits(row['action'])
+            allowed = kept_words.get((rel, ordn), [])
+            for hit in hits:
+                if hit not in allowed:
+                    fails.append(f'{rel} row {ordn}: level word {hit!r} left in the action '
+                                 f'text with no keep decision in '
+                                 f'audit/level-scan/token-decisions.yaml')
+            for a in allowed:
+                if a in hits:
+                    seen_kept[(rel, ordn, a)] = True
+            if b.get('policy') and rp:
+                fails.append(f'{rel} row {ordn}: cites policy {b["policy"]!r} and is also '
+                             f'listed as a PENDING row in pending-protocols.yaml')
+            if b.get('policy'):
+                if level != 'POLICY':
+                    fails.append(f'{rel} row {ordn}: row-bindings.yaml cites policy '
+                                 f'{b["policy"]!r} but the chip reads {level}')
+                if not POLICY_CHIP in cell:
+                    fails.append(f'{rel} row {ordn}: POLICY chip is not {POLICY_CHIP!r}')
+                if e is None:
+                    fails.append(f'{rel} row {ordn}: POLICY row missing from the ledger')
+                else:
+                    if e['status'] != 'policy':
+                        fails.append(f'{rel} row {ordn}: ledger says {e["status"]}, the page '
+                                     f'is chipped POLICY')
+                    if e.get('pems_page') or e.get('pems_ordinal') or e.get('pems_badge'):
+                        fails.append(f'{rel} row {ordn}: POLICY ledger row also claims a '
+                                     f'protocol citation (p.{e.get("pems_page")}#'
+                                     f'{e.get("pems_ordinal")}) — an administrative-policy row '
+                                     f'may not carry one')
+                    if e.get('policy') != b['policy']:
+                        fails.append(f'{rel} row {ordn}: ledger policy {e.get("policy")!r} != '
+                                     f'row-bindings.yaml {b["policy"]!r}')
+                    if norm_quote(e.get('policy_quote')) != norm_quote(b.get('policy_quote')):
+                        fails.append(f'{rel} row {ordn}: ledger quote and row-bindings.yaml '
+                                     f'quote disagree')
+                pol_rows.append({'row': ordn, 'policy': b['policy'],
+                                 'pages': policies()[b['policy']]['pages']})
+            elif rp:
+                if level != 'PENDING':
+                    fails.append(f'{rel} row {ordn}: listed as a PENDING row in '
+                                 f'pending-protocols.yaml but the chip reads {level}')
+                if e is None:
+                    fails.append(f'{rel} row {ordn}: PENDING row missing from the ledger')
+                else:
+                    if e['status'] != 'pending_row_omd':
+                        fails.append(f'{rel} row {ordn}: ledger says {e["status"]}, the page '
+                                     f'is chipped PENDING')
+                    if not e.get('reason'):
+                        fails.append(f'{rel} row {ordn}: PENDING row has no reason')
+                    if e.get('policy'):
+                        fails.append(f'{rel} row {ordn}: PENDING row carries a policy '
+                                     f'reference ({e["policy"]!r}) — PENDING means no PEMS '
+                                     f'policy prints it')
+                    if e.get('pems_page') or e.get('pems_ordinal'):
+                        fails.append(f'{rel} row {ordn}: PENDING row claims a PEMS citation')
+                    before = (e.get('before') or {}).get('leftmost')
+                    if before and before != rp['carried_from_page']:
+                        fails.append(f'{rel} row {ordn}: carried_from_page '
+                                     f'{rp["carried_from_page"]} != the level the page '
+                                     f'published before conversion {before}')
+                pend_rows.append({'row': ordn, 'reason': rp['reason'],
+                                  'carried_from_page': rp['carried_from_page']})
+            elif b.get('pems_page') is not None:
+                # a rule the policies do not print but a level-badged PROTOCOL row does:
+                # cited where printed (owner ruling 2026-11-16), chip = that row's badge
+                src = pems.get((b['pems_page'], b['pems_ordinal']))
+                if src is None:
+                    fails.append(f'{rel} row {ordn}: cites p.{b["pems_page"]}#'
+                                 f'{b["pems_ordinal"]}, which is not in pems_table.json')
+                else:
+                    badge, _ = badge_of(src)
+                    if level != badge:
+                        fails.append(f'{rel} row {ordn}: chip {level} != the badge '
+                                     f'p.{b["pems_page"]}#{b["pems_ordinal"]} prints ({badge})')
+                    q = b.get('quoted_row_text') or ''
+                    if not q:
+                        fails.append(f'{rel} row {ordn}: cross-page citation without '
+                                     f'quoted_row_text')
+                    elif not quote_in(q, src):
+                        fails.append(f'{rel} row {ordn}: quoted_row_text is not a verbatim '
+                                     f'span of the cited row p.{b["pems_page"]}#'
+                                     f'{b["pems_ordinal"]}')
+                if not b.get('cross_page'):
+                    fails.append(f'{rel} row {ordn}: cites a protocol row and is not marked '
+                                 f'cross_page: true')
+                if e is None or e['status'] not in ('OK',):
+                    fails.append(f'{rel} row {ordn}: cross-page citation, ledger says '
+                                 f'{e["status"] if e else "missing"}')
+                elif (e.get('pems_page'), e.get('pems_ordinal')) != (b['pems_page'],
+                                                                     b['pems_ordinal']):
+                    fails.append(f'{rel} row {ordn}: ledger cites '
+                                 f'p.{e.get("pems_page")}#{e.get("pems_ordinal")} != '
+                                 f'row-bindings.yaml p.{b["pems_page"]}#{b["pems_ordinal"]}')
+                xpage_rows.append({'row': ordn, 'protocol': b['pems_page'],
+                                   'ordinal': b['pems_ordinal'], 'level': level})
+            elif level in ('POLICY', 'PENDING'):
+                fails.append(f'{rel} row {ordn}: chipped {level} but the row is neither a '
+                             f'POLICY citation (row-bindings.yaml `policy:`) nor a recorded '
+                             f'PENDING row (pending-protocols.yaml `rows:`)')
+        for (f, r), b in bindings.items():
+            if f == rel and b.get('policy') and r not in seen:
+                fails.append(f'{rel}: row-bindings.yaml cites policy {b["policy"]!r} for row '
+                             f'{r}, which is not an action row on the page')
+        for (f, r), rp in row_pending.items():
+            if f == rel and r not in seen:
+                fails.append(f'{rel}: pending-protocols.yaml lists row {r}, which is not an '
+                             f'action row on the page')
+        policy_report.append({'file': rel, 'rows': len(rows),
+                              'policy': pol_rows, 'pending': pend_rows,
+                              'cross_page': xpage_rows})
+
     # pages outside PEMS 2024: every row PENDING, and not one PEMS citation claimed
     pending_specs = load_pending()
     pending_report = []
@@ -2030,9 +2545,23 @@ def check():
     if mc.returncode != 0:
         fails += ['mc_wording: ' + l.strip() for l in mc.stdout.splitlines() if l.strip()]
 
+    # no provider-level matrix may survive inside an `sc-wrap` block anywhere under docs/
+    # on a page this project has converted. Pages outside every conversion batch's scope
+    # (the procedures/ matrix, and the front-matter legend that DEFINES the level columns)
+    # are counted and reported, never silently passed off as clean.
+    sw_files, sw_blocks, sw_matrices = sc_wrap_audit()
+    in_scope = set(TARGETS + PENDING_TARGETS + policy_targets())
+    sw_out_of_scope = []
+    for m in sw_matrices:
+        rel = m.split(' (line')[0]
+        if rel in in_scope:
+            fails.append(f'{m}: a provider-level matrix is still wrapped in sc-wrap')
+        else:
+            sw_out_of_scope.append(m)
+
     # a keep decision may not point at a page or row that is not in scope
     for (f, row), words in kept_words.items():
-        if f not in set(TARGETS + PENDING_TARGETS):
+        if f not in set(TARGETS + PENDING_TARGETS + policy_targets()):
             fails.append(f'token-decisions.yaml: {f} is not a converted page')
             continue
         for w in words:
@@ -2052,6 +2581,17 @@ def check():
         'rows_owner_ruled': sum(len(r['owner_ruled']) for r in report),
         'rows_mc_required': sum(len(r.get('mc_required') or []) for r in report),
         'rows_cross_page': sum(len(r.get('cross_page') or []) for r in report),
+        'policy_pages': len(policy_report),
+        'policy_rows_total': sum(r['rows'] for r in policy_report),
+        'rows_policy': sum(len(r['policy']) for r in policy_report),
+        'rows_policy_pending': sum(len(r['pending']) for r in policy_report),
+        'policies_cited': sorted({p['policy'] for r in policy_report for p in r['policy']}),
+        'policy_report': policy_report,
+        'sc_wrap_files': len(sw_files),
+        'sc_wrap_blocks': sw_blocks,
+        'sc_wrap_level_matrices': sw_matrices,
+        'sc_wrap_level_matrices_out_of_scope': sw_out_of_scope,
+        'sc_wrap_files_list': sw_files,
         'cross_page_citations': [{'file': r['file'], 'row': c['row'], 'pems': c['pems'],
                                   'level': c['level'], 'quoted_row_text': c['quoted']}
                                  for r in report for c in (r.get('cross_page') or [])],
@@ -2099,6 +2639,22 @@ def check():
     print(f"OK — {summary['rows_pending_row_omd']} action row(s) on an otherwise PEMS-cited "
           f"page are chipped PENDING as agency additions awaiting OMD authorization "
           f"(pending-protocols.yaml `rows:`); 0 of them claim a PEMS citation.")
+    print(f"OK — {summary['policy_pages']} administrative-policy page(s) carry "
+          f"{summary['policy_rows_total']} action rows: {summary['rows_policy']} chipped POLICY "
+          f"(cited to one of {len(summary['policies_cited'])} PEMS 2024 administrative "
+          f"policies, each with a verbatim quote out of that policy's own pages), "
+          f"{summary['rows_policy_pending']} chipped PENDING (no PEMS policy prints the rule). "
+          f"0 of them publish a provider level and 0 of them claim a protocol citation.")
+    print(f"OK — sc-wrap: {summary['sc_wrap_blocks']} wide-table block(s) in "
+          f"{summary['sc_wrap_files']} docs file(s) — mostly dose charts, phone lists and SOP "
+          f"tables that are not level matrices; 0 provider-level matrices on an sc-wrap on any "
+          f"page this project has converted.")
+    print(f"REPORTED, NOT GATED — "
+          f"{len(summary['sc_wrap_level_matrices_out_of_scope'])} provider-level matrix/matrices "
+          f"inside sc-wrap remain on pages outside every conversion batch's scope "
+          f"(procedures/ + the front-matter legend):")
+    for m in summary['sc_wrap_level_matrices_out_of_scope']:
+        print('   -', m)
     return 0
 
 
@@ -2132,6 +2688,16 @@ def main():
                       f'text_label={str(e["before"]["text_label"]):<4} '
                       f'markers={len(e["before"]["markers"])} '
                       f'pems={e["pems_page"]}#{e["pems_ordinal"]} basis={e["basis"]}')
+    for rel in policy_targets():
+        _regions_out, ledger, problems, _lines, _regions = plan(rel)
+        bad += problems
+        all_ledger += ledger
+        if args.map:
+            print(f'== {rel}  (administrative policy)')
+            for e in ledger:
+                print(f'   {e["row"]:>3} {e["status"]:<14} level={str(e["level_published"]):<8} '
+                      f'before_leftmost={str(e["before"]["leftmost"]):<4} '
+                      f'policy={e.get("policy") or "-"}')
     for rel in PENDING_TARGETS:
         _regions_out, ledger, problems, _lines, _regions = plan_pending(rel, pending_specs[rel])
         bad += problems
@@ -2176,6 +2742,8 @@ def main():
         except (FileNotFoundError, KeyError):
             carried = {}
         for rel in TARGETS:
+            splice(rel)
+        for rel in policy_targets():
             splice(rel)
         for rel in PENDING_TARGETS:
             splice_pending(rel, pending_specs[rel])

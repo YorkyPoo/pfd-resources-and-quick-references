@@ -650,6 +650,19 @@ details.fc p { margin: .2em 0 .9em; }
 .md-typeset .lv-wrap.pending table th:nth-child(2),
 .md-typeset .lv-wrap.pending table td:nth-child(2) {
   width: 7em; min-width: 7em; max-width: 7em; }
+/* POLICY — the action is printed in a PEMS 2024 ADMINISTRATIVE POLICY (the 14 policies on
+   the p.9 table of contents), not as a level-badged protocol row. Deliberately NOT a
+   provider level: solid dark slate with white text and a wide box, so it cannot be read as
+   one of the pastel EMR/EMT/A/I/P badges, as the red MC badge, or as the dashed PENDING
+   chip. A POLICY row publishes no provider level at all. */
+.lvl-policy {
+  background: #263238; border: 1.5px solid #263238; color: #ffffff;
+  min-width: 5.6em; font-size: .62rem; letter-spacing: .06em; }
+[data-md-color-scheme="slate"] .lvl-policy {
+  background: #cfd8dc; border-color: #cfd8dc; color: #12161c; }
+.md-typeset .lv-wrap.policy table th:nth-child(2),
+.md-typeset .lv-wrap.policy table td:nth-child(2) {
+  width: 7em; min-width: 7em; max-width: 7em; }
 
 .md-typeset .lvl-own,
 .md-typeset .lvl-req {

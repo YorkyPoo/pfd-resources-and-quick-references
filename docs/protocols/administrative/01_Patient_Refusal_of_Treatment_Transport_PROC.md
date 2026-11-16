@@ -29,19 +29,21 @@ Guidelines for assessing capacity, identifying surrogate decision makers, and ob
     - **Medical ECO:** Acute medical emergencies who lack decision-making capacity or competence and are refusing treatment or transport.
 
 ### Interventions
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap policy" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Conduct a thorough assessment of the patient including vital signs and physical exam in accordance with relevant patient care protocols. |  | • | • | • | • |
-| 2 | Assess right/capacity to refuse (≥ 14 years of age, fully oriented, understands risks/benefits/alternatives, no risk to self/others). |  | • | • | • | • |
-| 3 | Identify appropriate surrogate decision maker (in descending order) if the patient lacks capacity or competence. |  | • | • | • | • |
-| 4 | Clearly document information provided; obtain signatures for refusal from patient or surrogate and at least 1 adult witness. |  | • | • | • | • |
-| 5 | Contact law enforcement regarding issuance of a Psychiatric ECO for patients with acute psychiatric emergencies risk of harm. |  | • | • | • | • |
-| 6 | Contact **Medical Control** regarding issuance of a Medical ECO for acute medical emergencies lacking capacity. | MC | MC | MC | MC | MC |
-| 7 | Contact **Medical Control** for assistance if unsure of capacity, surrogate validity, or if patient refuses despite severe risk. | MC | MC | MC | MC | MC |
+| # | Basis | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-policy">POLICY</span> | Conduct a thorough assessment of the patient including vital signs and physical exam in accordance with relevant patient care protocols. |
+| 2 | <span class="lvl lvl-policy">POLICY</span> | Assess right/capacity to refuse (≥ 14 years of age, fully oriented, understands risks/benefits/alternatives, no risk to self/others). |
+| 3 | <span class="lvl lvl-policy">POLICY</span> | Identify appropriate surrogate decision maker (in descending order) if the patient lacks capacity or competence. |
+| 4 | <span class="lvl lvl-policy">POLICY</span> | Clearly document information provided; obtain signatures for refusal from patient or surrogate and at least 1 adult witness. |
+| 5 | <span class="lvl lvl-policy">POLICY</span> | Contact law enforcement regarding issuance of a Psychiatric ECO for patients with acute psychiatric emergencies risk of harm. |
+| 6 | <span class="lvl lvl-policy">POLICY</span> | Contact **Medical Control** regarding issuance of a Medical ECO for acute medical emergencies lacking capacity. |
+| 7 | <span class="lvl lvl-policy">POLICY</span> | Contact **Medical Control** for assistance if unsure of capacity, surrogate validity, or if patient refuses despite severe risk. |
 
 </div>
+
+<p class="lv-note"><strong>POLICY</strong> — rows 1-7: this is not a provider level. This page is a PEMS administrative policy, not a clinical protocol: each row is cited to the PEMS 2024 administrative policy that prints it — <em>Patient Refusal of Treatment/Transport</em> (PEMS p.27, 28, 29) — and no provider level is published, because PEMS prints these rules as policy rather than as level-badged protocol rows. The policy and the verbatim span for every row are recorded in <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
 ### Pearls
 • ⚠ **Medical ECOs:** For medical emergencies, issuance of an emergency custody order (ECO) for medical evaluation requires a licensed physician to petition a magistrate or special justice. Early discussion with **Poquoson Medical Control** to provide a detailed description of the current clinical situation, capacity assessment, and concerns is critical.

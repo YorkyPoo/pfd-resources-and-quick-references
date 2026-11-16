@@ -54,3 +54,27 @@ changes:
       Styling only — it encodes no level. The data that decides which rows carry the marker
       is `mc_required` in audit/level-scan/row-bindings.yaml, enforced by
       `scripts/level_rule.py --check`.
+
+  - date: "2026-11-16"
+    status: recorded
+    files:
+      - docs/stylesheets/extra.css
+    selectors:
+      - ".lvl-policy { background: #263238; border: 1.5px solid #263238; color: #ffffff; ... }"
+      - "[data-md-color-scheme=\"slate\"] .lvl-policy { background: #cfd8dc; ... }"
+      - ".md-typeset .lv-wrap.policy table th:nth-child(2), .md-typeset .lv-wrap.policy table td:nth-child(2) { width: 7em; ... }"
+    affects: >-
+      the 14 administrative-policy pages converted in Batch 6 — every page whose rows are
+      chipped POLICY or PENDING instead of a provider level. Shared stylesheet, so it also
+      renders wherever .lv-wrap.policy is used later.
+    why: >-
+      New marker class for the owner's third citation class (2026-11-16: "Treat admin pages
+      as policy: cite PEMS administrative policies where they exist, PENDING where the
+      policy is ours"). The POLICY chip must NOT be mistakable for a provider level: it is a
+      filled dark-slate badge with white text and a wide 7em column, so it reads nothing
+      like the pastel EMR/EMT/A/I/P badges, the filled red MC badge, or the dashed PENDING
+      chip. It publishes no level at all.
+    scope_note: >-
+      Styling only — it encodes no level. Which rows are POLICY is decided by `policy:` in
+      audit/level-scan/row-bindings.yaml against audit/level-scan/pems-policies.yaml, and
+      enforced by `scripts/level_rule.py --check`.

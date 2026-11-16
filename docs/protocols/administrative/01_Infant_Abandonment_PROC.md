@@ -17,16 +17,20 @@ Procedures for receiving a surrendered infant under the Virginia Safe Haven Law 
     - Local Law Enforcement
 
 ### Interventions
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap policy" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Receive infant if safely surrendered to attended rescue squad |  | • | • | • | • |
-| 2 | Assess infant and provide medical care per these Protocols |  | • | • | • | • |
-| 3 | Contact Child Protective Services or local Law Enforcement |  | • | • | • | • |
-| 4 | Transport to appropriate facility if indicated |  | • | • | • | • |
+| # | Basis | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-policy">POLICY</span> | Receive infant if safely surrendered to attended rescue squad |
+| 2 | <span class="lvl lvl-pending">PENDING</span> | Assess infant and provide medical care per these Protocols |
+| 3 | <span class="lvl lvl-policy">POLICY</span> | Contact Child Protective Services or local Law Enforcement |
+| 4 | <span class="lvl lvl-policy">POLICY</span> | Transport to appropriate facility if indicated |
 
 </div>
+
+<p class="lv-note"><strong>POLICY</strong> — rows 1, 3-4: this is not a provider level. This page is a PEMS administrative policy, not a clinical protocol: each row is cited to the PEMS 2024 administrative policy that prints it — <em>Infant Abandonment</em> (PEMS p.25) — and no provider level is published, because PEMS prints these rules as policy rather than as level-badged protocol rows. The policy and the verbatim span for every row are recorded in <code>audit/level-scan/level-rule-ledger.md</code>.
+
+<strong>PENDING</strong> — row 2: PEMS 2024 prints no assessment or treatment step in the Infant Abandonment policy (p.25), so this instruction is the agency's own. No policy and no provider level is published for it. <strong>Pending OMD authorization</strong> — no provider level applies until the OMD authorizes it. See <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
 ### Pearls
 * ⚠ Infant must be within first 30 days of life.

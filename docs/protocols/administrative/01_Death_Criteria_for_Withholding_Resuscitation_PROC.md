@@ -26,17 +26,19 @@ This protocol outlines the indications and legal requirements for withholding re
     - No shocks delivered
 
 ### Interventions
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap policy" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | **Withhold CPR** for obvious mortal injury, rigor mortis, dependent lividity, decomposition, or valid DDNR. |  | • | • | • | • |
-| 2 | **Initiate CPR** if doubt exists regarding the DNR validity, or if only a living will/advanced directive is present. |  | • | • | • | • |
-| 3 | **Provide full BLS/ALS care** prior to termination (BLS: AED, pulse ox, EtCO2, supraglottic airway; ALS: advanced airway, IV/IO, meds per ACLS). |  | • | • | • | • |
-| 4 | **Contact Medical Control** for termination decision or DNR questions. Provide thorough report of history, condition, and treatment. |  | • | • | • | • |
-| 5 | **Remain on scene** and notify law enforcement and Medical Examiner if terminated on scene. Support bystanders and family. |  | • | • | • | • |
+| # | Basis | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-policy">POLICY</span> | **Withhold CPR** for obvious mortal injury, rigor mortis, dependent lividity, decomposition, or valid DDNR. |
+| 2 | <span class="lvl lvl-policy">POLICY</span> | **Initiate CPR** if doubt exists regarding the DNR validity, or if only a living will/advanced directive is present. |
+| 3 | <span class="lvl lvl-policy">POLICY</span> | **Provide full BLS/ALS care** prior to termination (BLS: AED, pulse ox, EtCO2, supraglottic airway; ALS: advanced airway, IV/IO, meds per ACLS). |
+| 4 | <span class="lvl lvl-policy">POLICY</span> | **Contact Medical Control** for termination decision or DNR questions. Provide thorough report of history, condition, and treatment. |
+| 5 | <span class="lvl lvl-policy">POLICY</span> | **Remain on scene** and notify law enforcement and Medical Examiner if terminated on scene. Support bystanders and family. |
 
 </div>
+
+<p class="lv-note"><strong>POLICY</strong> — rows 1-5: this is not a provider level. This page is a PEMS administrative policy, not a clinical protocol: each row is cited to the PEMS 2024 administrative policy that prints it — <em>Death & Criteria for Withholding Resuscitation</em> (PEMS p.21, 22) — and no provider level is published, because PEMS prints these rules as policy rather than as level-badged protocol rows. The policy and the verbatim span for every row are recorded in <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
 ### Honoring DNR Orders in Healthcare Facilities
 

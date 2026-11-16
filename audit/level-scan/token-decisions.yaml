@@ -108,6 +108,17 @@ kept:
       (the lowest level PEMS prints for the action, p.239#9); the caveat is what keeps the
       paediatric P requirement visible. Deliberate, kept.
 
+  - file: protocols/administrative/01_Trauma_Field_Triage_PROC.md
+    row: 3
+    hits:
+      - "(Level I or II)"
+    reason: >-
+      NOT a provider level. "Level I or II" is the trauma-center designation the PEMS
+      policy prints ("shall be transported to the closest appropriate trauma center"; the
+      procedure section says "should be transported to a Level I or Level II trauma
+      center"). It names the destination facility's designation, not which provider may
+      perform the action, and must not be stripped.
+
 removed:
 
   - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
@@ -148,3 +159,4 @@ removed:
       "**Unable to Ventilate - Laryngoscopy and Forceps Removal (Intermediate/Paramedic):**";
       the chip is I (p.239#8 prints laryngoscopy/forceps at I). Removed; the heading, the
       chip and every bullet are otherwise unchanged.
+

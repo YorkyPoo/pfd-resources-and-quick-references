@@ -423,6 +423,112 @@ the action text.
 | `02_Sedation_Assisted_Non_Paralytic_PROC.md` | 4 | I | p.55#3 | If Fentanyl is not sufficient, administer: ADULT: Midazolam (Versed) 2.5 mg IV/IO over 2 minutes or 5 mg IN/IM PEDIATRIC: Midazolam (Versed) 0.1 mg… | alignment:matched | OWNER_REQUIRED |
 | `02_Sedation_Assisted_Non_Paralytic_PROC.md` | 5 | P | p.55#2 | Administer: ADULT: Fentanyl (Sublimaze) 25 – 50 mcg IV/IO over 2 minutes or IN/IM PEDIATRIC: Fentanyl (Sublimaze) 0.5 – 1 mcg/kg IV/IO over 2 minut… | adjudicated:set_cells | OWNER_REQUIRED |
 | `02_Sedation_Assisted_Non_Paralytic_PROC.md` | 6 | I | p.55#3 | If Fentanyl is not sufficient, administer: ADULT: Midazolam (Versed) 2.5 mg IV/IO over 2 minutes or 5 mg IN/IM PEDIATRIC: Midazolam (Versed) 0.1 mg… | adjudicated:set_cells | OK |
+| `Universal Patient Care.md` | 1 | EMR | p.49#1 | Scene Safety / PPE / Patient Contact • Utilize appropriate agencies and resources as needed to ensure patient and provider safety including lift as… | alignment:matched | OK |
+| `Universal Patient Care.md` | 2 | EMR | p.49#2 | Initial Assessment • Perform Primary and Secondary Survey as indicated by patient status. • Consider spinal motion restriction if indicated by mech… | alignment:matched | OK |
+| `Universal Patient Care.md` | 3 | EMR | p.49#3 | Ensure Adequate Airway, Oxygenation, and Ventilation • Manage airway by the least invasive means necessary. • Home oxygen should be maintained unle… | alignment:matched | OK |
+| `Universal Patient Care.md` | 4 | EMR | p.49#4 | Vital Signs • Obtain blood pressure, pulse rate, respirations, and Glasgow Coma Scale. • Consider obtaining blood glucose level and temperature. • … | alignment:matched | OK |
+| `Universal Patient Care.md` | 5 | EMT | p.49#6 | Assess SpO2. Consider assessing EtCO2 and/or SpCO as indicated. | alignment:matched | OK |
+| `Universal Patient Care.md` | 6 | EMT | p.50#7 | Consider 12-Lead ECG. Refer to Chest Pain (Cardiac) protocol. • Acquire within 5 minutes of patient contact. • Transmit to receiving facility withi… | alignment:matched | OK |
+| `Universal Patient Care.md` | 7 | EMT | p.50#8 | Medication Administration • Confirm all medication administration “Rights”: o Right patient o Right medication o Right dose o Right route o Right t… | alignment:matched | OK |
+| `Universal Patient Care.md` | 8 | A | p.50#9 | Establish IV / IO access when indicated. Refer to Intraosseous (IO) Access procedure, as needed. | alignment:matched | OK |
+| `Universal Patient Care.md` | 9 | I | p.50#10 | Consider continuous cardiac monitoring. | alignment:matched | OK |
+| `Universal Patient Care.md` | 10 | EMT | p.50#11 | Transport • Transport decisions should be based on patient’s clinical condition. Refer to relevant regional Field Triage policies regarding transpo… | alignment:matched | OK |
+| `Universal Patient Care.md` | 11 | EMR | p.49#5 | Refer to relevant and appropriate protocols. If no protocol applies, or for clinical guidance at any time, consider contacting Medical Control. | alignment:matched | OK |
+| `01_ALS_Release_to_BLS_PROC.md` | 1 | POLICY | — | — | — | policy |
+| `01_ALS_Release_to_BLS_PROC.md` | 2 | POLICY | — | — | — | policy |
+| `01_ALS_Release_to_BLS_PROC.md` | 3 | POLICY | — | — | — | policy |
+| `01_ALS_Release_to_BLS_PROC.md` | 4 | POLICY | — | — | — | policy |
+| `01_ALS_Release_to_BLS_PROC.md` | 5 | POLICY | — | — | — | policy |
+| `01_ALS_Release_to_BLS_PROC.md` | 6 | POLICY | — | — | — | policy |
+| `01_ALS_Release_to_BLS_PROC.md` | 7 | POLICY | — | — | — | policy |
+| `01_ALS_Release_to_BLS_PROC.md` | 8 | POLICY | — | — | — | policy |
+| `01_Abuse_Recognition_and_Mandated_Reporting_PROC.md` | 1 | POLICY | — | — | — | policy |
+| `01_Abuse_Recognition_and_Mandated_Reporting_PROC.md` | 2 | POLICY | — | — | — | policy |
+| `01_Abuse_Recognition_and_Mandated_Reporting_PROC.md` | 3 | POLICY | — | — | — | policy |
+| `01_Abuse_Recognition_and_Mandated_Reporting_PROC.md` | 4 | POLICY | — | — | — | policy |
+| `01_Abuse_Recognition_and_Mandated_Reporting_PROC.md` | 5 | POLICY | — | — | — | policy |
+| `01_Abuse_Recognition_and_Mandated_Reporting_PROC.md` | 6 | POLICY | — | — | — | policy |
+| `01_Abuse_Recognition_and_Mandated_Reporting_PROC.md` | 7 | POLICY | — | — | — | policy |
+| `01_Behavioral_Health_Transportation_Decision_PROC.md` | 1 | POLICY | — | — | — | policy |
+| `01_Behavioral_Health_Transportation_Decision_PROC.md` | 2 | POLICY | — | — | — | policy |
+| `01_Behavioral_Health_Transportation_Decision_PROC.md` | 3 | POLICY | — | — | — | policy |
+| `01_Behavioral_Health_Transportation_Decision_PROC.md` | 4 | POLICY | — | — | — | policy |
+| `01_Behavioral_Health_Transportation_Decision_PROC.md` | 5 | POLICY | — | — | — | policy |
+| `01_Behavioral_Health_Transportation_Decision_PROC.md` | 6 | PENDING | — | — | — | pending_row_omd |
+| `01_Behavioral_Health_Transportation_Decision_PROC.md` | 7 | PENDING | — | — | — | pending_row_omd |
+| `01_Communications_PROC.md` | 1 | POLICY | — | — | — | policy |
+| `01_Communications_PROC.md` | 2 | POLICY | — | — | — | policy |
+| `01_Communications_PROC.md` | 3 | POLICY | — | — | — | policy |
+| `01_Communications_PROC.md` | 4 | POLICY | — | — | — | policy |
+| `01_Communications_PROC.md` | 5 | POLICY | — | — | — | policy |
+| `01_Communications_PROC.md` | 6 | POLICY | — | — | — | policy |
+| `01_Death_Criteria_for_Withholding_Resuscitation_PROC.md` | 1 | POLICY | — | — | — | policy |
+| `01_Death_Criteria_for_Withholding_Resuscitation_PROC.md` | 2 | POLICY | — | — | — | policy |
+| `01_Death_Criteria_for_Withholding_Resuscitation_PROC.md` | 3 | POLICY | — | — | — | policy |
+| `01_Death_Criteria_for_Withholding_Resuscitation_PROC.md` | 4 | POLICY | — | — | — | policy |
+| `01_Death_Criteria_for_Withholding_Resuscitation_PROC.md` | 5 | POLICY | — | — | — | policy |
+| `01_Helicopter_EMS_HEMS_PROC.md` | 1 | POLICY | — | — | — | policy |
+| `01_Helicopter_EMS_HEMS_PROC.md` | 2 | POLICY | — | — | — | policy |
+| `01_Helicopter_EMS_HEMS_PROC.md` | 3 | POLICY | — | — | — | policy |
+| `01_Helicopter_EMS_HEMS_PROC.md` | 4 | POLICY | — | — | — | policy |
+| `01_Helicopter_EMS_HEMS_PROC.md` | 5 | POLICY | — | — | — | policy |
+| `01_Helicopter_EMS_HEMS_PROC.md` | 6 | POLICY | — | — | — | policy |
+| `01_Infant_Abandonment_PROC.md` | 1 | POLICY | — | — | — | policy |
+| `01_Infant_Abandonment_PROC.md` | 2 | PENDING | — | — | — | pending_row_omd |
+| `01_Infant_Abandonment_PROC.md` | 3 | POLICY | — | — | — | policy |
+| `01_Infant_Abandonment_PROC.md` | 4 | POLICY | — | — | — | policy |
+| `01_Patient_Refusal_of_Treatment_Transport_PROC.md` | 1 | POLICY | — | — | — | policy |
+| `01_Patient_Refusal_of_Treatment_Transport_PROC.md` | 2 | POLICY | — | — | — | policy |
+| `01_Patient_Refusal_of_Treatment_Transport_PROC.md` | 3 | POLICY | — | — | — | policy |
+| `01_Patient_Refusal_of_Treatment_Transport_PROC.md` | 4 | POLICY | — | — | — | policy |
+| `01_Patient_Refusal_of_Treatment_Transport_PROC.md` | 5 | POLICY | — | — | — | policy |
+| `01_Patient_Refusal_of_Treatment_Transport_PROC.md` | 6 | POLICY | — | — | — | policy |
+| `01_Patient_Refusal_of_Treatment_Transport_PROC.md` | 7 | POLICY | — | — | — | policy |
+| `01_Patient_Restraint_PROC.md` | 1 | POLICY | — | — | — | policy |
+| `01_Patient_Restraint_PROC.md` | 2 | POLICY | — | — | — | policy |
+| `01_Patient_Restraint_PROC.md` | 3 | POLICY | — | — | — | policy |
+| `01_Patient_Restraint_PROC.md` | 4 | POLICY | — | — | — | policy |
+| `01_Patient_Restraint_PROC.md` | 5 | POLICY | — | — | — | policy |
+| `01_Patient_Restraint_PROC.md` | 6 | POLICY | — | — | — | policy |
+| `01_Patient_Restraint_PROC.md` | 7 | POLICY | — | — | — | policy |
+| `01_Patient_Restraint_PROC.md` | 8 | POLICY | — | — | — | policy |
+| `01_STEMI_Field_Triage_PROC.md` | 1 | POLICY | — | — | — | policy |
+| `01_STEMI_Field_Triage_PROC.md` | 2 | POLICY | — | — | — | policy |
+| `01_STEMI_Field_Triage_PROC.md` | 3 | POLICY | — | — | — | policy |
+| `01_STEMI_Field_Triage_PROC.md` | 4 | POLICY | — | — | — | policy |
+| `01_STEMI_Field_Triage_PROC.md` | 5 | POLICY | — | — | — | policy |
+| `01_STEMI_Field_Triage_PROC.md` | 6 | POLICY | — | — | — | policy |
+| `01_STEMI_Field_Triage_PROC.md` | 7 | MC | p.107#9 **×page** | Contact Medical Control for guidance as needed. If 12-Lead ECG is indeterminate or there is high suspicion for cardiac ischemia, obtain serial ECGs… | row-bindings:bound | OK |
+| `01_Safe_Transport_of_Pediatric_Patients_PROC.md` | 1 | POLICY | — | — | — | policy |
+| `01_Safe_Transport_of_Pediatric_Patients_PROC.md` | 2 | POLICY | — | — | — | policy |
+| `01_Safe_Transport_of_Pediatric_Patients_PROC.md` | 3 | POLICY | — | — | — | policy |
+| `01_Safe_Transport_of_Pediatric_Patients_PROC.md` | 4 | POLICY | — | — | — | policy |
+| `01_Safe_Transport_of_Pediatric_Patients_PROC.md` | 5 | POLICY | — | — | — | policy |
+| `01_Safe_Transport_of_Pediatric_Patients_PROC.md` | 6 | POLICY | — | — | — | policy |
+| `01_Safe_Transport_of_Pediatric_Patients_PROC.md` | 7 | POLICY | — | — | — | policy |
+| `01_Stroke_Field_Triage_PROC.md` | 1 | PENDING | — | — | — | pending_row_omd |
+| `01_Stroke_Field_Triage_PROC.md` | 2 | POLICY | — | — | — | policy |
+| `01_Stroke_Field_Triage_PROC.md` | 3 | POLICY | — | — | — | policy |
+| `01_Stroke_Field_Triage_PROC.md` | 4 | PENDING | — | — | — | pending_row_omd |
+| `01_Stroke_Field_Triage_PROC.md` | 5 | POLICY | — | — | — | policy |
+| `01_Stroke_Field_Triage_PROC.md` | 6 | POLICY | — | — | — | policy |
+| `01_Stroke_Field_Triage_PROC.md` | 7 | POLICY | — | — | — | policy |
+| `01_Stroke_Field_Triage_PROC.md` | 8 | POLICY | — | — | — | policy |
+| `01_Transportation_and_Destination_Determination_PROC.md` | 1 | POLICY | — | — | — | policy |
+| `01_Transportation_and_Destination_Determination_PROC.md` | 2 | POLICY | — | — | — | policy |
+| `01_Transportation_and_Destination_Determination_PROC.md` | 3 | POLICY | — | — | — | policy |
+| `01_Transportation_and_Destination_Determination_PROC.md` | 4 | POLICY | — | — | — | policy |
+| `01_Transportation_and_Destination_Determination_PROC.md` | 5 | POLICY | — | — | — | policy |
+| `01_Transportation_and_Destination_Determination_PROC.md` | 6 | POLICY | — | — | — | policy |
+| `01_Transportation_and_Destination_Determination_PROC.md` | 7 | POLICY | — | — | — | policy |
+| `01_Trauma_Field_Triage_PROC.md` | 1 | POLICY | — | — | — | policy |
+| `01_Trauma_Field_Triage_PROC.md` | 2 | POLICY | — | — | — | policy |
+| `01_Trauma_Field_Triage_PROC.md` | 3 | POLICY | — | — | — | policy |
+| `01_Trauma_Field_Triage_PROC.md` | 4 | POLICY | — | — | — | policy |
+| `01_Trauma_Field_Triage_PROC.md` | 5 | POLICY | — | — | — | policy |
+| `01_Trauma_Field_Triage_PROC.md` | 6 | POLICY | — | — | — | policy |
+| `01_Trauma_Field_Triage_PROC.md` | 7 | POLICY | — | — | — | policy |
+| `01_Trauma_Field_Triage_PROC.md` | 8 | POLICY | — | — | — | policy |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 1 | PENDING | — | — | — | pending_omd |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 2 | PENDING | — | — | — | pending_omd |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 3 | PENDING | — | — | — | pending_omd |
@@ -445,7 +551,7 @@ the verbatim span from the cited row that the checker re-reads out of
 `pems_table.json` — a citation whose quote the cited row does not print fails
 `--check`. The chip is the badge that row prints, not the page's old level.
 
-**45 row(s).**
+**46 row(s).**
 
 - `protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 4: **EMR** from p.103#1 (was OWNER_REQUIRED) — quoted: "Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure."
   - action: Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure.
@@ -582,6 +688,9 @@ the verbatim span from the cited row that the checker re-reads out of
 - `protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md` row 3: **A** from p.50#9 (was I) — quoted: "Establish IV / IO access when indicated."
   - action: Establish IV/IO access.
   - evidence: p.50#9 (Universal Patient Care) "Establish IV / IO access when indicated. Refer to Intraosseous (IO) Access procedure, as needed." badge A — the generic access row, the same row Batch 4 bound Trauma r7 to. Cross-page: p.55 prints no access row. Chip moves I -> A: PEMS badges IV/IO access A in every standalone row that prints it (p.50#9, p.100#7, p.103#5).
+- `protocols/administrative/01_STEMI_Field_Triage_PROC.md` row 7: **MC** from p.107#9 (was EMT) — quoted: "obtain serial ECGs at 10-minute intervals and contact Medical Control for guidance"
+  - action: Serial ECGs For atypical/indeterminate ECGs with high suspicion, transmit ECG, contact Medical Control, and obtain serial ECGs every 10 minutes.
+  - evidence: The STEMI Field Triage policy (p.35) prints no serial-ECG step; the action is printed verbatim as row p.107#9 of the Chest Pain protocol, badge MC. Cited where printed rather than left PENDING, so the reader is sent to the real source.
 
 ## `+MC` — Medical-Control-required marker (owner ruling 2026-11-16)
 
@@ -685,9 +794,24 @@ recorded decision — the citation that cleared it is listed above and in the ta
 | `02_Heat_Exposure_PROC.md` | 0 | 0 | new | 0 |
 | `02_Pain_Control_PROC.md` | 0 | 1 | new | 0 |
 | `02_Sedation_Assisted_Non_Paralytic_PROC.md` | 0 | 2 | new | 0 |
+| `Universal Patient Care.md` | 0 | 0 | new | 0 |
+| `01_ALS_Release_to_BLS_PROC.md` | 0 | 0 | new | 0 |
+| `01_Abuse_Recognition_and_Mandated_Reporting_PROC.md` | 0 | 0 | new | 0 |
+| `01_Behavioral_Health_Transportation_Decision_PROC.md` | 0 | 2 | new | 0 |
+| `01_Communications_PROC.md` | 0 | 0 | new | 0 |
+| `01_Death_Criteria_for_Withholding_Resuscitation_PROC.md` | 0 | 0 | new | 0 |
+| `01_Helicopter_EMS_HEMS_PROC.md` | 0 | 0 | new | 0 |
+| `01_Infant_Abandonment_PROC.md` | 0 | 1 | new | 0 |
+| `01_Patient_Refusal_of_Treatment_Transport_PROC.md` | 0 | 0 | new | 0 |
+| `01_Patient_Restraint_PROC.md` | 0 | 0 | new | 0 |
+| `01_STEMI_Field_Triage_PROC.md` | 0 | 0 | new | 0 |
+| `01_Safe_Transport_of_Pediatric_Patients_PROC.md` | 0 | 0 | new | 0 |
+| `01_Stroke_Field_Triage_PROC.md` | 0 | 2 | new | 0 |
+| `01_Transportation_and_Destination_Determination_PROC.md` | 0 | 0 | new | 0 |
+| `01_Trauma_Field_Triage_PROC.md` | 0 | 0 | new | 0 |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 11 | 11 | 0 | 0 |
 
-**Total: 77 flagged before, 51 after (26 cleared).**
+**Total: 77 flagged before, 56 after (21 cleared).**
 
 
 ## OWNER_REQUIRED
@@ -825,6 +949,13 @@ are styling fixes, not level decisions and not accidental diffs.
   - affects: every page that renders the .lv-wrap level chassis and carries a bracketed level cell (the rows marked `mc_required` in row-bindings.yaml): Pediatric Stridor, Smoke Inhalation, Upper Airway Obstruction and Chest Pain / ACS. The rule lives on the shared stylesheet, so it renders on every converted page that needs it, not only on the pages converted in this pass.
   - why: Owner ruling 2026-11-16: "Add a second marker so [X] survives in the chassis". The +MC marker must read as "this level, but only with Medical Control authorisation" and must not be confusable with the existing MC chip (which means the action IS a Medical Control contact). It is an outlined purple badge on its own line inside the 4.8em level column; the MC chip is a filled red badge. `display: block` keeps the column at its fixed width so the 390px layout does not regress.
   - scope: Styling only — it encodes no level. The data that decides which rows carry the marker is `mc_required` in audit/level-scan/row-bindings.yaml, enforced by `scripts/level_rule.py --check`.
+- **2026-11-16** — `docs/stylesheets/extra.css`
+  - rule: `.lvl-policy { background: #263238; border: 1.5px solid #263238; color: #ffffff; ... }`
+  - rule: `[data-md-color-scheme="slate"] .lvl-policy { background: #cfd8dc; ... }`
+  - rule: `.md-typeset .lv-wrap.policy table th:nth-child(2), .md-typeset .lv-wrap.policy table td:nth-child(2) { width: 7em; ... }`
+  - affects: the 14 administrative-policy pages converted in Batch 6 — every page whose rows are chipped POLICY or PENDING instead of a provider level. Shared stylesheet, so it also renders wherever .lv-wrap.policy is used later.
+  - why: New marker class for the owner's third citation class (2026-11-16: "Treat admin pages as policy: cite PEMS administrative policies where they exist, PENDING where the policy is ours"). The POLICY chip must NOT be mistakable for a provider level: it is a filled dark-slate badge with white text and a wide 7em column, so it reads nothing like the pastel EMR/EMT/A/I/P badges, the filled red MC badge, or the dashed PENDING chip. It publishes no level at all.
+  - scope: Styling only — it encodes no level. Which rows are POLICY is decided by `policy:` in audit/level-scan/row-bindings.yaml against audit/level-scan/pems-policies.yaml, and enforced by `scripts/level_rule.py --check`.
 
 ## PENDING_OMD — Pending OMD Authorization
 
@@ -850,7 +981,7 @@ source.
 
 ## PENDING_OMD — row-level (agency additions on PEMS-cited pages)
 
-**3 row(s).** The page is PEMS-cited and every other row on it names the PEMS 2024 row that authorizes it. These rows do not: the agency added them and PEMS publishes no such action, so no provider level is published for them until the OMD authorizes one. The chip is `PENDING`; `carried_from_page` records the level the page published before conversion and is **provenance only**.
+**8 row(s).** The page is PEMS-cited and every other row on it names the PEMS 2024 row that authorizes it. These rows do not: the agency added them and PEMS publishes no such action, so no provider level is published for them until the OMD authorizes one. The chip is `PENDING`; `carried_from_page` records the level the page published before conversion and is **provenance only**.
 
 - `protocols/neurologic/05_Stroke_TIA_PROC.md` row 8: PENDING (carried from the page as **I**) — Establish 18g IV in Right AC (preferred for rapid imaging)
   - reason: Agency addition; PEMS 2024 p.131 publishes no such action. Pending OMD authorization.
@@ -858,6 +989,163 @@ source.
   - reason: Agency addition; PEMS 2024 p.131 publishes no such action. Pending OMD authorization.
 - `protocols/trauma/09_Burns_Thermal_PROC.md` row 6: PENDING (carried from the page as **NONE**) — Hydrofluoric Acid (HF) Burns with Hypotension: Administer Calcium Chloride 1 g IV/IO over 
   - reason: Agency addition. PEMS 2024 prints 'Treat hypotension with 1 g Calcium Chloride IV/IO over 3 minutes' for hydrofluoric acid burns only in the Burns protocol's PEARLS (p.87-88 prose), not as a level-badged table row; the only table rows printing calcium chloride 1 g IV/IO over 3 minutes are p.91#5 (crush syndrome, badge [I]) and p.120#8 (CCB/BB overdose, badge I), whose indications differ. No PEMS row authorises this action's provider level, and the page published none. Pending OMD authorization.
+- `protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md` row 6: PENDING (carried from the page as **EMT**) — Law Enforcement Custody: Patients in LE custody (including ECOs) or under arrest MUST have
+  - reason: PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol restraint guidelines (p.71-72: "Patients in law enforcement custody (including emergency custody orders) or under arrest must have a law enforcement officer present at all times"), not as an administrative policy and not as a level-badged row. No policy and no level is published; the wording on this page is the agency policy.
+- `protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md` row 7: PENDING (carried from the page as **EMT**) — Restraints: If LE restraints utilized (handcuffs, flex-cuffs), LE officer SHOULD accompany
+  - reason: PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol restraint guidelines (p.71-72: "If law-enforcement restraints have been utilized (for example handcuffs or flex-cuffs), a law enforcement officer should accompany the patient"), not as an administrative policy and not as a level-badged row. No policy and no level is published; the wording on this page is the agency policy.
+- `protocols/administrative/01_Infant_Abandonment_PROC.md` row 2: PENDING (carried from the page as **EMT**) — Assess infant and provide medical care per these Protocols
+  - reason: The Infant Abandonment policy (p.25) prints what to do with a surrendered infant (contact CPS or law enforcement, and transport if indicated) but no assessment or treatment step. "Assess the infant and provide medical care per these Protocols" is the agency page's own instruction and is not printed in any PEMS administrative policy.
+- `protocols/administrative/01_Stroke_Field_Triage_PROC.md` row 1: PENDING (carried from the page as **EMT**) — Time Management: Maintain a goal scene time of less than 15 minutes.
+  - reason: The Stroke Field Triage policy (p.37) prints no scene-time target. The 15-minute goal is the agency page's own; PEMS prints a scene-time goal only in the Trauma Field Triage policy (p.44, 10 minutes), which does not govern stroke.
+- `protocols/administrative/01_Stroke_Field_Triage_PROC.md` row 4: PENDING (carried from the page as **EMT**) — Immediate Life-Threats: If uncontrolled airway, cardiac arrest, etc. cannot be addressed d
+  - reason: The Stroke Field Triage policy (p.37) prints the RACE/glucose/destination algorithm and no "life threats go to the nearest ED" branch. That branch is the agency page's own addition.
+
+## POLICY — PEMS 2024 administrative policy (owner ruling 2026-11-16)
+
+The owner ruled: *"Treat admin pages as policy: cite PEMS administrative
+policies where they exist, PENDING where the policy is ours."* An administrative
+page is therefore chipped **`POLICY`** where a PEMS 2024 administrative policy
+prints the rule, and **`PENDING`** where no PEMS policy prints it. A `POLICY` row
+publishes **no provider level**: PEMS prints these rules as policy prose, not as
+level-badged protocol rows, and `exceptions.yaml` already declares these pages
+`kind: administrative` — not level-gated. Each row below names the policy, its
+PEMS pages and a verbatim span of that policy; `audit/level-scan/pems-policies.yaml`
+is the only list of citable policies, and `--check` fails on an unknown policy id,
+on a `POLICY` row that also carries a protocol citation, on a `PENDING` row that
+carries a policy reference, and on a quote the policy pages do not print.
+
+**89 row(s) across 14 page(s), citing 14 of the 14 PEMS 2024 administrative policies.**
+
+| policy id | title | PEMS pages | effective | rows |
+|---|---|---|---|---:|
+| `als-release` | ALS Release to BLS | p.15 | 12/2012 | 8 |
+| `abuse-recognition` | Abuse Recognition & Mandatory Reporting | p.11, 12, 13 | 12/2012 | 7 |
+| `patient-refusal` | Patient Refusal of Treatment/Transport | p.27, 28, 29 | 03/2022 | 10 |
+| `behavioral-health-transport` | Behavioral Health Transportation Decision | p.41 | 03/2024 | 2 |
+| `communications` | Communications | p.17, 18, 19, 20 | 04/2021 | 6 |
+| `death-withholding` | Death & Criteria for Withholding Resuscitation | p.21, 22 | 07/2022 | 5 |
+| `hems` | Helicopter EMS (HEMS) | p.23 | 12/2012 | 6 |
+| `infant-abandonment` | Infant Abandonment | p.25 | 03/2023 | 3 |
+| `patient-restraint` | Patient Restraint | p.31, 32 | 12/2012 | 8 |
+| `stemi-field-triage` | STEMI Field Triage | p.35 | 04/2021 | 6 |
+| `safe-transport-pediatric` | Safe Transport of Pediatric Patients | p.33 | 12/2012 | 7 |
+| `stroke-field-triage` | Stroke Field Triage | p.37 | 04/2024 | 6 |
+| `transport-destination` | Transportation & Destination Determination | p.39 | 03/2022 | 7 |
+| `trauma-field-triage` | Trauma Field Triage | p.43, 44, 45 | 04/2021 | 8 |
+
+- `protocols/administrative/01_ALS_Release_to_BLS_PROC.md` — 8 POLICY row(s)
+  - row 1: `als-release` (p.15) — "A complete, pertinent patient history and physical assessment, including a full set of vital signs, must be completed."
+  - row 2: `als-release` (p.15) — "ALS care is not currently medically necessary and will likely not in the near future be necessary (to include pain management)"
+  - row 3: `als-release` (p.15) — "BLS provider is willing to accept responsibility for the patient"
+  - row 4: `als-release` (p.15) — "the Basic Life Support (BLS) provider can operate as the Attendant in Charge (AIC)"
+  - row 5: `als-release` (p.15) — "The ALS provider must contact Medical Control when there is a concern of the appropriateness of the release of patient care to a BLS provider."
+  - row 6: `als-release` (p.15) — "The BLS provider must complete a Patient Care Report."
+  - row 7: `als-release` (p.15) — "Documentation will include physical findings, transfer of care, and physician consultation on the Patient Care Report when necessary."
+  - row 8: `als-release` (p.15) — "Any ALS Release to BLS must be reviewed by the agency Quality Assurance/Quality Improvement process."
+    - note: The page names who reviews and when ("the Officer or Acting Officer the following day, per departmental SOP"); the policy prints the requirement, not that detail.
+- `protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md` — 7 POLICY row(s)
+  - row 1: `abuse-recognition` (p.11, 12, 13) — "Assess for and document psychological characteristics of abuse, including excessive passivity, compliant or fearful behavior"
+  - row 2: `abuse-recognition` (p.11, 12, 13) — "Assess for and document physical signs of abuse, including any injuries inconsistent with the reported mechanism of injury"
+  - row 3: `abuse-recognition` (p.11, 12, 13) — "Assess for and document symptoms or signs of neglect, including inappropriate level of clothing for weather, inadequate hygiene"
+  - row 4: `abuse-recognition` (p.11, 12, 13) — "Mandated reporters must report the following to Adult Protective Services and law enforcement"
+  - row 5: `abuse-recognition` (p.11, 12, 13) — "make reports to the 24-hour, toll-free Virginia Department of Social Services (VDSS) Child Protective Services (CPS) hotline"
+  - row 6: `abuse-recognition` (p.11, 12, 13) — "shall immediately give notice of the incident to the Department of Game and Inland Fisheries"
+  - row 7: `abuse-recognition` (p.11, 12, 13) — "Provide appropriate documentation on the PCR"
+- `protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md` — 5 POLICY row(s)
+  - row 1: `patient-refusal` (p.27, 28, 29) — "Assess clinical decision-making capacity"
+    - note: PEMS prints the capacity screen in the Patient Refusal policy (p.27), not in the Behavioral Health Transportation Decision policy (p.41).
+  - row 2: `behavioral-health-transport` (p.41) — "the Field Triage Decision protocol will be used to consider direct transport to a Mental Health Facility"
+  - row 3: `behavioral-health-transport` (p.41) — "When in doubt, contact Medical Control."
+  - row 4: `patient-refusal` (p.27, 28, 29) — "contact law enforcement regarding issuance of an Emergency Custody Order (ECO) for psychiatric evaluation"
+    - note: Printed in the Patient Refusal policy (p.28); the Behavioral Health policy prints the transport decision scheme, not the ECO step.
+  - row 5: `patient-refusal` (p.27, 28, 29) — "contact Medical Control regarding issuance of an Emergency Custody Order (ECO) for medical evaluation"
+    - note: Printed in the Patient Refusal policy (p.28#12, badge MC); the Behavioral Health policy prints the transport decision scheme, not the Medical ECO step.
+- `protocols/administrative/01_Communications_PROC.md` — 6 POLICY row(s)
+  - row 1: `communications` (p.17, 18, 19, 20) — "is used to notify hospitals of basic and advanced life support patients NOT requiring on-line physician intervention"
+  - row 2: `communications` (p.17, 18, 19, 20) — "The COR system shall be used for direct contact with Medical Control in any situation where physician consultation is appropriate"
+  - row 3: `communications` (p.17, 18, 19, 20) — "THE PRE-ARRIVAL REPORT SHOULD INCLUDE THE FOLLOWING"
+  - row 4: `communications` (p.17, 18, 19, 20) — "During an MCI, routine ambulance-to-emergency department communications are suspended."
+  - row 5: `communications` (p.17, 18, 19, 20) — "All orders within your scope of practice are considered standing orders in this situation."
+  - row 6: `communications` (p.17, 18, 19, 20) — "Carefully document events including"
+    - note: The page adds "review with the Officer/Acting Officer per department SOPs"; the policy prints the documentation list only.
+- `protocols/administrative/01_Death_Criteria_for_Withholding_Resuscitation_PROC.md` — 5 POLICY row(s)
+  - row 1: `death-withholding` (p.21, 22) — "full resuscitation measures shall be undertaken for all victims of cardiopulmonary arrest except in the presence of one or more of the indications of death"
+  - row 2: `death-withholding` (p.21, 22) — "When treating cardiac arrest victims who possess a "living will" or an advanced directive (other than a valid DDNR order/POST), full resuscitative efforts should be initiated and Medical Control consulted"
+  - row 3: `death-withholding` (p.21, 22) — "Provide full basic life support care including AED, pulse ox, EtCO2, and supraglottic airway."
+  - row 4: `death-withholding` (p.21, 22) — "Provide a thorough report of patient history, condition, and treatment."
+  - row 5: `death-withholding` (p.21, 22) — "Follow agency protocols/policies concerning notification of law enforcement and/or medical examiner. Remain on scene until proper authorities arrive."
+- `protocols/administrative/01_Helicopter_EMS_HEMS_PROC.md` — 6 POLICY row(s)
+  - row 1: `hems` (p.23) — "Request air ambulance standby/response according to department procedure."
+    - note: The "no medical control authorization needed" half is printed in the same policy: "Technicians can request HEMS without authorization by medical control."
+  - row 2: `hems` (p.23) — "Establish a safe and logistically feasible landing zone."
+  - row 3: `hems` (p.23) — "Establish number of patients, primary injuries/medical condition, and approximate patient weight(s)."
+  - row 4: `hems` (p.23) — "Trauma patients should be fully immobilized. IV/IO access should be established as time allows."
+    - note: The page adds "(within provider scope)".
+  - row 5: `hems` (p.23) — "On scene one individual should be responsible for providing the patient report(s) to the flight crew upon arrival."
+  - row 6: `hems` (p.23) — "Ensure PCR is provided to receiving facility as per 12 VAC 5-31"
+- `protocols/administrative/01_Infant_Abandonment_PROC.md` — 3 POLICY row(s)
+  - row 1: `infant-abandonment` (p.25) — "A parent may leave an infant (within the first 30 days of the child’s life) at a hospital that provides 24-hour emergency services or to an attended rescue squad that employs emergency medical services personnel."
+  - row 3: `infant-abandonment` (p.25) — "should contact Child Protective Services or local law enforcement resources"
+  - row 4: `infant-abandonment` (p.25) — "and, if indicated, transport to an appropriate facility."
+- `protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md` — 7 POLICY row(s)
+  - row 1: `patient-refusal` (p.27, 28, 29) — "Conduct a thorough assessment of the patient including vital signs and physical exam in accordance with relevant patient care protocols."
+  - row 2: `patient-refusal` (p.27, 28, 29) — "Patient must be at least 14 years of age to consent to or refuse care / transport."
+    - note: The page bundles the age test with the capacity bullets printed on p.27#2 ("Ensure the patient is fully oriented... understands the potential risks and benefits").
+  - row 3: `patient-refusal` (p.27, 28, 29) — "the following individuals may act as a surrogate decision maker, in descending order of authority"
+  - row 4: `patient-refusal` (p.27, 28, 29) — "obtain signatures from the patient or authorized surrogate decision maker and at least one adult witness, when possible."
+  - row 5: `patient-refusal` (p.27, 28, 29) — "contact law enforcement regarding issuance of an Emergency Custody Order (ECO) for psychiatric evaluation"
+  - row 6: `patient-refusal` (p.27, 28, 29) — "contact Medical Control regarding issuance of an Emergency Custody Order (ECO) for medical evaluation"
+  - row 7: `patient-refusal` (p.27, 28, 29) — "Contact Medical Control for assistance in situations including but not limited to"
+- `protocols/administrative/01_Patient_Restraint_PROC.md` — 8 POLICY row(s)
+  - row 1: `patient-restraint` (p.31, 32) — "If law enforcement or additional staff is needed, call for assistance prior to attempting restraint procedures."
+  - row 2: `patient-restraint` (p.31, 32) — "Consider and treat medical causes of combativeness (hypoxia, head injury, hypoglycemia)."
+  - row 3: `patient-restraint` (p.31, 32) — "Place the patient face up on a long backboard"
+  - row 4: `patient-restraint` (p.31, 32) — "check circulation in restrained extremities every 15 minutes"
+  - row 5: `patient-restraint` (p.31, 32) — "attempt to place SpO2 device and apply supplemental oxygen if indicated"
+  - row 6: `patient-restraint` (p.31, 32) — "DO NOT tighten chest straps to the point of impeding respiratory function."
+  - row 7: `patient-restraint` (p.31, 32) — "Assess vital signs within the first 5 minutes and thereafter as appropriate (at least every 10 minutes and prior to any repeat dose of medication)"
+  - row 8: `patient-restraint` (p.31, 32) — "If chemical restraint is required, see Behavioral Emergencies Protocol"
+- `protocols/administrative/01_STEMI_Field_Triage_PROC.md` — 6 POLICY row(s)
+  - row 1: `stemi-field-triage` (p.35) — "acquire a 12-lead ECG within 5 minutes of arrival at patient"
+  - row 2: `stemi-field-triage` (p.35) — "12-lead ECG criteria of 1 mm (or more) ST elevation in 2 (or more) contiguous leads"
+  - row 3: `stemi-field-triage` (p.35) — "PCI Capable hospital within 30 minutes"
+  - row 4: `stemi-field-triage` (p.35) — "Helicopter EMS (HEMS) within 30 minutes of patient’s location"
+  - row 5: `stemi-field-triage` (p.35) — "Any patient with a compromised airway or impending circulatory collapse should be taken to the closest Emergency Department."
+  - row 6: `stemi-field-triage` (p.35) — "activate the STEMI alert system by notifying the closest PCI center within 30 minutes EMS transport time"
+- `protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md` — 7 POLICY row(s)
+  - row 1: `safe-transport-pediatric` (p.33) — "Secure all monitoring devices and other equipment to prevent injury."
+  - row 2: `safe-transport-pediatric` (p.33) — "Drive cautiously and at safe speeds, observing applicable traffic laws."
+  - row 3: `safe-transport-pediatric` (p.33) — "Ensure pediatric patients under 40 kg (88 lbs) are restrained with approved child restraint devices secured per the manufacturer’s instructions."
+  - row 4: `safe-transport-pediatric` (p.33) — "Ensure that all EMS providers use available restraining devices or systems during transport."
+  - row 5: `safe-transport-pediatric` (p.33) — "parents or caregivers should be secured using safety belts"
+  - row 6: `safe-transport-pediatric` (p.33) — "Attempt to arrange for transportation of adults and children who are not patients by alternative means."
+  - row 7: `safe-transport-pediatric` (p.33) — "make every reasonable attempt to maximize safety while comforting the child"
+- `protocols/administrative/01_Stroke_Field_Triage_PROC.md` — 6 POLICY row(s)
+  - row 2: `stroke-field-triage` (p.37) — "Assess blood glucose. Is glucose greater than 60?"
+    - note: The page adds the <60 mg/dL referral to Hypoglycemia; the policy prints the glucose check only.
+  - row 3: `stroke-field-triage` (p.37) — "evaluate the patient using the RACE exam"
+    - note: The page adds BEFAST; the policy prints the RACE exam only.
+  - row 5: `stroke-field-triage` (p.37) — "If transport to Comprehensive Stroke Center increases transport time by 30 minutes or greater, transport to nearest Primary Stroke Center."
+  - row 6: `stroke-field-triage` (p.37) — "Transport to closest Stroke Center (Acute Stroke Ready, Primary or Comprehensive)"
+  - row 7: `stroke-field-triage` (p.37) — "activate the stroke alert system by notifying the appropriate facility"
+  - row 8: `stroke-field-triage` (p.37) — "Once the patient is in transport call the receiving facility’s COR with the patient’s Name/DOB."
+- `protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md` — 7 POLICY row(s)
+  - row 1: `transport-destination` (p.39) — "Patients with decision-making capacity are to be transported to the hospital emergency department of their choice within the policies of the transporting agency"
+  - row 2: `transport-destination` (p.39) — "the patient destination should be consistent with the PEMS Regional STEMI Plan"
+  - row 3: `transport-destination` (p.39) — "the patient destination should be consistent with the PEMS Stroke Triage Plan, to a designated stroke center"
+  - row 4: `transport-destination` (p.39) — "If the patient has no hospital preference, transport should be to the closest most appropriate hospital."
+  - row 5: `transport-destination` (p.39) — "the reason for the change and destination the most appropriate facility shall be documented on the Patient Care Report"
+  - row 6: `transport-destination` (p.39) — "Certified providers may contact HEMS (Medical Control permission not necessary)"
+  - row 7: `transport-destination` (p.39) — "If the patient is ready for transport AND air ambulance is delayed for more than 10 minutes, initiate ground transport to the closest hospital, or helispot/helipad."
+- `protocols/administrative/01_Trauma_Field_Triage_PROC.md` — 8 POLICY row(s)
+  - row 1: `trauma-field-triage` (p.43, 44, 45) — "initiate immediate transport (scene time less than 10 minutes)"
+  - row 2: `trauma-field-triage` (p.43, 44, 45) — "unmanageable/uncontrolled airway or uncontrolled hemorrhage to the closest"
+  - row 3: `trauma-field-triage` (p.43, 44, 45) — "shall be transported to the closest appropriate trauma center within a 30-minute ground transport time"
+  - row 4: `trauma-field-triage` (p.43, 44, 45) — "should be transported to the closest hospital unless they can be delivered to a trauma center more rapidly by helicopter EMS (HEMS)"
+  - row 5: `trauma-field-triage` (p.43, 44, 45) — "the technician should contact medical control to determine the destination hospital"
+  - row 6: `trauma-field-triage` (p.43, 44, 45) — "burns that meet burn center criteria should be transported to a burn center"
+  - row 7: `trauma-field-triage` (p.43, 44, 45) — "Severely injured pediatric patients should be transferred to a trauma center"
+  - row 8: `trauma-field-triage` (p.43, 44, 45) — "Establish early radio contact to alert trauma center staff."
 
 ## Level tokens removed from action text
 
@@ -883,6 +1171,7 @@ qualifier, decided and recorded in `audit/level-scan/token-decisions.yaml`; a
 later pass must not strip them. The sweep (`audit/level-scan/token_sweep.py`)
 sees 0 such words on every Batch-2, neurologic and Aortic page.
 
+- `01_Trauma_Field_Triage_PROC.md` row 3: kept (Level I or II)
 - `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 8: kept (as determined by EMT-I or P)
 - `04_Chest_Pain_ACS_PROC.md` row 5: kept Intermediate, Paramedic
 - `04_V_Fib_Pulseless_V_Tach_PROC.md` row 5: kept (AED for EMR/EMT, Manual for I/P)
@@ -900,7 +1189,7 @@ Removed by decision (not restated by the chip, so not left to a later pass):
 
 ## Level moved by the source (page level -> PEMS printed level)
 
-100 row(s). These are rows where the page under- or over-granted the
+102 row(s). These are rows where the page under- or over-granted the
 level the cited PEMS row prints. Review them first.
 
 - `protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 4: **EMT -> EMR** (p.103#1) — Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure.
@@ -1003,6 +1292,8 @@ level the cited PEMS row prints. Review them first.
 - `protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md` row 2: **A -> EMT** (p.77#2) — Assess and monitor blood pressure. Ensure patient is not hypotensive.
 - `protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md` row 3: **I -> A** (p.50#9) — Establish IV/IO access.
 - `protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md` row 6: **P -> I** (p.55#3) — OR Post-Intubation Sedation (Midazolam / Fentanyl):  • ADULT: Midazolam (Versed) 2.5 mg IV
+- `protocols/front-matter/Universal Patient Care.md` row 11: **EMT -> EMR** (p.49#5) — Refer to relevant protocols: • If no protocol applies, or for clinical guidance at any tim
+- `protocols/administrative/01_STEMI_Field_Triage_PROC.md` row 7: **EMT -> MC** (p.107#9) — Serial ECGs For atypical/indeterminate ECGs with high suspicion, transmit ECG, contact Med
 
 ## OPEN OWNER QUESTIONS
 
@@ -1121,12 +1412,73 @@ decision before the page is treated as final.
   no other PEMS row gates AED use on Medical Control (p.21#0, p.63#7, p.235#4,
   p.263#4 apply an AED at EMT/EMR with no pre-use contact). Page levels EMT and MC
   are kept and flagged.
+- **Batch 6 — administrative pages are chipped POLICY / PENDING, not levelled.**
+  Owner ruling 2026-11-16: *"Treat admin pages as policy."* All 14 administrative
+  pages are now 3-column tables whose marker column says `POLICY` (the rule is
+  printed in one of the 14 PEMS 2024 administrative policies) or `PENDING` (no
+  PEMS policy prints it). No provider level is published on those pages, so the
+  levels they used to show (mostly the cumulative EMR-through-P dot grid, which
+  was the same re-encoding defect the conversion removed elsewhere) are gone.
+  Every removed level is still recorded per row as `before.leftmost` above.
+- **Batch 6 — three of the 14 administrative policies ARE printed with provider
+  badges, and those badges are not republished.** PEMS prints Death & Criteria for
+  Withholding Resuscitation (p.21-22), Patient Refusal (p.27-28) and Trauma Field
+  Triage (p.43) as level-badged policy tables, not only as prose. Under the ruling
+  those rows are chipped `POLICY` like the rest, so the badge a reader could have
+  seen (EMT/I/MC on the Death and Refusal rows) is not on the site page. If the
+  owner wants those three pages levelled from the policy's own badges, that is a
+  second ruling and a small change: the badges are in pems_table.json and every
+  row prints its policy id here.
+- **Batch 6 — the 5 administrative PENDING rows, for the owner's one-pass ruling.**
+  Behavioral Health rows 6-7 (law-enforcement custody; handcuffed transport): PEMS
+  prints the rule only as prose in the Behavioral Emergencies restraint guidelines
+  (p.71-72), not in any administrative policy and not as a level-badged row.
+  Infant Abandonment row 2 ("assess infant and provide medical care"): the policy
+  prints no assessment/treatment step. Stroke Field Triage rows 1 and 4 (15-minute
+  scene time; life-threats route to nearest ED): the Stroke policy prints neither.
+  Each carries its reason in `pending-protocols.yaml` and on the page.
+- **Batch 6 — the STEMI page has one PEMS level, cited where printed.** STEMI row 7
+  (serial ECGs every 10 minutes) is not in the STEMI Field Triage policy; it is
+  printed verbatim as row p.107#9 of the Chest Pain protocol, badge MC, and is cited
+  there (`cross_page: true`). It is the only level chip left on an administrative
+  page, and the page note says why. Owner to confirm a protocol-row citation on a
+  policy page is preferable to a PENDING chip on a rule PEMS does print.
+- **Batch 6 — `07_Hypotension_Shock_Non_Trauma` needs no further conversion.** The
+  card inherited it for two remaining `sc-wrap` blocks; both are the
+  Norepinephrine/Epinephrine DRIP CHARTS (columns: Dose | Drops per minute with a
+  60-drop set). They are dose tables with no action row and no provider-level
+  column, so there is nothing to chip. The card premise (sc-wrap == unconverted
+  level matrix) is wrong here, exactly as Batch 5 reported.
+- **Batch 6 — "grep -rn sc-wrap docs/ returns nothing" cannot be the criterion.**
+  `sc-wrap` is the shared stylesheet wrapper for any wide table, used by ~80
+  non-level tables (pediatric dosing grids, COR phone lists, GCS tables, the SOP
+  pages). Converting or deleting them would edit clinical content the task forbids
+  touching. The check this batch enforces and reports instead: **zero level
+  matrices remain on `sc-wrap` anywhere under docs/** — i.e. no table whose header
+  is `| # | Action / Intervention | EMR | EMT | A | I | P |` still sits inside an
+  `sc-wrap`. That is the defect the criterion was aimed at, and it is now 0.
+- **Batch 6 — `rows_mc_required` = 8 is correct; the two "bracketed" Batch 5 rows
+  are a DIFFERENT bracket.** The 8 are page-cell brackets (`[X]` in the
+  pre-conversion site page) carrying the `+MC` marker. Pain Control rows 6-7 carry
+  an asterisk instead because the bracket is PEMS's, not the page's:
+  pems_table.json records p.77#5 `badge_tokens: ["[A]"]`, so the chip is `A` plus
+  the `*` source-bracket marker, and `+MC` (which means "this page printed the
+  level cell in brackets") would be a false statement about that row. Both
+  conventions are derived from data, not typed: `*` from the PEMS badge token,
+  `+MC` from row-bindings.yaml `mc_required` re-checked against the page's base
+  revision. No marker failed to apply.
+- **Batch 6 — Universal Patient Care row 11 moves EMT -> EMR.** The page printed
+  EMT-and-above for "Refer to relevant protocols / consider contacting Medical
+  Control"; PEMS p.49#5 badges the same sentence EMR. Chip follows the source, and
+  the move is listed under *Level moved by the source*. Its 11 row numbers are
+  unchanged, so the 34 inbound references from other pages (none of which point at
+  a row number or anchor) cannot break.
 - **Batch 3 — 3 row(s) lost a Medical-Control requirement the page printed.** Each is now chipped at the level PEMS prints:
   `03_Airway_Inhalation_Irritants_PROC.md` row 8 was `MC`, now `A` (p.153#4).
   `03_Respiratory_Distress_PROC.md` row 6 was `MC`, now `EMT` (p.123#3).
   `03_Respiratory_Distress_PROC.md` row 10 was `MC`, now `A` (p.113#4).
   The rule is "chip = the level PEMS prints", and the source grants these actions on standing order, but the owner should confirm that dropping a page-printed MC requirement is intended.
-  Row(s) in the converted set that moved *to* MC, now matching the source's MC row: `04_Chest_Pain_ACS_PROC.md` row 7 `I` -> `MC` (p.107#9); `03_Airway_Inhalation_Irritants_PROC.md` row 12 `I` -> `MC` (p.153#5); `03_Smoke_Inhalation_PROC.md` row 12 `I` -> `MC` (p.153#5); `06_Nausea_Vomiting_PROC.md` row 6 `A` -> `MC` (p.117#5).
+  Row(s) in the converted set that moved *to* MC, now matching the source's MC row: `04_Chest_Pain_ACS_PROC.md` row 7 `I` -> `MC` (p.107#9); `03_Airway_Inhalation_Irritants_PROC.md` row 12 `I` -> `MC` (p.153#5); `03_Smoke_Inhalation_PROC.md` row 12 `I` -> `MC` (p.153#5); `06_Nausea_Vomiting_PROC.md` row 6 `A` -> `MC` (p.117#5); `01_STEMI_Field_Triage_PROC.md` row 7 `EMT` -> `MC` (p.107#9).
   Already `MC` on the page and matching the source, so not moved (converted set, whole list): `04_Supraventricular_Tachycardia_PROC.md` row 10 (p.136#7); `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 12 (p.57#8); `04_Bradycardia_PROC.md` row 8 (p.104#13); `04_Cardiac_Arrest_Non_Traumatic_PROC.md` row 13 (p.57#8); `04_Cardiac_Arrest_Traumatic_PROC.md` row 11 (p.61#9); `04_Chest_Pain_ACS_PROC.md` row 13 (p.107#9); `04_Hypertensive_Crisis_PROC.md` row 7 (p.109#5); `04_V_Fib_Pulseless_V_Tach_PROC.md` row 12 (p.64#14); `07_Sepsis_PROC.md` row 6 (p.130#5); `07_OB_Emergencies_PROC.md` row 10 (p.147#4); `07_Hypotension_Shock_Non_Trauma_PROC.md` row 10 (p.114#9); `05_Seizure_PROC.md` row 7 (p.127#6); `03_Pulmonary_Edema_Congestion_PROC.md` row 13 (p.124#13); `09_Burns_Thermal_PROC.md` row 7 (p.88#9); `09_Crush_Syndrome_PROC.md` row 9 (p.91#8); `09_Hemorrhage_Control_PROC.md` row 9 (p.273#7); `09_Trauma_PROC.md` row 13 (p.84#15); `06_Nerve_Agents_PROC.md` row 7 (p.159#6); `02_Behavioral_Patient_Restraint_PROC.md` row 8 (p.72#10); `02_Diving_and_Drowning_Emergencies_PROC.md` row 7 (p.93#6).
 - **Batch 3 — four rows published no level at all** (Respiratory Arrest r11, r14,
   r15; Smoke Inhalation r8). There was nothing to keep, so each is bound to the row
@@ -1142,3 +1494,39 @@ entry that stops reproducing also fails it, so this list cannot go stale or hide
 new defect. Source of truth: `audit/level-scan/verifier-exceptions.yaml`.
 
 - **p.81 #3** (Spinal Clearance): the PEMS margin badge word bleeds into the recorded row text. Pre-existing layout defect in the canonical table, not in the conversion. The p.81 Spinal Clearance row continues past a page break (PEMS2024_full.txt shows "...No significant Mechanism of Injury (MOI)   EMR   EMR • Patient is Alert…"); the continuation join glued the margin badge column onto the row text, so the badge word appears at the start and in the middle of the text. It changes no badge decision: the row's badge_tokens come from the margin column and are correct (EMR), and no level-rule row cites p.81, so no chip anywhere is derived from this text. Fixing it means re-running the PDF layout extractor (pems_canonical.py) and re-freezing pems_table.json, which is outside the level-rule conversion this branch performs; recorded here so the green verdict is not overstated.
+
+## Whole-site totals (derived from the ledger, not typed)
+
+| metric | value |
+|---|---:|
+| converted pages — protocol/procedure chassis | 42 |
+| converted pages — administrative policy (POLICY/PENDING) | 14 |
+| action rows — total | 523 |
+| cited to a PEMS protocol row (incl. cross-page) | 377 |
+| cross-page citations | 46 |
+| POLICY (PEMS administrative policy) | 89 |
+| PENDING (no PEMS source: whole page + row-level + administrative) | 19 |
+| OWNER_REQUIRED | 37 |
+| OWNER_RULED | 1 |
+| +MC markers | 8 |
+
+### `sc-wrap` — whole `docs/` tree, walked (not a directory list)
+
+76 `sc-wrap` block(s) in 59 file(s). `sc-wrap` is the shared stylesheet wrapper for any wide table, so its presence is not a defect: the defect is a provider-level matrix still inside one. **Provider-level matrices inside `sc-wrap`: 14** — 0 on a page this project has converted (0 expected; `--check` fails on any), the rest on pages outside every batch's scope and reported, not gated.
+
+- protocols/front-matter/01 - How to Read the Protocols.md (line 33)
+- procedures/CPAP.md (line 15)
+- procedures/Capnography.md (line 14)
+- procedures/Chest_Decompression.md (line 14)
+- procedures/Endotracheal_Intubation.md (line 16)
+- procedures/Intraosseous_Access.md (line 13)
+- procedures/Medication_Administration.md (line 10)
+- procedures/Nasogastric_Tube.md (line 10)
+- procedures/Neonatal_Resuscitation.md (line 10)
+- procedures/Spinal_Motion_Restriction.md (line 19)
+- procedures/Surgical_Airway.md (line 15)
+- procedures/Taser_Barb_Removal.md (line 13)
+- procedures/Tourniquet_Application.md (line 10)
+- procedures/Transcutaneous_Pacing.md (line 14)
+
+Files still carrying `sc-wrap` (all non-level tables — dose charts, phone lists, SOP grids, GCS and screening tables): `fire-ems-references/index.md`, `fire-ems-references/initial-alarm-company-assignments.md`, `protocols/administrative/01_Communications_PROC.md`, `protocols/administrative/01_STEMI_Field_Triage_PROC.md`, `protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md`, `protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md`, `protocols/front-matter/01 - How to Read the Protocols.md`, `protocols/front-matter/Universal Patient Care.md`, `personnel-policies/index.md`, `pediatric-dosing/calculator.md`, `pediatric-dosing/dosing-tables.md`, `procedures/CPAP.md`, `procedures/Capnography.md`, `procedures/Chest_Decompression.md`, `procedures/Endotracheal_Intubation.md`, `procedures/Intraosseous_Access.md`, `procedures/Medical_Devices_Pumps.md`, `procedures/Medication_Administration.md`, `procedures/Nasogastric_Tube.md`, `procedures/Neonatal_Resuscitation.md`, `procedures/Spinal_Motion_Restriction.md`, `procedures/Surgical_Airway.md`, `procedures/Taser_Barb_Removal.md`, `procedures/Tourniquet_Application.md`, `procedures/Transcutaneous_Pacing.md`, `pharmacology/Adenosine.md`, `pharmacology/Albuterol.md`, `pharmacology/Amiodarone.md`, `pharmacology/Aspirin.md`, `pharmacology/Atropine Sulfate.md`, `pharmacology/Calcium Chloride.md`, `pharmacology/Dextrose.md`, `pharmacology/Diphenhydramine.md`, `pharmacology/Epinephrine.md`, `pharmacology/Etomidate.md`, `pharmacology/Fentanyl.md`, `pharmacology/Furosemide.md`, `pharmacology/Glucagon.md`, `pharmacology/Haloperidol.md`, `pharmacology/Hydroxocobalamin.md`, `pharmacology/Ipratropium Bromide.md`, `pharmacology/Ketamine.md`, `pharmacology/Ketorolac.md`, `pharmacology/Lidocaine.md`, `pharmacology/Magnesium Sulfate.md`, `pharmacology/Methylprednisolone.md`, `pharmacology/Midazolam.md`, `pharmacology/Morphine Sulfate.md`, `pharmacology/Naloxone.md`, `pharmacology/Nitroglycerin.md`, `pharmacology/Norepinephrine.md`, `pharmacology/Ondansetron.md`, `pharmacology/Rocuronium.md`, `pharmacology/Sodium Bicarbonate.md`, `pharmacology/Succinylcholine.md`, `pharmacology/Vecuronium.md`, `pharmacology/Ziprasidone.md`, `sops/emergency-operations/EO-600-First-to-Arrive-Duties.md`, `sops/emergency-operations/EO-600a-FORCES-Mnemonic.md`.

@@ -81,3 +81,90 @@ rows:
           badge [I]) and p.120#8 (CCB/BB overdose, badge I), whose indications differ. No
           PEMS row authorises this action's provider level, and the page published none.
           Pending OMD authorization.
+
+  # Batch 6 — administrative pages: rows the PEMS administrative policies do not print
+
+  - file: protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md
+    pems_equivalent: >-
+      no PEMS administrative policy prints this action; the row reason
+      names where PEMS prints it, if anywhere
+    rows:
+      - row: 6
+        carried_from_page: EMT
+        note: >-
+          <strong>PENDING</strong> — row 6: PEMS 2024 does not print this rule in any
+          administrative policy; it appears only as prose in the Behavioral Emergencies
+          restraint guidelines (p.71-72), which carries no level-badged row. No policy and
+          no provider level is published for it. <strong>Pending OMD authorization</strong>
+          — no provider level applies until the OMD authorizes it. See
+          <code>audit/level-scan/level-rule-ledger.md</code>.
+        reason: >-
+          PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol
+          restraint guidelines (p.71-72: "Patients in law enforcement custody (including emergency
+          custody orders) or under arrest must have a law enforcement officer present at all
+          times"), not as an administrative policy and not as a level-badged row. No policy and no
+          level is published; the wording on this page is the agency policy.
+      - row: 7
+        carried_from_page: EMT
+        note: >-
+          <strong>PENDING</strong> — row 7: PEMS 2024 does not print this rule in any
+          administrative policy; it appears only as prose in the Behavioral Emergencies
+          restraint guidelines (p.71-72), which carries no level-badged row. No policy and
+          no provider level is published for it. <strong>Pending OMD authorization</strong>
+          — no provider level applies until the OMD authorizes it. See
+          <code>audit/level-scan/level-rule-ledger.md</code>.
+        reason: >-
+          PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol
+          restraint guidelines (p.71-72: "If law-enforcement restraints have been utilized (for
+          example handcuffs or flex-cuffs), a law enforcement officer should accompany the
+          patient"), not as an administrative policy and not as a level-badged row. No policy and
+          no level is published; the wording on this page is the agency policy.
+
+  - file: protocols/administrative/01_Infant_Abandonment_PROC.md
+    pems_equivalent: >-
+      no PEMS administrative policy prints this action; the row reason
+      names where PEMS prints it, if anywhere
+    rows:
+      - row: 2
+        carried_from_page: EMT
+        note: >-
+          <strong>PENDING</strong> — row 2: PEMS 2024 prints no assessment or treatment
+          step in the Infant Abandonment policy (p.25), so this instruction is the agency's
+          own. No policy and no provider level is published for it. <strong>Pending OMD
+          authorization</strong> — no provider level applies until the OMD authorizes it.
+          See <code>audit/level-scan/level-rule-ledger.md</code>.
+        reason: >-
+          The Infant Abandonment policy (p.25) prints what to do with a surrendered infant
+          (contact CPS or law enforcement, and transport if indicated) but no assessment or
+          treatment step. "Assess the infant and provide medical care per these Protocols" is the
+          agency page's own instruction and is not printed in any PEMS administrative policy.
+
+  - file: protocols/administrative/01_Stroke_Field_Triage_PROC.md
+    pems_equivalent: >-
+      no PEMS administrative policy prints this action; the row reason
+      names where PEMS prints it, if anywhere
+    rows:
+      - row: 1
+        carried_from_page: EMT
+        note: >-
+          <strong>PENDING</strong> — row 1: the Stroke Field Triage policy (p.37) prints no
+          scene-time target, so the 15-minute goal is the agency's own. No policy and no
+          provider level is published for it. <strong>Pending OMD authorization</strong> —
+          no provider level applies until the OMD authorizes it. See
+          <code>audit/level-scan/level-rule-ledger.md</code>.
+        reason: >-
+          The Stroke Field Triage policy (p.37) prints no scene-time target. The 15-minute goal is
+          the agency page's own; PEMS prints a scene-time goal only in the Trauma Field Triage
+          policy (p.44, 10 minutes), which does not govern stroke.
+      - row: 4
+        carried_from_page: EMT
+        note: >-
+          <strong>PENDING</strong> — row 4: the Stroke Field Triage policy (p.37) prints no
+          life-threat routing branch, so this one is the agency's own. No policy and no
+          provider level is published for it. <strong>Pending OMD authorization</strong> —
+          no provider level applies until the OMD authorizes it. See
+          <code>audit/level-scan/level-rule-ledger.md</code>.
+        reason: >-
+          The Stroke Field Triage policy (p.37) prints the RACE/glucose/destination algorithm and
+          no "life threats go to the nearest ED" branch. That branch is the agency page's own
+          addition.

@@ -1,0 +1,129 @@
+# PEMS 2024 ADMINISTRATIVE POLICIES the site may cite.
+#
+# The owner ruling that creates this file (2026-11-16):
+#   "Treat admin pages as policy: cite PEMS administrative policies where they
+#    exist, PENDING where the policy is ours."
+#
+# These are the 14 policies on the PEMS 2024 "Administrative Policies" table of
+# contents (p.9). Each entry names the real policy, its effective date as printed,
+# the PEMS pages it occupies, and one verbatim span from those pages.
+#
+# Machine-checked by scripts/level_rule.py --check:
+#   * a row-binding that names `policy: <id>` must name an id defined here;
+#   * its `policy_quote` must be a verbatim span of that policy's pages in
+#     pems_chunks/PEMS2024_full.txt, so a policy citation cannot rest on prose the
+#     source does not print;
+#   * a POLICY row may not also carry a protocol citation (pems_page/pems_ordinal).
+
+source: pems_chunks/PEMS2024_full.txt
+source_pages: "PEMS Regional Patient Care Protocols, Policies and Procedures, Version: March 2024, Administrative Policies (p.9 table of contents)"
+
+policies:
+
+  - id: abuse-recognition
+    title: "Abuse Recognition & Mandatory Reporting"
+    pages: [11, 12, 13]
+    effective: "12/2012"
+    quote: >-
+      Virginia EMS providers are identified as mandated reporters.
+
+  - id: als-release
+    title: "ALS Release to BLS"
+    pages: [15]
+    effective: "12/2012"
+    quote: >-
+      This policy applies to all patients where patient contact has been made and the ALS
+      provider desires to release the patient to a BLS provider.
+
+  - id: communications
+    title: "Communications"
+    pages: [17, 18, 19, 20]
+    effective: "04/2021"
+    quote: >-
+      The HEAR (Hospital Emergency Administrative Radio) system is used to notify hospitals of
+      basic and advanced life support patients NOT requiring on-line physician intervention.
+
+  - id: death-withholding
+    title: "Death & Criteria for Withholding Resuscitation"
+    pages: [21, 22]
+    effective: "07/2022"
+    quote: >-
+      full resuscitation measures shall be undertaken for all victims of cardiopulmonary
+      arrest except in the presence of one or more of the indications of death
+
+  - id: hems
+    title: "Helicopter EMS (HEMS)"
+    pages: [23]
+    effective: "12/2012"
+    quote: >-
+      Technicians can request HEMS without authorization by medical control.
+
+  - id: infant-abandonment
+    title: "Infant Abandonment"
+    pages: [25]
+    effective: "03/2023"
+    quote: >-
+      A parent may leave an infant (within the first 30 days of the child’s life) at a
+      hospital that provides 24-hour emergency services or to an attended rescue squad that
+      employs emergency medical services personnel.
+
+  - id: patient-refusal
+    title: "Patient Refusal of Treatment/Transport"
+    pages: [27, 28, 29]
+    effective: "03/2022"
+    quote: >-
+      Assess clinical decision-making capacity
+
+  - id: patient-restraint
+    title: "Patient Restraint"
+    pages: [31, 32]
+    effective: "12/2012"
+    quote: >-
+      Place the patient face up on a long backboard – NEVER PRONE.
+
+  - id: safe-transport-pediatric
+    title: "Safe Transport of Pediatric Patients"
+    pages: [33]
+    effective: "12/2012"
+    quote: >-
+      Ensure pediatric patients under 40 kg (88 lbs) are restrained with approved child
+      restraint devices secured per the manufacturer’s instructions.
+
+  - id: stemi-field-triage
+    title: "STEMI Field Triage"
+    pages: [35]
+    effective: "04/2021"
+    quote: >-
+      activate the STEMI alert system by notifying the closest PCI center within 30 minutes
+      EMS transport time
+
+  - id: stroke-field-triage
+    title: "Stroke Field Triage"
+    pages: [37]
+    effective: "04/2024"
+    quote: >-
+      evaluate the patient using the RACE exam
+
+  - id: transport-destination
+    title: "Transportation & Destination Determination"
+    pages: [39]
+    effective: "03/2022"
+    quote: >-
+      Patients with decision-making capacity are to be transported to the hospital emergency
+      department of their choice within the policies of the transporting agency
+
+  - id: behavioral-health-transport
+    title: "Behavioral Health Transportation Decision"
+    pages: [41]
+    effective: "03/2024"
+    quote: >-
+      the Field Triage Decision protocol will be used to consider direct transport to a Mental
+      Health Facility
+
+  - id: trauma-field-triage
+    title: "Trauma Field Triage"
+    pages: [43, 44, 45]
+    effective: "04/2021"
+    quote: >-
+      A trauma patient who meets any of the following criteria shall be transported to the
+      closest appropriate trauma center within a 30-minute ground transport time.

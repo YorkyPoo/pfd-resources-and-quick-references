@@ -23,45 +23,59 @@ pages:
   # ---------------------------------------------------------------------
   - file: protocols/administrative/01_ALS_Release_to_BLS_PROC.md
     kind: administrative
+    pems_pages: [15]
     reason: "administrative policy; rows are process steps, not level-gated interventions"
   - file: protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md
     kind: administrative
+    pems_pages: [11, 12, 13]
     reason: "administrative policy; mandated-reporting steps are not provider-scope gated"
   - file: protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md
     kind: administrative
+    pems_pages: [41]
     reason: "administrative transport-eligibility policy, not a clinical intervention grid"
   - file: protocols/administrative/01_Communications_PROC.md
     kind: administrative
+    pems_pages: [17, 18, 19, 20]
     reason: "administrative communications policy; PEMS p.18 carries no level badges at all"
   - file: protocols/administrative/01_Death_Criteria_for_Withholding_Resuscitation_PROC.md
     kind: administrative
+    pems_pages: [21, 22]
     reason: "administrative withholding/termination policy; decision authority, not a procedure"
   - file: protocols/administrative/01_Helicopter_EMS_HEMS_PROC.md
     kind: administrative
+    pems_pages: [23]
     reason: "administrative HEMS request policy; no PEMS level grid exists for it"
   - file: protocols/administrative/01_Infant_Abandonment_PROC.md
     kind: administrative
+    pems_pages: [25]
     reason: "administrative safe-haven policy; statutory procedure, not provider-scoped care"
   - file: protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md
     kind: administrative
+    pems_pages: [27, 28, 29]
     reason: "administrative refusal/consent policy; PEMS p.27 badges describe documentation duties, not scope"
   - file: protocols/administrative/01_Patient_Restraint_PROC.md
     kind: administrative
+    pems_pages: [31, 32]
     reason: "administrative restraint policy; use-of-force procedure, not a level-gated intervention"
   - file: protocols/administrative/01_STEMI_Field_Triage_PROC.md
     kind: administrative
+    pems_pages: [35]
     reason: "administrative field-triage / destination policy"
   - file: protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md
     kind: administrative
+    pems_pages: [33]
     reason: "administrative pediatric transport policy; no PEMS counterpart"
   - file: protocols/administrative/01_Stroke_Field_Triage_PROC.md
     kind: administrative
+    pems_pages: [37]
     reason: "administrative field-triage / destination policy"
   - file: protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md
     kind: administrative
+    pems_pages: [39]
     reason: "administrative destination policy; explicitly excluded from level gating"
   - file: protocols/administrative/01_Trauma_Field_Triage_PROC.md
     kind: administrative
+    pems_pages: [43, 44, 45]
     reason: "administrative field-triage / destination policy"
   - file: protocols/front-matter/01 - How to Read the Protocols.md
     kind: explanatory

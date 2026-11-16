@@ -1094,3 +1094,569 @@ bindings:
       flagged: is post-intubation ketamine to sit at I on the strength of the p.55 sedation
       rows, or is it agency-specific like RSI (p.123#4)?
 
+# =====================================================================
+# Batch 6 — administrative pages: a POLICY citation (PEMS administrative policy)
+# or a cross-page protocol citation. Checked against pems-policies.yaml above.
+# =====================================================================
+
+  # ---- 01_ALS_Release_to_BLS_PROC.md
+  - file: protocols/administrative/01_ALS_Release_to_BLS_PROC.md
+    row: 1
+    policy: als-release
+    policy_quote: >-
+      A complete, pertinent patient history and physical assessment, including a full set of
+      vital signs, must be completed.
+  - file: protocols/administrative/01_ALS_Release_to_BLS_PROC.md
+    row: 2
+    policy: als-release
+    policy_quote: >-
+      ALS care is not currently medically necessary and will likely not in the near future be
+      necessary (to include pain management)
+  - file: protocols/administrative/01_ALS_Release_to_BLS_PROC.md
+    row: 3
+    policy: als-release
+    policy_quote: >-
+      BLS provider is willing to accept responsibility for the patient
+  - file: protocols/administrative/01_ALS_Release_to_BLS_PROC.md
+    row: 4
+    policy: als-release
+    policy_quote: >-
+      the Basic Life Support (BLS) provider can operate as the Attendant in Charge (AIC)
+  - file: protocols/administrative/01_ALS_Release_to_BLS_PROC.md
+    row: 5
+    policy: als-release
+    policy_quote: >-
+      The ALS provider must contact Medical Control when there is a concern of the
+      appropriateness of the release of patient care to a BLS provider.
+  - file: protocols/administrative/01_ALS_Release_to_BLS_PROC.md
+    row: 6
+    policy: als-release
+    policy_quote: >-
+      The BLS provider must complete a Patient Care Report.
+  - file: protocols/administrative/01_ALS_Release_to_BLS_PROC.md
+    row: 7
+    policy: als-release
+    policy_quote: >-
+      Documentation will include physical findings, transfer of care, and physician
+      consultation on the Patient Care Report when necessary.
+  - file: protocols/administrative/01_ALS_Release_to_BLS_PROC.md
+    row: 8
+    policy: als-release
+    policy_quote: >-
+      Any ALS Release to BLS must be reviewed by the agency Quality Assurance/Quality
+      Improvement process.
+    policy_note: >-
+      The page names who reviews and when ("the Officer or Acting Officer the following day,
+      per departmental SOP"); the policy prints the requirement, not that detail.
+
+  # ---- 01_Abuse_Recognition_and_Mandated_Reporting_PROC.md
+  - file: protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md
+    row: 1
+    policy: abuse-recognition
+    policy_quote: >-
+      Assess for and document psychological characteristics of abuse, including excessive
+      passivity, compliant or fearful behavior
+  - file: protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md
+    row: 2
+    policy: abuse-recognition
+    policy_quote: >-
+      Assess for and document physical signs of abuse, including any injuries inconsistent
+      with the reported mechanism of injury
+  - file: protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md
+    row: 3
+    policy: abuse-recognition
+    policy_quote: >-
+      Assess for and document symptoms or signs of neglect, including inappropriate level of
+      clothing for weather, inadequate hygiene
+  - file: protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md
+    row: 4
+    policy: abuse-recognition
+    policy_quote: >-
+      Mandated reporters must report the following to Adult Protective Services and law
+      enforcement
+  - file: protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md
+    row: 5
+    policy: abuse-recognition
+    policy_quote: >-
+      make reports to the 24-hour, toll-free Virginia Department of Social Services (VDSS)
+      Child Protective Services (CPS) hotline
+  - file: protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md
+    row: 6
+    policy: abuse-recognition
+    policy_quote: >-
+      shall immediately give notice of the incident to the Department of Game and Inland
+      Fisheries
+  - file: protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md
+    row: 7
+    policy: abuse-recognition
+    policy_quote: >-
+      Provide appropriate documentation on the PCR
+
+  # ---- 01_Behavioral_Health_Transportation_Decision_PROC.md
+  - file: protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md
+    row: 1
+    policy: patient-refusal
+    policy_quote: >-
+      Assess clinical decision-making capacity
+    policy_note: >-
+      PEMS prints the capacity screen in the Patient Refusal policy (p.27), not in the
+      Behavioral Health Transportation Decision policy (p.41).
+  - file: protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md
+    row: 2
+    policy: behavioral-health-transport
+    policy_quote: >-
+      the Field Triage Decision protocol will be used to consider direct transport to a Mental
+      Health Facility
+  - file: protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md
+    row: 3
+    policy: behavioral-health-transport
+    policy_quote: >-
+      When in doubt, contact Medical Control.
+  - file: protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md
+    row: 4
+    policy: patient-refusal
+    policy_quote: >-
+      contact law enforcement regarding issuance of an Emergency Custody Order (ECO) for
+      psychiatric evaluation
+    policy_note: >-
+      Printed in the Patient Refusal policy (p.28); the Behavioral Health policy prints the
+      transport decision scheme, not the ECO step.
+  - file: protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md
+    row: 5
+    policy: patient-refusal
+    policy_quote: >-
+      contact Medical Control regarding issuance of an Emergency Custody Order (ECO) for
+      medical evaluation
+    policy_note: >-
+      Printed in the Patient Refusal policy (p.28#12, badge MC); the Behavioral Health policy
+      prints the transport decision scheme, not the Medical ECO step.
+
+  # ---- 01_Communications_PROC.md
+  - file: protocols/administrative/01_Communications_PROC.md
+    row: 1
+    policy: communications
+    policy_quote: >-
+      is used to notify hospitals of basic and advanced life support patients NOT requiring
+      on-line physician intervention
+  - file: protocols/administrative/01_Communications_PROC.md
+    row: 2
+    policy: communications
+    policy_quote: >-
+      The COR system shall be used for direct contact with Medical Control in any situation
+      where physician consultation is appropriate
+  - file: protocols/administrative/01_Communications_PROC.md
+    row: 3
+    policy: communications
+    policy_quote: >-
+      THE PRE-ARRIVAL REPORT SHOULD INCLUDE THE FOLLOWING
+  - file: protocols/administrative/01_Communications_PROC.md
+    row: 4
+    policy: communications
+    policy_quote: >-
+      During an MCI, routine ambulance-to-emergency department communications are suspended.
+  - file: protocols/administrative/01_Communications_PROC.md
+    row: 5
+    policy: communications
+    policy_quote: >-
+      All orders within your scope of practice are considered standing orders in this
+      situation.
+  - file: protocols/administrative/01_Communications_PROC.md
+    row: 6
+    policy: communications
+    policy_quote: >-
+      Carefully document events including
+    policy_note: >-
+      The page adds "review with the Officer/Acting Officer per department SOPs"; the policy
+      prints the documentation list only.
+
+  # ---- 01_Death_Criteria_for_Withholding_Resuscitation_PROC.md
+  - file: protocols/administrative/01_Death_Criteria_for_Withholding_Resuscitation_PROC.md
+    row: 1
+    policy: death-withholding
+    policy_quote: >-
+      full resuscitation measures shall be undertaken for all victims of cardiopulmonary
+      arrest except in the presence of one or more of the indications of death
+  - file: protocols/administrative/01_Death_Criteria_for_Withholding_Resuscitation_PROC.md
+    row: 2
+    policy: death-withholding
+    policy_quote: >-
+      When treating cardiac arrest victims who possess a "living will" or an advanced
+      directive (other than a valid DDNR order/POST), full resuscitative efforts should be
+      initiated and Medical Control consulted
+  - file: protocols/administrative/01_Death_Criteria_for_Withholding_Resuscitation_PROC.md
+    row: 3
+    policy: death-withholding
+    policy_quote: >-
+      Provide full basic life support care including AED, pulse ox, EtCO2, and supraglottic
+      airway.
+  - file: protocols/administrative/01_Death_Criteria_for_Withholding_Resuscitation_PROC.md
+    row: 4
+    policy: death-withholding
+    policy_quote: >-
+      Provide a thorough report of patient history, condition, and treatment.
+  - file: protocols/administrative/01_Death_Criteria_for_Withholding_Resuscitation_PROC.md
+    row: 5
+    policy: death-withholding
+    policy_quote: >-
+      Follow agency protocols/policies concerning notification of law enforcement and/or
+      medical examiner. Remain on scene until proper authorities arrive.
+
+  # ---- 01_Helicopter_EMS_HEMS_PROC.md
+  - file: protocols/administrative/01_Helicopter_EMS_HEMS_PROC.md
+    row: 1
+    policy: hems
+    policy_quote: >-
+      Request air ambulance standby/response according to department procedure.
+    policy_note: >-
+      The "no medical control authorization needed" half is printed in the same policy:
+      "Technicians can request HEMS without authorization by medical control."
+  - file: protocols/administrative/01_Helicopter_EMS_HEMS_PROC.md
+    row: 2
+    policy: hems
+    policy_quote: >-
+      Establish a safe and logistically feasible landing zone.
+  - file: protocols/administrative/01_Helicopter_EMS_HEMS_PROC.md
+    row: 3
+    policy: hems
+    policy_quote: >-
+      Establish number of patients, primary injuries/medical condition, and approximate
+      patient weight(s).
+  - file: protocols/administrative/01_Helicopter_EMS_HEMS_PROC.md
+    row: 4
+    policy: hems
+    policy_quote: >-
+      Trauma patients should be fully immobilized. IV/IO access should be established as time
+      allows.
+    policy_note: >-
+      The page adds "(within provider scope)".
+  - file: protocols/administrative/01_Helicopter_EMS_HEMS_PROC.md
+    row: 5
+    policy: hems
+    policy_quote: >-
+      On scene one individual should be responsible for providing the patient report(s) to the
+      flight crew upon arrival.
+  - file: protocols/administrative/01_Helicopter_EMS_HEMS_PROC.md
+    row: 6
+    policy: hems
+    policy_quote: >-
+      Ensure PCR is provided to receiving facility as per 12 VAC 5-31
+
+  # ---- 01_Infant_Abandonment_PROC.md
+  - file: protocols/administrative/01_Infant_Abandonment_PROC.md
+    row: 1
+    policy: infant-abandonment
+    policy_quote: >-
+      A parent may leave an infant (within the first 30 days of the child’s life) at a
+      hospital that provides 24-hour emergency services or to an attended rescue squad that
+      employs emergency medical services personnel.
+  - file: protocols/administrative/01_Infant_Abandonment_PROC.md
+    row: 3
+    policy: infant-abandonment
+    policy_quote: >-
+      should contact Child Protective Services or local law enforcement resources
+  - file: protocols/administrative/01_Infant_Abandonment_PROC.md
+    row: 4
+    policy: infant-abandonment
+    policy_quote: >-
+      and, if indicated, transport to an appropriate facility.
+
+  # ---- 01_Patient_Refusal_of_Treatment_Transport_PROC.md
+  - file: protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md
+    row: 1
+    policy: patient-refusal
+    policy_quote: >-
+      Conduct a thorough assessment of the patient including vital signs and physical exam in
+      accordance with relevant patient care protocols.
+  - file: protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md
+    row: 2
+    policy: patient-refusal
+    policy_quote: >-
+      Patient must be at least 14 years of age to consent to or refuse care / transport.
+    policy_note: >-
+      The page bundles the age test with the capacity bullets printed on p.27#2 ("Ensure the
+      patient is fully oriented... understands the potential risks and benefits").
+  - file: protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md
+    row: 3
+    policy: patient-refusal
+    policy_quote: >-
+      the following individuals may act as a surrogate decision maker, in descending order of
+      authority
+  - file: protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md
+    row: 4
+    policy: patient-refusal
+    policy_quote: >-
+      obtain signatures from the patient or authorized surrogate decision maker and at least
+      one adult witness, when possible.
+  - file: protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md
+    row: 5
+    policy: patient-refusal
+    policy_quote: >-
+      contact law enforcement regarding issuance of an Emergency Custody Order (ECO) for
+      psychiatric evaluation
+  - file: protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md
+    row: 6
+    policy: patient-refusal
+    policy_quote: >-
+      contact Medical Control regarding issuance of an Emergency Custody Order (ECO) for
+      medical evaluation
+  - file: protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md
+    row: 7
+    policy: patient-refusal
+    policy_quote: >-
+      Contact Medical Control for assistance in situations including but not limited to
+
+  # ---- 01_Patient_Restraint_PROC.md
+  - file: protocols/administrative/01_Patient_Restraint_PROC.md
+    row: 1
+    policy: patient-restraint
+    policy_quote: >-
+      If law enforcement or additional staff is needed, call for assistance prior to
+      attempting restraint procedures.
+  - file: protocols/administrative/01_Patient_Restraint_PROC.md
+    row: 2
+    policy: patient-restraint
+    policy_quote: >-
+      Consider and treat medical causes of combativeness (hypoxia, head injury, hypoglycemia).
+  - file: protocols/administrative/01_Patient_Restraint_PROC.md
+    row: 3
+    policy: patient-restraint
+    policy_quote: >-
+      Place the patient face up on a long backboard
+  - file: protocols/administrative/01_Patient_Restraint_PROC.md
+    row: 4
+    policy: patient-restraint
+    policy_quote: >-
+      check circulation in restrained extremities every 15 minutes
+  - file: protocols/administrative/01_Patient_Restraint_PROC.md
+    row: 5
+    policy: patient-restraint
+    policy_quote: >-
+      attempt to place SpO2 device and apply supplemental oxygen if indicated
+  - file: protocols/administrative/01_Patient_Restraint_PROC.md
+    row: 6
+    policy: patient-restraint
+    policy_quote: >-
+      DO NOT tighten chest straps to the point of impeding respiratory function.
+  - file: protocols/administrative/01_Patient_Restraint_PROC.md
+    row: 7
+    policy: patient-restraint
+    policy_quote: >-
+      Assess vital signs within the first 5 minutes and thereafter as appropriate (at least
+      every 10 minutes and prior to any repeat dose of medication)
+  - file: protocols/administrative/01_Patient_Restraint_PROC.md
+    row: 8
+    policy: patient-restraint
+    policy_quote: >-
+      If chemical restraint is required, see Behavioral Emergencies Protocol
+
+  # ---- 01_STEMI_Field_Triage_PROC.md
+  - file: protocols/administrative/01_STEMI_Field_Triage_PROC.md
+    row: 1
+    policy: stemi-field-triage
+    policy_quote: >-
+      acquire a 12-lead ECG within 5 minutes of arrival at patient
+  - file: protocols/administrative/01_STEMI_Field_Triage_PROC.md
+    row: 2
+    policy: stemi-field-triage
+    policy_quote: >-
+      12-lead ECG criteria of 1 mm (or more) ST elevation in 2 (or more) contiguous leads
+  - file: protocols/administrative/01_STEMI_Field_Triage_PROC.md
+    row: 3
+    policy: stemi-field-triage
+    policy_quote: >-
+      PCI Capable hospital within 30 minutes
+  - file: protocols/administrative/01_STEMI_Field_Triage_PROC.md
+    row: 4
+    policy: stemi-field-triage
+    policy_quote: >-
+      Helicopter EMS (HEMS) within 30 minutes of patient’s location
+  - file: protocols/administrative/01_STEMI_Field_Triage_PROC.md
+    row: 5
+    policy: stemi-field-triage
+    policy_quote: >-
+      Any patient with a compromised airway or impending circulatory collapse should be taken
+      to the closest Emergency Department.
+  - file: protocols/administrative/01_STEMI_Field_Triage_PROC.md
+    row: 6
+    policy: stemi-field-triage
+    policy_quote: >-
+      activate the STEMI alert system by notifying the closest PCI center within 30 minutes
+      EMS transport time
+
+  # ---- 01_Safe_Transport_of_Pediatric_Patients_PROC.md
+  - file: protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md
+    row: 1
+    policy: safe-transport-pediatric
+    policy_quote: >-
+      Secure all monitoring devices and other equipment to prevent injury.
+  - file: protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md
+    row: 2
+    policy: safe-transport-pediatric
+    policy_quote: >-
+      Drive cautiously and at safe speeds, observing applicable traffic laws.
+  - file: protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md
+    row: 3
+    policy: safe-transport-pediatric
+    policy_quote: >-
+      Ensure pediatric patients under 40 kg (88 lbs) are restrained with approved child
+      restraint devices secured per the manufacturer’s instructions.
+  - file: protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md
+    row: 4
+    policy: safe-transport-pediatric
+    policy_quote: >-
+      Ensure that all EMS providers use available restraining devices or systems during
+      transport.
+  - file: protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md
+    row: 5
+    policy: safe-transport-pediatric
+    policy_quote: >-
+      parents or caregivers should be secured using safety belts
+  - file: protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md
+    row: 6
+    policy: safe-transport-pediatric
+    policy_quote: >-
+      Attempt to arrange for transportation of adults and children who are not patients by
+      alternative means.
+  - file: protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md
+    row: 7
+    policy: safe-transport-pediatric
+    policy_quote: >-
+      make every reasonable attempt to maximize safety while comforting the child
+
+  # ---- 01_Stroke_Field_Triage_PROC.md
+  - file: protocols/administrative/01_Stroke_Field_Triage_PROC.md
+    row: 2
+    policy: stroke-field-triage
+    policy_quote: >-
+      Assess blood glucose. Is glucose greater than 60?
+    policy_note: >-
+      The page adds the <60 mg/dL referral to Hypoglycemia; the policy prints the glucose
+      check only.
+  - file: protocols/administrative/01_Stroke_Field_Triage_PROC.md
+    row: 3
+    policy: stroke-field-triage
+    policy_quote: >-
+      evaluate the patient using the RACE exam
+    policy_note: >-
+      The page adds BEFAST; the policy prints the RACE exam only.
+  - file: protocols/administrative/01_Stroke_Field_Triage_PROC.md
+    row: 5
+    policy: stroke-field-triage
+    policy_quote: >-
+      If transport to Comprehensive Stroke Center increases transport time by 30 minutes or
+      greater, transport to nearest Primary Stroke Center.
+  - file: protocols/administrative/01_Stroke_Field_Triage_PROC.md
+    row: 6
+    policy: stroke-field-triage
+    policy_quote: >-
+      Transport to closest Stroke Center (Acute Stroke Ready, Primary or Comprehensive)
+  - file: protocols/administrative/01_Stroke_Field_Triage_PROC.md
+    row: 7
+    policy: stroke-field-triage
+    policy_quote: >-
+      activate the stroke alert system by notifying the appropriate facility
+  - file: protocols/administrative/01_Stroke_Field_Triage_PROC.md
+    row: 8
+    policy: stroke-field-triage
+    policy_quote: >-
+      Once the patient is in transport call the receiving facility’s COR with the patient’s
+      Name/DOB.
+
+  # ---- 01_Transportation_and_Destination_Determination_PROC.md
+  - file: protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md
+    row: 1
+    policy: transport-destination
+    policy_quote: >-
+      Patients with decision-making capacity are to be transported to the hospital emergency
+      department of their choice within the policies of the transporting agency
+  - file: protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md
+    row: 2
+    policy: transport-destination
+    policy_quote: >-
+      the patient destination should be consistent with the PEMS Regional STEMI Plan
+  - file: protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md
+    row: 3
+    policy: transport-destination
+    policy_quote: >-
+      the patient destination should be consistent with the PEMS Stroke Triage Plan, to a
+      designated stroke center
+  - file: protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md
+    row: 4
+    policy: transport-destination
+    policy_quote: >-
+      If the patient has no hospital preference, transport should be to the closest most
+      appropriate hospital.
+  - file: protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md
+    row: 5
+    policy: transport-destination
+    policy_quote: >-
+      the reason for the change and destination the most appropriate facility shall be
+      documented on the Patient Care Report
+  - file: protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md
+    row: 6
+    policy: transport-destination
+    policy_quote: >-
+      Certified providers may contact HEMS (Medical Control permission not necessary)
+  - file: protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md
+    row: 7
+    policy: transport-destination
+    policy_quote: >-
+      If the patient is ready for transport AND air ambulance is delayed for more than 10
+      minutes, initiate ground transport to the closest hospital, or helispot/helipad.
+
+  # ---- 01_Trauma_Field_Triage_PROC.md
+  - file: protocols/administrative/01_Trauma_Field_Triage_PROC.md
+    row: 1
+    policy: trauma-field-triage
+    policy_quote: >-
+      initiate immediate transport (scene time less than 10 minutes)
+  - file: protocols/administrative/01_Trauma_Field_Triage_PROC.md
+    row: 2
+    policy: trauma-field-triage
+    policy_quote: >-
+      unmanageable/uncontrolled airway or uncontrolled hemorrhage to the closest
+  - file: protocols/administrative/01_Trauma_Field_Triage_PROC.md
+    row: 3
+    policy: trauma-field-triage
+    policy_quote: >-
+      shall be transported to the closest appropriate trauma center within a 30-minute ground
+      transport time
+  - file: protocols/administrative/01_Trauma_Field_Triage_PROC.md
+    row: 4
+    policy: trauma-field-triage
+    policy_quote: >-
+      should be transported to the closest hospital unless they can be delivered to a trauma
+      center more rapidly by helicopter EMS (HEMS)
+  - file: protocols/administrative/01_Trauma_Field_Triage_PROC.md
+    row: 5
+    policy: trauma-field-triage
+    policy_quote: >-
+      the technician should contact medical control to determine the destination hospital
+  - file: protocols/administrative/01_Trauma_Field_Triage_PROC.md
+    row: 6
+    policy: trauma-field-triage
+    policy_quote: >-
+      burns that meet burn center criteria should be transported to a burn center
+  - file: protocols/administrative/01_Trauma_Field_Triage_PROC.md
+    row: 7
+    policy: trauma-field-triage
+    policy_quote: >-
+      Severely injured pediatric patients should be transferred to a trauma center
+  - file: protocols/administrative/01_Trauma_Field_Triage_PROC.md
+    row: 8
+    policy: trauma-field-triage
+    policy_quote: >-
+      Establish early radio contact to alert trauma center staff.
+
+  # ---- 01_STEMI_Field_Triage_PROC.md (cross-page to the protocol that prints it)
+  - file: protocols/administrative/01_STEMI_Field_Triage_PROC.md
+    row: 7
+    pems_page: 107
+    pems_ordinal: 9
+    cross_page: true
+    quoted_row_text: >-
+      obtain serial ECGs at 10-minute intervals and contact Medical Control for guidance
+    evidence: >-
+      The STEMI Field Triage policy (p.35) prints no serial-ECG step; the action is printed
+      verbatim as row p.107#9 of the Chest Pain protocol, badge MC. Cited where printed rather
+      than left PENDING, so the reader is sent to the real source.
