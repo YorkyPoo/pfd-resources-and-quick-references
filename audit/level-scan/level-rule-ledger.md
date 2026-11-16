@@ -643,6 +643,31 @@ decision before the page is treated as final.
 - **Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.** The
   owner was asked and did not rule, so the other 16 OWNER_REQUIRED rows keep their
   level + ⚑ flag exactly as they were. Do not convert them without a ruling.
+- **Batch 3 (respiratory) — 48 OWNER_REQUIRED rows.** PEMS 2024 prints one
+  respiratory protocol (p.123-124) and one inhalation-irritant protocol (p.153);
+  the rest of these pages' content is printed in procedures (p.239, p.241, p.243,
+  p.245, p.247, p.269) and other protocols (Burns p.87-88, Sedation p.55). Each row
+  keeps the level the page published, with its reason in `row-bindings.yaml`.
+- **Batch 3 — site-side `[X]` brackets are not represented by the single-chip
+  chassis.** The owner's 2026-11-13 ruling reads a bracketed cell as "that level
+  needs MC authorization". Five respiratory rows carried one and are now a plain
+  level chip + ⚑: Pediatric Stridor r11 `[P]`, Smoke Inhalation r7 `[I]` and r9
+  `[I]`, Upper Airway r13 `[I]` and r14 `[I]`. Two more are cited to a PEMS row that
+  prints the action unbracketed (Smoke r6 and Upper Airway r12 -> p.239#9, badge I).
+  This is the same gap as Batch-1 Chest Pain r14. Owner ruling needed: carry the
+  bracket into the chassis as a second marker, or accept the plain chip.
+- **Batch 3 — three rows lost a Medical-Control requirement the page printed.**
+  Airway/Inhalation r8 was `MC` in all five cells and is now `A` (p.153#4);
+  Respiratory Distress r6 was `MC` at A and I and is now `EMT` (p.123#3). The rule
+  is "chip = the level PEMS prints", and the source grants both on standing order,
+  but the owner should confirm that dropping a page-printed MC requirement is
+  intended. (Rows that moved *to* MC — Airway r12, Smoke r12, Pulmonary Edema r13 —
+  now match the source's MC row.)
+- **Batch 3 — four rows published no level at all** (Respiratory Arrest r11, r14,
+  r15; Smoke Inhalation r8). There was nothing to keep, so each is bound to the row
+  that prints the action: p.269#0 (Surgical Airway, already a C2 ruling), p.55#2
+  (Fentanyl), p.55#3 (Midazolam), p.88#8 (Hydroxocobalamin). Confirm that binding a
+  level-less row is preferred over chipping it PENDING.
 
 ## Verifier exceptions (known, documented, enforced)
 
