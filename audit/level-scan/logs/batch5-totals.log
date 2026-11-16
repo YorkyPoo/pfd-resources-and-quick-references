@@ -1,0 +1,30 @@
+Batch 5 — protocols/general/ (6 pages, derived from the tree by `grep -l sc-wrap`)
+  02_Behavioral_Patient_Restraint_PROC.md              rows= 8 cited= 8 flagged= 0 cross_page=0
+  02_Cold_Exposure_PROC.md                             rows= 9 cited= 7 flagged= 2 cross_page=0
+  02_Diving_and_Drowning_Emergencies_PROC.md           rows= 7 cited= 7 flagged= 0 cross_page=0
+  02_Heat_Exposure_PROC.md                             rows= 7 cited= 7 flagged= 0 cross_page=0
+  02_Pain_Control_PROC.md                              rows= 8 cited= 7 flagged= 1 cross_page=0
+  02_Sedation_Assisted_Non_Paralytic_PROC.md           rows= 6 cited= 4 flagged= 2 cross_page=2
+
+BATCH 5 TOTALS (derived)
+  action rows        45
+  cited to PEMS      40
+  flagged OWNER_REQ  5
+  PENDING (row)      0
+  +MC markers        0
+  bracketed (*) rows 2
+  cross_page cites   2
+  levels moved       14
+
+WHOLE-BOARD TOTALS (from level_rule.py --check, all 41 pages / 6 converted dirs)
+  pages                    40
+  rows_total               406
+  rows_verified            365
+  rows_owner_required      37
+  rows_owner_ruled         1
+  rows_mc_required         8
+  rows_cross_page          45
+  rows_pending_omd         11
+  rows_pending_row_omd     3
+  pending_pages            1
+EXIT=0
