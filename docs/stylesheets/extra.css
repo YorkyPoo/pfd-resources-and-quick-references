@@ -676,3 +676,82 @@ details.fc p { margin: .2em 0 .9em; }
   margin: .1em 0 0; font-size: .72rem; line-height: 1.5;
   color: var(--md-default-fg-color--light); }
 .md-typeset .lv-note strong { color: var(--md-primary-fg-color); }
+
+/* ============================================================
+   Outstanding Decisions page (docs/protocols/outstanding-decisions.md)
+   Phone-first: stacked definition cards, no wide table, nothing clipped.
+   ============================================================ */
+.md-typeset .od-card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-left: 4px solid #607d8b;
+  border-radius: 4px;
+  padding: .55em .7em .6em;
+  margin: .7em 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.md-typeset .od-cat-conflict { border-left-color: #b26a00; }
+.md-typeset .od-cat-pending  { border-left-color: #6a4c93; }
+.md-typeset .od-cat-question { border-left-color: #1565c0; }
+
+.md-typeset .od-card p { margin: .3em 0; }
+.md-typeset .od-card p:first-child { margin-top: 0; }
+.md-typeset .od-card p:last-child { margin-bottom: 0; }
+
+.md-typeset .od-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4em;
+  align-items: center;
+}
+.md-typeset .od-row {
+  font-weight: 700;
+  font-size: .72rem;
+  letter-spacing: .02em;
+  color: var(--md-default-fg-color--light);
+}
+.md-typeset .od-action { font-weight: 600; }
+.md-typeset .od-reason { font-size: .78rem; }
+.md-typeset .od-near   { font-size: .74rem; color: var(--md-default-fg-color--light); }
+.md-typeset .od-question { font-size: .8rem; }
+
+.md-typeset .od-batch,
+.md-typeset .od-count {
+  display: inline-block;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  padding: .1em .45em;
+  border-radius: 999px;
+  background: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color);
+}
+.md-typeset h4 .od-count { margin-left: .3em; }
+
+.md-typeset .od-page-block { margin: 1.2em 0 1.6em; }
+.md-typeset .od-page-block h4 { margin: 0 0 .2em; font-size: .9rem; }
+.md-typeset .od-pagenote {
+  font-size: .74rem;
+  line-height: 1.5;
+  margin: .2em 0 .4em;
+  padding: .45em .6em;
+  border-radius: 4px;
+  background: var(--md-default-fg-color--lightest);
+}
+.md-typeset .od-chip {
+  display: inline-block;
+  font-size: .64rem;
+  font-weight: 700;
+  padding: .1em .5em;
+  border-radius: 999px;
+  border: 1.5px solid currentColor;
+}
+.md-typeset .od-chip-nowhere  { color: #607d8b; }
+.md-typeset .od-chip-conflict { color: #b26a00; }
+.md-typeset .od-foot {
+  font-size: .7rem;
+  color: var(--md-default-fg-color--light);
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  padding-top: .6em;
+  margin-top: 1.6em;
+}

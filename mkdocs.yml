@@ -66,6 +66,7 @@ markdown_extensions:
 
 nav:
 - Home: index.md
+- Outstanding Decisions: protocols/outstanding-decisions.md
 - Fire Resources:
   - Fire Resources Home: resources/fire.md
   - Emergency Operations:
