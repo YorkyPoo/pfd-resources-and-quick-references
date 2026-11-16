@@ -14,14 +14,14 @@ Spinal Motion Restriction (SMR) is utilized to minimize movement of the spine in
     - High-risk MOI (pediatrics)
 
 ### Procedure
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Maintain manual C-spine stabilization while applying collar. | • | • | • | • | • |
-| 2 | Perform focused neurologic exam (GCS, motor, sensory). | • | • | • | • | • |
-| 3 | Utilize backboard/scoop only as a lift/move device. Once on stretcher, remove backboard/scoop. | • | • | • | • | • |
-| 4 | If head elevation is required, elevate the head while maintaining spinal alignment. | • | • | • | • | • |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emr">EMR</span> | Maintain manual C-spine stabilization while applying collar. |
+| 2 | <span class="lvl lvl-emr">EMR</span> | Perform focused neurologic exam (GCS, motor, sensory). |
+| 3 | <span class="lvl lvl-emr">EMR</span> | Utilize backboard/scoop only as a lift/move device. Once on stretcher, remove backboard/scoop. |
+| 4 | <span class="lvl lvl-emr">EMR</span> | If head elevation is required, elevate the head while maintaining spinal alignment. |
 
 </div>
 

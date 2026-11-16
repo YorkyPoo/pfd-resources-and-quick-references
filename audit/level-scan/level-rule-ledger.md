@@ -434,6 +434,87 @@ the action text.
 | `Universal Patient Care.md` | 9 | I | p.50#10 | Consider continuous cardiac monitoring. | alignment:matched | OK |
 | `Universal Patient Care.md` | 10 | EMT | p.50#11 | Transport • Transport decisions should be based on patient’s clinical condition. Refer to relevant regional Field Triage policies regarding transpo… | alignment:matched | OK |
 | `Universal Patient Care.md` | 11 | EMR | p.49#5 | Refer to relevant and appropriate protocols. If no protocol applies, or for clinical guidance at any time, consider contacting Medical Control. | alignment:matched | OK |
+| `CPAP.md` | 1 | EMT | p.245#0 | Ensure adequate oxygen supply to the CPAP device. Explain the procedure and indications to the patient. | row-bindings:bound | OK |
+| `CPAP.md` | 2 | EMT | p.245#0 | Ensure adequate oxygen supply to the CPAP device. Explain the procedure and indications to the patient. | row-bindings:bound | OK |
+| `CPAP.md` | 3 | EMT | p.245#1 | Set positive and expiratory pressure (PEEP) to 5 mmHg | row-bindings:bound | OK |
+| `CPAP.md` | 4 | EMT | p.245#2 | Place the mask over the mouth and nose with oxygen flowing. Secure with straps, beginning with the lower straps. Tighten until air-leak is minimal. | row-bindings:bound | OK |
+| `CPAP.md` | 5 | EMT | p.245#3 | Reassess the patient, including the SpO2, ETCO2, and work of breathing. | row-bindings:bound | OK |
+| `CPAP.md` | 6 | EMT | p.245#4 | Consider titratingPEEP9%-15mmHg) as needed to improve ventilation/work of breathing. CPAP, BiPAP, and PEEP are RED DOT procedures at all EMS Certif… | row-bindings:bound | OK |
+| `Capnography.md` | 1 | EMT | p.241#0 | Adequate respiratory effort: Apply ETCO2 sampling nasal cannula to patient. | row-bindings:bound | OK |
+| `Capnography.md` | 2 | EMT | p.241#1 | Inadequate respiratory effort / Apnea: Attach inline ETCO2 sampling device to BVM, CPAP, or ventilator. | row-bindings:bound | OK |
+| `Capnography.md` | 3 | EMT | p.241#2 | Continuously monitor reading and waveform. Refer to waveform guide below. | row-bindings:bound | OK |
+| `Capnography.md` | 4 | EMT | p.241#3 | Advanced airway (ETT/SGA): Continuous monitoring ETCO2 waveform is required at all times. Any sudden drop or loss of ETCO2 signal must be addressed… | row-bindings:bound | OK |
+| `Capnography.md` | 5 | EMT | p.241#4 | Cardiac Arrest: If ETCO2 < 10 or dropping during CPR, optimize compression rate, depth, and recoil. If ROSC is achieved, adjust ventilation to main… | row-bindings:bound | OK |
+| `Capnography.md` | 6 | EMT | p.241#5 | Head Injury / TBI / Stroke: Adjust ventilation to maintain ETCO2 of 35-45 mmHg. Do not hyperventilate. | row-bindings:bound | OK |
+| `Capnography.md` | 7 | EMT | p.241#6 | Obstructive airway disease (Asthma / COPD): Consider permissive hypercapnia. Prioritize oxygenation. | row-bindings:bound | OK |
+| `Chest_Decompression.md` | 1 | I | p.243#0 | Administer oxygen at 15 LPM (100% FiO2). | row-bindings:bound | OK |
+| `Chest_Decompression.md` | 2 | I | p.243#1 | Locate the second intercostal space in the mid-clavicular line on the same side as the suspected pneumothorax. Cleanse the site. Alternate acceptab… | row-bindings:bound | OK |
+| `Chest_Decompression.md` | 3 | I | p.243#1 | Locate the second intercostal space in the mid-clavicular line on the same side as the suspected pneumothorax. Cleanse the site. Alternate acceptab… | row-bindings:bound | OK |
+| `Chest_Decompression.md` | 4 | I | p.243#2 | Attach a 10 mL syringe filled with 0.9% Sodium Chloride to a 14-gauge catheter needle – use longest available. Aspirate the syringe while advancing… | row-bindings:bound | OK |
+| `Chest_Decompression.md` | 5 | I | p.243#2 | Attach a 10 mL syringe filled with 0.9% Sodium Chloride to a 14-gauge catheter needle – use longest available. Aspirate the syringe while advancing… | row-bindings:bound | OK |
+| `Chest_Decompression.md` | 6 | I | p.243#3 | Advance the catheter over the needle into the pleural space and remove the needle. | row-bindings:bound | OK |
+| `Chest_Decompression.md` | 7 | I | p.243#4 | Reassess the patient, including vital signs and respiratory effort / compliance. Consider repeating the above steps for continued or recurrent hemo… | row-bindings:bound | OK |
+| `Endotracheal_Intubation.md` | 1 | EMT | p.247#1 | Pre-oxygenate the patient: Provide 100% Oxygen via NRB or BVM for 3 minutes. Monitor SpO2. Refer to Airway Management and Ventilatory Support proto… | row-bindings:bound | OK |
+| `Endotracheal_Intubation.md` | 2 | EMT | — | — | — | OWNER_REQUIRED |
+| `Endotracheal_Intubation.md` | 3 | I | p.247#3 | Maintain in-line cervical spine stabilization if there is concern for trauma. Prepare equipment: o IV/IO access o ET tube of appropriate size + 1 s… | row-bindings:bound | OK |
+| `Endotracheal_Intubation.md` | 4 | I | p.247#3 | Maintain in-line cervical spine stabilization if there is concern for trauma. Prepare equipment: o IV/IO access o ET tube of appropriate size + 1 s… | row-bindings:bound | OK |
+| `Endotracheal_Intubation.md` | 5 | P | p.247#5 | Orally Intubate. Patients < 12 years old. | row-bindings:bound | OK |
+| `Endotracheal_Intubation.md` | 6 | P | — | — | — | OWNER_REQUIRED |
+| `Endotracheal_Intubation.md` | 7 | P | p.247#7 | After two failed attempts, airway must be managed by the most experienced provider available. If unable to intubate and unable to oxygenate, procee… | row-bindings:bound | OK |
+| `Endotracheal_Intubation.md` | 8 | I | p.247#9 | Ensure the presence of continuous box-waveform capnography. o Auscultate for bilateral lung sounds & absence of gastric sounds Secure the tube. Use… | row-bindings:bound | OK |
+| `Endotracheal_Intubation.md` | 9 | I | p.247#9 | Ensure the presence of continuous box-waveform capnography. o Auscultate for bilateral lung sounds & absence of gastric sounds Secure the tube. Use… | row-bindings:bound | OK |
+| `Endotracheal_Intubation.md` | 10 | I | p.247#9 | Ensure the presence of continuous box-waveform capnography. o Auscultate for bilateral lung sounds & absence of gastric sounds Secure the tube. Use… | row-bindings:bound | OK |
+| `Intraosseous_Access.md` | 1 | A | p.249#0 | Locate an appropriate insertion site. Avoid insertion through infected tissue and into bone suspected to be fractured. Cleanse the site with an alc… | row-bindings:bound | OK |
+| `Intraosseous_Access.md` | 2 | A | p.249#0 | Locate an appropriate insertion site. Avoid insertion through infected tissue and into bone suspected to be fractured. Cleanse the site with an alc… | row-bindings:bound | OK |
+| `Intraosseous_Access.md` | 3 | A | p.249#1 | Insert the IO needle into the selected site with the needle perpendicular to the bone surface until the needle tip touches the bone. Confirm at lea… | row-bindings:bound | OK |
+| `Intraosseous_Access.md` | 4 | A | p.249#2 | skin. Penetrate the bone by squeezing the driver’s trigger and apply gentle, steady, downward pressure. Release the trigger when a loss of resistan… | row-bindings:bound | OK |
+| `Intraosseous_Access.md` | 5 | A | p.249#3 | Stabilize the catheter hub and remove the driver from the needle. Remove the stylet by turning counterclockwise. Dispose of the stylet in an approp… | row-bindings:bound | OK |
+| `Intraosseous_Access.md` | 6 | A | p.249#4 | Secure the needle and attach primed extension tubing to the Luer-lock. If the patient is unconscious, aspirate to confirm placement then flush with… | row-bindings:bound | OK |
+| `Intraosseous_Access.md` | 7 | A | p.249#4 | Secure the needle and attach primed extension tubing to the Luer-lock. If the patient is unconscious, aspirate to confirm placement then flush with… | row-bindings:bound | OK |
+| `Intraosseous_Access.md` | 8 | A | p.249#5 | If the patient is conscious, administer: ADULT: 2% Lidocaine 1 mg/kg IO slow push. Maximum dose 40 mg. PEDIATRIC: 2% Lidocaine 0.5 mg/kg IO slow pu… | row-bindings:bound | OK |
+| `Medication_Administration.md` | 1 | EMT | p.257#0 | Prepare the medication to be administered. Refer to protocol specific indications and scope of practice for individual medications. Refer to Pharma… | row-bindings:bound | OK |
+| `Medication_Administration.md` | 2 | EMT | p.257#1 | CROSS CHECK with another qualified provider that the correct medication is being administered to the correct patient via an appropriate route at an… | row-bindings:bound | OK |
+| `Medication_Administration.md` | 3 | A | p.257#3 | Administer the medication at the appropriate rate: • IV push: Rapid administration. • IV slow push: At least 30 seconds. Preferably 1 - 2 minutes. … | row-bindings:bound | OK |
+| `Medication_Administration.md` | 4 | A | p.257#5 | Obtain IO access. Refer to Intraosseous Access procedure. | row-bindings:bound | OK |
+| `Medication_Administration.md` | 5 | EMT | p.257#8 | Insert the MAD into one nostril, orienting the tip posteriorly. Administer half of the dose. Administer the other half of the dose in the second no… | row-bindings:bound | OK |
+| `Medication_Administration.md` | 6 | EMT | p.258#11 | Insert the needle perpendicular to the skin to the depth of the targeted muscle. Depress the plunger slowly, ensuring the full intended dose is adm… | row-bindings:bound | OK |
+| `Nasogastric_Tube.md` | 1 | I | p.259#0 | Estimate insertion length by superimposing the tube over the body and measuring from nose to ear to xiphoid process. Note the length. | row-bindings:bound | OK |
+| `Nasogastric_Tube.md` | 2 | I | p.259#1 | Lubricate the distal end of the tube with Lidocaine gel and pass it through the patient’s nostril posteriorly along the floor of the nasal passage.… | row-bindings:bound | OK |
+| `Nasogastric_Tube.md` | 3 | I | p.259#2 | Continue to advance the tube gently until the measured length is reached. Ensure the tube is not coiled in the oropharynx. | row-bindings:bound | OK |
+| `Nasogastric_Tube.md` | 4 | I | p.259#3 | Confirm placement: Inject 20 cc of air using a Toomey syringe while auscultating over the epigastrium for bubbles. | row-bindings:bound | OK |
+| `Nasogastric_Tube.md` | 5 | I | p.259#4 | Secure the tube to the nose with tape and attach the proximal end of the tube to low/medium suction. | row-bindings:bound | OK |
+| `Nasogastric_Tube.md` | 6 | I | p.259#5 | Document the indication, depth of insertion, and volume of any output. | row-bindings:bound | OK |
+| `Neonatal_Resuscitation.md` | 1 | EMR | p.261#1 | Post delivery  Warm and maintain normal temperature.  Position / open airway (in a sniffing position – ear to sternal notch)  Dry and stimulate … | row-bindings:bound | OK |
+| `Neonatal_Resuscitation.md` | 2 | EMR | p.261#5 | Begin positive pressure ventilation with BVM and 21% oxygen for 30 seconds, then increase to 100% oxygen. Ensure adequate chest rise. 40-60 breaths… | row-bindings:bound | OK |
+| `Neonatal_Resuscitation.md` | 3 | I | — | — | — | OWNER_REQUIRED |
+| `Neonatal_Resuscitation.md` | 4 | EMR | p.261#9 | Begin chest compressions. Coordinate with ventilation. 3 compressions for each breath. 30 breaths per minute with chest compressions. | row-bindings:bound | OK |
+| `Neonatal_Resuscitation.md` | 5 | P | — | — | — | OWNER_REQUIRED |
+| `Spinal_Motion_Restriction.md` | 1 | EMR | p.267#0 | Maintain a patent airway while manually stabilizing the cervical spine until an appropriately sized cervical collar or alternative is applied. Main… | row-bindings:bound | OK |
+| `Spinal_Motion_Restriction.md` | 2 | EMR | p.267#1 | Perform a focused neurologic assessment including GCS, motor, and sensory function. | row-bindings:bound | OK |
+| `Spinal_Motion_Restriction.md` | 3 | EMR | p.267#3 | If necessary to lift/carry/maneuver the patient, utilize a long backboard, scoop stretcher, or extrication device with straps when feasible. Minimi… | row-bindings:bound | OK |
+| `Spinal_Motion_Restriction.md` | 4 | EMR | p.267#5 | SMR cannot be properly achieved with the patient in a sitting position. If elevation of the head is required, the device used to stabilize the spin… | row-bindings:bound | OK |
+| `Surgical_Airway.md` | 1 | P | p.269#0 | Position the patient supine, expose, and cleanse the anterior neck. Use the non-dominant hand to identify and stabilize the thyroid cartilage and u… | row-bindings:bound | OK |
+| `Surgical_Airway.md` | 2 | P | p.269#1 | membrane. Make a vertical incision (2 – 3 cm) across the cricothyroid membrane. Make a horizontal incision through the cricothyroid membrane (1 – 2… | row-bindings:bound | OK |
+| `Surgical_Airway.md` | 3 | P | p.269#8 | Attach a syringe filled with 0.9% Sodium Chloride onto a 14-guage catheter-needle. While aspirating the syringe, insert the needle at a 45-degree a… | row-bindings:bound | OK |
+| `Surgical_Airway.md` | 4 | P | p.269#5 | Ventilate the patient and confirm / monitor placement with continuous ETCO2 box-waveform and SpO2. Ensure presence of bilateral breath sounds and s… | row-bindings:bound | OK |
+| `Surgical_Airway.md` | 5 | MC | p.269#6 | Contact Medical Control and transport to the closest Emergency Department if airway cannot be secured. | row-bindings:bound | OK |
+| `Taser_Barb_Removal.md` | 1 | EMT | p.271#0 | Coordinate with law enforcement to ensure the weapon and patient are rendered safe to proceed. Refer to Behavioral Emergencies protocol and Patient… | row-bindings:bound | OK |
+| `Taser_Barb_Removal.md` | 2 | EMT | p.271#1 | Ensure the Taser cartridge is removed from the weapon or wires are cut prior to removing the darts. | row-bindings:bound | OK |
+| `Taser_Barb_Removal.md` | 3 | EMT | p.271#2 | Assess for injuries associated with burns, electrocution, and/or blunt trauma. Consider 12-Lead ECG. | row-bindings:bound | OK |
+| `Taser_Barb_Removal.md` | 4 | EMT | p.271#3 | Locate and expose both darts. If the darts have penetrated the eye, face, neck, breast, axilla, genitals, hands, or feet, leave them in place and t… | row-bindings:bound | OK |
+| `Taser_Barb_Removal.md` | 5 | EMT | p.271#4 | removal. Use one hand to hold the skin around the barb taut. With the other hand, use a hemostat or forceps to grasp the electrode shaft. Pull stra… | row-bindings:bound | OK |
+| `Taser_Barb_Removal.md` | 6 | EMT | p.271#5 | Safely dispose of the dart in an appropriate container for sharp biohazards. | row-bindings:bound | OK |
+| `Tourniquet_Application.md` | 1 | EMR | p.273#0 | Completely expose the injury and assess for additional injuries. | row-bindings:bound | OK |
+| `Tourniquet_Application.md` | 2 | EMR | p.273#1 | Position the tourniquet proximal to the injury. Do not place across a joint or open fracture. | row-bindings:bound | OK |
+| `Tourniquet_Application.md` | 3 | EMR | p.273#2 | Tighten the tourniquet until bleeding stops and distal pulses are absent. | row-bindings:bound | OK |
+| `Tourniquet_Application.md` | 4 | EMR | p.273#3 | If bleeding is not controlled, apply a second tourniquet proximal and adjacent to the first. | row-bindings:bound | OK |
+| `Tourniquet_Application.md` | 5 | EMR | p.273#4 | Clearly indicate the time and date of application. Ensure the tourniquet remains exposed and visible. | row-bindings:bound | OK |
+| `Tourniquet_Application.md` | 6 | EMR | p.273#5 | Once applied, do not remove or loosen the tourniquet(s). Additional tightening may be required. | row-bindings:bound | OK |
+| `Transcutaneous_Pacing.md` | 1 | I | p.275#0 | Remove any clothing covering the chest. Dry and/or shave the area, if necessary. Apply 4-Lead ECG and confirm rhythm. | row-bindings:bound | OK |
+| `Transcutaneous_Pacing.md` | 2 | I | p.275#1 | Apply multi-function pads in anterior/posterior position and set cardiac monitor to pacing mode. | row-bindings:bound | OK |
+| `Transcutaneous_Pacing.md` | 3 | I | p.275#2 | Set pacing rate at 80 beats per minute. Set initial current output to 50 mA. Confirm pacer “spikes” appear on cardiac monitor. | row-bindings:bound | OK |
+| `Transcutaneous_Pacing.md` | 4 | I | p.275#3 | Slowly increase the pacer output (10 mA / 10 seconds) until electrical capture is achieved. Confirm mechanical capture by palpating femoral pulses.… | row-bindings:bound | OK |
+| `Transcutaneous_Pacing.md` | 5 | I | p.275#3 | Slowly increase the pacer output (10 mA / 10 seconds) until electrical capture is achieved. Confirm mechanical capture by palpating femoral pulses.… | row-bindings:bound | OK |
 | `01_ALS_Release_to_BLS_PROC.md` | 1 | POLICY | — | — | — | policy |
 | `01_ALS_Release_to_BLS_PROC.md` | 2 | POLICY | — | — | — | policy |
 | `01_ALS_Release_to_BLS_PROC.md` | 3 | POLICY | — | — | — | policy |
@@ -795,6 +876,19 @@ recorded decision — the citation that cleared it is listed above and in the ta
 | `02_Pain_Control_PROC.md` | 0 | 1 | new | 0 |
 | `02_Sedation_Assisted_Non_Paralytic_PROC.md` | 0 | 2 | new | 0 |
 | `Universal Patient Care.md` | 0 | 0 | new | 0 |
+| `CPAP.md` | 0 | 0 | new | 0 |
+| `Capnography.md` | 0 | 0 | new | 0 |
+| `Chest_Decompression.md` | 0 | 0 | new | 0 |
+| `Endotracheal_Intubation.md` | 0 | 2 | new | 0 |
+| `Intraosseous_Access.md` | 0 | 0 | new | 0 |
+| `Medication_Administration.md` | 0 | 0 | new | 0 |
+| `Nasogastric_Tube.md` | 0 | 0 | new | 0 |
+| `Neonatal_Resuscitation.md` | 0 | 2 | new | 0 |
+| `Spinal_Motion_Restriction.md` | 0 | 0 | new | 0 |
+| `Surgical_Airway.md` | 0 | 0 | new | 0 |
+| `Taser_Barb_Removal.md` | 0 | 0 | new | 0 |
+| `Tourniquet_Application.md` | 0 | 0 | new | 0 |
+| `Transcutaneous_Pacing.md` | 0 | 0 | new | 0 |
 | `01_ALS_Release_to_BLS_PROC.md` | 0 | 0 | new | 0 |
 | `01_Abuse_Recognition_and_Mandated_Reporting_PROC.md` | 0 | 0 | new | 0 |
 | `01_Behavioral_Health_Transportation_Decision_PROC.md` | 0 | 2 | new | 0 |
@@ -811,12 +905,12 @@ recorded decision — the citation that cleared it is listed above and in the ta
 | `01_Trauma_Field_Triage_PROC.md` | 0 | 0 | new | 0 |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 11 | 11 | 0 | 0 |
 
-**Total: 77 flagged before, 56 after (21 cleared).**
+**Total: 77 flagged before, 60 after (17 cleared).**
 
 
 ## OWNER_REQUIRED
 
-**37 row(s).** No PEMS 2024 row authorises a provider level for these
+**41 row(s).** No PEMS 2024 row authorises a provider level for these
 actions, after the cross-page search (a row is only cleared when a PEMS row
 actually prints the action — see *Cross-page citations* above). The chip keeps the
 level the page already published and carries the flag. Nothing here was invented:
@@ -913,6 +1007,14 @@ prints it and why its badge contradicts the row's own words.
 - `protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md` row 5 — **P** kept from the page, not from the source. Post-Intubation Sedation, consider ONE of the following:  • ADULT: Ketamine (Ketalar) 1 mg/kg IV/IO (Maximum single dose: 100 mg). May repeat every 10
   - nearest PEMS row, NOT cited as authority: p.55#2
   - reason: The act is printed at I (p.55#2 fentanyl, p.55#3 midazolam, both badge I) but the drug this row names is not printed anywhere as a sedative: ketamine occurs in exactly one PEMS 2024 row, p.72#9 (behavioral restraint, badge P). The C2 adjudication bound this row to p.55#2 and levelled it I — that is the class level, and chipping it I would widen the authority for ketamine post-intubation sedation from the P this page published to I on a citation that does not name the drug. The page's P is kept and flagged: is post-intubation ketamine to sit at I on the strength of the p.55 sedation rows, or is it agency-specific like RSI (p.123#4)?
+- `procedures/Endotracheal_Intubation.md` row 2 — **EMT** kept from the page, not from the source. Position patient: Ear to sternal notch. Maintain in-line C-spine stabilization if trauma suspected.
+  - reason: The row bundles two actions printed on two PEMS rows at two different levels: "Position the patient: Ear to sternal notch." (p.247#2, badge EMT) and "Maintain in-line cervical spine stabilization if there is concern for trauma." (p.247#3, badge I). No single PEMS row prints the whole action, and one chip cannot carry both levels without over- or under-granting one half. The level this page published (EMT) is kept and flagged.
+- `procedures/Endotracheal_Intubation.md` row 6 — **P** kept from the page, not from the source. If unsuccessful, re-oxygenate with 100% O₂. After 2 failed attempts, manage via most experienced provider or alternative airway.
+  - reason: The row bundles two actions printed on two PEMS rows at two different levels: "If unsuccessful, reoxygenate between attempts with 100% Oxygen. Adjust positioning/technique/equipment as necessary prior to any further attempt." (p.247#6, badge I) and "After two failed attempts, airway must be managed by the most experienced provider available." (p.247#7, badge P). One chip cannot carry both; the level this page published (P) is kept and flagged.
+- `procedures/Neonatal_Resuscitation.md` row 3 — **I** kept from the page, not from the source. Apply ECG and EtCO₂ monitoring.
+  - reason: The row bundles two monitoring actions printed on two PEMS rows at two different levels: "Apply ECG monitoring." (p.261#7, badge I) and "Apply ETCO2 monitoring." (p.261#6 "Place supraglottic airway if necessary. Apply ETCO2 monitoring.", badge EMT). One chip cannot carry both; the level this page published (I) is kept and flagged.
+- `procedures/Neonatal_Resuscitation.md` row 5 — **P** kept from the page, not from the source. Obtain IV/IO access, administer Epinephrine 0.01 mg/kg (0.1 mg/mL). Repeat q3-5 mins.
+  - reason: The row bundles two actions printed on two PEMS rows at two different levels: "Obtain IV/IO access if not already obtained." (p.261#10, badge A) and "Administer: Epinephrine (Adrenaline) 0.01mg/kg (0.1mg/mL) IV/IO" (p.261#12, badge I). One chip cannot carry both; the level this page published (P) is kept and flagged.
 
 ## OWNER_RULED
 
@@ -1189,7 +1291,7 @@ Removed by decision (not restated by the chip, so not left to a later pass):
 
 ## Level moved by the source (page level -> PEMS printed level)
 
-102 row(s). These are rows where the page under- or over-granted the
+116 row(s). These are rows where the page under- or over-granted the
 level the cited PEMS row prints. Review them first.
 
 - `protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 4: **EMT -> EMR** (p.103#1) — Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure.
@@ -1293,6 +1395,20 @@ level the cited PEMS row prints. Review them first.
 - `protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md` row 3: **I -> A** (p.50#9) — Establish IV/IO access.
 - `protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md` row 6: **P -> I** (p.55#3) — OR Post-Intubation Sedation (Midazolam / Fentanyl):  • ADULT: Midazolam (Versed) 2.5 mg IV
 - `protocols/front-matter/Universal Patient Care.md` row 11: **EMT -> EMR** (p.49#5) — Refer to relevant protocols: • If no protocol applies, or for clinical guidance at any tim
+- `procedures/CPAP.md` row 6: **P -> EMT** (p.245#4) — Consider titrating PEEP (5–15 cmH2O) as needed to improve ventilation.
+- `procedures/Endotracheal_Intubation.md` row 4: **P -> I** (p.247#3) — Orally intubate (Patients ≥ 12 years).
+- `procedures/Endotracheal_Intubation.md` row 10: **P -> I** (p.247#9) — Administer analgesia/sedation as needed.
+- `procedures/Intraosseous_Access.md` row 8: **P -> A** (p.249#5) — Pain Control (Conscious Patient): Administer 2% Lidocaine slow push (Adult: 1mg/kg max 40m
+- `procedures/Medication_Administration.md` row 3: **I -> A** (p.257#3) — IV Administration: Verify patency, administer at prescribed rate (Push=Rapid; Slow Push=30
+- `procedures/Medication_Administration.md` row 4: **I -> A** (p.257#5) — IO Administration: Verify patency, follow IV administration steps.
+- `procedures/Nasogastric_Tube.md` row 1: **P -> I** (p.259#0) — Measure length: Nose to ear to xiphoid process.
+- `procedures/Nasogastric_Tube.md` row 2: **P -> I** (p.259#1) — Lubricate tip with Lidocaine gel and pass through nostril posteriorly along the floor of t
+- `procedures/Nasogastric_Tube.md` row 3: **P -> I** (p.259#2) — Advance gently until measured length reached. Ensure not coiled in oropharynx.
+- `procedures/Nasogastric_Tube.md` row 4: **P -> I** (p.259#3) — Confirm placement: Inject 20cc air and auscultate over epigastrium for bubbles.
+- `procedures/Nasogastric_Tube.md` row 5: **P -> I** (p.259#4) — Secure to nose and attach to low/medium suction.
+- `procedures/Nasogastric_Tube.md` row 6: **P -> I** (p.259#5) — Document indication, insertion depth, and output volume.
+- `procedures/Neonatal_Resuscitation.md` row 2: **EMT -> EMR** (p.261#5) — If apnea/gasping/HR <100: BVM with 21% O₂ for 30s, then 100% O₂. Rate: 40-60/min.
+- `procedures/Neonatal_Resuscitation.md` row 4: **EMT -> EMR** (p.261#9) — If HR <60/min or pulseless: Begin compressions (3:1 ratio, 30 breaths/min).
 - `protocols/administrative/01_STEMI_Field_Triage_PROC.md` row 7: **EMT -> MC** (p.107#9) — Serial ECGs For atypical/indeterminate ECGs with high suspicion, transmit ECG, contact Med
 
 ## OPEN OWNER QUESTIONS
@@ -1323,7 +1439,7 @@ decision before the page is treated as final.
   PENDING_OMD — row-level above. This is NOT the whole-page case: the rest of the
   Stroke page is PEMS-cited.
 - **Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.** The
-  owner was asked and did not rule, so the other 37 OWNER_REQUIRED rows keep their
+  owner was asked and did not rule, so the other 41 OWNER_REQUIRED rows keep their
   level + ⚑ flag exactly as they were. Do not convert them without a ruling.
 - **Respiratory pages — the OWNER_REQUIRED rows that remain after the cross-page
   pass.** PEMS 2024 prints one respiratory protocol (p.123-124) and one
@@ -1456,7 +1572,11 @@ decision before the page is treated as final.
   touching. The check this batch enforces and reports instead: **zero level
   matrices remain on `sc-wrap` anywhere under docs/** — i.e. no table whose header
   is `| # | Action / Intervention | EMR | EMT | A | I | P |` still sits inside an
-  `sc-wrap`. That is the defect the criterion was aimed at, and it is now 0.
+  `sc-wrap`. At Batch 6 that count was not 0: 13 `docs/procedures/` pages still
+  carried the matrix, outside every batch's scope and only REPORTED. Batch 7
+  converted those 13, so the count is 0 now and `--check` gates every one of them;
+  the only page left outside the gate is the front-matter legend that defines the
+  level columns and is correct as it stands.
 - **Batch 6 — `rows_mc_required` = 8 is correct; the two "bracketed" Batch 5 rows
   are a DIFFERENT bracket.** The 8 are page-cell brackets (`[X]` in the
   pre-conversion site page) carrying the `+MC` marker. Pain Control rows 6-7 carry
@@ -1473,13 +1593,45 @@ decision before the page is treated as final.
   the move is listed under *Level moved by the source*. Its 11 row numbers are
   unchanged, so the 34 inbound references from other pages (none of which point at
   a row number or anchor) cannot break.
+- **Batch 7 — the 13 `docs/procedures/` pages are bound to the PEMS 2024
+  PROCEDURES section.** The card listed p.231, 235, 239, 241, 243, 245, 247, 249,
+  263, 269, 273 as the available rows; `pems_table.json` actually carries the whole
+  procedure section (p.231-275), and the page -> PEMS page binding was derived from
+  it (each page's `pems_pages` in `exceptions.yaml`, title-matched, plus the row
+  citations in `row-bindings.yaml`): CPAP p.245, Capnography p.241, Chest
+  Decompression p.243, Endotracheal Intubation p.247, Intraosseous p.249, Medication
+  Administration p.257-258, Nasogastric Tube p.259, Neonatal Resuscitation p.261,
+  Spinal Motion Restriction p.267, Surgical Airway p.269, Taser Barb Removal p.271,
+  Tourniquet p.273, Transcutaneous Pacing p.275. `Medical_Devices_Pumps.md`
+  (2-column Device | Action) and `Vaccination.md` (prose list, no table) carry no
+  level matrix and were left byte-identical.
+- **Batch 7 — 14 rows now print a LOWER level than the page published.** The rule is
+  "chip = the level PEMS prints", so the chip follows the source; these are the rows
+  where that widens the skill beyond what the page granted. Owner should confirm each
+  ladder: CPAP r6 `P -> EMT` (PEEP titration); Endotracheal Intubation r4 and r10
+  `P -> I` (adult oral intubation, analgesia/sedation: PEMS prints both inside
+  p.247#3 and p.247#9 at badge I); Intraosseous r8 `P -> A` (IO lidocaine); Medication
+  Administration r3 and r4 `I -> A` (IV and IO administration, p.257#3/#5 badge A);
+  Nasogastric Tube r1-r6 `P -> I` (the whole procedure is badge I on p.259); Neonatal
+  Resuscitation r2 and r4 `EMT -> EMR` (BVM and chest compressions, p.261#5/#9 badge
+  EMR). No row moved *up*, and no row was left with a cumulative dot grid.
+- **Batch 7 — 4 rows are OWNER_REQUIRED bundles** (ETT r2, ETT r6, Neonatal r3,
+  Neonatal r5): each prints two actions that PEMS prints on two rows at two different
+  levels, so no single chip can carry the row without over- or under-granting one
+  half. Each keeps the level the page published and states the two source rows in
+  `row-bindings.yaml`.
+- **Batch 7 — CPAP units disagree with the source, and the action text was not
+  edited.** The page reads PEEP "5 cmH2O" (r3) and "5-15 cmH2O" (r6); PEMS p.245#1
+  prints "5 mmHg" and p.245#4 extracts as "titratingPEEP9%-15mmHg)". Reconciliation
+  (mmHg vs cmH2O, and 5-15 vs 9%-15) is a clinical-text decision outside this
+  conversion, so only the chip was bound; owner to reconcile the page wording.
 - **Batch 3 — 3 row(s) lost a Medical-Control requirement the page printed.** Each is now chipped at the level PEMS prints:
   `03_Airway_Inhalation_Irritants_PROC.md` row 8 was `MC`, now `A` (p.153#4).
   `03_Respiratory_Distress_PROC.md` row 6 was `MC`, now `EMT` (p.123#3).
   `03_Respiratory_Distress_PROC.md` row 10 was `MC`, now `A` (p.113#4).
   The rule is "chip = the level PEMS prints", and the source grants these actions on standing order, but the owner should confirm that dropping a page-printed MC requirement is intended.
   Row(s) in the converted set that moved *to* MC, now matching the source's MC row: `04_Chest_Pain_ACS_PROC.md` row 7 `I` -> `MC` (p.107#9); `03_Airway_Inhalation_Irritants_PROC.md` row 12 `I` -> `MC` (p.153#5); `03_Smoke_Inhalation_PROC.md` row 12 `I` -> `MC` (p.153#5); `06_Nausea_Vomiting_PROC.md` row 6 `A` -> `MC` (p.117#5); `01_STEMI_Field_Triage_PROC.md` row 7 `EMT` -> `MC` (p.107#9).
-  Already `MC` on the page and matching the source, so not moved (converted set, whole list): `04_Supraventricular_Tachycardia_PROC.md` row 10 (p.136#7); `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 12 (p.57#8); `04_Bradycardia_PROC.md` row 8 (p.104#13); `04_Cardiac_Arrest_Non_Traumatic_PROC.md` row 13 (p.57#8); `04_Cardiac_Arrest_Traumatic_PROC.md` row 11 (p.61#9); `04_Chest_Pain_ACS_PROC.md` row 13 (p.107#9); `04_Hypertensive_Crisis_PROC.md` row 7 (p.109#5); `04_V_Fib_Pulseless_V_Tach_PROC.md` row 12 (p.64#14); `07_Sepsis_PROC.md` row 6 (p.130#5); `07_OB_Emergencies_PROC.md` row 10 (p.147#4); `07_Hypotension_Shock_Non_Trauma_PROC.md` row 10 (p.114#9); `05_Seizure_PROC.md` row 7 (p.127#6); `03_Pulmonary_Edema_Congestion_PROC.md` row 13 (p.124#13); `09_Burns_Thermal_PROC.md` row 7 (p.88#9); `09_Crush_Syndrome_PROC.md` row 9 (p.91#8); `09_Hemorrhage_Control_PROC.md` row 9 (p.273#7); `09_Trauma_PROC.md` row 13 (p.84#15); `06_Nerve_Agents_PROC.md` row 7 (p.159#6); `02_Behavioral_Patient_Restraint_PROC.md` row 8 (p.72#10); `02_Diving_and_Drowning_Emergencies_PROC.md` row 7 (p.93#6).
+  Already `MC` on the page and matching the source, so not moved (converted set, whole list): `04_Supraventricular_Tachycardia_PROC.md` row 10 (p.136#7); `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 12 (p.57#8); `04_Bradycardia_PROC.md` row 8 (p.104#13); `04_Cardiac_Arrest_Non_Traumatic_PROC.md` row 13 (p.57#8); `04_Cardiac_Arrest_Traumatic_PROC.md` row 11 (p.61#9); `04_Chest_Pain_ACS_PROC.md` row 13 (p.107#9); `04_Hypertensive_Crisis_PROC.md` row 7 (p.109#5); `04_V_Fib_Pulseless_V_Tach_PROC.md` row 12 (p.64#14); `07_Sepsis_PROC.md` row 6 (p.130#5); `07_OB_Emergencies_PROC.md` row 10 (p.147#4); `07_Hypotension_Shock_Non_Trauma_PROC.md` row 10 (p.114#9); `05_Seizure_PROC.md` row 7 (p.127#6); `03_Pulmonary_Edema_Congestion_PROC.md` row 13 (p.124#13); `09_Burns_Thermal_PROC.md` row 7 (p.88#9); `09_Crush_Syndrome_PROC.md` row 9 (p.91#8); `09_Hemorrhage_Control_PROC.md` row 9 (p.273#7); `09_Trauma_PROC.md` row 13 (p.84#15); `06_Nerve_Agents_PROC.md` row 7 (p.159#6); `02_Behavioral_Patient_Restraint_PROC.md` row 8 (p.72#10); `02_Diving_and_Drowning_Emergencies_PROC.md` row 7 (p.93#6); `Surgical_Airway.md` row 5 (p.269#6).
 - **Batch 3 — four rows published no level at all** (Respiratory Arrest r11, r14,
   r15; Smoke Inhalation r8). There was nothing to keep, so each is bound to the row
   that prints the action: p.269#0 (Surgical Airway, already a C2 ruling), p.55#2
@@ -1499,34 +1651,21 @@ new defect. Source of truth: `audit/level-scan/verifier-exceptions.yaml`.
 
 | metric | value |
 |---|---:|
-| converted pages — protocol/procedure chassis | 42 |
+| converted pages — protocol/procedure chassis | 55 |
 | converted pages — administrative policy (POLICY/PENDING) | 14 |
-| action rows — total | 523 |
-| cited to a PEMS protocol row (incl. cross-page) | 377 |
+| action rows — total | 604 |
+| cited to a PEMS protocol row (incl. cross-page) | 454 |
 | cross-page citations | 46 |
 | POLICY (PEMS administrative policy) | 89 |
 | PENDING (no PEMS source: whole page + row-level + administrative) | 19 |
-| OWNER_REQUIRED | 37 |
+| OWNER_REQUIRED | 41 |
 | OWNER_RULED | 1 |
 | +MC markers | 8 |
 
 ### `sc-wrap` — whole `docs/` tree, walked (not a directory list)
 
-76 `sc-wrap` block(s) in 59 file(s). `sc-wrap` is the shared stylesheet wrapper for any wide table, so its presence is not a defect: the defect is a provider-level matrix still inside one. **Provider-level matrices inside `sc-wrap`: 14** — 0 on a page this project has converted (0 expected; `--check` fails on any), the rest on pages outside every batch's scope and reported, not gated.
+63 `sc-wrap` block(s) in 46 file(s). `sc-wrap` is the shared stylesheet wrapper for any wide table, so its presence is not a defect: the defect is a provider-level matrix still inside one. **Provider-level matrices inside `sc-wrap`: 1** — 0 on a page this project has converted (0 expected; `--check` fails on any), the rest on page(s) outside every batch's scope and reported, not gated (since Batch 7 that is only the front-matter legend, which defines the level columns and must stay as it is).
 
 - protocols/front-matter/01 - How to Read the Protocols.md (line 33)
-- procedures/CPAP.md (line 15)
-- procedures/Capnography.md (line 14)
-- procedures/Chest_Decompression.md (line 14)
-- procedures/Endotracheal_Intubation.md (line 16)
-- procedures/Intraosseous_Access.md (line 13)
-- procedures/Medication_Administration.md (line 10)
-- procedures/Nasogastric_Tube.md (line 10)
-- procedures/Neonatal_Resuscitation.md (line 10)
-- procedures/Spinal_Motion_Restriction.md (line 19)
-- procedures/Surgical_Airway.md (line 15)
-- procedures/Taser_Barb_Removal.md (line 13)
-- procedures/Tourniquet_Application.md (line 10)
-- procedures/Transcutaneous_Pacing.md (line 14)
 
-Files still carrying `sc-wrap` (all non-level tables — dose charts, phone lists, SOP grids, GCS and screening tables): `fire-ems-references/index.md`, `fire-ems-references/initial-alarm-company-assignments.md`, `protocols/administrative/01_Communications_PROC.md`, `protocols/administrative/01_STEMI_Field_Triage_PROC.md`, `protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md`, `protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md`, `protocols/front-matter/01 - How to Read the Protocols.md`, `protocols/front-matter/Universal Patient Care.md`, `personnel-policies/index.md`, `pediatric-dosing/calculator.md`, `pediatric-dosing/dosing-tables.md`, `procedures/CPAP.md`, `procedures/Capnography.md`, `procedures/Chest_Decompression.md`, `procedures/Endotracheal_Intubation.md`, `procedures/Intraosseous_Access.md`, `procedures/Medical_Devices_Pumps.md`, `procedures/Medication_Administration.md`, `procedures/Nasogastric_Tube.md`, `procedures/Neonatal_Resuscitation.md`, `procedures/Spinal_Motion_Restriction.md`, `procedures/Surgical_Airway.md`, `procedures/Taser_Barb_Removal.md`, `procedures/Tourniquet_Application.md`, `procedures/Transcutaneous_Pacing.md`, `pharmacology/Adenosine.md`, `pharmacology/Albuterol.md`, `pharmacology/Amiodarone.md`, `pharmacology/Aspirin.md`, `pharmacology/Atropine Sulfate.md`, `pharmacology/Calcium Chloride.md`, `pharmacology/Dextrose.md`, `pharmacology/Diphenhydramine.md`, `pharmacology/Epinephrine.md`, `pharmacology/Etomidate.md`, `pharmacology/Fentanyl.md`, `pharmacology/Furosemide.md`, `pharmacology/Glucagon.md`, `pharmacology/Haloperidol.md`, `pharmacology/Hydroxocobalamin.md`, `pharmacology/Ipratropium Bromide.md`, `pharmacology/Ketamine.md`, `pharmacology/Ketorolac.md`, `pharmacology/Lidocaine.md`, `pharmacology/Magnesium Sulfate.md`, `pharmacology/Methylprednisolone.md`, `pharmacology/Midazolam.md`, `pharmacology/Morphine Sulfate.md`, `pharmacology/Naloxone.md`, `pharmacology/Nitroglycerin.md`, `pharmacology/Norepinephrine.md`, `pharmacology/Ondansetron.md`, `pharmacology/Rocuronium.md`, `pharmacology/Sodium Bicarbonate.md`, `pharmacology/Succinylcholine.md`, `pharmacology/Vecuronium.md`, `pharmacology/Ziprasidone.md`, `sops/emergency-operations/EO-600-First-to-Arrive-Duties.md`, `sops/emergency-operations/EO-600a-FORCES-Mnemonic.md`.
+Files still carrying `sc-wrap` (all non-level tables — dose charts, phone lists, SOP grids, GCS and screening tables): `fire-ems-references/index.md`, `fire-ems-references/initial-alarm-company-assignments.md`, `protocols/administrative/01_Communications_PROC.md`, `protocols/administrative/01_STEMI_Field_Triage_PROC.md`, `protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md`, `protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md`, `protocols/front-matter/01 - How to Read the Protocols.md`, `protocols/front-matter/Universal Patient Care.md`, `personnel-policies/index.md`, `pediatric-dosing/calculator.md`, `pediatric-dosing/dosing-tables.md`, `procedures/Medical_Devices_Pumps.md`, `pharmacology/Adenosine.md`, `pharmacology/Albuterol.md`, `pharmacology/Amiodarone.md`, `pharmacology/Aspirin.md`, `pharmacology/Atropine Sulfate.md`, `pharmacology/Calcium Chloride.md`, `pharmacology/Dextrose.md`, `pharmacology/Diphenhydramine.md`, `pharmacology/Epinephrine.md`, `pharmacology/Etomidate.md`, `pharmacology/Fentanyl.md`, `pharmacology/Furosemide.md`, `pharmacology/Glucagon.md`, `pharmacology/Haloperidol.md`, `pharmacology/Hydroxocobalamin.md`, `pharmacology/Ipratropium Bromide.md`, `pharmacology/Ketamine.md`, `pharmacology/Ketorolac.md`, `pharmacology/Lidocaine.md`, `pharmacology/Magnesium Sulfate.md`, `pharmacology/Methylprednisolone.md`, `pharmacology/Midazolam.md`, `pharmacology/Morphine Sulfate.md`, `pharmacology/Naloxone.md`, `pharmacology/Nitroglycerin.md`, `pharmacology/Norepinephrine.md`, `pharmacology/Ondansetron.md`, `pharmacology/Rocuronium.md`, `pharmacology/Sodium Bicarbonate.md`, `pharmacology/Succinylcholine.md`, `pharmacology/Vecuronium.md`, `pharmacology/Ziprasidone.md`, `sops/emergency-operations/EO-600-First-to-Arrive-Duties.md`, `sops/emergency-operations/EO-600a-FORCES-Mnemonic.md`.

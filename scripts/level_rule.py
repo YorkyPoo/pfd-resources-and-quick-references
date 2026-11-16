@@ -116,6 +116,26 @@ TARGETS = [
     # with the ordinary chip chassis; its second `sc-wrap` block is a 3-column
     # HPI / Signs / Differential table with no action rows and stays untouched.
     'protocols/front-matter/Universal Patient Care.md',
+    # Batch 7 — docs/procedures/. Derived from the tree: `grep -l 'class="sc-wrap"'
+    # docs/procedures/*.md` returns 15 files, of which 13 carry the 7-column
+    # provider-level matrix; `Medical_Devices_Pumps.md` is a 2-column
+    # Device | Action table (no level column) and `Vaccination.md` has no table at
+    # all, so neither is a target. Nothing hand-picked: the 13 are the pages whose
+    # header is the level matrix. PEMS 2024 prints each of them as a PROCEDURE in
+    # its p.231-275 section, with one badge per row.
+    'procedures/CPAP.md',
+    'procedures/Capnography.md',
+    'procedures/Chest_Decompression.md',
+    'procedures/Endotracheal_Intubation.md',
+    'procedures/Intraosseous_Access.md',
+    'procedures/Medication_Administration.md',
+    'procedures/Nasogastric_Tube.md',
+    'procedures/Neonatal_Resuscitation.md',
+    'procedures/Spinal_Motion_Restriction.md',
+    'procedures/Surgical_Airway.md',
+    'procedures/Taser_Barb_Removal.md',
+    'procedures/Tourniquet_Application.md',
+    'procedures/Transcutaneous_Pacing.md',
 ]
 
 # Pages sourced from OUTSIDE PEMS 2024. PEMS prints no equivalent protocol, so no row on
@@ -1961,7 +1981,11 @@ def emit_md(ledger):
               '  touching. The check this batch enforces and reports instead: **zero level',
               '  matrices remain on `sc-wrap` anywhere under docs/** — i.e. no table whose header',
               '  is `| # | Action / Intervention | EMR | EMT | A | I | P |` still sits inside an',
-              '  `sc-wrap`. That is the defect the criterion was aimed at, and it is now 0.',
+              '  `sc-wrap`. At Batch 6 that count was not 0: 13 `docs/procedures/` pages still',
+              '  carried the matrix, outside every batch\'s scope and only REPORTED. Batch 7',
+              '  converted those 13, so the count is 0 now and `--check` gates every one of them;',
+              '  the only page left outside the gate is the front-matter legend that defines the',
+              '  level columns and is correct as it stands.',
               '- **Batch 6 — `rows_mc_required` = 8 is correct; the two "bracketed" Batch 5 rows',
               '  are a DIFFERENT bracket.** The 8 are page-cell brackets (`[X]` in the',
               '  pre-conversion site page) carrying the `+MC` marker. Pain Control rows 6-7 carry',
@@ -1977,7 +2001,39 @@ def emit_md(ledger):
               '  Control"; PEMS p.49#5 badges the same sentence EMR. Chip follows the source, and',
               '  the move is listed under *Level moved by the source*. Its 11 row numbers are',
               '  unchanged, so the 34 inbound references from other pages (none of which point at',
-              '  a row number or anchor) cannot break.']
+              '  a row number or anchor) cannot break.',
+              '- **Batch 7 — the 13 `docs/procedures/` pages are bound to the PEMS 2024',
+              '  PROCEDURES section.** The card listed p.231, 235, 239, 241, 243, 245, 247, 249,',
+              '  263, 269, 273 as the available rows; `pems_table.json` actually carries the whole',
+              '  procedure section (p.231-275), and the page -> PEMS page binding was derived from',
+              '  it (each page\'s `pems_pages` in `exceptions.yaml`, title-matched, plus the row',
+              '  citations in `row-bindings.yaml`): CPAP p.245, Capnography p.241, Chest',
+              '  Decompression p.243, Endotracheal Intubation p.247, Intraosseous p.249, Medication',
+              '  Administration p.257-258, Nasogastric Tube p.259, Neonatal Resuscitation p.261,',
+              '  Spinal Motion Restriction p.267, Surgical Airway p.269, Taser Barb Removal p.271,',
+              '  Tourniquet p.273, Transcutaneous Pacing p.275. `Medical_Devices_Pumps.md`',
+              '  (2-column Device | Action) and `Vaccination.md` (prose list, no table) carry no',
+              '  level matrix and were left byte-identical.',
+              '- **Batch 7 — 14 rows now print a LOWER level than the page published.** The rule is',
+              '  "chip = the level PEMS prints", so the chip follows the source; these are the rows',
+              '  where that widens the skill beyond what the page granted. Owner should confirm each',
+              '  ladder: CPAP r6 `P -> EMT` (PEEP titration); Endotracheal Intubation r4 and r10',
+              '  `P -> I` (adult oral intubation, analgesia/sedation: PEMS prints both inside',
+              '  p.247#3 and p.247#9 at badge I); Intraosseous r8 `P -> A` (IO lidocaine); Medication',
+              '  Administration r3 and r4 `I -> A` (IV and IO administration, p.257#3/#5 badge A);',
+              '  Nasogastric Tube r1-r6 `P -> I` (the whole procedure is badge I on p.259); Neonatal',
+              '  Resuscitation r2 and r4 `EMT -> EMR` (BVM and chest compressions, p.261#5/#9 badge',
+              '  EMR). No row moved *up*, and no row was left with a cumulative dot grid.',
+              '- **Batch 7 — 4 rows are OWNER_REQUIRED bundles** (ETT r2, ETT r6, Neonatal r3,',
+              '  Neonatal r5): each prints two actions that PEMS prints on two rows at two different',
+              '  levels, so no single chip can carry the row without over- or under-granting one',
+              '  half. Each keeps the level the page published and states the two source rows in',
+              '  `row-bindings.yaml`.',
+              '- **Batch 7 — CPAP units disagree with the source, and the action text was not',
+              '  edited.** The page reads PEEP "5 cmH2O" (r3) and "5-15 cmH2O" (r6); PEMS p.245#1',
+              '  prints "5 mmHg" and p.245#4 extracts as "titratingPEEP9%-15mmHg)". Reconciliation',
+              '  (mmHg vs cmH2O, and 5-15 vs 9%-15) is a clinical-text decision outside this',
+              '  conversion, so only the chip was bound; owner to reconcile the page wording.']
 
     # Derived from `changed` so the prose can never disagree with the table above:
     # an MC -> other move and an other -> MC move are counted and named from data.
@@ -2058,7 +2114,9 @@ def emit_md(ledger):
                         if m.split(' (line')[0]
                         in set(TARGETS + PENDING_TARGETS + policy_targets())))
               + ' on a page this project has converted (0 expected; `--check` fails on any), '
-              'the rest on pages outside every batch\'s scope and reported, not gated.', '']
+              "the rest on page(s) outside every batch's scope and reported, not gated "
+              "(since Batch 7 that is only the front-matter legend, which defines the level "
+              "columns and must stay as it is).", '']
     for m in sw_matrices:
         lines.append(f'- {m}')
     lines.append('')
@@ -2545,10 +2603,12 @@ def check():
     if mc.returncode != 0:
         fails += ['mc_wording: ' + l.strip() for l in mc.stdout.splitlines() if l.strip()]
 
-    # no provider-level matrix may survive inside an `sc-wrap` block anywhere under docs/
-    # on a page this project has converted. Pages outside every conversion batch's scope
-    # (the procedures/ matrix, and the front-matter legend that DEFINES the level columns)
-    # are counted and reported, never silently passed off as clean.
+    # no provider-level matrix may survive inside an `sc-wrap` block anywhere under
+    # docs/ on a page this project has converted. Every page that carries one is in
+    # scope now: the protocol batches, the administrative policies, and (Batch 7) the
+    # 13 docs/procedures/ pages. The only page left is the front-matter legend, which
+    # DEFINES the level columns and must stay exactly as it is — it is counted and
+    # reported, never silently passed off as clean.
     sw_files, sw_blocks, sw_matrices = sc_wrap_audit()
     in_scope = set(TARGETS + PENDING_TARGETS + policy_targets())
     sw_out_of_scope = []
@@ -2651,8 +2711,8 @@ def check():
           f"page this project has converted.")
     print(f"REPORTED, NOT GATED — "
           f"{len(summary['sc_wrap_level_matrices_out_of_scope'])} provider-level matrix/matrices "
-          f"inside sc-wrap remain on pages outside every conversion batch's scope "
-          f"(procedures/ + the front-matter legend):")
+          f"inside sc-wrap remain on a page outside every conversion batch's scope "
+          f"(the front-matter legend, which DEFINES the level columns and must not change):")
     for m in summary['sc_wrap_level_matrices_out_of_scope']:
         print('   -', m)
     return 0

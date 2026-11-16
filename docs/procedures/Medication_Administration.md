@@ -5,16 +5,16 @@
 Standardized procedures for the safe and accurate administration of medications across IV, IO, IN, and IM routes.
 
 ### Procedure
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| 1 | Prepare medication. Refer to protocol-specific indications and pharmacology section. |  | • | • | • | • |
-| 2 | **Cross-check:** Verify correct medication, patient, route, dose, and expiration with another provider. |  | • | • | • | • |
-| 3 | **IV Administration:** Verify patency, administer at prescribed rate (Push=Rapid; Slow Push=30-60s; Infusion=per rate). |  |  |  | • | • |
-| 4 | **IO Administration:** Verify patency, follow IV administration steps. |  |  |  | • | • |
-| 5 | **IN Administration:** Administer ½ dose per naris using MAD. Max 1mL/naris. |  | • | • | • | • |
-| 6 | **IM Administration:** Clean site, insert at 90° angle, administer, dispose in sharps. |  | • | • | • | • |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emt">EMT</span> | Prepare medication. Refer to protocol-specific indications and pharmacology section. |
+| 2 | <span class="lvl lvl-emt">EMT</span> | **Cross-check:** Verify correct medication, patient, route, dose, and expiration with another provider. |
+| 3 | <span class="lvl lvl-a">A</span> | **IV Administration:** Verify patency, administer at prescribed rate (Push=Rapid; Slow Push=30-60s; Infusion=per rate). |
+| 4 | <span class="lvl lvl-a">A</span> | **IO Administration:** Verify patency, follow IV administration steps. |
+| 5 | <span class="lvl lvl-emt">EMT</span> | **IN Administration:** Administer ½ dose per naris using MAD. Max 1mL/naris. |
+| 6 | <span class="lvl lvl-emt">EMT</span> | **IM Administration:** Clean site, insert at 90° angle, administer, dispose in sharps. |
 
 </div>
 

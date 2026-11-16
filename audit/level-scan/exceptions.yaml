@@ -144,6 +144,52 @@ pages:
     reason: "one site page covers three regional protocols: Childbirth (p.141), Eclampsia (p.147), Pregnancy Related Emergencies (p.149)"
 
   # ---------------------------------------------------------------------
+  # Batch 7 — docs/procedures/. PEMS 2024 prints these as PROCEDURES in its
+  # p.231-275 section, each with a level badge per row; the site page is the
+  # same procedure. The card's page->PEMS mapping was re-derived from
+  # pems_table.json (pems_docs titles + pages), not typed from the card.
+  # ---------------------------------------------------------------------
+  - file: procedures/CPAP.md
+    pems_pages: [245]
+    reason: "regional 'CPAP/BiPAP/PEEP' procedure, p.245"
+  - file: procedures/Capnography.md
+    pems_pages: [241]
+    reason: "regional 'Capnography' procedure, p.241"
+  - file: procedures/Chest_Decompression.md
+    pems_pages: [243]
+    reason: "regional 'Chest Decompression' procedure, p.243"
+  - file: procedures/Endotracheal_Intubation.md
+    pems_pages: [247]
+    reason: "regional 'Endotracheal Intubation' procedure, p.247"
+  - file: procedures/Intraosseous_Access.md
+    pems_pages: [249]
+    reason: "regional 'Intraosseous (IO) Access' procedure, p.249"
+  - file: procedures/Medication_Administration.md
+    pems_pages: [257, 258]
+    reason: "regional 'Medication Administration' procedure, which runs across p.257-258 (the IM route rows continue on p.258)"
+  - file: procedures/Nasogastric_Tube.md
+    pems_pages: [259]
+    reason: "regional 'Nasogastric Tube Insertion' procedure, p.259"
+  - file: procedures/Neonatal_Resuscitation.md
+    pems_pages: [261]
+    reason: "regional 'Neonatal Resuscitation' procedure, p.261"
+  - file: procedures/Spinal_Motion_Restriction.md
+    pems_pages: [267]
+    reason: "regional 'Spinal Motion Restriction' procedure, p.267"
+  - file: procedures/Surgical_Airway.md
+    pems_pages: [269]
+    reason: "regional 'Surgical Airway' procedure, p.269"
+  - file: procedures/Taser_Barb_Removal.md
+    pems_pages: [271]
+    reason: "regional 'Taser Barb Removal' procedure, p.271"
+  - file: procedures/Tourniquet_Application.md
+    pems_pages: [273]
+    reason: "regional 'Tourniquet Application' procedure, p.273"
+  - file: procedures/Transcutaneous_Pacing.md
+    pems_pages: [275]
+    reason: "regional 'Transcutaneous Pacing' procedure, p.275"
+
+  # ---------------------------------------------------------------------
   # Row-level declarations
   # ---------------------------------------------------------------------
   - file: protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md

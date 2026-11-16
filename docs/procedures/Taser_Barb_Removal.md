@@ -8,16 +8,16 @@ Removal of Taser barbs from patients requiring no other treatment and who are re
 - Barb imbedded in skin of patient refusing transport, requiring no other treatment.
 
 ### Procedure
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Coordinate with law enforcement (scene/patient safe). |  | • | • | • | • |
-| 2 | Ensure Taser cartridge removed/wires cut. |  | • | • | • | • |
-| 3 | Assess for injuries (burns, electrocution, trauma). |  | • | • | • | • |
-| 4 | **Leave in place and transport if in:** Eye, face, neck, breast, axilla, genitals, hands, or feet. |  | • | • | • | • |
-| 5 | Hold skin taut. Grasp electrode shaft with hemostat/forceps. Pull straight out with quick motion. |  | • | • | • | • |
-| 6 | Dispose in sharps container, provide wound care. |  | • | • | • | • |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emt">EMT</span> | Coordinate with law enforcement (scene/patient safe). |
+| 2 | <span class="lvl lvl-emt">EMT</span> | Ensure Taser cartridge removed/wires cut. |
+| 3 | <span class="lvl lvl-emt">EMT</span> | Assess for injuries (burns, electrocution, trauma). |
+| 4 | <span class="lvl lvl-emt">EMT</span> | **Leave in place and transport if in:** Eye, face, neck, breast, axilla, genitals, hands, or feet. |
+| 5 | <span class="lvl lvl-emt">EMT</span> | Hold skin taut. Grasp electrode shaft with hemostat/forceps. Pull straight out with quick motion. |
+| 6 | <span class="lvl lvl-emt">EMT</span> | Dispose in sharps container, provide wound care. |
 
 </div>
 

@@ -9,17 +9,17 @@ Needle decompression of the chest is a life-saving intervention for tension pneu
 - **Bilateral needle decompression:** Cardiac arrest with evidence of significant blunt or penetrating thoracoabdominal trauma.
 
 ### Procedure
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| 1 | Administer oxygen at 15 LPM (100% FiO2). |  |  |  | • | • |
-| 2 | Locate 2nd intercostal space in the mid-clavicular line on the side of suspected pneumothorax (Alternate: 4th intercostal space, mid-axillary line). |  |  |  | • | • |
-| 3 | Clean the site. |  |  |  | • | • |
-| 4 | Attach a 10 mL syringe filled with 0.9% Sodium Chloride to a 14-gauge catheter needle (longest available). |  |  |  | • | • |
-| 5 | Aspirate the syringe while advancing over the rib, perpendicular to the skin, into the pleural space until a pop is felt or air/blood/fluid is freely aspirated. **Do not advance needle further.** |  |  |  | • | • |
-| 6 | Advance the catheter over the needle into the pleural space and remove the needle. |  |  |  | • | • |
-| 7 | Reassess the patient, including vitals and respiratory effort/compliance. Consider repeating for continued/recurrent instability. |  |  |  | • | • |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-i">I</span> | Administer oxygen at 15 LPM (100% FiO2). |
+| 2 | <span class="lvl lvl-i">I</span> | Locate 2nd intercostal space in the mid-clavicular line on the side of suspected pneumothorax (Alternate: 4th intercostal space, mid-axillary line). |
+| 3 | <span class="lvl lvl-i">I</span> | Clean the site. |
+| 4 | <span class="lvl lvl-i">I</span> | Attach a 10 mL syringe filled with 0.9% Sodium Chloride to a 14-gauge catheter needle (longest available). |
+| 5 | <span class="lvl lvl-i">I</span> | Aspirate the syringe while advancing over the rib, perpendicular to the skin, into the pleural space until a pop is felt or air/blood/fluid is freely aspirated. **Do not advance needle further.** |
+| 6 | <span class="lvl lvl-i">I</span> | Advance the catheter over the needle into the pleural space and remove the needle. |
+| 7 | <span class="lvl lvl-i">I</span> | Reassess the patient, including vitals and respiratory effort/compliance. Consider repeating for continued/recurrent instability. |
 
 </div>
 
