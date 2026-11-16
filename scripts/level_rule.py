@@ -421,6 +421,23 @@ def load_bindings():
 
     Validated loudly: a binding must name an existing-kind PEMS pointer and may never
     state a level; an owner_required must carry a reason.
+
+    Two newer, also machine-checked fields:
+
+      cross_page: true   this citation reaches off the page's own governing PEMS source
+                         (the owner's 2026-11-16 ruling: an action printed in another
+                         protocol/procedure may be cited there). It requires `evidence`
+                         AND `quoted_row_text`, the verbatim span from the cited row that
+                         is the action. The checker re-reads that span out of
+                         pems_table.json, so a citation cannot be justified by prose that
+                         the source does not print.
+      mc_required: true  the page printed this row's level cell in brackets — that level
+                         performs the action only with Medical Control authorisation. The
+                         page renders the level chip plus a distinct `+MC` marker, and
+                         `--check` fails if that marker is missing or doubled.
+
+    An entry may carry `mc_required` without a citation (a row that stays
+    owner_required) and a citation without `mc_required`.
     """
     import yaml
     if not os.path.exists(BINDINGS_YAML):
@@ -434,17 +451,47 @@ def load_bindings():
             raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} states a '
                              f'level — a binding cites the source, it never sets a level')
         status = rec.get('status')
+        mc = rec.get('mc_required')
+        if mc is not None and not isinstance(mc, bool):
+            raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} has '
+                             f'mc_required={mc!r} — it must be true or false')
+        if mc and not str(rec.get('evidence') or '').strip():
+            raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} declares '
+                             f'mc_required without evidence — say which bracketed page '
+                             f'cell this marker carries')
         if status == 'owner_required':
             if not rec.get('reason'):
                 raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} is '
                                  f'owner_required without a reason')
+            if rec.get('pems_page') is not None:
+                raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} is '
+                                 f'owner_required but names pems_page '
+                                 f'{rec["pems_page"]!r} — a row that cannot be cited may '
+                                 f'not carry a citation')
         elif status not in (None, 'bound'):
             raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} has unknown '
                              f'status {status!r}')
+        elif (mc or str(rec.get('mc_bracket_excluded') or '').strip()) \
+                and rec.get('pems_page') is None:
+            pass  # a marker-only entry: the row keeps whatever citation it already has
         elif rec.get('pems_page') is None or rec.get('pems_ordinal') is None:
             raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} is a binding '
                              f'without pems_page/pems_ordinal')
-        out[(rec['file'], str(rec['row']))] = rec
+        if rec.get('cross_page') not in (None, True, False):
+            raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} has '
+                             f'cross_page={rec.get("cross_page")!r} — it must be true or false')
+        if rec.get('cross_page'):
+            if not str(rec.get('evidence') or '').strip():
+                raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} is a '
+                                 f'cross_page citation without evidence')
+            if not str(rec.get('quoted_row_text') or '').strip():
+                raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} is a '
+                                 f'cross_page citation without quoted_row_text — the cited '
+                                 f"row's own words are the only proof it prints the action")
+        key = (rec['file'], str(rec['row']))
+        if key in out:
+            raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} listed twice')
+        out[key] = rec
     return out
 
 
@@ -573,6 +620,53 @@ def pems_index(table):
     return idx
 
 
+EXCEPTIONS_YAML = os.path.join(AUD, 'exceptions.yaml')
+
+
+def governing_pages(rel, align):
+    """The PEMS page(s) that are this site page's own source.
+
+    Two recorded inputs, no guessing: the page-level `pems_pages` override in
+    audit/level-scan/exceptions.yaml, and every row alignment.json matched to the page's
+    own title/section. A citation outside this set is a *cross-page* citation and must
+    say so (`cross_page: true`) with the cited row's words quoted.
+    """
+    import yaml
+    pages = set()
+    if os.path.exists(EXCEPTIONS_YAML):
+        doc = yaml.safe_load(open(EXCEPTIONS_YAML, encoding='utf-8')) or {}
+        for rec in doc.get('pages') or []:
+            if rec.get('file') == rel:
+                for p in rec.get('pems_pages') or []:
+                    pages.add(int(p))
+    page = next((p for p in align['pages'] if p['site_page'] == rel), None)
+    for r in (page or {}).get('rows', []):
+        if r.get('status') == 'matched' and r.get('pems_page') is not None:
+            pages.add(int(r['pems_page']))
+    if not pages:
+        raise SystemExit(f'{rel}: no governing PEMS page could be derived (exceptions.yaml '
+                         f'pems_pages and alignment.json both empty) — cross-page citation '
+                         f'cannot be judged without it')
+    return pages
+
+
+def norm_quote(text):
+    """Text folded the way the quote check compares it: case, dashes, bullets, markup."""
+    text = (text or '').lower()
+    for a, b in (('\u2013', '-'), ('\u2014', '-'), ('\u2019', "'"), ('\u201c', '"'),
+                 ('\u201d', '"'), ('\u2022', ' '), ('\u2011', '-'), ('\u00a0', ' '), ('*', '')):
+        text = text.replace(a, b)
+    text = re.sub(r'[^a-z0-9%.\- ]+', ' ', text)
+    return re.sub(r'\s+', ' ', text).strip()
+
+
+def quote_in(quote, row):
+    """True when `quote` is a verbatim span of the cited PEMS row's printed text."""
+    return bool(row) and norm_quote(quote) in norm_quote(row.get('verbatim_text'))
+
+
+
+
 def badge_of(row):
     """The single provider badge PEMS prints for this row, and its bracket flag."""
     cols = row.get('columns') or {}
@@ -665,9 +759,14 @@ def resolve(rel, rows, align, adjudicated, pems, bindings=None):
         b = bindings.get((rel, ordinal))
         if b:
             extra['binding'] = b
+            if b.get('mc_required'):
+                extra['mc_required'] = True
+                extra['mc_evidence'] = b.get('evidence')
             if b.get('pems_page') is not None:
                 ptr, basis = (b['pems_page'], b['pems_ordinal']), 'row-bindings:bound'
                 extra['binding_evidence'] = b.get('evidence')
+                extra['cross_page'] = bool(b.get('cross_page'))
+                extra['quoted_row_text'] = b.get('quoted_row_text')
             if b.get('status') == 'owner_required':
                 extra['forced_owner'] = b['reason']
 
@@ -680,8 +779,19 @@ def resolve(rel, rows, align, adjudicated, pems, bindings=None):
 
 
 # ------------------------------------------------------------------- rendering
-def chip(level, bracketed=False, owner=False):
+MC_REQ_MARK = ('<span class="lvl lvl-mc-req" title="this level performs the action only '
+               'with Medical Control authorisation (the page printed this level cell in '
+               'brackets)">+MC</span>')
+
+
+def chip(level, bracketed=False, owner=False, mc_required=False):
     html = f'<span class="lvl lvl-{CHIP_CLASS.get(level, "na")}">{level}</span>'
+    if mc_required:
+        # A second marker, not a second level: the level still grants the skill, the
+        # bracketed page cell said the level needs Medical Control to authorise it. Kept
+        # deliberately distinct from the `MC` chip, which means the action *is* a Medical
+        # Control contact.
+        html += MC_REQ_MARK
     if bracketed:
         html += ('<sup class="lvl-req" title="PEMS 2024 prints this badge in brackets: agency '
                  'training documentation and Medical Control written authorization required">*</sup>')
@@ -698,7 +808,7 @@ def render_block(rows, note=None, banner=None):
     out += [DIV_OPEN, '', NEW_HEADER, '|:---:|---|---|']
     for r in rows:
         cell = r.get('level_cell') or chip(r['level'], r.get('bracketed', False),
-                                           r.get('owner', False))
+                                           r.get('owner', False), r.get('mc_required', False))
         out.append(f"| {r['ordinal']} | {cell} | {r['action']} |")
     out += ['', '</div>']
     if note:
@@ -841,7 +951,9 @@ def plan(rel):
                                 f'marker — cannot place a marker')
             blocks[-1]['rows'].append({'ordinal': row['ordinal'], 'action': new_text,
                                        'level': level, 'bracketed': r['bracketed'],
-                                       'owner': owner})
+                                       'owner': owner,
+                                       'mc_required': bool(r['extra'].get('mc_required'))
+                                       and level not in ('PENDING', 'MC')})
             entry = {
                 'file': rel,
                 'row': int(row['ordinal']),
@@ -859,6 +971,11 @@ def plan(rel):
                 'bracketed': r['bracketed'],
                 'pems_text': (r['pems_row'] or {}).get('verbatim_text'),
                 'binding_evidence': r['extra'].get('binding_evidence'),
+                'quoted_row_text': r['extra'].get('quoted_row_text'),
+                'cross_page': bool(r['extra'].get('cross_page')),
+                'mc_required': bool(r['extra'].get('mc_required'))
+                and level not in ('PENDING', 'MC'),
+                'mc_evidence': r['extra'].get('mc_evidence'),
                 'basis': r['basis'],
                 'before': before,
                 'note': r['extra'].get('adjudication'),
@@ -890,6 +1007,15 @@ def page_note_for(ledger):
                      ': no PEMS 2024 row authorises a provider level for this action. The level '
                      'shown is the one this page already published; it is not verified against '
                      'the source. See <code>audit/level-scan/level-rule-ledger.md</code>.')
+    mc_rows = [str(e['row']) for e in ledger if e.get('mc_required')]
+    if mc_rows:
+        label = ('row ' + mc_rows[0] if len(mc_rows) == 1
+                 else 'rows ' + ', '.join(mc_rows))
+        notes.append('**+MC** — ' + label + ': the level shown may perform this action only '
+                     'with Medical Control authorisation. This page printed that level in '
+                     'brackets; the marker carries that meaning into the single-level layout. '
+                     'It is not a second level and not the same as an <code>MC</code> chip, '
+                     'which marks an action that is itself a Medical Control contact.')
     if any(e['bracketed'] for e in ledger):
         notes.append('* **[ ] badge in PEMS 2024** — the source prints this level in brackets: '
                      'agency post-affiliation training documentation on file, plus the '
@@ -1061,6 +1187,39 @@ def git_show(rev, rel):
         return None
 
 
+# The pre-conversion branch base (`main`). The page-side bracket notation lives only in
+# these revisions, so the bracket rows are re-derived from here rather than trusted from a
+# list typed into the card or into row-bindings.yaml.
+BASE_REV = '768ad68'
+BRACKET_CELL = re.compile(r'^\[(EMR|EMT|A|I|P)\]$')
+
+
+def base_brackets(rel):
+    """{row ordinal: bracketed level} from the page's pre-conversion revision.
+
+    On those pages a level cell reading `[X]` means "X performs this action only with
+    Medical Control authorisation" (owner ruling 2026-11-13). The collapse to one chip
+    deleted that notation, so `--check` re-derives the set and demands each row either
+    carry the `+MC` marker or record why it cannot.
+    """
+    text = git_show(BASE_REV, rel)
+    if not text:
+        return {}
+    out = {}
+    for line in text.split('\n'):
+        s = line.strip()
+        if not s.startswith('|'):
+            continue
+        cells = [c.strip() for c in s.strip('|').split('|')]
+        if len(cells) < 7 or not cells[0].isdigit():
+            continue
+        for i, c in enumerate(cells[2:7]):
+            if BRACKET_CELL.match(c):
+                out[cells[0]] = LV[i]
+                break
+    return out
+
+
 def defect_counts():
     """The three defects named in the owner's rule, measured on the branch base."""
     base = subprocess.run(['git', '-C', ROOT, 'merge-base', 'HEAD', 'level-scan'],
@@ -1101,6 +1260,7 @@ def emit_md(ledger):
              '| basis | meaning |',
              '|---|---|',
              '| `row-bindings:bound` | a row-level citation in `audit/level-scan/row-bindings.yaml`, evidence recorded there |',
+             '| `row-bindings:bound` **×page** | a row-level citation to a PEMS 2024 row on ANOTHER page (owner ruling 2026-11-16); the cited row\'s quoted words are in *Cross-page citations* |',
              '| `alignment:matched` | section+ordinal match in `alignment.json` |',
              '| `adjudicated:*` | a C2 ruling in `adjudicated.json` |',
              '| `alignment:merged_into_site_row` | PEMS merges rows the page splits |',
@@ -1113,14 +1273,103 @@ def emit_md(ledger):
         if len(text) > 150:
             text = text[:147] + '…'
         pems = f"p.{e['pems_page']}#{e['pems_ordinal']}" if e['pems_page'] else '—'
+        if e.get('cross_page'):
+            pems += ' **×page**'
+        if e.get('mc_required'):
+            pems += ' +MC'
         f = e['file'].split('/')[-1]
         lines.append(f"| `{f}` | {e['row']} | {e['level_published']} | {pems} | {text} | "
                      f"{e['basis'] or '—'} | {e['status']} |")
+    # ---------------------------------------------------------------- cross-page citations
+    cross = [e for e in ledger if e.get('cross_page')]
+    lines += ['', '## Cross-page citations (owner ruling 2026-11-16)', '',
+              'The owner ruled: *"Cite across pages — if PEMS prints the action in a procedure,',
+              'use that procedure\'s level and cite it."* Each row below cites a PEMS 2024 row',
+              'that is **not** on the page\'s own governing source. `cross_page: true` is',
+              'recorded in `row-bindings.yaml` with the citing evidence, and `quoted_row_text` is',
+              'the verbatim span from the cited row that the checker re-reads out of',
+              '`pems_table.json` — a citation whose quote the cited row does not print fails',
+              '`--check`. The chip is the badge that row prints, not the page\'s old level.', '',
+              f'**{len(cross)} row(s).**', '']
+    if not cross:
+        lines.append('None — every PEMS citation is to the page\'s own source.')
+    for e in cross:
+        lines.append(f"- `{e['file']}` row {e['row']}: **{e['level_published']}** from "
+                     f"p.{e['pems_page']}#{e['pems_ordinal']} (was "
+                     f"{e.get('status_before') or e['before']['leftmost']}) — quoted: "
+                     f"\"{e.get('quoted_row_text')}\"")
+        lines.append(f"  - action: {e['action']}")
+        if e.get('binding_evidence'):
+            lines.append(f"  - evidence: {e['binding_evidence']}")
+
+    # ---------------------------------------------------------------- the +MC marker
+    mcrows = [e for e in ledger if e.get('mc_required')]
+    lines += ['', '## `+MC` — Medical-Control-required marker (owner ruling 2026-11-16)', '',
+              'These pages printed the level cell in brackets, meaning *that level performs the',
+              'action only with Medical Control authorisation* (owner ruling 2026-11-13). The',
+              'single-chip layout deleted that meaning; the `+MC` marker carries it back as a',
+              'second marker beside the level chip. It is deliberately not a second level chip,',
+              'and it is styled distinctly from the `MC` chip, which means the action *is* a',
+              'Medical Control contact. Source of truth is `mc_required: true` in',
+              '`row-bindings.yaml` (never a hand-written span); `--check` fails if the marker is',
+              'missing or doubled, and it re-derives the bracketed rows from the',
+              f'pre-conversion pages at `{BASE_REV}` so a bracketed row cannot be silently',
+              'dropped.', '',
+              f'**{len(mcrows)} row(s).**', '']
+    if not mcrows:
+        lines.append('None.')
+    for e in mcrows:
+        lines.append(f"- `{e['file']}` row {e['row']}: **{e['level_published']}** +MC")
+        if e.get('mc_evidence'):
+            lines.append(f"  - evidence: {e['mc_evidence']}")
+    excl = [(k, v) for k, v in load_bindings().items() if v.get('mc_bracket_excluded')]
+    lines += ['', '### Bracketed rows whose bracket cannot be carried', '',
+              'A bracketed page cell whose level is **not** the level the row now publishes',
+              'cannot be carried by `+MC` without changing its meaning. The rows below record, in',
+              '`row-bindings.yaml`, which case each is. Nothing here is silently dropped: `--check`',
+              'fails on a bracketed row that is neither `mc_required` nor `mc_bracket_excluded`.', '']
+    if not excl:
+        lines.append('None.')
+    for (f, row), rec in excl:
+        lines.append(f"- `{f}` row {row}: {rec['mc_bracket_excluded'].strip()}")
+
+    # ------------------------------------------------------- flagged rows before -> after
+    files = []
+    for e in ledger:
+        if e['file'] not in files:
+            files.append(e['file'])
+
+    def _flagged(status):
+        return status in ('OWNER_REQUIRED', 'pending_omd', 'pending_row_omd')
+
+    lines += ['', '## Flagged rows before -> after, per page (derived, not typed)', '',
+              '"Before" is the status the previous `level-rule-ledger.json` recorded for that row',
+              '(`status_before`, captured by the writer); "after" is the status on this page now.',
+              'A row that stopped being flagged is a **cross-page citation** or was closed by a',
+              'recorded decision — the citation that cleared it is listed above and in the table.', '',
+              '| page | flagged before | flagged after | cleared | of which cross-page |',
+              '|---|---:|---:|---:|---:|']
+    for f in files:
+        rows = [e for e in ledger if e['file'] == f]
+        before = sum(1 for e in rows if _flagged(e.get('status_before')))
+        after = sum(1 for e in rows if _flagged(e['status']))
+        cross_n = sum(1 for e in rows if e.get('cross_page')
+                      and _flagged(e.get('status_before')))
+        lines.append(f"| `{f.split('/')[-1]}` | {before} | {after} | {before - after} | "
+                     f"{cross_n} |")
+    tot_before = sum(1 for e in ledger if _flagged(e.get('status_before')))
+    tot_after = sum(1 for e in ledger if _flagged(e['status']))
+    lines += ['', f'**Total: {tot_before} flagged before, {tot_after} after '
+                  f'({tot_before - tot_after} cleared).**', '']
+
     owner = [e for e in ledger if e['status'] == 'OWNER_REQUIRED']
     lines += ['', '## OWNER_REQUIRED', '',
               f'**{len(owner)} row(s).** No PEMS 2024 row authorises a provider level for these',
-              'actions. The chip keeps the level the page already published and carries the flag.',
-              'Nothing here was invented. Each entry records why it could not be cited.', '']
+              'actions, after the cross-page search (a row is only cleared when a PEMS row',
+              'actually prints the action — see *Cross-page citations* above). The chip keeps the',
+              'level the page already published and carries the flag. Nothing here was invented:',
+              'each reason says either that no PEMS row anywhere prints the action, or which row',
+              'prints it and why its badge contradicts the row\'s own words.', '']
     if not owner:
         lines.append('None — no action row is left without a level decision.')
     for e in owner:
@@ -1258,22 +1507,26 @@ def emit_md(ledger):
               '  level the page used to publish (row 8 `I`, row 9 `A`) as provenance only; see',
               '  PENDING_OMD — row-level above. This is NOT the whole-page case: the rest of the',
               '  Stroke page is PEMS-cited.',
-              '- **Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.** The',
-              '  owner was asked and did not rule, so the other 16 OWNER_REQUIRED rows keep their',
+              f'- **Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.** The',
+              '  owner was asked and did not rule, so the other '
+              f'{len(owner)} OWNER_REQUIRED rows keep their',
               '  level + ⚑ flag exactly as they were. Do not convert them without a ruling.',
-              '- **Batch 3 (respiratory) — 48 OWNER_REQUIRED rows.** PEMS 2024 prints one',
-              '  respiratory protocol (p.123-124) and one inhalation-irritant protocol (p.153);',
-              '  the rest of these pages\' content is printed in procedures (p.239, p.241, p.243,',
-              '  p.245, p.247, p.269) and other protocols (Burns p.87-88, Sedation p.55). Each row',
-              '  keeps the level the page published, with its reason in `row-bindings.yaml`.',
-              '- **Batch 3 — site-side `[X]` brackets are not represented by the single-chip',
-              '  chassis.** The owner\'s 2026-11-13 ruling reads a bracketed cell as "that level',
-              '  needs MC authorization". Five respiratory rows carried one and are now a plain',
-              '  level chip + ⚑: Pediatric Stridor r11 `[P]`, Smoke Inhalation r7 `[I]` and r9',
-              '  `[I]`, Upper Airway r13 `[I]` and r14 `[I]`. Two more are cited to a PEMS row that',
-              '  prints the action unbracketed (Smoke r6 and Upper Airway r12 -> p.239#9, badge I).',
-              '  This is the same gap as Batch-1 Chest Pain r14. Owner ruling needed: carry the',
-              '  bracket into the chassis as a second marker, or accept the plain chip.']
+              '- **Respiratory pages — the OWNER_REQUIRED rows that remain after the cross-page',
+              '  pass.** PEMS 2024 prints one respiratory protocol (p.123-124) and one',
+              '  inhalation-irritant protocol (p.153); the rest of these pages\' content is printed',
+              '  in procedures (p.239, p.241, p.243, p.245, p.247, p.269) and other protocols',
+              '  (Burns p.87-88, Sedation p.55). Where such a procedure prints the action it is now',
+              '  cited (see *Cross-page citations*); where it does not, or prints it only across',
+              '  rows of different levels, the row keeps the level the page published with its',
+              '  reason in `row-bindings.yaml`.',
+              '- **Site-side `[X]` brackets — RESOLVED (owner ruling 2026-11-16).** The owner ruled',
+              '  *"Add a second marker so [X] survives in the chassis"*. Bracketed rows now carry',
+              '  the level chip plus a distinct `+MC` marker (see the `+MC` section above);',
+              '  `row-bindings.yaml` is the source of truth and `--check` re-derives the bracketed',
+              '  rows from the pre-conversion pages. A bracketed cell whose level is not the level',
+              '  the row now publishes, or a row that is itself a Medical Control contact, cannot',
+              '  carry `+MC` without changing its meaning — those rows say so explicitly under',
+              '  *Bracketed rows whose bracket cannot be carried* above.']
     # Derived from `changed` so the prose can never disagree with the table above:
     # an MC -> other move and an other -> MC move are counted and named from data.
     lost_mc = [e for e in changed
@@ -1345,6 +1598,7 @@ def check():
     for rel in TARGETS:
         path = os.path.join(DOCS, rel)
         raw = open(path, encoding='utf-8').read()
+        base = base_brackets(rel)
         if NEW_HEADER not in raw:
             fails.append(f'{rel}: no collapsed level table ({NEW_HEADER!r} missing)')
         if re.search(r'^\|\s*#\s*\|\s*Action\s*/\s*Intervention\s*\|\s*EMR\s*\|', raw, re.M):
@@ -1357,12 +1611,72 @@ def check():
         rows = [r for reg in regions for r in reg['rows'] if not is_banner(r)]
         res = resolve(rel, rows, align, adjudicated, pems, bindings)
         owner_rows, ok_rows, ruled_rows = [], [], []
+        mc_rows, cross_rows = [], []
         for row, r in zip(rows, res):
             chips = CHIP_RE.findall(row['level_cell'] or '')
             if len(chips) != 1:
                 fails.append(f'{rel} row {row["ordinal"]}: {len(chips)} level markers, expected 1')
                 continue
             level = chips[0][1]
+            # --- the +MC marker: a bracketed page cell must survive the collapse -------
+            cell = row['level_cell'] or ''
+            n_mc = cell.count('lvl-mc-req')
+            b = bindings.get((rel, str(row['ordinal']))) or {}
+            want_mc = bool(b.get('mc_required')) and bool(base.get(str(row['ordinal'])) == level) \
+                and level not in ('PENDING', 'MC')
+            if want_mc and n_mc != 1:
+                fails.append(f'{rel} row {row["ordinal"]}: the page printed this level cell in '
+                             f'brackets and row-bindings.yaml marks it mc_required, but the '
+                             f'chip carries {n_mc} +MC markers, expected exactly 1')
+            if not want_mc and n_mc:
+                fails.append(f'{rel} row {row["ordinal"]}: chip carries a +MC marker but '
+                             f'row-bindings.yaml does not mark the row mc_required')
+            if n_mc > 1:
+                fails.append(f'{rel} row {row["ordinal"]}: {n_mc} +MC markers, expected 1')
+            if b.get('mc_required') and level == 'MC':
+                fails.append(f'{rel} row {row["ordinal"]}: mc_required on an MC chip — the '
+                             f'action is itself a Medical Control contact, so a +MC marker '
+                             f'would duplicate it; use mc_bracket_excluded')
+            brk = base.get(str(row['ordinal']))
+            if brk and not b.get('mc_required') and not b.get('mc_bracket_excluded'):
+                fails.append(f'{rel} row {row["ordinal"]}: the page printed a bracketed level '
+                             f'cell ({brk}) and the row neither carries mc_required nor says '
+                             f'in row-bindings.yaml why the bracket cannot be carried '
+                             f'(mc_bracket_excluded)')
+            # --- cross-page citation ---------------------------------------------------
+            if b.get('pems_page') is not None:
+                gp = governing_pages(rel, align)
+                is_cross = int(b['pems_page']) not in gp
+                if is_cross and not b.get('cross_page'):
+                    fails.append(f'{rel} row {row["ordinal"]}: cites p.{b["pems_page"]}#'
+                                 f'{b["pems_ordinal"]}, outside this page\'s own source '
+                                 f'{sorted(gp)}, but is not marked cross_page: true')
+                if b.get('cross_page') and not is_cross:
+                    fails.append(f'{rel} row {row["ordinal"]}: marked cross_page: true but '
+                                 f'p.{b["pems_page"]} IS this page\'s own source {sorted(gp)}')
+                if b.get('cross_page'):
+                    q = b.get('quoted_row_text')
+                    src = pems.get((b['pems_page'], b['pems_ordinal']))
+                    if src is None:
+                        fails.append(f'{rel} row {row["ordinal"]}: cites p.{b["pems_page"]}#'
+                                     f'{b["pems_ordinal"]}, which is not in pems_table.json')
+                    elif not quote_in(q, src):
+                        fails.append(f'{rel} row {row["ordinal"]}: quoted_row_text is not a '
+                                     f'verbatim span of the cited row p.{b["pems_page"]}#'
+                                     f'{b["pems_ordinal"]} — the citation does not rest on '
+                                     f'the source\'s own words')
+                    if src is not None and r['badge'] is not None and r['pems_row'] is not None:
+                        # the chip must be the badge the cited row prints
+                        if b['pems_page'] != (r['ptr'] or (None, None))[0]:
+                            fails.append(f'{rel} row {row["ordinal"]}: cross_page binding and '
+                                         f'resolved pointer disagree')
+                    cross_rows.append({'row': row['ordinal'], 'level': level,
+                                       'pems': f'p.{b["pems_page"]}#{b["pems_ordinal"]}',
+                                       'badge': (r['badge'] or None),
+                                       'quoted': b.get('quoted_row_text')})
+            if want_mc:
+                mc_rows.append({'row': row['ordinal'], 'level': level,
+                                'bracket': brk})
             if TEXT_TOKEN.search(row['action']):
                 fails.append(f'{rel} row {row["ordinal"]}: level token left in the action text')
             hits = level_hits(row['action'])
@@ -1485,7 +1799,8 @@ def check():
                             'pems': (f"p.{r['ptr'][0]}#{r['ptr'][1]}" if r['ptr'] else None),
                             'basis': r['basis']})
         report.append({'file': rel, 'rows': len(rows), 'verified': len(ok_rows),
-                       'owner_required': owner_rows, 'owner_ruled': ruled_rows})
+                       'owner_required': owner_rows, 'owner_ruled': ruled_rows,
+                       'mc_required': mc_rows, 'cross_page': cross_rows})
 
     # pages outside PEMS 2024: every row PENDING, and not one PEMS citation claimed
     pending_specs = load_pending()
@@ -1603,6 +1918,14 @@ def check():
         'rows_verified': sum(r['verified'] for r in report),
         'rows_owner_required': sum(len(r['owner_required']) for r in report),
         'rows_owner_ruled': sum(len(r['owner_ruled']) for r in report),
+        'rows_mc_required': sum(len(r.get('mc_required') or []) for r in report),
+        'rows_cross_page': sum(len(r.get('cross_page') or []) for r in report),
+        'cross_page_citations': [{'file': r['file'], 'row': c['row'], 'pems': c['pems'],
+                                  'level': c['level'], 'quoted_row_text': c['quoted']}
+                                 for r in report for c in (r.get('cross_page') or [])],
+        'mc_required_rows': [{'file': r['file'], 'row': c['row'], 'level': c['level'],
+                              'bracket': c['bracket']}
+                             for r in report for c in (r.get('mc_required') or [])],
         'pending_pages': len(PENDING_TARGETS),
         'rows_pending_omd': sum(len(r['pending']) for r in pending_report),
         'pending': pending_report,
@@ -1633,6 +1956,11 @@ def check():
           f"{len(seen_kept)} level word(s) survive in action text as recorded clinical "
           f"qualifiers (audit/level-scan/token-decisions.yaml); every other level token found by "
           f"an independent sweep of the action text is either kept there or gone.")
+    print(f"OK — {summary['rows_mc_required']} row(s) carry the +MC marker (a bracketed page "
+          f"level cell: that level performs the action only with Medical Control authorisation), "
+          f"exactly one marker each.")
+    print(f"OK — {summary['rows_cross_page']} row(s) are cited across pages (cross_page: true), "
+          f"each with the cited row's own words quoted verbatim out of pems_table.json.")
     print(f"OK — {summary['rows_pending_omd']} action rows across "
           f"{summary['pending_pages']} page(s) are chipped PENDING (Pending OMD Authorization) "
           f"because PEMS 2024 publishes no such protocol; 0 of them claim a PEMS citation.")
@@ -1692,12 +2020,30 @@ def main():
     if args.map:
         return 0
     if args.write:
+        # What did the ledger say about each row BEFORE this run? Read the committed one
+        # (`HEAD`), not the working copy a previous --write in this run may have already
+        # overwritten — otherwise the before -> after report lies about its own baseline.
+        prior = {}
+        try:
+            raw = subprocess.run(['git', '-C', ROOT, 'show',
+                                  'HEAD:audit/level-scan/level-rule-ledger.json'],
+                                 capture_output=True, text=True, check=True).stdout
+            prior = {(e['file'], str(e['row'])): e.get('status')
+                     for e in json.loads(raw)['rows']}
+        except (subprocess.CalledProcessError, ValueError, KeyError):
+            try:
+                prior = {(e['file'], str(e['row'])): e.get('status')
+                         for e in load_json('level-rule-ledger.json')['rows']}
+            except (FileNotFoundError, KeyError):
+                prior = {}
         for rel in TARGETS:
             splice(rel)
         for rel in PENDING_TARGETS:
             splice_pending(rel, pending_specs[rel])
             _r, ledger, _p, _l, _g = plan_pending(rel, pending_specs[rel])
             all_ledger += ledger
+        for e in all_ledger:
+            e['status_before'] = prior.get((e['file'], str(e['row'])))
         out = os.path.join(AUD, 'level-rule-ledger.json')
         with open(out, 'w', encoding='utf-8') as fh:
             json.dump({'generated_by': 'scripts/level_rule.py',

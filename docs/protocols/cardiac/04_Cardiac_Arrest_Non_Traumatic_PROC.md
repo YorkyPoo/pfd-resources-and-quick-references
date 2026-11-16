@@ -41,7 +41,7 @@ Cardiac arrest is the cessation of cardiac mechanical activity resulting in the 
 |:---:|---|---|
 | 1 | <span class="lvl lvl-emr">EMR</span> | **Scene Safety / Initial Contact:**<br>• Ensure scene safety and appropriate PPE.<br>• Determine DNR status (refer to Death and Criteria for Withholding Resuscitation protocol).<br>• Patients with valid durable DNR or injuries inconsistent with survival are excluded. |
 | 2 | <span class="lvl lvl-emr">EMR</span> | **Begin High-Quality CPR:**<br>• Push hard and fast at rate **100 – 120 bpm**.<br>• Allow complete chest recoil.<br>• Minimize interruptions in chest compressions.<br>• Change compressors every **2 minutes** or sooner if fatigued. |
-| 3 | <span class="lvl lvl-emt">EMT</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | **Airway Management:**<br>• Apply BVM with high-flow O₂.<br>• Use quantitative **EtCO₂ monitoring** with BVM:<br>  - If EtCO₂ < 10 mmHg, improve compressions<br>  - If sudden increase above 30-40 mmHg, check for ROSC<br>• Give continuous compressions with advanced airway. |
+| 3 | <span class="lvl lvl-emt">EMT</span> | **Airway Management:**<br>• Apply BVM with high-flow O₂.<br>• Use quantitative **EtCO₂ monitoring** with BVM:<br>  - If EtCO₂ < 10 mmHg, improve compressions<br>  - If sudden increase above 30-40 mmHg, check for ROSC<br>• Give continuous compressions with advanced airway. |
 | 4 | <span class="lvl lvl-emt">EMT</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | **AED / Rhythm Assessment:**<br>• Apply AED and assess cardiac rhythm every **2 minutes**.<br>• Identify rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shockable). |
 | 5 | <span class="lvl lvl-emt">EMT</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | **Defibrillation - V-Fib/V-Tach Only:**<br>• **ADULT:** **200 joules** Biphasic / **360 joules** Monophasic, or manufacturer's recommendation<br>• **PEDIATRIC:** **2 joules/kg** initial, **4 joules/kg** subsequent<br>• After each defibrillation, perform **2 minutes of CPR**, then reassess rhythm.<br>• Ensure optimal pad placement; consider adjustment if multiple shocks delivered without rhythm change. |
 | 6 | <span class="lvl lvl-emt">EMT</span> | **Spinal Motion Restriction:**<br>• Consider spinal motion restriction if indicated. |
@@ -56,7 +56,7 @@ Cardiac arrest is the cessation of cardiac mechanical activity resulting in the 
 
 </div>
 
-<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — rows 3, 4, 5: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.</p>
+<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — rows 4, 5: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
 ### Pearls
 1. ⚠ **High-Quality CPR is Essential:** Push hard and fast at rate **100 – 120 bpm**. Allow complete chest recoil. Minimize interruptions. Change compressors every **2 minutes** or sooner if fatigued. Give continuous compressions with advanced airway.

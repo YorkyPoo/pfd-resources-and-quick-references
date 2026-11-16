@@ -629,6 +629,18 @@ details.fc p { margin: .2em 0 .9em; }
 .lvl-i   { background: #a9c8e4; }
 .lvl-p   { background: #8fbf4d; }
 .lvl-mc  { background: #c62828; color: #ffffff; }
+/* +MC — "this level performs the action only with Medical Control authorisation".
+   The site's pre-conversion pages printed that level cell in brackets ([P], [I]...).
+   Deliberately NOT the `MC` chip above: `MC` means the action IS a Medical Control
+   contact (filled red, level column), while +MC qualifies an ordinary level chip and
+   sits under it as a second, outlined marker so the two never read alike. */
+.md-typeset .lv-wrap .lvl-mc-req {
+  display: block; margin: .2em auto 0; background: transparent;
+  border: 1.5px solid #6a1b9a; color: #6a1b9a;
+  border-radius: .28em; font-size: .56rem; font-weight: 800;
+  letter-spacing: .03em; padding: .04em .18em; min-width: 2.8em; }
+[data-md-color-scheme="slate"] .md-typeset .lv-wrap .lvl-mc-req {
+  border-color: #ce93d8; color: #e1bee7; }
 /* PENDING — Pending OMD Authorization. Not a provider level and not a PEMS badge: this
    protocol's source (ODEMSA) is not published in PEMS 2024, so no level can be verified.
    Deliberately dashed and unfilled so it never reads as an EMR/EMT/A/I/P/MC badge. */
