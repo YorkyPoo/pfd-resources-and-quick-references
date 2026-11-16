@@ -67,6 +67,34 @@ def check(cond: bool, msg: str) -> None:
         fails.append(msg)
 
 
+def load_verifier_exceptions() -> dict[tuple[int, int], str]:
+    """Documented badge-bleed leaks: {(page, ordinal): reason}.
+
+    `verifier-exceptions.yaml` is the only place a leak may be tolerated. An entry
+    without a reason (or without page/ordinal) is itself a failure — an exception
+    nobody can explain is not an exception.
+    """
+    path = os.path.join(OUT, "verifier-exceptions.yaml")
+    check(os.path.exists(path), "verifier-exceptions.yaml exists")
+    if not os.path.exists(path):
+        return {}
+    doc = yaml.safe_load(open(path, encoding="utf-8")) or {}
+    entries = doc.get("leaks") or []
+    out: dict[tuple[int, int], str] = {}
+    problems = []
+    for e in entries:
+        page, ordinal, reason = e.get("page"), e.get("ordinal"), (e.get("reason") or "").strip()
+        if not isinstance(page, int) or not isinstance(ordinal, int):
+            problems.append(f"entry without an integer page/ordinal: {e!r}")
+        elif not reason:
+            problems.append(f"p.{page} #{ordinal} has no reason")
+        else:
+            out[(page, ordinal)] = reason
+    check(not problems, "every documented badge-bleed exception carries a page, an "
+                        "ordinal and a reason" + (f" ({'; '.join(problems)})" if problems else ""))
+    return out
+
+
 def levels(cells) -> set[str]:
     """The levels a site row authorises.
 
@@ -410,9 +438,24 @@ def main() -> int:
              and ((r["verbatim_text"].split() and r["verbatim_text"].split()[0]
                    in ("EMR", "EMT", "MC", "A", "I", "P"))
                   or r["verbatim_text"].split()[-1] in ("EMR", "EMT", "MC"))]
-    check(len(leaks) <= 2, f"badge column does not bleed into row text ({len(leaks)} leaks)")
+    # Tolerance is an explicit, documented list — not a count. Every leak the
+    # canonical table carries is named in `verifier-exceptions.yaml` with its
+    # reason; a leak that is NOT listed fails, and a listed leak that has stopped
+    # leaking also fails, so an exception can neither cover a new defect nor go
+    # stale. (The previous form was `len(leaks) <= 2`, a bare count that tolerated
+    # any two leaks; it predates the level-rule conversion, from d21aa3d.)
+    known = load_verifier_exceptions()
+    unexplained = [r for r in leaks if (r["page"], r["ordinal"]) not in known]
+    stale = [k for k in known if k not in {(r["page"], r["ordinal"]) for r in leaks}]
+    check(not unexplained,
+          "badge column does not bleed into row text: every leak is documented "
+          f"({len(leaks)} leak(s), {len(unexplained)} unexplained)")
+    check(not stale,
+          "every documented badge-bleed exception still leaks (no stale exception)")
     for r in leaks:
-        print("        leak:", r["page"], r["ordinal"], "|", r["verbatim_text"][:90])
+        why = known.get((r["page"], r["ordinal"]))
+        print(f"        leak: p.{r['page']} #{r['ordinal']} | {r['verbatim_text'][:80]}"
+              + (f"\n        documented: {why}" if why else "   <-- UNDOCUMENTED"))
     # ordinals restart at every section run, and a heading can recur on a page
     # (p.123 has an empty base section again after "Asthma..."), so runs are what
     # must be contiguous, not (page, heading) groups.

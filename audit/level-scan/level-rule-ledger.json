@@ -22,6 +22,15 @@
  "pending_targets": [
   "protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md"
  ],
+ "verifier_exceptions": [
+  {
+   "page": 81,
+   "ordinal": 3,
+   "section_heading": "Spinal Clearance",
+   "text_excerpt": "EMR palpation/step offs EMR o Absence of spine or neck tenderness with Range of Motion (ROM) \u2022 No significant Mechanism of Injury (MOI) \u2022 Patient is Alert, Awake\u2026",
+   "reason": "Pre-existing layout defect in the canonical table, not in the conversion. The p.81 Spinal Clearance row continues past a page break (PEMS2024_full.txt shows \"...No significant Mechanism of Injury (MOI)   EMR   EMR \u2022 Patient is Alert\u2026\"); the continuation join glued the margin badge column onto the row text, so the badge word appears at the start and in the middle of the text. It changes no badge decision: the row's badge_tokens come from the margin column and are correct (EMR), and no level-rule row cites p.81, so no chip anywhere is derived from this text. Fixing it means re-running the PDF layout extractor (pems_canonical.py) and re-freezing pems_table.json, which is outside the level-rule conversion this branch performs; recorded here so the green verdict is not overstated."
+  }
+ ],
  "rows": [
   {
    "file": "protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md",

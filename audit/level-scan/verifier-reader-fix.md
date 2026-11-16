@@ -96,3 +96,51 @@ disposition ruling is a decision for the owner, not a side effect of a verifier
 fix. Queued as follow-up work: rebuild the C2 scope artifact against the converted
 tree and have the owner re-ratify the disposition histogram.
 
+## Round 2 — the badge-bleed tolerance is now a named exception list, not a count
+
+Review round 1 blocked on `verify_pems_canonical.py`'s bleed check, which read
+`check(len(leaks) <= 2, ...)` — a bare count that tolerated **any two** leaks,
+including a newly introduced one. Provenance first:
+
+```
+$ git log --oneline -S "leaks) <=" -- scripts/verify_pems_canonical.py
+d21aa3d level-scan: canonical PEMS table (57 pages, per-page decision) + structural aligner
+$ git show 908f745:scripts/verify_pems_canonical.py | grep -n "leaks) <="
+377:    check(len(leaks) <= 2, f"badge column does not bleed into row text ({len(leaks)} leaks)")
+$ git show 6115f48:... | grep -n "leaks) <="   # same line, 377
+$ git show 56705be:... | grep -n "leaks) <="   # same line, 377
+```
+
+So the threshold **predates this branch** and was not introduced by the conversion.
+The tolerance was still wrong — a count cannot say *which* leak is known — so it is
+replaced by an enforced allow-list, which is stricter than the count in both
+directions:
+
+| old | new |
+|---|---|
+| passes with 0, 1 or 2 leaks of any kind | passes only when every leak is named in `verifier-exceptions.yaml` **and** every named entry still leaks |
+| a new leak silently rides along under the count | a leak that is not listed fails (`N unexplained`) |
+| an entry could rot unnoticed | a listed leak that has stopped leaking fails (`stale exception`) |
+| an exception with no reason is expressible | an entry without page/ordinal/reason fails |
+
+The one real leak is **p.81 #3** (Spinal Clearance): the row continues past a page
+break and the continuation join glued the margin badge column onto the text
+(`PEMS2024_full.txt`: `...Mechanism of Injury (MOI)   EMR   EMR • Patient is Alert…`).
+It changes no decision — the row's `badge_tokens` come from the margin column and are
+correct, and **no level-rule row cites p.81** — so it is documented, with that
+evidence, in `audit/level-scan/verifier-exceptions.yaml` and rendered into
+`level-rule-ledger.md` under "Verifier exceptions (known, documented, enforced)".
+Fixing it means re-running the PDF layout extractor and re-freezing `pems_table.json`,
+which is outside this branch.
+
+Planted-defect proof of the new form (each plant applied, verifier run, files
+restored byte-identically, then re-run):
+
+| plant | exit | failing invariant |
+|---|---|---|
+| exception with `reason: ''` | **1** | `p.81 #3 has no reason` + `1 leak(s), 1 unexplained` |
+| a new undocumented leak (synthetic p.81 #4 starting `EMT `) | **1** | `2 leak(s), 1 unexplained` |
+| exception naming a row that does not leak (p.82 #0) | **1** | `every documented badge-bleed exception still leaks (no stale exception)` |
+| restored tree | **0** | `1 leak(s), 0 unexplained` — `all invariants hold` |
+
+

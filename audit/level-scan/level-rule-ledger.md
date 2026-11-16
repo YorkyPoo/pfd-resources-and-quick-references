@@ -386,3 +386,12 @@ decision before the page is treated as final.
 - **Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.** The
   owner was asked and did not rule, so the other 16 OWNER_REQUIRED rows keep their
   level + ⚑ flag exactly as they were. Do not convert them without a ruling.
+
+## Verifier exceptions (known, documented, enforced)
+
+Defects the audit artifacts carry that `scripts/verify_pems_canonical.py` is told
+to expect, one record each. A leak not listed here fails the verifier, and a listed
+entry that stops reproducing also fails it, so this list cannot go stale or hide a
+new defect. Source of truth: `audit/level-scan/verifier-exceptions.yaml`.
+
+- **p.81 #3** (Spinal Clearance): the PEMS margin badge word bleeds into the recorded row text. Pre-existing layout defect in the canonical table, not in the conversion. The p.81 Spinal Clearance row continues past a page break (PEMS2024_full.txt shows "...No significant Mechanism of Injury (MOI)   EMR   EMR • Patient is Alert…"); the continuation join glued the margin badge column onto the row text, so the badge word appears at the start and in the middle of the text. It changes no badge decision: the row's badge_tokens come from the margin column and are correct (EMR), and no level-rule row cites p.81, so no chip anywhere is derived from this text. Fixing it means re-running the PDF layout extractor (pems_canonical.py) and re-freezing pems_table.json, which is outside the level-rule conversion this branch performs; recorded here so the green verdict is not overstated.

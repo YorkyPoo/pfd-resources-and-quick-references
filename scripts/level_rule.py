@@ -329,6 +329,20 @@ def load_token_decisions():
 
 
 # ----------------------------------------------------------------- level source
+def load_verifier_exceptions():
+    """Leaks the canonical PEMS table carries, documented in verifier-exceptions.yaml.
+
+    The verifier (scripts/verify_pems_canonical.py) fails on any leak not listed here
+    and on a listed leak that has stopped leaking, so the list is enforced, not a note.
+    """
+    import yaml
+    path = os.path.join(AUD, 'verifier-exceptions.yaml')
+    if not os.path.exists(path):
+        return []
+    doc = yaml.safe_load(open(path, encoding='utf-8')) or {}
+    return doc.get('leaks') or []
+
+
 def load_json(name):
     with open(os.path.join(AUD, name), encoding='utf-8') as fh:
         return json.load(fh)
@@ -1236,6 +1250,18 @@ def emit_md(ledger):
               '- **Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.** The',
               '  owner was asked and did not rule, so the other 16 OWNER_REQUIRED rows keep their',
               '  level + ⚑ flag exactly as they were. Do not convert them without a ruling.']
+    exc = load_verifier_exceptions()
+    lines += ['', '## Verifier exceptions (known, documented, enforced)', '',
+              'Defects the audit artifacts carry that `scripts/verify_pems_canonical.py` is told',
+              'to expect, one record each. A leak not listed here fails the verifier, and a listed',
+              'entry that stops reproducing also fails it, so this list cannot go stale or hide a',
+              'new defect. Source of truth: `audit/level-scan/verifier-exceptions.yaml`.', '']
+    if not exc:
+        lines.append('None — the verifier tolerates no badge-bleed leak.')
+    for e in exc:
+        lines.append(f"- **p.{e.get('page')} #{e.get('ordinal')}** "
+                     f"({e.get('section_heading') or 'unnamed section'}): the PEMS margin badge "
+                     f"word bleeds into the recorded row text. {e.get('reason')}")
     return '\n'.join(lines) + '\n'
 
 
@@ -1616,6 +1642,7 @@ def main():
                                'prints for that action',
                        'targets': TARGETS,
                        'pending_targets': PENDING_TARGETS,
+                       'verifier_exceptions': load_verifier_exceptions(),
                        'rows': all_ledger}, fh, indent=1)
         print(f'wrote {os.path.relpath(out, ROOT)} ({len(all_ledger)} rows)')
         md = os.path.join(AUD, 'level-rule-ledger.md')

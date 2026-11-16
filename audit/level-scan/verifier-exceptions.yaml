@@ -1,0 +1,30 @@
+# Verifier exceptions — leaks the canonical PEMS table carries, documented one by one
+#
+# `scripts/verify_pems_canonical.py` (check `stage1.pems_table`) requires the PEMS
+# badge/margin column to be absent from the row text. Every leak it finds must be
+# listed here, with a reason; a leak that is NOT listed fails the run, and a listed
+# leak that has stopped leaking also fails the run, so an exception can never go
+# stale or cover a newly introduced defect.
+#
+# The old form of that check was `len(leaks) <= 2` — a bare count that tolerated any
+# two leaks. It predates the level-rule conversion (introduced with the canonical
+# table in d21aa3d, unchanged through 908f745 and 155678e). This file replaces the
+# count with named, evidenced exceptions: the tolerance is now zero unexplained
+# leaks, and this is the complete list of what is explained.
+leaks:
+  - page: 81
+    ordinal: 3
+    section_heading: "Spinal Clearance"
+    text_excerpt: "EMR palpation/step offs EMR o Absence of spine or neck tenderness with Range of Motion (ROM) • No significant Mechanism of Injury (MOI) • Patient is Alert, Awake…"
+    reason: >-
+      Pre-existing layout defect in the canonical table, not in the conversion. The
+      p.81 Spinal Clearance row continues past a page break (PEMS2024_full.txt shows
+      "...No significant Mechanism of Injury (MOI)   EMR   EMR • Patient is Alert…");
+      the continuation join glued the margin badge column onto the row text, so the
+      badge word appears at the start and in the middle of the text. It changes no
+      badge decision: the row's badge_tokens come from the margin column and are
+      correct (EMR), and no level-rule row cites p.81, so no chip anywhere is derived
+      from this text. Fixing it means re-running the PDF layout extractor
+      (pems_canonical.py) and re-freezing pems_table.json, which is outside the
+      level-rule conversion this branch performs; recorded here so the green verdict
+      is not overstated.
