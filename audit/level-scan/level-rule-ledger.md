@@ -455,7 +455,7 @@ the action text.
 | `Chest_Decompression.md` | 6 | I | p.243#3 | Advance the catheter over the needle into the pleural space and remove the needle. | row-bindings:bound | OK |
 | `Chest_Decompression.md` | 7 | I | p.243#4 | Reassess the patient, including vital signs and respiratory effort / compliance. Consider repeating the above steps for continued or recurrent hemo… | row-bindings:bound | OK |
 | `Endotracheal_Intubation.md` | 1 | EMT | p.247#1 | Pre-oxygenate the patient: Provide 100% Oxygen via NRB or BVM for 3 minutes. Monitor SpO2. Refer to Airway Management and Ventilatory Support proto… | row-bindings:bound | OK |
-| `Endotracheal_Intubation.md` | 2 | EMT | p.247#2 | Position the patient: Ear to sternal notch. | row-bindings:bound | OK |
+| `Endotracheal_Intubation.md` | 2 | I | p.247#3 | Maintain in-line cervical spine stabilization if there is concern for trauma. Prepare equipment: o IV/IO access o ET tube of appropriate size + 1 s… | row-bindings:bound | OK |
 | `Endotracheal_Intubation.md` | 3 | I | p.247#3 | Maintain in-line cervical spine stabilization if there is concern for trauma. Prepare equipment: o IV/IO access o ET tube of appropriate size + 1 s… | row-bindings:bound | OK |
 | `Endotracheal_Intubation.md` | 4 | I | p.247#3 | Maintain in-line cervical spine stabilization if there is concern for trauma. Prepare equipment: o IV/IO access o ET tube of appropriate size + 1 s… | row-bindings:bound | OK |
 | `Endotracheal_Intubation.md` | 5 | P | p.247#5 | Orally Intubate. Patients < 12 years old. | row-bindings:bound | OK |
@@ -1285,7 +1285,7 @@ Removed by decision (not restated by the chip, so not left to a later pass):
 
 ## Level moved by the source (page level -> PEMS printed level)
 
-116 row(s). These are rows where the page under- or over-granted the
+117 row(s). These are rows where the page under- or over-granted the
 level the cited PEMS row prints. Review them first.
 
 - `protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 4: **EMT -> EMR** (p.103#1) — Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure.
@@ -1390,6 +1390,7 @@ level the cited PEMS row prints. Review them first.
 - `protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md` row 6: **P -> I** (p.55#3) — OR Post-Intubation Sedation (Midazolam / Fentanyl):  • ADULT: Midazolam (Versed) 2.5 mg IV
 - `protocols/front-matter/Universal Patient Care.md` row 11: **EMT -> EMR** (p.49#5) — Refer to relevant protocols: • If no protocol applies, or for clinical guidance at any tim
 - `procedures/CPAP.md` row 6: **P -> EMT** (p.245#4) — Consider titrating PEEP (5–15 cmH2O) as needed to improve ventilation.
+- `procedures/Endotracheal_Intubation.md` row 2: **EMT -> I** (p.247#3) — Position patient: Ear to sternal notch. Maintain in-line C-spine stabilization if trauma s
 - `procedures/Endotracheal_Intubation.md` row 4: **P -> I** (p.247#3) — Orally intubate (Patients ≥ 12 years).
 - `procedures/Endotracheal_Intubation.md` row 10: **P -> I** (p.247#9) — Administer analgesia/sedation as needed.
 - `procedures/Intraosseous_Access.md` row 8: **P -> A** (p.249#5) — Pain Control (Conscious Patient): Administer 2% Lidocaine slow push (Adult: 1mg/kg max 40m
@@ -1599,35 +1600,29 @@ decision before the page is treated as final.
   Tourniquet p.273, Transcutaneous Pacing p.275. `Medical_Devices_Pumps.md`
   (2-column Device | Action) and `Vaccination.md` (prose list, no table) carry no
   level matrix and were left byte-identical.
-- **Batch 7 — 14 rows now print a LOWER level than the page published.** The rule is
-  "chip = the level PEMS prints", so the chip follows the source; these are the rows
-  where that widens the skill beyond what the page granted. Owner should confirm each
+- **Batch 7 — 15 rows move to the level PEMS prints.** The rule is "chip = the
+  level PEMS prints", so the chip follows the source. 14 of these print a LOWER
+  level (more permissive) than the page published, and owner should confirm each
   ladder: CPAP r6 `P -> EMT` (PEEP titration); Endotracheal Intubation r4 and r10
   `P -> I` (adult oral intubation, analgesia/sedation: PEMS prints both inside
   p.247#3 and p.247#9 at badge I); Intraosseous r8 `P -> A` (IO lidocaine); Medication
   Administration r3 and r4 `I -> A` (IV and IO administration, p.257#3/#5 badge A);
   Nasogastric Tube r1-r6 `P -> I` (the whole procedure is badge I on p.259); Neonatal
   Resuscitation r2 and r4 `EMT -> EMR` (BVM and chest compressions, p.261#5/#9 badge
-  EMR). No row moved *up*, and no row was left with a cumulative dot grid.
-- **Batch 7 — ETT r2, ETT r6 and Neonatal r3 are CITED, not OWNER_REQUIRED.** Each
-  row's published level matches a PEMS row exactly, so each now cites it and takes
-  its badge: p.247#2 (EMT) "Position the patient: Ear to sternal notch.", p.247#7
-  (P) "After two failed attempts, airway must be managed by the most experienced
-  provider available.", p.261#7 (I) "Apply ECG monitoring." Each row also carries a
-  second sentence that PEMS prints at a different level inside the same site row
-  (ETT r2 C-spine sentence p.247#3 badge I; ETT r6 re-oxygenate sentence p.247#6
-  badge I; Neonatal r3 EtCO2 sub-step p.261#6 badge EMT). That split is stated in
-  each row's `evidence` in `row-bindings.yaml` and is not folded into the chip.
-- **Batch 7 — Neonatal r5 is the one OWNER_REQUIRED row left.** The page prints P;
-  its two PEMS rows are IV/IO access at badge A (p.261#10) and epinephrine at badge
-  I (p.261#12). Neither is P and no other p.261 row badges the bundle, so the row
-  keeps the published P and stays flagged.
-- **Batch 7 — ETT r2 needs an owner ruling on its C-spine sentence.** The row is
-  chipped EMT on p.247#2 (positioning), but the sentence it also prints ("Maintain
-  in-line C-spine stabilization if trauma suspected") is badge I at p.247#3. An EMT
-  chip on a row that contains an I-level sentence over-grants that half; owner to
-  confirm whether the C-spine sentence should become its own I-level row (a split)
-  or stays inside the EMT step.
+  EMR). The 15th moves the other way: Endotracheal Intubation r2 `EMT -> I`,
+  because the row bundles a sentence PEMS prints at I (see the bundled-row rule
+  below) and an EMT chip would over-grant it. No row keeps a cumulative dot grid.
+- **Batch 7 — a row that bundles more than one PEMS level takes the HIGHEST level.**
+  One rule for every bundled row: the chip is the highest (most restrictive) of the
+  source levels the row prints, and the evidence names each sub-step level, so a
+  lower-level sentence can never be published under a lower chip. Applied to the
+  three bundled rows: ETT r2 `I` (C-spine sentence p.247#3 badge I, position step
+  p.247#2 badge EMT) — the EMT over-grant the earlier draft only disclosed is now
+  REMOVED from the page, since the chip is the higher level; ETT r6 `P` (escalation
+  p.247#7 badge P, re-oxygenate sentence p.247#6 badge I); Neonatal r3 `I` (ECG
+  p.261#7 badge I, EtCO2 sub-step p.261#6 badge EMT). All three are CITED rows, not
+  OWNER_REQUIRED; each row's `evidence` in `row-bindings.yaml` states the rule and
+  both levels.
 - **Batch 7 — CPAP units disagree with the source, and the action text was not
   edited.** The page reads PEEP "5 cmH2O" (r3) and "5-15 cmH2O" (r6); PEMS p.245#1
   prints "5 mmHg" and p.245#4 extracts as "titratingPEEP9%-15mmHg)". Reconciliation
