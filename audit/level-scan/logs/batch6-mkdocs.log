@@ -1,4 +1,4 @@
-Batch 6 — mkdocs build --strict on c79862c
+Batch 6 — mkdocs build --strict on d1a49fc
 
 [33m │  [1mMaterial for MkDocs reaches end of life on May 5, 2027.[0m
 [33m │[0m  Critical fixes and security updates continue until that date.
@@ -57,7 +57,7 @@ INFO    -  The following pages exist in the docs directory, but are not included
   - personnel-policies/policies/42-resignations-and-separations.md
   - personnel-policies/policies/43-retiree-health-insurance-coverage.md
   - protocols/front-matter/00 - AI Formatting Guidelines.md
-INFO    -  Documentation built in 6.26 seconds
+INFO    -  Documentation built in 7.43 seconds
 [post_build] sitemap: dropped 1 noindex page(s): ['/resources/links.html']
-[post_build] Generated sw.js with 280 pre-cached pages (version: 20261116-044547)
+[post_build] Generated sw.js with 280 pre-cached pages (version: 20261116-045437)
 EXIT=0

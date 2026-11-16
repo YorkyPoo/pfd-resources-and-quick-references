@@ -1,4 +1,4 @@
-Batch 6 — level_rule --check on c79862c
+Batch 6 — level_rule --check on d1a49fc
 {
  "pages": 41,
  "rows_total": 417,
@@ -212,12 +212,12 @@ Batch 6 — level_rule --check on c79862c
    "pending": [
     {
      "row": "6",
-     "reason": "PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol restraint guidelines (p.71-72: \"Patients in law enforcement custody (including emergency custody orders) or under arrest must have a law enforcement officer present at all times\"), not as an administrative policy and not as a level-badged row. No policy and no level is published; the wording on this page is the agency policy.",
+     "reason": "PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol restraint guidelines (p.73: \"Patients in law enforcement custody (including emergency custody orders) or under arrest must have a law enforcement officer present at all times\"), not as an administrative policy and not as a level-badged row. No policy and no level is published; the wording on this page is the agency policy.",
      "carried_from_page": "EMT"
     },
     {
      "row": "7",
-     "reason": "PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol restraint guidelines (p.71-72: \"If law-enforcement restraints have been utilized (for example handcuffs or flex-cuffs), a law enforcement officer should accompany the patient\"), not as an administrative policy and not as a level-badged row. No policy and no level is published; the wording on this page is the agency policy.",
+     "reason": "PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol restraint guidelines (p.73: \"If law-enforcement restraints have been utilized (for example handcuffs or flex-cuffs), a law enforcement officer should accompany the patient\"), not as an administrative policy and not as a level-badged row. No policy and no level is published; the wording on this page is the agency policy.",
      "carried_from_page": "EMT"
     }
    ],
