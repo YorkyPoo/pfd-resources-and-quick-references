@@ -1,0 +1,456 @@
+{
+ "generated": "2026-11-16T13:19:47.808299Z",
+ "read_only": true,
+ "source": "audit/level-scan/pems_table.json + /root/System/mindpalace/40 - areas/Paramedic/PEMS2024.pdf",
+ "totals": {
+  "extracted_rows": 535,
+  "extracted_rows_len_check": 535,
+  "pages_with_extracted_rows": 82,
+  "rows_measurable": 527,
+  "pages_measurable": 79,
+  "printed_action_rows_on_measurable_pages": 531,
+  "fused_rows": 17,
+  "pages_affected": 12,
+  "printed_rows_absorbed_into_fused_rows": 38,
+  "pages_unmeasurable": {
+   "7": "no_badged_bands",
+   "43": "no_bands",
+   "52": "no_badged_bands"
+  }
+ },
+ "definition": "A fused row is one pems_table.json row whose verbatim_text contains text that the PDF prints in more than one bordered level-table row. Printed rows are the table cells separated by the PDF horizontal ruling lines (extracted with pdfplumber); only cells that carry a printed badge (EMR/EMT/A/I/P/MC) count as action rows. A row is credited with a printed row when (a) its first tokens open that printed row (\"own\"), (b) its first tokens begin inside that printed row (\"starts_mid_row\" - the previous extracted row took the opening), (c) it contains that printed row's opening 6 tokens at a word boundary, only if that opening is unique on the page (\"next_row_opening\"), or (d) it contains every token of that printed row (\"whole_row_embedded\"). n_printed >= 2 means fused.",
+ "detector_validation": {
+  "p247#3": {
+   "flagged": true,
+   "n_printed": 3,
+   "credit": {
+    "2": "starts_mid_row",
+    "3": "next_row_opening",
+    "4": "next_row_opening"
+   },
+   "printed_rows": {
+    "2": "Position the patient: Ear to sternal notch. Maintain in-line cervical spine stabilization if there is concern for trauma.",
+    "3": "Prepare equipment: o IV/IO access o ET tube of appropriate size + 1 size below o Stylet or bougie o Oxygen ON o Suction ON o Laryngoscope o Back up airway (e.g. Supraglottic airway device) o BVM with ETCO2 monitor attached",
+    "4": "Orally intubate. Patients 12 years and older. Advance laryngoscope in the midline, identifying airway structures progressively. Ensure tube and cuff are visualized passing through the vocal cords."
+   }
+  },
+  "p107#1": {
+   "flagged": false,
+   "credit": {
+    "1": "own"
+   }
+  },
+  "note": "p247#3 is the proven defect; p107 row 1 is the known-clean control."
+ },
+ "fused_rows": [
+  {
+   "key": "104#13",
+   "badge": [
+    "MC"
+   ],
+   "credit": {
+    "3": "starts_mid_row",
+    "4": "next_row_opening"
+   },
+   "n_printed": 2,
+   "band_texts": {
+    "3": "To maintain MAP > 65 until a vasopressor infusion is prepared, consider: ADULT: Push dose Epinephrine 5-10 mcg IV/IO every 2-3 minutes (Add 100 mcg Epinephrine (1mL of 0.1 mg/mL) to 9mL of 0.9% Normal Saline = 10 mcg / mL)",
+    "4": "Contact Medical Control for guidance as needed. Consider contacting Medical Control at a pediatric specialty center (VCU CHoR or CHKD) for children and infants with symptomatic bradycardia."
+   }
+  },
+  {
+   "key": "120#10",
+   "badge": [
+    "EMR"
+   ],
+   "credit": {
+    "0": "next_row_opening",
+    "1": "next_row_opening"
+   },
+   "n_printed": 2,
+   "band_texts": {
+    "0": "Begin active cooling if temperature is greater than 104F / 40C. Refer to Heat stroke / Hyperthermia protocol.",
+    "1": "Assess and monitor cardiac rhythm. For wide QRS (Adult: > 120 ms, Ped: > 90 ms) or arrhythmia, administer: ADULT: Sodium bicarbonate 50 mEq IV/IO slow push PEDIATRIC: Sodium bicarbonate 1 mEq/kg IV/IO slow push. Maximum dose 50 mEq. Repeat once in 5 \u2013 10 minutes for cardiac arrest or persistent ECG changes."
+   }
+  },
+  {
+   "key": "141#11",
+   "badge": [
+    "EMR"
+   ],
+   "credit": {
+    "10": "starts_mid_row",
+    "11": "next_row_opening"
+   },
+   "n_printed": 2,
+   "band_texts": {
+    "10": "Assess for additional pregnancies. If none, apply gentle traction to the umbilical cord and perform fundal massage until the placenta delivers and bleeding stops. Transport the placenta with the mother. If possible, allow skin to skin contact for the mother and baby.",
+    "11": "Apply direct pressure to any visible sites of bleeding. If bleeding continues, refer to Hemorrhagic Shock protocol and initiate transport, preferably to a facility with Obstetric capability if condition allows."
+   }
+  },
+  {
+   "key": "141#9",
+   "badge": [
+    "EMR"
+   ],
+   "credit": {
+    "8": "starts_mid_row",
+    "9": "next_row_opening",
+    "10": "next_row_opening"
+   },
+   "n_printed": 3,
+   "band_texts": {
+    "8": "Routine suctioning is no longer recommended. Only perform pharyngeal/tracheal suctioning if thick meconium is present or when the airway is obstructed.",
+    "9": "If the neonate does not require immediate resuscitation, consider delayed cord clamping until 1 \u2013 3 minutes after birth. When pulsation of the cord has ceased, place clamps at approximately 4\u201d and 6\u201d from the neonate. Cut between them. Keep the baby warm and monitor closely.",
+    "10": "Assess for additional pregnancies. If none, apply gentle traction to the umbilical cord and perform fundal massage until the placenta delivers and bleeding stops. Transport the placenta with the mother. If possible, allow skin to skin contact for the mother and baby."
+   }
+  },
+  {
+   "key": "153#4",
+   "badge": [
+    "A"
+   ],
+   "credit": {
+    "3": "starts_mid_row",
+    "4": "next_row_opening"
+   },
+   "n_printed": 2,
+   "band_texts": {
+    "3": "Administer: ADULT: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. PEDIATRIC: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary.",
+    "4": "Administer: ADULT: Methylprednisolone (Solu-Medrol) 125 mg IV/IO slow push. PEDIATRIC: Methylprednisolone (Solu-Medrol) 2 mg/kg IV/IO slow push. Maximum dose: 125 mg"
+   }
+  },
+  {
+   "key": "22#5",
+   "badge": [
+    "MC"
+   ],
+   "credit": {
+    "0": "own",
+    "1": "next_row_opening"
+   },
+   "n_printed": 2,
+   "band_texts": {
+    "0": "When treating cardiac arrest victims who possess a \"living will\" or an advanced directive (other than a valid DDNR order/POST), full resuscitative efforts should be initiated and Medical Control consulted as quickly as possible regarding the continuation or termination of treatment. Be prepared to review the reason(s) why resuscitation efforts may not be indicated (i.e. terminal illness).",
+    "1": "Providers shall honor any form issued or approved by the VA Department of Health to include: Alternate DDNR Jewelry\u201d and \u201cother\u201d DNR Orders including out of state DNR forms; this document must accompany the patient to the hospital. An original or a copy of a DDNR form must be in a patient\u2019s chart when responding to a call from a nursing home or hospice. A photocopy is acceptable."
+   }
+  },
+  {
+   "key": "235#2",
+   "badge": [
+    "EMR"
+   ],
+   "credit": {
+    "2": "own",
+    "3": "next_row_opening"
+   },
+   "n_printed": 2,
+   "band_texts": {
+    "2": "Begin chest compressions. Push hard and fast. Allow full chest recoil. Limit pauses to <10 sec. Depth: At least 2 inches deep Rate: 100 \u2013 120 bpm Adult: Finger interlocked, mid-chest on the sternum",
+    "3": "Administer 100% oxygen. Do not over-ventilate. Maintain compression-ventilation ratio 30:2 until advanced airway is established, then administer one breath every six seconds. If respiratory pathogen is suspected, consider early intubation and HEPA filtered ventilation (I/P only)."
+   }
+  },
+  {
+   "key": "235#4",
+   "badge": [
+    "EMR"
+   ],
+   "credit": {
+    "3": "starts_mid_row",
+    "4": "next_row_opening",
+    "5": "next_row_opening"
+   },
+   "n_printed": 3,
+   "band_texts": {
+    "3": "Administer 100% oxygen. Do not over-ventilate. Maintain compression-ventilation ratio 30:2 until advanced airway is established, then administer one breath every six seconds. If respiratory pathogen is suspected, consider early intubation and HEPA filtered ventilation (I/P only).",
+    "4": "Apply AED / Assess cardiac rhythm every 2 minutes. If AED is advising to shock or rhythm is VF or VT (as determined by EMT-I or P) defibrillate at maximum joules, then refer to Cardiac Arrest: Ventricular Fibrillation / Pulseless Ventricular Tachycardia protocol. If AED is advising no shock or rhythm is asystole or PEA (as determined by EMT-I or P), continue CPR then refer to Cardiac Arrest: Asystole / Pulseless Electrical Activity protocol.",
+    "5": "Alternate compressors every 2 minutes or sooner if fatigued. Consider mechanical CPR device, if available."
+   }
+  },
+  {
+   "key": "247#3",
+   "badge": [
+    "I"
+   ],
+   "credit": {
+    "2": "starts_mid_row",
+    "3": "next_row_opening",
+    "4": "next_row_opening"
+   },
+   "n_printed": 3,
+   "band_texts": {
+    "2": "Position the patient: Ear to sternal notch. Maintain in-line cervical spine stabilization if there is concern for trauma.",
+    "3": "Prepare equipment: o IV/IO access o ET tube of appropriate size + 1 size below o Stylet or bougie o Oxygen ON o Suction ON o Laryngoscope o Back up airway (e.g. Supraglottic airway device) o BVM with ETCO2 monitor attached",
+    "4": "Orally intubate. Patients 12 years and older. Advance laryngoscope in the midline, identifying airway structures progressively. Ensure tube and cuff are visualized passing through the vocal cords."
+   }
+  },
+  {
+   "key": "247#7",
+   "badge": [
+    "P"
+   ],
+   "credit": {
+    "6": "starts_mid_row",
+    "7": "next_row_opening"
+   },
+   "n_printed": 2,
+   "band_texts": {
+    "6": "If unsuccessful, reoxygenate between attempts with 100% Oxygen. Adjust positioning/technique/equipment as necessary prior to any further attempt. After two failed attempts, airway must be managed by the most experienced provider available.",
+    "7": "If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway."
+   }
+  },
+  {
+   "key": "247#9",
+   "badge": [
+    "I"
+   ],
+   "credit": {
+    "8": "starts_mid_row",
+    "9": "next_row_opening",
+    "10": "next_row_opening"
+   },
+   "n_printed": 3,
+   "band_texts": {
+    "8": "Verify placement. o Ensure the presence of continuous box-waveform capnography. o Auscultate for bilateral lung sounds & absence of gastric sounds",
+    "9": "Secure the tube. Use tape or commercial tube holder. Document the depth of placement.",
+    "10": "Administer analgesia/sedation, as needed for patient safety and comfort. Refer to the Sedation Post Advanced Airway Protocol."
+   }
+  },
+  {
+   "key": "252#11",
+   "badge": [
+    "MC"
+   ],
+   "credit": {
+    "1": "starts_mid_row",
+    "2": "next_row_opening"
+   },
+   "n_printed": 2,
+   "band_texts": {
+    "1": "If unresponsive and without palpable pulses, assist ventilations. Ensure the drive line and power source are connected. Ensure batteries have charge and replace if necessary. Contact the device coordinator and/or Medical Control for guidance. Do not begin chest compressions. Do not obtain ECG. Do not cardiovert/defibrillate.",
+    "2": "For all other device issues contact the device coordinator and/or Medical Control for guidance."
+   }
+  },
+  {
+   "key": "263#5",
+   "badge": [
+    "EMR"
+   ],
+   "credit": {
+    "5": "own",
+    "6": "next_row_opening"
+   },
+   "n_printed": 2,
+   "band_texts": {
+    "5": "Alternate compressors every 2 minutes or sooner if fatigued.",
+    "6": "If ETCO2 < 10 or dropping, reassess and optimize compression rate, depth, and recoil."
+   }
+  },
+  {
+   "key": "269#1",
+   "badge": [
+    "P"
+   ],
+   "credit": {
+    "1": "next_row_opening",
+    "2": "next_row_opening"
+   },
+   "n_printed": 2,
+   "band_texts": {
+    "1": "Make a vertical incision (2 \u2013 3 cm) across the cricothyroid membrane.",
+    "2": "Make a horizontal incision through the cricothyroid membrane (1 \u2013 2 cm) and place the non- dominant index finger into the airway."
+   }
+  },
+  {
+   "key": "28#9",
+   "badge": [
+    "A"
+   ],
+   "credit": {
+    "1": "starts_mid_row",
+    "2": "next_row_opening"
+   },
+   "n_printed": 2,
+   "band_texts": {
+    "1": "For patients in cardiac arrest: \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 A DNR/DDNR/DNAR (Do Not Resuscitate) is applicable ONLY if the patient is in cardiac arrest. Order such as POST, POLST, and MOLST forms may or may not include a specific DNR/DNI order and are valid if signed by a physician. A valid DNR (original or unaltered physical or electronic copy issued in any state) or alternative DDNR jewelry is required to withhold resuscitation of patients not within a qualified health care facility or receiving hospice/home health care services. Other DNR orders (e.g. electronic patient record) can be honored when a patient is within a qualified health care facility, during transfer between health care facilities, or receiving hospice or health care services at home. A valid living will or other advanced directive may be used to guide therapy and discussions with surrogate decision makers/Medical Control, but is generally applicable only to terminal illness and should not be used to withhold attempts at resuscitation in the event of cardiac arrest. A DNR can be revoked at any time by the patient or authorized decision maker (if the decision maker initiated the DNR) by physically destroying the DNR order form or oral expression of intent to revoke.",
+    "2": "If there is any doubt as to the applicability or validity of a DNR or other advanced directive belonging to a patient in cardiac arrest, begin CPR and contact Medical Control immediately for guidance."
+   }
+  },
+  {
+   "key": "67#1",
+   "badge": [
+    "EMR"
+   ],
+   "credit": {
+    "1": "own",
+    "2": "next_row_opening"
+   },
+   "n_printed": 2,
+   "band_texts": {
+    "1": "Place patient in a warm environment and prevent further heat loss",
+    "2": "Remove all wet clothing and replace with warm blankets. Handle the patient gently and avoid excessive movement (risk of cardiac arrest)"
+   }
+  },
+  {
+   "key": "67#2",
+   "badge": [
+    "EMR"
+   ],
+   "credit": {
+    "2": "starts_mid_row",
+    "3": "next_row_opening"
+   },
+   "n_printed": 2,
+   "band_texts": {
+    "2": "Remove all wet clothing and replace with warm blankets. Handle the patient gently and avoid excessive movement (risk of cardiac arrest)",
+    "3": "In the event of cardiac arrest, make persistent attempts at resuscitation for victims of prolonged cold exposure. Perform CPR and continuous warming procedures."
+   }
+  }
+ ],
+ "pages_affected": [
+  22,
+  28,
+  67,
+  104,
+  120,
+  141,
+  153,
+  235,
+  247,
+  252,
+  263,
+  269
+ ],
+ "pages_affected_in_converted_set": [
+  67,
+  235,
+  247,
+  269
+ ],
+ "converted_set": {
+  "level_rule_TARGETS": 54,
+  "PENDING_TARGETS": 1,
+  "pems_pages_cited_by_converted_files": 32
+ },
+ "badge_belongs_to_later_row": [
+  {
+   "key": "p28#9",
+   "badge": [
+    "A"
+   ],
+   "first_printed_badge": [
+    "EMT"
+   ],
+   "first_band": "For patients in cardiac arrest: \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 A DNR/DDNR/DNAR (Do Not Re",
+   "n_printed": 2,
+   "rule": {
+    "1": "starts_mid_row",
+    "2": "next_row_opening"
+   },
+   "text": "with surrogate decision makers/Medical Control, but is generally applicable only to terminal illness and should not be used to withhold attempts at resuscitation in the event of cardiac arrest. \u2022 DNR can be revoked at any time by the patient or authorized decision maker (if the decision maker initia"
+  },
+  {
+   "key": "p104#13",
+   "badge": [
+    "MC"
+   ],
+   "first_printed_badge": [
+    "P"
+   ],
+   "first_band": "To maintain MAP > 65 until a vasopressor infusion is prepared, conside",
+   "n_printed": 2,
+   "rule": {
+    "3": "starts_mid_row",
+    "4": "next_row_opening"
+   },
+   "text": "(Add 100 mcg Epinephrine (1mL of 0.1 mg/mL) to 9mL of 0.9% Normal Saline = 10 mcg / mL) Contact Medical Control for guidance as needed. Consider contacting Medical Control at a pediatric specialty center (VCU CHoR or CHKD) for children and infants with symptomatic bradycardia. Children\u2019s Hospital of"
+  },
+  {
+   "key": "p247#3",
+   "badge": [
+    "I"
+   ],
+   "first_printed_badge": [
+    "EMT"
+   ],
+   "first_band": "Position the patient: Ear to sternal notch. Maintain in-line cervical ",
+   "n_printed": 3,
+   "rule": {
+    "2": "starts_mid_row",
+    "3": "next_row_opening",
+    "4": "next_row_opening"
+   },
+   "text": "Maintain in-line cervical spine stabilization if there is concern for trauma. Prepare equipment: o IV/IO access o ET tube of appropriate size + 1 size below o Stylet or bougie o Oxygen ON o Suction ON o Laryngoscope o Back up airway (e.g. Supraglottic airway device) o BVM with ETCO2 monitor attached"
+  },
+  {
+   "key": "p247#7",
+   "badge": [
+    "P"
+   ],
+   "first_printed_badge": [
+    "I"
+   ],
+   "first_band": "If unsuccessful, reoxygenate between attempts with 100% Oxygen. Adjust",
+   "n_printed": 2,
+   "rule": {
+    "6": "starts_mid_row",
+    "7": "next_row_opening"
+   },
+   "text": "After two failed attempts, airway must be managed by the most experienced provider available. If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway. Verify placement."
+  }
+ ],
+ "blast_radius": {
+  "protocols/respiratory/03_Respiratory_Arrest_PROC.md": [
+   {
+    "site_row": 12,
+    "pems": "p247#9"
+   }
+  ],
+  "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md": [
+   {
+    "site_row": 14,
+    "pems": "p247#7"
+   }
+  ],
+  "procedures/Endotracheal_Intubation.md": [
+   {
+    "site_row": 2,
+    "pems": "p247#3"
+   },
+   {
+    "site_row": 3,
+    "pems": "p247#3"
+   },
+   {
+    "site_row": 4,
+    "pems": "p247#3"
+   },
+   {
+    "site_row": 6,
+    "pems": "p247#7"
+   },
+   {
+    "site_row": 7,
+    "pems": "p247#7"
+   },
+   {
+    "site_row": 8,
+    "pems": "p247#9"
+   },
+   {
+    "site_row": 9,
+    "pems": "p247#9"
+   },
+   {
+    "site_row": 10,
+    "pems": "p247#9"
+   }
+  ],
+  "procedures/Surgical_Airway.md": [
+   {
+    "site_row": 2,
+    "pems": "p269#1"
+   }
+  ]
+ }
+}
