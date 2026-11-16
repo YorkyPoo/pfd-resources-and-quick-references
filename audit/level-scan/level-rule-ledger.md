@@ -656,13 +656,12 @@ decision before the page is treated as final.
   prints the action unbracketed (Smoke r6 and Upper Airway r12 -> p.239#9, badge I).
   This is the same gap as Batch-1 Chest Pain r14. Owner ruling needed: carry the
   bracket into the chassis as a second marker, or accept the plain chip.
-- **Batch 3 — three rows lost a Medical-Control requirement the page printed.**
-  Airway/Inhalation r8 was `MC` in all five cells and is now `A` (p.153#4);
-  Respiratory Distress r6 was `MC` at A and I and is now `EMT` (p.123#3). The rule
-  is "chip = the level PEMS prints", and the source grants both on standing order,
-  but the owner should confirm that dropping a page-printed MC requirement is
-  intended. (Rows that moved *to* MC — Airway r12, Smoke r12, Pulmonary Edema r13 —
-  now match the source's MC row.)
+- **Batch 3 — 2 row(s) lost a Medical-Control requirement the page printed.** Each is now chipped at the level PEMS prints:
+  `03_Airway_Inhalation_Irritants_PROC.md` row 8 was `MC`, now `A` (p.153#4).
+  `03_Respiratory_Distress_PROC.md` row 6 was `MC`, now `EMT` (p.123#3).
+  The rule is "chip = the level PEMS prints", and the source grants these actions on standing order, but the owner should confirm that dropping a page-printed MC requirement is intended.
+  Row(s) in the converted set that moved *to* MC, now matching the source's MC row: `04_Chest_Pain_ACS_PROC.md` row 7 `I` -> `MC` (p.107#9); `03_Airway_Inhalation_Irritants_PROC.md` row 12 `I` -> `MC` (p.153#5); `03_Smoke_Inhalation_PROC.md` row 12 `I` -> `MC` (p.153#5).
+  Already `MC` on the page and matching the source, so not moved (converted set, whole list): `04_Supraventricular_Tachycardia_PROC.md` row 10 (p.136#7); `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 12 (p.57#8); `04_Bradycardia_PROC.md` row 8 (p.104#13); `04_Cardiac_Arrest_Non_Traumatic_PROC.md` row 13 (p.57#8); `04_Cardiac_Arrest_Traumatic_PROC.md` row 11 (p.61#9); `04_Chest_Pain_ACS_PROC.md` row 13 (p.107#9); `04_Hypertensive_Crisis_PROC.md` row 7 (p.109#5); `04_V_Fib_Pulseless_V_Tach_PROC.md` row 12 (p.64#14); `07_Sepsis_PROC.md` row 6 (p.130#5); `07_OB_Emergencies_PROC.md` row 10 (p.147#4); `07_Hypotension_Shock_Non_Trauma_PROC.md` row 10 (p.114#9); `05_Seizure_PROC.md` row 7 (p.127#6); `03_Pulmonary_Edema_Congestion_PROC.md` row 13 (p.124#13).
 - **Batch 3 — four rows published no level at all** (Respiratory Arrest r11, r14,
   r15; Smoke Inhalation r8). There was nothing to keep, so each is bound to the row
   that prints the action: p.269#0 (Surgical Airway, already a C2 ruling), p.55#2

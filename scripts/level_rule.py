@@ -1273,14 +1273,41 @@ def emit_md(ledger):
               '  `[I]`, Upper Airway r13 `[I]` and r14 `[I]`. Two more are cited to a PEMS row that',
               '  prints the action unbracketed (Smoke r6 and Upper Airway r12 -> p.239#9, badge I).',
               '  This is the same gap as Batch-1 Chest Pain r14. Owner ruling needed: carry the',
-              '  bracket into the chassis as a second marker, or accept the plain chip.',
-              '- **Batch 3 — three rows lost a Medical-Control requirement the page printed.**',
-              '  Airway/Inhalation r8 was `MC` in all five cells and is now `A` (p.153#4);',
-              '  Respiratory Distress r6 was `MC` at A and I and is now `EMT` (p.123#3). The rule',
-              '  is "chip = the level PEMS prints", and the source grants both on standing order,',
-              '  but the owner should confirm that dropping a page-printed MC requirement is',
-              '  intended. (Rows that moved *to* MC — Airway r12, Smoke r12, Pulmonary Edema r13 —',
-              '  now match the source\'s MC row.)',
+              '  bracket into the chassis as a second marker, or accept the plain chip.']
+    # Derived from `changed` so the prose can never disagree with the table above:
+    # an MC -> other move and an other -> MC move are counted and named from data.
+    lost_mc = [e for e in changed
+               if e['before']['leftmost'] == 'MC' and e['level_published'] != 'MC']
+    to_mc = [e for e in changed
+             if e['level_published'] == 'MC' and e['before']['leftmost'] != 'MC']
+    already_mc = [e for e in ledger if e['status'] == 'OK'
+                  and e['level_published'] == 'MC'
+                  and e['before']['leftmost'] == 'MC']
+
+    def _mcrow(e):
+        return f"`{e['file'].split('/')[-1]}` row {e['row']}"
+
+    lines.append(f'- **Batch 3 — {len(lost_mc)} row(s) lost a Medical-Control requirement the '
+                 'page printed.** Each is now chipped at the level PEMS prints:')
+    for e in lost_mc:
+        lines.append(f"  {_mcrow(e)} was `{e['before']['leftmost']}`, now "
+                     f"`{e['level_published']}` (p.{e['pems_page']}#{e['pems_ordinal']}).")
+    lines.append('  The rule is "chip = the level PEMS prints", and the source grants these '
+                 'actions on standing order, but the owner should confirm that dropping a '
+                 'page-printed MC requirement is intended.')
+    if to_mc:
+        lines.append('  Row(s) in the converted set that moved *to* MC, now matching the '
+                     "source's MC row: "
+                     + '; '.join(f"{_mcrow(e)} `{e['before']['leftmost']}` -> "
+                                 f"`{e['level_published']}` "
+                                 f"(p.{e['pems_page']}#{e['pems_ordinal']})" for e in to_mc)
+                     + '.')
+    if already_mc:
+        lines.append('  Already `MC` on the page and matching the source, so not moved '
+                     '(converted set, whole list): '
+                     + '; '.join(f"{_mcrow(e)} (p.{e['pems_page']}#{e['pems_ordinal']})"
+                                 for e in already_mc) + '.')
+    lines += [
               '- **Batch 3 — four rows published no level at all** (Respiratory Arrest r11, r14,',
               '  r15; Smoke Inhalation r8). There was nothing to keep, so each is bound to the row',
               '  that prints the action: p.269#0 (Surgical Airway, already a C2 ruling), p.55#2',
