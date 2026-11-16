@@ -726,10 +726,7 @@ details.fc p { margin: .2em 0 .9em; }
   background: var(--md-default-fg-color--lightest);
   color: var(--md-default-fg-color);
 }
-.md-typeset h4 .od-count { margin-left: .3em; }
-
-.md-typeset .od-page-block { margin: 1.2em 0 1.6em; }
-.md-typeset .od-page-block h4 { margin: 0 0 .2em; font-size: .9rem; }
+.md-typeset .od-page-block { margin: .5em 0 1.4em; }
 .md-typeset .od-pagenote {
   font-size: .74rem;
   line-height: 1.5;
@@ -755,3 +752,7 @@ details.fc p { margin: .2em 0 .9em; }
   padding-top: .6em;
   margin-top: 1.6em;
 }
+
+/* long file identifiers inside a card must break rather than push the paragraph */
+.md-typeset .od-card code,
+.md-typeset .od-card a { overflow-wrap: anywhere; word-break: break-word; }

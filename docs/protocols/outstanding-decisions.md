@@ -48,8 +48,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 
 <h3 id="pems-prints-this-nowhere">PEMS prints this nowhere — 17 rows</h3>
 
+#### [Chest Pain / ACS](cardiac/04_Chest_Pain_ACS_PROC.md) — 2 rows
+
 <div class="od-page-block">
-<h4><a class="od-page" href="cardiac/04_Chest_Pain_ACS_PROC.md">Chest Pain / ACS</a> <span class="od-count">2</span></h4>
 <div class="od-card od-cat-nowhere">
 <p class="od-head"><span class="od-row">Row 5</span> <span class="lvl lvl-p">P</span> &#9873;</p>
 <p class="od-action">12-Lead ECG Interpretation - STEMI Criteria: / • Intermediate and Paramedic providers may interpret as STEMI if: / - Symptoms consistent with ACS/myocardial ischemia AND / - ≥ 1 mm ST segment elevation in two or more contiguous leads</p>
@@ -64,8 +65,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Airway / Inhalation Irritants](respiratory/03_Airway_Inhalation_Irritants_PROC.md) — 2 rows
+
 <div class="od-page-block">
-<h4><a class="od-page" href="respiratory/03_Airway_Inhalation_Irritants_PROC.md">Airway / Inhalation Irritants</a> <span class="od-count">2</span></h4>
 <div class="od-card od-cat-nowhere">
 <p class="od-head"><span class="od-row">Row 3</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
 <p class="od-action">Airway Assessment: / • Assess for signs of airway injury (singed hairs, facial burns, hoarseness, stridor, soot). / • Monitor for progressive respiratory distress.</p>
@@ -80,8 +82,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Pediatric Stridor](respiratory/03_Pediatric_Stridor_PROC.md) — 1 row
+
 <div class="od-page-block">
-<h4><a class="od-page" href="respiratory/03_Pediatric_Stridor_PROC.md">Pediatric Stridor</a> <span class="od-count">1</span></h4>
 <div class="od-card od-cat-nowhere">
 <p class="od-head"><span class="od-row">Row 2</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
 <p class="od-action">Scene Management &amp; Calm Environment / • Keep child calm - agitation worsens obstruction / • Allow parent/caregiver to hold child / • Avoid unnecessary procedures / • Minimize stimulation and stranger anxiety</p>
@@ -90,8 +93,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Pneumothorax](respiratory/03_Pneumothorax_PROC.md) — 1 row
+
 <div class="od-page-block">
-<h4><a class="od-page" href="respiratory/03_Pneumothorax_PROC.md">Pneumothorax</a> <span class="od-count">1</span></h4>
 <div class="od-card od-cat-nowhere">
 <p class="od-head"><span class="od-row">Row 5</span> <span class="lvl lvl-a">A</span> &#9873;</p>
 <p class="od-action">Suction and Airway Management: / • Prepare suction and airway equipment. / • Be prepared for rapid airway intervention if decompensation occurs.</p>
@@ -100,8 +104,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Pulmonary Edema / Congestion](respiratory/03_Pulmonary_Edema_Congestion_PROC.md) — 3 rows
+
 <div class="od-page-block">
-<h4><a class="od-page" href="respiratory/03_Pulmonary_Edema_Congestion_PROC.md">Pulmonary Edema / Congestion</a> <span class="od-count">3</span></h4>
 <div class="od-card od-cat-nowhere">
 <p class="od-head"><span class="od-row">Row 6</span> <span class="lvl lvl-a">A</span> &#9873;</p>
 <p class="od-action">CPAP CONTRAINDICATIONS (⚠️): / • Apnea/agonal respirations / • GCS ≤ 13 / • Pneumothorax</p>
@@ -122,8 +127,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Smoke Inhalation](respiratory/03_Smoke_Inhalation_PROC.md) — 1 row
+
 <div class="od-page-block">
-<h4><a class="od-page" href="respiratory/03_Smoke_Inhalation_PROC.md">Smoke Inhalation</a> <span class="od-count">1</span></h4>
 <div class="od-card od-cat-nowhere">
 <p class="od-head"><span class="od-row">Row 3</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
 <p class="od-action">Airway Assessment: / • Inspect for singed facial/nasal hairs / • Examine face, nose, and mouth for burns or soot / • Auscultate for stridor, hoarseness, or voice changes / • Assess sputum for carbonaceous material / • Monitor respiratory effort and work of breathing</p>
@@ -132,8 +138,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Upper Airway Obstruction](respiratory/03_Upper_Airway_Obstruction_PROC.md) — 1 row
+
 <div class="od-page-block">
-<h4><a class="od-page" href="respiratory/03_Upper_Airway_Obstruction_PROC.md">Upper Airway Obstruction</a> <span class="od-count">1</span></h4>
 <div class="od-card od-cat-nowhere">
 <p class="od-head"><span class="od-row">Row 2</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
 <p class="od-action">Scene Safety / Recognition: / • Rapidly identify complete vs partial obstruction. / • Recognize universal choking sign (hands to throat). / • Determine conscious vs unconscious status.</p>
@@ -142,8 +149,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Trauma](trauma/09_Trauma_PROC.md) — 1 row
+
 <div class="od-page-block">
-<h4><a class="od-page" href="trauma/09_Trauma_PROC.md">Trauma</a> <span class="od-count">1</span></h4>
 <div class="od-card od-cat-nowhere">
 <p class="od-head"><span class="od-row">Row 6</span> <span class="lvl lvl-a">A</span> &#9873;</p>
 <p class="od-action">Assess for shock. Refer to Shock (Hypoperfusion) protocol.</p>
@@ -152,8 +160,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Cold Exposure](general/02_Cold_Exposure_PROC.md) — 2 rows
+
 <div class="od-page-block">
-<h4><a class="od-page" href="general/02_Cold_Exposure_PROC.md">Cold Exposure</a> <span class="od-count">2</span></h4>
 <div class="od-card od-cat-nowhere">
 <p class="od-head"><span class="od-row">Row 6</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
 <p class="od-action">If patient is alert and responsive: Use active external rewarming with heat packs, warm blankets, etc.</p>
@@ -168,8 +177,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Pain Control](general/02_Pain_Control_PROC.md) — 1 row
+
 <div class="od-page-block">
-<h4><a class="od-page" href="general/02_Pain_Control_PROC.md">Pain Control</a> <span class="od-count">1</span></h4>
 <div class="od-card od-cat-nowhere">
 <p class="od-head"><span class="od-row">Row 8</span> <span class="lvl lvl-mc">MC</span> &#9873;</p>
 <p class="od-action">If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact Medical Control for guidance.</p>
@@ -178,8 +188,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Sedation (Non-Paralytic)](general/02_Sedation_Assisted_Non_Paralytic_PROC.md) — 2 rows
+
 <div class="od-page-block">
-<h4><a class="od-page" href="general/02_Sedation_Assisted_Non_Paralytic_PROC.md">Sedation (Non-Paralytic)</a> <span class="od-count">2</span></h4>
 <div class="od-card od-cat-nowhere">
 <p class="od-head"><span class="od-row">Row 4</span> <span class="lvl lvl-i">I</span> &#9873;</p>
 <p class="od-action">Pre-Intubation Sedation, consider ONE of the following: / / • ADULT: Ketamine (Ketalar) 1.5 - 2 mg/kg IV/IO (Maximum single dose: 200 mg) OR 4 - 5 mg/kg IM/IN (Maximum single dose: 400 mg). If administering IV, administer over 1-2 minutes. / • PEDIATRIC: Ketamine (Ketalar) 1 - 2 mg/kg IV/IO (Maximum single dose: 50 mg) OR 2 - 5 mg/kg IM/IN (Maximum single dose: 100 mg). If administering IV, administer over 1-2 minutes. / / OR / / • ADULT: Midazolam (Versed) 2.5 - 5 mg IV/IO (Maximum single dose: 5 mg) OR 5 - 10 mg IN/IM (Maximum single dose: 10 mg). / • PEDIATRIC: Midazolam (Versed) 0.1 mg/kg IV/IO (Maximum single dose: 2.5 mg) OR 0.2 mg/kg IN/IM (Maximum single dose: 5 mg).</p>
@@ -196,8 +207,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 
 <h3 id="pems-prints-it-badge-contradicts">PEMS prints it, but the badge contradicts the row&#x27;s words — 21 rows</h3>
 
+#### [Asystole / PEA](cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md) — 1 row
+
 <div class="od-page-block">
-<h4><a class="od-page" href="cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md">Asystole / PEA</a> <span class="od-count">1</span></h4>
 <div class="od-card od-cat-conflict">
 <p class="od-head"><span class="od-row">Row 8</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
 <p class="od-action">Apply AED / Assess cardiac rhythm every 2 minutes. If AED is advising to shock or rhythm is VF or VT (as determined by EMT-I or P), defibrillate at maximum joules (or 2 J/kg for pediatrics), then refer to Cardiac Arrest: Ventricular Fibrillation / Pulseless Ventricular Tachycardia protocol. If AED is advising no shock or rhythm is asystole or PEA (as determined by EMT-I or P), continue CPR then refer to Cardiac Arrest: Asystole / Pulseless Electrical Activity protocol.</p>
@@ -206,8 +218,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Cardiac Arrest (Non-Traumatic)](cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md) — 2 rows
+
 <div class="od-page-block">
-<h4><a class="od-page" href="cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md">Cardiac Arrest (Non-Traumatic)</a> <span class="od-count">2</span></h4>
 <div class="od-card od-cat-conflict">
 <p class="od-head"><span class="od-row">Row 4</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
 <p class="od-action">AED / Rhythm Assessment: / • Apply AED and assess cardiac rhythm every 2 minutes. / • Identify rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shockable).</p>
@@ -222,8 +235,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Cardiac Arrest (Traumatic)](cardiac/04_Cardiac_Arrest_Traumatic_PROC.md) — 1 row
+
 <div class="od-page-block">
-<h4><a class="od-page" href="cardiac/04_Cardiac_Arrest_Traumatic_PROC.md">Cardiac Arrest (Traumatic)</a> <span class="od-count">1</span></h4>
 <div class="od-card od-cat-conflict">
 <p class="od-head"><span class="od-row">Row 5</span> <span class="lvl lvl-a">A</span> &#9873;</p>
 <p class="od-action">PEA / VF / VT: Continue CPR / Defibrillate if indicated</p>
@@ -232,8 +246,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [V-Fib / Pulseless V-Tach](cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md) — 1 row
+
 <div class="od-page-block">
-<h4><a class="od-page" href="cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md">V-Fib / Pulseless V-Tach</a> <span class="od-count">1</span></h4>
 <div class="od-card od-cat-conflict">
 <p class="od-head"><span class="od-row">Row 5</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
 <p class="od-action">Defibrillation: 200 J Biphasic / 360 J Monophasic (Adult) / 2 J/kg initial, 4 J/kg subsequent (Ped) (AED for EMR/EMT, Manual for I/P)</p>
@@ -242,8 +257,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Airway / Inhalation Irritants](respiratory/03_Airway_Inhalation_Irritants_PROC.md) — 1 row
+
 <div class="od-page-block">
-<h4><a class="od-page" href="respiratory/03_Airway_Inhalation_Irritants_PROC.md">Airway / Inhalation Irritants</a> <span class="od-count">1</span></h4>
 <div class="od-card od-cat-conflict">
 <p class="od-head"><span class="od-row">Row 10</span> <span class="lvl lvl-p">P</span> &#9873;</p>
 <p class="od-action">Endotracheal Intubation: / • Follow Endotracheal Intubation procedure. / • ⚠ Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended.</p>
@@ -252,8 +268,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Asthma / COPD / Reactive Airway](respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md) — 2 rows
+
 <div class="od-page-block">
-<h4><a class="od-page" href="respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md">Asthma / COPD / Reactive Airway</a> <span class="od-count">2</span></h4>
 <div class="od-card od-cat-conflict">
 <p class="od-head"><span class="od-row">Row 8</span> <span class="lvl lvl-i">I</span> &#9873;</p>
 <p class="od-action">Continuous Positive Airway Pressure (CPAP): / • Consider for COPD exacerbation or severe bronchospasm with adequate mentation. / • Initiate 5-10 cm H₂O, titrate to effect. / • Contraindicated if altered mental status, vomiting, or respiratory arrest imminent.</p>
@@ -268,8 +285,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Pediatric Stridor](respiratory/03_Pediatric_Stridor_PROC.md) — 1 row
+
 <div class="od-page-block">
-<h4><a class="od-page" href="respiratory/03_Pediatric_Stridor_PROC.md">Pediatric Stridor</a> <span class="od-count">1</span></h4>
 <div class="od-card od-cat-conflict">
 <p class="od-head"><span class="od-row">Row 5</span> <span class="lvl lvl-a">A</span> &#9873;</p>
 <p class="od-action">Continuous Monitoring / • Cardiac monitor / • Pulse oximetry / • EtCO2 when available</p>
@@ -278,8 +296,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Pneumothorax](respiratory/03_Pneumothorax_PROC.md) — 4 rows
+
 <div class="od-page-block">
-<h4><a class="od-page" href="respiratory/03_Pneumothorax_PROC.md">Pneumothorax</a> <span class="od-count">4</span></h4>
 <div class="od-card od-cat-conflict">
 <p class="od-head"><span class="od-row">Row 4</span> <span class="lvl lvl-a">A</span> &#9873;</p>
 <p class="od-action">Positioning and Monitoring: / • Position patient for comfort (typically supine or semi-Fowler&#x27;s). / • Establish IV/IO access. / • Continuous cardiac and pulse oximetry monitoring.</p>
@@ -306,8 +325,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Pulmonary Edema / Congestion](respiratory/03_Pulmonary_Edema_Congestion_PROC.md) — 1 row
+
 <div class="od-page-block">
-<h4><a class="od-page" href="respiratory/03_Pulmonary_Edema_Congestion_PROC.md">Pulmonary Edema / Congestion</a> <span class="od-count">1</span></h4>
 <div class="od-card od-cat-conflict">
 <p class="od-head"><span class="od-row">Row 9</span> <span class="lvl lvl-p">P</span> &#9873;</p>
 <p class="od-action">CPAP Titration: Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing</p>
@@ -316,8 +336,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Respiratory Distress](respiratory/03_Respiratory_Distress_PROC.md) — 2 rows
+
 <div class="od-page-block">
-<h4><a class="od-page" href="respiratory/03_Respiratory_Distress_PROC.md">Respiratory Distress</a> <span class="od-count">2</span></h4>
 <div class="od-card od-cat-conflict">
 <p class="od-head"><span class="od-row">Row 3</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
 <p class="od-action">Continuous Monitoring: / • Continuous EtCO2 monitoring to guide therapy / • Continuous pulse oximetry / • Cardiac monitoring</p>
@@ -332,8 +353,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Smoke Inhalation](respiratory/03_Smoke_Inhalation_PROC.md) — 1 row
+
 <div class="od-page-block">
-<h4><a class="od-page" href="respiratory/03_Smoke_Inhalation_PROC.md">Smoke Inhalation</a> <span class="od-count">1</span></h4>
 <div class="od-card od-cat-conflict">
 <p class="od-head"><span class="od-row">Row 13</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
 <p class="od-action">Monitoring and Reassessment: / • Monitor SpO2, EtCO2, and respiratory rate continuously / • Reassess airway patency frequently; edema may progress rapidly / • Observe for signs of respiratory failure requiring immediate airway intervention</p>
@@ -342,8 +364,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Electrical Injuries](trauma/09_Electrical_Injuries_PROC.md) — 1 row
+
 <div class="od-page-block">
-<h4><a class="od-page" href="trauma/09_Electrical_Injuries_PROC.md">Electrical Injuries</a> <span class="od-count">1</span></h4>
 <div class="od-card od-cat-conflict">
 <p class="od-head"><span class="od-row">Row 7</span> <span class="lvl lvl-a">A</span> &#9873;</p>
 <p class="od-action">Obtain 12-Lead ECG / Monitor rhythm continuously</p>
@@ -352,8 +375,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Lightning Injuries](trauma/09_Lightning_Injuries_PROC.md) — 1 row
+
 <div class="od-page-block">
-<h4><a class="od-page" href="trauma/09_Lightning_Injuries_PROC.md">Lightning Injuries</a> <span class="od-count">1</span></h4>
 <div class="od-card od-cat-conflict">
 <p class="od-head"><span class="od-row">Row 7</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
 <p class="od-action">Obtain and transmit a 12-Lead ECG / Monitor rhythm.</p>
@@ -362,8 +386,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Trauma](trauma/09_Trauma_PROC.md) — 1 row
+
 <div class="od-page-block">
-<h4><a class="od-page" href="trauma/09_Trauma_PROC.md">Trauma</a> <span class="od-count">1</span></h4>
 <div class="od-card od-cat-conflict">
 <p class="od-head"><span class="od-row">Row 2</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
 <p class="od-action">Ensure scene safety. Extricate/move patient to safety if necessary.</p>
@@ -372,8 +397,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Neonatal Resuscitation](../procedures/Neonatal_Resuscitation.md) — 1 row
+
 <div class="od-page-block">
-<h4><a class="od-page" href="../procedures/Neonatal_Resuscitation.md">Neonatal Resuscitation</a> <span class="od-count">1</span></h4>
 <div class="od-card od-cat-conflict">
 <p class="od-head"><span class="od-row">Row 5</span> <span class="lvl lvl-p">P</span> &#9873;</p>
 <p class="od-action">Obtain IV/IO access, administer Epinephrine 0.01 mg/kg (0.1 mg/mL). Repeat q3-5 mins.</p>
@@ -390,8 +416,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 
 <h3 id="pending-whole-page">Whole page not in PEMS 2024 — 11 rows</h3>
 
+#### [Aortic Dissection & AAA](cardiac/04b_Aortic_Dissection_AAA_PROC.md) — 11 rows
+
 <div class="od-page-block">
-<h4><a class="od-page" href="cardiac/04b_Aortic_Dissection_AAA_PROC.md">Aortic Dissection &amp; AAA</a> <span class="od-count">11</span></h4>
 <p class="od-pagenote"><strong>Note you will see on the page:</strong> Pending OMD Authorization — this protocol is sourced from ODEMSA Regional Patient Care Protocols, Section 2.5, Revised 06/2015. PEMS 2024 does not publish this protocol. Levels below are carried from the agency&#x27;s existing page and are not verified against a regional source.</p>
 <div class="od-card od-cat-pending">
 <p class="od-head"><span class="od-row">Row 1</span> <span class="lvl lvl-pending">PENDING</span></p>
@@ -474,8 +501,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 
 <h3 id="pending-agency">Clinical agency additions — 3 rows</h3>
 
+#### [Burns (Thermal)](trauma/09_Burns_Thermal_PROC.md) — 1 row
+
 <div class="od-page-block">
-<h4><a class="od-page" href="trauma/09_Burns_Thermal_PROC.md">Burns (Thermal)</a> <span class="od-count">1</span></h4>
 <p class="od-pagenote"><strong>Note you will see on the page:</strong> PENDING — row 6: PEMS 2024 prints the HF calcium treatment only in the Burns protocol&#x27;s PEARLS (p.87-88 prose), not as a level-badged row, so no provider level is published for it. Pending OMD authorization — no provider level applies until the OMD authorizes it. See audit/level-scan/pending-protocols.yaml and audit/level-scan/level-rule-ledger.md.</p>
 <div class="od-card od-cat-pending">
 <p class="od-head"><span class="od-row">Row 6</span> <span class="lvl lvl-pending">PENDING</span></p>
@@ -486,8 +514,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Stroke / TIA](neurologic/05_Stroke_TIA_PROC.md) — 2 rows
+
 <div class="od-page-block">
-<h4><a class="od-page" href="neurologic/05_Stroke_TIA_PROC.md">Stroke / TIA</a> <span class="od-count">2</span></h4>
 <p class="od-pagenote"><strong>Note you will see on the page:</strong> PENDING — rows 8, 9: this action has no counterpart in PEMS 2024. It is an agency addition, so the level it used to show was never verified against the regional source and is not published as a level now. Every other row on this page is cited to its PEMS 2024 row. This is not the same case as a whole protocol sourced outside PEMS (e.g. Aortic Dissection, which comes from ODEMSA and is PENDING on every row): here only the row(s) named are pending, and the rest of the protocol stands on PEMS. Pending OMD authorization — no provider level applies until the OMD authorizes it. See audit/level-scan/pending-protocols.yaml and audit/level-scan/level-rule-ledger.md.</p>
 <div class="od-card od-cat-pending">
 <p class="od-head"><span class="od-row">Row 8</span> <span class="lvl lvl-pending">PENDING</span></p>
@@ -507,8 +536,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 
 <h3 id="pending-admin">Administrative rules PEMS does not print — 5 rows</h3>
 
+#### [Behavioral Health Transportation](administrative/01_Behavioral_Health_Transportation_Decision_PROC.md) — 2 rows
+
 <div class="od-page-block">
-<h4><a class="od-page" href="administrative/01_Behavioral_Health_Transportation_Decision_PROC.md">Behavioral Health Transportation</a> <span class="od-count">2</span></h4>
 <div class="od-card od-cat-pending">
 <p class="od-head"><span class="od-row">Row 6</span> <span class="lvl lvl-pending">PENDING</span></p>
 <p class="od-action">Law Enforcement Custody: Patients in LE custody (including ECOs) or under arrest MUST have a law enforcement officer present at all times.</p>
@@ -525,8 +555,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Infant Abandonment](administrative/01_Infant_Abandonment_PROC.md) — 1 row
+
 <div class="od-page-block">
-<h4><a class="od-page" href="administrative/01_Infant_Abandonment_PROC.md">Infant Abandonment</a> <span class="od-count">1</span></h4>
 <div class="od-card od-cat-pending">
 <p class="od-head"><span class="od-row">Row 2</span> <span class="lvl lvl-pending">PENDING</span></p>
 <p class="od-action">Assess infant and provide medical care per these Protocols</p>
@@ -536,8 +567,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
+#### [Stroke Field Triage](administrative/01_Stroke_Field_Triage_PROC.md) — 2 rows
+
 <div class="od-page-block">
-<h4><a class="od-page" href="administrative/01_Stroke_Field_Triage_PROC.md">Stroke Field Triage</a> <span class="od-count">2</span></h4>
 <div class="od-card od-cat-pending">
 <p class="od-head"><span class="od-row">Row 1</span> <span class="lvl lvl-pending">PENDING</span></p>
 <p class="od-action">Time Management: Maintain a goal scene time of less than 15 minutes.</p>

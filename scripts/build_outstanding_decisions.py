@@ -62,9 +62,16 @@ def esc(text):
 
 
 def link_to(doc_rel, name, cls='od-page'):
-    """Relative .md link from the new page, percent-encoded like the rest of the site."""
+    """Relative .md link target from this page, percent-encoded like the rest of the
+    site. Emitted as a MARKDOWN link by `page_heading()` so mkdocs rewrites it to the
+    built .html and `--strict` fails if the target does not exist."""
     target = urllib.parse.quote(posixpath.relpath(doc_rel, 'protocols'), safe='/-_.~')
-    return f'<a class="{cls}" href="{target}">{esc(name)}</a>'
+    return target
+
+
+def page_heading(doc_rel, label, count):
+    rows = 'row' if count == 1 else 'rows'
+    return f'#### [{label}]({link_to(doc_rel, label)}) — {count} {rows}'
 
 
 def load_ledger():
@@ -407,9 +414,9 @@ def build():
         w(f'<h3 id="{anchor}">{esc(title)} — {len(group)} rows</h3>')
         w('')
         for rel, page_rows in group_by_page(group, labels, order):
-            w(f'<div class="od-page-block">')
-            w(f'<h4>{link_to(rel, human(rel, labels))} '
-              f'<span class="od-count">{len(page_rows)}</span></h4>')
+            w(page_heading(rel, human(rel, labels), len(page_rows)))
+            w('')
+            w('<div class="od-page-block">')
             for row in page_rows:
                 w(owner_required_card(row, actions[row['file']][int(row['row'])],
                                       nearest.get((row['file'], int(row['row'])))))
@@ -444,9 +451,9 @@ def build():
             note = page_note(rel, 'PENDING')
             per_row = [note_for_row(note, int(r['row'])) for r in page_rows]
             whole = all(n == note for n in per_row)
+            w(page_heading(rel, human(rel, labels), len(page_rows)))
+            w('')
             w('<div class="od-page-block">')
-            w(f'<h4>{link_to(rel, human(rel, labels))} '
-              f'<span class="od-count">{len(page_rows)}</span></h4>')
             if note and whole:
                 w(f'<p class="od-pagenote"><strong>Note you will see on the page:</strong> '
                   f'{esc(note)}</p>')
