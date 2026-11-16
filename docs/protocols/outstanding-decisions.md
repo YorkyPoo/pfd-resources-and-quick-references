@@ -23,7 +23,7 @@ This page is generated from the conversion ledger (`audit/level-scan/level-rule-
 <h2 id="what-each-decision-means">What each decision means</h2>
 
 <div class="od-preamble" markdown="1">
-- **`&#9873;` `OWNER_REQUIRED`** — the protocol shows a provider level, but no PEMS 2024 row authorises that level for that action. The level you see is **kept from the page as it was published, not taken from the source**. It is marked so nobody mistakes it for a verified regional citation. Your answer decides which level the row should carry.
+- **&#9873; `OWNER_REQUIRED`** — the protocol shows a provider level, but no PEMS 2024 row authorises that level for that action. The level you see is **kept from the page as it was published, not taken from the source**. It is marked so nobody mistakes it for a verified regional citation. Your answer decides which level the row should carry.
 - **`PENDING`** — no provider level is published at all yet. Either the whole protocol is not in PEMS 2024 (Aortic Dissection & AAA comes from ODEMSA), or the agency added the row and PEMS prints no such action. The row stays `PENDING` until the operational medical director authorises a level.
 - **`POLICY`** — the row is an administrative rule that PEMS prints as policy prose, not as a level-badged protocol row. Policy rows publish no provider level, so there is nothing here for you to level.
 - **`+MC`** — the original page printed that level in brackets (`[A]`), meaning "at this level only with Medical Control". The chip carries the level and a second marker carries the bracket, so the notation survives.

@@ -354,7 +354,7 @@ def build():
     w('<h2 id="what-each-decision-means">What each decision means</h2>')
     w('')
     w('<div class="od-preamble" markdown="1">')
-    w(f'- **`{FLAG}` `OWNER_REQUIRED`** — the protocol shows a provider level, but no '
+    w(f'- **&#9873; `OWNER_REQUIRED`** — the protocol shows a provider level, but no '
       'PEMS 2024 row authorises that level for that action. The level you see is '
       '**kept from the page as it was published, not taken from the source**. It is '
       'marked so nobody mistakes it for a verified regional citation. Your answer '
