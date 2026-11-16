@@ -17,7 +17,16 @@
   "protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md",
   "protocols/neurologic/05_Seizure_PROC.md",
   "protocols/neurologic/05_Hypoglycemia_Hyperglycemia_PROC.md",
-  "protocols/neurologic/05_Stroke_TIA_PROC.md"
+  "protocols/neurologic/05_Stroke_TIA_PROC.md",
+  "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+  "protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md",
+  "protocols/respiratory/03_Pediatric_Stridor_PROC.md",
+  "protocols/respiratory/03_Pneumothorax_PROC.md",
+  "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+  "protocols/respiratory/03_Respiratory_Arrest_PROC.md",
+  "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+  "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+  "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md"
  ],
  "pending_targets": [
   "protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md"
@@ -4526,6 +4535,3404 @@
    },
    "note": "agency addition \u2014 pending OMD authorization",
    "carried_from_page": "A"
+  },
+  {
+   "file": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+   "row": 1,
+   "action": "Scene Safety / PPE / Initial Assessment: \u2022 Follow Universal Patient Care / Initial Patient Contact protocol. \u2022 Decision to enter contaminated area res",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 153,
+   "pems_ordinal": 0,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+   "row": 2,
+   "action": "Decontamination (Gross): \u2022 Victims must be decontaminated and/or confirmed \"clean\" prior to treatment and transport. \u2022 Remove contaminated clothing. \u2022",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 153,
+   "pems_ordinal": 1,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Consider gross decontamination.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+   "row": 3,
+   "action": "Airway Assessment: \u2022 Assess for signs of airway injury (singed hairs, facial burns, hoarseness, stridor, soot). \u2022 Monitor for progressive respiratory ",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.153 prints no airway-assessment row. The pointer this row inherited (p.153#2 'Follow Airway Management and Ventilatory Support procedure') authorises following the airway procedure, not assessing for airway injury, so it is not cited.",
+   "owner_ruling": null,
+   "pems_page": 153,
+   "pems_ordinal": 2,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Airway Management and Ventilatory Support procedure.",
+   "binding_evidence": null,
+   "basis": "adjudicated:held_split_review",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "PEMS EMT/A/I/P; site EMT/A/I/P. Split review list."
+  },
+  {
+   "file": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+   "row": 4,
+   "action": "Oxygen Administration: \u2022 Apply high-flow oxygen via NRB or BVM as indicated. \u2022 Target SpO\u2082 > 94%.",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.153 prints no oxygen row. Oxygen for an inhalation irritant is p.239#4 (Airway Management procedure, badge EMT) and p.123#2 (Respiratory Distress, badge EMR) \u2014 both different protocols, so this page's EMT is not verified against the source.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+   "row": 5,
+   "action": "Airway Management - Basic: \u2022 Follow Airway Management and Ventilatory Support procedure. \u2022 Position patient upright if tolerated.",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 153,
+   "pems_ordinal": 2,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Airway Management and Ventilatory Support procedure.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+   "row": 6,
+   "action": "Albuterol Sulfate (Bronchodilator): \u2022 Adult: 3 mL of 0.083% solution, nebulized; repeat as necessary \u2022 Pediatric: 3 mL of 0.083% solution, nebulized; ",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 153,
+   "pems_ordinal": 3,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+   "row": 7,
+   "action": "Methylprednisolone (Solu-Medrol): \u2022 Adult: 125 mg IV/IO slow push \u2022 Pediatric: 2 mg/kg IV/IO slow push (Maximum dose: 125 mg)",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 153,
+   "pems_ordinal": 4,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "PEDIATRIC: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. Administer: ADULT: Methylprednisolone (Solu-Medrol) 125 mg IV/IO slow push. PEDIATRIC: Methylprednisolone (Solu-Medrol) 2 mg/kg IV/IO slow push. Maximum dose: 125 mg For suspected Chlorine gas exposure, consider: ADULT: Sodium bicarbonate 2 mL diluted with 2 mL 0.9% Sodium chloride, nebulized. Once. PEDIATRIC: Sodium bicarbonate 2 mL diluted with 2 mL 0.9% Sodium chloride, nebulized. Once.",
+   "binding_evidence": null,
+   "basis": "adjudicated:confirm",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "Methylprednisolone is inside p.153#4, badge A -> A/I/P; site A/I/P. Confirm."
+  },
+  {
+   "file": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+   "row": 8,
+   "action": "Sodium Bicarbonate - Chlorine Gas Exposure Only: \u2022 Adult: 2 mL diluted with 2 mL 0.9% Sodium chloride, nebulized (ONCE only) \u2022 Pediatric: 2 mL diluted",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 153,
+   "pems_ordinal": 4,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "PEDIATRIC: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. Administer: ADULT: Methylprednisolone (Solu-Medrol) 125 mg IV/IO slow push. PEDIATRIC: Methylprednisolone (Solu-Medrol) 2 mg/kg IV/IO slow push. Maximum dose: 125 mg For suspected Chlorine gas exposure, consider: ADULT: Sodium bicarbonate 2 mL diluted with 2 mL 0.9% Sodium chloride, nebulized. Once. PEDIATRIC: Sodium bicarbonate 2 mL diluted with 2 mL 0.9% Sodium chloride, nebulized. Once.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "MC",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+   "row": 9,
+   "action": "Advanced Airway Assessment: \u2022 Consider endotracheal intubation if signs of airway injury develop. \u2022 Assess for impending airway compromise (worsening ",
+   "level_published": "P",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.153 prints no advanced-airway assessment row; the assessment content is agency authoring. Intubation itself is the Endotracheal Intubation procedure (p.247).",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+   "row": 10,
+   "action": "Endotracheal Intubation: \u2022 Follow Endotracheal Intubation procedure. \u2022 \u26a0 Intubation of spontaneously breathing patients without rapid sequence inducti",
+   "level_published": "P",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.153 prints no endotracheal-intubation row. ETI is the Endotracheal Intubation procedure (p.247), whose rows are not this page's source.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+   "row": 11,
+   "action": "Poison Control Consultation: \u2022 Contact Poison Control Center at 1-800-222-1222 with any questions. (Note: Poison Control is not online medical control",
+   "level_published": "P",
+   "status": "OWNER_REQUIRED",
+   "reason": "PEMS 2024 prints no Poison Control consultation row on p.153 or on any other protocol page; the 1-800-222-1222 referral is agency authoring.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+   "row": 12,
+   "action": "Medical Control Contact: \u2022 Contact Medical Control for guidance as needed. \u2022 Report agent exposure, interventions performed, and patient status.",
+   "level_published": "MC",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 153,
+   "pems_ordinal": 5,
+   "pems_badge": "MC",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Contact Medical Control for guidance as needed.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md",
+   "row": 1,
+   "action": "Universal Patient Care / Assessment: \u2022 Assess airway, breathing, circulation, and mental status. \u2022 Apply pulse oximetry and cardiac monitoring. \u2022 Asse",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 0,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md",
+   "row": 2,
+   "action": "Oxygen Administration: \u2022 Administer oxygen to maintain SpO\u2082 \u2265 94%. \u2022 Use nasal cannula, simple mask, or non-rebreather as appropriate.",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 2,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Provide supplemental oxygen to maintain SpO2 > 94%.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md",
+   "row": 3,
+   "action": "Albuterol Sulfate (Beta-Agonist): \u2022 Adult & Pediatric: 3 mL of 0.083% solution via nebulizer. \u2022 Repeat as necessary based on clinical response. \u2022 May ",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 5,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. ADULT: Ipratropium Bromide 3 mL of 0.02% solution, nebulized. Once. PEDIATRIC: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. PEDIATRIC: Ipratropium Bromide 3 mL of 0.02% solution, nebulized. Once.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md",
+   "row": 4,
+   "action": "Ipratropium Bromide (Anticholinergic): \u2022 Adult & Pediatric: 3 mL of 0.02% solution via nebulizer. \u2022 \u26a0 ONCE ONLY \u2013 Do NOT repeat without Medical Contro",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 5,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. ADULT: Ipratropium Bromide 3 mL of 0.02% solution, nebulized. Once. PEDIATRIC: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. PEDIATRIC: Ipratropium Bromide 3 mL of 0.02% solution, nebulized. Once.",
+   "binding_evidence": null,
+   "basis": "adjudicated:confirm",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "Ipratropium is inside p.123#5, badge EMT -> EMT/A/I/P; site matches. Confirm."
+  },
+  {
+   "file": "protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md",
+   "row": 5,
+   "action": "Methylprednisolone (Solu-Medrol) for Moderate to Severe Symptoms: \u2022 Adult: 125 mg IV/IO slow push. \u2022 Pediatric: 2 mg/kg IV/IO slow push (maximum dose ",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 6,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "For moderate to severe symptoms, also administer: ADULT: Methylprednisolone (Solu-Medrol) 125 mg IV/IO slow push. PEDIATRIC: Methylprednisolone (Solu-Medrol) 2 mg/kg IV/IO slow push. Maximum dose: 125 mg",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md",
+   "row": 6,
+   "action": "Magnesium Sulfate for Severe Symptoms / Impending Respiratory Failure: \u2022 Adult: 2 g IV/IO infusion over 15 minutes. \u2022 Pediatric: 40 mg/kg IV/IO over 1",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 124,
+   "pems_ordinal": 7,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "For severe symptoms, also administer: ADULT: Magnesium Sulfate 2 g IV/IO infusion over 15 minutes PEDIATRIC: Magnesium Sulfate 40 mg/kg IV/IO over 15 minutes. Maximum dose: 2,000 mg (2 g)",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md",
+   "row": 7,
+   "action": "Assist Ventilations / Airway Management: \u2022 Prepare for assisted ventilation if respiratory failure develops. \u2022 Bag-valve-mask with PEEP valve as indic",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.123-124 print no assist-ventilation/airway-management row for the asthma section; BVM support is p.239#7 (Airway Management procedure, badge EMT), a different page.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md",
+   "row": 8,
+   "action": "Continuous Positive Airway Pressure (CPAP): \u2022 Consider for COPD exacerbation or severe bronchospasm with adequate mentation. \u2022 Initiate 5-10 cm H\u2082O, t",
+   "level_published": "I",
+   "status": "OWNER_REQUIRED",
+   "reason": "PEMS prints CPAP as a ventilatory-support option at EMT (p.123#3) but scopes the PEEP titration above the initial setting to I/P in the procedure text (p.239#5 'I/P only: Adjust PEEP...'). This row is the titration row, so one chip would contradict either the badge or the source's own scoping; the page's I is kept.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md",
+   "row": 9,
+   "action": "Related Protocol \u2013 Stridor (Upper Airway Obstruction): \u2022 Epinephrine: 3 mg [1 mg/mL solution] nebulized. \u2022 May be repeated once if needed. \u2022 Adult AND",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 124,
+   "pems_ordinal": 8,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Epinephrine 3 mg [1 mg/mL] nebulized PEDIATRIC: Epinephrine 3 mg [1 mg/mL] nebulized May repeat once, if needed.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md",
+   "row": 10,
+   "action": "Methylprednisolone for Moderate to Severe Stridor: \u2022 Same dosing as above (Row 5). \u2022 Administer after Epinephrine nebulization for persistent symptoms",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 124,
+   "pems_ordinal": 9,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "For moderate to severe symptoms, also administer: ADULT: Methylprednisolone (Solu-Medrol) 125 mg IV/IO slow push. PEDIATRIC: Methylprednisolone (Solu-Medrol) 2 mg/kg IV/IO slow push. Maximum dose: 125 mg",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md",
+   "row": 11,
+   "action": "Reassessment and Transport: \u2022 Continuously monitor respiratory status, auscultation, and SpO\u2082. \u2022 Reassess after each bronchodilator treatment. \u2022 Exped",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.123-124 print no reassessment/transport row for the asthma section; transport decisions are p.49#11 (Universal Patient Care), a different protocol.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pediatric_Stridor_PROC.md",
+   "row": 1,
+   "action": "Universal Patient Care / Initial Patient Contact \u2022 Follow the Universal Patient Care protocol for all patients.",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 0,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pediatric_Stridor_PROC.md",
+   "row": 2,
+   "action": "Scene Management & Calm Environment \u2022 Keep child calm - agitation worsens obstruction \u2022 Allow parent/caregiver to hold child \u2022 Avoid unnecessary proce",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.123-124 print no scene-management / calm-environment row; keeping the child calm is agency authoring.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pediatric_Stridor_PROC.md",
+   "row": 3,
+   "action": "Position of Comfort \u2022 Allow child to assume position of choice (usually upright or with parent) \u2022 Do not force supine positioning \u2022 Head-down position",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.123-124 print no position-of-comfort row. The nearest regional text is p.239#6 'Position the patient and open the airway' (Airway Management procedure), which is a different page and a different action.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pediatric_Stridor_PROC.md",
+   "row": 4,
+   "action": "High-Flow Oxygen \u2022 Apply high-flow oxygen via non-rebreather mask or blow-by \u2022 Monitor SpO2 continuously \u2022 Titrate to maintain SpO2 >94%",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 2,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Provide supplemental oxygen to maintain SpO2 > 94%.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pediatric_Stridor_PROC.md",
+   "row": 5,
+   "action": "Continuous Monitoring \u2022 Cardiac monitor \u2022 Pulse oximetry \u2022 EtCO2 when available",
+   "level_published": "A",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.123-124 print no continuous-monitoring row (cardiac monitor / pulse oximetry / EtCO2); EtCO2 monitoring is the Capnography procedure (p.241), a different page.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pediatric_Stridor_PROC.md",
+   "row": 6,
+   "action": "CPAP for Upper Airway Support \u2022 Consider CPAP for upper airway support if indicated \u2022 Initial PEEP 5 cmH2O (titratable by I/P providers)",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 3,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Consider non-invasive (CPAP) or invasive (SGA) ventilatory support.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pediatric_Stridor_PROC.md",
+   "row": 7,
+   "action": "Albuterol Nebulizer \u2022 Albuterol 3 mL 0.083% solution nebulized \u2022 May help with lower airway component \u2022 Reassess after treatment",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 5,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. ADULT: Ipratropium Bromide 3 mL of 0.02% solution, nebulized. Once. PEDIATRIC: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. PEDIATRIC: Ipratropium Bromide 3 mL of 0.02% solution, nebulized. Once.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pediatric_Stridor_PROC.md",
+   "row": 8,
+   "action": "Systemic Corticosteroids \u2022 Methylprednisolone (Solu-Medrol) per dosing table below:    \u2022 Adult: 125 mg IV/IO slow push    \u2022 Pediatric: 2 mg/kg IV/IO s",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 6,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "For moderate to severe symptoms, also administer: ADULT: Methylprednisolone (Solu-Medrol) 125 mg IV/IO slow push. PEDIATRIC: Methylprednisolone (Solu-Medrol) 2 mg/kg IV/IO slow push. Maximum dose: 125 mg",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pediatric_Stridor_PROC.md",
+   "row": 9,
+   "action": "IV/IO Access \u2022 Obtain IV or IO access for medication administration \u2022 Use largest appropriate catheter \u2022 Do NOT delay Epinephrine for IV/IO placement",
+   "level_published": "P",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.123-124 print no IV/IO access row. Vascular access is p.50#9 (Universal Patient Care, badge A), a different protocol.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pediatric_Stridor_PROC.md",
+   "row": 10,
+   "action": "Nebulized Epinephrine for Moderate to Severe Stridor \u2022 Epinephrine 3 mg [1 mg/mL] nebulized \u2022 May be repeated once if needed \u2022 Same concentration as a",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 124,
+   "pems_ordinal": 8,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Epinephrine 3 mg [1 mg/mL] nebulized PEDIATRIC: Epinephrine 3 mg [1 mg/mL] nebulized May repeat once, if needed.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pediatric_Stridor_PROC.md",
+   "row": 11,
+   "action": "Airway Protection - Advanced Airway \u2022 Prepare for advanced airway if impending respiratory failure \u2022 Have appropriate sized equipment ready \u2022 \u26a0 Intuba",
+   "level_published": "P",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.123-124 print no advanced-airway preparation row; intubation is the Endotracheal Intubation procedure (p.247).",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pediatric_Stridor_PROC.md",
+   "row": 12,
+   "action": "Transport Considerations \u2022 Transport to pediatric-capable facility \u2022 Alert receiving facility early \u2022 Consider ALS intercept if BLS only \u2022 Rapid trans",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.123-124 print no transport/destination row for stridor; destination decisions are p.49#11 (Universal Patient Care), a different protocol.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pneumothorax_PROC.md",
+   "row": 1,
+   "action": "Universal Patient Care / Scene Safety: \u2022 Ensure scene safety and appropriate PPE. \u2022 Bring all necessary equipment to patient side.",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.243 is the Chest Decompression procedure and prints no scene-safety/equipment row; scene safety is p.49#1 (Universal Patient Care), a different protocol.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pneumothorax_PROC.md",
+   "row": 2,
+   "action": "Primary Assessment: \u2022 Assess airway, breathing, circulation, and disability. \u2022 Assess vital signs and SpO2. \u2022 Identify life threats immediately.",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.243 prints no primary-assessment row; the primary/secondary survey is p.49#2 (Universal Patient Care), a different protocol.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pneumothorax_PROC.md",
+   "row": 3,
+   "action": "Oxygen Administration: \u2022 Administer Oxygen via nasal cannula or mask as needed to maintain SpO2 > 94%. \u2022 Titrate to patient condition.",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.243#0 prints oxygen at 15 LPM (100% FiO2) as the decompression procedure's first step, badge I \u2014 that is not this row's general titrated oxygen, whose regional row is p.239#4 (badge EMT). Citing p.243#0 would restrict routine oxygen to I.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pneumothorax_PROC.md",
+   "row": 4,
+   "action": "Positioning and Monitoring: \u2022 Position patient for comfort (typically supine or semi-Fowler's). \u2022 Establish IV/IO access. \u2022 Continuous cardiac and pul",
+   "level_published": "A",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.243 prints no positioning/monitoring row, and IV-IO access is p.50#9 (Universal Patient Care, badge A), a different protocol.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pneumothorax_PROC.md",
+   "row": 5,
+   "action": "Suction and Airway Management: \u2022 Prepare suction and airway equipment. \u2022 Be prepared for rapid airway intervention if decompensation occurs.",
+   "level_published": "A",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.243 prints no suction/airway-readiness row; suctioning is p.239#2 (Airway Management procedure, badge EMR), a different page.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pneumothorax_PROC.md",
+   "row": 6,
+   "action": "Needle Decompression - Site Selection: \u2022 Locate 2nd intercostal space in mid-clavicular line on affected side. \u2022 Alternate site: 4th intercostal space",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 243,
+   "pems_ordinal": 1,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Locate the second intercostal space in the mid-clavicular line on the same side as the suspected pneumothorax. Cleanse the site. Alternate acceptable position: Fourth intercostal space, midaxillary line.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pneumothorax_PROC.md",
+   "row": 7,
+   "action": "Needle Decompression - Equipment: \u2022 Attach 10 mL 0.9% Sodium Chloride syringe to 14-gauge catheter needle. \u2022 Use longest available needle (3.25 inch p",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 243,
+   "pems_ordinal": 2,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Attach a 10 mL syringe filled with 0.9% Sodium Chloride to a 14-gauge catheter needle \u2013 use longest available. Aspirate the syringe while advancing over the rib, perpendicular to the skin, and into the pleural space until a pop is felt or air/blood/fluid is freely aspirated. Do not advance the needle further.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pneumothorax_PROC.md",
+   "row": 8,
+   "action": "Needle Decompression - Procedure: \u2022 Aspirate syringe while advancing over the superior aspect of the rib. \u2022 Insert perpendicular to the skin into the ",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 243,
+   "pems_ordinal": 3,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Advance the catheter over the needle into the pleural space and remove the needle.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pneumothorax_PROC.md",
+   "row": 9,
+   "action": "Bilateral Chest Decompression (Traumatic Cardiac Arrest): \u2022 For traumatic cardiac arrest with suspicion of thoracoabdominal trauma, perform bilateral ",
+   "level_published": "I",
+   "status": "OWNER_REQUIRED",
+   "reason": "Bilateral decompression in traumatic arrest is printed as an INDICATION on p.243 ('Bilateral needle decompression: cardiac arrest with evidence of significant blunt or penetrating thoracoabdominal trauma'), not as a procedure row with a badge; the action row it belongs to is the Traumatic Cardiac Arrest protocol (p.61).",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pneumothorax_PROC.md",
+   "row": 10,
+   "action": "Reassessment After Decompression: \u2022 Continuously reassess vital signs, respiratory effort, and compliance. \u2022 Auscultate for return of breath sounds. \u2022",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 243,
+   "pems_ordinal": 4,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Reassess the patient, including vital signs and respiratory effort / compliance. Consider repeating the above steps for continued or recurrent hemodynamic instability.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pneumothorax_PROC.md",
+   "row": 11,
+   "action": "Repeat Decompression if Needed: \u2022 Consider repeating procedure for continued or recurrent hemodynamic instability or absent breath sounds.",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 243,
+   "pems_ordinal": 4,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Reassess the patient, including vital signs and respiratory effort / compliance. Consider repeating the above steps for continued or recurrent hemodynamic instability.",
+   "binding_evidence": null,
+   "basis": "adjudicated:held_split_review",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "PEMS I/P; site I/P. Split review list."
+  },
+  {
+   "file": "protocols/respiratory/03_Pneumothorax_PROC.md",
+   "row": 12,
+   "action": "Hemodynamic Support: \u2022 0.9% Sodium Chloride fluid bolus if hypotensive (SBP < 90 mmHg or MAP < 65). \u2022 Consider vasopressor support if cardiogenic shoc",
+   "level_published": "I",
+   "status": "OWNER_REQUIRED",
+   "reason": "The C2 ruling pointed this row at p.243#4, which is 'reassess the patient... consider repeating' \u2014 not haemodynamic support. Fluid bolus / vasopressor for hypotension is p.113-114 (Hypotension and Shock), a different protocol.",
+   "owner_ruling": null,
+   "pems_page": 243,
+   "pems_ordinal": 4,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Reassess the patient, including vital signs and respiratory effort / compliance. Consider repeating the above steps for continued or recurrent hemodynamic instability.",
+   "binding_evidence": null,
+   "basis": "adjudicated:no_pems_counterpart",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "'Hemodynamic Support: fluid bolus / vasopressors' has no PEMS row on p.243 (decompression only); p.243#4 is reassessment. Site I/P is authored and happens to equal that row's columns. No change; authoring flag."
+  },
+  {
+   "file": "protocols/respiratory/03_Pneumothorax_PROC.md",
+   "row": 13,
+   "action": "Advanced Airway Management (if indicated): \u2022 Prepare for or perform endotracheal intubation if respiratory failure. \u2022 \u26a0 Positive pressure ventilation ",
+   "level_published": "P",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.243 prints no advanced-airway row; intubation is the Endotracheal Intubation procedure (p.247), a different page.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pneumothorax_PROC.md",
+   "row": 14,
+   "action": "Transport Considerations: \u2022 Transport to appropriate trauma center if traumatic etiology. \u2022 Alert receiving facility of needle decompression performed",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.243 prints no transport row; trauma destination is the Trauma Field Triage policy (p.43) and p.49#11, different documents.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pneumothorax_PROC.md",
+   "row": 15,
+   "action": "Close Monitoring En Route: \u2022 Continuous reassessment en route. \u2022 Monitor for recurrent tension pneumothorax. \u2022 Secure catheter to prevent dislodgement",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.243 prints no en-route monitoring row; reassessment is p.243#4 for the procedure itself, not for transport monitoring.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": 1,
+   "action": "Follow Universal Patient Care / Initial Patient Contact protocol",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 0,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": 2,
+   "action": "Perform focused evaluation including assessment of airway and lung sounds",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 1,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Perform a focused evaluation including pertinent history and assessment of airway and lung sounds. Refer to Airway Management and Ventilatory Support procedure (includes airway foreign body).",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": 3,
+   "action": "Provide supplemental oxygen to maintain SpO2 > 94%",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 2,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Provide supplemental oxygen to maintain SpO2 > 94%.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": 4,
+   "action": "Consider non-invasive positive pressure ventilation (CPAP) for severe respiratory distress",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 3,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Consider non-invasive (CPAP) or invasive (SGA) ventilatory support.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": 5,
+   "action": "CPAP Initial Settings: PEEP 5 cmH2O",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 3,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Consider non-invasive (CPAP) or invasive (SGA) ventilatory support.",
+   "binding_evidence": null,
+   "basis": "adjudicated:set_cells",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "'Consider non-invasive (CPAP) or invasive (SGA) ventilatory support' is p.123#3, badge EMT (raster). Site prints A/I/P (narrower by EMT)."
+  },
+  {
+   "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": 6,
+   "action": "CPAP CONTRAINDICATIONS (\u26a0\ufe0f): \u2022 Apnea/agonal respirations \u2022 GCS \u2264 13 \u2022 Pneumothorax",
+   "level_published": "A",
+   "status": "OWNER_REQUIRED",
+   "reason": "A contraindication list is not an intervention, and p.245#2 (which the C2 ruling used) is the CPAP mask-placement step, not a contraindication row. PEMS prints no CPAP contraindication row on p.123-124 or p.245.",
+   "owner_ruling": null,
+   "pems_page": 245,
+   "pems_ordinal": 2,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Place the mask over the mouth and nose with oxygen flowing. Secure with straps, beginning with the lower straps. Tighten until air-leak is minimal.",
+   "binding_evidence": null,
+   "basis": "adjudicated:no_pems_counterpart",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "CPAP contraindications are procedure text from the CPAP/BiPAP/PEEP page (p.245), not a level-gated PEMS grid row. No cell change; the site's A/I/P is a downstream consequence of the parent CPAP row and should be reviewed with it."
+  },
+  {
+   "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": 7,
+   "action": "CPAP CONTRAINDICATIONS (\u26a0\ufe0f): \u2022 Facial trauma/burns/recent surgery \u2022 Penetrating neck/chest trauma \u2022 Active vomiting/severe nausea",
+   "level_published": "A",
+   "status": "OWNER_REQUIRED",
+   "reason": "Contraindication list, not an intervention; p.245#2 is the mask-placement step and no PEMS 2024 row prints CPAP contraindications.",
+   "owner_ruling": null,
+   "pems_page": 245,
+   "pems_ordinal": 2,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Place the mask over the mouth and nose with oxygen flowing. Secure with straps, beginning with the lower straps. Tighten until air-leak is minimal.",
+   "binding_evidence": null,
+   "basis": "adjudicated:no_pems_counterpart",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "CPAP contraindications, as row 6. No cell change; authoring review with the parent CPAP row."
+  },
+  {
+   "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": 8,
+   "action": "CPAP CONTRAINDICATIONS (\u26a0\ufe0f): \u2022 Hypotension (SBP < 90 mmHg, MAP < 65) \u2022 Inability to tolerate tight fitting mask",
+   "level_published": "A",
+   "status": "OWNER_REQUIRED",
+   "reason": "Contraindication list, not an intervention; p.245#2 is the mask-placement step and no PEMS 2024 row prints CPAP contraindications.",
+   "owner_ruling": null,
+   "pems_page": 245,
+   "pems_ordinal": 2,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Place the mask over the mouth and nose with oxygen flowing. Secure with straps, beginning with the lower straps. Tighten until air-leak is minimal.",
+   "binding_evidence": null,
+   "basis": "adjudicated:no_pems_counterpart",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "CPAP contraindications, as row 6. No cell change; authoring review with the parent CPAP row."
+  },
+  {
+   "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": 9,
+   "action": "CPAP Titration: Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing",
+   "level_published": "P",
+   "status": "OWNER_REQUIRED",
+   "reason": "PEMS scopes PEEP titration above the initial setting to I/P in the procedure's own text (p.239#5 'I/P only: Adjust PEEP...'), while the row that carries it is badged EMT. The C2 ruling's EMT would under-state a titration step the source reserves to I/P; the page's P is kept and the row is flagged.",
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 5,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Consider CPAP (PEEP: 5 cmH2O) for respiratory distress. Refer to CPAP procedure. I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH O.** 2",
+   "binding_evidence": null,
+   "basis": "adjudicated:set_cells",
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "PEEP titration is explicitly restricted in the source: p.239#5 'I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH2O' (raster). Site prints P only -> I/P. Upper bound confirmed as 10 cmH2O, not 15."
+  },
+  {
+   "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": 10,
+   "action": "Nitroglycerin Adult: 0.4 mg SL",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 124,
+   "pems_ordinal": 11,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Nitroglycerine 0.4 mg SL If SBP remains greater than 100 mmHg (MAP 65 mmHg), may repeat every five minutes as needed, up to three doses.",
+   "binding_evidence": null,
+   "basis": "adjudicated:set_cells",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "Nitroglycerine 0.4 mg SL is p.124#11, badge A -> A/I/P. Site prints I/P (narrower by A)."
+  },
+  {
+   "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": 11,
+   "action": "Nitroglycerin Repeat Administration: May repeat every 5 minutes as needed if SBP remains > 100 mmHg / MAP > 65 mmHg (maximum 3 doses)",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 124,
+   "pems_ordinal": 11,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Nitroglycerine 0.4 mg SL If SBP remains greater than 100 mmHg (MAP 65 mmHg), may repeat every five minutes as needed, up to three doses.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": 12,
+   "action": "Furosemide (Lasix) Adult: 40 mg IV/IO slow push",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 124,
+   "pems_ordinal": 12,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Furosemide (Lasix) 40 mg IV/IO slow push",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": 13,
+   "action": "Contact Medical Control for guidance as needed",
+   "level_published": "MC",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 124,
+   "pems_ordinal": 13,
+   "pems_badge": "MC",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Contact Medical Control for guidance as needed.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "MC",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Arrest_PROC.md",
+   "row": 1,
+   "action": "Universal Patient Care / Initial Patient Contact: \u2022 Follow the Universal Patient Care / Initial Patient Contact protocol. \u2022 Assess for life threats an",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 0,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Arrest_PROC.md",
+   "row": 2,
+   "action": "Position Patient and Open Airway: \u2022 Position the patient appropriately (supine for intubation, recovery position if vomiting). \u2022 Open the airway using",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 6,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Position the patient and open the airway. Use BLS airway adjuncts (OPA/NPA/SGA) as necessary.",
+   "binding_evidence": null,
+   "basis": "adjudicated:confirm",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "Position/open airway with BLS adjuncts is p.239#6, badge EMT -> EMT/A/I/P; site matches. Confirm."
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Arrest_PROC.md",
+   "row": 3,
+   "action": "Continuous Monitoring: \u2022 Apply continuous pulse oximetry (SpO2). \u2022 Apply continuous box-waveform capnography (EtCO2) once airway placed.",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.239 prints no continuous-monitoring row; SpO2/EtCO2 monitoring is the Capnography procedure (p.241) and p.49#6, both different pages.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Arrest_PROC.md",
+   "row": 4,
+   "action": "BLS Airway Adjuncts: \u2022 Insert oropharyngeal airway (OPA) as indicated. \u2022 Insert nasopharyngeal airway (NPA) if gag reflex present. \u2022 Use supraglottic ",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 6,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Position the patient and open the airway. Use BLS airway adjuncts (OPA/NPA/SGA) as necessary.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Arrest_PROC.md",
+   "row": 5,
+   "action": "Suctioning: \u2022 Provide suctioning of oropharynx as needed to clear secretions, blood, or vomitus. \u2022 Pre-oxygenate before any airway manipulation.",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 2,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Provide suctioning as needed to maintain patent airway.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Arrest_PROC.md",
+   "row": 6,
+   "action": "BVM Ventilation (Two-Person Technique): \u2022 Support respirations with bag-valve-mask using two-person technique preferred. \u2022 Deliver appropriate tidal v",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 7,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Support respirations with BVM. Use in-line EtCO2. Refer to Capnography procedure. Adjust tidal volume, respiratory rate, and/or PEEP (if available) to maintain EtCO 35 \u2013 45mmHg.** 2",
+   "binding_evidence": "p.239#7 'Support respirations with BVM. Use in-line EtCO2... Adjust tidal volume, respiratory rate, and/or PEEP' badge EMT. This page splits that one PEMS row into r6 (BVM) and r7 (EtCO2-guided ventilation); the page published A here, the source prints EMT, so the chip moves A -> EMT.",
+   "basis": "row-bindings:bound",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Arrest_PROC.md",
+   "row": 7,
+   "action": "EtCO2-Guided Ventilation: \u2022 Use in-line EtCO2 monitoring during BVM ventilation. \u2022 Adjust tidal volume, respiratory rate, and/or PEEP to maintain EtCO",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 7,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Support respirations with BVM. Use in-line EtCO2. Refer to Capnography procedure. Adjust tidal volume, respiratory rate, and/or PEEP (if available) to maintain EtCO 35 \u2013 45mmHg.** 2",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Arrest_PROC.md",
+   "row": 8,
+   "action": "Endotracheal Intubation \u2013 Adult (\u226512 years): \u2022 If apneic and unable to ventilate adequately by less invasive means, consider endotracheal intubation. ",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 9,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If apneic and \u2265 12 years old: Consider endotracheal intubation if unable to ventilate adequately by less invasive means. Follow Endotracheal Intubation procedure.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Arrest_PROC.md",
+   "row": 9,
+   "action": "Endotracheal Intubation \u2013 Pediatric (<12 years): \u2022 \u26a0 RED DOT SKILL: Intubation of children <12 years is a Paramedic \"red dot\" skill only. \u2022 If apneic ",
+   "level_published": "P",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 10,
+   "pems_badge": "P",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If apneic and < 12 years old: consider endotracheal intubation if unable to ventilate adequately by less invasive means. Follow Endotracheal Intubation procedure.****",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Arrest_PROC.md",
+   "row": 10,
+   "action": "Foreign Body Airway Obstruction: \u2022 If foreign body airway obstruction suspected and unable to ventilate, perform laryngoscopy. \u2022 Remove foreign body w",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 8,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Foreign body airway obstruction: If unable to ventilate, perform laryngoscopy. Remove with forceps.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Arrest_PROC.md",
+   "row": 11,
+   "action": "Surgical Airway (Cricothyrotomy): \u2022 If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway. \u2022 Use 14G, 3.25\" catheter o",
+   "level_published": "P",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 269,
+   "pems_ordinal": 0,
+   "pems_badge": "P",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Position the patient supine, expose, and cleanse the anterior neck. Use the non-dominant hand to identify and stabilize the thyroid cartilage and use the index finger to palpate the cricothyroid",
+   "binding_evidence": null,
+   "basis": "adjudicated:add_from_pems",
+   "before": {
+    "leftmost": "P",
+    "markers": [],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "C1 bound this row to p.239#2 (suctioning, EMR, all five columns) on text overlap \u2014 that binding is wrong. The true source is the Surgical Airway procedure, p.269, where every cricothyrotomy step prints badge P (raster confirms). ADD P only; adding all five columns would be a clinical defect."
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Arrest_PROC.md",
+   "row": 12,
+   "action": "Post-Intubation Airway Management: \u2022 Verify tube placement with continuous box-waveform capnography AND auscultation (bilateral lung sounds, absence o",
+   "level_published": "P",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.239 prints no post-intubation care row; verification/securement is the Endotracheal Intubation procedure p.247#9 (badge I), a different page.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Arrest_PROC.md",
+   "row": 13,
+   "action": "Ongoing Ventilation Monitoring: \u2022 Monitor ET tube placement and ventilation continuously with SpO2 and EtCO2. \u2022 Reassess lung sounds and gastric sound",
+   "level_published": "P",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.239 prints no ongoing tube-monitoring row; p.247#11 (badge EMT) is the Endotracheal Intubation procedure, a different page.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Arrest_PROC.md",
+   "row": 14,
+   "action": "Post-Advanced Airway Analgesia \u2013 Fentanyl (Sublimaze): \u2022 ADULT: 25\u201350 mcg IV/IO over 2 minutes or IN/IM. \u2022 PEDIATRIC: 0.5\u20131 mcg/kg IV/IO over 2 minute",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 55,
+   "pems_ordinal": 2,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Fentanyl (Sublimaze) 25 \u2013 50 mcg IV/IO over 2 minutes or IN/IM PEDIATRIC: Fentanyl (Sublimaze) 0.5 \u2013 1 mcg/kg IV/IO over 2 minutes or IN/IM Maximum dose 25 mcg. Repeat every 10 \u2013 15 minutes as needed for patient safety and comfort.",
+   "binding_evidence": "This row published no provider level at all, so there is none to keep. PEMS prints the identical Fentanyl order on p.55#2 (Sedation Post Advanced Airway, badge I): 'ADULT: Fentanyl (Sublimaze) 25 - 50 mcg IV/IO over 2 minutes or IN/IM; PEDIATRIC 0.5 - 1 mcg/kg... Maximum dose 25 mcg'. Bound to the row that prints the action; the level is the source's, not an invention.",
+   "basis": "row-bindings:bound",
+   "before": {
+    "leftmost": "I",
+    "markers": [],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Arrest_PROC.md",
+   "row": 15,
+   "action": "Post-Advanced Airway Sedation \u2013 Midazolam (Versed): \u2022 ADULT: 2.5 mg IV/IO over 2 minutes or 5 mg IN/IM. \u2022 PEDIATRIC: 0.1 mg/kg IV/IO over 2 minutes or",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 55,
+   "pems_ordinal": 3,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If Fentanyl is not sufficient, administer: ADULT: Midazolam (Versed) 2.5 mg IV/IO over 2 minutes or 5 mg IN/IM PEDIATRIC: Midazolam (Versed) 0.1 mg/kg IV/IO over 2 minutes or 0.2 mg/kg IN/IM Maximum dose 2.5 mg IV/IO or 5 mg IN/IM Repeat every 10 - 15 minutes as needed for patient safety and comfort.",
+   "binding_evidence": "This row published no provider level at all. PEMS prints the identical Midazolam order on p.55#3 (Sedation Post Advanced Airway, badge I): 'ADULT: Midazolam (Versed) 2.5 mg IV/IO over 2 minutes or 5 mg IN/IM; PEDIATRIC: 0.1 mg/kg IV/IO... Maximum dose 2.5 mg IV/IO or 5 mg IN/IM'.",
+   "basis": "row-bindings:bound",
+   "before": {
+    "leftmost": "I",
+    "markers": [],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 1,
+   "action": "Universal Patient Care / Initial Patient Contact Protocol: \u2022 Assess airway patency and breathing adequacy",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 0,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 2,
+   "action": "Airway and Lung Assessment: \u2022 Focused assessment for stridor, wheezing, rales \u2022 Auscultate breath sounds bilaterally \u2022 Assess work of breathing and ac",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 1,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Perform a focused evaluation including pertinent history and assessment of airway and lung sounds. Refer to Airway Management and Ventilatory Support procedure (includes airway foreign body).",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 3,
+   "action": "Continuous Monitoring: \u2022 Continuous EtCO2 monitoring to guide therapy \u2022 Continuous pulse oximetry \u2022 Cardiac monitoring",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.123-124 print no continuous-monitoring row (EtCO2/pulse oximetry/cardiac); EtCO2 monitoring is the Capnography procedure (p.241), a different page.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 4,
+   "action": "Oxygen Administration (if SpO2 <94%): \u2022 Supplemental Oxygen titrated to maintain SpO2 >94% \u2022 Start with nasal cannula or non-rebreather as needed \u2022 Av",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 2,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Provide supplemental oxygen to maintain SpO2 > 94%.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 5,
+   "action": "Positioning: \u2022 Patient position of comfort (sitting upright preferred) \u2022 Consider reverse Trendelenburg if tolerated",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.123-124 print no positioning row. p.239#6 'Position the patient and open the airway' belongs to the Airway Management procedure, not this protocol.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 6,
+   "action": "CPAP (Continuous Positive Airway Pressure): \u2022 Indications: Adults with respiratory distress due to pulmonary edema, infection, or near-drowning \u2022 Init",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 3,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Consider non-invasive (CPAP) or invasive (SGA) ventilatory support.",
+   "binding_evidence": null,
+   "basis": "adjudicated:set_cells",
+   "before": {
+    "leftmost": "MC",
+    "markers": [
+     "A",
+     "I"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "CPAP block: starting CPAP at PEEP 5 is EMT (p.239#5, p.123#3), titration to 10 is I/P only. Union = EMT/A/I/P. Site prints MC/MC, far narrower than the source."
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 7,
+   "action": "Supraglottic Airways (SGA): \u2022 Consider if patient continues to deteriorate and cannot tolerate CPAP \u2022 Maintains airway patency while avoiding invasive",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 3,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Consider non-invasive (CPAP) or invasive (SGA) ventilatory support.",
+   "binding_evidence": null,
+   "basis": "adjudicated:set_cells",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "SGA placement is EMT: p.239#6 'Use BLS airway adjuncts (OPA/NPA/SGA)' badge EMT, and p.123#3 groups SGA with CPAP at badge EMT. Site row prints no level -> EMT/A/I/P."
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 8,
+   "action": "Advanced Airway Management (ETI): \u2022 Endotracheal intubation reserved for I-level providers per protocol",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 123,
+   "pems_ordinal": 4,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Consider invasive ventilatory support via endotracheal intubation. Refer to Endotracheal Intubation procedure. Note: Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended. RSI is not addressed in PEMS regional protocols \u2013 refer to agency specific protocols for guidance.",
+   "binding_evidence": null,
+   "basis": "adjudicated:set_cells",
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "C1 bound this row to p.123#1 (focused evaluation, EMR). The text match is p.123#4 'Consider invasive ventilatory support via endotracheal intubation', badge I -> I/P. Site prints P only."
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 9,
+   "action": "IV/IO Access: \u2022 Establish vascular access for medication administration and fluid therapy \u2022 IO if IV unobtainable",
+   "level_published": "I",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.123-124 print no IV/IO access row; vascular access is p.50#9 (Universal Patient Care, badge A), a different protocol.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 10,
+   "action": "Fluid Administration: \u2022 0.9% Sodium Chloride or appropriate fluid as clinically indicated \u2022 Monitor for signs of fluid overload in CHF patients",
+   "level_published": "MC",
+   "status": "OWNER_REQUIRED",
+   "reason": "The C2 pointer (p.124#10) is the nebulised-saline bronchiolitis row, not fluid administration. PEMS prints no fluid-administration row in Respiratory Distress; fluid boluses are p.113-114 (Hypotension and Shock) and p.87#6 (Burns).",
+   "owner_ruling": null,
+   "pems_page": 124,
+   "pems_ordinal": 10,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Provide suctioning as needed and consider: PEDIATRIC: 0.9% Sodium Chloride, 6 mL nebulized. Repeat as needed for increased work of breathing due to secretions.",
+   "binding_evidence": null,
+   "basis": "adjudicated:no_pems_counterpart",
+   "before": {
+    "leftmost": "MC",
+    "markers": [
+     "A",
+     "I"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "p.124#10 is pediatric nebulised saline. No crystalloid bolus row exists on pp.123-125, so 'Fluid Administration' has no PEMS counterpart; its MC/MC cells are site-authored. No change, authoring flag."
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 11,
+   "action": "Stridor Management (Upper Airway): \u2022 Epinephrine 3 mg of 1 mg/mL (1:1,000) nebulized \u2022 May be repeated once \u2022 May need assistance to hold nebulizer \u2022 ",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 124,
+   "pems_ordinal": 8,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Epinephrine 3 mg [1 mg/mL] nebulized PEDIATRIC: Epinephrine 3 mg [1 mg/mL] nebulized May repeat once, if needed.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 12,
+   "action": "Bronchiolitis (Pediatric ONLY): \u2022 0.9% Sodium Chloride 6 mL nebulized \u2022 Repeat as needed for increased work of breathing \u2022 Transport in position of co",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 124,
+   "pems_ordinal": 10,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Provide suctioning as needed and consider: PEDIATRIC: 0.9% Sodium Chloride, 6 mL nebulized. Repeat as needed for increased work of breathing due to secretions.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 13,
+   "action": "Pulmonary Edema: \u2022 If Dyspnea with crackles and/or jugular venous distention: \u2022 Nitroglycerin 0.4 mg sublingual (adult only) \u2022 Repeat every 5 minutes ",
+   "level_published": "A",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 124,
+   "pems_ordinal": 11,
+   "pems_badge": "A",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Administer: ADULT: Nitroglycerine 0.4 mg SL If SBP remains greater than 100 mmHg (MAP 65 mmHg), may repeat every five minutes as needed, up to three doses.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "A",
+    "markers": [],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 14,
+   "action": "Severe Asthma/COPD: \u2022 Refer to Asthma specific protocol for comprehensive treatment \u2022 Magnesium Sulfate per Asthma protocol \u26a0 Positive pressure may wo",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 124,
+   "pems_ordinal": 7,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "For severe symptoms, also administer: ADULT: Magnesium Sulfate 2 g IV/IO infusion over 15 minutes PEDIATRIC: Magnesium Sulfate 40 mg/kg IV/IO over 15 minutes. Maximum dose: 2,000 mg (2 g)",
+   "binding_evidence": "This row published no provider level at all. It is the severe asthma/COPD row, and PEMS prints magnesium for severe symptoms on p.124#7 ('For severe symptoms, also administer: ADULT: Magnesium Sulfate 2 g IV/IO infusion over 15 minutes', badge I).",
+   "basis": "row-bindings:bound",
+   "before": {
+    "leftmost": "I",
+    "markers": [],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 15,
+   "action": "Cardiac Ischemia Management: \u2022 Evaluate for cardiac origin \u2022 Consider 12-lead ECG \u2022 Refer to Chest Pain/ACS protocol if indicated",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.123-124 print no 12-lead/ischaemia-evaluation row; the 12-lead is p.50#7 (Universal Patient Care, badge EMT) and the ACS pathway is p.107, different pages.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 16,
+   "action": "Respiratory Failure Management: \u2022 If apnea/agonal respirations or GCS \u226413: \u2022 Prepare for immediate airway control \u2022 Bag-valve-mask ventilation \u2022 Consi",
+   "level_published": "P",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.123-124 print no respiratory-failure-management row; BVM and airway escalation are p.239#7 (badge EMT) and p.239#9 (badge I), a different page.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+   "row": 1,
+   "action": "Universal Patient Care / Initial Patient Contact: \u2022 Follow the Universal Patient Care protocol \u2022 Remove patient from source and ensure scene safety \u2022 ",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 153,
+   "pems_ordinal": 0,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+   "row": 2,
+   "action": "Scene Safety and Scene Time Considerations: \u2022 Assess scene for ongoing hazard exposure \u2022 Limit scene time; prepare for rapid transport \u2022 Coordinate wi",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.153 prints no scene-safety / scene-time row; hazard assessment and rapid extrication are agency authoring.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+   "row": 3,
+   "action": "Airway Assessment: \u2022 Inspect for singed facial/nasal hairs \u2022 Examine face, nose, and mouth for burns or soot \u2022 Auscultate for stridor, hoarseness, or ",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.153 prints no airway-assessment row. The nearest regional text is p.87#2 (Burns: 'Assess airway and respiratory effort', badge EMR), a different protocol.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+   "row": 4,
+   "action": "Initial Airway Management: \u2022 Position patient to optimize ventilation \u2022 Suction oropharynx as needed for soot/secretions \u2022 Apply high-flow oxygen via ",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 153,
+   "pems_ordinal": 2,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Airway Management and Ventilatory Support procedure.",
+   "binding_evidence": null,
+   "basis": "adjudicated:held_split_review",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "PEMS EMT/A/I/P; site EMT/A/I/P. Split review list."
+  },
+  {
+   "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+   "row": 5,
+   "action": "Advanced Airway Considerations: \u2022 Consider endotracheal intubation versus immediate transport to the nearest emergency department if any signs or symp",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 87,
+   "pems_ordinal": 7,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Consider endotracheal intubation vs immediate transport to the nearest emergency department if any signs of symptoms of airway injury develop: \u2022 Singed facial or nasal hairs \u2022 Burns or soot on the face, nose, or mouth \u2022 Hoarse voice or stridor \u2022 Carbonaceous sputum \u2022 Difficulty breathing / respiratory distress \u2022 Hypoxia \u2022 Tachypnea Follow Endotracheal Intubation procedure if proceeding with intubation. Note: Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended. RSI is a Paramedic only skill and not addressed in PEMS regional protocols \u2013 refer to agency specific protocols for guidance. Note: Intubation of children under 12 years old is a Paramedic \u201cred dot\u201d skill only.",
+   "binding_evidence": "p.87#7 (Burns) prints this exact action: 'Consider endotracheal intubation vs immediate transport to the nearest emergency department if any signs or symptoms of airway injury develop: singed facial or nasal hairs... hoarse voice or stridor... carbonaceous sputum', badge I. The C2 ruling pointed at p.123#4 (the Respiratory Distress ETI row); p.87#7 is the row that prints this action, and its badge is I, so the page's P moves to I.",
+   "basis": "row-bindings:bound",
+   "before": {
+    "leftmost": "P",
+    "markers": [
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "'Consider endotracheal intubation versus immediate transport' is the intubation decision, which PEMS badges I (p.123#4, p.239#9). Site prints P only. Medium: no identical sentence in the source."
+  },
+  {
+   "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+   "row": 6,
+   "action": "Endotracheal Intubation (If Indicated): \u2022 Perform endotracheal intubation per procedure \u26a0 Intubation of spontaneously breathing patients without RSI i",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 9,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If apneic and \u2265 12 years old: Consider endotracheal intubation if unable to ventilate adequately by less invasive means. Follow Endotracheal Intubation procedure.",
+   "binding_evidence": "p.239#9 'If apneic and >= 12 years old: Consider endotracheal intubation if unable to ventilate adequately by less invasive means', badge I. PEMS prints paediatric intubation separately (p.239#10, badge P); this page merges both into one row, so the chip is the lowest level PEMS prints for the action (I) and the page's own 'under 12 ... Paramedic red dot skill only' caveat stays in the action text.",
+   "basis": "row-bindings:bound",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+   "row": 7,
+   "action": "Hydroxocobalamin (Cyanide Antidote) - Indication Assessment: \u2022 Assess for exposure to combustion products/fire in an enclosed space with ANY of the fo",
+   "level_published": "I",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.153 prints no hydroxocobalamin row; the drug's regional row is p.88#8 (Burns, badge I) and p.121#12 (Overdose, badge I), both different protocols.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+   "row": 8,
+   "action": "Hydroxocobalamin Preparation: \u2022 Reconstitute with 200 mL 0.9% Sodium Chloride \u2022 Use vented IV tubing for administration \u2022 Verify solution clarity and ",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 88,
+   "pems_ordinal": 8,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "For altered mental status, seizures, hypotension, and/or cardiac arrest following exposure to combustion products in an enclosed space or suspected cyanide poisoning, administer (if available): ADULT: Hydroxocobalamin (CYANOKIT) 5 g IV/IO, infuse over 15 minutes PEDIATRIC: Hydroxocobalamin (CYANOKIT) 70 mg/kg IV/IO, infuse over 15 minutes To reconstitute for infusion: Add: 200mL of 0.9% Sodium Chloride to Hydroxocobalamin (CYANOKIT) vial using the transfer spike included in the kit. Fill to the line. Mix: Repeatedly invert or rock the vial for at least 60 seconds. Do not shake.",
+   "binding_evidence": "This row published no provider level at all, so there is none to keep. PEMS prints the hydroxocobalamin order on p.88#8 (Burns, badge I): 'For altered mental status, seizures, hypotension, and/or cardiac arrest following exposure to combustion products in an enclosed space or suspected cyanide poisoning, administer (if available): ADULT: Hydroxocobalamin (CYANOKIT) 5 g IV/IO, infuse over 15 minutes'. The reconstitution steps themselves are agency detail; the drug's regional level is I.",
+   "basis": "row-bindings:bound",
+   "before": {
+    "leftmost": "I",
+    "markers": [],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+   "row": 9,
+   "action": "Hydroxocobalamin Administration: \u2022 Administer per Medical Control guidance \u2022 Monitor for increase in blood pressure \u2022 Inform receiving facility of adm",
+   "level_published": "I",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.153 prints no hydroxocobalamin row; the drug's regional row is p.88#8 (Burns, badge I) and p.121#12 (Overdose, badge I), both different protocols.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+   "row": 10,
+   "action": "Burn Assessment: \u2022 Assess for concomitant thermal burn injuries \u2022 Estimate total body surface area (TBSA) involved \u2022 Evaluate burn depth and critical ",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.153 prints no burn-assessment row; TBSA/depth assessment is p.87#3 (Burns, badge EMT), a different protocol.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+   "row": 11,
+   "action": "Fluid Management (If Burns Present): \u2022 Initiate fluid resuscitation per Burn Injuries Protocol \u2022 Titrate fluid administration to hemodynamic response ",
+   "level_published": "I",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.153 prints no fluid-resuscitation row; burn fluids are p.87#5-#6 (Burns, badge A for access and for the 500 mL/hr order), a different protocol.",
+   "owner_ruling": null,
+   "pems_page": 153,
+   "pems_ordinal": 2,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Airway Management and Ventilatory Support procedure.",
+   "binding_evidence": null,
+   "basis": "adjudicated:no_pems_counterpart",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "No burn-fluid row on the inhalation/irritants page. Site prints I/P (blocks EMT/A) with no PEMS row behind it. Authoring flag, no change."
+  },
+  {
+   "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+   "row": 12,
+   "action": "Medical Control Contact: \u2022 Contact Medical Control for cyanide poisoning confirmation and specific Hydroxocobalamin dosing guidance \u2022 Contact Regional",
+   "level_published": "MC",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 153,
+   "pems_ordinal": 5,
+   "pems_badge": "MC",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Contact Medical Control for guidance as needed.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+   "row": 13,
+   "action": "Monitoring and Reassessment: \u2022 Monitor SpO2, EtCO2, and respiratory rate continuously \u2022 Reassess airway patency frequently; edema may progress rapidly",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.153 prints no monitoring/reassessment row; SpO2/EtCO2 monitoring is the Capnography procedure (p.241) and p.49#6, different pages.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+   "row": 14,
+   "action": "Transport Considerations: \u2022 Expedited transport given risk of rapid airway compromise \u2022 Transport to facility capable of managing combined trauma/burn",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.153 prints no transport row; destination for inhalation injury is p.88#9 (Burns, MC row) and p.49#11, different pages.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "row": 1,
+   "action": "Universal Patient Care: \u2022 Apply to all patients per protocol.",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 0,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMR",
+    "markers": [
+     "EMR",
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "row": 2,
+   "action": "Scene Safety / Recognition: \u2022 Rapidly identify complete vs partial obstruction. \u2022 Recognize universal choking sign (hands to throat). \u2022 Determine cons",
+   "level_published": "EMT",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.239 prints no recognition/scene-safety row; identifying complete vs partial obstruction is agency authoring.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "row": 3,
+   "action": "Conscious Adult (\u226512 years) - Abdominal Thrusts: \u2022 Stand behind patient, wrap arms around waist. \u2022 Make fist with one hand; thumb side against patient",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 3,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Foreign body airway obstruction: * ADULT: Perform Heimlich abdominal thrusts. OBESE / PREGNANT: Perform chest thrusts. PEDIATRIC \u2265 1 year: Perform Heimlich abdominal thrusts. PEDIATRIC < 1 year: Alternate 5 back blows/chest thrusts until obstruction clears",
+   "binding_evidence": null,
+   "basis": "adjudicated:held_split_review",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "PEMS EMT/A/I/P; site EMT/A/I/P. Split review list."
+  },
+  {
+   "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "row": 4,
+   "action": "Conscious Obese Adult / Pregnant Woman - Chest Thrusts: \u2022 Stand behind patient, arms under patient's armpits. \u2022 Make fist with one hand; thumb side ag",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 3,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Foreign body airway obstruction: * ADULT: Perform Heimlich abdominal thrusts. OBESE / PREGNANT: Perform chest thrusts. PEDIATRIC \u2265 1 year: Perform Heimlich abdominal thrusts. PEDIATRIC < 1 year: Alternate 5 back blows/chest thrusts until obstruction clears",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "row": 5,
+   "action": "Conscious Pediatric \u22651 year - Abdominal Thrusts: \u2022 Kneel behind child, wrap arms around waist. \u2022 Make fist; thumb side against child's abdomen. \u2022 Posi",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 3,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Foreign body airway obstruction: * ADULT: Perform Heimlich abdominal thrusts. OBESE / PREGNANT: Perform chest thrusts. PEDIATRIC \u2265 1 year: Perform Heimlich abdominal thrusts. PEDIATRIC < 1 year: Alternate 5 back blows/chest thrusts until obstruction clears",
+   "binding_evidence": null,
+   "basis": "adjudicated:confirm",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "Pediatric abdominal thrusts are inside p.239#3, badge EMT -> EMT/A/I/P; site matches. Confirm."
+  },
+  {
+   "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "row": 6,
+   "action": "Conscious Pediatric <1 year - Back Blows and Chest Thrusts: \u2022 Position infant prone, head down, below level of chest. \u2022 Support head and neck with han",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 3,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Foreign body airway obstruction: * ADULT: Perform Heimlich abdominal thrusts. OBESE / PREGNANT: Perform chest thrusts. PEDIATRIC \u2265 1 year: Perform Heimlich abdominal thrusts. PEDIATRIC < 1 year: Alternate 5 back blows/chest thrusts until obstruction clears",
+   "binding_evidence": null,
+   "basis": "adjudicated:confirm",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "Infant back blows / chest thrusts are inside p.239#3, badge EMT; site matches. Confirm."
+  },
+  {
+   "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "row": 7,
+   "action": "Unconscious Patient - Position and Open Airway: \u2022 Place patient supine on firm surface. \u2022 Open airway using head-tilt chin-lift or jaw-thrust if traum",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 6,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Position the patient and open the airway. Use BLS airway adjuncts (OPA/NPA/SGA) as necessary.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "row": 8,
+   "action": "Unconscious Patient - BLS Airway Adjuncts: \u2022 Insert OPA or NPA as indicated by patient tolerance and level of consciousness. \u2022 Insert SGA (i-gel or Ki",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 6,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Position the patient and open the airway. Use BLS airway adjuncts (OPA/NPA/SGA) as necessary.",
+   "binding_evidence": null,
+   "basis": "adjudicated:held_split_review",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": "PEMS EMT/A/I/P; site EMT/A/I/P. Split review list."
+  },
+  {
+   "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "row": 9,
+   "action": "Suctioning: \u2022 Provide oropharyngeal suctioning as needed for secretions, blood, or vomit. \u2022 Use rigid Yankauer catheter for direct visualization.",
+   "level_published": "EMR",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 2,
+   "pems_badge": "EMR",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Provide suctioning as needed to maintain patent airway.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "EMT",
+    "markers": [
+     "EMT",
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "row": 10,
+   "action": "Apneic Patient - BVM Ventilation: \u2022 Support respirations with BVM and appropriate airway adjunct. \u2022 Ensure adequate seal and proper ventilation rate. ",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 7,
+   "pems_badge": "EMT",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Support respirations with BVM. Use in-line EtCO2. Refer to Capnography procedure. Adjust tidal volume, respiratory rate, and/or PEEP (if available) to maintain EtCO 35 \u2013 45mmHg.** 2",
+   "binding_evidence": "The alignment paired this BVM row with p.239#10 ('If apneic and < 12 years old: consider endotracheal intubation', badge P), which is the paediatric intubation row. p.239#7 'Support respirations with BVM' is the BVM row, badge EMT, so the page's A moves to EMT.",
+   "basis": "row-bindings:bound",
+   "before": {
+    "leftmost": "A",
+    "markers": [
+     "A",
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "row": 11,
+   "action": "Unable to Ventilate - Laryngoscopy and Forceps Removal: \u2022 If unable to ventilate due to foreign body obstruction, perform direct laryngoscopy. \u2022 Visua",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 8,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "Foreign body airway obstruction: If unable to ventilate, perform laryngoscopy. Remove with forceps.",
+   "binding_evidence": null,
+   "basis": "alignment:matched",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "row": 12,
+   "action": "Unable to Ventilate - Endotracheal Intubation: \u2022 If apneic and unable to ventilate by less invasive means, consider endotracheal intubation. \u2022 Visuali",
+   "level_published": "I",
+   "status": "OK",
+   "reason": null,
+   "owner_ruling": null,
+   "pems_page": 239,
+   "pems_ordinal": 9,
+   "pems_badge": "I",
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": "If apneic and \u2265 12 years old: Consider endotracheal intubation if unable to ventilate adequately by less invasive means. Follow Endotracheal Intubation procedure.",
+   "binding_evidence": "p.239#9 'If apneic and >= 12 years old: Consider endotracheal intubation...', badge I. PEMS prints paediatric intubation as its own row (p.239#10, badge P) and this page merges both into one row, so the chip is the lowest level PEMS prints for the action (I); the page's 'children <12 ... Paramedic red dot skill only' caveat stays in the action text. The page published [P] here (a bracketed grant, not a floor), which is why the chip moves P -> I.",
+   "basis": "row-bindings:bound",
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "row": 13,
+   "action": "Post-Obstruction Advanced Airway - Sedation: \u2022 If endotracheal intubation performed, refer to Sedation Post Advanced Airway protocol. \u2022 Fentanyl (25 m",
+   "level_published": "I",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.239 prints no post-intubation sedation row; sedation after an advanced airway is p.55 (Sedation Post Advanced Airway), a different protocol.",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
+  },
+  {
+   "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "row": 14,
+   "action": "Expanding Hematoma / Edema - Advanced Airway: \u2022 Early airway intervention before complete obstruction. \u2022 Consider difficult airway algorithm; prepare ",
+   "level_published": "I",
+   "status": "OWNER_REQUIRED",
+   "reason": "p.239 prints no expanding-haematoma / difficult-airway row; the row is agency authoring that cross-refers to surgical airway backup (p.269).",
+   "owner_ruling": null,
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
+   "compound_tokens": [],
+   "bracketed": false,
+   "pems_text": null,
+   "binding_evidence": null,
+   "basis": null,
+   "before": {
+    "leftmost": "I",
+    "markers": [
+     "I",
+     "P"
+    ],
+    "text_label": null,
+    "text_tokens": []
+   },
+   "note": null
   },
   {
    "file": "protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md",

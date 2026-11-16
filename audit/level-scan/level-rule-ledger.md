@@ -176,6 +176,128 @@ the action text.
 | `05_Stroke_TIA_PROC.md` | 7 | EMT | p.131#4 | Initiate transport. Goal scene time < 15 minutes: Symptoms less than 24 hours (or unknown) AND suspected LVO (RACE = 5 - 9) : Transport to the clos… | adjudicated:site_split_of_pems | OK |
 | `05_Stroke_TIA_PROC.md` | 8 | PENDING | — | — | — | pending_row_omd |
 | `05_Stroke_TIA_PROC.md` | 9 | PENDING | — | — | — | pending_row_omd |
+| `03_Airway_Inhalation_Irritants_PROC.md` | 1 | EMR | p.153#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `03_Airway_Inhalation_Irritants_PROC.md` | 2 | EMT | p.153#1 | Consider gross decontamination. | alignment:matched | OK |
+| `03_Airway_Inhalation_Irritants_PROC.md` | 3 | EMT | p.153#2 | Follow Airway Management and Ventilatory Support procedure. | adjudicated:held_split_review | OWNER_REQUIRED |
+| `03_Airway_Inhalation_Irritants_PROC.md` | 4 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Airway_Inhalation_Irritants_PROC.md` | 5 | EMT | p.153#2 | Follow Airway Management and Ventilatory Support procedure. | alignment:matched | OK |
+| `03_Airway_Inhalation_Irritants_PROC.md` | 6 | A | p.153#3 | Administer: ADULT: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. | alignment:matched | OK |
+| `03_Airway_Inhalation_Irritants_PROC.md` | 7 | A | p.153#4 | PEDIATRIC: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. Administer: ADULT: Methylprednisolone (Solu-Medrol) 125 mg IV… | adjudicated:confirm | OK |
+| `03_Airway_Inhalation_Irritants_PROC.md` | 8 | A | p.153#4 | PEDIATRIC: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. Administer: ADULT: Methylprednisolone (Solu-Medrol) 125 mg IV… | alignment:matched | OK |
+| `03_Airway_Inhalation_Irritants_PROC.md` | 9 | P | — | — | — | OWNER_REQUIRED |
+| `03_Airway_Inhalation_Irritants_PROC.md` | 10 | P | — | — | — | OWNER_REQUIRED |
+| `03_Airway_Inhalation_Irritants_PROC.md` | 11 | P | — | — | — | OWNER_REQUIRED |
+| `03_Airway_Inhalation_Irritants_PROC.md` | 12 | MC | p.153#5 | Contact Medical Control for guidance as needed. | alignment:matched | OK |
+| `03_Asthma_COPD_Reactive_Airway_PROC.md` | 1 | EMR | p.123#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `03_Asthma_COPD_Reactive_Airway_PROC.md` | 2 | EMR | p.123#2 | Provide supplemental oxygen to maintain SpO2 > 94%. | alignment:matched | OK |
+| `03_Asthma_COPD_Reactive_Airway_PROC.md` | 3 | EMT | p.123#5 | Administer: ADULT: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. ADULT: Ipratropium Bromide 3 mL of 0.02% solution, ne… | alignment:matched | OK |
+| `03_Asthma_COPD_Reactive_Airway_PROC.md` | 4 | EMT | p.123#5 | Administer: ADULT: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. ADULT: Ipratropium Bromide 3 mL of 0.02% solution, ne… | adjudicated:confirm | OK |
+| `03_Asthma_COPD_Reactive_Airway_PROC.md` | 5 | A | p.123#6 | For moderate to severe symptoms, also administer: ADULT: Methylprednisolone (Solu-Medrol) 125 mg IV/IO slow push. PEDIATRIC: Methylprednisolone (So… | alignment:matched | OK |
+| `03_Asthma_COPD_Reactive_Airway_PROC.md` | 6 | I | p.124#7 | For severe symptoms, also administer: ADULT: Magnesium Sulfate 2 g IV/IO infusion over 15 minutes PEDIATRIC: Magnesium Sulfate 40 mg/kg IV/IO over … | alignment:matched | OK |
+| `03_Asthma_COPD_Reactive_Airway_PROC.md` | 7 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Asthma_COPD_Reactive_Airway_PROC.md` | 8 | I | — | — | — | OWNER_REQUIRED |
+| `03_Asthma_COPD_Reactive_Airway_PROC.md` | 9 | A | p.124#8 | Administer: ADULT: Epinephrine 3 mg [1 mg/mL] nebulized PEDIATRIC: Epinephrine 3 mg [1 mg/mL] nebulized May repeat once, if needed. | alignment:matched | OK |
+| `03_Asthma_COPD_Reactive_Airway_PROC.md` | 10 | A | p.124#9 | For moderate to severe symptoms, also administer: ADULT: Methylprednisolone (Solu-Medrol) 125 mg IV/IO slow push. PEDIATRIC: Methylprednisolone (So… | alignment:matched | OK |
+| `03_Asthma_COPD_Reactive_Airway_PROC.md` | 11 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Pediatric_Stridor_PROC.md` | 1 | EMR | p.123#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `03_Pediatric_Stridor_PROC.md` | 2 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Pediatric_Stridor_PROC.md` | 3 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Pediatric_Stridor_PROC.md` | 4 | EMR | p.123#2 | Provide supplemental oxygen to maintain SpO2 > 94%. | alignment:matched | OK |
+| `03_Pediatric_Stridor_PROC.md` | 5 | A | — | — | — | OWNER_REQUIRED |
+| `03_Pediatric_Stridor_PROC.md` | 6 | EMT | p.123#3 | Consider non-invasive (CPAP) or invasive (SGA) ventilatory support. | alignment:matched | OK |
+| `03_Pediatric_Stridor_PROC.md` | 7 | EMT | p.123#5 | Administer: ADULT: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. ADULT: Ipratropium Bromide 3 mL of 0.02% solution, ne… | alignment:matched | OK |
+| `03_Pediatric_Stridor_PROC.md` | 8 | A | p.123#6 | For moderate to severe symptoms, also administer: ADULT: Methylprednisolone (Solu-Medrol) 125 mg IV/IO slow push. PEDIATRIC: Methylprednisolone (So… | alignment:matched | OK |
+| `03_Pediatric_Stridor_PROC.md` | 9 | P | — | — | — | OWNER_REQUIRED |
+| `03_Pediatric_Stridor_PROC.md` | 10 | A | p.124#8 | Administer: ADULT: Epinephrine 3 mg [1 mg/mL] nebulized PEDIATRIC: Epinephrine 3 mg [1 mg/mL] nebulized May repeat once, if needed. | alignment:matched | OK |
+| `03_Pediatric_Stridor_PROC.md` | 11 | P | — | — | — | OWNER_REQUIRED |
+| `03_Pediatric_Stridor_PROC.md` | 12 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Pneumothorax_PROC.md` | 1 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Pneumothorax_PROC.md` | 2 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Pneumothorax_PROC.md` | 3 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Pneumothorax_PROC.md` | 4 | A | — | — | — | OWNER_REQUIRED |
+| `03_Pneumothorax_PROC.md` | 5 | A | — | — | — | OWNER_REQUIRED |
+| `03_Pneumothorax_PROC.md` | 6 | I | p.243#1 | Locate the second intercostal space in the mid-clavicular line on the same side as the suspected pneumothorax. Cleanse the site. Alternate acceptab… | alignment:matched | OK |
+| `03_Pneumothorax_PROC.md` | 7 | I | p.243#2 | Attach a 10 mL syringe filled with 0.9% Sodium Chloride to a 14-gauge catheter needle – use longest available. Aspirate the syringe while advancing… | alignment:matched | OK |
+| `03_Pneumothorax_PROC.md` | 8 | I | p.243#3 | Advance the catheter over the needle into the pleural space and remove the needle. | alignment:matched | OK |
+| `03_Pneumothorax_PROC.md` | 9 | I | — | — | — | OWNER_REQUIRED |
+| `03_Pneumothorax_PROC.md` | 10 | I | p.243#4 | Reassess the patient, including vital signs and respiratory effort / compliance. Consider repeating the above steps for continued or recurrent hemo… | alignment:matched | OK |
+| `03_Pneumothorax_PROC.md` | 11 | I | p.243#4 | Reassess the patient, including vital signs and respiratory effort / compliance. Consider repeating the above steps for continued or recurrent hemo… | adjudicated:held_split_review | OK |
+| `03_Pneumothorax_PROC.md` | 12 | I | p.243#4 | Reassess the patient, including vital signs and respiratory effort / compliance. Consider repeating the above steps for continued or recurrent hemo… | adjudicated:no_pems_counterpart | OWNER_REQUIRED |
+| `03_Pneumothorax_PROC.md` | 13 | P | — | — | — | OWNER_REQUIRED |
+| `03_Pneumothorax_PROC.md` | 14 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Pneumothorax_PROC.md` | 15 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Pulmonary_Edema_Congestion_PROC.md` | 1 | EMR | p.123#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `03_Pulmonary_Edema_Congestion_PROC.md` | 2 | EMR | p.123#1 | Perform a focused evaluation including pertinent history and assessment of airway and lung sounds. Refer to Airway Management and Ventilatory Suppo… | alignment:matched | OK |
+| `03_Pulmonary_Edema_Congestion_PROC.md` | 3 | EMR | p.123#2 | Provide supplemental oxygen to maintain SpO2 > 94%. | alignment:matched | OK |
+| `03_Pulmonary_Edema_Congestion_PROC.md` | 4 | EMT | p.123#3 | Consider non-invasive (CPAP) or invasive (SGA) ventilatory support. | alignment:matched | OK |
+| `03_Pulmonary_Edema_Congestion_PROC.md` | 5 | EMT | p.123#3 | Consider non-invasive (CPAP) or invasive (SGA) ventilatory support. | adjudicated:set_cells | OK |
+| `03_Pulmonary_Edema_Congestion_PROC.md` | 6 | A | p.245#2 | Place the mask over the mouth and nose with oxygen flowing. Secure with straps, beginning with the lower straps. Tighten until air-leak is minimal. | adjudicated:no_pems_counterpart | OWNER_REQUIRED |
+| `03_Pulmonary_Edema_Congestion_PROC.md` | 7 | A | p.245#2 | Place the mask over the mouth and nose with oxygen flowing. Secure with straps, beginning with the lower straps. Tighten until air-leak is minimal. | adjudicated:no_pems_counterpart | OWNER_REQUIRED |
+| `03_Pulmonary_Edema_Congestion_PROC.md` | 8 | A | p.245#2 | Place the mask over the mouth and nose with oxygen flowing. Secure with straps, beginning with the lower straps. Tighten until air-leak is minimal. | adjudicated:no_pems_counterpart | OWNER_REQUIRED |
+| `03_Pulmonary_Edema_Congestion_PROC.md` | 9 | P | p.239#5 | Consider CPAP (PEEP: 5 cmH2O) for respiratory distress. Refer to CPAP procedure. I/P only: Adjust PEEP to support ventilation and work of breathing… | adjudicated:set_cells | OWNER_REQUIRED |
+| `03_Pulmonary_Edema_Congestion_PROC.md` | 10 | A | p.124#11 | Administer: ADULT: Nitroglycerine 0.4 mg SL If SBP remains greater than 100 mmHg (MAP 65 mmHg), may repeat every five minutes as needed, up to thre… | adjudicated:set_cells | OK |
+| `03_Pulmonary_Edema_Congestion_PROC.md` | 11 | A | p.124#11 | Administer: ADULT: Nitroglycerine 0.4 mg SL If SBP remains greater than 100 mmHg (MAP 65 mmHg), may repeat every five minutes as needed, up to thre… | alignment:matched | OK |
+| `03_Pulmonary_Edema_Congestion_PROC.md` | 12 | I | p.124#12 | Administer: ADULT: Furosemide (Lasix) 40 mg IV/IO slow push | alignment:matched | OK |
+| `03_Pulmonary_Edema_Congestion_PROC.md` | 13 | MC | p.124#13 | Contact Medical Control for guidance as needed. | alignment:matched | OK |
+| `03_Respiratory_Arrest_PROC.md` | 1 | EMR | p.239#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `03_Respiratory_Arrest_PROC.md` | 2 | EMT | p.239#6 | Position the patient and open the airway. Use BLS airway adjuncts (OPA/NPA/SGA) as necessary. | adjudicated:confirm | OK |
+| `03_Respiratory_Arrest_PROC.md` | 3 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Respiratory_Arrest_PROC.md` | 4 | EMT | p.239#6 | Position the patient and open the airway. Use BLS airway adjuncts (OPA/NPA/SGA) as necessary. | alignment:matched | OK |
+| `03_Respiratory_Arrest_PROC.md` | 5 | EMR | p.239#2 | Provide suctioning as needed to maintain patent airway. | alignment:matched | OK |
+| `03_Respiratory_Arrest_PROC.md` | 6 | EMT | p.239#7 | Support respirations with BVM. Use in-line EtCO2. Refer to Capnography procedure. Adjust tidal volume, respiratory rate, and/or PEEP (if available)… | row-bindings:bound | OK |
+| `03_Respiratory_Arrest_PROC.md` | 7 | EMT | p.239#7 | Support respirations with BVM. Use in-line EtCO2. Refer to Capnography procedure. Adjust tidal volume, respiratory rate, and/or PEEP (if available)… | alignment:matched | OK |
+| `03_Respiratory_Arrest_PROC.md` | 8 | I | p.239#9 | If apneic and ≥ 12 years old: Consider endotracheal intubation if unable to ventilate adequately by less invasive means. Follow Endotracheal Intuba… | alignment:matched | OK |
+| `03_Respiratory_Arrest_PROC.md` | 9 | P | p.239#10 | If apneic and < 12 years old: consider endotracheal intubation if unable to ventilate adequately by less invasive means. Follow Endotracheal Intuba… | alignment:matched | OK |
+| `03_Respiratory_Arrest_PROC.md` | 10 | I | p.239#8 | Foreign body airway obstruction: If unable to ventilate, perform laryngoscopy. Remove with forceps. | alignment:matched | OK |
+| `03_Respiratory_Arrest_PROC.md` | 11 | P | p.269#0 | Position the patient supine, expose, and cleanse the anterior neck. Use the non-dominant hand to identify and stabilize the thyroid cartilage and u… | adjudicated:add_from_pems | OK |
+| `03_Respiratory_Arrest_PROC.md` | 12 | P | — | — | — | OWNER_REQUIRED |
+| `03_Respiratory_Arrest_PROC.md` | 13 | P | — | — | — | OWNER_REQUIRED |
+| `03_Respiratory_Arrest_PROC.md` | 14 | I | p.55#2 | Administer: ADULT: Fentanyl (Sublimaze) 25 – 50 mcg IV/IO over 2 minutes or IN/IM PEDIATRIC: Fentanyl (Sublimaze) 0.5 – 1 mcg/kg IV/IO over 2 minut… | row-bindings:bound | OK |
+| `03_Respiratory_Arrest_PROC.md` | 15 | I | p.55#3 | If Fentanyl is not sufficient, administer: ADULT: Midazolam (Versed) 2.5 mg IV/IO over 2 minutes or 5 mg IN/IM PEDIATRIC: Midazolam (Versed) 0.1 mg… | row-bindings:bound | OK |
+| `03_Respiratory_Distress_PROC.md` | 1 | EMR | p.123#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `03_Respiratory_Distress_PROC.md` | 2 | EMR | p.123#1 | Perform a focused evaluation including pertinent history and assessment of airway and lung sounds. Refer to Airway Management and Ventilatory Suppo… | alignment:matched | OK |
+| `03_Respiratory_Distress_PROC.md` | 3 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Respiratory_Distress_PROC.md` | 4 | EMR | p.123#2 | Provide supplemental oxygen to maintain SpO2 > 94%. | alignment:matched | OK |
+| `03_Respiratory_Distress_PROC.md` | 5 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Respiratory_Distress_PROC.md` | 6 | EMT | p.123#3 | Consider non-invasive (CPAP) or invasive (SGA) ventilatory support. | adjudicated:set_cells | OK |
+| `03_Respiratory_Distress_PROC.md` | 7 | EMT | p.123#3 | Consider non-invasive (CPAP) or invasive (SGA) ventilatory support. | adjudicated:set_cells | OK |
+| `03_Respiratory_Distress_PROC.md` | 8 | I | p.123#4 | Consider invasive ventilatory support via endotracheal intubation. Refer to Endotracheal Intubation procedure. Note: Intubation of spontaneously br… | adjudicated:set_cells | OK |
+| `03_Respiratory_Distress_PROC.md` | 9 | I | — | — | — | OWNER_REQUIRED |
+| `03_Respiratory_Distress_PROC.md` | 10 | MC | p.124#10 | Provide suctioning as needed and consider: PEDIATRIC: 0.9% Sodium Chloride, 6 mL nebulized. Repeat as needed for increased work of breathing due to… | adjudicated:no_pems_counterpart | OWNER_REQUIRED |
+| `03_Respiratory_Distress_PROC.md` | 11 | A | p.124#8 | Administer: ADULT: Epinephrine 3 mg [1 mg/mL] nebulized PEDIATRIC: Epinephrine 3 mg [1 mg/mL] nebulized May repeat once, if needed. | alignment:matched | OK |
+| `03_Respiratory_Distress_PROC.md` | 12 | A | p.124#10 | Provide suctioning as needed and consider: PEDIATRIC: 0.9% Sodium Chloride, 6 mL nebulized. Repeat as needed for increased work of breathing due to… | alignment:matched | OK |
+| `03_Respiratory_Distress_PROC.md` | 13 | A | p.124#11 | Administer: ADULT: Nitroglycerine 0.4 mg SL If SBP remains greater than 100 mmHg (MAP 65 mmHg), may repeat every five minutes as needed, up to thre… | alignment:matched | OK |
+| `03_Respiratory_Distress_PROC.md` | 14 | I | p.124#7 | For severe symptoms, also administer: ADULT: Magnesium Sulfate 2 g IV/IO infusion over 15 minutes PEDIATRIC: Magnesium Sulfate 40 mg/kg IV/IO over … | row-bindings:bound | OK |
+| `03_Respiratory_Distress_PROC.md` | 15 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Respiratory_Distress_PROC.md` | 16 | P | — | — | — | OWNER_REQUIRED |
+| `03_Smoke_Inhalation_PROC.md` | 1 | EMR | p.153#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `03_Smoke_Inhalation_PROC.md` | 2 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Smoke_Inhalation_PROC.md` | 3 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Smoke_Inhalation_PROC.md` | 4 | EMT | p.153#2 | Follow Airway Management and Ventilatory Support procedure. | adjudicated:held_split_review | OK |
+| `03_Smoke_Inhalation_PROC.md` | 5 | I | p.87#7 | Consider endotracheal intubation vs immediate transport to the nearest emergency department if any signs of symptoms of airway injury develop: • Si… | row-bindings:bound | OK |
+| `03_Smoke_Inhalation_PROC.md` | 6 | I | p.239#9 | If apneic and ≥ 12 years old: Consider endotracheal intubation if unable to ventilate adequately by less invasive means. Follow Endotracheal Intuba… | row-bindings:bound | OK |
+| `03_Smoke_Inhalation_PROC.md` | 7 | I | — | — | — | OWNER_REQUIRED |
+| `03_Smoke_Inhalation_PROC.md` | 8 | I | p.88#8 | For altered mental status, seizures, hypotension, and/or cardiac arrest following exposure to combustion products in an enclosed space or suspected… | row-bindings:bound | OK |
+| `03_Smoke_Inhalation_PROC.md` | 9 | I | — | — | — | OWNER_REQUIRED |
+| `03_Smoke_Inhalation_PROC.md` | 10 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Smoke_Inhalation_PROC.md` | 11 | I | p.153#2 | Follow Airway Management and Ventilatory Support procedure. | adjudicated:no_pems_counterpart | OWNER_REQUIRED |
+| `03_Smoke_Inhalation_PROC.md` | 12 | MC | p.153#5 | Contact Medical Control for guidance as needed. | alignment:matched | OK |
+| `03_Smoke_Inhalation_PROC.md` | 13 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Smoke_Inhalation_PROC.md` | 14 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Upper_Airway_Obstruction_PROC.md` | 1 | EMR | p.239#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `03_Upper_Airway_Obstruction_PROC.md` | 2 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Upper_Airway_Obstruction_PROC.md` | 3 | EMT | p.239#3 | Foreign body airway obstruction: * ADULT: Perform Heimlich abdominal thrusts. OBESE / PREGNANT: Perform chest thrusts. PEDIATRIC ≥ 1 year: Perform … | adjudicated:held_split_review | OK |
+| `03_Upper_Airway_Obstruction_PROC.md` | 4 | EMT | p.239#3 | Foreign body airway obstruction: * ADULT: Perform Heimlich abdominal thrusts. OBESE / PREGNANT: Perform chest thrusts. PEDIATRIC ≥ 1 year: Perform … | alignment:matched | OK |
+| `03_Upper_Airway_Obstruction_PROC.md` | 5 | EMT | p.239#3 | Foreign body airway obstruction: * ADULT: Perform Heimlich abdominal thrusts. OBESE / PREGNANT: Perform chest thrusts. PEDIATRIC ≥ 1 year: Perform … | adjudicated:confirm | OK |
+| `03_Upper_Airway_Obstruction_PROC.md` | 6 | EMT | p.239#3 | Foreign body airway obstruction: * ADULT: Perform Heimlich abdominal thrusts. OBESE / PREGNANT: Perform chest thrusts. PEDIATRIC ≥ 1 year: Perform … | adjudicated:confirm | OK |
+| `03_Upper_Airway_Obstruction_PROC.md` | 7 | EMT | p.239#6 | Position the patient and open the airway. Use BLS airway adjuncts (OPA/NPA/SGA) as necessary. | alignment:matched | OK |
+| `03_Upper_Airway_Obstruction_PROC.md` | 8 | EMT | p.239#6 | Position the patient and open the airway. Use BLS airway adjuncts (OPA/NPA/SGA) as necessary. | adjudicated:held_split_review | OK |
+| `03_Upper_Airway_Obstruction_PROC.md` | 9 | EMR | p.239#2 | Provide suctioning as needed to maintain patent airway. | alignment:matched | OK |
+| `03_Upper_Airway_Obstruction_PROC.md` | 10 | EMT | p.239#7 | Support respirations with BVM. Use in-line EtCO2. Refer to Capnography procedure. Adjust tidal volume, respiratory rate, and/or PEEP (if available)… | row-bindings:bound | OK |
+| `03_Upper_Airway_Obstruction_PROC.md` | 11 | I | p.239#8 | Foreign body airway obstruction: If unable to ventilate, perform laryngoscopy. Remove with forceps. | alignment:matched | OK |
+| `03_Upper_Airway_Obstruction_PROC.md` | 12 | I | p.239#9 | If apneic and ≥ 12 years old: Consider endotracheal intubation if unable to ventilate adequately by less invasive means. Follow Endotracheal Intuba… | row-bindings:bound | OK |
+| `03_Upper_Airway_Obstruction_PROC.md` | 13 | I | — | — | — | OWNER_REQUIRED |
+| `03_Upper_Airway_Obstruction_PROC.md` | 14 | I | — | — | — | OWNER_REQUIRED |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 1 | PENDING | — | — | — | pending_omd |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 2 | PENDING | — | — | — | pending_omd |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 3 | PENDING | — | — | — | pending_omd |
@@ -190,7 +312,7 @@ the action text.
 
 ## OWNER_REQUIRED
 
-**16 row(s).** No PEMS 2024 row authorises a provider level for these
+**64 row(s).** No PEMS 2024 row authorises a provider level for these
 actions. The chip keeps the level the page already published and carries the flag.
 Nothing here was invented. Each entry records why it could not be cited.
 
@@ -231,6 +353,110 @@ Nothing here was invented. Each entry records why it could not be cited.
 - `protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md` row 5 — **EMT** kept from the page, not from the source. Defibrillation: 200 J Biphasic / 360 J Monophasic (Adult) / 2 J/kg initial, 4 J/kg subsequent (Ped) (AED for EMR/EMT, Manual for I/P)
   - nearest PEMS row, NOT cited as authority: p.63#7
   - reason: p.63#7 is the compound row named in this card as an unresolved inline badge contradiction: PEMS prints one badge (I) on "If VF or VT is present, or AED is advising to shock [EMR], immediately defibrillate". The page's own row text "(AED for EMR/EMT, Manual for I/P)" encodes both levels, so neither I nor EMT is the whole answer. audit/level-scan/badge-overrides.yaml is still empty.
+- `protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md` row 3 — **EMT** kept from the page, not from the source. Airway Assessment: • Assess for signs of airway injury (singed hairs, facial burns, hoarseness, stridor, soot). • Monitor for progressive respiratory 
+  - nearest PEMS row, NOT cited as authority: p.153#2
+  - reason: p.153 prints no airway-assessment row. The pointer this row inherited (p.153#2 'Follow Airway Management and Ventilatory Support procedure') authorises following the airway procedure, not assessing for airway injury, so it is not cited.
+- `protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md` row 4 — **EMT** kept from the page, not from the source. Oxygen Administration: • Apply high-flow oxygen via NRB or BVM as indicated. • Target SpO₂ > 94%.
+  - reason: p.153 prints no oxygen row. Oxygen for an inhalation irritant is p.239#4 (Airway Management procedure, badge EMT) and p.123#2 (Respiratory Distress, badge EMR) — both different protocols, so this page's EMT is not verified against the source.
+- `protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md` row 9 — **P** kept from the page, not from the source. Advanced Airway Assessment: • Consider endotracheal intubation if signs of airway injury develop. • Assess for impending airway compromise (worsening 
+  - reason: p.153 prints no advanced-airway assessment row; the assessment content is agency authoring. Intubation itself is the Endotracheal Intubation procedure (p.247).
+- `protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md` row 10 — **P** kept from the page, not from the source. Endotracheal Intubation: • Follow Endotracheal Intubation procedure. • ⚠ Intubation of spontaneously breathing patients without rapid sequence inducti
+  - reason: p.153 prints no endotracheal-intubation row. ETI is the Endotracheal Intubation procedure (p.247), whose rows are not this page's source.
+- `protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md` row 11 — **P** kept from the page, not from the source. Poison Control Consultation: • Contact Poison Control Center at 1-800-222-1222 with any questions. (Note: Poison Control is not online medical control
+  - reason: PEMS 2024 prints no Poison Control consultation row on p.153 or on any other protocol page; the 1-800-222-1222 referral is agency authoring.
+- `protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md` row 7 — **EMT** kept from the page, not from the source. Assist Ventilations / Airway Management: • Prepare for assisted ventilation if respiratory failure develops. • Bag-valve-mask with PEEP valve as indic
+  - reason: p.123-124 print no assist-ventilation/airway-management row for the asthma section; BVM support is p.239#7 (Airway Management procedure, badge EMT), a different page.
+- `protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md` row 8 — **I** kept from the page, not from the source. Continuous Positive Airway Pressure (CPAP): • Consider for COPD exacerbation or severe bronchospasm with adequate mentation. • Initiate 5-10 cm H₂O, t
+  - reason: PEMS prints CPAP as a ventilatory-support option at EMT (p.123#3) but scopes the PEEP titration above the initial setting to I/P in the procedure text (p.239#5 'I/P only: Adjust PEEP...'). This row is the titration row, so one chip would contradict either the badge or the source's own scoping; the page's I is kept.
+- `protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md` row 11 — **EMT** kept from the page, not from the source. Reassessment and Transport: • Continuously monitor respiratory status, auscultation, and SpO₂. • Reassess after each bronchodilator treatment. • Exped
+  - reason: p.123-124 print no reassessment/transport row for the asthma section; transport decisions are p.49#11 (Universal Patient Care), a different protocol.
+- `protocols/respiratory/03_Pediatric_Stridor_PROC.md` row 2 — **EMT** kept from the page, not from the source. Scene Management & Calm Environment • Keep child calm - agitation worsens obstruction • Allow parent/caregiver to hold child • Avoid unnecessary proce
+  - reason: p.123-124 print no scene-management / calm-environment row; keeping the child calm is agency authoring.
+- `protocols/respiratory/03_Pediatric_Stridor_PROC.md` row 3 — **EMT** kept from the page, not from the source. Position of Comfort • Allow child to assume position of choice (usually upright or with parent) • Do not force supine positioning • Head-down position
+  - reason: p.123-124 print no position-of-comfort row. The nearest regional text is p.239#6 'Position the patient and open the airway' (Airway Management procedure), which is a different page and a different action.
+- `protocols/respiratory/03_Pediatric_Stridor_PROC.md` row 5 — **A** kept from the page, not from the source. Continuous Monitoring • Cardiac monitor • Pulse oximetry • EtCO2 when available
+  - reason: p.123-124 print no continuous-monitoring row (cardiac monitor / pulse oximetry / EtCO2); EtCO2 monitoring is the Capnography procedure (p.241), a different page.
+- `protocols/respiratory/03_Pediatric_Stridor_PROC.md` row 9 — **P** kept from the page, not from the source. IV/IO Access • Obtain IV or IO access for medication administration • Use largest appropriate catheter • Do NOT delay Epinephrine for IV/IO placement
+  - reason: p.123-124 print no IV/IO access row. Vascular access is p.50#9 (Universal Patient Care, badge A), a different protocol.
+- `protocols/respiratory/03_Pediatric_Stridor_PROC.md` row 11 — **P** kept from the page, not from the source. Airway Protection - Advanced Airway • Prepare for advanced airway if impending respiratory failure • Have appropriate sized equipment ready • ⚠ Intuba
+  - reason: p.123-124 print no advanced-airway preparation row; intubation is the Endotracheal Intubation procedure (p.247).
+- `protocols/respiratory/03_Pediatric_Stridor_PROC.md` row 12 — **EMT** kept from the page, not from the source. Transport Considerations • Transport to pediatric-capable facility • Alert receiving facility early • Consider ALS intercept if BLS only • Rapid trans
+  - reason: p.123-124 print no transport/destination row for stridor; destination decisions are p.49#11 (Universal Patient Care), a different protocol.
+- `protocols/respiratory/03_Pneumothorax_PROC.md` row 1 — **EMT** kept from the page, not from the source. Universal Patient Care / Scene Safety: • Ensure scene safety and appropriate PPE. • Bring all necessary equipment to patient side.
+  - reason: p.243 is the Chest Decompression procedure and prints no scene-safety/equipment row; scene safety is p.49#1 (Universal Patient Care), a different protocol.
+- `protocols/respiratory/03_Pneumothorax_PROC.md` row 2 — **EMT** kept from the page, not from the source. Primary Assessment: • Assess airway, breathing, circulation, and disability. • Assess vital signs and SpO2. • Identify life threats immediately.
+  - reason: p.243 prints no primary-assessment row; the primary/secondary survey is p.49#2 (Universal Patient Care), a different protocol.
+- `protocols/respiratory/03_Pneumothorax_PROC.md` row 3 — **EMT** kept from the page, not from the source. Oxygen Administration: • Administer Oxygen via nasal cannula or mask as needed to maintain SpO2 > 94%. • Titrate to patient condition.
+  - reason: p.243#0 prints oxygen at 15 LPM (100% FiO2) as the decompression procedure's first step, badge I — that is not this row's general titrated oxygen, whose regional row is p.239#4 (badge EMT). Citing p.243#0 would restrict routine oxygen to I.
+- `protocols/respiratory/03_Pneumothorax_PROC.md` row 4 — **A** kept from the page, not from the source. Positioning and Monitoring: • Position patient for comfort (typically supine or semi-Fowler's). • Establish IV/IO access. • Continuous cardiac and pul
+  - reason: p.243 prints no positioning/monitoring row, and IV-IO access is p.50#9 (Universal Patient Care, badge A), a different protocol.
+- `protocols/respiratory/03_Pneumothorax_PROC.md` row 5 — **A** kept from the page, not from the source. Suction and Airway Management: • Prepare suction and airway equipment. • Be prepared for rapid airway intervention if decompensation occurs.
+  - reason: p.243 prints no suction/airway-readiness row; suctioning is p.239#2 (Airway Management procedure, badge EMR), a different page.
+- `protocols/respiratory/03_Pneumothorax_PROC.md` row 9 — **I** kept from the page, not from the source. Bilateral Chest Decompression (Traumatic Cardiac Arrest): • For traumatic cardiac arrest with suspicion of thoracoabdominal trauma, perform bilateral 
+  - reason: Bilateral decompression in traumatic arrest is printed as an INDICATION on p.243 ('Bilateral needle decompression: cardiac arrest with evidence of significant blunt or penetrating thoracoabdominal trauma'), not as a procedure row with a badge; the action row it belongs to is the Traumatic Cardiac Arrest protocol (p.61).
+- `protocols/respiratory/03_Pneumothorax_PROC.md` row 12 — **I** kept from the page, not from the source. Hemodynamic Support: • 0.9% Sodium Chloride fluid bolus if hypotensive (SBP < 90 mmHg or MAP < 65). • Consider vasopressor support if cardiogenic shoc
+  - nearest PEMS row, NOT cited as authority: p.243#4
+  - reason: The C2 ruling pointed this row at p.243#4, which is 'reassess the patient... consider repeating' — not haemodynamic support. Fluid bolus / vasopressor for hypotension is p.113-114 (Hypotension and Shock), a different protocol.
+- `protocols/respiratory/03_Pneumothorax_PROC.md` row 13 — **P** kept from the page, not from the source. Advanced Airway Management (if indicated): • Prepare for or perform endotracheal intubation if respiratory failure. • ⚠ Positive pressure ventilation 
+  - reason: p.243 prints no advanced-airway row; intubation is the Endotracheal Intubation procedure (p.247), a different page.
+- `protocols/respiratory/03_Pneumothorax_PROC.md` row 14 — **EMT** kept from the page, not from the source. Transport Considerations: • Transport to appropriate trauma center if traumatic etiology. • Alert receiving facility of needle decompression performed
+  - reason: p.243 prints no transport row; trauma destination is the Trauma Field Triage policy (p.43) and p.49#11, different documents.
+- `protocols/respiratory/03_Pneumothorax_PROC.md` row 15 — **EMT** kept from the page, not from the source. Close Monitoring En Route: • Continuous reassessment en route. • Monitor for recurrent tension pneumothorax. • Secure catheter to prevent dislodgement
+  - reason: p.243 prints no en-route monitoring row; reassessment is p.243#4 for the procedure itself, not for transport monitoring.
+- `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` row 6 — **A** kept from the page, not from the source. CPAP CONTRAINDICATIONS (⚠️): • Apnea/agonal respirations • GCS ≤ 13 • Pneumothorax
+  - nearest PEMS row, NOT cited as authority: p.245#2
+  - reason: A contraindication list is not an intervention, and p.245#2 (which the C2 ruling used) is the CPAP mask-placement step, not a contraindication row. PEMS prints no CPAP contraindication row on p.123-124 or p.245.
+- `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` row 7 — **A** kept from the page, not from the source. CPAP CONTRAINDICATIONS (⚠️): • Facial trauma/burns/recent surgery • Penetrating neck/chest trauma • Active vomiting/severe nausea
+  - nearest PEMS row, NOT cited as authority: p.245#2
+  - reason: Contraindication list, not an intervention; p.245#2 is the mask-placement step and no PEMS 2024 row prints CPAP contraindications.
+- `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` row 8 — **A** kept from the page, not from the source. CPAP CONTRAINDICATIONS (⚠️): • Hypotension (SBP < 90 mmHg, MAP < 65) • Inability to tolerate tight fitting mask
+  - nearest PEMS row, NOT cited as authority: p.245#2
+  - reason: Contraindication list, not an intervention; p.245#2 is the mask-placement step and no PEMS 2024 row prints CPAP contraindications.
+- `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` row 9 — **P** kept from the page, not from the source. CPAP Titration: Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing
+  - nearest PEMS row, NOT cited as authority: p.239#5
+  - reason: PEMS scopes PEEP titration above the initial setting to I/P in the procedure's own text (p.239#5 'I/P only: Adjust PEEP...'), while the row that carries it is badged EMT. The C2 ruling's EMT would under-state a titration step the source reserves to I/P; the page's P is kept and the row is flagged.
+- `protocols/respiratory/03_Respiratory_Arrest_PROC.md` row 3 — **EMT** kept from the page, not from the source. Continuous Monitoring: • Apply continuous pulse oximetry (SpO2). • Apply continuous box-waveform capnography (EtCO2) once airway placed.
+  - reason: p.239 prints no continuous-monitoring row; SpO2/EtCO2 monitoring is the Capnography procedure (p.241) and p.49#6, both different pages.
+- `protocols/respiratory/03_Respiratory_Arrest_PROC.md` row 12 — **P** kept from the page, not from the source. Post-Intubation Airway Management: • Verify tube placement with continuous box-waveform capnography AND auscultation (bilateral lung sounds, absence o
+  - reason: p.239 prints no post-intubation care row; verification/securement is the Endotracheal Intubation procedure p.247#9 (badge I), a different page.
+- `protocols/respiratory/03_Respiratory_Arrest_PROC.md` row 13 — **P** kept from the page, not from the source. Ongoing Ventilation Monitoring: • Monitor ET tube placement and ventilation continuously with SpO2 and EtCO2. • Reassess lung sounds and gastric sound
+  - reason: p.239 prints no ongoing tube-monitoring row; p.247#11 (badge EMT) is the Endotracheal Intubation procedure, a different page.
+- `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 3 — **EMT** kept from the page, not from the source. Continuous Monitoring: • Continuous EtCO2 monitoring to guide therapy • Continuous pulse oximetry • Cardiac monitoring
+  - reason: p.123-124 print no continuous-monitoring row (EtCO2/pulse oximetry/cardiac); EtCO2 monitoring is the Capnography procedure (p.241), a different page.
+- `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 5 — **EMT** kept from the page, not from the source. Positioning: • Patient position of comfort (sitting upright preferred) • Consider reverse Trendelenburg if tolerated
+  - reason: p.123-124 print no positioning row. p.239#6 'Position the patient and open the airway' belongs to the Airway Management procedure, not this protocol.
+- `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 9 — **I** kept from the page, not from the source. IV/IO Access: • Establish vascular access for medication administration and fluid therapy • IO if IV unobtainable
+  - reason: p.123-124 print no IV/IO access row; vascular access is p.50#9 (Universal Patient Care, badge A), a different protocol.
+- `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 10 — **MC** kept from the page, not from the source. Fluid Administration: • 0.9% Sodium Chloride or appropriate fluid as clinically indicated • Monitor for signs of fluid overload in CHF patients
+  - nearest PEMS row, NOT cited as authority: p.124#10
+  - reason: The C2 pointer (p.124#10) is the nebulised-saline bronchiolitis row, not fluid administration. PEMS prints no fluid-administration row in Respiratory Distress; fluid boluses are p.113-114 (Hypotension and Shock) and p.87#6 (Burns).
+- `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 15 — **EMT** kept from the page, not from the source. Cardiac Ischemia Management: • Evaluate for cardiac origin • Consider 12-lead ECG • Refer to Chest Pain/ACS protocol if indicated
+  - reason: p.123-124 print no 12-lead/ischaemia-evaluation row; the 12-lead is p.50#7 (Universal Patient Care, badge EMT) and the ACS pathway is p.107, different pages.
+- `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 16 — **P** kept from the page, not from the source. Respiratory Failure Management: • If apnea/agonal respirations or GCS ≤13: • Prepare for immediate airway control • Bag-valve-mask ventilation • Consi
+  - reason: p.123-124 print no respiratory-failure-management row; BVM and airway escalation are p.239#7 (badge EMT) and p.239#9 (badge I), a different page.
+- `protocols/respiratory/03_Smoke_Inhalation_PROC.md` row 2 — **EMT** kept from the page, not from the source. Scene Safety and Scene Time Considerations: • Assess scene for ongoing hazard exposure • Limit scene time; prepare for rapid transport • Coordinate wi
+  - reason: p.153 prints no scene-safety / scene-time row; hazard assessment and rapid extrication are agency authoring.
+- `protocols/respiratory/03_Smoke_Inhalation_PROC.md` row 3 — **EMT** kept from the page, not from the source. Airway Assessment: • Inspect for singed facial/nasal hairs • Examine face, nose, and mouth for burns or soot • Auscultate for stridor, hoarseness, or 
+  - reason: p.153 prints no airway-assessment row. The nearest regional text is p.87#2 (Burns: 'Assess airway and respiratory effort', badge EMR), a different protocol.
+- `protocols/respiratory/03_Smoke_Inhalation_PROC.md` row 7 — **I** kept from the page, not from the source. Hydroxocobalamin (Cyanide Antidote) - Indication Assessment: • Assess for exposure to combustion products/fire in an enclosed space with ANY of the fo
+  - reason: p.153 prints no hydroxocobalamin row; the drug's regional row is p.88#8 (Burns, badge I) and p.121#12 (Overdose, badge I), both different protocols.
+- `protocols/respiratory/03_Smoke_Inhalation_PROC.md` row 9 — **I** kept from the page, not from the source. Hydroxocobalamin Administration: • Administer per Medical Control guidance • Monitor for increase in blood pressure • Inform receiving facility of adm
+  - reason: p.153 prints no hydroxocobalamin row; the drug's regional row is p.88#8 (Burns, badge I) and p.121#12 (Overdose, badge I), both different protocols.
+- `protocols/respiratory/03_Smoke_Inhalation_PROC.md` row 10 — **EMT** kept from the page, not from the source. Burn Assessment: • Assess for concomitant thermal burn injuries • Estimate total body surface area (TBSA) involved • Evaluate burn depth and critical 
+  - reason: p.153 prints no burn-assessment row; TBSA/depth assessment is p.87#3 (Burns, badge EMT), a different protocol.
+- `protocols/respiratory/03_Smoke_Inhalation_PROC.md` row 11 — **I** kept from the page, not from the source. Fluid Management (If Burns Present): • Initiate fluid resuscitation per Burn Injuries Protocol • Titrate fluid administration to hemodynamic response 
+  - nearest PEMS row, NOT cited as authority: p.153#2
+  - reason: p.153 prints no fluid-resuscitation row; burn fluids are p.87#5-#6 (Burns, badge A for access and for the 500 mL/hr order), a different protocol.
+- `protocols/respiratory/03_Smoke_Inhalation_PROC.md` row 13 — **EMT** kept from the page, not from the source. Monitoring and Reassessment: • Monitor SpO2, EtCO2, and respiratory rate continuously • Reassess airway patency frequently; edema may progress rapidly
+  - reason: p.153 prints no monitoring/reassessment row; SpO2/EtCO2 monitoring is the Capnography procedure (p.241) and p.49#6, different pages.
+- `protocols/respiratory/03_Smoke_Inhalation_PROC.md` row 14 — **EMT** kept from the page, not from the source. Transport Considerations: • Expedited transport given risk of rapid airway compromise • Transport to facility capable of managing combined trauma/burn
+  - reason: p.153 prints no transport row; destination for inhalation injury is p.88#9 (Burns, MC row) and p.49#11, different pages.
+- `protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md` row 2 — **EMT** kept from the page, not from the source. Scene Safety / Recognition: • Rapidly identify complete vs partial obstruction. • Recognize universal choking sign (hands to throat). • Determine cons
+  - reason: p.239 prints no recognition/scene-safety row; identifying complete vs partial obstruction is agency authoring.
+- `protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md` row 13 — **I** kept from the page, not from the source. Post-Obstruction Advanced Airway - Sedation: • If endotracheal intubation performed, refer to Sedation Post Advanced Airway protocol. • Fentanyl (25 m
+  - reason: p.239 prints no post-intubation sedation row; sedation after an advanced airway is p.55 (Sedation Post Advanced Airway), a different protocol.
+- `protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md` row 14 — **I** kept from the page, not from the source. Expanding Hematoma / Edema - Advanced Airway: • Early airway intervention before complete obstruction. • Consider difficult airway algorithm; prepare 
+  - reason: p.239 prints no expanding-haematoma / difficult-airway row; the row is agency authoring that cross-refers to surgical airway backup (p.269).
 
 ## OWNER_RULED
 
@@ -320,13 +546,21 @@ sees 0 such words on every Batch-2, neurologic and Aortic page.
 - `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 8: kept (as determined by EMT-I or P)
 - `04_Chest_Pain_ACS_PROC.md` row 5: kept Intermediate, Paramedic
 - `04_V_Fib_Pulseless_V_Tach_PROC.md` row 5: kept (AED for EMR/EMT, Manual for I/P)
+- `03_Pediatric_Stridor_PROC.md` row 11: kept Paramedic
+- `03_Pediatric_Stridor_PROC.md` row 6: kept (titratable by I/P providers)
+- `03_Respiratory_Arrest_PROC.md` row 9: kept Paramedic
+- `03_Smoke_Inhalation_PROC.md` row 6: kept Paramedic
+- `03_Upper_Airway_Obstruction_PROC.md` row 12: kept Paramedic
 
 Removed by decision (not restated by the chip, so not left to a later pass):
 - `04_Chest_Pain_ACS_PROC.md` row 4: removed (EMT)
+- `03_Respiratory_Arrest_PROC.md` row 4: removed (EMR/EMT)
+- `03_Upper_Airway_Obstruction_PROC.md` row 10: removed (EMT and above)
+- `03_Upper_Airway_Obstruction_PROC.md` row 11: removed (Intermediate/Paramedic)
 
 ## Level moved by the source (page level -> PEMS printed level)
 
-26 row(s). These are rows where the page under- or over-granted the
+49 row(s). These are rows where the page under- or over-granted the
 level the cited PEMS row prints. Review them first.
 
 - `protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 9: **I -> A** (p.57#6) — Children/Infants ONLY: If unconscious and hypotensive, with HR less than 60, administer: P
@@ -355,6 +589,29 @@ level the cited PEMS row prints. Review them first.
 - `protocols/neurologic/05_Seizure_PROC.md` row 6: **I -> A** (p.127#5) — Use HALF dose Midazolam for frail/hypotensive/elderly >65y
 - `protocols/neurologic/05_Stroke_TIA_PROC.md` row 4: **A -> EMT** (p.131#3) — Assess blood glucose (Treat <60 per Hypoglycemia protocol)
 - `protocols/neurologic/05_Stroke_TIA_PROC.md` row 7: **A -> EMT** (p.131#4) — Triage: Symptoms >24 hrs OR RACE 0-4 -> Transport to closest stroke center
+- `protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md` row 8: **MC -> A** (p.153#4) — Sodium Bicarbonate - Chlorine Gas Exposure Only: • Adult: 2 mL diluted with 2 mL 0.9% Sodi
+- `protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md` row 12: **I -> MC** (p.153#5) — Medical Control Contact: • Contact Medical Control for guidance as needed. • Report agent 
+- `protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md` row 1: **EMT -> EMR** (p.123#0) — Universal Patient Care / Assessment: • Assess airway, breathing, circulation, and mental s
+- `protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md` row 2: **EMT -> EMR** (p.123#2) — Oxygen Administration: • Administer oxygen to maintain SpO₂ ≥ 94%. • Use nasal cannula, si
+- `protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md` row 9: **EMT -> A** (p.124#8) — Related Protocol – Stridor (Upper Airway Obstruction): • Epinephrine: 3 mg [1 mg/mL soluti
+- `protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md` row 10: **I -> A** (p.124#9) — Methylprednisolone for Moderate to Severe Stridor: • Same dosing as above (Row 5). • Admin
+- `protocols/respiratory/03_Pediatric_Stridor_PROC.md` row 4: **A -> EMR** (p.123#2) — High-Flow Oxygen • Apply high-flow oxygen via non-rebreather mask or blow-by • Monitor SpO
+- `protocols/respiratory/03_Pediatric_Stridor_PROC.md` row 6: **P -> EMT** (p.123#3) — CPAP for Upper Airway Support • Consider CPAP for upper airway support if indicated • Init
+- `protocols/respiratory/03_Pediatric_Stridor_PROC.md` row 7: **P -> EMT** (p.123#5) — Albuterol Nebulizer • Albuterol 3 mL 0.083% solution nebulized • May help with lower airwa
+- `protocols/respiratory/03_Pneumothorax_PROC.md` row 10: **EMT -> I** (p.243#4) — Reassessment After Decompression: • Continuously reassess vital signs, respiratory effort,
+- `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` row 4: **A -> EMT** (p.123#3) — Consider non-invasive positive pressure ventilation (CPAP) for severe respiratory distress
+- `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` row 5: **A -> EMT** (p.123#3) — CPAP Initial Settings: PEEP 5 cmH2O
+- `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` row 10: **I -> A** (p.124#11) — Nitroglycerin Adult: 0.4 mg SL
+- `protocols/respiratory/03_Respiratory_Arrest_PROC.md` row 5: **EMT -> EMR** (p.239#2) — Suctioning: • Provide suctioning of oropharynx as needed to clear secretions, blood, or vo
+- `protocols/respiratory/03_Respiratory_Arrest_PROC.md` row 6: **A -> EMT** (p.239#7) — BVM Ventilation (Two-Person Technique): • Support respirations with bag-valve-mask using t
+- `protocols/respiratory/03_Respiratory_Arrest_PROC.md` row 10: **P -> I** (p.239#8) — Foreign Body Airway Obstruction: • If foreign body airway obstruction suspected and unable
+- `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 2: **EMT -> EMR** (p.123#1) — Airway and Lung Assessment: • Focused assessment for stridor, wheezing, rales • Auscultate
+- `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 6: **MC -> EMT** (p.123#3) — CPAP (Continuous Positive Airway Pressure): • Indications: Adults with respiratory distres
+- `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 8: **P -> I** (p.123#4) — Advanced Airway Management (ETI): • Endotracheal intubation reserved for I-level providers
+- `protocols/respiratory/03_Smoke_Inhalation_PROC.md` row 5: **P -> I** (p.87#7) — Advanced Airway Considerations: • Consider endotracheal intubation versus immediate transp
+- `protocols/respiratory/03_Smoke_Inhalation_PROC.md` row 12: **I -> MC** (p.153#5) — Medical Control Contact: • Contact Medical Control for cyanide poisoning confirmation and 
+- `protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md` row 9: **EMT -> EMR** (p.239#2) — Suctioning: • Provide oropharyngeal suctioning as needed for secretions, blood, or vomit. 
+- `protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md` row 10: **A -> EMT** (p.239#7) — Apneic Patient - BVM Ventilation: • Support respirations with BVM and appropriate airway a
 
 ## OPEN OWNER QUESTIONS
 

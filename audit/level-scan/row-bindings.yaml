@@ -167,3 +167,434 @@ bindings:
     reason: >-
       PEMS 2024 p.109 prints no primary/secondary-survey or vital-signs row; its six
       rows are cross-references and the MC contact row. Local authoring.
+
+  # ============================================================= BATCH 3 — respiratory
+  # Nine pages. PEMS 2024 publishes ONE respiratory protocol (Respiratory Distress,
+  # p.123-124) and ONE inhalation-irritant protocol (CBRNE: Airway / Inhalation
+  # Irritants, p.153). The rest of the regional content these pages carry is printed in
+  # PROCEDURES (Airway Management p.239, Capnography p.241, Chest Decompression p.243,
+  # CPAP p.245, Endotracheal Intubation p.247, Surgical Airway p.269) and in other
+  # protocols (Burns p.87-88, Sedation Post Advanced Airway p.55).
+  #
+  # Two rules decide every row below:
+  #   * a row is BOUND only to a row printed on this page's own governing source;
+  #   * a row whose action PEMS prints only on a different page keeps the level this page
+  #     already published and is declared owner_required — never chipped on another
+  #     protocol's authority.
+  # Four rows published NO level at all (Respiratory Arrest r11, r14, r15 and Smoke
+  # Inhalation r8). There is nothing to keep for those, so each is bound to the row that
+  # prints the action and says so; none of them was given an invented level.
+
+  # --------------------------------------------- Airway / Inhalation Irritants (p.153)
+  - file: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
+    row: 3
+    status: owner_required
+    reason: >-
+      p.153 prints no airway-assessment row. The pointer this row inherited (p.153#2
+      'Follow Airway Management and Ventilatory Support procedure') authorises following
+      the airway procedure, not assessing for airway injury, so it is not cited.
+  - file: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
+    row: 4
+    status: owner_required
+    reason: >-
+      p.153 prints no oxygen row. Oxygen for an inhalation irritant is p.239#4 (Airway
+      Management procedure, badge EMT) and p.123#2 (Respiratory Distress, badge EMR) —
+      both different protocols, so this page's EMT is not verified against the source.
+  - file: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
+    row: 9
+    status: owner_required
+    reason: >-
+      p.153 prints no advanced-airway assessment row; the assessment content is agency
+      authoring. Intubation itself is the Endotracheal Intubation procedure (p.247).
+  - file: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
+    row: 10
+    status: owner_required
+    reason: >-
+      p.153 prints no endotracheal-intubation row. ETI is the Endotracheal Intubation
+      procedure (p.247), whose rows are not this page's source.
+  - file: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
+    row: 11
+    status: owner_required
+    reason: >-
+      PEMS 2024 prints no Poison Control consultation row on p.153 or on any other
+      protocol page; the 1-800-222-1222 referral is agency authoring.
+
+  # ------------------------------------------------- Asthma / COPD / reactive airway
+  # p.123-124 (Respiratory Distress) is the page's source; the asthma section is rows
+  # p.123#5-#6 and p.124#7.
+  - file: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
+    row: 7
+    status: owner_required
+    reason: >-
+      p.123-124 print no assist-ventilation/airway-management row for the asthma
+      section; BVM support is p.239#7 (Airway Management procedure, badge EMT), a
+      different page.
+  - file: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
+    row: 8
+    status: owner_required
+    reason: >-
+      PEMS prints CPAP as a ventilatory-support option at EMT (p.123#3) but scopes the
+      PEEP titration above the initial setting to I/P in the procedure text (p.239#5
+      'I/P only: Adjust PEEP...'). This row is the titration row, so one chip would
+      contradict either the badge or the source's own scoping; the page's I is kept.
+  - file: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
+    row: 11
+    status: owner_required
+    reason: >-
+      p.123-124 print no reassessment/transport row for the asthma section; transport
+      decisions are p.49#11 (Universal Patient Care), a different protocol.
+
+  # ------------------------------------------------------------- Pediatric stridor
+  - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+    row: 2
+    status: owner_required
+    reason: >-
+      p.123-124 print no scene-management / calm-environment row; keeping the child calm
+      is agency authoring.
+  - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+    row: 3
+    status: owner_required
+    reason: >-
+      p.123-124 print no position-of-comfort row. The nearest regional text is p.239#6
+      'Position the patient and open the airway' (Airway Management procedure), which is
+      a different page and a different action.
+  - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+    row: 5
+    status: owner_required
+    reason: >-
+      p.123-124 print no continuous-monitoring row (cardiac monitor / pulse oximetry /
+      EtCO2); EtCO2 monitoring is the Capnography procedure (p.241), a different page.
+  - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+    row: 9
+    status: owner_required
+    reason: >-
+      p.123-124 print no IV/IO access row. Vascular access is p.50#9 (Universal Patient
+      Care, badge A), a different protocol.
+  - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+    row: 11
+    status: owner_required
+    reason: >-
+      p.123-124 print no advanced-airway preparation row; intubation is the Endotracheal
+      Intubation procedure (p.247).
+  - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+    row: 12
+    status: owner_required
+    reason: >-
+      p.123-124 print no transport/destination row for stridor; destination decisions
+      are p.49#11 (Universal Patient Care), a different protocol.
+
+  # ------------------------------------------------------------------- Pneumothorax
+  # p.243 (Chest Decompression) is this page's recorded source; its five rows are the
+  # decompression steps, which rows 6-11 cite.
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 1
+    status: owner_required
+    reason: >-
+      p.243 is the Chest Decompression procedure and prints no scene-safety/equipment
+      row; scene safety is p.49#1 (Universal Patient Care), a different protocol.
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 2
+    status: owner_required
+    reason: >-
+      p.243 prints no primary-assessment row; the primary/secondary survey is p.49#2
+      (Universal Patient Care), a different protocol.
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 3
+    status: owner_required
+    reason: >-
+      p.243#0 prints oxygen at 15 LPM (100% FiO2) as the decompression procedure's first
+      step, badge I — that is not this row's general titrated oxygen, whose regional row
+      is p.239#4 (badge EMT). Citing p.243#0 would restrict routine oxygen to I.
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 4
+    status: owner_required
+    reason: >-
+      p.243 prints no positioning/monitoring row, and IV-IO access is p.50#9 (Universal
+      Patient Care, badge A), a different protocol.
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 5
+    status: owner_required
+    reason: >-
+      p.243 prints no suction/airway-readiness row; suctioning is p.239#2 (Airway
+      Management procedure, badge EMR), a different page.
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 9
+    status: owner_required
+    reason: >-
+      Bilateral decompression in traumatic arrest is printed as an INDICATION on p.243
+      ('Bilateral needle decompression: cardiac arrest with evidence of significant blunt
+      or penetrating thoracoabdominal trauma'), not as a procedure row with a badge; the
+      action row it belongs to is the Traumatic Cardiac Arrest protocol (p.61).
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 12
+    status: owner_required
+    reason: >-
+      The C2 ruling pointed this row at p.243#4, which is 'reassess the patient...
+      consider repeating' — not haemodynamic support. Fluid bolus / vasopressor for
+      hypotension is p.113-114 (Hypotension and Shock), a different protocol.
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 13
+    status: owner_required
+    reason: >-
+      p.243 prints no advanced-airway row; intubation is the Endotracheal Intubation
+      procedure (p.247), a different page.
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 14
+    status: owner_required
+    reason: >-
+      p.243 prints no transport row; trauma destination is the Trauma Field Triage
+      policy (p.43) and p.49#11, different documents.
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 15
+    status: owner_required
+    reason: >-
+      p.243 prints no en-route monitoring row; reassessment is p.243#4 for the procedure
+      itself, not for transport monitoring.
+
+  # ------------------------------------------------------- Pulmonary edema / congestion
+  - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
+    row: 6
+    status: owner_required
+    reason: >-
+      A contraindication list is not an intervention, and p.245#2 (which the C2 ruling
+      used) is the CPAP mask-placement step, not a contraindication row. PEMS prints no
+      CPAP contraindication row on p.123-124 or p.245.
+  - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
+    row: 7
+    status: owner_required
+    reason: >-
+      Contraindication list, not an intervention; p.245#2 is the mask-placement step and
+      no PEMS 2024 row prints CPAP contraindications.
+  - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
+    row: 8
+    status: owner_required
+    reason: >-
+      Contraindication list, not an intervention; p.245#2 is the mask-placement step and
+      no PEMS 2024 row prints CPAP contraindications.
+  - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
+    row: 9
+    status: owner_required
+    reason: >-
+      PEMS scopes PEEP titration above the initial setting to I/P in the procedure's own
+      text (p.239#5 'I/P only: Adjust PEEP...'), while the row that carries it is badged
+      EMT. The C2 ruling's EMT would under-state a titration step the source reserves to
+      I/P; the page's P is kept and the row is flagged.
+
+  # ----------------------------------------------------------------- Respiratory arrest
+  # p.239 (Airway Management and Ventilatory Support) is this page's recorded source.
+  - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
+    row: 3
+    status: owner_required
+    reason: >-
+      p.239 prints no continuous-monitoring row; SpO2/EtCO2 monitoring is the
+      Capnography procedure (p.241) and p.49#6, both different pages.
+  - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
+    row: 6
+    pems_page: 239
+    pems_ordinal: 7
+    evidence: >-
+      p.239#7 'Support respirations with BVM. Use in-line EtCO2... Adjust tidal volume,
+      respiratory rate, and/or PEEP' badge EMT. This page splits that one PEMS row into
+      r6 (BVM) and r7 (EtCO2-guided ventilation); the page published A here, the source
+      prints EMT, so the chip moves A -> EMT.
+  - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
+    row: 12
+    status: owner_required
+    reason: >-
+      p.239 prints no post-intubation care row; verification/securement is the
+      Endotracheal Intubation procedure p.247#9 (badge I), a different page.
+  - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
+    row: 13
+    status: owner_required
+    reason: >-
+      p.239 prints no ongoing tube-monitoring row; p.247#11 (badge EMT) is the
+      Endotracheal Intubation procedure, a different page.
+  - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
+    row: 14
+    pems_page: 55
+    pems_ordinal: 2
+    evidence: >-
+      This row published no provider level at all, so there is none to keep. PEMS prints
+      the identical Fentanyl order on p.55#2 (Sedation Post Advanced Airway, badge I):
+      'ADULT: Fentanyl (Sublimaze) 25 - 50 mcg IV/IO over 2 minutes or IN/IM; PEDIATRIC
+      0.5 - 1 mcg/kg... Maximum dose 25 mcg'. Bound to the row that prints the action;
+      the level is the source's, not an invention.
+  - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
+    row: 15
+    pems_page: 55
+    pems_ordinal: 3
+    evidence: >-
+      This row published no provider level at all. PEMS prints the identical Midazolam
+      order on p.55#3 (Sedation Post Advanced Airway, badge I): 'ADULT: Midazolam
+      (Versed) 2.5 mg IV/IO over 2 minutes or 5 mg IN/IM; PEDIATRIC: 0.1 mg/kg IV/IO...
+      Maximum dose 2.5 mg IV/IO or 5 mg IN/IM'.
+
+  # --------------------------------------------------------------- Respiratory distress
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 3
+    status: owner_required
+    reason: >-
+      p.123-124 print no continuous-monitoring row (EtCO2/pulse oximetry/cardiac);
+      EtCO2 monitoring is the Capnography procedure (p.241), a different page.
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 5
+    status: owner_required
+    reason: >-
+      p.123-124 print no positioning row. p.239#6 'Position the patient and open the
+      airway' belongs to the Airway Management procedure, not this protocol.
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 9
+    status: owner_required
+    reason: >-
+      p.123-124 print no IV/IO access row; vascular access is p.50#9 (Universal Patient
+      Care, badge A), a different protocol.
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 10
+    status: owner_required
+    reason: >-
+      The C2 pointer (p.124#10) is the nebulised-saline bronchiolitis row, not fluid
+      administration. PEMS prints no fluid-administration row in Respiratory Distress;
+      fluid boluses are p.113-114 (Hypotension and Shock) and p.87#6 (Burns).
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 14
+    pems_page: 124
+    pems_ordinal: 7
+    evidence: >-
+      This row published no provider level at all. It is the severe asthma/COPD row, and
+      PEMS prints magnesium for severe symptoms on p.124#7 ('For severe symptoms, also
+      administer: ADULT: Magnesium Sulfate 2 g IV/IO infusion over 15 minutes', badge I).
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 15
+    status: owner_required
+    reason: >-
+      p.123-124 print no 12-lead/ischaemia-evaluation row; the 12-lead is p.50#7
+      (Universal Patient Care, badge EMT) and the ACS pathway is p.107, different pages.
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 16
+    status: owner_required
+    reason: >-
+      p.123-124 print no respiratory-failure-management row; BVM and airway escalation
+      are p.239#7 (badge EMT) and p.239#9 (badge I), a different page.
+
+  # ----------------------------------------------------------------- Smoke inhalation
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 2
+    status: owner_required
+    reason: >-
+      p.153 prints no scene-safety / scene-time row; hazard assessment and rapid
+      extrication are agency authoring.
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 3
+    status: owner_required
+    reason: >-
+      p.153 prints no airway-assessment row. The nearest regional text is p.87#2
+      (Burns: 'Assess airway and respiratory effort', badge EMR), a different protocol.
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 5
+    pems_page: 87
+    pems_ordinal: 7
+    evidence: >-
+      p.87#7 (Burns) prints this exact action: 'Consider endotracheal intubation vs
+      immediate transport to the nearest emergency department if any signs or symptoms of
+      airway injury develop: singed facial or nasal hairs... hoarse voice or stridor...
+      carbonaceous sputum', badge I. The C2 ruling pointed at p.123#4 (the Respiratory
+      Distress ETI row); p.87#7 is the row that prints this action, and its badge is I,
+      so the page's P moves to I.
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 6
+    pems_page: 239
+    pems_ordinal: 9
+    evidence: >-
+      p.239#9 'If apneic and >= 12 years old: Consider endotracheal intubation if unable to
+      ventilate adequately by less invasive means', badge I. PEMS prints paediatric
+      intubation separately (p.239#10, badge P); this page merges both into one row, so the
+      chip is the lowest level PEMS prints for the action (I) and the page's own
+      'under 12 ... Paramedic red dot skill only' caveat stays in the action text.
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 7
+    status: owner_required
+    reason: >-
+      p.153 prints no hydroxocobalamin row; the drug's regional row is p.88#8 (Burns,
+      badge I) and p.121#12 (Overdose, badge I), both different protocols.
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 8
+    pems_page: 88
+    pems_ordinal: 8
+    evidence: >-
+      This row published no provider level at all, so there is none to keep. PEMS prints
+      the hydroxocobalamin order on p.88#8 (Burns, badge I): 'For altered mental status,
+      seizures, hypotension, and/or cardiac arrest following exposure to combustion
+      products in an enclosed space or suspected cyanide poisoning, administer (if
+      available): ADULT: Hydroxocobalamin (CYANOKIT) 5 g IV/IO, infuse over 15 minutes'.
+      The reconstitution steps themselves are agency detail; the drug's regional level is I.
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 9
+    status: owner_required
+    reason: >-
+      p.153 prints no hydroxocobalamin row; the drug's regional row is p.88#8 (Burns,
+      badge I) and p.121#12 (Overdose, badge I), both different protocols.
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 10
+    status: owner_required
+    reason: >-
+      p.153 prints no burn-assessment row; TBSA/depth assessment is p.87#3 (Burns, badge
+      EMT), a different protocol.
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 11
+    status: owner_required
+    reason: >-
+      p.153 prints no fluid-resuscitation row; burn fluids are p.87#5-#6 (Burns, badge A
+      for access and for the 500 mL/hr order), a different protocol.
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 13
+    status: owner_required
+    reason: >-
+      p.153 prints no monitoring/reassessment row; SpO2/EtCO2 monitoring is the
+      Capnography procedure (p.241) and p.49#6, different pages.
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 14
+    status: owner_required
+    reason: >-
+      p.153 prints no transport row; destination for inhalation injury is p.88#9 (Burns,
+      MC row) and p.49#11, different pages.
+
+  # ---------------------------------------------------------- Upper airway obstruction
+  # p.239 (Airway Management and Ventilatory Support) is this page's recorded source.
+  - file: protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md
+    row: 2
+    status: owner_required
+    reason: >-
+      p.239 prints no recognition/scene-safety row; identifying complete vs partial
+      obstruction is agency authoring.
+  - file: protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md
+    row: 10
+    pems_page: 239
+    pems_ordinal: 7
+    evidence: >-
+      The alignment paired this BVM row with p.239#10 ('If apneic and < 12 years old:
+      consider endotracheal intubation', badge P), which is the paediatric intubation
+      row. p.239#7 'Support respirations with BVM' is the BVM row, badge EMT, so the
+      page's A moves to EMT.
+  - file: protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md
+    row: 12
+    pems_page: 239
+    pems_ordinal: 9
+    evidence: >-
+      p.239#9 'If apneic and >= 12 years old: Consider endotracheal intubation...', badge
+      I. PEMS prints paediatric intubation as its own row (p.239#10, badge P) and this page
+      merges both into one row, so the chip is the lowest level PEMS prints for the action
+      (I); the page's 'children <12 ... Paramedic red dot skill only' caveat stays in the
+      action text. The page published [P] here (a bracketed grant, not a floor), which is
+      why the chip moves P -> I.
+  - file: protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md
+    row: 13
+    status: owner_required
+    reason: >-
+      p.239 prints no post-intubation sedation row; sedation after an advanced airway is
+      p.55 (Sedation Post Advanced Airway), a different protocol.
+  - file: protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md
+    row: 14
+    status: owner_required
+    reason: >-
+      p.239 prints no expanding-haematoma / difficult-airway row; the row is agency
+      authoring that cross-refers to surgical airway backup (p.269).

@@ -75,6 +75,17 @@ TARGETS = [
     'protocols/neurologic/05_Seizure_PROC.md',
     'protocols/neurologic/05_Hypoglycemia_Hyperglycemia_PROC.md',
     'protocols/neurologic/05_Stroke_TIA_PROC.md',
+    # Batch 3 — protocols/respiratory/. Derived from the tree: every .md file in that
+    # directory (9 pages), nothing hand-picked.
+    'protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md',
+    'protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md',
+    'protocols/respiratory/03_Pediatric_Stridor_PROC.md',
+    'protocols/respiratory/03_Pneumothorax_PROC.md',
+    'protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md',
+    'protocols/respiratory/03_Respiratory_Arrest_PROC.md',
+    'protocols/respiratory/03_Respiratory_Distress_PROC.md',
+    'protocols/respiratory/03_Smoke_Inhalation_PROC.md',
+    'protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md',
 ]
 
 # Pages sourced from OUTSIDE PEMS 2024. PEMS prints no equivalent protocol, so no row on

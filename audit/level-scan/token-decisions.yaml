@@ -58,6 +58,56 @@ kept:
       compound row (badge I with an inline [EMR]), and the ledger note for this row already
       explains that neither I nor EMT is the whole answer. Deliberate, kept.
 
+  - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+    row: 6
+    hits:
+      - "(titratable by I/P providers)"
+    reason: >-
+      CLINICAL QUALIFIER. The parenthetical scopes PEEP titration above the initial 5 cmH2O
+      to I/P, i.e. it says what the EMT-floor CPAP chip does NOT include. The chip is the
+      floor PEMS prints for CPAP (p.123#3, EMT); stripping the parenthetical would widen who
+      may titrate. Deliberate, kept.
+
+  - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+    row: 11
+    hits:
+      - Paramedic
+    reason: >-
+      CLINICAL QUALIFIER. "Intubation of children <12 requires Paramedic skill" is the
+      red-dot caveat on an advanced-airway preparation row. It is a safety condition on the
+      action, not a restatement of the chip (the chip is P because the page published P and
+      no PEMS 2024 row authorises the row). Deliberate, kept.
+
+  - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
+    row: 9
+    hits:
+      - Paramedic
+    reason: >-
+      CLINICAL QUALIFIER. "RED DOT SKILL: Intubation of children <12 years is a Paramedic
+      red dot skill only" is the source's own safety caveat on paediatric intubation (PEMS
+      p.239#10 prints the row with the same red-dot note). The chip is P; the sentence adds
+      the red-dot condition and must not be stripped. Deliberate, kept.
+
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 6
+    hits:
+      - Paramedic
+    reason: >-
+      CLINICAL QUALIFIER. "Intubation of children under 12 years old is a Paramedic red dot
+      skill only" scopes the paediatric half of a row whose chip is I (the adult ETI row
+      p.239#9). Removing it would present paediatric intubation as an I-level action.
+      Deliberate, kept.
+
+  - file: protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md
+    row: 12
+    hits:
+      - Paramedic
+    reason: >-
+      CLINICAL QUALIFIER. "Intubation of children <12 years is a Paramedic red dot skill
+      only" scopes the paediatric half of a merged adult/pediatric ETI row. The chip is I
+      (the lowest level PEMS prints for the action, p.239#9); the caveat is what keeps the
+      paediatric P requirement visible. Deliberate, kept.
+
 removed:
 
   - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
@@ -68,3 +118,33 @@ removed:
       LEFTOVER TOKEN. The parenthetical only restated the row's own chip (EMT) in the
       bolded heading "**12-Lead ECG Acquisition (EMT):**". Removed; the heading, the
       chip and every bullet are unchanged.
+
+  - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
+    row: 4
+    hit: "(EMR/EMT)"
+    replaced_with: "**BLS Airway Adjuncts:**"
+    reason: >-
+      LEFTOVER TOKEN. The parenthetical only restated the BLS levels in the bolded heading
+      "**BLS Airway Adjuncts (EMR/EMT):**", and it contradicted the row's own dots, which
+      floor the action at EMT (PEMS p.239#6 prints it at EMT). Removed; the heading, the
+      chip and every bullet are otherwise unchanged.
+
+  - file: protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md
+    row: 10
+    hit: "(EMT and above)"
+    replaced_with: "**Apneic Patient - BVM Ventilation:**"
+    reason: >-
+      LEFTOVER TOKEN. The parenthetical restated the row's level in the bolded heading
+      "**Apneic Patient - BVM Ventilation (EMT and above):**". The chip is EMT (p.239#7
+      prints BVM at EMT), so the words added nothing the chip does not say. Removed; the
+      heading, the chip and every bullet are otherwise unchanged.
+
+  - file: protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md
+    row: 11
+    hit: "(Intermediate/Paramedic)"
+    replaced_with: "**Unable to Ventilate - Laryngoscopy and Forceps Removal:**"
+    reason: >-
+      LEFTOVER TOKEN. The parenthetical restated the row's level in the bolded heading
+      "**Unable to Ventilate - Laryngoscopy and Forceps Removal (Intermediate/Paramedic):**";
+      the chip is I (p.239#8 prints laryngoscopy/forceps at I). Removed; the heading, the
+      chip and every bullet are otherwise unchanged.
