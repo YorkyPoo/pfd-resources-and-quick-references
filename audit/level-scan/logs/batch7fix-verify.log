@@ -1,0 +1,141 @@
+Batch 7 review fix — verifier (scripts/verify_pems_canonical.py) on ffae9c2
+verifier manifest — 7 checks
+  [stage1.pems_table] PEMS table integrity: page decisions, row fields, badges, ordinals, page-break continuations
+  [stage2.alignment] alignment integrity: totals, ambiguity classifications, containment evidence, 0.40 floor, text-binding verdicts
+  [c2.split_map] split-map invariant: the union of the levels published by the site rows that split a PEMS row equals the PEMS badge level and every level above it, each listed row still exists (in either table format), and each row's chip is the level the conversion ledger records for it
+  [c2.badge_overrides] badge-overrides.yaml: every override names an existing PEMS row, keeps a reason and evidence, cannot drift from the PDF token, and is actually applied by pems_table.json (original token retained)
+  [c2.recheck] badge re-check: at_risk matched rows in c2-scope.json equal the recheck script's output, both p.61#4/p.63#7 mapped rows are named, provisional flags are derived, and the adjudicator note is present
+  [deliverables] deliverables exist and state the same totals as the artifacts
+  [docs_clean] no protocol page under docs/ is modified
+
+stage 1 — canonical PEMS table
+  ok   57 site pages carry a decision (found 57)
+  ok   every decision is a distinct page
+  ok   every decision is level_gated / administrative / skipped
+  ok   every decision carries a reason, ruling or declared source
+  ok   all 15 administrative pages record the ruling as contested
+  ok   all administrative pages report whether the page still carries a level grid
+  ok   no skipped page without a stated reason
+  ok   every PEMS row carries the required fields (535 rows)
+  ok   every PEMS row carries a badge token
+  ok   every PEMS row has verbatim text
+  ok   verifier-exceptions.yaml exists
+  ok   every documented badge-bleed exception carries a page, an ordinal and a reason
+  ok   badge column does not bleed into row text: every leak is documented (1 leak(s), 0 unexplained)
+  ok   every documented badge-bleed exception still leaks (no stale exception)
+        leak: p.81 #3 | EMR palpation/step offs EMR o Absence of spine or neck tenderness with Range of 
+        documented: Pre-existing layout defect in the canonical table, not in the conversion. The p.81 Spinal Clearance row continues past a page break (PEMS2024_full.txt shows "...No significant Mechanism of Injury (MOI)   EMR   EMR • Patient is Alert…"); the continuation join glued the margin badge column onto the row text, so the badge word appears at the start and in the middle of the text. It changes no badge decision: the row's badge_tokens come from the margin column and are correct (EMR), and no level-rule row cites p.81, so no chip anywhere is derived from this text. Fixing it means re-running the PDF layout extractor (pems_canonical.py) and re-freezing pems_table.json, which is outside the level-rule conversion this branch performs; recorded here so the green verdict is not overstated.
+  ok   section ordinals are contiguous from 0 within every section run
+  ok   no PEMS document has an unnamed section in the middle (0 left)
+  ok   every page-break continuation row starts its page and keeps the heading it continues (0 bad)
+  ok   the 10 continuation rows are the ones the documents record (10)
+stage 2 — alignment
+  ok   matched 290 + ambiguous 127 = site rows 417
+  ok   matched + ambiguous + absent = 504 accounted
+  ok   absent total 87 equals the sum of the page lists
+  ok   127 ambiguous rows are all listed
+  ok   every ambiguous row states why
+  ok   every ambiguous row carries a classification reason_kind
+  ok   unresolved_section is never a terminal disposition
+  ok   every section-fallback row (0) is classified and carries its note
+  ok   every matched row cites a PEMS page and badge
+  ok   no PEMS row backs two site rows on the same page (0 clashes)
+  ok   no text/section pairing sits below the 0.40 floor (0 below)
+  ok   every text-binding token binding clears 0.40 coverage (0 below)
+  ok   the 1 containment claims all check out (0 bad)
+  ok   every no_counterpart row carries a text-binding verdict (0 without)
+  ok   the 86 text-binding verdicts check out (0 bad)
+  ok   totals count 1 bound rows, the pages carry 1
+  ok   every no_evidence_local row is counted under exactly one subtype
+  ok   text-binding.md exists
+  ok   text-binding.md states the same row total (86)
+  ok   split-map.yaml exists
+  ok   split-map.yaml records all 7 held splits (7 listed)
+  ok   every split carries a unique id
+  ok   split chest-pain-acs-r13: badge 'MC' matches pems_table.json for p.107 #9 ('MC')
+  ok   split chest-pain-acs-r13: names at least one site row
+  ok   split chest-pain-acs-r13: every named row's chip is the level the ledger records
+  ok   split chest-pain-acs-r13: PEMS p.107 #9 badge MC expects {EMR/EMT/A/I/P}; site rows publish {EMR/EMT/A/I/P} (04_Chest_Pain_ACS_PROC.md r13 → EMR/EMT/A/I/P)
+  ok   split stroke-tia-r6: badge 'EMT' matches pems_table.json for p.131 #4 ('EMT')
+  ok   split stroke-tia-r6: names at least one site row
+  ok   split stroke-tia-r6: every named row's chip is the level the ledger records
+  ok   split stroke-tia-r6: PEMS p.131 #4 badge EMT expects {EMT/A/I/P}; site rows publish {EMT/A/I/P} (05_Stroke_TIA_PROC.md r6 → EMT/A/I/P)
+  ok   split airway-inhalation-irritants-r3: badge 'EMT' matches pems_table.json for p.153 #2 ('EMT')
+  ok   split airway-inhalation-irritants-r3: names at least one site row
+  ok   split airway-inhalation-irritants-r3: every named row's chip is the level the ledger records
+  ok   split airway-inhalation-irritants-r3: PEMS p.153 #2 badge EMT expects {EMT/A/I/P}; site rows publish {EMT/A/I/P} (03_Airway_Inhalation_Irritants_PROC.md r3 → EMT/A/I/P; 03_Smoke_Inhalation_PROC.md r4 → EMT/A/I/P)
+  ok   split pneumothorax-r11: badge 'I' matches pems_table.json for p.243 #4 ('I')
+  ok   split pneumothorax-r11: names at least one site row
+  ok   split pneumothorax-r11: every named row's chip is the level the ledger records
+  ok   split pneumothorax-r11: PEMS p.243 #4 badge I expects {I/P}; site rows publish {I/P} (03_Pneumothorax_PROC.md r11 → I/P; 03_Pneumothorax_PROC.md r12 → I/P)
+  ok   split smoke-inhalation-r4: badge 'EMT' matches pems_table.json for p.153 #2 ('EMT')
+  ok   split smoke-inhalation-r4: names at least one site row
+  ok   split smoke-inhalation-r4: every named row's chip is the level the ledger records
+  ok   split smoke-inhalation-r4: PEMS p.153 #2 badge EMT expects {EMT/A/I/P}; site rows publish {EMT/A/I/P} (03_Airway_Inhalation_Irritants_PROC.md r3 → EMT/A/I/P; 03_Smoke_Inhalation_PROC.md r4 → EMT/A/I/P)
+  ok   split upper-airway-obstruction-r3: badge 'EMT' matches pems_table.json for p.239 #3 ('EMT')
+  ok   split upper-airway-obstruction-r3: names at least one site row
+  ok   split upper-airway-obstruction-r3: every named row's chip is the level the ledger records
+  ok   split upper-airway-obstruction-r3: PEMS p.239 #3 badge EMT expects {EMT/A/I/P}; site rows publish {EMT/A/I/P} (03_Upper_Airway_Obstruction_PROC.md r3 → EMT/A/I/P; 03_Upper_Airway_Obstruction_PROC.md r5 → EMT/A/I/P; 03_Upper_Airway_Obstruction_PROC.md r6 → EMT/A/I/P)
+  ok   split upper-airway-obstruction-r8: badge 'EMT' matches pems_table.json for p.239 #6 ('EMT')
+  ok   split upper-airway-obstruction-r8: names at least one site row
+  ok   split upper-airway-obstruction-r8: every named row's chip is the level the ledger records
+  ok   split upper-airway-obstruction-r8: PEMS p.239 #6 badge EMT expects {EMT/A/I/P}; site rows publish {EMT/A/I/P} (03_Respiratory_Arrest_PROC.md r2 → EMT/A/I/P; 03_Upper_Airway_Obstruction_PROC.md r8 → EMT/A/I/P)
+  ok   badge-overrides.yaml exists
+  ok   badge-overrides.yaml carries an `overrides` list
+  ok   the 0 badge overrides are complete and applied (0 problems)
+  ok   every row the table marks badge_override_applied is declared in the yaml (0 undeclared)
+  ok   every overridden row retains the PDF token in badge_token_from_pdf
+  ok   pems_table.json records 0 applied overrides, the yaml declares 0
+  ok   c2-scope.json exists
+  ok   c2-scope.json carries counts.at_risk_matched_rows
+  ok   at_risk_matched_rows equals the recheck script's output (2 listed, 2 derived)
+  ok   at_risk_matched_rows_count matches the list length
+  ok   at-risk list names 04_Cardiac_Arrest_Non_Traumatic_PROC.md r5 (mapped to an ambiguous badge)
+  ok   at-risk list names 04_Cardiac_Arrest_Traumatic_PROC.md r5 (mapped to an ambiguous badge)
+  ok   provisional flags equal the rows joined to a still-contradictory badge (4 flagged, 4 derived)
+  ok   counts.provisional_count 4 matches the 4 flagged rows
+  ok   counts.provisional enumerates exactly the provisional rows
+  ok   the single site_broader row is provisional (its direction rests on p.63#7)
+  ok   c2-scope.json carries notes_for_adjudicator
+  ok   notes_for_adjudicator carries the 'one row or two' test
+  ok   notes_for_adjudicator says the compound case is an authoring decision
+deliverables
+  ok   missing-rows.md exists
+  ok   ambiguous-rows.md exists
+  ok   alignment.json exists
+  ok   pems_table.json exists
+  ok   .cache/pems_rows.jsonl exists
+  ok   missing-rows.md states the same total (87)
+  ok   missing-rows.md reconciles with the prior scan's 152
+  ok   reconciliation.json exists
+  ok   prior reported total is 152 (152)
+  ok   every prior row lands in exactly one cause bucket (152 of 152)
+  ok   paired count 30 equals the bridge's paired count
+  ok   absent 87 = still absent 81 + newly absent 6
+  ok   newly unpaired total matches its bridge entry
+  ok   the still-absent bucket names every row it counts
+  ok   bucket 'claimed_by_an_ambiguous_site_row' names 12 rows and counts 12
+  ok   bucket 'still_absent' names 81 rows and counts 81
+  ok   bucket 'merged_into_a_site_row' names 21 rows and counts 21
+  ok   bucket 'paired_to_site_row_text' names 22 rows and counts 22
+  ok   bucket 'duplicate_copy_in_merged_source' names 6 rows and counts 6
+  ok   bucket 'paired_to_site_row_label' names 7 rows and counts 7
+  ok   bucket 'prior_row_not_in_current_scope' names 1 rows and counts 1
+  ok   bucket 'prior_claims_collapsed_into_one_current_row' names 1 rows and counts 1
+  ok   bucket 'paired_to_site_row_text_binding' names 1 rows and counts 1
+  ok   newly unpaired bucket names every row it counts
+  ok   every paired row carries a trust verdict
+  ok   reviewed pairings + unreviewed pairings = all pairings
+  ok   every recorded human review still maps to a pairing (0 stale)
+  ok   3 pairings are recorded as suspect, not as settled
+  ok   the 19 flagged pairings show similarity and PEMS text
+  ok   the ledger covers every in-scope PEMS row
+  ok   no PEMS row in scope is unaccounted for (0)
+  ok   ambiguous-rows.md states the same total (127)
+no protocol pages touched
+  ok   git status shows no modified files under docs/
+
+  ok   verifier manifest covers the run (7 of 7 checks reached: )
+
+all invariants hold
+EXIT=0
