@@ -970,3 +970,127 @@ bindings:
       prints 'If shock or potential for shock is present, keep the patient warm' (badge
       EMR) — the intervention, not the assessment/referral this row names. The page's A is
       kept and flagged.
+
+  # ================================================================ Batch 5 — general/
+  # Sources: p.71-72 Behavioral Emergencies (restraint), p.67 Cold Exposure, p.69 Heat
+  # Exposure, p.77 Pain Control, p.55 Sedation Post Advanced Airway.
+
+  # ---------------------------------------------------------- Behavioral restraint (p.71-72)
+  - file: protocols/general/02_Behavioral_Patient_Restraint_PROC.md
+    row: 1
+    pems_page: 71
+    pems_ordinal: 1
+    evidence: >-
+      p.71#1 "Assess decision making capacity. Refer to administrative policy Patient
+      Refusals." badge EMR. The site row concatenates that row with p.71#3 "Assess and
+      treat potential causes of agitation / altered mental status" (also badge EMR); the
+      alignment had matched it to #3 alone. Citing #1 because the capacity/refusals clause
+      leads the row. Same badge either way, so no level moves.
+  - file: protocols/general/02_Behavioral_Patient_Restraint_PROC.md
+    row: 2
+    pems_page: 71
+    pems_ordinal: 4
+    evidence: >-
+      p.71#4 "For mild agitation, follow de-escalation guidelines. See Pearls (**) below."
+      badge EMR — the de-escalation row, and the only PEMS row that authorises it. The
+      alignment reported no counterpart; the site row's detail (soothing tone, space,
+      boundaries) is the page's expansion of that PEMS row and its Pearls. Chip moves
+      EMT -> EMR: the source prints de-escalation at EMR, all five columns filled.
+
+  # ---------------------------------------------------------------- Cold Exposure (p.67)
+  - file: protocols/general/02_Cold_Exposure_PROC.md
+    row: 6
+    pems_owner_kind: not-printed
+    status: owner_required
+    reason: >-
+      PEMS prints this action nowhere. p.67#1 prints passive warming only ("place patient
+      in a warm environment and prevent further heat loss. Remove all wet clothing and
+      replace with warm blankets", badge EMR) and p.67#0 prints warmed humidified O2 (badge
+      EMR); no PEMS 2024 row prints active external rewarming with heat packs — the word
+      "heat pack" appears in no PEMS protocol row. Binding r6 to p.67#1 would widen EMT ->
+      EMR on warming text the source does not print. The page's EMT is kept and flagged.
+  - file: protocols/general/02_Cold_Exposure_PROC.md
+    row: 9
+    pems_owner_kind: printed-elsewhere-no-row-matches
+    status: owner_required
+    reason: >-
+      PEMS prints an AED Medical Control gate nowhere in the Cold Exposure protocol
+      (p.67#0-#5 carry no AED row at all), and no other PEMS 2024 row requires Medical
+      Control before AED use: p.21#0, p.63#7, p.235#4 and p.263#4 print AED application at
+      EMT/EMR with no pre-use MC contact. The page's MC chip is kept and flagged.
+  - file: protocols/general/02_Cold_Exposure_PROC.md
+    row: 4
+    pems_page: 67
+    pems_ordinal: 0
+    evidence: >-
+      p.67#0 "Follow General - Universal Patient Care/Initial Patient Contact Protocol. Use
+      warmed and humidified O2 if available." badge EMR. The site splits that one PEMS row
+      into r1 (UPC contact, cited to p.67#4) and r4 (the O2 clause); the source badges the
+      merged row EMR in all five columns, so the chip moves EMT -> EMR. Recorded here
+      because the split is the page's, not PEMS's.
+
+  # ---------------------------------------------------------------- Pain Control (p.77)
+  - file: protocols/general/02_Pain_Control_PROC.md
+    row: 8
+    pems_owner_kind: not-printed
+    status: owner_required
+    reason: >-
+      PEMS prints this action nowhere: p.77 carries no Medical Control row at all (its six
+      rows are #0-#5, all interventions), so the page's MC escalation row has no PEMS
+      counterpart. No other PEMS 2024 row prints a pain-control MC escalation. The page's
+      MC chip is kept and flagged.
+
+  # ------------------------------------------------- Sedation, non-paralytic (p.55)
+  - file: protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md
+    row: 2
+    pems_page: 77
+    pems_ordinal: 2
+    cross_page: true
+    quoted_row_text: >-
+      Assess and monitor blood pressure. Ensure patient is not hypotensive.
+    evidence: >-
+      p.77#2 "Assess and monitor blood pressure. Ensure patient is not hypotensive. See
+      Criteria." badge EMT — word-for-word the action this row names. Cross-page: p.55 (the
+      page's source) prints no BP-assessment row; its five rows are airway confirmation,
+      two sedation rows and an MC contact. Chip moves A -> EMT (source badges it EMT).
+  - file: protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md
+    row: 3
+    pems_page: 50
+    pems_ordinal: 9
+    cross_page: true
+    quoted_row_text: >-
+      Establish IV / IO access when indicated.
+    evidence: >-
+      p.50#9 (Universal Patient Care) "Establish IV / IO access when indicated. Refer to
+      Intraosseous (IO) Access procedure, as needed." badge A — the generic access row, the
+      same row Batch 4 bound Trauma r7 to. Cross-page: p.55 prints no access row. Chip
+      moves I -> A: PEMS badges IV/IO access A in every standalone row that prints it
+      (p.50#9, p.100#7, p.103#5).
+  - file: protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md
+    row: 4
+    pems_owner_kind: printed-elsewhere-no-row-matches
+    status: owner_required
+    reason: >-
+      PRE-INTUBATION sedation has no PEMS 2024 row. p.55 is "Sedation Post Advanced Airway"
+      and its only midazolam row (#3, badge I) is post-airway sedation after fentanyl; the
+      alignment bound r4 to it on text overlap, which would cite a post-airway row for a
+      pre-airway act. PEMS states the gap itself: p.123#4 "Intubation of spontaneously
+      breathing patients without rapid sequence induction (RSI) is generally not
+      recommended. RSI is not addressed in PEMS regional protocols - refer to agency
+      specific protocols for guidance." Ketamine appears in exactly one PEMS 2024 row,
+      p.72#9 (behavioral restraint, badge P), which does not authorise sedation for
+      intubation. The page's I is kept and flagged.
+  - file: protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md
+    row: 5
+    pems_owner_kind: printed-elsewhere-no-row-matches
+    status: owner_required
+    reason: >-
+      The act is printed at I (p.55#2 fentanyl, p.55#3 midazolam, both badge I) but the
+      drug this row names is not printed anywhere as a sedative: ketamine occurs in exactly
+      one PEMS 2024 row, p.72#9 (behavioral restraint, badge P). The C2 adjudication bound
+      this row to p.55#2 and levelled it I — that is the class level, and chipping it I
+      would widen the authority for ketamine post-intubation sedation from the P this page
+      published to I on a citation that does not name the drug. The page's P is kept and
+      flagged: is post-intubation ketamine to sit at I on the strength of the p.55 sedation
+      rows, or is it agency-specific like RSI (p.123#4)?
+

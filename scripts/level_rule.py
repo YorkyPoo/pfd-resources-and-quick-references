@@ -98,6 +98,19 @@ TARGETS = [
     'protocols/toxicology/06_Nausea_Vomiting_PROC.md',
     'protocols/toxicology/06_Nerve_Agents_PROC.md',
     'protocols/toxicology/06_Overdose_Poisoning_PROC.md',
+    # Batch 5 — protocols/general/. Derived from the tree: `grep -l 'class="sc-wrap"'
+    # docs/protocols/general/*.md` returns exactly these 6 pages, nothing hand-picked.
+    # protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md is the seventh page the
+    # card names; it was already converted in Batch 2 and is listed above. Its two
+    # remaining `sc-wrap` blocks are the Norepinephrine and Epinephrine DRIP CHARTS (a Dose
+    # column and a Drops-per-minute column), not level matrices — there is no action row to
+    # chip, so they stay sc-wrap. See the Batch 5 ledger note.
+    'protocols/general/02_Behavioral_Patient_Restraint_PROC.md',
+    'protocols/general/02_Cold_Exposure_PROC.md',
+    'protocols/general/02_Diving_and_Drowning_Emergencies_PROC.md',
+    'protocols/general/02_Heat_Exposure_PROC.md',
+    'protocols/general/02_Pain_Control_PROC.md',
+    'protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md',
 ]
 
 # Pages sourced from OUTSIDE PEMS 2024. PEMS prints no equivalent protocol, so no row on
@@ -1599,7 +1612,53 @@ def emit_md(ledger):
               '- **Batch 4 — three cross-page citations reach procedures.** Hemorrhage rows 8-9',
               '  cite the Tourniquet Application procedure (p.273#6 EMR, p.273#7 MC) and Trauma',
               '  row 7 cites Universal Patient Care (p.50#9 A). Each cited row prints the action',
-              '  verbatim; confirm citing a procedure for a protocol-page row is intended.']
+              '  verbatim; confirm citing a procedure for a protocol-page row is intended.',
+              '- **Batch 5 — four card premises were wrong, and the tree/source were followed.**',
+              '  (a) `07_Hypotension_Shock_Non_Trauma` was already converted in Batch 2; its two',
+              '  remaining `sc-wrap` blocks are the Norepinephrine and Epinephrine DRIP CHARTS',
+              '  (columns: Dose | Drops per minute) — dose tables, not level matrices, with no',
+              '  action row to chip. They keep `sc-wrap` and are excluded from `TARGETS`. Confirm',
+              '  a drip chart should never be converted. (b) `02_Diving_and_Drowning` did NOT need',
+              '  OWNER_REQUIRED: PEMS p.93#6 prints "Contact Medical Control for transport',
+              '  destination guidance if decompression injury is suspected" badged MC, so row 7',
+              '  is cited, not flagged. (c) `02_Behavioral_Patient_Restraint` is not',
+              '  admin-policy-only: PEMS p.71#2 prints "Restrain patient by least restrictive',
+              '  means necessary. Refer to administrative policy Patient Restraint." at EMR and',
+              '  p.71#4 prints de-escalation at EMR, so both are cited from the protocol row.',
+              '  (d) the general/ scope is 6 pages, not 6-plus-medical: `grep` is the source.',
+              '- **Batch 5 — Pain Control rows 6 and 7 now print `A` + `*` (PEMS `[A]` bracket),',
+              '  down from the `I` the page published.** p.77#5 is the only row that prints',
+              '  fentanyl/morphine and PEMS brackets its badge: AEMT, with agency training',
+              '  documentation and Medical Control written authorisation. The one-chip chassis',
+              '  cannot reproduce a bracket, so the asterisk note carries it. Owner to confirm',
+              '  that the analgesia ladder is A+MC in PEMS and not I.',
+              '- **Batch 5 — Sedation: pre-intubation sedation has no PEMS row (OWNER_REQUIRED,',
+              '  row 4).** p.55 is "Sedation Post Advanced Airway"; p.123#4 states outright that',
+              '  "RSI is not addressed in PEMS regional protocols – refer to agency specific',
+              '  protocols for guidance". The alignment had bound the row to the post-airway',
+              '  midazolam row; the binding now overrides that. Owner to say whether',
+              '  pre-intubation ketamine/midazolam is agency-specific (and should be PENDING like',
+              '  other agency additions) rather than I.',
+              '- **Batch 5 — Sedation row 5 (post-intubation KETAMINE) keeps `P`, flagged',
+              '  OWNER_REQUIRED.** Post-intubation sedation is printed at I (p.55#2 fentanyl,',
+              '  p.55#3 midazolam) but ketamine is printed in exactly one PEMS 2024 row — p.72#9,',
+              '  behavioural restraint, badge P — so no row authorises ketamine *as a sedative*.',
+              '  The C2 adjudication would have levelled it I (the class level, on a row that does',
+              '  not name the drug); the page level P is kept and flagged instead. Owner to rule:',
+              '  I on the class rows, or P/agency-specific.',
+              '- **Batch 5 — two cross-page citations reach other protocols.** Sedation row 2 cites',
+              '  Pain Control p.77#2 ("Assess and monitor blood pressure. Ensure patient is not',
+              '  hypotensive.", badge EMT) and row 3 cites Universal Patient Care p.50#9',
+              '  ("Establish IV / IO access when indicated.", badge A). Both print the site row',
+              '  verbatim; chip moves A -> EMT (row 2) and I -> A (row 3) as the source prints.',
+              '- **Batch 5 — Cold Exposure rows 6 and 9 are OWNER_REQUIRED.** Row 6 (active',
+              '  external rewarming with heat packs) is printed nowhere: p.67#1 prints passive',
+              '  warming and warm blankets at EMR, and no PEMS row anywhere prints heat packs.',
+              '  Row 9 (Medical Control before AED) is printed nowhere in the cold protocol, and',
+              '  no other PEMS row gates AED use on Medical Control (p.21#0, p.63#7, p.235#4,',
+              '  p.263#4 apply an AED at EMT/EMR with no pre-use contact). Page levels EMT and MC',
+              '  are kept and flagged.']
+
     # Derived from `changed` so the prose can never disagree with the table above:
     # an MC -> other move and an other -> MC move are counted and named from data.
     lost_mc = [e for e in changed

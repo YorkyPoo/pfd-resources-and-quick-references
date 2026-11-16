@@ -378,6 +378,51 @@ the action text.
 | `06_Overdose_Poisoning_PROC.md` | 8 | I | p.120#9 | For respiratory distress due to bronchorrhea, administer: ADULT: Atropine sulfate 2 mg IV/IO/IM PEDIATRIC (< 40 kg): Atroprine sulfate 1mg IV/IO/IM… | alignment:matched | OK |
 | `06_Overdose_Poisoning_PROC.md` | 9 | EMR | p.120#10 | Anti-Cholinergic & Tricyclic Antidepressant (TCA) Begin active cooling if temperature is greater than 104F / 40C. Refer to Heat stroke / Hypertherm… | alignment:matched | OK |
 | `06_Overdose_Poisoning_PROC.md` | 10 | I | p.120#11 | administer: ADULT: Sodium bicarbonate 50 mEq IV/IO slow push PEDIATRIC: Sodium bicarbonate 1 mEq/kg IV/IO slow push. Maximum dose 50 mEq. Repeat on… | alignment:matched | OK |
+| `02_Behavioral_Patient_Restraint_PROC.md` | 1 | EMR | p.71#1 | Assess decision making capacity. Refer to administrative policy Patient Refusals. | row-bindings:bound | OK |
+| `02_Behavioral_Patient_Restraint_PROC.md` | 2 | EMR | p.71#4 | For mild agitation, follow de-escalation guidelines. See Pearls (**) below. | row-bindings:bound | OK |
+| `02_Behavioral_Patient_Restraint_PROC.md` | 3 | EMR | p.71#2 | Restrain patient by least restrictive means necessary. Refer to administrative policy Patient Restraint. | alignment:matched | OK |
+| `02_Behavioral_Patient_Restraint_PROC.md` | 4 | I | p.71#6 | As soon as feasible, assess and initiate continuous monitoring of cardiac rhythm. | alignment:matched | OK |
+| `02_Behavioral_Patient_Restraint_PROC.md` | 5 | I | p.71#7 | For moderate agitation, consider: ADULT: Haloperidol (Haldol) 5 mg IV/IO slow push or IM PEDIATRIC: Haloperidol (Haldol) 0.02 mg/kg IV/IO slow push… | alignment:matched | OK |
+| `02_Behavioral_Patient_Restraint_PROC.md` | 6 | I | p.72#8 | For severe agitation that does not respond to the above therapy, administer: ADULT: Midazolam (Versed) 5 mg IV/IO slow push or 10 mg IM PEDIATRIC: … | alignment:matched | OK |
+| `02_Behavioral_Patient_Restraint_PROC.md` | 7 | P | p.72#9 | Only if the patient is severely agitated with imminent risk of harm to self or others, consider: ADULT: Ketamine (Ketalar) 4 mg/kg IM Be prepared t… | alignment:matched | OK |
+| `02_Behavioral_Patient_Restraint_PROC.md` | 8 | MC | p.72#10 | If unable to safely restrain or transport the patient, contact Medical Control for guidance. | alignment:matched | OK |
+| `02_Cold_Exposure_PROC.md` | 1 | EMR | p.67#4 | Follow General – Universal Patient Care/Initial Patient Contact Protocol. | alignment:matched | OK |
+| `02_Cold_Exposure_PROC.md` | 2 | EMR | p.67#1 | 2 Place patient in a warm environment and prevent further heat loss Remove all wet clothing and replace with warm blankets. Handle the patient gently | alignment:matched | OK |
+| `02_Cold_Exposure_PROC.md` | 3 | EMR | p.67#1 | 2 Place patient in a warm environment and prevent further heat loss Remove all wet clothing and replace with warm blankets. Handle the patient gently | adjudicated:confirm | OK |
+| `02_Cold_Exposure_PROC.md` | 4 | EMR | p.67#0 | Follow General – Universal Patient Care/Initial Patient Contact Protocol. Use warmed and humidified O if available. | row-bindings:bound | OK |
+| `02_Cold_Exposure_PROC.md` | 5 | EMR | p.67#5 | Apply loose, sterile dressings to affected part | alignment:matched | OK |
+| `02_Cold_Exposure_PROC.md` | 6 | EMT | — | — | — | OWNER_REQUIRED |
+| `02_Cold_Exposure_PROC.md` | 7 | EMR | p.67#2 | and avoid excessive movement (risk of cardiac arrest) In the event of cardiac arrest, make persistent attempts at resuscitation for victims of prol… | alignment:matched | OK |
+| `02_Cold_Exposure_PROC.md` | 8 | EMT | p.67#3 | Transport patient immediately with resuscitation efforts continued en route | alignment:matched | OK |
+| `02_Cold_Exposure_PROC.md` | 9 | MC | — | — | — | OWNER_REQUIRED |
+| `02_Diving_and_Drowning_Emergencies_PROC.md` | 1 | EMR | p.93#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `02_Diving_and_Drowning_Emergencies_PROC.md` | 2 | EMR | p.93#1 | Remove the patient from the water. Consider spinal motion restriction. Refer to Spinal Motion Restriction procedure. | alignment:matched | OK |
+| `02_Diving_and_Drowning_Emergencies_PROC.md` | 3 | EMR | p.93#2 | Assess airway and ventilation. Refer to Airway Management and Ventilatory Support protocol. | alignment:matched | OK |
+| `02_Diving_and_Drowning_Emergencies_PROC.md` | 4 | EMR | p.93#3 | Remove wet clothing and dry the skin. Keep the patient warm. | alignment:matched | OK |
+| `02_Diving_and_Drowning_Emergencies_PROC.md` | 5 | EMR | p.93#4 | If hypothermia and hemodynamically unstable, focus effort on rewarming as well as resuscitation. | alignment:matched | OK |
+| `02_Diving_and_Drowning_Emergencies_PROC.md` | 6 | EMR | p.93#5 | Diving emergencies: Consider pulmonary barotrauma, decompression sickness, and/or arterial gas embolism. Refer to appropriate protocols as needed.* | alignment:matched | OK |
+| `02_Diving_and_Drowning_Emergencies_PROC.md` | 7 | MC | p.93#6 | Contact Medical Control for transport destination guidance if decompression injury is suspected. Hyperbaric Centers: Sentara Leigh Hospital ED (Nor… | alignment:matched | OK |
+| `02_Heat_Exposure_PROC.md` | 1 | EMR | p.69#1 | Place patient in cool environment. | alignment:matched | OK |
+| `02_Heat_Exposure_PROC.md` | 2 | EMT | p.69#2 | • Remove excess clothing. • If skin temperature is normal to touch: o Apply cool compresses. • If skin temperature is hot to touch: o Treat as life… | alignment:matched | OK |
+| `02_Heat_Exposure_PROC.md` | 3 | EMT | p.69#2 | • Remove excess clothing. • If skin temperature is normal to touch: o Apply cool compresses. • If skin temperature is hot to touch: o Treat as life… | adjudicated:set_cells | OK |
+| `02_Heat_Exposure_PROC.md` | 4 | EMT | p.69#2 | • Remove excess clothing. • If skin temperature is normal to touch: o Apply cool compresses. • If skin temperature is hot to touch: o Treat as life… | adjudicated:set_cells | OK |
+| `02_Heat_Exposure_PROC.md` | 5 | EMT | p.69#2 | • Remove excess clothing. • If skin temperature is normal to touch: o Apply cool compresses. • If skin temperature is hot to touch: o Treat as life… | adjudicated:set_cells | OK |
+| `02_Heat_Exposure_PROC.md` | 6 | A | p.69#3 | Suspected heat stroke or hypovolemia: 20 mL/kg 0.9% Normal Saline up to 1000 A mL bolus, continuously reassessing need for further fluid administra… | alignment:matched | OK |
+| `02_Heat_Exposure_PROC.md` | 7 | EMT | p.69#4 | Continuously reassess patient. | alignment:matched | OK |
+| `02_Pain_Control_PROC.md` | 1 | EMR | p.77#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `02_Pain_Control_PROC.md` | 2 | EMR | p.77#1 | Assess baseline pain level using scale below. See Pearls. | alignment:matched | OK |
+| `02_Pain_Control_PROC.md` | 3 | EMT | p.77#2 | Assess and monitor blood pressure. Ensure patient is not hypotensive. See Criteria. | alignment:matched | OK |
+| `02_Pain_Control_PROC.md` | 4 | A | p.77#3 | Consider treatment for nausea prior to administering an opiate: ADULT: Ondansetron (Zofran) 4 mg IV/IO slow push, IM, or PO PEDIATRIC [> 1 year]: O… | alignment:matched | OK |
+| `02_Pain_Control_PROC.md` | 5 | A | p.77#4 | For mild to moderate pain (2 - 5), consider: ADULT: Ketoralac (Toradol) 15 mg IV/IO or 30 mg IM | alignment:matched | OK |
+| `02_Pain_Control_PROC.md` | 6 | A | p.77#5 | For moderate to severe pain (6 – 10), consider: ADULT: Fentanyl (Sublimaze) 25 – 50 mcg IV/IO over 2 minutes or IN/IM Maximum total dose: 100 mcg P… | alignment:matched | OK |
+| `02_Pain_Control_PROC.md` | 7 | A | p.77#5 | For moderate to severe pain (6 – 10), consider: ADULT: Fentanyl (Sublimaze) 25 – 50 mcg IV/IO over 2 minutes or IN/IM Maximum total dose: 100 mcg P… | adjudicated:set_cells | OK |
+| `02_Pain_Control_PROC.md` | 8 | MC | — | — | — | OWNER_REQUIRED |
+| `02_Sedation_Assisted_Non_Paralytic_PROC.md` | 1 | EMR | p.55#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
+| `02_Sedation_Assisted_Non_Paralytic_PROC.md` | 2 | EMT | p.77#2 **×page** | Assess and monitor blood pressure. Ensure patient is not hypotensive. See Criteria. | row-bindings:bound | OK |
+| `02_Sedation_Assisted_Non_Paralytic_PROC.md` | 3 | A | p.50#9 **×page** | Establish IV / IO access when indicated. Refer to Intraosseous (IO) Access procedure, as needed. | row-bindings:bound | OK |
+| `02_Sedation_Assisted_Non_Paralytic_PROC.md` | 4 | I | p.55#3 | If Fentanyl is not sufficient, administer: ADULT: Midazolam (Versed) 2.5 mg IV/IO over 2 minutes or 5 mg IN/IM PEDIATRIC: Midazolam (Versed) 0.1 mg… | alignment:matched | OWNER_REQUIRED |
+| `02_Sedation_Assisted_Non_Paralytic_PROC.md` | 5 | P | p.55#2 | Administer: ADULT: Fentanyl (Sublimaze) 25 – 50 mcg IV/IO over 2 minutes or IN/IM PEDIATRIC: Fentanyl (Sublimaze) 0.5 – 1 mcg/kg IV/IO over 2 minut… | adjudicated:set_cells | OWNER_REQUIRED |
+| `02_Sedation_Assisted_Non_Paralytic_PROC.md` | 6 | I | p.55#3 | If Fentanyl is not sufficient, administer: ADULT: Midazolam (Versed) 2.5 mg IV/IO over 2 minutes or 5 mg IN/IM PEDIATRIC: Midazolam (Versed) 0.1 mg… | adjudicated:set_cells | OK |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 1 | PENDING | — | — | — | pending_omd |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 2 | PENDING | — | — | — | pending_omd |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 3 | PENDING | — | — | — | pending_omd |
@@ -400,7 +445,7 @@ the verbatim span from the cited row that the checker re-reads out of
 `pems_table.json` — a citation whose quote the cited row does not print fails
 `--check`. The chip is the badge that row prints, not the page's old level.
 
-**43 row(s).**
+**45 row(s).**
 
 - `protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 4: **EMR** from p.103#1 (was OWNER_REQUIRED) — quoted: "Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure."
   - action: Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure.
@@ -531,6 +576,12 @@ the verbatim span from the cited row that the checker re-reads out of
 - `protocols/trauma/09_Trauma_PROC.md` row 7: **A** from p.50#9 (was I) — quoted: "Establish IV / IO access when indicated."
   - action: Obtain IV/IO access.
   - evidence: p.50#9 (Universal Patient Care) prints 'Establish IV / IO access when indicated. Refer to Intraosseous (IO) Access procedure, as needed.' badged A — the IV/IO access step this row names. Cross-page: p.83 prints no access row (p.83#10 is the fluid bolus, which is row 8). The C2 adjudication had resolved this row to p.83#10 (the fluid row); the binding overrides it.
+- `protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md` row 2: **EMT** from p.77#2 (was A) — quoted: "Assess and monitor blood pressure. Ensure patient is not hypotensive."
+  - action: Assess and monitor blood pressure. Ensure patient is not hypotensive.
+  - evidence: p.77#2 "Assess and monitor blood pressure. Ensure patient is not hypotensive. See Criteria." badge EMT — word-for-word the action this row names. Cross-page: p.55 (the page's source) prints no BP-assessment row; its five rows are airway confirmation, two sedation rows and an MC contact. Chip moves A -> EMT (source badges it EMT).
+- `protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md` row 3: **A** from p.50#9 (was I) — quoted: "Establish IV / IO access when indicated."
+  - action: Establish IV/IO access.
+  - evidence: p.50#9 (Universal Patient Care) "Establish IV / IO access when indicated. Refer to Intraosseous (IO) Access procedure, as needed." badge A — the generic access row, the same row Batch 4 bound Trauma r7 to. Cross-page: p.55 prints no access row. Chip moves I -> A: PEMS badges IV/IO access A in every standalone row that prints it (p.50#9, p.100#7, p.103#5).
 
 ## `+MC` — Medical-Control-required marker (owner ruling 2026-11-16)
 
@@ -628,14 +679,20 @@ recorded decision — the citation that cleared it is listed above and in the ta
 | `06_Nausea_Vomiting_PROC.md` | 0 | 0 | new | 0 |
 | `06_Nerve_Agents_PROC.md` | 0 | 0 | new | 0 |
 | `06_Overdose_Poisoning_PROC.md` | 0 | 0 | new | 0 |
+| `02_Behavioral_Patient_Restraint_PROC.md` | 0 | 0 | new | 0 |
+| `02_Cold_Exposure_PROC.md` | 0 | 2 | new | 0 |
+| `02_Diving_and_Drowning_Emergencies_PROC.md` | 0 | 0 | new | 0 |
+| `02_Heat_Exposure_PROC.md` | 0 | 0 | new | 0 |
+| `02_Pain_Control_PROC.md` | 0 | 1 | new | 0 |
+| `02_Sedation_Assisted_Non_Paralytic_PROC.md` | 0 | 2 | new | 0 |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 11 | 11 | 0 | 0 |
 
-**Total: 77 flagged before, 46 after (31 cleared).**
+**Total: 77 flagged before, 51 after (26 cleared).**
 
 
 ## OWNER_REQUIRED
 
-**32 row(s).** No PEMS 2024 row authorises a provider level for these
+**37 row(s).** No PEMS 2024 row authorises a provider level for these
 actions, after the cross-page search (a row is only cleared when a PEMS row
 actually prints the action — see *Cross-page citations* above). The chip keeps the
 level the page already published and carries the flag. Nothing here was invented:
@@ -720,6 +777,18 @@ prints it and why its badge contradicts the row's own words.
 - `protocols/trauma/09_Trauma_PROC.md` row 6 — **A** kept from the page, not from the source. Assess for shock. Refer to Shock (Hypoperfusion) protocol.
   - nearest PEMS row, NOT cited as authority: p.83#3
   - reason: No PEMS 2024 row prints 'assess for shock and refer to the Shock protocol'. p.83#3 prints 'If shock or potential for shock is present, keep the patient warm' (badge EMR) — the intervention, not the assessment/referral this row names. The page's A is kept and flagged.
+- `protocols/general/02_Cold_Exposure_PROC.md` row 6 — **EMT** kept from the page, not from the source. If patient is alert and responsive: Use active external rewarming with heat packs, warm blankets, etc.
+  - reason: PEMS prints this action nowhere. p.67#1 prints passive warming only ("place patient in a warm environment and prevent further heat loss. Remove all wet clothing and replace with warm blankets", badge EMR) and p.67#0 prints warmed humidified O2 (badge EMR); no PEMS 2024 row prints active external rewarming with heat packs — the word "heat pack" appears in no PEMS protocol row. Binding r6 to p.67#1 would widen EMT -> EMR on warming text the source does not print. The page's EMT is kept and flagged.
+- `protocols/general/02_Cold_Exposure_PROC.md` row 9 — **MC** kept from the page, not from the source. Contact Medical Control prior to use of AED.
+  - reason: PEMS prints an AED Medical Control gate nowhere in the Cold Exposure protocol (p.67#0-#5 carry no AED row at all), and no other PEMS 2024 row requires Medical Control before AED use: p.21#0, p.63#7, p.235#4 and p.263#4 print AED application at EMT/EMR with no pre-use MC contact. The page's MC chip is kept and flagged.
+- `protocols/general/02_Pain_Control_PROC.md` row 8 — **MC** kept from the page, not from the source. If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact Medical Control for guidance.
+  - reason: PEMS prints this action nowhere: p.77 carries no Medical Control row at all (its six rows are #0-#5, all interventions), so the page's MC escalation row has no PEMS counterpart. No other PEMS 2024 row prints a pain-control MC escalation. The page's MC chip is kept and flagged.
+- `protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md` row 4 — **I** kept from the page, not from the source. Pre-Intubation Sedation, consider ONE of the following:  • ADULT: Ketamine (Ketalar) 1.5 - 2 mg/kg IV/IO (Maximum single dose: 200 mg) OR 4 - 5 mg/kg 
+  - nearest PEMS row, NOT cited as authority: p.55#3
+  - reason: PRE-INTUBATION sedation has no PEMS 2024 row. p.55 is "Sedation Post Advanced Airway" and its only midazolam row (#3, badge I) is post-airway sedation after fentanyl; the alignment bound r4 to it on text overlap, which would cite a post-airway row for a pre-airway act. PEMS states the gap itself: p.123#4 "Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended. RSI is not addressed in PEMS regional protocols - refer to agency specific protocols for guidance." Ketamine appears in exactly one PEMS 2024 row, p.72#9 (behavioral restraint, badge P), which does not authorise sedation for intubation. The page's I is kept and flagged.
+- `protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md` row 5 — **P** kept from the page, not from the source. Post-Intubation Sedation, consider ONE of the following:  • ADULT: Ketamine (Ketalar) 1 mg/kg IV/IO (Maximum single dose: 100 mg). May repeat every 10
+  - nearest PEMS row, NOT cited as authority: p.55#2
+  - reason: The act is printed at I (p.55#2 fentanyl, p.55#3 midazolam, both badge I) but the drug this row names is not printed anywhere as a sedative: ketamine occurs in exactly one PEMS 2024 row, p.72#9 (behavioral restraint, badge P). The C2 adjudication bound this row to p.55#2 and levelled it I — that is the class level, and chipping it I would widen the authority for ketamine post-intubation sedation from the P this page published to I on a citation that does not name the drug. The page's P is kept and flagged: is post-intubation ketamine to sit at I on the strength of the p.55 sedation rows, or is it agency-specific like RSI (p.123#4)?
 
 ## OWNER_RULED
 
@@ -831,7 +900,7 @@ Removed by decision (not restated by the chip, so not left to a later pass):
 
 ## Level moved by the source (page level -> PEMS printed level)
 
-86 row(s). These are rows where the page under- or over-granted the
+100 row(s). These are rows where the page under- or over-granted the
 level the cited PEMS row prints. Review them first.
 
 - `protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 4: **EMT -> EMR** (p.103#1) — Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure.
@@ -920,6 +989,20 @@ level the cited PEMS row prints. Review them first.
 - `protocols/toxicology/06_Overdose_Poisoning_PROC.md` row 6: **I -> A** (p.119#7) — Opiate Overdose (Adult): Administer Naloxone 0.5-2 mg IV/IO/IM/IN  Opiate Overdose (Pediat
 - `protocols/toxicology/06_Overdose_Poisoning_PROC.md` row 9: **EMT -> EMR** (p.120#10) — Anti-Cholinergic / TCA Overdose: Initiate active cooling measures
 - `protocols/toxicology/06_Overdose_Poisoning_PROC.md` row 10: **P -> I** (p.120#11) — Anti-Cholinergic / TCA Overdose (Adult): Administer Sodium Bicarbonate 50 mEq IV/IO  Anti-
+- `protocols/general/02_Behavioral_Patient_Restraint_PROC.md` row 2: **EMT -> EMR** (p.71#4) — Apply de-escalation techniques. Remain calm, maintain soothing tone, allow space, do not r
+- `protocols/general/02_Cold_Exposure_PROC.md` row 4: **EMT -> EMR** (p.67#0) — Apply warmed and humidified O2 if available.
+- `protocols/general/02_Cold_Exposure_PROC.md` row 5: **EMT -> EMR** (p.67#5) — Localized cold injury: Apply loose, sterile dressings to the affected part.
+- `protocols/general/02_Cold_Exposure_PROC.md` row 8: **EMR -> EMT** (p.67#3) — Rapid transport immediately with resuscitation efforts continued en route. Do not delay tr
+- `protocols/general/02_Heat_Exposure_PROC.md` row 2: **A -> EMT** (p.69#2) — Remove excess clothing
+- `protocols/general/02_Heat_Exposure_PROC.md` row 3: **A -> EMT** (p.69#2) — Normal skin temp: Apply cool compresses
+- `protocols/general/02_Heat_Exposure_PROC.md` row 4: **A -> EMT** (p.69#2) — Hot skin temp (Heat Stroke): Treat as life-threatening/start rapid cooling (cool mist, ice
+- `protocols/general/02_Heat_Exposure_PROC.md` row 5: **A -> EMT** (p.69#2) — Shivering: Slow the cooling process
+- `protocols/general/02_Pain_Control_PROC.md` row 2: **EMT -> EMR** (p.77#1) — Assess baseline pain scale. Consider non-pharmacologic options (reassurance, distraction, 
+- `protocols/general/02_Pain_Control_PROC.md` row 6: **I -> A** (p.77#5) — Moderate to Severe Pain (6 - 10): • Adult: Fentanyl 25-50 mcg IV/IN/IM (Max total dose: 10
+- `protocols/general/02_Pain_Control_PROC.md` row 7: **I -> A** (p.77#5) — OR Moderate to Severe Pain (6 - 10): • Adult: Morphine Sulfate 2.5-5 mg IV/IM (Max total d
+- `protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md` row 2: **A -> EMT** (p.77#2) — Assess and monitor blood pressure. Ensure patient is not hypotensive.
+- `protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md` row 3: **I -> A** (p.50#9) — Establish IV/IO access.
+- `protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md` row 6: **P -> I** (p.55#3) — OR Post-Intubation Sedation (Midazolam / Fentanyl):  • ADULT: Midazolam (Versed) 2.5 mg IV
 
 ## OPEN OWNER QUESTIONS
 
@@ -949,7 +1032,7 @@ decision before the page is treated as final.
   PENDING_OMD — row-level above. This is NOT the whole-page case: the rest of the
   Stroke page is PEMS-cited.
 - **Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.** The
-  owner was asked and did not rule, so the other 32 OWNER_REQUIRED rows keep their
+  owner was asked and did not rule, so the other 37 OWNER_REQUIRED rows keep their
   level + ⚑ flag exactly as they were. Do not convert them without a ruling.
 - **Respiratory pages — the OWNER_REQUIRED rows that remain after the cross-page
   pass.** PEMS 2024 prints one respiratory protocol (p.123-124) and one
@@ -993,13 +1076,58 @@ decision before the page is treated as final.
   cite the Tourniquet Application procedure (p.273#6 EMR, p.273#7 MC) and Trauma
   row 7 cites Universal Patient Care (p.50#9 A). Each cited row prints the action
   verbatim; confirm citing a procedure for a protocol-page row is intended.
+- **Batch 5 — four card premises were wrong, and the tree/source were followed.**
+  (a) `07_Hypotension_Shock_Non_Trauma` was already converted in Batch 2; its two
+  remaining `sc-wrap` blocks are the Norepinephrine and Epinephrine DRIP CHARTS
+  (columns: Dose | Drops per minute) — dose tables, not level matrices, with no
+  action row to chip. They keep `sc-wrap` and are excluded from `TARGETS`. Confirm
+  a drip chart should never be converted. (b) `02_Diving_and_Drowning` did NOT need
+  OWNER_REQUIRED: PEMS p.93#6 prints "Contact Medical Control for transport
+  destination guidance if decompression injury is suspected" badged MC, so row 7
+  is cited, not flagged. (c) `02_Behavioral_Patient_Restraint` is not
+  admin-policy-only: PEMS p.71#2 prints "Restrain patient by least restrictive
+  means necessary. Refer to administrative policy Patient Restraint." at EMR and
+  p.71#4 prints de-escalation at EMR, so both are cited from the protocol row.
+  (d) the general/ scope is 6 pages, not 6-plus-medical: `grep` is the source.
+- **Batch 5 — Pain Control rows 6 and 7 now print `A` + `*` (PEMS `[A]` bracket),
+  down from the `I` the page published.** p.77#5 is the only row that prints
+  fentanyl/morphine and PEMS brackets its badge: AEMT, with agency training
+  documentation and Medical Control written authorisation. The one-chip chassis
+  cannot reproduce a bracket, so the asterisk note carries it. Owner to confirm
+  that the analgesia ladder is A+MC in PEMS and not I.
+- **Batch 5 — Sedation: pre-intubation sedation has no PEMS row (OWNER_REQUIRED,
+  row 4).** p.55 is "Sedation Post Advanced Airway"; p.123#4 states outright that
+  "RSI is not addressed in PEMS regional protocols – refer to agency specific
+  protocols for guidance". The alignment had bound the row to the post-airway
+  midazolam row; the binding now overrides that. Owner to say whether
+  pre-intubation ketamine/midazolam is agency-specific (and should be PENDING like
+  other agency additions) rather than I.
+- **Batch 5 — Sedation row 5 (post-intubation KETAMINE) keeps `P`, flagged
+  OWNER_REQUIRED.** Post-intubation sedation is printed at I (p.55#2 fentanyl,
+  p.55#3 midazolam) but ketamine is printed in exactly one PEMS 2024 row — p.72#9,
+  behavioural restraint, badge P — so no row authorises ketamine *as a sedative*.
+  The C2 adjudication would have levelled it I (the class level, on a row that does
+  not name the drug); the page level P is kept and flagged instead. Owner to rule:
+  I on the class rows, or P/agency-specific.
+- **Batch 5 — two cross-page citations reach other protocols.** Sedation row 2 cites
+  Pain Control p.77#2 ("Assess and monitor blood pressure. Ensure patient is not
+  hypotensive.", badge EMT) and row 3 cites Universal Patient Care p.50#9
+  ("Establish IV / IO access when indicated.", badge A). Both print the site row
+  verbatim; chip moves A -> EMT (row 2) and I -> A (row 3) as the source prints.
+- **Batch 5 — Cold Exposure rows 6 and 9 are OWNER_REQUIRED.** Row 6 (active
+  external rewarming with heat packs) is printed nowhere: p.67#1 prints passive
+  warming and warm blankets at EMR, and no PEMS row anywhere prints heat packs.
+  Row 9 (Medical Control before AED) is printed nowhere in the cold protocol, and
+  no other PEMS row gates AED use on Medical Control (p.21#0, p.63#7, p.235#4,
+  p.263#4 apply an AED at EMT/EMR with no pre-use contact). Page levels EMT and MC
+  are kept and flagged.
 - **Batch 3 — 3 row(s) lost a Medical-Control requirement the page printed.** Each is now chipped at the level PEMS prints:
   `03_Airway_Inhalation_Irritants_PROC.md` row 8 was `MC`, now `A` (p.153#4).
   `03_Respiratory_Distress_PROC.md` row 6 was `MC`, now `EMT` (p.123#3).
   `03_Respiratory_Distress_PROC.md` row 10 was `MC`, now `A` (p.113#4).
   The rule is "chip = the level PEMS prints", and the source grants these actions on standing order, but the owner should confirm that dropping a page-printed MC requirement is intended.
   Row(s) in the converted set that moved *to* MC, now matching the source's MC row: `04_Chest_Pain_ACS_PROC.md` row 7 `I` -> `MC` (p.107#9); `03_Airway_Inhalation_Irritants_PROC.md` row 12 `I` -> `MC` (p.153#5); `03_Smoke_Inhalation_PROC.md` row 12 `I` -> `MC` (p.153#5); `06_Nausea_Vomiting_PROC.md` row 6 `A` -> `MC` (p.117#5).
-  Already `MC` on the page and matching the source, so not moved (converted set, whole list): `04_Supraventricular_Tachycardia_PROC.md` row 10 (p.136#7); `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 12 (p.57#8); `04_Bradycardia_PROC.md` row 8 (p.104#13); `04_Cardiac_Arrest_Non_Traumatic_PROC.md` row 13 (p.57#8); `04_Cardiac_Arrest_Traumatic_PROC.md` row 11 (p.61#9); `04_Chest_Pain_ACS_PROC.md` row 13 (p.107#9); `04_Hypertensive_Crisis_PROC.md` row 7 (p.109#5); `04_V_Fib_Pulseless_V_Tach_PROC.md` row 12 (p.64#14); `07_Sepsis_PROC.md` row 6 (p.130#5); `07_OB_Emergencies_PROC.md` row 10 (p.147#4); `07_Hypotension_Shock_Non_Trauma_PROC.md` row 10 (p.114#9); `05_Seizure_PROC.md` row 7 (p.127#6); `03_Pulmonary_Edema_Congestion_PROC.md` row 13 (p.124#13); `09_Burns_Thermal_PROC.md` row 7 (p.88#9); `09_Crush_Syndrome_PROC.md` row 9 (p.91#8); `09_Hemorrhage_Control_PROC.md` row 9 (p.273#7); `09_Trauma_PROC.md` row 13 (p.84#15); `06_Nerve_Agents_PROC.md` row 7 (p.159#6).
+  Already `MC` on the page and matching the source, so not moved (converted set, whole list): `04_Supraventricular_Tachycardia_PROC.md` row 10 (p.136#7); `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 12 (p.57#8); `04_Bradycardia_PROC.md` row 8 (p.104#13); `04_Cardiac_Arrest_Non_Traumatic_PROC.md` row 13 (p.57#8); `04_Cardiac_Arrest_Traumatic_PROC.md` row 11 (p.61#9); `04_Chest_Pain_ACS_PROC.md` row 13 (p.107#9); `04_Hypertensive_Crisis_PROC.md` row 7 (p.109#5); `04_V_Fib_Pulseless_V_Tach_PROC.md` row 12 (p.64#14); `07_Sepsis_PROC.md` row 6 (p.130#5); `07_OB_Emergencies_PROC.md` row 10 (p.147#4); `07_Hypotension_Shock_Non_Trauma_PROC.md` row 10 (p.114#9); `05_Seizure_PROC.md` row 7 (p.127#6); `03_Pulmonary_Edema_Congestion_PROC.md` row 13 (p.124#13); `09_Burns_Thermal_PROC.md` row 7 (p.88#9); `09_Crush_Syndrome_PROC.md` row 9 (p.91#8); `09_Hemorrhage_Control_PROC.md` row 9 (p.273#7); `09_Trauma_PROC.md` row 13 (p.84#15); `06_Nerve_Agents_PROC.md` row 7 (p.159#6); `02_Behavioral_Patient_Restraint_PROC.md` row 8 (p.72#10); `02_Diving_and_Drowning_Emergencies_PROC.md` row 7 (p.93#6).
 - **Batch 3 — four rows published no level at all** (Respiratory Arrest r11, r14,
   r15; Smoke Inhalation r8). There was nothing to keep, so each is bound to the row
   that prints the action: p.269#0 (Surgical Airway, already a C2 ruling), p.55#2
