@@ -1,4 +1,4 @@
-GATE: verify_pems_canonical.py on dfb4b6d
+GATE: verify_pems_canonical.py on e101064
 verifier manifest — 7 checks
   [stage1.pems_table] PEMS table integrity: page decisions, row fields, badges, ordinals, page-break continuations
   [stage2.alignment] alignment integrity: totals, ambiguity classifications, containment evidence, 0.40 floor, text-binding verdicts
