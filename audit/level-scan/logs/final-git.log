@@ -1,0 +1,4 @@
+HEAD=33e3ba3f2a0de9a84a704406023f2b682f1c7920
+MAIN=768ad68edf8999a629b510fbe1cdf8983bb5838b
+--- git status --porcelain ---
+GIT_EXIT=0
