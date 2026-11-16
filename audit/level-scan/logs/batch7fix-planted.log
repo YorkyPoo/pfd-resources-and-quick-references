@@ -1,6 +1,6 @@
 Batch 7 review fix — planted-defect probe (scripts/level_rule.py --check)
 
-Run in a fresh clone of level-rule-collapse at ffae9c2. --check shells out to git
+Run in a fresh clone of level-rule-collapse at fd3b85d. --check shells out to git
 (git show / merge-base), so the probe runs in a .git-bearing copy; the real working
 tree is never touched.
 
@@ -16,6 +16,8 @@ edited from P to I (its citation p.247#7 prints P).
 defect 2 — a 7-column provider-level matrix put back inside an sc-wrap on the
 converted procedures page CPAP.md.
   -> EXIT=1
+     fail: procedures/CPAP.md: legacy 5-column level matrix still present
+     fail: procedures/CPAP.md row 1: 0 level markers, expected 1
      fail: procedures/CPAP.md (line 44): a provider-level matrix is still wrapped in sc-wrap
   revert -> EXIT=0
 
@@ -26,7 +28,7 @@ Neonatal_Resuscitation.md row 5 .lvl-own marker removed, citation unchanged.
            chip is not flagged OWNER_REQUIRED
   revert -> EXIT=0
 
-clone HEAD at end: ffae9c2, `git status --short` empty.
+clone HEAD at end: fd3b85d, `git status --short` empty.
 Each planted defect goes red and the revert goes green, so the gate is reading these
 pages, not passing blind.
 

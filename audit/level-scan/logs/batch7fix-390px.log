@@ -1,6 +1,6 @@
-Batch 7 review fix — 390px check on ffae9c2 (Emulation.setDeviceMetricsOverride 390x844, DPR 2)
+Batch 7 review fix — 390px check on fd3b85d (Emulation.setDeviceMetricsOverride 390x844, DPR 2)
 
-Served site/ from the mkdocs build of ffae9c2 on 127.0.0.1:8123 and measured in Chromium
+Served site/ from the mkdocs build of fd3b85d on 127.0.0.1:8123 and measured in Chromium
 over CDP in one tab at a true 390px viewport. For every one of the 13 converted
 docs/procedures/ pages: documentElement.scrollWidth vs clientWidth, the .lv-wrap table
 body row count, the number of .lvl chips inside those rows, td.scrollWidth vs
@@ -23,13 +23,14 @@ Tourniquet_Application          390   390     6     6       0         0    0
 Transcutaneous_Pacing           390   390     5     5       0         0    0
 
 13/13 pages: scrollWidth == clientWidth == 390; rows == chips (81 rows / 81 chips);
-0 clipped cells; 0 rows with more than one chip; 0 seven-column headers.
+0 clipped cells; 0 rows with more than one chip; 0 seven-column headers;
+1 OWNER_REQUIRED flag across the 13 pages (Neonatal row 5), 0 on the other 12.
 
 Review-fix pages, DOM state after the change:
   Endotracheal_Intubation   .lvl-own flags = 0, lv-note = none
                             chips = EMT, EMT, I, I, P, P, P, I, I, I
-  Neonatal_Resuscitation    .lvl-own flags = 1 (row 5), lv-note names row 5 only
+  Neonatal_Resuscitation    .lvl-own flags = 1 (row 5), note names row 5 and both source rows
                             chips = EMR, EMR, I, EMR, P
-Screenshots: audit/level-scan/evidence/batch7fix-390/*-390px.png
+Screenshots: audit/level-scan/evidence/batch7fix-390/*-390px.png (table + note, scrolled)
 
 EXIT=0
