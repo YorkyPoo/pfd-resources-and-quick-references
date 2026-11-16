@@ -635,6 +635,12 @@ are styling fixes, not level decisions and not accidental diffs.
   - affects: every page that renders the .lv-wrap level chassis — the Batch 1 cardiac pages as well as every page converted in Batch 2 and later. Not page-local.
   - why: Material wraps every table in .md-typeset__scrollwrap with margin: 0 -16px and pads .md-typeset__table by 0 16px. Inside .lv-wrap that 32px bleed is wider than the container, so it clipped the Action column at a 390px viewport and produced a stray horizontal scroll. Measured on the built site at 390x844 DPR 2: .lv-wrap client width == scroll width, document.scrollWidth == 390, action column not clipped.
   - scope: Made during the Batch 2 conversion (task t_2df73318), but broader than "convert seven pages": it changes the rendering of every lv-wrap page, including Batch 1. It is intentional and required for the 390px no-horizontal-scroll criterion, not an accidental styling edit.
+- **2026-11-16** — `docs/stylesheets/extra.css`
+  - rule: `.md-typeset .lv-wrap .lvl-mc-req { display: block; border: 1.5px solid #6a1b9a; ... }`
+  - rule: `[data-md-color-scheme="slate"] .md-typeset .lv-wrap .lvl-mc-req { border-color: #ce93d8; ... }`
+  - affects: every page that renders the .lv-wrap level chassis and carries a bracketed level cell (the rows marked `mc_required` in row-bindings.yaml): Pediatric Stridor, Smoke Inhalation, Upper Airway Obstruction and Chest Pain / ACS. The rule lives on the shared stylesheet, so it renders on every converted page that needs it, not only on the pages converted in this pass.
+  - why: Owner ruling 2026-11-16: "Add a second marker so [X] survives in the chassis". The +MC marker must read as "this level, but only with Medical Control authorisation" and must not be confusable with the existing MC chip (which means the action IS a Medical Control contact). It is an outlined purple badge on its own line inside the 4.8em level column; the MC chip is a filled red badge. `display: block` keeps the column at its fixed width so the 390px layout does not regress.
+  - scope: Styling only — it encodes no level. The data that decides which rows carry the marker is `mc_required` in audit/level-scan/row-bindings.yaml, enforced by `scripts/level_rule.py --check`.
 
 ## PENDING_OMD — Pending OMD Authorization
 

@@ -2036,6 +2036,13 @@ def main():
                          for e in load_json('level-rule-ledger.json')['rows']}
             except (FileNotFoundError, KeyError):
                 prior = {}
+        # A baseline already recorded in the ledger is carried forward, never recomputed:
+        # a later --write must not move the "before" line it is being compared against.
+        try:
+            carried = {(e['file'], str(e['row'])): e.get('status_before')
+                       for e in load_json('level-rule-ledger.json')['rows']}
+        except (FileNotFoundError, KeyError):
+            carried = {}
         for rel in TARGETS:
             splice(rel)
         for rel in PENDING_TARGETS:
@@ -2043,7 +2050,8 @@ def main():
             _r, ledger, _p, _l, _g = plan_pending(rel, pending_specs[rel])
             all_ledger += ledger
         for e in all_ledger:
-            e['status_before'] = prior.get((e['file'], str(e['row'])))
+            key = (e['file'], str(e['row']))
+            e['status_before'] = carried.get(key) or prior.get(key)
         out = os.path.join(AUD, 'level-rule-ledger.json')
         with open(out, 'w', encoding='utf-8') as fh:
             json.dump({'generated_by': 'scripts/level_rule.py',

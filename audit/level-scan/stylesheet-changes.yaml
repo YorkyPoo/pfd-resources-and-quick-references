@@ -29,3 +29,28 @@ changes:
       seven pages": it changes the rendering of every lv-wrap page, including Batch 1.
       It is intentional and required for the 390px no-horizontal-scroll criterion, not an
       accidental styling edit.
+
+  - date: "2026-11-16"
+    status: recorded
+    files:
+      - docs/stylesheets/extra.css
+    selectors:
+      - ".md-typeset .lv-wrap .lvl-mc-req { display: block; border: 1.5px solid #6a1b9a; ... }"
+      - "[data-md-color-scheme=\"slate\"] .md-typeset .lv-wrap .lvl-mc-req { border-color: #ce93d8; ... }"
+    affects: >-
+      every page that renders the .lv-wrap level chassis and carries a bracketed level
+      cell (the rows marked `mc_required` in row-bindings.yaml): Pediatric Stridor, Smoke
+      Inhalation, Upper Airway Obstruction and Chest Pain / ACS. The rule lives on the
+      shared stylesheet, so it renders on every converted page that needs it, not only on
+      the pages converted in this pass.
+    why: >-
+      Owner ruling 2026-11-16: "Add a second marker so [X] survives in the chassis". The
+      +MC marker must read as "this level, but only with Medical Control authorisation" and
+      must not be confusable with the existing MC chip (which means the action IS a Medical
+      Control contact). It is an outlined purple badge on its own line inside the 4.8em
+      level column; the MC chip is a filled red badge. `display: block` keeps the column at
+      its fixed width so the 390px layout does not regress.
+    scope_note: >-
+      Styling only — it encodes no level. The data that decides which rows carry the marker
+      is `mc_required` in audit/level-scan/row-bindings.yaml, enforced by
+      `scripts/level_rule.py --check`.
