@@ -13,8 +13,23 @@
 #   * `carried_levels` must cover every action row, and the level recorded must equal the
 #     level the page published before conversion.
 #
-# Status: Batch 2 (owner ruling 2026-11-15: "Just add pending OMD Authorization on stuff
+# Status: Batch 2-3 (owner ruling 2026-11-15: "Just add pending OMD Authorization on stuff
 # like that"). Batches 3-5 add their own entries.
+#
+# ---------------------------------------------------------------------------
+# ROW-LEVEL pending (`rows:` below) — an agency addition on an otherwise PEMS-cited page.
+#
+# A whole-page entry above says "this protocol is not in PEMS 2024". A row-level entry
+# says something narrower: the page IS PEMS-cited, but this one action has no PEMS row
+# behind it — the agency added it. It is chipped PENDING for the same reason (nobody has
+# authorized the level) and it may not cite a PEMS row either.
+#
+# Same rules, enforced by scripts/level_rule.py --check:
+#   * `reason` is required, and it is what the page note and the ledger quote;
+#   * `pems_page` / `pems_ordinal` / `pems_badge` may not appear on a row-level entry —
+#     a PENDING row that names a PEMS row is the fake citation this file exists to prevent;
+#   * `carried_from_page` is required and must equal the level the page published before
+#     conversion (the ledger's `before.leftmost`), so the provenance is checkable, not typed.
 
 protocols:
 
@@ -33,3 +48,15 @@ protocols:
       9: I
       10: EMR
       11: A
+
+rows:
+
+  - file: protocols/neurologic/05_Stroke_TIA_PROC.md
+    pems_equivalent: PEMS 2024 p.131 Stroke / TIA publishes 6 protocol rows; neither row below has a counterpart
+    rows:
+      - row: 8
+        carried_from_page: I
+        reason: Agency addition; PEMS 2024 p.131 publishes no such action. Pending OMD authorization.
+      - row: 9
+        carried_from_page: A
+        reason: Agency addition; PEMS 2024 p.131 publishes no such action. Pending OMD authorization.

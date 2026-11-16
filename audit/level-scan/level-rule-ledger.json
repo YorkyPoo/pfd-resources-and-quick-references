@@ -4436,7 +4436,7 @@
   {
    "file": "protocols/neurologic/05_Stroke_TIA_PROC.md",
    "row": 7,
-   "action": "Triage: Symptoms >24 hrs OR RACE 0-4 -> Transport to closest Primary Stroke Center",
+   "action": "Triage: Symptoms >24 hrs OR RACE 0-4 -> Transport to closest stroke center",
    "level_published": "EMT",
    "status": "OK",
    "reason": null,
@@ -4465,9 +4465,9 @@
    "file": "protocols/neurologic/05_Stroke_TIA_PROC.md",
    "row": 8,
    "action": "Establish 18g IV in Right AC (preferred for rapid imaging)",
-   "level_published": "I",
-   "status": "OWNER_REQUIRED",
-   "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+   "level_published": "PENDING",
+   "status": "pending_row_omd",
+   "reason": "Agency addition; PEMS 2024 p.131 publishes no such action. Pending OMD authorization.",
    "owner_ruling": null,
    "pems_page": null,
    "pems_ordinal": null,
@@ -4486,24 +4486,25 @@
     "text_label": null,
     "text_tokens": []
    },
-   "note": null
+   "note": "agency addition \u2014 pending OMD authorization",
+   "carried_from_page": "I"
   },
   {
    "file": "protocols/neurologic/05_Stroke_TIA_PROC.md",
    "row": 9,
    "action": "Call COR at the receiving facility with Name/DOB for rapid registration",
-   "level_published": "A",
-   "status": "OWNER_REQUIRED",
-   "reason": "Bound to p.131#2 on weak text similarity only; the PEMS row's text is \"Record time the patient last seen normal and family contact information, if available. Provide this information to the receiving facility.\" That does not authorise calling the receiving facility with Name/DOB for rapid registration, and no other PEMS 2024 row on p.131 does. Site-authored action with no matching PEMS row.",
+   "level_published": "PENDING",
+   "status": "pending_row_omd",
+   "reason": "Agency addition; PEMS 2024 p.131 publishes no such action. Pending OMD authorization.",
    "owner_ruling": null,
-   "pems_page": 131,
-   "pems_ordinal": 2,
-   "pems_badge": "EMR",
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
    "compound_tokens": [],
    "bracketed": false,
-   "pems_text": "Record time the patient last seen normal and family contact information, if available.* Provide this information to the receiving facility.",
+   "pems_text": null,
    "binding_evidence": null,
-   "basis": "adjudicated:set_cells",
+   "basis": null,
    "before": {
     "leftmost": "A",
     "markers": [
@@ -4514,7 +4515,8 @@
     "text_label": null,
     "text_tokens": []
    },
-   "note": "'Record time last seen normal ... provide to the receiving facility' is badge EMR = all five. Site prints A/I/P."
+   "note": "agency addition \u2014 pending OMD authorization",
+   "carried_from_page": "A"
   },
   {
    "file": "protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md",

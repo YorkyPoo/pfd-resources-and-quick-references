@@ -39,7 +39,8 @@ MANIFEST = [
     ("c2.split_map",
      "split-map invariant: the union of the levels published by the site rows "
      "that split a PEMS row equals the PEMS badge level and every level above "
-     "it, and each listed row still exists"),
+     "it, each listed row still exists (in either table format), and each row's "
+     "chip is the level the conversion ledger records for it"),
     ("c2.badge_overrides",
      "badge-overrides.yaml: every override names an existing PEMS row, keeps a "
      "reason and evidence, cannot drift from the PDF token, and is actually "
@@ -100,6 +101,21 @@ def fmt_levels(s: set[str]) -> str:
     return "/".join(L for L in LV if L in s) or "·"
 
 
+def ledger_level_index() -> dict:
+    """(file, row) -> level_published, from audit/level-scan/level-rule-ledger.json.
+
+    The ledger is the join key back to the conversion: it records, per action row,
+    which provider level the page publishes now and why. Re-deriving a site row's
+    level from the page alone cannot tell a renumbered row from a merged one; the
+    ledger can, because it is keyed on the action row the conversion wrote.
+    """
+    path = os.path.join(OUT, "level-rule-ledger.json")
+    if not os.path.exists(path):
+        return {}
+    doc = json.load(open(path, encoding="utf-8"))
+    return {(e["file"], str(e["row"])): e for e in doc.get("rows") or []}
+
+
 def check_split_map(pems_row: dict) -> None:
     """Re-derive the split invariant from the site pages.
 
@@ -109,8 +125,14 @@ def check_split_map(pems_row: dict) -> None:
     split-map.yaml` records those pairings (derived by scripts/build_split_map.py);
     this check re-parses each named row on every run and FAILS when the union
     stops equalling the expected set, when a named row no longer exists (renumbered
-    or merged away — the change the OMD must be told about), or when the yaml's
-    badge has drifted from `pems_table.json`.
+    or merged away — the change the OMD must be told about), when the row's chip
+    disagrees with the level the ledger records for it, or when the yaml's badge
+    has drifted from `pems_table.json`.
+
+    Rows are read through `pems_level_scan.read_action_rows`, which understands BOTH
+    the legacy 7-column matrix and the collapsed one-chip table. Reading only the
+    matrix is what made a converted page look like a page whose rows had been
+    deleted: the rows were there, in a format the reader did not parse.
     """
     path = os.path.join(OUT, "split-map.yaml")
     check(os.path.exists(path), "split-map.yaml exists")
@@ -121,6 +143,7 @@ def check_split_map(pems_row: dict) -> None:
     check(len(splits) == 7, f"split-map.yaml records all 7 held splits ({len(splits)} listed)")
     ids = [s.get("id") for s in splits]
     check(len(ids) == len(set(ids)) and all(ids), "every split carries a unique id")
+    led = ledger_level_index()
 
     for s in splits:
         sid = s.get("id")
@@ -139,11 +162,11 @@ def check_split_map(pems_row: dict) -> None:
 
         site_rows = s.get("site_rows") or []
         check(bool(site_rows), f"split {sid}: names at least one site row")
-        # 1. read every named row with the scanner's own parser
-        union, producers, missing = set(), [], []
+        # 1. read every named row with the scanner's own parser, either format
+        union, producers, missing, drifted = set(), [], [], []
         for sr in site_rows:
             rel, num = sr.get("file"), sr.get("row")
-            page = P.read_page(os.path.join(REPO, "docs", rel))
+            page = P.read_action_rows(os.path.join(REPO, "docs", rel))
             hits = [r for r in page.get("rows") or []
                     if str(r.get("num", "")).strip() == str(num)]
             if len(hits) != 1:
@@ -152,15 +175,28 @@ def check_split_map(pems_row: dict) -> None:
             got = levels(hits[0]["cells"])
             union |= got
             producers.append(f"{os.path.basename(rel)} r{num} → {fmt_levels(got)}")
-        # 5. a row that vanished is a failure, not silence
+            # 2. the ledger is the join key: the row's chip must be the level the
+            # conversion recorded for that (file, row), not merely a level that
+            # happens to make the union add up
+            entry = led.get((rel, str(num)))
+            if entry and hits[0].get("chip") and hits[0]["chip"] != entry["level_published"]:
+                drifted.append(f"{os.path.basename(rel)} r{num}: chip {hits[0]['chip']} "
+                               f"but the ledger records {entry['level_published']}")
+        # 3. a row that vanished is a failure, not silence
         for rel, num, n in missing:
+            where = ""
+            page = P.read_action_rows(os.path.join(REPO, "docs", rel))
+            if page.get("format") is None:
+                where = " (the page carries no level table in either format)"
             check(False,
                   f"split {sid}: site row {rel} r{num} no longer exists on the page "
-                  f"({n} rows carry that number) — renumbered or merged away; "
+                  f"({n} rows carry that number){where} — renumbered or merged away; "
                   f"update split-map.yaml and tell the OMD")
         if missing:
             continue
-        # 2-4. the union must be exactly the PEMS badge spread
+        check(not drifted, f"split {sid}: every named row's chip is the level the ledger "
+                           f"records" + (f" ({'; '.join(drifted)})" if drifted else ""))
+        # 4-5. the union must be exactly the PEMS badge spread
         exp = expected_levels(str(badge or ""))
         check(union == exp,
               f"split {sid}: PEMS p.{key[0]} #{key[1]} badge {badge} expects "

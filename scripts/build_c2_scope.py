@@ -200,12 +200,21 @@ def load_pems_index():
 
 def site_cells_for(rel, row_num):
     """Parse the site page with the scanner's own parser and return the row's
-    five level cells. Missing or duplicated row numbers are hard errors."""
+    five level cells. Missing or duplicated row numbers are hard errors.
+
+    The page may be in the legacy 7-column matrix or in the collapsed one-chip
+    format scripts/level_rule.py writes. Both are read: one chip at level X is
+    the same statement as filling X and the columns above it, which is the shape
+    `compare()` below compares column-by-column. Reading only the matrix made a
+    converted page raise "no EMR|EMT|A|I|P table", and the re-check silently
+    dropped every such row from its at-risk list — a parse gap reported as a
+    clean result, which is the one thing this re-check exists to prevent.
+    """
     path = os.path.join(DOCS, rel)
-    page = PLS.read_page(path)
-    if not page.get("has_table"):
-        raise SystemExit(f"{rel}: no EMR|EMT|A|I|P table")
-    hits = [r for r in page["rows"] if r["num"].strip() == str(row_num)]
+    page = PLS.read_action_rows(path)
+    if page.get("format") is None:
+        raise SystemExit(f"{rel}: no EMR|EMT|A|I|P table and no collapsed level table")
+    hits = [r for r in page["rows"] if str(r["num"]).strip() == str(row_num)]
     if len(hits) != 1:
         raise SystemExit(f"{rel}: row {row_num} matched {len(hits)} site rows")
     return [c.strip() for c in hits[0]["cells"]], hits[0]["action"]

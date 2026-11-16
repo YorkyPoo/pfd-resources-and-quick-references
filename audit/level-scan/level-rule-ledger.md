@@ -174,8 +174,8 @@ the action text.
 | `05_Stroke_TIA_PROC.md` | 5 | EMT | p.131#4 | Initiate transport. Goal scene time < 15 minutes: Symptoms less than 24 hours (or unknown) AND suspected LVO (RACE = 5 - 9) : Transport to the clos… | alignment:matched | OK |
 | `05_Stroke_TIA_PROC.md` | 6 | EMT | p.131#4 | Initiate transport. Goal scene time < 15 minutes: Symptoms less than 24 hours (or unknown) AND suspected LVO (RACE = 5 - 9) : Transport to the clos… | adjudicated:held_split_review | OK |
 | `05_Stroke_TIA_PROC.md` | 7 | EMT | p.131#4 | Initiate transport. Goal scene time < 15 minutes: Symptoms less than 24 hours (or unknown) AND suspected LVO (RACE = 5 - 9) : Transport to the clos… | adjudicated:site_split_of_pems | OK |
-| `05_Stroke_TIA_PROC.md` | 8 | I | — | — | — | OWNER_REQUIRED |
-| `05_Stroke_TIA_PROC.md` | 9 | A | p.131#2 | Record time the patient last seen normal and family contact information, if available.* Provide this information to the receiving facility. | adjudicated:set_cells | OWNER_REQUIRED |
+| `05_Stroke_TIA_PROC.md` | 8 | PENDING | — | — | — | pending_row_omd |
+| `05_Stroke_TIA_PROC.md` | 9 | PENDING | — | — | — | pending_row_omd |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 1 | PENDING | — | — | — | pending_omd |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 2 | PENDING | — | — | — | pending_omd |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 3 | PENDING | — | — | — | pending_omd |
@@ -190,7 +190,7 @@ the action text.
 
 ## OWNER_REQUIRED
 
-**18 row(s).** No PEMS 2024 row authorises a provider level for these
+**16 row(s).** No PEMS 2024 row authorises a provider level for these
 actions. The chip keeps the level the page already published and carries the flag.
 Nothing here was invented. Each entry records why it could not be cited.
 
@@ -231,11 +231,6 @@ Nothing here was invented. Each entry records why it could not be cited.
 - `protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md` row 5 — **EMT** kept from the page, not from the source. Defibrillation: 200 J Biphasic / 360 J Monophasic (Adult) / 2 J/kg initial, 4 J/kg subsequent (Ped) (AED for EMR/EMT, Manual for I/P)
   - nearest PEMS row, NOT cited as authority: p.63#7
   - reason: p.63#7 is the compound row named in this card as an unresolved inline badge contradiction: PEMS prints one badge (I) on "If VF or VT is present, or AED is advising to shock [EMR], immediately defibrillate". The page's own row text "(AED for EMR/EMT, Manual for I/P)" encodes both levels, so neither I nor EMT is the whole answer. audit/level-scan/badge-overrides.yaml is still empty.
-- `protocols/neurologic/05_Stroke_TIA_PROC.md` row 8 — **I** kept from the page, not from the source. Establish 18g IV in Right AC (preferred for rapid imaging)
-  - reason: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
-- `protocols/neurologic/05_Stroke_TIA_PROC.md` row 9 — **A** kept from the page, not from the source. Call COR at the receiving facility with Name/DOB for rapid registration
-  - nearest PEMS row, NOT cited as authority: p.131#2
-  - reason: Bound to p.131#2 on weak text similarity only; the PEMS row's text is "Record time the patient last seen normal and family contact information, if available. Provide this information to the receiving facility." That does not authorise calling the receiving facility with Name/DOB for rapid registration, and no other PEMS 2024 row on p.131 does. Site-authored action with no matching PEMS row.
 
 ## OWNER_RULED
 
@@ -288,6 +283,15 @@ source.
   - row 9: PENDING (carried from the page as **I**) — Hypotension Management - Vasopressors: • Consider Norepinephrine (Levophed) Infusion 0.1-0
   - row 10: PENDING (carried from the page as **EMR**) — Transport: • Transport and perform ongoing assessment as indicated. • Do not delay transpo
   - row 11: PENDING (carried from the page as **A**) — Medical Control Contact: • Contact Medical Control for guidance as needed.
+
+## PENDING_OMD — row-level (agency additions on PEMS-cited pages)
+
+**2 row(s).** The page is PEMS-cited and every other row on it names the PEMS 2024 row that authorizes it. These rows do not: the agency added them and PEMS publishes no such action, so no provider level is published for them until the OMD authorizes one. The chip is `PENDING`; `carried_from_page` records the level the page published before conversion and is **provenance only**.
+
+- `protocols/neurologic/05_Stroke_TIA_PROC.md` row 8: PENDING (carried from the page as **I**) — Establish 18g IV in Right AC (preferred for rapid imaging)
+  - reason: Agency addition; PEMS 2024 p.131 publishes no such action. Pending OMD authorization.
+- `protocols/neurologic/05_Stroke_TIA_PROC.md` row 9: PENDING (carried from the page as **A**) — Call COR at the receiving facility with Name/DOB for rapid registration
+  - reason: Agency addition; PEMS 2024 p.131 publishes no such action. Pending OMD authorization.
 
 ## Level tokens removed from action text
 
@@ -350,7 +354,7 @@ level the cited PEMS row prints. Review them first.
 - `protocols/neurologic/05_Seizure_PROC.md` row 5: **EMR -> A** (p.127#5) — Actively seizing >5 mins: Midazolam 5 mg IV/IO or 10 mg IM (Adult & Ped >40kg) \
 - `protocols/neurologic/05_Seizure_PROC.md` row 6: **I -> A** (p.127#5) — Use HALF dose Midazolam for frail/hypotensive/elderly >65y
 - `protocols/neurologic/05_Stroke_TIA_PROC.md` row 4: **A -> EMT** (p.131#3) — Assess blood glucose (Treat <60 per Hypoglycemia protocol)
-- `protocols/neurologic/05_Stroke_TIA_PROC.md` row 7: **A -> EMT** (p.131#4) — Triage: Symptoms >24 hrs OR RACE 0-4 -> Transport to closest Primary Stroke Center
+- `protocols/neurologic/05_Stroke_TIA_PROC.md` row 7: **A -> EMT** (p.131#4) — Triage: Symptoms >24 hrs OR RACE 0-4 -> Transport to closest stroke center
 
 ## OPEN OWNER QUESTIONS
 
@@ -371,8 +375,14 @@ decision before the page is treated as final.
   a page with no PEMS protocol. Owner ruling needed: is `PENDING` alone correct on
   such a page, or should a Medical-Control row read `MC` + `PENDING` (both chips)?
   Nothing on the page changes until the owner rules.
-- **`05_Stroke_TIA` row 9 is `OWNER_REQUIRED` with chip `A`** — the level the page
-  published before conversion. The EMR it had been given rested only on PEMS
-  p.131#2 by text resemblance, and that resemblance was withdrawn (the PEMS row
-  records a last-known-well time and a contact, not a pre-registration call).
-  Owner ruling needed: should the row read `EMR` *uncited* instead of `A`?
+- **`05_Stroke_TIA` rows 8 and 9 are agency additions** — PEMS 2024 p.131 prints 6
+  Stroke / TIA rows and neither "Establish 18g IV in Right AC" nor "Call COR at the
+  receiving hospital" is one of them. Owner ruling 2026-11-15: they are chipped
+  `PENDING` (Pending OMD Authorization), not given a level, and the ⚑ OWNER_REQUIRED
+  marker is removed because PENDING supersedes it. `carried_from_page` keeps the
+  level the page used to publish (row 8 `I`, row 9 `A`) as provenance only; see
+  PENDING_OMD — row-level above. This is NOT the whole-page case: the rest of the
+  Stroke page is PEMS-cited.
+- **Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.** The
+  owner was asked and did not rule, so the other 16 OWNER_REQUIRED rows keep their
+  level + ⚑ flag exactly as they were. Do not convert them without a ruling.

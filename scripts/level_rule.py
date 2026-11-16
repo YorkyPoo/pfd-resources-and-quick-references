@@ -448,6 +448,75 @@ def load_pending():
     return out
 
 
+def load_row_pending():
+    """Row-level pending: one agency-added action on an otherwise PEMS-cited page.
+
+    Keyed (file, row) -> {"carried_from_page", "reason"}. Validated loudly and for the
+    same reason a whole-page entry is: a PENDING row is a row nobody has authorized, so
+    it may not name a PEMS row, it may not be silent about why, and it must record the
+    level the page published before conversion so the provenance can be checked against
+    the ledger instead of believed.
+    """
+    import yaml
+    if not os.path.exists(PENDING_YAML):
+        return {}
+    doc = yaml.safe_load(open(PENDING_YAML, encoding='utf-8')) or {}
+    whole = {rec.get('file') for rec in doc.get('protocols') or []}
+    out = {}
+    for rec in doc.get('rows') or []:
+        rel = rec.get('file')
+        if not rel:
+            raise SystemExit(f'pending-protocols.yaml: row-level entry without a file: {rec!r}')
+        if rel in whole:
+            raise SystemExit(f'pending-protocols.yaml: {rel} is listed both whole-page and '
+                             f'row-level — a pending page has no PEMS row to spare')
+        for k in ('pems_page', 'pems_ordinal', 'pems_badge', 'pems_text'):
+            if rec.get(k) is not None:
+                raise SystemExit(f'pending-protocols.yaml: {rel} row-level entry states {k} — '
+                                 f'a pending row may not claim a PEMS citation')
+        if not rec.get('rows'):
+            raise SystemExit(f'pending-protocols.yaml: {rel} has a row-level entry with no rows')
+        for ent in rec['rows']:
+            if ent.get('row') is None:
+                raise SystemExit(f'pending-protocols.yaml: {rel} has a row entry without a row '
+                                 f'number: {ent!r}')
+            for k in ('pems_page', 'pems_ordinal', 'pems_badge', 'pems_text'):
+                if ent.get(k) is not None:
+                    raise SystemExit(f'pending-protocols.yaml: {rel} row {ent["row"]} states '
+                                     f'{k} — a pending row may not claim a PEMS citation')
+            for k in ('reason', 'carried_from_page'):
+                if not str(ent.get(k) or '').strip():
+                    raise SystemExit(f'pending-protocols.yaml: {rel} row {ent["row"]} has no '
+                                     f'{k}')
+            key = (rel, str(ent['row']))
+            if key in out:
+                raise SystemExit(f'pending-protocols.yaml: {rel} row {ent["row"]} listed twice')
+            out[key] = {'carried_from_page': str(ent['carried_from_page']).strip().upper(),
+                        'reason': str(ent['reason']).strip()}
+    return out
+
+
+def row_pending_note(spec_rows):
+    """The note a page carries when some of its rows are agency additions.
+
+    Says what PENDING means here, row by row, and says how it differs from the
+    whole-page ODEMSA case — a paramedic reading a Stroke page must not think the
+    whole protocol has lost its source.
+    """
+    label = ('row ' + spec_rows[0] if len(spec_rows) == 1
+             else 'rows ' + ', '.join(spec_rows))
+    return ('<strong>PENDING</strong> — ' + label + ': this action has no counterpart in '
+            'PEMS 2024. It is an agency addition, so the level it used to show was never '
+            'verified against the regional source and is not published as a level now. '
+            'Every other row on this page is cited to its PEMS 2024 row. This is not the '
+            'same case as a whole protocol sourced outside PEMS (e.g. Aortic Dissection, '
+            'which comes from ODEMSA and is PENDING on every row): here only the row(s) '
+            'named are pending, and the rest of the protocol stands on PEMS. '
+            '<strong>Pending OMD authorization</strong> — no provider level applies until '
+            'the OMD authorizes it. See <code>audit/level-scan/pending-protocols.yaml</code> '
+            'and <code>audit/level-scan/level-rule-ledger.md</code>.')
+
+
 def pending_note(spec):
     """The visible note printed above a pending protocol's table."""
     return ('**Pending OMD Authorization** — this protocol is sourced from '
@@ -654,7 +723,7 @@ def prior_before():
 
 
 # ------------------------------------------------------------------- the build
-def _decide(row, r, ruled_for_row):
+def _decide(row, r, ruled_for_row, pending_row=None):
     """(level, owner, status, reason, new_text, before, ruled) for one action row."""
     existing = CHIP_RE.search(row['level_cell'] or '')
     before_low = (leftmost_level(row['cells']) if row['cells'] is not None
@@ -665,6 +734,11 @@ def _decide(row, r, ruled_for_row):
               'text_label': text_label(row['action']), 'text_tokens': stripped}
 
     extra = r['extra']
+    if pending_row:
+        # an agency addition on an otherwise PEMS-cited page: no chip level at all, and
+        # the level the page used to publish is recorded as provenance only
+        return ('PENDING', False, 'pending_row_omd', pending_row['reason'], new_text,
+                before, None)
     if ruled_for_row:
         # the owner's decision replaces the inherited level; it is NOT PEMS-verified
         return ruled_for_row['level'], False, 'owner_ruled', None, new_text, before, ruled_for_row
@@ -695,6 +769,7 @@ def plan(rel):
     adjudicated = load_json('adjudicated.json')
     pems = pems_index(load_json('pems_table.json'))
     rulings, bindings = load_rulings(), load_bindings()
+    row_pending = load_row_pending()
     prior_tok = prior_tokens()
     prior = prior_before()
 
@@ -714,7 +789,8 @@ def plan(rel):
             r = res[cursor]
             cursor += 1
             ruled = rulings.get((rel, str(row['ordinal'])))
-            level, owner, status, reason, new_text, before, ruled = _decide(row, r, ruled)
+            rp = row_pending.get((rel, str(row['ordinal'])))
+            level, owner, status, reason, new_text, before, ruled = _decide(row, r, ruled, rp)
             prior_b = prior.get((rel, str(row['ordinal'])))
             if prior_b and row['cells'] is None:
                 # already collapsed: the page itself no longer holds the pre-conversion
@@ -727,6 +803,12 @@ def plan(rel):
                     # an uncited row keeps the level the page published before conversion —
                     # never a level that only a now-withdrawn binding justified
                     level = prior_b['leftmost']
+            if rp and before.get('leftmost') and before['leftmost'] != rp['carried_from_page']:
+                # provenance is checkable, not typed: the yaml must state the level the
+                # page actually published before conversion
+                problems.append(f'{rel} row {row["ordinal"]}: pending-protocols.yaml records '
+                                f'carried_from_page {rp["carried_from_page"]} but the page '
+                                f'published {before["leftmost"]} before conversion')
             stripped = before['text_tokens'] or prior_tok.get((rel, str(row['ordinal'])), [])
             before['text_tokens'] = stripped
             if level is None:
@@ -735,7 +817,7 @@ def plan(rel):
             blocks[-1]['rows'].append({'ordinal': row['ordinal'], 'action': new_text,
                                        'level': level, 'bracketed': r['bracketed'],
                                        'owner': owner})
-            ledger.append({
+            entry = {
                 'file': rel,
                 'row': int(row['ordinal']),
                 'action': re.sub(r'\[([^\]]*)\]\([^)]*\)', r'\1', new_text)
@@ -755,7 +837,15 @@ def plan(rel):
                 'basis': r['basis'],
                 'before': before,
                 'note': r['extra'].get('adjudication'),
-            })
+            }
+            if rp:
+                # a PENDING row may not carry a PEMS citation, even the one the alignment
+                # or an adjudication had attached to it before the row was ruled uncited
+                entry.update({'pems_page': None, 'pems_ordinal': None, 'pems_badge': None,
+                              'pems_text': None, 'compound_tokens': [], 'basis': None,
+                              'carried_from_page': rp['carried_from_page'],
+                              'note': 'agency addition — pending OMD authorization'})
+            ledger.append(entry)
         if reg['banner']:
             blocks[0]['banner'] = heading_for(reg['banner'])
         regions_out.append({'blocks': blocks})
@@ -764,6 +854,9 @@ def plan(rel):
 
 def page_note_for(ledger):
     notes = []
+    pending_rows = [str(e['row']) for e in ledger if e['status'] == 'pending_row_omd']
+    if pending_rows:
+        notes.append(row_pending_note(pending_rows))
     owner_rows = [str(e['row']) for e in ledger if e['status'] == 'OWNER_REQUIRED']
     if owner_rows:
         label = ('row ' + owner_rows[0] if len(owner_rows) == 1
@@ -1069,6 +1162,19 @@ def emit_md(ledger):
         for e in rows:
             lines.append(f"  - row {e['row']}: PENDING (carried from the page as "
                          f"**{e['carried_from_page']}**) — {e['action'][:90]}")
+    prows = [e for e in ledger if e['status'] == 'pending_row_omd']
+    lines += ['', '## PENDING_OMD — row-level (agency additions on PEMS-cited pages)', '',
+              f'**{len(prows)} row(s).** The page is PEMS-cited and every other row on it names '
+              'the PEMS 2024 row that authorizes it. These rows do not: the agency added them '
+              'and PEMS publishes no such action, so no provider level is published for them '
+              'until the OMD authorizes one. The chip is `PENDING`; `carried_from_page` records '
+              'the level the page published before conversion and is **provenance only**.', '']
+    if not prows:
+        lines.append('None.')
+    for e in prows:
+        lines.append(f"- `{e['file']}` row {e['row']}: PENDING (carried from the page as "
+                     f"**{e['carried_from_page']}**) — {e['action'][:90]}")
+        lines.append(f"  - reason: {e['reason']}")
     tokens = [(e['file'], e['row'], e['before']['text_tokens']) for e in ledger
               if e['before']['text_tokens']]
     lines += ['', '## Level tokens removed from action text', '']
@@ -1119,11 +1225,17 @@ def emit_md(ledger):
               '  a page with no PEMS protocol. Owner ruling needed: is `PENDING` alone correct on',
               '  such a page, or should a Medical-Control row read `MC` + `PENDING` (both chips)?',
               '  Nothing on the page changes until the owner rules.',
-              '- **`05_Stroke_TIA` row 9 is `OWNER_REQUIRED` with chip `A`** — the level the page',
-              '  published before conversion. The EMR it had been given rested only on PEMS',
-              '  p.131#2 by text resemblance, and that resemblance was withdrawn (the PEMS row',
-              '  records a last-known-well time and a contact, not a pre-registration call).',
-              '  Owner ruling needed: should the row read `EMR` *uncited* instead of `A`?']
+              '- **`05_Stroke_TIA` rows 8 and 9 are agency additions** — PEMS 2024 p.131 prints 6',
+              '  Stroke / TIA rows and neither "Establish 18g IV in Right AC" nor "Call COR at the',
+              '  receiving hospital" is one of them. Owner ruling 2026-11-15: they are chipped',
+              '  `PENDING` (Pending OMD Authorization), not given a level, and the ⚑ OWNER_REQUIRED',
+              '  marker is removed because PENDING supersedes it. `carried_from_page` keeps the',
+              '  level the page used to publish (row 8 `I`, row 9 `A`) as provenance only; see',
+              '  PENDING_OMD — row-level above. This is NOT the whole-page case: the rest of the',
+              '  Stroke page is PEMS-cited.',
+              '- **Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.** The',
+              '  owner was asked and did not rule, so the other 16 OWNER_REQUIRED rows keep their',
+              '  level + ⚑ flag exactly as they were. Do not convert them without a ruling.']
     return '\n'.join(lines) + '\n'
 
 
@@ -1131,13 +1243,14 @@ def check():
     align, adjudicated = load_json('alignment.json'), load_json('adjudicated.json')
     pems = pems_index(load_json('pems_table.json'))
     rulings, bindings = load_rulings(), load_bindings()
+    row_pending = load_row_pending()
     try:
         ledger_rows = load_json('level-rule-ledger.json')['rows']
     except FileNotFoundError:
         ledger_rows = []
     led = {(e['file'], str(e['row'])): e for e in ledger_rows}
 
-    fails, report = [], []
+    fails, report, pending_row_rows = [], [], []
     kept_words, removed_words = load_token_decisions()
     seen_kept = {}
     for rel in TARGETS:
@@ -1177,6 +1290,54 @@ def check():
                     fails.append(f'{rel} row {row["ordinal"]}: token-decisions.yaml keeps {a!r} '
                                  f'but the action text no longer contains it (stale decision)')
             ruled = rulings.get((rel, str(row['ordinal'])))
+            rp = row_pending.get((rel, str(row['ordinal'])))
+            if rp:
+                # an agency addition on an otherwise PEMS-cited page: PENDING and nothing
+                # else. No level chip, no OWNER_REQUIRED flag (PENDING supersedes it), no
+                # PEMS citation, and the carried level must match both the yaml and the
+                # ledger's record of what the page published before conversion.
+                if level != 'PENDING':
+                    fails.append(f'{rel} row {row["ordinal"]}: marked pending in '
+                                 f'pending-protocols.yaml but the chip reads {level}')
+                if 'lvl-own' in (row['level_cell'] or ''):
+                    fails.append(f'{rel} row {row["ordinal"]}: PENDING row still carries the '
+                                 f'OWNER_REQUIRED marker (PENDING supersedes it)')
+                if 'lvl-req' in (row['level_cell'] or ''):
+                    fails.append(f'{rel} row {row["ordinal"]}: PENDING row carries the '
+                                 f'bracketed-badge marker')
+                if re.search(r'\bp\.\s?\d+', row['action']):
+                    fails.append(f'{rel} row {row["ordinal"]}: action text names a PEMS page — '
+                                 f'a pending row may not claim a PEMS citation')
+                e = led.get((rel, str(row['ordinal'])))
+                if e is None:
+                    fails.append(f'{rel} row {row["ordinal"]}: pending row missing from the ledger')
+                else:
+                    if e['status'] != 'pending_row_omd':
+                        fails.append(f'{rel} row {row["ordinal"]}: ledger says {e["status"]}, '
+                                     f'the page is chipped PENDING')
+                    if e.get('pems_page') or e.get('pems_ordinal') or e.get('pems_badge'):
+                        fails.append(f'{rel} row {row["ordinal"]}: pending ledger row claims a '
+                                     f'PEMS citation (p.{e.get("pems_page")}#'
+                                     f'{e.get("pems_ordinal")}, badge {e.get("pems_badge")})')
+                    if not e.get('reason'):
+                        fails.append(f'{rel} row {row["ordinal"]}: pending row has no reason in '
+                                     f'the ledger')
+                    if e.get('carried_from_page') != rp['carried_from_page']:
+                        fails.append(f'{rel} row {row["ordinal"]}: ledger carried_from_page '
+                                     f'{e.get("carried_from_page")} != pending-protocols.yaml '
+                                     f'{rp["carried_from_page"]}')
+                    before = (e.get('before') or {}).get('leftmost')
+                    if before and before != rp['carried_from_page']:
+                        fails.append(f'{rel} row {row["ordinal"]}: pending-protocols.yaml '
+                                     f'carried_from_page {rp["carried_from_page"]} != the level '
+                                     f'the page published before conversion {before}')
+                pending_row_rows.append({'row': row['ordinal'], 'chip': 'PENDING',
+                                         'carried_from_page': rp['carried_from_page'],
+                                         'reason': rp['reason']})
+                continue
+            if level == 'PENDING':
+                fails.append(f'{rel} row {row["ordinal"]}: chipped PENDING but there is no '
+                             f'row-level entry for it in pending-protocols.yaml')
             if ruled:
                 if level != ruled['level']:
                     fails.append(f'{rel} row {row["ordinal"]}: marker {level} != owner ruling '
@@ -1356,6 +1517,8 @@ def check():
         'pending_pages': len(PENDING_TARGETS),
         'rows_pending_omd': sum(len(r['pending']) for r in pending_report),
         'pending': pending_report,
+        'rows_pending_row_omd': len(pending_row_rows),
+        'pending_row_level': pending_row_rows,
         'per_page': report,
         'level_moved_by_pems': [{'file': e['file'], 'row': e['row'],
                                  'page_level': e['before']['leftmost'],
@@ -1384,6 +1547,9 @@ def check():
     print(f"OK — {summary['rows_pending_omd']} action rows across "
           f"{summary['pending_pages']} page(s) are chipped PENDING (Pending OMD Authorization) "
           f"because PEMS 2024 publishes no such protocol; 0 of them claim a PEMS citation.")
+    print(f"OK — {summary['rows_pending_row_omd']} action row(s) on an otherwise PEMS-cited "
+          f"page are chipped PENDING as agency additions awaiting OMD authorization "
+          f"(pending-protocols.yaml `rows:`); 0 of them claim a PEMS citation.")
     return 0
 
 

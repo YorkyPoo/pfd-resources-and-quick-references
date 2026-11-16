@@ -450,6 +450,71 @@ def is_divider(num: str, action: str) -> bool:
         r"\d|\b(administer|apply|consider|obtain|monitor|repeat|assess|provide|transport|contact)\b", a, re.I)
 
 
+# --------------------------------------------------------------------------
+# site pages, collapsed format
+# --------------------------------------------------------------------------
+# scripts/level_rule.py rewrites a level table to `| # | Level | Action /
+# Intervention |` with ONE provider chip per action. read_page() above only
+# understands the legacy 7-column matrix (`| # | Action | EMR | EMT | A | I | P |`),
+# so on a converted page it returns zero rows — not "the row is gone", but "the
+# parser never looked". Every consumer that asks "does this row still exist, and
+# what level does it publish" must see both formats, or a conversion reads as a
+# mass deletion of rows. read_action_rows() is that reader.
+COLLAPSED_HDR_RE = re.compile(r"^\|\s*#\s*\|\s*Level\s*\|\s*Action\s*/\s*Intervention\s*\|$")
+CHIP_RE = re.compile(r'<span class="lvl lvl-([a-z]+)">([A-Z]+)</span>')
+
+
+def chip_cells(level: str) -> list[str]:
+    """The 5-cell EMR/EMT/A/I/P equivalent of one collapsed level chip.
+
+    One chip at level X authorises X and every level above it — exactly the
+    cumulative spread the legacy dot matrix encoded by filling X and the columns
+    to its right. `MC` is MC in every column. A `PENDING` chip authorises no
+    level at all: it marks an action awaiting OMD authorization, so it maps to
+    five blank cells (the same thing an empty matrix row means).
+    """
+    lv = ["EMR", "EMT", "A", "I", "P"]
+    lvl = (level or "").strip().upper()
+    if lvl == "MC":
+        return ["MC"] * len(lv)
+    if lvl not in lv:
+        return [""] * len(lv)
+    i = lv.index(lvl)
+    return [""] * i + ["•"] * (len(lv) - i)
+
+
+def read_action_rows(path: str) -> dict:
+    """Every action row on a page, in document order, in EITHER table format.
+
+    Returns {"format": "matrix" | "collapsed" | None, "rows": [...]} where each
+    row is {"num", "action", "cells"(5), "chip"(level or None)}. The legacy
+    matrix is read by read_page(); the collapsed format is parsed here.
+    """
+    page = read_page(path)
+    if page.get("rows"):
+        return {"format": "matrix",
+                "rows": [{"num": r["num"], "action": r["action"], "cells": r["cells"],
+                          "chip": None} for r in page["rows"]]}
+    lines = page.get("lines") or []
+    rows = []
+    for i, line in enumerate(lines):
+        if not COLLAPSED_HDR_RE.match(line.strip()):
+            continue
+        for raw in lines[i + 2:]:
+            s = raw.strip()
+            if not s.startswith("|"):
+                break
+            c = cells(raw)
+            if len(c) < 3:
+                continue
+            if all(set(x) <= set(":- ") for x in c):   # the :---|--- separator
+                continue
+            m = CHIP_RE.search(c[1])
+            rows.append({"num": c[0], "action": c[2], "chip": m.group(2) if m else None,
+                         "cells": chip_cells(m.group(2) if m else "")})
+    return {"format": "collapsed" if rows else None, "rows": rows}
+
+
 def read_page(path: str) -> dict:
     lines = open(path, encoding="utf-8", errors="replace").read().splitlines()
     rel = os.path.relpath(path, DOCS).replace(os.sep, "/")
