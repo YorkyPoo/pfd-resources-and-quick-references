@@ -17,7 +17,7 @@ Resuscitation protocol for newborns/neonates (<28 days) with heart rate <100/min
 
 </div>
 
-<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — row 5: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.</p>
+<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — row 5: this row prints two actions that PEMS 2024 splits across two rows at two lower levels — "Obtain IV/IO access if not already obtained." (p.261#10, badge A) and "Administer: Epinephrine (Adrenaline) 0.01mg/kg (0.1mg/mL) IV/IO" (p.261#12, badge I). No p.261 row prints either at P, so the P this page publishes has no PEMS authorisation and stays flagged. See <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
 ### Pearls
 *   Routine suctioning is no longer recommended.

@@ -2362,6 +2362,13 @@ bindings:
   - file: procedures/Neonatal_Resuscitation.md
     row: 5
     status: owner_required
+    owner_note: >-
+      &#9873; **OWNER_REQUIRED** — row 5: this row prints two actions that PEMS 2024 splits
+      across two rows at two lower levels — "Obtain IV/IO access if not already obtained."
+      (p.261#10, badge A) and "Administer: Epinephrine (Adrenaline) 0.01mg/kg (0.1mg/mL)
+      IV/IO" (p.261#12, badge I). No p.261 row prints either at P, so the P this page
+      publishes has no PEMS authorisation and stays flagged. See
+      <code>audit/level-scan/level-rule-ledger.md</code>.
     reason: >-
       The row bundles two actions printed on two PEMS rows at two different levels: "Obtain IV/IO
       access if not already obtained." (p.261#10, badge A) and "Administer: Epinephrine

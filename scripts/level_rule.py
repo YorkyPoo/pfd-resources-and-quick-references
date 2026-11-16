@@ -972,6 +972,7 @@ def resolve(rel, rows, align, adjudicated, pems, bindings=None):
                 extra['quoted_row_text'] = b.get('quoted_row_text')
             if b.get('status') == 'owner_required':
                 extra['forced_owner'] = b['reason']
+                extra['owner_note'] = b.get('owner_note')
 
         source_row = pems.get(ptr) if ptr else None
         badge, bracketed = badge_of(source_row) if source_row else (None, False)
@@ -1174,6 +1175,7 @@ def plan(rel):
                 'level_published': level,
                 'status': status,
                 'reason': reason,
+                'owner_note': r['extra'].get('owner_note'),
                 'owner_ruling': ({'date': ruled['date'], 'ruling': ruled['ruling'],
                                   'note': ruled.get('note')} if ruled else None),
                 'pems_page': r['ptr'][0] if r['ptr'] else None,
@@ -1275,12 +1277,21 @@ def page_note_for(ledger):
             notes.append(row_pending_note([str(e['row']) for e in pending_rows]))
     owner_rows = [str(e['row']) for e in ledger if e['status'] == 'OWNER_REQUIRED']
     if owner_rows:
-        label = ('row ' + owner_rows[0] if len(owner_rows) == 1
-                 else 'rows ' + ', '.join(owner_rows))
-        notes.append('&#9873; **OWNER_REQUIRED** — ' + label +
-                     ': no PEMS 2024 row authorises a provider level for this action. The level '
-                     'shown is the one this page already published; it is not verified against '
-                     'the source. See <code>audit/level-scan/level-rule-ledger.md</code>.')
+        # A row whose OWNER_REQUIRED reason is not the generic "no PEMS row prints it" case
+        # (e.g. the row bundles two actions PEMS prints at two *lower* levels) carries its own
+        # `owner_note` in row-bindings.yaml, because the generic sentence would be false for it.
+        custom = [e['owner_note'] for e in ledger if e['status'] == 'OWNER_REQUIRED'
+                  and e.get('owner_note')]
+        plain = [str(e['row']) for e in ledger if e['status'] == 'OWNER_REQUIRED'
+                 and not e.get('owner_note')]
+        notes.extend(custom)
+        if plain:
+            label = ('row ' + plain[0] if len(plain) == 1
+                     else 'rows ' + ', '.join(plain))
+            notes.append('&#9873; **OWNER_REQUIRED** — ' + label +
+                         ': no PEMS 2024 row authorises a provider level for this action. The level '
+                         'shown is the one this page already published; it is not verified against '
+                         'the source. See <code>audit/level-scan/level-rule-ledger.md</code>.')
     mc_rows = [str(e['row']) for e in ledger if e.get('mc_required')]
     if mc_rows:
         label = ('row ' + mc_rows[0] if len(mc_rows) == 1
