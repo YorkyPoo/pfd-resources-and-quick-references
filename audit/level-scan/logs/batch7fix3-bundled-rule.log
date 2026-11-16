@@ -1,0 +1,12 @@
+Batch 7 review fix 3 — bundled-row rule applied consistently (13 docs/procedures/ pages) on 920c47a
+
+Every procedures binding whose evidence names more than one PEMS badge, with the chip the
+page publishes. Rule: the chip must be the HIGHEST of the named levels.
+
+file                               row  chip levels named in evidence verdict
+Endotracheal_Intubation.md           2     I EMT,I                  OK highest
+Endotracheal_Intubation.md           6     P I,P                    OK highest
+Neonatal_Resuscitation.md            3     I EMT,I                  OK highest
+violations: 0
+
+3 bundled rows, 3 chips = the highest named level, 0 violations.
