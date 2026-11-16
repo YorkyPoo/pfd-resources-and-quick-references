@@ -5309,6 +5309,7 @@
    },
    "note": "agency addition \u2014 pending OMD authorization",
    "carried_from_page": "I",
+   "pending_note": null,
    "status_before": "pending_row_omd"
   },
   {
@@ -5343,6 +5344,7 @@
    },
    "note": "agency addition \u2014 pending OMD authorization",
    "carried_from_page": "A",
+   "pending_note": null,
    "status_before": "pending_row_omd"
   },
   {
@@ -9552,6 +9554,7 @@
    },
    "note": "agency addition \u2014 pending OMD authorization",
    "carried_from_page": "NONE",
+   "pending_note": "<strong>PENDING</strong> \u2014 row 6: PEMS 2024 prints the HF calcium treatment only in the Burns protocol's PEARLS (p.87-88 prose), not as a level-badged row, so no provider level is published for it. <strong>Pending OMD authorization</strong> \u2014 no provider level applies until the OMD authorizes it. See <code>audit/level-scan/pending-protocols.yaml</code> and <code>audit/level-scan/level-rule-ledger.md</code>.",
    "status_before": null
   },
   {

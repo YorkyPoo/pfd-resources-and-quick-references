@@ -576,7 +576,8 @@ def load_row_pending():
             if key in out:
                 raise SystemExit(f'pending-protocols.yaml: {rel} row {ent["row"]} listed twice')
             out[key] = {'carried_from_page': str(ent['carried_from_page']).strip().upper(),
-                        'reason': str(ent['reason']).strip()}
+                        'reason': str(ent['reason']).strip(),
+                        'note': str(ent.get('note') or '').strip() or None}
     return out
 
 
@@ -1002,6 +1003,7 @@ def plan(rel):
                 entry.update({'pems_page': None, 'pems_ordinal': None, 'pems_badge': None,
                               'pems_text': None, 'compound_tokens': [], 'basis': None,
                               'carried_from_page': rp['carried_from_page'],
+                              'pending_note': rp.get('note'),
                               'note': 'agency addition — pending OMD authorization'})
             ledger.append(entry)
         if reg['banner']:
@@ -1012,9 +1014,15 @@ def plan(rel):
 
 def page_note_for(ledger):
     notes = []
-    pending_rows = [str(e['row']) for e in ledger if e['status'] == 'pending_row_omd']
+    pending_rows = [e for e in ledger if e['status'] == 'pending_row_omd']
     if pending_rows:
-        notes.append(row_pending_note(pending_rows))
+        custom = [e.get('pending_note') for e in pending_rows if e.get('pending_note')]
+        if custom:
+            # a row whose action IS printed in PEMS (e.g. in PEARLS) needs a note that
+            # says so; the generic "no counterpart" wording would be false for it
+            notes.append(' '.join(custom))
+        else:
+            notes.append(row_pending_note([str(e['row']) for e in pending_rows]))
     owner_rows = [str(e['row']) for e in ledger if e['status'] == 'OWNER_REQUIRED']
     if owner_rows:
         label = ('row ' + owner_rows[0] if len(owner_rows) == 1
