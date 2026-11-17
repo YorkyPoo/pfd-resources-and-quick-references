@@ -289,9 +289,13 @@ def parse_page(pno: int, body: str, title: str) -> dict:
     lines = _lines(ws, start + 2, end)
     margins = _margins(lines)
     badges = _badges(lines, margins)
-    # A narrative/policy page also prints a few level tokens in the margin, but
-    # its body is full-width prose, not a grid: segmenting it would invent rows.
-    kind = "protocol" if caps else ("continuation" if len(badges) >= 2 else "narrative")
+    # A page carrying ANY level badge group is a grid page. With no PROTOCOL
+    # heading of its own it is a continuation: p.78 prints exactly ONE badged
+    # row (the Pain Control MC escalation) and the old `>= 2` test classed it
+    # narrative, silently discarding the row — the sole badged row in all 280
+    # pages that the extractor dropped. Only a page with NO badge group at all
+    # is narrative prose.
+    kind = "protocol" if caps else ("continuation" if badges else "narrative")
     if kind == "narrative":
         return {"page": pno, "title": title, "kind": kind, "grid_start": round(start, 1),
                 "grid_end": round(end, 1), "n_badges": len(badges), "rows": [], "orphans": []}
@@ -461,13 +465,69 @@ def build_docs(pages: dict[int, dict]) -> list[dict]:
 # ---------------------------------------------------------------------------
 # stage 1: the 57 site pages and their decision
 # ---------------------------------------------------------------------------
+# `scripts/level_rule.py` rewrote every protocol page's level matrix to the
+# one-chip table `| # | Level | Action / Intervention |` (and the administrative
+# pages to `| # | Basis | ... |` with a POLICY chip). `pems_level_scan.read_page()`
+# only understands the legacy 7-column matrix, so on a converted page it returns
+# `has_table: False` — not "the page lost its table" but "this reader never looked".
+# Asked in November 2026, that reader saw 2 tables instead of 55 and stage 1 wrote
+# page_decisions for 4 pages; stage 2 then reported 0 site rows.
+#
+# This reader accepts both formats. It mirrors `read_action_rows()` and widens
+# the chip column to `Basis` so an administrative POLICY page is still a page
+# with a table. A chip is turned into the same 5-cell spread the legacy matrix
+# encoded (`chip_cells`), a `POLICY`/`PENDING` chip into five blanks, so every
+# downstream consumer keeps seeing the shape it always saw.
+SITE_HDR_RE = re.compile(r"^\|\s*#\s*\|\s*(?:Level|Basis)\s*\|\s*Action\s*/\s*Intervention\s*\|\s*$")
+SITE_CHIP_RE = re.compile(r'<span class="lvl lvl-([a-z]+)">([A-Z]+)</span>')
+NOT_A_PROTOCOL_PAGE = {"protocols/outstanding-decisions.md"}
+
+
+def _site_rows_collapsed(path: str) -> list[dict] | None:
+    """Rows of a one-chip table page, in the legacy row shape, or None."""
+    lines = open(path, encoding="utf-8", errors="replace").read().splitlines()
+    rows: list[dict] = []
+    for i, line in enumerate(lines):
+        if not SITE_HDR_RE.match(line.strip()):
+            continue
+        for raw in lines[i + 2:]:
+            s = raw.strip()
+            if not s.startswith("|"):
+                break
+            c = P.cells(raw)
+            if len(c) < 3 or all(set(x) <= set(":- ") for x in c):
+                continue
+            m = SITE_CHIP_RE.search(c[1])
+            lvl = m.group(2) if m else ""
+            rows.append({"idx": len(rows), "num": c[0], "action": c[2],
+                         "cells": P.chip_cells(lvl), "ncols": 3,
+                         "divider": P.is_divider(c[0], P.clean(c[2]))})
+    return rows or None
+
+
+def _site_title(path: str) -> str:
+    for line in open(path, encoding="utf-8", errors="replace").read().splitlines()[:40]:
+        if line.startswith("## "):
+            return re.sub(r"^##\s*(General\s*-\s*)?", "", line).strip()
+    return os.path.basename(path)
+
+
 def site_pages() -> list[dict]:
     files = sorted(glob.glob(os.path.join(DOCS, "protocols", "**", "*.md"), recursive=True))
     out = []
     for f in files:
+        rel = os.path.relpath(f, DOCS).replace(os.sep, "/")
+        if rel in NOT_A_PROTOCOL_PAGE:      # generated digest, not a protocol page
+            continue
         pg = P.read_page(f)
         if pg.get("has_table"):
             out.append(pg)
+            continue
+        rows = _site_rows_collapsed(f)
+        if rows is None:
+            continue
+        out.append({"file": f, "rel": rel, "has_table": True, "title": _site_title(f),
+                    "hdr": None, "rows": rows, "lines": pg.get("lines") or [], "ncols": 3})
     return out
 
 

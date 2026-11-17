@@ -1,0 +1,4 @@
+parse_page(78) UNFIXED: kind=narrative n_badges=1 rows=0 orphans=0
+  FAIL no page carrying >=1 level badge contributes zero rows (offenders: [(78, 'narrative', 1, 'Pain Control')])
+1 INVARIANT(S) FAILED
+verify EXIT=1

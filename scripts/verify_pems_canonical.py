@@ -426,6 +426,23 @@ def main() -> int:
           f"every PEMS row carries the required fields ({len(rows)} rows)")
     check(all(r["badge_tokens"] for r in rows), "every PEMS row carries a badge token")
     check(all(r["verbatim_text"] for r in rows), "every PEMS row has verbatim text")
+    # A page carrying >=1 level badge group is a grid page and must yield rows.
+    # p.78 (Pain Control continuation, one MC row) used to be classed "narrative"
+    # by a `len(badges) >= 2` test and its row discarded, which made the ledger's
+    # "PEMS prints this nowhere" claim for Pain Control r8 false. The guard parses
+    # the PDF itself rather than trusting pems_table.json, so a table regenerated
+    # by broken code cannot hide the defect.
+    xml = P._read_pdf_xml(False)
+    zero_row_badge_pages = []
+    for pno, m in enumerate(P.PAGE_RE.finditer(xml), 1):
+        body = m.group(3)
+        rec = C.parse_page(pno, body, C.page_title(body))
+        if rec.get("n_badges", 0) >= 1 and not rec["rows"]:
+            zero_row_badge_pages.append(
+                (pno, rec.get("kind"), rec.get("n_badges"), rec.get("title")))
+    check(not zero_row_badge_pages,
+          "no page carrying >=1 level badge contributes zero rows"
+          + (f" (offenders: {zero_row_badge_pages})" if zero_row_badge_pages else ""))
     # A badge word may legitimately appear INSIDE an instruction ("...shock [EMR],
     # immediately defibrillate"); what must never happen is the margin column
     # being rendered at the start or end of the row text.
@@ -710,8 +727,26 @@ def main() -> int:
     section("deliverables")
     print("deliverables")
     for name in ("missing-rows.md", "ambiguous-rows.md", "alignment.json",
-                 "pems_table.json", ".cache/pems_rows.jsonl"):
+                 "pems_table.json", ".cache/pems_rows.jsonl", "pems_prose.json"):
         check(os.path.exists(os.path.join(OUT, name)), f"{name} exists")
+    # The prose index is the only place the unbadged PEARLS / NOTES /
+    # CONTRAINDICATIONS text lives (pems_table.json stores grid rows only), so a
+    # stale index silently re-opens the "PEMS prints this nowhere" defect. Compare
+    # it with a fresh build: same pages, same entries, byte-for-byte.
+    import build_pems_prose as BP
+    fresh, n_pearls, _methods, prose_failures = BP.build()
+    committed = json.load(open(os.path.join(OUT, "pems_prose.json"), encoding="utf-8"))
+    check(len(committed.get("pages", {})) == 280,
+          f"pems_prose.json indexes all 280 pages ({len(committed.get('pages', {}))})")
+    check(not prose_failures,
+          f"every prose entry verifies against the flattened text layer "
+          f"({len(prose_failures)} failure(s))")
+    check(committed == fresh,
+          "pems_prose.json is up to date with scripts/build_pems_prose.py "
+          "(pages and entries identical)")
+    check(bool(n_pearls) and any(e["heading"] == "PEARLS"
+                                 for v in committed.get("pages", {}).values() for e in v),
+          f"the prose index carries PEARLS entries ({n_pearls} PEARLS headings)")
     md = open(os.path.join(OUT, "missing-rows.md"), encoding="utf-8").read()
     check(f"**Total: {tot['absent_from_site']} rows" in md,
           f"missing-rows.md states the same total ({tot['absent_from_site']})")

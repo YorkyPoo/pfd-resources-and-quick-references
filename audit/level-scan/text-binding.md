@@ -4,9 +4,9 @@ Every row the structural aligner reported as `no_counterpart` was searched once 
 
 A row binds on `verbatim` (one of its phrases is an exact substring of the PEMS row) or on `token_binding` (coverage of the row's significant tokens clears the aligner's 0.40 floor AND the row shares a drug name, a dose, or its whole distinctive label head with that PEMS row). Anything else is `no_evidence_local`, and its negative search is recorded too.
 
-**86 rows** — bound_by_text **1**, no_evidence_local **85** (below_floor 61, best_evidence_is_held 16, no_anchor 8).
+**83 rows** — bound_by_text **1**, no_evidence_local **82** (below_floor 60, best_evidence_is_held 15, no_anchor 7).
 
-Coverage bands (coverage of the whole site row against its best candidate in the page's own scope): 0.0 → 55, 0.1 → 11, 0.2 → 4, >=0.3 → 16.
+Coverage bands (coverage of the whole site row against its best candidate in the page's own scope): 0.0 → 54, 0.1 → 10, 0.2 → 5, >=0.3 → 14.
 
 ## Bound and promoted to `matched`
 
@@ -16,11 +16,11 @@ Coverage bands (coverage of the whole site row against its best candidate in the
 - PEMS row (duplicate_in_source): If apneic/bradypneic, provide respiratory support and administer: ADULT: Naloxone (Narcan) 1 – 2 mg IN PEDIATRIC: Naloxone (Narcan) 1 -2 mg IN Repeat at double the initial dose if no response in 5 minutes.
 - method `token_binding` (body), coverage 0.67 (whole row 0.40), anchors: naloxone, 1 – 2 mg
 - matched phrase: `naloxone 1 – 2 mg`
-- site level cells: ['', '', '•', '•', '•'] vs PEMS badge columns: ['EMT', 'A', 'I', 'P'] — agrees: False
+- site level cells: ['', '•', '•', '•', '•'] vs PEMS badge columns: ['EMT', 'A', 'I', 'P'] — agrees: True
 
 ## No evidence for a free PEMS row (`no_evidence_local`)
 
-### `below_floor` — 61 rows
+### `below_floor` — 60 rows
 
 - `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 4 (p.57 row 1, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.57 row 1)
   - site row: Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure.
@@ -44,8 +44,8 @@ Coverage bands (coverage of the whole site row against its best candidate in the
   - site row: Right-Sided / 15-Lead ECG: • Consider right-sided 12-Lead or 15-Lead ECG for additional assessment.
   - pages searched: [107]; free candidates: 2; query: 12-lead, 15-lead, additional, assessment, ecg, right-sided
 - `04_Chest_Pain_ACS_PROC.md` row 3 (p.107 row 2, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.107 row 2)
-  - site row: Glucose Assessment: • Check blood glucose level. • Refer to Hyperglycemia / Hypoglycemia Poquoson Protocol if indicated.
-  - pages searched: [107]; free candidates: 2; query: assessment, blood, check, glucose, hyperglycemia, hypoglycemia, level, poquoson
+  - site row: Glucose Assessment: • Check blood glucose level. • Refer to the Hyperglycemia / Hypoglycemia protocol if indicated.
+  - pages searched: [107]; free candidates: 2; query: assessment, blood, check, glucose, hyperglycemia, hypoglycemia, level
 - `04_Chest_Pain_ACS_PROC.md` row 8 (p.107 row 2, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.107 row 2)
   - site row: IV/IO Access: • Establish IV / IO access when indicated (refer to Intraosseous Access procedure).
   - pages searched: [107]; free candidates: 2; query: access, establish, intraosseous, iv/io
@@ -61,12 +61,9 @@ Coverage bands (coverage of the whole site row against its best candidate in the
 - `02_Cold_Exposure_PROC.md` row 6 (p.67 row 1, coverage 0.38) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.38 against p.67 row 1)
   - site row: If patient is alert and responsive: Use active external rewarming with heat packs, warm blankets, etc.
   - pages searched: [67]; free candidates: 0; query: active, alert, blankets, etc, external, heat, packs, responsive, rewarming, warm
-- `02_Cold_Exposure_PROC.md` row 9 (p.67 row 4, coverage 0.17) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.17 against p.67 row 4)
-  - site row: Contact Poquoson Medical Control prior to use of AED.
-  - pages searched: [67]; free candidates: 0; query: aed, contact, control, medical, poquoson, prior
-- `02_Pain_Control_PROC.md` row 8 (p.77 row 0, coverage 0.08) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.08 against p.77 row 0)
-  - site row: If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact Poquoson Medical Control for guidance.
-  - pages searched: [77]; free candidates: 0; query: adequately, contact, control, extricate/transport, guidance, humanely, medical, pain, poquoson, safely, stable, unable
+- `02_Cold_Exposure_PROC.md` row 9 (p.67 row 4, coverage 0.20) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.20 against p.67 row 4)
+  - site row: Contact Medical Control prior to use of AED.
+  - pages searched: [67]; free candidates: 0; query: aed, contact, control, medical, prior
 - `02_Sedation_Assisted_Non_Paralytic_PROC.md` row 2 (p.55 row 1, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.55 row 1)
   - site row: Assess and monitor blood pressure. Ensure patient is not hypotensive.
   - pages searched: [55]; free candidates: 3; query: blood, hypotensive, pressure
@@ -185,8 +182,8 @@ Coverage bands (coverage of the whole site row against its best candidate in the
   - site row: Hydroxocobalamin Preparation: • Reconstitute with 200 mL 0.9% Sodium Chloride • Use vented IV tubing for administration • Verify solution clarity and integrity prior to administration
   - pages searched: [153, 239]; free candidates: 13; query: 0.9 %, 0.9%, 200, 200 ml, administration, chloride, clarity, hydroxocobalamin, integrity, preparation, prior, reconstitute
 - `03_Smoke_Inhalation_PROC.md` row 9 (p.239 row 4, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.239 row 4)
-  - site row: Hydroxocobalamin Administration: • Administer per Poquoson OMD guidance • Monitor for increase in blood pressure • Inform receiving facility of administration • Prepare for possible red/purple urine d
-  - pages searched: [153, 239]; free candidates: 13; query: administration, blood, discoloration, facility, guidance, hydroxocobalamin, increase, inform, omd, poquoson, possible, prepare
+  - site row: Hydroxocobalamin Administration: • Administer per Medical Control guidance • Monitor for increase in blood pressure • Inform receiving facility of administration • Prepare for possible red/purple urin
+  - pages searched: [153, 239]; free candidates: 13; query: administration, blood, control, discoloration, facility, guidance, hydroxocobalamin, increase, inform, medical, possible, prepare
 - `03_Upper_Airway_Obstruction_PROC.md` row 13 (p.239 row 1, coverage 0.06) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.06 against p.239 row 1)
   - site row: Post-Obstruction Advanced Airway - Sedation: • If endotracheal intubation performed, refer to Sedation Post Advanced Airway protocol. • Fentanyl (25 mcg) and Midazolam (2.5 mg) per Respiratory Arrest 
   - pages searched: [239]; free candidates: 4; query: 2.5, 2.5 mg, 25 mcg, advanced, airway, arrest, elderly, endotracheal, fentanyl, frail, half-doses, intubation
@@ -200,13 +197,13 @@ Coverage bands (coverage of the whole site row against its best candidate in the
   - site row: Hydrofluoric Acid (HF) Burns with Hypotension: Administer Calcium Chloride 1 g IV/IO over 3 mins (Repeat in 5 mins PRN).
   - pages searched: [87, 88]; free candidates: 3; query: 1 g, acid, burns, calcium, chloride, hydrofluoric, hypotension, iv/io, mins, prn
 - `09_Hemorrhage_Control_PROC.md` row 8 (p.75 row 0, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.75 row 0)
-  - site row: Consider pain control per Poquoson Protocol(s).
-  - pages searched: [75]; free candidates: 2; query: control, pain, poquoson
+  - site row: Consider pain control per the Pain Control protocol.
+  - pages searched: [75]; free candidates: 2; query: control, pain
 - `09_Trauma_PROC.md` row 2 (p.83 row 6, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.83 row 6)
   - site row: Ensure scene safety. Extricate/move patient to safety if necessary.
   - pages searched: [83, 84]; free candidates: 3; query: extricate/move, necessary, safety, scene
 
-### `best_evidence_is_held` — 16 rows
+### `best_evidence_is_held` — 15 rows
 
 - `04_Cardiac_Arrest_Non_Traumatic_PROC.md` row 4 (p.63 row 7, coverage 1.00) — this row's best text evidence is p.63 row 7 (coverage 1.00, badge I), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
   - site row: AED / Rhythm Assessment: • Apply AED and assess cardiac rhythm every 2 minutes. • Identify rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shockable).
@@ -214,18 +211,15 @@ Coverage bands (coverage of the whole site row against its best candidate in the
 - `04_Cardiac_Arrest_Traumatic_PROC.md` row 6 (p.61 row 5, coverage 1.00) — this row's best text evidence is p.61 row 5 (coverage 1.00, badge A), which site row 7 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
   - site row: Obtain IV/IO access (x2 preferred)
   - pages searched: [61]; free candidates: 4; query: access, iv/io, preferred
-- `04_Chest_Pain_ACS_PROC.md` row 13 (p.107 row 9, coverage 1.00) — this row's best text evidence is p.107 row 9 (coverage 1.00, badge MC), which site row 7 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
-  - site row: Medical Control Contact: • Contact Poquoson OMD for guidance as needed.
-  - pages searched: [107]; free candidates: 2; query: contact, control, guidance, medical, omd, poquoson
 - `04_Chest_Pain_ACS_PROC.md` row 5 (p.107 row 4, coverage 0.60) — this row's best text evidence is p.107 row 4 (coverage 0.60, badge EMT), which site row 6 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
   - site row: 12-Lead ECG Interpretation - STEMI Criteria: • Intermediate and Paramedic providers may interpret as STEMI if: - Symptoms consistent with ACS/myocardial ischemia AND - ≥ 1 mm ST segment elevation in t
   - pages searched: [107]; free candidates: 2; query: 12-lead, acs/myocardial, consistent, contiguous, criteria, ecg, elevation, intermediate, interpret, interpretation, ischemia, leads
 - `05_Stroke_TIA_PROC.md` row 6 (p.131 row 4, coverage 0.64) — this row's best text evidence is p.131 row 4 (coverage 0.64, badge EMT), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
   - site row: Triage: Symptoms <24 hrs & RACE 5-9 -> Transport to closest Comprehensive Stroke Center (if <30 min delay)
   - pages searched: [131]; free candidates: 1; query: 5-9, center, closest, comprehensive, delay, hrs, min, race, stroke, symptoms, transport, triage
-- `05_Stroke_TIA_PROC.md` row 7 (p.131 row 4, coverage 0.67) — this row's best text evidence is p.131 row 4 (coverage 0.67, badge EMT), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
-  - site row: Triage: Symptoms >24 hrs OR RACE 0-4 -> Transport to closest Primary Stroke Center
-  - pages searched: [131]; free candidates: 1; query: 0-4, center, closest, hrs, primary, race, stroke, symptoms, transport, triage
+- `05_Stroke_TIA_PROC.md` row 7 (p.131 row 4, coverage 0.75) — this row's best text evidence is p.131 row 4 (coverage 0.75, badge EMT), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
+  - site row: Triage: Symptoms >24 hrs OR RACE 0-4 -> Transport to closest stroke center
+  - pages searched: [131]; free candidates: 1; query: 0-4, center, closest, hrs, race, stroke, symptoms, transport, triage
 - `03_Airway_Inhalation_Irritants_PROC.md` row 3 (p.153 row 2, coverage 0.50) — this row's best text evidence is p.153 row 2 (coverage 0.50, badge EMT), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
   - site row: Airway Assessment: • Assess for signs of airway injury (singed hairs, facial burns, hoarseness, stridor, soot). • Monitor for progressive respiratory distress.
   - pages searched: [153]; free candidates: 0; query: airway, assessment, burns, distress, facial, hairs, hoarseness, injury, progressive, respiratory, signs, singed
@@ -233,8 +227,8 @@ Coverage bands (coverage of the whole site row against its best candidate in the
   - site row: Repeat Decompression if Needed: • Consider repeating procedure for continued or recurrent hemodynamic instability or absent breath sounds.
   - pages searched: [243]; free candidates: 1; query: absent, breath, decompression, hemodynamic, instability, recurrent, repeating, sounds
 - `03_Respiratory_Arrest_PROC.md` row 11 (p.239 row 2, coverage 0.50) — this row's best text evidence is p.239 row 2 (coverage 0.50, badge EMR), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
-  - site row: Surgical Airway (Cricothyrotomy): • If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway. • Use 14G, 3.25" catheter or surgical cricothyrotomy kit per Poquoson Protoco
-  - pages searched: [239]; free candidates: 2; query: 14 g, 14g, 3.25, airway, catheter, cricothyrotomy, immediately, intubate, kit, oxygenate, poquoson, proceed
+  - site row: Surgical Airway (Cricothyrotomy): • If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway. • Use 14G, 3.25" catheter or surgical cricothyrotomy kit per protocol.
+  - pages searched: [239]; free candidates: 2; query: 14 g, 14g, 3.25, airway, catheter, cricothyrotomy, immediately, intubate, kit, oxygenate, proceed, surgical
 - `03_Respiratory_Distress_PROC.md` row 10 (p.124 row 10, coverage 0.44) — this row's best text evidence is p.124 row 10 (coverage 0.44, badge A), which site row 12 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
   - site row: Fluid Administration: • 0.9% Sodium Chloride or appropriate fluid as clinically indicated • Monitor for signs of fluid overload in CHF patients
   - pages searched: [123, 124]; free candidates: 4; query: 0.9 %, 0.9%, administration, chf, chloride, clinically, fluid, overload, signs, sodium
@@ -257,7 +251,7 @@ Coverage bands (coverage of the whole site row against its best candidate in the
   - site row: Obtain IV/IO access.
   - pages searched: [83, 84]; free candidates: 3; query: access, iv/io
 
-### `no_anchor` — 8 rows
+### `no_anchor` — 7 rows
 
 - `04_Cardiac_Arrest_Traumatic_PROC.md` row 10 (p.61 row 2, coverage 0.50) — coverage 0.50 (whole row 0.38) clears the 0.40 floor, but the row shares no drug name, no dose and no whole label head with that PEMS row, so the binding would rest on an ordinary word: Begin chest compressions. Refer to Cardiopulmonary Resuscitation (CPR) procedure. Consider immediate transport to the closest Emergency Department or Trauma Cen
   - site row: Rapid transport to Level I/II Trauma Center (Goal < 10 mins)
@@ -265,9 +259,6 @@ Coverage bands (coverage of the whole site row against its best candidate in the
 - `04_Chest_Pain_ACS_PROC.md` row 9 (p.107 row 7, coverage 1.00) — coverage 1.00 (whole row 0.50) clears the 0.40 floor, but the row shares no drug name, no dose and no whole label head with that PEMS row, so the binding would rest on an ordinary word: Monitor cardiac rhythm. Refer to Tachyarrhythmias or Bradycardia protocol, as needed.
   - site row: Cardiac Monitoring: • Consider continuous cardiac monitoring.
   - pages searched: [107]; free candidates: 2; query: cardiac, continuous
-- `04_Supraventricular_Tachycardia_PROC.md` row 10 (p.136 row 7, coverage 0.71) — coverage 0.71 (whole row 0.71) clears the 0.40 floor, but the row shares no drug name, no dose and no whole label head with that PEMS row, so the binding would rest on an ordinary word: Contact Medical Control if uncertain regarding rhythm, most appropriate therapy, and for guidance as needed. Ensure a 12-Lead ECG is transmitted.
-  - site row: MC: Contact Poquoson OMD for guidance Ensure 12-Lead ECG transmitted
-  - pages searched: [135, 136]; free candidates: 0; query: 12-lead, contact, ecg, guidance, omd, poquoson, transmitted
 - `03_Asthma_COPD_Reactive_Airway_PROC.md` row 7 (p.123 row 1, coverage 0.50) — coverage 0.50 (whole row 0.11) clears the 0.40 floor, but the row shares no drug name, no dose and no whole label head with that PEMS row, so the binding would rest on an ordinary word: Perform a focused evaluation including pertinent history and assessment of airway and lung sounds. Refer to Airway Management and Ventilatory Support procedure 
   - site row: Assist Ventilations / Airway Management: • Prepare for assisted ventilation if respiratory failure develops. • Bag-valve-mask with PEEP valve as indicated. • Consider supraglottic airway or endotrache
   - pages searched: [123, 124]; free candidates: 6; query: adequate, airway, assist, assisted, bag-valve-mask, develops, endotracheal, failure, intubation, management, peep, prepare

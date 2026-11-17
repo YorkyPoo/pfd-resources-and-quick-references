@@ -1,0 +1,3285 @@
+{
+ "pages": {
+  "1": [],
+  "2": [],
+  "3": [],
+  "4": [],
+  "5": [],
+  "6": [],
+  "7": [],
+  "8": [],
+  "9": [],
+  "10": [],
+  "11": [],
+  "12": [],
+  "13": [],
+  "14": [],
+  "15": [],
+  "16": [],
+  "17": [],
+  "18": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "Provider is unable to make contact with medical control after two attempts by each of two different methods (i.e. twice via radio and twice via cell phone for a total of four attempts).",
+    "badge": null
+   }
+  ],
+  "19": [],
+  "20": [],
+  "21": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Termination of resuscitation efforts is a Medical Control decision only.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Resuscitation efforts and transport to the emergency department are indicated for any patient having suspected hypothermia.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Consider patient's previously diagnosed medical condition.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "WITHHOLDING RESUSCITATION CRITERIA In accordance with Commonwealth of Virginia law, full resuscitation measures shall be undertaken for all victims of cardiopulmonary arrest except in the presence of one or more of the indications of death:",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "The presence of one of the following: o An actual valid Virginia DDNR form o An actual valid DDNR from any State o A copy of a valid Virginia DDNR form (a digital copy is permitted) o A copy of a valid DDNR form from any State (a digital copy is permitted) o A Virginia approved DDNR ALERT bracelet or necklace o For reference, see the Code of Virginia §54.1-2987.1, § 54.1-2982",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Decapitation or other obvious mortal injury",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "Rigor mortis",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 8,
+    "text": "Dependent lividity",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 9,
+    "text": "Decomposition",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 10,
+    "text": "During mass-casualty incidents, resources must be directed toward viable patients",
+    "badge": null
+   }
+  ],
+  "22": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "For POST (Physician Orders for Scope of Treatment) forms, Section A qualifies as a DDNR",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "If you have any questions regarding the orders, ask Medical Control",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Providers are reminded they are still not to exceed their Scope of Practice",
+    "badge": null
+   }
+  ],
+  "23": [
+   {
+    "heading": "INDICATIONS",
+    "ordinal": 1,
+    "text": "• Patients meeting specialty care criteria including but not limited to: o STEMI o Stroke o Trauma o Burns o Critical Pediatrics o Ventricular Assist Device (LVAD/BiVAD/VAD as directed per VAD Coordinator or Medical Control) • The air ambulance service can provide needed medical capability at the scene. • Difficult-access situations: o Wilderness rescue o Ambulance egress or access impeded at the scene by road conditions, weather, or traffic",
+    "badge": null
+   }
+  ],
+  "24": [],
+  "25": [],
+  "26": [],
+  "27": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient or surrogate decision maker refusing or declining treatment of a condition for which treatment would be otherwise indicated and/or transport via ambulance to an appropriate receiving facility",
+    "badge": null
+   }
+  ],
+  "28": [],
+  "29": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "For medical emergencies, issuance of an emergency custody order (ECO) for medical evaluation requires a licensed physician to petition a magistrate or special justice. Early discussion with Medical Control to provide a detailed description of the current clinical situation and concerns, assessment of decision-making capacity, and any pertinent clinical information is critical.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Medical power of attorney only comes into effect when a patient lacks decision-making capacity.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Attempt to obtain a copy of any documentation assigning guardianship or medical power of attorney. If unavailable, you may accept the individual’s assertion as long as you do so in good faith and do not have any evidence or knowledge that the person is misrepresenting himself/herself as a guardian or medical power of attorney.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "In the absence of available parents, an adult in whose care a minor has been entrusted, such as a teacher or caregiver, may act as a surrogate decision maker in the place of a parent (“in loco parentis”).",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "A minor shall be deemed an adult for the purpose of consenting to: o Services needed to determine the presence of or to treat venereal disease of any infectious or contagious disease that the State board of Health requires to be reported o Services required in case of birth control, pregnancy or family planning o Services required in the case of outpatient care, treatment, or rehabilitation for substance abuse o Services required in the outpatient care, treatment, or rehabilitation for mental or emotional disturbance",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "A pregnant minor shall be deemed an adult for the sole purpose of giving consent for herself and her child to surgical and medical treatment relating to the delivery of her child. Thereafter, the minor mother shall be deemed an adult for the purpose of giving consent to surgical and medical treatment for her child.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "Treatment and/or transport of a minor is authorized if delay may adversely affect the minor’s recovery and no authorized person is available to provide consent. If the minor is 14 years of age or older and physically capable of giving consent, such consent shall be obtained first.",
+    "badge": null
+   }
+  ],
+  "30": [],
+  "31": [],
+  "32": [],
+  "33": [],
+  "34": [],
+  "35": [],
+  "36": [],
+  "37": [],
+  "38": [],
+  "39": [],
+  "40": [],
+  "41": [],
+  "42": [],
+  "43": [],
+  "44": [],
+  "45": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Transport all patients with unmanageable/uncontrolled airway or uncontrolled hemorrhage to the closest",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "hospital emergency department.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Traumatic cardiac arrest– if transporting, transport to the closest hospital emergency department.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Consider transport to a pediatric center (CHKD or VCU Medical Center) for pediatric patients meeting the above trauma triage criteria.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Consider transport to a burn center (Sentara Norfolk General Hospital or VCU Medical Center) for patients with burn injuries meeting the following criteria: o Partial-thickness burn of greater than 10% BSA o Electrical burns, including lightning injury o Full-thickness burns o Circumferential burns o Chemical burns",
+    "badge": null
+   }
+  ],
+  "46": [],
+  "47": [],
+  "48": [],
+  "49": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• The Universal Patient Care / Initial Patient Contact protocol applies to all patients and is the foundation for all patient care. A universal patient care protocol allows other protocols to focus on their specific goals for patient management. • While the steps listed below may occur in order, the dynamics of an emergency scene may dictate a change to the order in which they occur.",
+    "badge": null
+   }
+  ],
+  "50": [],
+  "51": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Glasgow Coma Scale 1 2 3 4 5 6 Spontaneous Eye Opening Does not open Opens to Pain Opens to voice Eye opening Oriented and Incomprehensible Inappropriate Confused, Verbal Makes no sound converses sounds words disoriented normally Abnormal Flexion or Makes no Extension to pain Obeys Motor flexion to pain withdrawal to Localizes pain movement (Decerebrate) commands (Decorticate) pain Infant Age Guidelines Newborn Up to 48 hours following birth Neonates Up to 28 days following birth",
+    "badge": null
+   }
+  ],
+  "52": [],
+  "53": [],
+  "54": [],
+  "55": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient receiving invasive ventilatory support following endotracheal intubation or placement of an advanced airway including supraglottic airway devices.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Adjust ventilation rate or volume to maintain EtCO2 of 35 – 45 mmHg following advanced airway placement.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Closely monitor for hypotension following intubation and sedation. Positive pressure ventilation increases the risk of pneumothorax and reduced preload, both of which can result in sudden drops in mean arterial pressure.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Use suction to remove blood, secretions and vomitus as needed.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Use lower doses of Fentanyl for opiate naïve, frail, low weight, hypotensive, hemodynamically labile, or elderly (> 65 years) patients.",
+    "badge": null
+   }
+  ],
+  "56": [],
+  "57": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient without a palpable pulse or respiration, and with Asystole or Pulseless Electrical Activity (PEA) evidence on the cardiac monitor (check two leads), or AED advising not to shock. • Patients with a valid durable DNR, rigor mortis, lividity, decomposition, or injuries inconsistent with survival are excluded.",
+    "badge": null
+   }
+  ],
+  "58": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Compressions:",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Push hard and fast: rate 100 – 120 bpm. Allow complete chest recoil.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Minimize interruptions in chest compressions.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Change compressors every 2 minutes or sooner if fatigued",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Give continuous compressions with advanced airway",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Use quantitative EtCO2 monitoring with BVM o If EtCO2 is less than 10 mmHg, improve chest compressions o If sudden increase in EtCO2 is noted (above 30-40 mmHg), check pulse and rhythm for ROSC.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "Airway:",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 8,
+    "text": "Use of advanced airways have not been shown to improve outcomes for children with out-of-hospital cardiac arrest. Focus on high quality BLS airway management.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 9,
+    "text": "Studies to date have not shown a clear improvement in outcomes with SGA vs intubation – do not compromise chest compressions for intubation.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 10,
+    "text": "Avoid excessive ventilation. Maximize preload.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 11,
+    "text": "Use EtCO2 to confirm and monitor placement of any advanced airway.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 12,
+    "text": "Continually monitor EtCO2 with target above 10 mmHg during CPR and 35-45 mmHg once ROSC is achieved.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 13,
+    "text": "In post ROSC patients, if EtCO2 falls below 20 mmHg or signal is lost, immediately reassess pulses and airway.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 14,
+    "text": "Reversible causes:",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 15,
+    "text": "Ensure IV/IO patency.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 16,
+    "text": "Identify and treat per appropriate protocol and scope of practice: o Hypoxia o Tension pneumothorax/hemothorax o Hyperkalemia or Hypokalemia o Tamponade (Cardiac) o Hyperthermia or Hypothermia o Thrombosis (Cardiac, Pulmonary) o Hypovolemia o Toxins o Hydrogen ion (acidosis) o Trauma o Hyperglycemia or Hypoglycemia o Tablets (Overdose)",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 17,
+    "text": "Termination of Resuscitation (TOR):",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 18,
+    "text": "Refer to Death & Criteria for Withholding Resuscitation protocol.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 19,
+    "text": "Termination of resuscitative efforts is a Medical Control decision only.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 20,
+    "text": "Consider contacting Medical Control to request TOR if the arrest was not witnessed by EMS and after 20 minutes of continuous CPR: 1. There has been no return of spontaneous circulation (ROSC) AND 2. No shocks were delivered.",
+    "badge": null
+   }
+  ],
+  "59": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient with return of spontaneous circulation (ROSC) following cardiac arrest.",
+    "badge": null
+   }
+  ],
+  "60": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Most patients will require at least some vasopressor support to maintain a MAP > 65 following cardiac arrest.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Push dose Epinephrine may be administered as a “bridge” while establishing a drip, but does not replace a drip.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Administer vasopressor through the largest, most proximal IV site available (AC or higher is preferable) or IO. Verify patency prior to initiating infusion and monitor closely for extravasation.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Maintain normal ventilation rate. Continually monitor EtCO2 with target range being 35 – 45 mmHg.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Identify and treat potentially reversible causes of cardiac arrest: o Hypoxia o Tension pneumothorax/hemothorax o Hyperkalemia or hypokalemia o Tamponade (Cardiac) o Hyperglycemia or hypoglycemia o Thrombosis (Cardiac/pulmonary) o Hypovolemia o Toxins o Hydrogen Ion (acidosis) o Trauma o Tablets (overdose)",
+    "badge": null
+   }
+  ],
+  "61": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient who has experienced blunt or penetrating trauma and is pulseless with apnea/agonal respirations. • Patients with obvious signs of death are excluded.",
+    "badge": null
+   }
+  ],
+  "62": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Unless loss of pulses is witnessed by EMS with immediate intervention, survival following traumatic cardiac arrest with an initial rhythm of asystole is very low (<1%). Providers must weigh the risks of resuscitation and transport (injury, infectious exposure etc.) against the potential benefit prior to initiating resuscitation.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "When possible, assess rhythm prior to initiating CPR. If the rhythm is asystole on arrival of EMS, consider withholding resuscitation.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "*Unlike non-traumatic cardiac arrest, the efficacy of CPR in trauma resuscitation is unclear. Prioritize addressing immediate reversible causes of hypotension/cardiac arrest such as chest decompression, volume expansion (preferably with whole blood), and airway management. CPR is needed, however, to circulate transfused blood and any medications or fluids administered.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "If available, blood products should be used rather than sodium chloride for treatment of hemorrhagic shock.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Assess the scene and patient closely. If the degree of sustained trauma appears disproportionately minor, consider the possibility a medical incident may have preceded or been induced by the injury. If there is suspicion for a medical event, refer to the appropriate patient care protocol.",
+    "badge": null
+   }
+  ],
+  "63": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient unresponsive, without palpable pulse or respiration, and Ventricular Fibrillation (V-Fib) or Ventricular Tachycardia (V-Tach) apparent on the cardiac monitor (check 2 leads), or AED advising to shock. • Patients with a valid durable DNR or injuries inconsistent with survival are excluded.",
+    "badge": null
+   }
+  ],
+  "64": [],
+  "65": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Compressions:",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Push hard and fast: rate 100 – 120 bpm. Allow complete chest recoil.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "A common cause of refractory VF / VT is incorrect defibrillator pad placement. Ensure optimal initial placement and consider adjustment is multiple shocks are delivered without a change in rhythm.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Minimize interruptions in chest compressions.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Change compressors every 2 minutes or sooner if fatigued",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Give continuous compressions with advanced airway",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "Use quantitative EtCO2 monitoring with BVM o If EtCO2 is less than 10 mmHg, improve chest compressions o If sudden increase in EtCO2 is noted (above 30-40 mmHg), check pulse and rhythm for ROSC.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 8,
+    "text": "Medications:",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 9,
+    "text": "Medications should be given without interruption of CPR.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 10,
+    "text": "Magnesium Sulfate should be considered for: Torsades de pointes, long QT, digitalis toxicity, or suspected hypomagnesemia.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 11,
+    "text": "If there is no Epinephrine 0.1 mg/mL preloaded syringe, combine 1 mg of Epinephrine 1 mg/mL with 9 mL of 0.9% sodium chloride in a 10 mL syrine.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 12,
+    "text": "Airway:",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 13,
+    "text": "Use of advanced airways have not been shown to improve outcomes for children with out-of-hospital cardiac arrest. Focus on high quality BLS airway management.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 14,
+    "text": "Studies to date have not shown a clear improvement in outcomes with SGA vs intubation – do not compromise chest compressions for intubation.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 15,
+    "text": "Avoid excessive ventilation. Maximize preload.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 16,
+    "text": "Use EtCO2 to confirm and monitor placement of any advanced airway.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 17,
+    "text": "Continually monitor EtCO2 with target above 10 mmHg during CPR and 35-45 mmHg once ROSC is achieved.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 18,
+    "text": "In post ROSC patients, if EtCO2 falls below 20 mmHg or signal is lost, immediately reassess pulses and airway.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 19,
+    "text": "Reversible causes:",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 20,
+    "text": "Identify and treat per appropriate protocol and scope of practice: o Hypoxia o Tension pneumothorax/hemothorax o Hyperkalemia or Hypokalemia o Tamponade (Cardiac) o Hyperthermia or Hypothermia o Thrombosis (Cardiac, Pulmonary) o Hypovolemia o Toxins o Hydrogen ion (acidosis) o Trauma o Hyperglycemia or Hypoglycemia o Tablets (Overdose)",
+    "badge": null
+   }
+  ],
+  "66": [],
+  "67": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "Patient exposed to extreme environmental conditions with symptoms that might include, but are not limited to: • CNS depression • Cardiac dysrhythmias • Abnormal vital signs • Suspect hypothermia in: o High-risk patients: very young or old patients, immobilized patients (e.g. prolonged entrapment), alcohol use, trauma/significant burns o High-risk environment: cold, windy environments, acute immersion incident",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Hypothermia patients are fragile: Rough handling, IV insertion, intubation, etc. might cause VF that is refractory to defibrillation and antiarrhythmic agents- use AHA guidelines for hypothermic arrest.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "DO NOT place heat packs, hot water bottles, IV bags, or other heat-retaining devices directly on skin",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Contact Medical Control prior to use of AED",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "If cardiac arrest occurs, start CPR. Do not delay transport waiting for ALS",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "If the patient is alert and responsive, use active external rewarming with heat packs, warm blankets, etc",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Assess pulse and respiratory rate for at least 60 seconds.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "In Localized injuries DO NOT: o Allow patient to use the affected part o Rub the affected part o Expose the part to direct dry heat o Immerse the part in snow or hot water o Attempt to debride blisters",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 8,
+    "text": "Remove jewelry and constricting items",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 9,
+    "text": "During cardiac arrest, medications should be spaced at longer intervals",
+    "badge": null
+   }
+  ],
+  "68": [],
+  "69": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "Patient exposed to extreme environmental conditions with symptoms that might include but are not limited to: • CNS depression • Cardiac dysrhythmias • Abnormal vital signs",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Consider cold IV fluids, if available, in heat stroke patient only. Use caution in the conscious patient",
+    "badge": null
+   }
+  ],
+  "70": [],
+  "71": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient with signs and/or symptoms of a psychiatric, medical, or traumatic emergency with agitated, aggressive, or combative behavior which poses a significant risk of harm to himself/herself or others. • For patients less than 25 kg who cannot be safely managed with de-escalation techniques (see below), contact medical control for guidance.",
+    "badge": null
+   }
+  ],
+  "72": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Mild agitation = anxious, apprehensive demeanor but non-aggressive.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Moderate agitation = pulling at tubes/catheters or aggressive behavior without violence.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Severe agitation = overt combativeness, violence or self-harm / immediate danger to self or staff.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "“Persons who lack decision-making capacity are assessed and treated with implied consent. EMS practitioners must maintain the patient’s dignity to the extent possible, including use of the least restrictive method of restraint that protects the patient, the public, and emergency responders from harm. The use of appropriate de- escalation techniques should take precedence over physical restraint or pharmacologic management whenever possible.” – National Association of EMS Physicians, Clinical Care and Restraint of Agitated or Combative Patients by EMS Practitioners, October 2020.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "* Consider potential medical or traumatic causes of altered mental status. These include head injury, hypoxia, delirium, stroke, seizure, toxic ingestion/overdose, medication reactions, CNS infection, hyperthermia, and endocrine emergencies such as hypoglycemia and thyrotoxicosis.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "** De-escalation guidelines: o Remain calm and friendly. Be aware of your emotions. o Be mindful of body language. Allow space and assume a non-threatening posture. o Position yourself between the patient and exit. o Maintain a safe distance. o Ideally, one provider should establish rapport and communicate with the patient.",
+    "badge": null
+   }
+  ],
+  "73": [],
+  "74": [],
+  "75": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient with uncontrolled or profuse external bleeding. • For general management of injured patients, refer to Trauma protocol.",
+    "badge": null
+   }
+  ],
+  "76": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Hemodialysis access sites may result in life threatening hemorrhage. Direct pressure/pressure dressing should be used first; followed by tourniquet in the setting of life-threatening hemorrhage.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Ensure date/time/location of placement is written on tourniquet.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Do not release tourniquet once applied.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "If a tourniquet is placed, an alert patient may require analgesia to manage tourniquet-associated discomfort. See Pain Control protocol.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "If extremity wound is not accessible, a tourniquet may be placed high on the extremity. Follow manufacturer’s recommendations.",
+    "badge": null
+   }
+  ],
+  "77": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient with discomfort/pain caused by injury or illness. • Ensure the patient is not hypotensive or at significant risk of hypotension. o Infants 0 – 12 months: SBP greater than 70 mmHg o Children 1 – 10 years: SBP greater than 80 mmHg o Children and adults over 10 years: SBP greater than 100",
+    "badge": null
+   }
+  ],
+  "78": [],
+  "79": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Administer Narcan (Naloxone) respiratory depression occurs. Refer to Overdose / Poisoning / Toxic Ingestions protocol.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Both the Wong-Baker (FACES) chart and FLACC scale can be used to assess pain in non-verbal patients including infants and children.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Even at therapeutic doses, opiates may cause respiratory/CNS depression, bradycardia and/or hypotension. Monitor vitals closely following any administration.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Associated factors which may affect hemodynamics and/or respiratory sufficiency including trauma, intoxication or illness must be considered when determining whether to administer opiates for pain control and, if so, at what dose.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "The goal of analgesia is not to completely alleviate pain, but to reduce pain to a manageable level which allows for safe and humane treatment and transport.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Consider non-pharmacologic options such as reassurance, distraction, positioning, splinting and/or cold therapy when drug therapies are either contraindicated or as an adjunct to drug therapy.",
+    "badge": null
+   }
+  ],
+  "80": [],
+  "81": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Blunt trauma and distracting injury • Altered mental status or suspected intoxication with possible spinal injury • Neurological complaint associated with trauma (numbness or weakness present) • Trauma patients with spinal pain, tenderness, or deformity • High energy mechanism of injury with the patient unable to communicate • Any clinical suspicious of injury • Age greater than or equal to 18 years",
+    "badge": null
+   }
+  ],
+  "82": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Any time the EMS provider is unsure whether spinal immobilization is appropriate or not, the EMS provider should consult with online Medical Control to determine appropriate therapy.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "The long spine board should be used as an extrication device and may not be required for all patients.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "The long spine board is beneficial for providing a firm surface to perform CPR on.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Utilization of the long spine board should take into consideration the risks versus the benefits for specific patient care and should be documented on the PCR.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Patients who are ambulatory at the scene of blunt trauma generally do not require spinal immobilization, however careful assessment and consideration must be evaluated.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Whether or not a long spinal board is utilized, spinal precautions are still very important in patients at risk for spinal injury. Adequate spinal precautions may be achieved by placement of a C-collar (or similar device) and securing the patient firmly to the ambulance stretcher, ensuring minimal movement.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "Self-extrication of patients from vehicles involved in motor vehicle accidents may best be achieved with guidance by the EMS provider. This may, in some cases, lessen the amount of movement that may occur to the patient during an extrication when the patient is not entrapped.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 8,
+    "text": "Spinal immobilization may be achieved by multiple appropriate methods. Some patients, due to size or age may not be able to be immobilized by traditional spinal immobilization procedures.",
+    "badge": null
+   }
+  ],
+  "83": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient who has experienced blunt or penetrating traumatic injury.",
+    "badge": null
+   }
+  ],
+  "84": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "*Shock Index = Heart Rate / Systolic Blood Pressure. Higher shock indices correlate with increased risk of post- intubation hypotension and cardiac arrest. Shock Index > 1.0 in an injured patient suggests the need for resuscitation prior to positive-pressure ventilation.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Do not delay transport to establish IV lines or wait for ALS.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Any patient who is cool/diaphoretic and tachycardic is considered to be in shock until proven otherwise.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "When possible, obtain two large bore IV access sites.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Stable patients with isolated spinal injuries: handle with the utmost care. Rapid transport is not indicated.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "All pregnant patients who have suffered blunt trauma should be encouraged to be evaluated in an emergency department, preferably at a facility with L&D capability for patients >20 weeks gestation. Pregnant patients in the third trimester should be transported with the backboard angled to the left and slightly elevated.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "Vasopressors worsen hemorrhage and are generally not indicated for the management of trauma.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 8,
+    "text": "BLS care is generally preferred in the prehospital management of major trauma. Safe and rapid transport to an appropriate hospital is indicated with ideal scene-time less than 10 minutes. Consider the benefit/risk of performing ALS interventions during transport.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 9,
+    "text": "Consider HEMS if the patient meets one or more of the applicable trauma triage criteria. HEMS is best utilized when the expected level of care exceeds available capabilities AND the patient can be transported by air in a similar or shorter time than the patient could be transported by ground. Be sure to consider the additional time required for rendezvous and patient transfer when considering HEMS.",
+    "badge": null
+   }
+  ],
+  "85": [],
+  "86": [],
+  "87": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient with radiation, chemical, or thermal burns.",
+    "badge": null
+   }
+  ],
+  "88": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Assess for airway / inhalation injury. Consider early definitive airway management for patients with respiratory distress, hoarse voice or stridor, carbonaceous sputum and/or facial burns. Prompt assessment by a qualified RSI paramedic, when available, is preferred.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Immediate (pre-hospital) hypotension solely due to burns < 20% TBSA is unlikely. Assess patients with hypotension/AMS in the setting of limited burns for concomitant trauma or other medical conditions (e.g. cardiac emergency or cyanide poisoning).",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Only if necessary (i.e. no other accessible site), obtain IV/IO access through a burned area.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Utilize reverse triage (i.e. treat pulseless/apneic patients first) in the case of lightning strike with multiple patients. Cardiac arrest is likely to be due to airway obstruction or shockable arrhythmia (VF/VT).",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Treat road-rash as a burn injury. Assess closely for concomitant blunt trauma.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Hydrofluoric Acid (HF) – binds and rapidly reduces serum calcium leading to circulatory collapse. Treat hypotension with 1 g Calcium Chloride IV/IO over 3 minutes. Repeat in 5 minutes as needed.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "Addressing hemodynamic instability, airway compromise and/or major traumatic injuries takes priority over direct transport to a burn center. Do not bypass a trauma center to transport to a burn center if the patient is unstable.",
+    "badge": null
+   }
+  ],
+  "89": [],
+  "90": [],
+  "91": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient with a trapped/crushed extremity or torso for more than 30 minutes. • Any patient who has experienced a crush injury or prolonged entrapment and is in cardiac arrest or has one or more of the following ECG change suggestive of hyperkalemia: o Peaked T waves o Ectopic beats o Prolonged PR segment (>200 ms) o Arrhythmia (e.g. ventricular o Flattening or loss of P waves tachycardia) o Wide QRS complex",
+    "badge": null
+   }
+  ],
+  "92": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Crush syndrome involves the release of toxins, particularly large amounts of potassium, from skeletal muscle cells following blunt trauma and prolonged soft tissue ischemia. Prehospital treatment is focused on preventing or treating life-threatening arrhythmia due to hyperkalemia. Crush injuries are not limited to heavy weights applied to extremities for a prolonged time and can occur in a variety of situations such are after prolonged suspension in a harness or following a prolonged time laying on a hard surface.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Sodium bicarbonate and Calcium Chloride are preferably given via separate IV lines to avoid precipitation into Calcium Carbonate. If separate IV sites cannot be obtained, flush with at least 20 mL saline between drugs.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Continuous albuterol is given to treat suspected hyperkalemia in the setting of persistent ECG changes.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "IV fluids may worsen bleeding. Use clinical judgement when administering fluids to patients with crush injuries, balancing risk of hemorrhage vs benefit in treating crush syndrome.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Widened QRS: Adult > 120 ms, Pediatric > 90 ms",
+    "badge": null
+   }
+  ],
+  "93": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient who has suffered an acute submersion / non-fatal drowning event. • Any patient with one or more of the following symptoms of decompression injury after breathing compressed air at depth: o Altered mental status o Chest pain o Seizures o Headache o Vision changes o Focal neurologic signs o Respiratory distress o Ataxia o Hemoptysis o Pain in joints / extremities",
+    "badge": null
+   }
+  ],
+  "94": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Caution: rewarming the extremities before the trunk may lead to vasodilation, resulting in a drop in blood pressure.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Trauma very commonly occurs along with submersion / drowning. Maintain a high suspicion for blunt trauma, particularly involving the head and spine.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Patients in cardiac arrest following cold-water submersion have been reported to survive neurologically intact even following prolonged resuscitation. Contact Medical Control for guidance regarding continued on-scene resuscitation vs transport to the closest emergency department.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Handle patients with hypothermia gently – rough handling may precipitate arrythmias including lethal VF.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Pulmonary edema may develop hours after a submersion event. Transport of all patients who have experienced nonfatal drowning for assessment and observation is encouraged.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "* Rapid ascent after breathing compressed air at depth may lead to barotrauma including injury to the lungs (pneumothorax). Evaluate and treat as you would any other trauma patient, beginning with a complete head- to-toe assessment.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "* Rapid ascent may also lead to the formation of gas bubbles in the soft tissues, causing pain (i.e. “the bends”). These bubbles may also form within the vasculature (arterial gas emboli) which can present as a variety of emergencies including seizure, stroke, MI or PE. Initial treatment is centered on identification, stabilization, and transport to an appropriate facility.",
+    "badge": null
+   }
+  ],
+  "95": [],
+  "96": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "Any patient exhibiting signs of symptoms of electrical contact injury or who may have been struck by lightning.",
+    "badge": null
+   }
+  ],
+  "97": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Assess for airway / inhalation injury. Consider early definitive airway management for patients with respiratory distress, hoarse voice or stridor, carbonaceous sputum and/or facial burns. Prompt assessment by a qualified RSI paramedic, when available, is preferred.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Immediate (pre-hospital) hypotension solely due to burns < 20% TBSA is unlikely. Assess patients with hypotension/AMS in the setting of limited burns for concomitant trauma or other medical conditions (e.g. cardiac emergency or cyanide poisoning).",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Only if necessary (i.e. no other accessible site), obtain IV/IO access through a burned area.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Utilize reverse triage (i.e. treat pulseless/apneic patients first) in the case of lightning strike with multiple patients. Cardiac arrest is likely to be due to airway obstruction or shockable arrhythmia (VF/VT).",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Addressing hemodynamic instability, airway compromise and/or major traumatic injuries takes priority over direct transport to a burn center. Do not bypass a trauma center to transport to a burn center if the patient is unstable.",
+    "badge": null
+   }
+  ],
+  "98": [],
+  "99": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient with signs or symptoms of an acute allergic reaction (mild - moderate). • Any patient with signs or symptoms of an anaphylactic reaction (severe). o Two or more of the following that occur rapidly after exposure to a likely allergen: § Involvement of the skin or mucosal tissue § Respiratory distress § Hypotension of syncope § Persistent gastrointestinal symptoms (abdominal cramps, diarrhea, vomiting) o OR hypotension after exposure to a known allergen for the patient.",
+    "badge": null
+   }
+  ],
+  "100": [],
+  "101": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Remove, decontaminate, or separate the patient from the allergic trigger whenever possible.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "If the patient is experiencing anaphylaxis with hemodynamic instability or respiratory distress, administer IM epinephrine before any other medications.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "EMTs may administer intramuscular epinephrine for anaphylaxis via color-coded or clearly marked syringe only.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Monitor patients closely following the administration of Epinephrine, particularly patients with significant cardiopulmonary comorbidities. Obtain an ECG immediately for any patient who develops chest discomfort or other signs of cardiac ischemia following the administration of IM Epinephrine or during an Epinephrine infusion.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Administer Epinephrine via infusion through the largest, most proximal IV access site that can be obtained, preferably antecubital fossa. Monitor closely for signs of extravasation including changes in skin color, pain, swelling, numbness, or tingling. Stop the infusion immediately if extravasation is suspected and resume, if needed, on the contralateral site.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Close monitoring during fluid administration should include frequent reassessment of respiratory effort, lung sounds and edema.",
+    "badge": null
+   }
+  ],
+  "102": [],
+  "103": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "Any patient with a sustained ventricular rate less than 60 beats per minute AND one or more of the following signs or symptoms despite adequate oxygenation and ventilation (ie UNSTABLE Bradycardia): • Hypotension (age based) • Pulmonary Edema • Signs of shock • Dyspnea • Altered mental status • Chest pain Patients with asymptomatic/STABLE bradycardia are excluded. Monitor closely for any change in status. Note: For neonates (less than 28 days of age), refer to Neonatal Resuscitation protocol.",
+    "badge": null
+   }
+  ],
+  "104": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Close monitoring during fluid administration including frequent reassessment of respiratory effort, lung sounds, and edema.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Do not delay pacing to obtain IV/IO access if the patient is hemodynamically unstable.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Refer to manufacturer recommendations for device specific optimal pad placement.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Administer vasopressors through the largest, most proximal IV site available (AC or higher preferable) or IO. Verify patency prior to initiating infusion and monitor closely for extravasation.",
+    "badge": null
+   }
+  ],
+  "105": [],
+  "106": [],
+  "107": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient reporting chest pain or discomfort • Any patient reporting symptoms which are unexplained and consistent with an atypical presentation of cardiac ischemia, such as: o Abdominal pain o Back pain o Nausea / vomiting o Neck or jaw pain / discomfort o Syncope o Arm pain / discomfort o Dyspnea",
+    "badge": null
+   }
+  ],
+  "108": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Intermediate and Paramedic providers may interpret a 12-Lead ECG as STEMI if diagnostic criteria is met: o Symptoms consistent with an acute coronary syndrome or myocardial ischemia AND o ≥ 1 mm ST segment elevation in two or more contiguous leads",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "*Contact the receiving facility via COR and provide notification of a “Pre-Hospital STEMI Alert” as well as the patient’s name and date of birth to facilitate rapid registration. Do not provide patient identifiers over the HEAR.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Consider right-sided 12-Lead or 15-Lead ECG.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Minimize scene time. Goal ≤ 15 minutes.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "If transport to a PCI capable hospital will not be possible within 30 minutes, consider HEMS.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "With prompt response, initial ECGs often do not show ischemia. When there is high suspicion for cardiac ischemia, obtain serial ECGs to assess symptoms with recent onset (< 1 hour).",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "Do not administer Nitroglycerine (Nitrostat) to patients who have taken any long-acting nitrate-based medications within the past 48 hours. These include: Sildenafil (Viagra / Revatio), Vardenafil (Levitra) and Tadalafil (Cialis). Record 12-Lead ECG prior to nitroglycerine administration.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 8,
+    "text": "Any unstable patient not expected to survive transport to a PCI capable hospital should be transported immediately to the nearest Emergency Department.",
+    "badge": null
+   }
+  ],
+  "109": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient with systolic blood pressure greater than 240 mmHg and/or diastolic greater than 120 mmHg. • Any patient with chronic essential hypertension and sudden, unexplained, significant increase in blood pressure.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Generally, prehospital treatment of hypertension is unnecessary. Monitor for deterioration in patient condition.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Patients with extremely high blood pressure may experience epistaxis (nose bleeding). If present, manage with direct pressure with the patient leaning forward.",
+    "badge": null
+   }
+  ],
+  "110": [],
+  "111": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient with symptomatic hyperglycemia (blood glucose greater than 300 mg/dL) • Any infant, child, or adult with symptomatic hypoglycemia (blood glucose less than 60 mg/dL) • Any newborn (less than 72 hours) with symptomatic hypoglycemia (blood glucose less than 40 mg/dL)",
+    "badge": null
+   }
+  ],
+  "112": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Blood glucose must be assessed for any patient with altered mental status.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "*Response to Glucagon requires adequate stores of glycogen in the liver. Patients with liver disease, malnourishment, and some newborns/children with congenital metabolic disease may not adequately respond. If IV access cannot be obtained and there is no response to Glucagon within 5-10 minutes (or if emergent therapy is required), obtain IO access and administer Dextrose as above.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Asymptomatic hyperglycemia does not require prehospital intervention. Use caution when administering IV fluids to patients with congestive heart failure, ESRD or pulmonary edema.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "The risk of recurrent hypoglycemia following appropriate treatment is higher in the following situations: o No clear explanation for hypoglycemia. o Nausea or vomiting that prevents adequate PO intake. o Signs/symptoms of acute illness such as infection or ACS. o Use of long-acting oral anti-hyperglycemic medications such as Sulfonylureas and SGLT2 inhibitors. o The patient is unaware of symptoms when hypoglycemic or the patient will be left alone. o Persistent vital sign abnormalities or altered mental status.",
+    "badge": null
+   }
+  ],
+  "113": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Under 1 year of age: SBP less than 70 mmHg or MAP less than 55 mmHg • Over 1 year of age: SBP less than 90 mmHg or MAP less than 65 mmHg • No evidence of acute traumatic injury (Refer to Trauma protocol for patients with injuries) • Signs and/or symptoms of inadequate perfusion, such as: o Altered mental status o Syncope o Diaphoresis o Dyspnea o Chest pain or discomfort o Pulmonary edema",
+    "badge": null
+   }
+  ],
+  "114": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "This protocol is not intended for the management of patients with hypotension due to major trauma.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "* There are many potential causes of hypotension. Generally, the causes fall into one of four categories: cardiogenic, distributive, hypovolemic or obstructive. Alternatively, hypotension can be rapidly assessed as a: o Pump problem: Cardiac issues such as dysrhythmia, ischemia, or tamponade o Tank problem: Hypovolemia (intravascular) due to hemorrhage, vomiting, diarrhea, dehydration, sepsis or anaphylaxis o Pipe problem: Large vessel injury or obstruction such as aortic dissection or pulmonary embolism",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Hypotension is a late sign of shock in pediatric patients. Children with tachycardia should be assessed closely for signs of compensated shock and providers must maintain a high index of suspicion that they may progress into decompensated shock with little warning.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "When administering fluids to an infant or child, use a three-way stopcock and syringe to pull/push the desired volume.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "** Use caution when administering IV fluids to patients with known or suspect congestive heart failure or decreased ejection fraction. Large volumes of rapidly administered fluids may lead to pulmonary edema and respiratory distress. Administer smaller boluses (250 mL then reassess) and consider early administration of vasopressors to patients unlikely to tolerate large volumes of IV fluids.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Administer vasopressors through the largest, most proximal IV site available (AC or higher preferable) or IO. Verify patency prior to initiating infusion and monitor closely for signs of extravasation.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "Use caution when considering positive pressure ventilation for patients with hypotension, particularly due to intravascular hypovolemia (reduced pre-load). Intubation and positive pressure ventilation may lead to a sudden drop in blood pressure or circulatory collapse / cardiac arrest.",
+    "badge": null
+   }
+  ],
+  "115": [],
+  "116": [],
+  "117": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "Any patient with persistent nausea or vomiting.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Caution: Administer IV Ondansetron (Zofran) via slow push – at least 30 seconds, but preferably 2 minutes.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Caution: Ondansetron is safe and effective at low doses but known to prolong the cardiac QT interval, increasing the risk of potentially lethal arrhythmia in patients taking other drugs which prolong the QT interval (e.g. Amiodarone, Haloperidol) and patients with pre-existing prolonged-QTc (≥ 500 ms). Assess and consider risk prior to administration.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Anti-emetic medications are often more effective when given prophylactically or for nausea prior to vomiting.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Maximum total dose of Ondansetron is 8 mg (Adult) or 0.3 mg/kg (Pediatric).",
+    "badge": null
+   }
+  ],
+  "118": [],
+  "119": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient with signs of symptoms of drug / medication overdose or report of toxic ingestion • For chemical / biological / radiological exposures, refer to CBRNE protocols.",
+    "badge": null
+   }
+  ],
+  "120": [],
+  "121": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Contact the Poison Control Center at 1-800-222-1222 with any questions. Note: Although Poison Control can provide invaluable expert guidance, it is not online medical control. If recommendations fall outside of protocols, contact medical control for guidance.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Ensure the patient is decontaminated and appropriate PPE is worn if there is any concern for dermal exposure (particularly organophosphates).",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Even small amounts of some drugs / medications can lead to permanent disability or death in small children. Some or all of the effects may be delayed. Maintain a low threshold to transport even well-appearing children following possible toxic ingestions and consider contacting Poison Control and/or Medical Control for guidance.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Hydroxocobalamin (Cyanokit) is not provided as part of the PEMS regional drug box exchange program. Availability may vary between agencies. Dosing guidelines are provided here for reference only – refer to agency specific protocols prior to administration, if applicable.",
+    "badge": null
+   }
+  ],
+  "122": [],
+  "123": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient who exhibits signs or symptoms of respiratory distress including abnormal respiratory rate or effort, increased work of breathing, abnormal breath sounds, cyanosis, or complains of dyspnea, shortness of breath or difficulty breathing. • For respiratory distress due to an allergic reaction, refer to the Allergic Reaction / Anaphylaxis protocol.",
+    "badge": null
+   }
+  ],
+  "124": [],
+  "125": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Appropriate treatment of patients experiencing respiratory distress relies on careful consideration of the underlying cause. During the initial evaluation, first assess for conditions requiring immediate action such as airway obstruction, respiratory failure requiring ventilatory support, cardiac ischemia, or tension pneumothorax/hemothorax. Refer to the condition specific protocols, as necessary.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Use all available data to make an informed decision as to the most likely cause of the patient’s respiratory distress, including known recent and chronic medical history, medications and physical exam via lung assessment, presence or absence of pulmonary/peripheral edema, JVD, productive cough etc.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Use caution when administering epinephrine to patients with suspected asthma/COPD/reactive airway disease who ALSO have a history or signs of congestive heart failure. Contact medical control immediately for guidance if there is any doubt as to whether epinephrine is indicated.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Early use of non-invasive positive pressure ventilation (CPAP) to support work of breathing has been shown to reduce the need for intubation and improve outcomes. Positive pressure ventilation does not replace the need for treatment of the underlying cause of respiratory distress. Close monitoring for the development of hypotension and/or pneumothorax is required.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "In severe cases of asthma/COPD/reactive airway disease, wheezing may be slight or absent if air movement is minimal. As bronchodilator therapy takes effect and air movement increases, wheezing may paradoxically worsen before improving. In all cases, judge the effectiveness of therapy and escalate / de-escalate based on the patient’s comfort, work of breathing and vital signs.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Prior to administering nitroglycerin to any patient: obtain IV access, ensure blood pressure is acceptable (SBP ≥ 100 mmHg and MAP ≥ 65), and assess for the recent use of PDE inhibitors (eg. Sildenafil, Vardenafil, Tadalafil). Note: these medications are routinely prescribed to both men and women for a variety of conditions.",
+    "badge": null
+   }
+  ],
+  "126": [],
+  "127": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient with witnessed or reported seizure-like activity • If the patient is pregnant at greater than 20 weeks gestation or up to 8 weeks post-partum AND has no known history of seizures or epilepsy, refer to Eclampsia protocol.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Seizures have a multitude of causes including epilepsy, hypoglycemia, trauma, stroke, infection and a variety of chemical overdose and withdrawal conditions.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Status epilepticus (two or more seizures without a return to baseline, or a single seizure lasting > 5 minutes) is an emergency requiring rapid treatment. Patients experiencing seizures refractory to benzodiazepine therapy may require airway management. Immediate transport to the closest Emergency Department is warranted.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Pediatric febrile seizures are common, but transport to an emergency department for close monitoring and further evaluation is recommended.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Caution: Both seizures and benzodiazepines may lead to significant respiratory depression. Monitor airway and breathing closely. Refer to Airway Management and Ventilatory Support for treatment guidelines.",
+    "badge": null
+   }
+  ],
+  "128": [],
+  "129": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Suspected infection with measure temperature greater than 38°C / 100.4°F or less than 36°C / 96.8°F • AND two or more of the following criteria < 1 month 1 mo – 1 yr 2 – 5 years 6 – 12 years 13 years + Mentation Lethargic, Altered Mental Status High Risk Immunocompromised, Malignancy, Indwelling catheters/tech, Sickle Cell Disease Bradycardia < 100 < 90 N/A Systolic BP Less than 70 mmHg Less than 90 mmHg MAP Less than 55 mmHg Less than 65 mmHg Respiratory Rate > 60 > 30 Capillary Refill Greater than 3 seconds EtCO2 Less than 25 mmHg",
+    "badge": null
+   }
+  ],
+  "130": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "*Use caution when administering IV fluids to patients with known or suspect congestive heart failure or decreased ejection fraction. Septic patients may be at higher risk of developing pulmonary edema and acute respiratory distress. Monitor closely for fluid overload. Large volumes of rapidly administered fluids may lead to pulmonary edema and respiratory distress. Administer smaller boluses (eg 250 mL then reassess) and consider early administration of vasopressors to patients unlikely to tolerate large volumes of IV fluids. If risk vs benefit of either therapy is in doubt or unclear, contact medical control for guidance.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "High risk patients for sepsis and septic shock include: Age < 56 days (8 weeks), presence of an indwelling catheter, malignancy, asplenia/sickle cell disease, use of immunosuppressant medications and any other immunocompromised condition.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Administer vasopressor through the largest, most proximal IV site available (AC or higher preferable) or IO. Verify patency prior to initiating infusion and monitor closely for signs of extravasation such as pain, skin pallor, absent distal pulses, and/or swelling at the infusion site.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Prehospital sepsis screening and notification have been shown to reduce time to treatment in Emergency Departments and improve mortality.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Refer to Hypotension / Shock protocol for vasopressor drip reference charts.",
+    "badge": null
+   }
+  ],
+  "131": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient presenting with new neurologic symptoms indicative of stroke (BEFAST) including: o Altered mental status o Abnormal or slurred speech o Facial droop o Unilateral weakness o Balance of gait instability o Vision changes. • BEFAST = Balance, Eyes, Face, Arms, Speech, Time",
+    "badge": null
+   }
+  ],
+  "132": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "It is critical to determine, whenever possible, the time of onset of any acute neurologic symptoms. These include headache, weakness, slurred speech, dizziness, altered mental status or any other symptoms that may be consistent with acute stroke.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Bring any medications or medication list, if available, with the patient.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "To expedite assessment in the ED, be prepared to answer questions regarding anticoagulant use, recent surgeries or trauma, bleeding disorders, or prior stroke.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "To facilitate rapid imaging, an 18g IV in the right antecubital (AC) site is preferred.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Approximately 85% of patients diagnosed with a large vessel occlusion have a RACE score ≥ 5. Approximately 69% of patients with a RACE score ≥ 5 will be diagnosed with an LVO. For these patients, endovascular therapy (available only at comprehensive/thrombectomy capable stoke centers) has been shown to lead to better long- term outcomes.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Any patient with an immediate life-threat (e.g. uncontrolled airway, cardiac arrest) that cannot be addressed during transport should be transported to the nearest emergency department.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "Call COR at the receiving facility to inform of the patient’s name and date of birth for rapid registration.",
+    "badge": null
+   }
+  ],
+  "133": [],
+  "134": [],
+  "135": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient with sustained supraventricular tachycardia (SVT). • SVT: Narrow complex (Adult < 120 ms, Ped < 90 ms), rate usually > 150 bpm, no P waves • Patients with chest pain, dyspnea, altered mental status, pulmonary edema, or other signs/symptoms of shock should be considered unstable. • For wide complex tachycardias, refer to Ventricular Tachycardia with a Pulse.",
+    "badge": null
+   }
+  ],
+  "136": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Unstable vs stable: Unstable patients are those with signs/symptoms consistent with poor or inadequate perfusion (chest pain, AMS, hypotension, diaphoresis, respiratory distress etc). Compensated vs decompensated tachycardia is another way of describing this difference. Stable/compensated patients may be symptomatic (palpitations or mild shortness of breath with exertion, for example) but are not in extremis.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "There are many potential causes for tachyarrhythmias including heart disease, fever, sepsis, trauma, pain, hypoxia, hypovolemia, hypoglycemia, toxic ingestion, myocardial infarction, pulmonary embolism, electrolyte abnormalities and many others. Prehospital therapy is based on early identification and treatment of unstable arrythmias and those at risk of rapid deterioration as well as the inciting factor.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Many patients who experience tachyarrhythmias have concurrent congestive heart failure or decreased ejection fraction. Exercise caution when providing IV fluids – give only enough to improve perfusion and monitor for signs of pulmonary edema.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "In rare cases, electrical cardioversion to sinus rhythm can result in embolization of small blood clots from the heart, leading to stroke. Following emergent cardioversion, monitor closely for changes in mental status or physical exam and reassess destination choice as appropriate.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Dosing of electrical therapy described above serves as a guideline only. Confirm agency dosing for cardioversion and defibrillation with device specific manufacturers recommendations.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Ensure the device is set to SYNC prior to any attempted cardioversion of a patient with a palpable pulse. Unsynchronized cardioversion/defibrillation may lead to ventricular fibrillation and cardiac arrest.",
+    "badge": null
+   }
+  ],
+  "137": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient with sustained ventricular tachycardia with a palpable pulse. • Ventricular tachycardia: Wide complex (Adult > 120 ms, Ped > 90 ms), no P waves, usual rate > 150 bpm • Patients with chest pain, dyspnea, altered mental status, pulmonary edema, or other signs/symptoms of shock should be considered unstable.",
+    "badge": null
+   }
+  ],
+  "138": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Unstable vs stable: Unstable patients are those with signs/symptoms consistent with poor or inadequate perfusion (chest pain, AMS, hypotension, diaphoresis, respiratory distress etc). Compensated vs decompensated tachycardia is another way of describing this difference. Stable/compensated patients may be symptomatic (palpitations or mild shortness of breath with exertion, for example) but are not in extremis.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "There are many potential causes for tachyarrhythmias including heart disease, fever, sepsis, trauma, pain, hypoxia, hypovolemia, hypoglycemia, toxic ingestion, myocardial infarction, pulmonary embolism, electrolyte abnormalities and many others. Prehospital therapy is based on early identification and treatment of unstable arrythmias and those at risk of rapid deterioration as well as the inciting factor.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Many patients who experience tachyarrhythmias have concurrent congestive heart failure or decreased ejection fraction. Exercise caution when providing IV fluids – give only enough to improve perfusion and monitor for signs of pulmonary edema.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "In rare cases, electrical cardioversion to sinus rhythm can result in embolization of small blood clots from the heart, leading to stroke. Following emergent cardioversion, monitor closely for changes in mental status or physical exam and reassess destination choice as appropriate.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Dosing of electrical therapy described above serves as a guideline only. Confirm agency dosing for cardioversion and defibrillation with device specific manufacturers recommendations.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Ensure the device is set to SYNC prior to any attempted cardioversion of a patient with a palpable pulse. Unsynchronized cardioversion/defibrillation may lead to ventricular fibrillation and cardiac arrest.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "If the rhythm is polymorphic ventricular tachycardia, synchronization may not be possible. This is the only time a patient with a palpable pulse is treated with unsynchronized defibrillation.",
+    "badge": null
+   }
+  ],
+  "139": [],
+  "140": [],
+  "141": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient with known or suspected pregnancy and symptoms of term or pre-term labor (contractions, loss of fluid, vaginal bleeding and/or urge to push)",
+    "badge": null
+   }
+  ],
+  "142": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Patients who are known or suspected to be pregnant and are experiencing profuse vaginal bleeding should be transported to a facility with obstetric capability if patient condition and geographic constraints allow. o Conditions such as uterine rupture and placental abruption are rare but cannot be managed effectively in the field and will most likely present with severe abdominal pain and symptoms consistent with hemorrhagic shock.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Gestational age can be approximated by the palpable height of the uterine fundus, with 20 weeks being roughly the height of the umbilicus. Resuscitation should be attempted for any fetus born after 22 weeks gestational age. If unsure of gestational age or viability, initiate resuscitative efforts by following the Neonatal Resuscitation protocol and contact medical control for guidance.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Rupture of membranes (loss of fluid) prior to 37 weeks gestation is considered premature. These patients are at an increased risk of umbilical cord prolapse and need for resuscitation of the neonate.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Hypotension not associated with blood loss should be addressed with IV fluids and, if possible, relieving weight on the IVC by placing the patient in a left lateral recumbent position.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Consider requesting an additional transport unit to the scene to care for the neonate if delivery is imminent.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "No NOT apply pressure to the uterine fundus. Suprapubic pressure is used to guide the fetus under the pubic symphysis.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "Normal newborn SpO2 is 60-70% in the first minute of life, 80-85% at five minutes, and 85-95% at ten minutes.",
+    "badge": null
+   }
+  ],
+  "143": [],
+  "144": [],
+  "145": [],
+  "146": [],
+  "147": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Pre-eclampsia with severe features: Any pregnant (or recently pregnant) patient over 20 weeks gestational age presenting with one or more of the following: o Systolic blood pressure greater than 160 mmHg or diastolic blood pressure greater than 110 mmHg o Severe and/or persistent headache o Right upper quadrant or epigastric abdominal pain o New onset of visual disturbance o Pulmonary edema • Eclampsia: Any pregnant or recently pregnant patient over 20 weeks gestational age experiencing seizures.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Pre-Eclampsia and Eclampsia can occur up to 8 weeks AFTER delivery of the baby.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "The primary goal of therapy is to prevent or limit seizures, and rapid intervention is warranted. If administration of Magnesium will be delayed due to lack of IV/IO access or need for reconstitution, consider early IM administration of midazolam followed by Magnesium infusion as soon as feasible.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "For the patient who presents with pre-eclampsia and deteriorates to eclampsia (seizes), the total maximum dose is 4g Magnesium Sulfate.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Provide early notification to the hospital as non-ED care teams such as OBGYN and anesthesia may need to be mobilized.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Caution: Administration of Magnesium and Benzodiazepines may lead to respiratory/CNS depression.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Caution: rapid administration of Magnesium may cause vasodilation and hypotension – monitor vitals at least every 5 minutes during infusion and stop infusion immediately if hypotension develops.",
+    "badge": null
+   }
+  ],
+  "148": [],
+  "149": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "Uterine Rupture - Severe vaginal bleeding in the second half of pregnancy.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Should be suspected in the pregnant trauma patient who has lost the palpable uterine contour, has easily palpated fetal parts, and who has severe abdominal pain. ABRUPTIO PLACENTA",
+    "badge": null
+   },
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "Premature separation of the placenta from the uterine wall after the 20th week of gestation and prior to birth. EMR Follow General – Universal Patient Care/Initial Patient Contact protocol. EMR EMR Support life threatening problems associated with airway, breathing and circulation. EMR EMR Administer oxygen as needed per patient assessment. EMR EMR If patient exhibits signs of shock, see Medical – Hypotension/Shock (Non-trauma). EMR EMR Place patient in left lateral recumbent position and transport immediately. EMR Establish IV access and administer 20 mL/kg 0.9% Normal Saline bolus up to a A total of 1,000 mL; continuously reassess need for further fluid administration. A",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Patients younger than 20 and greater than 35 years of age are at greater risk for placental abruption.",
+    "badge": null
+   }
+  ],
+  "150": [],
+  "151": [],
+  "152": [],
+  "153": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient with likely exposure to a choking agent / airway irritant and one or more of the following symptoms: o Difficulty breathing / respiratory distress o Throat pain / burning o Wheezing o Laryngospasm o Non-cardiogenic pulmonary edema • For respiratory distress due to nerve agents / organophosphates, refer to Nerve Agents protocol.",
+    "badge": null
+   }
+  ],
+  "154": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "The decision to enter a contaminated area to rescue and/or provide patient care rests with the incident commander and organizational policy.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Victims that have been decontaminated and/or confirmed “clean” are safe for treatment and transportation to a health care facility. Examples of common choking agents:",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Chlorine",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Ammonia",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Phosgene",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Fuming Sulfuric Acid",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "Hydrogen Sulfide",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 8,
+    "text": "Hydrochloric Acid",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 9,
+    "text": "Hydrofluoric Acid Concept of treatment protocol:",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 10,
+    "text": "Reduce the dose o Rescue from environment o Decontamination",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 11,
+    "text": "Optimize airway / ventilation",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 12,
+    "text": "Administer treatments / antidotes",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 13,
+    "text": "Support cardiovascular system / perfusion Contact the Poison Control Center at 1-800-222-1222 with any questions. Note: Although Poison Control can provide invaluable expert guidance, it is not online medical control. If recommendations fall outside of protocols, contact medical control for guidance.",
+    "badge": null
+   }
+  ],
+  "155": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient with likely exposure to a biological / infectious agent and one or more of the following otherwise unexplained symptoms: o Fever o Shortness of breath o Gastrointestinal symptoms o Rash • Any patient with close contact with a person with a confirmed or suspected diagnosis of an infectious biological agent such as: o Anthrax o Plague o Smallpox o Hemorrhagic Fever (e.g. Ebola, Marburg)",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Responders should wear a minimum of N-95 respirators with airborne and contact PPE (Level C) when responding to non-specific flu-like symptoms in the setting of a suspected biological incident. Higher levels of PPE may be warranted depending on the suspected biological / infectious agent.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "A surgical mask may be placed on the patient with suspected infection, under a non-rebreather mask if necessary.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Contact the local health department to determine whether antibiotic prophylaxis is required for first responders and/or close contacts.",
+    "badge": null
+   }
+  ],
+  "156": [],
+  "157": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient with suspected exposure to a blistering agent (including asymptomatic exposure) • Any patient with possible exposure to a blistering agent and signs or symptoms of skin or mucous membrane irritation and/or respiratory distress.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Blistering agents pose a significant risk of exposure to first responders. They are difficult to remove during decontamination and often do not provide immediate signs of contamination. Ensure appropriate PPE is worn during patient contact and maintain a low threshold for gross decontamination.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Skin penetration is rapid. Mustard agents cause both localized cellular damage and systemic damage. A large liquid or vapor exposure causes immune system failure and pulmonary damage. Sepsis and pulmonary damage the major causes of death.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Blister agents are powerful skin and mucous membrane irritants and vesicants, produce corrosion and necrosis of the skin, eyes, and respiratory tract. While the chemical reaction with biological tissue occurs rapidly, symptoms are typically delayed by several hours. Systemic poisoning occurs more easily in warm climates.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "DERMAL exposure: Signs and symptoms typically occurs within 2 – 24 hours of exposure. Itching and erythema occur 2 to 3 hours after dermal exposure to gas or liquid; erythema spreads over the next 24 hours and yellowish blisters appear and can become ulcerated. Thinner skin (neck, axillae, and groin) is more susceptible than thicker skin (soles, palms).",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "INHALATION exposure: Cough, hemoptysis, dyspnea, and possible pulmonary edema may occur up to 24 hours after inhalation of the gas. Ulceration of airway mucose may occur. Mild pulmonary exposure produces rhinorrhea, sneezing, epistaxis, hoarseness, and cough within 12 to 24 hours of exposure. Severe exposure produces additional symptoms of productive cough and shortness of breath (mild to severe) 2 to 4 hours after exposure.",
+    "badge": null
+   }
+  ],
+  "158": [],
+  "159": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient with suspected exposure to a chemical nerve agent or organophosphate AND • Signs / symptoms of exposure, including: o SLUDGE: Excessive salivation, lacrimation, urination, defecation, gastrointestinal distress, or emesis o DUMBBELS: Diarrhea, urinary, miosis, bronchorrhea, bradycardia, emesis, lacrimation, or salivation.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Each DuoDote Autoinjector contains 2.1 mg of Atropine sulfate and 600 mg of Pralodoxime chloride.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Nerve agents include both common organophosphate/carbamate pesticides and military grade toxins. Examples include: Azinphos-methyl, Malathion, Methyl parathion, Aldicarb, Sevin, Bendiocarb, Sarin, Somen, Tobun, VX, and Novichok.",
+    "badge": null
+   }
+  ],
+  "160": [],
+  "161": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any patient with confirmed or suspected exposure to harmful radiation.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "*Treatment of seriously injured or ill radiologically contaminated patients takes priority over decontamination. Do not delay advanced life support to assess contamination status.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Contaminated patients from a Radiation Dispersal Device present a low risk of exposure to healthcare providers.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Patients with open wounds should have the wound dressed and bandages without cleaning.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Responders should wear a minimum of N-95 respirators when responding to non-specific explosions to reduce the change of internal contamination.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "The mother likely isotopes used for Radiation Dispersal Devices will emit Gamma radiation, in addition to Alpha and Beta particles. Therefore, most available detectors will identify contamination. However, the dispersal of a source reduces the level of radioactivity, and therefore detection above background levels may be difficult.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "When monitoring for patient contamination (external), use of the portal monitors (found at several hospital emergency departments and available through the Hampton Roads Metropolitan Medical Strike Team) and/or the use of hand-held ratemeters with a “pancake” probe is suggested. When using a hand-held ratemeter, a quick “triage” of contamination should focus on the head (hair) and feet (shoes), with a more extensive survey on those found to be contaminated.",
+    "badge": null
+   }
+  ],
+  "162": [],
+  "163": [],
+  "164": [],
+  "165": [],
+  "166": [],
+  "167": [],
+  "168": [],
+  "169": [],
+  "170": [],
+  "171": [],
+  "172": [],
+  "173": [],
+  "174": [],
+  "175": [],
+  "176": [],
+  "177": [],
+  "178": [],
+  "179": [],
+  "180": [],
+  "181": [],
+  "182": [],
+  "183": [],
+  "184": [],
+  "185": [],
+  "186": [],
+  "187": [],
+  "188": [],
+  "189": [],
+  "190": [],
+  "191": [],
+  "192": [],
+  "193": [],
+  "194": [],
+  "195": [],
+  "196": [],
+  "197": [],
+  "198": [],
+  "199": [],
+  "200": [],
+  "201": [],
+  "202": [],
+  "203": [],
+  "204": [],
+  "205": [],
+  "206": [],
+  "207": [],
+  "208": [],
+  "209": [],
+  "210": [],
+  "211": [],
+  "212": [],
+  "213": [],
+  "214": [],
+  "215": [],
+  "216": [],
+  "217": [],
+  "218": [],
+  "219": [],
+  "220": [],
+  "221": [],
+  "222": [],
+  "223": [],
+  "224": [],
+  "225": [],
+  "226": [],
+  "227": [],
+  "228": [],
+  "229": [],
+  "230": [],
+  "231": [
+   {
+    "heading": "INDICATIONS",
+    "ordinal": 1,
+    "text": "• As indicated by any of the following protocols: o Allergic Reaction / Anaphylaxis o Overdose / Poisoning / Toxic Ingestion o Bradycardia (Symptomatic) o Post-Cardiac Arrest Care (ROSC) o Chest Pain (Cardiac) o Seizure o Crush Injuries o Tachyarrhythmias o Hypotension and Shock • Any witnessed or reported syncope, altered mental status, respiratory distress, and/or any condition or presentation which raises suspicion for an acute coronary syndrome, cardiac ischemia, or dysrhythmia.",
+    "badge": null
+   }
+  ],
+  "232": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Dry with a towel or shave the chest as needed if electrodes will not adhere or signal cannot becaptured.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Consider patient privacy, modesty, and cultural preferences. Consider moving out of public view prior to removing clothing.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Signs of ischemia (including S-T elevation) cannot be accurately or adequately assessed via 2- or 4-Lead ECG. A 12-Lead ECG is required to assess for ischemia.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "If a 12-Lead ECG has been transmitted and then a patient refusal is being obtained, consider contacting medical control to ensure there are no additional findings which the patient may require to make an informed decision.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "The initial ECGs may not show ischemia. When there is high suspicion for cardiac ischemia, obtain serial ECGs (approx. 10 minutes apart) to assess for changes and the development of signs of ischemia.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "If possible, obtain a 12-Lead ECG prior to the release of a crush injury followed by serial ECGs once released.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "Intermediate and Paramedic providers may interpret a 12-Lead ECG as STEMI if diagnostic criteria ismet: o Symptoms consistent with an acute coronary syndrome or myocardial infarction AND o ≥ 1 mm ST segment elevation in two or more contiguous leads",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 8,
+    "text": "EMT-I and Paramedic: If there is >1 mm ST elevation in leads II, III, and/or V1, and the ECG reads STEMI/ACUTE MI, consider obtaining a right-sided (V4R) ECG. See diagram below for lead placement. Transmit and consult medical control prior to administering Nitroglycerine. o ST elevation > 1 mm in lead V4R is highly sensitive for right ventricular infarction. o Patients with acute right ventricular infarction are highly preload dependent. Avoid nitrates unless specifically ordered by Medical Control.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 9,
+    "text": "A Right-sided 12-Lead ECG (V4R) & Posterior 12-Lead ECG (V8 & V9) together constitute a 15-LeadECG: o V4R- (formerly V4)5th intercostal space at midclavicular line on the patient’s right side o V8 - (formerly V5) 6th intercostal space left posterior at midscapular line o V9 - (formerly V6) 6th intercostal space left at paraspinous line o Label the second 12-Lead ECG to reflect the new leads: V4 as V4R, V5 as V8, and V6 as V9",
+    "badge": null
+   }
+  ],
+  "233": [],
+  "234": [],
+  "235": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Patient unresponsive, without palpable pulse or respiration (excluding agonal breaths). • Patients with obvious death (rigor mortis, lividity, decomposition, or injuries inconsistent with survival) are excluded.",
+    "badge": null
+   }
+  ],
+  "236": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Compressions:",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Push hard and fast: rate 100 – 120 bpm. Allow complete chest recoil.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Minimize interruptions in chest compressions.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Change compressor every 2 minutes or sooner iffatigued.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Give continuous compressions with advanced airway.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Use quantitative ETCO2 monitoring with BVM o If ETCO2 < 10 mmHg, improve chestcompressions o If sudden increase in ETCO2 isnoted (above 30-40mmHg), check pulse and rhythm for ROSC.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "Airway:",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 8,
+    "text": "Avoid excessive ventilation. Consider supraglottic airway (BIAD) or endotracheal intubation. (EMT)",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 9,
+    "text": "Studies to date have not shown a clear improvement in outcomes with SGA vs intubation – do not compromise chest compressions for intubation.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 10,
+    "text": "Use ETCO2 to confirm and monitor placement of anyadvanced airway.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 11,
+    "text": "Continually monitor ETCO2 with target above 10 mmHg during CPR and 35 - 45 mmHg if ROSC is achieved.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 12,
+    "text": "In post ROSC patient, if ETCO2 falls below 20 mmHg or signal is lost, immediately reassess pulses and airway.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 13,
+    "text": "Defibrillation:",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 14,
+    "text": "Ensure pad placement is optimal. Adjust pads if shockable rhythm is refractory to electrical therapy. Consider Anterior/Posterior placement.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 15,
+    "text": "Use maximum joules setting for adult defibrillation.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 16,
+    "text": "Reversible causes: Identify and treat per appropriate protocol and scope of practice:",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 17,
+    "text": "Hypoxia • Tension pneumothorax",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 18,
+    "text": "Hyperkalemia or Hypokalemia • Tamponade (Cardiac)",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 19,
+    "text": "Hypothermia • Thrombosis (Cardiac, Pulmonary)",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 20,
+    "text": "Hypovolemia • Toxins",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 21,
+    "text": "Hydrogen ion (acidosis) • Trauma",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 22,
+    "text": "Hypoglycemia or hyperglycemia • Tablets (Drug Overdose)",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 23,
+    "text": "Termination of Resuscitation (TOR):",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 24,
+    "text": "Refer to Death & Criteria for Withholding Resuscitationprotocol.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 25,
+    "text": "Termination of resuscitative efforts is a Medical Control decisiononly.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 26,
+    "text": "Consider contacting Medical Control to request TOR if the arrest was not witnessed by EMS and after 20 minutes of continuous CPR: 1) There has been no return of spontaneous circulation (ROSC). AND 2) No shocks were delivered.",
+    "badge": null
+   }
+  ],
+  "237": [],
+  "238": [],
+  "239": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Hypoxia (SpO2 < 94%) • Respiratory distress or failure • Acute or impending airway obstruction (expanding hematoma, edema, mass or other obstruction) • Inability to maintain a patent airway (due to secretions, blood, vomit, trauma etc) • Altered level of consciousness with ineffective / inadequate spontaneous respirations",
+    "badge": null
+   }
+  ],
+  "240": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "CPAP is a Red Dot Procedure for ALL EMS Certification levels",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "BVM use: Two-person technique is preferred and generally more effective vs one person technique. Oral and/or nasal airway tools (OPA/NPA) should be used with BVM to improve ventilation and prevent gastric insufflation. An average adult BVM has a capacity of 1,600 mL – more than double the physiologic adult tidal volume. Fully squeezing the bag will over-ventilate the patient. Over-ventilation with BVM significantly increases the risk of aspiration, hypotension, pneumothorax, and other major complications. The AIC may delegate airway management but must keep in mind that appropriate BVM use requires experience and a thorough understanding of cardio-pulmonary physiology. Although the AIC must maintain situational awareness and provide supervision of airway management, ensuring safe and effective airway management is the responsibility of ALL providers caring for the patient.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "* Foreign body airway obstruction: Perform Heimlich abdominal thrusts standing behind the patient with fist midline, below xiphoid process and above navel. Perform adult chest thrusts standing behind the patient with fist midline against the sternum or supine with palm against the sternum. Perform back blows and chest thrusts with infant positioned prone or supine, head down, below level of the chest.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "**Caution: Avoid overventilation in patients with obstructive airway disease (e.g. COPD, asthma). Allow longer exhalation time and consider permissive hypercapnia (ETCO2 >45 mmHg) to prevent breath stacking.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Caution: Sudden or persistent hypotension in patients receiving positive pressure ventilation may be due to increased intrathoracic pressure due to breath stacking and/or tension pneumothorax. Assess for pneumothorax and perform needle thoracostomy if indicated. Adjust PEEP (low or none), respiratory rate (low) and/or volume (low). Consider IV fluid bolus and/or vasopressor. If breath stacking has occurred in patients with obstructive airway disease, disconnect BVM and allow patient to exhale.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Caution: Avoid aspiration when using CPAP. Use only on conscious and alert patients. Remove the mask immediately if the patient begins to vomit. Consider RSI, if available.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "Caution: Avoid unrecognized advanced airway dislodgement. Once an invasive airway (BIAD/SGA, ET tube or surgical airway) is in place, continuous box-waveform ETCO2 signal must be ensured throughout treatment and transport. Any concern for airway dislodgement should immediately be addressed. Immediate re-visualization of endotracheal tube placement (via direct or video laryngoscopy) is required for any loss of box-waveform signal, sudden drop in SpO2, difficulty ventilating or other concern for dislodgement.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 8,
+    "text": "Caution: Avoid hypoxia and hypotension. Many conditions result in significantly worse outcomes if even transient episodes hypoxia and/or hypotension occur. Extreme care must be taken to ensure hypoxia and hypotension are not induced during airway management, particularly endotracheal intubation. Positive pressure ventilation has major effects on cardiac preload and may worsen or induce hypotension in patients suffering or at risk of preload reduction. Similarly, pneumothorax may be worsened or induced by use of positive pressure ventilation. Close monitoring for deterioration and rapid intervention are required for patients at risk of lung injury.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 9,
+    "text": "*** Note: Pre-hospital endotracheal intubation of pediatric patients is poorly supported by the available scientific literature and should be reserved for life-threatening situations in which less invasive means of oxygenation / ventilation have been attempted or considered and found to be not feasible. In all cases, the provider with the most experienced with pediatric airway management should perform the procedure. A robust training and skill maintenance program with involvement of the agency Medical Director and an agency-level system of continuous quality improvement (CQI)/quality assurance (QA) are highly recommended for agencies electing to include pediatric intubation as a procedure.",
+    "badge": null
+   }
+  ],
+  "241": [
+   {
+    "heading": "INDICATIONS",
+    "ordinal": 1,
+    "text": "• Any patient for whom continuous monitoring of respiratory effort, ventilation, and/or perfusion isrequired. • Continuous monitoring of end-tidal CO2 capnography is mandatory for any patient with an endotracheal tube or supraglottic airway device in place. Capnography is a Red Dot Procedure for EMT",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "In general, an ETCO2 < 20 suggests inadequate pulmonary perfusion (e.g. hypotension / pulmonary embolism) and/or severe metabolic derangement (e.g. diabetic ketoacidosis).",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "If using an inline HEPA filter, attach the inline ETCO2 sampling device proximal to the HEPA filter (closer to the patient).",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "With high-quality CPR, ETCO2 may consistently be measured in the normal range. Assess for ROSC if a sudden rise in ETCO2 is noted (e.g. 12 mmHg to 35 mmHg).",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Achieving normal ETCO2 levels may not be possible for patients with chronic obstructive airway disease (asthma / COPD), particularly during acute exacerbations. Utilize bronchodilators to improve ventilation when necessary and, if using assisted/mechanical ventilation, consider permissive hypercapnia (up to 90 mmHg) to reduce the risk of breath-stacking.",
+    "badge": null
+   }
+  ],
+  "242": [],
+  "243": [
+   {
+    "heading": "INDICATIONS",
+    "ordinal": 1,
+    "text": "• Unilateral or bilateral needle decompression: Cardiac arrest, hypotension, clinical signs of shock, or poor perfusion AND absent or decreased breath sounds. • Bilateral needle decompression: Cardiac arrest with evidence of significant blunt or penetrating thoracoabdominal trauma.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Needle decompression is known to have a failure rate of up to 50% due to kinking of the catheter, displacement, lack of penetration into the pleural space, or obstruction. Use the longest 14-gauge catheter available. If the initial attempt fails to return any air/blood/fluid, consider a second attempt in the same site or at an alternate site (lateral) on the same side.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "If the initial procedure produces transient clinical improvement, followed by clinical deterioration, consider repeating the procedure as air/blood may have reaccumulated.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Once needle decompression is performed, it must be assumed that the patient has a pneumothorax, regardless of air/blood/fluid return. Use caution when ventilating the patient, as positive pressure ventilation may exacerbate the pneumothorax, leading the hemodynamic instability/collapse.",
+    "badge": null
+   }
+  ],
+  "244": [],
+  "245": [
+   {
+    "heading": "INDICATIONS",
+    "ordinal": 1,
+    "text": "• Any adult patient with respiratory distress due to pulmonary edema, infection, near-drowning etc. • Use with caution for patients experiencing respiratory distress due to asthma / COPD. • Signs of respiratory distress include: o Accessory muscle use / retraction o SpO2 less than 94% o Respiratory rate greater than 24 o Inability to speak in complete sentences.",
+    "badge": null
+   },
+   {
+    "heading": "CONTRAINDICATIONS",
+    "ordinal": 1,
+    "text": "• Apnea / agonal respirations • Decreased level of consciousness (GCS ≤ 13) • Pneumothorax • Facial trauma, burns, or recent surgery • Penetrating neck and/or chest trauma • Active vomiting / severe nausea • Hypotension (SBP < 90 mmHg, MAP < 65) • Inability to tolerate tight fitting mask",
+    "badge": null
+   }
+  ],
+  "246": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Early use of CPAP for patients with respiratory distress has been shown to reduce the need for intubation and improve patient outcomes.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Positive pressure ventilation generally does not address the underlying cause of respiratory distress. Treatment of the underlying cause is of critical importance, such as bronchodilators for obstructive lung disease or preload reduction for congestive heart failure.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Caution: Sudden or persistent hypotension in patients receiving positive pressure ventilation may be due to increased intrathoracic pressure due to breath stacking and/or tension pneumothorax. Assess for pneumothorax and perform needle thoracostomy if indicated. Adjust PEEP (low or none), respiratory rate (low) and/or volume (low). Consider IV fluid bolus and/or vasopressor. If breath stacking has occurred in patients with obstructive airway disease, disconnect BVM and allow patient to exhale.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Caution: Avoid aspiration when using CPAP. Use only on conscious and alert patients. Remove the mask immediately if the patient begins to vomit. Consider RSI, if available.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Caution: Avoid hypoxia and hypotension. Many conditions result in significantly worse outcomes if even transient episodes hypoxia and/or hypotension occur. Extreme care must be taken to ensure hypoxia and hypotension are not induced during airway management, particularly endotracheal intubation. Positive pressure ventilation has major effects on cardiac preload and may worsen or induce hypotension in patients suffering or at risk of preload reduction. Similarly, pneumothorax may be worsened or induced by use of positive pressure ventilation. Close monitoring for deterioration and rapid intervention are required for patients at risk of lung injury.",
+    "badge": null
+   }
+  ],
+  "247": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Respiratory failure or respiratory arrest • Acute or impending airway obstruction • Inability to maintain a patent airway • Altered level of consciousness with ineffective or inadequate spontaneous respirations",
+    "badge": null
+   }
+  ],
+  "248": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Assume all intubations to be potentially difficult and prepare as such.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "ETCO2 monitoring with a continuous box-waveform while intubated is the accepted national standard of care. Without exception, after any patient is intubated, continuous monitoring of ETCO2 is expected and is the shared responsibility of everyone caring for thepatient.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Optimal de-nitrogenation and pre-oxygenation can significantly extend the safe apnea time. Provide at least 3 minutes of 100% FiO2 via NRB or BVM prior to initiating an intubation procedure.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Consider apneic oxygenation via nasal canula at 15 LPM throughout the procedure.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Address unstable vital signs (hypotension or unstable tachycardia / bradycardia) prior to intubation.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Non-cardiac arrest patients: Shock index has been shown to accurately predict post-intubation hypotension (PIH) and cardiac arrest. Shock index is calculated as heart rate divided by systolic blood pressure (HR/SBP). Normal values range from 0.5-0.7. Values greater than 1.0 are suggestive of a low cardiac output state – these patients may require resuscitation prior to endotracheal intubation. Normal shock index does not negate the possibility of PIH. Example: Heart rate 70, Blood pressure 120/70. HR/SBP = 70/120 = SI 0.58 Example: Heart rate 130, Blood pressure 100/50. HR/SBP = 130/100 = SI 1.3 Note: “Permissive hypotension” (SBP 80-90 mmHg, adjusted for mental status) is preferred when managing patients with hemorrhagic shock (trauma, GI bleed, etc). Intubation should be avoided in these patients whenever possible due to high risk of post-intubation hypotension and cardiac arrest.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "Lead with suction: Video laryngoscopes are prone to being obscured by vomit, blood and/or secretions in the airway. “Lead with suction” refers to placing suction into the mouth first, clearing away any such secretions prior to advancing the laryngoscope.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 8,
+    "text": "Caution: Avoid deep placement of the laryngoscope. In general, curved laryngoscopes are designed to be used with the tip in the vallecula. Overly deep placement can result in vomiting and increased risk of aspiration, difficulty passing the bougie/tube through the vocal cords, and unintentional trauma to delicate airway structures such as the vocal cords. If the blade is unintentionally placed below the vallecula, it is recommended to slide back until the epiglottis drops into view and then reposition into the vallecular space.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 9,
+    "text": "Patient hand off: In addition to standard patient hand-off information, inform ED team on arrival of indication for intubation, size of ET tube, depth of tube measured at teeth, current PEEP setting, ETCO2 range post- intubation, medications given and any other pertinent clinical information.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 10,
+    "text": "If performing RSI: Etomidate has minimal intrinsic effect on hemodynamics and is the preferred induction agent in most cases. Ketamine may increase the risk of post-intubation hypotension, particularly in patients with tachycardia. Ketamine does have some effect as a bronchodilator and may be preferred for patients with acute respiratory distress due to asthma, COPD, anaphylaxis etc. In all cases, notify the receiving facility of RSI medications administered, including dose and time given",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 11,
+    "text": "When exact weight is not known, use of a length-based tape (e.g. Broslow tape) is required for sizing pediatric equipment. Cuffed ET tube size should approximate (Age / 4) + 3.5.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 12,
+    "text": "* Note: Pre-hospital endotracheal intubation of pediatric patients is poorly supported by the available",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 13,
+    "text": "scientific literature and should be reserved for life-threatening situations in which less invasive means of oxygenation/ventilation have been attempted or considered and found to be not feasible. In all cases, the provider most experienced with pediatric airway management should perform the procedure. A robust training and skill maintenance program with involvement of the agency medical director and an agency-level system of continuous quality improvement (CQI)/quality assurance (QA) are highly recommended for agencies electing to include pediatric intubation as a procedure .",
+    "badge": null
+   }
+  ],
+  "249": [
+   {
+    "heading": "INDICATIONS",
+    "ordinal": 1,
+    "text": "• Intraosseous access is indicated for any patient in extremis requiring immediate medication administration and IV access cannot be readily obtained (90 seconds or two failed attempts).",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "If two “pops” or losses of resistance are felt, it is likely the needle has passed through the bone completely. Remove the needle.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "To remove a non-functional IO, attach a 10 cc syringe to the Luer-lock then rotate clockwise while pulling straight back. Dispose of the needle in a sharps container.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "IO flow rates: Proximal humerus (~80 mL/min), Tibia (~15 mL/min)",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Any medication routinely administered via the IV route may be administered via the IO route if IV access is not available.",
+    "badge": null
+   }
+  ],
+  "250": [],
+  "251": [
+   {
+    "heading": "INDICATIONS",
+    "ordinal": 1,
+    "text": "Any patient with an implanted, wearable, or attached medication or cardiac support device or pump.",
+    "badge": null
+   }
+  ],
+  "252": [],
+  "253": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "* The patient or family will often have extensive experience troubleshooting the device as well as contact information for a device coordinator, particularly for cardiac support devices such as VADs and TAHs. These coordinators can be extremely helpful in troubleshooting device issues and alarms, coordinating resources, and appropriately triaging the patient to definitive care. However, while device coordinators can make suggestions, they cannot provide binding online medical control orders based on Virginia Department of Health regulations. If their recommendations contradict established protocol or scope or practice, contact Medical Control for guidance.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "There are multiple potential causes for hypotension or “Low Flow” alarms with a VAD. While hypovolemia is a frequent issue, large volumes of IV fluids may catastrophically worsen other causes (e.g. pump thrombosis). Given the complexity of these patients, seeking expert consultation prior to initiating therapy is highly recommended.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "** ETCO2 (EMT) for the purpose of determining adequacy of perfusion should be measured via endotracheal tube or tracheostomy. ETCO2 (EMT) measured via SGA (EMT) is a reasonable alternative in the prehospital environment if endotracheal intubation cannot be rapidly performed.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Assessment of patients with VADs can be challenging due to differences in exam and available vital signs such as absent pulses, difficulty assessing BP, and the presence of machine noise over the lung fields. Alternate indicators of perfusion state can be extremely helpful such as reported symptoms, mental status, and warmth of extremities. Handheld doppler or ultrasound may allow for assessment of systolic blood pressure, which is equivalent to MAP in the case of a continuous flow VAD.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Assume all VAD and TAH patients to be anticoagulated.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "VAD patients can sometimes maintain consciousness while exhibiting otherwise lethal arrhythmias such as ventricular tachycardia and ventricular fibrillation. Treatment of these conditions follows standard protocols.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "To replace the VAD system controller, ensure power is supplied to the backup unit, then quickly transfer the drive line to the new unit. If successful, the unit will power on automatically. Attempt this ONLY as a last resort (ideally under telephone guidance from a device coordinator or with help of a trained family member).",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 8,
+    "text": "Generally, for patients with VADs and TAHs, vasopressors are reserved for hypotension/shock refractory to volume expansion. When indicated, low dose norepinephrine is the preferred agent. Use only in direct consultation with a device coordinator or Medical Control.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 9,
+    "text": "Total Artificial Hearts (TAHs) do not generate an electrocardiographic rhythm. Do not attempt to obtain a cardiac rhythm or ECG. The result will appear to be asystole regardless of device function.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 10,
+    "text": "Up to 5 defibrillations can be provided by the wearable defibrillator (LifeVest). An audible alarm will sound if an arrhythmia is detected. If the patient is conscious, he/she can inactivate the treatment sequence. If not inactivated, a transcutaneous defibrillation will be delivered, typically within one minute. Stand clear if the alarm is sounding. Once the alarm is no longer sounding, assess the patient and continue treatment as indicated.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 11,
+    "text": "Infection is a major concern for centrally terminating venous catheters and ports. Sterility must bemaintained.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 12,
+    "text": "As newer and more complex devices become available to patients in the community, the need increases for clear and timely communication between first responders, receiving facilities, and specialty centers. When in doubt, contact Medical Control for guidance.",
+    "badge": null
+   }
+  ],
+  "254": [],
+  "255": [],
+  "256": [],
+  "257": [
+   {
+    "heading": "INDICATIONS",
+    "ordinal": 1,
+    "text": "• Any patient requiring pharmacotherapy to treat or facilitate the treatment of an acute illness or injury. • Intraosseous administration is indicated for patients in extremis requiring immediate medication administration when IV access cannot be readily obtained (90 seconds or two failed attempts). • Intranasal and intramuscular administration are indicated when immediate medication administration is required, and IV/IO access cannot be readily obtained (e.g. pain control) or for certain conditions in which IN/IM is the preferred route for specific therapy (e.g. IM Epinephrine for anaphylaxis).",
+    "badge": null
+   }
+  ],
+  "258": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "IO flow rates: Proximal humerus (~80 mL/min), Tibia (~15 mL/min)",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Any medication routinely administered via the IV route may be administered via the IO route if IV access is not available.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Utilizing both nares maximizes the distribution of medication across the mucosal surface, increasing absorption.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Do not administer intranasal medications if there is evidence of nasal/facial trauma or bleeding from the nose.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "The anterolateral thigh is the preferred site for IM injection due to larger muscle mass, higher blood flow and more rapid absorption.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Do not administer more than 3 mL into the Deltoid site or 5 mL into the anterolateral thigh site for adults. If larger volumes are necessary due to available medication concentrations, use multiple sites simultaneously.",
+    "badge": null
+   }
+  ],
+  "259": [
+   {
+    "heading": "INDICATIONS",
+    "ordinal": 1,
+    "text": "• Gastric decompression in intubated patients (improves ventilation compliance, reduces risk of aspiration) • Airway management in patients with massive hematemesis • Persistent large volume emesis refractory to anti-emetics",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Caution: NG tube insertion is contraindicated for patients with known esophageal varices without active hemorrhage, recent maxillofacial surgery, and acute maxillofacial trauma.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "In the setting of an unconscious, intubated patient, oral insertion of the tube may be considered.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "For patients with massive upper GI bleeding and persistent hematemesis, placement of a nasogastric tube prior to attempting orotracheal intubation may allow for improved visualization of airway structures.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "If the patient is conscious, swallowing a sip of water may facilitate placement.",
+    "badge": null
+   }
+  ],
+  "260": [],
+  "261": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Any newborn who is unresponsive or has poor tone or respiratory effort • Any newborn or neonate (< 28 days) with a heart rate less than 100/min, apnea, or no palpablepulse",
+    "badge": null
+   }
+  ],
+  "262": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "For Epinephrine 0.1 mg/mL preloaded syringe, combine 1 mg of Epinephrine 1mg/mL with 9 mL 0.9% Sodium Chloride in a 10 mL syringe. Expected SpO2 after birth: 1 min – 60-65% 2 min – 65-70% 3 min – 70-75% 4 min – 75-80% 5 min – 80-85% 10 min – 85-95% Palpating a pulse on a neonate can be extremely difficult. Often, it is easiest to palpate at the umbilical stump. Otherwise, use a stethoscope over the chest to count heartbeats if necessary. Use a syringe and 3-way stopcock to administer precise fluid amounts to neonates (pull-push method). Do not infuse fluids to neonates via pressure-bag. Neonates of mothers with poorly controlled diabetes or with a history of poor feeding / low birth weight are at particular risk of early hypoglycemia.",
+    "badge": null
+   }
+  ],
+  "263": [
+   {
+    "heading": "CRITERIA",
+    "ordinal": 1,
+    "text": "• Pediatric patient who is unresponsive, without palpable pulse or respiration (excluding agonal breaths). • Pediatric patient with Unstable Bradycardia: sustained ventricular rate less than 60 BPM AND signs of inadequate perfusion (refer to Pediatric Bradycardia protocol). • Patients with obvious death (rigor mortis, lividity, decomposition, or injuries inconsistent with survival) are excluded.",
+    "badge": null
+   }
+  ],
+  "264": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Compressions: Push hard and fast: rate 100 – 120 bpm. Allow complete chest recoil.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Minimize interruptions in chest compressions.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Change compressor every 2 minutes or sooner iffatigued.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Give continuous compressions with advanced airway.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Use quantitative ETCO2 monitoring with BVM o If ETCO2 <10 mmHg, improve chestcompressions o If sudden increase in ETCO2 is noted (above 30-40mmHg), check pulse and rhythm for ROSC.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Airway:",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "Avoid excessive ventilation.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 8,
+    "text": "Consider supraglottic airway (BIAD) (EMT).Endotracheal intubation has not been shown to improve outcomes for children with out-of-hospital cardiac arrest.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 9,
+    "text": "Studies to date have not shown a clear improvement in outcomes with SGA vs intubation – do not compromise chest compressions for intubation.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 10,
+    "text": "Use ETCO2 to confirm and monitor placement of any advanced airway.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 11,
+    "text": "Continually monitor ETCO2 with target above 10 mmHg during CPR and 35 – 45 mmHg once ROSC is achieved.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 12,
+    "text": "In post ROSC patient, if ETCO2 falls below 20 mmHg or signal is lost, immediately reassess pulses and airway.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 13,
+    "text": "Defibrillation:",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 14,
+    "text": "Ensure pad placement is optimal. Adjust pads if shockable rhythm is refractory to electrical therapy. Consider Anterior/Posterior placement.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 15,
+    "text": "Initial defibrillation at 2 joules/kg. Subsequent defibrillations at 4joules/kg.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 16,
+    "text": "Reversible causes: Identify and treat per appropriate protocol and scope of practice:",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 17,
+    "text": "Hypoxia • Tension pneumothorax",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 18,
+    "text": "Hyperkalemia or Hypokalemia • Tamponade (Cardiac)",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 19,
+    "text": "Hypothermia • Thrombosis (Cardiac, Pulmonary)",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 20,
+    "text": "Hypovolemia • Toxins",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 21,
+    "text": "Hydrogen ion (acidosis) • Trauma",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 22,
+    "text": "Hypoglycemia or hyperglycemia • Tablets (Drug Overdose)",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 23,
+    "text": "Termination of Resuscitation (TOR):",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 24,
+    "text": "Refer to Death & Criteria for Withholding Resuscitationprotocol.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 25,
+    "text": "Termination of resuscitative efforts is a Medical Control decisiononly.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 26,
+    "text": "Consider contacting Medical Control to request TOR if the arrest was not witnessed by EMS and after 20 minutes of continuous CPR: 1) There has been no return of spontaneous circulation (ROSC). AND 2) No shocks were delivered.",
+    "badge": null
+   }
+  ],
+  "265": [],
+  "266": [],
+  "267": [
+   {
+    "heading": "INDICATIONS",
+    "ordinal": 1,
+    "text": "• Initiate Spinal Motional Restriction (SMR) for any patient with non-penetrating trauma (including falls) AND at least one of the following: o ADULT: • Acutely altered level of consciousness (GCS < 15 or evidence of intoxication) • Midline neck or back pain and/or tenderness • Focal neurologic signs and/or symptoms (e.g. numbness or motor weakness) • Anatomic deformity of the spine • Distracting circumstances or injury o PEDIATRIC: • Complaint of neck pain or apparent discomfort/tenderness • Torticollis • Acute neurologic deficit • Altered mental status (GCS < 15, evidence of intoxication, agitation, decreased respirations, somnolence, etc) • High-risk motor vehicle accidents, high-impact diving injuries, or significant torso injuries. • There is no role for SMR in isolated penetrating trauma.",
+    "badge": null
+   }
+  ],
+  "268": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Apply padding and/or a shoulder roll for pediatric patients to minimize neck flexion.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Patients in the late 2nd and 3rd trimester of pregnancy should be transported with padding under the right side to displace the uterus from the vena cava (turned slightly to the left).",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Patients who are ambulatory at the scene may or may not require SMR. If the patient is ambulatory and meets the criteria above for SMR, they may be assisted into a supine position on the stretcher while minimizing movement of the spine to the maximum extent possible.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "For patients seated in a vehicle or other confined space, spinal motion restriction may be best achieved through self-extrication with provider assistance, when possible.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "For further information see: Spinal Motion Restriction in the Trauma Patient – A Joint Position Statement by ACS-COT, ACEP, and NAEMSP.",
+    "badge": null
+   }
+  ],
+  "269": [
+   {
+    "heading": "INDICATIONS",
+    "ordinal": 1,
+    "text": "• Inability to oxygenate by less invasive means. • Surgical cricothyrotomy: Greater than approximately 12 years old or greater than 35 - 40 kg • Needle cricothyrotomy: Less than approximately 12 years old or less than 35 - 40 kg",
+    "badge": null
+   }
+  ],
+  "270": [
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "* A variety of options exist to connect a 14-gauge needle to an oxygen source. The best option depends on the size and position of the patient and lung compliance. Given the clinicalcircumstance, the best option is likely to be utilizing whichever tools are most readily and rapidly available. The most readily available adapters are usually: o Attach a 3-0 endotracheal tube adaptor directly to the catheter. Ventilate with BVM. o Attach a 3 mL syringe to the catheter, remove the plunger, then attach a 7-0 endotracheal tube adaptor to the syringe. Ventilate with BVM. o Attach a 10 mL syringe to the catheter, remove the plunger, then insert a 7-0 endotracheal tube into the syringe and inflate the balloon. Ventilate with BVM.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "It is unlikely a patient will be able to be ventilated adequately via needle cricothyrotomy. Prioritize oxygenation while avoiding barotrauma. Do not over-ventilate. A more definitive airway is required – do not delay transport to the closest emergency department.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "If a surgical airway is performed, clearly document consideration of or attempts to manage the airway by less invasive means.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "If a patient cannot be oxygenated by less invasive means, move immediately to surgical airway management.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Bleeding during or after a surgical airway is common. Utilize in-line suction to clear the airway as necessary.",
+    "badge": null
+   }
+  ],
+  "271": [
+   {
+    "heading": "INDICATIONS",
+    "ordinal": 1,
+    "text": "• Removal of Taser barbs imbedded in the skin of a patient requiring no other treatment and refusing transport to the hospital.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Consider shallow underlying structures prior to removal of any Taser barb. If removal may cause additional damage to underlying anatomy (e.g. neuro-vascular structures, tendons), do not attempt removal. When in doubt, contact Medical Control for guidance.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Ensure the patient has capacity to decline further assessment/transport and clearly document the circumstances of that decision.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Ensure the entire barb is removed. If the barb is broken, the entire barb cannot accounted for, or there is any concern for a retained foreign body, transport for further assessment should be recommended.",
+    "badge": null
+   }
+  ],
+  "272": [],
+  "273": [
+   {
+    "heading": "INDICATIONS",
+    "ordinal": 1,
+    "text": "• Any patient with life-threatening hemorrhage from an extremity which cannot be controlled by other means, such as wound packing and direct pressure, due to extent of injury or clinical/operational circumstances.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Ensure location and time of application of any tourniquet is provided to the receiving physician during patient turnover.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "For crush/harness/suspension injuries, consider loosely positioning tourniquets prior to release/extrication. Tighten if hemorrhage or hemodynamic collapse (crush syndrome) occur. If, due to ongoing extrication, access to the patient will continue to be limited following release of the crushed extremities rendering patient care impossible (e.g. high angle rescue from a suspended harness), consider applying tourniquets prior to release.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Use of an approved commercial device is preferred. If one is not available, an appropriately sized blood pressure cuff inflated to a pressure sufficient to stop bleeding is an acceptable alternative. Improvised tourniquets are unreliable and generally not recommended.",
+    "badge": null
+   }
+  ],
+  "274": [],
+  "275": [
+   {
+    "heading": "INDICATIONS",
+    "ordinal": 1,
+    "text": "• Any adult patient with persistent symptomatic bradycardia (HR < 60 bpm) • Consider transthoracic pacing for pediatric patients over 28 days old, with persistent symptomatic bradycardia despite adequate ventilation, high-quality chest compressions, and two weight-based doses each of Epinephrine and Atropine.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Ventricular fibrillation and ventricular tachycardia are rare complications.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Pacing may stimulate the diaphragm, causing involuntary spasm (hiccups).",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Consider sedation or pain control prior to initiating pacing. Due to the risk of over-sedation, do not administer both opiates and benzodiazepines.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "Pacing is rarely needed or indicated for patients under 12 years old. Strongly consider consulting with medical control at a pediatric emergency department (e.g. VCU Children’s Hospital or CHKD) for guidance. o VCU COR: 804-828-3989, ask to speak with a Medical Control physician in the pediatric Emergency Department. o CHKD: 757-668-8000",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Symptomatic bradycardia includes any patient over 28 days old with a sustained ventricular rate less than 60 BPM and one or more of the following signs or symptoms of inadequate perfusion despite adequate oxygenation and ventilation: o Hypotension o ETCO2 < 25 o Chest pain o Dyspnea / Pulmonary Edema o AMS/Decreased responsiveness o Diaphoresis",
+    "badge": null
+   }
+  ],
+  "276": [],
+  "277": [],
+  "278": [
+   {
+    "heading": "INDICATIONS",
+    "ordinal": 1,
+    "text": "• Patient meets current vaccine criteria. PRECAUTIONS • Refer to precautions per vaccine manufacturer’s guidelines.",
+    "badge": null
+   },
+   {
+    "heading": "CONTRAINDICATIONS",
+    "ordinal": 1,
+    "text": "• Refer to contraindications per vaccine manufacturer’s guidelines.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 1,
+    "text": "Vaccines provided under an Emergency Use Authorization requires that each recipient receive a vaccine- specific EUA Fact Sheet with the following information:",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 2,
+    "text": "Basic information on the disease symptoms, and what to discuss with a healthcare provider before vaccination",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 3,
+    "text": "Who should and should not receive the vaccine",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 4,
+    "text": "That recipients have the choice to receive or refuse the vaccine",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 5,
+    "text": "Dosage and vaccine series information",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 6,
+    "text": "Risks and benefits of the vaccine, including common side effects",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 7,
+    "text": "Information on reporting side effects to VAERS",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 8,
+    "text": "An explanation of what an EUA is and why it is issued",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 9,
+    "text": "Any approved available alternatives for preventing the disease",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 10,
+    "text": "Additional resources",
+    "badge": null
+   }
+  ],
+  "279": [],
+  "280": []
+ }
+}

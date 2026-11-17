@@ -1,26 +1,26 @@
 {
  "bridge": {
   "prior_reported": 152,
-  "now_absent": 87,
-  "still_absent_from_prior": 81,
+  "now_absent": 86,
+  "still_absent_from_prior": 80,
   "prior_missing_now_paired": 30,
   "prior_missing_now_paired_reviewed_correct": 13,
   "prior_missing_now_paired_reviewed_partial": 3,
   "prior_missing_now_paired_reviewed_suspect": 3,
   "prior_missing_now_paired_unreviewed": 11,
   "prior_missing_now_duplicate_or_merged": 27,
-  "prior_missing_now_claimed_by_ambiguous": 12,
+  "prior_missing_now_claimed_by_ambiguous": 13,
   "prior_rows_not_found_in_current_scope": 1,
   "prior_claims_collapsed_into_one_current_row": 1,
-  "newly_unpaired_not_in_prior_list": 17,
-  "identity": "absent now 87 = 81 prior rows still absent + 6 newly absent. Of the 152 prior rows, the 71 that left the gap list are: 30 paired to a site row (0 section+ordinal, 7 label, 22 text, 1 text-binding pass, 0 section-fallback), 12 explained by an ambiguous site row, 21 merged inside a wider site row, 6 duplicate copies, 1 not in this run's scope and 1 collapsed into a single parse row"
+  "newly_unpaired_not_in_prior_list": 16,
+  "identity": "absent now 86 = 80 prior rows still absent + 6 newly absent. Of the 152 prior rows, the 72 that left the gap list are: 30 paired to a site row (0 section+ordinal, 7 label, 22 text, 1 text-binding pass, 0 section-fallback), 13 explained by an ambiguous site row, 21 merged inside a wider site row, 6 duplicate copies, 1 not in this run's scope and 1 collapsed into a single parse row"
  },
  "prior_reported": 152,
  "prior_pages": 31,
  "pages_aligned_this_run": 41,
  "prior_to_now": {
   "counts": {
-   "claimed_by_an_ambiguous_site_row": 12,
+   "claimed_by_an_ambiguous_site_row": 13,
    "duplicate_copy_in_merged_source": 6,
    "merged_into_a_site_row": 21,
    "paired_to_site_row_label": 7,
@@ -28,7 +28,7 @@
    "paired_to_site_row_text_binding": 1,
    "prior_claims_collapsed_into_one_current_row": 1,
    "prior_row_not_in_current_scope": 1,
-   "still_absent": 81
+   "still_absent": 80
   },
   "rows": {
    "claimed_by_an_ambiguous_site_row": [
@@ -172,6 +172,20 @@
      "pems_text_now": "Follow General – Universal Patient Care/Initial Patient Contact protocol.",
      "claimed_by_site_rows": [
       "1"
+     ]
+    },
+    {
+     "site_page": "protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md",
+     "pems_page": 124,
+     "prior_row": 6,
+     "prior_badges": "['MC']",
+     "prior_text": "Contact Medical Control for guidance as needed.",
+     "current_disposition": "claimed_by_ambiguous_site_row",
+     "pems_page_now": 124,
+     "pems_ordinal_now": 13,
+     "pems_text_now": "Contact Medical Control for guidance as needed.",
+     "claimed_by_site_rows": [
+      "4"
      ]
     },
     {
@@ -654,17 +668,6 @@
      "pems_page_now": 124,
      "pems_ordinal_now": 11,
      "pems_text_now": "Administer: ADULT: Nitroglycerine 0.4 mg SL If SBP remains greater than 100 mmHg (MAP 65 mmHg), may repeat every five minutes as needed, up to three doses."
-    },
-    {
-     "site_page": "protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md",
-     "pems_page": 124,
-     "prior_row": 6,
-     "prior_badges": "['MC']",
-     "prior_text": "Contact Medical Control for guidance as needed.",
-     "current_disposition": "absent",
-     "pems_page_now": 124,
-     "pems_ordinal_now": 13,
-     "pems_text_now": "Contact Medical Control for guidance as needed."
     },
     {
      "site_page": "protocols/respiratory/03_Pediatric_Stridor_PROC.md",
@@ -1550,8 +1553,8 @@
      "pems_ordinal_now": 6,
      "pems_text_now": "Contact Medical Control for transport destination guidance if decompression injury is suspected. Hyperbaric Centers: Sentara Leigh Hospital ED (Norfolk, VA): 757 261 – 6804 Diver Alert Network: (919 684 – 9111 Do not initiate transport to a hyperbaric center without first confirming availability of the chamber.",
      "site_row_now": "7",
-     "site_action": "Contact Poquoson Medical Control for hyperbaric transport destination guidance if decompression injury is suspected.",
-     "similarity": 0.631,
+     "site_action": "Contact Medical Control for hyperbaric transport destination guidance if decompression injury is suspected.",
+     "similarity": 0.691,
      "match_basis": "page-flat+ordinal",
      "label_keys": null,
      "section_fallback": false,
@@ -1650,8 +1653,8 @@
      "pems_ordinal_now": 6,
      "pems_text_now": "Position the patient and open the airway. Use BLS airway adjuncts (OPA/NPA/SGA) as necessary.",
      "site_row_now": "4",
-     "site_action": "BLS Airway Adjuncts (EMR/EMT): • Insert oropharyngeal airway (OPA) as indicated. • Insert nasopharyngeal airway (NPA) if gag reflex present. • Use supraglottic airway (SGA) as necessary.",
-     "similarity": 0.491,
+     "site_action": "BLS Airway Adjuncts: • Insert oropharyngeal airway (OPA) as indicated. • Insert nasopharyngeal airway (NPA) if gag reflex present. • Use supraglottic airway (SGA) as necessary.",
+     "similarity": 0.5,
      "match_basis": "page-flat+text",
      "label_keys": null,
      "section_fallback": false,
@@ -1878,14 +1881,14 @@
      "pems_ordinal_now": 6,
      "pems_text_now": "If systolic blood pressure remains above 100 mmHg and MAP ≥ 65, consider: ADULT: Nitroglycerine 0.4 mg SL. May repeat every 5 minutes as needed for relief of chest pain, up to three doses.",
      "site_row_now": "11",
-     "site_action": "Nitroglycerin Administration: • Administer Nitroglycerin per Pain Control Poquoson Protocol for chest pain. • Confirm all \"Rights\" prior to administration.",
-     "similarity": 0.289,
+     "site_action": "Nitroglycerin Administration: • Administer Nitroglycerin per the Pain Control protocol for chest pain. • Confirm all \"Rights\" prior to administration.",
+     "similarity": 0.314,
      "match_basis": "label+keyword",
      "label_keys": [
       "nitrog"
      ],
      "section_fallback": false,
-     "verdict": "needs_a_human_eye",
+     "verdict": "correct_label",
      "human_verdict": "correct",
      "human_note": "same intervention: Nitroglycerin vs Nitroglycerine 0.4 mg SL (dose/spelling only)"
     },
@@ -1984,7 +1987,7 @@
      "pems_ordinal_now": 10,
      "pems_text_now": "If apneic and < 12 years old: consider endotracheal intubation if unable to ventilate adequately by less invasive means. Follow Endotracheal Intubation procedure.****",
      "site_row_now": "10",
-     "site_action": "Apneic Patient - BVM Ventilation (EMT and above): • Support respirations with BVM and appropriate airway adjunct. • Ensure adequate seal and proper ventilation rate. • Monitor SpO2 and EtCO2 continuou",
+     "site_action": "Apneic Patient - BVM Ventilation: • Support respirations with BVM and appropriate airway adjunct. • Ensure adequate seal and proper ventilation rate. • Monitor SpO2 and EtCO2 continuously.",
      "similarity": 0.183,
      "match_basis": "label+keyword",
      "label_keys": [
@@ -2042,10 +2045,10 @@
    ]
   },
   "verdicts": {
-   "correct_label": 2,
+   "correct_label": 3,
    "correct_text": 8,
    "correct_text_binding": 1,
-   "needs_a_human_eye": 19
+   "needs_a_human_eye": 18
   },
   "human_review": {
    "correct": 13,
@@ -2055,11 +2058,11 @@
   "paired_total": 30
  },
  "new_unpaired": {
-  "count": 17,
+  "count": 16,
   "counts": {
    "absent": 6,
    "duplicate_in_source": 3,
-   "merged_into_site_row": 8
+   "merged_into_site_row": 7
   },
   "rows": [
    {
@@ -2088,15 +2091,6 @@
     "section": "",
     "cause": "duplicate_in_source",
     "note": 1.0
-   },
-   {
-    "site_page": "protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md",
-    "pems_page": 136,
-    "ordinal": 7,
-    "pems_text": "Contact Medical Control if uncertain regarding rhythm, most appropriate therapy, and for guidance as needed. Ensure a 12-Lead ECG is transmitted.",
-    "section": "Unstable Supraventricular Tachycardia",
-    "cause": "merged_into_site_row",
-    "note": 0.78
    },
    {
     "site_page": "protocols/front-matter/Universal Patient Care.md",
@@ -2219,10 +2213,10 @@
  },
  "absent_arithmetic": {
   "prior_absent": 152,
-  "still_absent_from_prior": 81,
+  "still_absent_from_prior": 80,
   "newly_absent_not_on_prior_list": 6,
-  "now_absent": 87,
-  "identity": "absent now 87 = 81 prior rows still absent + 6 newly absent. Of the 152 prior rows, the 71 that left the gap list are: 30 paired to a site row (0 section+ordinal, 7 label, 22 text, 1 text-binding pass, 0 section-fallback), 12 explained by an ambiguous site row, 21 merged inside a wider site row, 6 duplicate copies, 1 not in this run's scope and 1 collapsed into a single parse row"
+  "now_absent": 86,
+  "identity": "absent now 86 = 80 prior rows still absent + 6 newly absent. Of the 152 prior rows, the 72 that left the gap list are: 30 paired to a site row (0 section+ordinal, 7 label, 22 text, 1 text-binding pass, 0 section-fallback), 13 explained by an ambiguous site row, 21 merged inside a wider site row, 6 duplicate copies, 1 not in this run's scope and 1 collapsed into a single parse row"
  },
- "identity": "absent now 87 = 81 prior rows still absent + 6 newly absent. Of the 152 prior rows, the 71 that left the gap list are: 30 paired to a site row (0 section+ordinal, 7 label, 22 text, 1 text-binding pass, 0 section-fallback), 12 explained by an ambiguous site row, 21 merged inside a wider site row, 6 duplicate copies, 1 not in this run's scope and 1 collapsed into a single parse row"
+ "identity": "absent now 86 = 80 prior rows still absent + 6 newly absent. Of the 152 prior rows, the 72 that left the gap list are: 30 paired to a site row (0 section+ordinal, 7 label, 22 text, 1 text-binding pass, 0 section-fallback), 13 explained by an ambiguous site row, 21 merged inside a wider site row, 6 duplicate copies, 1 not in this run's scope and 1 collapsed into a single parse row"
 }

@@ -1,35 +1,35 @@
 {
- "generated": "2026-11-15T02:21:06",
+ "generated": "2026-11-17T13:23:29",
  "method": "primary key = section heading + ordinal within section, then the site row's own intervention label (bold head noun); text similarity only breaks ties and never creates a pair on its own",
  "totals": {
   "site_rows": 417,
-  "matched": 290,
-  "ambiguous": 127,
-  "absent_from_site": 87,
+  "matched": 292,
+  "ambiguous": 125,
+  "absent_from_site": 86,
   "duplicate_in_source": 10,
-  "merged_into_site_row": 29,
-  "total_accounted": 504,
-  "site_rows_plus_absent": 504,
+  "merged_into_site_row": 28,
+  "total_accounted": 503,
+  "site_rows_plus_absent": 503,
   "pems_rows_by_disposition": {
-   "absent": 87,
-   "claimed_by_ambiguous_site_row": 19,
+   "absent": 86,
+   "claimed_by_ambiguous_site_row": 20,
    "duplicate_in_source": 9,
-   "matched": 290,
-   "merged_into_site_row": 29
+   "matched": 292,
+   "merged_into_site_row": 28
   },
-  "pems_rows_in_scope": 434,
+  "pems_rows_in_scope": 435,
   "ambiguous_by_kind": {
-   "multiple_candidates": 11,
-   "no_counterpart": 85,
+   "multiple_candidates": 12,
+   "no_counterpart": 82,
    "shared_pems_row": 31
   },
   "text_binding": {
    "bound_by_text": 1,
-   "no_evidence_local": 85,
+   "no_evidence_local": 82,
    "no_evidence_local_by_subtype": {
-    "below_floor": 61,
-    "best_evidence_is_held": 16,
-    "no_anchor": 8
+    "below_floor": 60,
+    "best_evidence_is_held": 15,
+    "no_anchor": 7
    }
   }
  },
@@ -103,7 +103,7 @@
      "section": "",
      "action": "Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -146,7 +146,7 @@
       "similarity": 0.122,
       "held_by_site_row": "1,12",
       "disposition": "claimed_by_ambiguous_site_row",
-      "badge_agrees_with_site": false,
+      "badge_agrees_with_site": true,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.57 row 1)"
      }
@@ -157,7 +157,7 @@
      "action": "Obtain and transmit a 12-Lead ECG.",
      "cells": [
       "",
-      "",
+      "•",
       "•",
       "•",
       "•"
@@ -230,7 +230,7 @@
      "action": "Monitor ETCO2. If ETCO2 < 10 or dropping, reassess and optimize compression rate, depth, and recoil.",
      "cells": [
       "",
-      "",
+      "•",
       "•",
       "•",
       "•"
@@ -273,7 +273,7 @@
       "similarity": 0.101,
       "held_by_site_row": "1",
       "disposition": "claimed_by_ambiguous_site_row",
-      "badge_agrees_with_site": false,
+      "badge_agrees_with_site": true,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.57 row 4)"
      }
@@ -356,7 +356,7 @@
      "cells": [
       "",
       "",
-      "",
+      "•",
       "•",
       "•"
      ],
@@ -379,7 +379,7 @@
      "cells": [
       "",
       "",
-      "•",
+      "",
       "•",
       "•"
      ],
@@ -413,7 +413,7 @@
     {
      "site_row": "12",
      "section": "",
-     "action": "If ROSC is achieved, refer to Post Cardiac Arrest Care (ROSC) protocol. If ROSC is not achieved, refer to Death and Criteria for Withholding Resuscitation protocol. Contact Poquoson Medical Control fo",
+     "action": "If ROSC is achieved, refer to Post Cardiac Arrest Care (ROSC) protocol. If ROSC is not achieved, refer to Death and Criteria for Withholding Resuscitation protocol. Contact Medical Control for guidanc",
      "cells": [
       "MC",
       "MC",
@@ -423,7 +423,7 @@
      ],
      "status": "ambiguous",
      "reason_kind": "multiple_candidates",
-     "reason": "2 different PEMS rows explain this row about equally well: p.57 row 8 (0.60), p.57 row 1 (0.59); the site row may merge them"
+     "reason": "2 different PEMS rows explain this row about equally well: p.57 row 8 (0.61), p.57 row 1 (0.60); the site row may merge them"
     }
    ],
    "absent": [],
@@ -703,7 +703,7 @@
       "",
       "",
       "",
-      "[I]",
+      "•",
       "•"
      ],
      "status": "matched",
@@ -1115,7 +1115,7 @@
      "section": "",
      "action": "Begin High-Quality CPR: • Push hard and fast at rate 100 – 120 bpm. • Allow complete chest recoil. • Minimize interruptions in chest compressions. • Change compressors every 2 minutes or sooner if fat",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -1370,7 +1370,7 @@
      "cells": [
       "",
       "",
-      "",
+      "•",
       "•",
       "•"
      ],
@@ -1414,7 +1414,7 @@
      "section": "",
      "action": "Identify and Treat Reversible Causes: • Continuously assess for H's and T's throughout resuscitation. • Treat underlying cause if identified.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -1460,7 +1460,7 @@
      "section": "",
      "action": "Post-Resuscitation: • If ROSC achieved, refer to Post Cardiac Arrest Care (ROSC) protocol. • If ROSC not achieved, refer to Death and Criteria for Withholding Resuscitation protocol.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -2055,7 +2055,7 @@
      "action": "Apply AED / Monitor (Assess rhythm before CPR if possible)",
      "cells": [
       "",
-      "",
+      "•",
       "•",
       "•",
       "•"
@@ -2070,8 +2070,8 @@
      "action": "Asystole on arrival: Consider withholding CPR",
      "cells": [
       "",
-      "•",
-      "•",
+      "",
+      "",
       "•",
       "•"
      ],
@@ -2109,7 +2109,7 @@
      "cells": [
       "",
       "",
-      "",
+      "•",
       "•",
       "•"
      ],
@@ -2147,7 +2147,7 @@
       "similarity": 0.509,
       "held_by_site_row": "7",
       "disposition": "matched",
-      "badge_agrees_with_site": false
+      "badge_agrees_with_site": true
      }
     },
     {
@@ -2181,7 +2181,7 @@
       "",
       "",
       "",
-      "",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -2217,7 +2217,7 @@
       "similarity": 0.252,
       "held_by_site_row": null,
       "disposition": "absent",
-      "badge_agrees_with_site": false,
+      "badge_agrees_with_site": true,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.20 against p.61 row 6)"
      }
@@ -2230,7 +2230,7 @@
       "",
       "",
       "",
-      "",
+      "•",
       "•"
      ],
      "status": "matched",
@@ -2303,7 +2303,7 @@
     {
      "site_row": "11",
      "section": "",
-     "action": "Contact Poquoson Medical Control for guidance / destination",
+     "action": "Contact Medical Control for guidance / destination",
      "cells": [
       "MC",
       "MC",
@@ -2320,7 +2320,7 @@
      "badges": [
       "MC"
      ],
-     "similarity": 0.542,
+     "similarity": 0.65,
      "match_basis": "page-flat+text"
     }
    ],
@@ -2539,7 +2539,7 @@
     {
      "site_row": "1",
      "section": "",
-     "action": "Scene Safety / Initial Assessment: • Follow Universal Patient Care / Initial Patient Contact Poquoson Protocol. • If stroke suspected, refer to Stroke / TIA Poquoson Protocol.",
+     "action": "Scene Safety / Initial Assessment: • Follow the Universal Patient Care / Initial Patient Contact protocol. • If stroke suspected, refer to the Stroke / TIA protocol.",
      "cells": [
       "•",
       "•",
@@ -2556,13 +2556,13 @@
      "badges": [
       "EMR"
      ],
-     "similarity": 0.838,
+     "similarity": 0.855,
      "match_basis": "page-flat+ordinal"
     },
     {
      "site_row": "2",
      "section": "",
-     "action": "Airway / Respiratory Management: • If respiratory distress, refer to Airway Management and Ventilatory Support procedure and Respiratory Distress Poquoson Protocol. • Assess SpO2.",
+     "action": "Airway / Respiratory Management: • If respiratory distress, refer to Airway Management and Ventilatory Support procedure and the Respiratory Distress protocol. • Assess SpO2.",
      "cells": [
       "•",
       "•",
@@ -2579,15 +2579,15 @@
      "badges": [
       "EMR"
      ],
-     "similarity": 0.69,
+     "similarity": 0.707,
      "match_basis": "page-flat+ordinal"
     },
     {
      "site_row": "3",
      "section": "",
-     "action": "Glucose Assessment: • Check blood glucose level. • Refer to Hyperglycemia / Hypoglycemia Poquoson Protocol if indicated.",
+     "action": "Glucose Assessment: • Check blood glucose level. • Refer to the Hyperglycemia / Hypoglycemia protocol if indicated.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -2604,8 +2604,7 @@
        "glucose",
        "hyperglycemia",
        "hypoglycemia",
-       "level",
-       "poquoson"
+       "level"
       ],
       "pages_searched": [
        107
@@ -2629,10 +2628,10 @@
       "coverage_row": 0.0,
       "coverage_basis": "row",
       "anchors": [],
-      "similarity": 0.111,
+      "similarity": 0.107,
       "held_by_site_row": null,
       "disposition": "absent",
-      "badge_agrees_with_site": false,
+      "badge_agrees_with_site": true,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.107 row 2)"
      }
@@ -2640,7 +2639,7 @@
     {
      "site_row": "4",
      "section": "",
-     "action": "12-Lead ECG Acquisition (EMT): • Consider assessing EtCO2 and/or SpCO as indicated. • Acquire 12-Lead ECG within 5 minutes of patient contact. • Transmit to receiving facility within 10 minutes of pat",
+     "action": "12-Lead ECG Acquisition: • Consider assessing EtCO2 and/or SpCO as indicated. • Acquire 12-Lead ECG within 5 minutes of patient contact. • Transmit to receiving facility within 10 minutes of patient c",
      "cells": [
       "",
       "•",
@@ -2730,9 +2729,9 @@
      "action": "STEMI Alert / Notification: • Contact receiving facility via COR and provide \"Pre-Hospital STEMI Alert\" with patient's name and date of birth to facilitate rapid registration. • Do NOT provide patient",
      "cells": [
       "",
-      "",
-      "",
-      "",
+      "•",
+      "•",
+      "•",
       "•"
      ],
      "status": "matched",
@@ -2750,13 +2749,13 @@
     {
      "site_row": "7",
      "section": "",
-     "action": "Extended ECG Assessment: • If 12-Lead ECG is indeterminate or high suspicion for cardiac ischemia, obtain serial ECGs at 10-minute intervals. • Contact Poquoson OMD for guidance.",
+     "action": "Extended ECG Assessment: • If 12-Lead ECG is indeterminate or high suspicion for cardiac ischemia, obtain serial ECGs at 10-minute intervals. • Contact Medical Control for guidance.",
      "cells": [
-      "",
-      "",
-      "",
-      "[I]",
-      "•"
+      "MC",
+      "MC",
+      "MC",
+      "MC",
+      "MC"
      ],
      "status": "matched",
      "pems_section_ordinal": 9,
@@ -2767,7 +2766,7 @@
      "badges": [
       "MC"
      ],
-     "similarity": 0.821,
+     "similarity": 0.929,
      "match_basis": "page-flat+text"
     },
     {
@@ -2777,7 +2776,7 @@
      "cells": [
       "",
       "",
-      "",
+      "•",
       "•",
       "•"
      ],
@@ -2829,7 +2828,7 @@
       "",
       "",
       "",
-      "",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -2862,7 +2861,7 @@
       "similarity": 0.333,
       "held_by_site_row": null,
       "disposition": "absent",
-      "badge_agrees_with_site": false,
+      "badge_agrees_with_site": true,
       "subtype": "no_anchor",
       "note": "coverage 1.00 (whole row 0.50) clears the 0.40 floor, but the row shares no drug name, no dose and no whole label head with that PEMS row, so the binding would rest on an ordinary word: Monitor cardiac rhythm. Refer to Tachyarrhythmias or Bradycardia protocol, as needed."
      }
@@ -2873,8 +2872,8 @@
      "action": "Aspirin Administration (for ACS/STEMI): • Aspirin (NSAID - inhibits platelet action preventing clot formation) • Indication: Acute coronary syndromes (ACS)/STEMI • Confirm all \"Rights\" (Right patient,",
      "cells": [
       "",
-      "",
-      "",
+      "•",
+      "•",
       "•",
       "•"
      ],
@@ -2896,12 +2895,12 @@
     {
      "site_row": "11",
      "section": "",
-     "action": "Nitroglycerin Administration: • Administer Nitroglycerin per Pain Control Poquoson Protocol for chest pain. • Confirm all \"Rights\" prior to administration.",
+     "action": "Nitroglycerin Administration: • Administer Nitroglycerin per the Pain Control protocol for chest pain. • Confirm all \"Rights\" prior to administration.",
      "cells": [
       "",
-      "",
-      "",
-      "",
+      "•",
+      "•",
+      "•",
       "•"
      ],
      "label_keys": [
@@ -2916,13 +2915,13 @@
      "badges": [
       "EMT"
      ],
-     "similarity": 0.289,
+     "similarity": 0.314,
      "match_basis": "label+keyword"
     },
     {
      "site_row": "12",
      "section": "",
-     "action": "Analgesia: • Consider analgesia (refer to Pain Control Poquoson Protocol).",
+     "action": "Analgesia: • Consider analgesia (refer to the Pain Control protocol).",
      "cells": [
       "",
       "",
@@ -2939,13 +2938,13 @@
      "badges": [
       "I"
      ],
-     "similarity": 0.941,
+     "similarity": 1.0,
      "match_basis": "page-flat+text"
     },
     {
      "site_row": "13",
      "section": "",
-     "action": "Medical Control Contact: • Contact Poquoson OMD for guidance as needed.",
+     "action": "Medical Control Contact: • Contact Medical Control for guidance as needed.",
      "cells": [
       "MC",
       "MC",
@@ -2954,46 +2953,22 @@
       "MC"
      ],
      "status": "ambiguous",
-     "reason_kind": "no_counterpart",
-     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
-     "text_binding": {
-      "query": [
+     "reason_kind": "shared_pems_row",
+     "contained_in_pems": {
+      "pems_page": 107,
+      "pems_ordinal": 9,
+      "pems_text": "Contact Medical Control for guidance as needed. If 12-Lead ECG is indeterminate or there is high suspicion for cardiac ischemia, obtain serial ECGs at 10-minute intervals and contact Medical Control for guidance.",
+      "overlap_tokens": [
        "contact",
        "control",
        "guidance",
-       "medical",
-       "omd",
-       "poquoson"
+       "medical"
       ],
-      "pages_searched": [
-       107
-      ],
-      "free_candidates": 2,
-      "verdict": "no_evidence_local",
-      "subtype": "best_evidence_is_held",
-      "note": "this row's best text evidence is p.107 row 9 (coverage 1.00, badge MC), which site row 7 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix",
-      "pems_page": 107,
-      "pems_ordinal": 9,
-      "pems_row_text": "Contact Medical Control for guidance as needed. If 12-Lead ECG is indeterminate or there is high suspicion for cardiac ischemia, obtain serial ECGs at 10-minute intervals and contact Medical Control for guidance.",
-      "badge_tokens": [
-       "MC"
-      ],
-      "badge_columns": [
-       "EMR",
-       "EMT",
-       "A",
-       "I",
-       "P"
-      ],
-      "coverage": 1.0,
-      "coverage_row": 0.667,
-      "coverage_basis": "label",
-      "anchors": [],
-      "similarity": 0.667,
-      "held_by_site_row": "7",
-      "disposition": "matched",
-      "badge_agrees_with_site": true
-     }
+      "tokens_in_site_row": 4,
+      "tokens_in_pems_row": 17,
+      "containment": 0.235
+     },
+     "reason": "every word of this row (contact, control, guidance, medical) occurs in p.107 row 9 — 4 of that row's 17 significant words — which site row 7 already holds; the site splits one PEMS row into two"
     },
     {
      "site_row": "14",
@@ -3003,7 +2978,7 @@
       "",
       "",
       "",
-      "[I]",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -3245,7 +3220,7 @@
     {
      "site_row": "1",
      "section": "",
-     "action": "Universal Patient Care / Initial Patient Contact: • Follow Universal Patient Care / Initial Patient Contact Poquoson Protocol. • Ensure scene safety and utilize appropriate PPE.",
+     "action": "Universal Patient Care / Initial Patient Contact: • Follow the Universal Patient Care / Initial Patient Contact protocol. • Ensure scene safety and utilize appropriate PPE.",
      "cells": [
       "•",
       "•",
@@ -3262,7 +3237,7 @@
      "badges": [
       "EMR"
      ],
-     "similarity": 0.864,
+     "similarity": 0.886,
      "match_basis": "page-flat+ordinal"
     },
     {
@@ -3270,7 +3245,7 @@
      "section": "",
      "action": "Primary Assessment: • Perform Primary and Secondary Survey. • Obtain complete set of vital signs including bilateral BP if possible. • Assess for signs of end-organ damage (neurological, cardiac, pulm",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -3324,7 +3299,7 @@
       "similarity": 0.18,
       "held_by_site_row": "4",
       "disposition": "matched",
-      "badge_agrees_with_site": false,
+      "badge_agrees_with_site": true,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.06 against p.109 row 2)"
      }
@@ -3332,7 +3307,7 @@
     {
      "site_row": "3",
      "section": "",
-     "action": "Stroke Assessment: • Perform stroke screening (Cincinnati Prehospital Stroke Scale or equivalent). • If stroke is suspected, refer to Stroke / TIA Poquoson Protocol immediately. • Note time of symptom",
+     "action": "Stroke Assessment: • Perform stroke screening (Cincinnati Prehospital Stroke Scale or equivalent). • If stroke is suspected, refer to the Stroke / TIA protocol immediately. • Note time of symptom onse",
      "cells": [
       "•",
       "•",
@@ -3349,13 +3324,13 @@
      "badges": [
       "EMR"
      ],
-     "similarity": 0.725,
+     "similarity": 0.73,
      "match_basis": "page-flat+text"
     },
     {
      "site_row": "4",
      "section": "",
-     "action": "Cardiac Assessment: • Assess for chest pain, pressure, or symptoms consistent with acute coronary syndrome. • Obtain 12-lead ECG if available. • If ACS is suspected, refer to Chest Pain (Cardiac) Poqu",
+     "action": "Cardiac Assessment: • Assess for chest pain, pressure, or symptoms consistent with acute coronary syndrome. • Obtain 12-lead ECG if available. • If ACS is suspected, refer to the Chest Pain (Cardiac) ",
      "cells": [
       "•",
       "•",
@@ -3372,13 +3347,13 @@
      "badges": [
       "EMR"
      ],
-     "similarity": 0.733,
+     "similarity": 0.742,
      "match_basis": "page-flat+text"
     },
     {
      "site_row": "5",
      "section": "",
-     "action": "Respiratory Assessment: • Assess for respiratory distress, pulmonary edema, or hypoxia. • Apply pulse oximetry and administer oxygen as indicated. • If respiratory distress is present, refer to Respir",
+     "action": "Respiratory Assessment: • Assess for respiratory distress, pulmonary edema, or hypoxia. • Apply pulse oximetry and administer oxygen as indicated. • If respiratory distress is present, refer to the Re",
      "cells": [
       "•",
       "•",
@@ -3395,13 +3370,13 @@
      "badges": [
       "EMR"
      ],
-     "similarity": 0.795,
+     "similarity": 0.804,
      "match_basis": "page-flat+text"
     },
     {
      "site_row": "6",
      "section": "",
-     "action": "Glucose Assessment: • Check blood glucose level. • If hyperglycemia or hypoglycemia is present or suspected, refer to Hyperglycemia / Hypoglycemia Poquoson Protocol. • Treat glucose abnormalities per ",
+     "action": "Glucose Assessment: • Check blood glucose level. • If hyperglycemia or hypoglycemia is present or suspected, refer to the Hyperglycemia / Hypoglycemia protocol. • Treat glucose abnormalities per appro",
      "cells": [
       "•",
       "•",
@@ -3418,13 +3393,13 @@
      "badges": [
       "EMR"
      ],
-     "similarity": 0.875,
+     "similarity": 0.888,
      "match_basis": "page-flat+text"
     },
     {
      "site_row": "7",
      "section": "",
-     "action": "Medical Control Consultation: • Contact Poquoson Medical Control for guidance on blood pressure management as needed. • Do NOT attempt to aggressively lower blood pressure in the field without specifi",
+     "action": "Medical Control Consultation: • Contact Medical Control for guidance on blood pressure management as needed. • Do NOT attempt to aggressively lower blood pressure in the field without specific orders.",
      "cells": [
       "MC",
       "MC",
@@ -3441,7 +3416,7 @@
      "badges": [
       "MC"
      ],
-     "similarity": 0.742,
+     "similarity": 0.746,
      "match_basis": "page-flat+text"
     }
    ],
@@ -3693,7 +3668,7 @@
       "",
       "",
       "",
-      "[I]",
+      "•",
       "•"
      ],
      "status": "matched",
@@ -3915,14 +3890,14 @@
       "EMR"
      ],
      "similarity": 1.0,
-     "match_basis": "section+ordinal"
+     "match_basis": "page-flat+ordinal"
     },
     {
      "site_row": "2",
      "section": "",
      "action": "Assess patient stability (chest pain, dyspnea, AMS, shock)",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -3930,7 +3905,7 @@
      ],
      "status": "ambiguous",
      "reason_kind": "no_counterpart",
-     "reason": "no PEMS row in '' reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
      "text_binding": {
       "query": [
        "ams",
@@ -3965,15 +3940,15 @@
       "similarity": 0.119,
       "held_by_site_row": "4",
       "disposition": "matched",
-      "badge_agrees_with_site": true,
+      "badge_agrees_with_site": false,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.135 row 1)"
      }
     },
     {
      "site_row": "4",
-     "section": "STABLE SVT PATHWAY",
-     "action": "EMT: Obtain and transmit 12-Lead ECG",
+     "section": "",
+     "action": "Obtain and transmit 12-Lead ECG",
      "cells": [
       "",
       "•",
@@ -3991,16 +3966,16 @@
       "EMT"
      ],
      "similarity": 1.0,
-     "match_basis": "section+ordinal"
+     "match_basis": "page-flat+text"
     },
     {
      "site_row": "5",
-     "section": "STABLE SVT PATHWAY",
-     "action": "A: Obtain IV access",
+     "section": "",
+     "action": "Obtain IV access",
      "cells": [
       "",
       "",
-      "",
+      "•",
       "•",
       "•"
      ],
@@ -4021,8 +3996,8 @@
     },
     {
      "site_row": "6",
-     "section": "STABLE SVT PATHWAY",
-     "action": "A: 0.9% Sodium chloride up to 1 L IV/IO (Adult) 250 – 500 mL boluses or 20 mL/kg IV/IO (Pediatric) Repeat as needed, max 60 mL/kg total",
+     "section": "",
+     "action": "0.9% Sodium chloride up to 1 L IV/IO (Adult) 250 – 500 mL boluses or 20 mL/kg IV/IO (Pediatric) Repeat as needed, max 60 mL/kg total",
      "cells": [
       "",
       "",
@@ -4040,12 +4015,12 @@
       "A"
      ],
      "similarity": 0.941,
-     "match_basis": "section+text"
+     "match_basis": "page-flat+text"
     },
     {
      "site_row": "7",
-     "section": "STABLE SVT PATHWAY",
-     "action": "I: If rhythm regular, Adenosine (Adenocard) 6 mg IV/IO (Adult) or 0.1 mg/kg IV/IO (Pediatric, max 6 mg) Followed by 20 mL (Adult) or 10–20 mL (Ped) 0.9% Sodium chloride flush",
+     "section": "",
+     "action": "If rhythm regular, Adenosine (Adenocard) 6 mg IV/IO (Adult) or 0.1 mg/kg IV/IO (Pediatric, max 6 mg) Followed by 20 mL (Adult) or 10–20 mL (Ped) 0.9% Sodium chloride flush",
      "cells": [
       "",
       "",
@@ -4063,17 +4038,17 @@
       "I"
      ],
      "similarity": 0.93,
-     "match_basis": "section+text"
+     "match_basis": "page-flat+text"
     },
     {
      "site_row": "8",
-     "section": "STABLE SVT PATHWAY",
-     "action": "I: If no conversion after 2 minutes, repeat Adenosine at DOUBLE initial dose",
+     "section": "",
+     "action": "If no conversion after 2 minutes, repeat Adenosine at DOUBLE initial dose",
      "cells": [
       "",
       "",
       "",
-      "",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -4082,8 +4057,8 @@
     },
     {
      "site_row": "9",
-     "section": "STABLE SVT PATHWAY",
-     "action": "I: If rhythm irregular/atrial fibrillation, initiate transport Monitor for signs of poor perfusion",
+     "section": "",
+     "action": "If rhythm irregular/atrial fibrillation, initiate transport Monitor for signs of poor perfusion",
      "cells": [
       "",
       "",
@@ -4101,67 +4076,35 @@
       "I"
      ],
      "similarity": 0.98,
-     "match_basis": "section+text"
+     "match_basis": "page-flat+text"
     },
     {
      "site_row": "10",
-     "section": "STABLE SVT PATHWAY",
-     "action": "MC: Contact Poquoson OMD for guidance Ensure 12-Lead ECG transmitted",
+     "section": "",
+     "action": "Contact Medical Control for guidance Ensure 12-Lead ECG transmitted",
      "cells": [
-      "",
-      "",
-      "",
-      "[I]",
-      "•"
+      "MC",
+      "MC",
+      "MC",
+      "MC",
+      "MC"
      ],
-     "status": "ambiguous",
-     "reason_kind": "no_counterpart",
-     "reason": "no PEMS row in 'STABLE SVT PATHWAY' reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
-     "text_binding": {
-      "query": [
-       "12-lead",
-       "contact",
-       "ecg",
-       "guidance",
-       "omd",
-       "poquoson",
-       "transmitted"
-      ],
-      "pages_searched": [
-       135,
-       136
-      ],
-      "free_candidates": 0,
-      "verdict": "no_evidence_local",
-      "pems_page": 136,
-      "pems_ordinal": 7,
-      "pems_row_text": "Contact Medical Control if uncertain regarding rhythm, most appropriate therapy, and for guidance as needed. Ensure a 12-Lead ECG is transmitted.",
-      "badge_tokens": [
-       "MC"
-      ],
-      "badge_columns": [
-       "EMR",
-       "EMT",
-       "A",
-       "I",
-       "P"
-      ],
-      "coverage": 0.714,
-      "coverage_row": 0.714,
-      "coverage_basis": "body",
-      "anchors": [],
-      "similarity": 0.78,
-      "held_by_site_row": null,
-      "disposition": "merged_into_site_row",
-      "badge_agrees_with_site": false,
-      "subtype": "no_anchor",
-      "note": "coverage 0.71 (whole row 0.71) clears the 0.40 floor, but the row shares no drug name, no dose and no whole label head with that PEMS row, so the binding would rest on an ordinary word: Contact Medical Control if uncertain regarding rhythm, most appropriate therapy, and for guidance as needed. Ensure a 12-Lead ECG is transmitted."
-     }
+     "status": "matched",
+     "pems_section_ordinal": 2,
+     "pems_page": 136,
+     "pems_ordinal": 7,
+     "pems_section": "Unstable Supraventricular Tachycardia",
+     "pems_text": "Contact Medical Control if uncertain regarding rhythm, most appropriate therapy, and for guidance as needed. Ensure a 12-Lead ECG is transmitted.",
+     "badges": [
+      "MC"
+     ],
+     "similarity": 0.915,
+     "match_basis": "page-flat+text"
     },
     {
      "site_row": "12",
-     "section": "UNSTABLE SVT PATHWAY",
-     "action": "I: For light sedation, consider Midazolam (Versed) 2.5 mg IV/IO or 5 mg IN/IM (Adult) 0.05 mg/kg IV/IO or 0.1 mg/kg IM (Pediatric) Max: 2.5 mg IV/IO or 5 mg IM",
+     "section": "",
+     "action": "For light sedation, consider Midazolam (Versed) 2.5 mg IV/IO or 5 mg IN/IM (Adult) 0.05 mg/kg IV/IO or 0.1 mg/kg IM (Pediatric) Max: 2.5 mg IV/IO or 5 mg IM",
      "cells": [
       "",
       "",
@@ -4179,18 +4122,18 @@
       "I"
      ],
      "similarity": 0.926,
-     "match_basis": "section+ordinal"
+     "match_basis": "page-flat+text"
     },
     {
      "site_row": "13",
-     "section": "UNSTABLE SVT PATHWAY",
-     "action": "I: Monitor SpO₂ and EtCO₂ during sedation",
+     "section": "",
+     "action": "Monitor SpO₂ and EtCO₂ during sedation",
      "cells": [
       "",
       "",
       "",
-      "",
-      ""
+      "•",
+      "•"
      ],
      "status": "ambiguous",
      "reason_kind": "shared_pems_row",
@@ -4198,14 +4141,14 @@
     },
     {
      "site_row": "14",
-     "section": "UNSTABLE SVT PATHWAY",
-     "action": "P: Perform SYNCHRONIZED cardioversion 100 joules initial dose (Adult) or 1 joule/kg (Pediatric)",
+     "section": "",
+     "action": "Perform SYNCHRONIZED cardioversion 100 joules initial dose (Adult) or 1 joule/kg (Pediatric)",
      "cells": [
       "",
       "",
       "",
-      "",
-      ""
+      "•",
+      "•"
      ],
      "status": "matched",
      "pems_section_ordinal": 1,
@@ -4217,12 +4160,12 @@
       "I"
      ],
      "similarity": 0.832,
-     "match_basis": "section+text"
+     "match_basis": "page-flat+text"
     },
     {
      "site_row": "15",
-     "section": "UNSTABLE SVT PATHWAY",
-     "action": "P: If unsuccessful, check pad placement and repeat at 200 joules (Adult) or 2 joules/kg (Pediatric)",
+     "section": "",
+     "action": "If unsuccessful, check pad placement and repeat at 200 joules (Adult) or 2 joules/kg (Pediatric)",
      "cells": [
       "",
       "",
@@ -4236,14 +4179,14 @@
     },
     {
      "site_row": "16",
-     "section": "UNSTABLE SVT PATHWAY",
-     "action": "P: If unsuccessful after two attempts, MC: Contact Poquoson OMD",
+     "section": "",
+     "action": "If unsuccessful after two attempts, contact Medical Control",
      "cells": [
       "",
       "",
       "",
-      "",
-      "[P]"
+      "•",
+      "•"
      ],
      "status": "ambiguous",
      "reason_kind": "shared_pems_row",
@@ -4258,34 +4201,12 @@
     136
    ],
    "site_sections": [
-    "",
-    "STABLE SVT PATHWAY",
-    "UNSTABLE SVT PATHWAY"
+    ""
    ],
    "pems_sections": [
     "",
     "Stable Supraventricular Tachycardia",
     "Unstable Supraventricular Tachycardia"
-   ],
-   "merged_into_site_row": [
-    {
-     "pems_page": 136,
-     "ordinal": 7,
-     "section": "Unstable Supraventricular Tachycardia",
-     "section_ordinal": 2,
-     "verbatim_text": "Contact Medical Control if uncertain regarding rhythm, most appropriate therapy, and for guidance as needed. Ensure a 12-Lead ECG is transmitted.",
-     "badges": [
-      "MC"
-     ],
-     "columns": {
-      "EMR": "MC",
-      "EMT": "MC",
-      "A": "MC",
-      "I": "MC",
-      "P": "MC"
-     },
-     "best_similarity_to_a_site_row": 0.78
-    }
    ],
    "pems_row_ledger": [
     {
@@ -4395,10 +4316,10 @@
      "badges": [
       "MC"
      ],
-     "disposition": "merged_into_site_row",
-     "site_row": null,
+     "disposition": "matched",
+     "site_row": "10",
      "claimed_by_site_rows": [],
-     "note": 0.78
+     "note": null
     }
    ]
   },
@@ -4410,7 +4331,7 @@
      "section": "",
      "action": "Begin high-quality CPR / determine DNR status",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -4551,7 +4472,7 @@
       "",
       "",
       "",
-      "",
+      "•",
       "•"
      ],
      "status": "matched",
@@ -4574,7 +4495,7 @@
       "",
       "",
       "",
-      "",
+      "•",
       "•"
      ],
      "status": "matched",
@@ -4661,7 +4582,7 @@
     {
      "site_row": "12",
      "section": "",
-     "action": "Contact Poquoson Medical Control for guidance / termination of resuscitation",
+     "action": "Contact Medical Control for guidance / termination of resuscitation",
      "cells": [
       "MC",
       "MC",
@@ -4678,7 +4599,7 @@
      "badges": [
       "MC"
      ],
-     "similarity": 0.85,
+     "similarity": 0.942,
      "match_basis": "page-flat+text"
     }
    ],
@@ -5198,7 +5119,7 @@
      "section": "",
      "action": "Refer to relevant protocols: • If no protocol applies, or for clinical guidance at any time, contact Medical Control.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -5576,7 +5497,7 @@
      "section": "",
      "action": "Apply de-escalation techniques. Remain calm, maintain soothing tone, allow space, do not reinforce delusions, set boundaries.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -5626,7 +5547,7 @@
       "similarity": 0.069,
       "held_by_site_row": null,
       "disposition": "absent",
-      "badge_agrees_with_site": false,
+      "badge_agrees_with_site": true,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.71 row 0)"
      }
@@ -5749,7 +5670,7 @@
     {
      "site_row": "8",
      "section": "",
-     "action": "Contact Poquoson Medical Control for guidance if unable to safely restrain or transport the patient.",
+     "action": "Contact Medical Control for guidance if unable to safely restrain or transport the patient.",
      "cells": [
       "MC",
       "MC",
@@ -5766,7 +5687,7 @@
      "badges": [
       "MC"
      ],
-     "similarity": 0.977,
+     "similarity": 1.0,
      "match_basis": "page-flat+text"
     }
    ],
@@ -6086,7 +6007,7 @@
      "section": "",
      "action": "Apply warmed and humidified O2 if available.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -6109,7 +6030,7 @@
      "section": "",
      "action": "Localized cold injury: Apply loose, sterile dressings to the affected part.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -6212,7 +6133,7 @@
      "section": "",
      "action": "Rapid transport immediately with resuscitation efforts continued en route. Do not delay transport waiting for ALS.",
      "cells": [
-      "•",
+      "",
       "•",
       "•",
       "•",
@@ -6233,7 +6154,7 @@
     {
      "site_row": "9",
      "section": "",
-     "action": "Contact Poquoson Medical Control prior to use of AED.",
+     "action": "Contact Medical Control prior to use of AED.",
      "cells": [
       "MC",
       "MC",
@@ -6250,7 +6171,6 @@
        "contact",
        "control",
        "medical",
-       "poquoson",
        "prior"
       ],
       "pages_searched": [
@@ -6271,16 +6191,16 @@
        "I",
        "P"
       ],
-      "coverage": 0.167,
-      "coverage_row": 0.167,
+      "coverage": 0.2,
+      "coverage_row": 0.2,
       "coverage_basis": "label",
       "anchors": [],
-      "similarity": 0.273,
+      "similarity": 0.314,
       "held_by_site_row": "1",
       "disposition": "matched",
       "badge_agrees_with_site": true,
       "subtype": "below_floor",
-      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.17 against p.67 row 4)"
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.20 against p.67 row 4)"
      }
     }
    ],
@@ -6505,7 +6425,7 @@
     {
      "site_row": "6",
      "section": "",
-     "action": "Diving emergencies: Assess for pulmonary barotrauma, decompression sickness, and/or arterial gas embolism. Refer to appropriate Poquoson Protocol(s) as needed.",
+     "action": "Diving emergencies: Assess for pulmonary barotrauma, decompression sickness, and/or arterial gas embolism. Refer to the appropriate protocol(s) as needed.",
      "cells": [
       "•",
       "•",
@@ -6522,13 +6442,13 @@
      "badges": [
       "EMR"
      ],
-     "similarity": 0.919,
+     "similarity": 0.981,
      "match_basis": "page-flat+ordinal"
     },
     {
      "site_row": "7",
      "section": "",
-     "action": "Contact Poquoson Medical Control for hyperbaric transport destination guidance if decompression injury is suspected.",
+     "action": "Contact Medical Control for hyperbaric transport destination guidance if decompression injury is suspected.",
      "cells": [
       "MC",
       "MC",
@@ -6545,7 +6465,7 @@
      "badges": [
       "MC"
      ],
-     "similarity": 0.631,
+     "similarity": 0.691,
      "match_basis": "page-flat+ordinal"
     }
    ],
@@ -6694,7 +6614,7 @@
      "action": "Remove excess clothing",
      "cells": [
       "",
-      "",
+      "•",
       "•",
       "•",
       "•"
@@ -6717,7 +6637,7 @@
      "action": "Normal skin temp: Apply cool compresses",
      "cells": [
       "",
-      "",
+      "•",
       "•",
       "•",
       "•"
@@ -6732,7 +6652,7 @@
      "action": "Hot skin temp (Heat Stroke): Treat as life-threatening/start rapid cooling (cool mist, ice packs to armpits/groin/neck, wet sheet)",
      "cells": [
       "",
-      "",
+      "•",
       "•",
       "•",
       "•"
@@ -6747,7 +6667,7 @@
      "action": "Shivering: Slow the cooling process",
      "cells": [
       "",
-      "",
+      "•",
       "•",
       "•",
       "•"
@@ -6937,7 +6857,7 @@
      "section": "",
      "action": "Assess baseline pain scale. Consider non-pharmacologic options (reassurance, distraction, positioning, splinting, cold therapy) first or as an adjunct.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -7031,7 +6951,7 @@
      "cells": [
       "",
       "",
-      "",
+      "•",
       "•",
       "•"
      ],
@@ -7054,7 +6974,7 @@
      "cells": [
       "",
       "",
-      "",
+      "•",
       "•",
       "•"
      ],
@@ -7065,7 +6985,7 @@
     {
      "site_row": "8",
      "section": "",
-     "action": "If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact Poquoson Medical Control for guidance.",
+     "action": "If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact Medical Control for guidance.",
      "cells": [
       "MC",
       "MC",
@@ -7073,60 +6993,25 @@
       "MC",
       "MC"
      ],
-     "status": "ambiguous",
-     "reason_kind": "no_counterpart",
-     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
-     "text_binding": {
-      "query": [
-       "adequately",
-       "contact",
-       "control",
-       "extricate/transport",
-       "guidance",
-       "humanely",
-       "medical",
-       "pain",
-       "poquoson",
-       "safely",
-       "stable",
-       "unable"
-      ],
-      "pages_searched": [
-       77
-      ],
-      "free_candidates": 0,
-      "verdict": "no_evidence_local",
-      "pems_page": 77,
-      "pems_ordinal": 0,
-      "pems_row_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
-      "badge_tokens": [
-       "EMR"
-      ],
-      "badge_columns": [
-       "EMR",
-       "EMT",
-       "A",
-       "I",
-       "P"
-      ],
-      "coverage": 0.083,
-      "coverage_row": 0.083,
-      "coverage_basis": "label",
-      "anchors": [],
-      "similarity": 0.26,
-      "held_by_site_row": "1",
-      "disposition": "matched",
-      "badge_agrees_with_site": true,
-      "subtype": "below_floor",
-      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.08 against p.77 row 0)"
-     }
+     "status": "matched",
+     "pems_section_ordinal": 6,
+     "pems_page": 78,
+     "pems_ordinal": 6,
+     "pems_section": "",
+     "pems_text": "If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact medical control for guidance.",
+     "badges": [
+      "MC"
+     ],
+     "similarity": 1.0,
+     "match_basis": "page-flat+text"
     }
    ],
    "absent": [],
    "notes": [],
    "pems_doc": "Pain Control",
    "pems_pages": [
-    77
+    77,
+    78
    ],
    "site_sections": [
     ""
@@ -7218,6 +7103,20 @@
      "site_row": "6",
      "claimed_by_site_rows": [],
      "note": null
+    },
+    {
+     "pems_page": 78,
+     "page_ordinal": 0,
+     "ordinal": 6,
+     "section": "",
+     "verbatim_text": "If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact medical control for guidance.",
+     "badges": [
+      "MC"
+     ],
+     "disposition": "matched",
+     "site_row": "8",
+     "claimed_by_site_rows": [],
+     "note": null
     }
    ]
   },
@@ -7253,7 +7152,7 @@
      "action": "Assess and monitor blood pressure. Ensure patient is not hypotensive.",
      "cells": [
       "",
-      "",
+      "•",
       "•",
       "•",
       "•"
@@ -7291,7 +7190,7 @@
       "similarity": 0.068,
       "held_by_site_row": null,
       "disposition": "absent",
-      "badge_agrees_with_site": false,
+      "badge_agrees_with_site": true,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.55 row 1)"
      }
@@ -7303,7 +7202,7 @@
      "cells": [
       "",
       "",
-      "",
+      "•",
       "•",
       "•"
      ],
@@ -7338,7 +7237,7 @@
       "similarity": 0.3,
       "held_by_site_row": "5,6",
       "disposition": "claimed_by_ambiguous_site_row",
-      "badge_agrees_with_site": true,
+      "badge_agrees_with_site": false,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.33 against p.55 row 2)"
      }
@@ -7389,7 +7288,7 @@
       "",
       "",
       "",
-      "",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -7547,7 +7446,7 @@
       "EMR"
      ],
      "similarity": 1.0,
-     "match_basis": "section+ordinal"
+     "match_basis": "page-flat+ordinal"
     },
     {
      "site_row": "2",
@@ -7570,11 +7469,11 @@
       "EMT"
      ],
      "similarity": 0.976,
-     "match_basis": "section+ordinal"
+     "match_basis": "page-flat+ordinal"
     },
     {
      "site_row": "3",
-     "section": "Acute Allergic Reaction (non-Anaphylaxis)",
+     "section": "",
      "action": "Antihistamine Administration: • ADULT: Diphenhydramine (Benadryl) 50 mg IV/IO slow push or IM. • PEDIATRIC: Diphenhydramine (Benadryl) 1 mg/kg IV/IO slow push or IM (Maximum dose: 50 mg).",
      "cells": [
       "",
@@ -7593,11 +7492,11 @@
       "A"
      ],
      "similarity": 0.92,
-     "match_basis": "section+ordinal"
+     "match_basis": "page-flat+text"
     },
     {
      "site_row": "4",
-     "section": "Acute Allergic Reaction (non-Anaphylaxis)",
+     "section": "",
      "action": "Bronchodilator (Wheezing): • If wheezing is present, administer: • ADULT & PEDIATRIC: Albuterol sulfate (Proventil) 3 mL of 0.083% solution, nebulized. Repeat as needed for wheezing.",
      "cells": [
       "",
@@ -7616,11 +7515,11 @@
       "A"
      ],
      "similarity": 0.969,
-     "match_basis": "section+ordinal"
+     "match_basis": "page-flat+text"
     },
     {
      "site_row": "5",
-     "section": "Acute Allergic Reaction (non-Anaphylaxis)",
+     "section": "",
      "action": "Anticholinergic (Wheezing): • If wheezing is present, administer: • ADULT & PEDIATRIC: Ipratropium bromide (Atrovent) 3 mL of 0.02% solution, nebulized, once.",
      "cells": [
       "",
@@ -7639,11 +7538,11 @@
       "A"
      ],
      "similarity": 0.966,
-     "match_basis": "section+ordinal"
+     "match_basis": "page-flat+text"
     },
     {
      "site_row": "6",
-     "section": "Acute Allergic Reaction (non-Anaphylaxis)",
+     "section": "",
      "action": "Corticosteroid (Consideration): • Consider administering: • ADULT: Methylprednisolone Succinate (Solu-Medrol) 125 mg slow IV push. • PEDIATRIC: Methylprednisolone Succinate (Solu-Medrol) 2 mg/kg slow ",
      "cells": [
       "",
@@ -7662,11 +7561,11 @@
       "A"
      ],
      "similarity": 0.844,
-     "match_basis": "section+ordinal"
+     "match_basis": "page-flat+text"
     },
     {
      "site_row": "7",
-     "section": "Anaphylaxis",
+     "section": "",
      "action": "Epinephrine Administration: • Administer IM using either dose-specific clearly marked or color-coded syringe. • ADULT: Epinephrine autoinjector or 0.3 mg [1 mg/mL] IM. • PEDIATRIC (< 30 kg): Pediatric",
      "cells": [
       "",
@@ -7685,11 +7584,11 @@
       "EMT"
      ],
      "similarity": 0.981,
-     "match_basis": "section+ordinal"
+     "match_basis": "page-flat+text"
     },
     {
      "site_row": "8",
-     "section": "Anaphylaxis",
+     "section": "",
      "action": "Vascular Access: • Obtain IV/IO access.",
      "cells": [
       "",
@@ -7708,11 +7607,11 @@
       "A"
      ],
      "similarity": 0.905,
-     "match_basis": "section+ordinal"
+     "match_basis": "page-flat+text"
     },
     {
      "site_row": "9",
-     "section": "Anaphylaxis",
+     "section": "",
      "action": "Fluid Resuscitation (Hypotension): • If patient is hypotensive, administer: • ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 – 500 mL boluses. • PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO. • R",
      "cells": [
       "",
@@ -7731,11 +7630,11 @@
       "A"
      ],
      "similarity": 0.95,
-     "match_basis": "section+ordinal"
+     "match_basis": "page-flat+text"
     },
     {
      "site_row": "10",
-     "section": "Anaphylaxis",
+     "section": "",
      "action": "Antihistamine Administration: • ADULT: Diphenhydramine (Benadryl) 50 mg IV/IO slow push or IM. • PEDIATRIC: Diphenhydramine (Benadryl) 1 mg/kg IV/IO slow push or IM (Maximum dose: 50 mg).",
      "cells": [
       "",
@@ -7754,11 +7653,11 @@
       "A"
      ],
      "similarity": 0.92,
-     "match_basis": "section+ordinal"
+     "match_basis": "page-flat+text"
     },
     {
      "site_row": "11",
-     "section": "Anaphylaxis",
+     "section": "",
      "action": "Bronchodilator (Wheezing): • If wheezing is present, administer: • ADULT & PEDIATRIC: Albuterol sulfate (Proventil) 3 mL of 0.083% solution, nebulized. May repeat as needed.",
      "cells": [
       "",
@@ -7777,11 +7676,11 @@
       "A"
      ],
      "similarity": 0.969,
-     "match_basis": "section+ordinal"
+     "match_basis": "page-flat+text"
     },
     {
      "site_row": "12",
-     "section": "Anaphylaxis",
+     "section": "",
      "action": "Anticholinergic (Wheezing): • If wheezing is present, administer: • ADULT & PEDIATRIC: Ipratropium bromide (Atrovent) 3 mL of 0.02% solution, nebulized, once.",
      "cells": [
       "",
@@ -7800,11 +7699,11 @@
       "A"
      ],
      "similarity": 0.966,
-     "match_basis": "section+ordinal"
+     "match_basis": "page-flat+text"
     },
     {
      "site_row": "13",
-     "section": "Anaphylaxis",
+     "section": "",
      "action": "Corticosteroid Administration: • ADULT: Methylprednisolone succinate (Solu-Medrol) 125 mg IV/IO slow push. • PEDIATRIC: Methylprednisolone succinate (Solu-Medrol) 2 mg/kg IV/IO slow push (Maximum dose",
      "cells": [
       "",
@@ -7823,7 +7722,7 @@
       "A"
      ],
      "similarity": 0.935,
-     "match_basis": "section+ordinal"
+     "match_basis": "page-flat+text"
     }
    ],
    "absent": [
@@ -7904,9 +7803,7 @@
     101
    ],
    "site_sections": [
-    "",
-    "Acute Allergic Reaction (non-Anaphylaxis)",
-    "Anaphylaxis"
+    ""
    ],
    "pems_sections": [
     "",
@@ -8275,7 +8172,7 @@
     {
      "site_row": "6",
      "section": "",
-     "action": "Assess and continuously monitor cardiac rhythm. Refer to Poquoson Tachyarrhythmias and Symptomatic Bradycardia protocols as needed.",
+     "action": "Assess and continuously monitor cardiac rhythm. Refer to the Tachyarrhythmias and Symptomatic Bradycardia protocols as needed.",
      "cells": [
       "",
       "",
@@ -8292,7 +8189,7 @@
      "badges": [
       "I"
      ],
-     "similarity": 0.981,
+     "similarity": 1.0,
      "match_basis": "page-flat+ordinal"
     },
     {
@@ -8326,7 +8223,7 @@
       "",
       "",
       "",
-      "[I]",
+      "•",
       "•"
      ],
      "status": "matched",
@@ -8567,7 +8464,7 @@
      "section": "",
      "action": "Normal Delivery: Apply gentle pressure on infant's skull to prevent explosive delivery. Check for nuchal cord. Dry, warm, and stimulate the neonate. DO NOT perform routine airway suctioning.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -8613,7 +8510,7 @@
      "section": "",
      "action": "Umbilical Cord Prolapse: Wrap exposed cord in saline-moistened gauze. Elevate mother's hips or place in Trendelenburg position. Insert gloved hand to relieve pressure on the cord. DO NOT attempt vagin",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -8628,7 +8525,7 @@
      "section": "",
      "action": "Breech Delivery: Allow controlled, spontaneous delivery to the umbilicus. Deliver the legs and support the body.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -9371,7 +9268,7 @@
       "",
       "",
       "",
-      "[I]",
+      "•",
       "•"
      ],
      "status": "matched",
@@ -9412,7 +9309,7 @@
     {
      "site_row": "6",
      "section": "",
-     "action": "Contact Poquoson Medical Control / Prehospital Sepsis Alert",
+     "action": "Contact Medical Control / Prehospital Sepsis Alert",
      "cells": [
       "MC",
       "MC",
@@ -9429,7 +9326,7 @@
      "badges": [
       "MC"
      ],
-     "similarity": 0.835,
+     "similarity": 0.95,
      "match_basis": "page-flat+ordinal"
     }
    ],
@@ -9816,7 +9713,7 @@
      "section": "",
      "action": "Refer to Overdose/Poisoning protocol if indicated",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -9840,11 +9737,11 @@
     {
      "site_row": "5",
      "section": "",
-     "action": "Actively seizing >5 mins: Midazolam 5 mg IV/IO or 10 mg IM (Adult & Ped >40kg) | Midazolam 2.5 mg IV/IO or 5 mg IM (Ped <40kg) (Repeat once in 5 mins)",
+     "action": "Actively seizing >5 mins: Midazolam 5 mg IV/IO or 10 mg IM (Adult & Ped >40kg)",
      "cells": [
       "",
       "",
-      "",
+      "•",
       "•",
       "•"
      ],
@@ -9857,7 +9754,7 @@
      "badges": [
       "[A]"
      ],
-     "similarity": 0.674,
+     "similarity": 0.645,
      "match_basis": "page-flat+text"
     },
     {
@@ -9867,7 +9764,7 @@
      "cells": [
       "",
       "",
-      "",
+      "•",
       "•",
       "•"
      ],
@@ -9878,7 +9775,7 @@
     {
      "site_row": "7",
      "section": "",
-     "action": "Contact Poquoson Medical Control and initiate transport if seizing >5 mins after 2nd dose of Midazolam",
+     "action": "Contact Medical Control and initiate transport if seizing >5 mins after 2nd dose of Midazolam",
      "cells": [
       "MC",
       "MC",
@@ -9895,7 +9792,7 @@
      "badges": [
       "MC"
      ],
-     "similarity": 0.641,
+     "similarity": 0.688,
      "match_basis": "page-flat+ordinal"
     }
    ],
@@ -10108,7 +10005,7 @@
      "action": "Assess blood glucose (Treat <60 per Hypoglycemia protocol)",
      "cells": [
       "",
-      "",
+      "•",
       "•",
       "•",
       "•"
@@ -10209,10 +10106,10 @@
     {
      "site_row": "7",
      "section": "",
-     "action": "Triage: Symptoms >24 hrs OR RACE 0-4 -> Transport to closest Primary Stroke Center",
+     "action": "Triage: Symptoms >24 hrs OR RACE 0-4 -> Transport to closest stroke center",
      "cells": [
       "",
-      "",
+      "•",
       "•",
       "•",
       "•"
@@ -10226,7 +10123,6 @@
        "center",
        "closest",
        "hrs",
-       "primary",
        "race",
        "stroke",
        "symptoms",
@@ -10239,7 +10135,7 @@
       "free_candidates": 1,
       "verdict": "no_evidence_local",
       "subtype": "best_evidence_is_held",
-      "note": "this row's best text evidence is p.131 row 4 (coverage 0.67, badge EMT), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix",
+      "note": "this row's best text evidence is p.131 row 4 (coverage 0.75, badge EMT), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix",
       "pems_page": 131,
       "pems_ordinal": 4,
       "pems_row_text": "Initiate transport. Goal scene time < 15 minutes: Symptoms less than 24 hours (or unknown) AND suspected LVO (RACE = 5 - 9) : Transport to the closest comprehensive stroke center as long as transport time is not increased by greater than 30 minutes. Symptoms greater than 24 hours OR low suspicion for LVO (RACE = 0 - 4): Transport to the closest stroke center.",
@@ -10252,14 +10148,14 @@
        "I",
        "P"
       ],
-      "coverage": 0.667,
-      "coverage_row": 0.6,
+      "coverage": 0.75,
+      "coverage_row": 0.667,
       "coverage_basis": "body",
       "anchors": [],
-      "similarity": 0.673,
+      "similarity": 0.726,
       "held_by_site_row": "5",
       "disposition": "matched",
-      "badge_agrees_with_site": false
+      "badge_agrees_with_site": true
      }
     },
     {
@@ -10270,8 +10166,8 @@
       "",
       "",
       "",
-      "•",
-      "•"
+      "",
+      ""
      ],
      "status": "ambiguous",
      "reason_kind": "no_counterpart",
@@ -10311,7 +10207,7 @@
       "similarity": 0.085,
       "held_by_site_row": null,
       "disposition": "absent",
-      "badge_agrees_with_site": false,
+      "badge_agrees_with_site": null,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.131 row 5)"
      }
@@ -10319,13 +10215,13 @@
     {
      "site_row": "9",
      "section": "",
-     "action": "Call Poquoson COR at receiving facility with Name/DOB for rapid registration",
+     "action": "Call COR at the receiving facility with Name/DOB for rapid registration",
      "cells": [
       "",
       "",
-      "•",
-      "•",
-      "•"
+      "",
+      "",
+      ""
      ],
      "status": "ambiguous",
      "reason_kind": "shared_pems_row",
@@ -10679,11 +10575,11 @@
      "section": "",
      "action": "Sodium Bicarbonate - Chlorine Gas Exposure Only: • Adult: 2 mL diluted with 2 mL 0.9% Sodium chloride, nebulized (ONCE only) • Pediatric: 2 mL diluted with 2 mL 0.9% Sodium chloride, nebulized (ONCE o",
      "cells": [
-      "MC",
-      "MC",
-      "MC",
-      "MC",
-      "MC"
+      "",
+      "",
+      "•",
+      "•",
+      "•"
      ],
      "status": "matched",
      "pems_section_ordinal": 4,
@@ -10705,7 +10601,7 @@
       "",
       "",
       "",
-      "",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -10874,13 +10770,13 @@
     {
      "site_row": "12",
      "section": "",
-     "action": "Medical Control Contact: • Contact Poquoson OMD for guidance as needed. • Report agent exposure, interventions performed, and patient status.",
+     "action": "Medical Control Contact: • Contact Medical Control for guidance as needed. • Report agent exposure, interventions performed, and patient status.",
      "cells": [
-      "",
-      "",
-      "",
-      "[I]",
-      "•"
+      "MC",
+      "MC",
+      "MC",
+      "MC",
+      "MC"
      ],
      "status": "matched",
      "pems_section_ordinal": 5,
@@ -10891,7 +10787,7 @@
      "badges": [
       "MC"
      ],
-     "similarity": 0.828,
+     "similarity": 0.841,
      "match_basis": "page-flat+text"
     }
    ],
@@ -11002,7 +10898,7 @@
      "section": "",
      "action": "Universal Patient Care / Assessment: • Assess airway, breathing, circulation, and mental status. • Apply pulse oximetry and cardiac monitoring. • Assess severity: Moderate, Moderate to Severe, or Seve",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -11025,7 +10921,7 @@
      "section": "",
      "action": "Oxygen Administration: • Administer oxygen to maintain SpO₂ ≥ 94%. • Use nasal cannula, simple mask, or non-rebreather as appropriate.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -11046,7 +10942,7 @@
     {
      "site_row": "3",
      "section": "",
-     "action": "Albuterol Sulfate (Beta-Agonist): • Adult & Pediatric: 3 mL of 0.083% solution via nebulizer. • Repeat as necessary based on clinical response. • May be administered continuously in severe cases per P",
+     "action": "Albuterol Sulfate (Beta-Agonist): • Adult & Pediatric: 3 mL of 0.083% solution via nebulizer. • Repeat as necessary based on clinical response. • May be administered continuously in severe cases per M",
      "cells": [
       "",
       "•",
@@ -11063,13 +10959,13 @@
      "badges": [
       "EMT"
      ],
-     "similarity": 0.552,
+     "similarity": 0.549,
      "match_basis": "page-flat+text"
     },
     {
      "site_row": "4",
      "section": "",
-     "action": "Ipratropium Bromide (Anticholinergic): • Adult & Pediatric: 3 mL of 0.02% solution via nebulizer. • ⚠ ONCE ONLY – Do NOT repeat without Poquoson OMD consultation.",
+     "action": "Ipratropium Bromide (Anticholinergic): • Adult & Pediatric: 3 mL of 0.02% solution via nebulizer. • ⚠ ONCE ONLY – Do NOT repeat without Medical Control consultation.",
      "cells": [
       "",
       "•",
@@ -11078,8 +10974,8 @@
       "•"
      ],
      "status": "ambiguous",
-     "reason_kind": "shared_pems_row",
-     "reason": "site row label names an intervention that p.123 row 5 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs"
+     "reason_kind": "multiple_candidates",
+     "reason": "2 different PEMS rows explain this row about equally well: p.123 row 5 (0.50), p.124 row 13 (0.46); the site row may merge them"
     },
     {
      "site_row": "5",
@@ -11269,7 +11165,7 @@
      "action": "Related Protocol – Stridor (Upper Airway Obstruction): • Epinephrine: 3 mg [1 mg/mL solution] nebulized. • May be repeated once if needed. • Adult AND Pediatric same dosing. • For anaphylaxis with str",
      "cells": [
       "",
-      "•",
+      "",
       "•",
       "•",
       "•"
@@ -11293,7 +11189,7 @@
      "cells": [
       "",
       "",
-      "",
+      "•",
       "•",
       "•"
      ],
@@ -11454,23 +11350,6 @@
       "I": "•",
       "P": "•"
      }
-    },
-    {
-     "pems_page": 124,
-     "ordinal": 13,
-     "section": "Pulmonary Edema",
-     "section_ordinal": 2,
-     "verbatim_text": "Contact Medical Control for guidance as needed.",
-     "badges": [
-      "MC"
-     ],
-     "columns": {
-      "EMR": "MC",
-      "EMT": "MC",
-      "A": "MC",
-      "I": "MC",
-      "P": "MC"
-     }
     }
    ],
    "notes": [],
@@ -11591,7 +11470,9 @@
      ],
      "disposition": "matched",
      "site_row": "3",
-     "claimed_by_site_rows": [],
+     "claimed_by_site_rows": [
+      "4"
+     ],
      "note": null
     },
     {
@@ -11701,9 +11582,11 @@
      "badges": [
       "MC"
      ],
-     "disposition": "absent",
+     "disposition": "claimed_by_ambiguous_site_row",
      "site_row": null,
-     "claimed_by_site_rows": [],
+     "claimed_by_site_rows": [
+      "4"
+     ],
      "note": null
     }
    ]
@@ -11714,7 +11597,7 @@
     {
      "site_row": "1",
      "section": "",
-     "action": "Universal Patient Care / Initial Patient Contact • Follow Universal Patient Care Poquoson Protocol for all patients.",
+     "action": "Universal Patient Care / Initial Patient Contact • Follow the Universal Patient Care protocol for all patients.",
      "cells": [
       "•",
       "•",
@@ -11731,7 +11614,7 @@
      "badges": [
       "EMR"
      ],
-     "similarity": 0.953,
+     "similarity": 1.0,
      "match_basis": "page-flat+ordinal"
     },
     {
@@ -11805,7 +11688,7 @@
      "section": "",
      "action": "Position of Comfort • Allow child to assume position of choice (usually upright or with parent) • Do not force supine positioning • Head-down positioning for infants <1 year if foreign body suspected",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -11861,7 +11744,7 @@
       "similarity": 0.239,
       "held_by_site_row": null,
       "disposition": "absent",
-      "badge_agrees_with_site": false,
+      "badge_agrees_with_site": true,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.12 against p.123 row 1)"
      }
@@ -11871,8 +11754,8 @@
      "section": "",
      "action": "High-Flow Oxygen • Apply high-flow oxygen via non-rebreather mask or blow-by • Monitor SpO2 continuously • Titrate to maintain SpO2 >94%",
      "cells": [
-      "",
-      "",
+      "•",
+      "•",
       "•",
       "•",
       "•"
@@ -11947,9 +11830,9 @@
      "action": "CPAP for Upper Airway Support • Consider CPAP for upper airway support if indicated • Initial PEEP 5 cmH2O (titratable by I/P providers)",
      "cells": [
       "",
-      "",
-      "",
-      "",
+      "•",
+      "•",
+      "•",
       "•"
      ],
      "status": "matched",
@@ -11970,9 +11853,9 @@
      "action": "Albuterol Nebulizer • Albuterol 3 mL 0.083% solution nebulized • May help with lower airway component • Reassess after treatment",
      "cells": [
       "",
-      "",
-      "",
-      "",
+      "•",
+      "•",
+      "•",
       "•"
      ],
      "status": "matched",
@@ -12017,8 +11900,8 @@
      "cells": [
       "",
       "",
-      "",
-      "",
+      "•",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -12060,7 +11943,7 @@
       "similarity": 0.153,
       "held_by_site_row": null,
       "disposition": "duplicate_in_source",
-      "badge_agrees_with_site": false,
+      "badge_agrees_with_site": true,
       "subtype": "no_anchor",
       "note": "coverage 0.50 (whole row 0.11) clears the 0.40 floor, but the row shares no drug name, no dose and no whole label head with that PEMS row, so the binding would rest on an ordinary word: For moderate to severe symptoms, also administer: ADULT: Methylprednisolone (Solu-Medrol) 125 mg IV/IO slow push. PEDIATRIC: Methylprednisolone (Solu-Medrol) 2 "
      }
@@ -12097,7 +11980,7 @@
       "",
       "",
       "",
-      "[P]"
+      "•"
      ],
      "status": "ambiguous",
      "reason_kind": "no_counterpart",
@@ -12582,7 +12465,7 @@
      "section": "",
      "action": "Universal Patient Care / Scene Safety: • Ensure scene safety and appropriate PPE. • Bring all necessary equipment to patient side.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -12635,7 +12518,7 @@
      "section": "",
      "action": "Primary Assessment: • Assess airway, breathing, circulation, and disability. • Assess vital signs and SpO2. • Identify life threats immediately.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -12981,8 +12864,8 @@
      "action": "Reassessment After Decompression: • Continuously reassess vital signs, respiratory effort, and compliance. • Auscultate for return of breath sounds. • Monitor for hemodynamic improvement.",
      "cells": [
       "",
-      "•",
-      "•",
+      "",
+      "",
       "•",
       "•"
      ],
@@ -13420,7 +13303,7 @@
      "action": "Consider non-invasive positive pressure ventilation (CPAP) for severe respiratory distress",
      "cells": [
       "",
-      "",
+      "•",
       "•",
       "•",
       "•"
@@ -13443,7 +13326,7 @@
      "action": "CPAP Initial Settings: PEEP 5 cmH2O",
      "cells": [
       "",
-      "",
+      "•",
       "•",
       "•",
       "•"
@@ -13519,7 +13402,7 @@
      "cells": [
       "",
       "",
-      "",
+      "•",
       "•",
       "•"
      ],
@@ -13576,7 +13459,7 @@
     {
      "site_row": "13",
      "section": "",
-     "action": "Contact Poquoson Medical Control for guidance as needed",
+     "action": "Contact Medical Control for guidance as needed",
      "cells": [
       "MC",
       "MC",
@@ -13593,7 +13476,7 @@
      "badges": [
       "MC"
      ],
-     "similarity": 0.957,
+     "similarity": 1.0,
      "match_basis": "page-flat+text"
     }
    ],
@@ -13943,7 +13826,7 @@
     {
      "site_row": "1",
      "section": "",
-     "action": "Universal Patient Care / Initial Patient Contact: • Follow Universal Patient Care / Initial Patient Contact Poquoson Protocol. • Assess for life threats and mechanism of respiratory failure.",
+     "action": "Universal Patient Care / Initial Patient Contact: • Follow the Universal Patient Care / Initial Patient Contact protocol. • Assess for life threats and mechanism of respiratory failure.",
      "cells": [
       "•",
       "•",
@@ -13960,7 +13843,7 @@
      "badges": [
       "EMR"
      ],
-     "similarity": 0.835,
+     "similarity": 0.851,
      "match_basis": "page-flat+ordinal"
     },
     {
@@ -14036,7 +13919,7 @@
     {
      "site_row": "4",
      "section": "",
-     "action": "BLS Airway Adjuncts (EMR/EMT): • Insert oropharyngeal airway (OPA) as indicated. • Insert nasopharyngeal airway (NPA) if gag reflex present. • Use supraglottic airway (SGA) as necessary.",
+     "action": "BLS Airway Adjuncts: • Insert oropharyngeal airway (OPA) as indicated. • Insert nasopharyngeal airway (NPA) if gag reflex present. • Use supraglottic airway (SGA) as necessary.",
      "cells": [
       "",
       "•",
@@ -14053,7 +13936,7 @@
      "badges": [
       "EMT"
      ],
-     "similarity": 0.491,
+     "similarity": 0.5,
      "match_basis": "page-flat+text"
     },
     {
@@ -14061,7 +13944,7 @@
      "section": "",
      "action": "Suctioning: • Provide suctioning of oropharynx as needed to clear secretions, blood, or vomitus. • Pre-oxygenate before any airway manipulation.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -14085,7 +13968,7 @@
      "action": "BVM Ventilation (Two-Person Technique): • Support respirations with bag-valve-mask using two-person technique preferred. • Deliver appropriate tidal volume (6-7 mL/kg) at rate of 10-12 breaths/min (ad",
      "cells": [
       "",
-      "",
+      "•",
       "•",
       "•",
       "•"
@@ -14139,7 +14022,7 @@
       "similarity": 0.103,
       "held_by_site_row": null,
       "disposition": "absent",
-      "badge_agrees_with_site": false,
+      "badge_agrees_with_site": true,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.239 row 4)"
      }
@@ -14221,7 +14104,7 @@
       "",
       "",
       "",
-      "",
+      "•",
       "•"
      ],
      "status": "matched",
@@ -14239,13 +14122,13 @@
     {
      "site_row": "11",
      "section": "",
-     "action": "Surgical Airway (Cricothyrotomy): • If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway. • Use 14G, 3.25\" catheter or surgical cricothyrotomy kit per Poquoson Protoco",
+     "action": "Surgical Airway (Cricothyrotomy): • If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway. • Use 14G, 3.25\" catheter or surgical cricothyrotomy kit per protocol.",
      "cells": [
       "",
       "",
       "",
       "",
-      ""
+      "•"
      ],
      "status": "ambiguous",
      "reason_kind": "no_counterpart",
@@ -14262,7 +14145,6 @@
        "intubate",
        "kit",
        "oxygenate",
-       "poquoson",
        "proceed",
        "surgical",
        "unable"
@@ -14288,13 +14170,13 @@
        "P"
       ],
       "coverage": 0.5,
-      "coverage_row": 0.071,
+      "coverage_row": 0.077,
       "coverage_basis": "label",
       "anchors": [],
-      "similarity": 0.299,
+      "similarity": 0.312,
       "held_by_site_row": "5",
       "disposition": "matched",
-      "badge_agrees_with_site": null
+      "badge_agrees_with_site": false
      }
     },
     {
@@ -14305,7 +14187,7 @@
       "",
       "",
       "",
-      "",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -14371,9 +14253,9 @@
      "action": "Ongoing Ventilation Monitoring: • Monitor ET tube placement and ventilation continuously with SpO2 and EtCO2. • Reassess lung sounds and gastric sounds after any patient movement.",
      "cells": [
       "",
-      "",
-      "",
-      "",
+      "•",
+      "•",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -14418,7 +14300,7 @@
       "similarity": 0.169,
       "held_by_site_row": null,
       "disposition": "absent",
-      "badge_agrees_with_site": false,
+      "badge_agrees_with_site": true,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.09 against p.239 row 4)"
      }
@@ -14431,8 +14313,8 @@
       "",
       "",
       "",
-      "",
-      ""
+      "•",
+      "•"
      ],
      "status": "ambiguous",
      "reason_kind": "no_counterpart",
@@ -14479,7 +14361,7 @@
       "similarity": 0.079,
       "held_by_site_row": null,
       "disposition": "absent",
-      "badge_agrees_with_site": null,
+      "badge_agrees_with_site": false,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.239 row 4)"
      }
@@ -14492,8 +14374,8 @@
       "",
       "",
       "",
-      "",
-      ""
+      "•",
+      "•"
      ],
      "status": "ambiguous",
      "reason_kind": "no_counterpart",
@@ -14542,7 +14424,7 @@
       "similarity": 0.111,
       "held_by_site_row": null,
       "disposition": "absent",
-      "badge_agrees_with_site": null,
+      "badge_agrees_with_site": false,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.239 row 4)"
      }
@@ -14824,7 +14706,7 @@
      "section": "",
      "action": "Airway and Lung Assessment: • Focused assessment for stridor, wheezing, rales • Auscultate breath sounds bilaterally • Assess work of breathing and accessory muscle use",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -14928,7 +14810,7 @@
      "section": "",
      "action": "Positioning: • Patient position of comfort (sitting upright preferred) • Consider reverse Trendelenburg if tolerated",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -14975,7 +14857,7 @@
       "similarity": 0.083,
       "held_by_site_row": null,
       "disposition": "absent",
-      "badge_agrees_with_site": false,
+      "badge_agrees_with_site": true,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 13)"
      }
@@ -14986,10 +14868,10 @@
      "action": "CPAP (Continuous Positive Airway Pressure): • Indications: Adults with respiratory distress due to pulmonary edema, infection, or near-drowning • Initial Settings: PEEP 5 cmH2O • Titration: Up to 10 c",
      "cells": [
       "",
-      "",
-      "MC",
-      "MC",
-      ""
+      "•",
+      "•",
+      "•",
+      "•"
      ],
      "status": "ambiguous",
      "reason_kind": "shared_pems_row",
@@ -15001,10 +14883,10 @@
      "action": "Supraglottic Airways (SGA): • Consider if patient continues to deteriorate and cannot tolerate CPAP • Maintains airway patency while avoiding invasive procedures",
      "cells": [
       "",
-      "",
-      "",
-      "",
-      ""
+      "•",
+      "•",
+      "•",
+      "•"
      ],
      "status": "ambiguous",
      "reason_kind": "shared_pems_row",
@@ -15018,7 +14900,7 @@
       "",
       "",
       "",
-      "",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -15074,7 +14956,7 @@
      "cells": [
       "",
       "",
-      "",
+      "•",
       "•",
       "•"
      ],
@@ -15116,7 +14998,7 @@
       "similarity": 0.202,
       "held_by_site_row": null,
       "disposition": "absent",
-      "badge_agrees_with_site": true,
+      "badge_agrees_with_site": false,
       "subtype": "no_anchor",
       "note": "coverage 0.50 (whole row 0.11) clears the 0.40 floor, but the row shares no drug name, no dose and no whole label head with that PEMS row, so the binding would rest on an ordinary word: Administer: ADULT: Furosemide (Lasix) 40 mg IV/IO slow push"
      }
@@ -15128,9 +15010,9 @@
      "cells": [
       "",
       "",
-      "MC",
-      "MC",
-      ""
+      "•",
+      "•",
+      "•"
      ],
      "status": "ambiguous",
      "reason_kind": "no_counterpart",
@@ -15178,7 +15060,7 @@
       "similarity": 0.468,
       "held_by_site_row": "12",
       "disposition": "matched",
-      "badge_agrees_with_site": false
+      "badge_agrees_with_site": true
      }
     },
     {
@@ -15234,9 +15116,9 @@
      "cells": [
       "",
       "",
-      "",
-      "",
-      ""
+      "•",
+      "•",
+      "•"
      ],
      "status": "matched",
      "pems_section_ordinal": 0,
@@ -15258,8 +15140,8 @@
       "",
       "",
       "",
-      "",
-      ""
+      "•",
+      "•"
      ],
      "status": "ambiguous",
      "reason_kind": "no_counterpart",
@@ -15309,7 +15191,7 @@
       "similarity": 0.174,
       "held_by_site_row": null,
       "disposition": "absent",
-      "badge_agrees_with_site": null,
+      "badge_agrees_with_site": false,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.08 against p.123 row 5, shared words: sulfate)"
      }
@@ -15805,7 +15687,7 @@
     {
      "site_row": "1",
      "section": "",
-     "action": "Universal Patient Care / Initial Patient Contact: • Follow Poquoson Protocols for Universal Patient Care • Remove patient from source and ensure scene safety • Initiate PPE appropriate for smoke/hazar",
+     "action": "Universal Patient Care / Initial Patient Contact: • Follow the Universal Patient Care protocol • Remove patient from source and ensure scene safety • Initiate PPE appropriate for smoke/hazardous envir",
      "cells": [
       "•",
       "•",
@@ -15822,7 +15704,7 @@
      "badges": [
       "EMR"
      ],
-     "similarity": 0.787,
+     "similarity": 0.807,
      "match_basis": "page-flat+ordinal"
     },
     {
@@ -15830,7 +15712,7 @@
      "section": "",
      "action": "Scene Safety and Scene Time Considerations: • Assess scene for ongoing hazard exposure • Limit scene time; prepare for rapid transport • Coordinate with fire department/hazmat as needed",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -16023,7 +15905,7 @@
       "",
       "",
       "",
-      "",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -16038,7 +15920,7 @@
       "",
       "",
       "",
-      "[I]",
+      "•",
       "•"
      ],
      "status": "matched",
@@ -16061,7 +15943,7 @@
       "",
       "",
       "",
-      "[I]",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -16124,8 +16006,8 @@
       "",
       "",
       "",
-      "",
-      ""
+      "•",
+      "•"
      ],
      "status": "ambiguous",
      "reason_kind": "no_counterpart",
@@ -16178,7 +16060,7 @@
       "similarity": 0.325,
       "held_by_site_row": null,
       "disposition": "absent",
-      "badge_agrees_with_site": null,
+      "badge_agrees_with_site": false,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.33 against p.153 row 4, shared words: 0.9 %, chloride, sodium)"
      }
@@ -16186,12 +16068,12 @@
     {
      "site_row": "9",
      "section": "",
-     "action": "Hydroxocobalamin Administration: • Administer per Poquoson OMD guidance • Monitor for increase in blood pressure • Inform receiving facility of administration • Prepare for possible red/purple urine d",
+     "action": "Hydroxocobalamin Administration: • Administer per Medical Control guidance • Monitor for increase in blood pressure • Inform receiving facility of administration • Prepare for possible red/purple urin",
      "cells": [
       "",
       "",
       "",
-      "[I]",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -16201,14 +16083,14 @@
       "query": [
        "administration",
        "blood",
+       "control",
        "discoloration",
        "facility",
        "guidance",
        "hydroxocobalamin",
        "increase",
        "inform",
-       "omd",
-       "poquoson",
+       "medical",
        "possible",
        "prepare",
        "pressure",
@@ -16238,7 +16120,7 @@
       "coverage_row": 0.0,
       "coverage_basis": "row",
       "anchors": [],
-      "similarity": 0.107,
+      "similarity": 0.101,
       "held_by_site_row": null,
       "disposition": "absent",
       "badge_agrees_with_site": false,
@@ -16319,7 +16201,7 @@
      "cells": [
       "",
       "",
-      "",
+      "•",
       "•",
       "•"
      ],
@@ -16377,13 +16259,13 @@
     {
      "site_row": "12",
      "section": "",
-     "action": "Medical Control Contact: • Contact Poquoson OMD for cyanide poisoning confirmation and specific Hydroxocobalamin dosing guidance • Contact Regional Burn Center for significant burn injuries requiring ",
+     "action": "Medical Control Contact: • Contact Medical Control for cyanide poisoning confirmation and specific Hydroxocobalamin dosing guidance • Contact Regional Burn Center for significant burn injuries requiri",
      "cells": [
-      "",
-      "",
-      "",
-      "[I]",
-      "•"
+      "MC",
+      "MC",
+      "MC",
+      "MC",
+      "MC"
      ],
      "status": "matched",
      "pems_section_ordinal": 5,
@@ -16394,7 +16276,7 @@
      "badges": [
       "MC"
      ],
-     "similarity": 0.74,
+     "similarity": 0.743,
      "match_basis": "page-flat+text"
     },
     {
@@ -17024,7 +16906,7 @@
     {
      "site_row": "1",
      "section": "",
-     "action": "Universal Patient Care: • Apply to all patients per Poquoson Protocols.",
+     "action": "Universal Patient Care: • Apply to all patients per protocol.",
      "cells": [
       "•",
       "•",
@@ -17041,7 +16923,7 @@
      "badges": [
       "EMR"
      ],
-     "similarity": 0.551,
+     "similarity": 0.878,
      "match_basis": "page-flat+ordinal"
     },
     {
@@ -17326,7 +17208,7 @@
      "section": "",
      "action": "Suctioning: • Provide oropharyngeal suctioning as needed for secretions, blood, or vomit. • Use rigid Yankauer catheter for direct visualization.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -17350,10 +17232,10 @@
     {
      "site_row": "10",
      "section": "",
-     "action": "Apneic Patient - BVM Ventilation (EMT and above): • Support respirations with BVM and appropriate airway adjunct. • Ensure adequate seal and proper ventilation rate. • Monitor SpO2 and EtCO2 continuou",
+     "action": "Apneic Patient - BVM Ventilation: • Support respirations with BVM and appropriate airway adjunct. • Ensure adequate seal and proper ventilation rate. • Monitor SpO2 and EtCO2 continuously.",
      "cells": [
       "",
-      "",
+      "•",
       "•",
       "•",
       "•"
@@ -17376,7 +17258,7 @@
     {
      "site_row": "11",
      "section": "",
-     "action": "Unable to Ventilate - Laryngoscopy and Forceps Removal (Intermediate/Paramedic): • If unable to ventilate due to foreign body obstruction, perform direct laryngoscopy. • Visualize foreign body using l",
+     "action": "Unable to Ventilate - Laryngoscopy and Forceps Removal: • If unable to ventilate due to foreign body obstruction, perform direct laryngoscopy. • Visualize foreign body using laryngoscope blade. • Remo",
      "cells": [
       "",
       "",
@@ -17393,7 +17275,7 @@
      "badges": [
       "I"
      ],
-     "similarity": 0.758,
+     "similarity": 0.774,
      "match_basis": "page-flat+text"
     },
     {
@@ -17427,7 +17309,7 @@
       "",
       "",
       "",
-      "[I]",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -17492,7 +17374,7 @@
       "",
       "",
       "",
-      "[I]",
+      "",
       "•"
      ],
      "status": "ambiguous",
@@ -17846,7 +17728,7 @@
      "section": "",
      "action": "Refer to Airway and Hypotension protocols as needed",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -17913,13 +17795,13 @@
     {
      "site_row": "6",
      "section": "",
-     "action": "Contact Poquoson Medical Control for additional doses or orders",
+     "action": "Contact Medical Control for additional doses or orders",
      "cells": [
-      "",
-      "",
-      "[A]",
-      "•",
-      "•"
+      "MC",
+      "MC",
+      "MC",
+      "MC",
+      "MC"
      ],
      "status": "matched",
      "pems_section_ordinal": 5,
@@ -17930,7 +17812,7 @@
      "badges": [
       "MC"
      ],
-     "similarity": 0.694,
+     "similarity": 0.718,
      "match_basis": "page-flat+ordinal"
     }
    ],
@@ -18064,7 +17946,7 @@
      "section": "",
      "action": "Don appropriate PPE; decontaminate patient prior to transport",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -18087,7 +17969,7 @@
      "section": "",
      "action": "Follow Airway Management (Consider early intubation due to copious secretions)",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -18134,7 +18016,7 @@
      "action": "DuoDote Autoinjector IM (Adult and Pediatric ≥ 40kg). Repeat in 5 mins up to 3 doses based on symptom severity.",
      "cells": [
       "",
-      "",
+      "•",
       "•",
       "•",
       "•"
@@ -18177,7 +18059,7 @@
     {
      "site_row": "7",
      "section": "",
-     "action": "Contact Poquoson Medical Control for additional guidance and dosing instructions",
+     "action": "Contact Medical Control for additional guidance and dosing instructions",
      "cells": [
       "MC",
       "MC",
@@ -18194,7 +18076,7 @@
      "badges": [
       "MC"
      ],
-     "similarity": 0.865,
+     "similarity": 0.886,
      "match_basis": "page-flat+ordinal"
     }
    ],
@@ -18412,7 +18294,7 @@
      "action": "Opiate Overdose: Administer Naloxone 1-2 mg IN",
      "cells": [
       "",
-      "",
+      "•",
       "•",
       "•",
       "•"
@@ -18459,7 +18341,7 @@
       "similarity": 0.334,
       "held_by_site_row": null,
       "disposition": "duplicate_in_source",
-      "badge_agrees_with_site": false
+      "badge_agrees_with_site": true
      },
      "pems_page": 119,
      "pems_ordinal": 6,
@@ -18478,7 +18360,7 @@
      "cells": [
       "",
       "",
-      "",
+      "•",
       "•",
       "•"
      ],
@@ -18545,7 +18427,7 @@
      "section": "",
      "action": "Anti-Cholinergic / TCA Overdose: Initiate active cooling measures",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -18571,7 +18453,7 @@
       "",
       "",
       "",
-      "",
+      "•",
       "•"
      ],
      "status": "matched",
@@ -19075,7 +18957,7 @@
     {
      "site_row": "7",
      "section": "",
-     "action": "Contact Poquoson Medical Control if the most appropriate transport destination is unclear based on criteria.",
+     "action": "Contact Medical Control if the most appropriate transport destination is unclear based on criteria.",
      "cells": [
       "MC",
       "MC",
@@ -19092,7 +18974,7 @@
      "badges": [
       "MC"
      ],
-     "similarity": 0.457,
+     "similarity": 0.507,
      "match_basis": "page-flat+text"
     }
    ],
@@ -19396,7 +19278,7 @@
      "cells": [
       "",
       "",
-      "[A]",
+      "•",
       "•",
       "•"
      ],
@@ -19420,7 +19302,7 @@
       "",
       "",
       "",
-      "[I]",
+      "•",
       "•"
      ],
      "status": "matched",
@@ -19443,7 +19325,7 @@
       "",
       "",
       "",
-      "",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -19457,7 +19339,7 @@
      "cells": [
       "",
       "",
-      "•",
+      "",
       "•",
       "•"
      ],
@@ -19499,7 +19381,7 @@
     {
      "site_row": "9",
      "section": "",
-     "action": "If it is anticipated the patient will not be able to be promptly and safely extricated, contact Poquoson Medical Control at a regional trauma center for additional resources.",
+     "action": "If it is anticipated the patient will not be able to be promptly and safely extricated, contact Medical Control at a regional trauma center for additional resources.",
      "cells": [
       "MC",
       "MC",
@@ -19516,7 +19398,7 @@
      "badges": [
       "MC"
      ],
-     "similarity": 0.939,
+     "similarity": 0.952,
      "match_basis": "page-flat+ordinal"
     }
    ],
@@ -19766,7 +19648,7 @@
      "action": "Estimate TBSA/burn depth (2nd/3rd degree only)",
      "cells": [
       "",
-      "",
+      "•",
       "•",
       "•",
       "•"
@@ -20186,7 +20068,7 @@
      "section": "",
      "action": "Extremity: Apply direct pressure/packing ➔ Tourniquet 2-3\" above wound ➔ 2nd Tourniquet if needed.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -20276,9 +20158,9 @@
     {
      "site_row": "8",
      "section": "",
-     "action": "Consider pain control per Poquoson Protocol(s).",
+     "action": "Consider pain control per the Pain Control protocol.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -20290,8 +20172,7 @@
      "text_binding": {
       "query": [
        "control",
-       "pain",
-       "poquoson"
+       "pain"
       ],
       "pages_searched": [
        75
@@ -20315,10 +20196,10 @@
       "coverage_row": 0.0,
       "coverage_basis": "row",
       "anchors": [],
-      "similarity": 0.112,
+      "similarity": 0.137,
       "held_by_site_row": "1",
       "disposition": "claimed_by_ambiguous_site_row",
-      "badge_agrees_with_site": false,
+      "badge_agrees_with_site": true,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.75 row 0)"
      }
@@ -20326,7 +20207,7 @@
     {
      "site_row": "9",
      "section": "",
-     "action": "Contact Poquoson Medical Control if hemorrhage cannot be controlled and transport immediately.",
+     "action": "Contact Medical Control if hemorrhage cannot be controlled and transport immediately.",
      "cells": [
       "MC",
       "MC",
@@ -21052,7 +20933,7 @@
      "section": "",
      "action": "Control hemorrhage. Refer to Hemorrhage Control protocol.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -21100,7 +20981,7 @@
      "cells": [
       "",
       "",
-      "",
+      "•",
       "•",
       "•"
      ],
@@ -21138,7 +21019,7 @@
       "similarity": 0.36,
       "held_by_site_row": "8",
       "disposition": "matched",
-      "badge_agrees_with_site": false
+      "badge_agrees_with_site": true
      }
     },
     {
@@ -21148,7 +21029,7 @@
      "cells": [
       "",
       "",
-      "",
+      "•",
       "•",
       "•"
      ],
@@ -21259,7 +21140,7 @@
     {
      "site_row": "13",
      "section": "",
-     "action": "Contact Poquoson Medical Control for guidance and/or optimal destination determination as needed.",
+     "action": "Contact Medical Control for guidance and/or optimal destination determination as needed.",
      "cells": [
       "MC",
       "MC",
@@ -21276,7 +21157,7 @@
      "badges": [
       "MC"
      ],
-     "similarity": 0.98,
+     "similarity": 1.0,
      "match_basis": "page-flat+text"
     }
    ],

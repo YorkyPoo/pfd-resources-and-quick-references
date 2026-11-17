@@ -5,7 +5,7 @@ Input to C2. A row is ambiguous when the structure cannot settle it. `reason_kin
 - `shared_pems_row` — one PEMS row backs the site's TWO rows. Either the site row's label names an intervention whose PEMS row already backs a different site row (CPAP and SGA share p.123 row 3), or the site row has no distinctive label word and its every word is inside a PEMS row another site row already holds ("A: Obtain IV access" is the head of p.135 row 2, whose fluid-bolus tail the next row matched). The containment case carries `contained_in_pems` with the PEMS row, the overlapping words and the ratio.
 
 Rows that carry `section_fallback: true` sit under a site section heading with no single PEMS counterpart, so they were scored against the whole page grid instead. That is an annotation on the row, never a disposition: the row is still `matched`, `ambiguous` or a gap on its own evidence.
-**Total: 127 rows** (multiple_candidates 11, no_counterpart 85, shared_pems_row 31) across 27 pages.
+**Total: 125 rows** (multiple_candidates 12, no_counterpart 82, shared_pems_row 31) across 27 pages.
 
 Raster crops already exist in `audit/level-scan/evidence/` for the six known hard cases (`vfib_p63`, `vfib_p64`, `crush_p91`, `crush_p92`, `cpap_p245`, `respdist_p125`); where an entry below names one, look at the crop instead of re-rastering.
 
@@ -13,7 +13,7 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 - row **1** (base section) [`multiple_candidates`] — Follow Universal Patient Care / Initial Patient Contact protocol. Determine DNR status. Refer to Death and Criteria for Withholding Resuscitation prot
   - why: 2 different PEMS rows explain this row about equally well: p.57 row 1 (0.88), p.57 row 0 (0.79); the site row may merge them
 - row **12** (base section) [`multiple_candidates`] — If ROSC is achieved, refer to Post Cardiac Arrest Care (ROSC) protocol. If ROSC is not achieved, refer to Death and Criteria for Withholding Resuscita
-  - why: 2 different PEMS rows explain this row about equally well: p.57 row 8 (0.60), p.57 row 1 (0.59); the site row may merge them
+  - why: 2 different PEMS rows explain this row about equally well: p.57 row 8 (0.61), p.57 row 1 (0.60); the site row may merge them
 - row **4** (base section) [`no_counterpart`] — Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure.
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.57 row 1) (best coverage 0.00, p.57 row 1; see `text-binding.md`)
@@ -58,13 +58,10 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
   - why: site row label names an intervention that p.61 row 4 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
 
 ## `protocols/cardiac/04_Chest_Pain_ACS_PROC.md` — 6 ambiguous
-- row **13** (base section) [`no_counterpart`] — Medical Control Contact: • Contact Poquoson OMD for guidance as needed.
-  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
-  - text pass: `no_evidence_local` / `best_evidence_is_held` — this row's best text evidence is p.107 row 9 (coverage 1.00, badge MC), which site row 7 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix (best coverage 1.00, p.107 row 9; see `text-binding.md`)
 - row **14** (base section) [`no_counterpart`] — Right-Sided / 15-Lead ECG: • Consider right-sided 12-Lead or 15-Lead ECG for additional assessment.
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.107 row 2) (best coverage 0.00, p.107 row 2; see `text-binding.md`)
-- row **3** (base section) [`no_counterpart`] — Glucose Assessment: • Check blood glucose level. • Refer to Hyperglycemia / Hypoglycemia Poquoson Protocol if indicated.
+- row **3** (base section) [`no_counterpart`] — Glucose Assessment: • Check blood glucose level. • Refer to the Hyperglycemia / Hypoglycemia protocol if indicated.
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.107 row 2) (best coverage 0.00, p.107 row 2; see `text-binding.md`)
 - row **5** (base section) [`no_counterpart`] — 12-Lead ECG Interpretation - STEMI Criteria: • Intermediate and Paramedic providers may interpret as STEMI if: - Symptoms consistent with ACS/myocardi
@@ -76,28 +73,27 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 - row **9** (base section) [`no_counterpart`] — Cardiac Monitoring: • Consider continuous cardiac monitoring.
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `no_anchor` — coverage 1.00 (whole row 0.50) clears the 0.40 floor, but the row shares no drug name, no dose and no whole label head with that PEMS row, so the binding would rest on an ordinary word: Monitor cardiac rhythm. Refer to Tachyarrhythmias or Bradycardia protocol, as needed. (best coverage 1.00, p.107 row 7; see `text-binding.md`)
+- row **13** (base section) [`shared_pems_row`] — Medical Control Contact: • Contact Medical Control for guidance as needed.
+  - why: every word of this row (contact, control, guidance, medical) occurs in p.107 row 9 — 4 of that row's 17 significant words — which site row 7 already holds; the site splits one PEMS row into two
 
 ## `protocols/cardiac/04_Hypertensive_Crisis_PROC.md` — 1 ambiguous
 - row **2** (base section) [`no_counterpart`] — Primary Assessment: • Perform Primary and Secondary Survey. • Obtain complete set of vital signs including bilateral BP if possible. • Assess for sign
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.06 against p.109 row 2) (best coverage 0.06, p.109 row 2; see `text-binding.md`)
 
-## `protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md` — 7 ambiguous
-- row **10** (STABLE SVT PATHWAY) [`no_counterpart`] — MC: Contact Poquoson OMD for guidance Ensure 12-Lead ECG transmitted
-  - why: no PEMS row in 'STABLE SVT PATHWAY' reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
-  - text pass: `no_evidence_local` / `no_anchor` — coverage 0.71 (whole row 0.71) clears the 0.40 floor, but the row shares no drug name, no dose and no whole label head with that PEMS row, so the binding would rest on an ordinary word: Contact Medical Control if uncertain regarding rhythm, most appropriate therapy, and for guidance as needed. Ensure a 12-Lead ECG is transmitted. (best coverage 0.71, p.136 row 7; see `text-binding.md`)
+## `protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md` — 6 ambiguous
 - row **2** (base section) [`no_counterpart`] — Assess patient stability (chest pain, dyspnea, AMS, shock)
-  - why: no PEMS row in '' reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
+  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.135 row 1) (best coverage 0.00, p.135 row 1; see `text-binding.md`)
-- row **13** (UNSTABLE SVT PATHWAY) [`shared_pems_row`] — I: Monitor SpO₂ and EtCO₂ during sedation
+- row **13** (base section) [`shared_pems_row`] — Monitor SpO₂ and EtCO₂ during sedation
   - why: site row label names an intervention that p.135 row 5 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
-- row **15** (UNSTABLE SVT PATHWAY) [`shared_pems_row`] — P: If unsuccessful, check pad placement and repeat at 200 joules (Adult) or 2 joules/kg (Pediatric)
+- row **15** (base section) [`shared_pems_row`] — If unsuccessful, check pad placement and repeat at 200 joules (Adult) or 2 joules/kg (Pediatric)
   - why: two site rows name this same PEMS intervention; p.136 row 6 merges what the site splits — adjudicate which site row's cells that PEMS badge governs
-- row **16** (UNSTABLE SVT PATHWAY) [`shared_pems_row`] — P: If unsuccessful after two attempts, MC: Contact Poquoson OMD
+- row **16** (base section) [`shared_pems_row`] — If unsuccessful after two attempts, contact Medical Control
   - why: site row label names an intervention that p.136 row 6 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
-- row **5** (STABLE SVT PATHWAY) [`shared_pems_row`] — A: Obtain IV access
+- row **5** (base section) [`shared_pems_row`] — Obtain IV access
   - why: every word of this row (access) occurs in p.135 row 2 — 1 of that row's 15 significant words — which site row 6 already holds; the site splits one PEMS row into two
-- row **8** (STABLE SVT PATHWAY) [`shared_pems_row`] — I: If no conversion after 2 minutes, repeat Adenosine at DOUBLE initial dose
+- row **8** (base section) [`shared_pems_row`] — If no conversion after 2 minutes, repeat Adenosine at DOUBLE initial dose
   - why: site row label names an intervention that p.135 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
 
 ## `protocols/general/02_Behavioral_Patient_Restraint_PROC.md` — 1 ambiguous
@@ -109,9 +105,9 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 - row **6** (base section) [`no_counterpart`] — If patient is alert and responsive: Use active external rewarming with heat packs, warm blankets, etc.
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.38 against p.67 row 1) (best coverage 0.38, p.67 row 1; see `text-binding.md`)
-- row **9** (base section) [`no_counterpart`] — Contact Poquoson Medical Control prior to use of AED.
+- row **9** (base section) [`no_counterpart`] — Contact Medical Control prior to use of AED.
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
-  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.17 against p.67 row 4) (best coverage 0.17, p.67 row 4; see `text-binding.md`)
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.20 against p.67 row 4) (best coverage 0.20, p.67 row 4; see `text-binding.md`)
 - row **3** (base section) [`shared_pems_row`] — Handle the patient gently and avoid excessive movement (risk of cardiac arrest/VF).
   - why: site row label names an intervention that p.67 row 1 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
 
@@ -123,10 +119,7 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 - row **5** (base section) [`shared_pems_row`] — Shivering: Slow the cooling process
   - why: site row label names an intervention that p.69 row 2 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
 
-## `protocols/general/02_Pain_Control_PROC.md` — 2 ambiguous
-- row **8** (base section) [`no_counterpart`] — If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact Poquoson Medical Control for guidance.
-  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
-  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.08 against p.77 row 0) (best coverage 0.08, p.77 row 0; see `text-binding.md`)
+## `protocols/general/02_Pain_Control_PROC.md` — 1 ambiguous
 - row **7** (base section) [`shared_pems_row`] — OR Moderate to Severe Pain (6 - 10): • Adult: Morphine Sulfate 2.5-5 mg IV/IM (Max total dose: 10 mg) • Pediatric: Morphine Sulfate 0.1 mg/kg IV/IM (M
   - why: site row label names an intervention that p.77 row 4 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
 
@@ -156,13 +149,13 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 - row **6** (base section) [`no_counterpart`] — Triage: Symptoms <24 hrs & RACE 5-9 -> Transport to closest Comprehensive Stroke Center (if <30 min delay)
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `best_evidence_is_held` — this row's best text evidence is p.131 row 4 (coverage 0.64, badge EMT), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix (best coverage 0.64, p.131 row 4; see `text-binding.md`)
-- row **7** (base section) [`no_counterpart`] — Triage: Symptoms >24 hrs OR RACE 0-4 -> Transport to closest Primary Stroke Center
+- row **7** (base section) [`no_counterpart`] — Triage: Symptoms >24 hrs OR RACE 0-4 -> Transport to closest stroke center
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
-  - text pass: `no_evidence_local` / `best_evidence_is_held` — this row's best text evidence is p.131 row 4 (coverage 0.67, badge EMT), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix (best coverage 0.67, p.131 row 4; see `text-binding.md`)
+  - text pass: `no_evidence_local` / `best_evidence_is_held` — this row's best text evidence is p.131 row 4 (coverage 0.75, badge EMT), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix (best coverage 0.75, p.131 row 4; see `text-binding.md`)
 - row **8** (base section) [`no_counterpart`] — Establish 18g IV in Right AC (preferred for rapid imaging)
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.131 row 5) (best coverage 0.00, p.131 row 5; see `text-binding.md`)
-- row **9** (base section) [`shared_pems_row`] — Call Poquoson COR at receiving facility with Name/DOB for rapid registration
+- row **9** (base section) [`shared_pems_row`] — Call COR at the receiving facility with Name/DOB for rapid registration
   - why: site row label names an intervention that p.131 row 2 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
 
 ## `protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md` — 6 ambiguous
@@ -185,6 +178,8 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
   - why: site row label names an intervention that p.153 row 4 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
 
 ## `protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md` — 4 ambiguous
+- row **4** (base section) [`multiple_candidates`] — Ipratropium Bromide (Anticholinergic): • Adult & Pediatric: 3 mL of 0.02% solution via nebulizer. • ⚠ ONCE ONLY – Do NOT repeat without Medical Contro
+  - why: 2 different PEMS rows explain this row about equally well: p.123 row 5 (0.50), p.124 row 13 (0.46); the site row may merge them
 - row **11** (base section) [`no_counterpart`] — Reassessment and Transport: • Continuously monitor respiratory status, auscultation, and SpO₂. • Reassess after each bronchodilator treatment. • Exped
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 11) (best coverage 0.00, p.124 row 11; see `text-binding.md`)
@@ -195,8 +190,6 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - evidence: `cpap_p245-245.png`
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.25 against p.123 row 1) (best coverage 0.25, p.123 row 1; see `text-binding.md`)
-- row **4** (base section) [`shared_pems_row`] — Ipratropium Bromide (Anticholinergic): • Adult & Pediatric: 3 mL of 0.02% solution via nebulizer. • ⚠ ONCE ONLY – Do NOT repeat without Poquoson OMD c
-  - why: site row label names an intervention that p.123 row 5 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
 
 ## `protocols/respiratory/03_Pediatric_Stridor_PROC.md` — 6 ambiguous
 - row **11** (base section) [`no_counterpart`] — Airway Protection - Advanced Airway • Prepare for advanced airway if impending respiratory failure • Have appropriate sized equipment ready • ⚠ Intuba
@@ -359,7 +352,7 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 - row **8** (base section) [`no_counterpart`] — Hydroxocobalamin Preparation: • Reconstitute with 200 mL 0.9% Sodium Chloride • Use vented IV tubing for administration • Verify solution clarity and 
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.33 against p.153 row 4, shared words: 0.9 %, chloride, sodium) (best coverage 0.33, p.153 row 4; see `text-binding.md`)
-- row **9** (base section) [`no_counterpart`] — Hydroxocobalamin Administration: • Administer per Poquoson OMD guidance • Monitor for increase in blood pressure • Inform receiving facility of admini
+- row **9** (base section) [`no_counterpart`] — Hydroxocobalamin Administration: • Administer per Medical Control guidance • Monitor for increase in blood pressure • Inform receiving facility of adm
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.239 row 4) (best coverage 0.00, p.239 row 4; see `text-binding.md`)
 
@@ -400,10 +393,10 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 ## `protocols/trauma/09_Hemorrhage_Control_PROC.md` — 3 ambiguous
 - row **1** (base section) [`multiple_candidates`] — Follow Universal Care / Reassess bleeding after treatments performed.
   - why: 2 different PEMS rows explain this row about equally well: p.75 row 0 (0.65), p.75 row 7 (0.68); the site row may merge them
-- row **8** (base section) [`no_counterpart`] — Consider pain control per Poquoson Protocol(s).
+- row **8** (base section) [`no_counterpart`] — Consider pain control per the Pain Control protocol.
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.75 row 0) (best coverage 0.00, p.75 row 0; see `text-binding.md`)
-- row **9** (base section) [`shared_pems_row`] — Contact Poquoson Medical Control if hemorrhage cannot be controlled and transport immediately.
+- row **9** (base section) [`shared_pems_row`] — Contact Medical Control if hemorrhage cannot be controlled and transport immediately.
   - why: site row label names an intervention that p.75 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
 
 ## `protocols/trauma/09_Trauma_PROC.md` — 2 ambiguous

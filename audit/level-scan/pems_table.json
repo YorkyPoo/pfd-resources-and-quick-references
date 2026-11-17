@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-15T03:33:34",
+ "generated": "2026-11-17T13:23:25",
  "sources": {
   "bbox_xml": "audit/level-scan/.cache/pems_bbox.xml",
   "text_layer": "pems_chunks/PEMS2024_full.txt",
   "pdf_pages_scanned": 280,
-  "pems_pages_with_rows": 94
+  "pems_pages_with_rows": 95
  },
  "row_schema": [
   "page",
@@ -29,218 +29,268 @@
    "title": "Administrative - ALS Release to BLS",
    "rows": 8,
    "numbered_rows": 8,
-   "blank_level_cells": 18,
-   "filled_level_cells": 22,
+   "blank_level_cells": 40,
+   "filled_level_cells": 0,
+   "pems_pages": [
+    15
+   ],
+   "source_declared": "exceptions.yaml forces p.[15]",
    "decision": "administrative",
    "ruling": "administrative policy; rows are process steps, not level-gated interventions",
    "ruling_citation": "owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`)",
    "ruling_status": "contested",
-   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 22 filled level cells against 18 blank ones, so the grid is not merely decorative",
-   "level_grid_present": true,
-   "pems_pages": []
+   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 40 blank ones, so the grid is not merely decorative",
+   "level_grid_present": false
   },
   {
    "site_page": "protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md",
    "title": "Administrative - Abuse Recognition & Mandated Reporting",
    "rows": 7,
    "numbered_rows": 7,
-   "blank_level_cells": 7,
-   "filled_level_cells": 28,
+   "blank_level_cells": 35,
+   "filled_level_cells": 0,
+   "pems_pages": [
+    11,
+    12,
+    13
+   ],
+   "source_declared": "exceptions.yaml forces p.[11, 12, 13] but that page carries no parsed level grid",
    "decision": "administrative",
    "ruling": "administrative policy; mandated-reporting steps are not provider-scope gated",
    "ruling_citation": "owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`)",
    "ruling_status": "contested",
-   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 28 filled level cells against 7 blank ones, so the grid is not merely decorative",
-   "level_grid_present": true,
-   "pems_pages": []
+   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 35 blank ones, so the grid is not merely decorative",
+   "level_grid_present": false
   },
   {
    "site_page": "protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md",
    "title": "Administrative - Behavioral Health Transportation Decision",
    "rows": 7,
    "numbered_rows": 7,
-   "blank_level_cells": 7,
-   "filled_level_cells": 28,
+   "blank_level_cells": 35,
+   "filled_level_cells": 0,
+   "pems_pages": [
+    41
+   ],
+   "source_declared": "exceptions.yaml forces p.[41]",
    "decision": "administrative",
    "ruling": "administrative transport-eligibility policy, not a clinical intervention grid",
    "ruling_citation": "owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`)",
    "ruling_status": "contested",
-   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 28 filled level cells against 7 blank ones, so the grid is not merely decorative",
-   "level_grid_present": true,
-   "pems_pages": []
+   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 35 blank ones, so the grid is not merely decorative",
+   "level_grid_present": false
   },
   {
    "site_page": "protocols/administrative/01_Communications_PROC.md",
    "title": "Administrative - Communications",
    "rows": 6,
    "numbered_rows": 6,
-   "blank_level_cells": 6,
-   "filled_level_cells": 24,
+   "blank_level_cells": 30,
+   "filled_level_cells": 0,
+   "pems_pages": [
+    17,
+    18
+   ],
+   "source_declared": "exceptions.yaml forces p.[17, 18, 19, 20]",
    "decision": "administrative",
    "ruling": "administrative communications policy; PEMS p.18 carries no level badges at all",
    "ruling_citation": "owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`)",
    "ruling_status": "contested",
-   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 24 filled level cells against 6 blank ones, so the grid is not merely decorative",
-   "level_grid_present": true,
-   "pems_pages": []
+   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 30 blank ones, so the grid is not merely decorative",
+   "level_grid_present": false
   },
   {
    "site_page": "protocols/administrative/01_Death_Criteria_for_Withholding_Resuscitation_PROC.md",
    "title": "Administrative - Death & Criteria for Withholding Resuscitation",
    "rows": 5,
    "numbered_rows": 5,
-   "blank_level_cells": 5,
-   "filled_level_cells": 20,
+   "blank_level_cells": 25,
+   "filled_level_cells": 0,
+   "pems_pages": [
+    21,
+    22
+   ],
+   "source_declared": "exceptions.yaml forces p.[21, 22]",
    "decision": "administrative",
    "ruling": "administrative withholding/termination policy; decision authority, not a procedure",
    "ruling_citation": "owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`)",
    "ruling_status": "contested",
-   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 20 filled level cells against 5 blank ones, so the grid is not merely decorative",
-   "level_grid_present": true,
-   "pems_pages": []
+   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 25 blank ones, so the grid is not merely decorative",
+   "level_grid_present": false
   },
   {
    "site_page": "protocols/administrative/01_Helicopter_EMS_HEMS_PROC.md",
    "title": "Administrative - Helicopter EMS (HEMS)",
    "rows": 6,
    "numbered_rows": 6,
-   "blank_level_cells": 6,
-   "filled_level_cells": 24,
+   "blank_level_cells": 30,
+   "filled_level_cells": 0,
+   "pems_pages": [
+    23
+   ],
+   "source_declared": "exceptions.yaml forces p.[23]",
    "decision": "administrative",
    "ruling": "administrative HEMS request policy; no PEMS level grid exists for it",
    "ruling_citation": "owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`)",
    "ruling_status": "contested",
-   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 24 filled level cells against 6 blank ones, so the grid is not merely decorative",
-   "level_grid_present": true,
-   "pems_pages": []
+   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 30 blank ones, so the grid is not merely decorative",
+   "level_grid_present": false
   },
   {
    "site_page": "protocols/administrative/01_Infant_Abandonment_PROC.md",
    "title": "Administrative - Infant Abandonment (Safe Haven)",
    "rows": 4,
    "numbered_rows": 4,
-   "blank_level_cells": 4,
-   "filled_level_cells": 16,
+   "blank_level_cells": 20,
+   "filled_level_cells": 0,
+   "pems_pages": [
+    25
+   ],
+   "source_declared": "exceptions.yaml forces p.[25]",
    "decision": "administrative",
    "ruling": "administrative safe-haven policy; statutory procedure, not provider-scoped care",
    "ruling_citation": "owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`)",
    "ruling_status": "contested",
-   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 16 filled level cells against 4 blank ones, so the grid is not merely decorative",
-   "level_grid_present": true,
-   "pems_pages": []
+   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 20 blank ones, so the grid is not merely decorative",
+   "level_grid_present": false
   },
   {
    "site_page": "protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md",
    "title": "Administrative - Patient Refusal of Treatment-Transport",
    "rows": 7,
    "numbered_rows": 7,
-   "blank_level_cells": 5,
-   "filled_level_cells": 30,
+   "blank_level_cells": 35,
+   "filled_level_cells": 0,
+   "pems_pages": [
+    27,
+    28
+   ],
+   "source_declared": "exceptions.yaml forces p.[27, 28, 29]",
    "decision": "administrative",
    "ruling": "administrative refusal/consent policy; PEMS p.27 badges describe documentation duties, not scope",
    "ruling_citation": "owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`)",
    "ruling_status": "contested",
-   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 30 filled level cells against 5 blank ones, so the grid is not merely decorative",
-   "level_grid_present": true,
-   "pems_pages": []
+   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 35 blank ones, so the grid is not merely decorative",
+   "level_grid_present": false
   },
   {
    "site_page": "protocols/administrative/01_Patient_Restraint_PROC.md",
    "title": "Administrative Policies - Patient Restraint",
    "rows": 8,
    "numbered_rows": 8,
-   "blank_level_cells": 12,
-   "filled_level_cells": 28,
+   "blank_level_cells": 40,
+   "filled_level_cells": 0,
+   "pems_pages": [
+    31,
+    32
+   ],
+   "source_declared": "exceptions.yaml forces p.[31, 32] but that page carries no parsed level grid",
    "decision": "administrative",
    "ruling": "administrative restraint policy; use-of-force procedure, not a level-gated intervention",
    "ruling_citation": "owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`)",
    "ruling_status": "contested",
-   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 28 filled level cells against 12 blank ones, so the grid is not merely decorative",
-   "level_grid_present": true,
-   "pems_pages": []
+   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 40 blank ones, so the grid is not merely decorative",
+   "level_grid_present": false
   },
   {
    "site_page": "protocols/administrative/01_STEMI_Field_Triage_PROC.md",
    "title": "Administrative - STEMI Field Triage",
    "rows": 7,
    "numbered_rows": 7,
-   "blank_level_cells": 10,
-   "filled_level_cells": 25,
+   "blank_level_cells": 30,
+   "filled_level_cells": 5,
+   "pems_pages": [
+    35,
+    37
+   ],
+   "source_declared": "exceptions.yaml forces p.[35]",
    "decision": "administrative",
    "ruling": "administrative field-triage / destination policy",
    "ruling_citation": "owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`)",
    "ruling_status": "contested",
-   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 25 filled level cells against 10 blank ones, so the grid is not merely decorative",
-   "level_grid_present": true,
-   "pems_pages": []
+   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 5 filled level cells against 30 blank ones, so the grid is not merely decorative",
+   "level_grid_present": true
   },
   {
    "site_page": "protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md",
    "title": "Administrative - Safe Transport of Pediatric Patients",
    "rows": 7,
    "numbered_rows": 7,
-   "blank_level_cells": 7,
-   "filled_level_cells": 28,
+   "blank_level_cells": 35,
+   "filled_level_cells": 0,
+   "pems_pages": [
+    33
+   ],
+   "source_declared": "exceptions.yaml forces p.[33]",
    "decision": "administrative",
    "ruling": "administrative pediatric transport policy; no PEMS counterpart",
    "ruling_citation": "owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`)",
    "ruling_status": "contested",
-   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 28 filled level cells against 7 blank ones, so the grid is not merely decorative",
-   "level_grid_present": true,
-   "pems_pages": []
+   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 35 blank ones, so the grid is not merely decorative",
+   "level_grid_present": false
   },
   {
    "site_page": "protocols/administrative/01_Stroke_Field_Triage_PROC.md",
    "title": "Administrative - Stroke Field Triage",
    "rows": 8,
    "numbered_rows": 8,
-   "blank_level_cells": 8,
-   "filled_level_cells": 32,
+   "blank_level_cells": 40,
+   "filled_level_cells": 0,
+   "pems_pages": [
+    35,
+    37
+   ],
+   "source_declared": "exceptions.yaml forces p.[37]",
    "decision": "administrative",
    "ruling": "administrative field-triage / destination policy",
    "ruling_citation": "owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`)",
    "ruling_status": "contested",
-   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 32 filled level cells against 8 blank ones, so the grid is not merely decorative",
-   "level_grid_present": true,
-   "pems_pages": []
+   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 40 blank ones, so the grid is not merely decorative",
+   "level_grid_present": false
   },
   {
    "site_page": "protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md",
    "title": "Administrative - Transportation and Destination Determination",
    "rows": 7,
    "numbered_rows": 7,
-   "blank_level_cells": 7,
-   "filled_level_cells": 28,
+   "blank_level_cells": 35,
+   "filled_level_cells": 0,
+   "pems_pages": [
+    39
+   ],
+   "source_declared": "exceptions.yaml forces p.[39]",
    "decision": "administrative",
    "ruling": "administrative destination policy; explicitly excluded from level gating",
    "ruling_citation": "owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`)",
    "ruling_status": "contested",
-   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 28 filled level cells against 7 blank ones, so the grid is not merely decorative",
-   "level_grid_present": true,
-   "pems_pages": []
+   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 35 blank ones, so the grid is not merely decorative",
+   "level_grid_present": false
   },
   {
    "site_page": "protocols/administrative/01_Trauma_Field_Triage_PROC.md",
    "title": "Administrative - Trauma Field Triage",
    "rows": 8,
    "numbered_rows": 8,
-   "blank_level_cells": 7,
-   "filled_level_cells": 33,
+   "blank_level_cells": 40,
+   "filled_level_cells": 0,
+   "pems_pages": [
+    43
+   ],
+   "source_declared": "exceptions.yaml forces p.[43, 44, 45]",
    "decision": "administrative",
    "ruling": "administrative field-triage / destination policy",
    "ruling_citation": "owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`)",
    "ruling_status": "contested",
-   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 33 filled level cells against 7 blank ones, so the grid is not merely decorative",
-   "level_grid_present": true,
-   "pems_pages": []
+   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 40 blank ones, so the grid is not merely decorative",
+   "level_grid_present": false
   },
   {
    "site_page": "protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
    "title": "Asystole and Pulseless Electrical Activity",
    "rows": 12,
    "numbered_rows": 12,
-   "blank_level_cells": 16,
-   "filled_level_cells": 44,
+   "blank_level_cells": 13,
+   "filled_level_cells": 47,
    "pems_pages": [
     57
    ],
@@ -266,8 +316,8 @@
    "title": "Cardiac - Cardiac Arrest Non-Traumatic",
    "rows": 14,
    "numbered_rows": 14,
-   "blank_level_cells": 20,
-   "filled_level_cells": 50,
+   "blank_level_cells": 16,
+   "filled_level_cells": 54,
    "pems_pages": [
     57,
     63,
@@ -281,8 +331,8 @@
    "title": "Cardiac Arrest (Traumatic)",
    "rows": 11,
    "numbered_rows": 11,
-   "blank_level_cells": 20,
-   "filled_level_cells": 35,
+   "blank_level_cells": 18,
+   "filled_level_cells": 37,
    "pems_pages": [
     61
    ],
@@ -294,8 +344,8 @@
    "title": "Cardiac - Chest Pain / ACS",
    "rows": 14,
    "numbered_rows": 14,
-   "blank_level_cells": 33,
-   "filled_level_cells": 37,
+   "blank_level_cells": 19,
+   "filled_level_cells": 51,
    "pems_pages": [
     107
    ],
@@ -307,8 +357,8 @@
    "title": "Cardiac - Hypertensive Crisis",
    "rows": 7,
    "numbered_rows": 7,
-   "blank_level_cells": 1,
-   "filled_level_cells": 34,
+   "blank_level_cells": 0,
+   "filled_level_cells": 35,
    "pems_pages": [
     109
    ],
@@ -331,10 +381,10 @@
   {
    "site_page": "protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md",
    "title": "Cardiac - Supraventricular Tachycardia",
-   "rows": 16,
+   "rows": 14,
    "numbered_rows": 14,
-   "blank_level_cells": 40,
-   "filled_level_cells": 30,
+   "blank_level_cells": 29,
+   "filled_level_cells": 41,
    "pems_pages": [
     135,
     136
@@ -347,8 +397,8 @@
    "title": "V-Fib / Pulseless V-Tach",
    "rows": 12,
    "numbered_rows": 12,
-   "blank_level_cells": 23,
-   "filled_level_cells": 37,
+   "blank_level_cells": 20,
+   "filled_level_cells": 40,
    "pems_pages": [
     63,
     64
@@ -361,8 +411,8 @@
    "title": "Cardiac - Aortic Dissection & Abdominal Aortic Aneurysm",
    "rows": 11,
    "numbered_rows": 11,
-   "blank_level_cells": 14,
-   "filled_level_cells": 41,
+   "blank_level_cells": 55,
+   "filled_level_cells": 0,
    "decision": "skipped",
    "reason": "no PEMS 2024 protocol matches this page (best title score 0.37, 'Allergic Reaction / Anaphylaxis'); the page is gated from a non-PEMS source"
   },
@@ -386,8 +436,8 @@
    "title": "Universal Patient Care / Initial Patient Contact",
    "rows": 11,
    "numbered_rows": 11,
-   "blank_level_cells": 10,
-   "filled_level_cells": 45,
+   "blank_level_cells": 9,
+   "filled_level_cells": 46,
    "pems_pages": [
     49,
     50,
@@ -401,8 +451,8 @@
    "title": "Behavioral Emergencies & Patient Restraint",
    "rows": 8,
    "numbered_rows": 8,
-   "blank_level_cells": 14,
-   "filled_level_cells": 26,
+   "blank_level_cells": 13,
+   "filled_level_cells": 27,
    "pems_pages": [
     71,
     72
@@ -415,8 +465,8 @@
    "title": "Cold Exposure (Environmental)",
    "rows": 9,
    "numbered_rows": 9,
-   "blank_level_cells": 3,
-   "filled_level_cells": 42,
+   "blank_level_cells": 2,
+   "filled_level_cells": 43,
    "pems_pages": [
     67
    ],
@@ -441,8 +491,8 @@
    "title": "Heat Exposure (Hyperthermia)",
    "rows": 7,
    "numbered_rows": 7,
-   "blank_level_cells": 11,
-   "filled_level_cells": 24,
+   "blank_level_cells": 7,
+   "filled_level_cells": 28,
    "pems_pages": [
     69
    ],
@@ -454,10 +504,11 @@
    "title": "Pain Control",
    "rows": 8,
    "numbered_rows": 8,
-   "blank_level_cells": 12,
-   "filled_level_cells": 28,
+   "blank_level_cells": 9,
+   "filled_level_cells": 31,
    "pems_pages": [
-    77
+    77,
+    78
    ],
    "source_declared": "title match 1.15 against 'Pain Control'",
    "decision": "level_gated"
@@ -467,8 +518,8 @@
    "title": "Sedation Assisted (Non-Paralytic)",
    "rows": 6,
    "numbered_rows": 6,
-   "blank_level_cells": 16,
-   "filled_level_cells": 14,
+   "blank_level_cells": 13,
+   "filled_level_cells": 17,
    "pems_pages": [
     55
    ],
@@ -478,7 +529,7 @@
   {
    "site_page": "protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md",
    "title": "Medical - Allergic Reaction / Anaphylaxis",
-   "rows": 15,
+   "rows": 13,
    "numbered_rows": 13,
    "blank_level_cells": 22,
    "filled_level_cells": 43,
@@ -509,8 +560,8 @@
    "title": "Medical - OB Emergencies",
    "rows": 10,
    "numbered_rows": 10,
-   "blank_level_cells": 11,
-   "filled_level_cells": 39,
+   "blank_level_cells": 8,
+   "filled_level_cells": 42,
    "pems_pages": [
     141,
     142,
@@ -552,8 +603,8 @@
    "title": "Neurologic - Seizure",
    "rows": 7,
    "numbered_rows": 7,
-   "blank_level_cells": 8,
-   "filled_level_cells": 27,
+   "blank_level_cells": 5,
+   "filled_level_cells": 30,
    "pems_pages": [
     127
    ],
@@ -565,8 +616,8 @@
    "title": "Neurologic - Stroke / TIA",
    "rows": 9,
    "numbered_rows": 9,
-   "blank_level_cells": 11,
-   "filled_level_cells": 34,
+   "blank_level_cells": 14,
+   "filled_level_cells": 31,
    "pems_pages": [
     131
    ],
@@ -578,8 +629,8 @@
    "title": "Respiratory - Airway / Inhalation Irritants",
    "rows": 12,
    "numbered_rows": 12,
-   "blank_level_cells": 23,
-   "filled_level_cells": 37,
+   "blank_level_cells": 21,
+   "filled_level_cells": 39,
    "pems_pages": [
     153
    ],
@@ -591,8 +642,8 @@
    "title": "Respiratory - Asthma, COPD, and Reactive Airway Disease",
    "rows": 11,
    "numbered_rows": 11,
-   "blank_level_cells": 18,
-   "filled_level_cells": 37,
+   "blank_level_cells": 16,
+   "filled_level_cells": 39,
    "pems_pages": [
     123,
     124
@@ -605,8 +656,8 @@
    "title": "Respiratory - Pediatric Stridor",
    "rows": 12,
    "numbered_rows": 12,
-   "blank_level_cells": 27,
-   "filled_level_cells": 33,
+   "blank_level_cells": 16,
+   "filled_level_cells": 44,
    "pems_pages": [
     123,
     124
@@ -636,8 +687,8 @@
    "title": "Respiratory - Pulmonary Edema and Congestion",
    "rows": 13,
    "numbered_rows": 13,
-   "blank_level_cells": 22,
-   "filled_level_cells": 43,
+   "blank_level_cells": 19,
+   "filled_level_cells": 46,
    "pems_pages": [
     123,
     124
@@ -650,8 +701,8 @@
    "title": "Respiratory - Respiratory Arrest / Airway Management",
    "rows": 15,
    "numbered_rows": 15,
-   "blank_level_cells": 41,
-   "filled_level_cells": 34,
+   "blank_level_cells": 29,
+   "filled_level_cells": 46,
    "pems_pages": [
     239
    ],
@@ -663,8 +714,8 @@
    "title": "Respiratory - Respiratory Distress",
    "rows": 16,
    "numbered_rows": 16,
-   "blank_level_cells": 40,
-   "filled_level_cells": 40,
+   "blank_level_cells": 24,
+   "filled_level_cells": 56,
    "pems_pages": [
     123,
     124
@@ -677,8 +728,8 @@
    "title": "Respiratory - Smoke Inhalation",
    "rows": 14,
    "numbered_rows": 14,
-   "blank_level_cells": 30,
-   "filled_level_cells": 40,
+   "blank_level_cells": 22,
+   "filled_level_cells": 48,
    "pems_pages": [
     153,
     239
@@ -691,8 +742,8 @@
    "title": "Respiratory - Upper Airway Obstruction / Foreign Body Airway Obstruction",
    "rows": 14,
    "numbered_rows": 14,
-   "blank_level_cells": 22,
-   "filled_level_cells": 48,
+   "blank_level_cells": 21,
+   "filled_level_cells": 49,
    "pems_pages": [
     239
    ],
@@ -704,8 +755,8 @@
    "title": "Toxicology / Medical - Nausea / Vomiting",
    "rows": 6,
    "numbered_rows": 6,
-   "blank_level_cells": 6,
-   "filled_level_cells": 24,
+   "blank_level_cells": 3,
+   "filled_level_cells": 27,
    "pems_pages": [
     117
    ],
@@ -717,8 +768,8 @@
    "title": "Toxicology - Nerve Agents",
    "rows": 7,
    "numbered_rows": 7,
-   "blank_level_cells": 7,
-   "filled_level_cells": 28,
+   "blank_level_cells": 4,
+   "filled_level_cells": 31,
    "pems_pages": [
     159
    ],
@@ -730,8 +781,8 @@
    "title": "Toxicology - Overdose / Poisoning",
    "rows": 10,
    "numbered_rows": 10,
-   "blank_level_cells": 17,
-   "filled_level_cells": 33,
+   "blank_level_cells": 13,
+   "filled_level_cells": 37,
    "pems_pages": [
     119,
     120,
@@ -772,8 +823,8 @@
    "title": "Electrical Injuries",
    "rows": 9,
    "numbered_rows": 9,
-   "blank_level_cells": 9,
-   "filled_level_cells": 36,
+   "blank_level_cells": 8,
+   "filled_level_cells": 37,
    "pems_pages": [
     95,
     96
@@ -786,8 +837,8 @@
    "title": "Hemorrhage Control",
    "rows": 9,
    "numbered_rows": 9,
-   "blank_level_cells": 2,
-   "filled_level_cells": 43,
+   "blank_level_cells": 0,
+   "filled_level_cells": 45,
    "pems_pages": [
     75
    ],
@@ -813,8 +864,8 @@
    "title": "Trauma",
    "rows": 13,
    "numbered_rows": 13,
-   "blank_level_cells": 21,
-   "filled_level_cells": 44,
+   "blank_level_cells": 18,
+   "filled_level_cells": 47,
    "pems_pages": [
     83,
     84
@@ -3691,9 +3742,10 @@
   {
    "title": "Pain Control",
    "pages": [
-    77
+    77,
+    78
    ],
-   "n_rows": 6,
+   "n_rows": 7,
    "section_continuations": [],
    "rows": [
     {
@@ -3813,6 +3865,26 @@
       "A": "[A]",
       "I": "•",
       "P": "•"
+     },
+     "side": "both"
+    },
+    {
+     "page": 78,
+     "section_heading": "",
+     "ordinal": 6,
+     "section_ordinal": 6,
+     "verbatim_text": "If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact medical control for guidance.",
+     "x": 77.3,
+     "y": 128.2,
+     "badge_tokens": [
+      "MC"
+     ],
+     "columns": {
+      "EMR": "MC",
+      "EMT": "MC",
+      "A": "MC",
+      "I": "MC",
+      "P": "MC"
      },
      "side": "both"
     }
@@ -12524,6 +12596,7 @@
   72,
   75,
   77,
+  78,
   81,
   83,
   84,

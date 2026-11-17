@@ -2,15 +2,15 @@
 
 Every PEMS 2024 intervention that has no counterpart on the Poquoson protocol page it belongs to. These are content gaps: the site documents the protocol but not this intervention, and nothing downstream will notice because the site row it should live on simply is not there.
 
-**Total: 87 rows across 27 pages.** (matched 290, ambiguous 127, site rows 417)
+**Total: 86 rows across 27 pages.** (matched 292, ambiguous 125, site rows 417)
 
 ## Reconciliation with the previous scan's 152, by cause
 
-The 2026-11-14 scan reported **152** PEMS rows with no site row. This run reports **87**. The delta is accounted for below by cause, with every row named in `reconciliation.json` (`prior_to_now.rows`). Rows are matched by verbatim text, not row number: the two scans number rows differently.
+The 2026-11-14 scan reported **152** PEMS rows with no site row. This run reports **86**. The delta is accounted for below by cause, with every row named in `reconciliation.json` (`prior_to_now.rows`). Rows are matched by verbatim text, not row number: the two scans number rows differently.
 
 | what happened to the prior scan's 152 rows | rows |
 |---|---|
-| still `absent_from_site` | 81 |
+| still `absent_from_site` | 80 |
 | paired to a site row on section + ordinal | 0 |
 | paired to a site row on its label | 7 |
 | paired to a site row on text evidence | 22 |
@@ -18,20 +18,20 @@ The 2026-11-14 scan reported **152** PEMS rows with no site row. This run report
 | paired by the section-fallback scoring (this fix) | 0 |
 | a duplicate copy inside the merged PEMS source | 6 |
 | the site does write it, inside a wider site row | 21 |
-| explained by an ambiguous site row (not a gap) | 12 |
+| explained by an ambiguous site row (not a gap) | 13 |
 | not found in this run's scope (needs a look) | 1 |
 | two prior claims that this run's parse merges into one PEMS row | 1 |
 | page not aligned this run | 0 |
 
-Of the 30 rows that now pair, the mechanical screen trusts 11 outright (0 section+ordinal, 2 distinctive label, 8 text evidence, 1 text-binding pass) and finds **19 too weak to accept without a human**. All 19 were read against both texts and are recorded in `reconciliation.json` under `prior_to_now.rows[*].human_verdict` / `human_note`:
+Of the 30 rows that now pair, the mechanical screen trusts 12 outright (0 section+ordinal, 3 distinctive label, 8 text evidence, 1 text-binding pass) and finds **18 too weak to accept without a human**. All 18 were read against both texts and are recorded in `reconciliation.json` under `prior_to_now.rows[*].human_verdict` / `human_note`:
 
 - **13 correct** — same intervention, wording or dose split differs.
 - **3 correct but partial** — the site row merges this PEMS intervention with another, and the PEMS row covers part of it.
 - **3 suspect** — the two rows are about different interventions and the binding rests on one shared word: 07_OB_Emergencies_PROC.md p.141#3; 03_Upper_Airway_Obstruction_PROC.md p.239#10; 09_Trauma_PROC.md p.83#3. These are counted as paired here only because that is what the aligner did; they are adjudication work for C2, not settled matches.
 
-Going the other way, **17 rows** this run leaves unpaired were not on the old list (6 absent, 3 duplicate, 8 merged): the old scan paired them on text similarity alone, and this one will not pair a row without structural evidence. They are the rows most worth a human glance and are named in `reconciliation.json` (`new_unpaired.rows`).
+Going the other way, **16 rows** this run leaves unpaired were not on the old list (6 absent, 3 duplicate, 7 merged): the old scan paired them on text similarity alone, and this one will not pair a row without structural evidence. They are the rows most worth a human glance and are named in `reconciliation.json` (`new_unpaired.rows`).
 
-**Check:** absent now 87 = 81 prior rows still absent + 6 newly absent. Of the 152 prior rows, the 71 that left the gap list are: 30 paired to a site row (0 section+ordinal, 7 label, 22 text, 1 text-binding pass, 0 section-fallback), 12 explained by an ambiguous site row, 21 merged inside a wider site row, 6 duplicate copies, 1 not in this run's scope and 1 collapsed into a single parse row.
+**Check:** absent now 86 = 80 prior rows still absent + 6 newly absent. Of the 152 prior rows, the 72 that left the gap list are: 30 paired to a site row (0 section+ordinal, 7 label, 22 text, 1 text-binding pass, 0 section-fallback), 13 explained by an ambiguous site row, 21 merged inside a wider site row, 6 duplicate copies, 1 not in this run's scope and 1 collapsed into a single parse row.
 
 ## `protocols/cardiac/04_Bradycardia_PROC.md` — 4 missing (PEMS p.103, p.104)
 - p.103 row 1 [base section #1] badge `EMR` — Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure.
@@ -101,13 +101,12 @@ Going the other way, **17 rows** this run leaves unpaired were not on the old li
 ## `protocols/neurologic/05_Stroke_TIA_PROC.md` — 1 missing (PEMS p.131)
 - p.131 row 5 [base section #5] badge `MC` — Contact Medical Control for guidance as needed.
 
-## `protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md` — 6 missing (PEMS p.123, p.124)
+## `protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md` — 5 missing (PEMS p.123, p.124)
 - p.123 row 1 [base section #1] badge `EMR` — Perform a focused evaluation including pertinent history and assessment of airway and lung sounds. Refer to Airway Management and Ventilatory Support procedure (includes airway foreign body).
 - p.123 row 3 [base section #3] badge `EMT` — Consider non-invasive (CPAP) or invasive (SGA) ventilatory support.
 - p.123 row 4 [base section #4] badge `I` — Consider invasive ventilatory support via endotracheal intubation. Refer to Endotracheal Intubation procedure. Note: Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended. RSI is not addressed in PEMS regional protocols – refer to agency specific protocols for guidance.
 - p.124 row 10 [Bronchiolitis #0] badge `A` — Provide suctioning as needed and consider: PEDIATRIC: 0.9% Sodium Chloride, 6 mL nebulized. Repeat as needed for increased work of breathing due to secretions.
 - p.124 row 11 [Pulmonary Edema #0] badge `A` — Administer: ADULT: Nitroglycerine 0.4 mg SL If SBP remains greater than 100 mmHg (MAP 65 mmHg), may repeat every five minutes as needed, up to three doses.
-- p.124 row 13 [Pulmonary Edema #2] badge `MC` — Contact Medical Control for guidance as needed.
 
 ## `protocols/respiratory/03_Pediatric_Stridor_PROC.md` — 4 missing (PEMS p.123, p.124)
 - p.123 row 1 [base section #1] badge `EMR` — Perform a focused evaluation including pertinent history and assessment of airway and lung sounds. Refer to Airway Management and Ventilatory Support procedure (includes airway foreign body).
