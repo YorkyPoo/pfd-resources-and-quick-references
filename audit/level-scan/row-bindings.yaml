@@ -202,13 +202,6 @@ bindings:
       protocol.' badged EMR — this row's action verbatim. Cross-page: p.107 (Chest Pain)
       prints no glucose row.
   - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
-    row: 5
-    status: owner_required
-    reason: >-
-      No PEMS 2024 row anywhere assigns 12-lead STEMI interpretation to a provider. p.107#4
-      badges EMT for acting on a 12-lead that already reads STEMI, which is not
-      interpretation. The page's P is kept and flagged.
-  - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
     row: 8
     pems_page: 50
     pems_ordinal: 9
@@ -221,11 +214,6 @@ bindings:
       prints no access row.
   - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
     row: 14
-    status: owner_required
-    reason: >-
-      No PEMS 2024 row anywhere prints a right-sided or 15-lead ECG. p.107#9 (MC) mentions
-      serial 12-leads, not a 15-lead, so there is no row to cite and the page's I is kept and
-      flagged.
     evidence: >-
       The pre-conversion page printed this row's level cell as [I] in the I column (git show
       768ad68), i.e. I performs this action only with Medical Control authorisation; the row
@@ -251,14 +239,6 @@ bindings:
       it I but brackets its own AED clause '[EMR]' and this page's row states '(AED for
       EMR/EMT, Manual for I/P)'; p.235#4/p.263#4 badge the AED/rhythm step EMR but scope
       rhythm determination to EMT-I/P. The page's EMT is kept and flagged.
-  - file: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
-    row: 3
-    status: owner_required
-    reason: >-
-      No PEMS 2024 row anywhere prints this airway-injury assessment. The signs it lists
-      appear only as the INDICATIONS of p.87#7, which badges intubation-at-I vs transport;
-      citing it would chip the assessment at I off a row whose action is intubation. The
-      page's EMT is kept and flagged.
   - file: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
     row: 4
     pems_page: 239
@@ -290,13 +270,6 @@ bindings:
       patients 12 and older and p.247#5 (badge P) for patients under 12. This site row invokes
       the procedure without an age limit, so no single badge is correct; the page's P is kept
       and flagged.
-  - file: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
-    row: 11
-    status: owner_required
-    reason: >-
-      No PEMS 2024 row anywhere prints a Poison Control consultation. The referral
-      (1-800-222-1222) is agency authoring; PEMS routes questions to Medical Control instead.
-      The page's P is kept and flagged.
   - file: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
     row: 7
     pems_page: 239
@@ -490,25 +463,6 @@ bindings:
       decompression is p.243#4 (badge I) while routine reassessment is p.49#4 (badge EMR); two
       levels, so the page's EMT is kept and flagged.
   - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
-    row: 6
-    status: owner_required
-    reason: >-
-      A CPAP contraindication list is not an intervention, and no PEMS 2024 row anywhere
-      prints CPAP contraindications (p.245 is the CPAP procedure's steps). Nothing to cite;
-      the page's A is kept and flagged.
-  - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
-    row: 7
-    status: owner_required
-    reason: >-
-      A CPAP contraindication list is not an intervention, and no PEMS 2024 row anywhere
-      prints CPAP contraindications. Nothing to cite; the page's A is kept and flagged.
-  - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
-    row: 8
-    status: owner_required
-    reason: >-
-      A CPAP contraindication list is not an intervention, and no PEMS 2024 row anywhere
-      prints CPAP contraindications. Nothing to cite; the page's A is kept and flagged.
-  - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
     row: 9
     status: owner_required
     reason: >-
@@ -625,13 +579,6 @@ bindings:
       resources as needed to ensure patient and provider safety ...' badged EMR — the
       scene-safety/hazard step this row expands. Cross-page: p.153 prints no scene-safety row.
       The scene-time limit in this row is agency authoring on top of that printed step.
-  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
-    row: 3
-    status: owner_required
-    reason: >-
-      No PEMS 2024 row anywhere prints this airway-injury assessment. The signs it lists
-      appear only as the INDICATIONS of p.87#7 (badge I), whose action is
-      intubation-vs-transport, not assessment. The page's EMT is kept and flagged.
   - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
     row: 7
     pems_page: 88
@@ -999,26 +946,6 @@ bindings:
 
   # ---------------------------------------------------------------- Cold Exposure (p.67)
   - file: protocols/general/02_Cold_Exposure_PROC.md
-    row: 6
-    pems_owner_kind: not-printed
-    status: owner_required
-    reason: >-
-      PEMS prints this action nowhere. p.67#1 prints passive warming only ("place patient
-      in a warm environment and prevent further heat loss. Remove all wet clothing and
-      replace with warm blankets", badge EMR) and p.67#0 prints warmed humidified O2 (badge
-      EMR); no PEMS 2024 row prints active external rewarming with heat packs — the word
-      "heat pack" appears in no PEMS protocol row. Binding r6 to p.67#1 would widen EMT ->
-      EMR on warming text the source does not print. The page's EMT is kept and flagged.
-  - file: protocols/general/02_Cold_Exposure_PROC.md
-    row: 9
-    pems_owner_kind: printed-elsewhere-no-row-matches
-    status: owner_required
-    reason: >-
-      PEMS prints an AED Medical Control gate nowhere in the Cold Exposure protocol
-      (p.67#0-#5 carry no AED row at all), and no other PEMS 2024 row requires Medical
-      Control before AED use: p.21#0, p.63#7, p.235#4 and p.263#4 print AED application at
-      EMT/EMR with no pre-use MC contact. The page's MC chip is kept and flagged.
-  - file: protocols/general/02_Cold_Exposure_PROC.md
     row: 4
     pems_page: 67
     pems_ordinal: 0
@@ -1032,13 +959,17 @@ bindings:
   # ---------------------------------------------------------------- Pain Control (p.77)
   - file: protocols/general/02_Pain_Control_PROC.md
     row: 8
-    pems_owner_kind: not-printed
-    status: owner_required
-    reason: >-
-      PEMS prints this action nowhere: p.77 carries no Medical Control row at all (its six
-      rows are #0-#5, all interventions), so the page's MC escalation row has no PEMS
-      counterpart. No other PEMS 2024 row prints a pain-control MC escalation. The page's
-      MC chip is kept and flagged.
+    pems_page: 78
+    pems_ordinal: 6
+    evidence: >-
+      p.78#6 prints "If unable to adequately control pain or safely and humanely
+      extricate/transport a stable patient, contact medical control for guidance." with an
+      MC badge in both margin columns — this row's action, word for word. p.78 is the Pain
+      Control protocol's own continuation page (the title band carries over from p.77, whose
+      six rows are #0-#5), so this is the page's governing source, not a cross-page reach.
+      The extractor used to discard p.78 entirely (a page carrying a single badge group was
+      classed `narrative`); that defect is fixed and the row is in pems_table.json, which is
+      what makes this citation checkable.
 
   # ------------------------------------------------- Sedation, non-paralytic (p.55)
   - file: protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md
@@ -1524,6 +1455,21 @@ bindings:
       make every reasonable attempt to maximize safety while comforting the child
 
   # ---- 01_Stroke_Field_Triage_PROC.md
+  - file: protocols/administrative/01_Stroke_Field_Triage_PROC.md
+    row: 1
+    pems_page: 131
+    pems_ordinal: 4
+    cross_page: true
+    quoted_row_text: >-
+      Initiate transport. Goal scene time < 15 minutes
+    evidence: >-
+      p.131#4 (Stroke / TIA protocol) prints "Initiate transport. Goal scene time < 15
+      minutes" badged EMT — the page's 15-minute scene-time goal, verbatim. Owner's Pearl
+      ruling 2026-11-17 applied here as a badged-row check, not a Pearl: this is a level-
+      badged protocol row, so the chip is that row's printed badge (EMT) and the row stops
+      being PENDING. Cross-page: this page's own source is the Stroke Field Triage
+      administrative policy (p.37), which prints no scene-time target; p.131 is the
+      clinical protocol that does.
   - file: protocols/administrative/01_Stroke_Field_Triage_PROC.md
     row: 2
     policy: stroke-field-triage

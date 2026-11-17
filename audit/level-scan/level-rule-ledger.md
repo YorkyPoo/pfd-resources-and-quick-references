@@ -18,14 +18,14 @@ the action text.
 | file | row | level | PEMS row | PEMS printed row text | basis | status |
 |---|---:|---|---|---|---|---|
 | `04_Supraventricular_Tachycardia_PROC.md` | 1 | EMR | p.135#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
-| `04_Supraventricular_Tachycardia_PROC.md` | 2 | EMR | — | — | — | owner_ruled |
+| `04_Supraventricular_Tachycardia_PROC.md` | 2 | EMR | — | — | owner-rulings:ruled | owner_ruled |
 | `04_Supraventricular_Tachycardia_PROC.md` | 4 | EMT | p.135#1 | Obtain and transmit a 12-Lead ECG. | alignment:matched | OK |
 | `04_Supraventricular_Tachycardia_PROC.md` | 5 | A | p.135#2 | Obtain IV access. Consider: ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 – 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO Repe… | adjudicated:set_cells | OK |
 | `04_Supraventricular_Tachycardia_PROC.md` | 6 | A | p.135#2 | Obtain IV access. Consider: ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 – 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO Repe… | alignment:matched | OK |
 | `04_Supraventricular_Tachycardia_PROC.md` | 7 | I | p.135#3 | If the rhythm is regular, consider: ADULT: Adenosine (Adenocard) 6 mg IV/IO followed by a 20 mL 0.9% Sodium chloride flush. PEDIATRIC: Adenosine (A… | alignment:matched | OK |
 | `04_Supraventricular_Tachycardia_PROC.md` | 8 | I | p.135#3 | If the rhythm is regular, consider: ADULT: Adenosine (Adenocard) 6 mg IV/IO followed by a 20 mL 0.9% Sodium chloride flush. PEDIATRIC: Adenosine (A… | adjudicated:set_cells | OK |
 | `04_Supraventricular_Tachycardia_PROC.md` | 9 | I | p.135#4 | If the rhythm is irregular/atrial fibrillation, initiate transport to an appropriate facility. Monitor for signs of poor perfusion. | alignment:matched | OK |
-| `04_Supraventricular_Tachycardia_PROC.md` | 10 | MC | p.136#7 | Contact Medical Control if uncertain regarding rhythm, most appropriate therapy, and for guidance as needed. Ensure a 12-Lead ECG is transmitted. | alignment:merged_into_site_row | OK |
+| `04_Supraventricular_Tachycardia_PROC.md` | 10 | MC | p.136#7 | Contact Medical Control if uncertain regarding rhythm, most appropriate therapy, and for guidance as needed. Ensure a 12-Lead ECG is transmitted. | alignment:matched | OK |
 | `04_Supraventricular_Tachycardia_PROC.md` | 12 | I | p.135#5 | For light sedation, if time and patient condition permit, consider: ADULT: Midazolam (Versed) 2.5 mg IV/IO or 5 mg IN/IM PEDIATRIC: Midazolam (Vers… | alignment:matched | OK |
 | `04_Supraventricular_Tachycardia_PROC.md` | 13 | I | p.135#5 | For light sedation, if time and patient condition permit, consider: ADULT: Midazolam (Versed) 2.5 mg IV/IO or 5 mg IN/IM PEDIATRIC: Midazolam (Vers… | adjudicated:set_cells | OK |
 | `04_Supraventricular_Tachycardia_PROC.md` | 14 | I | p.136#6 | Perform synchronized cardioversion. ADULT: 100 joules initial dose If cardioversion is unsuccessful, check pad placement and repeat at 200 joules. … | alignment:matched | OK |
@@ -88,7 +88,7 @@ the action text.
 | `04_Chest_Pain_ACS_PROC.md` | 2 | EMR | p.107#1 | Maintain SpO2 94 – 98%. Refer to Airway Management and Ventilatory Support protocol. | alignment:matched | OK |
 | `04_Chest_Pain_ACS_PROC.md` | 3 | EMR | p.109#4 **×page** | Check blood glucose level. Refer to Hyperglycemia / Hypoglycemia protocol. | row-bindings:bound | OK |
 | `04_Chest_Pain_ACS_PROC.md` | 4 | EMT | p.107#3 | Obtain and transmit 12 – Lead ECG within 5 minutes of patient contact. | alignment:matched | OK |
-| `04_Chest_Pain_ACS_PROC.md` | 5 | P | p.107#4 | If 12-Lead ECG reads “STEMI” or “ACUTE MI”, initiate transport to the nearest PCI capable hospital. Notify the receiving facility of a “Pre-Hospita… | adjudicated:ownership | OWNER_REQUIRED |
+| `04_Chest_Pain_ACS_PROC.md` | 5 | I | — | — | owner-rulings:ruled | owner_ruled |
 | `04_Chest_Pain_ACS_PROC.md` | 6 | EMT | p.107#4 | If 12-Lead ECG reads “STEMI” or “ACUTE MI”, initiate transport to the nearest PCI capable hospital. Notify the receiving facility of a “Pre-Hospita… | alignment:matched | OK |
 | `04_Chest_Pain_ACS_PROC.md` | 7 | MC | p.107#9 | Contact Medical Control for guidance as needed. If 12-Lead ECG is indeterminate or there is high suspicion for cardiac ischemia, obtain serial ECGs… | alignment:matched | OK |
 | `04_Chest_Pain_ACS_PROC.md` | 8 | A | p.50#9 **×page** | Establish IV / IO access when indicated. Refer to Intraosseous (IO) Access procedure, as needed. | row-bindings:bound | OK |
@@ -97,7 +97,7 @@ the action text.
 | `04_Chest_Pain_ACS_PROC.md` | 11 | EMT | p.107#6 | If systolic blood pressure remains above 100 mmHg and MAP ≥ 65, consider: ADULT: Nitroglycerine 0.4 mg SL. May repeat every 5 minutes as needed for… | alignment:matched | OK |
 | `04_Chest_Pain_ACS_PROC.md` | 12 | I | p.107#8 | Consider analgesia. Refer to Pain Control protocol. | alignment:matched | OK |
 | `04_Chest_Pain_ACS_PROC.md` | 13 | MC | p.107#9 | Contact Medical Control for guidance as needed. If 12-Lead ECG is indeterminate or there is high suspicion for cardiac ischemia, obtain serial ECGs… | adjudicated:held_split_review | OK |
-| `04_Chest_Pain_ACS_PROC.md` | 14 | I | — +MC | — | — | OWNER_REQUIRED |
+| `04_Chest_Pain_ACS_PROC.md` | 14 | I | — +MC | — | owner-rulings:ruled | owner_ruled |
 | `04_Hypertensive_Crisis_PROC.md` | 1 | EMR | p.109#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
 | `04_Hypertensive_Crisis_PROC.md` | 2 | EMR | p.49#2 **×page** | Initial Assessment • Perform Primary and Secondary Survey as indicated by patient status. • Consider spinal motion restriction if indicated by mech… | row-bindings:bound | OK |
 | `04_Hypertensive_Crisis_PROC.md` | 3 | EMR | p.109#1 | If stroke is suspected, refer to Stroke / TIA protocol. | alignment:matched | OK |
@@ -179,7 +179,7 @@ the action text.
 | `05_Stroke_TIA_PROC.md` | 9 | PENDING | — | — | — | pending_row_omd |
 | `03_Airway_Inhalation_Irritants_PROC.md` | 1 | EMR | p.153#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
 | `03_Airway_Inhalation_Irritants_PROC.md` | 2 | EMT | p.153#1 | Consider gross decontamination. | alignment:matched | OK |
-| `03_Airway_Inhalation_Irritants_PROC.md` | 3 | EMT | p.153#2 | Follow Airway Management and Ventilatory Support procedure. | adjudicated:held_split_review | OWNER_REQUIRED |
+| `03_Airway_Inhalation_Irritants_PROC.md` | 3 | EMT | — | — | owner-rulings:ruled | owner_ruled |
 | `03_Airway_Inhalation_Irritants_PROC.md` | 4 | EMT | p.239#4 **×page** | Provide / titrate supplemental oxygen via NC or NRB to maintain SpO 94 – 98%. 2 Use EtCO2 monitor to guide therapy. Refer to Capnography procedure. | row-bindings:bound | OK |
 | `03_Airway_Inhalation_Irritants_PROC.md` | 5 | EMT | p.153#2 | Follow Airway Management and Ventilatory Support procedure. | alignment:matched | OK |
 | `03_Airway_Inhalation_Irritants_PROC.md` | 6 | A | p.153#3 | Administer: ADULT: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. | alignment:matched | OK |
@@ -187,7 +187,7 @@ the action text.
 | `03_Airway_Inhalation_Irritants_PROC.md` | 8 | A | p.153#4 | PEDIATRIC: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. Administer: ADULT: Methylprednisolone (Solu-Medrol) 125 mg IV… | alignment:matched | OK |
 | `03_Airway_Inhalation_Irritants_PROC.md` | 9 | I | p.87#7 **×page** | Consider endotracheal intubation vs immediate transport to the nearest emergency department if any signs of symptoms of airway injury develop: • Si… | row-bindings:bound | OK |
 | `03_Airway_Inhalation_Irritants_PROC.md` | 10 | P | — | — | — | OWNER_REQUIRED |
-| `03_Airway_Inhalation_Irritants_PROC.md` | 11 | P | — | — | — | OWNER_REQUIRED |
+| `03_Airway_Inhalation_Irritants_PROC.md` | 11 | EMR | — | — | owner-rulings:ruled | owner_ruled |
 | `03_Airway_Inhalation_Irritants_PROC.md` | 12 | MC | p.153#5 | Contact Medical Control for guidance as needed. | alignment:matched | OK |
 | `03_Asthma_COPD_Reactive_Airway_PROC.md` | 1 | EMR | p.123#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
 | `03_Asthma_COPD_Reactive_Airway_PROC.md` | 2 | EMR | p.123#2 | Provide supplemental oxygen to maintain SpO2 > 94%. | alignment:matched | OK |
@@ -232,9 +232,9 @@ the action text.
 | `03_Pulmonary_Edema_Congestion_PROC.md` | 3 | EMR | p.123#2 | Provide supplemental oxygen to maintain SpO2 > 94%. | alignment:matched | OK |
 | `03_Pulmonary_Edema_Congestion_PROC.md` | 4 | EMT | p.123#3 | Consider non-invasive (CPAP) or invasive (SGA) ventilatory support. | alignment:matched | OK |
 | `03_Pulmonary_Edema_Congestion_PROC.md` | 5 | EMT | p.123#3 | Consider non-invasive (CPAP) or invasive (SGA) ventilatory support. | adjudicated:set_cells | OK |
-| `03_Pulmonary_Edema_Congestion_PROC.md` | 6 | A | p.245#2 | Place the mask over the mouth and nose with oxygen flowing. Secure with straps, beginning with the lower straps. Tighten until air-leak is minimal. | adjudicated:no_pems_counterpart | OWNER_REQUIRED |
-| `03_Pulmonary_Edema_Congestion_PROC.md` | 7 | A | p.245#2 | Place the mask over the mouth and nose with oxygen flowing. Secure with straps, beginning with the lower straps. Tighten until air-leak is minimal. | adjudicated:no_pems_counterpart | OWNER_REQUIRED |
-| `03_Pulmonary_Edema_Congestion_PROC.md` | 8 | A | p.245#2 | Place the mask over the mouth and nose with oxygen flowing. Secure with straps, beginning with the lower straps. Tighten until air-leak is minimal. | adjudicated:no_pems_counterpart | OWNER_REQUIRED |
+| `03_Pulmonary_Edema_Congestion_PROC.md` | 6 | EMT | — | — | owner-rulings:ruled | owner_ruled |
+| `03_Pulmonary_Edema_Congestion_PROC.md` | 7 | EMT | — | — | owner-rulings:ruled | owner_ruled |
+| `03_Pulmonary_Edema_Congestion_PROC.md` | 8 | EMT | — | — | owner-rulings:ruled | owner_ruled |
 | `03_Pulmonary_Edema_Congestion_PROC.md` | 9 | P | p.239#5 | Consider CPAP (PEEP: 5 cmH2O) for respiratory distress. Refer to CPAP procedure. I/P only: Adjust PEEP to support ventilation and work of breathing… | adjudicated:set_cells | OWNER_REQUIRED |
 | `03_Pulmonary_Edema_Congestion_PROC.md` | 10 | A | p.124#11 | Administer: ADULT: Nitroglycerine 0.4 mg SL If SBP remains greater than 100 mmHg (MAP 65 mmHg), may repeat every five minutes as needed, up to thre… | adjudicated:set_cells | OK |
 | `03_Pulmonary_Edema_Congestion_PROC.md` | 11 | A | p.124#11 | Administer: ADULT: Nitroglycerine 0.4 mg SL If SBP remains greater than 100 mmHg (MAP 65 mmHg), may repeat every five minutes as needed, up to thre… | alignment:matched | OK |
@@ -273,7 +273,7 @@ the action text.
 | `03_Respiratory_Distress_PROC.md` | 16 | P | — | — | — | OWNER_REQUIRED |
 | `03_Smoke_Inhalation_PROC.md` | 1 | EMR | p.153#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
 | `03_Smoke_Inhalation_PROC.md` | 2 | EMR | p.49#1 **×page** | Scene Safety / PPE / Patient Contact • Utilize appropriate agencies and resources as needed to ensure patient and provider safety including lift as… | row-bindings:bound | OK |
-| `03_Smoke_Inhalation_PROC.md` | 3 | EMT | — | — | — | OWNER_REQUIRED |
+| `03_Smoke_Inhalation_PROC.md` | 3 | EMT | — | — | owner-rulings:ruled | owner_ruled |
 | `03_Smoke_Inhalation_PROC.md` | 4 | EMT | p.153#2 | Follow Airway Management and Ventilatory Support procedure. | adjudicated:held_split_review | OK |
 | `03_Smoke_Inhalation_PROC.md` | 5 | I | p.87#7 **×page** | Consider endotracheal intubation vs immediate transport to the nearest emergency department if any signs of symptoms of airway injury develop: • Si… | row-bindings:bound | OK |
 | `03_Smoke_Inhalation_PROC.md` | 6 | I | p.239#9 +MC | If apneic and ≥ 12 years old: Consider endotracheal intubation if unable to ventilate adequately by less invasive means. Follow Endotracheal Intuba… | row-bindings:bound | OK |
@@ -391,10 +391,10 @@ the action text.
 | `02_Cold_Exposure_PROC.md` | 3 | EMR | p.67#1 | 2 Place patient in a warm environment and prevent further heat loss Remove all wet clothing and replace with warm blankets. Handle the patient gently | adjudicated:confirm | OK |
 | `02_Cold_Exposure_PROC.md` | 4 | EMR | p.67#0 | Follow General – Universal Patient Care/Initial Patient Contact Protocol. Use warmed and humidified O if available. | row-bindings:bound | OK |
 | `02_Cold_Exposure_PROC.md` | 5 | EMR | p.67#5 | Apply loose, sterile dressings to affected part | alignment:matched | OK |
-| `02_Cold_Exposure_PROC.md` | 6 | EMT | — | — | — | OWNER_REQUIRED |
+| `02_Cold_Exposure_PROC.md` | 6 | EMT | — | — | owner-rulings:ruled | owner_ruled |
 | `02_Cold_Exposure_PROC.md` | 7 | EMR | p.67#2 | and avoid excessive movement (risk of cardiac arrest) In the event of cardiac arrest, make persistent attempts at resuscitation for victims of prol… | alignment:matched | OK |
 | `02_Cold_Exposure_PROC.md` | 8 | EMT | p.67#3 | Transport patient immediately with resuscitation efforts continued en route | alignment:matched | OK |
-| `02_Cold_Exposure_PROC.md` | 9 | MC | — | — | — | OWNER_REQUIRED |
+| `02_Cold_Exposure_PROC.md` | 9 | MC | — | — | owner-rulings:ruled | owner_ruled |
 | `02_Diving_and_Drowning_Emergencies_PROC.md` | 1 | EMR | p.93#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
 | `02_Diving_and_Drowning_Emergencies_PROC.md` | 2 | EMR | p.93#1 | Remove the patient from the water. Consider spinal motion restriction. Refer to Spinal Motion Restriction procedure. | alignment:matched | OK |
 | `02_Diving_and_Drowning_Emergencies_PROC.md` | 3 | EMR | p.93#2 | Assess airway and ventilation. Refer to Airway Management and Ventilatory Support protocol. | alignment:matched | OK |
@@ -416,7 +416,7 @@ the action text.
 | `02_Pain_Control_PROC.md` | 5 | A | p.77#4 | For mild to moderate pain (2 - 5), consider: ADULT: Ketoralac (Toradol) 15 mg IV/IO or 30 mg IM | alignment:matched | OK |
 | `02_Pain_Control_PROC.md` | 6 | A | p.77#5 | For moderate to severe pain (6 – 10), consider: ADULT: Fentanyl (Sublimaze) 25 – 50 mcg IV/IO over 2 minutes or IN/IM Maximum total dose: 100 mcg P… | alignment:matched | OK |
 | `02_Pain_Control_PROC.md` | 7 | A | p.77#5 | For moderate to severe pain (6 – 10), consider: ADULT: Fentanyl (Sublimaze) 25 – 50 mcg IV/IO over 2 minutes or IN/IM Maximum total dose: 100 mcg P… | adjudicated:set_cells | OK |
-| `02_Pain_Control_PROC.md` | 8 | MC | — | — | — | OWNER_REQUIRED |
+| `02_Pain_Control_PROC.md` | 8 | MC | p.78#6 | If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact medical control for guidance. | row-bindings:bound | OK |
 | `02_Sedation_Assisted_Non_Paralytic_PROC.md` | 1 | EMR | p.55#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
 | `02_Sedation_Assisted_Non_Paralytic_PROC.md` | 2 | EMT | p.77#2 **×page** | Assess and monitor blood pressure. Ensure patient is not hypotensive. See Criteria. | row-bindings:bound | OK |
 | `02_Sedation_Assisted_Non_Paralytic_PROC.md` | 3 | A | p.50#9 **×page** | Establish IV / IO access when indicated. Refer to Intraosseous (IO) Access procedure, as needed. | row-bindings:bound | OK |
@@ -587,7 +587,7 @@ the action text.
 | `01_Safe_Transport_of_Pediatric_Patients_PROC.md` | 5 | POLICY | — | — | — | policy |
 | `01_Safe_Transport_of_Pediatric_Patients_PROC.md` | 6 | POLICY | — | — | — | policy |
 | `01_Safe_Transport_of_Pediatric_Patients_PROC.md` | 7 | POLICY | — | — | — | policy |
-| `01_Stroke_Field_Triage_PROC.md` | 1 | PENDING | — | — | — | pending_row_omd |
+| `01_Stroke_Field_Triage_PROC.md` | 1 | EMT | p.131#4 **×page** | Initiate transport. Goal scene time < 15 minutes: Symptoms less than 24 hours (or unknown) AND suspected LVO (RACE = 5 - 9) : Transport to the clos… | row-bindings:bound | OK |
 | `01_Stroke_Field_Triage_PROC.md` | 2 | POLICY | — | — | — | policy |
 | `01_Stroke_Field_Triage_PROC.md` | 3 | POLICY | — | — | — | policy |
 | `01_Stroke_Field_Triage_PROC.md` | 4 | PENDING | — | — | — | pending_row_omd |
@@ -632,7 +632,7 @@ the verbatim span from the cited row that the checker re-reads out of
 `pems_table.json` — a citation whose quote the cited row does not print fails
 `--check`. The chip is the badge that row prints, not the page's old level.
 
-**46 row(s).**
+**47 row(s).**
 
 - `protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 4: **EMR** from p.103#1 (was OWNER_REQUIRED) — quoted: "Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure."
   - action: Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure.
@@ -772,6 +772,9 @@ the verbatim span from the cited row that the checker re-reads out of
 - `protocols/administrative/01_STEMI_Field_Triage_PROC.md` row 7: **MC** from p.107#9 (was EMT) — quoted: "obtain serial ECGs at 10-minute intervals and contact Medical Control for guidance"
   - action: Serial ECGs For atypical/indeterminate ECGs with high suspicion, transmit ECG, contact Medical Control, and obtain serial ECGs every 10 minutes.
   - evidence: The STEMI Field Triage policy (p.35) prints no serial-ECG step; the action is printed verbatim as row p.107#9 of the Chest Pain protocol, badge MC. Cited where printed rather than left PENDING, so the reader is sent to the real source.
+- `protocols/administrative/01_Stroke_Field_Triage_PROC.md` row 1: **EMT** from p.131#4 (was EMT) — quoted: "Initiate transport. Goal scene time < 15 minutes"
+  - action: Time Management: Maintain a goal scene time of less than 15 minutes.
+  - evidence: p.131#4 (Stroke / TIA protocol) prints "Initiate transport. Goal scene time < 15 minutes" badged EMT — the page's 15-minute scene-time goal, verbatim. Owner's Pearl ruling 2026-11-17 applied here as a badged-row check, not a Pearl: this is a level- badged protocol row, so the chip is that row's printed badge (EMT) and the row stops being PENDING. Cross-page: this page's own source is the Stroke Field Triage administrative policy (p.37), which prints no scene-time target; p.131 is the clinical protocol that does.
 
 ## `+MC` — Medical-Control-required marker (owner ruling 2026-11-16)
 
@@ -841,7 +844,7 @@ recorded decision — the citation that cleared it is listed above and in the ta
 | `04_Bradycardia_PROC.md` | 0 | 0 | new | 0 |
 | `04_Cardiac_Arrest_Non_Traumatic_PROC.md` | 3 | 2 | 1 | 1 |
 | `04_Cardiac_Arrest_Traumatic_PROC.md` | 3 | 1 | 2 | 2 |
-| `04_Chest_Pain_ACS_PROC.md` | 4 | 2 | 2 | 2 |
+| `04_Chest_Pain_ACS_PROC.md` | 4 | 0 | 4 | 2 |
 | `04_Hypertensive_Crisis_PROC.md` | 1 | 0 | 1 | 1 |
 | `04_V_Fib_Pulseless_V_Tach_PROC.md` | 1 | 1 | 0 | 0 |
 | `07_Sepsis_PROC.md` | 0 | 0 | new | 0 |
@@ -851,14 +854,14 @@ recorded decision — the citation that cleared it is listed above and in the ta
 | `05_Seizure_PROC.md` | 0 | 0 | new | 0 |
 | `05_Hypoglycemia_Hyperglycemia_PROC.md` | 0 | 0 | new | 0 |
 | `05_Stroke_TIA_PROC.md` | 2 | 2 | 0 | 0 |
-| `03_Airway_Inhalation_Irritants_PROC.md` | 5 | 3 | 2 | 2 |
+| `03_Airway_Inhalation_Irritants_PROC.md` | 5 | 1 | 4 | 2 |
 | `03_Asthma_COPD_Reactive_Airway_PROC.md` | 3 | 2 | 1 | 1 |
 | `03_Pediatric_Stridor_PROC.md` | 6 | 2 | 4 | 4 |
 | `03_Pneumothorax_PROC.md` | 10 | 5 | 5 | 5 |
-| `03_Pulmonary_Edema_Congestion_PROC.md` | 4 | 4 | 0 | 0 |
+| `03_Pulmonary_Edema_Congestion_PROC.md` | 4 | 1 | 3 | 0 |
 | `03_Respiratory_Arrest_PROC.md` | 3 | 0 | 3 | 3 |
 | `03_Respiratory_Distress_PROC.md` | 6 | 2 | 4 | 4 |
-| `03_Smoke_Inhalation_PROC.md` | 8 | 2 | 6 | 6 |
+| `03_Smoke_Inhalation_PROC.md` | 8 | 1 | 7 | 6 |
 | `03_Upper_Airway_Obstruction_PROC.md` | 3 | 1 | 2 | 2 |
 | `09_Burns_Thermal_PROC.md` | 0 | 1 | new | 0 |
 | `09_Crush_Syndrome_PROC.md` | 0 | 0 | new | 0 |
@@ -870,10 +873,10 @@ recorded decision — the citation that cleared it is listed above and in the ta
 | `06_Nerve_Agents_PROC.md` | 0 | 0 | new | 0 |
 | `06_Overdose_Poisoning_PROC.md` | 0 | 0 | new | 0 |
 | `02_Behavioral_Patient_Restraint_PROC.md` | 0 | 0 | new | 0 |
-| `02_Cold_Exposure_PROC.md` | 0 | 2 | new | 0 |
+| `02_Cold_Exposure_PROC.md` | 0 | 0 | new | 0 |
 | `02_Diving_and_Drowning_Emergencies_PROC.md` | 0 | 0 | new | 0 |
 | `02_Heat_Exposure_PROC.md` | 0 | 0 | new | 0 |
-| `02_Pain_Control_PROC.md` | 0 | 1 | new | 0 |
+| `02_Pain_Control_PROC.md` | 0 | 0 | new | 0 |
 | `02_Sedation_Assisted_Non_Paralytic_PROC.md` | 0 | 2 | new | 0 |
 | `Universal Patient Care.md` | 0 | 0 | new | 0 |
 | `CPAP.md` | 0 | 0 | new | 0 |
@@ -900,17 +903,17 @@ recorded decision — the citation that cleared it is listed above and in the ta
 | `01_Patient_Restraint_PROC.md` | 0 | 0 | new | 0 |
 | `01_STEMI_Field_Triage_PROC.md` | 0 | 0 | new | 0 |
 | `01_Safe_Transport_of_Pediatric_Patients_PROC.md` | 0 | 0 | new | 0 |
-| `01_Stroke_Field_Triage_PROC.md` | 0 | 2 | new | 0 |
+| `01_Stroke_Field_Triage_PROC.md` | 0 | 1 | new | 0 |
 | `01_Transportation_and_Destination_Determination_PROC.md` | 0 | 0 | new | 0 |
 | `01_Trauma_Field_Triage_PROC.md` | 0 | 0 | new | 0 |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 11 | 11 | 0 | 0 |
 
-**Total: 77 flagged before, 57 after (20 cleared).**
+**Total: 77 flagged before, 45 after (32 cleared).**
 
 
 ## OWNER_REQUIRED
 
-**38 row(s).** No PEMS 2024 row authorises a provider level for these
+**27 row(s).** No PEMS 2024 row authorises a provider level for these
 actions, after the cross-page search (a row is only cleared when a PEMS row
 actually prints the action — see *Cross-page citations* above). The chip keeps the
 level the page already published and carries the flag. Nothing here was invented:
@@ -928,21 +931,11 @@ prints it and why its badge contradicts the row's own words.
 - `protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md` row 5 — **A** kept from the page, not from the source. PEA / VF / VT: Continue CPR / Defibrillate if indicated
   - nearest PEMS row, NOT cited as authority: p.61#4
   - reason: No PEMS 2024 row prints 'continue CPR / defibrillate if indicated' at one level: p.61#4 badges EMT while scoping the rhythm decision '(I / P)' in the same row, and p.63#7 badges defibrillation I with an inline '[EMR]' AED token. Both candidates contradict their own text. The page's A is kept and flagged.
-- `protocols/cardiac/04_Chest_Pain_ACS_PROC.md` row 5 — **P** kept from the page, not from the source. 12-Lead ECG Interpretation - STEMI Criteria: • Intermediate and Paramedic providers may interpret as STEMI if:   - Symptoms consistent with ACS/myocar
-  - nearest PEMS row, NOT cited as authority: p.107#4
-  - reason: No PEMS 2024 row anywhere assigns 12-lead STEMI interpretation to a provider. p.107#4 badges EMT for acting on a 12-lead that already reads STEMI, which is not interpretation. The page's P is kept and flagged.
-- `protocols/cardiac/04_Chest_Pain_ACS_PROC.md` row 14 — **I** kept from the page, not from the source. Right-Sided / 15-Lead ECG: • Consider right-sided 12-Lead or 15-Lead ECG for additional assessment.
-  - reason: No PEMS 2024 row anywhere prints a right-sided or 15-lead ECG. p.107#9 (MC) mentions serial 12-leads, not a 15-lead, so there is no row to cite and the page's I is kept and flagged.
 - `protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md` row 5 — **EMT** kept from the page, not from the source. Defibrillation: 200 J Biphasic / 360 J Monophasic (Adult) / 2 J/kg initial, 4 J/kg subsequent (Ped) (AED for EMR/EMT, Manual for I/P)
   - nearest PEMS row, NOT cited as authority: p.63#7
   - reason: No PEMS 2024 row prints defibrillation with an unambiguous single badge. p.63#7 badges it I but brackets its own AED clause '[EMR]' and this page's row states '(AED for EMR/EMT, Manual for I/P)'; p.235#4/p.263#4 badge the AED/rhythm step EMR but scope rhythm determination to EMT-I/P. The page's EMT is kept and flagged.
-- `protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md` row 3 — **EMT** kept from the page, not from the source. Airway Assessment: • Assess for signs of airway injury (singed hairs, facial burns, hoarseness, stridor, soot). • Monitor for progressive respiratory 
-  - nearest PEMS row, NOT cited as authority: p.153#2
-  - reason: No PEMS 2024 row anywhere prints this airway-injury assessment. The signs it lists appear only as the INDICATIONS of p.87#7, which badges intubation-at-I vs transport; citing it would chip the assessment at I off a row whose action is intubation. The page's EMT is kept and flagged.
 - `protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md` row 10 — **P** kept from the page, not from the source. Endotracheal Intubation: • Follow Endotracheal Intubation procedure. • ⚠ Intubation of spontaneously breathing patients without rapid sequence inducti
   - reason: PEMS prints endotracheal intubation as two age-split rows: p.247#3 (badge I) for patients 12 and older and p.247#5 (badge P) for patients under 12. This site row invokes the procedure without an age limit, so no single badge is correct; the page's P is kept and flagged.
-- `protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md` row 11 — **P** kept from the page, not from the source. Poison Control Consultation: • Contact Poison Control Center at 1-800-222-1222 with any questions. (Note: Poison Control is not online medical control
-  - reason: No PEMS 2024 row anywhere prints a Poison Control consultation. The referral (1-800-222-1222) is agency authoring; PEMS routes questions to Medical Control instead. The page's P is kept and flagged.
 - `protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md` row 8 — **I** kept from the page, not from the source. Continuous Positive Airway Pressure (CPAP): • Consider for COPD exacerbation or severe bronchospasm with adequate mentation. • Initiate 5-10 cm H₂O, t
   - reason: Conflict, recorded: the CPAP rows are p.123#3 (badge EMT) and p.239#5 (badge EMT, 'Consider CPAP (PEEP: 5 cmH2O)... I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH2O'). This row is the PEEP-titration row, and p.239#5's own text reserves that titration to I/P, so an EMT chip would contradict the cited row's words while an I chip would contradict its printed badge. The page's I is kept and flagged.
 - `protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md` row 11 — **EMT** kept from the page, not from the source. Reassessment and Transport: • Continuously monitor respiratory status, auscultation, and SpO₂. • Reassess after each bronchodilator treatment. • Exped
@@ -962,15 +955,6 @@ prints it and why its badge contradicts the row's own words.
   - reason: No single PEMS 2024 row prints this advanced-airway bundle: adult intubation is p.247#3 (badge I), paediatric is p.247#5 (badge P) and surgical airway is p.269#0 (badge P). Three rows, two levels, so the page's P is kept and flagged.
 - `protocols/respiratory/03_Pneumothorax_PROC.md` row 15 — **EMT** kept from the page, not from the source. Close Monitoring En Route: • Continuous reassessment en route. • Monitor for recurrent tension pneumothorax. • Secure catheter to prevent dislodgement
   - reason: No PEMS 2024 row prints this en-route monitoring bundle. Reassessment after decompression is p.243#4 (badge I) while routine reassessment is p.49#4 (badge EMR); two levels, so the page's EMT is kept and flagged.
-- `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` row 6 — **A** kept from the page, not from the source. CPAP CONTRAINDICATIONS (⚠️): • Apnea/agonal respirations • GCS ≤ 13 • Pneumothorax
-  - nearest PEMS row, NOT cited as authority: p.245#2
-  - reason: A CPAP contraindication list is not an intervention, and no PEMS 2024 row anywhere prints CPAP contraindications (p.245 is the CPAP procedure's steps). Nothing to cite; the page's A is kept and flagged.
-- `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` row 7 — **A** kept from the page, not from the source. CPAP CONTRAINDICATIONS (⚠️): • Facial trauma/burns/recent surgery • Penetrating neck/chest trauma • Active vomiting/severe nausea
-  - nearest PEMS row, NOT cited as authority: p.245#2
-  - reason: A CPAP contraindication list is not an intervention, and no PEMS 2024 row anywhere prints CPAP contraindications. Nothing to cite; the page's A is kept and flagged.
-- `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` row 8 — **A** kept from the page, not from the source. CPAP CONTRAINDICATIONS (⚠️): • Hypotension (SBP < 90 mmHg, MAP < 65) • Inability to tolerate tight fitting mask
-  - nearest PEMS row, NOT cited as authority: p.245#2
-  - reason: A CPAP contraindication list is not an intervention, and no PEMS 2024 row anywhere prints CPAP contraindications. Nothing to cite; the page's A is kept and flagged.
 - `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` row 9 — **P** kept from the page, not from the source. CPAP Titration: Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing
   - nearest PEMS row, NOT cited as authority: p.239#5
   - reason: Conflict, recorded: p.239#5 prints 'Consider CPAP (PEEP: 5 cmH2O) ... I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH2O' at badge EMT, and p.245#4 adds 'Consider titrating PEEP ... CPAP, BiPAP, and PEEP are RED DOT procedures at all EMS Certification Levels'. This row is the titration step the source's own text reserves to I/P, so an EMT chip would contradict the cited row's words. The page's P is kept and flagged.
@@ -978,8 +962,6 @@ prints it and why its badge contradicts the row's own words.
   - reason: No single PEMS 2024 row prints this monitoring bundle: continuous cardiac monitoring is p.50#10 (badge I) and SpO2/EtCO2 assessment is p.49#6 (badge EMT). Two levels, so the page's EMT is kept and flagged.
 - `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 16 — **P** kept from the page, not from the source. Respiratory Failure Management: • If apnea/agonal respirations or GCS ≤13: • Prepare for immediate airway control • Bag-valve-mask ventilation • Consi
   - reason: No single PEMS 2024 row prints this respiratory-failure bundle: BVM support is p.239#7 (badge EMT), adult intubation p.239#9 (badge I) and paediatric p.239#10 (badge P). Three rows, three levels, so the page's P is kept and flagged.
-- `protocols/respiratory/03_Smoke_Inhalation_PROC.md` row 3 — **EMT** kept from the page, not from the source. Airway Assessment: • Inspect for singed facial/nasal hairs • Examine face, nose, and mouth for burns or soot • Auscultate for stridor, hoarseness, or 
-  - reason: No PEMS 2024 row anywhere prints this airway-injury assessment. The signs it lists appear only as the INDICATIONS of p.87#7 (badge I), whose action is intubation-vs-transport, not assessment. The page's EMT is kept and flagged.
 - `protocols/respiratory/03_Smoke_Inhalation_PROC.md` row 13 — **EMT** kept from the page, not from the source. Monitoring and Reassessment: • Monitor SpO2, EtCO2, and respiratory rate continuously • Reassess airway patency frequently; edema may progress rapidly
   - reason: No single PEMS 2024 row prints this monitoring bundle: routine reassessment is p.49#4 (badge EMR), continuous cardiac monitoring p.50#10 (badge I) and continuous ETCO2 waveform p.241#3 (badge EMT). Multiple levels, so the page's EMT is kept and flagged.
 - `protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md` row 2 — **EMT** kept from the page, not from the source. Scene Safety / Recognition: • Rapidly identify complete vs partial obstruction. • Recognize universal choking sign (hands to throat). • Determine cons
@@ -995,12 +977,6 @@ prints it and why its badge contradicts the row's own words.
 - `protocols/trauma/09_Trauma_PROC.md` row 6 — **A** kept from the page, not from the source. Assess for shock. Refer to Shock (Hypoperfusion) protocol.
   - nearest PEMS row, NOT cited as authority: p.83#3
   - reason: No PEMS 2024 row prints 'assess for shock and refer to the Shock protocol'. p.83#3 prints 'If shock or potential for shock is present, keep the patient warm' (badge EMR) — the intervention, not the assessment/referral this row names. The page's A is kept and flagged.
-- `protocols/general/02_Cold_Exposure_PROC.md` row 6 — **EMT** kept from the page, not from the source. If patient is alert and responsive: Use active external rewarming with heat packs, warm blankets, etc.
-  - reason: PEMS prints this action nowhere. p.67#1 prints passive warming only ("place patient in a warm environment and prevent further heat loss. Remove all wet clothing and replace with warm blankets", badge EMR) and p.67#0 prints warmed humidified O2 (badge EMR); no PEMS 2024 row prints active external rewarming with heat packs — the word "heat pack" appears in no PEMS protocol row. Binding r6 to p.67#1 would widen EMT -> EMR on warming text the source does not print. The page's EMT is kept and flagged.
-- `protocols/general/02_Cold_Exposure_PROC.md` row 9 — **MC** kept from the page, not from the source. Contact Medical Control prior to use of AED.
-  - reason: PEMS prints an AED Medical Control gate nowhere in the Cold Exposure protocol (p.67#0-#5 carry no AED row at all), and no other PEMS 2024 row requires Medical Control before AED use: p.21#0, p.63#7, p.235#4 and p.263#4 print AED application at EMT/EMR with no pre-use MC contact. The page's MC chip is kept and flagged.
-- `protocols/general/02_Pain_Control_PROC.md` row 8 — **MC** kept from the page, not from the source. If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact Medical Control for guidance.
-  - reason: PEMS prints this action nowhere: p.77 carries no Medical Control row at all (its six rows are #0-#5, all interventions), so the page's MC escalation row has no PEMS counterpart. No other PEMS 2024 row prints a pain-control MC escalation. The page's MC chip is kept and flagged.
 - `protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md` row 4 — **I** kept from the page, not from the source. Pre-Intubation Sedation, consider ONE of the following:  • ADULT: Ketamine (Ketalar) 1.5 - 2 mg/kg IV/IO (Maximum single dose: 200 mg) OR 4 - 5 mg/kg 
   - nearest PEMS row, NOT cited as authority: p.55#3
   - reason: PRE-INTUBATION sedation has no PEMS 2024 row. p.55 is "Sedation Post Advanced Airway" and its only midazolam row (#3, badge I) is post-airway sedation after fentanyl; the alignment bound r4 to it on text overlap, which would cite a post-airway row for a pre-airway act. PEMS states the gap itself: p.123#4 "Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended. RSI is not addressed in PEMS regional protocols - refer to agency specific protocols for guidance." Ketamine appears in exactly one PEMS 2024 row, p.72#9 (behavioral restraint, badge P), which does not authorise sedation for intubation. The page's I is kept and flagged.
@@ -1016,7 +992,41 @@ The owner decided these levels. They are **decisions, not source citations**:
 no PEMS 2024 row badges the action, the row is not PEMS-verified, and the
 PEMS row column above is empty on purpose.
 
+Where the action IS printed in the source, the entry names the unbadged prose that
+prints it by page + heading + ordinal and quotes it verbatim (the same discipline as
+a cross-page row citation). That evidence settles *that the row is not silent*; it
+does not turn the level into a printed badge. `level from` names the printed row
+whose badge the ruling adopts, when the level itself comes from one.
+
 - `protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md` row 2 — **EMR** — status `owner_ruled`. Owner ruling 2026-11-15: EMR — any provider may assess stability. No PEMS 2024 row badges this action; this is an owner decision, not a source citation. Do not cite p.135 for it.
+- `protocols/cardiac/04_Chest_Pain_ACS_PROC.md` row 5 — **I** — status `owner_ruled`. Owner Pearl ruling 2026-11-17: "ONLY EMT-I and EMT-P can interpret 12-leads." The source prints the interpretation rule itself — p.108 PEARLS #1 and p.232 PEARLS #7, verbatim the same sentence, scoped to "Intermediate and Paramedic" — so the page's P claimed authority the source does not print and the row's I was one level too low is corrected to I (the lowest level the prose names). p.107#4 badges EMT for *acting* on a 12-lead that already reads STEMI, which is not interpretation and is cited by the STEMI-alert row (r6), not here.
+  - printed in unbadged prose: p.108 PEARLS #1 — "Intermediate and Paramedic providers may interpret a 12-Lead ECG as STEMI"
+  - printed in unbadged prose: p.232 PEARLS #7 — "Intermediate and Paramedic providers may interpret a 12-Lead ECG as STEMI"
+- `protocols/cardiac/04_Chest_Pain_ACS_PROC.md` row 14 — **I** — status `owner_ruled`. Owner Pearl ruling 2026-11-17. The source prints the action three times in unbadged prose — p.108 PEARLS #3 ("Consider right-sided 12-Lead or 15-Lead ECG"), p.232 PEARLS #8 scoped "EMT-I and Paramedic" and #9 defining the 15-Lead ECG — so the old reason ("No PEMS 2024 row anywhere prints a right-sided or 15-lead ECG") was false. What is true is narrower: no *level-badged row* prints it, which is why the level is the PROSE's own scope (EMT-I and Paramedic -> lowest I) and the chip stays I. The bracketed [I] page cell keeps its +MC marker.
+  - printed in unbadged prose: p.108 PEARLS #3 — "Consider right-sided 12-Lead or 15-Lead ECG."
+  - printed in unbadged prose: p.232 PEARLS #8 — "EMT-I and Paramedic: If there is >1 mm ST elevation in leads II, III, and/or V1"
+  - printed in unbadged prose: p.232 PEARLS #9 — "A Right-sided 12-Lead ECG (V4R) & Posterior 12-Lead ECG (V8 & V9) together constitute a 15-LeadECG"
+- `protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md` row 3 — **EMT** — status `owner_ruled`. Owner Pearl ruling 2026-11-17. p.88 PEARLS #1 prints the assessment — "Assess for airway / inhalation injury. Consider early definitive airway management for patients with respiratory distress, hoarse voice or stridor, carbonaceous sputum and/or facial burns" — so the old reason ("No PEMS 2024 row anywhere prints this airway-injury assessment") was false as written; true only of badged rows. Recognition is BLS-scope: the *advanced* airway step is the next row (r9, cited at I). Level unchanged (EMT).
+  - printed in unbadged prose: p.88 PEARLS #1 — "Assess for airway / inhalation injury."
+- `protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md` row 11 — **EMR** — status `owner_ruled`. Owner Pearl ruling 2026-11-17: "No one has to be trained to call poison control." The referral is printed twice — p.154 PEARLS #13 (CBRNE: Airway / Inhalation Irritants) and p.121 PEARLS #1 (Overdose / Poisoning / Toxic Ingestion), verbatim the same sentence, and it says explicitly that Poison Control "is not online medical control" — so it is a referral, not an ALS authorisation, and the P chip claimed authority the source does not print. The level is the page's own BLS floor, derived by page_floor() from the chips on the page itself and printed in the build log; nothing was hardcoded.
+  - printed in unbadged prose: p.154 PEARLS #13 — "Contact the Poison Control Center at 1-800-222-1222 with any questions. Note: Although Poison Control can provide invaluable expert guidance, it is not online medical control."
+  - printed in unbadged prose: p.121 PEARLS #1 — "Contact the Poison Control Center at 1-800-222-1222 with any questions. Note: Although Poison Control can provide invaluable expert guidance, it is not online medical control."
+  - level derived: the page's own lowest chip = EMR (chips on the page: EMR, EMT, EMT, EMT, EMT, A, A, A, I, P, EMR) — read out of the page by `page_floor()`, not typed
+- `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` row 6 — **EMT** — status `owner_ruled`. Owner Pearl ruling 2026-11-17: "EMT and above can do CPAP." p.245 prints the contraindication list above the procedure table as a headed CONTRAINDICATIONS block (prose, no badge anywhere on it) and badges all five procedure rows EMT, so the contraindications are gated at the level of the procedure they contraindicate: EMT. Level change A -> EMT (this bullet group is p.245 CONTRAINDICATIONS #1, bullets 1-3).
+  - printed in unbadged prose: p.245 CONTRAINDICATIONS #1 — "Apnea / agonal respirations • Decreased level of consciousness (GCS ≤ 13) • Pneumothorax"
+  - level from: p.245#0 (the badge PEMS prints for the procedure the rule governs)
+- `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` row 7 — **EMT** — status `owner_ruled`. As row 6 (owner Pearl ruling 2026-11-17). p.245 CONTRAINDICATIONS #1, bullets 4-6. Level change A -> EMT.
+  - printed in unbadged prose: p.245 CONTRAINDICATIONS #1 — "Facial trauma, burns, or recent surgery • Penetrating neck and/or chest trauma • Active vomiting / severe nausea"
+  - level from: p.245#0 (the badge PEMS prints for the procedure the rule governs)
+- `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` row 8 — **EMT** — status `owner_ruled`. As row 6 (owner Pearl ruling 2026-11-17). p.245 CONTRAINDICATIONS #1, bullets 7-8. Level change A -> EMT.
+  - printed in unbadged prose: p.245 CONTRAINDICATIONS #1 — "Hypotension (SBP < 90 mmHg, MAP < 65) • Inability to tolerate tight fitting mask"
+  - level from: p.245#0 (the badge PEMS prints for the procedure the rule governs)
+- `protocols/respiratory/03_Smoke_Inhalation_PROC.md` row 3 — **EMT** — status `owner_ruled`. Owner Pearl ruling 2026-11-17, as Inhalation Irritants r3. p.88 PEARLS #1 prints the assessment signs in the source's own words, so the old reason ("No PEMS 2024 row anywhere prints this airway-injury assessment") was false as written. Recognition is BLS-scope; the advanced-airway step is r5/r6, cited at I. Level unchanged (EMT).
+  - printed in unbadged prose: p.88 PEARLS #1 — "Consider early definitive airway management for patients with respiratory distress, hoarse voice or stridor, carbonaceous sputum and/or facial burns"
+- `protocols/general/02_Cold_Exposure_PROC.md` row 6 — **EMT** — status `owner_ruled`. Owner Pearl ruling 2026-11-17: "Patient warming with heat packs is a BLS skill, anyone can do that." The action is printed — p.67 PEARLS #5, verbatim — so the old reason ("PEMS prints this action nowhere") was false. No badge is printed, so the level stays the one the page published (EMT). p.67 PEARLS #2 also warns "DO NOT place heat packs ... directly on skin": that is a site-wording question (the page does not carry the caution), reported, not decided here, and it does not change the level.
+  - printed in unbadged prose: p.67 PEARLS #5 — "use active external rewarming with heat packs, warm blankets, etc"
+- `protocols/general/02_Cold_Exposure_PROC.md` row 9 — **MC** — status `owner_ruled`. Owner Pearl ruling 2026-11-17: "a lot of the pearls are just guidance" — so the Pearl does not create a new provider authority, but it does prove the row is not silent: p.67 PEARLS #3 prints it verbatim in the Cold Exposure protocol's own Pearls. What is true is narrower than the old reason: p.67's six badged rows (#0-#5) contain no AED row. Level unchanged (MC): the gate is a Medical Control contact, not a provider level.
+  - printed in unbadged prose: p.67 PEARLS #3 — "Contact Medical Control prior to use of AED"
 
 ## OWNER_RULED — wording (not level)
 
@@ -1077,7 +1087,7 @@ source.
 
 ## PENDING_OMD — row-level (agency additions on PEMS-cited pages)
 
-**8 row(s).** The page is PEMS-cited and every other row on it names the PEMS 2024 row that authorizes it. These rows do not: the agency added them and PEMS publishes no such action, so no provider level is published for them until the OMD authorizes one. The chip is `PENDING`; `carried_from_page` records the level the page published before conversion and is **provenance only**.
+**7 row(s).** The page is PEMS-cited and every other row on it names the PEMS 2024 row that authorizes it. These rows do not: the agency added them and PEMS publishes no such action, so no provider level is published for them until the OMD authorizes one. The chip is `PENDING`; `carried_from_page` records the level the page published before conversion and is **provenance only**.
 
 - `protocols/neurologic/05_Stroke_TIA_PROC.md` row 8: PENDING (carried from the page as **I**) — Establish 18g IV in Right AC (preferred for rapid imaging)
   - reason: Agency addition; PEMS 2024 p.131 publishes no such action. Pending OMD authorization.
@@ -1091,8 +1101,6 @@ source.
   - reason: PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol restraint guidelines (p.73: "If law-enforcement restraints have been utilized (for example handcuffs or flex-cuffs), a law enforcement officer should accompany the patient"), not as an administrative policy and not as a level-badged row. No policy and no level is published; the wording on this page is the agency policy.
 - `protocols/administrative/01_Infant_Abandonment_PROC.md` row 2: PENDING (carried from the page as **EMT**) — Assess infant and provide medical care per these Protocols
   - reason: The Infant Abandonment policy (p.25) prints what to do with a surrendered infant (contact CPS or law enforcement, and transport if indicated) but no assessment or treatment step. "Assess the infant and provide medical care per these Protocols" is the agency page's own instruction and is not printed in any PEMS administrative policy.
-- `protocols/administrative/01_Stroke_Field_Triage_PROC.md` row 1: PENDING (carried from the page as **EMT**) — Time Management: Maintain a goal scene time of less than 15 minutes.
-  - reason: The Stroke Field Triage policy (p.37) prints no scene-time target. The 15-minute goal is the agency page's own; PEMS prints a scene-time goal only in the Trauma Field Triage policy (p.44, 10 minutes), which does not govern stroke.
 - `protocols/administrative/01_Stroke_Field_Triage_PROC.md` row 4: PENDING (carried from the page as **EMT**) — Immediate Life-Threats: If uncontrolled airway, cardiac arrest, etc. cannot be addressed d
   - reason: The Stroke Field Triage policy (p.37) prints the RACE/glucose/destination algorithm and no "life threats go to the nearest ED" branch. That branch is the agency page's own addition.
 
@@ -1434,7 +1442,7 @@ decision before the page is treated as final.
   PENDING_OMD — row-level above. This is NOT the whole-page case: the rest of the
   Stroke page is PEMS-cited.
 - **Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.** The
-  owner was asked and did not rule, so the other 38 OWNER_REQUIRED rows keep their
+  owner was asked and did not rule, so the other 27 OWNER_REQUIRED rows keep their
   level + ⚑ flag exactly as they were. Do not convert them without a ruling.
 - **Respiratory pages — the OWNER_REQUIRED rows that remain after the cross-page
   pass.** PEMS 2024 prints one respiratory protocol (p.123-124) and one
@@ -1628,13 +1636,25 @@ decision before the page is treated as final.
   prints "5 mmHg" and p.245#4 extracts as "titratingPEEP9%-15mmHg)". Reconciliation
   (mmHg vs cmH2O, and 5-15 vs 9%-15) is a clinical-text decision outside this
   conversion, so only the chip was bound; owner to reconcile the page wording.
+- **Pearl ruling 2026-11-17 — two rows still say "PEMS prints this nowhere", and the
+  reason is only half true.** The BLS/ALS scope ruling cleared 11 of the 13 false
+  "prints nowhere" flags, so that bucket now holds 6 rows, not the 4 the task card
+  expected: the 4 genuinely absent rows (Pediatric Stridor r2, Pneumothorax r5, Upper
+  Airway Obstruction r2, Sedation r5) plus Trauma r6 and Sedation r4, which that card
+  put explicitly out of scope. Trauma r6 ("assess for shock") is worth a review:
+  p.84 PEARLS #3 prints the recognition half ("Any patient who is cool/diaphoretic and
+  tachycardic is considered to be in shock until proven otherwise") but not the
+  "refer to the Shock protocol" half, so the reason's silence claim is false while the
+  level question stays open. Sedation r4 prints only prose (p.248 PEARLS RSI bullet,
+  p.195 ketamine INDICATIONS) with no dose and no level. Both stay flagged until the
+  owner rules; the number the owner reads is 6 by design, not by omission.
 - **Batch 3 — 3 row(s) lost a Medical-Control requirement the page printed.** Each is now chipped at the level PEMS prints:
   `03_Airway_Inhalation_Irritants_PROC.md` row 8 was `MC`, now `A` (p.153#4).
   `03_Respiratory_Distress_PROC.md` row 6 was `MC`, now `EMT` (p.123#3).
   `03_Respiratory_Distress_PROC.md` row 10 was `MC`, now `A` (p.113#4).
   The rule is "chip = the level PEMS prints", and the source grants these actions on standing order, but the owner should confirm that dropping a page-printed MC requirement is intended.
   Row(s) in the converted set that moved *to* MC, now matching the source's MC row: `04_Chest_Pain_ACS_PROC.md` row 7 `I` -> `MC` (p.107#9); `03_Airway_Inhalation_Irritants_PROC.md` row 12 `I` -> `MC` (p.153#5); `03_Smoke_Inhalation_PROC.md` row 12 `I` -> `MC` (p.153#5); `06_Nausea_Vomiting_PROC.md` row 6 `A` -> `MC` (p.117#5); `01_STEMI_Field_Triage_PROC.md` row 7 `EMT` -> `MC` (p.107#9).
-  Already `MC` on the page and matching the source, so not moved (converted set, whole list): `04_Supraventricular_Tachycardia_PROC.md` row 10 (p.136#7); `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 12 (p.57#8); `04_Bradycardia_PROC.md` row 8 (p.104#13); `04_Cardiac_Arrest_Non_Traumatic_PROC.md` row 13 (p.57#8); `04_Cardiac_Arrest_Traumatic_PROC.md` row 11 (p.61#9); `04_Chest_Pain_ACS_PROC.md` row 13 (p.107#9); `04_Hypertensive_Crisis_PROC.md` row 7 (p.109#5); `04_V_Fib_Pulseless_V_Tach_PROC.md` row 12 (p.64#14); `07_Sepsis_PROC.md` row 6 (p.130#5); `07_OB_Emergencies_PROC.md` row 10 (p.147#4); `07_Hypotension_Shock_Non_Trauma_PROC.md` row 10 (p.114#9); `05_Seizure_PROC.md` row 7 (p.127#6); `03_Pulmonary_Edema_Congestion_PROC.md` row 13 (p.124#13); `09_Burns_Thermal_PROC.md` row 7 (p.88#9); `09_Crush_Syndrome_PROC.md` row 9 (p.91#8); `09_Hemorrhage_Control_PROC.md` row 9 (p.273#7); `09_Trauma_PROC.md` row 13 (p.84#15); `06_Nerve_Agents_PROC.md` row 7 (p.159#6); `02_Behavioral_Patient_Restraint_PROC.md` row 8 (p.72#10); `02_Diving_and_Drowning_Emergencies_PROC.md` row 7 (p.93#6); `Surgical_Airway.md` row 5 (p.269#6).
+  Already `MC` on the page and matching the source, so not moved (converted set, whole list): `04_Supraventricular_Tachycardia_PROC.md` row 10 (p.136#7); `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 12 (p.57#8); `04_Bradycardia_PROC.md` row 8 (p.104#13); `04_Cardiac_Arrest_Non_Traumatic_PROC.md` row 13 (p.57#8); `04_Cardiac_Arrest_Traumatic_PROC.md` row 11 (p.61#9); `04_Chest_Pain_ACS_PROC.md` row 13 (p.107#9); `04_Hypertensive_Crisis_PROC.md` row 7 (p.109#5); `04_V_Fib_Pulseless_V_Tach_PROC.md` row 12 (p.64#14); `07_Sepsis_PROC.md` row 6 (p.130#5); `07_OB_Emergencies_PROC.md` row 10 (p.147#4); `07_Hypotension_Shock_Non_Trauma_PROC.md` row 10 (p.114#9); `05_Seizure_PROC.md` row 7 (p.127#6); `03_Pulmonary_Edema_Congestion_PROC.md` row 13 (p.124#13); `09_Burns_Thermal_PROC.md` row 7 (p.88#9); `09_Crush_Syndrome_PROC.md` row 9 (p.91#8); `09_Hemorrhage_Control_PROC.md` row 9 (p.273#7); `09_Trauma_PROC.md` row 13 (p.84#15); `06_Nerve_Agents_PROC.md` row 7 (p.159#6); `02_Behavioral_Patient_Restraint_PROC.md` row 8 (p.72#10); `02_Diving_and_Drowning_Emergencies_PROC.md` row 7 (p.93#6); `02_Pain_Control_PROC.md` row 8 (p.78#6); `Surgical_Airway.md` row 5 (p.269#6).
 - **Batch 3 — four rows published no level at all** (Respiratory Arrest r11, r14,
   r15; Smoke Inhalation r8). There was nothing to keep, so each is bound to the row
   that prints the action: p.269#0 (Surgical Airway, already a C2 ruling), p.55#2
@@ -1657,12 +1677,12 @@ new defect. Source of truth: `audit/level-scan/verifier-exceptions.yaml`.
 | converted pages — protocol/procedure chassis | 55 |
 | converted pages — administrative policy (POLICY/PENDING) | 14 |
 | action rows — total | 604 |
-| cited to a PEMS protocol row (incl. cross-page) | 457 |
-| cross-page citations | 46 |
+| cited to a PEMS protocol row (incl. cross-page) | 459 |
+| cross-page citations | 47 |
 | POLICY (PEMS administrative policy) | 89 |
-| PENDING (no PEMS source: whole page + row-level + administrative) | 19 |
-| OWNER_REQUIRED | 38 |
-| OWNER_RULED | 1 |
+| PENDING (no PEMS source: whole page + row-level + administrative) | 18 |
+| OWNER_REQUIRED | 27 |
+| OWNER_RULED | 11 |
 | +MC markers | 8 |
 
 ### `sc-wrap` — whole `docs/` tree, walked (not a directory list)

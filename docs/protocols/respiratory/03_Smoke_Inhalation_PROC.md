@@ -42,7 +42,7 @@ The management of smoke inhalation involves the assessment and treatment of airw
 |:---:|---|---|
 | 1 | <span class="lvl lvl-emr">EMR</span> | **Universal Patient Care / Initial Patient Contact:**<br>• Follow the Universal Patient Care protocol<br>• Remove patient from source and ensure scene safety<br>• Initiate PPE appropriate for smoke/hazardous environment |
 | 2 | <span class="lvl lvl-emr">EMR</span> | **Scene Safety and Scene Time Considerations:**<br>• Assess scene for ongoing hazard exposure<br>• Limit scene time; prepare for rapid transport<br>• Coordinate with fire department/hazmat as needed |
-| 3 | <span class="lvl lvl-emt">EMT</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | **Airway Assessment:**<br>• Inspect for singed facial/nasal hairs<br>• Examine face, nose, and mouth for burns or soot<br>• Auscultate for stridor, hoarseness, or voice changes<br>• Assess sputum for carbonaceous material<br>• Monitor respiratory effort and work of breathing |
+| 3 | <span class="lvl lvl-emt">EMT</span> | **Airway Assessment:**<br>• Inspect for singed facial/nasal hairs<br>• Examine face, nose, and mouth for burns or soot<br>• Auscultate for stridor, hoarseness, or voice changes<br>• Assess sputum for carbonaceous material<br>• Monitor respiratory effort and work of breathing |
 | 4 | <span class="lvl lvl-emt">EMT</span> | **Initial Airway Management:**<br>• Position patient to optimize ventilation<br>• Suction oropharynx as needed for soot/secretions<br>• Apply high-flow **oxygen** via appropriate delivery device |
 | 5 | <span class="lvl lvl-i">I</span> | **Advanced Airway Considerations:**<br>• Consider endotracheal intubation versus immediate transport to the nearest emergency department if any signs or symptoms of airway injury develop<br>• Follow Endotracheal Intubation procedure if proceeding<br>• Continuously reassess airway patency during transport |
 | 6 | <span class="lvl lvl-i">I</span><span class="lvl lvl-mc-req" title="this level performs the action only with Medical Control authorisation (the page printed this level cell in brackets)">+MC</span> | **Endotracheal Intubation (If Indicated):**<br>• Perform endotracheal intubation per procedure<br>⚠ Intubation of spontaneously breathing patients without RSI is generally not recommended<br>⚠ Intubation of children under 12 years old is a Paramedic "red dot" skill only |
@@ -57,7 +57,7 @@ The management of smoke inhalation involves the assessment and treatment of airw
 
 </div>
 
-<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — rows 3, 13: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.
+<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — row 13: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.
 
 <strong>+MC</strong> — rows 6, 7, 9: the level shown may perform this action only with Medical Control authorisation. This page printed that level in brackets; the marker carries that meaning into the single-level layout. It is not a second level and not the same as an <code>MC</code> chip, which marks an action that is itself a Medical Control contact.</p>
 

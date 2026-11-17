@@ -33,13 +33,11 @@ Guidelines for assessing and managing pain using pharmacologic and non-pharmacol
 | 5 | <span class="lvl lvl-a">A</span> | Mild to Moderate Pain (2 - 5):<br>• Adult: **Ketorolac 15 mg** IV / **30 mg** IM |
 | 6 | <span class="lvl lvl-a">A</span><sup class="lvl-req" title="PEMS 2024 prints this badge in brackets: agency training documentation and Medical Control written authorization required">*</sup> | Moderate to Severe Pain (6 - 10):<br>• Adult: **[Fentanyl](../../pharmacology/Fentanyl.md) 25-50 mcg** IV/IN/IM (Max total dose: **100 mcg**)<br>• Pediatric: **[Fentanyl](../../pharmacology/Fentanyl.md) 0.5-1 mcg/kg** IV/IN/IM (Max dose: **25 mcg**, Max total dose: **100 mcg**) |
 | 7 | <span class="lvl lvl-a">A</span><sup class="lvl-req" title="PEMS 2024 prints this badge in brackets: agency training documentation and Medical Control written authorization required">*</sup> | OR Moderate to Severe Pain (6 - 10):<br>• Adult: **Morphine Sulfate 2.5-5 mg** IV/IM (Max total dose: **10 mg**)<br>• Pediatric: **Morphine Sulfate 0.1 mg/kg** IV/IM (Max dose: **2.5 mg**, Max total dose: **10 mg**) |
-| 8 | <span class="lvl lvl-mc">MC</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact Medical Control for guidance. |
+| 8 | <span class="lvl lvl-mc">MC</span> | If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact Medical Control for guidance. |
 
 </div>
 
-<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — row 8: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.
-
-* <strong>[ ] badge in PEMS 2024</strong> — the source prints this level in brackets: agency post-affiliation training documentation on file, plus the Medical Control written authorization for that skill. The bracketing is the source's, not this page's.</p>
+<p class="lv-note">* <strong>[ ] badge in PEMS 2024</strong> — the source prints this level in brackets: agency post-affiliation training documentation on file, plus the Medical Control written authorization for that skill. The bracketing is the source's, not this page's.</p>
 
 ### Pearls
 * ⚠ Opiates cause respiratory/CNS depression, bradycardia, and/or hypotension - monitor vitals closely following any administration.

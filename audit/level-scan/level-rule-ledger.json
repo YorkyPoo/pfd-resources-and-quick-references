@@ -124,14 +124,19 @@
    "cross_page": false,
    "mc_required": false,
    "mc_evidence": null,
-   "basis": null,
+   "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "EMR",
     "markers": [],
     "text_label": null,
     "text_tokens": []
    },
-   "note": null,
+   "note": "Owner ruling 2026-11-15: EMR \u2014 any provider may assess stability. No PEMS 2024 row badges this action; this is an owner decision, not a source citation. Do not cite p.135 for it.",
+   "prose_citations": [],
+   "level_from": null,
+   "ruling": "EMR \u2014 any provider may assess stability.",
+   "ruling_date": "2026-11-15",
+   "derived_floor": null,
    "status_before": "owner_ruled"
   },
   {
@@ -346,7 +351,7 @@
    "cross_page": false,
    "mc_required": false,
    "mc_evidence": null,
-   "basis": "alignment:merged_into_site_row",
+   "basis": "alignment:matched",
    "before": {
     "leftmost": "MC",
     "markers": [],
@@ -2463,23 +2468,27 @@
    "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
    "row": 5,
    "action": "12-Lead ECG Interpretation - STEMI Criteria: \u2022 Intermediate and Paramedic providers may interpret as STEMI if:   - Symptoms consistent with ACS/myocar",
-   "level_published": "P",
-   "status": "OWNER_REQUIRED",
-   "reason": "No PEMS 2024 row anywhere assigns 12-lead STEMI interpretation to a provider. p.107#4 badges EMT for acting on a 12-lead that already reads STEMI, which is not interpretation. The page's P is kept and flagged.",
+   "level_published": "I",
+   "status": "owner_ruled",
+   "reason": null,
    "owner_note": null,
-   "owner_ruling": null,
-   "pems_page": 107,
-   "pems_ordinal": 4,
-   "pems_badge": "EMT",
+   "owner_ruling": {
+    "date": "2026-11-17",
+    "ruling": "12-Lead STEMI interpretation is an ALS skill: only EMT-I and Paramedic may interpret a 12-Lead ECG as STEMI. Chip P -> I.",
+    "note": "Owner Pearl ruling 2026-11-17: \"ONLY EMT-I and EMT-P can interpret 12-leads.\" The source prints the interpretation rule itself \u2014 p.108 PEARLS #1 and p.232 PEARLS #7, verbatim the same sentence, scoped to \"Intermediate and Paramedic\" \u2014 so the page's P claimed authority the source does not print and the row's I was one level too low is corrected to I (the lowest level the prose names). p.107#4 badges EMT for *acting* on a 12-lead that already reads STEMI, which is not interpretation and is cited by the STEMI-alert row (r6), not here."
+   },
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
    "compound_tokens": [],
    "bracketed": false,
-   "pems_text": "If 12-Lead ECG reads \u201cSTEMI\u201d or \u201cACUTE MI\u201d, initiate transport to the nearest PCI capable hospital. Notify the receiving facility of a \u201cPre-Hospital STEMI Alert.\u201d* Refer to PEMS Administrative Policy: STEMI Field Triage.",
+   "pems_text": null,
    "binding_evidence": null,
    "quoted_row_text": null,
    "cross_page": false,
    "mc_required": false,
    "mc_evidence": null,
-   "basis": "adjudicated:ownership",
+   "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "P",
     "markers": [
@@ -2488,7 +2497,25 @@
     "text_label": null,
     "text_tokens": []
    },
-   "note": "p.107#4 is owned by site r6 (STEMI alert / notification). r5 is a site-authored interpretation step with no PEMS row of its own; PEMS badges the EMT for acting on the 12-lead, so the site's P-only gate is narrower than the source. Authoring question, no cell change.",
+   "note": "Owner Pearl ruling 2026-11-17: \"ONLY EMT-I and EMT-P can interpret 12-leads.\" The source prints the interpretation rule itself \u2014 p.108 PEARLS #1 and p.232 PEARLS #7, verbatim the same sentence, scoped to \"Intermediate and Paramedic\" \u2014 so the page's P claimed authority the source does not print and the row's I was one level too low is corrected to I (the lowest level the prose names). p.107#4 badges EMT for *acting* on a 12-lead that already reads STEMI, which is not interpretation and is cited by the STEMI-alert row (r6), not here.",
+   "prose_citations": [
+    {
+     "page": 108,
+     "heading": "PEARLS",
+     "ordinal": 1,
+     "quote": "Intermediate and Paramedic providers may interpret a 12-Lead ECG as STEMI"
+    },
+    {
+     "page": 232,
+     "heading": "PEARLS",
+     "ordinal": 7,
+     "quote": "Intermediate and Paramedic providers may interpret a 12-Lead ECG as STEMI"
+    }
+   ],
+   "level_from": null,
+   "ruling": "12-Lead STEMI interpretation is an ALS skill: only EMT-I and Paramedic may interpret a 12-Lead ECG as STEMI. Chip P -> I.",
+   "ruling_date": "2026-11-17",
+   "derived_floor": null,
    "status_before": "OWNER_REQUIRED"
   },
   {
@@ -2760,10 +2787,14 @@
    "row": 14,
    "action": "Right-Sided / 15-Lead ECG: \u2022 Consider right-sided 12-Lead or 15-Lead ECG for additional assessment.",
    "level_published": "I",
-   "status": "OWNER_REQUIRED",
-   "reason": "No PEMS 2024 row anywhere prints a right-sided or 15-lead ECG. p.107#9 (MC) mentions serial 12-leads, not a 15-lead, so there is no row to cite and the page's I is kept and flagged.",
+   "status": "owner_ruled",
+   "reason": null,
    "owner_note": null,
-   "owner_ruling": null,
+   "owner_ruling": {
+    "date": "2026-11-17",
+    "ruling": "Right-sided / 15-Lead ECG is an EMT-I and Paramedic assessment. Level unchanged (I); the \"prints nowhere\" flag is cleared.",
+    "note": "Owner Pearl ruling 2026-11-17. The source prints the action three times in unbadged prose \u2014 p.108 PEARLS #3 (\"Consider right-sided 12-Lead or 15-Lead ECG\"), p.232 PEARLS #8 scoped \"EMT-I and Paramedic\" and #9 defining the 15-Lead ECG \u2014 so the old reason (\"No PEMS 2024 row anywhere prints a right-sided or 15-lead ECG\") was false. What is true is narrower: no *level-badged row* prints it, which is why the level is the PROSE's own scope (EMT-I and Paramedic -> lowest I) and the chip stays I. The bracketed [I] page cell keeps its +MC marker."
+   },
    "pems_page": null,
    "pems_ordinal": null,
    "pems_badge": null,
@@ -2775,7 +2806,7 @@
    "cross_page": false,
    "mc_required": true,
    "mc_evidence": "The pre-conversion page printed this row's level cell as [I] in the I column (git show 768ad68), i.e. I performs this action only with Medical Control authorisation; the row is chipped I, so +MC carries exactly that meaning.",
-   "basis": null,
+   "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "I",
     "markers": [
@@ -2785,7 +2816,31 @@
     "text_label": null,
     "text_tokens": []
    },
-   "note": null,
+   "note": "Owner Pearl ruling 2026-11-17. The source prints the action three times in unbadged prose \u2014 p.108 PEARLS #3 (\"Consider right-sided 12-Lead or 15-Lead ECG\"), p.232 PEARLS #8 scoped \"EMT-I and Paramedic\" and #9 defining the 15-Lead ECG \u2014 so the old reason (\"No PEMS 2024 row anywhere prints a right-sided or 15-lead ECG\") was false. What is true is narrower: no *level-badged row* prints it, which is why the level is the PROSE's own scope (EMT-I and Paramedic -> lowest I) and the chip stays I. The bracketed [I] page cell keeps its +MC marker.",
+   "prose_citations": [
+    {
+     "page": 108,
+     "heading": "PEARLS",
+     "ordinal": 3,
+     "quote": "Consider right-sided 12-Lead or 15-Lead ECG."
+    },
+    {
+     "page": 232,
+     "heading": "PEARLS",
+     "ordinal": 8,
+     "quote": "EMT-I and Paramedic: If there is >1 mm ST elevation in leads II, III, and/or V1"
+    },
+    {
+     "page": 232,
+     "heading": "PEARLS",
+     "ordinal": 9,
+     "quote": "A Right-sided 12-Lead ECG (V4R) & Posterior 12-Lead ECG (V8 & V9) together constitute a 15-LeadECG"
+    }
+   ],
+   "level_from": null,
+   "ruling": "Right-sided / 15-Lead ECG is an EMT-I and Paramedic assessment. Level unchanged (I); the \"prints nowhere\" flag is cleared.",
+   "ruling_date": "2026-11-17",
+   "derived_floor": null,
    "status_before": "OWNER_REQUIRED"
   },
   {
@@ -5603,22 +5658,26 @@
    "row": 3,
    "action": "Airway Assessment: \u2022 Assess for signs of airway injury (singed hairs, facial burns, hoarseness, stridor, soot). \u2022 Monitor for progressive respiratory ",
    "level_published": "EMT",
-   "status": "OWNER_REQUIRED",
-   "reason": "No PEMS 2024 row anywhere prints this airway-injury assessment. The signs it lists appear only as the INDICATIONS of p.87#7, which badges intubation-at-I vs transport; citing it would chip the assessment at I off a row whose action is intubation. The page's EMT is kept and flagged.",
+   "status": "owner_ruled",
+   "reason": null,
    "owner_note": null,
-   "owner_ruling": null,
-   "pems_page": 153,
-   "pems_ordinal": 2,
-   "pems_badge": "EMT",
+   "owner_ruling": {
+    "date": "2026-11-17",
+    "ruling": "Assessing for airway/inhalation injury is a BLS assessment. Level unchanged (EMT); the \"prints nowhere\" flag is cleared.",
+    "note": "Owner Pearl ruling 2026-11-17. p.88 PEARLS #1 prints the assessment \u2014 \"Assess for airway / inhalation injury. Consider early definitive airway management for patients with respiratory distress, hoarse voice or stridor, carbonaceous sputum and/or facial burns\" \u2014 so the old reason (\"No PEMS 2024 row anywhere prints this airway-injury assessment\") was false as written; true only of badged rows. Recognition is BLS-scope: the *advanced* airway step is the next row (r9, cited at I). Level unchanged (EMT)."
+   },
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
    "compound_tokens": [],
    "bracketed": false,
-   "pems_text": "Follow Airway Management and Ventilatory Support procedure.",
+   "pems_text": null,
    "binding_evidence": null,
    "quoted_row_text": null,
    "cross_page": false,
    "mc_required": false,
    "mc_evidence": null,
-   "basis": "adjudicated:held_split_review",
+   "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "EMT",
     "markers": [
@@ -5630,7 +5689,19 @@
     "text_label": null,
     "text_tokens": []
    },
-   "note": "PEMS EMT/A/I/P; site EMT/A/I/P. Split review list.",
+   "note": "Owner Pearl ruling 2026-11-17. p.88 PEARLS #1 prints the assessment \u2014 \"Assess for airway / inhalation injury. Consider early definitive airway management for patients with respiratory distress, hoarse voice or stridor, carbonaceous sputum and/or facial burns\" \u2014 so the old reason (\"No PEMS 2024 row anywhere prints this airway-injury assessment\") was false as written; true only of badged rows. Recognition is BLS-scope: the *advanced* airway step is the next row (r9, cited at I). Level unchanged (EMT).",
+   "prose_citations": [
+    {
+     "page": 88,
+     "heading": "PEARLS",
+     "ordinal": 1,
+     "quote": "Assess for airway / inhalation injury."
+    }
+   ],
+   "level_from": null,
+   "ruling": "Assessing for airway/inhalation injury is a BLS assessment. Level unchanged (EMT); the \"prints nowhere\" flag is cleared.",
+   "ruling_date": "2026-11-17",
+   "derived_floor": null,
    "status_before": "OWNER_REQUIRED"
   },
   {
@@ -5875,11 +5946,15 @@
    "file": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
    "row": 11,
    "action": "Poison Control Consultation: \u2022 Contact Poison Control Center at 1-800-222-1222 with any questions. (Note: Poison Control is not online medical control",
-   "level_published": "P",
-   "status": "OWNER_REQUIRED",
-   "reason": "No PEMS 2024 row anywhere prints a Poison Control consultation. The referral (1-800-222-1222) is agency authoring; PEMS routes questions to Medical Control instead. The page's P is kept and flagged.",
+   "level_published": "EMR",
+   "status": "owner_ruled",
+   "reason": null,
    "owner_note": null,
-   "owner_ruling": null,
+   "owner_ruling": {
+    "date": "2026-11-17",
+    "ruling": "Calling Poison Control needs no provider training, so the row takes this page's own lowest chip. Chip P -> FLOOR (derived, not typed).",
+    "note": "Owner Pearl ruling 2026-11-17: \"No one has to be trained to call poison control.\" The referral is printed twice \u2014 p.154 PEARLS #13 (CBRNE: Airway / Inhalation Irritants) and p.121 PEARLS #1 (Overdose / Poisoning / Toxic Ingestion), verbatim the same sentence, and it says explicitly that Poison Control \"is not online medical control\" \u2014 so it is a referral, not an ALS authorisation, and the P chip claimed authority the source does not print. The level is the page's own BLS floor, derived by page_floor() from the chips on the page itself and printed in the build log; nothing was hardcoded."
+   },
    "pems_page": null,
    "pems_ordinal": null,
    "pems_badge": null,
@@ -5891,7 +5966,7 @@
    "cross_page": false,
    "mc_required": false,
    "mc_evidence": null,
-   "basis": null,
+   "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "P",
     "markers": [
@@ -5900,7 +5975,40 @@
     "text_label": null,
     "text_tokens": []
    },
-   "note": null,
+   "note": "Owner Pearl ruling 2026-11-17: \"No one has to be trained to call poison control.\" The referral is printed twice \u2014 p.154 PEARLS #13 (CBRNE: Airway / Inhalation Irritants) and p.121 PEARLS #1 (Overdose / Poisoning / Toxic Ingestion), verbatim the same sentence, and it says explicitly that Poison Control \"is not online medical control\" \u2014 so it is a referral, not an ALS authorisation, and the P chip claimed authority the source does not print. The level is the page's own BLS floor, derived by page_floor() from the chips on the page itself and printed in the build log; nothing was hardcoded.",
+   "prose_citations": [
+    {
+     "page": 154,
+     "heading": "PEARLS",
+     "ordinal": 13,
+     "quote": "Contact the Poison Control Center at 1-800-222-1222 with any questions. Note: Although Poison Control can provide invaluable expert guidance, it is not online medical control."
+    },
+    {
+     "page": 121,
+     "heading": "PEARLS",
+     "ordinal": 1,
+     "quote": "Contact the Poison Control Center at 1-800-222-1222 with any questions. Note: Although Poison Control can provide invaluable expert guidance, it is not online medical control."
+    }
+   ],
+   "level_from": null,
+   "ruling": "Calling Poison Control needs no provider training, so the row takes this page's own lowest chip. Chip P -> FLOOR (derived, not typed).",
+   "ruling_date": "2026-11-17",
+   "derived_floor": {
+    "level": "EMR",
+    "chips": [
+     "EMR",
+     "EMT",
+     "EMT",
+     "EMT",
+     "EMT",
+     "A",
+     "A",
+     "A",
+     "I",
+     "P",
+     "EMR"
+    ]
+   },
    "status_before": "OWNER_REQUIRED"
   },
   {
@@ -7407,23 +7515,27 @@
    "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
    "row": 6,
    "action": "CPAP CONTRAINDICATIONS (\u26a0\ufe0f): \u2022 Apnea/agonal respirations \u2022 GCS \u2264 13 \u2022 Pneumothorax",
-   "level_published": "A",
-   "status": "OWNER_REQUIRED",
-   "reason": "A CPAP contraindication list is not an intervention, and no PEMS 2024 row anywhere prints CPAP contraindications (p.245 is the CPAP procedure's steps). Nothing to cite; the page's A is kept and flagged.",
+   "level_published": "EMT",
+   "status": "owner_ruled",
+   "reason": null,
    "owner_note": null,
-   "owner_ruling": null,
-   "pems_page": 245,
-   "pems_ordinal": 2,
-   "pems_badge": "EMT",
+   "owner_ruling": {
+    "date": "2026-11-17",
+    "ruling": "CPAP is an EMT skill and its contraindications gate CPAP, so the contraindication row carries EMT. Chip A -> EMT.",
+    "note": "Owner Pearl ruling 2026-11-17: \"EMT and above can do CPAP.\" p.245 prints the contraindication list above the procedure table as a headed CONTRAINDICATIONS block (prose, no badge anywhere on it) and badges all five procedure rows EMT, so the contraindications are gated at the level of the procedure they contraindicate: EMT. Level change A -> EMT (this bullet group is p.245 CONTRAINDICATIONS #1, bullets 1-3)."
+   },
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
    "compound_tokens": [],
    "bracketed": false,
-   "pems_text": "Place the mask over the mouth and nose with oxygen flowing. Secure with straps, beginning with the lower straps. Tighten until air-leak is minimal.",
+   "pems_text": null,
    "binding_evidence": null,
    "quoted_row_text": null,
    "cross_page": false,
    "mc_required": false,
    "mc_evidence": null,
-   "basis": "adjudicated:no_pems_counterpart",
+   "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "A",
     "markers": [
@@ -7434,30 +7546,49 @@
     "text_label": null,
     "text_tokens": []
    },
-   "note": "CPAP contraindications are procedure text from the CPAP/BiPAP/PEEP page (p.245), not a level-gated PEMS grid row. No cell change; the site's A/I/P is a downstream consequence of the parent CPAP row and should be reviewed with it.",
+   "note": "Owner Pearl ruling 2026-11-17: \"EMT and above can do CPAP.\" p.245 prints the contraindication list above the procedure table as a headed CONTRAINDICATIONS block (prose, no badge anywhere on it) and badges all five procedure rows EMT, so the contraindications are gated at the level of the procedure they contraindicate: EMT. Level change A -> EMT (this bullet group is p.245 CONTRAINDICATIONS #1, bullets 1-3).",
+   "prose_citations": [
+    {
+     "page": 245,
+     "heading": "CONTRAINDICATIONS",
+     "ordinal": 1,
+     "quote": "Apnea / agonal respirations \u2022 Decreased level of consciousness (GCS \u2264 13) \u2022 Pneumothorax"
+    }
+   ],
+   "level_from": {
+    "page": 245,
+    "ordinal": 0
+   },
+   "ruling": "CPAP is an EMT skill and its contraindications gate CPAP, so the contraindication row carries EMT. Chip A -> EMT.",
+   "ruling_date": "2026-11-17",
+   "derived_floor": null,
    "status_before": "OWNER_REQUIRED"
   },
   {
    "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
    "row": 7,
    "action": "CPAP CONTRAINDICATIONS (\u26a0\ufe0f): \u2022 Facial trauma/burns/recent surgery \u2022 Penetrating neck/chest trauma \u2022 Active vomiting/severe nausea",
-   "level_published": "A",
-   "status": "OWNER_REQUIRED",
-   "reason": "A CPAP contraindication list is not an intervention, and no PEMS 2024 row anywhere prints CPAP contraindications. Nothing to cite; the page's A is kept and flagged.",
+   "level_published": "EMT",
+   "status": "owner_ruled",
+   "reason": null,
    "owner_note": null,
-   "owner_ruling": null,
-   "pems_page": 245,
-   "pems_ordinal": 2,
-   "pems_badge": "EMT",
+   "owner_ruling": {
+    "date": "2026-11-17",
+    "ruling": "CPAP contraindications (facial trauma, penetrating neck/chest, active vomiting) gate an EMT skill. Chip A -> EMT.",
+    "note": "As row 6 (owner Pearl ruling 2026-11-17). p.245 CONTRAINDICATIONS #1, bullets 4-6. Level change A -> EMT."
+   },
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
    "compound_tokens": [],
    "bracketed": false,
-   "pems_text": "Place the mask over the mouth and nose with oxygen flowing. Secure with straps, beginning with the lower straps. Tighten until air-leak is minimal.",
+   "pems_text": null,
    "binding_evidence": null,
    "quoted_row_text": null,
    "cross_page": false,
    "mc_required": false,
    "mc_evidence": null,
-   "basis": "adjudicated:no_pems_counterpart",
+   "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "A",
     "markers": [
@@ -7468,30 +7599,49 @@
     "text_label": null,
     "text_tokens": []
    },
-   "note": "CPAP contraindications, as row 6. No cell change; authoring review with the parent CPAP row.",
+   "note": "As row 6 (owner Pearl ruling 2026-11-17). p.245 CONTRAINDICATIONS #1, bullets 4-6. Level change A -> EMT.",
+   "prose_citations": [
+    {
+     "page": 245,
+     "heading": "CONTRAINDICATIONS",
+     "ordinal": 1,
+     "quote": "Facial trauma, burns, or recent surgery \u2022 Penetrating neck and/or chest trauma \u2022 Active vomiting / severe nausea"
+    }
+   ],
+   "level_from": {
+    "page": 245,
+    "ordinal": 0
+   },
+   "ruling": "CPAP contraindications (facial trauma, penetrating neck/chest, active vomiting) gate an EMT skill. Chip A -> EMT.",
+   "ruling_date": "2026-11-17",
+   "derived_floor": null,
    "status_before": "OWNER_REQUIRED"
   },
   {
    "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
    "row": 8,
    "action": "CPAP CONTRAINDICATIONS (\u26a0\ufe0f): \u2022 Hypotension (SBP < 90 mmHg, MAP < 65) \u2022 Inability to tolerate tight fitting mask",
-   "level_published": "A",
-   "status": "OWNER_REQUIRED",
-   "reason": "A CPAP contraindication list is not an intervention, and no PEMS 2024 row anywhere prints CPAP contraindications. Nothing to cite; the page's A is kept and flagged.",
+   "level_published": "EMT",
+   "status": "owner_ruled",
+   "reason": null,
    "owner_note": null,
-   "owner_ruling": null,
-   "pems_page": 245,
-   "pems_ordinal": 2,
-   "pems_badge": "EMT",
+   "owner_ruling": {
+    "date": "2026-11-17",
+    "ruling": "CPAP contraindications (hypotension, mask intolerance) gate an EMT skill. Chip A -> EMT.",
+    "note": "As row 6 (owner Pearl ruling 2026-11-17). p.245 CONTRAINDICATIONS #1, bullets 7-8. Level change A -> EMT."
+   },
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
    "compound_tokens": [],
    "bracketed": false,
-   "pems_text": "Place the mask over the mouth and nose with oxygen flowing. Secure with straps, beginning with the lower straps. Tighten until air-leak is minimal.",
+   "pems_text": null,
    "binding_evidence": null,
    "quoted_row_text": null,
    "cross_page": false,
    "mc_required": false,
    "mc_evidence": null,
-   "basis": "adjudicated:no_pems_counterpart",
+   "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "A",
     "markers": [
@@ -7502,7 +7652,22 @@
     "text_label": null,
     "text_tokens": []
    },
-   "note": "CPAP contraindications, as row 6. No cell change; authoring review with the parent CPAP row.",
+   "note": "As row 6 (owner Pearl ruling 2026-11-17). p.245 CONTRAINDICATIONS #1, bullets 7-8. Level change A -> EMT.",
+   "prose_citations": [
+    {
+     "page": 245,
+     "heading": "CONTRAINDICATIONS",
+     "ordinal": 1,
+     "quote": "Hypotension (SBP < 90 mmHg, MAP < 65) \u2022 Inability to tolerate tight fitting mask"
+    }
+   ],
+   "level_from": {
+    "page": 245,
+    "ordinal": 0
+   },
+   "ruling": "CPAP contraindications (hypotension, mask intolerance) gate an EMT skill. Chip A -> EMT.",
+   "ruling_date": "2026-11-17",
+   "derived_floor": null,
    "status_before": "OWNER_REQUIRED"
   },
   {
@@ -8778,10 +8943,14 @@
    "row": 3,
    "action": "Airway Assessment: \u2022 Inspect for singed facial/nasal hairs \u2022 Examine face, nose, and mouth for burns or soot \u2022 Auscultate for stridor, hoarseness, or ",
    "level_published": "EMT",
-   "status": "OWNER_REQUIRED",
-   "reason": "No PEMS 2024 row anywhere prints this airway-injury assessment. The signs it lists appear only as the INDICATIONS of p.87#7 (badge I), whose action is intubation-vs-transport, not assessment. The page's EMT is kept and flagged.",
+   "status": "owner_ruled",
+   "reason": null,
    "owner_note": null,
-   "owner_ruling": null,
+   "owner_ruling": {
+    "date": "2026-11-17",
+    "ruling": "Assessing for airway/inhalation injury is a BLS assessment. Level unchanged (EMT); the \"prints nowhere\" flag is cleared.",
+    "note": "Owner Pearl ruling 2026-11-17, as Inhalation Irritants r3. p.88 PEARLS #1 prints the assessment signs in the source's own words, so the old reason (\"No PEMS 2024 row anywhere prints this airway-injury assessment\") was false as written. Recognition is BLS-scope; the advanced-airway step is r5/r6, cited at I. Level unchanged (EMT)."
+   },
    "pems_page": null,
    "pems_ordinal": null,
    "pems_badge": null,
@@ -8793,7 +8962,7 @@
    "cross_page": false,
    "mc_required": false,
    "mc_evidence": null,
-   "basis": null,
+   "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "EMT",
     "markers": [
@@ -8805,7 +8974,19 @@
     "text_label": null,
     "text_tokens": []
    },
-   "note": null,
+   "note": "Owner Pearl ruling 2026-11-17, as Inhalation Irritants r3. p.88 PEARLS #1 prints the assessment signs in the source's own words, so the old reason (\"No PEMS 2024 row anywhere prints this airway-injury assessment\") was false as written. Recognition is BLS-scope; the advanced-airway step is r5/r6, cited at I. Level unchanged (EMT).",
+   "prose_citations": [
+    {
+     "page": 88,
+     "heading": "PEARLS",
+     "ordinal": 1,
+     "quote": "Consider early definitive airway management for patients with respiratory distress, hoarse voice or stridor, carbonaceous sputum and/or facial burns"
+    }
+   ],
+   "level_from": null,
+   "ruling": "Assessing for airway/inhalation injury is a BLS assessment. Level unchanged (EMT); the \"prints nowhere\" flag is cleared.",
+   "ruling_date": "2026-11-17",
+   "derived_floor": null,
    "status_before": "OWNER_REQUIRED"
   },
   {
@@ -12866,10 +13047,14 @@
    "row": 6,
    "action": "If patient is alert and responsive: Use active external rewarming with heat packs, warm blankets, etc.",
    "level_published": "EMT",
-   "status": "OWNER_REQUIRED",
-   "reason": "PEMS prints this action nowhere. p.67#1 prints passive warming only (\"place patient in a warm environment and prevent further heat loss. Remove all wet clothing and replace with warm blankets\", badge EMR) and p.67#0 prints warmed humidified O2 (badge EMR); no PEMS 2024 row prints active external rewarming with heat packs \u2014 the word \"heat pack\" appears in no PEMS protocol row. Binding r6 to p.67#1 would widen EMT -> EMR on warming text the source does not print. The page's EMT is kept and flagged.",
+   "status": "owner_ruled",
+   "reason": null,
    "owner_note": null,
-   "owner_ruling": null,
+   "owner_ruling": {
+    "date": "2026-11-17",
+    "ruling": "Active external rewarming with heat packs is a BLS skill. Level unchanged (EMT); the \"prints nowhere\" flag is cleared.",
+    "note": "Owner Pearl ruling 2026-11-17: \"Patient warming with heat packs is a BLS skill, anyone can do that.\" The action is printed \u2014 p.67 PEARLS #5, verbatim \u2014 so the old reason (\"PEMS prints this action nowhere\") was false. No badge is printed, so the level stays the one the page published (EMT). p.67 PEARLS #2 also warns \"DO NOT place heat packs ... directly on skin\": that is a site-wording question (the page does not carry the caution), reported, not decided here, and it does not change the level."
+   },
    "pems_page": null,
    "pems_ordinal": null,
    "pems_badge": null,
@@ -12881,7 +13066,7 @@
    "cross_page": false,
    "mc_required": false,
    "mc_evidence": null,
-   "basis": null,
+   "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "EMT",
     "markers": [
@@ -12893,7 +13078,19 @@
     "text_label": null,
     "text_tokens": []
    },
-   "note": null,
+   "note": "Owner Pearl ruling 2026-11-17: \"Patient warming with heat packs is a BLS skill, anyone can do that.\" The action is printed \u2014 p.67 PEARLS #5, verbatim \u2014 so the old reason (\"PEMS prints this action nowhere\") was false. No badge is printed, so the level stays the one the page published (EMT). p.67 PEARLS #2 also warns \"DO NOT place heat packs ... directly on skin\": that is a site-wording question (the page does not carry the caution), reported, not decided here, and it does not change the level.",
+   "prose_citations": [
+    {
+     "page": 67,
+     "heading": "PEARLS",
+     "ordinal": 5,
+     "quote": "use active external rewarming with heat packs, warm blankets, etc"
+    }
+   ],
+   "level_from": null,
+   "ruling": "Active external rewarming with heat packs is a BLS skill. Level unchanged (EMT); the \"prints nowhere\" flag is cleared.",
+   "ruling_date": "2026-11-17",
+   "derived_floor": null,
    "status_before": null
   },
   {
@@ -12973,10 +13170,14 @@
    "row": 9,
    "action": "Contact Medical Control prior to use of AED.",
    "level_published": "MC",
-   "status": "OWNER_REQUIRED",
-   "reason": "PEMS prints an AED Medical Control gate nowhere in the Cold Exposure protocol (p.67#0-#5 carry no AED row at all), and no other PEMS 2024 row requires Medical Control before AED use: p.21#0, p.63#7, p.235#4 and p.263#4 print AED application at EMT/EMR with no pre-use MC contact. The page's MC chip is kept and flagged.",
+   "status": "owner_ruled",
+   "reason": null,
    "owner_note": null,
-   "owner_ruling": null,
+   "owner_ruling": {
+    "date": "2026-11-17",
+    "ruling": "The AED Medical Control gate is printed in the protocol's own Pearls. Level unchanged (MC); the \"prints nowhere\" flag is cleared.",
+    "note": "Owner Pearl ruling 2026-11-17: \"a lot of the pearls are just guidance\" \u2014 so the Pearl does not create a new provider authority, but it does prove the row is not silent: p.67 PEARLS #3 prints it verbatim in the Cold Exposure protocol's own Pearls. What is true is narrower than the old reason: p.67's six badged rows (#0-#5) contain no AED row. Level unchanged (MC): the gate is a Medical Control contact, not a provider level."
+   },
    "pems_page": null,
    "pems_ordinal": null,
    "pems_badge": null,
@@ -12988,7 +13189,7 @@
    "cross_page": false,
    "mc_required": false,
    "mc_evidence": null,
-   "basis": null,
+   "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "MC",
     "markers": [
@@ -13001,7 +13202,19 @@
     "text_label": null,
     "text_tokens": []
    },
-   "note": null,
+   "note": "Owner Pearl ruling 2026-11-17: \"a lot of the pearls are just guidance\" \u2014 so the Pearl does not create a new provider authority, but it does prove the row is not silent: p.67 PEARLS #3 prints it verbatim in the Cold Exposure protocol's own Pearls. What is true is narrower than the old reason: p.67's six badged rows (#0-#5) contain no AED row. Level unchanged (MC): the gate is a Medical Control contact, not a provider level.",
+   "prose_citations": [
+    {
+     "page": 67,
+     "heading": "PEARLS",
+     "ordinal": 3,
+     "quote": "Contact Medical Control prior to use of AED"
+    }
+   ],
+   "level_from": null,
+   "ruling": "The AED Medical Control gate is printed in the protocol's own Pearls. Level unchanged (MC); the \"prints nowhere\" flag is cleared.",
+   "ruling_date": "2026-11-17",
+   "derived_floor": null,
    "status_before": null
   },
   {
@@ -13742,22 +13955,22 @@
    "row": 8,
    "action": "If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact Medical Control for guidance.",
    "level_published": "MC",
-   "status": "OWNER_REQUIRED",
-   "reason": "PEMS prints this action nowhere: p.77 carries no Medical Control row at all (its six rows are #0-#5, all interventions), so the page's MC escalation row has no PEMS counterpart. No other PEMS 2024 row prints a pain-control MC escalation. The page's MC chip is kept and flagged.",
+   "status": "OK",
+   "reason": null,
    "owner_note": null,
    "owner_ruling": null,
-   "pems_page": null,
-   "pems_ordinal": null,
-   "pems_badge": null,
+   "pems_page": 78,
+   "pems_ordinal": 6,
+   "pems_badge": "MC",
    "compound_tokens": [],
    "bracketed": false,
-   "pems_text": null,
-   "binding_evidence": null,
+   "pems_text": "If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact medical control for guidance.",
+   "binding_evidence": "p.78#6 prints \"If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact medical control for guidance.\" with an MC badge in both margin columns \u2014 this row's action, word for word. p.78 is the Pain Control protocol's own continuation page (the title band carries over from p.77, whose six rows are #0-#5), so this is the page's governing source, not a cross-page reach. The extractor used to discard p.78 entirely (a page carrying a single badge group was classed `narrative`); that defect is fixed and the row is in pems_table.json, which is what makes this citation checkable.",
    "quoted_row_text": null,
    "cross_page": false,
    "mc_required": false,
    "mc_evidence": null,
-   "basis": null,
+   "basis": "row-bindings:bound",
    "before": {
     "leftmost": "MC",
     "markers": [
@@ -20233,23 +20446,23 @@
    "file": "protocols/administrative/01_Stroke_Field_Triage_PROC.md",
    "row": 1,
    "action": "Time Management: Maintain a goal scene time of less than 15 minutes.",
-   "level_published": "PENDING",
-   "status": "pending_row_omd",
-   "reason": "The Stroke Field Triage policy (p.37) prints no scene-time target. The 15-minute goal is the agency page's own; PEMS prints a scene-time goal only in the Trauma Field Triage policy (p.44, 10 minutes), which does not govern stroke.",
+   "level_published": "EMT",
+   "status": "OK",
+   "reason": null,
    "owner_note": null,
    "owner_ruling": null,
-   "pems_page": null,
-   "pems_ordinal": null,
-   "pems_badge": null,
+   "pems_page": 131,
+   "pems_ordinal": 4,
+   "pems_badge": "EMT",
    "compound_tokens": [],
    "bracketed": false,
-   "pems_text": null,
-   "binding_evidence": null,
-   "quoted_row_text": null,
-   "cross_page": false,
+   "pems_text": "Initiate transport. Goal scene time < 15 minutes: Symptoms less than 24 hours (or unknown) AND suspected LVO (RACE = 5 - 9) : Transport to the closest comprehensive stroke center as long as transport time is not increased by greater than 30 minutes. Symptoms greater than 24 hours OR low suspicion for LVO (RACE = 0 - 4): Transport to the closest stroke center.",
+   "binding_evidence": "p.131#4 (Stroke / TIA protocol) prints \"Initiate transport. Goal scene time < 15 minutes\" badged EMT \u2014 the page's 15-minute scene-time goal, verbatim. Owner's Pearl ruling 2026-11-17 applied here as a badged-row check, not a Pearl: this is a level- badged protocol row, so the chip is that row's printed badge (EMT) and the row stops being PENDING. Cross-page: this page's own source is the Stroke Field Triage administrative policy (p.37), which prints no scene-time target; p.131 is the clinical protocol that does.",
+   "quoted_row_text": "Initiate transport. Goal scene time < 15 minutes",
+   "cross_page": true,
    "mc_required": false,
    "mc_evidence": null,
-   "basis": null,
+   "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
     "markers": [
@@ -20261,9 +20474,7 @@
     "text_label": null,
     "text_tokens": []
    },
-   "note": "agency addition \u2014 pending OMD authorization",
-   "carried_from_page": "EMT",
-   "pending_note": "<strong>PENDING</strong> \u2014 row 1: the Stroke Field Triage policy (p.37) prints no scene-time target, so the 15-minute goal is the agency's own. No policy and no provider level is published for it. <strong>Pending OMD authorization</strong> \u2014 no provider level applies until the OMD authorizes it. See <code>audit/level-scan/level-rule-ledger.md</code>.",
+   "note": null,
    "status_before": null
   },
   {

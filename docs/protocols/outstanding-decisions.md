@@ -14,9 +14,9 @@ This page is generated from the conversion ledger (`audit/level-scan/level-rule-
 
 | what | how many |
 |---|---:|
-| Rows that need your level decision (`OWNER_REQUIRED`, marked &#9873; on the page) | **38** |
-| Rows pending authorization (`PENDING`) | **19** (11 whole-page + 8 single-row) |
-| Open questions on how the rules themselves should read | **33** |
+| Rows that need your level decision (`OWNER_REQUIRED`, marked &#9873; on the page) | **27** |
+| Rows pending authorization (`PENDING`) | **18** (11 whole-page + 7 single-row) |
+| Open questions on how the rules themselves should read | **34** |
 
 </div>
 
@@ -35,52 +35,18 @@ This page is generated from the conversion ledger (`audit/level-scan/level-rule-
 <h2 id="two-kinds">Two kinds of flagged row</h2>
 
 <div class="od-legend" markdown="1">
-- <span class="od-chip od-chip-nowhere">PEMS prints this nowhere</span> — **17 rows**. No PEMS 2024 row prints the action at all (or prints it only in pieces that no single row covers). Your answer is a level of our own, or `PENDING`.
+- <span class="od-chip od-chip-nowhere">PEMS prints this nowhere</span> — **6 rows**. No PEMS 2024 row prints the action at all (or prints it only in pieces that no single row covers). Your answer is a level of our own, or `PENDING`.
 - <span class="od-chip od-chip-conflict">PEMS prints it, but the badge contradicts the row's own words</span> — **21 rows**. A PEMS row prints the action, but its printed badge conflicts with the text of that same row, or the action is spread over rows at different levels. Your answer is which one wins (and whether the row should be split).
 
 Jump to: [PEMS prints this nowhere](#pems-prints-this-nowhere) · [PEMS prints it, badge contradicts](#pems-prints-it-badge-contradicts)
 
 </div>
 
-<h2 id="owner-required">1. Needs your level decision — 38 rows</h2>
+<h2 id="owner-required">1. Needs your level decision — 27 rows</h2>
 
 Grouped by protocol page, in the order they appear in the site navigation. Each card shows the page, the row number, the level the page shows today with the &#9873; flag, the row text word for word, and the full reason it is flagged.
 
-<h3 id="pems-prints-this-nowhere">PEMS prints this nowhere — 17 rows</h3>
-
-#### [Chest Pain / ACS](cardiac/04_Chest_Pain_ACS_PROC.md) — 2 rows
-
-<div class="od-page-block">
-<div class="od-card od-cat-nowhere">
-<p class="od-head"><span class="od-row">Row 5</span> <span class="lvl lvl-p">P</span> &#9873;</p>
-<p class="od-action">12-Lead ECG Interpretation - STEMI Criteria: / • Intermediate and Paramedic providers may interpret as STEMI if: / - Symptoms consistent with ACS/myocardial ischemia AND / - ≥ 1 mm ST segment elevation in two or more contiguous leads</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No PEMS 2024 row anywhere assigns 12-lead STEMI interpretation to a provider. p.107#4 badges EMT for acting on a 12-lead that already reads STEMI, which is not interpretation. The page&#x27;s P is kept and flagged.</p>
-<p class="od-near">Nearest PEMS row: <strong>p.107#4</strong> &mdash; <em>not cited as authority</em></p>
-</div>
-<div class="od-card od-cat-nowhere">
-<p class="od-head"><span class="od-row">Row 14</span> <span class="lvl lvl-i">I</span> &#9873;</p>
-<p class="od-action">Right-Sided / 15-Lead ECG: / • Consider right-sided 12-Lead or 15-Lead ECG for additional assessment.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No PEMS 2024 row anywhere prints a right-sided or 15-lead ECG. p.107#9 (MC) mentions serial 12-leads, not a 15-lead, so there is no row to cite and the page&#x27;s I is kept and flagged.</p>
-
-</div>
-</div>
-
-#### [Airway / Inhalation Irritants](respiratory/03_Airway_Inhalation_Irritants_PROC.md) — 2 rows
-
-<div class="od-page-block">
-<div class="od-card od-cat-nowhere">
-<p class="od-head"><span class="od-row">Row 3</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
-<p class="od-action">Airway Assessment: / • Assess for signs of airway injury (singed hairs, facial burns, hoarseness, stridor, soot). / • Monitor for progressive respiratory distress.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No PEMS 2024 row anywhere prints this airway-injury assessment. The signs it lists appear only as the INDICATIONS of p.87#7, which badges intubation-at-I vs transport; citing it would chip the assessment at I off a row whose action is intubation. The page&#x27;s EMT is kept and flagged.</p>
-<p class="od-near">Nearest PEMS row: <strong>p.153#2</strong> &mdash; <em>not cited as authority</em></p>
-</div>
-<div class="od-card od-cat-nowhere">
-<p class="od-head"><span class="od-row">Row 11</span> <span class="lvl lvl-p">P</span> &#9873;</p>
-<p class="od-action">Poison Control Consultation: / • Contact Poison Control Center at 1-800-222-1222 with any questions. / (Note: Poison Control is not online medical control.)</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No PEMS 2024 row anywhere prints a Poison Control consultation. The referral (1-800-222-1222) is agency authoring; PEMS routes questions to Medical Control instead. The page&#x27;s P is kept and flagged.</p>
-
-</div>
-</div>
+<h3 id="pems-prints-this-nowhere">PEMS prints this nowhere — 6 rows</h3>
 
 #### [Pediatric Stridor](respiratory/03_Pediatric_Stridor_PROC.md) — 1 row
 
@@ -104,40 +70,6 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
-#### [Pulmonary Edema / Congestion](respiratory/03_Pulmonary_Edema_Congestion_PROC.md) — 3 rows
-
-<div class="od-page-block">
-<div class="od-card od-cat-nowhere">
-<p class="od-head"><span class="od-row">Row 6</span> <span class="lvl lvl-a">A</span> &#9873;</p>
-<p class="od-action">CPAP CONTRAINDICATIONS (⚠️): / • Apnea/agonal respirations / • GCS ≤ 13 / • Pneumothorax</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> A CPAP contraindication list is not an intervention, and no PEMS 2024 row anywhere prints CPAP contraindications (p.245 is the CPAP procedure&#x27;s steps). Nothing to cite; the page&#x27;s A is kept and flagged.</p>
-<p class="od-near">Nearest PEMS row: <strong>p.245#2</strong> &mdash; <em>not cited as authority</em></p>
-</div>
-<div class="od-card od-cat-nowhere">
-<p class="od-head"><span class="od-row">Row 7</span> <span class="lvl lvl-a">A</span> &#9873;</p>
-<p class="od-action">CPAP CONTRAINDICATIONS (⚠️): / • Facial trauma/burns/recent surgery / • Penetrating neck/chest trauma / • Active vomiting/severe nausea</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> A CPAP contraindication list is not an intervention, and no PEMS 2024 row anywhere prints CPAP contraindications. Nothing to cite; the page&#x27;s A is kept and flagged.</p>
-<p class="od-near">Nearest PEMS row: <strong>p.245#2</strong> &mdash; <em>not cited as authority</em></p>
-</div>
-<div class="od-card od-cat-nowhere">
-<p class="od-head"><span class="od-row">Row 8</span> <span class="lvl lvl-a">A</span> &#9873;</p>
-<p class="od-action">CPAP CONTRAINDICATIONS (⚠️): / • Hypotension (SBP &lt; 90 mmHg, MAP &lt; 65) / • Inability to tolerate tight fitting mask</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> A CPAP contraindication list is not an intervention, and no PEMS 2024 row anywhere prints CPAP contraindications. Nothing to cite; the page&#x27;s A is kept and flagged.</p>
-<p class="od-near">Nearest PEMS row: <strong>p.245#2</strong> &mdash; <em>not cited as authority</em></p>
-</div>
-</div>
-
-#### [Smoke Inhalation](respiratory/03_Smoke_Inhalation_PROC.md) — 1 row
-
-<div class="od-page-block">
-<div class="od-card od-cat-nowhere">
-<p class="od-head"><span class="od-row">Row 3</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
-<p class="od-action">Airway Assessment: / • Inspect for singed facial/nasal hairs / • Examine face, nose, and mouth for burns or soot / • Auscultate for stridor, hoarseness, or voice changes / • Assess sputum for carbonaceous material / • Monitor respiratory effort and work of breathing</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No PEMS 2024 row anywhere prints this airway-injury assessment. The signs it lists appear only as the INDICATIONS of p.87#7 (badge I), whose action is intubation-vs-transport, not assessment. The page&#x27;s EMT is kept and flagged.</p>
-
-</div>
-</div>
-
 #### [Upper Airway Obstruction](respiratory/03_Upper_Airway_Obstruction_PROC.md) — 1 row
 
 <div class="od-page-block">
@@ -157,34 +89,6 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 <p class="od-action">Assess for shock. Refer to Shock (Hypoperfusion) protocol.</p>
 <p class="od-reason"><strong>Why it is flagged:</strong> No PEMS 2024 row prints &#x27;assess for shock and refer to the Shock protocol&#x27;. p.83#3 prints &#x27;If shock or potential for shock is present, keep the patient warm&#x27; (badge EMR) — the intervention, not the assessment/referral this row names. The page&#x27;s A is kept and flagged.</p>
 <p class="od-near">Nearest PEMS row: <strong>p.83#3</strong> &mdash; <em>not cited as authority</em></p>
-</div>
-</div>
-
-#### [Cold Exposure](general/02_Cold_Exposure_PROC.md) — 2 rows
-
-<div class="od-page-block">
-<div class="od-card od-cat-nowhere">
-<p class="od-head"><span class="od-row">Row 6</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
-<p class="od-action">If patient is alert and responsive: Use active external rewarming with heat packs, warm blankets, etc.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> PEMS prints this action nowhere. p.67#1 prints passive warming only (&quot;place patient in a warm environment and prevent further heat loss. Remove all wet clothing and replace with warm blankets&quot;, badge EMR) and p.67#0 prints warmed humidified O2 (badge EMR); no PEMS 2024 row prints active external rewarming with heat packs — the word &quot;heat pack&quot; appears in no PEMS protocol row. Binding r6 to p.67#1 would widen EMT -&gt; EMR on warming text the source does not print. The page&#x27;s EMT is kept and flagged.</p>
-
-</div>
-<div class="od-card od-cat-nowhere">
-<p class="od-head"><span class="od-row">Row 9</span> <span class="lvl lvl-mc">MC</span> &#9873;</p>
-<p class="od-action">Contact Medical Control prior to use of AED.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> PEMS prints an AED Medical Control gate nowhere in the Cold Exposure protocol (p.67#0-#5 carry no AED row at all), and no other PEMS 2024 row requires Medical Control before AED use: p.21#0, p.63#7, p.235#4 and p.263#4 print AED application at EMT/EMR with no pre-use MC contact. The page&#x27;s MC chip is kept and flagged.</p>
-
-</div>
-</div>
-
-#### [Pain Control](general/02_Pain_Control_PROC.md) — 1 row
-
-<div class="od-page-block">
-<div class="od-card od-cat-nowhere">
-<p class="od-head"><span class="od-row">Row 8</span> <span class="lvl lvl-mc">MC</span> &#9873;</p>
-<p class="od-action">If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact Medical Control for guidance.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> PEMS prints this action nowhere: p.77 carries no Medical Control row at all (its six rows are #0-#5, all interventions), so the page&#x27;s MC escalation row has no PEMS counterpart. No other PEMS 2024 row prints a pain-control MC escalation. The page&#x27;s MC chip is kept and flagged.</p>
-
 </div>
 </div>
 
@@ -408,11 +312,11 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
-<h2 id="pending">2. Pending authorization — 19 rows</h2>
+<h2 id="pending">2. Pending authorization — 18 rows</h2>
 
-**11 whole-page rows** — a protocol that is not in PEMS 2024 at all. **3 clinical agency additions** — a row the agency wrote on a page that is otherwise PEMS-cited. **5 administrative rules** — a policy row no PEMS administrative policy prints.
+**11 whole-page rows** — a protocol that is not in PEMS 2024 at all. **3 clinical agency additions** — a row the agency wrote on a page that is otherwise PEMS-cited. **4 administrative rules** — a policy row no PEMS administrative policy prints.
 
-<p class="od-pagenote">The brief for this page said "14 PENDING rows" (11 + 3). The ledger records 8 single-row PENDING entries: 3 clinical agency additions plus 5 administrative rules. Both are listed below, so the number you see here is 19 — derived from the ledger, not from the brief. The administrative five are decided together with the Batch 6 administrative ruling (see the open questions).</p>
+<p class="od-pagenote">The brief for this page said "14 PENDING rows" (11 + 3). The ledger records 7 single-row PENDING entries: 3 clinical agency additions plus 4 administrative rules. Both are listed below, so the number you see here is 18 — derived from the ledger, not from the brief. The administrative five are decided together with the Batch 6 administrative ruling (see the open questions).</p>
 
 <h3 id="pending-whole-page">Whole page not in PEMS 2024 — 11 rows</h3>
 
@@ -534,7 +438,7 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
-<h3 id="pending-admin">Administrative rules PEMS does not print — 5 rows</h3>
+<h3 id="pending-admin">Administrative rules PEMS does not print — 4 rows</h3>
 
 #### [Behavioral Health Transportation](administrative/01_Behavioral_Health_Transportation_Decision_PROC.md) — 2 rows
 
@@ -567,16 +471,9 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
-#### [Stroke Field Triage](administrative/01_Stroke_Field_Triage_PROC.md) — 2 rows
+#### [Stroke Field Triage](administrative/01_Stroke_Field_Triage_PROC.md) — 1 row
 
 <div class="od-page-block">
-<div class="od-card od-cat-pending">
-<p class="od-head"><span class="od-row">Row 1</span> <span class="lvl lvl-pending">PENDING</span></p>
-<p class="od-action">Time Management: Maintain a goal scene time of less than 15 minutes.</p>
-<p class="od-reason"><strong>Why:</strong> The Stroke Field Triage policy (p.37) prints no scene-time target. The 15-minute goal is the agency page&#x27;s own; PEMS prints a scene-time goal only in the Trauma Field Triage policy (p.44, 10 minutes), which does not govern stroke.</p>
-<p class="od-pagenote"><strong>Note on the page:</strong> PENDING — row 1: the Stroke Field Triage policy (p.37) prints no scene-time target, so the 15-minute goal is the agency&#x27;s own. No policy and no provider level is published for it. Pending OMD authorization — no provider level applies until the OMD authorizes it. See audit/level-scan/level-rule-ledger.md.</p>
-<p class="od-near">Was carried from the page as <strong>EMT</strong> &mdash; provenance only, not a citation.</p>
-</div>
 <div class="od-card od-cat-pending">
 <p class="od-head"><span class="od-row">Row 4</span> <span class="lvl lvl-pending">PENDING</span></p>
 <p class="od-action">Immediate Life-Threats: If uncontrolled airway, cardiac arrest, etc. cannot be addressed during transport, route to the nearest ED.</p>
@@ -586,11 +483,11 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
-<h2 id="open-questions">3. Open questions about the rules — 33</h2>
+<h2 id="open-questions">3. Open questions about the rules — 34</h2>
 
 These are not row-level decisions. Each one is a question about how the rule itself should read, recorded in the conversion ledger and grouped here by the batch that raised it — the batch is the topic of work, and every card opens with the ledger's own heading naming its subject.
 
-<h3>No batch recorded <span class="od-count">8</span></h3>
+<h3>No batch recorded <span class="od-count">9</span></h3>
 
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
@@ -614,7 +511,7 @@ These are not row-level decisions. Each one is a question about how the rule its
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
-<p class="od-question"><strong>Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.</strong> The owner was asked and did not rule, so the other 38 OWNER_REQUIRED rows keep their level + ⚑ flag exactly as they were. Do not convert them without a ruling.</p>
+<p class="od-question"><strong>Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.</strong> The owner was asked and did not rule, so the other 27 OWNER_REQUIRED rows keep their level + ⚑ flag exactly as they were. Do not convert them without a ruling.</p>
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
@@ -624,12 +521,16 @@ These are not row-level decisions. Each one is a question about how the rule its
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
 <p class="od-question"><strong>Site-side <code>[X]</code> brackets — RESOLVED (owner ruling 2026-11-16).</strong> The owner ruled *&quot;Add a second marker so [X] survives in the chassis&quot;*. Bracketed rows now carry the level chip plus a distinct <code>+MC</code> marker (see the <code>+MC</code> section above); <code>row-bindings.yaml</code> is the source of truth and <code>--check</code> re-derives the bracketed rows from the pre-conversion pages. A bracketed cell whose level is not the level the row now publishes, or a row that is itself a Medical Control contact, cannot carry <code>+MC</code> without changing its meaning — those rows say so explicitly under *Bracketed rows whose bracket cannot be carried* above.</p>
 </div>
+<div class="od-card od-cat-question">
+<p class="od-head"><span class="od-batch">No batch recorded</span></p>
+<p class="od-question"><strong>Pearl ruling 2026-11-17 — two rows still say &quot;PEMS prints this nowhere&quot;, and the reason is only half true.</strong> The BLS/ALS scope ruling cleared 11 of the 13 false &quot;prints nowhere&quot; flags, so that bucket now holds 6 rows, not the 4 the task card expected: the 4 genuinely absent rows (Pediatric Stridor r2, Pneumothorax r5, Upper Airway Obstruction r2, Sedation r5) plus Trauma r6 and Sedation r4, which that card put explicitly out of scope. Trauma r6 (&quot;assess for shock&quot;) is worth a review: p.84 PEARLS #3 prints the recognition half (&quot;Any patient who is cool/diaphoretic and tachycardic is considered to be in shock until proven otherwise&quot;) but not the &quot;refer to the Shock protocol&quot; half, so the reason&#x27;s silence claim is false while the level question stays open. Sedation r4 prints only prose (p.248 PEARLS RSI bullet, p.195 ketamine INDICATIONS) with no dose and no level. Both stay flagged until the owner rules; the number the owner reads is 6 by design, not by omission.</p>
+</div>
 
 <h3>Batch 3 <span class="od-count">2</span></h3>
 
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 3</span></p>
-<p class="od-question"><strong>Batch 3 — 3 row(s) lost a Medical-Control requirement the page printed.</strong> Each is now chipped at the level PEMS prints: <code>03_Airway_Inhalation_Irritants_PROC.md</code> row 8 was <code>MC</code>, now <code>A</code> (p.153#4). <code>03_Respiratory_Distress_PROC.md</code> row 6 was <code>MC</code>, now <code>EMT</code> (p.123#3). <code>03_Respiratory_Distress_PROC.md</code> row 10 was <code>MC</code>, now <code>A</code> (p.113#4). The rule is &quot;chip = the level PEMS prints&quot;, and the source grants these actions on standing order, but the owner should confirm that dropping a page-printed MC requirement is intended. Row(s) in the converted set that moved *to* MC, now matching the source&#x27;s MC row: <code>04_Chest_Pain_ACS_PROC.md</code> row 7 <code>I</code> -&gt; <code>MC</code> (p.107#9); <code>03_Airway_Inhalation_Irritants_PROC.md</code> row 12 <code>I</code> -&gt; <code>MC</code> (p.153#5); <code>03_Smoke_Inhalation_PROC.md</code> row 12 <code>I</code> -&gt; <code>MC</code> (p.153#5); <code>06_Nausea_Vomiting_PROC.md</code> row 6 <code>A</code> -&gt; <code>MC</code> (p.117#5); <code>01_STEMI_Field_Triage_PROC.md</code> row 7 <code>EMT</code> -&gt; <code>MC</code> (p.107#9). Already <code>MC</code> on the page and matching the source, so not moved (converted set, whole list): <code>04_Supraventricular_Tachycardia_PROC.md</code> row 10 (p.136#7); <code>04_Asystole_and_Pulseless_Electrical_Activity_PROC.md</code> row 12 (p.57#8); <code>04_Bradycardia_PROC.md</code> row 8 (p.104#13); <code>04_Cardiac_Arrest_Non_Traumatic_PROC.md</code> row 13 (p.57#8); <code>04_Cardiac_Arrest_Traumatic_PROC.md</code> row 11 (p.61#9); <code>04_Chest_Pain_ACS_PROC.md</code> row 13 (p.107#9); <code>04_Hypertensive_Crisis_PROC.md</code> row 7 (p.109#5); <code>04_V_Fib_Pulseless_V_Tach_PROC.md</code> row 12 (p.64#14); <code>07_Sepsis_PROC.md</code> row 6 (p.130#5); <code>07_OB_Emergencies_PROC.md</code> row 10 (p.147#4); <code>07_Hypotension_Shock_Non_Trauma_PROC.md</code> row 10 (p.114#9); <code>05_Seizure_PROC.md</code> row 7 (p.127#6); <code>03_Pulmonary_Edema_Congestion_PROC.md</code> row 13 (p.124#13); <code>09_Burns_Thermal_PROC.md</code> row 7 (p.88#9); <code>09_Crush_Syndrome_PROC.md</code> row 9 (p.91#8); <code>09_Hemorrhage_Control_PROC.md</code> row 9 (p.273#7); <code>09_Trauma_PROC.md</code> row 13 (p.84#15); <code>06_Nerve_Agents_PROC.md</code> row 7 (p.159#6); <code>02_Behavioral_Patient_Restraint_PROC.md</code> row 8 (p.72#10); <code>02_Diving_and_Drowning_Emergencies_PROC.md</code> row 7 (p.93#6); <code>Surgical_Airway.md</code> row 5 (p.269#6).</p>
+<p class="od-question"><strong>Batch 3 — 3 row(s) lost a Medical-Control requirement the page printed.</strong> Each is now chipped at the level PEMS prints: <code>03_Airway_Inhalation_Irritants_PROC.md</code> row 8 was <code>MC</code>, now <code>A</code> (p.153#4). <code>03_Respiratory_Distress_PROC.md</code> row 6 was <code>MC</code>, now <code>EMT</code> (p.123#3). <code>03_Respiratory_Distress_PROC.md</code> row 10 was <code>MC</code>, now <code>A</code> (p.113#4). The rule is &quot;chip = the level PEMS prints&quot;, and the source grants these actions on standing order, but the owner should confirm that dropping a page-printed MC requirement is intended. Row(s) in the converted set that moved *to* MC, now matching the source&#x27;s MC row: <code>04_Chest_Pain_ACS_PROC.md</code> row 7 <code>I</code> -&gt; <code>MC</code> (p.107#9); <code>03_Airway_Inhalation_Irritants_PROC.md</code> row 12 <code>I</code> -&gt; <code>MC</code> (p.153#5); <code>03_Smoke_Inhalation_PROC.md</code> row 12 <code>I</code> -&gt; <code>MC</code> (p.153#5); <code>06_Nausea_Vomiting_PROC.md</code> row 6 <code>A</code> -&gt; <code>MC</code> (p.117#5); <code>01_STEMI_Field_Triage_PROC.md</code> row 7 <code>EMT</code> -&gt; <code>MC</code> (p.107#9). Already <code>MC</code> on the page and matching the source, so not moved (converted set, whole list): <code>04_Supraventricular_Tachycardia_PROC.md</code> row 10 (p.136#7); <code>04_Asystole_and_Pulseless_Electrical_Activity_PROC.md</code> row 12 (p.57#8); <code>04_Bradycardia_PROC.md</code> row 8 (p.104#13); <code>04_Cardiac_Arrest_Non_Traumatic_PROC.md</code> row 13 (p.57#8); <code>04_Cardiac_Arrest_Traumatic_PROC.md</code> row 11 (p.61#9); <code>04_Chest_Pain_ACS_PROC.md</code> row 13 (p.107#9); <code>04_Hypertensive_Crisis_PROC.md</code> row 7 (p.109#5); <code>04_V_Fib_Pulseless_V_Tach_PROC.md</code> row 12 (p.64#14); <code>07_Sepsis_PROC.md</code> row 6 (p.130#5); <code>07_OB_Emergencies_PROC.md</code> row 10 (p.147#4); <code>07_Hypotension_Shock_Non_Trauma_PROC.md</code> row 10 (p.114#9); <code>05_Seizure_PROC.md</code> row 7 (p.127#6); <code>03_Pulmonary_Edema_Congestion_PROC.md</code> row 13 (p.124#13); <code>09_Burns_Thermal_PROC.md</code> row 7 (p.88#9); <code>09_Crush_Syndrome_PROC.md</code> row 9 (p.91#8); <code>09_Hemorrhage_Control_PROC.md</code> row 9 (p.273#7); <code>09_Trauma_PROC.md</code> row 13 (p.84#15); <code>06_Nerve_Agents_PROC.md</code> row 7 (p.159#6); <code>02_Behavioral_Patient_Restraint_PROC.md</code> row 8 (p.72#10); <code>02_Diving_and_Drowning_Emergencies_PROC.md</code> row 7 (p.93#6); <code>02_Pain_Control_PROC.md</code> row 8 (p.78#6); <code>Surgical_Airway.md</code> row 5 (p.269#6).</p>
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 3</span></p>

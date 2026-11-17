@@ -528,7 +528,23 @@ def load_stylesheet_changes():
 
 
 def load_rulings():
-    """Owner rulings keyed (file, row). A ruling is a decision, never a source citation."""
+    """Owner rulings keyed (file, row). A ruling is a decision, never a source citation.
+
+    A ruling may record EVIDENCE that PEMS prints the action without badgeing it:
+
+      prose_citations: [{page, heading, ordinal, quote}]  a PEARLS / NOTES /
+          CONTRAINDICATIONS / INDICATIONS / CRITERIA entry (pems_prose.json). Verified
+          verbatim by --check, exactly like a quoted row.
+      level_from: {page, ordinal}  a printed, level-badged row whose badge IS the ruled
+          level (e.g. the CPAP procedure rows badge EMT for the contraindications the
+          page lists). Verified: the chip must equal that row's printed badge.
+
+    Neither field makes the level a PEMS citation: the level is still the owner's scope
+    decision (see the file header), and the ledger keeps reporting it as `owner_ruled`.
+
+    `level: FLOOR` is the one derived level: it means "the lowest chip this page itself
+    carries", computed by page_floor() from the page, never typed.
+    """
     import yaml
     if not os.path.exists(RULINGS_YAML):
         return {}
@@ -539,6 +555,26 @@ def load_rulings():
             raise SystemExit(f'level-rulings.yaml: incomplete ruling {rec!r}')
         if rec.get('status') != 'owner_ruled':
             raise SystemExit(f'level-rulings.yaml: status must be "owner_ruled" (row {rec}')
+        if rec['level'] != 'FLOOR' and rec['level'] not in LV + ['MC']:
+            raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} has level '
+                             f'{rec["level"]!r} — it must be a provider level, MC, or FLOOR')
+        cites = rec.get('prose_citations')
+        if cites is not None:
+            if not isinstance(cites, list):
+                raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} '
+                                 f'prose_citations must be a list')
+            for c in cites:
+                if not isinstance(c, dict) or not all(
+                        c.get(k) not in (None, '') for k in ('page', 'heading', 'ordinal',
+                                                             'quote')):
+                    raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} '
+                                     f'has a prose citation without page/heading/ordinal/'
+                                     f'quote: {c!r}')
+        lf = rec.get('level_from')
+        if lf is not None:
+            if not isinstance(lf, dict) or lf.get('page') is None or lf.get('ordinal') is None:
+                raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} '
+                                 f'level_from must name page + ordinal')
         out[(rec['file'], str(rec['row']))] = rec
     return out
 
@@ -868,6 +904,94 @@ def quote_in(quote, row):
     return bool(row) and norm_quote(quote) in norm_quote(row.get('verbatim_text'))
 
 
+# ---------------------------------------------------------------- unbadged prose
+# PEMS prints clinical instruction in PEARLS / NOTES / CONTRAINDICATIONS / INDICATIONS /
+# CRITERIA blocks as well as in level-badged grid rows. `GRID_STOP` in pems_canonical.py
+# deliberately ends the table at those headings, so a row whose action PEMS prints only as
+# prose can never be cited to a table row: it is cited to the prose index instead
+# (audit/level-scan/pems_prose.json, built by scripts/build_pems_prose.py). A prose
+# citation names page + heading + ordinal and quotes that entry's own words, so it is
+# checkable exactly like a row citation and cannot rest on free text.
+def load_prose():
+    try:
+        return load_json('pems_prose.json')
+    except FileNotFoundError:
+        raise SystemExit('audit/level-scan/pems_prose.json is missing — run '
+                         'scripts/build_pems_prose.py to rebuild the unbadged-prose '
+                         'index; a citation to prose cannot be verified without it')
+
+
+def prose_entry(index, page, heading, ordinal):
+    """The index entry for (page, heading, ordinal), or None."""
+    for e in (index.get('pages') or {}).get(str(page), []):
+        if (str(e.get('heading') or '').upper() == str(heading or '').upper()
+                and int(e.get('ordinal')) == int(ordinal)):
+            return e
+    return None
+
+
+def prose_quote_in(quote, entry):
+    """True when `quote` is a verbatim span of the prose entry's printed text."""
+    return bool(entry) and norm_quote(quote) in norm_quote(entry.get('text'))
+
+
+def check_prose_citations(rel, label, cites, index, fails):
+    """Verify a `prose_citations:` list; returns the resolved list for the ledger.
+
+    Every citation must name page + heading + ordinal that exist in the index AND quote
+    a verbatim span of that entry. No free-text citation passes.
+    """
+    if cites is None:
+        return []
+    if not isinstance(cites, list) or not cites:
+        fails.append(f'{rel} {label}: prose_citations must be a non-empty list')
+        return []
+    out = []
+    for c in cites:
+        missing = [k for k in ('page', 'heading', 'ordinal', 'quote') if c.get(k) in (None, '')]
+        if missing:
+            fails.append(f'{rel} {label}: prose citation without {"/".join(missing)} — a '
+                         f'citation names page + heading + ordinal and quotes the text')
+            continue
+        entry = prose_entry(index, c['page'], c['heading'], c['ordinal'])
+        if entry is None:
+            fails.append(f'{rel} {label}: prose citation p.{c["page"]} {c["heading"]} '
+                         f'#{c["ordinal"]} is not in pems_prose.json')
+            continue
+        if not prose_quote_in(c['quote'], entry):
+            fails.append(f'{rel} {label}: the quote is not a verbatim span of p.{c["page"]} '
+                         f'{c["heading"]} #{c["ordinal"]}')
+            continue
+        out.append({'page': int(c['page']), 'heading': str(c['heading']).upper(),
+                    'ordinal': int(c['ordinal']), 'quote': c['quote'],
+                    'text': entry['text']})
+    return out
+
+
+def page_floor(rel):
+    """The lowest provider level this page itself chips, read out of the file.
+
+    A ruling may take the page's own BLS floor as its level (owner's Pearl ruling
+    2026-11-17: a BLS-scope action carries the page's floor, not the level its old
+    matrix happened to publish). The floor is DERIVED here — never typed into the yaml,
+    never guessed — and the derivation is printed by the caller.
+    """
+    lines = open(os.path.join(DOCS, rel), encoding='utf-8').read().split('\n')
+    chips, rows_seen = [], []
+    for reg in find_regions(lines):
+        for row in reg['rows']:
+            if is_banner(row):
+                continue
+            rows_seen.append(row['ordinal'])
+            m = CHIP_RE.search(row['level_cell'] or '')
+            if m and m.group(2) in LV:
+                chips.append(m.group(2))
+    if not chips:
+        raise SystemExit(f'{rel}: a page floor was requested but the page carries no '
+                         f'provider chip — cannot derive one')
+    return min(chips, key=LV.index), chips, rows_seen
+
+
 
 
 def badge_of(row):
@@ -1137,6 +1261,18 @@ def plan(rel):
             r = res[cursor]
             cursor += 1
             ruled = rulings.get((rel, str(row['ordinal'])))
+            if ruled and ruled['level'] == 'FLOOR':
+                # a derived level: the page's own lowest chip, read out of the page here,
+                # never typed into the yaml. Print the derivation so the log shows it.
+                floor, chips_seen, rows_seen = page_floor(rel)
+                print(f'floor({rel.split("/")[-1]}) = {floor}  (chips scanned: '
+                      f'{len(chips_seen)} on {len(rows_seen)} rows: {", ".join(chips_seen)})')
+                _m = CHIP_RE.search(row['level_cell'] or '')
+                was = (leftmost_level(row['cells']) if row['cells'] is not None
+                       else (_m.group(2) if _m else None))
+                print(f'row {row["ordinal"]}: {was or "(no chip)"} -> {floor}')
+                ruled = dict(ruled, level=floor,
+                             derived_floor={'level': floor, 'chips': chips_seen})
             rp = row_pending.get((rel, str(row['ordinal'])))
             level, owner, status, reason, new_text, before, ruled = _decide(row, r, ruled, rp)
             prior_b = prior.get((rel, str(row['ordinal'])))
@@ -1202,6 +1338,28 @@ def plan(rel):
                               'carried_from_page': rp['carried_from_page'],
                               'pending_note': rp.get('note'),
                               'note': 'agency addition — pending OMD authorization'})
+            if ruled:
+                # The owner decided this level. Any row the alignment/adjudication had
+                # attached to the row is NOT the authority for it, so the ledger must not
+                # publish that as a citation. What the ledger does publish is the evidence
+                # that PEMS prints the action at all: the prose citation (verified verbatim
+                # against pems_prose.json) and, where given, the printed row whose badge the
+                # ruling adopts (level_from, verified against pems_table.json).
+                entry.update({
+                    'pems_page': None, 'pems_ordinal': None, 'pems_badge': None,
+                    'pems_text': None, 'compound_tokens': [],
+                    'basis': 'owner-rulings:ruled',
+                    'prose_citations': [{'page': int(c['page']),
+                                         'heading': str(c['heading']).upper(),
+                                         'ordinal': int(c['ordinal']),
+                                         'quote': c['quote']}
+                                        for c in (ruled.get('prose_citations') or [])],
+                    'level_from': ruled.get('level_from'),
+                    'ruling': ruled.get('ruling'),
+                    'ruling_date': ruled.get('date'),
+                    'derived_floor': ruled.get('derived_floor'),
+                    'note': ruled.get('note') or 'owner ruling — level decided by the owner',
+                })
             pol_b = r['extra'].get('binding') or {}
             if pol_b.get('policy'):
                 # a POLICY row cites a policy, never a protocol row: the ledger carries the
@@ -1695,13 +1853,30 @@ def emit_md(ledger):
     lines += ['', '## OWNER_RULED', '',
               'The owner decided these levels. They are **decisions, not source citations**:',
               'no PEMS 2024 row badges the action, the row is not PEMS-verified, and the',
-              'PEMS row column above is empty on purpose.', '']
+              'PEMS row column above is empty on purpose.', '',
+              'Where the action IS printed in the source, the entry names the unbadged prose that',
+              'prints it by page + heading + ordinal and quotes it verbatim (the same discipline as',
+              'a cross-page row citation). That evidence settles *that the row is not silent*; it',
+              'does not turn the level into a printed badge. `level from` names the printed row',
+              'whose badge the ruling adopts, when the level itself comes from one.', '']
     if not ruled:
         lines.append('None — every action row is either PEMS-verified or OWNER_REQUIRED.')
     for e in ruled:
         r = e.get('owner_ruling') or {}
         lines.append(f"- `{e['file']}` row {e['row']} — **{e['level_published']}** — "
                      f"status `owner_ruled`. {r.get('note') or r.get('ruling')}")
+        for c in e.get('prose_citations') or []:
+            lines.append(f"  - printed in unbadged prose: p.{c['page']} {c['heading']} "
+                         f"#{c['ordinal']} — \"{c['quote']}\"")
+        lf = e.get('level_from')
+        if lf:
+            lines.append(f"  - level from: p.{lf['page']}#{lf['ordinal']} (the badge PEMS prints "
+                         f"for the procedure the rule governs)")
+        if e.get('derived_floor'):
+            df = e['derived_floor']
+            lines.append(f"  - level derived: the page's own lowest chip = {df['level']} "
+                         f"(chips on the page: {', '.join(df['chips'])}) — read out of the page "
+                         f"by `page_floor()`, not typed")
     wording = load_wording_rulings()
     lines += ['', '## OWNER_RULED — wording (not level)', '',
               'Decisions the OWNER made about how a phrase reads. These are **rulings, not',
@@ -2052,7 +2227,19 @@ def emit_md(ledger):
               '  edited.** The page reads PEEP "5 cmH2O" (r3) and "5-15 cmH2O" (r6); PEMS p.245#1',
               '  prints "5 mmHg" and p.245#4 extracts as "titratingPEEP9%-15mmHg)". Reconciliation',
               '  (mmHg vs cmH2O, and 5-15 vs 9%-15) is a clinical-text decision outside this',
-              '  conversion, so only the chip was bound; owner to reconcile the page wording.']
+              '  conversion, so only the chip was bound; owner to reconcile the page wording.',
+              '- **Pearl ruling 2026-11-17 — two rows still say "PEMS prints this nowhere", and the',
+              '  reason is only half true.** The BLS/ALS scope ruling cleared 11 of the 13 false',
+              '  "prints nowhere" flags, so that bucket now holds 6 rows, not the 4 the task card',
+              '  expected: the 4 genuinely absent rows (Pediatric Stridor r2, Pneumothorax r5, Upper',
+              '  Airway Obstruction r2, Sedation r5) plus Trauma r6 and Sedation r4, which that card',
+              '  put explicitly out of scope. Trauma r6 ("assess for shock") is worth a review:',
+              '  p.84 PEARLS #3 prints the recognition half ("Any patient who is cool/diaphoretic and',
+              '  tachycardic is considered to be in shock until proven otherwise") but not the',
+              '  "refer to the Shock protocol" half, so the reason\'s silence claim is false while the',
+              '  level question stays open. Sedation r4 prints only prose (p.248 PEARLS RSI bullet,',
+              '  p.195 ketamine INDICATIONS) with no dose and no level. Both stay flagged until the',
+              '  owner rules; the number the owner reads is 6 by design, not by omission.']
 
     # Derived from `changed` so the prose can never disagree with the table above:
     # an MC -> other move and an other -> MC move are counted and named from data.
@@ -2149,6 +2336,7 @@ def check():
     align, adjudicated = load_json('alignment.json'), load_json('adjudicated.json')
     pems = pems_index(load_json('pems_table.json'))
     rulings, bindings = load_rulings(), load_bindings()
+    prose = load_prose()
     row_pending = load_row_pending()
     try:
         ledger_rows = load_json('level-rule-ledger.json')['rows']
@@ -2156,7 +2344,7 @@ def check():
         ledger_rows = []
     led = {(e['file'], str(e['row'])): e for e in ledger_rows}
 
-    fails, report, pending_row_rows = [], [], []
+    fails, report, pending_row_rows, ruling_cites = [], [], [], []
     kept_words, removed_words = load_token_decisions()
     seen_kept = {}
     for rel in TARGETS:
@@ -2306,16 +2494,64 @@ def check():
                 fails.append(f'{rel} row {row["ordinal"]}: chipped PENDING but there is no '
                              f'row-level entry for it in pending-protocols.yaml')
             if ruled:
-                if level != ruled['level']:
+                want_level = ruled['level']
+                if want_level == 'FLOOR':
+                    want_level, _chips, _rows = page_floor(rel)
+                if level != want_level:
                     fails.append(f'{rel} row {row["ordinal"]}: marker {level} != owner ruling '
-                                 f'{ruled["level"]}')
+                                 f'{want_level}')
                 if 'lvl-own' in (row['level_cell'] or ''):
                     fails.append(f'{rel} row {row["ordinal"]}: owner-ruled row still carries '
                                  f'the OWNER_REQUIRED marker')
-                if r['badge'] is not None:
+                # a ruling must rest on printed prose: the citation is verified verbatim
+                # against the prose index, so a ruling can no longer be free text.
+                cites = check_prose_citations(rel, f'row {row["ordinal"]}',
+                                              ruled.get('prose_citations'), prose, fails)
+                lf = ruled.get('level_from')
+                if r['badge'] is not None and not cites and not lf:
                     fails.append(f'{rel} row {row["ordinal"]}: owner ruling recorded but PEMS '
-                                 f'row {r["ptr"]} already badges it — ruling is stale')
-                ruled_rows.append({'row': row['ordinal'], 'level': level, 'status': 'owner_ruled'})
+                                 f'row {r["ptr"]} already badges it and the ruling records no '
+                                 f'prose citation — ruling is stale')
+                if lf:
+                    src = pems.get((lf['page'], lf['ordinal']))
+                    if src is None:
+                        fails.append(f'{rel} row {row["ordinal"]}: ruling level_from '
+                                     f'p.{lf["page"]}#{lf["ordinal"]} is not in '
+                                     f'pems_table.json')
+                    else:
+                        badge, _brk = badge_of(src)
+                        if badge != want_level:
+                            fails.append(f'{rel} row {row["ordinal"]}: ruling level '
+                                         f'{want_level} != the badge p.{lf["page"]}#'
+                                         f'{lf["ordinal"]} prints ({badge})')
+                e = led.get((rel, str(row['ordinal'])))
+                if e is None:
+                    fails.append(f'{rel} row {row["ordinal"]}: owner_ruled row missing from '
+                                 f'the ledger')
+                else:
+                    if e['status'] != 'owner_ruled':
+                        fails.append(f'{rel} row {row["ordinal"]}: ledger says {e["status"]}, '
+                                     f'level-rulings.yaml rounds it owner_ruled')
+                    if e.get('pems_page') or e.get('pems_ordinal') or e.get('pems_badge'):
+                        fails.append(f'{rel} row {row["ordinal"]}: owner_ruled ledger row '
+                                     f'claims a PEMS row citation (p.{e.get("pems_page")}#'
+                                     f'{e.get("pems_ordinal")}) — a ruling is not a citation')
+                    # one source of truth: the ledger must carry the yaml's own citations
+                    want = [(int(c['page']), str(c['heading']).upper(), int(c['ordinal']))
+                            for c in (ruled.get('prose_citations') or [])]
+                    got = [(c['page'], c['heading'], c['ordinal'])
+                           for c in (e.get('prose_citations') or [])]
+                    if want != got:
+                        fails.append(f'{rel} row {row["ordinal"]}: ledger prose citations '
+                                     f'{got} != level-rulings.yaml {want}')
+                ruled_rows.append({'row': row['ordinal'], 'level': level, 'status': 'owner_ruled',
+                                   'prose': [f"p.{c['page']} {c['heading']} #{c['ordinal']}"
+                                             for c in cites]})
+                if cites:
+                    ruling_cites.append({'file': rel, 'row': row['ordinal'],
+                                         'level': level,
+                                         'citations': [f"p.{c['page']} {c['heading']} "
+                                                       f"#{c['ordinal']}" for c in cites]})
                 continue
 
             resolved_level = cells_level((r['resolved'] or {}).get('resolved_cells'))
@@ -2658,6 +2894,7 @@ def check():
         'rows_verified': sum(r['verified'] for r in report),
         'rows_owner_required': sum(len(r['owner_required']) for r in report),
         'rows_owner_ruled': sum(len(r['owner_ruled']) for r in report),
+        'ruling_prose_citations': ruling_cites,
         'rows_mc_required': sum(len(r.get('mc_required') or []) for r in report),
         'rows_cross_page': sum(len(r.get('cross_page') or []) for r in report),
         'policy_pages': len(policy_report),
@@ -2710,6 +2947,10 @@ def check():
     print(f"OK — {summary['rows_mc_required']} row(s) carry the +MC marker (a bracketed page "
           f"level cell: that level performs the action only with Medical Control authorisation), "
           f"exactly one marker each.")
+    print(f"OK — {len(ruling_cites)} owner_ruled row(s) cite unbadged PEMS prose by page + "
+          f"heading + ordinal, each quoting a verbatim span of its indexed entry "
+          f"({sum(len(c['citations']) for c in ruling_cites)} citation(s) checked against "
+          f"audit/level-scan/pems_prose.json); 0 rulings rest on free text.")
     print(f"OK — {summary['rows_cross_page']} row(s) are cited across pages (cross_page: true), "
           f"each with the cited row's own words quoted verbatim out of pems_table.json.")
     print(f"OK — {summary['rows_pending_omd']} action rows across "

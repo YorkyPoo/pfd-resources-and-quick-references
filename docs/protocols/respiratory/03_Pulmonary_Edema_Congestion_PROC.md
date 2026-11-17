@@ -37,9 +37,9 @@ Management of acute cardiogenic pulmonary edema and congestion due to congestive
 | 3 | <span class="lvl lvl-emr">EMR</span> | Provide supplemental oxygen to maintain SpO2 > 94% |
 | 4 | <span class="lvl lvl-emt">EMT</span> | Consider non-invasive positive pressure ventilation (**CPAP**) for severe respiratory distress |
 | 5 | <span class="lvl lvl-emt">EMT</span> | **CPAP Initial Settings:** PEEP 5 cmH2O |
-| 6 | <span class="lvl lvl-a">A</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | **CPAP CONTRAINDICATIONS (⚠️):**<br>• Apnea/agonal respirations<br>• GCS ≤ 13<br>• Pneumothorax |
-| 7 | <span class="lvl lvl-a">A</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | **CPAP CONTRAINDICATIONS (⚠️):**<br>• Facial trauma/burns/recent surgery<br>• Penetrating neck/chest trauma<br>• Active vomiting/severe nausea |
-| 8 | <span class="lvl lvl-a">A</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | **CPAP CONTRAINDICATIONS (⚠️):**<br>• Hypotension (SBP < 90 mmHg, MAP < 65)<br>• Inability to tolerate tight fitting mask |
+| 6 | <span class="lvl lvl-emt">EMT</span> | **CPAP CONTRAINDICATIONS (⚠️):**<br>• Apnea/agonal respirations<br>• GCS ≤ 13<br>• Pneumothorax |
+| 7 | <span class="lvl lvl-emt">EMT</span> | **CPAP CONTRAINDICATIONS (⚠️):**<br>• Facial trauma/burns/recent surgery<br>• Penetrating neck/chest trauma<br>• Active vomiting/severe nausea |
+| 8 | <span class="lvl lvl-emt">EMT</span> | **CPAP CONTRAINDICATIONS (⚠️):**<br>• Hypotension (SBP < 90 mmHg, MAP < 65)<br>• Inability to tolerate tight fitting mask |
 | 9 | <span class="lvl lvl-p">P</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | **CPAP Titration:** Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing |
 | 10 | <span class="lvl lvl-a">A</span> | **[Nitroglycerin](../../pharmacology/Nitroglycerin.md)**<br>Adult: **0.4 mg SL** |
 | 11 | <span class="lvl lvl-a">A</span> | **[Nitroglycerin](../../pharmacology/Nitroglycerin.md)** Repeat Administration:<br>May repeat every 5 minutes as needed if SBP remains > 100 mmHg / MAP > 65 mmHg (maximum 3 doses) |
@@ -48,7 +48,7 @@ Management of acute cardiogenic pulmonary edema and congestion due to congestive
 
 </div>
 
-<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — rows 6, 7, 8, 9: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.</p>
+<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — row 9: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
 ### Pearls
 1. Early use of non-invasive positive pressure ventilation (**CPAP**) has been shown to reduce the need for intubation and improve outcomes.

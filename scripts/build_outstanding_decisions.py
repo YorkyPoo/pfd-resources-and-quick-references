@@ -319,6 +319,31 @@ def build():
     n_nowhere = sum(1 for r in owner if r['cat'] == 'nowhere')
     n_conflict = sum(1 for r in owner if r['cat'] == 'conflict')
     assert n_nowhere + n_conflict == len(owner)
+    # ---- The "PEMS prints this nowhere" bucket, asserted by MEMBERSHIP, not by count ----
+    # The owner's Pearl ruling of 2026-11-17 (BLS/ALS scope test) cleared every flag whose
+    # reason claimed the source is silent, EXCEPT the four rows the source genuinely does not
+    # print and the two rows that card put out of scope (Trauma r6: only part of the reasoning
+    # is false and the level question is open; Sedation r4: no dose is published). Before that
+    # ruling the bucket held 17 rows, 13 of them false; 11 were repaired, so 6 remain. A quiet
+    # re-categorisation of any row must fail the build rather than move the number the owner
+    # reads on the page.
+    nowhere_expected = {
+        ('protocols/respiratory/03_Pediatric_Stridor_PROC.md', 2),      # genuinely absent
+        ('protocols/respiratory/03_Pneumothorax_PROC.md', 5),           # genuinely absent
+        ('protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md', 2),  # genuinely absent
+        ('protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md', 5),  # genuinely absent
+        ('protocols/trauma/09_Trauma_PROC.md', 6),                      # out of scope (this card)
+        ('protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md', 4),  # out of scope
+    }
+    nowhere_got = {(r['file'], int(r['row'])) for r in owner if r['cat'] == 'nowhere'}
+    assert nowhere_got == nowhere_expected, (
+        'the "PEMS prints this nowhere" bucket changed membership:\n'
+        f'  unexpected: {sorted(nowhere_got - nowhere_expected)}\n'
+        f'  missing:    {sorted(nowhere_expected - nowhere_got)}')
+    assert n_nowhere == len(nowhere_expected)
+    print(f'the "PEMS prints this nowhere" bucket is {n_nowhere} rows (was 17 before the '
+          f'2026-11-17 Pearl ruling): 4 genuinely absent from the source, 2 out of scope for '
+          f'that card — membership asserted, not typed', file=sys.stderr)
 
     o = []
     w = o.append

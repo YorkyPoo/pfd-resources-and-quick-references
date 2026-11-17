@@ -3,7 +3,36 @@
 # A ruling here is the OWNER'S DECISION about the level of an action that no PEMS 2024
 # row badges. It is not a source citation: the ledger reports it as `owner_ruled`,
 # distinct from `OK` (PEMS-verified), and `level_rule.py --check` refuses to treat it
-# as verified. Never cite a PEMS page for a ruled row.
+# as verified. A ruling never turns unbadged prose into a printed badge.
+#
+# What a ruling may now also record is EVIDENCE that PEMS prints the action at all
+# (owner's Pearl ruling 2026-11-17 — "a lot of the pearls are just guidance", so a Pearl
+# restating a level creates no new authority, but a Pearl that prints an action proves the
+# action is not absent from the source):
+#
+#   prose_citations:            the unbadged prose that prints the action, named by
+#     - page / heading /        page + heading + ordinal into audit/level-scan/
+#       ordinal / quote         pems_prose.json and quoting that entry verbatim. --check
+#                               re-reads the index and fails if the quote is not a span of
+#                               it, so this is checkable exactly like a row citation and
+#                               can never be free text.
+#   level_from: {page, ordinal} a printed, level-badged row whose badge IS the ruled level
+#                               (e.g. the CPAP procedure rows print EMT for the procedure
+#                               whose contraindications the page lists). --check fails if
+#                               the chip is not that row's printed badge.
+#
+#   level: FLOOR                the one derived level: "the lowest chip this page itself
+#                               carries", computed from the page by page_floor() and
+#                               printed in the build log. Never typed by hand.
+#
+# The owner's scope test applied here (verbatim, 2026-11-17):
+#   "Basics and Advanced have only trained to Basic Life Support (BLS) levels.
+#    Intermediates and Paramedics can provide Advanced Life Support (ALS). ONLY EMT-I and
+#    EMT-P can interpret 12-leads. The pearls section is just reminding that. Patient
+#    warming with heat packs is a BLS skill, anyone can do that. If you were to do patient
+#    warming with warm saline via IV, well an IV is an ALS skill. EMT and above can do
+#    CPAP. No one has to be trained to call poison control. A lot of the pearls are just
+#    guidance."
 #
 # Consumed by scripts/level_rule.py (--write / --check).
 
@@ -19,3 +48,240 @@ rulings:
       Owner ruling 2026-11-15: EMR — any provider may assess stability. No PEMS 2024 row
       badges this action; this is an owner decision, not a source citation. Do not cite
       p.135 for it.
+
+  # ---------------------------------------------------------------- 2026-11-17 Pearl ruling
+  - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
+    row: 5
+    level: I
+    status: owner_ruled
+    date: "2026-11-17"
+    ruling: >-
+      12-Lead STEMI interpretation is an ALS skill: only EMT-I and Paramedic may interpret a
+      12-Lead ECG as STEMI. Chip P -> I.
+    action: "12-Lead ECG Interpretation - STEMI Criteria"
+    prose_citations:
+      - page: 108
+        heading: PEARLS
+        ordinal: 1
+        quote: "Intermediate and Paramedic providers may interpret a 12-Lead ECG as STEMI"
+      - page: 232
+        heading: PEARLS
+        ordinal: 7
+        quote: "Intermediate and Paramedic providers may interpret a 12-Lead ECG as STEMI"
+    note: >-
+      Owner Pearl ruling 2026-11-17: "ONLY EMT-I and EMT-P can interpret 12-leads." The
+      source prints the interpretation rule itself — p.108 PEARLS #1 and p.232 PEARLS #7,
+      verbatim the same sentence, scoped to "Intermediate and Paramedic" — so the page's P
+      claimed authority the source does not print and the row's I was one level too low is
+      corrected to I (the lowest level the prose names). p.107#4 badges EMT for *acting* on
+      a 12-lead that already reads STEMI, which is not interpretation and is cited by the
+      STEMI-alert row (r6), not here.
+
+  - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
+    row: 14
+    level: I
+    status: owner_ruled
+    date: "2026-11-17"
+    ruling: >-
+      Right-sided / 15-Lead ECG is an EMT-I and Paramedic assessment. Level unchanged (I);
+      the "prints nowhere" flag is cleared.
+    action: "Right-Sided / 15-Lead ECG"
+    prose_citations:
+      - page: 108
+        heading: PEARLS
+        ordinal: 3
+        quote: "Consider right-sided 12-Lead or 15-Lead ECG."
+      - page: 232
+        heading: PEARLS
+        ordinal: 8
+        quote: "EMT-I and Paramedic: If there is >1 mm ST elevation in leads II, III, and/or V1"
+      - page: 232
+        heading: PEARLS
+        ordinal: 9
+        quote: "A Right-sided 12-Lead ECG (V4R) & Posterior 12-Lead ECG (V8 & V9) together constitute a 15-LeadECG"
+    note: >-
+      Owner Pearl ruling 2026-11-17. The source prints the action three times in unbadged
+      prose — p.108 PEARLS #3 ("Consider right-sided 12-Lead or 15-Lead ECG"), p.232
+      PEARLS #8 scoped "EMT-I and Paramedic" and #9 defining the 15-Lead ECG — so the old
+      reason ("No PEMS 2024 row anywhere prints a right-sided or 15-lead ECG") was false.
+      What is true is narrower: no *level-badged row* prints it, which is why the level is
+      the PROSE's own scope (EMT-I and Paramedic -> lowest I) and the chip stays I. The
+      bracketed [I] page cell keeps its +MC marker.
+
+  - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
+    row: 6
+    level: EMT
+    status: owner_ruled
+    date: "2026-11-17"
+    ruling: >-
+      CPAP is an EMT skill and its contraindications gate CPAP, so the contraindication row
+      carries EMT. Chip A -> EMT.
+    action: "CPAP CONTRAINDICATIONS - apnea/agonal, GCS <= 13, pneumothorax"
+    prose_citations:
+      - page: 245
+        heading: CONTRAINDICATIONS
+        ordinal: 1
+        quote: "Apnea / agonal respirations • Decreased level of consciousness (GCS ≤ 13) • Pneumothorax"
+    level_from:
+      page: 245
+      ordinal: 0
+    note: >-
+      Owner Pearl ruling 2026-11-17: "EMT and above can do CPAP." p.245 prints the
+      contraindication list above the procedure table as a headed CONTRAINDICATIONS block
+      (prose, no badge anywhere on it) and badges all five procedure rows EMT, so the
+      contraindications are gated at the level of the procedure they contraindicate: EMT.
+      Level change A -> EMT (this bullet group is p.245 CONTRAINDICATIONS #1, bullets 1-3).
+
+  - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
+    row: 7
+    level: EMT
+    status: owner_ruled
+    date: "2026-11-17"
+    ruling: >-
+      CPAP contraindications (facial trauma, penetrating neck/chest, active vomiting) gate
+      an EMT skill. Chip A -> EMT.
+    action: "CPAP CONTRAINDICATIONS - facial trauma, penetrating trauma, vomiting"
+    prose_citations:
+      - page: 245
+        heading: CONTRAINDICATIONS
+        ordinal: 1
+        quote: "Facial trauma, burns, or recent surgery • Penetrating neck and/or chest trauma • Active vomiting / severe nausea"
+    level_from:
+      page: 245
+      ordinal: 0
+    note: >-
+      As row 6 (owner Pearl ruling 2026-11-17). p.245 CONTRAINDICATIONS #1, bullets 4-6.
+      Level change A -> EMT.
+
+  - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
+    row: 8
+    level: EMT
+    status: owner_ruled
+    date: "2026-11-17"
+    ruling: >-
+      CPAP contraindications (hypotension, mask intolerance) gate an EMT skill. Chip A ->
+      EMT.
+    action: "CPAP CONTRAINDICATIONS - hypotension, mask intolerance"
+    prose_citations:
+      - page: 245
+        heading: CONTRAINDICATIONS
+        ordinal: 1
+        quote: "Hypotension (SBP < 90 mmHg, MAP < 65) • Inability to tolerate tight fitting mask"
+    level_from:
+      page: 245
+      ordinal: 0
+    note: >-
+      As row 6 (owner Pearl ruling 2026-11-17). p.245 CONTRAINDICATIONS #1, bullets 7-8.
+      Level change A -> EMT.
+
+  - file: protocols/general/02_Cold_Exposure_PROC.md
+    row: 6
+    level: EMT
+    status: owner_ruled
+    date: "2026-11-17"
+    ruling: >-
+      Active external rewarming with heat packs is a BLS skill. Level unchanged (EMT); the
+      "prints nowhere" flag is cleared.
+    action: "If patient is alert and responsive: active external rewarming with heat packs"
+    prose_citations:
+      - page: 67
+        heading: PEARLS
+        ordinal: 5
+        quote: "use active external rewarming with heat packs, warm blankets, etc"
+    note: >-
+      Owner Pearl ruling 2026-11-17: "Patient warming with heat packs is a BLS skill, anyone
+      can do that." The action is printed — p.67 PEARLS #5, verbatim — so the old reason
+      ("PEMS prints this action nowhere") was false. No badge is printed, so the level stays
+      the one the page published (EMT). p.67 PEARLS #2 also warns "DO NOT place heat packs
+      ... directly on skin": that is a site-wording question (the page does not carry the
+      caution), reported, not decided here, and it does not change the level.
+
+  - file: protocols/general/02_Cold_Exposure_PROC.md
+    row: 9
+    level: MC
+    status: owner_ruled
+    date: "2026-11-17"
+    ruling: >-
+      The AED Medical Control gate is printed in the protocol's own Pearls. Level unchanged
+      (MC); the "prints nowhere" flag is cleared.
+    action: "Contact Medical Control prior to use of AED."
+    prose_citations:
+      - page: 67
+        heading: PEARLS
+        ordinal: 3
+        quote: "Contact Medical Control prior to use of AED"
+    note: >-
+      Owner Pearl ruling 2026-11-17: "a lot of the pearls are just guidance" — so the Pearl
+      does not create a new provider authority, but it does prove the row is not silent:
+      p.67 PEARLS #3 prints it verbatim in the Cold Exposure protocol's own Pearls. What is
+      true is narrower than the old reason: p.67's six badged rows (#0-#5) contain no AED
+      row. Level unchanged (MC): the gate is a Medical Control contact, not a provider level.
+
+  - file: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
+    row: 3
+    level: EMT
+    status: owner_ruled
+    date: "2026-11-17"
+    ruling: >-
+      Assessing for airway/inhalation injury is a BLS assessment. Level unchanged (EMT); the
+      "prints nowhere" flag is cleared.
+    action: "Airway Assessment - signs of airway injury"
+    prose_citations:
+      - page: 88
+        heading: PEARLS
+        ordinal: 1
+        quote: "Assess for airway / inhalation injury."
+    note: >-
+      Owner Pearl ruling 2026-11-17. p.88 PEARLS #1 prints the assessment — "Assess for
+      airway / inhalation injury. Consider early definitive airway management for patients
+      with respiratory distress, hoarse voice or stridor, carbonaceous sputum and/or facial
+      burns" — so the old reason ("No PEMS 2024 row anywhere prints this airway-injury
+      assessment") was false as written; true only of badged rows. Recognition is BLS-scope:
+      the *advanced* airway step is the next row (r9, cited at I). Level unchanged (EMT).
+
+  - file: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
+    row: 11
+    level: FLOOR
+    status: owner_ruled
+    date: "2026-11-17"
+    ruling: >-
+      Calling Poison Control needs no provider training, so the row takes this page's own
+      lowest chip. Chip P -> FLOOR (derived, not typed).
+    action: "Poison Control Consultation"
+    prose_citations:
+      - page: 154
+        heading: PEARLS
+        ordinal: 13
+        quote: "Contact the Poison Control Center at 1-800-222-1222 with any questions. Note: Although Poison Control can provide invaluable expert guidance, it is not online medical control."
+      - page: 121
+        heading: PEARLS
+        ordinal: 1
+        quote: "Contact the Poison Control Center at 1-800-222-1222 with any questions. Note: Although Poison Control can provide invaluable expert guidance, it is not online medical control."
+    note: >-
+      Owner Pearl ruling 2026-11-17: "No one has to be trained to call poison control." The
+      referral is printed twice — p.154 PEARLS #13 (CBRNE: Airway / Inhalation Irritants) and
+      p.121 PEARLS #1 (Overdose / Poisoning / Toxic Ingestion), verbatim the same sentence,
+      and it says explicitly that Poison Control "is not online medical control" — so it is a
+      referral, not an ALS authorisation, and the P chip claimed authority the source does not
+      print. The level is the page's own BLS floor, derived by page_floor() from the chips on
+      the page itself and printed in the build log; nothing was hardcoded.
+
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 3
+    level: EMT
+    status: owner_ruled
+    date: "2026-11-17"
+    ruling: >-
+      Assessing for airway/inhalation injury is a BLS assessment. Level unchanged (EMT); the
+      "prints nowhere" flag is cleared.
+    action: "Airway Assessment - singed hairs, soot, stridor"
+    prose_citations:
+      - page: 88
+        heading: PEARLS
+        ordinal: 1
+        quote: "Consider early definitive airway management for patients with respiratory distress, hoarse voice or stridor, carbonaceous sputum and/or facial burns"
+    note: >-
+      Owner Pearl ruling 2026-11-17, as Inhalation Irritants r3. p.88 PEARLS #1 prints the
+      assessment signs in the source's own words, so the old reason ("No PEMS 2024 row
+      anywhere prints this airway-injury assessment") was false as written. Recognition is
+      BLS-scope; the advanced-airway step is r5/r6, cited at I. Level unchanged (EMT).
