@@ -1,0 +1,6 @@
+floor(03_Airway_Inhalation_Irritants_PROC.md) = EMR  (chips scanned: 11 on 12 rows: EMR, EMT, EMT, EMT, EMT, A, A, A, I, P, EMR)
+row 11: EMR -> EMR
+floor(03_Airway_Inhalation_Irritants_PROC.md) = EMR  (chips scanned: 11 on 12 rows: EMR, EMT, EMT, EMT, EMT, A, A, A, I, P, EMR)
+row 11: EMR -> EMR
+wrote audit/level-scan/level-rule-ledger.json (604 rows)
+wrote audit/level-scan/level-rule-ledger.md
