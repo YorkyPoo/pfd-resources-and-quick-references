@@ -1,0 +1,5 @@
+top-level key differs: generated
+page_decisions fields that changed: ['blank_level_cells', 'contested_because', 'filled_level_cells', 'level_grid_present']
+decisions changed: []
+decision tally: {'administrative': 15, 'skipped': 1, 'level_gated': 41}
+EXIT=0

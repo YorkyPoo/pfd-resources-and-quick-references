@@ -499,8 +499,12 @@ def _site_rows_collapsed(path: str) -> list[dict] | None:
                 continue
             m = SITE_CHIP_RE.search(c[1])
             lvl = m.group(2) if m else ""
+            # `cells` keeps the legacy 5-cell cumulative spread: `levels()`,
+            # text-binding and the C2 scope check all read a non-blank cell as
+            # "this level and every level above it". `chip` is the published
+            # level itself, which is what `decide()` counts (see the note there).
             rows.append({"idx": len(rows), "num": c[0], "action": c[2],
-                         "cells": P.chip_cells(lvl), "ncols": 3,
+                         "cells": P.chip_cells(lvl), "chip": lvl, "ncols": 3,
                          "divider": P.is_divider(c[0], P.clean(c[2]))})
     return rows or None
 
@@ -521,13 +525,15 @@ def site_pages() -> list[dict]:
             continue
         pg = P.read_page(f)
         if pg.get("has_table"):
+            pg["format"] = "matrix"
             out.append(pg)
             continue
         rows = _site_rows_collapsed(f)
         if rows is None:
             continue
         out.append({"file": f, "rel": rel, "has_table": True, "title": _site_title(f),
-                    "hdr": None, "rows": rows, "lines": pg.get("lines") or [], "ncols": 3})
+                    "hdr": None, "rows": rows, "lines": pg.get("lines") or [], "ncols": 3,
+                    "format": "collapsed"})
     return out
 
 
@@ -580,8 +586,21 @@ def decide(pg: dict, exc: dict, docs: list[dict]) -> dict:
     ep = exc.get(rel) or {}
     rows = pg["rows"]
     data_rows = [r for r in rows if not r["divider"]]
-    blank_cells = sum(1 for r in data_rows for c in r["cells"] if not c.strip())
-    filled_cells = sum(1 for r in data_rows for c in r["cells"] if c.strip())
+    if pg.get("format") == "collapsed":
+        # The published table carries ONE chip per row, and that is what
+        # `filled_level_cells` must mean — otherwise `POLICY`/`PENDING`, which
+        # map to five blank legacy cells, make a grid-carrying page report
+        # "0 filled level cells against 40 blank ones, so the grid is not merely
+        # decorative", and a level chip's cumulative 5-cell spread inflates the
+        # count on level-gated pages (Chest Pain 37 -> 51 for the same 14 rows).
+        # One chip = one filled level cell; the four remaining legacy matrix
+        # columns stay blank. `cells` itself is untouched: `levels()` and
+        # text-binding depend on its cumulative spread.
+        filled_cells = sum(1 for r in data_rows if (r.get("chip") or "").strip())
+        blank_cells = 5 * len(data_rows) - filled_cells
+    else:
+        blank_cells = sum(1 for r in data_rows for c in r["cells"] if not c.strip())
+        filled_cells = sum(1 for r in data_rows for c in r["cells"] if c.strip())
     rec = {"site_page": rel, "title": pg.get("title") or rel, "rows": len(rows),
            "numbered_rows": len(data_rows), "blank_level_cells": blank_cells,
            "filled_level_cells": filled_cells}

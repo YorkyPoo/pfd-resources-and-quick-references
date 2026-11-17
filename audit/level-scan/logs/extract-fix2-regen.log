@@ -1,0 +1,7 @@
+stage 1: 95 PEMS pages with rows, 70 documents, 536 level rows
+  decisions: {'site_pages_with_level_table': 57, 'administrative': 15, 'level_gated': 41, 'skipped': 1}
+  STALE exception paths: ['protocols/trauma/09_Pneumothorax_PROC.md']
+  wrote audit/level-scan/pems_table.json
+stage 2: {'site_rows': 417, 'matched': 292, 'ambiguous': 125, 'absent_from_site': 86, 'duplicate_in_source': 10, 'merged_into_site_row': 28, 'total_accounted': 503, 'site_rows_plus_absent': 503, 'pems_rows_by_disposition': {'absent': 86, 'claimed_by_ambiguous_site_row': 20, 'duplicate_in_source': 9, 'matched': 292, 'merged_into_site_row': 28}, 'pems_rows_in_scope': 435, 'ambiguous_by_kind': {'multiple_candidates': 12, 'no_counterpart': 82, 'shared_pems_row': 31}, 'text_binding': {'bound_by_text': 1, 'no_evidence_local': 82, 'no_evidence_local_by_subtype': {'below_floor': 60, 'best_evidence_is_held': 15, 'no_anchor': 7}}}
+  wrote audit/level-scan/alignment.json, audit/level-scan/missing-rows.md, audit/level-scan/ambiguous-rows.md
+EXIT=0

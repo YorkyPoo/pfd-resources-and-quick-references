@@ -1,0 +1,68 @@
+== acceptance lookups (threshold 0.45) ==
+  'contact medical control prior to use of AED'
+    -> 15 hits; top 1.00 p.67 PEARLS #3
+  'active external rewarming with heat packs warm blankets'
+    -> 1 hits; top 1.00 p.67 PEARLS #5
+  'CPAP contraindications apnea agonal respirations pneumothorax facial trauma active vomiting hypotension inability to tolerate tight fitting mask'
+    -> 1 hits; top 0.88 p.245 CONTRAINDICATIONS #1
+
+== one entry per printed bullet ==
+  p.236: 32 entries; reversible-causes items #17-#28 = 12
+    #17: 'Hypoxia'
+    #18: 'Tension pneumothorax'
+    #19: 'Hyperkalemia or Hypokalemia'
+    #20: 'Tamponade (Cardiac)'
+    #21: 'Hypothermia'
+    #22: 'Thrombosis (Cardiac, Pulmonary)'
+    #23: 'Hypovolemia'
+    #24: 'Toxins'
+    #25: 'Hydrogen ion (acidosis)'
+    #26: 'Trauma'
+    #27: 'Hypoglycemia or hyperglycemia'
+    #28: 'Tablets (Drug Overdose)'
+  p.264: 32 entries; reversible-causes items #17-#28 = 12
+    #17: 'Hypoxia'
+    #18: 'Tension pneumothorax'
+    #19: 'Hyperkalemia or Hypokalemia'
+    #20: 'Tamponade (Cardiac)'
+    #21: 'Hypothermia'
+    #22: 'Thrombosis (Cardiac, Pulmonary)'
+    #23: 'Hypovolemia'
+    #24: 'Toxins'
+    #25: 'Hydrogen ion (acidosis)'
+    #26: 'Trauma'
+    #27: 'Hypoglycemia or hyperglycemia'
+    #28: 'Tablets (Drug Overdose)'
+
+== no fragment entries (entry starting lower-case) ==
+  fragments: none
+
+== pages changed against the pre-fix index ==
+  p.236: 26 -> 32
+  p.248: 13 -> 12
+  p.264: 26 -> 32
+  p.45: 5 -> 4
+
+== citations the follow-up card relies on (must be unchanged) ==
+  p.67 PEARLS #2: unchanged / present
+  p.67 PEARLS #3: unchanged / present
+  p.67 PEARLS #5: unchanged / present
+  p.84 PEARLS #3: unchanged / present
+  p.88 PEARLS #1: unchanged / present
+  p.108 PEARLS #1: unchanged / present
+  p.108 PEARLS #3: unchanged / present
+  p.121 PEARLS #1: unchanged / present
+  p.132 PEARLS #4: unchanged / present
+  p.154 PEARLS #13: unchanged / present
+  p.232 PEARLS #7: unchanged / present
+  p.232 PEARLS #8: unchanged / present
+  p.232 PEARLS #9: unchanged / present
+  p.245 CONTRAINDICATIONS #1: unchanged / present
+  p.248 PEARLS #10: unchanged / present
+
+== totals ==
+  pages: 280  entries: 493  pearls headings: 63 (census)
+  badge null on every entry: True
+
+RESULT: OK
+EXIT=0

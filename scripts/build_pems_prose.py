@@ -28,7 +28,14 @@ Granularity, per the task spec:
     within that heading on that page. Sub-bullets (`o ...`) stay inside their
     parent bullet. A non-bullet line indented less than the section's bullet
     markers starts a new entry (p.248 prints trailing paragraphs after its last
-    bullet).
+    bullet). Two text-layer artefacts are corrected so that one entry really is
+    one printed bullet: (a) a layout line that prints two bullets side by side
+    (the two-column reversible-causes list on p.236/p.264) is split at the
+    second glyph — see `_expand_two_column`; (b) a fragment that merely
+    continues an unfinished sentence (`p.45 ...to the closest` /
+    `• hospital emergency department.`, p.248's flush-left `scientific
+    literature...` tail) is folded back into its bullet — see
+    `_merge_continuations`, which prints every merge it makes.
   * CONTRAINDICATIONS / INDICATIONS / CRITERIA -> one entry per heading block,
     bullets kept inside the block.
   * A heading whose block has no bullets at all (p.51's Glasgow Coma Scale
@@ -81,6 +88,9 @@ STOP = HEADINGS | {"REFERENCES", "ADMINISTRATIVE", "PROCEDURES", "DOCUMENTATION"
                    "PROTOCOL", "PROCEDURE"}
 SUB_BULLET = re.compile(r"^(?:o|▪|§|\*|·)\s")
 BULLET = "\u2022"
+# (predecessor, merged tail) for every fragment folded back into its bullet;
+# printed by `main()` so the split rule is auditable, not implicit.
+MERGES: list[tuple[str, str]] = []
 
 
 # ---------------------------------------------------------------------------
@@ -178,6 +188,7 @@ def _split_bullets(block: list[str]) -> list[str]:
     if not any(ln.lstrip().startswith(BULLET) for ln in lines):
         whole = _clean(" ".join(lines))
         return [whole] if whole else []
+    lines = [sub for ln in lines for sub in _expand_two_column(ln)]
     groups: list[list[str]] = []
     cur: list[str] = []
     marker_indent: int | None = None
@@ -205,7 +216,55 @@ def _split_bullets(block: list[str]) -> list[str]:
         txt = txt[len(BULLET):].strip() if txt.startswith(BULLET) else txt
         if txt:
             out.append(txt)
-    return out
+    return _merge_continuations(out)
+
+
+# ---------------------------------------------------------------------------
+# two printed columns, and bullets that continue an unfinished sentence
+# ---------------------------------------------------------------------------
+# Two text-layer artefacts break "one entry per top-level bullet". Both are
+# corrections to the WRONG split, never a merge of two real bullets.
+
+TERMINAL_PUNCT = re.compile(r"[.:;!?)\]”\"]$")
+
+
+def _expand_two_column(line: str) -> list[str]:
+    """Split a bullet line that holds TWO printed bullets.
+
+    The reversible-causes list on p.236 and p.264 is set in two columns and the
+    layout text puts one item from each column on a single line
+    (`•  Hypoxia              •  Tension pneumothorax`). One entry per printed
+    bullet means 12 entries, not 6 fused pairs — otherwise `p.236 PEARLS #17`
+    names two bullets at once and cannot be cited.
+    """
+    stripped = line.lstrip()
+    if not stripped.startswith(BULLET) or stripped.count(BULLET) < 2:
+        return [line]
+    indent = line[: len(line) - len(stripped)]
+    parts = [p.strip() for p in stripped.split(BULLET)[1:]]
+    return [f"{indent}{BULLET} {p}" for p in parts if p]
+
+
+def _merge_continuations(texts: list[str]) -> list[str]:
+    """Merge an entry that is really the tail of the previous bullet.
+
+    Sometimes the PDF puts a bullet glyph (or a flush-left continuation line)
+    in the middle of one sentence: p.45 prints `…to the closest` then
+    `• hospital emergency department.`, and p.248 prints `* Note: … available`
+    then `scientific literature and should be reserved…` one character left of
+    the bullet column. The marker follows the print, so such a tail would
+    otherwise become a fragment entry that reads as a self-contained Pearl and
+    can be cited as one. Rule: a group whose text starts lower-case and whose
+    predecessor does not end in terminal punctuation continues that predecessor.
+    """
+    merged: list[str] = []
+    for txt in texts:
+        if merged and txt[:1].islower() and not TERMINAL_PUNCT.search(merged[-1]):
+            MERGES.append((merged[-1], txt))
+            merged[-1] = _clean(merged[-1] + " " + txt)
+        else:
+            merged.append(txt)
+    return merged
 
 
 # ---------------------------------------------------------------------------
@@ -287,6 +346,7 @@ def main(argv=None) -> int:
                     help="build in memory, compare with the committed index, write nothing")
     ap.add_argument("--rebuild", action="store_true", help="re-read the PDF")
     args = ap.parse_args(argv)
+    MERGES.clear()
     data, n_pearls, methods, failures = build(args.rebuild)
     n_pages = len(data["pages"])
     n_with = sum(1 for v in data["pages"].values() if v)
@@ -299,6 +359,9 @@ def main(argv=None) -> int:
     print("by heading: " + ", ".join(f"{k}={v}" for k, v in sorted(by_head.items())))
     print("text-layer verification: " + ", ".join(f"{k}={v}" for k, v in sorted(by_method.items()))
           + f", FAILED={len(failures)}")
+    print(f"fragment merges (tail folded back into its bullet): {len(MERGES)}")
+    for head, tail in MERGES:
+        print(f"  merged: {head[-60:]!r} + {tail[:60]!r}")
     for f in failures[:20]:
         print("  FAIL " + f)
     if failures:

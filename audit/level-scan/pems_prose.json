@@ -192,30 +192,24 @@
    {
     "heading": "PEARLS",
     "ordinal": 1,
-    "text": "Transport all patients with unmanageable/uncontrolled airway or uncontrolled hemorrhage to the closest",
+    "text": "Transport all patients with unmanageable/uncontrolled airway or uncontrolled hemorrhage to the closest hospital emergency department.",
     "badge": null
    },
    {
     "heading": "PEARLS",
     "ordinal": 2,
-    "text": "hospital emergency department.",
-    "badge": null
-   },
-   {
-    "heading": "PEARLS",
-    "ordinal": 3,
     "text": "Traumatic cardiac arrest– if transporting, transport to the closest hospital emergency department.",
     "badge": null
    },
    {
     "heading": "PEARLS",
-    "ordinal": 4,
+    "ordinal": 3,
     "text": "Consider transport to a pediatric center (CHKD or VCU Medical Center) for pediatric patients meeting the above trauma triage criteria.",
     "badge": null
    },
    {
     "heading": "PEARLS",
-    "ordinal": 5,
+    "ordinal": 4,
     "text": "Consider transport to a burn center (Sentara Norfolk General Hospital or VCU Medical Center) for patients with burn injuries meeting the following criteria: o Partial-thickness burn of greater than 10% BSA o Electrical burns, including lightning injury o Full-thickness burns o Circumferential burns o Chemical burns",
     "badge": null
    }
@@ -2331,60 +2325,96 @@
    {
     "heading": "PEARLS",
     "ordinal": 17,
-    "text": "Hypoxia • Tension pneumothorax",
+    "text": "Hypoxia",
     "badge": null
    },
    {
     "heading": "PEARLS",
     "ordinal": 18,
-    "text": "Hyperkalemia or Hypokalemia • Tamponade (Cardiac)",
+    "text": "Tension pneumothorax",
     "badge": null
    },
    {
     "heading": "PEARLS",
     "ordinal": 19,
-    "text": "Hypothermia • Thrombosis (Cardiac, Pulmonary)",
+    "text": "Hyperkalemia or Hypokalemia",
     "badge": null
    },
    {
     "heading": "PEARLS",
     "ordinal": 20,
-    "text": "Hypovolemia • Toxins",
+    "text": "Tamponade (Cardiac)",
     "badge": null
    },
    {
     "heading": "PEARLS",
     "ordinal": 21,
-    "text": "Hydrogen ion (acidosis) • Trauma",
+    "text": "Hypothermia",
     "badge": null
    },
    {
     "heading": "PEARLS",
     "ordinal": 22,
-    "text": "Hypoglycemia or hyperglycemia • Tablets (Drug Overdose)",
+    "text": "Thrombosis (Cardiac, Pulmonary)",
     "badge": null
    },
    {
     "heading": "PEARLS",
     "ordinal": 23,
-    "text": "Termination of Resuscitation (TOR):",
+    "text": "Hypovolemia",
     "badge": null
    },
    {
     "heading": "PEARLS",
     "ordinal": 24,
-    "text": "Refer to Death & Criteria for Withholding Resuscitationprotocol.",
+    "text": "Toxins",
     "badge": null
    },
    {
     "heading": "PEARLS",
     "ordinal": 25,
-    "text": "Termination of resuscitative efforts is a Medical Control decisiononly.",
+    "text": "Hydrogen ion (acidosis)",
     "badge": null
    },
    {
     "heading": "PEARLS",
     "ordinal": 26,
+    "text": "Trauma",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 27,
+    "text": "Hypoglycemia or hyperglycemia",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 28,
+    "text": "Tablets (Drug Overdose)",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 29,
+    "text": "Termination of Resuscitation (TOR):",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 30,
+    "text": "Refer to Death & Criteria for Withholding Resuscitationprotocol.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 31,
+    "text": "Termination of resuscitative efforts is a Medical Control decisiononly.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 32,
     "text": "Consider contacting Medical Control to request TOR if the arrest was not witnessed by EMS and after 20 minutes of continuous CPR: 1) There has been no return of spontaneous circulation (ROSC). AND 2) No shocks were delivered.",
     "badge": null
    }
@@ -2639,13 +2669,7 @@
    {
     "heading": "PEARLS",
     "ordinal": 12,
-    "text": "* Note: Pre-hospital endotracheal intubation of pediatric patients is poorly supported by the available",
-    "badge": null
-   },
-   {
-    "heading": "PEARLS",
-    "ordinal": 13,
-    "text": "scientific literature and should be reserved for life-threatening situations in which less invasive means of oxygenation/ventilation have been attempted or considered and found to be not feasible. In all cases, the provider most experienced with pediatric airway management should perform the procedure. A robust training and skill maintenance program with involvement of the agency medical director and an agency-level system of continuous quality improvement (CQI)/quality assurance (QA) are highly recommended for agencies electing to include pediatric intubation as a procedure .",
+    "text": "* Note: Pre-hospital endotracheal intubation of pediatric patients is poorly supported by the available scientific literature and should be reserved for life-threatening situations in which less invasive means of oxygenation/ventilation have been attempted or considered and found to be not feasible. In all cases, the provider most experienced with pediatric airway management should perform the procedure. A robust training and skill maintenance program with involvement of the agency medical director and an agency-level system of continuous quality improvement (CQI)/quality assurance (QA) are highly recommended for agencies electing to include pediatric intubation as a procedure .",
     "badge": null
    }
   ],
@@ -2971,60 +2995,96 @@
    {
     "heading": "PEARLS",
     "ordinal": 17,
-    "text": "Hypoxia • Tension pneumothorax",
+    "text": "Hypoxia",
     "badge": null
    },
    {
     "heading": "PEARLS",
     "ordinal": 18,
-    "text": "Hyperkalemia or Hypokalemia • Tamponade (Cardiac)",
+    "text": "Tension pneumothorax",
     "badge": null
    },
    {
     "heading": "PEARLS",
     "ordinal": 19,
-    "text": "Hypothermia • Thrombosis (Cardiac, Pulmonary)",
+    "text": "Hyperkalemia or Hypokalemia",
     "badge": null
    },
    {
     "heading": "PEARLS",
     "ordinal": 20,
-    "text": "Hypovolemia • Toxins",
+    "text": "Tamponade (Cardiac)",
     "badge": null
    },
    {
     "heading": "PEARLS",
     "ordinal": 21,
-    "text": "Hydrogen ion (acidosis) • Trauma",
+    "text": "Hypothermia",
     "badge": null
    },
    {
     "heading": "PEARLS",
     "ordinal": 22,
-    "text": "Hypoglycemia or hyperglycemia • Tablets (Drug Overdose)",
+    "text": "Thrombosis (Cardiac, Pulmonary)",
     "badge": null
    },
    {
     "heading": "PEARLS",
     "ordinal": 23,
-    "text": "Termination of Resuscitation (TOR):",
+    "text": "Hypovolemia",
     "badge": null
    },
    {
     "heading": "PEARLS",
     "ordinal": 24,
-    "text": "Refer to Death & Criteria for Withholding Resuscitationprotocol.",
+    "text": "Toxins",
     "badge": null
    },
    {
     "heading": "PEARLS",
     "ordinal": 25,
-    "text": "Termination of resuscitative efforts is a Medical Control decisiononly.",
+    "text": "Hydrogen ion (acidosis)",
     "badge": null
    },
    {
     "heading": "PEARLS",
     "ordinal": 26,
+    "text": "Trauma",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 27,
+    "text": "Hypoglycemia or hyperglycemia",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 28,
+    "text": "Tablets (Drug Overdose)",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 29,
+    "text": "Termination of Resuscitation (TOR):",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 30,
+    "text": "Refer to Death & Criteria for Withholding Resuscitationprotocol.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 31,
+    "text": "Termination of resuscitative efforts is a Medical Control decisiononly.",
+    "badge": null
+   },
+   {
+    "heading": "PEARLS",
+    "ordinal": 32,
     "text": "Consider contacting Medical Control to request TOR if the arrest was not witnessed by EMS and after 20 minutes of continuous CPR: 1) There has been no return of spontaneous circulation (ROSC). AND 2) No shocks were delivered.",
     "badge": null
    }

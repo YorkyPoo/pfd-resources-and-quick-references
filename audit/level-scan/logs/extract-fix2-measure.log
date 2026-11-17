@@ -1,0 +1,8 @@
+rows before/after: 536 536
+counts before/after: {'site_pages_with_level_table': 57, 'administrative': 15, 'level_gated': 41, 'skipped': 1} {'site_pages_with_level_table': 57, 'administrative': 15, 'level_gated': 41, 'skipped': 1}
+only in old: 0 []
+only in new: 0 []
+badge_tokens changed on any surviving row: []
+p.78 rows: [(6, ['MC'], 'If unable to adequately control pain or safely and humanely extricate/transport a stable p')]
+docs before/after: 70 70
+EXIT=0

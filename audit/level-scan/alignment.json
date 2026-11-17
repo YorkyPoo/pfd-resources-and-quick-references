@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T13:23:29",
+ "generated": "2026-11-17T13:34:21",
  "method": "primary key = section heading + ordinal within section, then the site row's own intervention label (bold head noun); text similarity only breaks ties and never creates a pair on its own",
  "totals": {
   "site_rows": 417,
