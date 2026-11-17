@@ -124,19 +124,14 @@
    "cross_page": false,
    "mc_required": false,
    "mc_evidence": null,
-   "basis": "owner-rulings:ruled",
+   "basis": null,
    "before": {
     "leftmost": "EMR",
     "markers": [],
     "text_label": null,
     "text_tokens": []
    },
-   "note": "Owner ruling 2026-11-15: EMR \u2014 any provider may assess stability. No PEMS 2024 row badges this action; this is an owner decision, not a source citation. Do not cite p.135 for it.",
-   "prose_citations": [],
-   "level_from": null,
-   "ruling": "EMR \u2014 any provider may assess stability.",
-   "ruling_date": "2026-11-15",
-   "derived_floor": null,
+   "note": null,
    "status_before": "owner_ruled"
   },
   {

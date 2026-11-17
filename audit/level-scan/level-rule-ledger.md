@@ -18,7 +18,7 @@ the action text.
 | file | row | level | PEMS row | PEMS printed row text | basis | status |
 |---|---:|---|---|---|---|---|
 | `04_Supraventricular_Tachycardia_PROC.md` | 1 | EMR | p.135#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
-| `04_Supraventricular_Tachycardia_PROC.md` | 2 | EMR | — | — | owner-rulings:ruled | owner_ruled |
+| `04_Supraventricular_Tachycardia_PROC.md` | 2 | EMR | — | — | — | owner_ruled |
 | `04_Supraventricular_Tachycardia_PROC.md` | 4 | EMT | p.135#1 | Obtain and transmit a 12-Lead ECG. | alignment:matched | OK |
 | `04_Supraventricular_Tachycardia_PROC.md` | 5 | A | p.135#2 | Obtain IV access. Consider: ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 – 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO Repe… | adjudicated:set_cells | OK |
 | `04_Supraventricular_Tachycardia_PROC.md` | 6 | A | p.135#2 | Obtain IV access. Consider: ADULT: 0.9% Sodium chloride up to 1 L IV/IO in 250 – 500 mL boluses PEDIATRIC: 0.9% Sodium chloride 20 mL/kg IV/IO Repe… | alignment:matched | OK |

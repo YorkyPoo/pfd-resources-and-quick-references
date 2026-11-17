@@ -1338,13 +1338,14 @@ def plan(rel):
                               'carried_from_page': rp['carried_from_page'],
                               'pending_note': rp.get('note'),
                               'note': 'agency addition — pending OMD authorization'})
-            if ruled:
-                # The owner decided this level. Any row the alignment/adjudication had
-                # attached to the row is NOT the authority for it, so the ledger must not
-                # publish that as a citation. What the ledger does publish is the evidence
-                # that PEMS prints the action at all: the prose citation (verified verbatim
-                # against pems_prose.json) and, where given, the printed row whose badge the
-                # ruling adopts (level_from, verified against pems_table.json).
+            if ruled and (ruled.get('prose_citations') or ruled.get('level_from')):
+                # The owner decided this level, and the ruling records where PEMS prints
+                # the action (prose) and/or which printed row's badge it adopts. Any row the
+                # alignment/adjudication had attached to the row is NOT the authority for the
+                # level, so the ledger must not publish that as a citation. What it does
+                # publish is that evidence, verified verbatim by --check.
+                # A legacy ruling with no recorded evidence (SVT r2, 2026-11-15) keeps the
+                # ledger shape it always had: no citation, no basis, note from owner_ruling.
                 entry.update({
                     'pems_page': None, 'pems_ordinal': None, 'pems_badge': None,
                     'pems_text': None, 'compound_tokens': [],
