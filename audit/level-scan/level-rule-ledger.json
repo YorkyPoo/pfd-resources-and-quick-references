@@ -2475,7 +2475,7 @@
    "owner_ruling": {
     "date": "2026-11-17",
     "ruling": "12-Lead STEMI interpretation is an ALS skill: only EMT-I and Paramedic may interpret a 12-Lead ECG as STEMI. Chip P -> I.",
-    "note": "Owner Pearl ruling 2026-11-17: \"ONLY EMT-I and EMT-P can interpret 12-leads.\" The source prints the interpretation rule itself \u2014 p.108 PEARLS #1 and p.232 PEARLS #7, verbatim the same sentence, scoped to \"Intermediate and Paramedic\" \u2014 so the page's P claimed authority the source does not print and the row's I was one level too low is corrected to I (the lowest level the prose names). p.107#4 badges EMT for *acting* on a 12-lead that already reads STEMI, which is not interpretation and is cited by the STEMI-alert row (r6), not here."
+    "note": "Owner Pearl ruling 2026-11-17: \"ONLY EMT-I and EMT-P can interpret 12-leads.\" The source prints the interpretation rule itself \u2014 p.108 PEARLS #1 and p.232 PEARLS #7, verbatim the same sentence, scoped to \"Intermediate and Paramedic\" \u2014 so the page's P claimed authority the source does not print. The chip is now I, the lowest level the prose names. p.107#4 badges EMT for *acting* on a 12-lead that already reads STEMI, which is not interpretation and is cited by the STEMI-alert row (r6), not here."
    },
    "pems_page": null,
    "pems_ordinal": null,
@@ -2497,7 +2497,7 @@
     "text_label": null,
     "text_tokens": []
    },
-   "note": "Owner Pearl ruling 2026-11-17: \"ONLY EMT-I and EMT-P can interpret 12-leads.\" The source prints the interpretation rule itself \u2014 p.108 PEARLS #1 and p.232 PEARLS #7, verbatim the same sentence, scoped to \"Intermediate and Paramedic\" \u2014 so the page's P claimed authority the source does not print and the row's I was one level too low is corrected to I (the lowest level the prose names). p.107#4 badges EMT for *acting* on a 12-lead that already reads STEMI, which is not interpretation and is cited by the STEMI-alert row (r6), not here.",
+   "note": "Owner Pearl ruling 2026-11-17: \"ONLY EMT-I and EMT-P can interpret 12-leads.\" The source prints the interpretation rule itself \u2014 p.108 PEARLS #1 and p.232 PEARLS #7, verbatim the same sentence, scoped to \"Intermediate and Paramedic\" \u2014 so the page's P claimed authority the source does not print. The chip is now I, the lowest level the prose names. p.107#4 badges EMT for *acting* on a 12-lead that already reads STEMI, which is not interpretation and is cited by the STEMI-alert row (r6), not here.",
    "prose_citations": [
     {
      "page": 108,

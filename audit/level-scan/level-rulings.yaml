@@ -72,10 +72,9 @@ rulings:
       Owner Pearl ruling 2026-11-17: "ONLY EMT-I and EMT-P can interpret 12-leads." The
       source prints the interpretation rule itself — p.108 PEARLS #1 and p.232 PEARLS #7,
       verbatim the same sentence, scoped to "Intermediate and Paramedic" — so the page's P
-      claimed authority the source does not print and the row's I was one level too low is
-      corrected to I (the lowest level the prose names). p.107#4 badges EMT for *acting* on
-      a 12-lead that already reads STEMI, which is not interpretation and is cited by the
-      STEMI-alert row (r6), not here.
+      claimed authority the source does not print. The chip is now I, the lowest level the
+      prose names. p.107#4 badges EMT for *acting* on a 12-lead that already reads STEMI,
+      which is not interpretation and is cited by the STEMI-alert row (r6), not here.
 
   - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
     row: 14
