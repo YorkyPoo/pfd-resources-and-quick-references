@@ -463,8 +463,9 @@ def build():
       f'The ledger records {len(pend_row)} single-row PENDING entries: {len(pend_clin)} '
       f'clinical agency additions plus {len(pend_admin)} administrative rules. Both are '
       f'listed below, so the number you see here is {len(pend_page) + len(pend_row)} — '
-      f'derived from the ledger, not from the brief. The administrative five are decided '
-      f'together with the Batch 6 administrative ruling (see the open questions).</p>')
+      f'derived from the ledger, not from the brief. The {len(pend_admin)} administrative '
+      f'rules are decided together with the Batch 6 administrative ruling (see the open '
+      f'questions).</p>')
     w('')
     for label, anchor, group in (
             ('Whole page not in PEMS 2024', 'pending-whole-page', pend_page),

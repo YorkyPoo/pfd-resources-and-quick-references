@@ -193,7 +193,15 @@ rulings:
       ("PEMS prints this action nowhere") was false. No badge is printed, so the level stays
       the one the page published (EMT). p.67 PEARLS #2 also warns "DO NOT place heat packs
       ... directly on skin": that is a site-wording question (the page does not carry the
-      caution), reported, not decided here, and it does not change the level.
+      caution), reported, not decided here, and it does not change the level. FLOOR TENSION,
+      recorded for the owner and not decided here: this card's row table kept the level
+      unchanged at EMT, while the ruling's test is "BLS-scope -> the page's BLS floor" and
+      this page's own lowest chip is EMR (the page chips EMR, EMR, EMR, EMR, EMR, EMT, EMR,
+      EMT). Both readings call the action BLS-scope and neither grants new authority; they
+      disagree only on which BLS level prints. The row therefore publishes EMT as directed,
+      and the disagreement is raised in the ledger's OPEN OWNER QUESTIONS ("Cold Exposure row
+      6 keeps EMT although the page's own BLS floor is EMR") so the owner can confirm EMT or
+      lower it to EMR. Nothing changes on the page until that answer.
 
   - file: protocols/general/02_Cold_Exposure_PROC.md
     row: 9

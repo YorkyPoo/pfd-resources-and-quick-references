@@ -1023,7 +1023,7 @@ whose badge the ruling adopts, when the level itself comes from one.
   - level from: p.245#0 (the badge PEMS prints for the procedure the rule governs)
 - `protocols/respiratory/03_Smoke_Inhalation_PROC.md` row 3 — **EMT** — status `owner_ruled`. Owner Pearl ruling 2026-11-17, as Inhalation Irritants r3. p.88 PEARLS #1 prints the assessment signs in the source's own words, so the old reason ("No PEMS 2024 row anywhere prints this airway-injury assessment") was false as written. Recognition is BLS-scope; the advanced-airway step is r5/r6, cited at I. Level unchanged (EMT).
   - printed in unbadged prose: p.88 PEARLS #1 — "Consider early definitive airway management for patients with respiratory distress, hoarse voice or stridor, carbonaceous sputum and/or facial burns"
-- `protocols/general/02_Cold_Exposure_PROC.md` row 6 — **EMT** — status `owner_ruled`. Owner Pearl ruling 2026-11-17: "Patient warming with heat packs is a BLS skill, anyone can do that." The action is printed — p.67 PEARLS #5, verbatim — so the old reason ("PEMS prints this action nowhere") was false. No badge is printed, so the level stays the one the page published (EMT). p.67 PEARLS #2 also warns "DO NOT place heat packs ... directly on skin": that is a site-wording question (the page does not carry the caution), reported, not decided here, and it does not change the level.
+- `protocols/general/02_Cold_Exposure_PROC.md` row 6 — **EMT** — status `owner_ruled`. Owner Pearl ruling 2026-11-17: "Patient warming with heat packs is a BLS skill, anyone can do that." The action is printed — p.67 PEARLS #5, verbatim — so the old reason ("PEMS prints this action nowhere") was false. No badge is printed, so the level stays the one the page published (EMT). p.67 PEARLS #2 also warns "DO NOT place heat packs ... directly on skin": that is a site-wording question (the page does not carry the caution), reported, not decided here, and it does not change the level. FLOOR TENSION, recorded for the owner and not decided here: this card's row table kept the level unchanged at EMT, while the ruling's test is "BLS-scope -> the page's BLS floor" and this page's own lowest chip is EMR (the page chips EMR, EMR, EMR, EMR, EMR, EMT, EMR, EMT). Both readings call the action BLS-scope and neither grants new authority; they disagree only on which BLS level prints. The row therefore publishes EMT as directed, and the disagreement is raised in the ledger's OPEN OWNER QUESTIONS ("Cold Exposure row 6 keeps EMT although the page's own BLS floor is EMR") so the owner can confirm EMT or lower it to EMR. Nothing changes on the page until that answer.
   - printed in unbadged prose: p.67 PEARLS #5 — "use active external rewarming with heat packs, warm blankets, etc"
 - `protocols/general/02_Cold_Exposure_PROC.md` row 9 — **MC** — status `owner_ruled`. Owner Pearl ruling 2026-11-17: "a lot of the pearls are just guidance" — so the Pearl does not create a new provider authority, but it does prove the row is not silent: p.67 PEARLS #3 prints it verbatim in the Cold Exposure protocol's own Pearls. What is true is narrower than the old reason: p.67's six badged rows (#0-#5) contain no AED row. Level unchanged (MC): the gate is a Medical Control contact, not a provider level.
   - printed in unbadged prose: p.67 PEARLS #3 — "Contact Medical Control prior to use of AED"
@@ -1524,13 +1524,8 @@ decision before the page is treated as final.
   hypotensive.", badge EMT) and row 3 cites Universal Patient Care p.50#9
   ("Establish IV / IO access when indicated.", badge A). Both print the site row
   verbatim; chip moves A -> EMT (row 2) and I -> A (row 3) as the source prints.
-- **Batch 5 — Cold Exposure rows 6 and 9 are OWNER_REQUIRED.** Row 6 (active
-  external rewarming with heat packs) is printed nowhere: p.67#1 prints passive
-  warming and warm blankets at EMR, and no PEMS row anywhere prints heat packs.
-  Row 9 (Medical Control before AED) is printed nowhere in the cold protocol, and
-  no other PEMS row gates AED use on Medical Control (p.21#0, p.63#7, p.235#4,
-  p.263#4 apply an AED at EMT/EMR with no pre-use contact). Page levels EMT and MC
-  are kept and flagged.
+- **Batch 5 — Cold Exposure rows 6 and 9 are OWNER_RULED (Pearl ruling 2026-11-17); the "prints nowhere" reason was false and no flag remains.** Row 6 (active external rewarming with heat packs) is printed in the protocol's own Pearls — p.67 PEARLS #5: "use active external rewarming with heat packs, warm blankets, etc" — so the level stays `EMT`: a Pearl that restates a BLS skill does not create a new provider authority, and PEMS prints no badge for it. Row 9 (Medical Control before use of AED) is printed — p.67 PEARLS #3: "Contact Medical Control prior to use of AED" — so the level stays `MC`: a Medical Control contact is not a provider level. Neither row is flagged on its page any more; both were cleared by the ruling, not left as questions.
+- **Pearl ruling 2026-11-17 — Cold Exposure row 6 keeps `EMT` although the page's own BLS floor is `EMR`.** The ruling's test reads "BLS-scope -> the page's BLS floor", and heat packs are a BLS skill ("anyone can do that"), yet this card's row table said the level stays unchanged, so the row now reads `EMT` while the page itself chips a floor of `EMR` (derived from the page's 8 level chips, in file order: EMR, EMR, EMR, EMR, EMR, EMT, EMR, EMT). Both readings agree the action is BLS-scope and that no new authority is created; they disagree only on which BLS level prints. Owner to confirm: keep `EMT` as directed, or lower the row to the page floor `EMR`? Nothing changes on the page until then.
 - **Batch 6 — administrative pages are chipped POLICY / PENDING, not levelled.**
   Owner ruling 2026-11-16: *"Treat admin pages as policy."* All 14 administrative
   pages are now 3-column tables whose marker column says `POLICY` (the rule is
@@ -1548,14 +1543,9 @@ decision before the page is treated as final.
   owner wants those three pages levelled from the policy's own badges, that is a
   second ruling and a small change: the badges are in pems_table.json and every
   row prints its policy id here.
-- **Batch 6 — the 5 administrative PENDING rows, for the owner's one-pass ruling.**
-  Behavioral Health rows 6-7 (law-enforcement custody; handcuffed transport): PEMS
-  prints the rule only as prose in the Behavioral Emergencies restraint guidelines
-  (p.73), not in any administrative policy and not as a level-badged row.
-  Infant Abandonment row 2 ("assess infant and provide medical care"): the policy
-  prints no assessment/treatment step. Stroke Field Triage rows 1 and 4 (15-minute
-  scene time; life-threats route to nearest ED): the Stroke policy prints neither.
-  Each carries its reason in `pending-protocols.yaml` and on the page.
+- **Batch 6 — the 4 administrative PENDING row(s), for the owner's one-pass ruling.** Each row below is an administrative rule that no PEMS 2024 administrative policy prints:
+  Behavioral Health rows 6-7 (law-enforcement custody; handcuffed transport): PEMS prints the rule only as prose in the Behavioral Emergencies restraint guidelines (p.73), not in any administrative policy and not as a level-badged row. Infant Abandonment row 2 ("assess infant and provide medical care"): the policy prints no assessment/treatment step. Stroke Field Triage row 4 (life-threats route to nearest ED): the Stroke policy prints it nowhere.
+  Stroke Field Triage row 1 is no longer in this set: the Pearl ruling levelled it `EMT` (p.131#4), so the administrative PENDING count is 4. Each row keeps its reason in `pending-protocols.yaml` and on the page.
 - **Batch 6 — the STEMI page has one PEMS level, cited where printed.** STEMI row 7
   (serial ECGs every 10 minutes) is not in the STEMI Field Triage policy; it is
   printed verbatim as row p.107#9 of the Chest Pain protocol, badge MC, and is cited

@@ -16,7 +16,7 @@ This page is generated from the conversion ledger (`audit/level-scan/level-rule-
 |---|---:|
 | Rows that need your level decision (`OWNER_REQUIRED`, marked &#9873; on the page) | **27** |
 | Rows pending authorization (`PENDING`) | **18** (11 whole-page + 7 single-row) |
-| Open questions on how the rules themselves should read | **34** |
+| Open questions on how the rules themselves should read | **35** |
 
 </div>
 
@@ -316,7 +316,7 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 
 **11 whole-page rows** — a protocol that is not in PEMS 2024 at all. **3 clinical agency additions** — a row the agency wrote on a page that is otherwise PEMS-cited. **4 administrative rules** — a policy row no PEMS administrative policy prints.
 
-<p class="od-pagenote">The brief for this page said "14 PENDING rows" (11 + 3). The ledger records 7 single-row PENDING entries: 3 clinical agency additions plus 4 administrative rules. Both are listed below, so the number you see here is 18 — derived from the ledger, not from the brief. The administrative five are decided together with the Batch 6 administrative ruling (see the open questions).</p>
+<p class="od-pagenote">The brief for this page said "14 PENDING rows" (11 + 3). The ledger records 7 single-row PENDING entries: 3 clinical agency additions plus 4 administrative rules. Both are listed below, so the number you see here is 18 — derived from the ledger, not from the brief. The 4 administrative rules are decided together with the Batch 6 administrative ruling (see the open questions).</p>
 
 <h3 id="pending-whole-page">Whole page not in PEMS 2024 — 11 rows</h3>
 
@@ -483,11 +483,11 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
-<h2 id="open-questions">3. Open questions about the rules — 34</h2>
+<h2 id="open-questions">3. Open questions about the rules — 35</h2>
 
 These are not row-level decisions. Each one is a question about how the rule itself should read, recorded in the conversion ledger and grouped here by the batch that raised it — the batch is the topic of work, and every card opens with the ledger's own heading naming its subject.
 
-<h3>No batch recorded <span class="od-count">9</span></h3>
+<h3>No batch recorded <span class="od-count">10</span></h3>
 
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
@@ -520,6 +520,10 @@ These are not row-level decisions. Each one is a question about how the rule its
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
 <p class="od-question"><strong>Site-side <code>[X]</code> brackets — RESOLVED (owner ruling 2026-11-16).</strong> The owner ruled *&quot;Add a second marker so [X] survives in the chassis&quot;*. Bracketed rows now carry the level chip plus a distinct <code>+MC</code> marker (see the <code>+MC</code> section above); <code>row-bindings.yaml</code> is the source of truth and <code>--check</code> re-derives the bracketed rows from the pre-conversion pages. A bracketed cell whose level is not the level the row now publishes, or a row that is itself a Medical Control contact, cannot carry <code>+MC</code> without changing its meaning — those rows say so explicitly under *Bracketed rows whose bracket cannot be carried* above.</p>
+</div>
+<div class="od-card od-cat-question">
+<p class="od-head"><span class="od-batch">No batch recorded</span></p>
+<p class="od-question"><strong>Pearl ruling 2026-11-17 — Cold Exposure row 6 keeps <code>EMT</code> although the page&#x27;s own BLS floor is <code>EMR</code>.</strong> The ruling&#x27;s test reads &quot;BLS-scope -&gt; the page&#x27;s BLS floor&quot;, and heat packs are a BLS skill (&quot;anyone can do that&quot;), yet this card&#x27;s row table said the level stays unchanged, so the row now reads <code>EMT</code> while the page itself chips a floor of <code>EMR</code> (derived from the page&#x27;s 8 level chips, in file order: EMR, EMR, EMR, EMR, EMR, EMT, EMR, EMT). Both readings agree the action is BLS-scope and that no new authority is created; they disagree only on which BLS level prints. Owner to confirm: keep <code>EMT</code> as directed, or lower the row to the page floor <code>EMR</code>? Nothing changes on the page until then.</p>
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
@@ -584,7 +588,7 @@ These are not row-level decisions. Each one is a question about how the rule its
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 5</span></p>
-<p class="od-question"><strong>Batch 5 — Cold Exposure rows 6 and 9 are OWNER_REQUIRED.</strong> Row 6 (active external rewarming with heat packs) is printed nowhere: p.67#1 prints passive warming and warm blankets at EMR, and no PEMS row anywhere prints heat packs. Row 9 (Medical Control before AED) is printed nowhere in the cold protocol, and no other PEMS row gates AED use on Medical Control (p.21#0, p.63#7, p.235#4, p.263#4 apply an AED at EMT/EMR with no pre-use contact). Page levels EMT and MC are kept and flagged.</p>
+<p class="od-question"><strong>Batch 5 — Cold Exposure rows 6 and 9 are OWNER_RULED (Pearl ruling 2026-11-17); the &quot;prints nowhere&quot; reason was false and no flag remains.</strong> Row 6 (active external rewarming with heat packs) is printed in the protocol&#x27;s own Pearls — p.67 PEARLS #5: &quot;use active external rewarming with heat packs, warm blankets, etc&quot; — so the level stays <code>EMT</code>: a Pearl that restates a BLS skill does not create a new provider authority, and PEMS prints no badge for it. Row 9 (Medical Control before use of AED) is printed — p.67 PEARLS #3: &quot;Contact Medical Control prior to use of AED&quot; — so the level stays <code>MC</code>: a Medical Control contact is not a provider level. Neither row is flagged on its page any more; both were cleared by the ruling, not left as questions.</p>
 </div>
 
 <h3>Batch 6 <span class="od-count">8</span></h3>
@@ -599,7 +603,7 @@ These are not row-level decisions. Each one is a question about how the rule its
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 6</span></p>
-<p class="od-question"><strong>Batch 6 — the 5 administrative PENDING rows, for the owner&#x27;s one-pass ruling.</strong> Behavioral Health rows 6-7 (law-enforcement custody; handcuffed transport): PEMS prints the rule only as prose in the Behavioral Emergencies restraint guidelines (p.73), not in any administrative policy and not as a level-badged row. Infant Abandonment row 2 (&quot;assess infant and provide medical care&quot;): the policy prints no assessment/treatment step. Stroke Field Triage rows 1 and 4 (15-minute scene time; life-threats route to nearest ED): the Stroke policy prints neither. Each carries its reason in <code>pending-protocols.yaml</code> and on the page.</p>
+<p class="od-question"><strong>Batch 6 — the 4 administrative PENDING row(s), for the owner&#x27;s one-pass ruling.</strong> Each row below is an administrative rule that no PEMS 2024 administrative policy prints: Behavioral Health rows 6-7 (law-enforcement custody; handcuffed transport): PEMS prints the rule only as prose in the Behavioral Emergencies restraint guidelines (p.73), not in any administrative policy and not as a level-badged row. Infant Abandonment row 2 (&quot;assess infant and provide medical care&quot;): the policy prints no assessment/treatment step. Stroke Field Triage row 4 (life-threats route to nearest ED): the Stroke policy prints it nowhere. Stroke Field Triage row 1 is no longer in this set: the Pearl ruling levelled it <code>EMT</code> (p.131#4), so the administrative PENDING count is 4. Each row keeps its reason in <code>pending-protocols.yaml</code> and on the page.</p>
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 6</span></p>

@@ -1715,6 +1715,173 @@ def defect_counts():
     return base, per_file, totals
 
 
+# ------------------------------------------- owner-facing open-question cards
+# The ledger's OPEN OWNER QUESTIONS section is copied verbatim into the page the OWNER
+# reads (`docs/protocols/outstanding-decisions.md`), so a card that states the pre-ruling
+# state is a published false reason, not an internal note. These two cards therefore
+# DERIVE their state from the ledger: the Cold Exposure card was hand-written and went
+# on saying "rows 6 and 9 are OWNER_REQUIRED / printed nowhere / kept and flagged" after
+# the 2026-11-17 Pearl ruling had made both rows `owner_ruled` with verbatim citations,
+# and the administrative card kept asking about Stroke Field Triage row 1 after that row
+# had been levelled `EMT`. `check_ledger_markdown()` fails `--check` on any drift.
+ADMIN_PENDING_PROSE = {
+    ('01_Behavioral_Health_Transportation_Decision_PROC.md', '6'): (
+        'law-enforcement custody',
+        'PEMS prints the rule only as prose in the Behavioral Emergencies restraint '
+        'guidelines (p.73), not in any administrative policy and not as a level-badged row.'),
+    ('01_Behavioral_Health_Transportation_Decision_PROC.md', '7'): (
+        'handcuffed transport',
+        'PEMS prints the rule only as prose in the Behavioral Emergencies restraint '
+        'guidelines (p.73), not in any administrative policy and not as a level-badged row.'),
+    ('01_Infant_Abandonment_PROC.md', '2'): (
+        '"assess infant and provide medical care"',
+        'the policy prints no assessment/treatment step.'),
+    ('01_Stroke_Field_Triage_PROC.md', '4'): (
+        'life-threats route to nearest ED',
+        'the Stroke policy prints it nowhere.'),
+}
+
+
+def open_question_facts(ledger):
+    """The state the two owner-facing Batch-5 question cards must state, from the ledger."""
+    cold = [e for e in ledger
+            if e['file'].endswith('02_Cold_Exposure_PROC.md') and e['row'] in (6, 9)]
+    admin_pages = {e['file'] for e in ledger if e['status'] == 'policy'}
+    admin_pending = [e for e in ledger
+                     if e['status'] == 'pending_row_omd' and e['file'] in admin_pages]
+    return {'cold': cold,
+            'cold_by_row': {e['row']: e for e in cold},
+            'admin_pending': admin_pending}
+
+
+def _cite_brief(c):
+    """`p.67 PEARLS #5: "the quoted words"` — page, heading and ordinal, then the quote."""
+    q = ' '.join((c.get('quote') or c.get('text') or '').split())
+    if len(q) > 110:
+        q = q[:107].rstrip() + '…'
+    return f"p.{c['page']} {c['heading']} #{c['ordinal']}" + (f': "{q}"' if q else '')
+
+
+def _rows_label(rows):
+    rows = sorted(rows)
+    return f'row {rows[0]}' if len(rows) == 1 else f'rows {rows[0]}-{rows[-1]}'
+
+
+ADMIN_PAGE_NAME = {
+    '01_Behavioral_Health_Transportation_Decision_PROC.md': 'Behavioral Health',
+    '01_Infant_Abandonment_PROC.md': 'Infant Abandonment',
+    '01_Stroke_Field_Triage_PROC.md': 'Stroke Field Triage',
+}
+
+
+def cold_question_cards(ledger):
+    """The Batch-5 Cold Exposure card plus the floor-tension question, from the ledger."""
+    facts = open_question_facts(ledger)
+    by_row = facts['cold_by_row']
+    r6, r9 = by_row.get(6), by_row.get(9)
+    if r6 is None or r9 is None:
+        return ['- **Batch 5 — Cold Exposure rows 6 and 9 are no longer in this ledger.** The '
+                'rows this card recorded cannot be found; re-run `scripts/level_rule.py '
+                '--write` before publishing.']
+    out = []
+    if r6['status'] == 'owner_ruled' and r9['status'] == 'owner_ruled':
+        c6 = ', '.join(_cite_brief(c) for c in (r6.get('prose_citations') or []))
+        c9 = ', '.join(_cite_brief(c) for c in (r9.get('prose_citations') or []))
+        out.append(
+            '- **Batch 5 — Cold Exposure rows 6 and 9 are OWNER_RULED (Pearl ruling '
+            '2026-11-17); the "prints nowhere" reason was false and no flag remains.** '
+            f'Row 6 (active external rewarming with heat packs) is printed in the '
+            f'protocol\'s own Pearls — {c6} — so the level stays `{r6["level_published"]}`: '
+            'a Pearl that restates a BLS skill does not create a new provider authority, '
+            'and PEMS prints no badge for it. '
+            f'Row 9 (Medical Control before use of AED) is printed — {c9} — so the level '
+            f'stays `{r9["level_published"]}`: a Medical Control contact is not a provider '
+            'level. Neither row is flagged on its page any more; both were cleared by the '
+            'ruling, not left as questions.')
+    else:
+        out.append(
+            '- **Batch 5 — Cold Exposure rows 6 and 9, as the ledger records them today.** '
+            + '; '.join(f"row {e['row']} is `{e['status']}` at `{e['level_published']}`"
+                        for e in sorted(facts['cold'], key=lambda e: e['row']))
+            + '. Any row not `owner_ruled` here is still open and carries its flag.')
+    out += cold_floor_question(ledger)
+    return out
+
+
+def cold_floor_question(ledger):
+    """The Cold r6 floor tension, in a card the owner can actually see.
+
+    The card's own table kept row 6 at `EMT`, but the ruling's test is "BLS-scope -> the
+    page's BLS floor" and this page chips a lower floor. The level is not changed here;
+    the disagreement is recorded so a reader comparing the two rules is not left with an
+    unexplained contradiction.
+    """
+    by_row = open_question_facts(ledger)['cold_by_row']
+    r6 = by_row.get(6)
+    if r6 is None or r6['status'] != 'owner_ruled':
+        return []
+    floor, chips, _seen = page_floor(r6['file'])
+    if floor == r6['level_published']:
+        return []
+    return [f'- **Pearl ruling 2026-11-17 — Cold Exposure row 6 keeps '
+            f'`{r6["level_published"]}` although the page\'s own BLS floor is `{floor}`.** '
+            f'The ruling\'s test reads "BLS-scope -> the page\'s BLS floor", and heat packs '
+            f'are a BLS skill ("anyone can do that"), yet this card\'s row table said the '
+            f'level stays unchanged, so the row now reads `{r6["level_published"]}` while '
+            f'the page itself chips a floor of `{floor}` (derived from the page\'s '
+            f'{len(chips)} level chips, in file order: {", ".join(chips)}). Both readings '
+            f'agree the action is BLS-scope and that no new authority is created; they '
+            f'disagree only on which BLS level prints. Owner to confirm: keep '
+            f'`{r6["level_published"]}` as directed, or lower the row to the page floor '
+            f'`{floor}`? Nothing changes on the page until then.']
+
+
+def admin_pending_cards(ledger):
+    """The Batch-6 administrative PENDING card, counting and naming rows from the ledger."""
+    pend = open_question_facts(ledger)['admin_pending']
+    if not pend:
+        return []
+    out = [f'- **Batch 6 — the {len(pend)} administrative PENDING row(s), for the owner\'s '
+           'one-pass ruling.** Each row below is an administrative rule that no PEMS 2024 '
+           'administrative policy prints:']
+    # group consecutive rows of the SAME file with the SAME explanation into one clause
+    groups = []
+    for e in sorted(pend, key=lambda e: (e['file'], e['row'])):
+        short = e['file'].split('/')[-1]
+        desc, why = ADMIN_PENDING_PROSE.get(
+            (short, str(e['row'])), ('', (e.get('reason') or '').strip()))
+        if groups and groups[-1]['file'] == short and groups[-1]['why'] == why:
+            groups[-1]['rows'].append(e['row'])
+            if desc and desc not in groups[-1]['descs']:
+                groups[-1]['descs'].append(desc)
+        else:
+            groups.append({'file': short, 'rows': [e['row']], 'why': why,
+                           'descs': [desc] if desc else []})
+    clauses = []
+    for g in groups:
+        name = ADMIN_PAGE_NAME.get(
+            g['file'], g['file'].replace('_PROC.md', '').split('_', 1)[-1].replace('_', ' '))
+        desc = '; '.join(g['descs'])
+        clauses.append(f"{name} {_rows_label(g['rows'])}" + (f' ({desc})' if desc else '')
+                       + (f': {g["why"]}' if g['why'] else '.'))
+    out.append('  ' + ' '.join(clauses))
+    # a row this card used to ask about, now ruled: say so instead of leaving the owner
+    # with a count that silently shrank.
+    sft = [e for e in ledger
+           if e['file'].endswith('01_Stroke_Field_Triage_PROC.md') and e['row'] == 1]
+    if sft and sft[0]['status'] != 'pending_row_omd':
+        e = sft[0]
+        cite = (f' (p.{e["pems_page"]}#{e["pems_ordinal"]})' if e.get('pems_page') is not None
+                else '')
+        out.append(f'  Stroke Field Triage row 1 is no longer in this set: the Pearl ruling '
+                   f'levelled it `{e["level_published"]}`{cite}, so the administrative '
+                   f'PENDING count is {len(pend)}. Each row keeps its reason in '
+                   '`pending-protocols.yaml` and on the page.')
+    else:
+        out.append('  Each keeps its reason in `pending-protocols.yaml` and on the page.')
+    return out
+
+
 def emit_md(ledger):
     """The per-action citation table: one line per action row, source cited."""
     lines = ['# Level rule — per-action PEMS citation', '',
@@ -2117,13 +2284,7 @@ def emit_md(ledger):
               '  hypotensive.", badge EMT) and row 3 cites Universal Patient Care p.50#9',
               '  ("Establish IV / IO access when indicated.", badge A). Both print the site row',
               '  verbatim; chip moves A -> EMT (row 2) and I -> A (row 3) as the source prints.',
-              '- **Batch 5 — Cold Exposure rows 6 and 9 are OWNER_REQUIRED.** Row 6 (active',
-              '  external rewarming with heat packs) is printed nowhere: p.67#1 prints passive',
-              '  warming and warm blankets at EMR, and no PEMS row anywhere prints heat packs.',
-              '  Row 9 (Medical Control before AED) is printed nowhere in the cold protocol, and',
-              '  no other PEMS row gates AED use on Medical Control (p.21#0, p.63#7, p.235#4,',
-              '  p.263#4 apply an AED at EMT/EMR with no pre-use contact). Page levels EMT and MC',
-              '  are kept and flagged.',
+              ] + cold_question_cards(ledger) + [
               '- **Batch 6 — administrative pages are chipped POLICY / PENDING, not levelled.**',
               '  Owner ruling 2026-11-16: *"Treat admin pages as policy."* All 14 administrative',
               '  pages are now 3-column tables whose marker column says `POLICY` (the rule is',
@@ -2141,14 +2302,7 @@ def emit_md(ledger):
               '  owner wants those three pages levelled from the policy\'s own badges, that is a',
               '  second ruling and a small change: the badges are in pems_table.json and every',
               '  row prints its policy id here.',
-              '- **Batch 6 — the 5 administrative PENDING rows, for the owner\'s one-pass ruling.**',
-              '  Behavioral Health rows 6-7 (law-enforcement custody; handcuffed transport): PEMS',
-              '  prints the rule only as prose in the Behavioral Emergencies restraint guidelines',
-              '  (p.73), not in any administrative policy and not as a level-badged row.',
-              '  Infant Abandonment row 2 ("assess infant and provide medical care"): the policy',
-              '  prints no assessment/treatment step. Stroke Field Triage rows 1 and 4 (15-minute',
-              '  scene time; life-threats route to nearest ED): the Stroke policy prints neither.',
-              '  Each carries its reason in `pending-protocols.yaml` and on the page.',
+              ] + admin_pending_cards(ledger) + [
               '- **Batch 6 — the STEMI page has one PEMS level, cited where printed.** STEMI row 7',
               '  (serial ECGs every 10 minutes) is not in the STEMI Field Triage policy; it is',
               '  printed verbatim as row p.107#9 of the Chest Pain protocol, badge MC, and is cited',
@@ -2333,6 +2487,63 @@ def emit_md(ledger):
     return '\n'.join(lines) + '\n'
 
 
+def check_ledger_markdown(ledger, fails):
+    """The committed ledger markdown must be exactly what `emit_md()` derives, and the two
+    owner-facing Batch-5/Batch-6 cards must state the ledger's own state.
+
+    The cards are copied verbatim into the page the owner reads, so a stale card is a
+    published false reason. This guard is what makes that a `--check` failure: hand-edit
+    the markdown (or forget to regenerate after a ruling) and the comparison fails; change
+    a row's status so a card's claim no longer holds and the assertions below fail.
+    """
+    path = os.path.join(AUD, 'level-rule-ledger.md')
+    try:
+        disk = open(path, encoding='utf-8').read()
+    except FileNotFoundError:
+        fails.append('audit/level-scan/level-rule-ledger.md is missing — the owner-facing '
+                     'open-question cards live in it')
+        return
+    md = emit_md(ledger)
+    if disk != md:
+        import difflib
+        diff = [l for l in difflib.unified_diff(disk.split('\n'), md.split('\n'),
+                                                'level-rule-ledger.md', 'emit_md(ledger)',
+                                                lineterm='', n=0)][:10]
+        fails.append('audit/level-scan/level-rule-ledger.md != what emit_md() derives from '
+                     'level-rule-ledger.json — re-run `scripts/level_rule.py --write`:\n    '
+                     + '\n    '.join(diff))
+    section = md.split('## OPEN OWNER QUESTIONS', 1)
+    section = section[1].split('\n## ', 1)[0] if len(section) > 1 else ''
+    facts = open_question_facts(ledger)
+    cold = facts['cold_by_row']
+    # a row the card says is still flagged must really be flagged
+    if all(cold.get(n) is not None and cold[n]['status'] == 'owner_ruled' for n in (6, 9)):
+        for stale in ('Cold Exposure rows 6 and 9 are OWNER_REQUIRED',
+                      'no PEMS row anywhere prints heat packs'):
+            if stale in section:
+                fails.append(f'OPEN OWNER QUESTIONS still publishes the pre-ruling claim '
+                             f'{stale!r} although Cold Exposure rows 6 and 9 are owner_ruled '
+                             f'in the ledger')
+        for n in (6, 9):
+            head = f'p.{cold[n]["prose_citations"][0]["page"]} ' \
+                   f'{cold[n]["prose_citations"][0]["heading"]} ' \
+                   f'#{cold[n]["prose_citations"][0]["ordinal"]}' \
+                if cold[n].get('prose_citations') else None
+            if head and head not in section:
+                fails.append(f'OPEN OWNER QUESTIONS omits the verbatim citation {head} that '
+                             f'clears Cold Exposure row {n}')
+    # the administrative card's count and row set must be the ledger's
+    n_admin = len(facts['admin_pending'])
+    if n_admin and f'the {n_admin} administrative PENDING row(s)' not in section:
+        fails.append(f'OPEN OWNER QUESTIONS does not state the ledger\'s administrative '
+                     f'PENDING count ({n_admin})')
+    for e in facts['admin_pending']:
+        name = ADMIN_PAGE_NAME.get(e['file'].split('/')[-1])
+        if name and not re.search(re.escape(name) + r' rows? [\d,\-]+', section):
+            fails.append(f'OPEN OWNER QUESTIONS omits administrative PENDING row '
+                         f'{name} {e["row"]}')
+
+
 def check():
     align, adjudicated = load_json('alignment.json'), load_json('adjudicated.json')
     pems = pems_index(load_json('pems_table.json'))
@@ -2346,6 +2557,7 @@ def check():
     led = {(e['file'], str(e['row'])): e for e in ledger_rows}
 
     fails, report, pending_row_rows, ruling_cites = [], [], [], []
+    check_ledger_markdown(ledger_rows, fails)
     kept_words, removed_words = load_token_decisions()
     seen_kept = {}
     for rel in TARGETS:
