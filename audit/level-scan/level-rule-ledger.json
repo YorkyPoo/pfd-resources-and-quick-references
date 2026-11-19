@@ -91,6 +91,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -126,6 +127,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMR",
@@ -157,6 +159,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -190,6 +193,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "A",
@@ -223,6 +227,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -256,6 +261,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -289,6 +295,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "I",
@@ -322,6 +329,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -355,6 +363,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "MC",
@@ -388,6 +397,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -421,6 +431,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "I",
@@ -454,6 +465,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -487,6 +499,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:confirm",
    "before": {
     "leftmost": "I",
@@ -520,6 +533,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "I",
@@ -554,6 +568,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -585,6 +600,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -616,6 +632,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -647,6 +664,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -678,6 +696,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -709,6 +728,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -740,6 +760,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -771,6 +792,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "P",
@@ -802,6 +824,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:confirm",
    "before": {
     "leftmost": "EMR",
@@ -839,6 +862,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -876,6 +900,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -913,6 +938,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -949,6 +975,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "A",
@@ -984,6 +1011,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -1019,6 +1047,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "A",
@@ -1054,6 +1083,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -1090,6 +1120,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -1124,6 +1155,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -1159,6 +1191,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:confirm",
    "before": {
     "leftmost": "I",
@@ -1193,6 +1226,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:confirm",
    "before": {
     "leftmost": "MC",
@@ -1230,6 +1264,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -1267,6 +1302,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -1301,6 +1337,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -1335,6 +1372,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -1369,6 +1407,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -1403,6 +1442,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -1437,6 +1477,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "P",
@@ -1470,6 +1511,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "MC",
@@ -1507,6 +1549,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -1544,6 +1587,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -1580,6 +1624,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -1618,6 +1663,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:site_split_of_pems",
    "before": {
     "leftmost": "EMT",
@@ -1656,6 +1702,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -1692,6 +1739,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -1728,6 +1776,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -1763,6 +1812,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -1798,6 +1848,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:confirm",
    "before": {
     "leftmost": "I",
@@ -1832,6 +1883,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -1866,6 +1918,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -1900,6 +1953,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -1936,6 +1990,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "MC",
@@ -1973,6 +2028,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "EMT",
@@ -2009,6 +2065,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -2046,6 +2103,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -2085,6 +2143,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "A",
@@ -2123,6 +2182,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "EMT",
@@ -2162,6 +2222,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -2197,6 +2258,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "I",
@@ -2231,6 +2293,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -2266,6 +2329,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -2299,6 +2363,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "P",
@@ -2332,6 +2397,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -2368,6 +2434,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "MC",
@@ -2405,6 +2472,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -2442,6 +2510,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -2479,6 +2548,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -2515,6 +2585,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -2555,6 +2626,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "P",
@@ -2606,6 +2678,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "P",
@@ -2639,6 +2712,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -2673,6 +2747,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -2707,6 +2782,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -2740,6 +2816,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -2774,6 +2851,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "P",
@@ -2807,6 +2885,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -2841,6 +2920,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:held_split_review",
    "before": {
     "leftmost": "MC",
@@ -2882,6 +2962,7 @@
    "mc_required": true,
    "mc_evidence": "The pre-conversion page printed this row's level cell as [I] in the I column (git show 768ad68), i.e. I performs this action only with Medical Control authorisation; the row is chipped I, so +MC carries exactly that meaning.",
    "flag_reason": null,
+   "ratified": null,
    "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "I",
@@ -2940,6 +3021,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -2977,6 +3059,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -3013,6 +3096,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -3050,6 +3134,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -3087,6 +3172,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -3124,6 +3210,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -3161,6 +3248,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "MC",
@@ -3198,6 +3286,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -3234,6 +3323,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -3270,6 +3360,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -3305,6 +3396,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -3342,6 +3434,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -3378,6 +3471,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -3413,6 +3507,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "P",
@@ -3446,6 +3541,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "P",
@@ -3479,6 +3575,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -3513,6 +3610,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -3547,6 +3645,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -3584,6 +3683,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "MC",
@@ -3621,6 +3721,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -3658,6 +3759,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -3693,6 +3795,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -3727,6 +3830,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -3761,6 +3865,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "P",
@@ -3794,6 +3899,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "MC",
@@ -3831,6 +3937,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -3868,6 +3975,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -3904,6 +4012,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -3939,6 +4048,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -3974,6 +4084,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -4009,6 +4120,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -4044,6 +4156,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -4080,6 +4193,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -4115,6 +4229,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -4150,6 +4265,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -4185,6 +4301,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -4220,6 +4337,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -4255,6 +4373,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -4290,6 +4409,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:confirm",
    "before": {
     "leftmost": "EMR",
@@ -4327,6 +4447,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -4363,6 +4484,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -4400,6 +4522,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "EMT",
@@ -4436,6 +4559,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -4472,6 +4596,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -4506,6 +4631,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -4540,6 +4666,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -4577,6 +4704,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -4612,6 +4740,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "MC",
@@ -4649,6 +4778,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -4686,6 +4816,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -4723,6 +4854,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -4760,6 +4892,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -4796,6 +4929,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -4831,6 +4965,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -4865,6 +5000,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -4899,6 +5035,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -4933,6 +5070,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "P",
@@ -4966,6 +5104,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "MC",
@@ -5003,6 +5142,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -5040,6 +5180,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -5077,6 +5218,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -5113,6 +5255,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -5149,6 +5292,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -5183,6 +5327,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "I",
@@ -5217,6 +5362,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "MC",
@@ -5254,6 +5400,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -5291,6 +5438,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -5327,6 +5475,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -5362,6 +5511,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -5397,6 +5547,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -5432,6 +5583,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -5469,6 +5621,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -5506,6 +5659,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -5543,6 +5697,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -5578,6 +5733,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -5614,6 +5770,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:held_split_review",
    "before": {
     "leftmost": "EMT",
@@ -5650,6 +5807,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:site_split_of_pems",
    "before": {
     "leftmost": "A",
@@ -5685,6 +5843,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "I",
@@ -5721,6 +5880,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "A",
@@ -5758,6 +5918,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -5795,6 +5956,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -5835,6 +5997,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "EMT",
@@ -5883,6 +6046,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -5919,6 +6083,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -5955,6 +6120,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -5990,6 +6156,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:confirm",
    "before": {
     "leftmost": "A",
@@ -6025,6 +6192,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "MC",
@@ -6062,6 +6230,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -6095,6 +6264,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "P",
@@ -6132,6 +6302,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "P",
@@ -6198,6 +6369,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -6232,6 +6404,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -6268,6 +6441,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -6304,6 +6478,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -6340,6 +6515,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:confirm",
    "before": {
     "leftmost": "EMT",
@@ -6376,6 +6552,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -6411,6 +6588,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -6445,6 +6623,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -6481,6 +6660,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "I",
@@ -6515,6 +6695,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -6551,6 +6732,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -6585,6 +6767,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -6621,6 +6804,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -6658,6 +6842,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -6694,6 +6879,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -6730,6 +6916,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -6765,6 +6952,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "A",
@@ -6800,6 +6988,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "P",
@@ -6833,6 +7022,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "P",
@@ -6866,6 +7056,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -6901,6 +7092,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -6934,6 +7126,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -6969,6 +7162,7 @@
    "mc_required": true,
    "mc_evidence": "p.247#6 prints 'Orally Intubate. Patients < 12 years old.' badged P \u2014 the row this page's own text scopes ('Intubation of children <12 requires Paramedic skill'). Cross-page: p.123-124 print no intubation row.",
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -7002,6 +7196,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -7038,6 +7233,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -7074,6 +7270,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -7110,6 +7307,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -7146,6 +7344,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "A",
@@ -7181,6 +7380,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "A",
@@ -7216,6 +7416,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -7250,6 +7451,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -7284,6 +7486,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -7318,6 +7521,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -7352,6 +7556,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -7388,6 +7593,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:held_split_review",
    "before": {
     "leftmost": "I",
@@ -7422,6 +7628,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:no_pems_counterpart",
    "before": {
     "leftmost": "I",
@@ -7456,6 +7663,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "P",
@@ -7489,6 +7697,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -7525,6 +7734,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -7561,6 +7771,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -7598,6 +7809,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -7635,6 +7847,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -7672,6 +7885,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -7707,6 +7921,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "A",
@@ -7746,6 +7961,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "A",
@@ -7800,6 +8016,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "A",
@@ -7854,6 +8071,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "A",
@@ -7904,6 +8122,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "P",
@@ -7937,6 +8156,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "I",
@@ -7971,6 +8191,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -8006,6 +8227,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -8040,6 +8262,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "MC",
@@ -8077,6 +8300,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -8114,6 +8338,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:confirm",
    "before": {
     "leftmost": "EMT",
@@ -8150,6 +8375,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -8186,6 +8412,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -8222,6 +8449,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -8258,6 +8486,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "A",
@@ -8293,6 +8522,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -8329,6 +8559,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -8363,6 +8594,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "P",
@@ -8396,6 +8628,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "P",
@@ -8429,6 +8662,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:add_from_pems",
    "before": {
     "leftmost": "P",
@@ -8460,6 +8694,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -8493,6 +8728,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -8526,6 +8762,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -8557,6 +8794,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -8588,6 +8826,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -8625,6 +8864,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -8661,6 +8901,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -8697,6 +8938,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -8734,6 +8976,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -8770,6 +9013,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "MC",
@@ -8804,6 +9048,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "EMT",
@@ -8835,6 +9080,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "P",
@@ -8868,6 +9114,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -8902,6 +9149,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "MC",
@@ -8936,6 +9184,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -8971,6 +9220,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -9006,6 +9256,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -9037,6 +9288,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -9068,6 +9320,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -9104,6 +9357,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "P",
@@ -9137,6 +9391,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -9174,6 +9429,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -9214,6 +9470,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "EMT",
@@ -9262,6 +9519,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:held_split_review",
    "before": {
     "leftmost": "EMT",
@@ -9298,6 +9556,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -9331,6 +9590,7 @@
    "mc_required": true,
    "mc_evidence": "p.239#9 'If apneic and >= 12 years old: Consider endotracheal intubation if unable to ventilate adequately by less invasive means', badge I. PEMS prints paediatric intubation separately (p.239#10, badge P); this page merges both into one row, so the chip is the lowest level PEMS prints for the action (I) and the page's own 'under 12 ... Paramedic red dot skill only' caveat stays in the action text.",
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -9365,6 +9625,7 @@
    "mc_required": true,
    "mc_evidence": "p.88#8 prints 'For altered mental status, seizures, hypotension, and/or cardiac arrest following exposure to combustion products in an enclosed space or suspected cyanide poisoning, administer (if available): ... Hydroxocobalamin (CYANOKIT) ...' badged I \u2014 the indication-and-dose row this row expands. Cross-page: p.153 prints no hydroxocobalamin row.",
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -9399,6 +9660,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -9430,6 +9692,7 @@
    "mc_required": true,
    "mc_evidence": "p.88#8 prints the hydroxocobalamin administration order ('administer (if available): ADULT: Hydroxocobalamin (CYANOKIT) 5 g IV/IO, infuse over 15 minutes ...') badged I \u2014 the same drug step this row expands. Cross-page: p.153 prints no hydroxocobalamin row.",
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -9464,6 +9727,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -9500,6 +9764,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -9534,6 +9799,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -9568,6 +9834,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -9604,6 +9871,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -9640,6 +9908,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -9677,6 +9946,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -9713,6 +9983,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:held_split_review",
    "before": {
     "leftmost": "EMT",
@@ -9749,6 +10020,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -9785,6 +10057,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:confirm",
    "before": {
     "leftmost": "EMT",
@@ -9821,6 +10094,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:confirm",
    "before": {
     "leftmost": "EMT",
@@ -9857,6 +10131,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -9893,6 +10168,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:held_split_review",
    "before": {
     "leftmost": "EMT",
@@ -9929,6 +10205,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -9965,6 +10242,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "A",
@@ -10000,6 +10278,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -10034,6 +10313,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -10068,6 +10348,7 @@
    "mc_required": true,
    "mc_evidence": "p.55#2 prints 'Administer: ADULT: Fentanyl (Sublimaze) 25 - 50 mcg IV/IO over 2 minutes ...' badged I \u2014 the sedation drug row this row administers under, in the Sedation Post Advanced Airway protocol the row names. Cross-page: p.239 prints no sedation row.",
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -10102,6 +10383,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -10136,6 +10418,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -10173,6 +10456,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -10210,6 +10494,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -10246,6 +10531,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -10282,6 +10568,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -10317,6 +10604,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": null,
@@ -10350,6 +10638,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "MC",
@@ -10387,6 +10676,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:confirm",
    "before": {
     "leftmost": "EMR",
@@ -10424,6 +10714,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -10460,6 +10751,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -10495,6 +10787,7 @@
    "mc_required": true,
    "mc_evidence": "the page printed the A cell in brackets ([A]) in its pre-conversion revision (cf8af7a); PEMS p.91#4 prints the continuous albuterol order with badge [A], so the chip is A and the bracket means A performs it only with Medical Control authorisation.",
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -10530,6 +10823,7 @@
    "mc_required": true,
    "mc_evidence": "the page printed the I cell in brackets ([I]) in its pre-conversion revision (cf8af7a); PEMS p.91#5 prints the sodium bicarbonate order with badge [I], so the chip is I and the bracket means I performs it only with Medical Control authorisation.",
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -10564,6 +10858,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "P",
@@ -10597,6 +10892,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -10632,6 +10928,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -10668,6 +10965,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "MC",
@@ -10705,6 +11003,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -10742,6 +11041,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -10779,6 +11079,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -10816,6 +11117,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -10853,6 +11155,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -10888,6 +11191,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -10924,6 +11228,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -10959,6 +11264,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -10994,6 +11300,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -11029,6 +11336,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:confirm",
    "before": {
     "leftmost": "EMR",
@@ -11066,6 +11374,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -11103,6 +11412,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -11140,6 +11450,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -11176,6 +11487,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -11213,6 +11525,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -11250,6 +11563,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -11287,6 +11601,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -11323,6 +11638,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "MC",
@@ -11360,6 +11676,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -11397,6 +11714,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -11434,6 +11752,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -11471,6 +11790,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -11508,6 +11828,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -11544,6 +11865,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -11580,6 +11902,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -11616,6 +11939,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -11651,6 +11975,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -11686,6 +12011,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -11723,6 +12049,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -11759,6 +12086,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -11796,6 +12124,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -11832,6 +12161,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -11868,6 +12198,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -11903,6 +12234,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -11937,6 +12269,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -11971,6 +12304,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -12005,6 +12339,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -12039,6 +12374,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -12073,6 +12409,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -12109,6 +12446,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "MC",
@@ -12146,6 +12484,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -12183,6 +12522,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -12220,6 +12560,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -12256,6 +12597,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -12292,6 +12634,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -12327,6 +12670,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -12362,6 +12706,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -12399,6 +12744,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -12435,6 +12781,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -12471,6 +12818,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -12508,6 +12856,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -12543,6 +12892,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -12577,6 +12927,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "MC",
@@ -12614,6 +12965,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -12651,6 +13003,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -12688,6 +13041,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -12725,6 +13079,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -12761,6 +13116,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -12796,6 +13152,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -12830,6 +13187,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -12864,6 +13222,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -12898,6 +13257,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -12934,6 +13294,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "P",
@@ -12967,6 +13328,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMR",
@@ -13004,6 +13366,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -13040,6 +13403,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -13077,6 +13441,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -13111,6 +13476,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -13145,6 +13511,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -13179,6 +13546,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "P",
@@ -13212,6 +13580,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "MC",
@@ -13249,6 +13618,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -13286,6 +13656,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -13323,6 +13694,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:confirm",
    "before": {
     "leftmost": "EMR",
@@ -13360,6 +13732,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -13396,6 +13769,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -13436,6 +13810,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "EMT",
@@ -13484,6 +13859,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -13521,6 +13897,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -13562,6 +13939,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "MC",
@@ -13611,6 +13989,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -13648,6 +14027,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -13685,6 +14065,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -13722,6 +14103,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -13759,6 +14141,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -13796,6 +14179,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -13833,6 +14217,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "MC",
@@ -13870,6 +14255,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -13907,6 +14293,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -13942,6 +14329,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "A",
@@ -13977,6 +14365,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "A",
@@ -14012,6 +14401,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "A",
@@ -14047,6 +14437,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -14082,6 +14473,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -14118,6 +14510,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -14155,6 +14548,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -14191,6 +14585,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -14227,6 +14622,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -14262,6 +14658,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -14297,6 +14694,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -14331,6 +14729,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "I",
@@ -14365,6 +14764,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "MC",
@@ -14402,6 +14802,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -14439,6 +14840,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "A",
@@ -14474,6 +14876,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -14508,6 +14911,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -14542,6 +14946,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "P",
@@ -14575,6 +14980,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "adjudicated:set_cells",
    "before": {
     "leftmost": "P",
@@ -14608,6 +15014,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -14645,6 +15052,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -14682,6 +15090,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -14719,6 +15128,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMR",
@@ -14756,6 +15166,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -14792,6 +15203,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -14828,6 +15240,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -14864,6 +15277,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "A",
@@ -14899,6 +15313,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "I",
@@ -14933,6 +15348,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -14969,6 +15385,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "alignment:matched",
    "before": {
     "leftmost": "EMT",
@@ -15005,6 +15422,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -15041,6 +15459,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -15077,6 +15496,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -15113,6 +15533,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -15149,6 +15570,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -15185,6 +15607,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -15218,6 +15641,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -15254,6 +15678,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -15290,6 +15715,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -15326,6 +15752,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -15362,6 +15789,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -15398,6 +15826,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -15434,6 +15863,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -15470,6 +15900,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -15504,6 +15935,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -15538,6 +15970,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -15572,6 +16005,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -15606,6 +16040,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -15640,6 +16075,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -15674,6 +16110,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -15708,6 +16145,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -15744,6 +16182,13 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": "chip I -> EMT, 2026-11-19 (owner ruling A1): PEMS prints both sentences of this row in one EMT cell; it published I while the extractor's fused row was read as the source.",
+   "ratified": {
+    "date": "2026-11-19",
+    "by": "owner",
+    "marker": "retired",
+    "ruling": "\"Those markers come off the page now. They are not a high enough tier that needs the OMD.\"",
+    "decision": "The corrected level stands as published (EMT). The owner read the correction against the printed page and retired the CORRECTED marker from the page; the correction record, its p.247 citation, its evidence and this ratification stay in row-bindings.yaml and in audit/level-scan/level-rule-ledger.json / .md."
+   },
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -15780,6 +16225,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -15814,6 +16260,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -15847,6 +16294,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -15880,6 +16328,13 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": "chip P -> I, 2026-11-19 (owner ruling A1): PEMS prints both sentences of this row in one I cell; it published P while the extractor's fused row was read as the source.",
+   "ratified": {
+    "date": "2026-11-19",
+    "by": "owner",
+    "marker": "retired",
+    "ruling": "\"Those markers come off the page now. They are not a high enough tier that needs the OMD.\"",
+    "decision": "The corrected level stands as published (I). The owner read the correction against the printed page and retired the CORRECTED marker from the page; the correction record, its p.247 citation, its evidence and this ratification stay in row-bindings.yaml and in audit/level-scan/level-rule-ledger.json / .md."
+   },
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -15913,6 +16368,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -15946,6 +16402,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -15980,6 +16437,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -16014,6 +16472,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -16047,6 +16506,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "A",
@@ -16082,6 +16542,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "A",
@@ -16117,6 +16578,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "A",
@@ -16152,6 +16614,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "A",
@@ -16187,6 +16650,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "A",
@@ -16222,6 +16686,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "A",
@@ -16257,6 +16722,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "A",
@@ -16292,6 +16758,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -16325,6 +16792,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -16361,6 +16829,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -16397,6 +16866,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -16431,6 +16901,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -16465,6 +16936,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -16501,6 +16973,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -16537,6 +17010,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -16570,6 +17044,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -16603,6 +17078,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -16636,6 +17112,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -16669,6 +17146,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -16702,6 +17180,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -16735,6 +17214,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMR",
@@ -16772,6 +17252,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -16808,6 +17289,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -16842,6 +17324,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -16878,6 +17361,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "P",
@@ -16911,6 +17395,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMR",
@@ -16948,6 +17433,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMR",
@@ -16985,6 +17471,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMR",
@@ -17022,6 +17509,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMR",
@@ -17059,6 +17547,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -17092,6 +17581,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -17125,6 +17615,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -17158,6 +17649,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "P",
@@ -17191,6 +17683,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "MC",
@@ -17228,6 +17721,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -17264,6 +17758,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -17300,6 +17795,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -17336,6 +17832,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -17372,6 +17869,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -17408,6 +17906,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -17444,6 +17943,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMR",
@@ -17481,6 +17981,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMR",
@@ -17518,6 +18019,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMR",
@@ -17555,6 +18057,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMR",
@@ -17592,6 +18095,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMR",
@@ -17629,6 +18133,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMR",
@@ -17666,6 +18171,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -17700,6 +18206,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -17734,6 +18241,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -17768,6 +18276,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -17802,6 +18311,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "I",
@@ -17836,6 +18346,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "I",
@@ -17878,6 +18389,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "I",
@@ -17920,6 +18432,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "I",
@@ -17962,6 +18475,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "A",
@@ -18005,6 +18519,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "MC",
@@ -18048,6 +18563,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMR",
@@ -18093,6 +18609,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "I",
@@ -18135,6 +18652,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "A",
@@ -18178,6 +18696,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -18224,6 +18743,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -18270,6 +18790,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -18316,6 +18837,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -18362,6 +18884,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -18408,6 +18931,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -18454,6 +18978,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -18500,6 +19025,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -18546,6 +19072,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -18590,6 +19117,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -18634,6 +19162,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -18680,6 +19209,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -18726,6 +19256,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -18764,6 +19295,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -18802,6 +19334,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -18849,6 +19382,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -18896,6 +19430,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -18943,6 +19478,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -18990,6 +19526,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19037,6 +19574,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19084,6 +19622,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19129,6 +19668,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19174,6 +19714,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19219,6 +19760,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19264,6 +19806,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19309,6 +19852,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19353,6 +19897,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19397,6 +19942,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19441,6 +19987,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19485,6 +20032,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19529,6 +20077,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19573,6 +20122,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19617,6 +20167,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19655,6 +20206,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19699,6 +20251,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19743,6 +20296,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19789,6 +20343,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19835,6 +20390,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19881,6 +20437,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19927,6 +20484,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -19973,6 +20531,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "MC",
@@ -20020,6 +20579,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "MC",
@@ -20067,6 +20627,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -20112,6 +20673,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -20157,6 +20719,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -20202,6 +20765,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -20247,6 +20811,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -20292,6 +20857,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -20337,6 +20903,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "I",
@@ -20380,6 +20947,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "I",
@@ -20423,6 +20991,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -20467,6 +21036,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "P",
@@ -20508,6 +21078,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -20552,6 +21123,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -20596,6 +21168,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -20640,6 +21213,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -20684,6 +21258,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -20720,6 +21295,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -20764,6 +21340,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -20808,6 +21385,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -20852,6 +21430,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -20896,6 +21475,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -20940,6 +21520,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -20984,6 +21565,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21028,6 +21610,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": "row-bindings:bound",
    "before": {
     "leftmost": "EMT",
@@ -21064,6 +21647,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21108,6 +21692,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21152,6 +21737,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21190,6 +21776,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21234,6 +21821,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21278,6 +21866,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21322,6 +21911,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21366,6 +21956,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21410,6 +22001,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21454,6 +22046,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21498,6 +22091,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21542,6 +22136,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21586,6 +22181,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21630,6 +22226,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21674,6 +22271,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21720,6 +22318,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21766,6 +22365,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21812,6 +22412,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21858,6 +22459,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "MC",
@@ -21905,6 +22507,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21951,6 +22554,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",
@@ -21997,6 +22601,7 @@
    "mc_required": false,
    "mc_evidence": null,
    "flag_reason": null,
+   "ratified": null,
    "basis": null,
    "before": {
     "leftmost": "EMT",

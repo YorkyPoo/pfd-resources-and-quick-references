@@ -1,0 +1,48 @@
+ett-marker-retire — gate and publish evidence (2026-11-19)
+
+Ruling: owner, 2026-11-19 — "Those markers come off the page now. They are not a
+high enough tier that needs the OMD."
+
+Branch: ett-ratify-marker-retire (commit 7ba631e). Not merged to main; not pushed
+to main, so the deploy workflow cannot publish it to the live root.
+
+1. level_rule.py --write
+   wrote audit/level-scan/level-rule-ledger.json (604 rows)
+   wrote audit/level-scan/level-rule-ledger.md
+   working tree changed exactly 5 files, none of them row-splits.yaml
+
+2. level_rule.py --check (branch working tree, markers absent)
+   EXIT=0
+   OK — 498 action rows across 54 pages ...
+
+3. Planted defect — row 2's `ratified:` block removed from row-bindings.yaml while
+   its page marker stays retired (an unratified flagged row with no marker):
+   EXIT=1
+    - procedures/Endotracheal_Intubation.md row 2: row-bindings.yaml flags this row as
+      a correction, it is not owner-ratified, and the chip does not carry the flag
+    - procedures/Endotracheal_Intubation.md row 2: ledger ratification record does not
+      match row-bindings.yaml
+   Restored from row-bindings.yaml.bak; --check EXIT=0 again.
+
+4. Preview build (bash scripts/build_preview.sh)
+   site_preview/procedures/Endotracheal_Intubation.html: lvl-fix=0, CORRECTED=0
+   row 2 chip EMT (no marker), row 6 chip I (no marker)
+
+5. Publish — gh-pages /preview/ only
+   gh-pages before: 42f5426
+   gh-pages after:  c89d1f6  "preview: republish /preview/ from ett-ratify-marker-retire"
+   git diff --name-only 42f5426 origin/gh-pages -- . ':!preview'  -> 0 files
+   (live root byte-identical)
+
+6. Fetched preview page
+   https://yorkypoo.github.io/pfd-resources-and-quick-references/preview/procedures/Endotracheal_Intubation.html
+   HTTP=200, lvl-fix=0, CORRECTED=0, lv-note=0
+   row 2: <span class="lvl lvl-emt">EMT</span>
+   row 6: <span class="lvl lvl-i">I</span>
+
+7. Live root untouched
+   https://yorkypoo.github.io/pfd-resources-and-quick-references/procedures/Endotracheal_Intubation.html
+   still the pre-collapse 7-column sc-wrap matrix (no lv-wrap), i.e. the old deploy.
+
+8. audit/level-scan/row-splits.yaml — unchanged (git diff vs main empty). The p.247
+   fusion fix, the evidence render and the p.247#2 / p.247#7 citations are untouched.

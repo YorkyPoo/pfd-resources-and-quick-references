@@ -692,6 +692,32 @@ def load_bindings():
                 raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} is both '
                                  f'owner_required and `flag`ged — a row PEMS does not badge '
                                  f'cannot carry a corrected source level')
+        rat = rec.get('ratified')
+        if rat is not None:
+            # An owner-ratified correction: the flag record stays (it is the audit trail),
+            # but the on-page marker is retired. Only a `flag`ged correction may be
+            # ratified — there is nothing to ratify on a row that was never corrected.
+            if 'flag' not in rec:
+                raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} has a '
+                                 f'`ratified` record but no `flag` — only a corrected '
+                                 f'correction can be ratified')
+            if not isinstance(rat, dict):
+                raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} has '
+                                 f'ratified={rat!r} — it must be a mapping')
+            for k in ('date', 'by', 'ruling'):
+                if not str(rat.get(k) or '').strip():
+                    raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} '
+                                     f'ratified record has no {k} — the record must say who '
+                                     f'ratified the correction, when, and in what words')
+            if rat.get('marker') != 'retired':
+                raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} '
+                                 f'ratified.marker is {rat.get("marker")!r} — it must be '
+                                 f'"retired" (a ratified correction keeps its record and '
+                                 f'drops its marker)')
+            if rec.get('pems_page') is None or rec.get('pems_ordinal') is None:
+                raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} is '
+                                 f'ratified without a citation — the record must still name '
+                                 f'the printed page that authorised the chip')
         if rec.get('cross_page'):
             if not str(rec.get('evidence') or '').strip():
                 raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} is a '
@@ -1115,8 +1141,11 @@ def resolve(rel, rows, align, adjudicated, pems, bindings=None):
                 extra['owner_note'] = b.get('owner_note')
             if b.get('flag'):
                 # a corrected row: the chip is the source badge, but the row's level
-                # changed under an owner ruling and the page must keep saying so
+                # changed under an owner ruling and the page must keep saying so —
+                # unless the owner has ratified the correction and retired the marker
+                # (then the record above stays in the ledger and the marker does not)
                 extra['flag'] = b['flag']
+                extra['ratified'] = b.get('ratified')
 
         source_row = pems.get(ptr) if ptr else None
         badge, bracketed = badge_of(source_row) if source_row else (None, False)
@@ -1328,7 +1357,8 @@ def plan(rel):
             blocks[-1]['rows'].append({'ordinal': row['ordinal'], 'action': new_text,
                                        'level': level, 'bracketed': r['bracketed'],
                                        'owner': owner,
-                                       'flag': r['extra'].get('flag'),
+                                       'flag': (None if r['extra'].get('ratified')
+                                                else r['extra'].get('flag')),
                                        'mc_required': bool(r['extra'].get('mc_required'))
                                        and level not in ('PENDING', 'MC')})
             entry = {
@@ -1355,6 +1385,7 @@ def plan(rel):
                 and level not in ('PENDING', 'MC'),
                 'mc_evidence': r['extra'].get('mc_evidence'),
                 'flag_reason': r['extra'].get('flag'),
+                'ratified': r['extra'].get('ratified'),
                 'basis': r['basis'],
                 'before': before,
                 'note': r['extra'].get('adjudication'),
@@ -1480,7 +1511,8 @@ def page_note_for(ledger):
                          ': no PEMS 2024 row authorises a provider level for this action. The level '
                          'shown is the one this page already published; it is not verified against '
                          'the source. See <code>audit/level-scan/level-rule-ledger.md</code>.')
-    fixed = [(e['row'], e.get('flag_reason')) for e in ledger if e.get('flag_reason')]
+    fixed = [(e['row'], e.get('flag_reason')) for e in ledger
+             if e.get('flag_reason') and not e.get('ratified')]
     if fixed:
         notes.append('&#9873; **CORRECTED** — ' +
                      '; '.join(f"row {r}: {why}" for r, why in fixed) +
@@ -2213,6 +2245,38 @@ def emit_md(ledger):
         lines.append(f"- `{e['file']}` row {e['row']}: **{e['before']['leftmost']} -> "
                      f"{e['level_published']}** (p.{e['pems_page']}#{e['pems_ordinal']}) — "
                      f"{e['action'][:90]}")
+    # ------------------------------------------------------- corrected rows (CORRECTED)
+    # A flagged correction that the owner has ratified keeps this record and loses its
+    # on-page marker. The record must still answer: which printed page authorised the
+    # chip, what the page published before, and who ratified the change.
+    fixed = [e for e in ledger if e.get('flag_reason')]
+    lines += ['', '## CORRECTED — level corrected against the printed page', '',
+              f'**{len(fixed)} row(s).** A `CORRECTED` row published a level different from',
+              'the one its cited PEMS 2024 row prints. `row-bindings.yaml` keeps the correction',
+              'reason (`flag`), the p.247 citation and the evidence. Where the owner has since',
+              'read the correction and ratified it, `ratified` records the date, the ratifying',
+              'party and the ruling words, and the on-page ⚑ marker is **retired** — the chip',
+              'stays the corrected level. `--check` fails a ratified row that still carries the',
+              'marker, and an unratified flagged row that has lost it.', '']
+    if not fixed:
+        lines.append('None.')
+    for e in fixed:
+        lines.append(f"- `{e['file']}` row {e['row']}: **{e['level_published']}** from "
+                     f"p.{e['pems_page']}#{e['pems_ordinal']} (published "
+                     f"{e['before']['leftmost']} before the correction)")
+        lines.append(f"  - correction: {e['flag_reason']}")
+        if e.get('binding_evidence'):
+            lines.append(f"  - evidence: {e['binding_evidence']}")
+        rat = e.get('ratified')
+        if rat:
+            lines.append(f"  - ratified: **{str(rat.get('by') or 'owner')}**, {rat.get('date')} "
+                         f"— marker retired")
+            lines.append(f"  - ruling: {str(rat.get('ruling') or '').strip()}")
+            if rat.get('decision'):
+                lines.append(f"  - decision: {str(rat['decision']).strip()}")
+        else:
+            lines.append('  - ratified: no — the ⚑ marker stays on the page until the owner '
+                         'rules on it')
     lines += ['', '## OPEN OWNER QUESTIONS', '',
               'Recorded, not fixed. Not verified against PEMS 2024; needs the owner\'s',
               'decision before the page is treated as final.', '',
@@ -2835,13 +2899,26 @@ def check():
             if has_flag:
                 fails.append(f'{rel} row {row["ordinal"]}: chip carries the OWNER_REQUIRED flag '
                              f'but the row is cited to PEMS {r["ptr"]}')
-            # a CORRECTED row: the chip IS the cited badge, and the flag marks the
-            # history. Both halves are checked against row-bindings.yaml.
-            b_flag = (r['extra'].get('binding') or {}).get('flag')
+            # a CORRECTED row: the chip IS the cited badge, and the flag records the
+            # history. Three states are distinguished, and only these three:
+            #   flag + no ratified  -> the marker MUST be on the chip
+            #   flag + ratified     -> the marker MUST be gone (retired by the owner)
+            #   no flag             -> the marker must be absent
+            binding = r['extra'].get('binding') or {}
+            b_flag = binding.get('flag')
+            b_rat = binding.get('ratified')
             has_fix = 'lvl-fix' in (row['level_cell'] or '')
-            if b_flag and not has_fix:
+            if b_flag and not b_rat and not has_fix:
                 fails.append(f'{rel} row {row["ordinal"]}: row-bindings.yaml flags this row as '
-                             f'a correction but the chip does not carry the flag')
+                             f'a correction, it is not owner-ratified, and the chip does not '
+                             f'carry the flag')
+            if b_flag and b_rat and has_fix:
+                fails.append(f'{rel} row {row["ordinal"]}: the owner ratified this correction '
+                             f'on {b_rat.get("date")} and retired the marker, but the chip '
+                             f'still carries the CORRECTED flag')
+            if b_rat and not b_flag:
+                fails.append(f'{rel} row {row["ordinal"]}: ratification recorded without the '
+                             f'correction it ratifies')
             if has_fix and not b_flag:
                 fails.append(f'{rel} row {row["ordinal"]}: the chip carries the correction flag '
                              f'but row-bindings.yaml does not declare one')
@@ -2850,6 +2927,20 @@ def check():
                 if e_fix is None or e_fix.get('flag_reason') != b_flag:
                     fails.append(f'{rel} row {row["ordinal"]}: the ledger does not record the '
                                  f'binding\'s flag reason')
+                else:
+                    if (e_fix.get('pems_page'), e_fix.get('pems_ordinal')) != \
+                            (binding.get('pems_page'), binding.get('pems_ordinal')):
+                        fails.append(f'{rel} row {row["ordinal"]}: the ledger does not record '
+                                     f'the printed page the correction was checked against')
+                    if bool(e_fix.get('ratified')) != bool(b_rat):
+                        fails.append(f'{rel} row {row["ordinal"]}: ledger ratification record '
+                                     f'does not match row-bindings.yaml')
+                    elif b_rat:
+                        got = e_fix.get('ratified') or {}
+                        for k in ('date', 'by', 'ruling'):
+                            if str(got.get(k) or '').strip() != str(b_rat.get(k) or '').strip():
+                                fails.append(f'{rel} row {row["ordinal"]}: ledger ratified '
+                                             f'{k} does not match row-bindings.yaml')
             want = resolved_level or r['badge']
             if level != want:
                 where = f' (p.{r["ptr"][0]}#{r["ptr"][1]})' if r['ptr'] else ''
