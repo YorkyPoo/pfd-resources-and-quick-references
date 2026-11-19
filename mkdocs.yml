@@ -66,7 +66,6 @@ markdown_extensions:
 
 nav:
 - Home: index.md
-- Outstanding Decisions: protocols/outstanding-decisions.md
 - Fire Resources:
   - Fire Resources Home: resources/fire.md
   - Emergency Operations:
@@ -169,6 +168,7 @@ nav:
     - Station Tours: sops/public-relations/PR-300-Station-Tours.md
     - Apparatus Displays & Standbys: sops/public-relations/PR-400-Apparatus-Displays-Standbys.md
 - EMS Resources:
+  - Outstanding Decisions: protocols/outstanding-decisions.md
   - EMS Resources Home: resources/ems.md
   - Cardiac:
     - Asystole / PEA: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
