@@ -1414,6 +1414,29 @@ level the cited PEMS row prints. Review them first.
 - `procedures/Neonatal_Resuscitation.md` row 4: **EMT -> EMR** (p.261#9) — If HR <60/min or pulseless: Begin compressions (3:1 ratio, 30 breaths/min).
 - `protocols/administrative/01_STEMI_Field_Triage_PROC.md` row 7: **EMT -> MC** (p.107#9) — Serial ECGs For atypical/indeterminate ECGs with high suspicion, transmit ECG, contact Med
 
+## CORRECTED — level corrected against the printed page
+
+**2 row(s).** A `CORRECTED` row published a level different from
+the one its cited PEMS 2024 row prints. `row-bindings.yaml` keeps the correction
+reason (`flag`), the p.247 citation and the evidence. Where the owner has since
+read the correction and ratified it, `ratified` records the date, the ratifying
+party and the ruling words, and the on-page ⚑ marker is **retired** — the chip
+stays the corrected level. `--check` fails a ratified row that still carries the
+marker, and an unratified flagged row that has lost it.
+
+- `procedures/Endotracheal_Intubation.md` row 2: **EMT** from p.247#2 (published EMT before the correction)
+  - correction: chip I -> EMT, 2026-11-19 (owner ruling A1): PEMS prints both sentences of this row in one EMT cell; it published I while the extractor's fused row was read as the source.
+  - evidence: p.247#2 "Position the patient: Ear to sternal notch." badge EMT, and p.247#3 "Maintain in-line cervical spine stabilization if there is concern for trauma." badge EMT — the second sentence of that same printed EMT cell, separated from the first by the extractor and restored to it by audit/level-scan/row-splits.yaml (evidence render audit/level-scan/evidence/pems_p247.png). Both halves of this row are printed at EMT, so the chip is EMT; the bundled-row rule that made it I applied a fused row's badge to text printed a cell earlier, which the 2026-11-19 owner ruling corrected.
+  - ratified: **owner**, 2026-11-19 — marker retired
+  - ruling: "Those markers come off the page now. They are not a high enough tier that needs the OMD."
+  - decision: The corrected level stands as published (EMT). The owner read the correction against the printed page and retired the CORRECTED marker from the page; the correction record, its p.247 citation, its evidence and this ratification stay in row-bindings.yaml and in audit/level-scan/level-rule-ledger.json / .md.
+- `procedures/Endotracheal_Intubation.md` row 6: **I** from p.247#7 (published P before the correction)
+  - correction: chip P -> I, 2026-11-19 (owner ruling A1): PEMS prints both sentences of this row in one I cell; it published P while the extractor's fused row was read as the source.
+  - evidence: p.247#7 "If unsuccessful, reoxygenate between attempts with 100% Oxygen. Adjust positioning/technique/equipment as necessary prior to any further attempt." badge I, and p.247#8 "After two failed attempts, airway must be managed by the most experienced provider available." badge I — the same printed I cell, split by the extractor and restored by audit/level-scan/row-splits.yaml (evidence render audit/level-scan/evidence/pems_p247.png). Both of this row's sentences are printed at I. The P badge that made it P belongs to the next printed cell (p.247#9, surgical airway), which is Endotracheal_Intubation row 7.
+  - ratified: **owner**, 2026-11-19 — marker retired
+  - ruling: "Those markers come off the page now. They are not a high enough tier that needs the OMD."
+  - decision: The corrected level stands as published (I). The owner read the correction against the printed page and retired the CORRECTED marker from the page; the correction record, its p.247 citation, its evidence and this ratification stay in row-bindings.yaml and in audit/level-scan/level-rule-ledger.json / .md.
+
 ## OPEN OWNER QUESTIONS
 
 Recorded, not fixed. Not verified against PEMS 2024; needs the owner's

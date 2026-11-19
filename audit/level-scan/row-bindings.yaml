@@ -1793,6 +1793,18 @@ bindings:
     flag: >-
       chip I -> EMT, 2026-11-19 (owner ruling A1): PEMS prints both sentences of this row in
       one EMT cell; it published I while the extractor's fused row was read as the source.
+    ratified:
+      date: '2026-11-19'
+      by: owner
+      marker: retired
+      ruling: >-
+        "Those markers come off the page now. They are not a high enough tier that needs the
+        OMD."
+      decision: >-
+        The corrected level stands as published (EMT). The owner read the correction against
+        the printed page and retired the CORRECTED marker from the page; the correction
+        record, its p.247 citation, its evidence and this ratification stay in
+        row-bindings.yaml and in audit/level-scan/level-rule-ledger.json / .md.
     evidence: >-
       p.247#2 "Position the patient: Ear to sternal notch." badge EMT, and p.247#3 "Maintain
       in-line cervical spine stabilization if there is concern for trauma." badge EMT — the
@@ -1833,6 +1845,18 @@ bindings:
     flag: >-
       chip P -> I, 2026-11-19 (owner ruling A1): PEMS prints both sentences of this row in one
       I cell; it published P while the extractor's fused row was read as the source.
+    ratified:
+      date: '2026-11-19'
+      by: owner
+      marker: retired
+      ruling: >-
+        "Those markers come off the page now. They are not a high enough tier that needs the
+        OMD."
+      decision: >-
+        The corrected level stands as published (I). The owner read the correction against the
+        printed page and retired the CORRECTED marker from the page; the correction record,
+        its p.247 citation, its evidence and this ratification stay in row-bindings.yaml and
+        in audit/level-scan/level-rule-ledger.json / .md.
     evidence: >-
       p.247#7 "If unsuccessful, reoxygenate between attempts with 100% Oxygen. Adjust
       positioning/technique/equipment as necessary prior to any further attempt." badge I,
