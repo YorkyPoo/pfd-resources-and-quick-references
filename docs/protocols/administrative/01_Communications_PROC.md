@@ -22,18 +22,20 @@ This protocol outlines the procedures for effectively communicating with Medical
 ---
 
 ### Interventions
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap policy" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | **Use HEAR for notification only**<br>Notify hospitals of BLS/ALS patients NOT requiring on-line physician intervention. |  | • | • | • | • |
-| 2 | **Use COR for medical control/meds/alerts**<br>Direct contact with Medical Control for physician consultation. Used for Stroke, Trauma, STEMI alerts (providing Name/DOB). |  | • | • | • | • |
-| 3 | **Transmit standard pre-arrival report**<br>Include Unit ID/ETA, patient age/gender/chief complaint, history of present illness/injury, pertinent medical history, significant physical findings, vital signs, and treatment. |  | • | • | • | • |
-| 4 | **MCI comms suspension/supervisor relay**<br>Routine ambulance-to-ED communications suspended. Transport group supervisor communicates directly to coordinating ED. |  | • | • | • | • |
-| 5 | **Comm Failure: act on standing orders**<br>Follow appropriate Poquoson Patient Care Protocols based on clinical situation. All orders within scope of practice become standing orders. |  | • | • | • | • |
-| 6 | **Document comm failure**<br>Document time, nature of comms problem, clinical status, and protocols used on the PCR. Review with Officer/Acting Officer per department SOPs. |  | • | • | • | • |
+| # | Basis | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-policy">POLICY</span> | **Use HEAR for notification only**<br>Notify hospitals of BLS/ALS patients NOT requiring on-line physician intervention. |
+| 2 | <span class="lvl lvl-policy">POLICY</span> | **Use COR for medical control/meds/alerts**<br>Direct contact with Medical Control for physician consultation. Used for Stroke, Trauma, STEMI alerts (providing Name/DOB). |
+| 3 | <span class="lvl lvl-policy">POLICY</span> | **Transmit standard pre-arrival report**<br>Include Unit ID/ETA, patient age/gender/chief complaint, history of present illness/injury, pertinent medical history, significant physical findings, vital signs, and treatment. |
+| 4 | <span class="lvl lvl-policy">POLICY</span> | **MCI comms suspension/supervisor relay**<br>Routine ambulance-to-ED communications suspended. Transport group supervisor communicates directly to coordinating ED. |
+| 5 | <span class="lvl lvl-policy">POLICY</span> | **Comm Failure: act on standing orders**<br>Follow the appropriate Patient Care Protocols based on clinical situation. All orders within scope of practice become standing orders. |
+| 6 | <span class="lvl lvl-policy">POLICY</span> | **Document comm failure**<br>Document time, nature of comms problem, clinical status, and protocols used on the PCR. Review with Officer/Acting Officer per department SOPs. |
 
 </div>
+
+<p class="lv-note"><strong>POLICY</strong> — rows 1-6: this is not a provider level. This page is a PEMS administrative policy, not a clinical protocol: each row is cited to the PEMS 2024 administrative policy that prints it — <em>Communications</em> (PEMS p.17, 18, 19, 20) — and no provider level is published, because PEMS prints these rules as policy rather than as level-badged protocol rows. The policy and the verbatim span for every row are recorded in <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
 ### Pearls
 1. ⚠ **Communication Failure Standing Orders:** In the event of communications failure, act on standing orders within your scope of practice based on the clinical situation.

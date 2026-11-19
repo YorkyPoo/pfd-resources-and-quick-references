@@ -1,0 +1,3 @@
+floor(03_Airway_Inhalation_Irritants_PROC.md) = EMR  (chips scanned: 11 on 12 rows: EMR, EMT, EMT, EMT, EMT, A, A, A, I, P, P)   [revision 2ad9b15, the page as this card found it]
+floor(03_Airway_Inhalation_Irritants_PROC.md) = EMR  (chips scanned: 11 on 12 rows: EMR, EMT, EMT, EMT, EMT, A, A, A, I, P, EMR)   [working tree, after the ruling]
+row 11: P -> EMR   (derived floor unchanged by the fix: EMR == EMR)

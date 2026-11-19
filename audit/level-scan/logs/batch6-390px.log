@@ -1,0 +1,33 @@
+Batch 6 — 390px check (Emulation.setDeviceMetricsOverride 390x844, DPR 2)
+Served site/ from the mkdocs build on c79862c; measured in Chromium via CDP in a single
+tab at a true 390px viewport, documentElement.scrollWidth vs clientWidth, and counted
+table body rows against .lvl chips inside every .lv-wrap.
+
+page                                                      scrollW clientW rows chips POLICY PEND MC actClip
+01_ALS_Release_to_BLS_PROC.html                               390     390     8     8      8    0  0   False
+01_Abuse_Recognition_and_Mandated_Reporting_PROC.html         390     390     7     7      7    0  0   False
+01_Behavioral_Health_Transportation_Decision_PROC.html        390     390     7     7      5    2  0   False
+01_Communications_PROC.html                                   390     390     6     6      6    0  0   False
+01_Death_Criteria_for_Withholding_Resuscitation_PROC.html     390     390     5     5      5    0  0   False
+01_Helicopter_EMS_HEMS_PROC.html                              390     390     6     6      6    0  0   False
+01_Infant_Abandonment_PROC.html                               390     390     4     4      3    1  0   False
+01_Patient_Refusal_of_Treatment_Transport_PROC.html           390     390     7     7      7    0  0   False
+01_Patient_Restraint_PROC.html                                390     390     8     8      8    0  0   False
+01_STEMI_Field_Triage_PROC.html                               390     390     7     7      6    0  1   False
+01_Safe_Transport_of_Pediatric_Patients_PROC.html             390     390     7     7      7    0  0   False
+01_Stroke_Field_Triage_PROC.html                              390     390     8     8      6    2  0   False
+01_Transportation_and_Destination_Determination_PROC.html     390     390     7     7      7    0  0   False
+01_Trauma_Field_Triage_PROC.html                              390     390     8     8      8    0  0   False
+Universal Patient Care.html                                   390     390    11    11      0    0  0   False
+
+OVERFLOW: none — scrollWidth == clientWidth on all 15 pages
+One chip per action row on every page: 106 rows / 106 chips.
+POLICY chips 89 + PENDING 5 + MC 1 = 95 — matches the ledger (95) for the 14 administrative pages; Universal Patient Care 11 rows / 11 level chips.
+Action column not clipped on any page (scrollWidth == clientWidth on every td).
+Note paragraph renders on all 14 policy pages; Universal carries none (no flags).
+
+Screenshot captured at 390px: shot.png — page header + intro + start of the
+Assessment block on STEMI Field Triage (the table sits below the fold; the chip
+geometry is measured above rather than eyeballed: POLICY chips 7em column, no
+overflow, 6 POLICY + 1 MC on that page).
+EXIT=0

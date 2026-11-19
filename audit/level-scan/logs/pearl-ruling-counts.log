@@ -1,0 +1,37 @@
+ledger status totals (derived):
+  OK               459
+  OWNER_REQUIRED   27
+  owner_ruled      11
+  pending_omd      11
+  pending_row_omd  7
+  policy           89
+  TOTAL            604
+
+OWNER_REQUIRED : 38 -> 27   (11 of the 12 touched rows were OWNER_REQUIRED)
+PENDING        : 19 -> 18   (11 whole-page + 7 row-level)
+
+digest bucket 'PEMS prints this nowhere': 17 -> 6
+digest bucket 'badge contradicts'       : 21 -> 21
+  6 + 21 == 27 -> True
+
+remaining 'prints nowhere' members (each one's reason claims the source is silent):
+  02_Sedation_Assisted_Non_Paralytic_PROC.md    row 4   I     PRE-INTUBATION sedation has no PEMS 2024 row. p.55 is "Sedat...
+  02_Sedation_Assisted_Non_Paralytic_PROC.md    row 5   P     The act is printed at I (p.55#2 fentanyl, p.55#3 midazolam, ...
+  03_Pediatric_Stridor_PROC.md                  row 2   EMT   No PEMS 2024 row anywhere prints scene management or keeping...
+  03_Pneumothorax_PROC.md                       row 5   A     No PEMS 2024 row prints equipment readiness. p.239#2 (badge ...
+  03_Upper_Airway_Obstruction_PROC.md           row 2   EMT   No PEMS 2024 row prints recognition. p.239#3 and p.239#8 pri...
+  09_Trauma_PROC.md                             row 6   A     No PEMS 2024 row prints 'assess for shock and refer to the S...
+
+the 12 rows this card touched (status / level now):
+  04_Chest_Pain_ACS_PROC.md                     row 5   owner_ruled   I     p.108 PEARLS #1, p.232 PEARLS #7
+  04_Chest_Pain_ACS_PROC.md                     row 14  owner_ruled   I     p.108 PEARLS #3, p.232 PEARLS #8, p.232 PEARLS #9
+  03_Pulmonary_Edema_Congestion_PROC.md         row 6   owner_ruled   EMT   p.245 CONTRAINDICATIONS #1
+  03_Pulmonary_Edema_Congestion_PROC.md         row 7   owner_ruled   EMT   p.245 CONTRAINDICATIONS #1
+  03_Pulmonary_Edema_Congestion_PROC.md         row 8   owner_ruled   EMT   p.245 CONTRAINDICATIONS #1
+  02_Cold_Exposure_PROC.md                      row 6   owner_ruled   EMT   p.67 PEARLS #5
+  02_Cold_Exposure_PROC.md                      row 9   owner_ruled   MC    p.67 PEARLS #3
+  02_Pain_Control_PROC.md                       row 8   OK            MC    -
+  03_Airway_Inhalation_Irritants_PROC.md        row 3   owner_ruled   EMT   p.88 PEARLS #1
+  03_Airway_Inhalation_Irritants_PROC.md        row 11  owner_ruled   EMR   p.154 PEARLS #13, p.121 PEARLS #1
+  03_Smoke_Inhalation_PROC.md                   row 3   owner_ruled   EMT   p.88 PEARLS #1
+  01_Stroke_Field_Triage_PROC.md                row 1   OK            EMT   -

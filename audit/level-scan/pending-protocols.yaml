@@ -1,0 +1,158 @@
+# Protocols sourced from OUTSIDE PEMS 2024 — every action row is PENDING OMD Authorization.
+#
+# A page listed here has no PEMS 2024 protocol to cite: the regional source prints no
+# equivalent, so NO row on the page can be verified against PEMS and NONE may claim a PEMS
+# citation. The chip is `PENDING`; the ledger status is `pending_omd`; and the level the
+# agency's page already published is recorded here as `carried_levels` (the ledger field
+# `carried_from_page`). That record is provenance for the reader, never a citation.
+#
+# Machine-checked by scripts/level_rule.py (--write / --check):
+#   * `source` is required and is printed in the page's note and in the ledger;
+#   * `pems_page` / `pems_ordinal` / `pems_badge` may not appear (a pending row that names
+#     a PEMS row would be exactly the fake citation this file exists to prevent);
+#   * `carried_levels` must cover every action row, and the level recorded must equal the
+#     level the page published before conversion.
+#
+# Status: Batch 2-3 (owner ruling 2026-11-15: "Just add pending OMD Authorization on stuff
+# like that"). Batches 3-5 add their own entries.
+#
+# ---------------------------------------------------------------------------
+# ROW-LEVEL pending (`rows:` below) — an agency addition on an otherwise PEMS-cited page.
+#
+# A whole-page entry above says "this protocol is not in PEMS 2024". A row-level entry
+# says something narrower: the page IS PEMS-cited, but this one action has no PEMS row
+# behind it — the agency added it. It is chipped PENDING for the same reason (nobody has
+# authorized the level) and it may not cite a PEMS row either.
+#
+# Same rules, enforced by scripts/level_rule.py --check:
+#   * `reason` is required, and it is what the page note and the ledger quote;
+#   * `pems_page` / `pems_ordinal` / `pems_badge` may not appear on a row-level entry —
+#     a PENDING row that names a PEMS row is the fake citation this file exists to prevent;
+#   * `carried_from_page` is required and must equal the level the page published before
+#     conversion (the ledger's `before.leftmost`), so the provenance is checkable, not typed.
+
+protocols:
+
+  - file: protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md
+    source: ODEMSA Regional Patient Care Protocols, Section 2.5, Revised 06/2015
+    pems_equivalent: none — PEMS 2024 publishes no Aortic Dissection or AAA protocol
+    carried_levels:
+      1: EMR
+      2: EMR
+      3: EMR
+      4: EMR
+      5: EMT
+      6: A
+      7: I
+      8: I
+      9: I
+      10: EMR
+      11: A
+
+rows:
+
+  - file: protocols/neurologic/05_Stroke_TIA_PROC.md
+    pems_equivalent: PEMS 2024 p.131 Stroke / TIA publishes 6 protocol rows; neither row below has a counterpart
+    rows:
+      - row: 8
+        carried_from_page: I
+        reason: Agency addition; PEMS 2024 p.131 publishes no such action. Pending OMD authorization.
+      - row: 9
+        carried_from_page: A
+        reason: Agency addition; PEMS 2024 p.131 publishes no such action. Pending OMD authorization.
+
+  - file: protocols/trauma/09_Burns_Thermal_PROC.md
+    pems_equivalent: PEMS 2024 prints the HF calcium treatment only in the Burns protocol's PEARLS (p.87-88 prose), not as a level-badged row
+    rows:
+      - row: 6
+        carried_from_page: NONE
+        note: >-
+          <strong>PENDING</strong> — row 6: PEMS 2024 prints the HF calcium treatment only
+          in the Burns protocol's PEARLS (p.87-88 prose), not as a level-badged row, so no
+          provider level is published for it. <strong>Pending OMD authorization</strong> — no
+          provider level applies until the OMD authorizes it. See
+          <code>audit/level-scan/pending-protocols.yaml</code> and
+          <code>audit/level-scan/level-rule-ledger.md</code>.
+        reason: >-
+          Agency addition. PEMS 2024 prints 'Treat hypotension with 1 g Calcium Chloride
+          IV/IO over 3 minutes' for hydrofluoric acid burns only in the Burns protocol's
+          PEARLS (p.87-88 prose), not as a level-badged table row; the only table rows
+          printing calcium chloride 1 g IV/IO over 3 minutes are p.91#5 (crush syndrome,
+          badge [I]) and p.120#8 (CCB/BB overdose, badge I), whose indications differ. No
+          PEMS row authorises this action's provider level, and the page published none.
+          Pending OMD authorization.
+
+  # Batch 6 — administrative pages: rows the PEMS administrative policies do not print
+
+  - file: protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md
+    pems_equivalent: >-
+      no PEMS administrative policy prints this action; the row reason
+      names where PEMS prints it, if anywhere
+    rows:
+      - row: 6
+        carried_from_page: EMT
+        note: >-
+          <strong>PENDING</strong> — row 6: PEMS 2024 does not print this rule in any
+          administrative policy; it appears only as prose in the Behavioral Emergencies
+          restraint guidelines (p.73), which carries no level-badged row. No policy and
+          no provider level is published for it. <strong>Pending OMD authorization</strong>
+          — no provider level applies until the OMD authorizes it. See
+          <code>audit/level-scan/level-rule-ledger.md</code>.
+        reason: >-
+          PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol
+          restraint guidelines (p.73: "Patients in law enforcement custody (including emergency
+          custody orders) or under arrest must have a law enforcement officer present at all
+          times"), not as an administrative policy and not as a level-badged row. No policy and no
+          level is published; the wording on this page is the agency policy.
+      - row: 7
+        carried_from_page: EMT
+        note: >-
+          <strong>PENDING</strong> — row 7: PEMS 2024 does not print this rule in any
+          administrative policy; it appears only as prose in the Behavioral Emergencies
+          restraint guidelines (p.73), which carries no level-badged row. No policy and
+          no provider level is published for it. <strong>Pending OMD authorization</strong>
+          — no provider level applies until the OMD authorizes it. See
+          <code>audit/level-scan/level-rule-ledger.md</code>.
+        reason: >-
+          PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol
+          restraint guidelines (p.73: "If law-enforcement restraints have been utilized (for
+          example handcuffs or flex-cuffs), a law enforcement officer should accompany the
+          patient"), not as an administrative policy and not as a level-badged row. No policy and
+          no level is published; the wording on this page is the agency policy.
+
+  - file: protocols/administrative/01_Infant_Abandonment_PROC.md
+    pems_equivalent: >-
+      no PEMS administrative policy prints this action; the row reason
+      names where PEMS prints it, if anywhere
+    rows:
+      - row: 2
+        carried_from_page: EMT
+        note: >-
+          <strong>PENDING</strong> — row 2: PEMS 2024 prints no assessment or treatment
+          step in the Infant Abandonment policy (p.25), so this instruction is the agency's
+          own. No policy and no provider level is published for it. <strong>Pending OMD
+          authorization</strong> — no provider level applies until the OMD authorizes it.
+          See <code>audit/level-scan/level-rule-ledger.md</code>.
+        reason: >-
+          The Infant Abandonment policy (p.25) prints what to do with a surrendered infant
+          (contact CPS or law enforcement, and transport if indicated) but no assessment or
+          treatment step. "Assess the infant and provide medical care per these Protocols" is the
+          agency page's own instruction and is not printed in any PEMS administrative policy.
+
+  - file: protocols/administrative/01_Stroke_Field_Triage_PROC.md
+    pems_equivalent: >-
+      no PEMS administrative policy prints this action; the row reason
+      names where PEMS prints it, if anywhere
+    rows:
+      - row: 4
+        carried_from_page: EMT
+        note: >-
+          <strong>PENDING</strong> — row 4: the Stroke Field Triage policy (p.37) prints no
+          life-threat routing branch, so this one is the agency's own. No policy and no
+          provider level is published for it. <strong>Pending OMD authorization</strong> —
+          no provider level applies until the OMD authorizes it. See
+          <code>audit/level-scan/level-rule-ledger.md</code>.
+        reason: >-
+          The Stroke Field Triage policy (p.37) prints the RACE/glucose/destination algorithm and
+          no "life threats go to the nearest ED" branch. That branch is the agency page's own
+          addition.

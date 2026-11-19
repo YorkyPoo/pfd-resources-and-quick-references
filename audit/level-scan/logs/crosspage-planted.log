@@ -1,0 +1,26 @@
+# Planted-defect proof for the new checks
+
+Each case: make the defect in the working tree, run `scripts/level_rule.py --check`,
+record the exit code and the failures it named, then `git checkout --` the file.
+
+## remove the +MC marker on Smoke Inhalation row 7
+EXIT=1
+   - protocols/respiratory/03_Smoke_Inhalation_PROC.md row 7: the page printed this level cell in brackets and row-bindings.yaml marks it mc_required, but the chip carries 0 +MC markers, expected exactly 1
+
+## double the +MC marker on Smoke Inhalation row 7
+EXIT=1
+   - protocols/respiratory/03_Smoke_Inhalation_PROC.md row 7: the page printed this level cell in brackets and row-bindings.yaml marks it mc_required, but the chip carries 2 +MC markers, expected exactly 1
+   - protocols/respiratory/03_Smoke_Inhalation_PROC.md row 7: 2 +MC markers, expected 1
+
+## drop cross_page: true from Smoke Inhalation row 7
+EXIT=1
+   - protocols/respiratory/03_Smoke_Inhalation_PROC.md row 7: cites p.88#8, outside this page's own source [153, 239], but is not marked cross_page: true
+
+## replace a quoted_row_text with words the cited row does not print
+EXIT=1
+   - protocols/respiratory/03_Smoke_Inhalation_PROC.md row 7: quoted_row_text is not a verbatim span of the cited row p.88#8 — the citation does not rest on the source's own words
+   - protocols/respiratory/03_Smoke_Inhalation_PROC.md row 8: quoted_row_text is not a verbatim span of the cited row p.88#8 — the citation does not rest on the source's own words
+   - protocols/respiratory/03_Smoke_Inhalation_PROC.md row 9: quoted_row_text is not a verbatim span of the cited row p.88#8 — the citation does not rest on the source's own words
+
+## restored tree — `--check`
+EXIT=0

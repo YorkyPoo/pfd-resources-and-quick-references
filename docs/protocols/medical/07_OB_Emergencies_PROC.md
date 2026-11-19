@@ -25,20 +25,20 @@ This protocol outlines the assessment and management of obstetrical emergencies,
     - Uterine rupture
 
 ### Interventions
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Follow Universal Patient Care, don appropriate PPE, and visualize perineum for crowning or presenting part. |  | • | • | • | • |
-| 2 | **Normal Delivery:** Apply gentle pressure on infant's skull to prevent explosive delivery. Check for nuchal cord. Dry, warm, and stimulate the neonate. DO NOT perform routine airway suctioning. |  | • | • | • | • |
-| 3 | **Shoulder Dystocia:** Place mother in McRobert's position (knees to chest) and apply suprapubic pressure. |  | • | • | • | • |
-| 4 | **Umbilical Cord Prolapse:** Wrap exposed cord in saline-moistened gauze. Elevate mother's hips or place in Trendelenburg position. Insert gloved hand to relieve pressure on the cord. DO NOT attempt vaginal delivery. |  | • | • | • | • |
-| 5 | **Breech Delivery:** Allow controlled, spontaneous delivery to the umbilicus. Deliver the legs and support the body. |  | • | • | • | • |
-| 6 | **Eclampsia (Seizures):** Administer **[Magnesium Sulfate](../../pharmacology/Magnesium%20Sulfate.md) 4 g** IV/IO infusion over 10 minutes. |  |  |  |  | • |
-| 7 | If seizures persist > 5 minutes, administer **[Midazolam](../../pharmacology/Midazolam.md) 5 mg** IV/IO or **10 mg** IM. |  |  |  |  | • |
-| 8 | **Bleeding / Rupture / Abruptio:** Place patient in left lateral recumbent position. |  | • | • | • | • |
-| 9 | Establish IV access and administer **0.9% Normal Saline 20 mL/kg** up to **1,000 mL**. |  |  |  | • | • |
-| 10 | Contact Medical Control for guidance, especially for complications, eclampsia seizures, or difficult deliveries. | MC | MC | MC | MC | MC |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emr">EMR</span> | Follow Universal Patient Care, don appropriate PPE, and visualize perineum for crowning or presenting part. |
+| 2 | <span class="lvl lvl-emr">EMR</span> | **Normal Delivery:** Apply gentle pressure on infant's skull to prevent explosive delivery. Check for nuchal cord. Dry, warm, and stimulate the neonate. DO NOT perform routine airway suctioning. |
+| 3 | <span class="lvl lvl-emr">EMR</span> | **Shoulder Dystocia:** Place mother in McRobert's position (knees to chest) and apply suprapubic pressure. |
+| 4 | <span class="lvl lvl-emr">EMR</span> | **Umbilical Cord Prolapse:** Wrap exposed cord in saline-moistened gauze. Elevate mother's hips or place in Trendelenburg position. Insert gloved hand to relieve pressure on the cord. DO NOT attempt vaginal delivery. |
+| 5 | <span class="lvl lvl-emr">EMR</span> | **Breech Delivery:** Allow controlled, spontaneous delivery to the umbilicus. Deliver the legs and support the body. |
+| 6 | <span class="lvl lvl-i">I</span> | **Eclampsia (Seizures):** Administer **[Magnesium Sulfate](../../pharmacology/Magnesium%20Sulfate.md) 4 g** IV/IO infusion over 10 minutes. |
+| 7 | <span class="lvl lvl-i">I</span> | If seizures persist > 5 minutes, administer **[Midazolam](../../pharmacology/Midazolam.md) 5 mg** IV/IO or **10 mg** IM. |
+| 8 | <span class="lvl lvl-emr">EMR</span> | **Bleeding / Rupture / Abruptio:** Place patient in left lateral recumbent position. |
+| 9 | <span class="lvl lvl-a">A</span> | Establish IV access and administer **0.9% Normal Saline 20 mL/kg** up to **1,000 mL**. |
+| 10 | <span class="lvl lvl-mc">MC</span> | Contact Medical Control for guidance, especially for complications, eclampsia seizures, or difficult deliveries. |
 
 </div>
 

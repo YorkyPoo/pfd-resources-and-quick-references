@@ -32,26 +32,28 @@ Acute Coronary Syndrome (ACS) encompasses a spectrum of conditions resulting fro
     - **Musculoskeletal pain**
 
 ### Interventions
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-|---|---|:---:|:---:|:---:|:---:|:---:|
-| 1 | **Scene Safety / Initial Assessment:**<br>• Follow Universal Patient Care / Initial Patient Contact Poquoson Protocol.<br>• If stroke suspected, refer to Stroke / TIA Poquoson Protocol. |  | • | • | • | • |
-| 2 | **Airway / Respiratory Management:**<br>• If respiratory distress, refer to Airway Management and Ventilatory Support procedure and Respiratory Distress Poquoson Protocol.<br>• Assess SpO2. |  | • | • | • | • |
-| 3 | **Glucose Assessment:**<br>• Check blood glucose level.<br>• Refer to Hyperglycemia / Hypoglycemia Poquoson Protocol if indicated. |  | • | • | • | • |
-| 4 | **12-Lead ECG Acquisition (EMT):**<br>• Consider assessing EtCO2 and/or SpCO as indicated.<br>• Acquire **12-Lead ECG within 5 minutes of patient contact**.<br>• Transmit to receiving facility within 10 minutes of patient contact. |  |  | • | • | • |
-| 5 | **12-Lead ECG Interpretation - STEMI Criteria:**<br>• Intermediate and Paramedic providers may interpret as STEMI if:<br>  - Symptoms consistent with ACS/myocardial ischemia AND<br>  - ≥ 1 mm ST segment elevation in two or more contiguous leads |  |  |  |  | • |
-| 6 | **STEMI Alert / Notification:**<br>• Contact receiving facility via COR and provide "Pre-Hospital STEMI Alert" with patient's name and date of birth to facilitate rapid registration.<br>• Do NOT provide patient identifiers over the HEAR.<br>• Consider destination per Administrative Policy - STEMI Field Triage if indicated. |  |  |  |  | • |
-| 7 | **Extended ECG Assessment:**<br>• If 12-Lead ECG is indeterminate or high suspicion for cardiac ischemia, obtain serial ECGs at 10-minute intervals.<br>• Contact Poquoson OMD for guidance. |  |  |  | [I] | • |
-| 8 | **IV/IO Access:**<br>• Establish IV / IO access when indicated (refer to Intraosseous Access procedure). |  |  |  | • | • |
-| 9 | **Cardiac Monitoring:**<br>• Consider continuous cardiac monitoring. |  |  |  |  | • |
-| 10 | **[Aspirin](../../pharmacology/Aspirin.md) Administration (for ACS/STEMI):**<br>• **[Aspirin](../../pharmacology/Aspirin.md)** (NSAID - inhibits platelet action preventing clot formation)<br>• Indication: Acute coronary syndromes (ACS)/STEMI<br>• Confirm all "Rights" (Right patient, medication, dose, route, time)<br>• Ensure medications not expired, assess for drug-drug interactions<br>• Contraindications: Allergy to **[Aspirin](../../pharmacology/Aspirin.md)**/NSAIDs<br>• Precautions: History of GI bleeding/peptic ulcers, chronic kidney disease, trauma |  |  |  | • | • |
-| 11 | **[Nitroglycerin](../../pharmacology/Nitroglycerin.md) Administration:**<br>• Administer **[Nitroglycerin](../../pharmacology/Nitroglycerin.md)** per Pain Control Poquoson Protocol for chest pain.<br>• Confirm all "Rights" prior to administration. |  |  |  |  | • |
-| 12 | **Analgesia:**<br>• Consider analgesia (refer to Pain Control Poquoson Protocol). |  |  |  |  | • |
-| 13 | **Medical Control Contact:**<br>• Contact Poquoson OMD for guidance as needed. |  |  | [A] | • | • |
-| 14 | **Right-Sided / 15-Lead ECG:**<br>• Consider right-sided 12-Lead or 15-Lead ECG for additional assessment. |  |  |  | [I] | • |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emr">EMR</span> | **Scene Safety / Initial Assessment:**<br>• Follow the Universal Patient Care / Initial Patient Contact protocol.<br>• If stroke suspected, refer to the Stroke / TIA protocol. |
+| 2 | <span class="lvl lvl-emr">EMR</span> | **Airway / Respiratory Management:**<br>• If respiratory distress, refer to Airway Management and Ventilatory Support procedure and the Respiratory Distress protocol.<br>• Assess SpO2. |
+| 3 | <span class="lvl lvl-emr">EMR</span> | **Glucose Assessment:**<br>• Check blood glucose level.<br>• Refer to the Hyperglycemia / Hypoglycemia protocol if indicated. |
+| 4 | <span class="lvl lvl-emt">EMT</span> | **12-Lead ECG Acquisition:**<br>• Consider assessing EtCO2 and/or SpCO as indicated.<br>• Acquire **12-Lead ECG within 5 minutes of patient contact**.<br>• Transmit to receiving facility within 10 minutes of patient contact. |
+| 5 | <span class="lvl lvl-i">I</span> | **12-Lead ECG Interpretation - STEMI Criteria:**<br>• Intermediate and Paramedic providers may interpret as STEMI if:<br>  - Symptoms consistent with ACS/myocardial ischemia AND<br>  - ≥ 1 mm ST segment elevation in two or more contiguous leads |
+| 6 | <span class="lvl lvl-emt">EMT</span> | **STEMI Alert / Notification:**<br>• Contact receiving facility via COR and provide "Pre-Hospital STEMI Alert" with patient's name and date of birth to facilitate rapid registration.<br>• Do NOT provide patient identifiers over the HEAR.<br>• Consider destination per Administrative Policy - STEMI Field Triage if indicated. |
+| 7 | <span class="lvl lvl-mc">MC</span> | **Extended ECG Assessment:**<br>• If 12-Lead ECG is indeterminate or high suspicion for cardiac ischemia, obtain serial ECGs at 10-minute intervals.<br>• Contact Medical Control for guidance. |
+| 8 | <span class="lvl lvl-a">A</span> | **IV/IO Access:**<br>• Establish IV / IO access when indicated (refer to Intraosseous Access procedure). |
+| 9 | <span class="lvl lvl-i">I</span> | **Cardiac Monitoring:**<br>• Consider continuous cardiac monitoring. |
+| 10 | <span class="lvl lvl-emt">EMT</span> | **[Aspirin](../../pharmacology/Aspirin.md) Administration (for ACS/STEMI):**<br>• **[Aspirin](../../pharmacology/Aspirin.md)** (NSAID - inhibits platelet action preventing clot formation)<br>• Indication: Acute coronary syndromes (ACS)/STEMI<br>• Confirm all "Rights" (Right patient, medication, dose, route, time)<br>• Ensure medications not expired, assess for drug-drug interactions<br>• Contraindications: Allergy to **[Aspirin](../../pharmacology/Aspirin.md)**/NSAIDs<br>• Precautions: History of GI bleeding/peptic ulcers, chronic kidney disease, trauma |
+| 11 | <span class="lvl lvl-emt">EMT</span> | **[Nitroglycerin](../../pharmacology/Nitroglycerin.md) Administration:**<br>• Administer **[Nitroglycerin](../../pharmacology/Nitroglycerin.md)** per the Pain Control protocol for chest pain.<br>• Confirm all "Rights" prior to administration. |
+| 12 | <span class="lvl lvl-i">I</span> | **Analgesia:**<br>• Consider analgesia (refer to the Pain Control protocol). |
+| 13 | <span class="lvl lvl-mc">MC</span> | **Medical Control Contact:**<br>• Contact Medical Control for guidance as needed. |
+| 14 | <span class="lvl lvl-i">I</span><span class="lvl lvl-mc-req" title="this level performs the action only with Medical Control authorisation (the page printed this level cell in brackets)">+MC</span> | **Right-Sided / 15-Lead ECG:**<br>• Consider right-sided 12-Lead or 15-Lead ECG for additional assessment. |
 
 </div>
+
+<p class="lv-note"><strong>+MC</strong> — row 14: the level shown may perform this action only with Medical Control authorisation. This page printed that level in brackets; the marker carries that meaning into the single-level layout. It is not a second level and not the same as an <code>MC</code> chip, which marks an action that is itself a Medical Control contact.</p>
 
 ### Pearls
 1. **Atypical Presentations:** ACS may present as abdominal pain, nausea/vomiting, syncope, dyspnea, back pain, neck/jaw pain, or arm pain/discomfort without classic chest pain. Maintain high index of suspicion in at-risk populations.

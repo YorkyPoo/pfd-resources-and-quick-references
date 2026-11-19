@@ -9,17 +9,17 @@ Continuous monitoring of end-tidal CO₂ (EtCO₂) is a mandatory procedure for 
 - Mandatory for any patient with an ETT or SGA in place.
 
 ### Procedure
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| 1 | **Adequate respiratory effort:** Apply EtCO₂ sampling nasal cannula to patient. |  | • | • | • | • |
-| 2 | **Inadequate respiratory effort / Apnea:** Attach in-line EtCO₂ sampling device to BVM, CPAP, or ventilator. |  | • | • | • | • |
-| 3 | **Continuous Monitoring:** Monitor reading and waveform continuously. |  | • | • | • | • |
-| 4 | **Advanced Airway (ETT/SGA):** Continuous monitoring is mandatory. Sudden drop or loss of EtCO₂ signal requires immediate verification of airway device placement and ventilation. |  | • | • | • | • |
-| 5 | **Cardiac Arrest:** If EtCO₂ < 10 mmHg or dropping during CPR, optimize compression rate, depth, and recoil. If ROSC is achieved, adjust ventilation to maintain EtCO₂ 35-45 mmHg. Do not hyperventilate. |  | • | • | • | • |
-| 6 | **TBI / Stroke:** Adjust ventilation to maintain EtCO₂ 35-45 mmHg. Do not hyperventilate. |  | • | • | • | • |
-| 7 | **Obstructive airway disease (Asthma/COPD):** Consider permissive hypercapnia. Prioritize oxygenation. |  | • | • | • | • |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emt">EMT</span> | **Adequate respiratory effort:** Apply EtCO₂ sampling nasal cannula to patient. |
+| 2 | <span class="lvl lvl-emt">EMT</span> | **Inadequate respiratory effort / Apnea:** Attach in-line EtCO₂ sampling device to BVM, CPAP, or ventilator. |
+| 3 | <span class="lvl lvl-emt">EMT</span> | **Continuous Monitoring:** Monitor reading and waveform continuously. |
+| 4 | <span class="lvl lvl-emt">EMT</span> | **Advanced Airway (ETT/SGA):** Continuous monitoring is mandatory. Sudden drop or loss of EtCO₂ signal requires immediate verification of airway device placement and ventilation. |
+| 5 | <span class="lvl lvl-emt">EMT</span> | **Cardiac Arrest:** If EtCO₂ < 10 mmHg or dropping during CPR, optimize compression rate, depth, and recoil. If ROSC is achieved, adjust ventilation to maintain EtCO₂ 35-45 mmHg. Do not hyperventilate. |
+| 6 | <span class="lvl lvl-emt">EMT</span> | **TBI / Stroke:** Adjust ventilation to maintain EtCO₂ 35-45 mmHg. Do not hyperventilate. |
+| 7 | <span class="lvl lvl-emt">EMT</span> | **Obstructive airway disease (Asthma/COPD):** Consider permissive hypercapnia. Prioritize oxygenation. |
 
 </div>
 

@@ -19,20 +19,26 @@ To rapidly evaluate and get patients experiencing a suspected stroke to the most
     - Immediate Life-Threats (e.g., uncontrolled airway, cardiac arrest)
 
 ### Interventions
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap policy" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | **Time Management:** Maintain a goal scene time of less than 15 minutes. |  | • | • | • | • |
-| 2 | **Diagnostics:** Assess blood glucose. If < 60 mg/dL, treat per Hypoglycemia protocol. |  | • | • | • | • |
-| 3 | **Neurological Assessment:** Evaluate patient using **BEFAST** criteria and **RACE** scale. |  | • | • | • | • |
-| 4 | **Immediate Life-Threats:** If uncontrolled airway, cardiac arrest, etc. cannot be addressed during transport, route to the nearest ED. |  | • | • | • | • |
-| 5 | **Routing (< 24 Hours & LVO):** If Symptoms < 24 Hours (or unknown) AND Suspected LVO (RACE Score 5-9), transport to closest Comprehensive Stroke Center IF it does not increase transport time by 30 mins or greater. If it does, transport to nearest Primary Stroke Center. |  | • | • | • | • |
-| 6 | **Routing (> 24 Hours OR No LVO):** If Symptoms > 24 Hours OR Low Suspicion for LVO (RACE Score 0-4), transport to closest Stroke Center (Acute Stroke Ready, Primary, or Comprehensive). |  | • | • | • | • |
-| 7 | **Stroke Alert Activation:** If RACE ≥ 1, activate stroke alert system by notifying appropriate facility early. |  | • | • | • | • |
-| 8 | **Communication:** Early notification to Medical Control and/or Stroke Center. During transport, call COR with Name and DOB for rapid registration. |  | • | • | • | • |
+| # | Basis | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emt">EMT</span> | **Time Management:** Maintain a goal scene time of less than 15 minutes. |
+| 2 | <span class="lvl lvl-policy">POLICY</span> | **Diagnostics:** Assess blood glucose. If < 60 mg/dL, treat per Hypoglycemia protocol. |
+| 3 | <span class="lvl lvl-policy">POLICY</span> | **Neurological Assessment:** Evaluate patient using **BEFAST** criteria and **RACE** scale. |
+| 4 | <span class="lvl lvl-pending">PENDING</span> | **Immediate Life-Threats:** If uncontrolled airway, cardiac arrest, etc. cannot be addressed during transport, route to the nearest ED. |
+| 5 | <span class="lvl lvl-policy">POLICY</span> | **Routing (< 24 Hours & LVO):** If Symptoms < 24 Hours (or unknown) AND Suspected LVO (RACE Score 5-9), transport to closest Comprehensive Stroke Center IF it does not increase transport time by 30 mins or greater. If it does, transport to nearest Primary Stroke Center. |
+| 6 | <span class="lvl lvl-policy">POLICY</span> | **Routing (> 24 Hours OR No LVO):** If Symptoms > 24 Hours OR Low Suspicion for LVO (RACE Score 0-4), transport to closest Stroke Center (Acute Stroke Ready, Primary, or Comprehensive). |
+| 7 | <span class="lvl lvl-policy">POLICY</span> | **Stroke Alert Activation:** If RACE ≥ 1, activate stroke alert system by notifying appropriate facility early. |
+| 8 | <span class="lvl lvl-policy">POLICY</span> | **Communication:** Early notification to Medical Control and/or Stroke Center. During transport, call COR with Name and DOB for rapid registration. |
 
 </div>
+
+<p class="lv-note"><strong>POLICY</strong> — rows 2-3, 5-8: this is not a provider level. This page is a PEMS administrative policy, not a clinical protocol: each row is cited to the PEMS 2024 administrative policy that prints it — <em>Stroke Field Triage</em> (PEMS p.37) — and no provider level is published, because PEMS prints these rules as policy rather than as level-badged protocol rows. The policy and the verbatim span for every row are recorded in <code>audit/level-scan/level-rule-ledger.md</code>.
+
+A PEMS level on this page does not make it a protocol: row 1 is printed as row p.131#4 of the PEMS 2024 protocol and is cited there, so its chip is that row's level (EMT). No administrative policy prints it.
+
+<strong>PENDING</strong> — row 4: the Stroke Field Triage policy (p.37) prints no life-threat routing branch, so this one is the agency's own. No policy and no provider level is published for it. <strong>Pending OMD authorization</strong> — no provider level applies until the OMD authorizes it. See <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
 ### Pearls
 1. ⚠ **Time is Brain:** It is critical to accurately record the "last seen normal" time to determine the appropriate treatment window.

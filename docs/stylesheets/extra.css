@@ -582,3 +582,177 @@ details.fc p { margin: .2em 0 .9em; }
 .md-typeset .trainbar { padding: .45em .8em; font-size: .78rem; line-height: 1.3; }
 .md-typeset .trainbar p { margin: 0; }
 .md-typeset .trainbar strong { font-size: .95em; letter-spacing: .02em; }
+
+/* ============================================================
+   .lv — one provider level per action (scripts/level_rule.py)
+   ============================================================
+   PEMS 2024 prints a single provider badge beside each action; the site used to print
+   a 7-column EMR|EMT|A|I|P dot matrix, which published every level the action is
+   permitted at instead of the lowest one, and disagreed with the level typed into the
+   action text. This chassis prints exactly one badge and then the action, so the page
+   reads "EMT — Obtain and transmit 12-Lead ECG" with nothing to reconcile.
+
+   Column 3 carries the action text and keeps the width; # and Level are pinned narrow
+   so a 390px phone shows the badge and the whole sentence without horizontal scroll.
+   Chip colours mirror the badges PEMS prints (grey EMR, yellow EMT, orange A, blue I,
+   green P, red MC) so a provider reading the source sees the same colour here. */
+
+.lv-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1em 0; }
+.md-typeset .lv-wrap table { width: 100%; margin: 0; }
+/* Material bleeds its table wrapper by -16px each side (and pads it back by 16px). Inside
+   .lv-wrap that bleed is wider than the container, so it clipped the action column on a
+   390px phone and forced a stray horizontal scroll. Neutralise it here. This is a shared,
+   deliberate cross-page change, recorded in audit/level-scan/stylesheet-changes.yaml. */
+.md-typeset .lv-wrap .md-typeset__scrollwrap { margin: 0; }
+.md-typeset .lv-wrap .md-typeset__table { padding: 0; }
+.md-typeset .lv-wrap table th,
+.md-typeset .lv-wrap table td { vertical-align: top; padding-top: .5em; padding-bottom: .5em; }
+.md-typeset .lv-wrap table th:nth-child(1),
+.md-typeset .lv-wrap table td:nth-child(1) {
+  width: 2.6em; min-width: 2.6em; max-width: 2.6em; text-align: center;
+  padding-left: .2em; padding-right: .2em; }
+.md-typeset .lv-wrap table th:nth-child(2),
+.md-typeset .lv-wrap table td:nth-child(2) {
+  width: 4.8em; min-width: 4.8em; max-width: 4.8em; text-align: center;
+  white-space: nowrap; padding-left: .2em; padding-right: .2em; }
+.md-typeset .lv-wrap table th:nth-child(3),
+.md-typeset .lv-wrap table td:nth-child(3) { width: auto; text-align: left; }
+.md-typeset .lv-wrap table td:nth-child(3) strong { display: inline; }
+
+.md-typeset .lvl {
+  display: inline-block; min-width: 2.8em; padding: .16em .3em;
+  border-radius: .28em; font-size: .68rem; font-weight: 800; letter-spacing: .04em;
+  line-height: 1.4; text-align: center; color: #12161c; }
+.lvl-emr { background: #b9c2cb; }
+.lvl-emt { background: #f2d64b; }
+.lvl-a   { background: #eda646; }
+.lvl-i   { background: #a9c8e4; }
+.lvl-p   { background: #8fbf4d; }
+.lvl-mc  { background: #c62828; color: #ffffff; }
+/* +MC — "this level performs the action only with Medical Control authorisation".
+   The site's pre-conversion pages printed that level cell in brackets ([P], [I]...).
+   Deliberately NOT the `MC` chip above: `MC` means the action IS a Medical Control
+   contact (filled red, level column), while +MC qualifies an ordinary level chip and
+   sits under it as a second, outlined marker so the two never read alike. */
+.md-typeset .lv-wrap .lvl-mc-req {
+  display: block; margin: .2em auto 0; background: transparent;
+  border: 1.5px solid #6a1b9a; color: #6a1b9a;
+  border-radius: .28em; font-size: .56rem; font-weight: 800;
+  letter-spacing: .03em; padding: .04em .18em; min-width: 2.8em; }
+[data-md-color-scheme="slate"] .md-typeset .lv-wrap .lvl-mc-req {
+  border-color: #ce93d8; color: #e1bee7; }
+/* PENDING — Pending OMD Authorization. Not a provider level and not a PEMS badge: this
+   protocol's source (ODEMSA) is not published in PEMS 2024, so no level can be verified.
+   Deliberately dashed and unfilled so it never reads as an EMR/EMT/A/I/P/MC badge. */
+.lvl-pending {
+  background: transparent; border: 1.5px dashed var(--md-default-fg-color--light);
+  color: var(--md-default-fg-color--light); min-width: 5.6em; font-size: .62rem; }
+.md-typeset .lv-wrap.pending table th:nth-child(2),
+.md-typeset .lv-wrap.pending table td:nth-child(2) {
+  width: 7em; min-width: 7em; max-width: 7em; }
+/* POLICY — the action is printed in a PEMS 2024 ADMINISTRATIVE POLICY (the 14 policies on
+   the p.9 table of contents), not as a level-badged protocol row. Deliberately NOT a
+   provider level: solid dark slate with white text and a wide box, so it cannot be read as
+   one of the pastel EMR/EMT/A/I/P badges, as the red MC badge, or as the dashed PENDING
+   chip. A POLICY row publishes no provider level at all. */
+.lvl-policy {
+  background: #263238; border: 1.5px solid #263238; color: #ffffff;
+  min-width: 5.6em; font-size: .62rem; letter-spacing: .06em; }
+[data-md-color-scheme="slate"] .lvl-policy {
+  background: #cfd8dc; border-color: #cfd8dc; color: #12161c; }
+.md-typeset .lv-wrap.policy table th:nth-child(2),
+.md-typeset .lv-wrap.policy table td:nth-child(2) {
+  width: 7em; min-width: 7em; max-width: 7em; }
+
+.md-typeset .lvl-own,
+.md-typeset .lvl-req {
+  font-size: .68rem; font-weight: 800; vertical-align: super; line-height: 0;
+  margin-left: .1em; }
+.md-typeset .lvl-own { color: #b3261e; }
+.md-typeset .lvl-req { color: var(--md-default-fg-color--light); }
+[data-md-color-scheme="slate"] .md-typeset .lvl-own { color: #ff8a80; }
+
+.md-typeset .lv-note {
+  margin: .1em 0 0; font-size: .72rem; line-height: 1.5;
+  color: var(--md-default-fg-color--light); }
+.md-typeset .lv-note strong { color: var(--md-primary-fg-color); }
+
+/* ============================================================
+   Outstanding Decisions page (docs/protocols/outstanding-decisions.md)
+   Phone-first: stacked definition cards, no wide table, nothing clipped.
+   ============================================================ */
+.md-typeset .od-card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-left: 4px solid #607d8b;
+  border-radius: 4px;
+  padding: .55em .7em .6em;
+  margin: .7em 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.md-typeset .od-cat-conflict { border-left-color: #b26a00; }
+.md-typeset .od-cat-pending  { border-left-color: #6a4c93; }
+.md-typeset .od-cat-question { border-left-color: #1565c0; }
+
+.md-typeset .od-card p { margin: .3em 0; }
+.md-typeset .od-card p:first-child { margin-top: 0; }
+.md-typeset .od-card p:last-child { margin-bottom: 0; }
+
+.md-typeset .od-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4em;
+  align-items: center;
+}
+.md-typeset .od-row {
+  font-weight: 700;
+  font-size: .72rem;
+  letter-spacing: .02em;
+  color: var(--md-default-fg-color--light);
+}
+.md-typeset .od-action { font-weight: 600; }
+.md-typeset .od-reason { font-size: .78rem; }
+.md-typeset .od-near   { font-size: .74rem; color: var(--md-default-fg-color--light); }
+.md-typeset .od-question { font-size: .8rem; }
+
+.md-typeset .od-batch,
+.md-typeset .od-count {
+  display: inline-block;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  padding: .1em .45em;
+  border-radius: 999px;
+  background: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color);
+}
+.md-typeset .od-page-block { margin: .5em 0 1.4em; }
+.md-typeset .od-pagenote {
+  font-size: .74rem;
+  line-height: 1.5;
+  margin: .2em 0 .4em;
+  padding: .45em .6em;
+  border-radius: 4px;
+  background: var(--md-default-fg-color--lightest);
+}
+.md-typeset .od-chip {
+  display: inline-block;
+  font-size: .64rem;
+  font-weight: 700;
+  padding: .1em .5em;
+  border-radius: 999px;
+  border: 1.5px solid currentColor;
+}
+.md-typeset .od-chip-nowhere  { color: #607d8b; }
+.md-typeset .od-chip-conflict { color: #b26a00; }
+.md-typeset .od-foot {
+  font-size: .7rem;
+  color: var(--md-default-fg-color--light);
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  padding-top: .6em;
+  margin-top: 1.6em;
+}
+
+/* long file identifiers inside a card must break rather than push the paragraph */
+.md-typeset .od-card code,
+.md-typeset .od-card a { overflow-wrap: anywhere; word-break: break-word; }

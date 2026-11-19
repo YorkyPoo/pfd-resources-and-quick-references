@@ -18,21 +18,23 @@ Guidelines for managing patients struck by lightning, emphasizing scene safety, 
     - Airway obstruction vs. VF/VT
 
 ### Interventions
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Follow Universal Patient Care / Initial Patient Contact protocol. |  | • | • | • | • |
-| 2 | Ensure scene safety and that the patient is not energized (avoid second victim). Fully expose the injured area. Remove constricting items including clothing. |  | • | • | • | • |
-| 3 | If multiple patients are present: Treat cardiac arrest FIRST (reverse triage). |  | • | • | • | • |
-| 4 | Assess airway and respiratory effort. Ventilate using least invasive means necessary. |  | • | • | • | • |
-| 5 | Estimate TBSA and burn depth (only count 2nd and 3rd degree burns). 1% BSA = area of patient's palm. |  |  | • | • | • |
-| 6 | Apply clean, dry dressings to burns. Prevent loss of body heat. Keep the patient warm. |  |  | • | • | • |
-| 7 | Obtain and transmit a 12-Lead ECG / Monitor rhythm. |  |  | • | • | • |
-| 8 | Establish IV/IO access on a non-burned extremity if possible (preferably x2 sites on non-burned skin). Only if necessary, obtain IV/IO access through a burned area. |  |  |  | • | • |
-| 9 | For an adult patient with SBP less than 90 and TBSA greater than 20%, administer fluid resuscitation:<br>Adult: **0.9% Sodium Chloride** at **500 mL/hr** IV/IO<br>Pediatric (6-12 years): **0.9% Sodium Chloride** at **250 mL/hr** IV/IO<br>Pediatric (≤5 years): **0.9% Sodium Chloride** at **125 mL/hr** IV/IO |  |  |  | • | • |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emr">EMR</span> | Follow Universal Patient Care / Initial Patient Contact protocol. |
+| 2 | <span class="lvl lvl-emr">EMR</span> | Ensure scene safety and that the patient is not energized (avoid second victim). Fully expose the injured area. Remove constricting items including clothing. |
+| 3 | <span class="lvl lvl-emr">EMR</span> | If multiple patients are present: Treat cardiac arrest FIRST (reverse triage). |
+| 4 | <span class="lvl lvl-emr">EMR</span> | Assess airway and respiratory effort. Ventilate using least invasive means necessary. |
+| 5 | <span class="lvl lvl-emt">EMT</span> | Estimate TBSA and burn depth (only count 2nd and 3rd degree burns). 1% BSA = area of patient's palm. |
+| 6 | <span class="lvl lvl-emt">EMT</span> | Apply clean, dry dressings to burns. Prevent loss of body heat. Keep the patient warm. |
+| 7 | <span class="lvl lvl-emt">EMT</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | Obtain and transmit a 12-Lead ECG / Monitor rhythm. |
+| 8 | <span class="lvl lvl-a">A</span> | Establish IV/IO access on a non-burned extremity if possible (preferably x2 sites on non-burned skin). Only if necessary, obtain IV/IO access through a burned area. |
+| 9 | <span class="lvl lvl-a">A</span> | For an adult patient with SBP less than 90 and TBSA greater than 20%, administer fluid resuscitation:<br>Adult: **0.9% Sodium Chloride** at **500 mL/hr** IV/IO<br>Pediatric (6-12 years): **0.9% Sodium Chloride** at **250 mL/hr** IV/IO<br>Pediatric (≤5 years): **0.9% Sodium Chloride** at **125 mL/hr** IV/IO |
 
 </div>
+
+<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — row 7: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
 ### Pearls
 * ⚠ Lightning strikes with multiple victims require REVERSE triage - treat pulseless/apneic patients first.

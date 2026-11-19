@@ -10,16 +10,16 @@ Continuous Positive Airway Pressure (CPAP) provides positive pressure ventilatio
 - Signs of respiratory distress: Accessory muscle use, SpO2 <94%, Respiratory rate >24, Inability to speak in complete sentences.
 
 ### Procedure
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| 1 | Explain procedure and indications to the patient. |  | • | • | • | • |
-| 2 | Ensure adequate oxygen supply to the CPAP device. |  | • | • | • | • |
-| 3 | Set positive end-expiratory pressure (PEEP) to 5 cmH2O. |  | • | • | • | • |
-| 4 | Place mask over mouth/nose with oxygen flowing. Secure with straps, starting with lower straps. Minimize air leak. |  | • | • | • | • |
-| 5 | Reassess patient (SpO2, EtCO2, work of breathing). |  | • | • | • | • |
-| 6 | Consider titrating PEEP (5–15 cmH2O) as needed to improve ventilation. |  |  |  |  | • |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emt">EMT</span> | Explain procedure and indications to the patient. |
+| 2 | <span class="lvl lvl-emt">EMT</span> | Ensure adequate oxygen supply to the CPAP device. |
+| 3 | <span class="lvl lvl-emt">EMT</span> | Set positive end-expiratory pressure (PEEP) to 5 cmH2O. |
+| 4 | <span class="lvl lvl-emt">EMT</span> | Place mask over mouth/nose with oxygen flowing. Secure with straps, starting with lower straps. Minimize air leak. |
+| 5 | <span class="lvl lvl-emt">EMT</span> | Reassess patient (SpO2, EtCO2, work of breathing). |
+| 6 | <span class="lvl lvl-emt">EMT</span> | Consider titrating PEEP (5–15 cmH2O) as needed to improve ventilation. |
 
 </div>
 

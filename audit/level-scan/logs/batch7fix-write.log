@@ -1,0 +1,17 @@
+Batch 7 review fix — `--write` idempotency and tree equality on fd3b85d
+
+Gate: run scripts/level_rule.py --write twice on the committed tree and compare
+(a) the md5 of every docs/**/*.md file after each run, and (b) `git status`.
+
+run 1: python3 scripts/level_rule.py --write   -> EXIT=0
+run 2: python3 scripts/level_rule.py --write   -> EXIT=0
+
+docs md5 after run 1: 9294a520605c52a79d07b300e70447a9
+docs md5 after run 2: 9294a520605c52a79d07b300e70447a9
+=> byte-identical: a re-run is a no-op.
+
+git status before run 1 == after run 2 (only the gate logs written by this batch
+differ); no tracked file under docs/ or audit/level-scan/ changed across the two runs,
+so the committed tree IS what --write produces.
+
+EXIT=0

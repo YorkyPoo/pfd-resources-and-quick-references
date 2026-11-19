@@ -1,0 +1,6 @@
+PLANTED DEFECT PROBE (evidence the page's links are gated by --strict)
+[90m  To disable this warning, set NO_MKDOCS_2_WARNING=1.[0m
+WARNING -  Doc file 'protocols/outstanding-decisions.md' contains a link 'cardiac/04_DOES_NOT_EXIST.md', but the target 'protocols/cardiac/04_DOES_NOT_EXIST.md' is not found among documentation files.
+EXIT=1
+
+(defect reverted by re-running scripts/build_outstanding_decisions.py; the page is generated, so the planted edit cannot survive)

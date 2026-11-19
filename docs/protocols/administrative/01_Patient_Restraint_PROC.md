@@ -28,20 +28,22 @@ Guidelines and procedures for physical and chemical patient restraint to ensure 
     - Frequency of respiratory/mental status change assessments
 
 ### Interventions
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap policy" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | **Request Law Enforcement if needed**<br>Call for assistance prior to attempting restraint procedures. |  | • | • | • | • |
-| 2 | **Rule out/treat medical causes**<br>Consider and treat medical causes of combativeness (hypoxia, head injury, hypoglycemia). |  | • | • | • | • |
-| 3 | **Place patient supine on backboard**<br>**NEVER PRONE**. |  | • | • | • | • |
-| 4 | **Secure extremities/check circulation every 15 mins**<br>Attempt lower extremities first (soft restraints around both ankles), then arms at sides. Secure backboard to stretcher. If necessary, utilize cervical spine precautions. |  | • | • | • | • |
-| 5 | **Apply SpO2 and monitor respiratory status**<br>Evaluate respiratory/cardiac status to assure no airway compromise exists; apply supplemental oxygen if indicated. |  | • | • | • | • |
-| 6 | **Avoid impeding respiratory function with chest straps**<br>DO NOT tighten chest straps to the point of impeding respiratory function. |  | • | • | • | • |
-| 7 | **Chemical Restraint: Assess vitals <5 mins then q10 mins**<br>And prior to any repeat dose. Monitor ECG, obtain 12-Lead, consider IN medications and establish IV/IO if possible. |  |  |  | • | • |
-| 8 | **Refer to Behavioral Emergencies Protocol for sedatives**<br>Sedative agents may be needed to restrain violently combative patients. (Refer to Poquoson Protocol(s) for Behavioral Emergencies). |  |  |  | • | • |
+| # | Basis | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-policy">POLICY</span> | **Request Law Enforcement if needed**<br>Call for assistance prior to attempting restraint procedures. |
+| 2 | <span class="lvl lvl-policy">POLICY</span> | **Rule out/treat medical causes**<br>Consider and treat medical causes of combativeness (hypoxia, head injury, hypoglycemia). |
+| 3 | <span class="lvl lvl-policy">POLICY</span> | **Place patient supine on backboard**<br>**NEVER PRONE**. |
+| 4 | <span class="lvl lvl-policy">POLICY</span> | **Secure extremities/check circulation every 15 mins**<br>Attempt lower extremities first (soft restraints around both ankles), then arms at sides. Secure backboard to stretcher. If necessary, utilize cervical spine precautions. |
+| 5 | <span class="lvl lvl-policy">POLICY</span> | **Apply SpO2 and monitor respiratory status**<br>Evaluate respiratory/cardiac status to assure no airway compromise exists; apply supplemental oxygen if indicated. |
+| 6 | <span class="lvl lvl-policy">POLICY</span> | **Avoid impeding respiratory function with chest straps**<br>DO NOT tighten chest straps to the point of impeding respiratory function. |
+| 7 | <span class="lvl lvl-policy">POLICY</span> | **Chemical Restraint: Assess vitals <5 mins then q10 mins**<br>And prior to any repeat dose. Monitor ECG, obtain 12-Lead, consider IN medications and establish IV/IO if possible. |
+| 8 | <span class="lvl lvl-policy">POLICY</span> | **Refer to Behavioral Emergencies Protocol for sedatives**<br>Sedative agents may be needed to restrain violently combative patients. (Refer to the Behavioral Emergencies Protocol). |
 
 </div>
+
+<p class="lv-note"><strong>POLICY</strong> — rows 1-8: this is not a provider level. This page is a PEMS administrative policy, not a clinical protocol: each row is cited to the PEMS 2024 administrative policy that prints it — <em>Patient Restraint</em> (PEMS p.31, 32) — and no provider level is published, because PEMS prints these rules as policy rather than as level-badged protocol rows. The policy and the verbatim span for every row are recorded in <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
 ### Pearls
 * ⚠ **NEVER restrain a patient prone.**

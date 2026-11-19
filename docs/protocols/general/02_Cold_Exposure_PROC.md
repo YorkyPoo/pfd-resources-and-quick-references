@@ -17,19 +17,19 @@ Guidelines for managing systemic hypothermia and localized cold injuries, emphas
     - Assess pulse and respiratory rate for at least 60 seconds.
 
 ### Interventions
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Follow General – Universal Patient Care/Initial Patient Contact Protocol. |  | • | • | • | • |
-| 2 | Remove all wet clothing, place in a warm environment, prevent further heat loss, and replace with warm blankets. |  | • | • | • | • |
-| 3 | Handle the patient gently and avoid excessive movement (risk of cardiac arrest/VF). |  | • | • | • | • |
-| 4 | Apply warmed and humidified **O2** if available. |  | • | • | • | • |
-| 5 | **Localized cold injury:** Apply loose, sterile dressings to the affected part. |  | • | • | • | • |
-| 6 | If patient is alert and responsive: Use active external rewarming with heat packs, warm blankets, etc. |  | • | • | • | • |
-| 7 | **Cardiac Arrest:** Make persistent attempts at resuscitation for victims of prolonged cold exposure. Begin CPR and continuous warming procedures. | • | • | • | • | • |
-| 8 | Rapid transport immediately with resuscitation efforts continued en route. Do not delay transport waiting for ALS. | • | • | • | • | • |
-| 9 | Contact Poquoson Medical Control prior to use of AED. | MC | MC | MC | MC | MC |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emr">EMR</span> | Follow General – Universal Patient Care/Initial Patient Contact Protocol. |
+| 2 | <span class="lvl lvl-emr">EMR</span> | Remove all wet clothing, place in a warm environment, prevent further heat loss, and replace with warm blankets. |
+| 3 | <span class="lvl lvl-emr">EMR</span> | Handle the patient gently and avoid excessive movement (risk of cardiac arrest/VF). |
+| 4 | <span class="lvl lvl-emr">EMR</span> | Apply warmed and humidified **O2** if available. |
+| 5 | <span class="lvl lvl-emr">EMR</span> | **Localized cold injury:** Apply loose, sterile dressings to the affected part. |
+| 6 | <span class="lvl lvl-emt">EMT</span> | If patient is alert and responsive: Use active external rewarming with heat packs, warm blankets, etc. |
+| 7 | <span class="lvl lvl-emr">EMR</span> | **Cardiac Arrest:** Make persistent attempts at resuscitation for victims of prolonged cold exposure. Begin CPR and continuous warming procedures. |
+| 8 | <span class="lvl lvl-emt">EMT</span> | Rapid transport immediately with resuscitation efforts continued en route. Do not delay transport waiting for ALS. |
+| 9 | <span class="lvl lvl-mc">MC</span> | Contact Medical Control prior to use of AED. |
 
 </div>
 

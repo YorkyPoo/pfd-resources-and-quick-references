@@ -9,15 +9,15 @@ Management of unstable symptomatic bradycardia (HR <60 bpm).
 - Pediatric: Symptomatic bradycardia despite adequate ventilation, high-quality CPR, and appropriate pharmacological interventions ([Epinephrine](../pharmacology/Epinephrine.md)/[Atropine](../pharmacology/Atropine%20Sulfate.md)).
 
 ### Procedure
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Expose/clean chest, apply 4-lead ECG. | | | | • | • |
-| 2 | Apply pads (anterior/posterior) and set to pacing mode. | | | | • | • |
-| 3 | Set rate at 80 bpm. Initial current 50mA. | | | | • | • |
-| 4 | Increase current (10mA/10s) until electrical capture achieved. | | | | • | • |
-| 5 | Palpate femoral pulse to confirm mechanical capture. | | | | • | • |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-i">I</span> | Expose/clean chest, apply 4-lead ECG. |
+| 2 | <span class="lvl lvl-i">I</span> | Apply pads (anterior/posterior) and set to pacing mode. |
+| 3 | <span class="lvl lvl-i">I</span> | Set rate at 80 bpm. Initial current 50mA. |
+| 4 | <span class="lvl lvl-i">I</span> | Increase current (10mA/10s) until electrical capture achieved. |
+| 5 | <span class="lvl lvl-i">I</span> | Palpate femoral pulse to confirm mechanical capture. |
 
 </div>
 

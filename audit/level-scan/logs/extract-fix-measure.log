@@ -1,0 +1,13 @@
+== row totals ==
+before (HEAD artifact): 535 rows, 94 pages parsed
+after  (regenerated)  : 536 rows, 95 pages parsed
+== parse_page(78), fixed code ==
+kind=continuation n_badges=1 rows=1 orphans=0
+  row: ['MC'] | If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact medical control for guidance.
+== full-PDF sweep: pages carrying >=1 badge but contributing ZERO rows ==
+count: 0 
+== rows added / removed vs the committed artifact ==
+only in new: [(78, 6, 'If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact medical control for guidance.', ('MC',))]
+only in old: []
+count delta: 1
+EXIT=0

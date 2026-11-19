@@ -1,0 +1,3324 @@
+{
+ "note": "C2 queue. Every row the total counts is enumerated in `rows`; the total is derived from the three sources minus dedupe, never hand-summed. Dedupe is by (file, row). The held-row split and every verdict are a join against pems_table.json by (pems_page, pems_ordinal) \u2014 no hand verdicts, no hand published levels. Core ambiguous rows are parsed live from ambiguous-rows.md. Dispositions encode an operator ruling, not an inference; see disposition_legend.",
+ "disposition_legend": {
+  "held_level_correct": "level is right; the open question is which site row owns the PEMS row. Split-review list. NOT matched, NOT in C3's apply set, no cells change.",
+  "ownership_adjudication": "ownership call \u2014 choosing the owner determines the level. Not a level question.",
+  "site_gap_add": "no owner to choose and no level printed on the page; carry the PEMS columns through to C3 as an ADD.",
+  "ambiguous_adjudication": "structure could not settle the row; reason_kind says which shape of ambiguity.",
+  "named_item": "named extra still requiring a human."
+ },
+ "counts": {
+  "rows_listed_here": 61,
+  "derived_total": 61,
+  "source_derivation": {
+   "held_rows": 16,
+   "core_ambiguous_from_md": 42,
+   "core_ambiguous_by_kind": {
+    "multiple_candidates": 11,
+    "shared_pems_row": 31
+   },
+   "extra_named": 3,
+   "dedupe_dropped": 0
+  },
+  "disposition_histogram": {
+   "ownership_adjudication": 8,
+   "held_level_correct": 7,
+   "site_gap_add": 1,
+   "named_item": 3,
+   "ambiguous_adjudication": 42
+  },
+  "disposition_expected": {
+   "held_level_correct": 7,
+   "ownership_adjudication": 8,
+   "site_gap_add": 1,
+   "ambiguous_adjudication": 42,
+   "named_item": 3
+  },
+  "held_total": 16,
+  "held_agrees": 7,
+  "held_disagrees": 9,
+  "held_direction_histogram": {
+   "site_broader": 1,
+   "site_narrower": 7,
+   "site_gap": 1
+  },
+  "site_broader": [
+   {
+    "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+    "row": 4,
+    "pems_columns": {
+     "EMR": "",
+     "EMT": "",
+     "A": "",
+     "I": "\u2022",
+     "P": "\u2022"
+    },
+    "site_cells": [
+     "",
+     "\u2022",
+     "\u2022",
+     "\u2022",
+     "\u2022"
+    ]
+   }
+  ],
+  "split_review_list": [
+   {
+    "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+    "row": 13,
+    "pems_page": 107,
+    "pems_ordinal": 9,
+    "site_cells": [
+     "MC",
+     "MC",
+     "MC",
+     "MC",
+     "MC"
+    ],
+    "pems_columns": {
+     "EMR": "MC",
+     "EMT": "MC",
+     "A": "MC",
+     "I": "MC",
+     "P": "MC"
+    }
+   },
+   {
+    "file": "protocols/neurologic/05_Stroke_TIA_PROC.md",
+    "row": 6,
+    "pems_page": 131,
+    "pems_ordinal": 4,
+    "site_cells": [
+     "",
+     "\u2022",
+     "\u2022",
+     "\u2022",
+     "\u2022"
+    ],
+    "pems_columns": {
+     "EMR": "",
+     "EMT": "\u2022",
+     "A": "\u2022",
+     "I": "\u2022",
+     "P": "\u2022"
+    }
+   },
+   {
+    "file": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+    "row": 3,
+    "pems_page": 153,
+    "pems_ordinal": 2,
+    "site_cells": [
+     "",
+     "\u2022",
+     "\u2022",
+     "\u2022",
+     "\u2022"
+    ],
+    "pems_columns": {
+     "EMR": "",
+     "EMT": "\u2022",
+     "A": "\u2022",
+     "I": "\u2022",
+     "P": "\u2022"
+    }
+   },
+   {
+    "file": "protocols/respiratory/03_Pneumothorax_PROC.md",
+    "row": 11,
+    "pems_page": 243,
+    "pems_ordinal": 4,
+    "site_cells": [
+     "",
+     "",
+     "",
+     "\u2022",
+     "\u2022"
+    ],
+    "pems_columns": {
+     "EMR": "",
+     "EMT": "",
+     "A": "",
+     "I": "\u2022",
+     "P": "\u2022"
+    }
+   },
+   {
+    "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+    "row": 4,
+    "pems_page": 153,
+    "pems_ordinal": 2,
+    "site_cells": [
+     "",
+     "\u2022",
+     "\u2022",
+     "\u2022",
+     "\u2022"
+    ],
+    "pems_columns": {
+     "EMR": "",
+     "EMT": "\u2022",
+     "A": "\u2022",
+     "I": "\u2022",
+     "P": "\u2022"
+    }
+   },
+   {
+    "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+    "row": 3,
+    "pems_page": 239,
+    "pems_ordinal": 3,
+    "site_cells": [
+     "",
+     "\u2022",
+     "\u2022",
+     "\u2022",
+     "\u2022"
+    ],
+    "pems_columns": {
+     "EMR": "",
+     "EMT": "\u2022",
+     "A": "\u2022",
+     "I": "\u2022",
+     "P": "\u2022"
+    }
+   },
+   {
+    "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+    "row": 8,
+    "pems_page": 239,
+    "pems_ordinal": 6,
+    "site_cells": [
+     "",
+     "\u2022",
+     "\u2022",
+     "\u2022",
+     "\u2022"
+    ],
+    "pems_columns": {
+     "EMR": "",
+     "EMT": "\u2022",
+     "A": "\u2022",
+     "I": "\u2022",
+     "P": "\u2022"
+    }
+   }
+  ],
+  "c3_apply_excluded": [
+   {
+    "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+    "row": 13
+   },
+   {
+    "file": "protocols/neurologic/05_Stroke_TIA_PROC.md",
+    "row": 6
+   },
+   {
+    "file": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+    "row": 3
+   },
+   {
+    "file": "protocols/respiratory/03_Pneumothorax_PROC.md",
+    "row": 11
+   },
+   {
+    "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+    "row": 4
+   },
+   {
+    "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+    "row": 3
+   },
+   {
+    "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+    "row": 8
+   }
+  ],
+  "c3_apply_candidates": 54,
+  "needs_vision_count": 4,
+  "needs_vision": [
+   {
+    "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+    "row": 4,
+    "pems_page": 63,
+    "pems_ordinal": 7,
+    "why": "PEMS p.63 #7: badge I authorises I/P but the line prints '[EMR]'"
+   },
+   {
+    "file": "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+    "row": 5,
+    "pems_page": 63,
+    "pems_ordinal": 7,
+    "why": "PEMS p.63 #7: badge I authorises I/P but the line prints '[EMR]'"
+   },
+   {
+    "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+    "row": 3,
+    "pems_page": 61,
+    "pems_ordinal": 8,
+    "why": "PEMS p.61 #4: badge EMT authorises EMT/A/I/P but the line prints '(I / P)'"
+   },
+   {
+    "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+    "row": 4,
+    "pems_page": 61,
+    "pems_ordinal": 4,
+    "why": "PEMS p.61 #4: badge EMT authorises EMT/A/I/P but the line prints '(I / P)'"
+   }
+  ],
+  "provisional_count": 4,
+  "provisional": [
+   {
+    "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+    "row": 4,
+    "pems_keys": [
+     "p.63#7"
+    ],
+    "verdict": "disagrees",
+    "direction": "site_broader",
+    "provisional_reason": "depends on unresolved badge for PEMS p.63#7"
+   },
+   {
+    "file": "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+    "row": 5,
+    "pems_keys": [
+     "p.63#7"
+    ],
+    "verdict": "disagrees",
+    "direction": "site_broader",
+    "provisional_reason": "depends on unresolved badge for PEMS p.63#7"
+   },
+   {
+    "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+    "row": 3,
+    "pems_keys": [
+     "p.61#4"
+    ],
+    "verdict": "ambiguous",
+    "direction": null,
+    "provisional_reason": "depends on unresolved badge for PEMS p.61#4"
+   },
+   {
+    "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+    "row": 4,
+    "pems_keys": [
+     "p.61#4"
+    ],
+    "verdict": "agrees",
+    "direction": null,
+    "provisional_reason": "depends on unresolved badge for PEMS p.61#4"
+   }
+  ],
+  "at_risk_matched_rows_count": 2,
+  "at_risk_matched_rows": [
+   {
+    "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+    "row": 5,
+    "old_verdict": "matched",
+    "pems_page": 63,
+    "pems_ordinal": 7,
+    "pdf_badge": "I",
+    "flips_if_badge": [
+     "EMR",
+     "I"
+    ],
+    "directions": [
+     "site_broader",
+     "site_narrower"
+    ]
+   },
+   {
+    "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+    "row": 5,
+    "old_verdict": "matched",
+    "pems_page": 61,
+    "pems_ordinal": 4,
+    "pdf_badge": "EMT",
+    "flips_if_badge": [
+     "EMT",
+     "I"
+    ],
+    "directions": [
+     "site_broader",
+     "site_narrower"
+    ]
+   }
+  ],
+  "dedupe_dropped": [],
+  "decisions_filled": 61,
+  "decisions_filled_of": 61
+ },
+ "notes_for_adjudicator": [
+  "**Test \"one row or two\" before choosing a level.** Both contradiction texts look compound:",
+  "- `Apply AED or cardiac monitor. Assess rhythm (I / P)` may mean EMT applies the AED while I/P assess rhythm.",
+  "- `or AED is advising to shock [EMR], immediately defibrillate` may mean EMR may use the AED, with the badge covering the advanced step.",
+  "If either is compound, these are **PEMS rows the site split**, not mis-decoded badges \u2014 which puts them in the `held_level_correct` class and makes the fix an **authoring decision, not a level fix**. Settle the shape before the number. Do not write a level until you know whether you are writing one row or two."
+ ],
+ "excluded": [
+  {
+   "file": "protocols/toxicology/06_Overdose_Poisoning_PROC.md",
+   "row": 5,
+   "why": "text-binding settled: site A+ vs PEMS EMT -> fix list, not queue"
+  }
+ ],
+ "rows": [
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": 4,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "site grants EMT/A which PEMS does not (PEMS I/P)",
+   "disposition": "ownership_adjudication",
+   "adjudication": "ownership",
+   "decision": "site_split_of_pems",
+   "needs_vision": true,
+   "needs_vision_reason": "PEMS p.63 #7: badge I authorises I/P but the line prints '[EMR]'",
+   "pems_page": 63,
+   "pems_ordinal": 7,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "I"
+   ],
+   "site_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**AED / Rhythm Assessment:**<br>\u2022 Apply AED and assess cardiac rhythm every **2 minutes**.<br>\u2022 Identify rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-s",
+   "verdict": "disagrees",
+   "direction": "site_broader",
+   "provisional": true,
+   "provisional_reason": "depends on unresolved badge for PEMS p.63#7",
+   "decision_verdict": "Compound row. Badge I is printed once for the whole defibrillation row; the inline '[EMR]' puts the AED in the EMR's hands ('or AED is advising to shock [EMR]'). Site rows 4 (AED application) and 5 (defibrillation) split this one PEMS row. r4's EMT/A cells are supported by that inline annotation, not by the badge, so no cell change and the provisional site_broader flag is withdrawn as an authoring difference.",
+   "resolved_cells": null,
+   "decision_confidence": "medium",
+   "decision_evidence": "audit/level-scan/evidence/vfib_p63-063.png"
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+   "row": 6,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "site blocks A which PEMS grants (PEMS A/I/P)",
+   "disposition": "ownership_adjudication",
+   "adjudication": "ownership",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 61,
+   "pems_ordinal": 5,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "A"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "Obtain IV/IO access (x2 preferred)",
+   "verdict": "disagrees",
+   "direction": "site_narrower",
+   "decision_verdict": "PEMS p.61#5 badge A opens with 'Obtain IV/IO access. Establish secondary IV/IO access if possible.' Access is authorised at A; corroborated by p.57#5, p.63#5 and p.135#2, all badge A on an access row. Site prints I/P (narrower by A).",
+   "resolved_cells": [
+    "",
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/cardiacarresttraumatic_p61-061.png"
+  },
+  {
+   "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+   "row": 13,
+   "source_bucket": "held_agrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "PEMS MC in every column; site MC in every column",
+   "disposition": "held_level_correct",
+   "adjudication": "split_review",
+   "decision": "held_split_review",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 107,
+   "pems_ordinal": 9,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "MC",
+    "EMT": "MC",
+    "A": "MC",
+    "I": "MC",
+    "P": "MC"
+   },
+   "badge_tokens": [
+    "MC"
+   ],
+   "site_cells": [
+    "MC",
+    "MC",
+    "MC",
+    "MC",
+    "MC"
+   ],
+   "site_action": "**Medical Control Contact:**<br>\u2022 Contact Poquoson OMD for guidance as needed.",
+   "verdict": "agrees",
+   "decision_verdict": "PEMS MC in every column; site MC in every column. Level already correct; goes to the split review list. Do not set to matched.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_107-107.png"
+  },
+  {
+   "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+   "row": 5,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "site blocks EMT/A/I which PEMS grants (PEMS EMT/A/I/P)",
+   "disposition": "ownership_adjudication",
+   "adjudication": "ownership",
+   "decision": "ownership",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 107,
+   "pems_ordinal": 4,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "",
+    "\u2022"
+   ],
+   "site_action": "**12-Lead ECG Interpretation - STEMI Criteria:**<br>\u2022 Intermediate and Paramedic providers may interpret as STEMI if:<br>  - Symptoms consistent with ACS/myocar",
+   "verdict": "disagrees",
+   "direction": "site_narrower",
+   "decision_verdict": "p.107#4 is owned by site r6 (STEMI alert / notification). r5 is a site-authored interpretation step with no PEMS row of its own; PEMS badges the EMT for acting on the 12-lead, so the site's P-only gate is narrower than the source. Authoring question, no cell change.",
+   "resolved_cells": null,
+   "decision_confidence": "medium",
+   "decision_evidence": "audit/level-scan/evidence/page_107-107.png"
+  },
+  {
+   "file": "protocols/neurologic/05_Stroke_TIA_PROC.md",
+   "row": 6,
+   "source_bucket": "held_agrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "site grants EMT/A/I/P; PEMS EMT/A/I/P",
+   "disposition": "held_level_correct",
+   "adjudication": "split_review",
+   "decision": "held_split_review",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 131,
+   "pems_ordinal": 4,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "Triage: Symptoms <24 hrs & RACE 5-9 -> Transport to closest Comprehensive Stroke Center (if <30 min delay)",
+   "verdict": "agrees",
+   "decision_verdict": "PEMS EMT/A/I/P; site EMT/A/I/P. Level correct; split review list. Do not set to matched.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_131-131.png"
+  },
+  {
+   "file": "protocols/neurologic/05_Stroke_TIA_PROC.md",
+   "row": 7,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "site blocks EMT which PEMS grants (PEMS EMT/A/I/P)",
+   "disposition": "ownership_adjudication",
+   "adjudication": "ownership",
+   "decision": "site_split_of_pems",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 131,
+   "pems_ordinal": 4,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "Triage: Symptoms >24 hrs OR RACE 0-4 -> Transport to closest Primary Stroke Center",
+   "verdict": "disagrees",
+   "direction": "site_narrower",
+   "decision_verdict": "One PEMS transport row with two triage branches, badge EMT. r6 (comprehensive centre, EMT..P) plus r7 (primary centre, A/I/P) union to EMT/A/I/P = the badge spread, so the split invariant holds and r7's cells are correct as authored.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_131-131.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+   "row": 3,
+   "source_bucket": "held_agrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "site grants EMT/A/I/P; PEMS EMT/A/I/P",
+   "disposition": "held_level_correct",
+   "adjudication": "split_review",
+   "decision": "held_split_review",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 153,
+   "pems_ordinal": 2,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**Airway Assessment:**<br>\u2022 Assess for signs of airway injury (singed hairs, facial burns, hoarseness, stridor, soot).<br>\u2022 Monitor for progressive respiratory ",
+   "verdict": "agrees",
+   "decision_verdict": "PEMS EMT/A/I/P; site EMT/A/I/P. Split review list.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_153-153.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Pneumothorax_PROC.md",
+   "row": 11,
+   "source_bucket": "held_agrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "site grants I/P; PEMS I/P",
+   "disposition": "held_level_correct",
+   "adjudication": "split_review",
+   "decision": "held_split_review",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 243,
+   "pems_ordinal": 4,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "I"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**Repeat Decompression if Needed:**<br>\u2022 Consider repeating procedure for continued or recurrent hemodynamic instability or absent breath sounds.",
+   "verdict": "agrees",
+   "decision_verdict": "PEMS I/P; site I/P. Split review list.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_243-243.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Arrest_PROC.md",
+   "row": 11,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "PEMS grants EMR/EMT/A/I/P; site prints no level",
+   "disposition": "site_gap_add",
+   "adjudication": "add",
+   "decision": "add_from_pems",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 239,
+   "pems_ordinal": 2,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "\u2022",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMR"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "site_action": "**Surgical Airway (Cricothyrotomy):**<br>\u2022 If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway.<br>\u2022 Use 14G, 3.25\" catheter o",
+   "verdict": "disagrees",
+   "direction": "site_gap",
+   "decision_verdict": "C1 bound this row to p.239#2 (suctioning, EMR, all five columns) on text overlap \u2014 that binding is wrong. The true source is the Surgical Airway procedure, p.269, where every cricothyrotomy step prints badge P (raster confirms). ADD P only; adding all five columns would be a clinical defect.",
+   "resolved_cells": [
+    "",
+    "",
+    "",
+    "",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_269-269.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 10,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "site blocks P which PEMS grants (PEMS A/I/P)",
+   "disposition": "ownership_adjudication",
+   "adjudication": "ownership",
+   "decision": "no_pems_counterpart",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 124,
+   "pems_ordinal": 10,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "A"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "MC",
+    "MC",
+    ""
+   ],
+   "site_action": "**Fluid Administration:**<br>\u2022 **0.9% Sodium Chloride** or appropriate fluid as clinically indicated<br>\u2022 Monitor for signs of fluid overload in CHF patients",
+   "verdict": "disagrees",
+   "direction": "site_narrower",
+   "decision_verdict": "p.124#10 is pediatric nebulised saline. No crystalloid bolus row exists on pp.123-125, so 'Fluid Administration' has no PEMS counterpart; its MC/MC cells are site-authored. No change, authoring flag.",
+   "resolved_cells": null,
+   "decision_confidence": "medium",
+   "decision_evidence": "audit/level-scan/evidence/page_124-124.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 8,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "site blocks EMR/EMT/A/I which PEMS grants (PEMS EMR/EMT/A/I/P)",
+   "disposition": "ownership_adjudication",
+   "adjudication": "ownership",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 123,
+   "pems_ordinal": 1,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "\u2022",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMR"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "",
+    "\u2022"
+   ],
+   "site_action": "**Advanced Airway Management (ETI):**<br>\u2022 Endotracheal intubation reserved for I-level providers per protocol",
+   "verdict": "disagrees",
+   "direction": "site_narrower",
+   "decision_verdict": "C1 bound this row to p.123#1 (focused evaluation, EMR). The text match is p.123#4 'Consider invasive ventilatory support via endotracheal intubation', badge I -> I/P. Site prints P only.",
+   "resolved_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_123-123.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+   "row": 11,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "site blocks EMT/A which PEMS grants (PEMS EMT/A/I/P)",
+   "disposition": "ownership_adjudication",
+   "adjudication": "ownership",
+   "decision": "no_pems_counterpart",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 153,
+   "pems_ordinal": 2,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**Fluid Management (If Burns Present):**<br>\u2022 Initiate fluid resuscitation per Burn Injuries Protocol<br>\u2022 Titrate fluid administration to hemodynamic response<",
+   "verdict": "disagrees",
+   "direction": "site_narrower",
+   "decision_verdict": "No burn-fluid row on the inhalation/irritants page. Site prints I/P (blocks EMT/A) with no PEMS row behind it. Authoring flag, no change.",
+   "resolved_cells": null,
+   "decision_confidence": "medium",
+   "decision_evidence": "audit/level-scan/evidence/page_153-153.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+   "row": 4,
+   "source_bucket": "held_agrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "site grants EMT/A/I/P; PEMS EMT/A/I/P",
+   "disposition": "held_level_correct",
+   "adjudication": "split_review",
+   "decision": "held_split_review",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 153,
+   "pems_ordinal": 2,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**Initial Airway Management:**<br>\u2022 Position patient to optimize ventilation<br>\u2022 Suction oropharynx as needed for soot/secretions<br>\u2022 Apply high-flow **oxygen",
+   "verdict": "agrees",
+   "decision_verdict": "PEMS EMT/A/I/P; site EMT/A/I/P. Split review list.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_153-153.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "row": 3,
+   "source_bucket": "held_agrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "site grants EMT/A/I/P; PEMS EMT/A/I/P",
+   "disposition": "held_level_correct",
+   "adjudication": "split_review",
+   "decision": "held_split_review",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 239,
+   "pems_ordinal": 3,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**Conscious Adult (\u226512 years) - Abdominal Thrusts:**<br>\u2022 Stand behind patient, wrap arms around waist.<br>\u2022 Make fist with one hand; thumb side against patient",
+   "verdict": "agrees",
+   "decision_verdict": "PEMS EMT/A/I/P; site EMT/A/I/P. Split review list.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_239-239.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "row": 8,
+   "source_bucket": "held_agrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "site grants EMT/A/I/P; PEMS EMT/A/I/P",
+   "disposition": "held_level_correct",
+   "adjudication": "split_review",
+   "decision": "held_split_review",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 239,
+   "pems_ordinal": 6,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**Unconscious Patient - BLS Airway Adjuncts:**<br>\u2022 Insert OPA or NPA as indicated by patient tolerance and level of consciousness.<br>\u2022 Insert SGA (i-gel or Ki",
+   "verdict": "agrees",
+   "decision_verdict": "PEMS EMT/A/I/P; site EMT/A/I/P. Split review list.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_239-239.png"
+  },
+  {
+   "file": "protocols/trauma/09_Trauma_PROC.md",
+   "row": 7,
+   "source_bucket": "held_disagrees",
+   "reason_kind": "shared_pems_row",
+   "detail": "site blocks A which PEMS grants (PEMS A/I/P)",
+   "disposition": "ownership_adjudication",
+   "adjudication": "ownership",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 83,
+   "pems_ordinal": 10,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "A"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "Obtain IV/IO access.",
+   "verdict": "disagrees",
+   "direction": "site_narrower",
+   "decision_verdict": "p.83#10 (hypovolemia / crystalloid) is badge A; IV/IO access is an A-level act in every PEMS protocol that badges it. Site prints I/P. Note: site r8 (Fluid Resuscitation, currently 'matched', out of this queue) prints I/P for the same A-badged row \u2014 same defect.",
+   "resolved_cells": [
+    "",
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_83-083.png"
+  },
+  {
+   "file": "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+   "row": 5,
+   "source_bucket": "extra_named",
+   "reason_kind": "named_item",
+   "detail": "PEMS p.63 badge I but the line says 'AED is advising to shock [EMR]' inline",
+   "disposition": "named_item",
+   "adjudication": "named_item",
+   "decision": "site_split_of_pems",
+   "pems_page": 63,
+   "pems_ordinal": 7,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "I"
+   ],
+   "needs_vision": true,
+   "needs_vision_reason": "PEMS p.63 #7: badge I authorises I/P but the line prints '[EMR]'",
+   "site_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "Defibrillation: **200 J Biphasic / 360 J Monophasic** (Adult) / **2 J/kg initial, 4 J/kg subsequent** (Ped) (AED for EMR/EMT, Manual for I/P)",
+   "verdict": "disagrees",
+   "direction": "site_broader",
+   "provisional": true,
+   "provisional_reason": "depends on unresolved badge for PEMS p.63#7",
+   "decision_verdict": "Raster: one row, one badge (I), text 'If VF or VT is present, or AED is advising to shock [EMR], immediately defibrillate'. Two triggers, one action: the defibrillation is I; the AED may be applied/read by an EMR, which is what the bracketed token says. Site's own annotation '(AED for EMR/EMT, Manual for I/P)' matches the source. No cell change; provisional site_broader withdrawn as an authoring difference, not a level defect.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/vfib_p63-063.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": null,
+   "source_bucket": "extra_named",
+   "reason_kind": "named_item",
+   "detail": "PEMS p.125 pearl tail truncated in every text extraction",
+   "disposition": "named_item",
+   "adjudication": "named_item",
+   "decision": "info",
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_columns": null,
+   "pems_columns_null_reason": "no single PEMS row: the item is a page-level defect, not a row-level pairing (see text-binding.md / extra-named list)",
+   "badge_tokens": [],
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "site_cells": null,
+   "site_cells_null_reason": "named item names no site row number",
+   "decision_verdict": "Named item (pearl tail). Raster of p.125 shows the page ends cleanly after six pearls; nothing is cut off. Recovered tail: 'Note: these medications are routinely prescribed to both men and women for a variety of conditions.'",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/respdist_p125-125.png"
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": null,
+   "source_bucket": "extra_named",
+   "reason_kind": "named_item",
+   "detail": "amiodarone 300 mg vs 150 mg row pairing (C1 false-confidence case)",
+   "disposition": "named_item",
+   "adjudication": "named_item",
+   "decision": "info",
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_columns": null,
+   "pems_columns_null_reason": "no single PEMS row: the item is a page-level defect, not a row-level pairing (see text-binding.md / extra-named list)",
+   "badge_tokens": [],
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "site_cells": null,
+   "site_cells_null_reason": "named item names no site row number",
+   "decision_verdict": "Named item (amiodarone 300 vs 150). Raster of p.64: p.64#9 = 'Amiodarone 300 mg IV/IO slow push' (plus lidocaine alternative), badge I; p.64#10 = 'Amiodarone 150 mg ... ensure optimal defibrillator pad placement', badge I. Two separate rows, both I. Site CNT r9 (300 mg) is the first dose and correctly prints I/P once re-bound to p.64#9. Site V-Fib r8 (150 mg) prints P only -> narrower than I (out of this queue, flagged).",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/vfib_p64-064.png"
+  },
+  {
+   "file": "protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
+   "row": 1,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "multiple_candidates",
+   "detail": "2 different PEMS rows explain this row about equally well: p.57 row 1 (0.88), p.57 row 0 (0.79); the site row may merge them",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "confirm",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 57,
+   "pems_ordinal": 1,
+   "pems_columns_basis": "candidates",
+   "pems_columns": {
+    "EMR": "\u2022",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMR"
+   ],
+   "site_cells": [
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "Follow Universal Patient Care / Initial Patient Contact protocol. Determine DNR status. Refer to Death and Criteria for Withholding Resuscitation protocol. Cons",
+   "verdict": "agrees",
+   "pems_candidates": [
+    {
+     "pems_page": 57,
+     "pems_ordinal": 1,
+     "pems_columns": {
+      "EMR": "\u2022",
+      "EMT": "\u2022",
+      "A": "\u2022",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "EMR"
+     ],
+     "verdict": "agrees",
+     "detail": "site grants EMR/EMT/A/I/P; PEMS EMR/EMT/A/I/P",
+     "needs_vision": false
+    },
+    {
+     "pems_page": 57,
+     "pems_ordinal": 0,
+     "pems_columns": {
+      "EMR": "\u2022",
+      "EMT": "\u2022",
+      "A": "\u2022",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "EMR"
+     ],
+     "verdict": "agrees",
+     "detail": "site grants EMR/EMT/A/I/P; PEMS EMR/EMT/A/I/P",
+     "needs_vision": false
+    }
+   ],
+   "decision_verdict": "Site row merges p.57#0 and p.57#1, both badge EMR (all five columns); site prints all five. Confirm.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_57-057.png"
+  },
+  {
+   "file": "protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
+   "row": 12,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "multiple_candidates",
+   "detail": "2 different PEMS rows explain this row about equally well: p.57 row 8 (0.60), p.57 row 1 (0.59); the site row may merge them",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "confirm",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 57,
+   "pems_ordinal": 8,
+   "pems_columns_basis": "candidates",
+   "pems_columns": {
+    "EMR": "MC",
+    "EMT": "MC",
+    "A": "MC",
+    "I": "MC",
+    "P": "MC"
+   },
+   "badge_tokens": [
+    "MC"
+   ],
+   "site_cells": [
+    "MC",
+    "MC",
+    "MC",
+    "MC",
+    "MC"
+   ],
+   "site_action": "If ROSC is achieved, refer to Post Cardiac Arrest Care (ROSC) protocol.<br><br>If ROSC is not achieved, refer to Death and Criteria for Withholding Resuscitatio",
+   "verdict": "agrees",
+   "pems_candidates": [
+    {
+     "pems_page": 57,
+     "pems_ordinal": 8,
+     "pems_columns": {
+      "EMR": "MC",
+      "EMT": "MC",
+      "A": "MC",
+      "I": "MC",
+      "P": "MC"
+     },
+     "badge_tokens": [
+      "MC"
+     ],
+     "verdict": "agrees",
+     "detail": "PEMS MC in every column; site MC in every column",
+     "needs_vision": false
+    },
+    {
+     "pems_page": 57,
+     "pems_ordinal": 1,
+     "pems_columns": {
+      "EMR": "\u2022",
+      "EMT": "\u2022",
+      "A": "\u2022",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "EMR"
+     ],
+     "verdict": "agrees",
+     "detail": "site grants EMR/EMT/A/I/P; PEMS EMR/EMT/A/I/P",
+     "needs_vision": false
+    }
+   ],
+   "decision_verdict": "Site prints MC in every cell, matching p.57#8 (MC). The row also contains the ROSC / withholding referral, which PEMS badges EMR (p.57#0-#3, p.64#13), so all-MC under-grants that half. Matches the row it is bound to; authoring flag only.",
+   "resolved_cells": null,
+   "decision_confidence": "medium",
+   "decision_evidence": "audit/level-scan/evidence/page_57-057.png"
+  },
+  {
+   "file": "protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
+   "row": 11,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.57 row 7 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "confirm",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 57,
+   "pems_ordinal": 7,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "I"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "For cardiac arrest in renal dialysis patients, patients with crush injuries, suspected calcium channel blocker overdose, or suspected hyperkalemia only, also ad",
+   "verdict": "agrees",
+   "evidence": "`crush_p91-091.png`, `crush_p92-092.png`",
+   "decision_verdict": "PEMS p.57#7 badge I -> I/P; site I/P. Confirm. Note: site r10 (adult half, 'matched', out of queue) prints A/I/P where the same I-badged row authorises I/P \u2014 broader than the badge.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_57-057.png"
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": 14,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "multiple_candidates",
+   "detail": "3 different PEMS rows explain this row about equally well: p.64 row 13 (0.65), p.57 row 1 (0.64), p.63 row 1 (0.64); the site row may merge them",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 64,
+   "pems_ordinal": 13,
+   "pems_columns_basis": "candidates",
+   "pems_columns": {
+    "EMR": "\u2022",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMR"
+   ],
+   "site_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**Post-Resuscitation:**<br>\u2022 If ROSC achieved, refer to Post Cardiac Arrest Care (ROSC) protocol.<br>\u2022 If ROSC not achieved, refer to Death and Criteria for Wit",
+   "verdict": "disagrees",
+   "pems_candidates": [
+    {
+     "pems_page": 64,
+     "pems_ordinal": 13,
+     "pems_columns": {
+      "EMR": "\u2022",
+      "EMT": "\u2022",
+      "A": "\u2022",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "EMR"
+     ],
+     "verdict": "disagrees",
+     "detail": "site blocks EMR which PEMS grants (PEMS EMR/EMT/A/I/P)",
+     "needs_vision": false,
+     "direction": "site_narrower"
+    },
+    {
+     "pems_page": 57,
+     "pems_ordinal": 1,
+     "pems_columns": {
+      "EMR": "\u2022",
+      "EMT": "\u2022",
+      "A": "\u2022",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "EMR"
+     ],
+     "verdict": "disagrees",
+     "detail": "site blocks EMR which PEMS grants (PEMS EMR/EMT/A/I/P)",
+     "needs_vision": false,
+     "direction": "site_narrower"
+    },
+    {
+     "pems_page": 63,
+     "pems_ordinal": 1,
+     "pems_columns": {
+      "EMR": "\u2022",
+      "EMT": "\u2022",
+      "A": "\u2022",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "EMR"
+     ],
+     "verdict": "disagrees",
+     "detail": "site blocks EMR which PEMS grants (PEMS EMR/EMT/A/I/P)",
+     "needs_vision": false,
+     "direction": "site_narrower"
+    }
+   ],
+   "direction": "site_narrower",
+   "decision_verdict": "p.64#13 'If ROSC is achieved, refer to Post ROSC Care' is badge EMR = every column; the no-ROSC half is p.57#1, also EMR. Site prints EMT..P (narrower by EMR).",
+   "resolved_cells": [
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/vfib_p64-064.png"
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": 9,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "multiple_candidates",
+   "detail": "3 different PEMS rows explain this row about equally well: p.64 row 11 (0.67), p.64 row 10 (0.64), p.64 row 9 (0.61); the site row may merge them",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "confirm",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 64,
+   "pems_ordinal": 11,
+   "pems_columns_basis": "candidates",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "I"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**[Amiodarone](../../pharmacology/Amiodarone.md) - V-Fib/V-Tach Only (if persists after defibrillation and [Epinephrine](../../pharmacology/Epinephrine.md)):**<",
+   "verdict": "agrees",
+   "pems_candidates": [
+    {
+     "pems_page": 64,
+     "pems_ordinal": 11,
+     "pems_columns": {
+      "EMR": "",
+      "EMT": "",
+      "A": "",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "I"
+     ],
+     "verdict": "agrees",
+     "detail": "site grants I/P; PEMS I/P",
+     "needs_vision": false
+    },
+    {
+     "pems_page": 64,
+     "pems_ordinal": 10,
+     "pems_columns": {
+      "EMR": "",
+      "EMT": "",
+      "A": "",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "I"
+     ],
+     "verdict": "agrees",
+     "detail": "site grants I/P; PEMS I/P",
+     "needs_vision": false
+    },
+    {
+     "pems_page": 64,
+     "pems_ordinal": 9,
+     "pems_columns": {
+      "EMR": "",
+      "EMT": "",
+      "A": "",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "I"
+     ],
+     "verdict": "agrees",
+     "detail": "site grants I/P; PEMS I/P",
+     "needs_vision": false
+    }
+   ],
+   "decision_verdict": "C1 bound this row to p.64#11 (magnesium). The 300 mg amiodarone text is p.64#9, badge I -> I/P, which is exactly what the site prints. Confirm on the corrected key.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/vfib_p64-064.png"
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+   "row": 3,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "multiple_candidates",
+   "detail": "3 different PEMS rows explain this row about equally well: p.61 row 8 (0.40), p.61 row 4 (0.38), p.61 row 5 (0.38); the site row may merge them",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": true,
+   "needs_vision_reason": "PEMS p.61 #4: badge EMT authorises EMT/A/I/P but the line prints '(I / P)'",
+   "pems_page": 61,
+   "pems_ordinal": 8,
+   "pems_columns_basis": "candidates",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "A"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "Apply AED / Monitor (Assess rhythm before CPR if possible)",
+   "verdict": "ambiguous",
+   "pems_candidates": [
+    {
+     "pems_page": 61,
+     "pems_ordinal": 8,
+     "pems_columns": {
+      "EMR": "",
+      "EMT": "",
+      "A": "\u2022",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "A"
+     ],
+     "verdict": "agrees",
+     "detail": "site grants A/I/P; PEMS A/I/P",
+     "needs_vision": false
+    },
+    {
+     "pems_page": 61,
+     "pems_ordinal": 4,
+     "pems_columns": {
+      "EMR": "",
+      "EMT": "\u2022",
+      "A": "\u2022",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "EMT"
+     ],
+     "verdict": "disagrees",
+     "detail": "site blocks EMT which PEMS grants (PEMS EMT/A/I/P)",
+     "needs_vision": true,
+     "direction": "site_narrower",
+     "needs_vision_reason": "PEMS p.61 #4: badge EMT authorises EMT/A/I/P but the line prints '(I / P)'"
+    },
+    {
+     "pems_page": 61,
+     "pems_ordinal": 5,
+     "pems_columns": {
+      "EMR": "",
+      "EMT": "",
+      "A": "\u2022",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "A"
+     ],
+     "verdict": "agrees",
+     "detail": "site grants A/I/P; PEMS A/I/P",
+     "needs_vision": false
+    }
+   ],
+   "provisional": true,
+   "provisional_reason": "depends on unresolved badge for PEMS p.61#4",
+   "decision_verdict": "C1 bound this row to p.61#8 (epinephrine). 'Apply AED or cardiac monitor' is p.61#4, badge EMT -> EMT/A/I/P. Site prints A/I/P (narrower by EMT).",
+   "resolved_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/cardiacarresttraumatic_p61-061.png"
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+   "row": 4,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.61 row 4 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": true,
+   "needs_vision_reason": "PEMS p.61 #4: badge EMT authorises EMT/A/I/P but the line prints '(I / P)'",
+   "pems_page": 61,
+   "pems_ordinal": 4,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "Asystole on arrival: Consider withholding CPR",
+   "verdict": "agrees",
+   "provisional": true,
+   "provisional_reason": "depends on unresolved badge for PEMS p.61#4",
+   "decision_verdict": "Raster: the row is 'Apply AED or cardiac monitor. Assess rhythm (I / P): For Asystole at the time of EMS arrival: Consider withholding / terminating resuscitation...'. The (I / P) token governs the rhythm assessment and the withhold/continue clauses, which is exactly what this site row states. Site prints EMT/A/I/P -> should be I/P.",
+   "resolved_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "medium",
+   "decision_evidence": "audit/level-scan/evidence/cardiacarresttraumatic_p61-061.png"
+  },
+  {
+   "file": "protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md",
+   "row": 13,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.135 row 5 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 135,
+   "pems_ordinal": 5,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "I"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "site_action": "I: Monitor SpO\u2082 and EtCO\u2082 during sedation",
+   "verdict": "disagrees",
+   "direction": "site_gap",
+   "decision_verdict": "p.135#5 (light sedation) ends 'Monitor SpO2 and EtCO2', inside the same badge-I row. Site row prints no level at all -> I/P.",
+   "resolved_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_135-135.png"
+  },
+  {
+   "file": "protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md",
+   "row": 15,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "two site rows name this same PEMS intervention; p.136 row 6 merges what the site splits \u2014 adjudicate which site row's cells that PEMS badge governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "confirm",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 136,
+   "pems_ordinal": 6,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "I"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "P: If unsuccessful, check pad placement and repeat at **200 joules** (Adult)<br>or **2 joules/kg** (Pediatric)",
+   "verdict": "agrees",
+   "decision_verdict": "Repeat-cardioversion half of p.136#6 (badge I); site I/P. Confirm.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_136-136.png"
+  },
+  {
+   "file": "protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md",
+   "row": 16,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.136 row 6 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 136,
+   "pems_ordinal": 6,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "I"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "",
+    "[P]"
+   ],
+   "site_action": "P: If unsuccessful after two attempts, MC: Contact Poquoson OMD",
+   "verdict": "disagrees",
+   "direction": "site_narrower",
+   "decision_verdict": "'If cardioversion is unsuccessful after two attempts, contact Medical Control' is the last clause of p.136#6, badge I. Site prints [P] only: under-grants I, and the bracket is not in the source. SVT's own MC row is p.136#7 (all MC).",
+   "resolved_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "medium",
+   "decision_evidence": "audit/level-scan/evidence/page_136-136.png"
+  },
+  {
+   "file": "protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md",
+   "row": 5,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "every word of this row (access) occurs in p.135 row 2 \u2014 1 of that row's 15 significant words \u2014 which site row 6 already holds; the site splits one PEMS row into two",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 135,
+   "pems_ordinal": 2,
+   "pems_columns_basis": "contained_in_pems",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "A"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "A: Obtain IV access",
+   "verdict": "disagrees",
+   "direction": "site_narrower",
+   "decision_verdict": "Site label says 'A: Obtain IV access'; p.135#2 badge A. Site prints I/P (narrower by A).",
+   "resolved_cells": [
+    "",
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_135-135.png"
+  },
+  {
+   "file": "protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md",
+   "row": 8,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.135 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 135,
+   "pems_ordinal": 3,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "I"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "",
+    "\u2022"
+   ],
+   "site_action": "I: If no conversion after 2 minutes, repeat [Adenosine](../../pharmacology/Adenosine.md) at DOUBLE initial dose",
+   "verdict": "disagrees",
+   "direction": "site_narrower",
+   "decision_verdict": "Repeat-adenosine clause is inside p.135#3, badge I. Site label says 'I:' but prints P only.",
+   "resolved_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_135-135.png"
+  },
+  {
+   "file": "protocols/general/02_Cold_Exposure_PROC.md",
+   "row": 3,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.67 row 1 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "confirm",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 67,
+   "pems_ordinal": 1,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "\u2022",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMR"
+   ],
+   "site_cells": [
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "Handle the patient gently and avoid excessive movement (risk of cardiac arrest/VF).",
+   "verdict": "agrees",
+   "decision_verdict": "'Handle the patient gently' is inside p.67#1, badge EMR (all five). Site all five. Confirm.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_67-067.png"
+  },
+  {
+   "file": "protocols/general/02_Heat_Exposure_PROC.md",
+   "row": 3,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.69 row 2 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 69,
+   "pems_ordinal": 2,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "Normal skin temp: Apply cool compresses",
+   "verdict": "disagrees",
+   "direction": "site_narrower",
+   "decision_verdict": "Cool compresses for normal skin temperature are inside p.69#2, badge EMT. Site prints A/I/P (narrower by EMT).",
+   "resolved_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_69-069.png"
+  },
+  {
+   "file": "protocols/general/02_Heat_Exposure_PROC.md",
+   "row": 4,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.69 row 2 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 69,
+   "pems_ordinal": 2,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "Hot skin temp (Heat Stroke): Treat as life-threatening/start rapid cooling (cool mist, ice packs to armpits/groin/neck, wet sheet)",
+   "verdict": "disagrees",
+   "direction": "site_narrower",
+   "decision_verdict": "Rapid cooling for hot skin / heat stroke is inside p.69#2, badge EMT. Site prints A/I/P.",
+   "resolved_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_69-069.png"
+  },
+  {
+   "file": "protocols/general/02_Heat_Exposure_PROC.md",
+   "row": 5,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.69 row 2 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 69,
+   "pems_ordinal": 2,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "Shivering: Slow the cooling process",
+   "verdict": "disagrees",
+   "direction": "site_narrower",
+   "decision_verdict": "'If patient begins to shiver, slow cooling process' is inside p.69#2, badge EMT. Site A/I/P.",
+   "resolved_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_69-069.png"
+  },
+  {
+   "file": "protocols/general/02_Pain_Control_PROC.md",
+   "row": 7,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.77 row 4 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 77,
+   "pems_ordinal": 4,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "A"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "OR Moderate to Severe Pain (6 - 10):<br>\u2022 Adult: **Morphine Sulfate 2.5-5 mg** IV/IM (Max total dose: **10 mg**)<br>\u2022 Pediatric: **Morphine Sulfate 0.1 mg/kg** ",
+   "verdict": "disagrees",
+   "direction": "site_narrower",
+   "decision_verdict": "C1 bound this row to p.77#4 (ketorolac, A). Raster of p.77: ONE row carries the bracketed badge [A] and contains both Fentanyl and 'OR: Morphine Sulfate 2.5 - 5 mg'. Morphine is p.77#5, badge [A] -> A/I/P with the bracket preserved. Site prints I/P.",
+   "resolved_cells": [
+    "",
+    "",
+    "[A]",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_77-077.png"
+  },
+  {
+   "file": "protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md",
+   "row": 5,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "multiple_candidates",
+   "detail": "2 different PEMS rows explain this row about equally well: p.55 row 2 (0.48), p.55 row 3 (0.43); the site row may merge them",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 55,
+   "pems_ordinal": 2,
+   "pems_columns_basis": "candidates",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "I"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "",
+    "\u2022"
+   ],
+   "site_action": "**Post-Intubation Sedation**, consider ONE of the following:<br><br>\u2022 ADULT: **[Ketamine](../../pharmacology/Ketamine.md) (Ketalar) 1 mg/kg IV/IO** (Maximum sin",
+   "verdict": "disagrees",
+   "pems_candidates": [
+    {
+     "pems_page": 55,
+     "pems_ordinal": 2,
+     "pems_columns": {
+      "EMR": "",
+      "EMT": "",
+      "A": "",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "I"
+     ],
+     "verdict": "disagrees",
+     "detail": "site blocks I which PEMS grants (PEMS I/P)",
+     "needs_vision": false,
+     "direction": "site_narrower"
+    },
+    {
+     "pems_page": 55,
+     "pems_ordinal": 3,
+     "pems_columns": {
+      "EMR": "",
+      "EMT": "",
+      "A": "",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "I"
+     ],
+     "verdict": "disagrees",
+     "detail": "site blocks I which PEMS grants (PEMS I/P)",
+     "needs_vision": false,
+     "direction": "site_narrower"
+    }
+   ],
+   "direction": "site_narrower",
+   "decision_verdict": "No ketamine row exists on p.55; post-intubation sedation is an I-level act there (fentanyl p.55#2 and midazolam p.55#3 are both badge I). Site prints P only. Medium: inferred from the page's sedation badges, not from an identical row.",
+   "resolved_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "medium",
+   "decision_evidence": "audit/level-scan/evidence/page_55-055.png"
+  },
+  {
+   "file": "protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md",
+   "row": 6,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "multiple_candidates",
+   "detail": "2 different PEMS rows explain this row about equally well: p.55 row 2 (0.69), p.55 row 3 (0.61); the site row may merge them",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 55,
+   "pems_ordinal": 2,
+   "pems_columns_basis": "candidates",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "I"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "",
+    "\u2022"
+   ],
+   "site_action": "**OR Post-Intubation Sedation** ([Midazolam](../../pharmacology/Midazolam.md) / [Fentanyl](../../pharmacology/Fentanyl.md)):<br><br>\u2022 ADULT: **[Midazolam](../..",
+   "verdict": "disagrees",
+   "pems_candidates": [
+    {
+     "pems_page": 55,
+     "pems_ordinal": 2,
+     "pems_columns": {
+      "EMR": "",
+      "EMT": "",
+      "A": "",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "I"
+     ],
+     "verdict": "disagrees",
+     "detail": "site blocks I which PEMS grants (PEMS I/P)",
+     "needs_vision": false,
+     "direction": "site_narrower"
+    },
+    {
+     "pems_page": 55,
+     "pems_ordinal": 3,
+     "pems_columns": {
+      "EMR": "",
+      "EMT": "",
+      "A": "",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "I"
+     ],
+     "verdict": "disagrees",
+     "detail": "site blocks I which PEMS grants (PEMS I/P)",
+     "needs_vision": false,
+     "direction": "site_narrower"
+    }
+   ],
+   "direction": "site_narrower",
+   "decision_verdict": "This row names Midazolam and Fentanyl, i.e. p.55#3 and p.55#2, both badge I -> I/P. Site prints P only.",
+   "resolved_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_55-055.png"
+  },
+  {
+   "file": "protocols/medical/07_OB_Emergencies_PROC.md",
+   "row": 1,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "multiple_candidates",
+   "detail": "2 different PEMS rows explain this row about equally well: p.147 row 0 (0.67), p.141 row 1 (0.65); the site row may merge them",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "confirm",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 147,
+   "pems_ordinal": 0,
+   "pems_columns_basis": "candidates",
+   "pems_columns": {
+    "EMR": "\u2022",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMR"
+   ],
+   "site_cells": [
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "Follow Universal Patient Care, don appropriate PPE, and visualize perineum for crowning or presenting part.",
+   "verdict": "agrees",
+   "pems_candidates": [
+    {
+     "pems_page": 147,
+     "pems_ordinal": 0,
+     "pems_columns": {
+      "EMR": "\u2022",
+      "EMT": "\u2022",
+      "A": "\u2022",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "EMR"
+     ],
+     "verdict": "agrees",
+     "detail": "site grants EMR/EMT/A/I/P; PEMS EMR/EMT/A/I/P",
+     "needs_vision": false
+    },
+    {
+     "pems_page": 141,
+     "pems_ordinal": 1,
+     "pems_columns": {
+      "EMR": "\u2022",
+      "EMT": "\u2022",
+      "A": "\u2022",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "EMR"
+     ],
+     "verdict": "agrees",
+     "detail": "site grants EMR/EMT/A/I/P; PEMS EMR/EMT/A/I/P",
+     "needs_vision": false
+    }
+   ],
+   "decision_verdict": "Universal patient care row, badge EMR (all five); site all five. Confirm.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_147-147.png"
+  },
+  {
+   "file": "protocols/medical/07_OB_Emergencies_PROC.md",
+   "row": 4,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.141 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 141,
+   "pems_ordinal": 3,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "\u2022",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMR"
+   ],
+   "site_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**Umbilical Cord Prolapse:** Wrap exposed cord in saline-moistened gauze. Elevate mother's hips or place in Trendelenburg position. Insert gloved hand to reliev",
+   "verdict": "disagrees",
+   "direction": "site_narrower",
+   "decision_verdict": "'If breech presentation or cord prolapse, refer to guidance below' is badge EMR = every column. Site prints EMT..P (narrower by EMR).",
+   "resolved_cells": [
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_141-141.png"
+  },
+  {
+   "file": "protocols/neurologic/05_Seizure_PROC.md",
+   "row": 6,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.127 row 5 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 127,
+   "pems_ordinal": 5,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "[A]",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "[A]"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "Use HALF dose **[Midazolam](../../pharmacology/Midazolam.md)** for frail/hypotensive/elderly >65y",
+   "verdict": "disagrees",
+   "direction": "site_narrower",
+   "decision_verdict": "Raster: the midazolam row prints a single bracketed badge [A]. The half-dose line is the last sentence of that row, so it is [A]/I/P. Site prints I/P (narrower by A, and drops the bracket).",
+   "resolved_cells": [
+    "",
+    "",
+    "[A]",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_127-127.png"
+  },
+  {
+   "file": "protocols/neurologic/05_Stroke_TIA_PROC.md",
+   "row": 9,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.131 row 2 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 131,
+   "pems_ordinal": 2,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "\u2022",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMR"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "Call Poquoson COR at receiving facility with Name/DOB for rapid registration",
+   "verdict": "disagrees",
+   "direction": "site_narrower",
+   "decision_verdict": "'Record time last seen normal ... provide to the receiving facility' is badge EMR = all five. Site prints A/I/P.",
+   "resolved_cells": [
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_131-131.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+   "row": 7,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.153 row 4 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "confirm",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 153,
+   "pems_ordinal": 4,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "A"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**[Methylprednisolone](../../pharmacology/Methylprednisolone.md) (Solu-Medrol):**<br>\u2022 **Adult:** **125 mg IV/IO** slow push<br>\u2022 **Pediatric:** **2 mg/kg IV/IO",
+   "verdict": "agrees",
+   "decision_verdict": "Methylprednisolone is inside p.153#4, badge A -> A/I/P; site A/I/P. Confirm.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_153-153.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md",
+   "row": 4,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.123 row 5 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "confirm",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 123,
+   "pems_ordinal": 5,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**[Ipratropium](../../pharmacology/Ipratropium Bromide.md) Bromide (Anticholinergic):**<br>\u2022 **Adult & Pediatric:** **3 mL of 0.02% solution** via nebulizer.<br",
+   "verdict": "agrees",
+   "decision_verdict": "Ipratropium is inside p.123#5, badge EMT -> EMT/A/I/P; site matches. Confirm.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_123-123.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Pneumothorax_PROC.md",
+   "row": 12,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.243 row 4 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "no_pems_counterpart",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 243,
+   "pems_ordinal": 4,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "I"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**Hemodynamic Support:**<br>\u2022 **0.9% Sodium Chloride** fluid bolus if hypotensive (SBP < 90 mmHg or MAP < 65).<br>\u2022 Consider vasopressor support if cardiogenic ",
+   "verdict": "agrees",
+   "decision_verdict": "'Hemodynamic Support: fluid bolus / vasopressors' has no PEMS row on p.243 (decompression only); p.243#4 is reassessment. Site I/P is authored and happens to equal that row's columns. No change; authoring flag.",
+   "resolved_cells": null,
+   "decision_confidence": "medium",
+   "decision_evidence": "audit/level-scan/evidence/page_243-243.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": 10,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.124 row 11 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 124,
+   "pems_ordinal": 11,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "A"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**[Nitroglycerin](../../pharmacology/Nitroglycerin.md)**<br>Adult: **0.4 mg SL**",
+   "verdict": "disagrees",
+   "direction": "site_narrower",
+   "decision_verdict": "Nitroglycerine 0.4 mg SL is p.124#11, badge A -> A/I/P. Site prints I/P (narrower by A).",
+   "resolved_cells": [
+    "",
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_124-124.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": 5,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.123 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 123,
+   "pems_ordinal": 3,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**CPAP Initial Settings:** PEEP 5 cmH2O",
+   "verdict": "disagrees",
+   "evidence": "`cpap_p245-245.png`",
+   "direction": "site_narrower",
+   "decision_verdict": "'Consider non-invasive (CPAP) or invasive (SGA) ventilatory support' is p.123#3, badge EMT (raster). Site prints A/I/P (narrower by EMT).",
+   "resolved_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_123-123.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": 6,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.123 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "no_pems_counterpart",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 123,
+   "pems_ordinal": 3,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**CPAP CONTRAINDICATIONS (\u26a0\ufe0f):**<br>\u2022 Apnea/agonal respirations<br>\u2022 GCS \u2264 13<br>\u2022 Pneumothorax",
+   "verdict": "disagrees",
+   "evidence": "`cpap_p245-245.png`",
+   "direction": "site_narrower",
+   "decision_verdict": "CPAP contraindications are procedure text from the CPAP/BiPAP/PEEP page (p.245), not a level-gated PEMS grid row. No cell change; the site's A/I/P is a downstream consequence of the parent CPAP row and should be reviewed with it.",
+   "resolved_cells": null,
+   "decision_confidence": "medium",
+   "decision_evidence": "audit/level-scan/evidence/cpap_p245-245.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": 7,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.123 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "no_pems_counterpart",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 123,
+   "pems_ordinal": 3,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**CPAP CONTRAINDICATIONS (\u26a0\ufe0f):**<br>\u2022 Facial trauma/burns/recent surgery<br>\u2022 Penetrating neck/chest trauma<br>\u2022 Active vomiting/severe nausea",
+   "verdict": "disagrees",
+   "evidence": "`cpap_p245-245.png`",
+   "direction": "site_narrower",
+   "decision_verdict": "CPAP contraindications, as row 6. No cell change; authoring review with the parent CPAP row.",
+   "resolved_cells": null,
+   "decision_confidence": "medium",
+   "decision_evidence": "audit/level-scan/evidence/cpap_p245-245.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": 8,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.123 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "no_pems_counterpart",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 123,
+   "pems_ordinal": 3,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**CPAP CONTRAINDICATIONS (\u26a0\ufe0f):**<br>\u2022 Hypotension (SBP < 90 mmHg, MAP < 65)<br>\u2022 Inability to tolerate tight fitting mask",
+   "verdict": "disagrees",
+   "evidence": "`cpap_p245-245.png`",
+   "direction": "site_narrower",
+   "decision_verdict": "CPAP contraindications, as row 6. No cell change; authoring review with the parent CPAP row.",
+   "resolved_cells": null,
+   "decision_confidence": "medium",
+   "decision_evidence": "audit/level-scan/evidence/cpap_p245-245.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": 9,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.123 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 123,
+   "pems_ordinal": 3,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "",
+    "\u2022"
+   ],
+   "site_action": "**CPAP Titration:** Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing",
+   "verdict": "disagrees",
+   "evidence": "`cpap_p245-245.png`",
+   "direction": "site_narrower",
+   "decision_verdict": "PEEP titration is explicitly restricted in the source: p.239#5 'I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH2O' (raster). Site prints P only -> I/P. Upper bound confirmed as 10 cmH2O, not 15.",
+   "resolved_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_239-239.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Arrest_PROC.md",
+   "row": 2,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.239 row 6 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "confirm",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 239,
+   "pems_ordinal": 6,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**Position Patient and Open Airway:**<br>\u2022 Position the patient appropriately (supine for intubation, recovery position if vomiting).<br>\u2022 Open the airway using",
+   "verdict": "agrees",
+   "decision_verdict": "Position/open airway with BLS adjuncts is p.239#6, badge EMT -> EMT/A/I/P; site matches. Confirm.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_239-239.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 6,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "two site rows name this same PEMS intervention; p.123 row 3 merges what the site splits \u2014 adjudicate which site row's cells that PEMS badge governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 123,
+   "pems_ordinal": 3,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "MC",
+    "MC",
+    ""
+   ],
+   "site_action": "****CPAP** (Continuous Positive Airway Pressure):**<br>\u2022 **Indications:** Adults with respiratory distress due to pulmonary edema, infection, or near-drowning<b",
+   "verdict": "disagrees",
+   "evidence": "`cpap_p245-245.png`",
+   "direction": "site_narrower",
+   "decision_verdict": "CPAP block: starting CPAP at PEEP 5 is EMT (p.239#5, p.123#3), titration to 10 is I/P only. Union = EMT/A/I/P. Site prints MC/MC, far narrower than the source.",
+   "resolved_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_123-123.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": 7,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "two site rows name this same PEMS intervention; p.123 row 3 merges what the site splits \u2014 adjudicate which site row's cells that PEMS badge governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 123,
+   "pems_ordinal": 3,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "site_action": "**Supraglottic Airways (SGA):**<br>\u2022 Consider if patient continues to deteriorate and cannot tolerate CPAP<br>\u2022 Maintains airway patency while avoiding invasive",
+   "verdict": "disagrees",
+   "evidence": "`cpap_p245-245.png`",
+   "direction": "site_gap",
+   "decision_verdict": "SGA placement is EMT: p.239#6 'Use BLS airway adjuncts (OPA/NPA/SGA)' badge EMT, and p.123#3 groups SGA with CPAP at badge EMT. Site row prints no level -> EMT/A/I/P.",
+   "resolved_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_123-123.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+   "row": 5,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "multiple_candidates",
+   "detail": "2 different PEMS rows explain this row about equally well: p.153 row 2 (0.43), p.239 row 10 (0.34); the site row may merge them",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 153,
+   "pems_ordinal": 2,
+   "pems_columns_basis": "candidates",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "",
+    "\u2022"
+   ],
+   "site_action": "**Advanced Airway Considerations:**<br>\u2022 Consider endotracheal intubation versus immediate transport to the nearest emergency department if any signs or symptom",
+   "verdict": "ambiguous",
+   "pems_candidates": [
+    {
+     "pems_page": 153,
+     "pems_ordinal": 2,
+     "pems_columns": {
+      "EMR": "",
+      "EMT": "\u2022",
+      "A": "\u2022",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "EMT"
+     ],
+     "verdict": "disagrees",
+     "detail": "site blocks EMT/A/I which PEMS grants (PEMS EMT/A/I/P)",
+     "needs_vision": false,
+     "direction": "site_narrower"
+    },
+    {
+     "pems_page": 239,
+     "pems_ordinal": 10,
+     "pems_columns": {
+      "EMR": "",
+      "EMT": "",
+      "A": "",
+      "I": "",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "P"
+     ],
+     "verdict": "agrees",
+     "detail": "site grants P; PEMS P",
+     "needs_vision": false
+    }
+   ],
+   "decision_verdict": "'Consider endotracheal intubation versus immediate transport' is the intubation decision, which PEMS badges I (p.123#4, p.239#9). Site prints P only. Medium: no identical sentence in the source.",
+   "resolved_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "decision_confidence": "medium",
+   "decision_evidence": "audit/level-scan/evidence/page_123-123.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "row": 5,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.239 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "confirm",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 239,
+   "pems_ordinal": 3,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**Conscious Pediatric \u22651 year - Abdominal Thrusts:**<br>\u2022 Kneel behind child, wrap arms around waist.<br>\u2022 Make fist; thumb side against child's abdomen.<br>\u2022 P",
+   "verdict": "agrees",
+   "decision_verdict": "Pediatric abdominal thrusts are inside p.239#3, badge EMT -> EMT/A/I/P; site matches. Confirm.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_239-239.png"
+  },
+  {
+   "file": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
+   "row": 6,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.239 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "confirm",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 239,
+   "pems_ordinal": 3,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMT"
+   ],
+   "site_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "**Conscious Pediatric <1 year - Back Blows and Chest Thrusts:**<br>\u2022 Position infant prone, head down, below level of chest.<br>\u2022 Support head and neck with han",
+   "verdict": "agrees",
+   "decision_verdict": "Infant back blows / chest thrusts are inside p.239#3, badge EMT; site matches. Confirm.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_239-239.png"
+  },
+  {
+   "file": "protocols/trauma/09_Crush_Syndrome_PROC.md",
+   "row": 1,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "multiple_candidates",
+   "detail": "2 different PEMS rows explain this row about equally well: p.91 row 1 (0.90), p.91 row 0 (0.86); the site row may merge them",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "confirm",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 91,
+   "pems_ordinal": 1,
+   "pems_columns_basis": "candidates",
+   "pems_columns": {
+    "EMR": "\u2022",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMR"
+   ],
+   "site_cells": [
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "Follow Universal Patient Care / Initial Patient Contact protocol. Refer to Trauma, Hemorrhage Control, and Pain Control protocols as needed.",
+   "verdict": "agrees",
+   "pems_candidates": [
+    {
+     "pems_page": 91,
+     "pems_ordinal": 1,
+     "pems_columns": {
+      "EMR": "\u2022",
+      "EMT": "\u2022",
+      "A": "\u2022",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "EMR"
+     ],
+     "verdict": "agrees",
+     "detail": "site grants EMR/EMT/A/I/P; PEMS EMR/EMT/A/I/P",
+     "needs_vision": false
+    },
+    {
+     "pems_page": 91,
+     "pems_ordinal": 0,
+     "pems_columns": {
+      "EMR": "\u2022",
+      "EMT": "\u2022",
+      "A": "\u2022",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "EMR"
+     ],
+     "verdict": "agrees",
+     "detail": "site grants EMR/EMT/A/I/P; PEMS EMR/EMT/A/I/P",
+     "needs_vision": false
+    }
+   ],
+   "evidence": "`crush_p91-091.png`, `crush_p92-092.png`",
+   "decision_verdict": "Site row merges p.91#0 and p.91#1, both badge EMR (all five); site all five. Confirm.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/crush_p91-091.png"
+  },
+  {
+   "file": "protocols/trauma/09_Crush_Syndrome_PROC.md",
+   "row": 6,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.91 row 5 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "set_cells",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 91,
+   "pems_ordinal": 5,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "",
+    "EMT": "",
+    "A": "",
+    "I": "[I]",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "[I]"
+   ],
+   "site_cells": [
+    "",
+    "",
+    "",
+    "",
+    "\u2022"
+   ],
+   "site_action": "Administer, preferably via separate lines (when able, initiate prior to release):<br>- ADULT: **[Calcium Chloride](../../pharmacology/Calcium%20Chloride.md)** *",
+   "verdict": "disagrees",
+   "evidence": "`crush_p91-091.png`, `crush_p92-092.png`",
+   "direction": "site_narrower",
+   "decision_verdict": "Same PEMS row as site r5 (p.91#5, badge [I], spread {I,P}). The site splits the row's two drugs and prints P only for calcium chloride, which is narrower: PEMS badges the calcium at [I] too. Note the split-map union rule passes this pair only because r5 carries the I \u2014 do not let the union check hide the deficit on this half.",
+   "resolved_cells": [
+    "",
+    "",
+    "",
+    "[I]",
+    "\u2022"
+   ],
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/crush_p91-091.png"
+  },
+  {
+   "file": "protocols/trauma/09_Hemorrhage_Control_PROC.md",
+   "row": 1,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "multiple_candidates",
+   "detail": "2 different PEMS rows explain this row about equally well: p.75 row 0 (0.65), p.75 row 7 (0.68); the site row may merge them",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "confirm",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 75,
+   "pems_ordinal": 0,
+   "pems_columns_basis": "candidates",
+   "pems_columns": {
+    "EMR": "\u2022",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMR"
+   ],
+   "site_cells": [
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "site_action": "Follow Universal Care / Reassess bleeding after treatments performed.",
+   "verdict": "agrees",
+   "pems_candidates": [
+    {
+     "pems_page": 75,
+     "pems_ordinal": 0,
+     "pems_columns": {
+      "EMR": "\u2022",
+      "EMT": "\u2022",
+      "A": "\u2022",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "EMR"
+     ],
+     "verdict": "agrees",
+     "detail": "site grants EMR/EMT/A/I/P; PEMS EMR/EMT/A/I/P",
+     "needs_vision": false
+    },
+    {
+     "pems_page": 75,
+     "pems_ordinal": 7,
+     "pems_columns": {
+      "EMR": "\u2022",
+      "EMT": "\u2022",
+      "A": "\u2022",
+      "I": "\u2022",
+      "P": "\u2022"
+     },
+     "badge_tokens": [
+      "EMR"
+     ],
+     "verdict": "agrees",
+     "detail": "site grants EMR/EMT/A/I/P; PEMS EMR/EMT/A/I/P",
+     "needs_vision": false
+    }
+   ],
+   "decision_verdict": "Universal patient care / reassess, badge EMR (all five); site all five. Confirm.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_75-075.png"
+  },
+  {
+   "file": "protocols/trauma/09_Hemorrhage_Control_PROC.md",
+   "row": 9,
+   "source_bucket": "core_ambiguous",
+   "reason_kind": "shared_pems_row",
+   "detail": "site row label names an intervention that p.75 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) \u2014 adjudicate which cell source governs",
+   "disposition": "ambiguous_adjudication",
+   "adjudication": "adjudicate",
+   "decision": "no_pems_counterpart",
+   "needs_vision": false,
+   "needs_vision_reason": null,
+   "pems_page": 75,
+   "pems_ordinal": 3,
+   "pems_columns_basis": "named_row",
+   "pems_columns": {
+    "EMR": "\u2022",
+    "EMT": "\u2022",
+    "A": "\u2022",
+    "I": "\u2022",
+    "P": "\u2022"
+   },
+   "badge_tokens": [
+    "EMR"
+   ],
+   "site_cells": [
+    "MC",
+    "MC",
+    "MC",
+    "MC",
+    "MC"
+   ],
+   "site_action": "Contact Poquoson Medical Control if hemorrhage cannot be controlled and transport immediately.",
+   "verdict": "agrees",
+   "decision_verdict": "No Medical Control row exists on p.75 (all EMR regional-pressure rows). A 'contact Medical Control' step is inherently all-MC, which is what the site prints. No change.",
+   "resolved_cells": null,
+   "decision_confidence": "high",
+   "decision_evidence": "audit/level-scan/evidence/page_75-075.png"
+  }
+ ]
+}

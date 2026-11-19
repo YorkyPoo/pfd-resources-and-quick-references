@@ -8,18 +8,18 @@ Intraosseous (IO) access is a rapid vascular access route for patients in extrem
 - Any patient in extremis requiring immediate medication administration when IV access cannot be readily obtained (90 seconds or two failed attempts).
 
 ### Procedure
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| 1 | Locate site: Proximal humerus (greater tubercle) or Proximal tibia (2-3 finger breadths below patella, 2 finger breadths medial). |  |  | • | • | • |
-| 2 | Clean site with alcohol/disinfectant. |  |  | • | • | • |
-| 3 | Insert needle perpendicular until tip touches bone (confirm 1 black line visible). |  |  | • | • | • |
-| 4 | Drill until loss of resistance is felt (medullary space entry). |  |  | • | • | • |
-| 5 | Remove driver, remove stylet (turn counter-clockwise), dispose in sharps. |  |  | • | • | • |
-| 6 | Secure needle, attach primed extension tubing. |  |  | • | • | • |
-| 7 | **Confirm/Flush:** Aspirate to confirm (if unconscious), flush with 10–20 mL 0.9% Sodium Chloride. |  |  | • | • | • |
-| 8 | **Pain Control (Conscious Patient):** Administer 2% [Lidocaine](../pharmacology/Lidocaine.md) slow push (Adult: 1mg/kg max 40mg; Ped: 0.5mg/kg max 20mg). Dwell 1 min, flush. |  |  |  |  | • |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-a">A</span> | Locate site: Proximal humerus (greater tubercle) or Proximal tibia (2-3 finger breadths below patella, 2 finger breadths medial). |
+| 2 | <span class="lvl lvl-a">A</span> | Clean site with alcohol/disinfectant. |
+| 3 | <span class="lvl lvl-a">A</span> | Insert needle perpendicular until tip touches bone (confirm 1 black line visible). |
+| 4 | <span class="lvl lvl-a">A</span> | Drill until loss of resistance is felt (medullary space entry). |
+| 5 | <span class="lvl lvl-a">A</span> | Remove driver, remove stylet (turn counter-clockwise), dispose in sharps. |
+| 6 | <span class="lvl lvl-a">A</span> | Secure needle, attach primed extension tubing. |
+| 7 | <span class="lvl lvl-a">A</span> | **Confirm/Flush:** Aspirate to confirm (if unconscious), flush with 10–20 mL 0.9% Sodium Chloride. |
+| 8 | <span class="lvl lvl-a">A</span> | **Pain Control (Conscious Patient):** Administer 2% [Lidocaine](../pharmacology/Lidocaine.md) slow push (Adult: 1mg/kg max 40mg; Ped: 0.5mg/kg max 20mg). Dwell 1 min, flush. |
 
 </div>
 

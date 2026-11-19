@@ -1,0 +1,205 @@
+# Deliberate deviations from the PEMS regional source.
+#
+# Every entry carries a `reason`. An exception without a reason is a hard
+# error, by design: this file records human decisions; rows the matcher could
+# not pair are reported as UNMATCHED and are never edited.
+#
+# Page-level keys:
+#   file:        path relative to docs/ (e.g. protocols/cardiac/Foo.md)
+#   reason:      one line, mandatory
+#   kind:        administrative | explanatory   (page is not level-gated at all)
+#   pems_pages:  [n, ...]   force the PEMS source page(s); continuation pages of
+#                           a forced page are included automatically
+#   rows:        {"<row number or divider:label>": {kind|cells|pems_page/pems_row, reason}}
+#
+# Row kinds: divider | local | skip
+
+pages:
+  # ---------------------------------------------------------------------
+  # Administrative policies — not level-gated (owner ruling 2026-11-11).
+  # These pages carry a level grid for layout consistency, but an
+  # administrative instruction ("notify the receiving facility") is not a
+  # provider-authorization question and must not be levelled from PEMS.
+  # ---------------------------------------------------------------------
+  - file: protocols/administrative/01_ALS_Release_to_BLS_PROC.md
+    kind: administrative
+    pems_pages: [15]
+    reason: "administrative policy; rows are process steps, not level-gated interventions"
+  - file: protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md
+    kind: administrative
+    pems_pages: [11, 12, 13]
+    reason: "administrative policy; mandated-reporting steps are not provider-scope gated"
+  - file: protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md
+    kind: administrative
+    pems_pages: [41]
+    reason: "administrative transport-eligibility policy, not a clinical intervention grid"
+  - file: protocols/administrative/01_Communications_PROC.md
+    kind: administrative
+    pems_pages: [17, 18, 19, 20]
+    reason: "administrative communications policy; PEMS p.18 carries no level badges at all"
+  - file: protocols/administrative/01_Death_Criteria_for_Withholding_Resuscitation_PROC.md
+    kind: administrative
+    pems_pages: [21, 22]
+    reason: "administrative withholding/termination policy; decision authority, not a procedure"
+  - file: protocols/administrative/01_Helicopter_EMS_HEMS_PROC.md
+    kind: administrative
+    pems_pages: [23]
+    reason: "administrative HEMS request policy; no PEMS level grid exists for it"
+  - file: protocols/administrative/01_Infant_Abandonment_PROC.md
+    kind: administrative
+    pems_pages: [25]
+    reason: "administrative safe-haven policy; statutory procedure, not provider-scoped care"
+  - file: protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md
+    kind: administrative
+    pems_pages: [27, 28, 29]
+    reason: "administrative refusal/consent policy; PEMS p.27 badges describe documentation duties, not scope"
+  - file: protocols/administrative/01_Patient_Restraint_PROC.md
+    kind: administrative
+    pems_pages: [31, 32]
+    reason: "administrative restraint policy; use-of-force procedure, not a level-gated intervention"
+  - file: protocols/administrative/01_STEMI_Field_Triage_PROC.md
+    kind: administrative
+    pems_pages: [35]
+    reason: "administrative field-triage / destination policy"
+  - file: protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md
+    kind: administrative
+    pems_pages: [33]
+    reason: "administrative pediatric transport policy; no PEMS counterpart"
+  - file: protocols/administrative/01_Stroke_Field_Triage_PROC.md
+    kind: administrative
+    pems_pages: [37]
+    reason: "administrative field-triage / destination policy"
+  - file: protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md
+    kind: administrative
+    pems_pages: [39]
+    reason: "administrative destination policy; explicitly excluded from level gating"
+  - file: protocols/administrative/01_Trauma_Field_Triage_PROC.md
+    kind: administrative
+    pems_pages: [43, 44, 45]
+    reason: "administrative field-triage / destination policy"
+  - file: protocols/front-matter/01 - How to Read the Protocols.md
+    kind: explanatory
+    reason: "front-matter explainer for the level columns themselves; it defines no interventions"
+
+  # ---------------------------------------------------------------------
+  # Structural deviations the doctrine names: merges and forced sources.
+  # ---------------------------------------------------------------------
+  - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
+    pems_pages: [57]
+    reason: "regional protocol is 'Cardiac Arrest: Asystole / PEA' p.57; the title matcher prefers 'Electrical Injuries' on the shared word 'electrical', so the source is forced"
+  - file: protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
+    pems_pages: [57, 63]
+    reason: "deliberate MERGE: regional Asystole/PEA on p.57 and V-Fib/pVT on p.63; this page runs one algorithm covering both"
+  - file: protocols/trauma/09_Lightning_Injuries_PROC.md
+    pems_pages: [96]
+    reason: "PEMS has no lightning protocol; the regional Electrical Injuries page (p.96) is the governing source"
+  - file: protocols/trauma/09_Pneumothorax_PROC.md
+    pems_pages: [243]
+    reason: "regional source for needle/finger thoracostomy is the Chest Decompression procedure (p.243), not a protocol page"
+  - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
+    pems_pages: [239]
+    reason: "regional source is the Airway Management and Ventilatory Support procedure (p.239), which this page expands"
+  - file: protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md
+    pems_pages: [239]
+    reason: "FBAO content lives in the Airway Management and Ventilatory Support procedure (p.239)"
+  - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+    pems_pages: [123, 124]
+    reason: "no dedicated PEMS stridor page; the regional Respiratory Distress protocol (p.123-124) carries the epinephrine/stridor steps"
+  - file: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
+    pems_pages: [123, 124]
+    reason: "asthma/COPD is a section of the regional Respiratory Distress protocol (p.123-124); the site splits it onto its own page"
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    pems_pages: [123, 124]
+    reason: "regional Respiratory Distress protocol p.123-124; the site page is a longer expansion"
+  - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
+    pems_pages: [123, 124]
+    reason: "no dedicated PEMS pulmonary-edema page; CPAP/nitroglycerin steps are in Respiratory Distress p.123-124"
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    pems_pages: [153, 239]
+    reason: "no dedicated PEMS smoke-inhalation page; CBRNE airway/inhalation irritants (p.153) plus airway procedure (p.239) govern"
+  - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
+    pems_pages: [107]
+    reason: "regional protocol is 'Chest Pain (Cardiac)' p.107; the site's '/ ACS' suffix suppresses the automatic title band"
+  - file: protocols/cardiac/04_Hypertensive_Crisis_PROC.md
+    pems_pages: [109]
+    reason: "regional protocol is 'Hypertension' p.109"
+  - file: protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md
+    pems_pages: [55]
+    reason: "regional 'Sedation Post Advanced Airway' p.55 is the only PEMS sedation source"
+  - file: protocols/general/02_Diving_and_Drowning_Emergencies_PROC.md
+    pems_pages: [93]
+    reason: "regional 'Drowning and Diving Injuries' p.93"
+  - file: protocols/trauma/09_Burns_Thermal_PROC.md
+    pems_pages: [87]
+    reason: "regional 'Burns Injuries' p.87"
+  - file: protocols/trauma/09_Crush_Syndrome_PROC.md
+    pems_pages: [91]
+    base_rev: cf8af7a
+    reason: "regional 'Crush Injuries' p.91; the [A]/[I] bracket notation on rows 4-5 was added on the level-scan branch (ef540f9) after the branch base 768ad68, so this page's pre-conversion bracket set is the branch tip cf8af7a, not main"
+  - file: protocols/trauma/09_Trauma_PROC.md
+    pems_pages: [83]
+    reason: "regional 'Trauma' p.83-84"
+  - file: protocols/medical/07_OB_Emergencies_PROC.md
+    pems_pages: [141, 147, 149]
+    reason: "one site page covers three regional protocols: Childbirth (p.141), Eclampsia (p.147), Pregnancy Related Emergencies (p.149)"
+
+  # ---------------------------------------------------------------------
+  # Batch 7 — docs/procedures/. PEMS 2024 prints these as PROCEDURES in its
+  # p.231-275 section, each with a level badge per row; the site page is the
+  # same procedure. The card's page->PEMS mapping was re-derived from
+  # pems_table.json (pems_docs titles + pages), not typed from the card.
+  # ---------------------------------------------------------------------
+  - file: procedures/CPAP.md
+    pems_pages: [245]
+    reason: "regional 'CPAP/BiPAP/PEEP' procedure, p.245"
+  - file: procedures/Capnography.md
+    pems_pages: [241]
+    reason: "regional 'Capnography' procedure, p.241"
+  - file: procedures/Chest_Decompression.md
+    pems_pages: [243]
+    reason: "regional 'Chest Decompression' procedure, p.243"
+  - file: procedures/Endotracheal_Intubation.md
+    pems_pages: [247]
+    reason: "regional 'Endotracheal Intubation' procedure, p.247"
+  - file: procedures/Intraosseous_Access.md
+    pems_pages: [249]
+    reason: "regional 'Intraosseous (IO) Access' procedure, p.249"
+  - file: procedures/Medication_Administration.md
+    pems_pages: [257, 258]
+    reason: "regional 'Medication Administration' procedure, which runs across p.257-258 (the IM route rows continue on p.258)"
+  - file: procedures/Nasogastric_Tube.md
+    pems_pages: [259]
+    reason: "regional 'Nasogastric Tube Insertion' procedure, p.259"
+  - file: procedures/Neonatal_Resuscitation.md
+    pems_pages: [261]
+    reason: "regional 'Neonatal Resuscitation' procedure, p.261"
+  - file: procedures/Spinal_Motion_Restriction.md
+    pems_pages: [267]
+    reason: "regional 'Spinal Motion Restriction' procedure, p.267"
+  - file: procedures/Surgical_Airway.md
+    pems_pages: [269]
+    reason: "regional 'Surgical Airway' procedure, p.269"
+  - file: procedures/Taser_Barb_Removal.md
+    pems_pages: [271]
+    reason: "regional 'Taser Barb Removal' procedure, p.271"
+  - file: procedures/Tourniquet_Application.md
+    pems_pages: [273]
+    reason: "regional 'Tourniquet Application' procedure, p.273"
+  - file: procedures/Transcutaneous_Pacing.md
+    pems_pages: [275]
+    reason: "regional 'Transcutaneous Pacing' procedure, p.275"
+
+  # ---------------------------------------------------------------------
+  # Row-level declarations
+  # ---------------------------------------------------------------------
+  - file: protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md
+    reason: "two numbered divider rows separate the stable and unstable halves by design"
+    rows:
+      "3": {kind: divider, reason: "'STABLE SVT PATHWAY' is a section label, not an intervention"}
+      "11": {kind: divider, reason: "'UNSTABLE SVT PATHWAY' is a section label, not an intervention"}
+      "16": {kind: skip, reason: "the row is a failed-cardioversion escalation ('Contact Poquoson OMD') written at P; PEMS p.136 badges it MC, but flattening that to MC in all five cells would restate the whole ladder — the audit (AUD-0319) reads it as I+ with MC guidance. Owner to choose; left untouched."}
+  - file: protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md
+    reason: "two unnumbered divider rows split one grid into the mild and severe halves"
+    rows:
+      "divider:acute allergic reaction non anaphylaxis": {kind: divider, reason: "severity-half section label, authorizes nothing"}
+      "divider:anaphylaxis": {kind: divider, reason: "severity-half section label, authorizes nothing"}

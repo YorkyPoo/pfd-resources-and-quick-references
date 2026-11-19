@@ -1,0 +1,378 @@
+{
+ "site_protocol_md_files": 55,
+ "vault_md_files": 87,
+ "site_files_with_matrix": 55,
+ "vault_files_with_matrix": 54,
+ "paired_basenames": 54,
+ "files_compared_both_have_matrix": 54,
+ "site_only_unpaired": [
+  "04b_Aortic_Dissection_AAA_PROC.md"
+ ],
+ "vault_only_unpaired": [
+  "00 - Master Protocol Tracker.md",
+  "08_Adenosine_PROC.md",
+  "08_Albuterol_PROC.md",
+  "08_Amiodarone_PROC.md",
+  "08_Aspirin_PROC.md",
+  "08_Atropine_Sulfate_PROC.md",
+  "08_Calcium_Chloride_PROC.md",
+  "08_Dextrose_PROC.md",
+  "08_Diphenhydramine_PROC.md",
+  "08_Epinephrine_PROC.md",
+  "08_Etomidate_PROC.md",
+  "08_Fentanyl_PROC.md",
+  "08_Furosemide_PROC.md",
+  "08_Glucagon_PROC.md",
+  "08_Haloperidol_PROC.md",
+  "08_Hydroxocobalamin_PROC.md",
+  "08_Ipratropium_Bromide_PROC.md",
+  "08_Ketamine_PROC.md",
+  "08_Ketorolac_PROC.md",
+  "08_Lidocaine_PROC.md",
+  "08_Magnesium_Sulfate_PROC.md",
+  "08_Methylprednisolone_PROC.md",
+  "08_Midazolam_PROC.md",
+  "08_Morphine_Sulfate_PROC.md",
+  "08_Naloxone_PROC.md",
+  "08_Nitroglycerine_PROC.md",
+  "08_Norepinephrine_PROC.md",
+  "08_Ondansetron_PROC.md",
+  "08_Rocuronium_PROC.md",
+  "08_Sodium_Bicarbonate_PROC.md",
+  "08_Succinylcholine_PROC.md",
+  "08_Vecuronium_PROC.md",
+  "08_Ziprasidone_PROC.md"
+ ],
+ "vault_only_basename_found_elsewhere_in_site_docs": {},
+ "stats": {
+  "rows_compared": 474,
+  "rows_with_cell_discrepancy": 468,
+  "text_differs": 21,
+  "row_missing_site": 1,
+  "unparseable_vault": 6,
+  "vault_internal_dot_below_mc_rows": 5,
+  "site_internal_dot_below_mc_rows": 3,
+  "divider": 4
+ },
+ "cell_counts": {
+  "effective|site_broader|admin": 1,
+  "effective|site_broader|gated": 15,
+  "effective|site_narrower|admin": 88,
+  "effective|site_narrower|gated": 372,
+  "literal|bracket_shape|gated": 14,
+  "literal|eff_only|gated": 5,
+  "literal|site_broader|admin": 4,
+  "literal|site_broader|gated": 15,
+  "literal|site_narrower|admin": 88,
+  "literal|site_narrower|gated": 367
+ },
+ "discrepancy_records": 500,
+ "provenance_16c0627": {
+  "files_with_fills": 65,
+  "total_fills_docs_wide": 699,
+  "fills_by_source_kind": {
+   "dot": 695,
+   "mc": 4
+  },
+  "replay_vs_post_mismatches": 0,
+  "effective_changes_by_source": {
+   "mc N->M": 4
+  }
+ },
+ "three_way": {
+  "pre_16c0627": {
+   "stats": {
+    "paired_without_matrix": 1,
+    "rows_compared": 474,
+    "rows_with_cell_discrepancy": 455,
+    "text_differs": 21,
+    "row_missing_site": 1,
+    "unparseable_vault": 6,
+    "vault_internal_dot_below_mc_rows": 5,
+    "site_internal_dot_below_mc_rows": 3,
+    "divider": 4
+   },
+   "cells": {
+    "effective|site_broader|gated": 1,
+    "effective|site_narrower|admin": 92,
+    "effective|site_narrower|gated": 372,
+    "literal|eff_only|admin": 3,
+    "literal|eff_only|gated": 5,
+    "literal|site_broader|gated": 1,
+    "literal|site_narrower|admin": 256,
+    "literal|site_narrower|gated": 799
+   }
+  },
+  "post_16c0627": {
+   "stats": {
+    "paired_without_matrix": 1,
+    "rows_compared": 474,
+    "rows_with_cell_discrepancy": 455,
+    "text_differs": 21,
+    "row_missing_site": 1,
+    "unparseable_vault": 6,
+    "vault_internal_dot_below_mc_rows": 5,
+    "site_internal_dot_below_mc_rows": 3,
+    "divider": 4
+   },
+   "cells": {
+    "effective|site_broader|gated": 1,
+    "effective|site_narrower|admin": 92,
+    "effective|site_narrower|gated": 372,
+    "literal|eff_only|admin": 3,
+    "literal|eff_only|gated": 5,
+    "literal|site_broader|gated": 1,
+    "literal|site_narrower|admin": 89,
+    "literal|site_narrower|gated": 367
+   }
+  },
+  "head": {
+   "stats": {
+    "rows_compared": 474,
+    "rows_with_cell_discrepancy": 468,
+    "text_differs": 21,
+    "row_missing_site": 1,
+    "unparseable_vault": 6,
+    "vault_internal_dot_below_mc_rows": 5,
+    "site_internal_dot_below_mc_rows": 3,
+    "divider": 4
+   },
+   "cells": {
+    "effective|site_broader|admin": 1,
+    "effective|site_broader|gated": 15,
+    "effective|site_narrower|admin": 88,
+    "effective|site_narrower|gated": 372,
+    "literal|bracket_shape|gated": 14,
+    "literal|eff_only|gated": 5,
+    "literal|site_broader|admin": 4,
+    "literal|site_broader|gated": 15,
+    "literal|site_narrower|admin": 88,
+    "literal|site_narrower|gated": 367
+   }
+  }
+ },
+ "gated_cell_pattern_counts": {
+  "EMR | blank | dot | site_narrower": 151,
+  "A | blank | dot | site_narrower": 72,
+  "EMT | blank | dot | site_narrower": 63,
+  "I | blank | dot | site_narrower": 60,
+  "P | blank | dot | site_narrower": 21,
+  "P | dot | mc | site_broader": 12,
+  "I | br | mc | bracket_shape": 10,
+  "P | blank | blank | eff_only": 3,
+  "P | br | mc | bracket_shape": 2,
+  "A | br | mc | bracket_shape": 2,
+  "I | dot | mc | site_broader": 2,
+  "EMR | dot | blank | site_broader": 1,
+  "A | blank | blank | eff_only": 1,
+  "I | blank | blank | eff_only": 1
+ },
+ "front_matter_appendix": {
+  "files": [
+   "front-matter/00 - AI Formatting Guidelines.md",
+   "front-matter/00 - Introduction.md",
+   "front-matter/01 - How to Read the Protocols.md",
+   "front-matter/Universal Patient Care.md"
+  ],
+  "stats": {
+   "paired_without_matrix": 2,
+   "rows_compared": 15,
+   "rows_with_cell_discrepancy": 15
+  },
+  "cells": {
+   "effective|site_narrower|gated": 14,
+   "literal|bracket_shape|gated": 1,
+   "literal|site_narrower|gated": 14
+  }
+ },
+ "internal_conflicts": {
+  "site_rows_dot_below_explicit_MC_or_bracket": 3,
+  "vault_rows_dot_below_explicit_MC_or_bracket": 5
+ },
+ "vault_only_unpaired_count": 33,
+ "implied_unwritten_cells": {
+  "site": 0,
+  "site_examples": [],
+  "site_blank_directly_above_plain_MC": 3,
+  "vault": 8,
+  "vault_examples": [
+   {
+    "file": "01 - Administrative Policies/01_ALS_Release_to_BLS_PROC.md",
+    "row": "6",
+    "level": "A",
+    "line": 20
+   },
+   {
+    "file": "01 - Administrative Policies/01_ALS_Release_to_BLS_PROC.md",
+    "row": "6",
+    "level": "I",
+    "line": 20
+   },
+   {
+    "file": "01 - Administrative Policies/01_ALS_Release_to_BLS_PROC.md",
+    "row": "6",
+    "level": "P",
+    "line": 20
+   },
+   {
+    "file": "03 - Respiratory/03_Respiratory_Distress_PROC.md",
+    "row": "7",
+    "level": "A",
+    "line": 24
+   },
+   {
+    "file": "03 - Respiratory/03_Respiratory_Distress_PROC.md",
+    "row": "7",
+    "level": "I",
+    "line": 24
+   },
+   {
+    "file": "04 - Cardiac/04_Bradycardia_PROC.md",
+    "row": "3",
+    "level": "P",
+    "line": 17
+   },
+   {
+    "file": "04 - Cardiac/04_Bradycardia_PROC.md",
+    "row": "5",
+    "level": "P",
+    "line": 19
+   },
+   {
+    "file": "04 - Cardiac/04_Bradycardia_PROC.md",
+    "row": "6",
+    "level": "P",
+    "line": 20
+   }
+  ],
+  "vault_blank_directly_above_plain_MC": 0
+ },
+ "text_differs_rows": [
+  {
+   "file": "administrative/01_ALS_Release_to_BLS_PROC.md",
+   "row": "8",
+   "site": "qa/qi review: any als release to bls must be reviewed by the officer or acting officer the following day, per departmental sop.",
+   "vault": "qa/qi review: any als release to bls must be reviewed by the agency quality assurance/quality improvement process."
+  },
+  {
+   "file": "administrative/01_Communications_PROC.md",
+   "row": "6",
+   "site": "document comm failure document time, nature of comms problem, clinical status, and protocols used on the pcr. review with officer/acting off",
+   "vault": "document comm failure/submit incident form document time, nature of comms problem, clinical status, and protocols used. submit medical contr"
+  },
+  {
+   "file": "administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md",
+   "row": "6",
+   "site": "contact poquoson medical control regarding issuance of a medical eco for acute medical emergencies lacking capacity.",
+   "vault": "contact poquoson omd / medical control regarding issuance of a medical eco for acute medical emergencies lacking capacity."
+  },
+  {
+   "file": "administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md",
+   "row": "7",
+   "site": "contact poquoson medical control for assistance if unsure of capacity, surrogate validity, or if patient refuses despite severe risk.",
+   "vault": "contact poquoson omd / medical control for assistance if unsure of capacity, surrogate validity, or if patient refuses despite severe risk."
+  },
+  {
+   "file": "general/02_Behavioral_Patient_Restraint_PROC.md",
+   "row": "8",
+   "site": "contact poquoson medical control for guidance if unable to safely restrain or transport the patient.",
+   "vault": "contact poquoson omd / medical control for guidance if unable to safely restrain or transport the patient."
+  },
+  {
+   "file": "general/02_Cold_Exposure_PROC.md",
+   "row": "9",
+   "site": "contact poquoson medical control prior to use of aed.",
+   "vault": "contact poquoson omd / medical control prior to use of aed."
+  },
+  {
+   "file": "general/02_Diving_and_Drowning_Emergencies_PROC.md",
+   "row": "7",
+   "site": "contact poquoson medical control for hyperbaric transport destination guidance if decompression injury is suspected.",
+   "vault": "contact poquoson omd / medical control for hyperbaric transport destination guidance if decompression injury is suspected."
+  },
+  {
+   "file": "general/02_Pain_Control_PROC.md",
+   "row": "8",
+   "site": "if unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact poquoson medical control for guida",
+   "vault": "if unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact poquoson omd / medical control for"
+  },
+  {
+   "file": "respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": "13",
+   "site": "contact poquoson medical control for guidance as needed",
+   "vault": "contact poquoson omd / medical control for guidance as needed"
+  },
+  {
+   "file": "cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
+   "row": "12",
+   "site": "if rosc is achieved, refer to post cardiac arrest care (rosc) protocol. if rosc is not achieved, refer to death and criteria for withholding",
+   "vault": "if rosc is achieved, refer to post cardiac arrest care (rosc) protocol. if rosc is not achieved, refer to death and criteria for withholding"
+  },
+  {
+   "file": "cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+   "row": "11",
+   "site": "contact poquoson medical control for guidance / destination",
+   "vault": "contact poquoson omd / medical control for guidance / destination"
+  },
+  {
+   "file": "cardiac/04_Hypertensive_Crisis_PROC.md",
+   "row": "7",
+   "site": "medical control consultation: • contact poquoson medical control for guidance on blood pressure management as needed. • do not attempt to ag",
+   "vault": "medical control consultation: • contact poquoson omd / medical control for guidance on blood pressure management as needed. • do not attempt"
+  },
+  {
+   "file": "cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+   "row": "12",
+   "site": "contact poquoson medical control for guidance / termination of resuscitation",
+   "vault": "contact poquoson omd / medical control for guidance / termination of resuscitation"
+  },
+  {
+   "file": "neurologic/05_Seizure_PROC.md",
+   "row": "7",
+   "site": "contact poquoson medical control and initiate transport if seizing >5 mins after 2nd dose of midazolam",
+   "vault": "contact poquoson omd / medical control and initiate transport if seizing >5 mins after 2nd dose of midazolam"
+  },
+  {
+   "file": "toxicology/06_Nausea_Vomiting_PROC.md",
+   "row": "6",
+   "site": "contact poquoson medical control for additional doses or orders",
+   "vault": "contact poquoson omd / medical control for additional doses or orders"
+  },
+  {
+   "file": "toxicology/06_Nerve_Agents_PROC.md",
+   "row": "7",
+   "site": "contact poquoson medical control for additional guidance and dosing instructions",
+   "vault": "contact poquoson omd / medical control for additional guidance and dosing instructions"
+  },
+  {
+   "file": "medical/07_Sepsis_PROC.md",
+   "row": "6",
+   "site": "contact poquoson medical control / prehospital sepsis alert",
+   "vault": "contact poquoson omd / medical control / prehospital sepsis alert"
+  },
+  {
+   "file": "trauma/09_Burns_Thermal_PROC.md",
+   "row": "7",
+   "site": "contact poquoson medical control if the most appropriate transport destination is unclear based on criteria.",
+   "vault": "contact poquoson omd / medical control if the most appropriate transport destination is unclear based on criteria."
+  },
+  {
+   "file": "trauma/09_Crush_Syndrome_PROC.md",
+   "row": "9",
+   "site": "if it is anticipated the patient will not be able to be promptly and safely extricated, contact poquoson medical control at a regional traum",
+   "vault": "if it is anticipated the patient will not be able to be promptly and safely extricated, contact poquoson omd / medical control at a regional"
+  },
+  {
+   "file": "trauma/09_Hemorrhage_Control_PROC.md",
+   "row": "9",
+   "site": "contact poquoson medical control if hemorrhage cannot be controlled and transport immediately.",
+   "vault": "contact poquoson omd / medical control if hemorrhage cannot be controlled and transport immediately."
+  },
+  {
+   "file": "trauma/09_Trauma_PROC.md",
+   "row": "13",
+   "site": "contact poquoson medical control for guidance and/or optimal destination determination as needed.",
+   "vault": "contact poquoson omd / medical control for guidance and/or optimal destination determination as needed."
+  }
+ ]
+}

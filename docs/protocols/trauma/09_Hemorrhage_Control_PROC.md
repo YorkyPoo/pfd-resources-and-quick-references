@@ -17,19 +17,19 @@ Guidelines for managing life-threatening hemorrhage across various anatomical lo
     - Airway/breathing
 
 ### Interventions
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Follow Universal Care / Reassess bleeding after treatments performed. |  | • | • | • | • |
-| 2 | **Head:** Apply direct pressure / Hemostatic dressing (avoid eyes/mouth). |  | • | • | • | • |
-| 3 | **Neck:** Apply occlusive dressing / direct pressure (DO NOT pack). |  | • | • | • | • |
-| 4 | **Extremity:** Apply direct pressure/packing ➔ Tourniquet 2-3" above wound ➔ 2nd Tourniquet if needed. |  | • | • | • | • |
-| 5 | **Junctional (Axilla or femoral):** Pack tightly with hemostatic gauze / hold pressure x3 mins. |  | • | • | • | • |
-| 6 | **Thoracoabdominal:** Apply direct pressure / chest seal (DO NOT pack). |  | • | • | • | • |
-| 7 | Apply pelvic binder if unstable pelvis suspected. |  | • | • | • | • |
-| 8 | Consider pain control per Poquoson Protocol(s). |  | • | • | • | • |
-| 9 | Contact Poquoson Medical Control if hemorrhage cannot be controlled and transport immediately. | MC | MC | MC | MC | MC |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emr">EMR</span> | Follow Universal Care / Reassess bleeding after treatments performed. |
+| 2 | <span class="lvl lvl-emr">EMR</span> | **Head:** Apply direct pressure / Hemostatic dressing (avoid eyes/mouth). |
+| 3 | <span class="lvl lvl-emr">EMR</span> | **Neck:** Apply occlusive dressing / direct pressure (DO NOT pack). |
+| 4 | <span class="lvl lvl-emr">EMR</span> | **Extremity:** Apply direct pressure/packing ➔ Tourniquet 2-3" above wound ➔ 2nd Tourniquet if needed. |
+| 5 | <span class="lvl lvl-emr">EMR</span> | **Junctional (Axilla or femoral):** Pack tightly with hemostatic gauze / hold pressure x3 mins. |
+| 6 | <span class="lvl lvl-emr">EMR</span> | **Thoracoabdominal:** Apply direct pressure / chest seal (DO NOT pack). |
+| 7 | <span class="lvl lvl-emr">EMR</span> | Apply pelvic binder if unstable pelvis suspected. |
+| 8 | <span class="lvl lvl-emr">EMR</span> | Consider pain control per the Pain Control protocol. |
+| 9 | <span class="lvl lvl-mc">MC</span> | Contact Medical Control if hemorrhage cannot be controlled and transport immediately. |
 
 </div>
 

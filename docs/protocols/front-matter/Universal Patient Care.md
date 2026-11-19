@@ -17,21 +17,21 @@ The Universal Patient Care / Initial Patient Contact protocol applies to all pat
 
 ### Interventions
 
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-|---|---|:---:|:---:|:---:|:---:|:---:|
-| 1 | **Scene Safety / PPE / Patient Contact:**<br>• Utilize appropriate agencies and resources as needed (lift assistance, ALS, law enforcement).<br>• Bring all necessary equipment to the patient’s side. |  | • | • | • | • |
-| 2 | **Initial Assessment:**<br>• Perform Primary and Secondary Survey as indicated.<br>• Consider spinal motion restriction if indicated by MOI or history. |  | • | • | • | • |
-| 3 | **Ensure Adequate Airway, Oxygenation, and Ventilation:**<br>• Manage airway by the least invasive means necessary.<br>• Maintain home oxygen unless symptoms indicate need for increase.<br>• Administer up to 15 LPM oxygen through an appropriate delivery device. |  | • | • | • | • |
-| 4 | **Vital Signs:**<br>• Obtain BP, pulse rate, respirations, and GCS.<br>• Consider obtaining blood glucose level and temperature.<br>• Reassess Stable patients at least every 15 minutes.<br>• Reassess Unstable patients at least every 5 minutes. |  | • | • | • | • |
-| 5 | **Assess SpO2:**<br>• Consider assessing EtCO2 and/or SpCO as indicated. |  |  | • | • | • |
-| 6 | **Consider 12-Lead ECG:**<br>• Acquire within 5 minutes of patient contact.<br>• Transmit to receiving facility within 10 minutes of patient contact. |  |  | • | • | • |
-| 7 | **Medication Administration:**<br>• Confirm all "Rights" (Patient, Medication, Dose, Route, Time).<br>• Ensure medications are not expired.<br>• Assess for drug-drug interactions and contraindications. |  |  | • | • | • |
-| 8 | **Establish IV / IO access:**<br>• Establish access when indicated. |  |  |  | • | • |
-| 9 | **Consider continuous cardiac monitoring.** |  |  |  |  | • |
-| 10 | **Transport:**<br>• Base transport decisions on clinical condition and regional Field Triage policies.<br>• Deliver a pre-arrival report to the receiving facility as soon as practical.<br>• Consult with Medical Control regarding destination or clinical guidance. |  |  | • | • | • |
-| 11 | **Refer to relevant protocols:**<br>• If no protocol applies, or for clinical guidance at any time, contact Medical Control. |  | • | • | • | • |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emr">EMR</span> | **Scene Safety / PPE / Patient Contact:**<br>• Utilize appropriate agencies and resources as needed (lift assistance, ALS, law enforcement).<br>• Bring all necessary equipment to the patient’s side. |
+| 2 | <span class="lvl lvl-emr">EMR</span> | **Initial Assessment:**<br>• Perform Primary and Secondary Survey as indicated.<br>• Consider spinal motion restriction if indicated by MOI or history. |
+| 3 | <span class="lvl lvl-emr">EMR</span> | **Ensure Adequate Airway, Oxygenation, and Ventilation:**<br>• Manage airway by the least invasive means necessary.<br>• Maintain home oxygen unless symptoms indicate need for increase.<br>• Administer up to 15 LPM oxygen through an appropriate delivery device. |
+| 4 | <span class="lvl lvl-emr">EMR</span> | **Vital Signs:**<br>• Obtain BP, pulse rate, respirations, and GCS.<br>• Consider obtaining blood glucose level and temperature.<br>• Reassess Stable patients at least every 15 minutes.<br>• Reassess Unstable patients at least every 5 minutes. |
+| 5 | <span class="lvl lvl-emt">EMT</span> | **Assess SpO2:**<br>• Consider assessing EtCO2 and/or SpCO as indicated. |
+| 6 | <span class="lvl lvl-emt">EMT</span> | **Consider 12-Lead ECG:**<br>• Acquire within 5 minutes of patient contact.<br>• Transmit to receiving facility within 10 minutes of patient contact. |
+| 7 | <span class="lvl lvl-emt">EMT</span> | **Medication Administration:**<br>• Confirm all "Rights" (Patient, Medication, Dose, Route, Time).<br>• Ensure medications are not expired.<br>• Assess for drug-drug interactions and contraindications. |
+| 8 | <span class="lvl lvl-a">A</span> | **Establish IV / IO access:**<br>• Establish access when indicated. |
+| 9 | <span class="lvl lvl-i">I</span> | **Consider continuous cardiac monitoring.** |
+| 10 | <span class="lvl lvl-emt">EMT</span> | **Transport:**<br>• Base transport decisions on clinical condition and regional Field Triage policies.<br>• Deliver a pre-arrival report to the receiving facility as soon as practical.<br>• Consult with Medical Control regarding destination or clinical guidance. |
+| 11 | <span class="lvl lvl-emr">EMR</span> | **Refer to relevant protocols:**<br>• If no protocol applies, or for clinical guidance at any time, contact Medical Control. |
 
 </div>
 

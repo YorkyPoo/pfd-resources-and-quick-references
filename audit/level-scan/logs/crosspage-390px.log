@@ -1,0 +1,42 @@
+# 390px check — pages carrying the +MC marker
+
+Viewport 390 x 844 (DPR 2, mobile emulation) against `site/` served locally
+(`python3 -m http.server`, `mkdocs build --strict` output at d561fbb+).
+
+Method: `Emulation.setDeviceMetricsOverride(390, 844, 2, mobile=True)`, then in the page
+read `documentElement.scrollWidth` vs `clientWidth`, `.lv-wrap` `scrollWidth` vs
+`clientWidth`, count table rows, count `.lv-wrap .lvl` markers and `.lv-wrap .lvl-mc-req`
+markers, and read the computed style of the first `+MC` marker.
+
+| page | doc scrollW / clientW | .lv-wrap scrollW / clientW | rows | level markers | +MC markers |
+|---|---|---:|---:|---:|---:|
+| 03_Pediatric_Stridor_PROC | 390 / 390 | 358 / 358 | 12 | 12 | 1 |
+| 03_Smoke_Inhalation_PROC | 390 / 390 | 358 / 358 | 14 | 14 | 3 |
+| 03_Upper_Airway_Obstruction_PROC | 390 / 390 | 358 / 358 | 14 | 14 | 1 |
+| 04_Chest_Pain_ACS_PROC | 390 / 390 | 358 / 358 | 14 | 14 | 1 |
+
+(rows/markers exclude the header row; `.lvl-mc-req` carries the `lvl` class too, which is
+why the raw `.lvl` count equals rows + `+MC` markers.)
+
+Computed style of a `+MC` marker at 390px:
+
+    border: 1px solid rgb(106, 27, 154)   (outlined purple)
+    color:  rgb(106, 27, 154)
+    background: rgba(0, 0, 0, 0)          (transparent — not a filled chip)
+    display: block                        (own line inside the 4.8em level column)
+
+The `MC` chip on the same page computes to a filled red badge (`background:
+rgb(198, 40, 40)`), so the two never read alike: `MC` = the action is a Medical Control
+contact, `+MC` = this level needs Medical Control authorisation.
+
+No horizontal scroll on any of the four pages: `documentElement.scrollWidth == clientWidth
+== 390` and the `.lv-wrap` container does not overflow. Level column not clipped, action
+column not truncated.
+
+Screenshots (390px, the same pages):
+
+- `audit/level-scan/evidence/crosspage-390/mc-marker-390.png` — Smoke Inhalation rows 6-9:
+  an `I` chip with the outlined `+MC` marker beneath it.
+- `audit/level-scan/evidence/crosspage-390/mc-chip-vs-plusmc-390.png` — Smoke Inhalation
+  rows 12-14: the filled red `MC` chip (row 12) beside the `+MC` rows above it, plus the
+  page note that explains both.

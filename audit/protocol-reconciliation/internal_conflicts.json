@@ -1,0 +1,75 @@
+[
+ {
+  "side": "vault",
+  "file": "03 - Respiratory/03_Respiratory_Distress_PROC.md",
+  "row": "6",
+  "levels": [
+   "A",
+   "I"
+  ],
+  "line": 23
+ },
+ {
+  "side": "vault",
+  "file": "03 - Respiratory/03_Upper_Airway_Obstruction_PROC.md",
+  "row": "12",
+  "levels": [
+   "P"
+  ],
+  "line": 26
+ },
+ {
+  "side": "site",
+  "file": "cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+  "row": "11",
+  "levels": [
+   "P"
+  ],
+  "line": 52
+ },
+ {
+  "side": "vault",
+  "file": "04 - Cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+  "row": "11",
+  "levels": [
+   "P"
+  ],
+  "line": 25
+ },
+ {
+  "side": "site",
+  "file": "cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+  "row": "13",
+  "levels": [
+   "P"
+  ],
+  "line": 54
+ },
+ {
+  "side": "vault",
+  "file": "04 - Cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+  "row": "13",
+  "levels": [
+   "P"
+  ],
+  "line": 27
+ },
+ {
+  "side": "site",
+  "file": "cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+  "row": "9",
+  "levels": [
+   "P"
+  ],
+  "line": 50
+ },
+ {
+  "side": "vault",
+  "file": "04 - Cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+  "row": "9",
+  "levels": [
+   "P"
+  ],
+  "line": 23
+ }
+]

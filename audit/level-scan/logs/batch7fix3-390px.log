@@ -1,0 +1,37 @@
+Batch 7 review fix 3 — 390px check on 42eadc9 (Emulation.setDeviceMetricsOverride 390x844, DPR 2)
+
+Served site/ from the mkdocs build of 42eadc9 on 127.0.0.1:8137 and measured in headless
+Chromium over CDP in one target at a true 390px viewport. For every one of the 13 converted
+docs/procedures/ pages: documentElement.scrollWidth vs clientWidth, the .lv-wrap table
+body row count, the number of .lvl chips inside those rows, td.scrollWidth vs
+td.clientWidth on every cell (action column included), rows carrying more than one chip,
+and any table whose header row has 7 columns (the old matrix).
+
+page                          docSW docCW rows chips clipped multiChip  hdr7
+CPAP                            390   390    6     6       0         0     0
+Capnography                     390   390    7     7       0         0     0
+Chest_Decompression             390   390    7     7       0         0     0
+Endotracheal_Intubation         390   390   10    10       0         0     0
+Intraosseous_Access             390   390    8     8       0         0     0
+Medication_Administration       390   390    6     6       0         0     0
+Nasogastric_Tube                390   390    6     6       0         0     0
+Neonatal_Resuscitation          390   390    5     5       0         0     0
+Spinal_Motion_Restriction       390   390    4     4       0         0     0
+Surgical_Airway                 390   390    5     5       0         0     0
+Taser_Barb_Removal              390   390    6     6       0         0     0
+Tourniquet_Application          390   390    6     6       0         0     0
+Transcutaneous_Pacing           390   390    5     5       0         0     0
+
+13/13 pages: scrollWidth == clientWidth == 390; rows == chips (81 rows / 81 chips);
+0 clipped cells; 0 rows with more than one chip; 0 seven-column headers;
+1 OWNER_REQUIRED flag(s) across the 13 pages (Neonatal_Resuscitation flags=1), 0 on the other 12.
+
+Review-fix page, DOM state after the change:
+  Endotracheal_Intubation    .lvl-own flags = 0, lv-note = none
+                             chips = EMT, I, I, I, P, P, P, I, I, I
+  Neonatal_Resuscitation     .lvl-own flags = 1, lv-note = ⚑ OWNER_REQUIRED — row 5: this row prints two actions that PEMS 2024 splits across two row
+                             chips = EMR, EMR, I, EMR, P
+
+Screenshots: audit/level-scan/evidence/batch7fix3-390/*-390px.png (table + note)
+
+EXIT=0

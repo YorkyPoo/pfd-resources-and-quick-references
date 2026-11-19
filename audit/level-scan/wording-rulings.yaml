@@ -1,0 +1,21 @@
+# Owner rulings on WORDING — not on provider level.
+#
+# These are decisions the owner made about how a phrase reads on the page, where the page
+# and the source text disagree. They are recorded here so a later pass cannot "restore"
+# the source reading as if the page were wrong: the page is right by ruling, not by source.
+#
+# Consumed by scripts/level_rule.py (--write writes the ledger; --check verifies that every
+# `page_reads` string is actually on the page).
+
+rulings:
+
+  - file: docs/sops/ems/EMS-100-General-EMS-Guidelines.md
+    date: "2026-11-15"
+    status: owner_ruled
+    source_prints: "eliminate in hospital delays"
+    page_reads: "eliminate in-hospital delays"
+    ruling: >-
+      Owner ruling 2026-11-15 ("I like the change to in-hospital delays"): the compound is
+      hyphenated. The SOP as printed carries no hyphen. This is an OWNER RULING, not a
+      source reading — do not revert the page to the un-hyphenated form on the grounds that
+      the source prints it that way.

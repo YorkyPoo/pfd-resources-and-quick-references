@@ -1,0 +1,26 @@
+Batch 7 review fix — whole-site totals, derived from audit/level-scan/level-rule-ledger.json on fd3b85d
+
+BATCH 7 SCOPE — docs/procedures/ (13 pages)
+  rows total                81
+  cited to a PEMS row       80
+  OWNER_REQUIRED             1   -> procedures/Neonatal_Resuscitation.md row 5
+                                 (page prints P; p.261#10 is A, p.261#12 is I — no P row)
+  PENDING                    0
+  rows still carrying a cumulative dot grid   0 (one chip per row on all 13 pages)
+
+REVIEW FIX — the three rows the reviewer proved had PEMS authority are now citations,
+not OWNER_REQUIRED (was 4 owner rows / 77 citations / 81 total):
+  Endotracheal_Intubation r2  EMT  cites p.247#2 (EMT) "Position the patient: Ear to sternal notch."
+                                   evidence also states the C-spine sentence is p.247#3 (I)
+  Endotracheal_Intubation r6  P    cites p.247#7 (P) "After two failed attempts, airway must be
+                                   managed by the most experienced provider available."
+                                   evidence also states re-oxygenate is p.247#6 (I)
+  Neonatal_Resuscitation r3   I    cites p.261#7 (I) "Apply ECG monitoring."
+                                   evidence also states the EtCO2 sub-step is p.261#6 (EMT)
+
+WHOLE LEDGER (all converted pages, from the same file)
+  rows 604: OK 457, OWNER_REQUIRED 38, remainder POLICY / PENDING-class rows.
+  level_rule.py --check: 498 rows over 54 TARGET pages, 456 verified, 38 OWNER_REQUIRED
+  (was 453 / 41 before this fix).
+
+EXIT=0

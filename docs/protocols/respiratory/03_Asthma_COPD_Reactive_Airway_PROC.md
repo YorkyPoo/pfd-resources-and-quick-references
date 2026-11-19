@@ -28,23 +28,25 @@ This protocol addresses acute bronchospasm associated with asthma, COPD, and rea
     - **Pulmonary Embolism**
 
 ### Interventions
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-|---|---|:---:|:---:|:---:|:---:|:---:|
-| 1 | **Universal Patient Care / Assessment:**<br>• Assess airway, breathing, circulation, and mental status.<br>• Apply pulse oximetry and cardiac monitoring.<br>• Assess severity: Moderate, Moderate to Severe, or Severe. |  | • | • | • | • |
-| 2 | **Oxygen Administration:**<br>• Administer oxygen to maintain SpO₂ ≥ 94%.<br>• Use nasal cannula, simple mask, or non-rebreather as appropriate. |  | • | • | • | • |
-| 3 | **[Albuterol](../../pharmacology/Albuterol.md) Sulfate (Beta-Agonist):**<br>• **Adult & Pediatric:** **3 mL of 0.083% solution** via nebulizer.<br>• Repeat as necessary based on clinical response.<br>• May be administered continuously in severe cases per Poquoson OMD direction. |  | • | • | • | • |
-| 4 | **[Ipratropium](../../pharmacology/Ipratropium Bromide.md) Bromide (Anticholinergic):**<br>• **Adult & Pediatric:** **3 mL of 0.02% solution** via nebulizer.<br>• ⚠ **ONCE ONLY – Do NOT repeat without Poquoson OMD consultation.** |  | • | • | • | • |
-| 5 | **[Methylprednisolone](../../pharmacology/Methylprednisolone.md) (Solu-Medrol) for Moderate to Severe Symptoms:**<br>• **Adult:** **125 mg IV/IO** slow push.<br>• **Pediatric:** **2 mg/kg IV/IO** slow push (maximum dose **125 mg**).<br>• Administer if wheezing with moderate to severe respiratory distress. |  |  |  | • | • |
-| 6 | **[Magnesium Sulfate](../../pharmacology/Magnesium%20Sulfate.md) for Severe Symptoms / Impending Respiratory Failure:**<br>• **Adult:** **2 g IV/IO infusion** over 15 minutes.<br>• **Pediatric:** **40 mg/kg IV/IO** over 15 minutes (maximum dose **2,000 mg** or **2 g**).<br>• Administer if severe bronchospasm unresponsive to initial therapy. |  |  |  |  | • |
-| 7 | **Assist Ventilations / Airway Management:**<br>• Prepare for assisted ventilation if respiratory failure develops.<br>• Bag-valve-mask with PEEP valve as indicated.<br>• Consider supraglottic airway or endotracheal intubation if unable to maintain adequate ventilation. |  | • | • | • | • |
-| 8 | **Continuous Positive Airway Pressure (CPAP):**<br>• Consider for COPD exacerbation or severe bronchospasm with adequate mentation.<br>• Initiate 5-10 cm H₂O, titrate to effect.<br>• Contraindicated if altered mental status, vomiting, or respiratory arrest imminent. |  |  |  | • | • |
-| 9 | **Related Protocol – Stridor (Upper Airway Obstruction):**<br>• **[Epinephrine](../../pharmacology/Epinephrine.md):** **3 mg** [**1 mg/mL** solution] nebulized.<br>• May be repeated **once** if needed.<br>• **Adult AND Pediatric same dosing.**<br>• For anaphylaxis with stridor, follow Allergic Reaction Protocol. |  | • | • | • | • |
-| 10 | **Methylprednisolone for Moderate to Severe Stridor:**<br>• Same dosing as above (Row 5).<br>• Administer after [Epinephrine](../../pharmacology/Epinephrine.md) nebulization for persistent symptoms. |  |  |  | • | • |
-| 11 | **Reassessment and Transport:**<br>• Continuously monitor respiratory status, auscultation, and SpO₂.<br>• Reassess after each bronchodilator treatment.<br>• Expedite transport for severe or deteriorating patients. |  | • | • | • | • |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emr">EMR</span> | **Universal Patient Care / Assessment:**<br>• Assess airway, breathing, circulation, and mental status.<br>• Apply pulse oximetry and cardiac monitoring.<br>• Assess severity: Moderate, Moderate to Severe, or Severe. |
+| 2 | <span class="lvl lvl-emr">EMR</span> | **Oxygen Administration:**<br>• Administer oxygen to maintain SpO₂ ≥ 94%.<br>• Use nasal cannula, simple mask, or non-rebreather as appropriate. |
+| 3 | <span class="lvl lvl-emt">EMT</span> | **[Albuterol](../../pharmacology/Albuterol.md) Sulfate (Beta-Agonist):**<br>• **Adult & Pediatric:** **3 mL of 0.083% solution** via nebulizer.<br>• Repeat as necessary based on clinical response.<br>• May be administered continuously in severe cases per Medical Control direction. |
+| 4 | <span class="lvl lvl-emt">EMT</span> | **[Ipratropium](../../pharmacology/Ipratropium Bromide.md) Bromide (Anticholinergic):**<br>• **Adult & Pediatric:** **3 mL of 0.02% solution** via nebulizer.<br>• ⚠ **ONCE ONLY – Do NOT repeat without Medical Control consultation.** |
+| 5 | <span class="lvl lvl-a">A</span> | **[Methylprednisolone](../../pharmacology/Methylprednisolone.md) (Solu-Medrol) for Moderate to Severe Symptoms:**<br>• **Adult:** **125 mg IV/IO** slow push.<br>• **Pediatric:** **2 mg/kg IV/IO** slow push (maximum dose **125 mg**).<br>• Administer if wheezing with moderate to severe respiratory distress. |
+| 6 | <span class="lvl lvl-i">I</span> | **[Magnesium Sulfate](../../pharmacology/Magnesium%20Sulfate.md) for Severe Symptoms / Impending Respiratory Failure:**<br>• **Adult:** **2 g IV/IO infusion** over 15 minutes.<br>• **Pediatric:** **40 mg/kg IV/IO** over 15 minutes (maximum dose **2,000 mg** or **2 g**).<br>• Administer if severe bronchospasm unresponsive to initial therapy. |
+| 7 | <span class="lvl lvl-emt">EMT</span> | **Assist Ventilations / Airway Management:**<br>• Prepare for assisted ventilation if respiratory failure develops.<br>• Bag-valve-mask with PEEP valve as indicated.<br>• Consider supraglottic airway or endotracheal intubation if unable to maintain adequate ventilation. |
+| 8 | <span class="lvl lvl-i">I</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | **Continuous Positive Airway Pressure (CPAP):**<br>• Consider for COPD exacerbation or severe bronchospasm with adequate mentation.<br>• Initiate 5-10 cm H₂O, titrate to effect.<br>• Contraindicated if altered mental status, vomiting, or respiratory arrest imminent. |
+| 9 | <span class="lvl lvl-a">A</span> | **Related Protocol – Stridor (Upper Airway Obstruction):**<br>• **[Epinephrine](../../pharmacology/Epinephrine.md):** **3 mg** [**1 mg/mL** solution] nebulized.<br>• May be repeated **once** if needed.<br>• **Adult AND Pediatric same dosing.**<br>• For anaphylaxis with stridor, follow Allergic Reaction Protocol. |
+| 10 | <span class="lvl lvl-a">A</span> | **Methylprednisolone for Moderate to Severe Stridor:**<br>• Same dosing as above (Row 5).<br>• Administer after [Epinephrine](../../pharmacology/Epinephrine.md) nebulization for persistent symptoms. |
+| 11 | <span class="lvl lvl-emt">EMT</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | **Reassessment and Transport:**<br>• Continuously monitor respiratory status, auscultation, and SpO₂.<br>• Reassess after each bronchodilator treatment.<br>• Expedite transport for severe or deteriorating patients. |
 
 </div>
+
+<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — rows 8, 11: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
 ### Pearls
 1. ⚠ **[Ipratropium](../../pharmacology/Ipratropium Bromide.md) Bromide is ONCE ONLY.** Do not administer repeat doses without consulting Poquoson OMD. Excessive anticholinergic dosing may worsen outcomes.

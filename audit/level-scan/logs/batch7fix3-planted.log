@@ -1,0 +1,80 @@
+Batch 7 review fix 3 — planted-defect probe (scripts/level_rule.py --check)
+
+Run in a fresh tar copy of level-rule-collapse at 42eadc9 (keeps .git: --check shells out to
+git show / merge-base and fails with bogus +MC errors in a tarball without one); the real
+working tree is never touched. Each defect is planted, --check run, then reverted and re-run.
+
+baseline (clean copy at HEAD):
+  baseline: EXIT=0
+     | OK — 11 action rows across 1 page(s) are chipped PENDING (Pending OMD Authorization) because PEMS 2024 publishes no such protocol; 0 of them claim a P
+     | OK — 3 action row(s) on an otherwise PEMS-cited page are chipped PENDING as agency additions awaiting OMD authorization (pending-protocols.yaml `rows:
+     | OK — 14 administrative-policy page(s) carry 95 action rows: 89 chipped POLICY (cited to one of 14 PEMS 2024 administrative policies, each with a verba
+     | OK — sc-wrap: 63 wide-table block(s) in 46 docs file(s) — mostly dose charts, phone lists and SOP tables that are not level matrices; 0 provider-level
+     | REPORTED, NOT GATED — 1 provider-level matrix/matrices inside sc-wrap remain on a page outside every conversion batch's scope (the front-matter legend
+     |    - protocols/front-matter/01 - How to Read the Protocols.md (line 33)
+  defect 1: ETT r2 chip EMT (the C-spine over-grant): EXIT=1
+     |  ]
+     | }
+     | 
+     | FAIL
+     |  - procedures/Endotracheal_Intubation.md row 2: marker EMT != expected I (p.247#3)
+     |  - procedures/Endotracheal_Intubation.md row 2: PEMS column dots start at I, badge says EMT
+  defect 1: ETT r2 chip EMT (the C-spine over-grant) (reverted): EXIT=0
+     | OK — 11 action rows across 1 page(s) are chipped PENDING (Pending OMD Authorization) because PEMS 2024 publishes no such protocol; 0 of them claim a P
+     | OK — 3 action row(s) on an otherwise PEMS-cited page are chipped PENDING as agency additions awaiting OMD authorization (pending-protocols.yaml `rows:
+     | OK — 14 administrative-policy page(s) carry 95 action rows: 89 chipped POLICY (cited to one of 14 PEMS 2024 administrative policies, each with a verba
+     | OK — sc-wrap: 63 wide-table block(s) in 46 docs file(s) — mostly dose charts, phone lists and SOP tables that are not level matrices; 0 provider-level
+     | REPORTED, NOT GATED — 1 provider-level matrix/matrices inside sc-wrap remain on a page outside every conversion batch's scope (the front-matter legend
+     |    - protocols/front-matter/01 - How to Read the Protocols.md (line 33)
+
+  defect 2: 7-column matrix inside sc-wrap (CPAP): EXIT=1
+     | }
+     | 
+     | FAIL
+     |  - procedures/CPAP.md: legacy 5-column level matrix still present
+     |  - procedures/CPAP.md row 1: 0 level markers, expected 1
+     |  - procedures/CPAP.md (line 15): a provider-level matrix is still wrapped in sc-wrap
+  defect 2: 7-column matrix inside sc-wrap (CPAP) (reverted): EXIT=0
+     | OK — 11 action rows across 1 page(s) are chipped PENDING (Pending OMD Authorization) because PEMS 2024 publishes no such protocol; 0 of them claim a P
+     | OK — 3 action row(s) on an otherwise PEMS-cited page are chipped PENDING as agency additions awaiting OMD authorization (pending-protocols.yaml `rows:
+     | OK — 14 administrative-policy page(s) carry 95 action rows: 89 chipped POLICY (cited to one of 14 PEMS 2024 administrative policies, each with a verba
+     | OK — sc-wrap: 63 wide-table block(s) in 46 docs file(s) — mostly dose charts, phone lists and SOP tables that are not level matrices; 0 provider-level
+     | REPORTED, NOT GATED — 1 provider-level matrix/matrices inside sc-wrap remain on a page outside every conversion batch's scope (the front-matter legend
+     |    - protocols/front-matter/01 - How to Read the Protocols.md (line 33)
+
+  defect 3: ETT r2 bound to p.247#5 (badge P) while the chip says I: EXIT=1
+     |  ]
+     | }
+     | 
+     | FAIL
+     |  - procedures/Endotracheal_Intubation.md row 2: marker I != expected P (p.247#5)
+     |  - procedures/Endotracheal_Intubation.md row 2: PEMS column dots start at P, badge says I
+  defect 3: ETT r2 bound to p.247#5 (badge P) while the chip says I (reverted): EXIT=0
+     | OK — 11 action rows across 1 page(s) are chipped PENDING (Pending OMD Authorization) because PEMS 2024 publishes no such protocol; 0 of them claim a P
+     | OK — 3 action row(s) on an otherwise PEMS-cited page are chipped PENDING as agency additions awaiting OMD authorization (pending-protocols.yaml `rows:
+     | OK — 14 administrative-policy page(s) carry 95 action rows: 89 chipped POLICY (cited to one of 14 PEMS 2024 administrative policies, each with a verba
+     | OK — sc-wrap: 63 wide-table block(s) in 46 docs file(s) — mostly dose charts, phone lists and SOP tables that are not level matrices; 0 provider-level
+     | REPORTED, NOT GATED — 1 provider-level matrix/matrices inside sc-wrap remain on a page outside every conversion batch's scope (the front-matter legend
+     |    - protocols/front-matter/01 - How to Read the Protocols.md (line 33)
+
+  defect 4: Neonatal r5 OWNER_REQUIRED removed and cited to p.261#10 (A): EXIT=1
+     | }
+     | 
+     | FAIL
+     |  - procedures/Neonatal_Resuscitation.md row 5: chip carries the OWNER_REQUIRED flag but the row is cited to PEMS (261, 10)
+     |  - procedures/Neonatal_Resuscitation.md row 5: marker P != expected A (p.261#10)
+     |  - procedures/Neonatal_Resuscitation.md row 5: PEMS column dots start at A, badge says P
+  defect 4: Neonatal r5 OWNER_REQUIRED removed and cited to p.261#10 (A) (reverted): EXIT=0
+     | OK — 11 action rows across 1 page(s) are chipped PENDING (Pending OMD Authorization) because PEMS 2024 publishes no such protocol; 0 of them claim a P
+     | OK — 3 action row(s) on an otherwise PEMS-cited page are chipped PENDING as agency additions awaiting OMD authorization (pending-protocols.yaml `rows:
+     | OK — 14 administrative-policy page(s) carry 95 action rows: 89 chipped POLICY (cited to one of 14 PEMS 2024 administrative policies, each with a verba
+     | OK — sc-wrap: 63 wide-table block(s) in 46 docs file(s) — mostly dose charts, phone lists and SOP tables that are not level matrices; 0 provider-level
+     | REPORTED, NOT GATED — 1 provider-level matrix/matrices inside sc-wrap remain on a page outside every conversion batch's scope (the front-matter legend
+     |    - protocols/front-matter/01 - How to Read the Protocols.md (line 33)
+
+SUMMARY
+  ETT r2 chip reverted to EMT: plant EXIT=1 -> revert EXIT=0
+  7-column matrix inside sc-wrap on CPAP: plant EXIT=1 -> revert EXIT=0
+  ETT r2 binding repointed to p.247#5 (P): plant EXIT=1 -> revert EXIT=0
+  Neonatal r5 owner flag stripped: plant EXIT=1 -> revert EXIT=0
+EXIT=0

@@ -1,0 +1,254 @@
+{
+ "generated_by": "scripts/mc_wording.py --write-rows",
+ "rule": "every MC-badged row says \"Contact Medical Control\"; no MC row names a local office, a Medical Director, or a named individual",
+ "base_rev": "d98e36069adac54243c952f2d8cff93f92ed1ed9^",
+ "total": 30,
+ "pages": 28,
+ "counts": {
+  "rewritten": 20,
+  "already_correct": 10,
+  "unknown_base": 0
+ },
+ "records": [
+  {
+   "file": "protocols/toxicology/06_Nerve_Agents_PROC.md",
+   "row": "7",
+   "line": 47,
+   "text": "Contact Medical Control for additional guidance and dosing instructions",
+   "status": "rewritten",
+   "text_before": "Contact Poquoson Medical Control for additional guidance and dosing instructions"
+  },
+  {
+   "file": "protocols/administrative/01_ALS_Release_to_BLS_PROC.md",
+   "row": "5",
+   "line": 30,
+   "text": "**Medical Control**: Contact Medical Control when there is a concern of the appropriateness of the release.",
+   "status": "already_correct",
+   "text_before": "**Medical Control**: Contact Medical Control when there is a concern of the appropriateness of the release."
+  },
+  {
+   "file": "protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md",
+   "row": "6",
+   "line": 41,
+   "text": "Contact **Medical Control** regarding issuance of a Medical ECO for acute medical emergencies lacking capacity.",
+   "status": "rewritten",
+   "text_before": "Contact **Poquoson Medical Control** regarding issuance of a Medical ECO for acute medical emergencies lacking capacity."
+  },
+  {
+   "file": "protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md",
+   "row": "7",
+   "line": 42,
+   "text": "Contact **Medical Control** for assistance if unsure of capacity, surrogate validity, or if patient refuses despite severe risk.",
+   "status": "rewritten",
+   "text_before": "Contact **Poquoson Medical Control** for assistance if unsure of capacity, surrogate validity, or if patient refuses despite severe risk."
+  },
+  {
+   "file": "protocols/administrative/01_Trauma_Field_Triage_PROC.md",
+   "row": "5",
+   "line": 42,
+   "text": "**Mechanism-Only Routing:** If patient meets mechanism criteria but NOT physiologic/anatomic criteria, contact Medical Control to determine destination.",
+   "status": "already_correct",
+   "text_before": "**Mechanism-Only Routing:** If patient meets mechanism criteria but NOT physiologic/anatomic criteria, contact Medical Control to determine destination."
+  },
+  {
+   "file": "protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
+   "row": "12",
+   "line": 33,
+   "text": "If ROSC is achieved, refer to Post Cardiac Arrest Care (ROSC) protocol.<br><br>If ROSC is not achieved, refer to Death and Criteria for Withholding Resuscitation protocol. Contact **Medical Control** for guidance as needed. Note: Once initiated, termination of resuscitative efforts is a **Medical Control** decision only.",
+   "status": "rewritten",
+   "text_before": "If ROSC is achieved, refer to Post Cardiac Arrest Care (ROSC) protocol.<br><br>If ROSC is not achieved, refer to Death and Criteria for Withholding Resuscitation protocol. Contact **Poquoson Medical Control** for guidance as needed. Note: Once initiated, termination of resuscitative efforts is a **Poquoson Medical Control** decision only."
+  },
+  {
+   "file": "protocols/cardiac/04_Bradycardia_PROC.md",
+   "row": "8",
+   "line": 42,
+   "text": "Contact Medical Control for guidance as needed<br>Consider contacting Medical Control at a pediatric specialty center (VCU CHoR or CHKD) for children and infants with symptomatic bradycardia",
+   "status": "already_correct",
+   "text_before": "Contact Medical Control for guidance as needed<br>Consider contacting Medical Control at a pediatric specialty center (VCU CHoR or CHKD) for children and infants with symptomatic bradycardia"
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": "13",
+   "line": 54,
+   "text": "**Termination of Resuscitation (TOR):**<br>Contact Medical Control to request TOR if ALL criteria met:<br>• Arrest was not witnessed by EMS<br>• After **20 minutes** of continuous CPR with no ROSC<br>• AND no shocks were delivered",
+   "status": "already_correct",
+   "text_before": "**Termination of Resuscitation (TOR):**<br>Contact Medical Control to request TOR if ALL criteria met:<br>• Arrest was not witnessed by EMS<br>• After **20 minutes** of continuous CPR with no ROSC<br>• AND no shocks were delivered"
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+   "row": "11",
+   "line": 36,
+   "text": "Contact Medical Control for guidance / destination",
+   "status": "rewritten",
+   "text_before": "Contact Poquoson Medical Control for guidance / destination"
+  },
+  {
+   "file": "protocols/cardiac/04_Chest_Pain_ACS_PROC.md",
+   "row": "13",
+   "line": 51,
+   "text": "**Medical Control Contact:**<br>• Contact Medical Control for guidance as needed.",
+   "status": "rewritten",
+   "text_before": "**Medical Control Contact:**<br>• Contact Poquoson OMD for guidance as needed."
+  },
+  {
+   "file": "protocols/cardiac/04_Hypertensive_Crisis_PROC.md",
+   "row": "7",
+   "line": 47,
+   "text": "**Medical Control Consultation:**<br>• Contact **Medical Control** for guidance on blood pressure management as needed.<br>• Do NOT attempt to aggressively lower blood pressure in the field without specific orders.<br>• Report all associated symptoms, vital signs, and suspected target organ involvement.",
+   "status": "rewritten",
+   "text_before": "**Medical Control Consultation:**<br>• Contact **Poquoson Medical Control** for guidance on blood pressure management as needed.<br>• Do NOT attempt to aggressively lower blood pressure in the field without specific orders.<br>• Report all associated symptoms, vital signs, and suspected target organ involvement."
+  },
+  {
+   "file": "protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md",
+   "row": "10",
+   "line": 56,
+   "text": "Contact Medical Control for guidance<br>Ensure 12-Lead ECG transmitted",
+   "status": "rewritten",
+   "text_before": "Contact Poquoson OMD for guidance<br>Ensure 12-Lead ECG transmitted"
+  },
+  {
+   "file": "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+   "row": "12",
+   "line": 36,
+   "text": "Contact Medical Control for guidance / termination of resuscitation",
+   "status": "rewritten",
+   "text_before": "Contact Poquoson Medical Control for guidance / termination of resuscitation"
+  },
+  {
+   "file": "protocols/trauma/09_Burns_Thermal_PROC.md",
+   "row": "7",
+   "line": 39,
+   "text": "Contact Medical Control if the most appropriate transport destination is unclear based on criteria.",
+   "status": "rewritten",
+   "text_before": "Contact Poquoson Medical Control if the most appropriate transport destination is unclear based on criteria."
+  },
+  {
+   "file": "protocols/trauma/09_Crush_Syndrome_PROC.md",
+   "row": "9",
+   "line": 38,
+   "text": "If it is anticipated the patient will not be able to be promptly and safely extricated, contact Medical Control at a regional trauma center for additional resources.",
+   "status": "rewritten",
+   "text_before": "If it is anticipated the patient will not be able to be promptly and safely extricated, contact Poquoson Medical Control at a regional trauma center for additional resources."
+  },
+  {
+   "file": "protocols/trauma/09_Hemorrhage_Control_PROC.md",
+   "row": "9",
+   "line": 32,
+   "text": "Contact Medical Control if hemorrhage cannot be controlled and transport immediately.",
+   "status": "rewritten",
+   "text_before": "Contact Poquoson Medical Control if hemorrhage cannot be controlled and transport immediately."
+  },
+  {
+   "file": "protocols/trauma/09_Trauma_PROC.md",
+   "row": "13",
+   "line": 40,
+   "text": "Contact Medical Control for guidance and/or optimal destination determination as needed.",
+   "status": "rewritten",
+   "text_before": "Contact Poquoson Medical Control for guidance and/or optimal destination determination as needed."
+  },
+  {
+   "file": "protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md",
+   "row": "10",
+   "line": 45,
+   "text": "Contact Medical Control for guidance as needed.",
+   "status": "already_correct",
+   "text_before": "Contact Medical Control for guidance as needed."
+  },
+  {
+   "file": "protocols/medical/07_OB_Emergencies_PROC.md",
+   "row": "10",
+   "line": 41,
+   "text": "Contact Medical Control for guidance, especially for complications, eclampsia seizures, or difficult deliveries.",
+   "status": "already_correct",
+   "text_before": "Contact Medical Control for guidance, especially for complications, eclampsia seizures, or difficult deliveries."
+  },
+  {
+   "file": "protocols/medical/07_Sepsis_PROC.md",
+   "row": "6",
+   "line": 40,
+   "text": "Contact Medical Control / Prehospital Sepsis Alert",
+   "status": "rewritten",
+   "text_before": "Contact Poquoson Medical Control / Prehospital Sepsis Alert"
+  },
+  {
+   "file": "protocols/neurologic/05_Seizure_PROC.md",
+   "row": "7",
+   "line": 37,
+   "text": "Contact Medical Control and initiate transport if seizing >5 mins after 2nd dose of **[Midazolam](../../pharmacology/Midazolam.md)**",
+   "status": "rewritten",
+   "text_before": "Contact Poquoson Medical Control and initiate transport if seizing >5 mins after 2nd dose of **[Midazolam](../../pharmacology/Midazolam.md)**"
+  },
+  {
+   "file": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+   "row": "8",
+   "line": 54,
+   "text": "**[Sodium Bicarbonate](../../pharmacology/Sodium%20Bicarbonate.md) - Chlorine Gas Exposure Only:**<br>• **Adult:** **2 mL** diluted with **2 mL 0.9% Sodium chloride**, nebulized (**ONCE only**)<br>• **Pediatric:** **2 mL** diluted with **2 mL 0.9% Sodium chloride**, nebulized (**ONCE only**)",
+   "status": "already_correct",
+   "text_before": "**[Sodium Bicarbonate](../../pharmacology/Sodium%20Bicarbonate.md) - Chlorine Gas Exposure Only:**<br>• **Adult:** **2 mL** diluted with **2 mL 0.9% Sodium chloride**, nebulized (**ONCE only**)<br>• **Pediatric:** **2 mL** diluted with **2 mL 0.9% Sodium chloride**, nebulized (**ONCE only**)"
+  },
+  {
+   "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
+   "row": "13",
+   "line": 47,
+   "text": "Contact Medical Control for guidance as needed",
+   "status": "rewritten",
+   "text_before": "Contact Poquoson Medical Control for guidance as needed"
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": "6",
+   "line": 55,
+   "text": "****CPAP** (Continuous Positive Airway Pressure):**<br>• **Indications:** Adults with respiratory distress due to pulmonary edema, infection, or near-drowning<br>• **Initial Settings:** PEEP 5 cmH2O<br>• **Titration:** Up to 10 cmH2O<br>• Close monitoring for hypotension or pneumothorax<br>⚠ **See Pearls for all contraindications**",
+   "status": "already_correct",
+   "text_before": "****CPAP** (Continuous Positive Airway Pressure):**<br>• **Indications:** Adults with respiratory distress due to pulmonary edema, infection, or near-drowning<br>• **Initial Settings:** PEEP 5 cmH2O<br>• **Titration:** Up to 10 cmH2O<br>• Close monitoring for hypotension or pneumothorax<br>⚠ **See Pearls for all contraindications**"
+  },
+  {
+   "file": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
+   "row": "10",
+   "line": 59,
+   "text": "**Fluid Administration:**<br>• **0.9% Sodium Chloride** or appropriate fluid as clinically indicated<br>• Monitor for signs of fluid overload in CHF patients",
+   "status": "already_correct",
+   "text_before": "**Fluid Administration:**<br>• **0.9% Sodium Chloride** or appropriate fluid as clinically indicated<br>• Monitor for signs of fluid overload in CHF patients"
+  },
+  {
+   "file": "protocols/general/02_Behavioral_Patient_Restraint_PROC.md",
+   "row": "8",
+   "line": 36,
+   "text": "Contact Medical Control for guidance if unable to safely restrain or transport the patient.",
+   "status": "rewritten",
+   "text_before": "Contact Poquoson Medical Control for guidance if unable to safely restrain or transport the patient."
+  },
+  {
+   "file": "protocols/general/02_Cold_Exposure_PROC.md",
+   "row": "9",
+   "line": 32,
+   "text": "Contact Medical Control prior to use of AED.",
+   "status": "rewritten",
+   "text_before": "Contact Poquoson Medical Control prior to use of AED."
+  },
+  {
+   "file": "protocols/general/02_Diving_and_Drowning_Emergencies_PROC.md",
+   "row": "7",
+   "line": 41,
+   "text": "Contact Medical Control for hyperbaric transport destination guidance if decompression injury is suspected.",
+   "status": "rewritten",
+   "text_before": "Contact Poquoson Medical Control for hyperbaric transport destination guidance if decompression injury is suspected."
+  },
+  {
+   "file": "protocols/general/02_Pain_Control_PROC.md",
+   "row": "8",
+   "line": 36,
+   "text": "If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact Medical Control for guidance.",
+   "status": "rewritten",
+   "text_before": "If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact Poquoson Medical Control for guidance."
+  },
+  {
+   "file": "procedures/Surgical_Airway.md",
+   "row": "5",
+   "line": 21,
+   "text": "Contact Medical Control and transport to closest ED.",
+   "status": "already_correct",
+   "text_before": "Contact Medical Control and transport to closest ED."
+  }
+ ]
+}

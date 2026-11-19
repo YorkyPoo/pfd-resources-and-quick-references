@@ -19,23 +19,25 @@ Resuscitation guidelines for traumatic cardiac arrest, prioritizing hemorrhage c
     - Withholding CPR for Asystole on EMS arrival
 
 ### Interventions
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Control major active external bleeding / Begin CPR |  | • | • | • | • |
-| 2 | Open the airway / Ventilate |  |  | • | • | • |
-| 3 | Apply AED / Monitor (Assess rhythm before CPR if possible) |  |  | • | • | • |
-| 4 | Asystole on arrival: Consider withholding CPR |  |  | • | • | • |
-| 5 | PEA / VF / VT: Continue CPR / Defibrillate if indicated |  |  | • | • | • |
-| 6 | Obtain IV/IO access (x2 preferred) |  |  |  | • | • |
-| 7 | If blood unavailable: **0.9% Sodium Chloride** up to **1 L** IV/IO (Adult) / **20 mL/kg** IV/IO (Ped) |  |  |  | • | • |
-| 8 | Assess Shock Index > 1 / Resuscitate prior to intubation |  |  |  |  | • |
-| 9 | Perform bilateral chest decompression for tension pneumo |  |  |  |  | • |
-| 10 | Rapid transport to Level I/II Trauma Center (Goal < 10 mins) |  | • | • | • | • |
-| 11 | Contact Poquoson Medical Control for guidance / destination | MC | MC | MC | MC | MC |
+| # | Level | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-emr">EMR</span> | Control major active external bleeding / Begin CPR |
+| 2 | <span class="lvl lvl-emt">EMT</span> | Open the airway / Ventilate |
+| 3 | <span class="lvl lvl-emt">EMT</span> | Apply AED / Monitor (Assess rhythm before CPR if possible) |
+| 4 | <span class="lvl lvl-i">I</span> | Asystole on arrival: Consider withholding CPR |
+| 5 | <span class="lvl lvl-a">A</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | PEA / VF / VT: Continue CPR / Defibrillate if indicated |
+| 6 | <span class="lvl lvl-a">A</span> | Obtain IV/IO access (x2 preferred) |
+| 7 | <span class="lvl lvl-a">A</span> | If blood unavailable: **0.9% Sodium Chloride** up to **1 L** IV/IO (Adult) / **20 mL/kg** IV/IO (Ped) |
+| 8 | <span class="lvl lvl-i">I</span> | Assess Shock Index > 1 / Resuscitate prior to intubation |
+| 9 | <span class="lvl lvl-i">I</span> | Perform bilateral chest decompression for tension pneumo |
+| 10 | <span class="lvl lvl-emt">EMT</span> | Rapid transport to Level I/II Trauma Center (Goal < 10 mins) |
+| 11 | <span class="lvl lvl-mc">MC</span> | Contact Medical Control for guidance / destination |
 
 </div>
+
+<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — row 5: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
 ### Pearls
 • ⚠ **Asystole on arrival survival <1%**: Consider withholding resuscitation if the rhythm is asystole on EMS arrival, as survival rates are extremely low unless loss of pulses was witnessed by EMS with immediate intervention.

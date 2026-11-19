@@ -1,0 +1,2329 @@
+# Row-level bindings for the batch conversion of protocol pages.
+#
+# Two kinds of entry — machine-checked by scripts/level_rule.py:
+#
+#   - a BINDING: this site row is authorised by this PEMS 2024 row.
+#       pems_page / pems_ordinal   -> resolved in audit/level-scan/pems_table.json
+#       evidence                   -> why this site row is that PEMS row
+#     The chip becomes the leftmost level that PEMS prints on that row. A binding is
+#     a source citation, never a level decision: if the PEMS row does not badge the
+#     action, no binding may be written here.
+#
+#   - an OWNER_REQUIRED declaration: no PEMS 2024 row authorises this row's provider
+#     level. The page keeps the level it already published and the chip is flagged.
+#     `reason` is required and is published in audit/level-scan/level-rule-ledger.md.
+#
+# Nothing here is a level the audit invented. Every level comes from a printed PEMS
+# badge (binding) or from the page itself (owner_required).
+#
+# Status: Batch 1 (protocols/cardiac/). Batches 2-5 add their own entries.
+
+bindings:
+
+  # ---------------------------------------------------------------- Asystole / PEA
+
+  - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
+    row: 9
+    pems_page: 107
+    pems_ordinal: 7
+    evidence: >-
+      p.107#7 "Monitor cardiac rhythm. Refer to Tachyarrhythmias or Bradycardia
+      protocol, as needed." badge I — the only cardiac-monitoring row printed for
+      Chest Pain. The page had resolved the alignment as no-counterpart; the PEMS row
+      is unambiguous.
+
+  - file: protocols/neurologic/05_Stroke_TIA_PROC.md
+    row: 9
+    status: owner_required
+    reason: >-
+      Bound to p.131#2 on weak text similarity only; the PEMS row's text is "Record time
+      the patient last seen normal and family contact information, if available. Provide
+      this information to the receiving facility." That does not authorise calling the
+      receiving facility with Name/DOB for rapid registration, and no other PEMS 2024 row
+      on p.131 does. Site-authored action with no matching PEMS row.
+
+  # ---------------------------------------------------------------- Hypertensive crisis
+
+  - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
+    row: 6
+    pems_page: 239
+    pems_ordinal: 7
+    evidence: >-
+      p.239#7 'Support respirations with BVM. Use in-line EtCO2... Adjust tidal volume,
+      respiratory rate, and/or PEEP' badge EMT. This page splits that one PEMS row into
+      r6 (BVM) and r7 (EtCO2-guided ventilation); the page published A here, the source
+      prints EMT, so the chip moves A -> EMT.
+
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 14
+    pems_page: 124
+    pems_ordinal: 7
+    evidence: >-
+      This row published no provider level at all. It is the severe asthma/COPD row, and
+      PEMS prints magnesium for severe symptoms on p.124#7 ('For severe symptoms, also
+      administer: ADULT: Magnesium Sulfate 2 g IV/IO infusion over 15 minutes', badge I).
+
+  - file: protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md
+    row: 10
+    pems_page: 239
+    pems_ordinal: 7
+    evidence: >-
+      The alignment paired this BVM row with p.239#10 ('If apneic and < 12 years old:
+      consider endotracheal intubation', badge P), which is the paediatric intubation
+      row. p.239#7 'Support respirations with BVM' is the BVM row, badge EMT, so the
+      page's A moves to EMT.
+
+  # ================================================================ CROSS-PAGE CITATIONS + +MC MARKERS
+  # Added by the owner rulings of 2026-11-16. Three kinds of entry:
+  #   * cross_page: true  — a citation to a PEMS row on another page, with the
+  #     cited row's words in `quoted_row_text` (re-read by level_rule.py --check)
+  #   * mc_required: true — the page printed this level cell in brackets; render the
+  #     level chip plus a distinct +MC marker
+  #   * mc_bracket_excluded — a bracketed row whose bracket cannot be carried as +MC
+  #     without changing its meaning; the reason says which case it is
+  # ================================================================
+  - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
+    row: 4
+    pems_page: 103
+    pems_ordinal: 1
+    cross_page: true
+    quoted_row_text: >-
+      Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support
+      procedure.
+    evidence: >-
+      p.103#1 prints the identical step: 'Ensure adequate oxygenation. Refer to Airway
+      Management and Ventilatory Support procedure.' badged EMR. Cross-page: p.57 has no
+      oxygenation row; this is the same printed action on the Bradycardia protocol.
+  - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
+    row: 5
+    pems_page: 103
+    pems_ordinal: 4
+    cross_page: true
+    quoted_row_text: >-
+      Obtain and transmit a 12-Lead ECG.
+    evidence: >-
+      p.103#4 prints 'Obtain and transmit a 12-Lead ECG.' badged EMT — the same sentence as
+      this row. Also printed at p.96#8 and p.113#3 (both EMT). Cross-page: p.57 prints no
+      12-lead row.
+  - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
+    row: 7
+    pems_page: 235
+    pems_ordinal: 6
+    cross_page: true
+    quoted_row_text: >-
+      Monitor ETCO2. If ETCO2 < 10 or dropping, reassess and optimize compression rate, depth,
+      and recoil.
+    evidence: >-
+      p.235#6 prints 'Monitor ETCO2. If ETCO2 < 10 or dropping, reassess and optimize
+      compression rate, depth, and recoil.' badged EMT — this row verbatim. Cross-page: p.57
+      has no capnography row; the CPR procedure owns it.
+  - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
+    row: 8
+    status: owner_required
+    reason: >-
+      No PEMS 2024 row prints this bundled AED-application + rhythm-determination +
+      defibrillation step at one level. The rows that print it split the badge from the words:
+      p.235#4 and p.263#4 carry badge EMR while scoping rhythm determination to 'EMT-I or P'
+      in the same row, and p.63#7 badges defibrillation I while bracketing its AED clause
+      '[EMR]'. Citing any of them would chip a level the row's own text contradicts. The
+      page's EMT is kept and flagged.
+  - file: protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
+    row: 3
+    pems_page: 239
+    pems_ordinal: 7
+    cross_page: true
+    quoted_row_text: >-
+      Support respirations with BVM. Use in-line EtCO2.
+    evidence: >-
+      p.239#7 prints 'Support respirations with BVM. Use in-line EtCO2. Refer to Capnography
+      procedure. Adjust tidal volume, respiratory rate, and/or PEEP...' badged EMT — the
+      BVM+EtCO2 management this row describes. Cross-page: the arrest protocols print no
+      BVM/EtCO2 row; the Airway Management procedure owns it.
+  - file: protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
+    row: 4
+    status: owner_required
+    reason: >-
+      No PEMS 2024 row prints AED application + rhythm assessment + defibrillation at one
+      level. p.263#4 and p.235#4 print 'Apply AED / Assess cardiac rhythm every 2 minutes' at
+      badge EMR but scope rhythm determination to 'EMT-I or P' in the same row's text; p.63#7
+      badges defibrillation I and brackets its AED clause '[EMR]'. The page's EMT is kept and
+      flagged rather than chipped off a badge the row's own words contradict.
+  - file: protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
+    row: 5
+    status: owner_required
+    reason: >-
+      Same conflict: the only PEMS row printing defibrillation is p.63#7 (badge I, inline
+      '[EMR]' on the AED clause). A chip of I would contradict the [EMR] token, a chip of EMT
+      would contradict the printed badge; p.235#4/p.263#4 badge the AED step EMR but scope
+      rhythm determination to EMT-I/P. The page's EMT is kept and flagged.
+  - file: protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md
+    row: 5
+    status: owner_required
+    reason: >-
+      No PEMS 2024 row prints 'continue CPR / defibrillate if indicated' at one level: p.61#4
+      badges EMT while scoping the rhythm decision '(I / P)' in the same row, and p.63#7
+      badges defibrillation I with an inline '[EMR]' AED token. Both candidates contradict
+      their own text. The page's A is kept and flagged.
+  - file: protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md
+    row: 8
+    pems_page: 84
+    pems_ordinal: 11
+    cross_page: true
+    quoted_row_text: >-
+      If considering intubation, assess Shock Index (Heart Rate / Systolic Blood Pressure).*
+      If Shock Index is greater than 1, consider resuscitation prior to intubation.
+    evidence: >-
+      p.84#11 prints 'If considering intubation, assess Shock Index (Heart Rate / Systolic
+      Blood Pressure). If Shock Index is greater than 1, consider resuscitation prior to
+      intubation.' badged I — this row verbatim in substance. Cross-page: p.61 prints no
+      shock-index row; the trauma procedure (p.84) owns it.
+  - file: protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md
+    row: 10
+    pems_page: 84
+    pems_ordinal: 14
+    cross_page: true
+    quoted_row_text: >-
+      If the patient meets the trauma triage criteria according to Administrative Policy –
+      Trauma Field Triage, transport immediately to a Level 1 or Level II Trauma Center.
+    evidence: >-
+      p.84#14 prints 'If the patient meets the trauma triage criteria ... transport
+      immediately to a Level 1 or Level II Trauma Center. Goal scene time: Less than 10
+      minutes.' badged EMT — the same destination and the same 10-minute goal. Cross-page:
+      p.61#2 only prints 'consider immediate transport to the closest ED or Trauma Center'.
+  - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
+    row: 3
+    pems_page: 109
+    pems_ordinal: 4
+    cross_page: true
+    quoted_row_text: >-
+      Check blood glucose level. Refer to Hyperglycemia / Hypoglycemia protocol.
+    evidence: >-
+      p.109#4 prints 'Check blood glucose level. Refer to Hyperglycemia / Hypoglycemia
+      protocol.' badged EMR — this row's action verbatim. Cross-page: p.107 (Chest Pain)
+      prints no glucose row.
+  - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
+    row: 8
+    pems_page: 50
+    pems_ordinal: 9
+    cross_page: true
+    quoted_row_text: >-
+      Establish IV / IO access when indicated.
+    evidence: >-
+      p.50#9 prints 'Establish IV / IO access when indicated. Refer to Intraosseous (IO)
+      Access procedure, as needed.' badged A — this row's action verbatim. Cross-page: p.107
+      prints no access row.
+  - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
+    row: 14
+    evidence: >-
+      The pre-conversion page printed this row's level cell as [I] in the I column (git show
+      768ad68), i.e. I performs this action only with Medical Control authorisation; the row
+      is chipped I, so +MC carries exactly that meaning.
+    mc_required: true
+  - file: protocols/cardiac/04_Hypertensive_Crisis_PROC.md
+    row: 2
+    pems_page: 49
+    pems_ordinal: 2
+    cross_page: true
+    quoted_row_text: >-
+      Initial Assessment • Perform Primary and Secondary Survey as indicated by patient
+      status.
+    evidence: >-
+      p.49#2 prints 'Initial Assessment • Perform Primary and Secondary Survey as indicated by
+      patient status...' badged EMR; the vital-signs clause is p.49#4, also EMR, so one chip
+      is consistent with both. Cross-page: p.109 prints no primary-assessment row.
+  - file: protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md
+    row: 5
+    status: owner_required
+    reason: >-
+      No PEMS 2024 row prints defibrillation with an unambiguous single badge. p.63#7 badges
+      it I but brackets its own AED clause '[EMR]' and this page's row states '(AED for
+      EMR/EMT, Manual for I/P)'; p.235#4/p.263#4 badge the AED/rhythm step EMR but scope
+      rhythm determination to EMT-I/P. The page's EMT is kept and flagged.
+  - file: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
+    row: 4
+    pems_page: 239
+    pems_ordinal: 4
+    cross_page: true
+    quoted_row_text: >-
+      Provide / titrate supplemental oxygen via NC or NRB to maintain SpO 94 – 98%.
+    evidence: >-
+      p.239#4 prints 'Provide / titrate supplemental oxygen via NC or NRB to maintain SpO 94 -
+      98%.' badged EMT — the oxygen-administration step this row expands. Cross-page: p.153
+      prints no oxygen row.
+  - file: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
+    row: 9
+    pems_page: 87
+    pems_ordinal: 7
+    cross_page: true
+    quoted_row_text: >-
+      Consider endotracheal intubation vs immediate transport to the nearest emergency
+      department if any signs of symptoms of airway injury develop:
+    evidence: >-
+      p.87#7 prints 'Consider endotracheal intubation vs immediate transport ... if any signs
+      or symptoms of airway injury develop' badged I — the same decision on the same signs.
+      Cross-page: p.153 prints no advanced-airway assessment row.
+  - file: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
+    row: 10
+    status: owner_required
+    reason: >-
+      PEMS prints endotracheal intubation as two age-split rows: p.247#4 (badge I) for
+      patients 12 and older and p.247#6 (badge P) for patients under 12. This site row invokes
+      the procedure without an age limit, so no single badge is correct; the page's P is kept
+      and flagged.
+  - file: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
+    row: 7
+    pems_page: 239
+    pems_ordinal: 7
+    cross_page: true
+    quoted_row_text: >-
+      Support respirations with BVM. Use in-line EtCO2.
+    evidence: >-
+      p.239#7 prints 'Support respirations with BVM. Use in-line EtCO2. Refer to Capnography
+      procedure. Adjust tidal volume, respiratory rate, and/or PEEP...' badged EMT — the
+      assisted-ventilation step this row prepares. Cross-page: p.123-124 print no
+      assist-ventilation row.
+  - file: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
+    row: 8
+    status: owner_required
+    reason: >-
+      Conflict, recorded: the CPAP rows are p.123#3 (badge EMT) and p.239#5 (badge EMT,
+      'Consider CPAP (PEEP: 5 cmH2O)... I/P only: Adjust PEEP to support ventilation and work
+      of breathing, up to 10 cmH2O'). This row is the PEEP-titration row, and p.239#5's own
+      text reserves that titration to I/P, so an EMT chip would contradict the cited row's
+      words while an I chip would contradict its printed badge. The page's I is kept and
+      flagged.
+  - file: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
+    row: 11
+    status: owner_required
+    reason: >-
+      No single PEMS 2024 row prints this reassessment-and-transport bundle: reassessment is
+      p.49#4 (badge EMR, reassess vitals every 15/5 minutes) and the transport step is p.50#11
+      (badge EMT). One chip cannot carry both, so the page's EMT is kept and flagged.
+  - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+    row: 2
+    status: owner_required
+    reason: >-
+      No PEMS 2024 row anywhere prints scene management or keeping a child calm. The nearest
+      rows are the universal-care steps, which do not print this action; the page's EMT is
+      kept and flagged.
+  - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+    row: 3
+    pems_page: 117
+    pems_ordinal: 1
+    cross_page: true
+    quoted_row_text: >-
+      Place patient in a position of comfort. If unresponsive, place in recovery position and
+      provide suctioning.
+    evidence: >-
+      p.117#1 prints 'Place patient in a position of comfort. If unresponsive, place in
+      recovery position and provide suctioning.' badged EMR — the position-of-comfort step
+      this row expands. Cross-page: p.123-124 print no positioning row.
+  - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+    row: 5
+    status: owner_required
+    reason: >-
+      No single PEMS 2024 row prints this monitoring bundle: continuous cardiac monitoring is
+      p.50#10 (badge I) and SpO2/EtCO2 assessment is p.49#6 (badge EMT), while continuous
+      ETCO2 waveform belongs to p.241#3 (badge EMT). Two levels, so the page's A is kept and
+      flagged.
+  - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+    row: 9
+    pems_page: 50
+    pems_ordinal: 9
+    cross_page: true
+    quoted_row_text: >-
+      Establish IV / IO access when indicated.
+    evidence: >-
+      p.50#9 prints 'Establish IV / IO access when indicated. Refer to Intraosseous (IO)
+      Access procedure, as needed.' badged A — the access step this row expands. Cross-page:
+      p.123-124 print no access row.
+  - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+    row: 11
+    pems_page: 247
+    pems_ordinal: 6
+    cross_page: true
+    quoted_row_text: >-
+      Orally Intubate. Patients < 12 years old.
+    evidence: >-
+      p.247#6 prints 'Orally Intubate. Patients < 12 years old.' badged P — the row this
+      page's own text scopes ('Intubation of children <12 requires Paramedic skill').
+      Cross-page: p.123-124 print no intubation row.
+    mc_required: true
+  - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+    row: 12
+    pems_page: 50
+    pems_ordinal: 11
+    cross_page: true
+    quoted_row_text: >-
+      Transport • Transport decisions should be based on patient’s clinical condition.
+    evidence: >-
+      p.50#11 prints 'Transport • Transport decisions should be based on patient's clinical
+      condition. Refer to relevant regional Field Triage policies ... Deliver a pre-arrival
+      report to the receiving facility as soon as practical.' badged EMT — the transport plus
+      early-notification step this row expands. Cross-page: p.123-124 print no transport row.
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 1
+    pems_page: 49
+    pems_ordinal: 1
+    cross_page: true
+    quoted_row_text: >-
+      Scene Safety / PPE / Patient Contact • Utilize appropriate agencies and resources as
+      needed to ensure patient and provider safety including lift assistance, personnel,
+    evidence: >-
+      p.49#1 prints 'Scene Safety / PPE / Patient Contact • Utilize appropriate agencies and
+      resources as needed to ensure patient and provider safety ... Bring all necessary
+      equipment to the patient's side.' badged EMR — the scene-safety/PPE/equipment step this
+      row restates. Cross-page: p.243 is the decompression procedure and prints no
+      scene-safety row.
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 2
+    pems_page: 49
+    pems_ordinal: 2
+    cross_page: true
+    quoted_row_text: >-
+      Initial Assessment • Perform Primary and Secondary Survey as indicated by patient
+      status.
+    evidence: >-
+      p.49#2 prints 'Initial Assessment • Perform Primary and Secondary Survey as indicated by
+      patient status...' badged EMR; vital signs are p.49#4, also EMR. Cross-page: p.243
+      prints no assessment row.
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 3
+    pems_page: 239
+    pems_ordinal: 4
+    cross_page: true
+    quoted_row_text: >-
+      Provide / titrate supplemental oxygen via NC or NRB to maintain SpO 94 – 98%.
+    evidence: >-
+      p.239#4 prints 'Provide / titrate supplemental oxygen via NC or NRB to maintain SpO 94 -
+      98%.' badged EMT — routine titrated oxygen. Cross-page, and deliberately NOT p.243#0:
+      that row badges oxygen I but sits inside the decompression procedure ('Administer oxygen
+      at 15 LPM (100% FiO2)') and would restrict routine oxygen to I.
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 4
+    status: owner_required
+    reason: >-
+      No single PEMS 2024 row prints this positioning-plus-access-plus-monitoring bundle:
+      position of comfort is p.117#1 (badge EMR), IV/IO access is p.50#9 (badge A) and
+      continuous cardiac monitoring is p.50#10 (badge I). Three levels, so the page's A is
+      kept and flagged.
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 5
+    status: owner_required
+    reason: >-
+      No PEMS 2024 row prints equipment readiness. p.239#2 (badge EMR) prints 'Provide
+      suctioning as needed to maintain patent airway' — the act, not the preparation this row
+      describes — so citing it would chip an action the row does not name. The page's A is
+      kept and flagged.
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 9
+    pems_page: 61
+    pems_ordinal: 7
+    cross_page: true
+    quoted_row_text: >-
+      If signs or suspicion of thoracoabdominal trauma are present (blunt or penetrating),
+      perform bilateral chest decompression.
+    evidence: >-
+      p.61#7 prints 'If signs or suspicion of thoracoabdominal trauma are present (blunt or
+      penetrating), perform bilateral chest decompression. Follow Chest Decompression
+      procedure.' badged I — this row verbatim. Cross-page: p.243 prints the technique, not
+      the traumatic-arrest indication.
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 12
+    status: owner_required
+    reason: >-
+      No single PEMS 2024 row prints this haemodynamic bundle: the fluid bolus is p.113#4
+      (badge A) and vasopressor support is p.113#6 (badge I). Two levels, so the page's I is
+      kept and flagged.
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 13
+    status: owner_required
+    reason: >-
+      No single PEMS 2024 row prints this advanced-airway bundle: adult intubation is p.247#4
+      (badge I), paediatric is p.247#6 (badge P) and surgical airway is p.269#0 (badge P).
+      Three rows, two levels, so the page's P is kept and flagged.
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 14
+    pems_page: 84
+    pems_ordinal: 14
+    cross_page: true
+    quoted_row_text: >-
+      If the patient meets the trauma triage criteria according to Administrative Policy –
+      Trauma Field Triage, transport immediately to a Level 1 or Level II Trauma Center.
+    evidence: >-
+      p.84#14 prints 'If the patient meets the trauma triage criteria ... transport
+      immediately to a Level 1 or Level II Trauma Center. Goal scene time: Less than 10
+      minutes.' badged EMT — the trauma-centre transport step this row expands. Cross-page:
+      p.243 prints no transport row.
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 15
+    status: owner_required
+    reason: >-
+      No PEMS 2024 row prints this en-route monitoring bundle. Reassessment after
+      decompression is p.243#4 (badge I) while routine reassessment is p.49#4 (badge EMR); two
+      levels, so the page's EMT is kept and flagged.
+  - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
+    row: 9
+    status: owner_required
+    reason: >-
+      Conflict, recorded: p.239#5 prints 'Consider CPAP (PEEP: 5 cmH2O) ... I/P only: Adjust
+      PEEP to support ventilation and work of breathing, up to 10 cmH2O' at badge EMT, and
+      p.245#4 adds 'Consider titrating PEEP ... CPAP, BiPAP, and PEEP are RED DOT procedures
+      at all EMS Certification Levels'. This row is the titration step the source's own text
+      reserves to I/P, so an EMT chip would contradict the cited row's words. The page's P is
+      kept and flagged.
+  - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
+    row: 3
+    pems_page: 247
+    pems_ordinal: 13
+    cross_page: true
+    quoted_row_text: >-
+      Monitor ET tube placement and ventilation with SpO2 and Continuous box waveform ETCO2
+    evidence: >-
+      p.247#13 prints 'Monitor ET tube placement and ventilation with SpO2 and Continuous box
+      waveform ETCO2' badged EMT — the continuous SpO2/EtCO2 monitoring this row requires once
+      the airway is placed. Cross-page: p.239 prints no monitoring row.
+  - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
+    row: 12
+    pems_page: 247
+    pems_ordinal: 11
+    cross_page: true
+    quoted_row_text: >-
+      Ensure the presence of continuous box-waveform capnography.
+    evidence: >-
+      p.247#11 prints 'Ensure the presence of continuous box-waveform capnography. Auscultate
+      for bilateral lung sounds & absence of gastric sounds. Secure the tube ... Document the
+      depth of placement.' badged I — the post-intubation verification step this row expands.
+      Cross-page: p.239 prints no post-intubation care row.
+  - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
+    row: 13
+    pems_page: 247
+    pems_ordinal: 13
+    cross_page: true
+    quoted_row_text: >-
+      Monitor ET tube placement and ventilation with SpO2 and Continuous box waveform ETCO2
+    evidence: >-
+      p.247#13 prints 'Monitor ET tube placement and ventilation with SpO2 and Continuous box
+      waveform ETCO2' badged EMT — the ongoing tube/ventilation monitoring this row expands.
+      Cross-page: p.239 prints no ongoing-tube row.
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 3
+    status: owner_required
+    reason: >-
+      No single PEMS 2024 row prints this monitoring bundle: continuous cardiac monitoring is
+      p.50#10 (badge I) and SpO2/EtCO2 assessment is p.49#6 (badge EMT). Two levels, so the
+      page's EMT is kept and flagged.
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 5
+    pems_page: 117
+    pems_ordinal: 1
+    cross_page: true
+    quoted_row_text: >-
+      Place patient in a position of comfort. If unresponsive, place in recovery position and
+      provide suctioning.
+    evidence: >-
+      p.117#1 prints 'Place patient in a position of comfort. If unresponsive, place in
+      recovery position and provide suctioning.' badged EMR — the position-of-comfort step
+      this row expands. Cross-page: p.123-124 print no positioning row.
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 9
+    pems_page: 50
+    pems_ordinal: 9
+    cross_page: true
+    quoted_row_text: >-
+      Establish IV / IO access when indicated.
+    evidence: >-
+      p.50#9 prints 'Establish IV / IO access when indicated. Refer to Intraosseous (IO)
+      Access procedure, as needed.' badged A — the access step this row expands. Cross-page:
+      p.123-124 print no access row.
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 10
+    pems_page: 113
+    pems_ordinal: 4
+    cross_page: true
+    quoted_row_text: >-
+      Obtain IV/IO access. Administer:** ADULT:
+    evidence: >-
+      p.113#4 prints 'Obtain IV/IO access. Administer: ADULT: 0.9% Sodium chloride up to 1 L
+      IV/IO in 250 - 500 mL boluses ... Repeat as needed to maintain adequate perfusion'
+      badged A — the fluid-administration step this row expands. Cross-page: p.123-124 print
+      no fluid row.
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 15
+    pems_page: 50
+    pems_ordinal: 7
+    cross_page: true
+    quoted_row_text: >-
+      Consider 12-Lead ECG. Refer to Chest Pain (Cardiac) protocol.
+    evidence: >-
+      p.50#7 prints 'Consider 12-Lead ECG. Refer to Chest Pain (Cardiac) protocol. Acquire
+      within 5 minutes of patient contact.' badged EMT — the 12-lead/refer-to-Chest-Pain step
+      this row expands. Cross-page: p.123-124 print no 12-lead row.
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 16
+    status: owner_required
+    reason: >-
+      No single PEMS 2024 row prints this respiratory-failure bundle: BVM support is p.239#7
+      (badge EMT), adult intubation p.239#9 (badge I) and paediatric p.239#10 (badge P). Three
+      rows, three levels, so the page's P is kept and flagged.
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 2
+    pems_page: 49
+    pems_ordinal: 1
+    cross_page: true
+    quoted_row_text: >-
+      Scene Safety / PPE / Patient Contact • Utilize appropriate agencies and resources as
+      needed to ensure patient and provider safety including lift assistance, personnel,
+    evidence: >-
+      p.49#1 prints 'Scene Safety / PPE / Patient Contact • Utilize appropriate agencies and
+      resources as needed to ensure patient and provider safety ...' badged EMR — the
+      scene-safety/hazard step this row expands. Cross-page: p.153 prints no scene-safety row.
+      The scene-time limit in this row is agency authoring on top of that printed step.
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 7
+    pems_page: 88
+    pems_ordinal: 8
+    cross_page: true
+    quoted_row_text: >-
+      For altered mental status, seizures, hypotension, and/or cardiac arrest following
+      exposure to combustion products in an enclosed space or suspected cyanide poisoning,
+    evidence: >-
+      p.88#8 prints 'For altered mental status, seizures, hypotension, and/or cardiac arrest
+      following exposure to combustion products in an enclosed space or suspected cyanide
+      poisoning, administer (if available): ... Hydroxocobalamin (CYANOKIT) ...' badged I —
+      the indication-and-dose row this row expands. Cross-page: p.153 prints no
+      hydroxocobalamin row.
+    mc_required: true
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 9
+    pems_page: 88
+    pems_ordinal: 8
+    cross_page: true
+    quoted_row_text: >-
+      For altered mental status, seizures, hypotension, and/or cardiac arrest following
+      exposure to combustion products in an enclosed space or suspected cyanide poisoning,
+    evidence: >-
+      p.88#8 prints the hydroxocobalamin administration order ('administer (if available):
+      ADULT: Hydroxocobalamin (CYANOKIT) 5 g IV/IO, infuse over 15 minutes ...') badged I —
+      the same drug step this row expands. Cross-page: p.153 prints no hydroxocobalamin row.
+    mc_required: true
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 10
+    pems_page: 87
+    pems_ordinal: 3
+    cross_page: true
+    quoted_row_text: >-
+      Estimate depth of burns and body surface area involved using the chart provided below
+      and/or estimated by 1% BSA = the area of the patient’s palm.
+    evidence: >-
+      p.87#3 prints 'Estimate depth of burns and body surface area involved using the chart
+      provided below and/or estimated by 1% BSA = the area of the patient's palm.' badged EMT
+      — the TBSA/depth assessment this row expands. Cross-page: p.153 prints no
+      burn-assessment row.
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 11
+    pems_page: 87
+    pems_ordinal: 6
+    cross_page: true
+    quoted_row_text: >-
+      For an adult patient with SBP less than 90 and TBSA greater than 20%, administer:
+    evidence: >-
+      p.87#6 prints 'For an adult patient with SBP less than 90 and TBSA greater than 20%,
+      administer: ADULT: 0.9% Sodium chloride at 500 mL/hr IV/IO ...' badged A — the burn
+      fluid-resuscitation step this row expands. Cross-page: p.153 prints no fluid row.
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 13
+    status: owner_required
+    reason: >-
+      No single PEMS 2024 row prints this monitoring bundle: routine reassessment is p.49#4
+      (badge EMR), continuous cardiac monitoring p.50#10 (badge I) and continuous ETCO2
+      waveform p.241#3 (badge EMT). Multiple levels, so the page's EMT is kept and flagged.
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 14
+    pems_page: 50
+    pems_ordinal: 11
+    cross_page: true
+    quoted_row_text: >-
+      Transport • Transport decisions should be based on patient’s clinical condition.
+    evidence: >-
+      p.50#11 prints 'Transport • Transport decisions should be based on patient's clinical
+      condition. Refer to relevant regional Field Triage policies regarding transport to
+      specialty centers ...' badged EMT — the expedited-transport step this row expands, with
+      destination set by p.88#9 (MC) when unclear. Cross-page: p.153 prints no transport row.
+  - file: protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md
+    row: 2
+    status: owner_required
+    reason: >-
+      No PEMS 2024 row prints recognition. p.239#3 and p.239#8 print the obstruction-relief
+      actions, not 'rapidly identify complete vs partial obstruction'; citing either would
+      chip a level for an action the row does not name. The page's EMT is kept and flagged.
+  - file: protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md
+    row: 13
+    pems_page: 55
+    pems_ordinal: 2
+    cross_page: true
+    quoted_row_text: >-
+      Administer: ADULT:
+    evidence: >-
+      p.55#2 prints 'Administer: ADULT: Fentanyl (Sublimaze) 25 - 50 mcg IV/IO over 2 minutes
+      ...' badged I — the sedation drug row this row administers under, in the Sedation Post
+      Advanced Airway protocol the row names. Cross-page: p.239 prints no sedation row.
+    mc_required: true
+  - file: protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md
+    row: 14
+    pems_page: 247
+    pems_ordinal: 9
+    cross_page: true
+    quoted_row_text: >-
+      If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway.
+    evidence: >-
+      p.247#9 prints 'If unable to intubate and unable to oxygenate, proceed immediately to
+      Surgical Airway.' badged P — the difficult-airway/surgical-airway fallback this row
+      prepares. The escalation that leads to it ('After two failed attempts, airway must be
+      managed by the most experienced provider available.') is the I-badged cell above it
+      (p.247#8); the citation is the P row, because that is the level this row publishes.
+      Cross-page: p.239 prints no difficult-airway row.
+    mc_bracket_excluded: >-
+      the page bracketed the I cell ([I]) while this row now publishes P: the cross-page
+      citation is p.247#9 ("proceed immediately to Surgical Airway", badge P), so the
+      bracketed level is no longer the level the row publishes and `+MC` beside P would attach
+      the page's Intermediate restriction to a Paramedic grant.
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 6
+    pems_page: 239
+    pems_ordinal: 9
+    evidence: >-
+      p.239#9 'If apneic and >= 12 years old: Consider endotracheal intubation if unable to
+      ventilate adequately by less invasive means', badge I. PEMS prints paediatric intubation
+      separately (p.239#10, badge P); this page merges both into one row, so the chip is the
+      lowest level PEMS prints for the action (I) and the page's own 'under 12 ... Paramedic
+      red dot skill only' caveat stays in the action text.
+    mc_required: true
+  - file: protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md
+    row: 12
+    pems_page: 239
+    pems_ordinal: 9
+    evidence: >-
+      p.239#9 'If apneic and >= 12 years old: Consider endotracheal intubation...', badge I.
+      PEMS prints paediatric intubation as its own row (p.239#10, badge P) and this page
+      merges both into one row, so the chip is the lowest level PEMS prints for the action
+      (I); the page's 'children <12 ... Paramedic red dot skill only' caveat stays in the
+      action text. The page published [P] here (a bracketed grant, not a floor), which is why
+      the chip moves P -> I.
+    mc_bracket_excluded: >-
+      the page bracketed the P cell ([P]) while the row now publishes I (p.239#9, badge I; the
+      paediatric path is p.239#10, badge P). The bracket qualified the Paramedic grant, so
+      `+MC` beside I would claim a restriction the page did not write.
+  - file: protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md
+    row: 10
+    mc_bracket_excluded: >-
+      the page bracketed the I cell ([I] in the I column) but PEMS 2024 p.136#7 prints this
+      row as a Medical Control CONTACT and the chip is `MC`: the action is already MC-gated,
+      so a `+MC` marker would duplicate the chip and say nothing.
+  - file: protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md
+    row: 16
+    mc_bracket_excluded: >-
+      the page bracketed the P cell ([P] in the P column) while the row now publishes I (PEMS
+      p.135#5, badge I). The bracket qualifies the Paramedic grant, not the Intermediate one;
+      putting `+MC` beside I would claim a restriction the page did not write on that level.
+  - file: protocols/cardiac/04_Bradycardia_PROC.md
+    row: 8
+    mc_bracket_excluded: >-
+      the page bracketed the A cell ([A]) but the row is chipped `MC` (PEMS p.104#13 is the
+      Medical Control contact). The chip already states the MC requirement.
+  - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
+    row: 7
+    mc_bracket_excluded: >-
+      the page bracketed the I cell ([I]) but the row is chipped `MC` (PEMS p.107#9 is the
+      Medical Control contact). The chip already states the MC requirement.
+  - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
+    row: 13
+    mc_bracket_excluded: >-
+      the page bracketed the A cell ([A]) but the row is chipped `MC` — it is the Medical
+      Control contact row itself. The chip already states the MC requirement.
+  - file: protocols/medical/07_Sepsis_PROC.md
+    row: 6
+    mc_bracket_excluded: >-
+      the page bracketed the A cell ([A]) but the row is chipped `MC` — it is the Medical
+      Control contact / sepsis-alert row itself. The chip already states the MC requirement.
+  - file: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
+    row: 12
+    mc_bracket_excluded: >-
+      the page bracketed the I cell ([I]) but the row is chipped `MC` — it is the Medical
+      Control contact row. The chip already states the MC requirement.
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 12
+    mc_bracket_excluded: >-
+      the page bracketed the I cell ([I]) but the row is chipped `MC` — it is the Medical
+      Control contact row. The chip already states the MC requirement.
+  - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
+    row: 14
+    pems_page: 55
+    pems_ordinal: 2
+    cross_page: true
+    quoted_row_text: >-
+      Administer: ADULT:
+    evidence: >-
+      This row published no provider level at all, so there is none to keep. PEMS prints the
+      identical Fentanyl order on p.55#2 (Sedation Post Advanced Airway, badge I): 'ADULT:
+      Fentanyl (Sublimaze) 25 - 50 mcg IV/IO over 2 minutes or IN/IM; PEDIATRIC 0.5 - 1
+      mcg/kg... Maximum dose 25 mcg'. Bound to the row that prints the action; the level is
+      the source's, not an invention. Marked cross_page now that the checker enforces it
+      (owner ruling 2026-11-16).
+  - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
+    row: 15
+    pems_page: 55
+    pems_ordinal: 3
+    cross_page: true
+    quoted_row_text: >-
+      If Fentanyl is not sufficient, administer:
+    evidence: >-
+      This row published no provider level at all. PEMS prints the identical Midazolam order
+      on p.55#3 (Sedation Post Advanced Airway, badge I): 'ADULT: Midazolam (Versed) 2.5 mg
+      IV/IO over 2 minutes or 5 mg IN/IM; PEDIATRIC: 0.1 mg/kg IV/IO... Maximum dose 2.5 mg
+      IV/IO or 5 mg IN/IM'. Marked cross_page now that the checker enforces it (owner ruling
+      2026-11-16).
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 5
+    pems_page: 87
+    pems_ordinal: 7
+    cross_page: true
+    quoted_row_text: >-
+      Consider endotracheal intubation vs immediate transport to the nearest emergency
+      department if any signs of symptoms of airway injury develop:
+    evidence: >-
+      p.87#7 (Burns) prints this exact action: 'Consider endotracheal intubation vs immediate
+      transport to the nearest emergency department if any signs or symptoms of airway injury
+      develop: singed facial or nasal hairs... hoarse voice or stridor... carbonaceous
+      sputum', badge I. The C2 ruling pointed at p.123#4 (the Respiratory Distress ETI row);
+      p.87#7 is the row that prints this action, and its badge is I, so the page's P moves to
+      I. Marked cross_page now that the checker enforces it (owner ruling 2026-11-16).
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 8
+    pems_page: 88
+    pems_ordinal: 8
+    cross_page: true
+    quoted_row_text: >-
+      For altered mental status, seizures, hypotension, and/or cardiac arrest following
+      exposure to combustion products in an enclosed space or suspected cyanide poisoning,
+    evidence: >-
+      This row published no provider level at all, so there is none to keep. PEMS prints the
+      hydroxocobalamin order on p.88#8 (Burns, badge I): 'For altered mental status, seizures,
+      hypotension, and/or cardiac arrest following exposure to combustion products in an
+      enclosed space or suspected cyanide poisoning, administer (if available): ADULT:
+      Hydroxocobalamin (CYANOKIT) 5 g IV/IO, infuse over 15 minutes'. Marked cross_page now
+      that the checker enforces it (owner ruling 2026-11-16).
+
+  # ================================================================ BATCH 4 — trauma + toxicology
+  # protocols/trauma/ (6 pages) + protocols/toxicology/ (3 pages). Derived from the tree.
+  # Cross-page citations carry the cited row's words in `quoted_row_text`; `+MC` markers
+  # carry a page-side bracketed level cell; owner_required rows say why no PEMS row
+  # authorises the action.
+
+  # ---------------------------------------------------------------- Crush Syndrome (p.91)
+  - file: protocols/trauma/09_Crush_Syndrome_PROC.md
+    row: 4
+    mc_required: true
+    evidence: >-
+      the page printed the A cell in brackets ([A]) in its pre-conversion revision
+      (cf8af7a); PEMS p.91#4 prints the continuous albuterol order with badge [A], so the
+      chip is A and the bracket means A performs it only with Medical Control authorisation.
+  - file: protocols/trauma/09_Crush_Syndrome_PROC.md
+    row: 5
+    mc_required: true
+    evidence: >-
+      the page printed the I cell in brackets ([I]) in its pre-conversion revision
+      (cf8af7a); PEMS p.91#5 prints the sodium bicarbonate order with badge [I], so the
+      chip is I and the bracket means I performs it only with Medical Control authorisation.
+
+  # ---------------------------------------------------------------- Electrical Injuries (p.95-96)
+  - file: protocols/trauma/09_Electrical_Injuries_PROC.md
+    row: 7
+    status: owner_required
+    reason: >-
+      No single PEMS 2024 row prints this 12-lead-plus-continuous-monitoring bundle:
+      p.96#8 badges 'Obtain and transmit a 12-Lead ECG' EMT and p.96#11 badges 'Assess and
+      continuously monitor cardiac rhythm' I. Two levels, so the page's A is kept and
+      flagged rather than chipped off one row that would contradict the other.
+
+  # ---------------------------------------------------------------- Hemorrhage Control (p.75)
+  - file: protocols/trauma/09_Hemorrhage_Control_PROC.md
+    row: 8
+    pems_page: 273
+    pems_ordinal: 6
+    cross_page: true
+    quoted_row_text: >-
+      Consider pain control. Refer to Pain Control protocol.
+    evidence: >-
+      p.273#6 (Tourniquet Application) prints 'Consider pain control. Refer to Pain Control
+      protocol.' badged EMR — the same referral this row makes. Cross-page: p.75 prints no
+      pain-control row.
+  - file: protocols/trauma/09_Hemorrhage_Control_PROC.md
+    row: 9
+    pems_page: 273
+    pems_ordinal: 7
+    cross_page: true
+    quoted_row_text: >-
+      If hemorrhage cannot be controlled, transport immediately to the nearest emergency
+      department and contact Medical Control for guidance.
+    evidence: >-
+      p.273#7 (Tourniquet Application) prints this exact escalation badged MC. Cross-page:
+      p.75 prints no Medical Control row. The C2 adjudication had resolved this row to
+      p.75#3 (badge EMR), which would chip an MC contact as EMR; the binding overrides it.
+
+  # ---------------------------------------------------------------- Lightning Injuries (p.96)
+  - file: protocols/trauma/09_Lightning_Injuries_PROC.md
+    row: 7
+    status: owner_required
+    reason: >-
+      No single PEMS 2024 row prints this 12-lead-plus-monitoring bundle: p.96#8 badges
+      'Obtain and transmit a 12-Lead ECG' EMT and p.96#11 badges 'Assess and continuously
+      monitor cardiac rhythm' I. Two levels, so the page's EMT is kept and flagged.
+
+  # ---------------------------------------------------------------- Trauma (p.83-84)
+  - file: protocols/trauma/09_Trauma_PROC.md
+    row: 2
+    status: owner_required
+    reason: >-
+      No PEMS 2024 row prints scene safety plus extrication/movement to safety. p.49#1
+      prints scene safety/PPE (badge EMR) but not extrication; p.91#7 prints extrication
+      from entrapment (badge EMT) but not scene safety. Two rows, two levels, so the page's
+      EMT is kept and flagged.
+  - file: protocols/trauma/09_Trauma_PROC.md
+    row: 7
+    pems_page: 50
+    pems_ordinal: 9
+    cross_page: true
+    quoted_row_text: >-
+      Establish IV / IO access when indicated.
+    evidence: >-
+      p.50#9 (Universal Patient Care) prints 'Establish IV / IO access when indicated.
+      Refer to Intraosseous (IO) Access procedure, as needed.' badged A — the IV/IO access
+      step this row names. Cross-page: p.83 prints no access row (p.83#10 is the fluid
+      bolus, which is row 8). The C2 adjudication had resolved this row to p.83#10 (the
+      fluid row); the binding overrides it.
+
+  # ---------------------------------------------------------------- Nausea / Vomiting (p.117)
+  - file: protocols/toxicology/06_Nausea_Vomiting_PROC.md
+    row: 6
+    mc_bracket_excluded: >-
+      the page bracketed the A cell ([A]) but the row is chipped MC (PEMS p.117#5 is the
+      Medical Control contact). The chip already states the MC requirement, so a +MC
+      marker would duplicate it.
+  - file: protocols/trauma/09_Trauma_PROC.md
+    row: 6
+    status: owner_required
+    reason: >-
+      No PEMS 2024 row prints 'assess for shock and refer to the Shock protocol'. p.83#3
+      prints 'If shock or potential for shock is present, keep the patient warm' (badge
+      EMR) — the intervention, not the assessment/referral this row names. The page's A is
+      kept and flagged.
+
+  # ================================================================ Batch 5 — general/
+  # Sources: p.71-72 Behavioral Emergencies (restraint), p.67 Cold Exposure, p.69 Heat
+  # Exposure, p.77 Pain Control, p.55 Sedation Post Advanced Airway.
+
+  # ---------------------------------------------------------- Behavioral restraint (p.71-72)
+  - file: protocols/general/02_Behavioral_Patient_Restraint_PROC.md
+    row: 1
+    pems_page: 71
+    pems_ordinal: 1
+    evidence: >-
+      p.71#1 "Assess decision making capacity. Refer to administrative policy Patient
+      Refusals." badge EMR. The site row concatenates that row with p.71#3 "Assess and
+      treat potential causes of agitation / altered mental status" (also badge EMR); the
+      alignment had matched it to #3 alone. Citing #1 because the capacity/refusals clause
+      leads the row. Same badge either way, so no level moves.
+  - file: protocols/general/02_Behavioral_Patient_Restraint_PROC.md
+    row: 2
+    pems_page: 71
+    pems_ordinal: 4
+    evidence: >-
+      p.71#4 "For mild agitation, follow de-escalation guidelines. See Pearls (**) below."
+      badge EMR — the de-escalation row, and the only PEMS row that authorises it. The
+      alignment reported no counterpart; the site row's detail (soothing tone, space,
+      boundaries) is the page's expansion of that PEMS row and its Pearls. Chip moves
+      EMT -> EMR: the source prints de-escalation at EMR, all five columns filled.
+
+  # ---------------------------------------------------------------- Cold Exposure (p.67)
+  - file: protocols/general/02_Cold_Exposure_PROC.md
+    row: 4
+    pems_page: 67
+    pems_ordinal: 0
+    evidence: >-
+      p.67#0 "Follow General - Universal Patient Care/Initial Patient Contact Protocol. Use
+      warmed and humidified O2 if available." badge EMR. The site splits that one PEMS row
+      into r1 (UPC contact, cited to p.67#4) and r4 (the O2 clause); the source badges the
+      merged row EMR in all five columns, so the chip moves EMT -> EMR. Recorded here
+      because the split is the page's, not PEMS's.
+
+  # ---------------------------------------------------------------- Pain Control (p.77)
+  - file: protocols/general/02_Pain_Control_PROC.md
+    row: 8
+    pems_page: 78
+    pems_ordinal: 6
+    evidence: >-
+      p.78#6 prints "If unable to adequately control pain or safely and humanely
+      extricate/transport a stable patient, contact medical control for guidance." with an
+      MC badge in both margin columns — this row's action, word for word. p.78 is the Pain
+      Control protocol's own continuation page (the title band carries over from p.77, whose
+      six rows are #0-#5), so this is the page's governing source, not a cross-page reach.
+      The extractor used to discard p.78 entirely (a page carrying a single badge group was
+      classed `narrative`); that defect is fixed and the row is in pems_table.json, which is
+      what makes this citation checkable.
+
+  # ------------------------------------------------- Sedation, non-paralytic (p.55)
+  - file: protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md
+    row: 2
+    pems_page: 77
+    pems_ordinal: 2
+    cross_page: true
+    quoted_row_text: >-
+      Assess and monitor blood pressure. Ensure patient is not hypotensive.
+    evidence: >-
+      p.77#2 "Assess and monitor blood pressure. Ensure patient is not hypotensive. See
+      Criteria." badge EMT — word-for-word the action this row names. Cross-page: p.55 (the
+      page's source) prints no BP-assessment row; its five rows are airway confirmation,
+      two sedation rows and an MC contact. Chip moves A -> EMT (source badges it EMT).
+  - file: protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md
+    row: 3
+    pems_page: 50
+    pems_ordinal: 9
+    cross_page: true
+    quoted_row_text: >-
+      Establish IV / IO access when indicated.
+    evidence: >-
+      p.50#9 (Universal Patient Care) "Establish IV / IO access when indicated. Refer to
+      Intraosseous (IO) Access procedure, as needed." badge A — the generic access row, the
+      same row Batch 4 bound Trauma r7 to. Cross-page: p.55 prints no access row. Chip
+      moves I -> A: PEMS badges IV/IO access A in every standalone row that prints it
+      (p.50#9, p.100#7, p.103#5).
+  - file: protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md
+    row: 4
+    pems_owner_kind: printed-elsewhere-no-row-matches
+    status: owner_required
+    reason: >-
+      PRE-INTUBATION sedation has no PEMS 2024 row. p.55 is "Sedation Post Advanced Airway"
+      and its only midazolam row (#3, badge I) is post-airway sedation after fentanyl; the
+      alignment bound r4 to it on text overlap, which would cite a post-airway row for a
+      pre-airway act. PEMS states the gap itself: p.123#4 "Intubation of spontaneously
+      breathing patients without rapid sequence induction (RSI) is generally not
+      recommended. RSI is not addressed in PEMS regional protocols - refer to agency
+      specific protocols for guidance." Ketamine appears in exactly one PEMS 2024 row,
+      p.72#9 (behavioral restraint, badge P), which does not authorise sedation for
+      intubation. The page's I is kept and flagged.
+  - file: protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md
+    row: 5
+    pems_owner_kind: printed-elsewhere-no-row-matches
+    status: owner_required
+    reason: >-
+      The act is printed at I (p.55#2 fentanyl, p.55#3 midazolam, both badge I) but the
+      drug this row names is not printed anywhere as a sedative: ketamine occurs in exactly
+      one PEMS 2024 row, p.72#9 (behavioral restraint, badge P). The C2 adjudication bound
+      this row to p.55#2 and levelled it I — that is the class level, and chipping it I
+      would widen the authority for ketamine post-intubation sedation from the P this page
+      published to I on a citation that does not name the drug. The page's P is kept and
+      flagged: is post-intubation ketamine to sit at I on the strength of the p.55 sedation
+      rows, or is it agency-specific like RSI (p.123#4)?
+
+# =====================================================================
+# Batch 6 — administrative pages: a POLICY citation (PEMS administrative policy)
+# or a cross-page protocol citation. Checked against pems-policies.yaml above.
+# =====================================================================
+
+  # ---- 01_ALS_Release_to_BLS_PROC.md
+  - file: protocols/administrative/01_ALS_Release_to_BLS_PROC.md
+    row: 1
+    policy: als-release
+    policy_quote: >-
+      A complete, pertinent patient history and physical assessment, including a full set of
+      vital signs, must be completed.
+  - file: protocols/administrative/01_ALS_Release_to_BLS_PROC.md
+    row: 2
+    policy: als-release
+    policy_quote: >-
+      ALS care is not currently medically necessary and will likely not in the near future be
+      necessary (to include pain management)
+  - file: protocols/administrative/01_ALS_Release_to_BLS_PROC.md
+    row: 3
+    policy: als-release
+    policy_quote: >-
+      BLS provider is willing to accept responsibility for the patient
+  - file: protocols/administrative/01_ALS_Release_to_BLS_PROC.md
+    row: 4
+    policy: als-release
+    policy_quote: >-
+      the Basic Life Support (BLS) provider can operate as the Attendant in Charge (AIC)
+  - file: protocols/administrative/01_ALS_Release_to_BLS_PROC.md
+    row: 5
+    policy: als-release
+    policy_quote: >-
+      The ALS provider must contact Medical Control when there is a concern of the
+      appropriateness of the release of patient care to a BLS provider.
+  - file: protocols/administrative/01_ALS_Release_to_BLS_PROC.md
+    row: 6
+    policy: als-release
+    policy_quote: >-
+      The BLS provider must complete a Patient Care Report.
+  - file: protocols/administrative/01_ALS_Release_to_BLS_PROC.md
+    row: 7
+    policy: als-release
+    policy_quote: >-
+      Documentation will include physical findings, transfer of care, and physician
+      consultation on the Patient Care Report when necessary.
+  - file: protocols/administrative/01_ALS_Release_to_BLS_PROC.md
+    row: 8
+    policy: als-release
+    policy_quote: >-
+      Any ALS Release to BLS must be reviewed by the agency Quality Assurance/Quality
+      Improvement process.
+    policy_note: >-
+      The page names who reviews and when ("the Officer or Acting Officer the following day,
+      per departmental SOP"); the policy prints the requirement, not that detail.
+
+  # ---- 01_Abuse_Recognition_and_Mandated_Reporting_PROC.md
+  - file: protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md
+    row: 1
+    policy: abuse-recognition
+    policy_quote: >-
+      Assess for and document psychological characteristics of abuse, including excessive
+      passivity, compliant or fearful behavior
+  - file: protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md
+    row: 2
+    policy: abuse-recognition
+    policy_quote: >-
+      Assess for and document physical signs of abuse, including any injuries inconsistent
+      with the reported mechanism of injury
+  - file: protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md
+    row: 3
+    policy: abuse-recognition
+    policy_quote: >-
+      Assess for and document symptoms or signs of neglect, including inappropriate level of
+      clothing for weather, inadequate hygiene
+  - file: protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md
+    row: 4
+    policy: abuse-recognition
+    policy_quote: >-
+      Mandated reporters must report the following to Adult Protective Services and law
+      enforcement
+  - file: protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md
+    row: 5
+    policy: abuse-recognition
+    policy_quote: >-
+      make reports to the 24-hour, toll-free Virginia Department of Social Services (VDSS)
+      Child Protective Services (CPS) hotline
+  - file: protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md
+    row: 6
+    policy: abuse-recognition
+    policy_quote: >-
+      shall immediately give notice of the incident to the Department of Game and Inland
+      Fisheries
+  - file: protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md
+    row: 7
+    policy: abuse-recognition
+    policy_quote: >-
+      Provide appropriate documentation on the PCR
+
+  # ---- 01_Behavioral_Health_Transportation_Decision_PROC.md
+  - file: protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md
+    row: 1
+    policy: patient-refusal
+    policy_quote: >-
+      Assess clinical decision-making capacity
+    policy_note: >-
+      PEMS prints the capacity screen in the Patient Refusal policy (p.27), not in the
+      Behavioral Health Transportation Decision policy (p.41).
+  - file: protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md
+    row: 2
+    policy: behavioral-health-transport
+    policy_quote: >-
+      the Field Triage Decision protocol will be used to consider direct transport to a Mental
+      Health Facility
+  - file: protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md
+    row: 3
+    policy: behavioral-health-transport
+    policy_quote: >-
+      When in doubt, contact Medical Control.
+  - file: protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md
+    row: 4
+    policy: patient-refusal
+    policy_quote: >-
+      contact law enforcement regarding issuance of an Emergency Custody Order (ECO) for
+      psychiatric evaluation
+    policy_note: >-
+      Printed in the Patient Refusal policy (p.28); the Behavioral Health policy prints the
+      transport decision scheme, not the ECO step.
+  - file: protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md
+    row: 5
+    policy: patient-refusal
+    policy_quote: >-
+      contact Medical Control regarding issuance of an Emergency Custody Order (ECO) for
+      medical evaluation
+    policy_note: >-
+      Printed in the Patient Refusal policy (p.28#12, badge MC); the Behavioral Health policy
+      prints the transport decision scheme, not the Medical ECO step.
+
+  # ---- 01_Communications_PROC.md
+  - file: protocols/administrative/01_Communications_PROC.md
+    row: 1
+    policy: communications
+    policy_quote: >-
+      is used to notify hospitals of basic and advanced life support patients NOT requiring
+      on-line physician intervention
+  - file: protocols/administrative/01_Communications_PROC.md
+    row: 2
+    policy: communications
+    policy_quote: >-
+      The COR system shall be used for direct contact with Medical Control in any situation
+      where physician consultation is appropriate
+  - file: protocols/administrative/01_Communications_PROC.md
+    row: 3
+    policy: communications
+    policy_quote: >-
+      THE PRE-ARRIVAL REPORT SHOULD INCLUDE THE FOLLOWING
+  - file: protocols/administrative/01_Communications_PROC.md
+    row: 4
+    policy: communications
+    policy_quote: >-
+      During an MCI, routine ambulance-to-emergency department communications are suspended.
+  - file: protocols/administrative/01_Communications_PROC.md
+    row: 5
+    policy: communications
+    policy_quote: >-
+      All orders within your scope of practice are considered standing orders in this
+      situation.
+  - file: protocols/administrative/01_Communications_PROC.md
+    row: 6
+    policy: communications
+    policy_quote: >-
+      Carefully document events including
+    policy_note: >-
+      The page adds "review with the Officer/Acting Officer per department SOPs"; the policy
+      prints the documentation list only.
+
+  # ---- 01_Death_Criteria_for_Withholding_Resuscitation_PROC.md
+  - file: protocols/administrative/01_Death_Criteria_for_Withholding_Resuscitation_PROC.md
+    row: 1
+    policy: death-withholding
+    policy_quote: >-
+      full resuscitation measures shall be undertaken for all victims of cardiopulmonary
+      arrest except in the presence of one or more of the indications of death
+  - file: protocols/administrative/01_Death_Criteria_for_Withholding_Resuscitation_PROC.md
+    row: 2
+    policy: death-withholding
+    policy_quote: >-
+      When treating cardiac arrest victims who possess a "living will" or an advanced
+      directive (other than a valid DDNR order/POST), full resuscitative efforts should be
+      initiated and Medical Control consulted
+  - file: protocols/administrative/01_Death_Criteria_for_Withholding_Resuscitation_PROC.md
+    row: 3
+    policy: death-withholding
+    policy_quote: >-
+      Provide full basic life support care including AED, pulse ox, EtCO2, and supraglottic
+      airway.
+  - file: protocols/administrative/01_Death_Criteria_for_Withholding_Resuscitation_PROC.md
+    row: 4
+    policy: death-withholding
+    policy_quote: >-
+      Provide a thorough report of patient history, condition, and treatment.
+  - file: protocols/administrative/01_Death_Criteria_for_Withholding_Resuscitation_PROC.md
+    row: 5
+    policy: death-withholding
+    policy_quote: >-
+      Follow agency protocols/policies concerning notification of law enforcement and/or
+      medical examiner. Remain on scene until proper authorities arrive.
+
+  # ---- 01_Helicopter_EMS_HEMS_PROC.md
+  - file: protocols/administrative/01_Helicopter_EMS_HEMS_PROC.md
+    row: 1
+    policy: hems
+    policy_quote: >-
+      Request air ambulance standby/response according to department procedure.
+    policy_note: >-
+      The "no medical control authorization needed" half is printed in the same policy:
+      "Technicians can request HEMS without authorization by medical control."
+  - file: protocols/administrative/01_Helicopter_EMS_HEMS_PROC.md
+    row: 2
+    policy: hems
+    policy_quote: >-
+      Establish a safe and logistically feasible landing zone.
+  - file: protocols/administrative/01_Helicopter_EMS_HEMS_PROC.md
+    row: 3
+    policy: hems
+    policy_quote: >-
+      Establish number of patients, primary injuries/medical condition, and approximate
+      patient weight(s).
+  - file: protocols/administrative/01_Helicopter_EMS_HEMS_PROC.md
+    row: 4
+    policy: hems
+    policy_quote: >-
+      Trauma patients should be fully immobilized. IV/IO access should be established as time
+      allows.
+    policy_note: >-
+      The page adds "(within provider scope)".
+  - file: protocols/administrative/01_Helicopter_EMS_HEMS_PROC.md
+    row: 5
+    policy: hems
+    policy_quote: >-
+      On scene one individual should be responsible for providing the patient report(s) to the
+      flight crew upon arrival.
+  - file: protocols/administrative/01_Helicopter_EMS_HEMS_PROC.md
+    row: 6
+    policy: hems
+    policy_quote: >-
+      Ensure PCR is provided to receiving facility as per 12 VAC 5-31
+
+  # ---- 01_Infant_Abandonment_PROC.md
+  - file: protocols/administrative/01_Infant_Abandonment_PROC.md
+    row: 1
+    policy: infant-abandonment
+    policy_quote: >-
+      A parent may leave an infant (within the first 30 days of the child’s life) at a
+      hospital that provides 24-hour emergency services or to an attended rescue squad that
+      employs emergency medical services personnel.
+  - file: protocols/administrative/01_Infant_Abandonment_PROC.md
+    row: 3
+    policy: infant-abandonment
+    policy_quote: >-
+      should contact Child Protective Services or local law enforcement resources
+  - file: protocols/administrative/01_Infant_Abandonment_PROC.md
+    row: 4
+    policy: infant-abandonment
+    policy_quote: >-
+      and, if indicated, transport to an appropriate facility.
+
+  # ---- 01_Patient_Refusal_of_Treatment_Transport_PROC.md
+  - file: protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md
+    row: 1
+    policy: patient-refusal
+    policy_quote: >-
+      Conduct a thorough assessment of the patient including vital signs and physical exam in
+      accordance with relevant patient care protocols.
+  - file: protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md
+    row: 2
+    policy: patient-refusal
+    policy_quote: >-
+      Patient must be at least 14 years of age to consent to or refuse care / transport.
+    policy_note: >-
+      The page bundles the age test with the capacity bullets printed on p.27#2 ("Ensure the
+      patient is fully oriented... understands the potential risks and benefits").
+  - file: protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md
+    row: 3
+    policy: patient-refusal
+    policy_quote: >-
+      the following individuals may act as a surrogate decision maker, in descending order of
+      authority
+  - file: protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md
+    row: 4
+    policy: patient-refusal
+    policy_quote: >-
+      obtain signatures from the patient or authorized surrogate decision maker and at least
+      one adult witness, when possible.
+  - file: protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md
+    row: 5
+    policy: patient-refusal
+    policy_quote: >-
+      contact law enforcement regarding issuance of an Emergency Custody Order (ECO) for
+      psychiatric evaluation
+  - file: protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md
+    row: 6
+    policy: patient-refusal
+    policy_quote: >-
+      contact Medical Control regarding issuance of an Emergency Custody Order (ECO) for
+      medical evaluation
+  - file: protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md
+    row: 7
+    policy: patient-refusal
+    policy_quote: >-
+      Contact Medical Control for assistance in situations including but not limited to
+
+  # ---- 01_Patient_Restraint_PROC.md
+  - file: protocols/administrative/01_Patient_Restraint_PROC.md
+    row: 1
+    policy: patient-restraint
+    policy_quote: >-
+      If law enforcement or additional staff is needed, call for assistance prior to
+      attempting restraint procedures.
+  - file: protocols/administrative/01_Patient_Restraint_PROC.md
+    row: 2
+    policy: patient-restraint
+    policy_quote: >-
+      Consider and treat medical causes of combativeness (hypoxia, head injury, hypoglycemia).
+  - file: protocols/administrative/01_Patient_Restraint_PROC.md
+    row: 3
+    policy: patient-restraint
+    policy_quote: >-
+      Place the patient face up on a long backboard
+  - file: protocols/administrative/01_Patient_Restraint_PROC.md
+    row: 4
+    policy: patient-restraint
+    policy_quote: >-
+      check circulation in restrained extremities every 15 minutes
+  - file: protocols/administrative/01_Patient_Restraint_PROC.md
+    row: 5
+    policy: patient-restraint
+    policy_quote: >-
+      attempt to place SpO2 device and apply supplemental oxygen if indicated
+  - file: protocols/administrative/01_Patient_Restraint_PROC.md
+    row: 6
+    policy: patient-restraint
+    policy_quote: >-
+      DO NOT tighten chest straps to the point of impeding respiratory function.
+  - file: protocols/administrative/01_Patient_Restraint_PROC.md
+    row: 7
+    policy: patient-restraint
+    policy_quote: >-
+      Assess vital signs within the first 5 minutes and thereafter as appropriate (at least
+      every 10 minutes and prior to any repeat dose of medication)
+  - file: protocols/administrative/01_Patient_Restraint_PROC.md
+    row: 8
+    policy: patient-restraint
+    policy_quote: >-
+      If chemical restraint is required, see Behavioral Emergencies Protocol
+
+  # ---- 01_STEMI_Field_Triage_PROC.md
+  - file: protocols/administrative/01_STEMI_Field_Triage_PROC.md
+    row: 1
+    policy: stemi-field-triage
+    policy_quote: >-
+      acquire a 12-lead ECG within 5 minutes of arrival at patient
+  - file: protocols/administrative/01_STEMI_Field_Triage_PROC.md
+    row: 2
+    policy: stemi-field-triage
+    policy_quote: >-
+      12-lead ECG criteria of 1 mm (or more) ST elevation in 2 (or more) contiguous leads
+  - file: protocols/administrative/01_STEMI_Field_Triage_PROC.md
+    row: 3
+    policy: stemi-field-triage
+    policy_quote: >-
+      PCI Capable hospital within 30 minutes
+  - file: protocols/administrative/01_STEMI_Field_Triage_PROC.md
+    row: 4
+    policy: stemi-field-triage
+    policy_quote: >-
+      Helicopter EMS (HEMS) within 30 minutes of patient’s location
+  - file: protocols/administrative/01_STEMI_Field_Triage_PROC.md
+    row: 5
+    policy: stemi-field-triage
+    policy_quote: >-
+      Any patient with a compromised airway or impending circulatory collapse should be taken
+      to the closest Emergency Department.
+  - file: protocols/administrative/01_STEMI_Field_Triage_PROC.md
+    row: 6
+    policy: stemi-field-triage
+    policy_quote: >-
+      activate the STEMI alert system by notifying the closest PCI center within 30 minutes
+      EMS transport time
+
+  # ---- 01_Safe_Transport_of_Pediatric_Patients_PROC.md
+  - file: protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md
+    row: 1
+    policy: safe-transport-pediatric
+    policy_quote: >-
+      Secure all monitoring devices and other equipment to prevent injury.
+  - file: protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md
+    row: 2
+    policy: safe-transport-pediatric
+    policy_quote: >-
+      Drive cautiously and at safe speeds, observing applicable traffic laws.
+  - file: protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md
+    row: 3
+    policy: safe-transport-pediatric
+    policy_quote: >-
+      Ensure pediatric patients under 40 kg (88 lbs) are restrained with approved child
+      restraint devices secured per the manufacturer’s instructions.
+  - file: protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md
+    row: 4
+    policy: safe-transport-pediatric
+    policy_quote: >-
+      Ensure that all EMS providers use available restraining devices or systems during
+      transport.
+  - file: protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md
+    row: 5
+    policy: safe-transport-pediatric
+    policy_quote: >-
+      parents or caregivers should be secured using safety belts
+  - file: protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md
+    row: 6
+    policy: safe-transport-pediatric
+    policy_quote: >-
+      Attempt to arrange for transportation of adults and children who are not patients by
+      alternative means.
+  - file: protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md
+    row: 7
+    policy: safe-transport-pediatric
+    policy_quote: >-
+      make every reasonable attempt to maximize safety while comforting the child
+
+  # ---- 01_Stroke_Field_Triage_PROC.md
+  - file: protocols/administrative/01_Stroke_Field_Triage_PROC.md
+    row: 1
+    pems_page: 131
+    pems_ordinal: 4
+    cross_page: true
+    quoted_row_text: >-
+      Initiate transport. Goal scene time < 15 minutes
+    evidence: >-
+      p.131#4 (Stroke / TIA protocol) prints "Initiate transport. Goal scene time < 15
+      minutes" badged EMT — the page's 15-minute scene-time goal, verbatim. Owner's Pearl
+      ruling 2026-11-17 applied here as a badged-row check, not a Pearl: this is a level-
+      badged protocol row, so the chip is that row's printed badge (EMT) and the row stops
+      being PENDING. Cross-page: this page's own source is the Stroke Field Triage
+      administrative policy (p.37), which prints no scene-time target; p.131 is the
+      clinical protocol that does.
+  - file: protocols/administrative/01_Stroke_Field_Triage_PROC.md
+    row: 2
+    policy: stroke-field-triage
+    policy_quote: >-
+      Assess blood glucose. Is glucose greater than 60?
+    policy_note: >-
+      The page adds the <60 mg/dL referral to Hypoglycemia; the policy prints the glucose
+      check only.
+  - file: protocols/administrative/01_Stroke_Field_Triage_PROC.md
+    row: 3
+    policy: stroke-field-triage
+    policy_quote: >-
+      evaluate the patient using the RACE exam
+    policy_note: >-
+      The page adds BEFAST; the policy prints the RACE exam only.
+  - file: protocols/administrative/01_Stroke_Field_Triage_PROC.md
+    row: 5
+    policy: stroke-field-triage
+    policy_quote: >-
+      If transport to Comprehensive Stroke Center increases transport time by 30 minutes or
+      greater, transport to nearest Primary Stroke Center.
+  - file: protocols/administrative/01_Stroke_Field_Triage_PROC.md
+    row: 6
+    policy: stroke-field-triage
+    policy_quote: >-
+      Transport to closest Stroke Center (Acute Stroke Ready, Primary or Comprehensive)
+  - file: protocols/administrative/01_Stroke_Field_Triage_PROC.md
+    row: 7
+    policy: stroke-field-triage
+    policy_quote: >-
+      activate the stroke alert system by notifying the appropriate facility
+  - file: protocols/administrative/01_Stroke_Field_Triage_PROC.md
+    row: 8
+    policy: stroke-field-triage
+    policy_quote: >-
+      Once the patient is in transport call the receiving facility’s COR with the patient’s
+      Name/DOB.
+
+  # ---- 01_Transportation_and_Destination_Determination_PROC.md
+  - file: protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md
+    row: 1
+    policy: transport-destination
+    policy_quote: >-
+      Patients with decision-making capacity are to be transported to the hospital emergency
+      department of their choice within the policies of the transporting agency
+  - file: protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md
+    row: 2
+    policy: transport-destination
+    policy_quote: >-
+      the patient destination should be consistent with the PEMS Regional STEMI Plan
+  - file: protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md
+    row: 3
+    policy: transport-destination
+    policy_quote: >-
+      the patient destination should be consistent with the PEMS Stroke Triage Plan, to a
+      designated stroke center
+  - file: protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md
+    row: 4
+    policy: transport-destination
+    policy_quote: >-
+      If the patient has no hospital preference, transport should be to the closest most
+      appropriate hospital.
+  - file: protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md
+    row: 5
+    policy: transport-destination
+    policy_quote: >-
+      the reason for the change and destination the most appropriate facility shall be
+      documented on the Patient Care Report
+  - file: protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md
+    row: 6
+    policy: transport-destination
+    policy_quote: >-
+      Certified providers may contact HEMS (Medical Control permission not necessary)
+  - file: protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md
+    row: 7
+    policy: transport-destination
+    policy_quote: >-
+      If the patient is ready for transport AND air ambulance is delayed for more than 10
+      minutes, initiate ground transport to the closest hospital, or helispot/helipad.
+
+  # ---- 01_Trauma_Field_Triage_PROC.md
+  - file: protocols/administrative/01_Trauma_Field_Triage_PROC.md
+    row: 1
+    policy: trauma-field-triage
+    policy_quote: >-
+      initiate immediate transport (scene time less than 10 minutes)
+  - file: protocols/administrative/01_Trauma_Field_Triage_PROC.md
+    row: 2
+    policy: trauma-field-triage
+    policy_quote: >-
+      unmanageable/uncontrolled airway or uncontrolled hemorrhage to the closest
+  - file: protocols/administrative/01_Trauma_Field_Triage_PROC.md
+    row: 3
+    policy: trauma-field-triage
+    policy_quote: >-
+      shall be transported to the closest appropriate trauma center within a 30-minute ground
+      transport time
+  - file: protocols/administrative/01_Trauma_Field_Triage_PROC.md
+    row: 4
+    policy: trauma-field-triage
+    policy_quote: >-
+      should be transported to the closest hospital unless they can be delivered to a trauma
+      center more rapidly by helicopter EMS (HEMS)
+  - file: protocols/administrative/01_Trauma_Field_Triage_PROC.md
+    row: 5
+    policy: trauma-field-triage
+    policy_quote: >-
+      the technician should contact medical control to determine the destination hospital
+  - file: protocols/administrative/01_Trauma_Field_Triage_PROC.md
+    row: 6
+    policy: trauma-field-triage
+    policy_quote: >-
+      burns that meet burn center criteria should be transported to a burn center
+  - file: protocols/administrative/01_Trauma_Field_Triage_PROC.md
+    row: 7
+    policy: trauma-field-triage
+    policy_quote: >-
+      Severely injured pediatric patients should be transferred to a trauma center
+  - file: protocols/administrative/01_Trauma_Field_Triage_PROC.md
+    row: 8
+    policy: trauma-field-triage
+    policy_quote: >-
+      Establish early radio contact to alert trauma center staff.
+
+  # ---- 01_STEMI_Field_Triage_PROC.md (cross-page to the protocol that prints it)
+  - file: protocols/administrative/01_STEMI_Field_Triage_PROC.md
+    row: 7
+    pems_page: 107
+    pems_ordinal: 9
+    cross_page: true
+    quoted_row_text: >-
+      obtain serial ECGs at 10-minute intervals and contact Medical Control for guidance
+    evidence: >-
+      The STEMI Field Triage policy (p.35) prints no serial-ECG step; the action is printed
+      verbatim as row p.107#9 of the Chest Pain protocol, badge MC. Cited where printed rather
+      than left PENDING, so the reader is sent to the real source.
+
+  # ================================================================
+  # Batch 7 — docs/procedures/ (PEMS 2024 procedures section, p.231-275).
+  # Page -> PEMS page is declared in exceptions.yaml; every row below cites the
+  # PEMS row that prints the action, or declares why no single row does.
+  # ================================================================
+
+  - file: procedures/CPAP.md
+    row: 1
+    pems_page: 245
+    pems_ordinal: 0
+    evidence: >-
+      p.245#0 "Ensure adequate oxygen supply to the CPAP device. Explain the procedure and
+      indications to the patient." badge EMT. PEMS prints both sentences on one row; the page
+      splits them into rows 1 and 2.
+
+  - file: procedures/CPAP.md
+    row: 2
+    pems_page: 245
+    pems_ordinal: 0
+    evidence: >-
+      Same PEMS row as row 1: "Ensure adequate oxygen supply to the CPAP device." badge EMT. The
+      page keeps the oxygen-supply step as its own numbered action.
+
+  - file: procedures/CPAP.md
+    row: 3
+    pems_page: 245
+    pems_ordinal: 1
+    evidence: >-
+      p.245#1 "Set positive and expiratory pressure (PEEP) to 5 mmHg" badge EMT. PEMS prints 5
+      mmHg where this page writes 5 cmH2O; the unit difference is recorded as an owner question,
+      not silently reconciled in the action text.
+
+  - file: procedures/CPAP.md
+    row: 4
+    pems_page: 245
+    pems_ordinal: 2
+    evidence: >-
+      p.245#2 "Place the mask over the mouth and nose with oxygen flowing. Secure with straps,
+      beginning with the lower straps. Tighten until air-leak is minimal." badge EMT.
+
+  - file: procedures/CPAP.md
+    row: 5
+    pems_page: 245
+    pems_ordinal: 3
+    evidence: >-
+      p.245#3 "Reassess the patient, including the SpO2, ETCO2, and work of breathing." badge EMT.
+
+  - file: procedures/CPAP.md
+    row: 6
+    pems_page: 245
+    pems_ordinal: 4
+    evidence: >-
+      p.245#4 prints the PEEP-titration step (extracted as "Consider titratingPEEP9%-15mmHg) as
+      needed to improve ventilation/work of breathing.") badge EMT. The page published P, so the
+      chip moves P -> EMT: the printed level is the authority, and the move is listed for owner
+      review.
+
+  - file: procedures/Capnography.md
+    row: 1
+    pems_page: 241
+    pems_ordinal: 0
+    evidence: >-
+      p.241#0 "Adequate respiratory effort: Apply ETCO2 sampling nasal cannula to patient." badge
+      EMT.
+
+  - file: procedures/Capnography.md
+    row: 2
+    pems_page: 241
+    pems_ordinal: 1
+    evidence: >-
+      p.241#1 "Inadequate respiratory effort / Apnea: Attach inline ETCO2 sampling device to BVM,
+      CPAP, or ventilator." badge EMT.
+
+  - file: procedures/Capnography.md
+    row: 3
+    pems_page: 241
+    pems_ordinal: 2
+    evidence: >-
+      p.241#2 "Continuously monitor reading and waveform. Refer to waveform guide below." badge
+      EMT.
+
+  - file: procedures/Capnography.md
+    row: 4
+    pems_page: 241
+    pems_ordinal: 3
+    evidence: >-
+      p.241#3 "Advanced airway (ETT/SGA): Continuous monitoring ETCO2 waveform is required at all
+      times." badge EMT.
+
+  - file: procedures/Capnography.md
+    row: 5
+    pems_page: 241
+    pems_ordinal: 4
+    evidence: >-
+      p.241#4 "Cardiac Arrest: If ETCO2 < 10 or dropping during CPR, optimize compression rate,
+      depth, and recoil." badge EMT.
+
+  - file: procedures/Capnography.md
+    row: 6
+    pems_page: 241
+    pems_ordinal: 5
+    evidence: >-
+      p.241#5 "Head Injury / TBI / Stroke: Adjust ventilation to maintain ETCO2 of 35-45 mmHg."
+      badge EMT.
+
+  - file: procedures/Capnography.md
+    row: 7
+    pems_page: 241
+    pems_ordinal: 6
+    evidence: >-
+      p.241#6 "Obstructive airway disease (Asthma / COPD): Consider permissive hypercapnia.
+      Prioritize oxygenation." badge EMT.
+
+  - file: procedures/Chest_Decompression.md
+    row: 1
+    pems_page: 243
+    pems_ordinal: 0
+    evidence: >-
+      p.243#0 "Administer oxygen at 15 LPM (100% FiO2)." badge I.
+
+  - file: procedures/Chest_Decompression.md
+    row: 2
+    pems_page: 243
+    pems_ordinal: 1
+    evidence: >-
+      p.243#1 "Locate the second intercostal space in the mid-clavicular line on the same side as
+      the suspected pneumothorax." badge I.
+
+  - file: procedures/Chest_Decompression.md
+    row: 3
+    pems_page: 243
+    pems_ordinal: 1
+    evidence: >-
+      Same PEMS row as row 2, which also prints "Cleanse the site." badge I. The page keeps
+      cleansing as its own numbered step.
+
+  - file: procedures/Chest_Decompression.md
+    row: 4
+    pems_page: 243
+    pems_ordinal: 2
+    evidence: >-
+      p.243#2 "Attach a 10 mL syringe filled with 0.9% Sodium Chloride to a 14-gauge catheter
+      needle - use longest available." badge I.
+
+  - file: procedures/Chest_Decompression.md
+    row: 5
+    pems_page: 243
+    pems_ordinal: 2
+    evidence: >-
+      Same PEMS row as row 4, which also prints "Aspirate the syringe while advancing over the
+      rib, perpendicular to the skin, and into the pleural space until a pop is felt or
+      air/blood/fluid is freely aspirated." badge I.
+
+  - file: procedures/Chest_Decompression.md
+    row: 6
+    pems_page: 243
+    pems_ordinal: 3
+    evidence: >-
+      p.243#3 "Advance the catheter over the needle into the pleural space and remove the needle."
+      badge I.
+
+  - file: procedures/Chest_Decompression.md
+    row: 7
+    pems_page: 243
+    pems_ordinal: 4
+    evidence: >-
+      p.243#4 "Reassess the patient, including vital signs and respiratory effort / compliance.
+      Consider repeating the above steps for continued or recurrent hemodynamic instability."
+      badge I.
+
+  - file: procedures/Endotracheal_Intubation.md
+    row: 1
+    pems_page: 247
+    pems_ordinal: 1
+    evidence: >-
+      p.247#1 "Pre-oxygenate the patient: Provide 100% Oxygen via NRB or BVM for 3 minutes.
+      Monitor SpO2." badge EMT.
+
+  - file: procedures/Endotracheal_Intubation.md
+    row: 2
+    pems_page: 247
+    pems_ordinal: 2
+    flag: >-
+      chip I -> EMT, 2026-11-19 (owner ruling A1): PEMS prints both sentences of this row in
+      one EMT cell; it published I while the extractor's fused row was read as the source.
+    evidence: >-
+      p.247#2 "Position the patient: Ear to sternal notch." badge EMT, and p.247#3 "Maintain
+      in-line cervical spine stabilization if there is concern for trauma." badge EMT — the
+      second sentence of that same printed EMT cell, separated from the first by the
+      extractor and restored to it by audit/level-scan/row-splits.yaml (evidence render
+      audit/level-scan/evidence/pems_p247.png). Both halves of this row are printed at EMT,
+      so the chip is EMT; the bundled-row rule that made it I applied a fused row's badge
+      to text printed a cell earlier, which the 2026-11-19 owner ruling corrected.
+
+  - file: procedures/Endotracheal_Intubation.md
+    row: 3
+    pems_page: 247
+    pems_ordinal: 4
+    evidence: >-
+      p.247#4 "Prepare equipment: ... ET tube of appropriate size + 1 size below ...
+      Laryngoscope ... Back up airway" badge I.
+
+  - file: procedures/Endotracheal_Intubation.md
+    row: 4
+    pems_page: 247
+    pems_ordinal: 4
+    evidence: >-
+      Same PEMS row prints "Orally intubate. Patients 12 years and older." badge I. The page
+      published P, so the chip moves P -> I: the source level is the authority, and the move is
+      listed for owner review.
+
+  - file: procedures/Endotracheal_Intubation.md
+    row: 5
+    pems_page: 247
+    pems_ordinal: 6
+    evidence: >-
+      p.247#6 "Orally Intubate. Patients < 12 years old." badge P.
+
+  - file: procedures/Endotracheal_Intubation.md
+    row: 6
+    pems_page: 247
+    pems_ordinal: 7
+    flag: >-
+      chip P -> I, 2026-11-19 (owner ruling A1): PEMS prints both sentences of this row in one
+      I cell; it published P while the extractor's fused row was read as the source.
+    evidence: >-
+      p.247#7 "If unsuccessful, reoxygenate between attempts with 100% Oxygen. Adjust
+      positioning/technique/equipment as necessary prior to any further attempt." badge I,
+      and p.247#8 "After two failed attempts, airway must be managed by the most experienced
+      provider available." badge I — the same printed I cell, split by the extractor and
+      restored by audit/level-scan/row-splits.yaml (evidence render
+      audit/level-scan/evidence/pems_p247.png). Both of this row's sentences are printed at
+      I. The P badge that made it P belongs to the next printed cell (p.247#9, surgical
+      airway), which is Endotracheal_Intubation row 7.
+
+  - file: procedures/Endotracheal_Intubation.md
+    row: 7
+    pems_page: 247
+    pems_ordinal: 9
+    evidence: >-
+      p.247#9 "If unable to intubate and unable to oxygenate, proceed immediately to Surgical
+      Airway." badge P.
+
+  - file: procedures/Endotracheal_Intubation.md
+    row: 8
+    pems_page: 247
+    pems_ordinal: 11
+    evidence: >-
+      p.247#11 "Ensure the presence of continuous box-waveform capnography. o Auscultate for
+      bilateral lung sounds & absence of gastric sounds" badge I.
+
+  - file: procedures/Endotracheal_Intubation.md
+    row: 9
+    pems_page: 247
+    pems_ordinal: 11
+    evidence: >-
+      Same PEMS row also prints "Secure the tube. Use tape or commercial tube holder. Document the
+      depth of placement." badge I.
+
+  - file: procedures/Endotracheal_Intubation.md
+    row: 10
+    pems_page: 247
+    pems_ordinal: 11
+    evidence: >-
+      Same PEMS row also prints "Administer analgesia/sedation, as needed for patient safety and
+      comfort. Refer to" (the sentence continues on p.247#12 with "the Sedation Post Advanced
+      Airway Protocol."). badge I. The page published P, so the chip moves P -> I and the move is
+      listed for owner review.
+
+  - file: procedures/Intraosseous_Access.md
+    row: 1
+    pems_page: 249
+    pems_ordinal: 0
+    evidence: >-
+      p.249#0 "Locate an appropriate insertion site. ... Proximal humerus ... Proximal tibia"
+      badge A.
+
+  - file: procedures/Intraosseous_Access.md
+    row: 2
+    pems_page: 249
+    pems_ordinal: 0
+    evidence: >-
+      Same PEMS row prints "Cleanse the site with an alcohol pad or disinfectant swab." badge A.
+
+  - file: procedures/Intraosseous_Access.md
+    row: 3
+    pems_page: 249
+    pems_ordinal: 1
+    evidence: >-
+      p.249#1 "Insert the IO needle into the selected site with the needle perpendicular to the
+      bone surface until the needle tip touches the bone. Confirm at least one black line" badge
+      A.
+
+  - file: procedures/Intraosseous_Access.md
+    row: 4
+    pems_page: 249
+    pems_ordinal: 2
+    evidence: >-
+      p.249#2 "Penetrate the bone by squeezing the driver's trigger and apply gentle, steady,
+      downward pressure. Release the trigger when a loss of resistance is felt" badge A.
+
+  - file: procedures/Intraosseous_Access.md
+    row: 5
+    pems_page: 249
+    pems_ordinal: 3
+    evidence: >-
+      p.249#3 "Stabilize the catheter hub and remove the driver from the needle. Remove the stylet
+      by turning counterclockwise. Dispose of the stylet in an appropriate container" badge A.
+
+  - file: procedures/Intraosseous_Access.md
+    row: 6
+    pems_page: 249
+    pems_ordinal: 4
+    evidence: >-
+      p.249#4 "Secure the needle and attach primed extension tubing to the Luer-lock." badge A.
+
+  - file: procedures/Intraosseous_Access.md
+    row: 7
+    pems_page: 249
+    pems_ordinal: 4
+    evidence: >-
+      Same PEMS row also prints "If the patient is unconscious, aspirate to confirm placement then
+      flush with 10 - 20 mL 0.9% Sodium Chloride." badge A.
+
+  - file: procedures/Intraosseous_Access.md
+    row: 8
+    pems_page: 249
+    pems_ordinal: 5
+    evidence: >-
+      p.249#5 "If the patient is conscious, administer: ADULT: 2% Lidocaine 1 mg/kg IO slow push.
+      Maximum dose 40 mg. PEDIATRIC: 2% Lidocaine 0.5 mg/kg IO slow push." badge A. The page
+      published P, so the chip moves P -> A: the source level is the authority, and the move is
+      listed for owner review.
+
+  - file: procedures/Medication_Administration.md
+    row: 1
+    pems_page: 257
+    pems_ordinal: 0
+    evidence: >-
+      p.257#0 "Prepare the medication to be administered. Refer to protocol specific indications
+      and scope of practice for individual medications." badge EMT.
+
+  - file: procedures/Medication_Administration.md
+    row: 2
+    pems_page: 257
+    pems_ordinal: 1
+    evidence: >-
+      p.257#1 "CROSS CHECK with another qualified provider that the correct medication is being
+      administered to the correct patient via an appropriate route at an appropriate dose" badge
+      EMT.
+
+  - file: procedures/Medication_Administration.md
+    row: 3
+    pems_page: 257
+    pems_ordinal: 3
+    evidence: >-
+      p.257#3 (section INTRAVENOUS (IV)) "Administer the medication at the appropriate rate: IV
+      push: Rapid administration. IV slow push: At least 30 seconds." badge A. The page published
+      I, so the chip moves I -> A and the move is listed for owner review.
+
+  - file: procedures/Medication_Administration.md
+    row: 4
+    pems_page: 257
+    pems_ordinal: 5
+    evidence: >-
+      p.257#5 (section INTRAOSSEOUS (IO)) "Obtain IO access. Refer to Intraosseous Access
+      procedure." badge A, with p.257#6 "Follow steps above for IV medication administration."
+      badge A. The page published I, so the chip moves I -> A and the move is listed for owner
+      review.
+
+  - file: procedures/Medication_Administration.md
+    row: 5
+    pems_page: 257
+    pems_ordinal: 8
+    evidence: >-
+      p.257#8 (section INTRANASAL (IN)) "Insert the MAD into one nostril, orienting the tip
+      posteriorly. Administer half of the dose. Administer the other half of the dose in the
+      second nostril. Do not exceed 1 mL per nostril." badge EMT.
+
+  - file: procedures/Medication_Administration.md
+    row: 6
+    pems_page: 258
+    pems_ordinal: 11
+    evidence: >-
+      p.258#11 (section INTRAMUSCULAR (IM)) "Insert the needle perpendicular to the skin to the
+      depth of the targeted muscle. Depress the plunger slowly" badge EMT, with p.258#9 "Cleanse
+      the site with an alcohol pad or disinfectant swab." badge EMT.
+
+  - file: procedures/Nasogastric_Tube.md
+    row: 1
+    pems_page: 259
+    pems_ordinal: 0
+    evidence: >-
+      p.259#0 "Estimate insertion length by superimposing the tube over the body and measuring
+      from nose to ear to xiphoid process. Note the length." badge I. The page published P, so the
+      chip moves P -> I: the source level is the authority, and the move is listed for owner
+      review.
+
+  - file: procedures/Nasogastric_Tube.md
+    row: 2
+    pems_page: 259
+    pems_ordinal: 1
+    evidence: >-
+      p.259#1 "Lubricate the distal end of the tube with Lidocaine gel and pass it through the
+      patient's nostril posteriorly along the floor of the nasal passage." badge I. The page
+      published P, so the chip moves P -> I: the source level is the authority, and the move is
+      listed for owner review.
+
+  - file: procedures/Nasogastric_Tube.md
+    row: 3
+    pems_page: 259
+    pems_ordinal: 2
+    evidence: >-
+      p.259#2 "Continue to advance the tube gently until the measured length is reached. Ensure
+      the tube is not coiled in the oropharynx." badge I. The page published P, so the chip moves
+      P -> I: the source level is the authority, and the move is listed for owner review.
+
+  - file: procedures/Nasogastric_Tube.md
+    row: 4
+    pems_page: 259
+    pems_ordinal: 3
+    evidence: >-
+      p.259#3 "Confirm placement: Inject 20 cc of air using a Toomey syringe while auscultating
+      over the epigastrium for bubbles." badge I. The page published P, so the chip moves P -> I:
+      the source level is the authority, and the move is listed for owner review.
+
+  - file: procedures/Nasogastric_Tube.md
+    row: 5
+    pems_page: 259
+    pems_ordinal: 4
+    evidence: >-
+      p.259#4 "Secure the tube to the nose with tape and attach the proximal end of the tube to
+      low/medium suction." badge I. The page published P, so the chip moves P -> I: the source
+      level is the authority, and the move is listed for owner review.
+
+  - file: procedures/Nasogastric_Tube.md
+    row: 6
+    pems_page: 259
+    pems_ordinal: 5
+    evidence: >-
+      p.259#5 "Document the indication, depth of insertion, and volume of any output." badge I.
+      The page published P, so the chip moves P -> I: the source level is the authority, and the
+      move is listed for owner review.
+
+  - file: procedures/Neonatal_Resuscitation.md
+    row: 1
+    pems_page: 261
+    pems_ordinal: 1
+    evidence: >-
+      p.261#1 "Post delivery Warm and maintain normal temperature. Position / open airway (in a
+      sniffing position - ear to sternal notch) Dry and stimulate the newborn vigorously. Clear
+      secretions only if needed." badge EMR.
+
+  - file: procedures/Neonatal_Resuscitation.md
+    row: 2
+    pems_page: 261
+    pems_ordinal: 5
+    evidence: >-
+      p.261#5 "Begin positive pressure ventilation with BVM and 21% oxygen for 30 seconds, then
+      increase to 100% oxygen. Ensure adequate chest rise. 40-60 breaths per minute." badge EMR.
+      The page published EMT, so the chip moves EMT -> EMR: the source level is the authority, and
+      the move is listed for owner review.
+
+  - file: procedures/Neonatal_Resuscitation.md
+    row: 3
+    pems_page: 261
+    pems_ordinal: 7
+    evidence: >-
+      p.261#7 "Apply ECG monitoring." badge I — the ECG step this row opens with. The row's
+      second half, EtCO2 monitoring, is printed at badge EMT in p.261#6 ("Place supraglottic
+      airway if necessary. Apply ETCO2 monitoring."). Under the bundled-row rule the chip is
+      the HIGHEST level among the bundled source rows, so I carries the row and the EMT
+      EtCO2 sub-step is published at that higher level (more restrictive, never an
+      over-grant).
+
+  - file: procedures/Neonatal_Resuscitation.md
+    row: 4
+    pems_page: 261
+    pems_ordinal: 9
+    evidence: >-
+      p.261#9 "Begin chest compressions. Coordinate with ventilation. 3 compressions for each
+      breath. 30 breaths per minute with chest compressions." badge EMR. The page published EMT,
+      so the chip moves EMT -> EMR and the move is listed for owner review.
+
+  - file: procedures/Spinal_Motion_Restriction.md
+    row: 1
+    pems_page: 267
+    pems_ordinal: 0
+    evidence: >-
+      p.267#0 "Maintain a patent airway while manually stabilizing the cervical spine until an
+      appropriately sized cervical collar or alternative is applied. Maintain alignment of the
+      head, neck, and torso at all times." badge EMR.
+
+  - file: procedures/Spinal_Motion_Restriction.md
+    row: 2
+    pems_page: 267
+    pems_ordinal: 1
+    evidence: >-
+      p.267#1 "Perform a focused neurologic assessment including GCS, motor, and sensory
+      function." badge EMR.
+
+  - file: procedures/Spinal_Motion_Restriction.md
+    row: 3
+    pems_page: 267
+    pems_ordinal: 3
+    evidence: >-
+      p.267#3 "If necessary to lift/carry/maneuver the patient, utilize a long backboard, scoop
+      stretcher, or extrication device with straps when feasible." badge EMR, with p.267#4 "Once
+      on the stretcher, the backboard, scoop stretcher, or extrication device may be removed."
+      badge EMR.
+
+  - file: procedures/Spinal_Motion_Restriction.md
+    row: 4
+    pems_page: 267
+    pems_ordinal: 5
+    evidence: >-
+      p.267#5 "SMR cannot be properly achieved with the patient in a sitting position. If
+      elevation of the head is required, the device used to stabilize the spine should be elevated
+      at the head while maintaining alignment of the neck and torso." badge EMR.
+
+  - file: procedures/Surgical_Airway.md
+    row: 1
+    pems_page: 269
+    pems_ordinal: 0
+    evidence: >-
+      p.269#0 (Surgical Cricothyrotomy) "Position the patient supine, expose, and cleanse the
+      anterior neck. Use the non-dominant hand to identify and stabilize the thyroid cartilage"
+      badge P.
+
+  - file: procedures/Surgical_Airway.md
+    row: 2
+    pems_page: 269
+    pems_ordinal: 1
+    evidence: >-
+      p.269#1 (Surgical Cricothyrotomy) "Make a vertical incision (2 - 3 cm) across the
+      cricothyroid membrane. Make a horizontal incision through the cricothyroid membrane (1 - 2
+      cm)" badge P, continuing p.269#3 bougie and p.269#4 "Pass an endotracheal tube (size 4-0 to
+      6-0) over the bougie" - all badge P.
+
+  - file: procedures/Surgical_Airway.md
+    row: 3
+    pems_page: 269
+    pems_ordinal: 8
+    evidence: >-
+      p.269#8 (Needle Cricothyrotomy) "Attach a syringe filled with 0.9% Sodium Chloride onto a
+      14-guage catheter-needle. While aspirating the syringe, insert the needle at a 45-degree
+      angle inferiorly through the cricothyroid membrane." badge P.
+
+  - file: procedures/Surgical_Airway.md
+    row: 4
+    pems_page: 269
+    pems_ordinal: 5
+    evidence: >-
+      p.269#5 "Ventilate the patient and confirm / monitor placement with continuous ETCO2
+      box-waveform and SpO2. Ensure presence of bilateral breath sounds and secure the tube."
+      badge P (p.269#11 prints the needle-cric equivalent, also badge P).
+
+  - file: procedures/Surgical_Airway.md
+    row: 5
+    pems_page: 269
+    pems_ordinal: 6
+    evidence: >-
+      p.269#6 "Contact Medical Control and transport to the closest Emergency Department if airway
+      cannot be secured." badge MC (the row is a Medical Control contact; p.269#12 prints the
+      needle-cric equivalent, badge MC).
+
+  - file: procedures/Taser_Barb_Removal.md
+    row: 1
+    pems_page: 271
+    pems_ordinal: 0
+    evidence: >-
+      p.271#0 "Coordinate with law enforcement to ensure the weapon and patient are rendered safe
+      to proceed." badge EMT.
+
+  - file: procedures/Taser_Barb_Removal.md
+    row: 2
+    pems_page: 271
+    pems_ordinal: 1
+    evidence: >-
+      p.271#1 "Ensure the Taser cartridge is removed from the weapon or wires are cut prior to
+      removing the darts." badge EMT.
+
+  - file: procedures/Taser_Barb_Removal.md
+    row: 3
+    pems_page: 271
+    pems_ordinal: 2
+    evidence: >-
+      p.271#2 "Assess for injuries associated with burns, electrocution, and/or blunt trauma.
+      Consider 12-Lead ECG." badge EMT.
+
+  - file: procedures/Taser_Barb_Removal.md
+    row: 4
+    pems_page: 271
+    pems_ordinal: 3
+    evidence: >-
+      p.271#3 "If the darts have penetrated the eye, face, neck, breast, axilla, genitals, hands,
+      or feet, leave them in place and transport to an Emergency Department" badge EMT.
+
+  - file: procedures/Taser_Barb_Removal.md
+    row: 5
+    pems_page: 271
+    pems_ordinal: 4
+    evidence: >-
+      p.271#4 "Use one hand to hold the skin around the barb taut. With the other hand, use a
+      hemostat or forceps to grasp the electrode shaft. Pull straight out with a gentle, quick
+      motion." badge EMT.
+
+  - file: procedures/Taser_Barb_Removal.md
+    row: 6
+    pems_page: 271
+    pems_ordinal: 5
+    evidence: >-
+      p.271#5 "Safely dispose of the dart in an appropriate container for sharp biohazards." badge
+      EMT, with p.271#6 "Provide wound care, as necessary. Apply a bandage over the wound sites."
+      badge EMT.
+
+  - file: procedures/Tourniquet_Application.md
+    row: 1
+    pems_page: 273
+    pems_ordinal: 0
+    evidence: >-
+      p.273#0 "Completely expose the injury and assess for additional injuries." badge EMR.
+
+  - file: procedures/Tourniquet_Application.md
+    row: 2
+    pems_page: 273
+    pems_ordinal: 1
+    evidence: >-
+      p.273#1 "Position the tourniquet proximal to the injury. Do not place across a joint or open
+      fracture." badge EMR.
+
+  - file: procedures/Tourniquet_Application.md
+    row: 3
+    pems_page: 273
+    pems_ordinal: 2
+    evidence: >-
+      p.273#2 "Tighten the tourniquet until bleeding stops and distal pulses are absent." badge
+      EMR.
+
+  - file: procedures/Tourniquet_Application.md
+    row: 4
+    pems_page: 273
+    pems_ordinal: 3
+    evidence: >-
+      p.273#3 "If bleeding is not controlled, apply a second tourniquet proximal and adjacent to
+      the first." badge EMR.
+
+  - file: procedures/Tourniquet_Application.md
+    row: 5
+    pems_page: 273
+    pems_ordinal: 4
+    evidence: >-
+      p.273#4 "Clearly indicate the time and date of application. Ensure the tourniquet remains
+      exposed and visible." badge EMR.
+
+  - file: procedures/Tourniquet_Application.md
+    row: 6
+    pems_page: 273
+    pems_ordinal: 5
+    evidence: >-
+      p.273#5 "Once applied, do not remove or loosen the tourniquet(s). Additional tightening may
+      be required." badge EMR, with p.273#6 "Consider pain control. Refer to Pain Control
+      protocol." badge EMR.
+
+  - file: procedures/Transcutaneous_Pacing.md
+    row: 1
+    pems_page: 275
+    pems_ordinal: 0
+    evidence: >-
+      p.275#0 "Remove any clothing covering the chest. Dry and/or shave the area, if necessary.
+      Apply 4-Lead ECG and confirm rhythm." badge I.
+
+  - file: procedures/Transcutaneous_Pacing.md
+    row: 2
+    pems_page: 275
+    pems_ordinal: 1
+    evidence: >-
+      p.275#1 "Apply multi-function pads in anterior/posterior position and set cardiac monitor to
+      pacing mode." badge I.
+
+  - file: procedures/Transcutaneous_Pacing.md
+    row: 3
+    pems_page: 275
+    pems_ordinal: 2
+    evidence: >-
+      p.275#2 "Set pacing rate at 80 beats per minute. Set initial current output to 50 mA.
+      Confirm pacer spikes appear on cardiac monitor." badge I.
+
+  - file: procedures/Transcutaneous_Pacing.md
+    row: 4
+    pems_page: 275
+    pems_ordinal: 3
+    evidence: >-
+      p.275#3 "Slowly increase the pacer output (10 mA / 10 seconds) until electrical capture is
+      achieved." badge I.
+
+  - file: procedures/Transcutaneous_Pacing.md
+    row: 5
+    pems_page: 275
+    pems_ordinal: 3
+    evidence: >-
+      Same PEMS row also prints "Confirm mechanical capture by palpating femoral pulses. Reassess
+      the patient." badge I.
+
+  - file: procedures/Neonatal_Resuscitation.md
+    row: 5
+    status: owner_required
+    owner_note: >-
+      &#9873; **OWNER_REQUIRED** — row 5: this row prints two actions that PEMS 2024 splits
+      across two rows at two lower levels — "Obtain IV/IO access if not already obtained."
+      (p.261#10, badge A) and "Administer: Epinephrine (Adrenaline) 0.01mg/kg (0.1mg/mL)
+      IV/IO" (p.261#12, badge I). No p.261 row prints either at P, so the P this page
+      publishes has no PEMS authorisation and stays flagged. See
+      <code>audit/level-scan/level-rule-ledger.md</code>.
+    reason: >-
+      The row bundles two actions printed on two PEMS rows at two different levels: "Obtain IV/IO
+      access if not already obtained." (p.261#10, badge A) and "Administer: Epinephrine
+      (Adrenaline) 0.01mg/kg (0.1mg/mL) IV/IO" (p.261#12, badge I). One chip cannot carry both;
+      the level this page published (P) is kept and flagged.

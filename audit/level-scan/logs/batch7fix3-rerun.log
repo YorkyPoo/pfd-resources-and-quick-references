@@ -1,0 +1,104 @@
+Batch 7 review fix 3 — INDEPENDENT RE-RUN of the gates on level-rule-collapse @ 920c47a
+(re-executed 2026-11-16 12:58-13:05 UTC by the developer worker for this attempt; the
+batch7fix3-*.log files from the earlier run are the original evidence, this log is a
+re-execution on the same commit, not a copy of their output)
+
+HEAD           920c47a (audit: gate evidence on 42eadc9); branch level-rule-collapse
+main           768ad68 (untouched)
+worktree       clean apart from this log at run time
+nothing pushed git ls-remote --heads origin level-rule-collapse = 0 refs
+
+$ python3 scripts/verify_pems_canonical.py
+  all invariants hold
+EXIT=0
+
+$ python3 scripts/level_rule.py --check
+  OK — 498 action rows across 54 pages: 456 carry exactly one marker equal to the level
+       printed by the cited PEMS 2024 row, 38 flagged OWNER_REQUIRED with a reason,
+       1 owner_ruled
+  OK — 8 rows carry the +MC marker
+  OK — 45 cross_page rows, each with the cited row's words quoted verbatim
+  OK — 11 PENDING (Pending OMD Authorization) rows, 0 claim a PEMS citation
+  OK — 3 agency-addition PENDING rows, 0 claim a PEMS citation
+  OK — 14 administrative-policy pages, 95 rows (89 POLICY / 5 PENDING)
+  OK — sc-wrap: 63 wide-table blocks in 46 docs files; 0 provider-level matrices on an
+       sc-wrap on any page this project has converted
+  REPORTED, NOT GATED — 1 provider-level matrix inside sc-wrap remains, outside every
+       batch's scope (the legend that DEFINES the level columns, must not change):
+       - protocols/front-matter/01 - How to Read the Protocols.md (line 33)
+EXIT=0
+
+$ python3 scripts/mc_wording.py --check
+  OK — 27 MC row(s) on 26 page(s) plus every other protocol table row (all levels):
+       none name OMD / Poquoson / a Medical Director / a named individual.
+EXIT=0
+
+$ /root/pfd-ssg-env/bin/mkdocs build --strict
+  INFO - Documentation built in 6.69 seconds
+  [post_build] Generated sw.js with 280 pre-cached pages
+EXIT=0
+
+$ python3 scripts/level_rule.py --write   (twice; docs/**.md hashed before, between, after)
+  run 1 output: wrote audit/level-scan/level-rule-ledger.json (604 rows) /
+                wrote audit/level-scan/level-rule-ledger.md
+  run 2 output: identical
+  docs md5-of-md5s before = 30628308978d55c669c085d2baba2fe3
+  docs md5-of-md5s after  = 30628308978d55c669c085d2baba2fe3
+  docs md5-of-md5s after run 2 = 30628308978d55c669c085d2baba2fe3
+  git status before == git status after (only these new log files untracked)
+  IDEMPOTENT — no docs/ page changed by either run
+EXIT=0
+
+390px measurement — re-taken, not copied: mkdocs build of 920c47a served on
+127.0.0.1:8137, headless Chromium over CDP with Emulation.setDeviceMetricsOverride
+width=390 height=844 deviceScaleFactor=2 mobile=true, one target, every one of the 13
+converted docs/procedures/ pages measured for documentElement.scrollWidth vs
+clientWidth, .lv-wrap tbody row count, .lvl chip count, per-cell clipped check,
+rows with >1 chip, and 7-column header rows.
+
+page                          docSW docCW rows chips clipped multiChip hdr7 flags   note
+CPAP                            390   390    6     6       0         0    0     0     -
+Capnography                     390   390    7     7       0         0    0     0     -
+Chest_Decompression             390   390    7     7       0         0    0     0     -
+Endotracheal_Intubation         390   390   10    10       0         0    0     0     -
+Intraosseous_Access             390   390    8     8       0         0    0     0     -
+Medication_Administration       390   390    6     6       0         0    0     0     -
+Nasogastric_Tube                390   390    6     6       0         0    0     0     -
+Neonatal_Resuscitation          390   390    5     5       0         0    0     1     OWNER_REQUIRED row 5
+Spinal_Motion_Restriction       390   390    4     4       0         0    0     0     -
+Surgical_Airway                 390   390    5     5       0         0    0     0     -
+Taser_Barb_Removal              390   390    6     6       0         0    0     0     -
+Tourniquet_Application          390   390    6     6       0         0    0     0     -
+Transcutaneous_Pacing           390   390    5     5       0         0    0     0     -
+TOTALS 13 pages / 81 rows / 81 chips / 1 OWNER_REQUIRED flag / 0 clipped / 0 multi-chip /
+       0 seven-column headers / 13 of 13 scrollWidth == clientWidth == 390
+EXIT=0
+
+Planted defects, re-run in a throwaway git clone of level-rule-collapse @ 920c47a
+(/root/.hermes/profiles/developer/cache/scratch/plant7b), real tree untouched:
+  1. old 7-column dot matrix put back inside <div class="sc-wrap"> on
+     docs/procedures/CPAP.md
+       -> EXIT=1  "FAIL - procedures/CPAP.md (line 15): a provider-level matrix is
+                   still wrapped in sc-wrap"
+       -> git checkout -- docs/procedures/CPAP.md -> EXIT=0
+  2. Endotracheal_Intubation.md row 2 chip I -> EMT (the round-2 blocking defect
+     restored)
+       -> EXIT=1  "FAIL - procedures/Endotracheal_Intubation.md row 2: marker EMT !=
+                   expected I (p.247#3)"
+                  "... row 2: PEMS column dots start at I, badge says EMT"
+       -> git checkout -- docs/procedures/Endotracheal_Intubation.md -> EXIT=0
+EXIT=0
+
+Residual scans re-run by hand on 920c47a:
+  grep -rn '| # | Action / Intervention |' docs/procedures/       -> 0 hits
+  grep -rnE '\|\s*EMR\s*\|\s*EMT\s*\|\s*A\s*\|' docs/             -> 2 hits, both legit:
+       docs/stylesheets/extra.css:25 (a CSS comment) and
+       docs/protocols/front-matter/01 - How to Read the Protocols.md:33 (the legend)
+  grep -rn 'sc-wrap' docs/procedures/                             -> 1 hit,
+       Medical_Devices_Pumps.md:8, a 2-column Device|Action table (not a level matrix)
+EXIT=0
+
+Batch 7 scope (13 pages) totals from audit/level-scan/level-rule-ledger.json:
+  81 rows = 80 cited to a PEMS row with evidence + 1 OWNER_REQUIRED
+  (procedures/Neonatal_Resuscitation.md row 5) + 0 PENDING; 0 rows keep a dot grid
+EXIT=0

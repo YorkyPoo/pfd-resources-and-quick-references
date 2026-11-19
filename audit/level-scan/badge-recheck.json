@@ -1,0 +1,323 @@
+{
+ "generated": "2026-11-15T03:33:38",
+ "watched_pems_rows": [
+  {
+   "page": 61,
+   "ordinal": 4
+  },
+  {
+   "page": 63,
+   "ordinal": 7
+  }
+ ],
+ "named_pems_rows": [
+  {
+   "page": 61,
+   "ordinal": 4
+  },
+  {
+   "page": 63,
+   "ordinal": 7
+  }
+ ],
+ "overrides": [],
+ "counts": {
+  "linked_rows": 6,
+  "at_risk": 2,
+  "flips": 0,
+  "in_queue": 4
+ },
+ "at_risk": [
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": 5,
+   "pems": [
+    63,
+    7
+   ],
+   "basis": "matched",
+   "status": "matched",
+   "reason_kind": null,
+   "old_verdict": "matched",
+   "resolution_basis": "unresolved",
+   "site_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "pdf_badge": "I",
+   "outcomes": [
+    {
+     "resolved_badge": "I",
+     "verdict": "disagrees",
+     "direction": "site_broader",
+     "detail": "site grants EMT/A which PEMS does not (PEMS I/P)"
+    },
+    {
+     "resolved_badge": "EMR",
+     "verdict": "disagrees",
+     "direction": "site_narrower",
+     "detail": "site blocks EMR which PEMS grants (PEMS EMR/EMT/A/I/P)"
+    }
+   ],
+   "flips": [
+    {
+     "resolved_badge": "I",
+     "verdict": "disagrees",
+     "direction": "site_broader",
+     "detail": "site grants EMT/A which PEMS does not (PEMS I/P)"
+    },
+    {
+     "resolved_badge": "EMR",
+     "verdict": "disagrees",
+     "direction": "site_narrower",
+     "detail": "site blocks EMR which PEMS grants (PEMS EMR/EMT/A/I/P)"
+    }
+   ]
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+   "row": 5,
+   "pems": [
+    61,
+    4
+   ],
+   "basis": "matched",
+   "status": "matched",
+   "reason_kind": null,
+   "old_verdict": "matched",
+   "resolution_basis": "unresolved",
+   "site_cells": [
+    "",
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "pdf_badge": "EMT",
+   "outcomes": [
+    {
+     "resolved_badge": "EMT",
+     "verdict": "disagrees",
+     "direction": "site_narrower",
+     "detail": "site blocks EMT which PEMS grants (PEMS EMT/A/I/P)"
+    },
+    {
+     "resolved_badge": "I",
+     "verdict": "disagrees",
+     "direction": "site_broader",
+     "detail": "site grants A which PEMS does not (PEMS I/P)"
+    }
+   ],
+   "flips": [
+    {
+     "resolved_badge": "EMT",
+     "verdict": "disagrees",
+     "direction": "site_narrower",
+     "detail": "site blocks EMT which PEMS grants (PEMS EMT/A/I/P)"
+    },
+    {
+     "resolved_badge": "I",
+     "verdict": "disagrees",
+     "direction": "site_broader",
+     "detail": "site grants A which PEMS does not (PEMS I/P)"
+    }
+   ]
+  }
+ ],
+ "flips": [],
+ "in_queue": [
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
+   "row": 4,
+   "pems": [
+    63,
+    7
+   ],
+   "basis": "text_binding",
+   "status": "ambiguous",
+   "reason_kind": "no_counterpart",
+   "old_verdict": "ambiguous:no_counterpart",
+   "resolution_basis": "unresolved",
+   "site_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "pdf_badge": "I",
+   "outcomes": [
+    {
+     "resolved_badge": "I",
+     "verdict": "disagrees",
+     "direction": "site_broader",
+     "detail": "site grants EMT/A which PEMS does not (PEMS I/P)"
+    },
+    {
+     "resolved_badge": "EMR",
+     "verdict": "disagrees",
+     "direction": "site_narrower",
+     "detail": "site blocks EMR which PEMS grants (PEMS EMR/EMT/A/I/P)"
+    }
+   ],
+   "flips": [
+    {
+     "resolved_badge": "I",
+     "verdict": "disagrees",
+     "direction": "site_broader",
+     "detail": "site grants EMT/A which PEMS does not (PEMS I/P)"
+    },
+    {
+     "resolved_badge": "EMR",
+     "verdict": "disagrees",
+     "direction": "site_narrower",
+     "detail": "site blocks EMR which PEMS grants (PEMS EMR/EMT/A/I/P)"
+    }
+   ]
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+   "row": 3,
+   "pems": [
+    61,
+    4
+   ],
+   "basis": "named_in_reason",
+   "status": "ambiguous",
+   "reason_kind": "multiple_candidates",
+   "old_verdict": "ambiguous:multiple_candidates",
+   "resolution_basis": "unresolved",
+   "site_cells": [
+    "",
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "pdf_badge": "EMT",
+   "outcomes": [
+    {
+     "resolved_badge": "EMT",
+     "verdict": "disagrees",
+     "direction": "site_narrower",
+     "detail": "site blocks EMT which PEMS grants (PEMS EMT/A/I/P)"
+    },
+    {
+     "resolved_badge": "I",
+     "verdict": "disagrees",
+     "direction": "site_broader",
+     "detail": "site grants A which PEMS does not (PEMS I/P)"
+    }
+   ],
+   "flips": [
+    {
+     "resolved_badge": "EMT",
+     "verdict": "disagrees",
+     "direction": "site_narrower",
+     "detail": "site blocks EMT which PEMS grants (PEMS EMT/A/I/P)"
+    },
+    {
+     "resolved_badge": "I",
+     "verdict": "disagrees",
+     "direction": "site_broader",
+     "detail": "site grants A which PEMS does not (PEMS I/P)"
+    }
+   ]
+  },
+  {
+   "file": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
+   "row": 4,
+   "pems": [
+    61,
+    4
+   ],
+   "basis": "named_in_reason",
+   "status": "ambiguous",
+   "reason_kind": "shared_pems_row",
+   "old_verdict": "ambiguous:shared_pems_row",
+   "resolution_basis": "unresolved",
+   "site_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "pdf_badge": "EMT",
+   "outcomes": [
+    {
+     "resolved_badge": "EMT",
+     "verdict": "agrees",
+     "direction": null,
+     "detail": "site grants EMT/A/I/P; PEMS EMT/A/I/P"
+    },
+    {
+     "resolved_badge": "I",
+     "verdict": "disagrees",
+     "direction": "site_broader",
+     "detail": "site grants EMT/A which PEMS does not (PEMS I/P)"
+    }
+   ],
+   "flips": [
+    {
+     "resolved_badge": "I",
+     "verdict": "disagrees",
+     "direction": "site_broader",
+     "detail": "site grants EMT/A which PEMS does not (PEMS I/P)"
+    }
+   ]
+  },
+  {
+   "file": "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
+   "row": 5,
+   "pems": [
+    63,
+    7
+   ],
+   "basis": "matched",
+   "status": "matched",
+   "reason_kind": null,
+   "old_verdict": "matched",
+   "resolution_basis": "unresolved",
+   "site_cells": [
+    "",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022"
+   ],
+   "pdf_badge": "I",
+   "outcomes": [
+    {
+     "resolved_badge": "I",
+     "verdict": "disagrees",
+     "direction": "site_broader",
+     "detail": "site grants EMT/A which PEMS does not (PEMS I/P)"
+    },
+    {
+     "resolved_badge": "EMR",
+     "verdict": "disagrees",
+     "direction": "site_narrower",
+     "detail": "site blocks EMR which PEMS grants (PEMS EMR/EMT/A/I/P)"
+    }
+   ],
+   "flips": [
+    {
+     "resolved_badge": "I",
+     "verdict": "disagrees",
+     "direction": "site_broader",
+     "detail": "site grants EMT/A which PEMS does not (PEMS I/P)"
+    },
+    {
+     "resolved_badge": "EMR",
+     "verdict": "disagrees",
+     "direction": "site_narrower",
+     "detail": "site blocks EMR which PEMS grants (PEMS EMR/EMT/A/I/P)"
+    }
+   ]
+  }
+ ]
+}

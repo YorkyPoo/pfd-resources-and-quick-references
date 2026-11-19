@@ -1,0 +1,466 @@
+page_decisions before -> after, every page (57)
+decision values: before {'administrative': 15, 'level_gated': 41, 'skipped': 1} after {'administrative': 15, 'level_gated': 41, 'skipped': 1} 
+decision field changes: none
+
+protocols/administrative/01_ALS_Release_to_BLS_PROC.md  [administrative]
+  rows: 8 -> 8
+  numbered_rows: 8 -> 8
+  filled_level_cells: 0 -> 8  <-- changed
+  blank_level_cells: 40 -> 32  <-- changed
+  level_grid_present: False -> True  <-- changed
+  contested_because before:
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 40 blank ones, so the grid is not merely decorative
+  contested_because after :
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 8 filled level cells against 32 blank ones, so the grid is not merely decorative
+
+protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.md  [administrative]
+  rows: 7 -> 7
+  numbered_rows: 7 -> 7
+  filled_level_cells: 0 -> 7  <-- changed
+  blank_level_cells: 35 -> 28  <-- changed
+  level_grid_present: False -> True  <-- changed
+  contested_because before:
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 35 blank ones, so the grid is not merely decorative
+  contested_because after :
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 7 filled level cells against 28 blank ones, so the grid is not merely decorative
+
+protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md  [administrative]
+  rows: 7 -> 7
+  numbered_rows: 7 -> 7
+  filled_level_cells: 0 -> 7  <-- changed
+  blank_level_cells: 35 -> 28  <-- changed
+  level_grid_present: False -> True  <-- changed
+  contested_because before:
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 35 blank ones, so the grid is not merely decorative
+  contested_because after :
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 7 filled level cells against 28 blank ones, so the grid is not merely decorative
+
+protocols/administrative/01_Communications_PROC.md  [administrative]
+  rows: 6 -> 6
+  numbered_rows: 6 -> 6
+  filled_level_cells: 0 -> 6  <-- changed
+  blank_level_cells: 30 -> 24  <-- changed
+  level_grid_present: False -> True  <-- changed
+  contested_because before:
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 30 blank ones, so the grid is not merely decorative
+  contested_because after :
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 6 filled level cells against 24 blank ones, so the grid is not merely decorative
+
+protocols/administrative/01_Death_Criteria_for_Withholding_Resuscitation_PROC.md  [administrative]
+  rows: 5 -> 5
+  numbered_rows: 5 -> 5
+  filled_level_cells: 0 -> 5  <-- changed
+  blank_level_cells: 25 -> 20  <-- changed
+  level_grid_present: False -> True  <-- changed
+  contested_because before:
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 25 blank ones, so the grid is not merely decorative
+  contested_because after :
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 5 filled level cells against 20 blank ones, so the grid is not merely decorative
+
+protocols/administrative/01_Helicopter_EMS_HEMS_PROC.md  [administrative]
+  rows: 6 -> 6
+  numbered_rows: 6 -> 6
+  filled_level_cells: 0 -> 6  <-- changed
+  blank_level_cells: 30 -> 24  <-- changed
+  level_grid_present: False -> True  <-- changed
+  contested_because before:
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 30 blank ones, so the grid is not merely decorative
+  contested_because after :
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 6 filled level cells against 24 blank ones, so the grid is not merely decorative
+
+protocols/administrative/01_Infant_Abandonment_PROC.md  [administrative]
+  rows: 4 -> 4
+  numbered_rows: 4 -> 4
+  filled_level_cells: 0 -> 4  <-- changed
+  blank_level_cells: 20 -> 16  <-- changed
+  level_grid_present: False -> True  <-- changed
+  contested_because before:
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 20 blank ones, so the grid is not merely decorative
+  contested_because after :
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 4 filled level cells against 16 blank ones, so the grid is not merely decorative
+
+protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md  [administrative]
+  rows: 7 -> 7
+  numbered_rows: 7 -> 7
+  filled_level_cells: 0 -> 7  <-- changed
+  blank_level_cells: 35 -> 28  <-- changed
+  level_grid_present: False -> True  <-- changed
+  contested_because before:
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 35 blank ones, so the grid is not merely decorative
+  contested_because after :
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 7 filled level cells against 28 blank ones, so the grid is not merely decorative
+
+protocols/administrative/01_Patient_Restraint_PROC.md  [administrative]
+  rows: 8 -> 8
+  numbered_rows: 8 -> 8
+  filled_level_cells: 0 -> 8  <-- changed
+  blank_level_cells: 40 -> 32  <-- changed
+  level_grid_present: False -> True  <-- changed
+  contested_because before:
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 40 blank ones, so the grid is not merely decorative
+  contested_because after :
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 8 filled level cells against 32 blank ones, so the grid is not merely decorative
+
+protocols/administrative/01_STEMI_Field_Triage_PROC.md  [administrative]
+  rows: 7 -> 7
+  numbered_rows: 7 -> 7
+  filled_level_cells: 5 -> 7  <-- changed
+  blank_level_cells: 30 -> 28  <-- changed
+  level_grid_present: True -> True
+  contested_because before:
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 5 filled level cells against 30 blank ones, so the grid is not merely decorative
+  contested_because after :
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 7 filled level cells against 28 blank ones, so the grid is not merely decorative
+
+protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md  [administrative]
+  rows: 7 -> 7
+  numbered_rows: 7 -> 7
+  filled_level_cells: 0 -> 7  <-- changed
+  blank_level_cells: 35 -> 28  <-- changed
+  level_grid_present: False -> True  <-- changed
+  contested_because before:
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 35 blank ones, so the grid is not merely decorative
+  contested_because after :
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 7 filled level cells against 28 blank ones, so the grid is not merely decorative
+
+protocols/administrative/01_Stroke_Field_Triage_PROC.md  [administrative]
+  rows: 8 -> 8
+  numbered_rows: 8 -> 8
+  filled_level_cells: 0 -> 8  <-- changed
+  blank_level_cells: 40 -> 32  <-- changed
+  level_grid_present: False -> True  <-- changed
+  contested_because before:
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 40 blank ones, so the grid is not merely decorative
+  contested_because after :
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 8 filled level cells against 32 blank ones, so the grid is not merely decorative
+
+protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md  [administrative]
+  rows: 7 -> 7
+  numbered_rows: 7 -> 7
+  filled_level_cells: 0 -> 7  <-- changed
+  blank_level_cells: 35 -> 28  <-- changed
+  level_grid_present: False -> True  <-- changed
+  contested_because before:
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 35 blank ones, so the grid is not merely decorative
+  contested_because after :
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 7 filled level cells against 28 blank ones, so the grid is not merely decorative
+
+protocols/administrative/01_Trauma_Field_Triage_PROC.md  [administrative]
+  rows: 8 -> 8
+  numbered_rows: 8 -> 8
+  filled_level_cells: 0 -> 8  <-- changed
+  blank_level_cells: 40 -> 32  <-- changed
+  level_grid_present: False -> True  <-- changed
+  contested_because before:
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 40 blank ones, so the grid is not merely decorative
+  contested_because after :
+    the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 8 filled level cells against 32 blank ones, so the grid is not merely decorative
+
+protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md  [level_gated]
+  rows: 12 -> 12
+  numbered_rows: 12 -> 12
+  filled_level_cells: 47 -> 12  <-- changed
+  blank_level_cells: 13 -> 48  <-- changed
+  level_grid_present: None -> None
+
+protocols/cardiac/04_Bradycardia_PROC.md  [level_gated]
+  rows: 8 -> 8
+  numbered_rows: 8 -> 8
+  filled_level_cells: 21 -> 8  <-- changed
+  blank_level_cells: 19 -> 32  <-- changed
+  level_grid_present: None -> None
+
+protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md  [level_gated]
+  rows: 14 -> 14
+  numbered_rows: 14 -> 14
+  filled_level_cells: 54 -> 14  <-- changed
+  blank_level_cells: 16 -> 56  <-- changed
+  level_grid_present: None -> None
+
+protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md  [level_gated]
+  rows: 11 -> 11
+  numbered_rows: 11 -> 11
+  filled_level_cells: 37 -> 11  <-- changed
+  blank_level_cells: 18 -> 44  <-- changed
+  level_grid_present: None -> None
+
+protocols/cardiac/04_Chest_Pain_ACS_PROC.md  [level_gated]
+  rows: 14 -> 14
+  numbered_rows: 14 -> 14
+  filled_level_cells: 51 -> 14  <-- changed
+  blank_level_cells: 19 -> 56  <-- changed
+  level_grid_present: None -> None
+
+protocols/cardiac/04_Hypertensive_Crisis_PROC.md  [level_gated]
+  rows: 7 -> 7
+  numbered_rows: 7 -> 7
+  filled_level_cells: 35 -> 7  <-- changed
+  blank_level_cells: 0 -> 28  <-- changed
+  level_grid_present: None -> None
+
+protocols/cardiac/04_Post_Resuscitation_Care_PROC.md  [level_gated]
+  rows: 8 -> 8
+  numbered_rows: 8 -> 8
+  filled_level_cells: 24 -> 8  <-- changed
+  blank_level_cells: 16 -> 32  <-- changed
+  level_grid_present: None -> None
+
+protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md  [level_gated]
+  rows: 14 -> 14
+  numbered_rows: 14 -> 14
+  filled_level_cells: 41 -> 14  <-- changed
+  blank_level_cells: 29 -> 56  <-- changed
+  level_grid_present: None -> None
+
+protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md  [level_gated]
+  rows: 12 -> 12
+  numbered_rows: 12 -> 12
+  filled_level_cells: 40 -> 12  <-- changed
+  blank_level_cells: 20 -> 48  <-- changed
+  level_grid_present: None -> None
+
+protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md  [skipped]
+  rows: 11 -> 11
+  numbered_rows: 11 -> 11
+  filled_level_cells: 0 -> 11  <-- changed
+  blank_level_cells: 55 -> 44  <-- changed
+  level_grid_present: None -> None
+
+protocols/front-matter/01 - How to Read the Protocols.md  [administrative]
+  rows: 4 -> 4
+  numbered_rows: 4 -> 4
+  filled_level_cells: 11 -> 11
+  blank_level_cells: 9 -> 9
+  level_grid_present: True -> True
+
+protocols/front-matter/Universal Patient Care.md  [level_gated]
+  rows: 11 -> 11
+  numbered_rows: 11 -> 11
+  filled_level_cells: 46 -> 11  <-- changed
+  blank_level_cells: 9 -> 44  <-- changed
+  level_grid_present: None -> None
+
+protocols/general/02_Behavioral_Patient_Restraint_PROC.md  [level_gated]
+  rows: 8 -> 8
+  numbered_rows: 8 -> 8
+  filled_level_cells: 27 -> 8  <-- changed
+  blank_level_cells: 13 -> 32  <-- changed
+  level_grid_present: None -> None
+
+protocols/general/02_Cold_Exposure_PROC.md  [level_gated]
+  rows: 9 -> 9
+  numbered_rows: 9 -> 9
+  filled_level_cells: 43 -> 9  <-- changed
+  blank_level_cells: 2 -> 36  <-- changed
+  level_grid_present: None -> None
+
+protocols/general/02_Diving_and_Drowning_Emergencies_PROC.md  [level_gated]
+  rows: 7 -> 7
+  numbered_rows: 7 -> 7
+  filled_level_cells: 35 -> 7  <-- changed
+  blank_level_cells: 0 -> 28  <-- changed
+  level_grid_present: None -> None
+
+protocols/general/02_Heat_Exposure_PROC.md  [level_gated]
+  rows: 7 -> 7
+  numbered_rows: 7 -> 7
+  filled_level_cells: 28 -> 7  <-- changed
+  blank_level_cells: 7 -> 28  <-- changed
+  level_grid_present: None -> None
+
+protocols/general/02_Pain_Control_PROC.md  [level_gated]
+  rows: 8 -> 8
+  numbered_rows: 8 -> 8
+  filled_level_cells: 31 -> 8  <-- changed
+  blank_level_cells: 9 -> 32  <-- changed
+  level_grid_present: None -> None
+
+protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md  [level_gated]
+  rows: 6 -> 6
+  numbered_rows: 6 -> 6
+  filled_level_cells: 17 -> 6  <-- changed
+  blank_level_cells: 13 -> 24  <-- changed
+  level_grid_present: None -> None
+
+protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md  [level_gated]
+  rows: 13 -> 13
+  numbered_rows: 13 -> 13
+  filled_level_cells: 43 -> 13  <-- changed
+  blank_level_cells: 22 -> 52  <-- changed
+  level_grid_present: None -> None
+
+protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md  [level_gated]
+  rows: 10 -> 10
+  numbered_rows: 10 -> 10
+  filled_level_cells: 34 -> 10  <-- changed
+  blank_level_cells: 16 -> 40  <-- changed
+  level_grid_present: None -> None
+
+protocols/medical/07_OB_Emergencies_PROC.md  [level_gated]
+  rows: 10 -> 10
+  numbered_rows: 10 -> 10
+  filled_level_cells: 42 -> 10  <-- changed
+  blank_level_cells: 8 -> 40  <-- changed
+  level_grid_present: None -> None
+
+protocols/medical/07_Sepsis_PROC.md  [level_gated]
+  rows: 6 -> 6
+  numbered_rows: 6 -> 6
+  filled_level_cells: 18 -> 6  <-- changed
+  blank_level_cells: 12 -> 24  <-- changed
+  level_grid_present: None -> None
+
+protocols/neurologic/05_Hypoglycemia_Hyperglycemia_PROC.md  [level_gated]
+  rows: 5 -> 5
+  numbered_rows: 5 -> 5
+  filled_level_cells: 18 -> 5  <-- changed
+  blank_level_cells: 7 -> 20  <-- changed
+  level_grid_present: None -> None
+
+protocols/neurologic/05_Seizure_PROC.md  [level_gated]
+  rows: 7 -> 7
+  numbered_rows: 7 -> 7
+  filled_level_cells: 30 -> 7  <-- changed
+  blank_level_cells: 5 -> 28  <-- changed
+  level_grid_present: None -> None
+
+protocols/neurologic/05_Stroke_TIA_PROC.md  [level_gated]
+  rows: 9 -> 9
+  numbered_rows: 9 -> 9
+  filled_level_cells: 31 -> 9  <-- changed
+  blank_level_cells: 14 -> 36  <-- changed
+  level_grid_present: None -> None
+
+protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md  [level_gated]
+  rows: 12 -> 12
+  numbered_rows: 12 -> 12
+  filled_level_cells: 39 -> 12  <-- changed
+  blank_level_cells: 21 -> 48  <-- changed
+  level_grid_present: None -> None
+
+protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md  [level_gated]
+  rows: 11 -> 11
+  numbered_rows: 11 -> 11
+  filled_level_cells: 39 -> 11  <-- changed
+  blank_level_cells: 16 -> 44  <-- changed
+  level_grid_present: None -> None
+
+protocols/respiratory/03_Pediatric_Stridor_PROC.md  [level_gated]
+  rows: 12 -> 12
+  numbered_rows: 12 -> 12
+  filled_level_cells: 44 -> 12  <-- changed
+  blank_level_cells: 16 -> 48  <-- changed
+  level_grid_present: None -> None
+
+protocols/respiratory/03_Pneumothorax_PROC.md  [level_gated]
+  rows: 15 -> 15
+  numbered_rows: 15 -> 15
+  filled_level_cells: 43 -> 15  <-- changed
+  blank_level_cells: 32 -> 60  <-- changed
+  level_grid_present: None -> None
+
+protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md  [level_gated]
+  rows: 13 -> 13
+  numbered_rows: 13 -> 13
+  filled_level_cells: 46 -> 13  <-- changed
+  blank_level_cells: 19 -> 52  <-- changed
+  level_grid_present: None -> None
+
+protocols/respiratory/03_Respiratory_Arrest_PROC.md  [level_gated]
+  rows: 15 -> 15
+  numbered_rows: 15 -> 15
+  filled_level_cells: 46 -> 15  <-- changed
+  blank_level_cells: 29 -> 60  <-- changed
+  level_grid_present: None -> None
+
+protocols/respiratory/03_Respiratory_Distress_PROC.md  [level_gated]
+  rows: 16 -> 16
+  numbered_rows: 16 -> 16
+  filled_level_cells: 56 -> 16  <-- changed
+  blank_level_cells: 24 -> 64  <-- changed
+  level_grid_present: None -> None
+
+protocols/respiratory/03_Smoke_Inhalation_PROC.md  [level_gated]
+  rows: 14 -> 14
+  numbered_rows: 14 -> 14
+  filled_level_cells: 48 -> 14  <-- changed
+  blank_level_cells: 22 -> 56  <-- changed
+  level_grid_present: None -> None
+
+protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md  [level_gated]
+  rows: 14 -> 14
+  numbered_rows: 14 -> 14
+  filled_level_cells: 49 -> 14  <-- changed
+  blank_level_cells: 21 -> 56  <-- changed
+  level_grid_present: None -> None
+
+protocols/toxicology/06_Nausea_Vomiting_PROC.md  [level_gated]
+  rows: 6 -> 6
+  numbered_rows: 6 -> 6
+  filled_level_cells: 27 -> 6  <-- changed
+  blank_level_cells: 3 -> 24  <-- changed
+  level_grid_present: None -> None
+
+protocols/toxicology/06_Nerve_Agents_PROC.md  [level_gated]
+  rows: 7 -> 7
+  numbered_rows: 7 -> 7
+  filled_level_cells: 31 -> 7  <-- changed
+  blank_level_cells: 4 -> 28  <-- changed
+  level_grid_present: None -> None
+
+protocols/toxicology/06_Overdose_Poisoning_PROC.md  [level_gated]
+  rows: 10 -> 10
+  numbered_rows: 10 -> 10
+  filled_level_cells: 37 -> 10  <-- changed
+  blank_level_cells: 13 -> 40  <-- changed
+  level_grid_present: None -> None
+
+protocols/trauma/09_Burns_Thermal_PROC.md  [level_gated]
+  rows: 7 -> 7
+  numbered_rows: 7 -> 7
+  filled_level_cells: 26 -> 7  <-- changed
+  blank_level_cells: 9 -> 28  <-- changed
+  level_grid_present: None -> None
+
+protocols/trauma/09_Crush_Syndrome_PROC.md  [level_gated]
+  rows: 9 -> 9
+  numbered_rows: 9 -> 9
+  filled_level_cells: 30 -> 9  <-- changed
+  blank_level_cells: 15 -> 36  <-- changed
+  level_grid_present: None -> None
+
+protocols/trauma/09_Electrical_Injuries_PROC.md  [level_gated]
+  rows: 9 -> 9
+  numbered_rows: 9 -> 9
+  filled_level_cells: 37 -> 9  <-- changed
+  blank_level_cells: 8 -> 36  <-- changed
+  level_grid_present: None -> None
+
+protocols/trauma/09_Hemorrhage_Control_PROC.md  [level_gated]
+  rows: 9 -> 9
+  numbered_rows: 9 -> 9
+  filled_level_cells: 45 -> 9  <-- changed
+  blank_level_cells: 0 -> 36  <-- changed
+  level_grid_present: None -> None
+
+protocols/trauma/09_Lightning_Injuries_PROC.md  [level_gated]
+  rows: 9 -> 9
+  numbered_rows: 9 -> 9
+  filled_level_cells: 38 -> 9  <-- changed
+  blank_level_cells: 7 -> 36  <-- changed
+  level_grid_present: None -> None
+
+protocols/trauma/09_Trauma_PROC.md  [level_gated]
+  rows: 13 -> 13
+  numbered_rows: 13 -> 13
+  filled_level_cells: 47 -> 13  <-- changed
+  blank_level_cells: 18 -> 52  <-- changed
+  level_grid_present: None -> None
+
+== the self-contradicting page the review named ==
+before: the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 0 filled level cells against 40 blank ones, so the grid is not merely decorative
+after : the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 8 filled level cells against 32 blank ones, so the grid is not merely decorative
+
+level_grid_present True with 0 filled cells: none
+administrative pages reporting no grid: none
+EXIT=0

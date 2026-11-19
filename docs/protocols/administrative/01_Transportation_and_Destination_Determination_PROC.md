@@ -20,19 +20,21 @@ Respecting patient decision-making capacity while ensuring safe, appropriate med
     - HEMS availability and ETA
 
 ### Interventions
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap policy" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | **Transport to patient choice:** Transport capable patients to the ED of their choice (if no exceptions) |  | • | • | • | • |
-| 2 | **Reroute for STEMI criteria:** Transport to STEMI Receiving Center per Poquoson Regional STEMI Plan |  | • | • | • | • |
-| 3 | **Reroute for Stroke criteria:** Transport to designated stroke center per Poquoson Stroke Triage Plan |  | • | • | • | • |
-| 4 | **Transport to closest:** Transport to the closest most appropriate hospital if no patient preference |  | • | • | • | • |
-| 5 | **Document reason:** Document reason for any reroute or destination change on the PCR |  | • | • | • | • |
-| 6 | **Contact HEMS:** Contact HEMS without Medical Control if beneficial to the patient |  | • | • | • | • |
-| 7 | **Initiate ground transport:** Initiate ground transport to closest hospital/helispot if HEMS > 10 min delay |  | • | • | • | • |
+| # | Basis | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-policy">POLICY</span> | **Transport to patient choice:** Transport capable patients to the ED of their choice (if no exceptions) |
+| 2 | <span class="lvl lvl-policy">POLICY</span> | **Reroute for STEMI criteria:** Transport to STEMI Receiving Center per the Regional STEMI Plan |
+| 3 | <span class="lvl lvl-policy">POLICY</span> | **Reroute for Stroke criteria:** Transport to designated stroke center per the Regional Stroke Triage Plan |
+| 4 | <span class="lvl lvl-policy">POLICY</span> | **Transport to closest:** Transport to the closest most appropriate hospital if no patient preference |
+| 5 | <span class="lvl lvl-policy">POLICY</span> | **Document reason:** Document reason for any reroute or destination change on the PCR |
+| 6 | <span class="lvl lvl-policy">POLICY</span> | **Contact HEMS:** Contact HEMS without Medical Control if beneficial to the patient |
+| 7 | <span class="lvl lvl-policy">POLICY</span> | **Initiate ground transport:** Initiate ground transport to closest hospital/helispot if HEMS > 10 min delay |
 
 </div>
+
+<p class="lv-note"><strong>POLICY</strong> — rows 1-7: this is not a provider level. This page is a PEMS administrative policy, not a clinical protocol: each row is cited to the PEMS 2024 administrative policy that prints it — <em>Transportation & Destination Determination</em> (PEMS p.39) — and no provider level is published, because PEMS prints these rules as policy rather than as level-badged protocol rows. The policy and the verbatim span for every row are recorded in <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
 ### Pearls
 1. ⚠ **Destination Changes:** Any time a patient is transported to the most appropriate facility other than the one requested, the reason for the change and destination shall be documented on the Patient Care Report (PCR).

@@ -18,19 +18,23 @@ This administrative protocol establishes the operational guidelines to rapidly i
     - Atypical or indeterminate ECGs
 
 ### Interventions
-<div class="sc-wrap" markdown="1">
+<div class="lv-wrap policy" markdown="1">
 
-| # | Action / Intervention | EMR | EMT | A | I | P |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | **Acquire 12-Lead ECG**<br>Must be completed within 5 minutes of patient arrival. |  | • | • | • | • |
-| 2 | **ECG Interpretation**<br>Identify STEMI based on cardiac symptoms AND 1mm+ ST elevation in 2+ contiguous leads. |  |  |  |  | • |
-| 3 | **Routing - PCI Capable Hospital**<br>Transport to the closest PCI capable facility if EMS ground transport time is < 30 minutes. |  | • | • | • | • |
-| 4 | **Routing - HEMS Consideration**<br>If ground transport to a PCI facility is > 30 minutes, evaluate Helicopter EMS (HEMS) transport within 30 minutes. |  | • | • | • | • |
-| 5 | **Routing - Closest ED**<br>Transport to the closest ED (regardless of PCI capability) if the patient has a compromised airway or impending circulatory collapse. |  | • | • | • | • |
-| 6 | **Notifications**<br>Activate STEMI alert system to closest PCI center within 30 minutes. Call COR with "Pre-Hospital STEMI Alert" and patient Name/DOB. Transmit ECG and provide printed/electronic copy to facility/HEMS. |  | • | • | • | • |
-| 7 | **Serial ECGs**<br>For atypical/indeterminate ECGs with high suspicion, transmit ECG, contact Medical Control, and obtain serial ECGs every 10 minutes. |  | • | • | • | • |
+| # | Basis | Action / Intervention |
+|:---:|---|---|
+| 1 | <span class="lvl lvl-policy">POLICY</span> | **Acquire 12-Lead ECG**<br>Must be completed within 5 minutes of patient arrival. |
+| 2 | <span class="lvl lvl-policy">POLICY</span> | **ECG Interpretation**<br>Identify STEMI based on cardiac symptoms AND 1mm+ ST elevation in 2+ contiguous leads. |
+| 3 | <span class="lvl lvl-policy">POLICY</span> | **Routing - PCI Capable Hospital**<br>Transport to the closest PCI capable facility if EMS ground transport time is < 30 minutes. |
+| 4 | <span class="lvl lvl-policy">POLICY</span> | **Routing - HEMS Consideration**<br>If ground transport to a PCI facility is > 30 minutes, evaluate Helicopter EMS (HEMS) transport within 30 minutes. |
+| 5 | <span class="lvl lvl-policy">POLICY</span> | **Routing - Closest ED**<br>Transport to the closest ED (regardless of PCI capability) if the patient has a compromised airway or impending circulatory collapse. |
+| 6 | <span class="lvl lvl-policy">POLICY</span> | **Notifications**<br>Activate STEMI alert system to closest PCI center within 30 minutes. Call COR with "Pre-Hospital STEMI Alert" and patient Name/DOB. Transmit ECG and provide printed/electronic copy to facility/HEMS. |
+| 7 | <span class="lvl lvl-mc">MC</span> | **Serial ECGs**<br>For atypical/indeterminate ECGs with high suspicion, transmit ECG, contact Medical Control, and obtain serial ECGs every 10 minutes. |
 
 </div>
+
+<p class="lv-note"><strong>POLICY</strong> — rows 1-6: this is not a provider level. This page is a PEMS administrative policy, not a clinical protocol: each row is cited to the PEMS 2024 administrative policy that prints it — <em>STEMI Field Triage</em> (PEMS p.35) — and no provider level is published, because PEMS prints these rules as policy rather than as level-badged protocol rows. The policy and the verbatim span for every row are recorded in <code>audit/level-scan/level-rule-ledger.md</code>.
+
+A PEMS level on this page does not make it a protocol: row 7 is printed as row p.107#9 of the PEMS 2024 protocol and is cited there, so its chip is that row's level (MC). No administrative policy prints it.</p>
 
 ### Field STEMI Triage Decision Scheme
 

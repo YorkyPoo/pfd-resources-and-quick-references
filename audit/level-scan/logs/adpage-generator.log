@@ -1,0 +1,3 @@
+GATE: build_outstanding_decisions.py --check on e101064
+OK — protocols/outstanding-decisions.md matches the ledger
+EXIT=0

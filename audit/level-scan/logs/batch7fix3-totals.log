@@ -1,0 +1,32 @@
+Batch 7 review fix 3 — whole-site totals, derived from audit/level-scan/level-rule-ledger.json on 42eadc9
+
+BATCH 7 SCOPE — docs/procedures/ (13 pages)
+  rows total                81
+  cited to a PEMS row       80
+  OWNER_REQUIRED            1   -> procedures/Neonatal_Resuscitation.md row 5
+                                The row bundles two actions printed on two PEMS rows at two different levels: "Obtain IV/IO access if not alre
+  PENDING                   0
+  rows still carrying a cumulative dot grid   0 (one chip per row on all 13 pages)
+
+REVIEW FIX 3 — one rule for bundled rows: chip = the HIGHEST PEMS level the row prints.
+  (was: ETT r2 chipped EMT, an over-grant on its I-level C-spine sentence)
+  CPAP.md                            r6  P    -> EMT   p.245#4
+  Endotracheal_Intubation.md         r2  EMT  -> I     p.247#3
+  Endotracheal_Intubation.md         r4  P    -> I     p.247#3
+  Endotracheal_Intubation.md         r10 P    -> I     p.247#9
+  Intraosseous_Access.md             r8  P    -> A     p.249#5
+  Medication_Administration.md       r3  I    -> A     p.257#3
+  Medication_Administration.md       r4  I    -> A     p.257#5
+  Nasogastric_Tube.md                r1  P    -> I     p.259#0
+  Nasogastric_Tube.md                r2  P    -> I     p.259#1
+  Nasogastric_Tube.md                r3  P    -> I     p.259#2
+  Nasogastric_Tube.md                r4  P    -> I     p.259#3
+  Nasogastric_Tube.md                r5  P    -> I     p.259#4
+  Nasogastric_Tube.md                r6  P    -> I     p.259#5
+  Neonatal_Resuscitation.md          r2  EMT  -> EMR   p.261#5
+  Neonatal_Resuscitation.md          r4  EMT  -> EMR   p.261#9
+
+WHOLE LEDGER (all converted pages, from the same file)
+  rows 604: OK 457, OWNER_REQUIRED 38, remainder POLICY / PENDING-class rows.
+  status counts: OK=457, OWNER_REQUIRED=38, owner_ruled=1, pending_omd=11, pending_row_omd=8, policy=89
+EXIT=0

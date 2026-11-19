@@ -1,0 +1,14 @@
+Batch 7 review fix 3 — --write idempotency on 42eadc9
+docs md5 before: 30628308978d55c669c085d2baba2fe3
+run 1:
+wrote audit/level-scan/level-rule-ledger.json (604 rows)
+wrote audit/level-scan/level-rule-ledger.md
+files changed by run: 0
+docs md5 after: 30628308978d55c669c085d2baba2fe3
+run 2:
+wrote audit/level-scan/level-rule-ledger.json (604 rows)
+wrote audit/level-scan/level-rule-ledger.md
+files changed by run: 0
+docs md5 after run 2: 30628308978d55c669c085d2baba2fe3
+IDEMPOTENT — docs tree md5 unchanged across two --write runs
+EXIT=0

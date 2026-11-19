@@ -1,0 +1,277 @@
+# Text-binding pass over the `no_counterpart` rows (C1d)
+
+Every row the structural aligner reported as `no_counterpart` was searched once more, on text alone, inside the PEMS pages its page is aligned to. No vision, no raster, no change to the aligner's scope: the candidates are the rows of the page's own `pems_row_ledger`.
+
+A row binds on `verbatim` (one of its phrases is an exact substring of the PEMS row) or on `token_binding` (coverage of the row's significant tokens clears the aligner's 0.40 floor AND the row shares a drug name, a dose, or its whole distinctive label head with that PEMS row). Anything else is `no_evidence_local`, and its negative search is recorded too.
+
+**83 rows** — bound_by_text **1**, no_evidence_local **82** (below_floor 60, best_evidence_is_held 15, no_anchor 7).
+
+Coverage bands (coverage of the whole site row against its best candidate in the page's own scope): 0.0 → 54, 0.1 → 10, 0.2 → 5, >=0.3 → 14.
+
+## Bound and promoted to `matched`
+
+### `06_Overdose_Poisoning_PROC.md` row 5 → p.119 row 6 badge `EMT`
+
+- site row: Opiate Overdose: Administer Naloxone 1-2 mg IN
+- PEMS row (duplicate_in_source): If apneic/bradypneic, provide respiratory support and administer: ADULT: Naloxone (Narcan) 1 – 2 mg IN PEDIATRIC: Naloxone (Narcan) 1 -2 mg IN Repeat at double the initial dose if no response in 5 minutes.
+- method `token_binding` (body), coverage 0.67 (whole row 0.40), anchors: naloxone, 1 – 2 mg
+- matched phrase: `naloxone 1 – 2 mg`
+- site level cells: ['', '•', '•', '•', '•'] vs PEMS badge columns: ['EMT', 'A', 'I', 'P'] — agrees: True
+
+## No evidence for a free PEMS row (`no_evidence_local`)
+
+### `below_floor` — 60 rows
+
+- `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 4 (p.57 row 1, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.57 row 1)
+  - site row: Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure.
+  - pages searched: [57]; free candidates: 4; query: adequate, airway, management, oxygenation, support, ventilatory
+- `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 5 (p.57 row 1, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.57 row 1)
+  - site row: Obtain and transmit a 12-Lead ECG.
+  - pages searched: [57]; free candidates: 4; query: 12-lead, ecg, transmit
+- `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 7 (p.57 row 4, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.57 row 4)
+  - site row: Monitor ETCO2. If ETCO2 < 10 or dropping, reassess and optimize compression rate, depth, and recoil.
+  - pages searched: [57]; free candidates: 4; query: compression, depth, dropping, etco2, optimize, rate, reassess, recoil
+- `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 8 (p.57 row 1, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.57 row 1)
+  - site row: Apply AED / Assess cardiac rhythm every 2 minutes. If AED is advising to shock or rhythm is VF or VT (as determined by EMT-I or P), defibrillate at maximum joules (or 2 J/kg for pediatrics), then refe
+  - pages searched: [57]; free candidates: 4; query: 2 j, activity, advising, aed, arrest, asystole, cardiac, cpr, defibrillate, determined, electrical, emt-i
+- `04_Cardiac_Arrest_Non_Traumatic_PROC.md` row 3 (p.64 row 13, coverage 0.06) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.06 against p.64 row 13)
+  - site row: Airway Management: • Apply BVM with high-flow O₂. • Use quantitative EtCO₂ monitoring with BVM: - If EtCO₂ < 10 mmHg, improve compressions - If sudden increase above 30-40 mmHg, check for ROSC • Give 
+  - pages searched: [57, 63, 64]; free candidates: 14; query: 30-40, advanced, airway, bvm, check, compressions, continuous, etco, give, high-flow, improve, increase
+- `04_Cardiac_Arrest_Traumatic_PROC.md` row 8 (p.61 row 6, coverage 0.20) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.20 against p.61 row 6)
+  - site row: Assess Shock Index > 1 / Resuscitate prior to intubation
+  - pages searched: [61]; free candidates: 4; query: index, intubation, prior, resuscitate, shock
+- `04_Chest_Pain_ACS_PROC.md` row 14 (p.107 row 2, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.107 row 2)
+  - site row: Right-Sided / 15-Lead ECG: • Consider right-sided 12-Lead or 15-Lead ECG for additional assessment.
+  - pages searched: [107]; free candidates: 2; query: 12-lead, 15-lead, additional, assessment, ecg, right-sided
+- `04_Chest_Pain_ACS_PROC.md` row 3 (p.107 row 2, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.107 row 2)
+  - site row: Glucose Assessment: • Check blood glucose level. • Refer to the Hyperglycemia / Hypoglycemia protocol if indicated.
+  - pages searched: [107]; free candidates: 2; query: assessment, blood, check, glucose, hyperglycemia, hypoglycemia, level
+- `04_Chest_Pain_ACS_PROC.md` row 8 (p.107 row 2, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.107 row 2)
+  - site row: IV/IO Access: • Establish IV / IO access when indicated (refer to Intraosseous Access procedure).
+  - pages searched: [107]; free candidates: 2; query: access, establish, intraosseous, iv/io
+- `04_Hypertensive_Crisis_PROC.md` row 2 (p.109 row 2, coverage 0.06) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.06 against p.109 row 2)
+  - site row: Primary Assessment: • Perform Primary and Secondary Survey. • Obtain complete set of vital signs including bilateral BP if possible. • Assess for signs of end-organ damage (neurological, cardiac, pulm
+  - pages searched: [109]; free candidates: 0; query: assessment, bilateral, cardiac, complete, damage, end-organ, including, neurological, possible, primary, pulmonary, renal
+- `04_Supraventricular_Tachycardia_PROC.md` row 2 (p.135 row 1, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.135 row 1)
+  - site row: Assess patient stability (chest pain, dyspnea, AMS, shock)
+  - pages searched: [135, 136]; free candidates: 0; query: ams, chest, dyspnea, pain, shock, stability
+- `02_Behavioral_Patient_Restraint_PROC.md` row 2 (p.71 row 0, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.71 row 0)
+  - site row: Apply de-escalation techniques. Remain calm, maintain soothing tone, allow space, do not reinforce delusions, set boundaries.
+  - pages searched: [71, 72]; free candidates: 1; query: allow, boundaries, calm, de-escalation, delusions, reinforce, remain, set, soothing, space, techniques, tone
+- `02_Cold_Exposure_PROC.md` row 6 (p.67 row 1, coverage 0.38) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.38 against p.67 row 1)
+  - site row: If patient is alert and responsive: Use active external rewarming with heat packs, warm blankets, etc.
+  - pages searched: [67]; free candidates: 0; query: active, alert, blankets, etc, external, heat, packs, responsive, rewarming, warm
+- `02_Cold_Exposure_PROC.md` row 9 (p.67 row 4, coverage 0.20) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.20 against p.67 row 4)
+  - site row: Contact Medical Control prior to use of AED.
+  - pages searched: [67]; free candidates: 0; query: aed, contact, control, medical, prior
+- `02_Sedation_Assisted_Non_Paralytic_PROC.md` row 2 (p.55 row 1, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.55 row 1)
+  - site row: Assess and monitor blood pressure. Ensure patient is not hypotensive.
+  - pages searched: [55]; free candidates: 3; query: blood, hypotensive, pressure
+- `02_Sedation_Assisted_Non_Paralytic_PROC.md` row 3 (p.55 row 2, coverage 0.33) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.33 against p.55 row 2)
+  - site row: Establish IV/IO access.
+  - pages searched: [55]; free candidates: 3; query: access, establish, iv/io
+- `05_Stroke_TIA_PROC.md` row 8 (p.131 row 5, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.131 row 5)
+  - site row: Establish 18g IV in Right AC (preferred for rapid imaging)
+  - pages searched: [131]; free candidates: 1; query: 18 g, 18g, establish, imaging, preferred, rapid, right
+- `03_Airway_Inhalation_Irritants_PROC.md` row 10 (p.153 row 2, coverage 0.09) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.09 against p.153 row 2)
+  - site row: Endotracheal Intubation: • Follow Endotracheal Intubation procedure. • ⚠ Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended.
+  - pages searched: [153]; free candidates: 0; query: breathing, endotracheal, follow, generally, induction, intubation, rapid, recommended, rsi, sequence, spontaneously
+- `03_Airway_Inhalation_Irritants_PROC.md` row 11 (p.153 row 5, coverage 0.33) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.33 against p.153 row 5)
+  - site row: Poison Control Consultation: • Contact Poison Control Center at 1-800-222-1222 with any questions. (Note: Poison Control is not online medical control.)
+  - pages searched: [153]; free candidates: 0; query: 1-800-222-1222, center, consultation, contact, control, medical, note, online, poison, questions
+- `03_Airway_Inhalation_Irritants_PROC.md` row 4 (p.153 row 1, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.153 row 1)
+  - site row: Oxygen Administration: • Apply high-flow oxygen via NRB or BVM as indicated. • Target SpO₂ > 94%.
+  - pages searched: [153]; free candidates: 0; query: 94 %, 94%, administration, bvm, high-flow, nrb, oxygen, spo, target
+- `03_Airway_Inhalation_Irritants_PROC.md` row 9 (p.153 row 2, coverage 0.33) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.33 against p.153 row 2)
+  - site row: Advanced Airway Assessment: • Consider endotracheal intubation if signs of airway injury develop. • Assess for impending airway compromise (worsening stridor, respiratory failure).
+  - pages searched: [153]; free candidates: 0; query: advanced, airway, assessment, compromise, develop, endotracheal, failure, impending, injury, intubation, respiratory, signs
+- `03_Asthma_COPD_Reactive_Airway_PROC.md` row 11 (p.124 row 11, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 11)
+  - site row: Reassessment and Transport: • Continuously monitor respiratory status, auscultation, and SpO₂. • Reassess after each bronchodilator treatment. • Expedite transport for severe or deteriorating patients
+  - pages searched: [123, 124]; free candidates: 6; query: auscultation, bronchodilator, continuously, deteriorating, expedite, reassess, reassessment, respiratory, severe, spo, status, transport
+- `03_Asthma_COPD_Reactive_Airway_PROC.md` row 8 (p.123 row 1, coverage 0.25) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.25 against p.123 row 1)
+  - site row: Continuous Positive Airway Pressure (CPAP): • Consider for COPD exacerbation or severe bronchospasm with adequate mentation. • Initiate 5-10 cm H₂O, titrate to effect. • Contraindicated if altered men
+  - pages searched: [123, 124]; free candidates: 6; query: 5-10, adequate, airway, altered, arrest, bronchospasm, continuous, contraindicated, copd, cpap, effect, exacerbation
+- `03_Pediatric_Stridor_PROC.md` row 11 (p.123 row 1, coverage 0.33) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.33 against p.123 row 1)
+  - site row: Airway Protection - Advanced Airway • Prepare for advanced airway if impending respiratory failure • Have appropriate sized equipment ready • ⚠ Intubation of children <12 requires Paramedic skill
+  - pages searched: [123, 124]; free candidates: 5; query: advanced, airway, children, equipment, failure, impending, intubation, paramedic, prepare, protection, ready, requires
+- `03_Pediatric_Stridor_PROC.md` row 12 (p.124 row 9, coverage 0.08) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.08 against p.124 row 9)
+  - site row: Transport Considerations • Transport to pediatric-capable facility • Alert receiving facility early • Consider ALS intercept if BLS only • Rapid transport if severe obstruction
+  - pages searched: [123, 124]; free candidates: 5; query: alert, als, bls, considerations, early, facility, intercept, obstruction, pediatric-capable, rapid, receiving, severe
+- `03_Pediatric_Stridor_PROC.md` row 2 (p.123 row 1, coverage 0.25) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.25 against p.123 row 1)
+  - site row: Scene Management & Calm Environment • Keep child calm - agitation worsens obstruction • Allow parent/caregiver to hold child • Avoid unnecessary procedures • Minimize stimulation and stranger anxiety
+  - pages searched: [123, 124]; free candidates: 5; query: agitation, allow, anxiety, avoid, calm, child, environment, hold, keep, management, minimize, obstruction
+- `03_Pediatric_Stridor_PROC.md` row 3 (p.123 row 1, coverage 0.12) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.12 against p.123 row 1)
+  - site row: Position of Comfort • Allow child to assume position of choice (usually upright or with parent) • Do not force supine positioning • Head-down positioning for infants <1 year if foreign body suspected
+  - pages searched: [123, 124]; free candidates: 5; query: allow, assume, body, child, choice, comfort, force, foreign, head-down, infants, parent, position
+- `03_Pediatric_Stridor_PROC.md` row 5 (p.124 row 11, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 11)
+  - site row: Continuous Monitoring • Cardiac monitor • Pulse oximetry • EtCO2 when available
+  - pages searched: [123, 124]; free candidates: 5; query: available, cardiac, continuous, etco2, oximetry, pulse
+- `03_Pneumothorax_PROC.md` row 1 (p.243 row 0, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0)
+  - site row: Universal Patient Care / Scene Safety: • Ensure scene safety and appropriate PPE. • Bring all necessary equipment to patient side.
+  - pages searched: [243]; free candidates: 1; query: bring, care, equipment, necessary, ppe, safety, scene, side, universal
+- `03_Pneumothorax_PROC.md` row 13 (p.243 row 0, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0)
+  - site row: Advanced Airway Management (if indicated): • Prepare for or perform endotracheal intubation if respiratory failure. • ⚠ Positive pressure ventilation (BVM/CPAP) may worsen or induce pneumothorax.
+  - pages searched: [243]; free candidates: 1; query: advanced, airway, bvm/cpap, endotracheal, failure, induce, intubation, management, pneumothorax, positive, prepare, pressure
+- `03_Pneumothorax_PROC.md` row 14 (p.243 row 0, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0)
+  - site row: Transport Considerations: • Transport to appropriate trauma center if traumatic etiology. • Alert receiving facility of needle decompression performed. • Consider air medical transport for severe case
+  - pages searched: [243]; free candidates: 1; query: air, alert, cases, center, considerations, decompression, etiology, facility, medical, needle, receiving, severe
+- `03_Pneumothorax_PROC.md` row 15 (p.243 row 0, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0)
+  - site row: Close Monitoring En Route: • Continuous reassessment en route. • Monitor for recurrent tension pneumothorax. • Secure catheter to prevent dislodgement.
+  - pages searched: [243]; free candidates: 1; query: catheter, close, continuous, dislodgement, pneumothorax, prevent, reassessment, recurrent, route, secure, tension
+- `03_Pneumothorax_PROC.md` row 2 (p.243 row 0, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0)
+  - site row: Primary Assessment: • Assess airway, breathing, circulation, and disability. • Assess vital signs and SpO2. • Identify life threats immediately.
+  - pages searched: [243]; free candidates: 1; query: airway, assessment, breathing, circulation, disability, identify, immediately, life, primary, signs, spo2, threats
+- `03_Pneumothorax_PROC.md` row 4 (p.243 row 0, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0)
+  - site row: Positioning and Monitoring: • Position patient for comfort (typically supine or semi-Fowler's). • Establish IV/IO access. • Continuous cardiac and pulse oximetry monitoring.
+  - pages searched: [243]; free candidates: 1; query: access, cardiac, comfort, continuous, establish, iv/io, oximetry, position, positioning, pulse, semi-fowler, supine
+- `03_Pneumothorax_PROC.md` row 5 (p.243 row 0, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0)
+  - site row: Suction and Airway Management: • Prepare suction and airway equipment. • Be prepared for rapid airway intervention if decompensation occurs.
+  - pages searched: [243]; free candidates: 1; query: airway, decompensation, equipment, intervention, management, occurs, prepare, prepared, rapid, suction
+- `03_Pneumothorax_PROC.md` row 9 (p.243 row 0, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0)
+  - site row: Bilateral Chest Decompression (Traumatic Cardiac Arrest): • For traumatic cardiac arrest with suspicion of thoracoabdominal trauma, perform bilateral needle decompression.
+  - pages searched: [243]; free candidates: 1; query: arrest, bilateral, cardiac, chest, decompression, needle, suspicion, thoracoabdominal, trauma, traumatic
+- `03_Respiratory_Arrest_PROC.md` row 12 (p.239 row 4, coverage 0.05) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.05 against p.239 row 4)
+  - site row: Post-Intubation Airway Management: • Verify tube placement with continuous box-waveform capnography AND auscultation (bilateral lung sounds, absence of gastric sounds). • Secure tube with tape or comm
+  - pages searched: [239]; free candidates: 2; query: absence, airway, auscultation, bilateral, box-waveform, capnography, commercial, continuous, depth, document, gastric, holder
+- `03_Respiratory_Arrest_PROC.md` row 13 (p.239 row 4, coverage 0.09) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.09 against p.239 row 4)
+  - site row: Ongoing Ventilation Monitoring: • Monitor ET tube placement and ventilation continuously with SpO2 and EtCO2. • Reassess lung sounds and gastric sounds after any patient movement.
+  - pages searched: [239]; free candidates: 2; query: continuously, etco2, gastric, lung, movement, ongoing, placement, reassess, sounds, spo2, tube, ventilation
+- `03_Respiratory_Arrest_PROC.md` row 14 (p.239 row 4, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.239 row 4)
+  - site row: Post-Advanced Airway Analgesia – Fentanyl (Sublimaze): • ADULT: 25–50 mcg IV/IO over 2 minutes or IN/IM. • PEDIATRIC: 0.5–1 mcg/kg IV/IO over 2 minutes or IN/IM (Maximum dose 25 mcg). • Repeat every 1
+  - pages searched: [239]; free candidates: 2; query: 0.5, 0.5-1 mcg, 25 mcg, 25-50 mcg, airway, analgesia, every, fentanyl, in/im, iv/io, mcg, mcg/kg
+- `03_Respiratory_Arrest_PROC.md` row 15 (p.239 row 4, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.239 row 4)
+  - site row: Post-Advanced Airway Sedation – Midazolam (Versed): • ADULT: 2.5 mg IV/IO over 2 minutes or 5 mg IN/IM. • PEDIATRIC: 0.1 mg/kg IV/IO over 2 minutes or 0.2 mg/kg IN/IM (Maximum dose 2.5 mg IV/IO or 5 m
+  - pages searched: [239]; free candidates: 2; query: 0.1, 0.1 mg, 0.2, 0.2 mg, 2.5, 2.5 mg, 5 mg, airway, every, in/im, iv/io, mg/kg
+- `03_Respiratory_Arrest_PROC.md` row 3 (p.239 row 4, coverage 0.22) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.22 against p.239 row 4)
+  - site row: Continuous Monitoring: • Apply continuous pulse oximetry (SpO2). • Apply continuous box-waveform capnography (EtCO2) once airway placed.
+  - pages searched: [239]; free candidates: 2; query: airway, box-waveform, capnography, continuous, etco2, oximetry, placed, pulse, spo2
+- `03_Respiratory_Arrest_PROC.md` row 6 (p.239 row 4, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.239 row 4)
+  - site row: BVM Ventilation (Two-Person Technique): • Support respirations with bag-valve-mask using two-person technique preferred. • Deliver appropriate tidal volume (6-7 mL/kg) at rate of 10-12 breaths/min (ad
+  - pages searched: [239]; free candidates: 2; query: 10-12, 6-7, 6-7 ml, avoid, bag-valve-mask, breaths/min, bvm, deliver, ml/kg, over-ventilation, preferred, rate
+- `03_Respiratory_Distress_PROC.md` row 14 (p.123 row 5, coverage 0.08) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.08 against p.123 row 5, shared words: sulfate)
+  - site row: Severe Asthma/COPD: • Refer to Asthma specific protocol for comprehensive treatment • Magnesium Sulfate per Asthma protocol ⚠ Positive pressure may worsen pneumothorax or cause breath stacking
+  - pages searched: [123, 124]; free candidates: 4; query: asthma, asthma/copd, breath, cause, comprehensive, magnesium, pneumothorax, positive, pressure, severe, specific, stacking
+- `03_Respiratory_Distress_PROC.md` row 15 (p.123 row 5, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.123 row 5)
+  - site row: Cardiac Ischemia Management: • Evaluate for cardiac origin • Consider 12-lead ECG • Refer to Chest Pain/ACS protocol if indicated
+  - pages searched: [123, 124]; free candidates: 4; query: 12-lead, cardiac, chest, ecg, evaluate, ischemia, management, origin, pain/acs
+- `03_Respiratory_Distress_PROC.md` row 16 (p.124 row 13, coverage 0.07) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.07 against p.124 row 13)
+  - site row: Respiratory Failure Management: • If apnea/agonal respirations or GCS ≤13: • Prepare for immediate airway control • Bag-valve-mask ventilation • Consider advanced airway per provider level • Transport
+  - pages searched: [123, 124]; free candidates: 4; query: advanced, airway, apnea/agonal, bag-valve-mask, control, delay, failure, gcs, immediate, level, management, prepare
+- `03_Respiratory_Distress_PROC.md` row 3 (p.124 row 13, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 13)
+  - site row: Continuous Monitoring: • Continuous EtCO2 monitoring to guide therapy • Continuous pulse oximetry • Cardiac monitoring
+  - pages searched: [123, 124]; free candidates: 4; query: cardiac, continuous, etco2, guide, oximetry, pulse, therapy
+- `03_Respiratory_Distress_PROC.md` row 5 (p.124 row 13, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 13)
+  - site row: Positioning: • Patient position of comfort (sitting upright preferred) • Consider reverse Trendelenburg if tolerated
+  - pages searched: [123, 124]; free candidates: 4; query: comfort, position, positioning, preferred, reverse, sitting, tolerated, trendelenburg, upright
+- `03_Smoke_Inhalation_PROC.md` row 10 (p.239 row 8, coverage 0.05) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.05 against p.239 row 8)
+  - site row: Burn Assessment: • Assess for concomitant thermal burn injuries • Estimate total body surface area (TBSA) involved • Evaluate burn depth and critical areas (face, hands, perineum, major joints)
+  - pages searched: [153, 239]; free candidates: 13; query: area, areas, assessment, body, burn, concomitant, critical, depth, estimate, evaluate, face, hands
+- `03_Smoke_Inhalation_PROC.md` row 13 (p.239 row 7, coverage 0.17) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.17 against p.239 row 7)
+  - site row: Monitoring and Reassessment: • Monitor SpO2, EtCO2, and respiratory rate continuously • Reassess airway patency frequently; edema may progress rapidly • Observe for signs of respiratory failure requir
+  - pages searched: [153, 239]; free candidates: 13; query: airway, continuously, edema, etco2, failure, frequently, immediate, intervention, observe, patency, progress, rapidly
+- `03_Smoke_Inhalation_PROC.md` row 14 (p.153 row 2, coverage 0.05) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.05 against p.153 row 2)
+  - site row: Transport Considerations: • Expedited transport given risk of rapid airway compromise • Transport to facility capable of managing combined trauma/burns if indicated • Consider aeromedical evacuation f
+  - pages searched: [153, 239]; free candidates: 13; query: aeromedical, airway, burn, capable, centers, combined, compromise, considerations, evacuation, expedited, facility, given
+- `03_Smoke_Inhalation_PROC.md` row 2 (p.153 row 4, coverage 0.08) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.08 against p.153 row 4)
+  - site row: Scene Safety and Scene Time Considerations: • Assess scene for ongoing hazard exposure • Limit scene time; prepare for rapid transport • Coordinate with fire department/hazmat as needed
+  - pages searched: [153, 239]; free candidates: 13; query: considerations, coordinate, department/hazmat, exposure, fire, hazard, limit, ongoing, prepare, rapid, safety, scene
+- `03_Smoke_Inhalation_PROC.md` row 7 (p.153 row 4, coverage 0.08) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.08 against p.153 row 4)
+  - site row: Hydroxocobalamin (Cyanide Antidote) - Indication Assessment: • Assess for exposure to combustion products/fire in an enclosed space with ANY of the following: - Altered mental status - Seizures - Hypo
+  - pages searched: [153, 239]; free candidates: 13; query: altered, antidote, arrest, assessment, cardiac, combustion, cyanide, enclosed, exposure, hydroxocobalamin, hypotension, indication
+- `03_Smoke_Inhalation_PROC.md` row 8 (p.153 row 4, coverage 0.33) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.33 against p.153 row 4, shared words: 0.9 %, chloride, sodium)
+  - site row: Hydroxocobalamin Preparation: • Reconstitute with 200 mL 0.9% Sodium Chloride • Use vented IV tubing for administration • Verify solution clarity and integrity prior to administration
+  - pages searched: [153, 239]; free candidates: 13; query: 0.9 %, 0.9%, 200, 200 ml, administration, chloride, clarity, hydroxocobalamin, integrity, preparation, prior, reconstitute
+- `03_Smoke_Inhalation_PROC.md` row 9 (p.239 row 4, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.239 row 4)
+  - site row: Hydroxocobalamin Administration: • Administer per Medical Control guidance • Monitor for increase in blood pressure • Inform receiving facility of administration • Prepare for possible red/purple urin
+  - pages searched: [153, 239]; free candidates: 13; query: administration, blood, control, discoloration, facility, guidance, hydroxocobalamin, increase, inform, medical, possible, prepare
+- `03_Upper_Airway_Obstruction_PROC.md` row 13 (p.239 row 1, coverage 0.06) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.06 against p.239 row 1)
+  - site row: Post-Obstruction Advanced Airway - Sedation: • If endotracheal intubation performed, refer to Sedation Post Advanced Airway protocol. • Fentanyl (25 mcg) and Midazolam (2.5 mg) per Respiratory Arrest 
+  - pages searched: [239]; free candidates: 4; query: 2.5, 2.5 mg, 25 mcg, advanced, airway, arrest, elderly, endotracheal, fentanyl, frail, half-doses, intubation
+- `03_Upper_Airway_Obstruction_PROC.md` row 14 (p.239 row 1, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.239 row 1)
+  - site row: Expanding Hematoma / Edema - Advanced Airway: • Early airway intervention before complete obstruction. • Consider difficult airway algorithm; prepare surgical airway backup. • Contact Medical Control 
+  - pages searched: [239]; free candidates: 4; query: advanced, airway, airways, algorithm, backup, complete, complex, contact, control, difficult, early, edema
+- `03_Upper_Airway_Obstruction_PROC.md` row 2 (p.239 row 7, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.239 row 7)
+  - site row: Scene Safety / Recognition: • Rapidly identify complete vs partial obstruction. • Recognize universal choking sign (hands to throat). • Determine conscious vs unconscious status.
+  - pages searched: [239]; free candidates: 4; query: choking, complete, conscious, hands, identify, obstruction, partial, rapidly, recognition, recognize, safety, scene
+- `09_Burns_Thermal_PROC.md` row 6 (p.88 row 8, coverage 0.33) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.33 against p.88 row 8, shared words: chloride)
+  - site row: Hydrofluoric Acid (HF) Burns with Hypotension: Administer Calcium Chloride 1 g IV/IO over 3 mins (Repeat in 5 mins PRN).
+  - pages searched: [87, 88]; free candidates: 3; query: 1 g, acid, burns, calcium, chloride, hydrofluoric, hypotension, iv/io, mins, prn
+- `09_Hemorrhage_Control_PROC.md` row 8 (p.75 row 0, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.75 row 0)
+  - site row: Consider pain control per the Pain Control protocol.
+  - pages searched: [75]; free candidates: 2; query: control, pain
+- `09_Trauma_PROC.md` row 2 (p.83 row 6, coverage 0.00) — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.83 row 6)
+  - site row: Ensure scene safety. Extricate/move patient to safety if necessary.
+  - pages searched: [83, 84]; free candidates: 3; query: extricate/move, necessary, safety, scene
+
+### `best_evidence_is_held` — 15 rows
+
+- `04_Cardiac_Arrest_Non_Traumatic_PROC.md` row 4 (p.63 row 7, coverage 1.00) — this row's best text evidence is p.63 row 7 (coverage 1.00, badge I), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
+  - site row: AED / Rhythm Assessment: • Apply AED and assess cardiac rhythm every 2 minutes. • Identify rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shockable).
+  - pages searched: [57, 63, 64]; free candidates: 14; query: aed, assessment, asystole/pea, cardiac, every, identify, minutes, non-shockable, rhythm, shockable, v-fib/v-tach
+- `04_Cardiac_Arrest_Traumatic_PROC.md` row 6 (p.61 row 5, coverage 1.00) — this row's best text evidence is p.61 row 5 (coverage 1.00, badge A), which site row 7 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
+  - site row: Obtain IV/IO access (x2 preferred)
+  - pages searched: [61]; free candidates: 4; query: access, iv/io, preferred
+- `04_Chest_Pain_ACS_PROC.md` row 5 (p.107 row 4, coverage 0.60) — this row's best text evidence is p.107 row 4 (coverage 0.60, badge EMT), which site row 6 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
+  - site row: 12-Lead ECG Interpretation - STEMI Criteria: • Intermediate and Paramedic providers may interpret as STEMI if: - Symptoms consistent with ACS/myocardial ischemia AND - ≥ 1 mm ST segment elevation in t
+  - pages searched: [107]; free candidates: 2; query: 12-lead, acs/myocardial, consistent, contiguous, criteria, ecg, elevation, intermediate, interpret, interpretation, ischemia, leads
+- `05_Stroke_TIA_PROC.md` row 6 (p.131 row 4, coverage 0.64) — this row's best text evidence is p.131 row 4 (coverage 0.64, badge EMT), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
+  - site row: Triage: Symptoms <24 hrs & RACE 5-9 -> Transport to closest Comprehensive Stroke Center (if <30 min delay)
+  - pages searched: [131]; free candidates: 1; query: 5-9, center, closest, comprehensive, delay, hrs, min, race, stroke, symptoms, transport, triage
+- `05_Stroke_TIA_PROC.md` row 7 (p.131 row 4, coverage 0.75) — this row's best text evidence is p.131 row 4 (coverage 0.75, badge EMT), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
+  - site row: Triage: Symptoms >24 hrs OR RACE 0-4 -> Transport to closest stroke center
+  - pages searched: [131]; free candidates: 1; query: 0-4, center, closest, hrs, race, stroke, symptoms, transport, triage
+- `03_Airway_Inhalation_Irritants_PROC.md` row 3 (p.153 row 2, coverage 0.50) — this row's best text evidence is p.153 row 2 (coverage 0.50, badge EMT), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
+  - site row: Airway Assessment: • Assess for signs of airway injury (singed hairs, facial burns, hoarseness, stridor, soot). • Monitor for progressive respiratory distress.
+  - pages searched: [153]; free candidates: 0; query: airway, assessment, burns, distress, facial, hairs, hoarseness, injury, progressive, respiratory, signs, singed
+- `03_Pneumothorax_PROC.md` row 11 (p.243 row 4, coverage 0.57) — this row's best text evidence is p.243 row 4 (coverage 0.57, badge I), which site row 10 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
+  - site row: Repeat Decompression if Needed: • Consider repeating procedure for continued or recurrent hemodynamic instability or absent breath sounds.
+  - pages searched: [243]; free candidates: 1; query: absent, breath, decompression, hemodynamic, instability, recurrent, repeating, sounds
+- `03_Respiratory_Arrest_PROC.md` row 11 (p.239 row 2, coverage 0.50) — this row's best text evidence is p.239 row 2 (coverage 0.50, badge EMR), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
+  - site row: Surgical Airway (Cricothyrotomy): • If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway. • Use 14G, 3.25" catheter or surgical cricothyrotomy kit per protocol.
+  - pages searched: [239]; free candidates: 2; query: 14 g, 14g, 3.25, airway, catheter, cricothyrotomy, immediately, intubate, kit, oxygenate, proceed, surgical
+- `03_Respiratory_Distress_PROC.md` row 10 (p.124 row 10, coverage 0.44) — this row's best text evidence is p.124 row 10 (coverage 0.44, badge A), which site row 12 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
+  - site row: Fluid Administration: • 0.9% Sodium Chloride or appropriate fluid as clinically indicated • Monitor for signs of fluid overload in CHF patients
+  - pages searched: [123, 124]; free candidates: 4; query: 0.9 %, 0.9%, administration, chf, chloride, clinically, fluid, overload, signs, sodium
+- `03_Respiratory_Distress_PROC.md` row 8 (p.123 row 1, coverage 0.67) — this row's best text evidence is p.123 row 1 (coverage 0.67, badge EMR), which site row 2 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
+  - site row: Advanced Airway Management (ETI): • Endotracheal intubation reserved for I-level providers per protocol
+  - pages searched: [123, 124]; free candidates: 4; query: advanced, airway, endotracheal, eti, i-level, intubation, management, providers, reserved
+- `03_Smoke_Inhalation_PROC.md` row 11 (p.153 row 2, coverage 0.50) — this row's best text evidence is p.153 row 2 (coverage 0.50, badge EMT), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
+  - site row: Fluid Management (If Burns Present): • Initiate fluid resuscitation per Burn Injuries Protocol • Titrate fluid administration to hemodynamic response • Monitor urine output if catheter in place
+  - pages searched: [153, 239]; free candidates: 13; query: administration, burn, burns, catheter, fluid, hemodynamic, injuries, management, output, place, present, response
+- `03_Smoke_Inhalation_PROC.md` row 4 (p.153 row 2, coverage 1.00) — this row's best text evidence is p.153 row 2 (coverage 1.00, badge EMT), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
+  - site row: Initial Airway Management: • Position patient to optimize ventilation • Suction oropharynx as needed for soot/secretions • Apply high-flow oxygen via appropriate delivery device
+  - pages searched: [153, 239]; free candidates: 13; query: airway, delivery, device, high-flow, management, optimize, oropharynx, oxygen, position, soot/secretions, suction, ventilation
+- `03_Upper_Airway_Obstruction_PROC.md` row 3 (p.239 row 3, coverage 0.50) — this row's best text evidence is p.239 row 3 (coverage 0.50, badge EMT), which site row 4 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
+  - site row: Conscious Adult (≥12 years) - Abdominal Thrusts: • Stand behind patient, wrap arms around waist. • Make fist with one hand; thumb side against patient's abdomen. • Position fist midline, below xiphoid
+  - pages searched: [239]; free candidates: 4; query: abdomen, abdominal, arms, around, becomes, behind, clears, conscious, deliver, fist, grasp, hand
+- `03_Upper_Airway_Obstruction_PROC.md` row 8 (p.239 row 6, coverage 0.75) — this row's best text evidence is p.239 row 6 (coverage 0.75, badge EMT), which site row 7 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
+  - site row: Unconscious Patient - BLS Airway Adjuncts: • Insert OPA or NPA as indicated by patient tolerance and level of consciousness. • Insert SGA (i-gel or King) if unable to maintain airway with basic maneuv
+  - pages searched: [239]; free candidates: 4; query: adjuncts, airway, basic, bls, consciousness, i-gel, insert, king, level, maneuvers, npa, opa
+- `09_Trauma_PROC.md` row 7 (p.83 row 10, coverage 0.50) — this row's best text evidence is p.83 row 10 (coverage 0.50, badge A), which site row 8 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix
+  - site row: Obtain IV/IO access.
+  - pages searched: [83, 84]; free candidates: 3; query: access, iv/io
+
+### `no_anchor` — 7 rows
+
+- `04_Cardiac_Arrest_Traumatic_PROC.md` row 10 (p.61 row 2, coverage 0.50) — coverage 0.50 (whole row 0.38) clears the 0.40 floor, but the row shares no drug name, no dose and no whole label head with that PEMS row, so the binding would rest on an ordinary word: Begin chest compressions. Refer to Cardiopulmonary Resuscitation (CPR) procedure. Consider immediate transport to the closest Emergency Department or Trauma Cen
+  - site row: Rapid transport to Level I/II Trauma Center (Goal < 10 mins)
+  - pages searched: [61]; free candidates: 4; query: center, goal, i/ii, level, mins, rapid, transport, trauma
+- `04_Chest_Pain_ACS_PROC.md` row 9 (p.107 row 7, coverage 1.00) — coverage 1.00 (whole row 0.50) clears the 0.40 floor, but the row shares no drug name, no dose and no whole label head with that PEMS row, so the binding would rest on an ordinary word: Monitor cardiac rhythm. Refer to Tachyarrhythmias or Bradycardia protocol, as needed.
+  - site row: Cardiac Monitoring: • Consider continuous cardiac monitoring.
+  - pages searched: [107]; free candidates: 2; query: cardiac, continuous
+- `03_Asthma_COPD_Reactive_Airway_PROC.md` row 7 (p.123 row 1, coverage 0.50) — coverage 0.50 (whole row 0.11) clears the 0.40 floor, but the row shares no drug name, no dose and no whole label head with that PEMS row, so the binding would rest on an ordinary word: Perform a focused evaluation including pertinent history and assessment of airway and lung sounds. Refer to Airway Management and Ventilatory Support procedure 
+  - site row: Assist Ventilations / Airway Management: • Prepare for assisted ventilation if respiratory failure develops. • Bag-valve-mask with PEEP valve as indicated. • Consider supraglottic airway or endotrache
+  - pages searched: [123, 124]; free candidates: 6; query: adequate, airway, assist, assisted, bag-valve-mask, develops, endotracheal, failure, intubation, management, peep, prepare
+- `03_Pediatric_Stridor_PROC.md` row 9 (p.124 row 9, coverage 0.50) — coverage 0.50 (whole row 0.11) clears the 0.40 floor, but the row shares no drug name, no dose and no whole label head with that PEMS row, so the binding would rest on an ordinary word: For moderate to severe symptoms, also administer: ADULT: Methylprednisolone (Solu-Medrol) 125 mg IV/IO slow push. PEDIATRIC: Methylprednisolone (Solu-Medrol) 2 
+  - site row: IV/IO Access • Obtain IV or IO access for medication administration • Use largest appropriate catheter • Do NOT delay Epinephrine for IV/IO placement
+  - pages searched: [123, 124]; free candidates: 5; query: access, administration, catheter, delay, epinephrine, iv/io, largest, medication, placement
+- `03_Pneumothorax_PROC.md` row 3 (p.243 row 0, coverage 0.50) — coverage 0.50 (whole row 0.10) clears the 0.40 floor, but the row shares no drug name, no dose and no whole label head with that PEMS row, so the binding would rest on an ordinary word: Administer oxygen at 15 LPM (100% FiO2).
+  - site row: Oxygen Administration: • Administer Oxygen via nasal cannula or mask as needed to maintain SpO2 > 94%. • Titrate to patient condition.
+  - pages searched: [243]; free candidates: 1; query: 94 %, 94%, administration, cannula, condition, mask, nasal, oxygen, spo2, titrate
+- `03_Respiratory_Distress_PROC.md` row 9 (p.124 row 12, coverage 0.50) — coverage 0.50 (whole row 0.11) clears the 0.40 floor, but the row shares no drug name, no dose and no whole label head with that PEMS row, so the binding would rest on an ordinary word: Administer: ADULT: Furosemide (Lasix) 40 mg IV/IO slow push
+  - site row: IV/IO Access: • Establish vascular access for medication administration and fluid therapy • IO if IV unobtainable
+  - pages searched: [123, 124]; free candidates: 4; query: access, administration, establish, fluid, iv/io, medication, therapy, unobtainable, vascular
+- `03_Smoke_Inhalation_PROC.md` row 3 (p.153 row 2, coverage 0.50) — coverage 0.50 (whole row 0.04) clears the 0.40 floor, but the row shares no drug name, no dose and no whole label head with that PEMS row, so the binding would rest on an ordinary word: Follow Airway Management and Ventilatory Support procedure.
+  - site row: Airway Assessment: • Inspect for singed facial/nasal hairs • Examine face, nose, and mouth for burns or soot • Auscultate for stridor, hoarseness, or voice changes • Assess sputum for carbonaceous mat
+  - pages searched: [153, 239]; free candidates: 13; query: airway, assessment, auscultate, breathing, burns, carbonaceous, changes, effort, examine, face, facial/nasal, hairs
+

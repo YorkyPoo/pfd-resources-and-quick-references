@@ -1,0 +1,15 @@
+== lookup: Cold Exposure r9 (MC before AED) ==
+15 match(es), best first (threshold 0.45):
+  1.00  p.67 PEARLS #3  Contact Medical Control prior to use of AED
+== lookup: Cold Exposure r6 (active external rewarming) ==
+1 match(es), best first (threshold 0.45):
+  1.00  p.67 PEARLS #5  If the patient is alert and responsive, use active external rewarming with heat packs, warm blankets, etc
+== lookup: Pulmonary Edema r6-r8 (CPAP contraindications) ==
+1 match(es), best first (threshold 0.45):
+  0.75  p.245 CONTRAINDICATIONS #1  • Apnea / agonal respirations • Decreased level of consciousness (GCS ≤ 13) • Pneumothorax • Facial trauma, burns, or recent surgery • Penetrating neck and/or chest trauma • Active vomiting / severe nausea • Hypotension (SBP < 90 mmHg, MAP < 65) • Inability to tolerate tight fitting mask
+== lookup: Chest Pain r14 (right-sided 15-lead) ==
+9 match(es), best first (threshold 0.45):
+  1.00  p.108 PEARLS #3  Consider right-sided 12-Lead or 15-Lead ECG.
+  1.00  p.232 PEARLS #8  EMT-I and Paramedic: If there is >1 mm ST elevation in leads II, III, and/or V1, and the ECG reads STEMI/ACUTE MI, consider obtaining a right-sided (V4R) ECG. See diagram below for lead placement. Transmit and consult medical control prior to administering Nitroglycerine. o ST elevation > 1 mm in...
+  1.00  p.232 PEARLS #9  A Right-sided 12-Lead ECG (V4R) & Posterior 12-Lead ECG (V8 & V9) together constitute a 15-LeadECG: o V4R- (formerly V4)5th intercostal space at midclavicular line on the patient’s right side o V8 - (formerly V5) 6th intercostal space left posterior at midscapular line o V9 - (formerly V6) 6th in...
+EXIT=0
