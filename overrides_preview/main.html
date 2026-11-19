@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  {# PREVIEW BUILD ONLY (mkdocs.preview.yml -> overrides_preview).
+     Every page is noindex/nofollow so the draft cannot be crawled, and the
+     live site's service-worker registration + web manifest are deliberately
+     NOT emitted here: a second worker on the same origin could serve stale
+     protocol levels from cache. Offline capability is not required for a
+     draft review. Keep this file out of the live build — the live build uses
+     overrides/main.html. #}
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#16213e" />
+{% endblock %}
