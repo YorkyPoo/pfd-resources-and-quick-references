@@ -1,0 +1,13 @@
+# Planted-defect observations, owner ruling A1 fix (branch tip 362c39a)
+
+## 1. Endotracheal_Intubation r6 chip set back to P (the level this fix corrected)
+caused: EXIT=1
+ - procedures/Endotracheal_Intubation.md row 6: marker P != expected I (p.247#7)
+ - procedures/Endotracheal_Intubation.md row 6: PEMS column dots start at I, badge says P
+
+## 2. the CORRECTED flag marker removed from r2
+caused: EXIT=1
+ - procedures/Endotracheal_Intubation.md row 2: row-bindings.yaml flags this row as a correction but the chip does not carry the flag
+
+## 3. (control) only the CSS class of r6's chip changed, text left at I
+caused: EXIT=0 — the reader takes the chip's letter, not its class, so this is cosmetic and correctly not a level defect.
