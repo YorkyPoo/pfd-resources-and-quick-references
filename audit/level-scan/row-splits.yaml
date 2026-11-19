@@ -1,0 +1,81 @@
+# Durable record of the extracted rows the PDF parser fused across a printed
+# cell boundary. Read by scripts/pems_canonical.py (stage 1, before the table is
+# written) and checked by scripts/verify_pems_canonical.py.
+#
+# Why this file exists: the parser segments a page's badge column by matching
+# each printed badge's vertical centre to a block of text lines. Where two
+# printed cells sit close together that partition can hand a printed cell's last
+# lines to the *next* badge, so one extracted row carries two printed rows and
+# the badge of the second. The text is the source's and the badge is the
+# source's; only the boundary is wrong, and no single badge can repair it — a
+# `badge-overrides.yaml` entry would have to answer EMT AND I for one row.
+#
+# Schema (one entry per fused extraction row):
+#
+#   page / ordinal:  the extracted row to split, as it stands in pems_table.json
+#                    BEFORE any split is applied (page number, document ordinal).
+#   reason:          one line, mandatory.
+#   evidence:        the raster or other source that shows where the cells break.
+#                    Mandatory — a split is a claim about the printed page.
+#   parts:           the printed cells, in printed order. At least two.
+#     - badge:       the level PEMS prints in that cell's margin columns.
+#     - text:        that cell's own words.
+#     - merge: next  (optional, last part only) the cell continues into the row
+#                    that follows; carried onto it instead of becoming a row.
+#
+# The invariant `--check` enforces: the parts, concatenated, must reproduce the
+# extracted row's verbatim_text exactly. A split may move a boundary the
+# extractor misplaced; it may never invent, drop or reword the source's text.
+#
+# Only the rows the owner ruled on are listed. p.247 was measured in
+# audit/level-scan/fusion-impact.md (17 fused rows on 12 pages); the p.28 / p.104
+# fusions touch no published page and remain open.
+splits:
+
+  # Owner ruling A1, 2026-11-19 (SSG Decision Sheet §A): "Split fused row
+  # p247#3 -> EMT + I". The printed cell "Position the patient: Ear to sternal
+  # notch. / Maintain in-line cervical spine stabilization…" is badged EMT on
+  # both margins; the extractor gave its second sentence to the next badge.
+  - page: 247
+    ordinal: 3
+    reason: >-
+      The extractor starts this row at the second sentence of the printed EMT
+      cell ("Maintain in-line cervical spine stabilization…"), which ends in the
+      next printed cell. Split at that boundary so the EMT sentence carries EMT
+      and the preparation cell keeps the I it prints.
+    evidence: audit/level-scan/evidence/pems_p247.png
+    parts:
+      - badge: EMT
+        text: "Maintain in-line cervical spine stabilization if there is concern for trauma."
+      - badge: I
+        text: >-
+          Prepare equipment: o IV/IO access o ET tube of appropriate size + 1 size
+          below o Stylet or bougie o Oxygen ON o Suction ON o Laryngoscope o Back up
+          airway (e.g. Supraglottic airway device) o BVM with ETCO2 monitor attached
+          Orally intubate. Patients 12 years and older. Advance laryngoscope in the
+          midline, identifying airway structures progressively. Ensure
+
+  # Owner ruling A1: "Split fused row p247#7 -> I + P". Printed: the I cell
+  # ("If unsuccessful, reoxygenate… After two failed attempts…"), then the P cell
+  # ("If unable to intubate and unable to oxygenate, proceed immediately to
+  # Surgical Airway."), then the I cell "Verify placement." — which the extractor
+  # left at the end of the P row and which belongs to the row after it.
+  - page: 247
+    ordinal: 7
+    reason: >-
+      The extractor gave this row the last sentence of the printed I cell, the
+      whole P cell and the first sentence of the following I cell. Split at both
+      boundaries: I / P, with "Verify placement." carried onto the next row.
+    evidence: audit/level-scan/evidence/pems_p247.png
+    parts:
+      - badge: I
+        text: >-
+          After two failed attempts, airway must be managed by the most experienced
+          provider available.
+      - badge: P
+        text: >-
+          If unable to intubate and unable to oxygenate, proceed immediately to
+          Surgical Airway.
+      - badge: I
+        merge: next
+        text: "Verify placement."

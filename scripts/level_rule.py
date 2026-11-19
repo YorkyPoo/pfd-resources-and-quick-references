@@ -44,6 +44,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import html as html_lib
 import json
 import os
 import re
@@ -676,6 +677,21 @@ def load_bindings():
         if rec.get('cross_page') not in (None, True, False):
             raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} has '
                              f'cross_page={rec.get("cross_page")!r} — it must be true or false')
+        if 'flag' in rec:
+            # a CORRECTED row: the citation gives the chip, and the flag is what keeps
+            # the correction visible. It is not a second level and not an owner_required
+            # declaration (which is for a row PEMS does not badge at all).
+            if not str(rec.get('flag') or '').strip():
+                raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} has an '
+                                 f'empty `flag` — say what the reader must be told')
+            if rec.get('pems_page') is None or rec.get('pems_ordinal') is None:
+                raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} declares '
+                                 f'a `flag` without a citation — a flagged correction must '
+                                 f'still cite the level it was corrected to')
+            if status == 'owner_required':
+                raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} is both '
+                                 f'owner_required and `flag`ged — a row PEMS does not badge '
+                                 f'cannot carry a corrected source level')
         if rec.get('cross_page'):
             if not str(rec.get('evidence') or '').strip():
                 raise SystemExit(f'row-bindings.yaml: {rec["file"]} row {rec["row"]} is a '
@@ -1097,6 +1113,10 @@ def resolve(rel, rows, align, adjudicated, pems, bindings=None):
             if b.get('status') == 'owner_required':
                 extra['forced_owner'] = b['reason']
                 extra['owner_note'] = b.get('owner_note')
+            if b.get('flag'):
+                # a corrected row: the chip is the source badge, but the row's level
+                # changed under an owner ruling and the page must keep saying so
+                extra['flag'] = b['flag']
 
         source_row = pems.get(ptr) if ptr else None
         badge, bracketed = badge_of(source_row) if source_row else (None, False)
@@ -1112,7 +1132,7 @@ MC_REQ_MARK = ('<span class="lvl lvl-mc-req" title="this level performs the acti
                'brackets)">+MC</span>')
 
 
-def chip(level, bracketed=False, owner=False, mc_required=False):
+def chip(level, bracketed=False, owner=False, mc_required=False, flag=None):
     html = f'<span class="lvl lvl-{CHIP_CLASS.get(level, "na")}">{level}</span>'
     if mc_required:
         # A second marker, not a second level: the level still grants the skill, the
@@ -1126,6 +1146,12 @@ def chip(level, bracketed=False, owner=False, mc_required=False):
     if owner:
         html += ('<sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this '
                  'action\'s provider level">&#9873;</sup>')
+    if flag:
+        # A corrected row: the chip IS the level PEMS prints (so this is not
+        # OWNER_REQUIRED), but the row carried a different level until the owner ruled
+        # on it and the owner asked for that history to stay visible on the page.
+        title = html_lib.escape(str(flag), quote=True)
+        html += f'<sup class="lvl-fix" title="{title}">&#9873;</sup>'
     return html
 
 
@@ -1136,7 +1162,8 @@ def render_block(rows, note=None, banner=None, header=NEW_HEADER, div_open=DIV_O
     out += [div_open, '', header, '|:---:|---|---|']
     for r in rows:
         cell = r.get('level_cell') or chip(r['level'], r.get('bracketed', False),
-                                           r.get('owner', False), r.get('mc_required', False))
+                                           r.get('owner', False), r.get('mc_required', False),
+                                           r.get('flag'))
         out.append(f"| {r['ordinal']} | {cell} | {r['action']} |")
     out += ['', '</div>']
     if note:
@@ -1301,6 +1328,7 @@ def plan(rel):
             blocks[-1]['rows'].append({'ordinal': row['ordinal'], 'action': new_text,
                                        'level': level, 'bracketed': r['bracketed'],
                                        'owner': owner,
+                                       'flag': r['extra'].get('flag'),
                                        'mc_required': bool(r['extra'].get('mc_required'))
                                        and level not in ('PENDING', 'MC')})
             entry = {
@@ -1326,6 +1354,7 @@ def plan(rel):
                 'mc_required': bool(r['extra'].get('mc_required'))
                 and level not in ('PENDING', 'MC'),
                 'mc_evidence': r['extra'].get('mc_evidence'),
+                'flag_reason': r['extra'].get('flag'),
                 'basis': r['basis'],
                 'before': before,
                 'note': r['extra'].get('adjudication'),
@@ -1451,6 +1480,15 @@ def page_note_for(ledger):
                          ': no PEMS 2024 row authorises a provider level for this action. The level '
                          'shown is the one this page already published; it is not verified against '
                          'the source. See <code>audit/level-scan/level-rule-ledger.md</code>.')
+    fixed = [(e['row'], e.get('flag_reason')) for e in ledger if e.get('flag_reason')]
+    if fixed:
+        notes.append('&#9873; **CORRECTED** — ' +
+                     '; '.join(f"row {r}: {why}" for r, why in fixed) +
+                     '. The chip is the level PEMS 2024 prints on the cited page; the flag '
+                     'marks a level this page published differently until the owner ruled on '
+                     'it, and stays until the correction has been read against the printed '
+                     'page. The citation and the evidence are in '
+                     '<code>audit/level-scan/level-rule-ledger.md</code>.')
     mc_rows = [str(e['row']) for e in ledger if e.get('mc_required')]
     if mc_rows:
         label = ('row ' + mc_rows[0] if len(mc_rows) == 1
@@ -2797,6 +2835,21 @@ def check():
             if has_flag:
                 fails.append(f'{rel} row {row["ordinal"]}: chip carries the OWNER_REQUIRED flag '
                              f'but the row is cited to PEMS {r["ptr"]}')
+            # a CORRECTED row: the chip IS the cited badge, and the flag marks the
+            # history. Both halves are checked against row-bindings.yaml.
+            b_flag = (r['extra'].get('binding') or {}).get('flag')
+            has_fix = 'lvl-fix' in (row['level_cell'] or '')
+            if b_flag and not has_fix:
+                fails.append(f'{rel} row {row["ordinal"]}: row-bindings.yaml flags this row as '
+                             f'a correction but the chip does not carry the flag')
+            if has_fix and not b_flag:
+                fails.append(f'{rel} row {row["ordinal"]}: the chip carries the correction flag '
+                             f'but row-bindings.yaml does not declare one')
+            if b_flag:
+                e_fix = led.get((rel, str(row['ordinal'])))
+                if e_fix is None or e_fix.get('flag_reason') != b_flag:
+                    fails.append(f'{rel} row {row["ordinal"]}: the ledger does not record the '
+                                 f'binding\'s flag reason')
             want = resolved_level or r['badge']
             if level != want:
                 where = f' (p.{r["ptr"][0]}#{r["ptr"][1]})' if r['ptr'] else ''

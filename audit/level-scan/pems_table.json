@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T13:34:16",
+ "generated": "2026-11-19T17:25:59",
  "sources": {
   "bbox_xml": "audit/level-scan/.cache/pems_bbox.xml",
   "text_layer": "pems_chunks/PEMS2024_full.txt",
@@ -878,6 +878,44 @@
   "file": "audit/level-scan/badge-overrides.yaml",
   "count": 0,
   "applied": []
+ },
+ "row_splits": {
+  "file": "audit/level-scan/row-splits.yaml",
+  "count": 2,
+  "rows": [
+   {
+    "page": 247,
+    "ordinal": 3,
+    "part": 0,
+    "of": 2,
+    "badge": "EMT",
+    "verbatim_text": "Maintain in-line cervical spine stabilization if there is concern for trauma."
+   },
+   {
+    "page": 247,
+    "ordinal": 3,
+    "part": 1,
+    "of": 2,
+    "badge": "I",
+    "verbatim_text": "Prepare equipment: o IV/IO access o ET tube of appropriate size + 1 size below o Stylet or bougie o Oxygen ON o Suction ON o Laryngoscope o Back up airway (e.g. Supraglottic airway device) o BVM with ETCO2 monitor attached Orally intubate. Patients 12 years and older. Advance laryngoscope in the midline, identifying airway structures progressively. Ensure"
+   },
+   {
+    "page": 247,
+    "ordinal": 7,
+    "part": 0,
+    "of": 3,
+    "badge": "I",
+    "verbatim_text": "After two failed attempts, airway must be managed by the most experienced provider available."
+   },
+   {
+    "page": 247,
+    "ordinal": 7,
+    "part": 1,
+    "of": 3,
+    "badge": "P",
+    "verbatim_text": "If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway."
+   }
+  ]
  },
  "pems_docs": [
   {
@@ -10048,7 +10086,7 @@
    "pages": [
     247
    ],
-   "n_rows": 12,
+   "n_rows": 14,
    "section_continuations": [],
    "rows": [
     {
@@ -10116,7 +10154,34 @@
      "section_heading": "",
      "ordinal": 3,
      "section_ordinal": 3,
-     "verbatim_text": "Maintain in-line cervical spine stabilization if there is concern for trauma. Prepare equipment: o IV/IO access o ET tube of appropriate size + 1 size below o Stylet or bougie o Oxygen ON o Suction ON o Laryngoscope o Back up airway (e.g. Supraglottic airway device) o BVM with ETCO2 monitor attached Orally intubate. Patients 12 years and older. Advance laryngoscope in the midline, identifying airway structures progressively. Ensure",
+     "verbatim_text": "Maintain in-line cervical spine stabilization if there is concern for trauma.",
+     "x": 79.2,
+     "y": 326.8,
+     "badge_tokens": [
+      "EMT"
+     ],
+     "columns": {
+      "EMR": "",
+      "EMT": "•",
+      "A": "•",
+      "I": "•",
+      "P": "•"
+     },
+     "side": "both",
+     "row_split": {
+      "page": 247,
+      "ordinal": 3,
+      "part": 0,
+      "of": 2,
+      "evidence": "audit/level-scan/evidence/pems_p247.png"
+     }
+    },
+    {
+     "page": 247,
+     "section_heading": "",
+     "ordinal": 4,
+     "section_ordinal": 4,
+     "verbatim_text": "Prepare equipment: o IV/IO access o ET tube of appropriate size + 1 size below o Stylet or bougie o Oxygen ON o Suction ON o Laryngoscope o Back up airway (e.g. Supraglottic airway device) o BVM with ETCO2 monitor attached Orally intubate. Patients 12 years and older. Advance laryngoscope in the midline, identifying airway structures progressively. Ensure",
      "x": 79.2,
      "y": 326.8,
      "badge_tokens": [
@@ -10129,13 +10194,20 @@
       "I": "•",
       "P": "•"
      },
-     "side": "both"
+     "side": "both",
+     "row_split": {
+      "page": 247,
+      "ordinal": 3,
+      "part": 1,
+      "of": 2,
+      "evidence": "audit/level-scan/evidence/pems_p247.png"
+     }
     },
     {
      "page": 247,
      "section_heading": "",
-     "ordinal": 4,
-     "section_ordinal": 4,
+     "ordinal": 5,
+     "section_ordinal": 5,
      "verbatim_text": "tube and cuff are visualized passing through the vocal cords.",
      "x": 79.2,
      "y": 414.6,
@@ -10154,8 +10226,8 @@
     {
      "page": 247,
      "section_heading": "",
-     "ordinal": 5,
-     "section_ordinal": 5,
+     "ordinal": 6,
+     "section_ordinal": 6,
      "verbatim_text": "Orally Intubate. Patients < 12 years old.",
      "x": 73.8,
      "y": 440.1,
@@ -10174,8 +10246,8 @@
     {
      "page": 247,
      "section_heading": "",
-     "ordinal": 6,
-     "section_ordinal": 6,
+     "ordinal": 7,
+     "section_ordinal": 7,
      "verbatim_text": "If unsuccessful, reoxygenate between attempts with 100% Oxygen. Adjust positioning/technique/equipment as necessary prior to any further attempt.",
      "x": 79.2,
      "y": 468.1,
@@ -10194,9 +10266,36 @@
     {
      "page": 247,
      "section_heading": "",
-     "ordinal": 7,
-     "section_ordinal": 7,
-     "verbatim_text": "After two failed attempts, airway must be managed by the most experienced provider available. If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway. Verify placement.",
+     "ordinal": 8,
+     "section_ordinal": 8,
+     "verbatim_text": "After two failed attempts, airway must be managed by the most experienced provider available.",
+     "x": 79.2,
+     "y": 507.1,
+     "badge_tokens": [
+      "I"
+     ],
+     "columns": {
+      "EMR": "",
+      "EMT": "",
+      "A": "",
+      "I": "•",
+      "P": "•"
+     },
+     "side": "both",
+     "row_split": {
+      "page": 247,
+      "ordinal": 7,
+      "part": 0,
+      "of": 3,
+      "evidence": "audit/level-scan/evidence/pems_p247.png"
+     }
+    },
+    {
+     "page": 247,
+     "section_heading": "",
+     "ordinal": 9,
+     "section_ordinal": 9,
+     "verbatim_text": "If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway.",
      "x": 79.2,
      "y": 507.1,
      "badge_tokens": [
@@ -10209,14 +10308,21 @@
       "I": "",
       "P": "•"
      },
-     "side": "both"
+     "side": "both",
+     "row_split": {
+      "page": 247,
+      "ordinal": 7,
+      "part": 1,
+      "of": 3,
+      "evidence": "audit/level-scan/evidence/pems_p247.png"
+     }
     },
     {
      "page": 247,
      "section_heading": "",
-     "ordinal": 8,
-     "section_ordinal": 8,
-     "verbatim_text": "o",
+     "ordinal": 10,
+     "section_ordinal": 10,
+     "verbatim_text": "Verify placement. o",
      "x": 97.2,
      "y": 534.5,
      "badge_tokens": [
@@ -10234,8 +10340,8 @@
     {
      "page": 247,
      "section_heading": "",
-     "ordinal": 9,
-     "section_ordinal": 9,
+     "ordinal": 11,
+     "section_ordinal": 11,
      "verbatim_text": "Ensure the presence of continuous box-waveform capnography. o Auscultate for bilateral lung sounds & absence of gastric sounds Secure the tube. Use tape or commercial tube holder. Document the depth of placement. Administer analgesia/sedation, as needed for patient safety and comfort. Refer to",
      "x": 115.2,
      "y": 571.3,
@@ -10254,8 +10360,8 @@
     {
      "page": 247,
      "section_heading": "",
-     "ordinal": 10,
-     "section_ordinal": 10,
+     "ordinal": 12,
+     "section_ordinal": 12,
      "verbatim_text": "the Sedation Post Advanced Airway Protocol.",
      "x": 79.2,
      "y": 604.7,
@@ -10274,8 +10380,8 @@
     {
      "page": 247,
      "section_heading": "",
-     "ordinal": 11,
-     "section_ordinal": 11,
+     "ordinal": 13,
+     "section_ordinal": 13,
      "verbatim_text": "Monitor ET tube placement and ventilation with SpO2 and Continuous box waveform ETCO2",
      "x": 45.0,
      "y": 621.4,

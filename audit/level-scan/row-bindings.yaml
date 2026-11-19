@@ -266,8 +266,8 @@ bindings:
     row: 10
     status: owner_required
     reason: >-
-      PEMS prints endotracheal intubation as two age-split rows: p.247#3 (badge I) for
-      patients 12 and older and p.247#5 (badge P) for patients under 12. This site row invokes
+      PEMS prints endotracheal intubation as two age-split rows: p.247#4 (badge I) for
+      patients 12 and older and p.247#6 (badge P) for patients under 12. This site row invokes
       the procedure without an age limit, so no single badge is correct; the page's P is kept
       and flagged.
   - file: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
@@ -340,12 +340,12 @@ bindings:
   - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
     row: 11
     pems_page: 247
-    pems_ordinal: 5
+    pems_ordinal: 6
     cross_page: true
     quoted_row_text: >-
       Orally Intubate. Patients < 12 years old.
     evidence: >-
-      p.247#5 prints 'Orally Intubate. Patients < 12 years old.' badged P — the row this
+      p.247#6 prints 'Orally Intubate. Patients < 12 years old.' badged P — the row this
       page's own text scopes ('Intubation of children <12 requires Paramedic skill').
       Cross-page: p.123-124 print no intubation row.
     mc_required: true
@@ -439,8 +439,8 @@ bindings:
     row: 13
     status: owner_required
     reason: >-
-      No single PEMS 2024 row prints this advanced-airway bundle: adult intubation is p.247#3
-      (badge I), paediatric is p.247#5 (badge P) and surgical airway is p.269#0 (badge P).
+      No single PEMS 2024 row prints this advanced-airway bundle: adult intubation is p.247#4
+      (badge I), paediatric is p.247#6 (badge P) and surgical airway is p.269#0 (badge P).
       Three rows, two levels, so the page's P is kept and flagged.
   - file: protocols/respiratory/03_Pneumothorax_PROC.md
     row: 14
@@ -475,35 +475,35 @@ bindings:
   - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
     row: 3
     pems_page: 247
-    pems_ordinal: 11
+    pems_ordinal: 13
     cross_page: true
     quoted_row_text: >-
       Monitor ET tube placement and ventilation with SpO2 and Continuous box waveform ETCO2
     evidence: >-
-      p.247#11 prints 'Monitor ET tube placement and ventilation with SpO2 and Continuous box
+      p.247#13 prints 'Monitor ET tube placement and ventilation with SpO2 and Continuous box
       waveform ETCO2' badged EMT — the continuous SpO2/EtCO2 monitoring this row requires once
       the airway is placed. Cross-page: p.239 prints no monitoring row.
   - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
     row: 12
     pems_page: 247
-    pems_ordinal: 9
+    pems_ordinal: 11
     cross_page: true
     quoted_row_text: >-
       Ensure the presence of continuous box-waveform capnography.
     evidence: >-
-      p.247#9 prints 'Ensure the presence of continuous box-waveform capnography. Auscultate
+      p.247#11 prints 'Ensure the presence of continuous box-waveform capnography. Auscultate
       for bilateral lung sounds & absence of gastric sounds. Secure the tube ... Document the
       depth of placement.' badged I — the post-intubation verification step this row expands.
       Cross-page: p.239 prints no post-intubation care row.
   - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
     row: 13
     pems_page: 247
-    pems_ordinal: 11
+    pems_ordinal: 13
     cross_page: true
     quoted_row_text: >-
       Monitor ET tube placement and ventilation with SpO2 and Continuous box waveform ETCO2
     evidence: >-
-      p.247#11 prints 'Monitor ET tube placement and ventilation with SpO2 and Continuous box
+      p.247#13 prints 'Monitor ET tube placement and ventilation with SpO2 and Continuous box
       waveform ETCO2' badged EMT — the ongoing tube/ventilation monitoring this row expands.
       Cross-page: p.239 prints no ongoing-tube row.
   - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
@@ -672,19 +672,20 @@ bindings:
   - file: protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md
     row: 14
     pems_page: 247
-    pems_ordinal: 7
+    pems_ordinal: 9
     cross_page: true
     quoted_row_text: >-
-      After two failed attempts, airway must be managed by the most experienced provider
-      available.
+      If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway.
     evidence: >-
-      p.247#7 prints 'After two failed attempts, airway must be managed by the most
-      experienced provider available. If unable to intubate and unable to oxygenate, proceed
-      immediately to Surgical Airway.' badged P — the difficult-airway/surgical-airway
-      fallback this row prepares. Cross-page: p.239 prints no difficult-airway row.
+      p.247#9 prints 'If unable to intubate and unable to oxygenate, proceed immediately to
+      Surgical Airway.' badged P — the difficult-airway/surgical-airway fallback this row
+      prepares. The escalation that leads to it ('After two failed attempts, airway must be
+      managed by the most experienced provider available.') is the I-badged cell above it
+      (p.247#8); the citation is the P row, because that is the level this row publishes.
+      Cross-page: p.239 prints no difficult-airway row.
     mc_bracket_excluded: >-
       the page bracketed the I cell ([I]) while this row now publishes P: the cross-page
-      citation is p.247#7 ("proceed immediately to Surgical Airway", badge P), so the
+      citation is p.247#9 ("proceed immediately to Surgical Airway", badge P), so the
       bracketed level is no longer the level the row publishes and `+MC` beside P would attach
       the page's Intermediate restriction to a Paramedic grant.
   - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
@@ -1788,29 +1789,31 @@ bindings:
   - file: procedures/Endotracheal_Intubation.md
     row: 2
     pems_page: 247
-    pems_ordinal: 3
+    pems_ordinal: 2
+    flag: >-
+      chip I -> EMT, 2026-11-19 (owner ruling A1): PEMS prints both sentences of this row in
+      one EMT cell; it published I while the extractor's fused row was read as the source.
     evidence: >-
-      p.247#3 "Maintain in-line cervical spine stabilization if there is concern for
-      trauma." badge I — the C-spine clause this row is half made of. The row's other
-      sentence, "Position the patient: Ear to sternal notch", is p.247#2 at badge EMT.
-      Bundled-row rule (applied to every row that prints more than one PEMS level): the chip
-      is the HIGHEST level among the source rows it bundles, so an I-level sentence is never
-      published under an EMT chip. Chip moves EMT -> I (more restrictive, never an
-      over-grant); the EMT position step is the sub-step carried at that higher level.
+      p.247#2 "Position the patient: Ear to sternal notch." badge EMT, and p.247#3 "Maintain
+      in-line cervical spine stabilization if there is concern for trauma." badge EMT — the
+      second sentence of that same printed EMT cell, separated from the first by the
+      extractor and restored to it by audit/level-scan/row-splits.yaml (evidence render
+      audit/level-scan/evidence/pems_p247.png). Both halves of this row are printed at EMT,
+      so the chip is EMT; the bundled-row rule that made it I applied a fused row's badge
+      to text printed a cell earlier, which the 2026-11-19 owner ruling corrected.
 
   - file: procedures/Endotracheal_Intubation.md
     row: 3
     pems_page: 247
-    pems_ordinal: 3
+    pems_ordinal: 4
     evidence: >-
-      p.247#3 "Maintain in-line cervical spine stabilization if there is concern for trauma.
-      Prepare equipment: ... ET tube of appropriate size + 1 size below ... Laryngoscope ... Back
-      up airway" badge I.
+      p.247#4 "Prepare equipment: ... ET tube of appropriate size + 1 size below ...
+      Laryngoscope ... Back up airway" badge I.
 
   - file: procedures/Endotracheal_Intubation.md
     row: 4
     pems_page: 247
-    pems_ordinal: 3
+    pems_ordinal: 4
     evidence: >-
       Same PEMS row prints "Orally intubate. Patients 12 years and older." badge I. The page
       published P, so the chip moves P -> I: the source level is the authority, and the move is
@@ -1819,44 +1822,47 @@ bindings:
   - file: procedures/Endotracheal_Intubation.md
     row: 5
     pems_page: 247
-    pems_ordinal: 5
+    pems_ordinal: 6
     evidence: >-
-      p.247#5 "Orally Intubate. Patients < 12 years old." badge P.
+      p.247#6 "Orally Intubate. Patients < 12 years old." badge P.
 
   - file: procedures/Endotracheal_Intubation.md
     row: 6
     pems_page: 247
     pems_ordinal: 7
+    flag: >-
+      chip P -> I, 2026-11-19 (owner ruling A1): PEMS prints both sentences of this row in one
+      I cell; it published P while the extractor's fused row was read as the source.
     evidence: >-
-      p.247#7 "After two failed attempts, airway must be managed by the most experienced
-      provider available." badge P — the escalation this row's second sentence prints. The
-      row's first sentence, "re-oxygenate with 100% O2" between attempts, is printed at badge
-      I in p.247#6 ("If unsuccessful, reoxygenate between attempts with 100% Oxygen. Adjust
-      positioning/technique/equipment as necessary prior to any further attempt."). Under the
-      bundled-row rule the chip is the HIGHEST level among the bundled source rows, so P
-      carries the row and the I-level re-oxygenate sub-step is published at that higher level
-      (more restrictive, never an over-grant).
+      p.247#7 "If unsuccessful, reoxygenate between attempts with 100% Oxygen. Adjust
+      positioning/technique/equipment as necessary prior to any further attempt." badge I,
+      and p.247#8 "After two failed attempts, airway must be managed by the most experienced
+      provider available." badge I — the same printed I cell, split by the extractor and
+      restored by audit/level-scan/row-splits.yaml (evidence render
+      audit/level-scan/evidence/pems_p247.png). Both of this row's sentences are printed at
+      I. The P badge that made it P belongs to the next printed cell (p.247#9, surgical
+      airway), which is Endotracheal_Intubation row 7.
 
   - file: procedures/Endotracheal_Intubation.md
     row: 7
     pems_page: 247
-    pems_ordinal: 7
+    pems_ordinal: 9
     evidence: >-
-      p.247#7 "If unable to intubate and unable to oxygenate, proceed immediately to Surgical
+      p.247#9 "If unable to intubate and unable to oxygenate, proceed immediately to Surgical
       Airway." badge P.
 
   - file: procedures/Endotracheal_Intubation.md
     row: 8
     pems_page: 247
-    pems_ordinal: 9
+    pems_ordinal: 11
     evidence: >-
-      p.247#9 "Ensure the presence of continuous box-waveform capnography. o Auscultate for
+      p.247#11 "Ensure the presence of continuous box-waveform capnography. o Auscultate for
       bilateral lung sounds & absence of gastric sounds" badge I.
 
   - file: procedures/Endotracheal_Intubation.md
     row: 9
     pems_page: 247
-    pems_ordinal: 9
+    pems_ordinal: 11
     evidence: >-
       Same PEMS row also prints "Secure the tube. Use tape or commercial tube holder. Document the
       depth of placement." badge I.
@@ -1864,10 +1870,10 @@ bindings:
   - file: procedures/Endotracheal_Intubation.md
     row: 10
     pems_page: 247
-    pems_ordinal: 9
+    pems_ordinal: 11
     evidence: >-
       Same PEMS row also prints "Administer analgesia/sedation, as needed for patient safety and
-      comfort. Refer to" (the sentence continues on p.247#10 with "the Sedation Post Advanced
+      comfort. Refer to" (the sentence continues on p.247#12 with "the Sedation Post Advanced
       Airway Protocol."). badge I. The page published P, so the chip moves P -> I and the move is
       listed for owner review.
 

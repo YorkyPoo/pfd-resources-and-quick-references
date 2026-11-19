@@ -41,6 +41,11 @@ MANIFEST = [
      "that split a PEMS row equals the PEMS badge level and every level above "
      "it, each listed row still exists (in either table format), and each row's "
      "chip is the level the conversion ledger records for it"),
+    ("c2.row_splits",
+     "row-splits.yaml: every declared fused-row split is applied by "
+     "pems_table.json, no applied split is undeclared, and the declared parts "
+     "reproduce a row a fresh parse of the page produces (no word added or "
+     "dropped)"),
     ("c2.badge_overrides",
      "badge-overrides.yaml: every override names an existing PEMS row, keeps a "
      "reason and evidence, cannot drift from the PDF token, and is actually "
@@ -231,6 +236,76 @@ def check_split_map(pems_row: dict) -> None:
               f"{{{fmt_levels(exp)}}}; site rows publish {{{fmt_levels(union)}}} "
               f"({'; '.join(producers)})")
 
+
+
+def check_row_splits(table: dict) -> None:
+    """row-splits.yaml is the durable home of a fused-row repair.
+
+    The extractor can hand a printed cell's last lines to the next printed badge;
+    one extracted row then carries two badges' worth of text. A split moves that
+    boundary and nothing else, so it is checked the way an override is: the file
+    must parse strictly, every declared split must be applied by pems_table.json,
+    no applied split may be missing from the file, and — the check that makes the
+    claim about the source rather than about our own output — the declared parts,
+    concatenated, must reproduce the row the PDF parser produces on a fresh parse
+    of that page.
+    """
+    import re as _re
+    path = os.path.join(OUT, "row-splits.yaml")
+    check(os.path.exists(path), "row-splits.yaml exists")
+    if not os.path.exists(path):
+        return
+    splits, _ = C._load_row_splits()
+    norm = lambda s: _re.sub(r"\s+", " ", str(s or "")).strip()
+    stored = (table.get("row_splits") or {}).get("rows") or []
+    check((table.get("row_splits") or {}).get("count") == len(splits),
+          f"pems_table.json records the {len(splits)} declared row split(s) "
+          f"({(table.get('row_splits') or {}).get('count')} recorded)")
+
+    xml = P._read_pdf_xml(False)
+    fresh: dict[int, dict] = {}
+    for pno, m in enumerate(P.PAGE_RE.finditer(xml), 1):
+        if pno in {int(p) for p, _o in splits}:
+            body = m.group(3)
+            fresh[pno] = C.parse_page(pno, body, C.page_title(body))
+
+    applied_keys = {(r["page"], r["ordinal"]) for r in stored}
+    stale = applied_keys - set(splits)
+    check(not stale, f"no split row in pems_table.json lacks a row-splits.yaml entry "
+                     f"({sorted(stale)} undeclared)")
+    for (page, ordn), sp in sorted(splits.items()):
+        label = f"p.{page} #{ordn}"
+        parts = sp["parts"]
+        declared = [p for p in parts if p.get("merge") != "next"]
+        got = [r for r in stored if (r["page"], r["ordinal"]) == (page, ordn)]
+        check(len(got) == len(declared),
+              f"split {label}: pems_table.json carries {len(got)} row(s) for the "
+              f"{len(declared)} named printed cell(s)")
+        if [r["part"] for r in got] != sorted(r["part"] for r in got):
+            check(False, f"split {label}: the stored parts are out of printed order")
+        check([r["badge"] for r in sorted(got, key=lambda r: r["part"])]
+              == [p["badge"] for p in declared],
+              f"split {label}: the stored badges are the declared ones "
+              f"({[p['badge'] for p in declared]})")
+        check([norm(r["verbatim_text"]) for r in sorted(got, key=lambda r: r["part"])]
+              == [norm(p["text"]) for p in declared],
+              f"split {label}: the stored text is the declared text")
+        # the claim is about the source: the parts must rebuild a row the PDF
+        # parser produces from the page right now
+        joined = norm(" ".join(p["text"] for p in parts))
+        fresh_texts = [norm(r["verbatim_text"]) for r in (fresh.get(page) or {}).get("rows") or []]
+        check(joined in fresh_texts,
+              f"split {label}: the declared parts reproduce a row a fresh parse of "
+              f"p.{page} produces (no word added or dropped)")
+        # a merged part must survive on the row that follows, not vanish
+        mids = [p["text"] for p in parts if p.get("merge") == "next"]
+        if mids:
+            following = " ".join(norm(r["verbatim_text"]) for d in table["pems_docs"]
+                                 for r in d["rows"]
+                                 if r["page"] == page and r["ordinal"] > ordn)
+            check(all(norm(t) in following for t in mids),
+                  f"split {label}: the {len(mids)} merged part(s) are carried onto a later "
+                  f"row of p.{page} (not dropped)")
 
 
 def check_badge_overrides(table: dict, pems_row: dict) -> None:
@@ -718,6 +793,9 @@ def main() -> int:
     # ---- C2e: durable badge overrides + the widened re-check.
     # A badge resolution that lives only in an adjudication output is not
     # durable; it must live where the parser reads it.
+    section("c2.row_splits")
+    check_row_splits(table)
+
     section("c2.badge_overrides")
     check_badge_overrides(table, pems_row)
 

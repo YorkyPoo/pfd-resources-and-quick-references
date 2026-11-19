@@ -73,6 +73,7 @@ CACHE = os.path.join(OUTDIR, ".cache")
 ROWS_CACHE = os.path.join(CACHE, "pems_rows.jsonl")
 TABLE_JSON = os.path.join(OUTDIR, "pems_table.json")
 OVERRIDES_YAML = os.path.join(OUTDIR, "badge-overrides.yaml")
+SPLITS_YAML = os.path.join(OUTDIR, "row-splits.yaml")
 ALIGN_JSON = os.path.join(OUTDIR, "alignment.json")
 MISSING_MD = os.path.join(OUTDIR, "missing-rows.md")
 AMBIG_MD = os.path.join(OUTDIR, "ambiguous-rows.md")
@@ -657,7 +658,10 @@ def decide(pg: dict, exc: dict, docs: list[dict]) -> dict:
 
 def _row_record(r: dict) -> dict:
     rec = {k: r.get(k) for k in ("page", "section_heading", "ordinal", "section_ordinal",
-                                 "verbatim_text", "x", "y", "badge_tokens", "columns", "side")}
+                                 "verbatim_text", "x", "y", "badge_tokens", "columns", "side",
+                                 "row_split")}
+    if rec.get("row_split") is None:
+        rec.pop("row_split")
     if r.get("section_continued"):
         # the heading printed above this row is on an earlier page: the section
         # resumes here without reprinting it (see _merge_page_break_sections)
@@ -669,6 +673,11 @@ def stage1(verbose: bool = False) -> dict:
     os.makedirs(CACHE, exist_ok=True)
     pages = parse_pdf()
     docs = build_docs(pages)
+    splits, _ = _load_row_splits()
+    if splits:
+        applied = _apply_row_splits(docs, splits)
+        if verbose:
+            print(f"  row splits: {len(applied)} fused row(s) split")
     os.makedirs(OUTDIR, exist_ok=True)
     # every document's rows, flattened, for the sibling pipeline stages
     with open(ROWS_CACHE, "w", encoding="utf-8") as fh:
@@ -789,6 +798,145 @@ def _apply_overrides(rows: list[dict], overrides: dict,
     return out
 
 
+def _load_row_splits() -> tuple[dict, list[str]]:
+    """row-splits.yaml -> ({(page, ordinal): entry}, problems).
+
+    The parser segments a page's badge column by matching each badge's vertical
+    centre to a block of text lines. When two printed cells are only a few points
+    apart that partition can put a printed cell's last lines under the *next*
+    badge: the extracted row then carries two printed rows and the badge of the
+    second. The text is real, the badge is real; only the boundary is wrong, and
+    no single badge can correct it.
+
+    A split names such a row and the printed cells it fuses, in order, each with
+    the badge PEMS prints on it. The parts must reproduce the extracted text
+    exactly — a split may move a boundary the extractor misplaced, never invent or
+    drop words. A part marked `merge: next` belongs to the row that follows
+    (the printed cell continues there), so it is carried onto that row instead of
+    becoming a row of its own.
+    """
+    import yaml
+    if not os.path.exists(SPLITS_YAML):
+        return {}, []
+    doc = yaml.safe_load(open(SPLITS_YAML, encoding="utf-8")) or {}
+    raw = doc.get("splits")
+    if raw is None:
+        return {}, []
+    if not isinstance(raw, list):
+        raise SystemExit("row-splits.yaml: `splits` must be a list")
+    problems: list[str] = []
+    out: dict = {}
+    for e in raw:
+        if not isinstance(e, dict):
+            problems.append(f"entry is not a mapping: {e!r}")
+            continue
+        page, ordn = e.get("page"), e.get("ordinal")
+        label = f"p.{page} #{ordn}"
+        if not isinstance(page, int) or not isinstance(ordn, int):
+            problems.append(f"entry without an integer page/ordinal: {e!r}")
+            continue
+        for fld in ("reason", "evidence"):
+            if not str(e.get(fld) or "").strip():
+                problems.append(f"{label}: `{fld}` is mandatory")
+        parts = e.get("parts")
+        if not isinstance(parts, list) or len(parts) < 2:
+            problems.append(f"{label}: `parts` must list at least two printed cells")
+            parts = []
+        for i, p in enumerate(parts):
+            if not isinstance(p, dict):
+                problems.append(f"{label} part {i}: not a mapping")
+                continue
+            if str(p.get("badge") or "") not in LEVELS:
+                problems.append(f"{label} part {i}: badge {p.get('badge')!r} is not one of "
+                                + "/".join(LEVELS))
+            if not str(p.get("text") or "").strip():
+                problems.append(f"{label} part {i}: `text` is mandatory")
+            if p.get("merge") not in (None, "next"):
+                problems.append(f"{label} part {i}: `merge` may only be \"next\"")
+            if p.get("merge") and i != len(parts) - 1:
+                problems.append(f"{label} part {i}: only the last part may merge into the "
+                                f"next row")
+        key = (page, ordn)
+        if key in out:
+            problems.append(f"{label}: listed twice")
+        out[key] = e
+    if problems:
+        raise SystemExit("row-splits.yaml is invalid:\n  " + "\n  ".join(problems))
+    return out, []
+
+
+def _apply_row_splits(docs: list[dict], splits: dict) -> list[dict]:
+    """Split the declared fused rows, then renumber the document's rows.
+
+    `ordinal` is the document-wide index and `section_ordinal` the index within
+    the section run; both are recomputed exactly as `build_docs` assigns them, so
+    the table keeps the shape every consumer already expects.
+    """
+    if not splits:
+        return []
+    applied: list[dict] = []
+    remaining = set(splits)
+    for d in docs:
+        rows = d["rows"]
+        if not any((r["page"], r["ordinal"]) in splits for r in rows):
+            continue
+        out: list[dict] = []
+        prepend = ""
+        touched = False
+        for r in rows:
+            if prepend:
+                r = dict(r)
+                r["verbatim_text"] = re.sub(r"\s+", " ", prepend + " " + r["verbatim_text"]).strip()
+                prepend = ""
+            sp = splits.get((r["page"], r["ordinal"]))
+            if sp is None:
+                out.append(r)
+                continue
+            touched = True
+            remaining.discard((r["page"], r["ordinal"]))
+            parts = sp["parts"]
+            joined = re.sub(r"\s+", " ", " ".join(p["text"] for p in parts)).strip()
+            stored = re.sub(r"\s+", " ", r["verbatim_text"]).strip()
+            if joined != stored:
+                raise SystemExit(
+                    f"row-splits.yaml: p.{r['page']} #{r['ordinal']} — the declared parts do "
+                    f"not reproduce the extracted row text.\n    declared: {joined}\n    "
+                    f"extracted: {stored}")
+            emitted = []
+            for i, p in enumerate(parts):
+                if p.get("merge") == "next":
+                    prepend = p["text"]
+                    continue
+                nr = dict(r)
+                nr["verbatim_text"] = p["text"]
+                nr["badge_tokens"] = [p["badge"]]
+                nr["columns"] = _columns([p["badge"]])
+                nr["row_split"] = {"page": r["page"], "ordinal": r["ordinal"],
+                                   "part": i, "of": len(parts),
+                                   "evidence": sp.get("evidence")}
+                emitted.append(nr)
+            out.extend(emitted)
+            applied.append({"page": r["page"], "ordinal": r["ordinal"],
+                            "badges": [p["badge"] for p in parts],
+                            "evidence": sp.get("evidence"), "reason": sp.get("reason")})
+        if prepend:
+            raise SystemExit(f"row-splits.yaml: p.{out[-1]['page']} — a `merge: next` part "
+                            f"has no following row to merge into")
+        if touched:
+            d["rows"] = out
+            sec, cnt = None, 0
+            for i, r in enumerate(d["rows"]):
+                r["ordinal"] = i
+                if r["section_heading"] != sec:
+                    sec, cnt = r["section_heading"], 0
+                r["section_ordinal"] = cnt
+                cnt += 1
+    if remaining:
+        raise SystemExit("row-splits.yaml names PEMS rows the parser did not produce: "
+                         f"{sorted(remaining)}")
+    return applied
+
+
 def _write_table(decisions: list[dict], docs: list[dict], pages: dict[int, dict],
                  exc: dict, repairs: dict) -> dict:
     counts: dict[str, int] = {}
@@ -811,6 +959,12 @@ def _write_table(decisions: list[dict], docs: list[dict], pages: dict[int, dict]
         # silent no-op, and the next reader believes the badge was corrected
         raise SystemExit("badge-overrides.yaml names PEMS rows the parser did not "
                          f"produce: {sorted(remaining)}")
+    splits, _ = _load_row_splits()
+    split_rows = [{"page": r["row_split"]["page"], "ordinal": r["row_split"]["ordinal"],
+                   "part": r["row_split"]["part"], "of": r["row_split"]["of"],
+                   "badge": (r["badge_tokens"] or [None])[0],
+                   "verbatim_text": r["verbatim_text"]}
+                  for d in doc_records for r in d["rows"] if r.get("row_split")]
     out = {
         "generated": _dt.datetime.now().isoformat(timespec="seconds"),
         "sources": {"bbox_xml": os.path.relpath(P.CACHE, REPO),
@@ -823,6 +977,9 @@ def _write_table(decisions: list[dict], docs: list[dict], pages: dict[int, dict]
         "badge_overrides": {"file": os.path.relpath(OVERRIDES_YAML, REPO),
                             "count": len(overrides),
                             "applied": applied},
+        "row_splits": {"file": os.path.relpath(SPLITS_YAML, REPO),
+                       "count": len(splits),
+                       "rows": split_rows},
         "pems_docs": doc_records,
         "stale_exception_paths": sorted(repairs),
         "pems_pages_parsed": sorted({p for d in docs for p in d["pages"]}),
