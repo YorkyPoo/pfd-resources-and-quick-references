@@ -311,14 +311,61 @@ rulings:
       BLS-scope; the advanced-airway step is r5/r6, cited at I. Level unchanged (EMT).
 
   # ---------------------------------------------------------------------------
-  # Owner instruction 2026-11-20 (row-structure pass). Three rows could not be CITED
-  # and are NOT owner rulings either: PEMS prints the action inside a row whose printed
-  # badge belongs to a different clause and scopes this one in the row's own words
-  # ("(as determined by EMT-I or P)", "I/P only"). No owner statement about those levels
-  # exists, so they are not listed here — a ruling must quote the owner's words. They are
-  # recorded as `owner_required` in row-bindings.yaml with the row that prints the action
-  # and why its badge cannot carry it, and the row-splits entry says `source: owner_required`.
-  # (2026-11-20 later ruling: `owner_ruled` was dropped from all three for exactly this
-  # reason — a level the owner never spoke to must not be attributed to him.)
+  # 2026-11-20 — DERIVED, not ruled. These two rows are the ONLY ones the ladder rule
+  # settles outright, so they are recorded as `derived`: PEMS prints the action inside a
+  # row badged for a different clause and scopes it in that row's own words
+  # ("as determined by EMT-I or P"). The owner has never spoken about these levels and
+  # none is attributed to him. The chip is the LOWEST level the ladder names — computed
+  # from `derive.ladder`, which `--check` re-reads as a verbatim span of the cited row —
+  # and every level above it may also perform the action (the owner's standing rule,
+  # 2026-11-20: "You just have to put the lowest provider level and everyone above can do
+  # it too"). A `derived` row is NOT an open decision and never appears on the
+  # owner-facing decisions page.
+  #
+  # The third row of that same shape, Asthma r8a (PEEP titration), is NOT derivable: the
+  # two printed rows disagree (one scopes it I/P, the other badges it at every level) and
+  # it is a bundle, so it stays `owner_required` in row-bindings.yaml until card
+  # t_peep_i lands. Pulmonary Edema r9 is the same question and stays flagged too.
+  # ---------------------------------------------------------------------------
+
+  - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
+    row: 8a
+    level: LOWEST
+    status: derived
+    date: "2026-11-20"
+    rule: lowest_printed_level
+    action: "Interpret the rhythm: VF or VT (shockable), or asystole or PEA (non-shockable)."
+    derive:
+      rule: lowest_printed_level
+      pems_page: 235
+      pems_ordinal: 4
+      quote: "or rhythm is VF or VT (as determined by EMT-I or P)"
+      ladder: "EMT-I or P"
+    note: >-
+      Derived from the source's own words, NOT ruled by the owner. p.235#4 prints
+      "rhythm is VF or VT (as determined by EMT-I or P)" (and the same scoping for
+      asystole/PEA, and again word for word at p.263#4), so the levels that determine the
+      rhythm are EMT-I and Paramedic. Lowest named = I, which is the chip; every level
+      above I may also perform it by the owner's ladder rule. The printed badge on that
+      row (EMR) belongs to the AED/analyse clause, which is row 8 with its own binding.
+
+  - file: protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
+    row: 4a
+    level: LOWEST
+    status: derived
+    date: "2026-11-20"
+    rule: lowest_printed_level
+    action: "Interpret the rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shockable)."
+    derive:
+      rule: lowest_printed_level
+      pems_page: 235
+      pems_ordinal: 4
+      quote: "or rhythm is VF or VT (as determined by EMT-I or P)"
+      ladder: "EMT-I or P"
+    note: >-
+      As Asystole r8a: same action, same scoping sentence in the same PEMS row (p.235#4,
+      repeated at p.263#4). Derived, not ruled — the source names EMT-I and Paramedic, so
+      the chip is the lowest of them (I) and every level above may perform it. The AED
+      half of the split row is row 4, cited at EMR.
 
 

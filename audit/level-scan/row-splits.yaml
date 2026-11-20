@@ -108,7 +108,7 @@ site_splits:
           joules.
       - row: 8a
         level: I
-        source: owner_required
+        source: derived
         pems: p.235#4
         text: >-
           Interpret the rhythm: VF or VT (shockable), or asystole or PEA (non-shockable).
@@ -139,7 +139,7 @@ site_splits:
           every **2 minutes**; the AED announces whether a shock is advised.
       - row: 4a
         level: I
-        source: owner_required
+        source: derived
         pems: p.235#4
         text: >-
           • Interpret the rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shockable).
