@@ -17,13 +17,7 @@
       "built_at": "2026-11-20T04:53:33Z",
       "description": "Provider levels relabelled R | B | A | I | P",
       "sha": "05addb26252f6259debff424aa83b68467bea4ab"
-    },
-    "smoke": {
-      "branch": "main",
-      "built_at": "2026-11-20T04:54:25Z",
-      "description": "Temporary slot used to prove single-slot teardown",
-      "sha": "98189044c7e1acd89c2fd48e0ab4eb5be06a02cb"
     }
   },
-  "updated_at": "2026-11-20T04:54:25.206512+00:00"
+  "updated_at": "2026-11-20T04:54:29.975083+00:00"
 }
