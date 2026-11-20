@@ -24,11 +24,17 @@
 
 <section class="pfd-zone" markdown="1">
 
-<p class="pfd-cap">Clinical protocols</p>
+**[Clinical protocols](ems/index.md)**{: .pfd-cap .pfd-cap--link }
 
 <div class="pfd-scroller pfd-scroller--ems" markdown="1">
 
-[All EMS SOPs](ems/index.md#ems-operations-sops){ .pfd-chip .pfd-chip--all }
+[EMS Clinical Hub](ems/index.md){ .pfd-chip .pfd-chip--all }
+[Procedures](resources/ems.md#procedures){ .pfd-chip .pfd-chip--ems }
+[Controlled Substances](sops/ems/EMS-2100-Controlled-Substances.md){ .pfd-chip .pfd-chip--ems }
+[Refusals / AMA](protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md){ .pfd-chip .pfd-chip--ems }
+[Diversion](protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md){ .pfd-chip .pfd-chip--ems }
+[Documentation](sops/ems/EMS-1700-Mandatory-Reporting.md){ .pfd-chip .pfd-chip--ems }
+[MCI](sops/emergency-operations/EO-100-Incident-Management-System.md){ .pfd-chip .pfd-chip--ems }
 [Cardiac](ems/index.md#cardiac){ .pfd-chip .pfd-chip--ems }
 [Respiratory](ems/index.md#respiratory){ .pfd-chip .pfd-chip--ems }
 [Trauma](ems/index.md#trauma){ .pfd-chip .pfd-chip--ems }
@@ -37,16 +43,20 @@
 
 </div>
 
-<p class="pfd-cap">Fire EOs &amp; field guides</p>
+**[Fire EOs &amp; field guides](resources/fire.md)**{: .pfd-cap .pfd-cap--link }
 
 <div class="pfd-scroller pfd-scroller--fire" markdown="1">
 
-[Emergency Ops](resources/fire.md#emergency-operations){ .pfd-chip .pfd-chip--fire }
+[All Fire SOPs](resources/fire.md){ .pfd-chip .pfd-chip--all }
+[Emergency Operations](resources/fire.md#emergency-operations){ .pfd-chip .pfd-chip--fire }
 [Field References](resources/fire.md#field-references){ .pfd-chip .pfd-chip--fire }
 [Strategies](resources/fire.md#strategies){ .pfd-chip .pfd-chip--fire }
 [Frameworks](resources/fire.md#frameworks){ .pfd-chip .pfd-chip--fire }
 [Special Operations](resources/fire.md#special-operations){ .pfd-chip .pfd-chip--fire }
 [Equipment & Apparatus](resources/fire.md#equipment-apparatus){ .pfd-chip .pfd-chip--fire }
+[Safety & Health](resources/fire.md#safety-health){ .pfd-chip .pfd-chip--fire }
+[General Administration](resources/fire.md#general-administration){ .pfd-chip .pfd-chip--fire }
+[Public Relations](resources/fire.md#public-relations){ .pfd-chip .pfd-chip--fire }
 
 </div>
 
@@ -56,16 +66,17 @@
 
 <div class="pfd-secondary" markdown="1">
 
-**[City &amp; Personnel Policies](station/policies.md)**{: .pfd-cap .pfd-cap--link }
+**[City &amp; personnel policies](station/policies.md)**{: .pfd-cap .pfd-cap--link }
 
-<div class="pfd-chips" markdown="1">
+<div class="pfd-scroller pfd-scroller--admin" markdown="1">
 
+[City &amp; Personnel Policies](station/policies.md){ .pfd-chip .pfd-chip--admin }
+[All policies](station/policies.md#full-policy-list){ .pfd-chip .pfd-chip--admin }
 [Hazardous Weather](personnel-policies/policies/26-hazardous-weather.md){ .pfd-chip .pfd-chip--admin }
 [Overtime / Comp Time](personnel-policies/policies/13-overtime-compensatory-time.md){ .pfd-chip .pfd-chip--admin }
 [Leave](personnel-policies/policies/15-annual-leave-vrs-plan-1-plan-2-and.md){ .pfd-chip .pfd-chip--admin }
 [Exposure / Infection Control](sops/ems/EMS-1900-Incident-Infection-Control.md){ .pfd-chip .pfd-chip--admin }
 [City HR Manual](personnel-policies/index.md){ .pfd-chip .pfd-chip--admin }
-[All policies](station/policies.md){ .pfd-chip .pfd-chip--admin }
 
 </div>
 
@@ -73,10 +84,14 @@
 
 <div class="pfd-secondary" markdown="1">
 
-**[Crew Links &amp; Portals](resources/links.md)**{: .pfd-cap .pfd-cap--link }
+**[Crew links &amp; portals](resources/links.md)**{: .pfd-cap .pfd-cap--link }
 
-<div class="pfd-chips" markdown="1">
+<div class="pfd-scroller pfd-scroller--util" markdown="1">
 
+[All Links](resources/links.md){ .pfd-chip .pfd-chip--util }
+[ESO Suite](https://www.esosuite.net/login/Va00340){ .pfd-chip .pfd-chip--util }
+[LogRx](https://logrx.com/){ .pfd-chip .pfd-chip--util }
+[VendNovation](https://ems.vendnovation.com/){ .pfd-chip .pfd-chip--util }
 [Maps & Danger](resources/links.md#response){ .pfd-chip .pfd-chip--util }
 [Run Docs](resources/links.md#doc){ .pfd-chip .pfd-chip--util }
 [Apparatus](resources/links.md#readiness){ .pfd-chip .pfd-chip--util }

@@ -94,9 +94,9 @@ SCENE_TOOLS = [
      "Initial company roles", "FIRE", "arrive"),
 ]
 
-# The two homepage scrollers (owner ruling: four horizontal scrollers that mirror the
-# bottom nav are the defect, not the decoration). Category chips land on the EMS
-# clinical hub's own sections, so a paramedic reads the protocol, not the sitemap.
+# The four homepage scrollers (owner card t_a650f9ea: "first button is the section,
+# then real destinations"). Each strip leads with the hub it belongs to, so the first
+# tap is never a surprise, and every chip after it carries its own URL.
 EMS_CLINICAL_STRIP = [
     ("Cardiac", EMS_CLINICAL_HUB + "#cardiac"),
     ("Respiratory", EMS_CLINICAL_HUB + "#respiratory"),
@@ -104,14 +104,19 @@ EMS_CLINICAL_STRIP = [
     ("Medical", EMS_CLINICAL_HUB + "#medical"),
     ("Pediatric", EMS_CLINICAL_HUB + "#pediatric"),
 ]
-EMS_SOP_PILL = ("All EMS SOPs", EMS_CLINICAL_HUB + "#ems-operations-sops")
+EMS_HUB_CHIP = ("EMS Clinical Hub", EMS_CLINICAL_HUB)
+EMS_PROCEDURES_CHIP = ("Procedures", "resources/ems.md#procedures")
+FIRE_HUB_CHIP = ("All Fire SOPs", FIRE_HUB)
 FIRE_STRIP = [
-    ("Emergency Ops", FIRE_HUB + "#emergency-operations"),
+    ("Emergency Operations", FIRE_HUB + "#emergency-operations"),
     ("Field References", FIRE_HUB + "#field-references"),
     ("Strategies", FIRE_HUB + "#strategies"),
     ("Frameworks", FIRE_HUB + "#frameworks"),
     ("Special Operations", FIRE_HUB + "#special-operations"),
     ("Equipment & Apparatus", FIRE_HUB + "#equipment-apparatus"),
+    ("Safety & Health", FIRE_HUB + "#safety-health"),
+    ("General Administration", FIRE_HUB + "#general-administration"),
+    ("Public Relations", FIRE_HUB + "#public-relations"),
 ]
 
 # Bottom utility row, left column: the five policies a crew actually reaches for.
@@ -131,9 +136,14 @@ POLICY_TILES = [
      "City HR policy manual"),
 ]
 
-# Bottom utility row, right column: the station launchpad anchors (hand-written
-# {#ids} in links.md, so a title rename cannot drift them).
+# Bottom utility row, right column: the portals a crew actually opens. The first three
+# are the systems themselves (their own hosts, titled as the sites title themselves);
+# the rest are the links.md group anchors (hand-written {#ids} in links.md, so a title
+# rename cannot drift them) plus the station hub.
 CREW_CHIPS = [
+    ("ESO Suite", "https://www.esosuite.net/login/Va00340"),
+    ("LogRx", "https://logrx.com/"),
+    ("VendNovation", "https://ems.vendnovation.com/"),
     ("Maps & Danger", LINKS_PAGE + "#response"),
     ("Run Docs", LINKS_PAGE + "#doc"),
     ("Apparatus", LINKS_PAGE + "#readiness"),
@@ -141,6 +151,7 @@ CREW_CHIPS = [
     ("City", LINKS_PAGE + "#city"),
     ("Station Hub", STATION_HUB),
 ]
+LINKS_HUB_CHIP = ("All Links", LINKS_PAGE)
 
 # EMS clinical hub categories, in the order a call is triaged.
 EMS_CATEGORIES = [
@@ -175,6 +186,18 @@ EMS_OPS = [
     ("Mass Casualty / IMS", "sops/emergency-operations/EO-100-Incident-Management-System.md",
      "Command, triage, branches"),
 ]
+
+# The EMS SOP chips on the homepage scroller. Labels are the owner's own group names
+# (card t_a650f9ea); every target is one of EMS_OPS' verified pages, so the chip and
+# the hub card for the same SOP never point at different files.
+EMS_SOP_STRIP = [(label, path) for label, path in
+                 (("Controlled Substances", "sops/ems/EMS-2100-Controlled-Substances.md"),
+                  ("Refusals / AMA",
+                   "protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md"),
+                  ("Diversion",
+                   "protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md"),
+                  ("Documentation", "sops/ems/EMS-1700-Mandatory-Reporting.md"),
+                  ("MCI", "sops/emergency-operations/EO-100-Incident-Management-System.md"))]
 
 # Policy page grouping (the full manual index still lives on personnel-policies/).
 POLICY_GROUPS = [
@@ -424,6 +447,11 @@ def check_targets(records):
     on_disk = lambda p: (DOCS / p.split("#")[0]).exists()
     missing = [p for _l, p, *_ in SCENE_TOOLS if p.split("#")[0] not in nav_paths]
     missing += [p for _l, p, _s in POLICY_TILES if not on_disk(p)]
+    missing += [p for _l, p in EMS_SOP_STRIP if not on_disk(p)]
+    missing += [p for _l, p in EMS_CLINICAL_STRIP if not on_disk(p)]
+    missing += [p for _l, p in FIRE_STRIP if not on_disk(p)]
+    missing += [EMS_PROCEDURES_CHIP[1].split("#")[0]] * (not on_disk(EMS_PROCEDURES_CHIP[1]))
+    missing += [p for _l, p in CREW_CHIPS if not p.startswith("http") and not on_disk(p)]
     missing += [p for _l, p, _s in EMS_OPS if not on_disk(p)]
     missing += [p for _l, p in EMS_PEDIATRIC if not on_disk(p)]
     missing += [p for _g, pairs in POLICY_GROUPS for _l, p in pairs if not on_disk(p)]
@@ -435,11 +463,12 @@ def check_targets(records):
 
 
 def quicklinks_block(records):
-    """The on-scene dashboard: five high-acuity tools, exactly two scrollers, and a
-    compact two-column utility row (owner card t_e787ab8d).
+    """The on-scene dashboard: five high-acuity tools and four scrollers.
 
-    Nothing here is a sitemap: the protocol and fire category lists live on their own
-    hub pages, and personnel policies moved to station/policies.md.
+    Card t_a650f9ea (owner's words, applied literally): every scroller starts with the
+    section itself, then the real destinations. The two bottom groups are scrollers
+    too, and each crew-links chip carries its own URL — the earlier row pointed all
+    six chips at links.md, which is one link wearing six labels.
     """
     check_targets(records)
 
@@ -451,30 +480,37 @@ def quicklinks_block(records):
               for label, path, sub, domain, icon in SCENE_TOOLS]
     parts += ["", "</div>", "", "</section>", "",
               '<section class="pfd-zone" markdown="1">', "",
-              '<p class="pfd-cap">Clinical protocols</p>', "",
+              f'**[Clinical protocols]({EMS_CLINICAL_HUB})**'
+              '{: .pfd-cap .pfd-cap--link }', "",
               '<div class="pfd-scroller pfd-scroller--ems" markdown="1">', ""]
-    parts += [chip(*EMS_SOP_PILL, "all")]
+    parts += [chip(*EMS_HUB_CHIP, "all"), chip(*EMS_PROCEDURES_CHIP, "ems")]
+    parts += [chip(label, href, "ems") for label, href in EMS_SOP_STRIP]
     parts += [chip(label, href, "ems") for label, href in EMS_CLINICAL_STRIP]
     parts += ["", "</div>", "",
-              '<p class="pfd-cap">Fire EOs &amp; field guides</p>', "",
+              f'**[Fire EOs &amp; field guides]({FIRE_HUB})**'
+              '{: .pfd-cap .pfd-cap--link }', "",
               '<div class="pfd-scroller pfd-scroller--fire" markdown="1">', ""]
+    parts += [chip(*FIRE_HUB_CHIP, "all")]
     parts += [chip(label, href, "fire") for label, href in FIRE_STRIP]
     parts += ["", "</div>", "", "</section>", "",
               '<section class="pfd-secondary-row" markdown="1">', "",
               '<div class="pfd-secondary" markdown="1">', "",
-              f'**[City &amp; Personnel Policies]({STATION_POLICIES})**'
+              f'**[City &amp; personnel policies]({STATION_POLICIES})**'
               '{: .pfd-cap .pfd-cap--link }', "",
-              '<div class="pfd-chips" markdown="1">', ""]
+              '<div class="pfd-scroller pfd-scroller--admin" markdown="1">', ""]
+    # Scroller order is the owner's: the hub, the full list, then the five policies a
+    # crew actually reaches for.
+    parts += [chip("City &amp; Personnel Policies", STATION_POLICIES, "admin"),
+              chip("All policies", STATION_POLICIES + "#full-policy-list", "admin")]
     parts += [chip(label, path, "admin") for label, path, _s in POLICY_TILES]
-    parts += [chip("All policies", STATION_POLICIES, "admin")]
     parts += ["", "</div>", "", "</div>", "",
               '<div class="pfd-secondary" markdown="1">', "",
-              f'**[Crew Links &amp; Portals]({LINKS_PAGE})**'
+              f'**[Crew links &amp; portals]({LINKS_PAGE})**'
               '{: .pfd-cap .pfd-cap--link }', "",
-              '<div class="pfd-chips" markdown="1">', ""]
-    # Utility, not admin: maps, run docs, apparatus, training and the station hub are
-    # "where do I go" links, not policy. They carry their own neutral accent so the
-    # colour code never claims the crew row is administrative.
+              '<div class="pfd-scroller pfd-scroller--util" markdown="1">', ""]
+    # Utility, not admin: these are "where do I go" links, not policy, so they carry
+    # their own neutral accent and the colour code never claims the crew row is policy.
+    parts += [chip(*LINKS_HUB_CHIP, "util")]
     parts += [chip(label, href, "util") for label, href in CREW_CHIPS]
     parts += ["", "</div>", "", "</div>", "", "</section>", "",
               QL_END]
