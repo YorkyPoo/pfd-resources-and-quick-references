@@ -10,7 +10,7 @@
       "branch": "ai-prompt-exclusion",
       "built_at": "2026-11-20T06:41:35Z",
       "description": "AI build prompt excluded from the published site; guard added",
-      "sha": "4b7674bc23a28ac5d5cfcd3ce3a52b8c9db7fd64"
+      "sha": "ba9c0bf9852885fe270a4a6eb7e3146b73eaa402"
     },
     "airway-levels": {
       "branch": "airway-levels",
