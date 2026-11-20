@@ -50,10 +50,10 @@
     },
     "sedation": {
       "branch": "sedation-p55",
-      "built_at": "2026-11-20T06:57:37Z",
-      "description": "\"Sedation: PEMS p.55 verbatim, ketamine removed\"",
-      "sha": "7cbb4d8bee9bd31f8f4ea484aa50db8de571f796"
+      "built_at": "2026-11-20T07:05:20Z",
+      "description": "Sedation page: PEMS p.55 verbatim, ketamine rows removed",
+      "sha": "8cd3c98fabe2fd495cc789419289ba035c565b5d"
     }
   },
-  "updated_at": "2026-11-20T06:58:34.158043+00:00"
+  "updated_at": "2026-11-20T07:05:20.157069+00:00"
 }
