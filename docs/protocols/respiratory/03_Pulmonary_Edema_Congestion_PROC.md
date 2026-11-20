@@ -45,9 +45,9 @@ Management of acute cardiogenic pulmonary edema and congestion due to congestive
 
 </div>
 
-Rows 6–8 were conditional rules for CPAP; they are listed under References & Good Practice below.
-
 <p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — row 9: PEMS 2024 does not settle which provider level may titrate PEEP. The level shown is unverified pending a Medical Control decision.</p>
+
+Rows 6–8 were conditional rules for CPAP; they are listed under References & Good Practice below.
 
 ### References & Good Practice
 

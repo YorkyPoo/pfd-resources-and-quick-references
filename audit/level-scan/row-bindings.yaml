@@ -371,7 +371,7 @@ bindings:
       procedures at all EMS Certification Levels' at badge EMT. Two printed rows disagree
       (I/P-only scope in one, EMT badge in the other) and no printed row badges the titration
       at I, so neither level is a single-row citation. The page's P is kept and flagged as an
-      open owner/OMD decision. A 2026-11-20 attempt to rule it to I was reverted: it was
+      open decision for the owner. A 2026-11-20 attempt to rule it to I was reverted: it was
       labelled `owner_ruled` although the owner never ruled on PEEP titration, and the pearl
       evidence for I is on the Respiratory Distress page (Pearl 4), not this page's source.
   - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
