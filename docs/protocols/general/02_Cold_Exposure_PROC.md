@@ -31,6 +31,8 @@ Guidelines for managing systemic hypothermia and localized cold injuries, emphas
 
 </div>
 
+Rows 6 and 9 were conditional rules for rewarming and AED use; they are listed under References & Good Practice below.
+
 ### References & Good Practice
 
 **Heat packs and warm blankets — active external rewarming.** If the patient is alert and responsive, use active external rewarming with heat packs, warm blankets, etc.
