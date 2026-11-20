@@ -2,6 +2,7 @@
 
 ## Levels of Certification
 The protocols use the following abbreviations to indicate provider levels:
+
 * **R:** Emergency Medical Responder (EMR)
 * **B:** Emergency Medical Technician (EMT)
 * **A:** Advanced Emergency Medical Technician (AEMT)
