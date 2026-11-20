@@ -2,7 +2,7 @@
 # Gate runner for the pip-strip rollout (card t_a3480fb0).
 # Writes the log to audit/gates/<branch>-<sha>.log. Every gate prints EXIT=n.
 set -uo pipefail
-cd "$(dirname "$0")/.."
+cd "$(git -C "$(dirname "$0")" rev-parse --show-toplevel)"
 BRANCH=pipstrip-rollout
 SHA=$(git rev-parse --short HEAD)
 LOG="audit/gates/${BRANCH}-${SHA}.log"
