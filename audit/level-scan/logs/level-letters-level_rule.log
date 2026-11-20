@@ -1,3 +1,4 @@
+# 1521a2e : python3 scripts/level_rule.py --check
 {
  "pages": 54,
  "rows_total": 498,
@@ -970,10 +971,10 @@
  "sc_wrap_files": 46,
  "sc_wrap_blocks": 63,
  "sc_wrap_level_matrices": [
-  "protocols/front-matter/01 - How to Read the Protocols.md (line 33)"
+  "protocols/front-matter/01 - How to Read the Protocols.md (line 34)"
  ],
  "sc_wrap_level_matrices_out_of_scope": [
-  "protocols/front-matter/01 - How to Read the Protocols.md (line 33)"
+  "protocols/front-matter/01 - How to Read the Protocols.md (line 34)"
  ],
  "sc_wrap_files_list": [
   "fire-ems-references/index.md",
@@ -3583,4 +3584,5 @@ OK — 3 action row(s) on an otherwise PEMS-cited page are chipped PENDING as ag
 OK — 14 administrative-policy page(s) carry 95 action rows: 89 chipped POLICY (cited to one of 14 PEMS 2024 administrative policies, each with a verbatim quote out of that policy's own pages), 4 chipped PENDING (no PEMS policy prints the rule). 0 of them publish a provider level and 0 of them claim a protocol citation.
 OK — sc-wrap: 63 wide-table block(s) in 46 docs file(s) — mostly dose charts, phone lists and SOP tables that are not level matrices; 0 provider-level matrices on an sc-wrap on any page this project has converted.
 REPORTED, NOT GATED — 1 provider-level matrix/matrices inside sc-wrap remain on a page outside every conversion batch's scope (the front-matter legend, which DEFINES the level columns — R / B / A / I / P):
-   - protocols/front-matter/01 - How to Read the Protocols.md (line 33)
+   - protocols/front-matter/01 - How to Read the Protocols.md (line 34)
+EXIT=0
