@@ -362,7 +362,7 @@ bindings:
     status: owner_required
     owner_note: >-
       &#9873; **OWNER_REQUIRED** — row 9: PEMS 2024 does not settle which provider level may
-      titrate PEEP. The level shown is unverified pending a Medical Director decision.
+      titrate PEEP. The level shown is unverified pending a Medical Control decision.
     reason: >-
       Conflict, recorded: p.239#5 prints 'Consider CPAP (PEEP: 5 cmH2O) ... I/P only: Adjust
       PEEP to support ventilation and work of breathing, up to 10 cmH2O' at badge EMT, and

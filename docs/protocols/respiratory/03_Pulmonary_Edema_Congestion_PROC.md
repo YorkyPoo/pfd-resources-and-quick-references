@@ -45,7 +45,7 @@ Management of acute cardiogenic pulmonary edema and congestion due to congestive
 
 </div>
 
-<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — row 9: PEMS 2024 does not settle which provider level may titrate PEEP. The level shown is unverified pending a Medical Director decision.</p>
+<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — row 9: PEMS 2024 does not settle which provider level may titrate PEEP. The level shown is unverified pending a Medical Control decision.</p>
 
 ### References & Good Practice
 
