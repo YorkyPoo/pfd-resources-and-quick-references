@@ -1,8 +1,8 @@
 // Pre-Cache Service Worker for Poquoson Fire & Rescue Protocols
-// Generated: 20261120-064105
+// Generated: 20261120-072552
 // Caches ALL protocols on first visit for full offline access
 
-const CACHE_NAME = "pfd-protocols-v20261120-064105";
+const CACHE_NAME = "pfd-protocols-v20261120-072552";
 
 const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/404.html",
@@ -137,7 +137,6 @@ const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/protocols/cardiac/04_Supraventricular_Tachycardia_PROC.html",
     "/pfd-resources-and-quick-references/protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.html",
     "/pfd-resources-and-quick-references/protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.html",
-    "/pfd-resources-and-quick-references/protocols/front-matter/00 - AI Formatting Guidelines.html",
     "/pfd-resources-and-quick-references/protocols/front-matter/00 - Introduction.html",
     "/pfd-resources-and-quick-references/protocols/front-matter/01 - How to Read the Protocols.html",
     "/pfd-resources-and-quick-references/protocols/front-matter/Universal Patient Care.html",
