@@ -8,6 +8,12 @@ on:
 permissions:
   contents: write
 
+# One gh-pages writer at a time; a queued deploy must not interleave with the
+# /preview/ preservation push that follows it.
+concurrency:
+  group: gh-pages-deploy
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -30,5 +36,45 @@ jobs:
           git config user.name "deploy-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+      # mkdocs gh-deploy --force REPLACES the whole gh-pages branch with the
+      # main build. main has no preview/ subtree, so without the two steps
+      # below every deploy deletes /preview/<slot>/ (run 44682670389 did
+      # exactly that). Remember the pre-deploy tip, restore preview/ after.
+      - name: Record gh-pages tip before deploy
+        id: predeploy
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin +refs/heads/gh-pages:refs/remotes/origin/gh-pages
+          sha="$(git rev-parse refs/remotes/origin/gh-pages)"
+          echo "sha=$sha" >> "$GITHUB_OUTPUT"
+          echo "pre-deploy gh-pages tip: $sha"
+
       - name: Build and deploy
         run: mkdocs gh-deploy --force
+
+      - name: Restore /preview/ slots onto the fresh gh-pages tree
+        env:
+          PREV: ${{ steps.predeploy.outputs.sha }}
+        run: bash scripts/preserve_preview_on_deploy.sh "$PREV"
+
+      - name: Verify /preview/ survived the deploy
+        env:
+          PREV: ${{ steps.predeploy.outputs.sha }}
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin +refs/heads/gh-pages:refs/remotes/origin/gh-pages
+          AFTER="$(git rev-parse refs/remotes/origin/gh-pages)"
+          if ! git cat-file -e "${PREV}:preview" 2>/dev/null; then
+            echo "::notice::no preview/ subtree existed before this deploy; nothing to verify"
+            exit 0
+          fi
+          echo "pre-deploy  gh-pages: $PREV"
+          echo "post-deploy gh-pages: $AFTER"
+          if ! git diff --quiet "$PREV" "$AFTER" -- preview; then
+            echo "::error::preview/ changed during the deploy; it must be byte-identical"
+            git diff --name-status "$PREV" "$AFTER" -- preview | head -50
+            exit 1
+          fi
+          echo "preview/ byte-identical across the deploy ($(git ls-tree -r --name-only "$AFTER" -- preview | wc -l) files)"
+          echo "--- real root changes (must be only this commit's site output) ---"
+          git diff --name-only "$PREV" "$AFTER" -- . ':(exclude)preview' | head -50
