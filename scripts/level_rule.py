@@ -198,6 +198,131 @@ DIV_ANY = re.compile(r'^<div class="(sc|lv)-wrap')
 INLINE_BRACKET = re.compile(r'\[(EMR|EMT|A|I|P)\]')
 INLINE_PAREN = re.compile(r'\((EMR|EMT|A|I|P)\s*/\s*(EMR|EMT|A|I|P)\)')
 
+# ------------------------------------------------------- the ladder rule (derived)
+# The owner's standing rule (verbatim, 2026-11-20): "If an EMT-I can do it then so can a
+# Paramedic. You just have to put the lowest provider level and everyone above can do it
+# too." So when the source's own words scope an action to a named level ladder
+# ("as determined by EMT-I or P", "I/P only", "EMT-I and Paramedic"), the level is
+# DERIVED — the lowest level the ladder names — and it is NOT an owner decision. Asking
+# the owner to re-authorise what his own rule already settles is the defect this
+# machinery exists to stop.
+LADDER_WORD = r'(?:EMT-I|EMT-P|EMT-I/P|EMR|EMT|AEMT|Intermediate|Paramedic)'
+LADDER_SEP = (r'(?:\s*/\s*|\s*,\s*|\s+[Oo][Rr]\s+|\s+[Aa][Nn][Dd]\s+'
+              r'|\s*&\s*|\s*-\s*|\s+[Tt][Hh][Rr][Oo][Uu][Gg][Hh]\s+)')
+# word ladders: "EMT-I or P", "Intermediate and Paramedic", "EMR/EMT"
+LADDER_WORD_PAIR = re.compile(rf'(?i:\b({LADDER_WORD})){LADDER_SEP}(?-i:([AIP]))(?![A-Za-z])')
+LADDER_WORD_PAIR2 = re.compile(rf'(?i:\b({LADDER_WORD})){LADDER_SEP}(?i:({LADDER_WORD}))\b')
+# bare-token ladders: "I/P only" — uppercase only, so an English "a or p" cannot match
+LADDER_BARE_PAIR = re.compile(r'\b([AIP])' + LADDER_SEP + r'([AIP])(?![A-Za-z])')
+LADDER_ONLY = re.compile(rf'(?i:\b({LADDER_WORD}))\s+only\b|\b([AIP])\s+only\b')
+LADDER_RES = (LADDER_WORD_PAIR, LADDER_WORD_PAIR2, LADDER_BARE_PAIR)
+LADDER_LEVEL = {'EMR': 'EMR', 'EMT': 'EMT', 'AEMT': 'A', 'A': 'A',
+                'EMT-I': 'I', 'EMT-I/P': 'I', 'INTERMEDIATE': 'I', 'I': 'I',
+                'EMT-P': 'P', 'PARAMEDIC': 'P', 'P': 'P'}
+
+
+def ladder_level(token):
+    """The provider level a ladder token names. Never guesses: an unknown token is a bug."""
+    key = str(token).strip().upper().replace(' ', '')
+    if key not in LADDER_LEVEL:
+        raise SystemExit(f'ladder: {token!r} does not name a provider level')
+    return LADDER_LEVEL[key]
+
+
+def ladder_hits(text):
+    """[(phrase, [levels], scopes_a_sub_clause)] for every level ladder in `text`.
+
+    `scopes_a_sub_clause` is True when the ladder introduces something after a colon
+    ("I/P only: adjust PEEP ..."), i.e. it scopes ONE clause of a bundled row rather than
+    the whole row. A sub-clause ladder cannot settle the row's chip: the other clause
+    still belongs to the row's printed badge.
+    """
+    out, seen, spans = [], set(), []
+    text = str(text or '')
+
+    def sub_clause(end):
+        tail = text[end:end + 16].lstrip(')] ')
+        return bool(tail.startswith(':') or re.match(r'(?i)^only\s*:', tail))
+
+    for rx in LADDER_RES:
+        for m in rx.finditer(text):
+            if any(a <= m.start() and m.end() <= b for a, b in spans):
+                continue        # "I or P" inside "EMT-I or P": one ladder, not two
+            levels = [ladder_level(g) for g in m.groups() if g]
+            phrase = m.group(0).strip()
+            if phrase.lower() in seen:
+                continue
+            seen.add(phrase.lower())
+            spans.append((m.start(), m.end()))
+            out.append((phrase, sorted(set(levels), key=LV.index), sub_clause(m.end())))
+    for m in LADDER_ONLY.finditer(text):
+        tok = m.group(1) or m.group(2)
+        if not tok:
+            continue
+        if any(a <= m.start() and m.end() <= b for a, b in spans):
+            continue
+        phrase = m.group(0).strip()
+        start = text.rfind('(', 0, m.start())
+        open_paren = start >= 0 and ')' not in text[start:m.start()]
+        if open_paren:
+            phrase = text[start:m.end()].strip()
+        if phrase.lower() in seen:
+            continue
+        seen.add(phrase.lower())
+        out.append((phrase, [ladder_level(tok)], sub_clause(m.end())))
+    return out
+
+
+def ladder_floor(ladder):
+    """The chip a recorded ladder derives: the LOWEST level the ladder names.
+
+    Used by `level-rulings.yaml` entries that record `rule: lowest_printed_level` and by
+    the automatic derivation below. The levels come out of the source's own words — the
+    lowest one is computed here, never typed into a yaml.
+    """
+    hits = ladder_hits(ladder)
+    if not hits:
+        hints = ladder_levels_only(ladder)
+        if not hints:
+            raise SystemExit(f'ladder: {ladder!r} names no provider level — cannot derive '
+                             f'a floor from it')
+        return min(hints, key=LV.index)
+    levels = sorted({lv for _p, lvs, _s in hits for lv in lvs}, key=LV.index)
+    if not levels:
+        raise SystemExit(f'ladder: {ladder!r} names no provider level')
+    return levels[0]
+
+
+def ladder_levels_only(ladder):
+    """Every provider level token in a recorded ladder string, in printed order.
+
+    A recorded ladder is short by construction ("EMT-I or P"), so a plain token scan is
+    enough and cannot pick up prose.
+    """
+    out = []
+    for m in re.finditer(rf'(?i:{LADDER_WORD})|\b([AIP])\b', str(ladder)):
+        tok = m.group(0)
+        out.append(ladder_level(tok))
+    return out
+
+
+def derivable_floor(*texts):
+    """(floor, phrase, levels) when `texts` scope the WHOLE row to one ladder, else None.
+
+    A ladder that only scopes a sub-clause (after a colon) is a bundled row: the rest of
+    the row belongs to the printed badge, so the row still needs a decision.
+    """
+    for text in texts:
+        if not text:
+            continue
+        hits = [h for h in ladder_hits(text) if not h[2]]
+        if not hits:
+            continue
+        levels = sorted({lv for _p, lvs, _s in hits for lv in lvs}, key=LV.index)
+        if levels:
+            return levels[0], hits[0][0], levels
+    return None
+
 
 # --------------------------------------------------------------------- parsing
 def split_cells(line):
@@ -629,13 +754,15 @@ def load_site_splits():
                 raise SystemExit(f'row-splits.yaml site_splits: {rec["file"]} part '
                                  f'{p["row"]} level {p["level"]!r} is not a provider level')
             src = p.get('source')
-            if src not in ('cited', 'ruling', 'owner_required'):
+            if src not in ('cited', 'ruling', 'derived', 'owner_required'):
                 raise SystemExit(f'row-splits.yaml site_splits: {rec["file"]} part '
                                  f'{p["row"]} has source {src!r} — it must say `cited` (a '
-                                 f'printed PEMS badge), `ruling` (a recorded owner decision) '
-                                 f'or `owner_required` (the source scopes the action in a '
-                                 f'row badged for another clause, so the level is an open '
-                                 f'decision and the part is flagged, not cited)')
+                                 f'printed PEMS badge), `ruling` (a recorded owner decision), '
+                                 f'`derived` (the source scopes the action to a level ladder, '
+                                 f'so the chip is the lowest level it names) or '
+                                 f'`owner_required` (the source scopes the action in a '
+                                 f'row badged for another clause and the levels cannot be '
+                                 f'reconciled, so it stays an open decision)')
         out.append(rec)
     return out
 
@@ -658,28 +785,85 @@ def load_rulings():
           CONTRAINDICATIONS / INDICATIONS / CRITERIA entry (pems_prose.json). Verified
           verbatim by --check, exactly like a quoted row.
       level_from: {page, ordinal}  a printed, level-badged row whose badge IS the ruled
-          level (e.g. the CPAP procedure rows badge EMT for the contraindications the
-          page lists). Verified: the chip must equal that row's printed badge.
+          level (e.g. the CPAP procedure rows print EMT for the procedure
+          whose contraindications the page lists). Verified: the chip must equal that row's
+          printed badge.
+      clause_of: {page, ordinal, token}  a clause INSIDE a printed row that scopes the action,
+          e.g. the `I/P only` half of p.239#5 (badge EMT). Verified: the token is a verbatim
+          span of that row, and the ruled level is the lowest level the token itself names.
+          The row's printed badge is NOT the ruling's authority, which is why this needs its
+          own field rather than `level_from`. A clause_of ruling must also declare
+          `clause_only: true` — see load_rulings()'s validation: the flag may retire only
+          when the site row covers the scoped clause alone.
 
     Neither field makes the level a PEMS citation: the level is still the owner's scope
     decision (see the file header), and the ledger keeps reporting it as `owner_ruled`.
 
     `level: FLOOR` is the one derived level: it means "the lowest chip this page itself
     carries", computed by page_floor() from the page, never typed.
+
+    `status: derived` + `level: LOWEST` records a level that the source's own words
+    already settle (the owner's ladder rule: the chip is the lowest level the act is
+    printed for, and every level above may also perform it):
+        derive:
+          rule: lowest_printed_level
+          pems_page, pems_ordinal   the printed row whose own words scope the action
+          quote: verbatim span of that row naming the ladder  ("as determined by EMT-I or P")
+          ladder: verbatim span of `quote` that IS the ladder  ("EMT-I or P")
+    The chip is computed from `ladder` (lowest named level) — never typed — and the
+    ledger reports the row as `derived`, NOT as an owner ruling, so it never appears on
+    the owner-facing decisions page.
     """
     import yaml
     if not os.path.exists(RULINGS_YAML):
         return {}
     doc = yaml.safe_load(open(RULINGS_YAML, encoding='utf-8')) or {}
     out = {}
+    table = None
     for rec in doc.get('rulings') or []:
         if not rec.get('file') or rec.get('row') is None or not rec.get('level'):
             raise SystemExit(f'level-rulings.yaml: incomplete ruling {rec!r}')
-        if rec.get('status') != 'owner_ruled':
-            raise SystemExit(f'level-rulings.yaml: status must be "owner_ruled" (row {rec}')
-        if rec['level'] != 'FLOOR' and rec['level'] not in LV + ['MC']:
+        if rec.get('status') not in ('owner_ruled', 'derived'):
+            raise SystemExit(f'level-rulings.yaml: status must be "owner_ruled" or "derived" '
+                             f'(row {rec}')
+        if rec['level'] != 'FLOOR' and rec['level'] not in LV + ['MC', 'LOWEST']:
             raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} has level '
-                             f'{rec["level"]!r} — it must be a provider level, MC, or FLOOR')
+                             f'{rec["level"]!r} — it must be a provider level, MC, FLOOR '
+                             f'(the page\'s own floor) or LOWEST (the lowest level the '
+                             f'recorded ladder names)')
+        if rec['level'] == 'LOWEST' and rec.get('status') != 'derived':
+            raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} has level '
+                             f'LOWEST but status {rec.get("status")!r} — a derived level is '
+                             f'not an owner ruling')
+        if rec.get('status') == 'derived':
+            der = rec.get('derive')
+            if not isinstance(der, dict):
+                raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} is '
+                                 f'derived without a `derive:` record')
+            if der.get('rule') != 'lowest_printed_level':
+                raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} derive '
+                                 f'rule {der.get("rule")!r} — the only rule is '
+                                 f'"lowest_printed_level"')
+            for k in ('pems_page', 'pems_ordinal', 'quote', 'ladder'):
+                if der.get(k) in (None, ''):
+                    raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} '
+                                     f'derive record has no {k}')
+            if norm_quote(der['ladder']) not in norm_quote(der['quote']):
+                raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} derive '
+                                 f'ladder {der["ladder"]!r} is not a span of its own quote '
+                                 f'{der["quote"]!r} — the ladder must be the source\'s words')
+            if table is None:
+                table = pems_index(load_json('pems_table.json'))
+            key = (int(der['pems_page']), int(der['pems_ordinal']))
+            src = table.get(key)
+            if src is None:
+                raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} derives '
+                                 f'from p.{key[0]}#{key[1]}, which is not in pems_table.json')
+            if not quote_in(der['quote'], src):
+                raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} derive '
+                                 f'quote is not a verbatim span of p.{key[0]}#{key[1]} — the '
+                                 f'derivation does not rest on the source\'s own words')
+            ladder_floor(der['ladder'])
         cites = rec.get('prose_citations')
         if cites is not None:
             if not isinstance(cites, list):
@@ -709,6 +893,26 @@ def load_rulings():
                                  f'`answered` {ans["level"]!r} but its `level` is '
                                  f'{rec["level"]!r} — an answer that changes the level must '
                                  f'be the level the ruling records')
+        co = rec.get('clause_of')
+        if co is not None:
+            if not isinstance(co, dict) or co.get('page') is None \
+                    or co.get('ordinal') is None or not str(co.get('token') or '').strip():
+                raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} '
+                                 f'clause_of must name page + ordinal + the clause token the '
+                                 f'printed row carries')
+            # THE BUNDLED-ROW RULE: a clause_of ruling adopts one level out of a compound
+            # printed row, so the OWNER_REQUIRED flag may retire ONLY when the site row
+            # covers that clause alone. `clause_only: true` is how a ruling says so; without
+            # it the mechanism is not available at all, and the row keeps its warning.
+            if not rec.get('clause_only'):
+                raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} declares '
+                                 f'a clause_of but not clause_only: true — a clause_of ruling '
+                                 f'may retire the OWNER_REQUIRED flag only when the site row '
+                                 f'covers the scoped clause alone')
+        elif rec.get('clause_only'):
+            raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} declares '
+                             f'clause_only without a clause_of — say which printed clause the '
+                             f'level comes from')
         out[(rec['file'], str(rec['row']))] = rec
     return out
 
@@ -1147,6 +1351,51 @@ def check_prose_citations(rel, label, cites, index, fails):
     return out
 
 
+def clause_levels(token):
+    """The provider levels a printed clause names, lowest first: `I/P only` -> ['I', 'P']."""
+    found = []
+    for part in re.split(r'[^A-Za-z]+', token or ''):
+        up = part.upper()
+        if up in LV and up not in found:
+            found.append(up)
+    return sorted(found, key=LV.index)
+
+
+def check_clause(rel, label, co, want_level, pems, fails):
+    """Verify a `clause_of:` ruling; returns the resolved record for the ledger.
+
+    The clause must be a verbatim span of the named printed row, it must name a provider
+    level, and the ruled level must be the LOWEST level it names. That is the same reading
+    the compound-token logic refuses to chip, now made a recorded owner decision with the
+    clause itself as the evidence — so the level is checkable, and the row's badge (which
+    differs by design) is recorded beside it instead of being claimed as authority.
+    """
+    page, ordinal = co.get('page'), co.get('ordinal')
+    src = pems.get((page, ordinal))
+    if src is None:
+        fails.append(f'{rel} {label}: ruling clause_of p.{page}#{ordinal} is not in '
+                     f'pems_table.json')
+        return None
+    token = ' '.join(str(co.get('token') or '').split())
+    text = ' '.join((src.get('verbatim_text') or '').split())
+    if not token or token not in text:
+        fails.append(f'{rel} {label}: the clause {co.get("token")!r} is not a verbatim span '
+                     f'of p.{page}#{ordinal}')
+        return None
+    levels = clause_levels(token)
+    if not levels:
+        fails.append(f'{rel} {label}: the clause {co.get("token")!r} names no provider level')
+        return None
+    if levels[0] != want_level:
+        fails.append(f'{rel} {label}: ruling level {want_level} != the lowest level the '
+                     f'clause {co.get("token")!r} names ({levels[0]} of '
+                     f'{"/".join(levels)})')
+        return None
+    badge, _brk = badge_of(src)
+    return {'page': int(page), 'ordinal': int(ordinal), 'token': token,
+            'badge': badge, 'levels': levels}
+
+
 def page_floor(rel):
     """The lowest provider level this page itself chips, read out of the file.
 
@@ -1317,7 +1566,7 @@ MC_REQ_MARK = ('<span class="lvl lvl-mc-req" title="this level performs the acti
                'brackets)">+MC</span>')
 
 
-def chip(level, bracketed=False, owner=False, mc_required=False, flag=None):
+def chip(level, bracketed=False, owner=False, mc_required=False, flag=None, derived=False):
     html = f'<span class="lvl lvl-{CHIP_CLASS.get(level, "na")}">{level}</span>'
     if mc_required:
         # A second marker, not a second level: the level still grants the skill, the
@@ -1333,6 +1582,12 @@ def chip(level, bracketed=False, owner=False, mc_required=False, flag=None):
         # audit vocabulary, no ledger/file reference, no self-reference to the table.
         html += ('<sup class="lvl-own" title="Provider level for this action is awaiting a '
                  'Medical Control decision">&#9873;</sup>')
+    if derived:
+        # The owner's ladder rule: the chip is the lowest level the source names for the
+        # action, and every level above may also perform it. Reader text, no audit words.
+        html += ('<sup class="lvl-deriv" title="Provider level derived from the source&#39;s '
+                 'own wording: it names the levels that perform this action, so the lowest '
+                 'one is shown and every level above it may also perform it">&#8224;</sup>')
     if flag:
         # A corrected row: the chip IS the level PEMS prints (so this is not
         # OWNER_REQUIRED), but the row carried a different level until the owner ruled
@@ -1351,7 +1606,7 @@ def render_block(rows, note=None, banner=None, header=NEW_HEADER, div_open=DIV_O
     for r in rows:
         cell = r.get('level_cell') or chip(r['level'], r.get('bracketed', False),
                                            r.get('owner', False), r.get('mc_required', False),
-                                           r.get('flag'))
+                                           r.get('flag'), r.get('derived', False))
         out.append(f"| {r['ordinal']} | {cell} | {r['action']} |")
     out += ['', '</div>']
     if note:
@@ -1408,6 +1663,50 @@ def prior_before():
 
 
 # ------------------------------------------------------------------- the build
+def derived_reason(got):
+    """The one sentence both the ledger and the page use for a derived row."""
+    floor, phrase, levels = got
+    return ('level derived from the source\'s own words, not an owner decision: PEMS scopes '
+            f'this action to "{phrase}" ({" / ".join(levels)}); the lowest named level is '
+            f'{floor}, and every level above it may also perform the action.')
+
+
+def derived_record(got, r):
+    """A `derived` ruling record built from a detected ladder (never typed)."""
+    floor, phrase, levels = got
+    ptr = r.get('ptr')
+    return {'status': 'derived', 'level': floor, 'derived_reason': derived_reason(got),
+            'derive': {'rule': 'lowest_printed_level', 'ladder': phrase, 'levels': levels,
+                       'pems_page': ptr[0] if ptr else None,
+                       'pems_ordinal': ptr[1] if ptr else None}}
+
+
+def auto_derived(new_text, extra, r):
+    """(floor, phrase, levels) when this row's own words settle its chip by the ladder rule.
+
+    The owner's ladder rule, not a clinical judgement: if the source scopes the action to
+    a named level ladder ("as determined by EMT-I or P", "I/P only"), the chip is the
+    lowest level named and every level above may also perform it. Two guards keep this
+    from swallowing a REAL conflict:
+
+      * a ladder that only scopes a sub-clause (after a colon) belongs to a bundled row —
+        the other clause still carries the printed badge, so the row needs a decision;
+      * a printed badge that is not the derived floor means the source's badge and its
+        words disagree (badge EMT, words "I/P only") — the owner decides which wins.
+    """
+    b = extra.get('binding') or {}
+    texts = [b.get('quoted_row_text'), new_text]
+    if r['pems_row'] is not None:
+        texts.append((r['pems_row'] or {}).get('verbatim_text'))
+    got = derivable_floor(*texts)
+    if not got:
+        return None
+    floor = got[0]
+    if r['badge'] is not None and r['badge'] != floor:
+        return None
+    return got
+
+
 def _decide(row, r, ruled_for_row, pending_row=None):
     """(level, owner, status, reason, new_text, before, ruled) for one action row."""
     existing = CHIP_RE.search(row['level_cell'] or '')
@@ -1430,22 +1729,39 @@ def _decide(row, r, ruled_for_row, pending_row=None):
         # ledger cites the policy id + the verbatim span out of that policy's own pages
         return ('POLICY', False, 'policy', None, new_text, before, None)
     if ruled_for_row:
-        # the owner's decision replaces the inherited level; it is NOT PEMS-verified
-        return ruled_for_row['level'], False, 'owner_ruled', None, new_text, before, ruled_for_row
+        # the owner's decision replaces the inherited level; it is NOT PEMS-verified.
+        # A `derived` ruling is not an owner decision at all: the source's own words
+        # scope the action to a ladder and the chip is the lowest level it names.
+        return (ruled_for_row['level'],
+                False,
+                'derived' if ruled_for_row.get('status') == 'derived' else 'owner_ruled',
+                ruled_for_row.get('derived_reason'), new_text, before, ruled_for_row)
 
     resolved_level = cells_level((r['resolved'] or {}).get('resolved_cells'))
     tokens = compound_tokens(r['pems_row'],
                              (extra.get('binding') or {}).get('quoted_row_text'))
 
     if extra.get('forced_owner'):
+        got = auto_derived(new_text, extra, r)
+        if got:
+            return (got[0], False, 'derived', derived_reason(got), new_text, before,
+                    derived_record(got, r))
         return (before_low, True, 'OWNER_REQUIRED', extra['forced_owner'], new_text, before, None)
     if resolved_level:
         return resolved_level, False, 'OK', None, new_text, before, None
     if r['badge'] is None:
+        got = auto_derived(new_text, extra, r)
+        if got:
+            return (got[0], False, 'derived', derived_reason(got), new_text, before,
+                    derived_record(got, r))
         reason = (extra.get('alignment_reason')
                   or 'no PEMS 2024 row authorises this action\'s provider level')
         return (before_low, True, 'OWNER_REQUIRED', reason, new_text, before, None)
     if tokens:
+        got = auto_derived(new_text, extra, r)
+        if got and r['badge'] == got[0]:
+            return (got[0], False, 'derived', derived_reason(got), new_text, before,
+                    derived_record(got, r))
         reason = ('PEMS prints one badge (%s) on a compound row whose own text scopes a clause '
                   'to %s; a single chip would contradict either the badge or the row\'s own '
                   'text' % (r['badge'], '/'.join(tokens)))
@@ -1492,6 +1808,19 @@ def plan(rel):
                 print(f'row {row["ordinal"]}: {was or "(no chip)"} -> {floor}')
                 ruled = dict(ruled, level=floor,
                              derived_floor={'level': floor, 'chips': chips_seen})
+            if ruled and ruled['level'] == 'LOWEST':
+                # a DERIVED level: the source's own words scope the action to a ladder and
+                # the chip is the lowest level it names. Computed here from the recorded
+                # quote — never typed into the yaml — and printed so the log shows the
+                # derivation.
+                der = ruled['derive']
+                levels = ladder_levels_only(der['ladder'])
+                floor = ladder_floor(der['ladder'])
+                print(f'derived({rel.split("/")[-1]}) row {row["ordinal"]}: PEMS '
+                      f'p.{der["pems_page"]}#{der["pems_ordinal"]} scopes the action to '
+                      f'"{der["ladder"]}" ({"/".join(levels)}), lowest = {floor}')
+                ruled = dict(ruled, level=floor,
+                             derived_reason=derived_reason((floor, der['ladder'], levels)))
             rp = row_pending.get((rel, str(row['ordinal'])))
             level, owner, status, reason, new_text, before, ruled = _decide(row, r, ruled, rp)
             prior_b = prior.get((rel, str(row['ordinal'])))
@@ -1520,6 +1849,7 @@ def plan(rel):
             blocks[-1]['rows'].append({'ordinal': row['ordinal'], 'action': new_text,
                                        'level': level, 'bracketed': r['bracketed'],
                                        'owner': owner,
+                                       'derived': status == 'derived',
                                        'flag': (None if r['extra'].get('ratified')
                                                 else r['extra'].get('flag')),
                                        'mc_required': bool(r['extra'].get('mc_required'))
@@ -1534,7 +1864,8 @@ def plan(rel):
                 'reason': reason,
                 'owner_note': r['extra'].get('owner_note'),
                 'owner_ruling': ({'date': ruled['date'], 'ruling': ruled['ruling'],
-                                  'note': ruled.get('note')} if ruled else None),
+                                  'note': ruled.get('note')}
+                                 if ruled and status == 'owner_ruled' else None),
                 'pems_page': r['ptr'][0] if r['ptr'] else None,
                 'pems_ordinal': r['ptr'][1] if r['ptr'] else None,
                 'pems_badge': r['badge'],
@@ -1562,7 +1893,28 @@ def plan(rel):
                               'carried_from_page': rp['carried_from_page'],
                               'pending_note': rp.get('note'),
                               'note': 'agency addition — pending OMD authorization'})
-            if ruled and (ruled.get('prose_citations') or ruled.get('level_from')):
+            if ruled and ruled.get('status') == 'derived':
+                # A DERIVED level: the source's own words settle it by the ladder rule, so
+                # the ledger must not publish it as an owner decision and must not publish
+                # an inherited row citation as if it authorised the chip. What it publishes
+                # is the recorded derivation, which --check re-reads against the source.
+                der = dict(ruled['derive'])
+                entry.update({
+                    'pems_page': None, 'pems_ordinal': None, 'pems_badge': None,
+                    'pems_text': None, 'compound_tokens': [],
+                    'basis': 'level-rulings:derived',
+                    'derived': {'rule': der['rule'], 'ladder': der['ladder'],
+                                'levels': ladder_levels_only(der['ladder']),
+                                'pems_page': der['pems_page'],
+                                'pems_ordinal': der['pems_ordinal']},
+                    'derived_reason': ruled.get('derived_reason') or derived_reason(
+                        (ruled['level'], der['ladder'], ladder_levels_only(der['ladder']))),
+                    'note': ruled.get('note') or (
+                        'level derived from the source\'s own scoping words — no owner '
+                        'decision is claimed'),
+                })
+            if ruled and (ruled.get('prose_citations') or ruled.get('level_from')
+                          or ruled.get('clause_of')):
                 # The owner decided this level, and the ruling records where PEMS prints
                 # the action (prose) and/or which printed row's badge it adopts. Any row the
                 # alignment/adjudication had attached to the row is NOT the authority for the
@@ -1580,6 +1932,8 @@ def plan(rel):
                                          'quote': c['quote']}
                                         for c in (ruled.get('prose_citations') or [])],
                     'level_from': ruled.get('level_from'),
+                    'clause_of': ruled.get('clause_of'),
+                    'clause_only': bool(ruled.get('clause_only')),
                     'ruling': ruled.get('ruling'),
                     'ruling_date': ruled.get('date'),
                     'derived_floor': ruled.get('derived_floor'),
@@ -1658,6 +2012,19 @@ def page_note_for(ledger):
             notes.append(' '.join(custom))
         else:
             notes.append(row_pending_note([str(e['row']) for e in pending_rows]))
+    der_rows = [e for e in ledger if e['status'] == 'derived']
+    if der_rows:
+        ladders = []
+        for e in der_rows:
+            lad = (e.get('derived') or {}).get('ladder')
+            if lad and lad not in ladders:
+                ladders.append(lad)
+        quoted = '; '.join('&#8220;' + html_lib.escape(l, quote=False) + '&#8221;'
+                           for l in ladders)
+        notes.append('&#8224; **Level derived from the source\'s own wording** — PEMS names '
+                     'the levels that perform this action (' + quoted + '), so the level '
+                     'shown is the lowest one named, and every level above it may also '
+                     'perform the action.')
     owner_rows = [str(e['row']) for e in ledger if e['status'] == 'OWNER_REQUIRED']
     if owner_rows:
         # A row whose OWNER_REQUIRED reason is not the generic "no PEMS row prints it" case
@@ -2011,6 +2378,12 @@ COLD_PAGE = 'protocols/general/02_Cold_Exposure_PROC.md'
 # OWNER_RULED section, never in OPEN OWNER QUESTIONS — the page the owner reads is titled
 # "decisions still waiting on you", so an answered card there is a published falsehood.
 COLD_RULED_HEADER = '## OWNER_RULED — Cold Exposure pilot (owner ruling 2026-11-20)'
+
+# The 2026-11-20 PEEP-titration ruling, in its own section for the same reason: it is a
+# DECISION the owner made, so it must not be published in a list titled "decisions still
+# waiting on you". `build_outstanding_decisions.py` parses this heading and renders the
+# entries under "Already ruled".
+PEEP_RULED_HEADER = '## OWNER_RULED — PEEP titration (owner ruling 2026-11-20)'
 
 # Pages whose unbadged PEMS prose lives in a "References & Good Practice" block. The owner's
 # 2026-11-20 ruling: the page states the recorded level; the PEMS citation itself stays in
@@ -2448,6 +2821,8 @@ def emit_md(ledger):
                          f"p.{e['pems_page']}#{e['pems_ordinal']}")
         lines.append(f"  - reason: {e['reason']}")
     ruled = [e for e in ledger if e['status'] == 'owner_ruled']
+    peep = [e for e in ruled if e.get('clause_of')]
+    ruled = [e for e in ruled if not e.get('clause_of')]
     lines += ['', '## OWNER_RULED', '',
               'The owner decided these levels. They are **decisions, not source citations**:',
               'no PEMS 2024 row badges the action, the row is not PEMS-verified, and the',
@@ -2475,6 +2850,52 @@ def emit_md(ledger):
             lines.append(f"  - level derived: the page's own lowest chip = {df['level']} "
                          f"(chips on the page: {', '.join(df['chips'])}) — read out of the page "
                          f"by `page_floor()`, not typed")
+    der = [e for e in ledger if e['status'] == 'derived']
+    lines += ['', '## DERIVED — level derived from the source\'s own wording', '',
+              'These levels are **not owner decisions and not open questions.** The owner\'s',
+              'standing rule: *"If an EMT-I can do it then so can a Paramedic. You just have to',
+              'put the lowest provider level and everyone above can do it too."* Where PEMS',
+              'scopes an action to a named level ladder in its own words, the chip is the',
+              'lowest level the ladder names and every level above it may also perform the',
+              'action. `--check` re-reads each quote out of `pems_table.json` and recomputes',
+              'the lowest level; nothing here is typed.', '']
+    if not der:
+        lines.append('None — no row on this branch needs a level derived from the source.')
+    for e in der:
+        d = e.get('derived') or {}
+        lines.append(f"- `{e['file']}` row {e['row']} — **{e['level_published']}** — "
+                     f"rule `{d.get('rule')}`. {e['action']}")
+        lines.append(f"  - source scopes the action: p.{d.get('pems_page')}#"
+                     f"{d.get('pems_ordinal')} — ladder \"{d.get('ladder')}\" "
+                     f"(levels named: {', '.join(d.get('levels') or [])}); lowest = "
+                     f"{e['level_published']}")
+    # ---- OWNER_RULED — PEEP titration: the 2026-11-20 ruling, kept in its own section so the
+    # ---- owner-facing page can publish it as a DECISION ("already ruled"), not a question.
+    if peep:
+        lines += ['', PEEP_RULED_HEADER, '',
+                  'Decided, not open. The owner ruled on 2026-11-20: **"An intermediate can also',
+                  'titrate peep."** Each row below is titration-only, so one chip is the whole',
+                  'authorisation and the OWNER_REQUIRED flag is retired. The level is the owner\'s',
+                  'decision read off the printed clause named for each row — not the badge of the',
+                  'printed row that carries the clause.', '']
+        for e in peep:
+            r = e.get('owner_ruling') or {}
+            co = e['clause_of']
+            _src = pems_index(load_json('pems_table.json')).get((co['page'], co['ordinal']))
+            _badge = badge_of(_src)[0] if _src else None
+            _levels = clause_levels(co.get('token'))
+            lines.append(f"- `{e['file']}` row {e['row']} — **{e['level_published']}** — "
+                         f"decided {r.get('date')}: \"{r.get('ruling')}\" {e['action']}")
+            lines.append(f"  - clause the level comes from: p.{co['page']}#{co['ordinal']} — "
+                         f"\"{co['token']}\". That printed row is badged "
+                         f"{_badge or 'nothing'}; its own words scope this action to "
+                         f"{'/'.join(_levels)}, so the chip is the lowest level the clause "
+                         f"names and NOT the row's badge. "
+                         + ("The site row covers this clause alone (`clause_only`), so it "
+                            "carries no OWNER_REQUIRED flag."
+                            if e.get('clause_only')
+                            else "The site row bundles more than this clause, so it keeps its "
+                                 "OWNER_REQUIRED flag."))
     wording = load_wording_rulings()
     lines += ['', '## OWNER_RULED — wording (not level)', '',
               'Decisions the OWNER made about how a phrase reads. These are **rulings, not',
@@ -2951,6 +3372,8 @@ def emit_md(ledger):
               f'| OWNER_REQUIRED | {sum(1 for e in ledger if e["status"] == "OWNER_REQUIRED")} |',
               f'| rows moved below the action table (References & Good Practice) | {len(reloc)} |',
               f'| OWNER_RULED | {sum(1 for e in ledger if e["status"] == "owner_ruled")} |',
+              f'| DERIVED (level derived from the source\'s own ladder wording) | '
+              f'{sum(1 for e in ledger if e["status"] == "derived")} |',
               f'| +MC markers | {sum(1 for e in ledger if e.get("mc_required"))} |',
               '', '### `sc-wrap` — whole `docs/` tree, walked (not a directory list)', '',
               f'{sw_blocks} `sc-wrap` block(s) in {len(sw_files)} file(s). `sc-wrap` is the '
@@ -3116,7 +3539,7 @@ def check():
         rows = [r for reg in regions for r in reg['rows'] if not is_banner(r)]
         res = resolve(rel, rows, align, adjudicated, pems, bindings)
         owner_rows, ok_rows, ruled_rows = [], [], []
-        mc_rows, cross_rows = [], []
+        mc_rows, cross_rows, derived_rows = [], [], []
         for row, r in zip(rows, res):
             chips = CHIP_RE.findall(row['level_cell'] or '')
             if len(chips) != 1:
@@ -3252,24 +3675,104 @@ def check():
                 fails.append(f'{rel} row {row["ordinal"]}: chipped PENDING but there is no '
                              f'row-level entry for it in pending-protocols.yaml')
             if ruled:
+                is_derived = ruled.get('status') == 'derived'
                 want_level = ruled['level']
                 if want_level == 'FLOOR':
                     want_level, _chips, _rows = page_floor(rel)
+                if want_level == 'LOWEST':
+                    # a DERIVED level: re-read the recorded quote out of the source and
+                    # recompute the lowest level it names. Nothing here is trusted from
+                    # the yaml except the quote itself, which must be a verbatim span.
+                    der = ruled['derive']
+                    key = (int(der['pems_page']), int(der['pems_ordinal']))
+                    src = pems.get(key)
+                    if src is None:
+                        fails.append(f'{rel} row {row["ordinal"]}: derived level cites '
+                                     f'p.{key[0]}#{key[1]}, which is not in pems_table.json')
+                    elif not quote_in(der['quote'], src):
+                        fails.append(f'{rel} row {row["ordinal"]}: derived quote is not a '
+                                     f'verbatim span of p.{key[0]}#{key[1]} — the derivation '
+                                     f'does not rest on the source\'s own words')
+                    want_level = ladder_floor(der['ladder'])
+                    named = ladder_levels_only(der['ladder'])
+                    if not named:
+                        fails.append(f'{rel} row {row["ordinal"]}: derived ladder '
+                                     f'{der["ladder"]!r} names no provider level')
+                    if 'lvl-deriv' not in (row['level_cell'] or ''):
+                        fails.append(f'{rel} row {row["ordinal"]}: level is derived from the '
+                                     f'source\'s own ladder wording, so the chip must carry '
+                                     f'the \u2020 marker (it does not)')
                 if level != want_level:
-                    fails.append(f'{rel} row {row["ordinal"]}: marker {level} != owner ruling '
+                    fails.append(f'{rel} row {row["ordinal"]}: marker {level} != '
+                                 f'{"derived level" if is_derived else "owner ruling"} '
                                  f'{want_level}')
-                if 'lvl-own' in (row['level_cell'] or ''):
-                    fails.append(f'{rel} row {row["ordinal"]}: owner-ruled row still carries '
-                                 f'the OWNER_REQUIRED marker')
+                cell_txt = row['level_cell'] or ''
+                if 'lvl-own' in cell_txt:
+                    fails.append(f'{rel} row {row["ordinal"]}: '
+                                 f'{"derived" if is_derived else "owner-ruled"} row still '
+                                 f'carries the OWNER_REQUIRED marker')
+                if not is_derived and 'lvl-deriv' in cell_txt:
+                    fails.append(f'{rel} row {row["ordinal"]}: chip carries the \u2020 '
+                                 f'derived-level marker but level-rulings.yaml records no '
+                                 f'derived level for it')
+                if is_derived:
+                    e = led.get((rel, str(row['ordinal'])))
+                    if e is None:
+                        fails.append(f'{rel} row {row["ordinal"]}: derived row missing from '
+                                     f'the ledger')
+                    else:
+                        if e['status'] != 'derived':
+                            fails.append(f'{rel} row {row["ordinal"]}: ledger says '
+                                         f'{e["status"]}, level-rulings.yaml derives the level')
+                        if e.get('pems_page') or e.get('pems_ordinal'):
+                            fails.append(f'{rel} row {row["ordinal"]}: derived ledger row '
+                                         f'claims p.{e.get("pems_page")}#'
+                                         f'{e.get("pems_ordinal")} as the authority — the '
+                                         f'source row scopes the action, it does not badge it')
+                        if e.get('owner_ruling'):
+                            fails.append(f'{rel} row {row["ordinal"]}: derived ledger row '
+                                         f'carries an owner_ruling record — the ladder rule '
+                                         f'settles this, the owner did not')
+                        got_der = e.get('derived') or {}
+                        der = ruled['derive']
+                        if (got_der.get('rule'), got_der.get('ladder'),
+                                got_der.get('pems_page'), got_der.get('pems_ordinal')) != \
+                                (der['rule'], der['ladder'], int(der['pems_page']),
+                                 int(der['pems_ordinal'])):
+                            fails.append(f'{rel} row {row["ordinal"]}: ledger derivation '
+                                         f'{got_der} != level-rulings.yaml {der}')
+                    derived_rows.append({'row': row['ordinal'], 'level': level,
+                                         'ladder': ruled['derive']['ladder'],
+                                         'pems': f"p.{ruled['derive']['pems_page']}#"
+                                                 f"{ruled['derive']['pems_ordinal']}"})
+                    continue
                 # a ruling must rest on printed prose: the citation is verified verbatim
                 # against the prose index, so a ruling can no longer be free text.
                 cites = check_prose_citations(rel, f'row {row["ordinal"]}',
                                               ruled.get('prose_citations'), prose, fails)
                 lf = ruled.get('level_from')
-                if r['badge'] is not None and not cites and not lf:
+                co = check_clause(rel, f'row {row["ordinal"]}', ruled.get('clause_of'),
+                                  want_level, pems, fails) if ruled.get('clause_of') else None
+                if r['badge'] is not None and not cites and not lf and not co:
                     fails.append(f'{rel} row {row["ordinal"]}: owner ruling recorded but PEMS '
                                  f'row {r["ptr"]} already badges it and the ruling records no '
                                  f'prose citation — ruling is stale')
+                if co:
+                    # the ruling does NOT rest on the row's badge — it rests on the clause.
+                    # Say so out loud rather than silently accepting a different level.
+                    if co['badge'] == want_level:
+                        fails.append(f'{rel} row {row["ordinal"]}: clause_of ruling records '
+                                     f'level {want_level}, but p.{co["page"]}#'
+                                     f'{co["ordinal"]} already prints that badge — the clause '
+                                     f'is not what changes the level; cite the row instead')
+                    # the flag may retire only because the site row covers this clause alone.
+                    # A binding that still declares the row owner_required contradicts it.
+                    b = bindings.get((rel, str(row['ordinal']))) or {}
+                    if b.get('status') == 'owner_required':
+                        fails.append(f'{rel} row {row["ordinal"]}: level-rulings.yaml declares '
+                                     f'clause_only, but row-bindings.yaml still declares the '
+                                     f'row owner_required — a retired flag cannot keep an open '
+                                     f'decision\'s reason')
                 if lf:
                     src = pems.get((lf['page'], lf['ordinal']))
                     if src is None:
@@ -3302,6 +3805,10 @@ def check():
                     if want != got:
                         fails.append(f'{rel} row {row["ordinal"]}: ledger prose citations '
                                      f'{got} != level-rulings.yaml {want}')
+                    if (e.get('clause_of') or None) != (ruled.get('clause_of') or None):
+                        fails.append(f'{rel} row {row["ordinal"]}: ledger clause_of '
+                                     f'{e.get("clause_of")} != level-rulings.yaml clause '
+                                     f'{ruled.get("clause_of")}')
                 ruled_rows.append({'row': row['ordinal'], 'level': level, 'status': 'owner_ruled',
                                    'prose': [f"p.{c['page']} {c['heading']} #{c['ordinal']}"
                                              for c in cites]})
@@ -3315,6 +3822,32 @@ def check():
             resolved_level = cells_level((r['resolved'] or {}).get('resolved_cells'))
             tokens = compound_tokens(r['pems_row'],
                                      (r['extra'].get('binding') or {}).get('quoted_row_text'))
+            if not ruled:
+                auto = auto_derived(row['action'], r['extra'], r)
+                if auto:
+                    cell_txt = row['level_cell'] or ''
+                    if level != auto[0]:
+                        fails.append(f'{rel} row {row["ordinal"]}: the source scopes this '
+                                     f'action to "{auto[1]}", so the chip must be the lowest '
+                                     f'level it names ({auto[0]}), not {level}')
+                    if 'lvl-own' in cell_txt:
+                        fails.append(f'{rel} row {row["ordinal"]}: the source\'s own ladder '
+                                     f'wording settles this level, so the row must not carry '
+                                     f'the OWNER_REQUIRED flag')
+                    if 'lvl-deriv' not in cell_txt:
+                        fails.append(f'{rel} row {row["ordinal"]}: level derived from '
+                                     f'"{auto[1]}" but the chip does not carry the \u2020 '
+                                     f'marker')
+                    e = led.get((rel, str(row['ordinal'])))
+                    if e is None or e['status'] != 'derived':
+                        fails.append(f'{rel} row {row["ordinal"]}: level derived from the '
+                                     f'source\'s own ladder wording but the ledger says '
+                                     f'{e["status"] if e else "nothing"}')
+                    derived_rows.append({'row': row['ordinal'], 'level': level,
+                                         'ladder': auto[1],
+                                         'pems': (f'p.{r["ptr"][0]}#{r["ptr"][1]}'
+                                                  if r['ptr'] else 'derived from the row text')})
+                    continue
             must_own = bool(r['extra'].get('forced_owner')) or (
                 resolved_level is None and (r['badge'] is None or bool(tokens)))
             has_flag = 'lvl-own' in (row['level_cell'] or '')
@@ -3401,6 +3934,7 @@ def check():
                             'basis': r['basis']})
         report.append({'file': rel, 'rows': len(rows), 'verified': len(ok_rows),
                        'owner_required': owner_rows, 'owner_ruled': ruled_rows,
+                       'derived': derived_rows,
                        'mc_required': mc_rows, 'cross_page': cross_rows})
 
     # ------------------------------------------------- administrative-policy pages
@@ -3731,6 +4265,29 @@ def check():
                                    'level': p['level'], 'pems': str(p['pems']),
                                    'source': 'ruling'})
                 continue
+            if p.get('source') == 'derived':
+                # The source's own words scope this part to a level ladder, so the chip is
+                # the lowest level the ladder names — not an owner decision and not a
+                # printed badge. The derivation is re-read out of the source here.
+                rul = rulings.get((rel, num)) or {}
+                der = rul.get('derive') or {}
+                if rul.get('status') != 'derived':
+                    fails.append(f'{label}: recorded as a `derived` part but level-rulings.yaml '
+                                 f'records no derived level for it')
+                else:
+                    if ladder_floor(str(der.get('ladder') or '')) != p['level']:
+                        fails.append(f'{label}: row-splits.yaml records level {p["level"]} but '
+                                     f'the recorded ladder "{der.get("ladder")}" derives '
+                                     f'{ladder_floor(str(der.get("ladder") or ""))}')
+                    if m and (int(m.group(1)), int(m.group(2))) != \
+                            (int(der.get('pems_page') or 0), int(der.get('pems_ordinal') or 0)):
+                        fails.append(f'{label}: row-splits.yaml names {p["pems"]} but the '
+                                     f'derivation is read from p.{der.get("pems_page")}#'
+                                     f'{der.get("pems_ordinal")}')
+                split_rows.append({'file': rel, 'parent': rec['row'], 'row': num,
+                                   'level': p['level'], 'pems': str(p['pems']),
+                                   'source': 'derived'})
+                continue
             if p.get('source') == 'owner_required':
                 # The source prints the action but scopes it in the row's own words inside
                 # a cell badged for another clause (or two printed rows disagree about its
@@ -3839,6 +4396,7 @@ def check():
         'rows_verified': sum(r['verified'] for r in report),
         'rows_owner_required': sum(len(r['owner_required']) for r in report),
         'rows_owner_ruled': sum(len(r['owner_ruled']) for r in report),
+        'rows_derived': sum(len(r.get('derived') or []) for r in report),
         'ruling_prose_citations': ruling_cites,
         'rows_mc_required': sum(len(r.get('mc_required') or []) for r in report),
         'rows_cross_page': sum(len(r.get('cross_page') or []) for r in report),
@@ -3889,7 +4447,9 @@ def check():
     print(f"\nOK — {summary['rows_total']} action rows across {summary['pages']} pages: "
           f"{summary['rows_verified']} carry exactly one marker equal to the level printed by the "
           f"cited PEMS 2024 row, {summary['rows_owner_required']} are flagged OWNER_REQUIRED with a "
-          f"recorded reason, {summary['rows_owner_ruled']} are owner_ruled. "
+          f"recorded reason, {summary['rows_owner_ruled']} are owner_ruled, "
+          f"{summary['rows_derived']} carry a level DERIVED from the source's own ladder "
+          f"wording (the lowest level it names; not an owner decision). "
           f"{len(seen_kept)} level word(s) survive in action text as recorded clinical "
           f"qualifiers (audit/level-scan/token-decisions.yaml); every other level token found by "
           f"an independent sweep of the action text is either kept there or gone.")

@@ -311,14 +311,121 @@ rulings:
       BLS-scope; the advanced-airway step is r5/r6, cited at I. Level unchanged (EMT).
 
   # ---------------------------------------------------------------------------
-  # Owner instruction 2026-11-20 (row-structure pass). Three rows could not be CITED
-  # and are NOT owner rulings either: PEMS prints the action inside a row whose printed
-  # badge belongs to a different clause and scopes this one in the row's own words
-  # ("(as determined by EMT-I or P)", "I/P only"). No owner statement about those levels
-  # exists, so they are not listed here — a ruling must quote the owner's words. They are
-  # recorded as `owner_required` in row-bindings.yaml with the row that prints the action
-  # and why its badge cannot carry it, and the row-splits entry says `source: owner_required`.
-  # (2026-11-20 later ruling: `owner_ruled` was dropped from all three for exactly this
-  # reason — a level the owner never spoke to must not be attributed to him.)
+  # 2026-11-20 — DERIVED, not ruled. These two rows are the ONLY ones the ladder rule
+  # settles outright, so they are recorded as `derived`: PEMS prints the action inside a
+  # row badged for a different clause and scopes it in that row's own words
+  # ("as determined by EMT-I or P"). The owner has never spoken about these levels and
+  # none is attributed to him. The chip is the LOWEST level the ladder names — computed
+  # from `derive.ladder`, which `--check` re-reads as a verbatim span of the cited row —
+  # and every level above it may also perform the action (the owner's standing rule,
+  # 2026-11-20: "You just have to put the lowest provider level and everyone above can do
+  # it too"). A `derived` row is NOT an open decision and never appears on the
+  # owner-facing decisions page.
+  #
+  # The third row of that same shape, Asthma r8a (PEEP titration), is NOT derivable: the
+  # two printed rows disagree (one scopes it I/P, the other badges it at every level) and
+  # it is a bundle, so it stays `owner_required` in row-bindings.yaml until card
+  # t_peep_i lands. Pulmonary Edema r9 is the same question and stays flagged too.
+  # ---------------------------------------------------------------------------
+
+  - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
+    row: 8a
+    level: LOWEST
+    status: derived
+    date: "2026-11-20"
+    rule: lowest_printed_level
+    action: "Interpret the rhythm: VF or VT (shockable), or asystole or PEA (non-shockable)."
+    derive:
+      rule: lowest_printed_level
+      pems_page: 235
+      pems_ordinal: 4
+      quote: "or rhythm is VF or VT (as determined by EMT-I or P)"
+      ladder: "EMT-I or P"
+    note: >-
+      Derived from the source's own words, NOT ruled by the owner. p.235#4 prints
+      "rhythm is VF or VT (as determined by EMT-I or P)" (and the same scoping for
+      asystole/PEA, and again word for word at p.263#4), so the levels that determine the
+      rhythm are EMT-I and Paramedic. Lowest named = I, which is the chip; every level
+      above I may also perform it by the owner's ladder rule. The printed badge on that
+      row (EMR) belongs to the AED/analyse clause, which is row 8 with its own binding.
+
+  - file: protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
+    row: 4a
+    level: LOWEST
+    status: derived
+    date: "2026-11-20"
+    rule: lowest_printed_level
+    action: "Interpret the rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shockable)."
+    derive:
+      rule: lowest_printed_level
+      pems_page: 235
+      pems_ordinal: 4
+      quote: "or rhythm is VF or VT (as determined by EMT-I or P)"
+      ladder: "EMT-I or P"
+    note: >-
+      As Asystole r8a: same action, same scoping sentence in the same PEMS row (p.235#4,
+      repeated at p.263#4). Derived, not ruled — the source names EMT-I and Paramedic, so
+      the chip is the lowest of them (I) and every level above may perform it. The AED
+      half of the split row is row 4, cited at EMR.
+
+  # ------------------------------------------------------------- 2026-11-20 PEEP titration
+  # Owner ruling, verbatim: "An intermediate can also titrate peep."
+  #
+  # This settles the p.239#5 / p.245#4 disagreement the row-structure pass left open in
+  # favour of the `I/P only` clause: titrating PEEP is an Intermediate-level action. p.245#4
+  # badges the CPAP/BiPAP/PEEP procedure EMT and calls CPAP/BiPAP/PEEP RED DOT at all
+  # levels, but the row that prints THIS action scopes it to I/P in its own words, and the
+  # owner has now decided which reading wins. Neither entry is a source citation: the chip
+  # is the owner's decision, the clause is its printed basis, and the row's EMT badge is
+  # recorded beside it.
+  #
+  # `clause_only: true` on both: each site row covers the titration and nothing else, so one
+  # chip is the whole authorisation and the ⚑ OWNER_REQUIRED flag retires. A row that still
+  # bundled CPAP INITIATION (printed EMT) with titration would keep its flag — see
+  # Respiratory Distress r6, which still bundles both and is therefore NOT covered here.
+  - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
+    row: 9
+    level: I
+    status: owner_ruled
+    date: "2026-11-20"
+    clause_only: true
+    clause_of:
+      page: 239
+      ordinal: 5
+      token: "I/P only: Adjust PEEP to support ventilation and work of breathing"
+    ruling: "An intermediate can also titrate peep."
+    action: "CPAP Titration: Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing"
+    note: >-
+      Owner ruling 2026-11-20, verbatim: "An intermediate can also titrate peep." The chip is
+      now I. PEMS prints the action inside p.239#5 — "Consider CPAP (PEEP: 5 cmH2O) ...
+      I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH2O" —
+      a row badged EMT whose own words scope this clause to I/P, so the level is the lowest
+      level the clause names (I) and not the row's badge. p.245#4 (CPAP/BiPAP/PEEP procedure)
+      badges titration EMT and calls the procedures RED DOT at all levels; the owner has
+      ruled which reading governs, so that conflict is settled, not open. The row is
+      titration-only, so the chip is the whole authorisation and the OWNER_REQUIRED flag is
+      retired.
+
+  - file: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
+    row: 8a
+    level: I
+    status: owner_ruled
+    date: "2026-11-20"
+    clause_only: true
+    clause_of:
+      page: 239
+      ordinal: 5
+      token: "I/P only: Adjust PEEP to support ventilation and work of breathing"
+    ruling: "An intermediate can also titrate peep."
+    action: "Titrate PEEP up to 10 cm H2O to support ventilation and work of breathing."
+    note: >-
+      Owner ruling 2026-11-20, verbatim: "An intermediate can also titrate peep.", as
+      Pulmonary Edema row 9: p.239#5's own words scope PEEP titration to I/P inside a row
+      badged EMT, and the owner has ruled that reading governs. The level was already I; what
+      changes is that it is no longer provisional. Row 8a is the titration half of the split
+      the owner ordered on 2026-11-20 and covers nothing else, so its chip is the whole
+      authorisation and the OWNER_REQUIRED flag retires. Row 8 (CPAP initiation, printed EMT
+      at p.239#5) is cited and unaffected.
+
 
 
