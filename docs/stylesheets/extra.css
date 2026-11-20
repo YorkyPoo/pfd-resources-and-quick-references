@@ -268,37 +268,160 @@
     border-right: 2px solid var(--md-primary-fg-color); }
 }
 
-/* Homepage quick links: one big door row (.qlone) above its own jump strip
-   (.qljump). No cards — the hub pages carry the depth. Sized for a thumb on a
-   phone (owner: "those bars need to be a little bit larger"). */
-.qlcap { margin: .2em 0 .35em; font-size: .74em; letter-spacing: .06em;
-  text-transform: uppercase; opacity: .62; }
-.qlcap p { margin: 0; }
+/* ============================================================================
+   Homepage on-scene dashboard (owner card t_e787ab8d)
+   ----------------------------------------------------------------------------
+   The homepage is a 10-second on-scene dashboard, not a vertical sitemap. Three
+   zones: five high-acuity tiles, exactly two horizontal scrollers, one compact
+   two-column utility row. .qljump survives below for the hub pages.
+   Every tile is a raised surface with a 4px domain accent bar and an icon,
+   because the old page was one flat blush tint from top to bottom and a
+   paramedic could not tell an emergency tool from an administrative policy.
+   Colour is NEVER the only signal: each tile spells its domain (EMS / FIRE /
+   ADMIN) into its sublabel, and the accent only echoes it.
+   ========================================================================== */
 
-/* static one-tap tools */
-.qltools { display: flex; flex-wrap: wrap; gap: .4em; margin: 0 0 .75em; }
-.qltools p { display: contents; }
-.qltools a {
-  flex: 1 1 46%; text-align: center; text-decoration: none;
-  display: flex; align-items: center; justify-content: center; min-height: 52px;
-  padding: .6em .5em; border-radius: 10px; font-weight: 700; font-size: .88em;
-  line-height: 1.25; color: var(--md-typeset-a-color);
-  background: color-mix(in srgb, var(--md-primary-fg-color) 13%, var(--md-default-bg-color));
-  border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 26%, transparent); }
-.qltools a:hover { background: color-mix(in srgb, var(--md-primary-fg-color) 24%, var(--md-default-bg-color)); }
-@media only screen and (min-width: 761px) { .qltools a { flex: 0 0 auto; } }
+.md-typeset .pfd-zone { margin: 0 0 1.15em; }
+.md-typeset .pfd-cap {
+  margin: 0 0 .42em; font-size: .72em; font-weight: 700;
+  letter-spacing: .07em; text-transform: uppercase;
+  color: var(--md-default-fg-color--light); }
+.md-typeset .pfd-cap a { color: inherit !important; text-decoration: underline;
+  text-underline-offset: 2px; text-decoration-thickness: 1px; }
+/* the two utility-column headings are links, so they are bold markdown with the
+   cap class rather than a <p> (a raw <a href="x.md"> would ship an unrewritten
+   .md href; MkDocs only rewrites markdown links) */
+.md-typeset .pfd-cap--link {
+  display: block; margin: 0 0 .42em; font-size: .72em; font-weight: 700;
+  letter-spacing: .07em; text-transform: uppercase;
+  color: var(--md-default-fg-color--light); }
+.md-typeset .pfd-cap--link a { color: inherit !important; text-decoration: underline;
+  text-underline-offset: 2px; text-decoration-thickness: 1px; }
 
-/* door row: full-width, one line, big target */
-.qlone { margin: .1em 0 .35em; }
-.qlone p { margin: 0; }
-.qlone a {
-  display: block; min-height: 58px; padding: .85em .9em; border-radius: 10px;
-  background: color-mix(in srgb, var(--md-primary-fg-color) 11%, var(--md-default-bg-color));
-  border-left: 5px solid var(--md-primary-fg-color);
-  font-size: 1.02em; font-weight: 700; line-height: 1.35; text-decoration: none; }
-.qlone a:hover { background: color-mix(in srgb, var(--md-primary-fg-color) 19%, var(--md-default-bg-color)); }
-.qlcount { float: right; font-weight: 400; font-size: .76em; opacity: .8; line-height: 2.4; }
-@media only screen and (max-width: 600px) { .qlcount { display: none; } }
+/* --- tile grid: 2 up on a phone, 3 up from 761px ------------------------- */
+/* .md-typeset prefix is load-bearing: Material's own `ul` rules are (0,1,1) and
+   set display/margins on lists, which collapsed this grid to one column. */
+.md-typeset .pfd-quick-grid > ul {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .6em; margin: 0; padding: 0; list-style: none; }
+@media only screen and (min-width: 761px) {
+  .md-typeset .pfd-quick-grid > ul { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.md-typeset .pfd-quick-grid > ul > li { margin: 0; padding: 0; list-style: none; }
+.md-typeset .pfd-quick-grid > ul > li::before { content: none; }
+
+.md-typeset .pfd-card {
+  --pfd-accent: var(--md-primary-fg-color);
+  display: grid; grid-template-columns: auto 1fr;
+  grid-template-areas: "ico t" "ico s";
+  align-content: center; column-gap: .55em; row-gap: .1em;
+  min-height: 80px; height: 100%; box-sizing: border-box;
+  padding: .62em .7em; border-radius: 10px;
+  text-decoration: none; color: var(--md-default-fg-color) !important;
+  /* surface lifted off the page in BOTH schemes: a white-mix of the page colour
+     is a near-white card on light and a lighter slate on dark, never white-on-dark */
+  background: color-mix(in srgb, var(--md-default-bg-color) 92%, #ffffff);
+  border: 1px solid color-mix(in srgb, var(--md-default-fg-color) 18%, transparent);
+  border-left: 4px solid var(--pfd-accent);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, .18), 0 3px 10px rgba(16, 24, 40, .10);
+  transition: box-shadow .12s ease, transform .12s ease; }
+/* light scheme only: a neutral (not blush) surface a hair off the white page, so
+   elevation is legible even where the box-shadow is lost in glare */
+[data-md-color-scheme="default"] .md-typeset .pfd-card { background: #f8fafc; }
+.md-typeset .pfd-card--plain { grid-template-columns: 1fr; grid-template-areas: "t" "s"; }
+.md-typeset .pfd-card:hover,
+.md-typeset .pfd-card:focus-visible {
+  box-shadow: 0 2px 5px rgba(16, 24, 40, .22), 0 7px 18px rgba(16, 24, 40, .16);
+  transform: translateY(-1px); }
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset .pfd-card { transition: none; }
+  .md-typeset .pfd-card:hover, .md-typeset .pfd-card:focus-visible { transform: none; }
+}
+.pfd-ico { grid-area: ico; align-self: center; display: flex;
+  color: var(--pfd-accent); }
+.pfd-ico svg { width: 27px; height: 27px; display: block; }
+.pfd-t { grid-area: t; font-weight: 800; font-size: .92em; line-height: 1.2;
+  min-width: 0; hyphens: auto;
+  /* Material's global word-break would split "Assignments" into "Assignmen/ts" in
+     the 139px tile at 320px; hyphenate instead of breaking a word mid-syllable */
+  overflow-wrap: normal; word-break: normal; }
+.pfd-s { grid-area: s; font-size: .7em; line-height: 1.3; font-weight: 500;
+  letter-spacing: .01em; min-width: 0; hyphens: auto;
+  overflow-wrap: normal; word-break: normal;
+  /* 80% of the body ink instead of Material's --light: the sublabel is the only
+     place the domain is *written*, and it has to survive cab glare, so it is held
+     well above the 4.5:1 floor (measured below) */
+  color: color-mix(in srgb, var(--md-default-fg-color) 80%, transparent); }
+/* 320px: the two-up tile is 139px wide, so the icon and the type both step down
+   rather than breaking a word */
+@media only screen and (max-width: 360px) {
+  .md-typeset .pfd-card { padding: .55em .5em; column-gap: .45em; }
+  .pfd-ico svg { width: 22px; height: 22px; }
+  .pfd-t { font-size: .84em; }
+  .pfd-s { font-size: .66em; }
+}
+
+/* domain accents — one place, so a tile cannot carry the wrong colour.
+   The .md-typeset prefix and this order are load-bearing: the base rules above are
+   (0,2,0) and would otherwise win the custom-property race, painting every domain
+   with the maroon brand colour (measured: all five tiles maroon before this fix). */
+.md-typeset .pfd-card--ems, .md-typeset a.pfd-chip--ems { --pfd-accent: #0284c7; }
+.md-typeset .pfd-card--fire, .md-typeset a.pfd-chip--fire { --pfd-accent: #b91c1c; }
+.md-typeset .pfd-card--admin, .md-typeset a.pfd-chip--admin { --pfd-accent: #475569; }
+/* dark scheme: the same three hues at icon/bar lightness, so the accent bar and
+   icon measure >=3:1 on the dark card (the light-scheme hexes do not) */
+[data-md-color-scheme="slate"] .md-typeset .pfd-card--ems,
+[data-md-color-scheme="slate"] .md-typeset a.pfd-chip--ems { --pfd-accent: #38bdf8; }
+[data-md-color-scheme="slate"] .md-typeset .pfd-card--fire,
+[data-md-color-scheme="slate"] .md-typeset a.pfd-chip--fire { --pfd-accent: #f87171; }
+[data-md-color-scheme="slate"] .md-typeset .pfd-card--admin,
+[data-md-color-scheme="slate"] .md-typeset a.pfd-chip--admin { --pfd-accent: #94a3b8; }
+
+/* --- the two scrollers --------------------------------------------------- */
+.md-typeset .pfd-scroller {
+  display: flex; align-items: center; gap: .38em;
+  margin: 0 0 .9em; padding: .45em .5em; border-radius: 10px;
+  background: var(--md-code-bg-color);
+  border: 1px solid color-mix(in srgb, var(--md-default-fg-color) 10%, transparent);
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  /* fade at the right edge says "there is more" without a grey track */
+  mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 26px), transparent);
+  -webkit-mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 26px), transparent); }
+.md-typeset .pfd-scroller > p { display: contents; }
+
+.md-typeset .pfd-chip {
+  --pfd-accent: var(--md-primary-fg-color);
+  flex: 0 0 auto; display: inline-flex; align-items: center;
+  min-height: 44px; padding: .3em .95em; border-radius: 999px;
+  font-weight: 700; font-size: .82em; white-space: nowrap; text-decoration: none;
+  color: var(--md-default-fg-color) !important;
+  background: color-mix(in srgb, var(--md-default-bg-color) 94%, #ffffff);
+  border: 1px solid color-mix(in srgb, var(--pfd-accent) 45%, transparent); }
+.md-typeset .pfd-chip::before {
+  content: ""; flex: 0 0 auto; width: .5em; height: .5em; border-radius: 50%;
+  margin-right: .45em; background: var(--pfd-accent); }
+.md-typeset .pfd-chip:hover,
+.md-typeset .pfd-chip:focus-visible {
+  background: color-mix(in srgb, var(--pfd-accent) 14%, var(--md-default-bg-color)); }
+
+/* --- bottom utility row: policies beside crew links ---------------------- */
+.md-typeset .pfd-secondary-row {
+  display: grid; grid-template-columns: 1fr; gap: .9em;
+  padding-top: .8em;
+  border-top: 1px solid var(--md-default-fg-color--lightest); }
+@media only screen and (min-width: 761px) {
+  .md-typeset .pfd-secondary-row { grid-template-columns: 1fr 1fr; gap: 1.4em; }
+}
+.md-typeset .pfd-secondary { min-width: 0; }
+.md-typeset .pfd-chips { display: flex; flex-wrap: wrap; gap: .35em; }
+.md-typeset .pfd-chips > p { display: contents; }
+
+/* The floating "Back to top" pill is positioned over the content column and lands
+   on the H1 at 390px (measured overlap before this rule). The dashboard header has
+   to be clean on load, so the pill is removed on this page only — every other page
+   keeps navigation.top. */
+body:has(.pfd-quick-grid) .md-top { display: none !important; }
 
 /* Group jump: horizontal chip strips (homepage + each hub page). One row per
    bucket; scrolls sideways instead of stacking into a wall of pills. */
@@ -328,26 +451,17 @@
    override component link text explicitly, not with primary. #ffab91 measures
    7.2:1 (tools) / 7.5:1 (doors) / 6.7:1 (chips) against the tinted dark tiles,
    chosen over the barely-passing salmon because this app gets read in daylight. */
-[data-md-color-scheme="slate"] .qlcap { color: rgba(226, 228, 233, .78); opacity: 1; }
-[data-md-color-scheme="slate"] .qltools a {
-  color: #ffab91; background: rgba(255, 171, 145, .10);
-  border-color: rgba(255, 171, 145, .38); }
-[data-md-color-scheme="slate"] .qltools a:hover { background: rgba(255, 138, 128, .20); }
-[data-md-color-scheme="slate"] .qlone a {
-  color: #ffab91; background: rgba(255, 171, 145, .08); border-left-color: #b04040; }
-[data-md-color-scheme="slate"] .qlone a:hover { background: rgba(255, 138, 128, .17); }
-[data-md-color-scheme="slate"] .qlcount { color: rgba(226, 228, 233, .62); }
 [data-md-color-scheme="slate"] .qljump strong { color: rgba(226, 228, 233, .62); }
 [data-md-color-scheme="slate"] .qljump a { color: #ffab91; background: rgba(255, 171, 145, .14); }
 [data-md-color-scheme="slate"] .qljump a:hover { background: rgba(255, 138, 128, .26); }
 [data-md-color-scheme="slate"] .qljump p::-webkit-scrollbar-thumb { background: rgba(255,138,128,.5); }
 
 /* Home page only: the site name already sits in the top bar, so the page title
-   costs a screen of scroll for nothing. Compress it when the quick-links block
+   costs a screen of scroll for nothing. Compress it when the dashboard block
    is present (:has() — degrades to the normal title on older engines). */
-article:has(.qltools) h1:first-of-type { font-size: 1.25em; margin: .1em 0 .3em; }
-article:has(.qltools) h1:first-of-type + p { margin: 0 0 .45em; font-size: .9em; }
-article:has(.qltools) h2:first-of-type { font-size: 1.15em; margin: .45em 0 .3em; }
+article:has(.pfd-quick-grid) h1:first-of-type { font-size: 1.25em; margin: .1em 0 .3em; }
+article:has(.pfd-quick-grid) h1:first-of-type + p { margin: 0 0 .45em; font-size: .9em; }
+article:has(.pfd-quick-grid) h2:first-of-type { font-size: 1.15em; margin: .45em 0 .3em; }
 
 /* Homepage recent-updates list */
 .recent-list { list-style: none; padding: 0; margin: 0; }
@@ -479,11 +593,8 @@ article:has(.qltools) h2:first-of-type { font-size: 1.15em; margin: .45em 0 .3em
    that exact bug made today's intake button render maroon-on-maroon.
    ============================================================ */
 
-/* --- on-scene tool row: 2-column grid on phones, >=54px targets --- */
-@media only screen and (max-width: 600px) {
-  .qltools { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .qltools a { flex: none; min-height: 54px; font-size: .92em; padding: .55em .4em; }
-}
+/* --- on-scene tool row: the dashboard grid in extra.css owns this now; the
+   legacy .qltools rules were removed with the door rows (card t_e787ab8d) --- */
 
 /* --- crew portal cards --- */
 .lgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: .9em 0 1.3em; }

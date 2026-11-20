@@ -4,9 +4,13 @@ Everything attached to the **EMS side** — protocols, skills procedures, medica
 
 <div class="qljump" markdown="1">
 
-**Jump:** [Cardiac](#cardiac) [Respiratory](#respiratory) [Trauma](#trauma) [Medical](#medical) [Administrative](#administrative) [Procedures](#procedures) [Quick References](#quick-references) [Toxicology](#toxicology) [Neurologic](#neurologic) [General](#general) [Pharmacology](#pharmacology) [Medications & Calculators](#medications-calculators) [Pediatric Dosing Reference](#pediatric-dosing-reference) [EMS SOPs](#ems-sops) [Front Matter](#front-matter)
+**Jump:** [Orientation](#orientation) [Cardiac](#cardiac) [Respiratory](#respiratory) [Trauma](#trauma) [Medical](#medical) [Administrative](#administrative) [Procedures](#procedures) [Quick References](#quick-references) [Toxicology](#toxicology) [Neurologic](#neurologic) [General](#general) [Pharmacology](#pharmacology) [Medications & Calculators](#medications-calculators) [Pediatric Dosing Reference](#pediatric-dosing-reference) [EMS SOPs](#ems-sops) [Front Matter](#front-matter)
 
 </div>
+
+## Orientation
+
+- [Outstanding Decisions](../protocols/outstanding-decisions.md)
 
 ## Cardiac
 
