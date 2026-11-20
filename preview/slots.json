@@ -7,10 +7,10 @@
       "sha": "98189044c7e1acd89c2fd48e0ab4eb5be06a02cb"
     },
     "pilot": {
-      "branch": "pilot-pipstrip",
-      "built_at": "2026-11-20T05:15:46Z",
-      "description": "Protocol format pilot: tapped-level R|B|A|I|P pip strip (2 pages)",
-      "sha": "6339178bd898cf6186528896e7e506c46d99c077"
+      "branch": "pilot-references-block",
+      "built_at": "2026-11-20T05:16:50Z",
+      "description": "\"Pilot: prose moved from action tables into a References & Good Practice block (2 pages)\"",
+      "sha": "c9615d945742aa2ad3465dd7461fcc0e6e9a8dec"
     },
     "relabel": {
       "branch": "provider-level-letters",
@@ -19,5 +19,5 @@
       "sha": "05addb26252f6259debff424aa83b68467bea4ab"
     }
   },
-  "updated_at": "2026-11-20T05:15:46.320932+00:00"
+  "updated_at": "2026-11-20T05:16:50.208571+00:00"
 }
