@@ -50,10 +50,10 @@
     },
     "sedation": {
       "branch": "sedation-integration",
-      "built_at": "2026-11-20T06:44:28Z",
+      "built_at": "2026-11-20T06:45:16Z",
       "description": "Sedation: ketamine removed, printed fentanyl/midazolam regimen",
-      "sha": "289a1240c87b73b70672477787d4a5f8d652ef09"
+      "sha": "1d0ff5b09c0ad20041f950e3a62fe89422d56db4"
     }
   },
-  "updated_at": "2026-11-20T06:44:28.645661+00:00"
+  "updated_at": "2026-11-20T06:45:16.626265+00:00"
 }
