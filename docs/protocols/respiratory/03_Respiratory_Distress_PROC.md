@@ -49,7 +49,8 @@ This protocol addresses respiratory distress from obstructive (asthma/COPD), inf
 |:---:|---|---|
 | 1 | <span class="lvl lvl-emr">EMR</span> | **Universal Patient Care / Initial Patient Contact Protocol:**<br>• Assess airway patency and breathing adequacy |
 | 2 | <span class="lvl lvl-emr">EMR</span> | **Airway and Lung Assessment:**<br>• Focused assessment for stridor, wheezing, rales<br>• Auscultate breath sounds bilaterally<br>• Assess work of breathing and accessory muscle use |
-| 3 | <span class="lvl lvl-emt">EMT</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | **Continuous Monitoring:**<br>• Continuous EtCO2 monitoring to guide therapy<br>• Continuous pulse oximetry<br>• Cardiac monitoring |
+| 3 | <span class="lvl lvl-emt">EMT</span> | **Continuous Monitoring:**<br>• Continuous EtCO2 monitoring to guide therapy<br>• Continuous pulse oximetry |
+| 3a | <span class="lvl lvl-i">I</span> | • Cardiac monitoring |
 | 4 | <span class="lvl lvl-emr">EMR</span> | **Oxygen Administration (if SpO2 <94%):**<br>• **Supplemental Oxygen** titrated to maintain SpO2 >94%<br>• Start with nasal cannula or non-rebreather as needed<br>• Avoid excessive FiO2 in COPD patients (target 88-92%) |
 | 5 | <span class="lvl lvl-emr">EMR</span> | **Positioning:**<br>• Patient position of comfort (sitting upright preferred)<br>• Consider reverse Trendelenburg if tolerated |
 | 6 | <span class="lvl lvl-emt">EMT</span> | ****CPAP** (Continuous Positive Airway Pressure):**<br>• **Indications:** Adults with respiratory distress due to pulmonary edema, infection, or near-drowning<br>• **Initial Settings:** PEEP 5 cmH2O<br>• **Titration:** Up to 10 cmH2O<br>• Close monitoring for hypotension or pneumothorax<br>⚠ **See Pearls for all contraindications** |
@@ -62,11 +63,11 @@ This protocol addresses respiratory distress from obstructive (asthma/COPD), inf
 | 13 | <span class="lvl lvl-a">A</span> | **Pulmonary Edema:**<br>• If Dyspnea with crackles and/or jugular venous distention:<br>• **[Nitroglycerin](../../pharmacology/Nitroglycerin.md) 0.4 mg** sublingual (adult only)<br>• Repeat every 5 minutes up to 3 doses if SBP >100 mmHg (MAP >65 mmHg)<br>• Consider CPAP if available and no contraindications |
 | 14 | <span class="lvl lvl-i">I</span> | **Severe Asthma/COPD:**<br>• Refer to Asthma specific protocol for comprehensive treatment<br>• **[Magnesium Sulfate](../../pharmacology/Magnesium%20Sulfate.md)** per Asthma protocol<br>⚠ Positive pressure may worsen pneumothorax or cause breath stacking |
 | 15 | <span class="lvl lvl-emt">EMT</span> | **Cardiac Ischemia Management:**<br>• Evaluate for cardiac origin<br>• Consider 12-lead ECG<br>• Refer to Chest Pain/ACS protocol if indicated |
-| 16 | <span class="lvl lvl-p">P</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | **Respiratory Failure Management:**<br>• If apnea/agonal respirations or GCS ≤13:<br>• Prepare for immediate airway control<br>• Bag-valve-mask ventilation<br>• Consider advanced airway per provider level<br>• Transport without delay |
+| 16 | <span class="lvl lvl-emt">EMT</span> | **Respiratory Failure Management:**<br>• If apnea/agonal respirations or GCS ≤13:<br>• Prepare for immediate airway control<br>• Bag-valve-mask ventilation<br>• Transport without delay |
+| 16a | <span class="lvl lvl-i">I</span> | • Consider advanced airway per provider level — patients 12 years and older |
+| 16b | <span class="lvl lvl-p">P</span> | • Consider advanced airway per provider level — patients under 12 years of age |
 
 </div>
-
-<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — rows 3, 16: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
 ---
 

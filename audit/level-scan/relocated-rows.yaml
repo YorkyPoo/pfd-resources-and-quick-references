@@ -1,69 +1,145 @@
-# Rows moved OUT of an action table into that page's "References & Good Practice" block
-# (owner presentation ruling: unbadged PEARLS / NOTES / CONTRAINDICATIONS prose does not
-# sit as a chipped action row). Pilot 2026-11-20 — Pulmonary Edema rows 6-8, Cold
-# Exposure rows 6 and 9.
+# Rows moved OUT of an action table into that page's "References & Good Practice" block.
 #
-# level_rule.py reads this file for two things, and both are verified, not asserted:
+# Two owner rulings put prose here instead of in the action table:
+#   * presentation ruling 2026-11-20 (pilot): unbadged PEARLS / NOTES / CONTRAINDICATIONS
+#     prose is not an action row — Pulmonary Edema rows 6-8, Cold Exposure rows 6 and 9.
+#   * row-structure instruction 2026-11-20: guidance PEMS prints as instruction to the
+#     provider — scene management, recognition, preparation, assessment — is not a numbered
+#     action and takes no level — Pediatric Stridor r2, Upper Airway Obstruction r2,
+#     Pneumothorax r5, Trauma r6.
 #
-#   1. The ledger's historical "flagged before / cleared" counts. A relocated row is no
-#      longer in the ledger, so its pre-ruling status would silently disappear from those
-#      totals; `status_before` keeps that history immutable.
-#   2. The owner-facing Cold Exposure card. `proves` lists spans that must appear
-#      verbatim in the page's markdown. If the block or the level statement it describes
-#      is edited away, `--check` fails instead of publishing a card about a block that is
-#      no longer there.
+# A relocated row is still on the page but is no longer a chipped action row, so the ledger
+# cannot see it. Each record therefore keeps:
 #
-# Nothing here changes an action, intervention or level: `level` is the level the page
-# records for the row (the level it carried when it was a chip, updated by any later owner
-# ruling), and `pems` is where the prose is printed.
+#   row / where     which row moved, and where it now reads (a heading in the block)
+#   level           the level the page records for the pilot rows; a record WITHOUT
+#   guidance: true  `guidance` MUST state it. A guidance record carries NO provider level.
+#   status_before   the status the ledger recorded before the move, so the ledger's historical
+#                   "flagged before" counts do not silently shrink
+#   pems            where the prose is printed in PEMS 2024
+#   proves          spans that must appear verbatim on the page. `scripts/level_rule.py
+#                   --check` re-reads every record's page and fails if the block is not
+#                   printed, so a record can never describe a move that is no longer there.
+#
+# Nothing here changes a clinical instruction or a level: the words are the page's own, moved.
 relocated:
+
   - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
     row: 6
     rows_moved: "6-8"
+    where: 'References & Good Practice — "CPAP contraindications."'
     level: EMT
     pems: "p.245 CONTRAINDICATIONS"
     status_before: OWNER_REQUIRED
     proves:
       - "### References & Good Practice"
-      - "This page records the list at **EMT**"
-      - "Rows 6–8 are covered under"
+      - "**CPAP contraindications apply at EMT:**"
+      - "- Inability to tolerate a tight-fitting mask"
+
   - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
     row: 7
     rows_moved: "6-8"
+    where: 'References & Good Practice — "CPAP contraindications."'
     level: EMT
     pems: "p.245 CONTRAINDICATIONS"
     status_before: OWNER_REQUIRED
     proves:
       - "### References & Good Practice"
-      - "This page records the list at **EMT**"
-      - "Rows 6–8 are covered under"
+      - "**CPAP contraindications apply at EMT:**"
+      - "- Inability to tolerate a tight-fitting mask"
+
   - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
     row: 8
     rows_moved: "6-8"
+    where: 'References & Good Practice — "CPAP contraindications."'
     level: EMT
     pems: "p.245 CONTRAINDICATIONS"
     status_before: OWNER_REQUIRED
     proves:
       - "### References & Good Practice"
-      - "This page records the list at **EMT**"
-      - "Rows 6–8 are covered under"
+      - "**CPAP contraindications apply at EMT:**"
+      - "- Inability to tolerate a tight-fitting mask"
+
   - file: protocols/general/02_Cold_Exposure_PROC.md
     row: 6
     rows_moved: "6 and 9"
+    where: 'References & Good Practice — heat packs / Medical Control before the AED'
     level: EMR
     pems: "p.67 PEARLS #5"
     status_before: null
     proves:
       - "### References & Good Practice"
-      - "This page records the rewarming item at **EMR**"
-      - "Rows 6 and 9 are covered under"
+      - "**Heat packs and warm blankets are an EMR skill**"
+      - "**Heat packs and warm blankets — active external rewarming.**"
+
   - file: protocols/general/02_Cold_Exposure_PROC.md
     row: 9
     rows_moved: "6 and 9"
+    where: 'References & Good Practice — heat packs / Medical Control before the AED'
     level: MC
     pems: "p.67 PEARLS #3"
     status_before: null
     proves:
       - "### References & Good Practice"
-      - "the AED item at **MC**"
-      - "Rows 6 and 9 are covered under"
+      - "contacting Medical Control before the AED is a Medical Control decision"
+      - "**Medical Control before the AED.**"
+
+  - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+    row: 2
+    rows_moved: "2"
+    where: 'References & Good Practice — "Scene management — keeping the child calm."'
+    status_before: OWNER_REQUIRED
+    guidance: true
+    note: >-
+      Scene management (keep the child calm, let the parent hold them, avoid unnecessary
+      procedures, minimise stimulation). No PEMS 2024 row prints it and it is not an action,
+      so it takes no level. Not deleted: the words are in the block below the table.
+    proves:
+      - "### References & Good Practice"
+      - "**Scene management — keeping the child calm.**"
+      - "- Minimize stimulation and stranger anxiety"
+
+  - file: protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md
+    row: 2
+    rows_moved: "2"
+    where: 'References & Good Practice — "Recognition — complete versus partial obstruction."'
+    status_before: OWNER_REQUIRED
+    guidance: true
+    note: >-
+      Recognition (complete vs partial obstruction, the universal choking sign, conscious vs
+      unconscious). PEMS prints the obstruction-relief actions, not the recognition step, and
+      recognition is not a level-gated action anywhere in the source.
+    proves:
+      - "### References & Good Practice"
+      - "**Recognition — complete versus partial obstruction.**"
+      - "- Determine conscious vs unconscious status."
+
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 5
+    rows_moved: "5"
+    where: 'References & Good Practice — "Preparation — airway equipment readiness."'
+    status_before: OWNER_REQUIRED
+    guidance: true
+    note: >-
+      Preparation (suction and airway equipment ready, ready for rapid airway intervention).
+      p.239#2 prints suctioning as an act at EMR, not preparation; equipment readiness is not
+      a numbered action in PEMS at any level.
+    proves:
+      - "### References & Good Practice"
+      - "**Preparation — airway equipment readiness.**"
+      - "- Be prepared for rapid airway intervention if decompensation occurs."
+
+  - file: protocols/trauma/09_Trauma_PROC.md
+    row: 6
+    rows_moved: "6"
+    where: 'References & Good Practice — "Assessment — recognising shock."'
+    status_before: OWNER_REQUIRED
+    guidance: true
+    note: >-
+      Assessment and referral (assess for shock, refer to the Shock protocol). p.84 PEARLS #3
+      prints the recognition half as guidance, and a referral to another protocol is not a
+      level-gated action; no PEMS row badges either half.
+    proves:
+      - "### References & Good Practice"
+      - "**Assessment — recognising shock.**"
+      - "- Assess for shock. Refer to Shock (Hypoperfusion) protocol."

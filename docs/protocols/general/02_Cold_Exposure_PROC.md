@@ -31,7 +31,7 @@ Guidelines for managing systemic hypothermia and localized cold injuries, emphas
 
 </div>
 
-*Rows 6 and 9 are covered under [References & Good Practice](#references-good-practice) below.*
+Rows 6 and 9 were conditional rules for rewarming and AED use; they are listed under References & Good Practice below.
 
 ### References & Good Practice
 
@@ -39,7 +39,7 @@ Guidelines for managing systemic hypothermia and localized cold injuries, emphas
 
 **Medical Control before the AED.** Contact Medical Control prior to use of AED.
 
-*This page records the rewarming item at **EMR** (anyone can warm a patient) and the AED item at **MC**.*
+**Heat packs and warm blankets are an EMR skill** — anyone can warm a patient; **contacting Medical Control before the AED is a Medical Control decision.**
 
 **Why and what next:** [Cardiac Arrest (Non-Traumatic) — AED use and defibrillation](../cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md) · [Post-Resuscitation Care](../cardiac/04_Post_Resuscitation_Care_PROC.md)
 

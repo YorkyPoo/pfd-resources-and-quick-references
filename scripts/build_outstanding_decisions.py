@@ -109,7 +109,7 @@ def page_note(doc_rel, want):
     return re.sub(r'\s+', ' ', text).strip()
 
 
-ROW_LINE = re.compile(r'^\|\s*(\d+)\s*\|\s*(<span[^>]*>.*?</span>(?:<sup.*?</sup>)?)\s*\|(.*)\|\s*$')
+ROW_LINE = re.compile(r'^\|\s*(\d+[a-z]?)\s*\|\s*(<span[^>]*>.*?</span>(?:<sup.*?</sup>)?)\s*\|(.*)\|\s*$')
 
 
 def clean_cell(text):
@@ -132,7 +132,7 @@ def page_actions(rows):
     cache, out = {}, {}
     wanted = {}
     for row in rows:
-        wanted.setdefault(row['file'], set()).add(int(row['row']))
+        wanted.setdefault(row['file'], set()).add(str(row['row']))
     for rel, nums in wanted.items():
         path = os.path.join(DOCS, rel)
         if rel not in cache:
@@ -141,7 +141,7 @@ def page_actions(rows):
         for line in cache[rel]:
             m = ROW_LINE.match(line.rstrip())
             if m:
-                found[int(m.group(1))] = clean_cell(m.group(3))
+                found[m.group(1)] = clean_cell(m.group(3))
         missing = nums - set(found)
         if missing:
             raise SystemExit(f'{rel}: no table row for row(s) {sorted(missing)}')
@@ -348,33 +348,31 @@ def build():
     n_nowhere = sum(1 for r in owner if r['cat'] == 'nowhere')
     n_conflict = sum(1 for r in owner if r['cat'] == 'conflict')
     assert n_nowhere + n_conflict == len(owner)
-    # ---- The "PEMS prints this nowhere" bucket, asserted by MEMBERSHIP, not by count ----
     # ---- The owner's Pearl ruling of 2026-11-17 (BLS/ALS scope test) cleared every flag whose
-    # reason claimed the source is silent, EXCEPT four rows the source genuinely does not
-    # print. The 2026-11-20 ketamine ruling then removed the two Sedation rows that card had
-    # put out of scope (pre-intubation sedation r4, post-intubation ketamine r5): both rows
-    # left the page, so neither is a question any more. The bucket now holds four rows: three
-    # genuinely absent, plus Trauma r6, whose "prints nowhere" reason is only half true (p.84
-    # PEARLS #3 prints the recognition half) and whose level question therefore stays open.
-    # A quiet re-categorisation of any row must fail the build rather than move the number the
-    # owner reads on the page.
-    nowhere_expected = {
-        ('protocols/respiratory/03_Pediatric_Stridor_PROC.md', 2),      # genuinely absent
-        ('protocols/respiratory/03_Pneumothorax_PROC.md', 5),           # genuinely absent
-        ('protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md', 2),  # genuinely absent
-        ('protocols/trauma/09_Trauma_PROC.md', 6),                      # out of scope (this card)
-    }
-    nowhere_got = {(r['file'], int(r['row'])) for r in owner if r['cat'] == 'nowhere'}
+    # reason claimed the source is silent, EXCEPT the rows the source genuinely does not print.
+    # Two later passes closed the last of them, and the bucket is now empty:
+    #   * 2026-11-20 ketamine ruling (already on main): the two Sedation rows left the page when
+    #     the action table was republished as PEMS p.55 verbatim (pre-intubation sedation r4, no
+    #     PEMS row at all; post-intubation ketamine r5, the drug printed only as a restraint
+    #     sedative at p.72#9).
+    #   * 2026-11-20 row-structure pass (this branch): the four guidance rows — Pediatric Stridor
+    #     r2 (scene management), Pneumothorax r5 (equipment readiness), Upper Airway Obstruction
+    #     r2 (recognition), Trauma r6 (assess shock / refer) — moved below their pages' tables
+    #     with no level, recorded in audit/level-scan/relocated-rows.yaml, not deleted.
+    # So no converted action row is left without a printed badge. A quiet re-categorisation of
+    # any row must fail the build rather than move the number the owner reads on the page.
+    nowhere_got = {(r['file'], str(r['row'])) for r in owner if r['cat'] == 'nowhere'}
+    nowhere_expected = set()
     assert nowhere_got == nowhere_expected, (
         'the "PEMS prints this nowhere" bucket changed membership:\n'
         f'  unexpected: {sorted(nowhere_got - nowhere_expected)}\n'
         f'  missing:    {sorted(nowhere_expected - nowhere_got)}')
     assert n_nowhere == len(nowhere_expected)
     print(f'the "PEMS prints this nowhere" bucket is {n_nowhere} rows (was 17 before the '
-          f'2026-11-17 Pearl ruling, 6 after it, 4 after the 2026-11-20 ketamine ruling '
-          f'removed the two Sedation rows it had left out of scope): 3 genuinely absent from '
-          f'the source, plus Trauma r6 whose level question stays open — membership asserted, '
-          f'not typed', file=sys.stderr)
+          f'2026-11-17 Pearl ruling, 6 after it, then 4 after the 2026-11-20 ketamine ruling '
+          f'removed the two Sedation rows, and 0 once the row-structure pass moved the last '
+          f'four guidance rows below their tables): every converted action row now cites a '
+          f'printed PEMS badge — membership asserted, not typed', file=sys.stderr)
 
     o = []
     w = o.append
@@ -443,11 +441,11 @@ def build():
     w('')
     w('<div class="od-legend" markdown="1">')
     w(f'- <span class="od-chip od-chip-nowhere">PEMS prints this nowhere</span> — '
-      f'**{n_nowhere} rows**. No PEMS 2024 row prints the action at all (or prints it '
+      f'**{n_nowhere} row{"" if n_nowhere == 1 else "s"}**. No PEMS 2024 row prints the action at all (or prints it '
       'only in pieces that no single row covers). Your answer is a level of our own, '
       'or `PENDING`.')
     w(f'- <span class="od-chip od-chip-conflict">PEMS prints it, but the badge contradicts '
-      f'the row\'s own words</span> — **{n_conflict} rows**. A PEMS row prints the '
+      f'the row\'s own words</span> — **{n_conflict} row{"" if n_conflict == 1 else "s"}**. A PEMS row prints the '
       'action, but its printed badge conflicts with the text of that same row, or the '
       'action is spread over rows at different levels. Your answer is which one wins '
       '(and whether the row should be split).')
@@ -458,7 +456,7 @@ def build():
     w('</div>')
     w('')
     # ------------------------------------------------------- 1. OWNER_REQUIRED
-    w(f'<h2 id="owner-required">1. Needs your level decision — {len(owner)} rows</h2>')
+    w(f'<h2 id="owner-required">1. Needs your level decision — {len(owner)} row{"" if len(owner) == 1 else "s"}</h2>')
     w('')
     w(f'Grouped by protocol page, in the order they appear in the site navigation. '
       f'Each card shows the page, the row number, the level the page shows today with '
@@ -469,15 +467,15 @@ def build():
             ('conflict', 'PEMS prints it, but the badge contradicts the row\'s words',
              'pems-prints-it-badge-contradicts')):
         group = [r for r in owner if r['cat'] == cat]
-        w(f'<h3 id="{anchor}">{esc(title)} — {len(group)} rows</h3>')
+        w(f'<h3 id="{anchor}">{esc(title)} — {len(group)} row{"" if len(group) == 1 else "s"}</h3>')
         w('')
         for rel, page_rows in group_by_page(group, labels, order):
             w(page_heading(rel, human(rel, labels), len(page_rows)))
             w('')
             w('<div class="od-page-block">')
             for row in page_rows:
-                w(owner_required_card(row, actions[row['file']][int(row['row'])],
-                                      nearest.get((row['file'], int(row['row'])))))
+                w(owner_required_card(row, actions[row['file']][str(row['row'])],
+                                      nearest.get((row['file'], str(row['row'])))))
             w('</div>')
             w('')
     # ------------------------------------------------------------ 2. PENDING
@@ -517,7 +515,7 @@ def build():
                 w(f'<p class="od-pagenote"><strong>Note you will see on the page:</strong> '
                   f'{esc(note)}</p>')
             for row, row_note in zip(page_rows, per_row):
-                w(pending_card(row, actions[row['file']][int(row['row'])],
+                w(pending_card(row, actions[row['file']][str(row['row'])],
                                carried_level(row),
                                None if whole else row_note))
             w('</div>')

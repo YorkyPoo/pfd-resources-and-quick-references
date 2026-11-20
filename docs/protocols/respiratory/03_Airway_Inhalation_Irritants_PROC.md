@@ -53,13 +53,12 @@ This protocol addresses exposure to choking agents and irritant gases causing ai
 | 7 | <span class="lvl lvl-a">A</span> | **[Methylprednisolone](../../pharmacology/Methylprednisolone.md) (Solu-Medrol):**<br>• **Adult:** **125 mg IV/IO** slow push<br>• **Pediatric:** **2 mg/kg IV/IO** slow push (Maximum dose: **125 mg**) |
 | 8 | <span class="lvl lvl-a">A</span> | **[Sodium Bicarbonate](../../pharmacology/Sodium%20Bicarbonate.md) - Chlorine Gas Exposure Only:**<br>• **Adult:** **2 mL** diluted with **2 mL 0.9% Sodium chloride**, nebulized (**ONCE only**)<br>• **Pediatric:** **2 mL** diluted with **2 mL 0.9% Sodium chloride**, nebulized (**ONCE only**) |
 | 9 | <span class="lvl lvl-i">I</span> | **Advanced Airway Assessment:**<br>• Consider endotracheal intubation if signs of airway injury develop.<br>• Assess for impending airway compromise (worsening stridor, respiratory failure). |
-| 10 | <span class="lvl lvl-p">P</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | **Endotracheal Intubation:**<br>• Follow Endotracheal Intubation procedure.<br>• ⚠ Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended. |
+| 10 | <span class="lvl lvl-i">I</span> | **Endotracheal Intubation:**<br>• Follow Endotracheal Intubation procedure. Patients 12 years and older.<br>• ⚠ Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended. |
+| 10a | <span class="lvl lvl-p">P</span> | • Orally intubate. Patients under 12 years old. |
 | 11 | <span class="lvl lvl-emr">EMR</span> | **Poison Control Consultation:**<br>• Contact **Poison Control Center at 1-800-222-1222** with any questions.<br>(Note: Poison Control is not online medical control.) |
 | 12 | <span class="lvl lvl-mc">MC</span> | **Medical Control Contact:**<br>• Contact **Medical Control** for guidance as needed.<br>• Report agent exposure, interventions performed, and patient status. |
 
 </div>
-
-<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — row 10: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
 ### Pearls
 1. ⚠ **Decontamination Safety:** Victims must be decontaminated and/or confirmed "clean" prior to treatment and transport to prevent secondary contamination of EMS personnel and equipment.

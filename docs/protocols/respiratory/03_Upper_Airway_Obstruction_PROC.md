@@ -34,7 +34,6 @@ Management of acute or impending airway obstruction including expanding hematoma
 | # | Level | Action / Intervention |
 |:---:|---|---|
 | 1 | <span class="lvl lvl-emr">EMR</span> | **Universal Patient Care:**<br>• Apply to all patients per protocol. |
-| 2 | <span class="lvl lvl-emt">EMT</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | **Scene Safety / Recognition:**<br>• Rapidly identify complete vs partial obstruction.<br>• Recognize universal choking sign (hands to throat).<br>• Determine conscious vs unconscious status. |
 | 3 | <span class="lvl lvl-emt">EMT</span> | **Conscious Adult (≥12 years) - Abdominal Thrusts:**<br>• Stand behind patient, wrap arms around waist.<br>• Make fist with one hand; thumb side against patient's abdomen.<br>• Position fist midline, below xiphoid process and above navel.<br>• Grasp fist with other hand and deliver quick, upward thrusts.<br>• Repeat until obstruction clears or patient becomes unconscious. |
 | 4 | <span class="lvl lvl-emt">EMT</span> | **Conscious Obese Adult / Pregnant Woman - Chest Thrusts:**<br>• Stand behind patient, arms under patient's armpits.<br>• Make fist with one hand; thumb side against sternum.<br>• Position fist midline on lower half of sternum.<br>• Grasp fist with other hand and deliver backward thrusts.<br>• Repeat until obstruction clears or patient becomes unconscious. |
 | 5 | <span class="lvl lvl-emt">EMT</span> | **Conscious Pediatric ≥1 year - Abdominal Thrusts:**<br>• Kneel behind child, wrap arms around waist.<br>• Make fist; thumb side against child's abdomen.<br>• Position fist midline, below xiphoid process and above navel.<br>• Deliver quick, upward thrusts until obstruction clears. |
@@ -45,14 +44,20 @@ Management of acute or impending airway obstruction including expanding hematoma
 | 10 | <span class="lvl lvl-emt">EMT</span> | **Apneic Patient - BVM Ventilation:**<br>• Support respirations with BVM and appropriate airway adjunct.<br>• Ensure adequate seal and proper ventilation rate.<br>• Monitor SpO2 and EtCO2 continuously. |
 | 11 | <span class="lvl lvl-i">I</span> | **Unable to Ventilate - Laryngoscopy and Forceps Removal:**<br>• If unable to ventilate due to foreign body obstruction, perform direct laryngoscopy.<br>• Visualize foreign body using laryngoscope blade.<br>• Remove obstruction with Magill forceps under direct visualization.<br>• Do NOT perform blind finger sweeps (may impact object deeper). |
 | 12 | <span class="lvl lvl-i">I</span> | **Unable to Ventilate - Endotracheal Intubation:**<br>• If apneic and unable to ventilate by less invasive means, consider endotracheal intubation.<br>• Visualize cords and pass ET tube under direct visualization.<br>⚠ Intubation of children <12 years is a Paramedic "red dot" skill only. |
-| 13 | <span class="lvl lvl-i">I</span><span class="lvl lvl-mc-req" title="this level performs the action only with Medical Control authorisation (the page printed this level cell in brackets)">+MC</span> | **Post-Obstruction Advanced Airway - Sedation:**<br>• If endotracheal intubation performed, refer to Sedation Post Advanced Airway protocol.<br>• **[Fentanyl](../../pharmacology/Fentanyl.md) (25 mcg)** and **[Midazolam](../../pharmacology/Midazolam.md) (2.5 mg)** per Respiratory Arrest protocol.<br>• Use half-doses in elderly or frail patients. |
+| 13 | <span class="lvl lvl-i">I</span><span class="lvl lvl-mc-req" title="this level performs the action only with Medical Control authorisation (PEMS prints the level cell in brackets)">+MC</span> | **Post-Obstruction Advanced Airway - Sedation:**<br>• If endotracheal intubation performed, refer to Sedation Post Advanced Airway protocol.<br>• **[Fentanyl](../../pharmacology/Fentanyl.md) (25 mcg)** and **[Midazolam](../../pharmacology/Midazolam.md) (2.5 mg)** per Respiratory Arrest protocol.<br>• Use half-doses in elderly or frail patients. |
 | 14 | <span class="lvl lvl-p">P</span> | **Expanding Hematoma / Edema - Advanced Airway:**<br>• Early airway intervention before complete obstruction.<br>• Consider difficult airway algorithm; prepare surgical airway backup.<br>• Contact Medical Control for guidance in complex airways. |
 
 </div>
 
-<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — row 2: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.
+<p class="lv-note"><strong>+MC</strong> — the marked action(s) may be performed at the level shown only with Medical Control authorisation. PEMS prints that level in brackets; the marker carries that meaning into the single-level layout. It is not a second level and not the same as an <code>MC</code> chip, which marks an action that is itself a Medical Control contact.</p>
 
-<strong>+MC</strong> — row 13: the level shown may perform this action only with Medical Control authorisation. This page printed that level in brackets; the marker carries that meaning into the single-level layout. It is not a second level and not the same as an <code>MC</code> chip, which marks an action that is itself a Medical Control contact.</p>
+### References & Good Practice
+
+**Recognition — complete versus partial obstruction.**
+
+- Rapidly identify complete vs partial obstruction.
+- Recognize universal choking sign (hands to throat).
+- Determine conscious vs unconscious status.
 
 ### Pearls
 1. **Conscious vs. Unconscious Algorithm:**<br>Conscious patients receive mechanical relief (Heimlich/chest thrusts). Unconscious patients receive airway positioning, suctioning, BLS adjuncts, and advanced airway interventions as indicated.

@@ -1,0 +1,3 @@
+the "PEMS prints this nowhere" bucket is 2 rows (was 17 before the 2026-11-17 Pearl ruling, 6 after it, 2 after the 2026-11-20 row-structure pass moved four guidance rows below their tables; Sedation r5 is back in it because the Sedation page belongs to card t_060d0fe8 and is untouched here): pre-intubation and post-intubation sedation, whose levels this branch does not answer — membership asserted, not typed
+wrote protocols/outstanding-decisions.md (58387 bytes)
+build_outstanding_decisions EXIT=0

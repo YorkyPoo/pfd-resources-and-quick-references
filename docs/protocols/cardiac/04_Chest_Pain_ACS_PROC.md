@@ -49,11 +49,11 @@ Acute Coronary Syndrome (ACS) encompasses a spectrum of conditions resulting fro
 | 11 | <span class="lvl lvl-emt">EMT</span> | **[Nitroglycerin](../../pharmacology/Nitroglycerin.md) Administration:**<br>• Administer **[Nitroglycerin](../../pharmacology/Nitroglycerin.md)** per the Pain Control protocol for chest pain.<br>• Confirm all "Rights" prior to administration. |
 | 12 | <span class="lvl lvl-i">I</span> | **Analgesia:**<br>• Consider analgesia (refer to the Pain Control protocol). |
 | 13 | <span class="lvl lvl-mc">MC</span> | **Medical Control Contact:**<br>• Contact Medical Control for guidance as needed. |
-| 14 | <span class="lvl lvl-i">I</span><span class="lvl lvl-mc-req" title="this level performs the action only with Medical Control authorisation (the page printed this level cell in brackets)">+MC</span> | **Right-Sided / 15-Lead ECG:**<br>• Consider right-sided 12-Lead or 15-Lead ECG for additional assessment. |
+| 14 | <span class="lvl lvl-i">I</span><span class="lvl lvl-mc-req" title="this level performs the action only with Medical Control authorisation (PEMS prints the level cell in brackets)">+MC</span> | **Right-Sided / 15-Lead ECG:**<br>• Consider right-sided 12-Lead or 15-Lead ECG for additional assessment. |
 
 </div>
 
-<p class="lv-note"><strong>+MC</strong> — row 14: the level shown may perform this action only with Medical Control authorisation. This page printed that level in brackets; the marker carries that meaning into the single-level layout. It is not a second level and not the same as an <code>MC</code> chip, which marks an action that is itself a Medical Control contact.</p>
+<p class="lv-note"><strong>+MC</strong> — the marked action(s) may be performed at the level shown only with Medical Control authorisation. PEMS prints that level in brackets; the marker carries that meaning into the single-level layout. It is not a second level and not the same as an <code>MC</code> chip, which marks an action that is itself a Medical Control contact.</p>
 
 ### Pearls
 1. **Atypical Presentations:** ACS may present as abdominal pain, nausea/vomiting, syncope, dyspnea, back pain, neck/jaw pain, or arm pain/discomfort without classic chest pain. Maintain high index of suspicion in at-risk populations.

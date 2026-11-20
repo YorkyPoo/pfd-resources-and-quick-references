@@ -35,7 +35,7 @@ Guidelines for the rapid assessment and transport of patients with suspected Str
 
 </div>
 
-<p class="lv-note"><strong>PENDING</strong> — rows 8, 9: this action has no counterpart in PEMS 2024. It is an agency addition, so the level it used to show was never verified against the regional source and is not published as a level now. Every other row on this page is cited to its PEMS 2024 row. This is not the same case as a whole protocol sourced outside PEMS (e.g. Aortic Dissection, which comes from ODEMSA and is PENDING on every row): here only the row(s) named are pending, and the rest of the protocol stands on PEMS. <strong>Pending OMD authorization</strong> — no provider level applies until the OMD authorizes it. See <code>audit/level-scan/pending-protocols.yaml</code> and <code>audit/level-scan/level-rule-ledger.md</code>.</p>
+<p class="lv-note"><strong>PENDING</strong> — rows 8, 9: this action has no counterpart in PEMS 2024. It is an agency addition, so the level it used to show was never verified against the regional source and is not published as a level now. Every other action listed is cited to its PEMS 2024 row. This is not the same case as a whole protocol sourced outside PEMS (e.g. Aortic Dissection, which comes from ODEMSA and is PENDING on every row): in this case only the action(s) named are pending, and the rest of the protocol stands on PEMS. <strong>Pending OMD authorization</strong> — no provider level applies until the OMD authorizes it.</p>
 
 ### Pearls
 • ⚠ Immediate life-threats (uncontrolled airway/arrest) go to the nearest ED.

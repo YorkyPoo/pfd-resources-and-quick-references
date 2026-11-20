@@ -32,9 +32,9 @@ This administrative protocol establishes the operational guidelines to rapidly i
 
 </div>
 
-<p class="lv-note"><strong>POLICY</strong> — rows 1-6: this is not a provider level. This page is a PEMS administrative policy, not a clinical protocol: each row is cited to the PEMS 2024 administrative policy that prints it — <em>STEMI Field Triage</em> (PEMS p.35) — and no provider level is published, because PEMS prints these rules as policy rather than as level-badged protocol rows. The policy and the verbatim span for every row are recorded in <code>audit/level-scan/level-rule-ledger.md</code>.
+<p class="lv-note"><strong>POLICY</strong> — rows 1-6: no provider level applies. PEMS publishes these rules as administrative policy, not as a clinical protocol: each is cited to the PEMS 2024 administrative policy that prints it — <em>STEMI Field Triage</em> (PEMS p.35) — and no provider level is published, because PEMS prints these rules as policy rather than as level-badged protocol rows.</p>
 
-A PEMS level on this page does not make it a protocol: row 7 is printed as row p.107#9 of the PEMS 2024 protocol and is cited there, so its chip is that row's level (MC). No administrative policy prints it.</p>
+<p class="lv-note">A provider level does not by itself make an administrative rule a protocol: one of them is printed as row p.107#9 of the PEMS 2024 protocol and is cited there, so its chip is that row's level (MC). No administrative policy prints it.</p>
 
 ### Field STEMI Triage Decision Scheme
 
