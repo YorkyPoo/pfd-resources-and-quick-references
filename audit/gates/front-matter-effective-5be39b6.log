@@ -1,0 +1,79 @@
+# gate log — branch front-matter-effective, content commit 5be39b6
+# written 2026-11-20 12:57:11 by write_gate_log.py
+
+## gate: internal_artifacts
+cmd: python3 scripts/internal_artifacts.py --check
+EXIT=0
+  OK — no conversion QA reports, no replacement-mapping block under docs/, no effective date on a front-matter page, and no built page for an excluded source
+
+## gate: agency_names
+cmd: python3 scripts/agency_names.py --check
+EXIT=0
+  OK — 713 line(s) name the office or the agency; all are document-name / administrative exemptions. No clinical prose names a local office or the local agency.
+
+## gate: verify_pems_canonical
+cmd: python3 scripts/verify_pems_canonical.py
+EXIT=0
+  ... (143 earlier line(s) omitted)
+    ok   newly unpaired bucket names every row it counts
+    ok   every paired row carries a trust verdict
+    ok   reviewed pairings + unreviewed pairings = all pairings
+    ok   every recorded human review still maps to a pairing (0 stale)
+    ok   3 pairings are recorded as suspect, not as settled
+    ok   the 18 flagged pairings show similarity and PEMS text
+    ok   the ledger covers every in-scope PEMS row
+    ok   no PEMS row in scope is unaccounted for (0)
+    ok   ambiguous-rows.md states the same total (125)
+  no protocol pages touched
+    ok   git status shows no modified files under docs/
+  
+    ok   verifier manifest covers the run (8 of 8 checks reached: )
+  
+  all invariants hold
+
+## gate: level_rule
+cmd: python3 scripts/level_rule.py --check
+EXIT=0
+  ... (3428 earlier line(s) omitted)
+     "hit": "(Intermediate/Paramedic)"
+    }
+   ]
+  }
+  
+  OK — 494 action rows across 54 pages: 460 carry exactly one marker equal to the level printed by the cited PEMS 2024 row, 25 are flagged OWNER_REQUIRED with a recorded reason, 6 are owner_ruled. 10 level word(s) survive in action text as recorded clinical qualifiers (audit/level-scan/token-decisions.yaml); every other level token found by an independent sweep of the action text is either kept there or gone.
+  OK — 8 row(s) carry the +MC marker (a bracketed page level cell: that level performs the action only with Medical Control authorisation), exactly one marker each.
+  OK — 5 owner_ruled row(s) cite unbadged PEMS prose by page + heading + ordinal, each quoting a verbatim span of its indexed entry (9 citation(s) checked against audit/level-scan/pems_prose.json); 0 rulings rest on free text.
+  OK — 43 row(s) are cited across pages (cross_page: true), each with the cited row's own words quoted verbatim out of pems_table.json.
+  OK — 11 action rows across 1 page(s) are chipped PENDING (Pending OMD Authorization) because PEMS 2024 publishes no such protocol; 0 of them claim a PEMS citation.
+  OK — 3 action row(s) on an otherwise PEMS-cited page are chipped PENDING as agency additions awaiting OMD authorization (pending-protocols.yaml `rows:`); 0 of them claim a PEMS citation.
+  OK — 14 administrative-policy page(s) carry 95 action rows: 89 chipped POLICY (cited to one of 14 PEMS 2024 administrative policies, each with a verbatim quote out of that policy's own pages), 4 chipped PENDING (no PEMS policy prints the rule). 0 of them publish a provider level and 0 of them claim a protocol citation.
+  OK — sc-wrap: 63 wide-table block(s) in 46 docs file(s) — mostly dose charts, phone lists and SOP tables that are not level matrices; 0 provider-level matrices on an sc-wrap on any page this project has converted.
+  REPORTED, NOT GATED — 1 provider-level matrix/matrices inside sc-wrap remain on a page outside every conversion batch's scope (the front-matter legend, which DEFINES the level columns — R / B / A / I / P):
+     - protocols/front-matter/01 - How to Read the Protocols.md (line 34)
+
+## gate: mc_wording
+cmd: python3 scripts/mc_wording.py --check
+EXIT=0
+  OK — 27 MC row(s) on 26 page(s) plus every other protocol table row (all levels): none name OMD / Poquoson / a Medical Director / a named individual.
+       prose lines still mentioning the office (out of scope, not edited): 53
+
+## gate: mkdocs_strict
+cmd: /root/pfd-ssg-env/bin/mkdocs build --strict
+EXIT=0
+  ... (50 earlier line(s) omitted)
+    - personnel-policies/policies/30-travel-policy-and-procedures.md
+    - personnel-policies/policies/31-outside-employment.md
+    - personnel-policies/policies/32-safe-harbor-policy.md
+    - personnel-policies/policies/33-sexual-harassment.md
+    - personnel-policies/policies/34-training-and-career-development.md
+    - personnel-policies/policies/35-tuition-reimbursement-education-assistance.md
+    - personnel-policies/policies/36-uniforms-protective-clothing-and-effective-date.md
+    - personnel-policies/policies/37-smoking-in-the-workplace.md
+    - personnel-policies/policies/38-physical-examinations-for-high.md
+    - personnel-policies/policies/39-employee-conduct-progressive-discipline.md
+    - personnel-policies/policies/40-drug-and-alcohol-policy.md
+    - personnel-policies/policies/41-grievance-procedure.md
+    - personnel-policies/policies/42-resignations-and-separations.md
+    - personnel-policies/policies/43-retiree-health-insurance-coverage.md
+  INFO    -  Documentation built in 7.66 seconds
+
