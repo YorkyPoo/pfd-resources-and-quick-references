@@ -43,10 +43,10 @@
       "sha": "75793158f0b521bb774b5fc58ca9d726dfa2e171"
     },
     "home": {
-      "branch": "homepage-dashboard",
-      "built_at": "2026-11-20T18:37:18Z",
-      "description": "Dashboard: crew links get a utility accent, exposure label matches its page",
-      "sha": "189e6021639cb88b2688ba51b5b786eb1c06d058"
+      "branch": "homepage-r2",
+      "built_at": "2026-11-20T19:59:28Z",
+      "description": "Dashboard round 2: scheme-scoped links, dosing table fixed, four scrollers",
+      "sha": "b9d03275670435af73af48ed2cdd144f29080d56"
     },
     "main": {
       "branch": "main",
@@ -115,5 +115,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-20T18:37:18.895986+00:00"
+  "updated_at": "2026-11-20T19:59:28.401067+00:00"
 }
