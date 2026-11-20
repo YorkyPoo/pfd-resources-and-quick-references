@@ -42,6 +42,12 @@
       "description": "Baseline: local main",
       "sha": "98189044c7e1acd89c2fd48e0ab4eb5be06a02cb"
     },
+    "peep-final": {
+      "branch": "peep-final",
+      "built_at": "2026-11-20T14:30:51Z",
+      "description": "CPAP r6 -> I; PEEP ceiling 15 mmHg (owner ruling 2026-11-20, t_7a22b040)",
+      "sha": "5ec0d056e3602c612ee90aa3c1a9c73b42cfc569"
+    },
     "peep-i": {
       "branch": "peep-i",
       "built_at": "2026-11-20T13:43:54Z",
@@ -91,5 +97,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-20T14:21:16.387559+00:00"
+  "updated_at": "2026-11-20T14:30:52.057556+00:00"
 }
