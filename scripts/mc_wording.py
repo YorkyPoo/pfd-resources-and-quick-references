@@ -126,6 +126,23 @@ def forbidden_hits(text):
     return hits
 
 
+# ------------------------------------------------- reading pages print no repo paths
+# A provider reading a protocol page has no checkout, so a clinical page may not print a
+# repository path or a repository file name (`audit/level-scan/level-rule-ledger.md`,
+# `row-bindings.yaml`, `scripts/mc_wording.py`, ...). Provenance belongs in the audit trail,
+# which `outstanding-decisions.md` links to on purpose — that generated page and the format
+# front matter are the only exemptions.
+REPO_PATH = re.compile(r'(?<![\w/.-])(?:audit|scripts|docs|pems_chunks)/[\w./-]+')
+REPO_FILE = re.compile(r'(?<![\w/.-])[\w-]+\.(?:ya?ml|json|md)\b')
+REPO_PATH_EXEMPT = {'protocols/outstanding-decisions.md'}
+
+
+def repo_path_hits(text):
+    plain = strip_md(text)
+    return sorted({m.group(0) for m in REPO_PATH.finditer(plain)}
+                  | {m.group(0) for m in REPO_FILE.finditer(plain)})
+
+
 def walk(docs):
     for base, _dirs, files in os.walk(docs):
         for fn in sorted(files):
@@ -135,11 +152,18 @@ def walk(docs):
 
 def derive(docs=DEFAULT_DOCS):
     """Every violating table row (any level), every MC row, every prose mention."""
-    bad, mc_rows, prose, pages = [], [], [], set()
+    bad, mc_rows, prose, pages, paths = [], [], [], set(), []
     for rel in walk(docs):
         path = os.path.join(docs, rel)
         text = open(path, encoding='utf-8').read()
         lines = text.split('\n')
+        if (rel.startswith('protocols/') and rel not in REPO_PATH_EXEMPT
+                and not rel.startswith('protocols/front-matter/')):
+            for lineno, line in enumerate(lines, 1):
+                hits = repo_path_hits(line)
+                if hits:
+                    paths.append({'file': rel, 'line': lineno,
+                                  'text': line.strip(), 'hits': hits})
         table_lines = set()
         for lineno, row in parse_tables(text):
             table_lines.add(lineno)
@@ -165,7 +189,8 @@ def derive(docs=DEFAULT_DOCS):
                 continue
             if OMD_MENTION.search(line):
                 prose.append({'file': rel, 'line': lineno, 'text': line.strip()})
-    return {'bad': bad, 'mc_rows': mc_rows, 'prose': prose, 'pages': sorted(pages)}
+    return {'bad': bad, 'mc_rows': mc_rows, 'prose': prose, 'paths': paths,
+            'pages': sorted(pages)}
 
 
 # --------------------------------------------------------------- mc-rows artifact
@@ -256,6 +281,14 @@ def main():
         return 0
 
     if args.check:
+        if d['paths']:
+            print(f'FAIL — {len(d["paths"])} line(s) on reader-facing protocol pages print a '
+                  f'repository path or file name. A provider on scene has no checkout; '
+                  f'provenance belongs in the audit trail, not on the page.')
+            for p in d['paths']:
+                print(f" - {p['file']}:{p['line']}: {', '.join(p['hits'])}")
+                print(f"     {p['text'][:160]}")
+            return 1
         if d['bad']:
             print(f'FAIL — {len(d["bad"])} protocol table row(s) name a local office, a '
                   f'Medical Director, a named individual, or the local agency instead of the '

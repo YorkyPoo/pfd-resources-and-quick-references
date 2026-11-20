@@ -15,6 +15,7 @@ Endotracheal intubation is an advanced airway management technique for patients 
 
 | # | Level | Action / Intervention |
 |:---:|---|---|
+| 0 | <span class="lvl lvl-emr">EMR</span> | Follow Universal Patient Care / Initial Patient Contact protocol. |
 | 1 | <span class="lvl lvl-emt">EMT</span> | Pre-oxygenate: 100% O₂ via NRB or BVM for 3 mins. Monitor SpO₂. |
 | 2 | <span class="lvl lvl-emt">EMT</span> | Position patient: Ear to sternal notch. Maintain in-line C-spine stabilization if trauma suspected. |
 | 3 | <span class="lvl lvl-i">I</span> | Prepare equipment: ETT (appropriate size + 1 size below), stylet/bougie, O₂, suction, laryngoscope, backup airway (SGA), BVM with EtCO₂. |
@@ -25,6 +26,7 @@ Endotracheal intubation is an advanced airway management technique for patients 
 | 8 | <span class="lvl lvl-i">I</span> | Verify placement: Continuous box-waveform EtCO₂, bilateral lung sounds, absence of gastric sounds. |
 | 9 | <span class="lvl lvl-i">I</span> | Secure tube: Tape or commercial holder. Document depth. |
 | 10 | <span class="lvl lvl-i">I</span> | Administer analgesia/sedation as needed. |
+| 11 | <span class="lvl lvl-emt">EMT</span> | Monitor ET tube placement and ventilation with SpO₂ and continuous box-waveform EtCO₂. |
 
 </div>
 

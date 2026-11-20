@@ -1,0 +1,3 @@
+OK — 27 MC row(s) on 26 page(s) plus every other protocol table row (all levels): none name OMD / Poquoson / a Medical Director / a named individual.
+     prose lines still mentioning the office (out of scope, not edited): 77
+mc_wording EXIT=0

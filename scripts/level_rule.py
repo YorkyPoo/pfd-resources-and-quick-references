@@ -285,11 +285,17 @@ def find_regions(lines):
         q = end + 1
         while q < n and lines[q].strip() == '':
             q += 1
-        if q < n and lines[q].startswith('<p class="lv-note">'):
+        # consume EVERY trailing note paragraph, not just one: a page can carry several
+        # (POLICY / PENDING / flagged-row notes), and a run must replace all of them or
+        # they accumulate.
+        while q < n and lines[q].startswith('<p class="lv-note">'):
             r = q
             while r < n and '</p>' not in lines[r]:
                 r += 1
             end = r
+            q = end + 1
+            while q < n and lines[q].strip() == '':
+                q += 1
         regions.append({'start': start, 'end': end, 'banner': banner,
                         'rows': table_rows(body)})
         i = end + 1
@@ -436,39 +442,6 @@ RULINGS_YAML = os.path.join(AUD, 'level-rulings.yaml')
 BINDINGS_YAML = os.path.join(AUD, 'row-bindings.yaml')
 WORDING_YAML = os.path.join(AUD, 'wording-rulings.yaml')
 STYLESHEET_YAML = os.path.join(AUD, 'stylesheet-changes.yaml')
-RELOCATED_YAML = os.path.join(AUD, 'relocated-rows.yaml')
-
-
-def load_relocated():
-    """Rows moved OUT of an action table into the page's References & Good Practice block.
-
-    A relocated row is still on the page, but it is no longer a chipped action row, so it
-    is no longer in the ledger. This record keeps two things honest that the ledger can no
-    longer see: the row's pre-move status (so the ledger's historical "flagged before"
-    counts do not shrink) and, via `proves`, proof that the block the owner-facing card
-    describes is actually printed on the page.
-    """
-    import yaml
-    if not os.path.exists(RELOCATED_YAML):
-        return []
-    doc = yaml.safe_load(open(RELOCATED_YAML, encoding='utf-8')) or {}
-    out = []
-    for rec in doc.get('relocated') or []:
-        missing = [k for k in ('file', 'row', 'level', 'pems', 'proves')
-                   if rec.get(k) in (None, '', [])]
-        if missing:
-            raise SystemExit(f'relocated-rows.yaml: entry {rec!r} is missing {missing}')
-        out.append(rec)
-    return out
-
-
-def relocated_proofs_missing(rec):
-    """The `proves` spans of one relocated row that its page does NOT print."""
-    path = os.path.join(DOCS, rec['file'])
-    if not os.path.exists(path):
-        return ['(page file missing)']
-    text = open(path, encoding='utf-8').read()
-    return [span for span in rec['proves'] if span not in text]
 
 
 
@@ -560,6 +533,120 @@ def load_stylesheet_changes():
                 raise SystemExit(f'stylesheet-changes.yaml: incomplete entry {rec!r}')
         out.append(rec)
     return out
+
+
+RELOCATED_YAML = os.path.join(AUD, 'relocated-rows.yaml')
+SPLITS_YAML = os.path.join(AUD, 'row-splits.yaml')
+
+
+def load_relocated():
+    """Rows moved OUT of an action table into the page's References & Good Practice block.
+
+    Owner instruction 2026-11-20: guidance that PEMS prints as instruction to the provider
+    — scene management, recognition, preparation, assessment — is not a numbered action and
+    must not be given a level of our own invention. It moves below the table as prose and
+    keeps no chip and no flag.
+
+    A relocated row is still on the page, but it is no longer a chipped action row, so the
+    ledger cannot see it any more. This record keeps two things honest: the row's pre-move
+    status (so the ledger's historical "flagged before" count does not quietly shrink) and,
+    via `proves`, proof that the block the record describes is actually printed on the page.
+    """
+    import yaml
+    if not os.path.exists(RELOCATED_YAML):
+        return []
+    doc = yaml.safe_load(open(RELOCATED_YAML, encoding='utf-8')) or {}
+    out = []
+    for rec in doc.get('relocated') or []:
+        need = ('file', 'row', 'where', 'proves')
+        missing = [k for k in need if rec.get(k) in (None, '', [])]
+        if missing:
+            raise SystemExit(f'relocated-rows.yaml: entry {rec!r} is missing {missing}')
+        if not rec.get('guidance') and rec.get('level') in (None, ''):
+            raise SystemExit(f'relocated-rows.yaml: {rec["file"]} row {rec["row"]} has no '
+                             f'`level` — a relocated ACTION records the level it carried; '
+                             f'guidance prose that carries no level sets `guidance: true`')
+        if rec.get('guidance') and rec.get('level') not in (None, ''):
+            raise SystemExit(f'relocated-rows.yaml: {rec["file"]} row {rec["row"]} is marked '
+                             f'`guidance: true` and still states a level — instruction to the '
+                             f'provider carries no provider level')
+        out.append(rec)
+    return out
+
+
+def relocated_proofs_missing(rec):
+    """The `proves` spans of one relocated row that its page does NOT print."""
+    path = os.path.join(DOCS, rec['file'])
+    if not os.path.exists(path):
+        return ['(page file missing)']
+    text = open(path, encoding='utf-8').read()
+    return [span for span in rec['proves'] if span not in text]
+
+
+def load_site_splits():
+    """`site_splits:` — the durable record of a bundled action row split into sub-rows.
+
+    `row-splits.yaml` has two disjoint sections. `splits:` records a repair of the PDF
+    extraction (one printed cell's lines handed to the next badge); it is checked by
+    `pems_canonical.py` / `verify_pems_canonical.py` and is untouched by this pass.
+    `site_splits:` records the owner's row-structure ruling of 2026-11-20: a site row that
+    bundled several actions is split into one action per row, each part carrying the level
+    of the PEMS row that prints it. A bundled row cannot carry one level without over- or
+    under-granting half of itself — that is why these rows were flagged OWNER_REQUIRED.
+
+    Numbering: the first part keeps the original number and the rest are lettered (`8`,
+    `8a`, `8b`), so the row number stays the audit key bound to its PEMS citation and no
+    downstream citation shifts. Each part must name the PEMS row it cites; the level is
+    never typed here as the authority — it is what that row prints, and `--check` compares
+    the two.
+    """
+    import yaml
+    if not os.path.exists(SPLITS_YAML):
+        return []
+    doc = yaml.safe_load(open(SPLITS_YAML, encoding='utf-8')) or {}
+    out = []
+    for rec in doc.get('site_splits') or []:
+        need = ('file', 'row', 'reason', 'parts')
+        missing = [k for k in need if rec.get(k) in (None, '', [])]
+        if missing:
+            raise SystemExit(f'row-splits.yaml site_splits: entry {rec!r} is missing {missing}')
+        parts = rec['parts']
+        if not isinstance(parts, list) or len(parts) < 2:
+            raise SystemExit(f'row-splits.yaml site_splits: {rec["file"]} row {rec["row"]} '
+                             f'must list at least two parts')
+        want = [str(rec['row'])] + [f'{rec["row"]}{chr(97 + i)}' for i in range(len(parts) - 1)]
+        got = [str(p.get('row')) for p in parts]
+        if got != want:
+            raise SystemExit(f'row-splits.yaml site_splits: {rec["file"]} row {rec["row"]} '
+                             f'parts are numbered {got}, expected {want} — the first part '
+                             f'keeps the original number and the rest are lettered')
+        for p in parts:
+            miss = [k for k in ('row', 'level', 'pems', 'text') if p.get(k) in (None, '', [])]
+            if miss:
+                raise SystemExit(f'row-splits.yaml site_splits: {rec["file"]} row '
+                                 f'{rec["row"]} part {p.get("row")} is missing {miss}')
+            if p['level'] not in LV + ['MC']:
+                raise SystemExit(f'row-splits.yaml site_splits: {rec["file"]} part '
+                                 f'{p["row"]} level {p["level"]!r} is not a provider level')
+            src = p.get('source')
+            if src not in ('cited', 'ruling', 'owner_required'):
+                raise SystemExit(f'row-splits.yaml site_splits: {rec["file"]} part '
+                                 f'{p["row"]} has source {src!r} — it must say `cited` (a '
+                                 f'printed PEMS badge), `ruling` (a recorded owner decision) '
+                                 f'or `owner_required` (the source scopes the action in a '
+                                 f'row badged for another clause, so the level is an open '
+                                 f'decision and the part is flagged, not cited)')
+        out.append(rec)
+    return out
+
+
+def norm_row_text(text):
+    """A row's action as compared by the split check: markup, links and spacing folded."""
+    text = re.sub(r'\[([^\]]*)\]\([^)]*\)', r'\1', str(text or ''))
+    text = text.replace('**', '').replace('<br>', ' ').replace('<br/>', ' ')
+    text = re.sub(r'<[^>]+>', ' ', text)
+    text = html_lib.unescape(text)
+    return re.sub(r'\s+', ' ', text).strip()
 
 
 def load_rulings():
@@ -865,13 +952,12 @@ def row_pending_note(spec_rows):
     return ('<strong>PENDING</strong> — ' + label + ': this action has no counterpart in '
             'PEMS 2024. It is an agency addition, so the level it used to show was never '
             'verified against the regional source and is not published as a level now. '
-            'Every other row on this page is cited to its PEMS 2024 row. This is not the '
+            'Every other action listed is cited to its PEMS 2024 row. This is not the '
             'same case as a whole protocol sourced outside PEMS (e.g. Aortic Dissection, '
-            'which comes from ODEMSA and is PENDING on every row): here only the row(s) '
-            'named are pending, and the rest of the protocol stands on PEMS. '
+            'which comes from ODEMSA and is PENDING on every row): in this case only the '
+            'action(s) named are pending, and the rest of the protocol stands on PEMS. '
             '<strong>Pending OMD authorization</strong> — no provider level applies until '
-            'the OMD authorizes it. See <code>audit/level-scan/pending-protocols.yaml</code> '
-            'and <code>audit/level-scan/level-rule-ledger.md</code>.')
+            'the OMD authorizes it.')
 
 
 def pending_note(spec):
@@ -1099,16 +1185,35 @@ def badge_of(row):
     return tok.strip('[] '), tok.strip().startswith('[')
 
 
-def compound_tokens(row):
+def row_key(ordinal):
+    """A table row's ledger key: an int for a plain number, the string for a lettered one.
+
+    Splitting a bundled action (owner ruling 2026-11-20) keeps the original number on the
+    first sub-row and letters the rest (`8`, `8a`, `8b`) so the row number stays the audit
+    key it always was and no downstream citation shifts. A lettered sub-row therefore has a
+    string key; everything that only indexed numeric rows must go through this.
+    """
+    s = str(ordinal).strip()
+    return int(s) if s.isdigit() else s
+
+
+def compound_tokens(row, span=None):
     """Inline level tokens inside the PEMS row text, e.g. '(I / P)' or '[EMR]'.
 
     PEMS prints ONE badge per row but sometimes scopes a clause to another level in the
     text. Such a row cannot be reproduced as a single chip without contradicting either
     the badge or the row's own wording.
+
+    `span` is the clause a binding quotes as the words this site row publishes
+    (`quoted_row_text`). On a split row that clause is only part of the compound PEMS row,
+    so a token OUTSIDE it cannot contradict this row's chip — the half it scoped is now a
+    row of its own with its own citation. Only a token inside the published clause counts.
     """
     if not row:
         return []
     text = row.get('verbatim_text') or ''
+    if span:
+        text = str(span)
     found = INLINE_BRACKET.findall(text)
     for a, b in INLINE_PAREN.findall(text):
         found += [a, b]
@@ -1208,7 +1313,7 @@ def resolve(rel, rows, align, adjudicated, pems, bindings=None):
 
 # ------------------------------------------------------------------- rendering
 MC_REQ_MARK = ('<span class="lvl lvl-mc-req" title="this level performs the action only '
-               'with Medical Control authorisation (the page printed this level cell in '
+               'with Medical Control authorisation (PEMS prints the level cell in '
                'brackets)">+MC</span>')
 
 
@@ -1224,13 +1329,16 @@ def chip(level, bracketed=False, owner=False, mc_required=False, flag=None):
         html += ('<sup class="lvl-req" title="PEMS 2024 prints this badge in brackets: agency '
                  'training documentation and Medical Control written authorization required">*</sup>')
     if owner:
-        html += ('<sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this '
-                 'action\'s provider level">&#9873;</sup>')
+        # Page voice (owner ruling 2026-11-20): the marker's tooltip is reader text. No
+        # audit vocabulary, no ledger/file reference, no self-reference to the table.
+        html += ('<sup class="lvl-own" title="Provider level for this action is awaiting a '
+                 'Medical Control decision">&#9873;</sup>')
     if flag:
         # A corrected row: the chip IS the level PEMS prints (so this is not
         # OWNER_REQUIRED), but the row carried a different level until the owner ruled
         # on it and the owner asked for that history to stay visible on the page.
-        title = html_lib.escape(str(flag), quote=True)
+        # The tooltip is reader text: markdown bold is stripped, quotes escaped.
+        title = html_lib.escape(re.sub(r'\*\*(.+?)\*\*', r'\1', str(flag)), quote=True)
         html += f'<sup class="lvl-fix" title="{title}">&#9873;</sup>'
     return html
 
@@ -1249,8 +1357,11 @@ def render_block(rows, note=None, banner=None, header=NEW_HEADER, div_open=DIV_O
     if note:
         # written as HTML, not markdown: attr_list does not run on a paragraph inside a
         # markdown="1" div, and the note must never render as raw "{: .lv-note }" text.
-        out += ['', '<p class="lv-note">' + re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', note)
-                + '</p>']
+        # page_note_for() joins several notes with a blank line; each gets its own <p> so a
+        # blank line can never end the HTML block early.
+        for part in note.split('\n\n'):
+            out += ['', '<p class="lv-note">'
+                    + re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', part) + '</p>']
     return out
 
 
@@ -1323,7 +1434,8 @@ def _decide(row, r, ruled_for_row, pending_row=None):
         return ruled_for_row['level'], False, 'owner_ruled', None, new_text, before, ruled_for_row
 
     resolved_level = cells_level((r['resolved'] or {}).get('resolved_cells'))
-    tokens = compound_tokens(r['pems_row'])
+    tokens = compound_tokens(r['pems_row'],
+                             (extra.get('binding') or {}).get('quoted_row_text'))
 
     if extra.get('forced_owner'):
         return (before_low, True, 'OWNER_REQUIRED', extra['forced_owner'], new_text, before, None)
@@ -1414,7 +1526,7 @@ def plan(rel):
                                        and level not in ('PENDING', 'MC')})
             entry = {
                 'file': rel,
-                'row': int(row['ordinal']),
+                'row': row_key(row['ordinal']),
                 'action': re.sub(r'\[([^\]]*)\]\([^)]*\)', r'\1', new_text)
                               .replace('**', '').replace('<br>', ' ')[:150],
                 'level_published': level,
@@ -1426,7 +1538,8 @@ def plan(rel):
                 'pems_page': r['ptr'][0] if r['ptr'] else None,
                 'pems_ordinal': r['ptr'][1] if r['ptr'] else None,
                 'pems_badge': r['badge'],
-                'compound_tokens': compound_tokens(r['pems_row']),
+                'compound_tokens': compound_tokens(
+                    r['pems_row'], (r['extra'].get('binding') or {}).get('quoted_row_text')),
                 'bracketed': r['bracketed'],
                 'pems_text': (r['pems_row'] or {}).get('verbatim_text'),
                 'binding_evidence': r['extra'].get('binding_evidence'),
@@ -1521,18 +1634,18 @@ def page_note_for(ledger):
         cites = '; '.join(
             f"<em>{policies()[i]['title']}</em> (PEMS p."
             + ', '.join(str(p) for p in policies()[i]['pages']) + ')' for i in ids)
-        notes.append('<strong>POLICY</strong> — ' + label + ': this is not a provider level. '
-                     'This page is a PEMS administrative policy, not a clinical protocol: '
-                     'each row is cited to the PEMS 2024 administrative policy that prints '
-                     'it — ' + cites + ' — and no provider level is published, because PEMS '
-                     'prints these rules as policy rather than as level-badged protocol rows. '
-                     'The policy and the verbatim span for every row are recorded in '
-                     '<code>audit/level-scan/level-rule-ledger.md</code>.')
+        notes.append('<strong>POLICY</strong> — ' + label + ': no provider level applies. '
+                     'PEMS publishes these rules as administrative policy, not as a clinical '
+                     'protocol: each is cited to the PEMS 2024 administrative policy that '
+                     'prints it — ' + cites + ' — and no provider level is published, because '
+                     'PEMS prints these rules as policy rather than as level-badged protocol '
+                     'rows.')
         xp = [e for e in ledger if e.get('cross_page')]
         if xp:
-            notes.append('A PEMS level on this page does not make it a protocol: '
+            notes.append('A provider level does not by itself make an administrative rule a '
+                         'protocol: '
                          + '; '.join(
-                             f"row {e['row']} is printed as row p.{e['pems_page']}#"
+                             f"one of them is printed as row p.{e['pems_page']}#"
                              f"{e['pems_ordinal']} of the PEMS 2024 protocol and is cited "
                              f"there, so its chip is that row's level ({e['level_published']})"
                              for e in xp) + '. No administrative policy prints it.')
@@ -1556,36 +1669,32 @@ def page_note_for(ledger):
                  and not e.get('owner_note')]
         notes.extend(custom)
         if plain:
-            label = ('row ' + plain[0] if len(plain) == 1
-                     else 'rows ' + ', '.join(plain))
-            notes.append('&#9873; **OWNER_REQUIRED** — ' + label +
-                         ': no PEMS 2024 row authorises a provider level for this action. The level '
-                         'shown is the one this page already published; it is not verified against '
-                         'the source. See <code>audit/level-scan/level-rule-ledger.md</code>.')
+            # Page voice (owner ruling 2026-11-20): plain reader instruction only — no audit
+            # token, no row number, no file path. The ⚑ on the chip marks which action it is.
+            notes.append('&#9873; **Level pending Medical Control review** — PEMS 2024 does not '
+                         'print a provider level for this action as a level-badged row, so the '
+                         'level shown is provisional. Treat it as provisional until Medical '
+                         'Control confirms it.')
     fixed = [(e['row'], e.get('flag_reason')) for e in ledger
              if e.get('flag_reason') and not e.get('ratified')]
     if fixed:
-        notes.append('&#9873; **CORRECTED** — ' +
-                     '; '.join(f"row {r}: {why}" for r, why in fixed) +
-                     '. The chip is the level PEMS 2024 prints on the cited page; the flag '
-                     'marks a level this page published differently until the owner ruled on '
-                     'it, and stays until the correction has been read against the printed '
-                     'page. The citation and the evidence are in '
-                     '<code>audit/level-scan/level-rule-ledger.md</code>.')
+        # Page voice (owner ruling 2026-11-20): the flag text is reader instruction, written in
+        # row-bindings.yaml; no row numbers, no audit vocabulary, no file path here.
+        notes.append('&#9873; ' + ' '.join(why for _r, why in fixed))
     mc_rows = [str(e['row']) for e in ledger if e.get('mc_required')]
     if mc_rows:
         label = ('row ' + mc_rows[0] if len(mc_rows) == 1
                  else 'rows ' + ', '.join(mc_rows))
-        notes.append('**+MC** — ' + label + ': the level shown may perform this action only '
-                     'with Medical Control authorisation. This page printed that level in '
+        notes.append('**+MC** — the marked action(s) may be performed at the level shown only '
+                     'with Medical Control authorisation. PEMS prints that level in '
                      'brackets; the marker carries that meaning into the single-level layout. '
                      'It is not a second level and not the same as an <code>MC</code> chip, '
                      'which marks an action that is itself a Medical Control contact.')
     if any(e['bracketed'] for e in ledger):
-        notes.append('* **[ ] badge in PEMS 2024** — the source prints this level in brackets: '
+        notes.append('* **Bracketed badge** — the level is printed in brackets in the source: '
                      'agency post-affiliation training documentation on file, plus the '
-                     "Medical Control written authorization for that skill. The bracketing is the source's, "
-                     'not this page\'s.')
+                     'Medical Control written authorization for that skill. The brackets are '
+                     "the source's own.")
     return '\n\n'.join(notes) if notes else None
 
 
@@ -1673,7 +1782,7 @@ def plan_pending(rel, spec):
                                        'owner': False})
             ledger.append({
                 'file': rel,
-                'row': int(ordinal),
+                'row': row_key(ordinal),
                 'action': re.sub(r'\[([^\]]*)\]\([^)]*\)', r'\1', new_text)
                               .replace('**', '').replace('<br>', ' ')[:150],
                 'level_published': 'PENDING',
@@ -2214,10 +2323,17 @@ def emit_md(ledger):
         lines.append(f"- `{f}` row {row}: {rec['mc_bracket_excluded'].strip()}")
 
     # ------------------------------------------------------- flagged rows before -> after
+    # A relocated row left the action table, so it is no longer in this ledger — its
+    # pre-move status is read from relocated-rows.yaml instead, or the history would
+    # silently shrink by exactly the rows this pass moved.
+    reloc = load_relocated()
     files = []
     for e in ledger:
         if e['file'] not in files:
             files.append(e['file'])
+    for r in reloc:
+        if r['file'] not in files:
+            files.append(r['file'])
 
     def _flagged(status):
         return status in ('OWNER_REQUIRED', 'pending_omd', 'pending_row_omd')
@@ -2254,6 +2370,65 @@ def emit_md(ledger):
     tot_after = sum(1 for e in ledger if _flagged(e['status']))
     lines += ['', f'**Total: {tot_before} flagged before, {tot_after} after '
                   f'({tot_before - tot_after} cleared).**', '']
+
+    # ------------------------------------------- rows moved below the action table
+    lines += ['', '## Rows moved below the action table (References & Good Practice)', '',
+              'Owner instruction 2026-11-20: guidance PEMS prints as instruction to the',
+              'provider is not a numbered action and must not be given a level of our own',
+              'invention. Such a row leaves the action table and the ledger; it is recorded',
+              'here and in `audit/level-scan/relocated-rows.yaml` with what it was and where',
+              'it now reads, so nothing can be deleted silently. `--check` re-reads the page',
+              'and fails if the recorded block is not printed there.', '',
+              f'**{len(reloc)} row(s).**', '']
+    if not reloc:
+        lines.append('None.')
+    for r in reloc:
+        lvl = ('no level — guidance, not an action' if r.get('guidance')
+               else f"level `{r['level']}`")
+        was = f" (was `{r['status_before']}`)" if r.get('status_before') else ''
+        lines.append(f"- `{r['file']}` row {r['row']}: {lvl}{was} — {r['where']}")
+        if r.get('note'):
+            lines.append(f"  - {r['note']}")
+
+    # ------------------------------------------------ rows split into one action each
+    splits = load_site_splits()
+    lines += ['', '## Rows split into one action each (owner instruction 2026-11-20)', '',
+              'A row that bundled more than one action cannot carry one level without over- or',
+              'under-granting half of itself — that is why every row below was flagged',
+              'OWNER_REQUIRED. Each is now one action per row, and each part cites the PEMS 2024',
+              'row that prints **that** action, so the chip is the source\'s badge and nothing was',
+              'invented. The first part keeps the row number and the rest are lettered, so the',
+              'number stays the audit key bound to its citation and no downstream reference',
+              'shifts. The durable record is `audit/level-scan/row-splits.yaml` `site_splits:`;',
+              '`--check` re-reads every part on the page and compares its chip with the badge of',
+              'the row it names. `source` is `cited` when a printed badge authorises the level,',
+              '`owner_required` when the source prints the action but scopes it in the row\'s own',
+              'words inside a cell badged for another clause (or two printed rows disagree) — the',
+              'part is then flagged and the PEMS row shown is the row that PRINTS the action, not',
+              'a level citation. `source: ruling` would mean a recorded owner decision; none of',
+              'these parts is one.', '']
+    if not splits:
+        lines.append('None.')
+    else:
+        lines += ['| page | row | part | level | PEMS row | source |',
+                  '|---|---|---|---|---|---|']
+        for rec in splits:
+            short = rec['file'].split('/')[-1]
+            for p in rec['parts']:
+                lines.append(f"| `{short}` | {rec['row']} | {p['row']} | {p['level']} | "
+                             f"{p['pems']} | {p.get('source', 'cited')} |")
+        n_before = len(splits)
+        n_after = sum(len(r['parts']) for r in splits)
+        lines += ['', f'**{n_before} row(s) became {n_after} sub-rows.** Every part carries',
+                  'exactly one level, and no part restates a level in its action text.', '']
+        for rec in splits:
+            def _part(p):
+                tag = ' — OWNER_REQUIRED, printing row' if p.get('source') == 'owner_required' \
+                    else ''
+                return f"{p['row']} `{p['level']}` ({p['pems']}{tag})"
+            lines.append(f"- `{rec['file']}` row {rec['row']}: "
+                         + '; '.join(_part(p) for p in rec['parts']))
+            lines.append(f"  - why: {' '.join(rec['reason'].split())}")
 
     owner = [e for e in ledger if e['status'] == 'OWNER_REQUIRED']
     lines += ['', '## OWNER_REQUIRED', '',
@@ -2478,9 +2653,15 @@ def emit_md(ledger):
               'decision before the page is treated as final.', '',
               '- **Post-ROSC has no row for PEMS p.59#0** ("Follow Universal Patient Care…", badge',
               '  EMR) — missing row, not a level defect.',
-              '- **p.61#4 and p.63#7 are compound rows** (one badge, plus an inline level token',
-              '  scoping a clause). Every site row bound to them without a C2 `resolved_cells`',
-              '  decision is flagged OWNER_REQUIRED rather than given a chip.',
+              '- **p.61#4 and p.63#7 are compound rows — RESOLVED for the split rows (2026-11-20).**',
+              '  The two printed rows carry one badge plus an inline level token scoping a clause',
+              '  (`[EMR]` on the AED clause; `(I / P)` on the rhythm decision). A site row that',
+              '  published the whole row could not be chipped without contradicting one half, so it',
+              '  was flagged. Those rows are now split one clause per row (see *Rows split into one',
+              '  action each*), each citing the printed row for its own clause, and `--check` only',
+              '  counts a compound token that falls inside the clause the row quotes. A site row',
+              '  that still publishes a whole compound row without a C2 `resolved_cells` decision',
+              '  would still be flagged — none is left.',
               '- **Aortic Dissection & AAA (`04b`) has no PEMS 2024 protocol**: its source is',
               '  ODEMSA Section 2.5 (Revised 06/2015). It is converted to the 3-column chassis',
               '  with every row chipped `PENDING` (Pending OMD Authorization); see PENDING_OMD',
@@ -2509,7 +2690,10 @@ def emit_md(ledger):
               '  (Burns p.87-88, Sedation p.55). Where such a procedure prints the action it is now',
               '  cited (see *Cross-page citations*); where it does not, or prints it only across',
               '  rows of different levels, the row keeps the level the page published with its',
-              '  reason in `row-bindings.yaml`.',
+              '  reason in `row-bindings.yaml`. **After the 2026-11-20 row-structure pass no',
+              '  respiratory row is flagged**: each bundled row is split and each half cites the',
+              '  procedure row that prints it, and the four rows that were not actions moved below',
+              '  their tables.',
               '- **Site-side `[X]` brackets — RESOLVED (owner ruling 2026-11-16).** The owner ruled',
               '  *"Add a second marker so [X] survives in the chassis"*. Bracketed rows now carry',
               '  the level chip plus a distinct `+MC` marker (see the `+MC` section above);',
@@ -2525,16 +2709,17 @@ def emit_md(ledger):
               '  1 g IV/IO over 3 minutes are p.91#5 (crush syndrome, badge [I]) and p.120#8',
               '  (CCB/BB overdose, badge I), whose indications differ. Confirm PENDING is preferred',
               '  over citing one of those rows across indications.',
-              '- **Batch 4 — Electrical row 7 and Lightning row 7 are OWNER_REQUIRED bundles.**',
-              '  Each row prints a 12-lead ECG (p.96#8, badge EMT) and continuous rhythm',
-              '  monitoring (p.96#11, badge I) as one action. One chip cannot carry both without',
-              '  over- or under-granting one half; the page levels (A and EMT) are kept and',
-              '  flagged. Owner to decide whether to split the rows or accept one level.',
-              '- **Batch 4 — Trauma row 2 (scene safety + extrication) and row 6 (assess shock /',
-              '  refer to Shock protocol) are OWNER_REQUIRED.** No PEMS row prints either bundle:',
-              '  scene safety is p.49#1 (EMR) and extrication is p.91#7 (EMT); the shock row',
-              '  p.83#3 prints "keep the patient warm" (EMR), not the assessment/referral the page',
-              '  names. The page levels (EMT and A) are kept and flagged.',
+              '- **Batch 4 — Electrical row 7 and Lightning row 7 — RESOLVED 2026-11-20.** Each',
+              '  row printed a 12-lead ECG (p.96#8, badge EMT) and continuous rhythm monitoring',
+              '  (p.96#11, badge I) as one action. Owner instruction: split rather than accept one',
+              '  level. Row 7 is now the 12-lead at EMT and row 7a the rhythm monitoring at I on',
+              '  both pages (see *Rows split into one action each*).',
+              '- **Batch 4 — Trauma row 2 and row 6 — RESOLVED 2026-11-20.** Row 2 (scene safety +',
+              '  extrication) is split: scene safety at EMR (p.49#1) and extrication at EMT',
+              '  (p.91#7). Row 6 (assess shock / refer to Shock protocol) is recognition and',
+              '  referral, not a numbered action, so it moved below the table into the page\u2019s',
+              '  References & Good Practice block with no level (see *Rows moved below the action',
+              '  table*).',
               '- **Batch 4 — Crush rows 4-5 carry `+MC` from brackets added on the level-scan',
               '  branch.** The [A]/[I] notation was added by ef540f9 after the branch base',
               '  768ad68, so this page\'s pre-conversion bracket set is recorded as `base_rev:',
@@ -2682,19 +2867,17 @@ def emit_md(ledger):
               '  prints "5 mmHg" and p.245#4 extracts as "titratingPEEP9%-15mmHg)". Reconciliation',
               '  (mmHg vs cmH2O, and 5-15 vs 9%-15) is a clinical-text decision outside this',
               '  conversion, so only the chip was bound; owner to reconcile the page wording.',
-              '- **Pearl ruling 2026-11-17 + ketamine ruling 2026-11-20 — the "prints nowhere"',
-              '  bucket holds 4 rows.** It held 17 rows before the Pearl ruling and 6 after it.',
-              '  Two of the six left with the 2026-11-20 ketamine ruling: the Sedation ketamine',
-              '  rows (r4 pre-intubation sedation, r5 post-intubation ketamine) were deleted from',
-              '  the page and replaced by the fentanyl/midazolam rows p.55 prints, so neither is a',
-              '  row any more. The four that remain are Pediatric Stridor r2, Pneumothorax r5,',
-              '  Upper Airway Obstruction r2 and Trauma r6. The first three are genuinely absent',
-              '  from the source. Trauma r6 ("assess for shock") is only half absent: p.84 PEARLS',
-              '  #3 prints the recognition half ("Any patient who is cool/diaphoretic and',
-              '  tachycardic is considered to be in shock until proven otherwise") but not the',
-              '  "refer to the Shock protocol" half, so its level question stays open and the row',
-              '  stays flagged. These four are the only converted rows still without a printed',
-              '  badge.']
+              '- **Pearl ruling 2026-11-17 + ketamine ruling 2026-11-20 and the row-structure',
+              '  instruction — the "prints nowhere" bucket is empty.** It held 17 rows before the Pearl',
+              '  ruling and 6 after it, and every one of those six has since left the action',
+              '  table: the four guidance rows the owner moved below their pages\u2019 tables on',
+              '  2026-11-20 (Pediatric Stridor r2 scene management, Pneumothorax r5 equipment',
+              '  readiness, Upper Airway Obstruction r2 recognition, Trauma r6 assess shock \u2014',
+              '  recorded in <code>audit/level-scan/relocated-rows.yaml</code>, not deleted), and',
+              '  the two Sedation ketamine rows (r4 pre-intubation sedation, r5 post-intubation',
+              '  ketamine), which the p.55 verbatim rewrite deleted with the drug. No converted',
+              '  action row is left without a printed badge, so no row is counted in this',
+              '  bucket and no OWNER_REQUIRED flag rests on a missing source row.']
 
     # Derived from `changed` so the prose can never disagree with the table above:
     # an MC -> other move and an other -> MC move are counted and named from data.
@@ -2766,6 +2949,7 @@ def emit_md(ledger):
               f'| PENDING (no PEMS source: whole page + row-level + administrative) | '
               f"{sum(1 for e in ledger if e['status'] in ('pending_omd', 'pending_row_omd'))} |",
               f'| OWNER_REQUIRED | {sum(1 for e in ledger if e["status"] == "OWNER_REQUIRED")} |',
+              f'| rows moved below the action table (References & Good Practice) | {len(reloc)} |',
               f'| OWNER_RULED | {sum(1 for e in ledger if e["status"] == "owner_ruled")} |',
               f'| +MC markers | {sum(1 for e in ledger if e.get("mc_required"))} |',
               '', '### `sc-wrap` — whole `docs/` tree, walked (not a directory list)', '',
@@ -2975,12 +3159,17 @@ def check():
                 if b.get('cross_page') and not is_cross:
                     fails.append(f'{rel} row {row["ordinal"]}: marked cross_page: true but '
                                  f'p.{b["pems_page"]} IS this page\'s own source {sorted(gp)}')
-                if b.get('cross_page'):
+                if b.get('cross_page') or b.get('quoted_row_text'):
                     q = b.get('quoted_row_text')
                     src = pems.get((b['pems_page'], b['pems_ordinal']))
                     if src is None:
                         fails.append(f'{rel} row {row["ordinal"]}: cites p.{b["pems_page"]}#'
                                      f'{b["pems_ordinal"]}, which is not in pems_table.json')
+                    elif not q:
+                        fails.append(f'{rel} row {row["ordinal"]}: this row publishes one '
+                                     f'clause of a PEMS row but records no quoted_row_text — '
+                                     f'quote the clause it publishes so the chip can be '
+                                     f'checked against it')
                     elif not quote_in(q, src):
                         fails.append(f'{rel} row {row["ordinal"]}: quoted_row_text is not a '
                                      f'verbatim span of the cited row p.{b["pems_page"]}#'
@@ -3124,7 +3313,8 @@ def check():
                 continue
 
             resolved_level = cells_level((r['resolved'] or {}).get('resolved_cells'))
-            tokens = compound_tokens(r['pems_row'])
+            tokens = compound_tokens(r['pems_row'],
+                                     (r['extra'].get('binding') or {}).get('quoted_row_text'))
             must_own = bool(r['extra'].get('forced_owner')) or (
                 resolved_level is None and (r['badge'] is None or bool(tokens)))
             has_flag = 'lvl-own' in (row['level_cell'] or '')
@@ -3452,6 +3642,149 @@ def check():
         pending_report.append({'file': rel, 'source': spec['source'], 'rows': len(rows),
                                'pending': pend_rows, 'pems_citations': 0})
 
+    # ------------------------------------------------------------- relocated rows
+    # A row that moved below the action table has to be provably still on the page, and
+    # provably gone from the action table and the ledger. `proves` is the page's own words,
+    # so an edited-away block fails here instead of leaving a permanent record of a move
+    # that no longer describes the page.
+    relocated = load_relocated()
+    reloc_rows = []
+    for rec in relocated:
+        rel, num = rec['file'], str(rec['row'])
+        miss = relocated_proofs_missing(rec)
+        if miss:
+            fails.append(f'{rel} row {num}: relocated-rows.yaml records this row as moved below '
+                         f'the table, but the page does not print '
+                         + ', '.join(repr(s) for s in miss))
+            continue
+        path = os.path.join(DOCS, rel)
+        if not os.path.exists(path):
+            fails.append(f'{rel}: relocated-rows.yaml names a page that does not exist')
+            continue
+        rows = [r for reg in find_regions(open(path, encoding='utf-8').read().split('\n'))
+                for r in reg['rows'] if not is_banner(r)]
+        if any(str(r['ordinal']) == num for r in rows):
+            fails.append(f'{rel} row {num}: recorded as relocated, but the action table still '
+                         f'carries that row number — the move did not happen')
+        if (rel, num) in led:
+            fails.append(f'{rel} row {num}: recorded as relocated, but the ledger still lists '
+                         f'it as an action row (re-run scripts/level_rule.py --write)')
+        reloc_rows.append({'file': rel, 'row': rec['row'], 'where': rec['where'],
+                           'level': rec.get('level'), 'guidance': bool(rec.get('guidance'))})
+
+    # ------------------------------------------------------------ site row splits
+    # Every split a page carries is recorded in row-splits.yaml `site_splits:` with the PEMS
+    # row each part cites. The chip must be that row's badge (not a level typed into the
+    # file), the part's words must be on the page, and no un-recorded lettered row may
+    # exist — a split that only lives in the page is a renumbering nobody can audit.
+    site_splits = load_site_splits()
+    split_rows = []
+    recorded = set()
+    for rec in site_splits:
+        rel = rec['file']
+        path = os.path.join(DOCS, rel)
+        if not os.path.exists(path):
+            fails.append(f'{rel}: row-splits.yaml site_splits names a page that does not exist')
+            continue
+        by_num = {}
+        for reg in find_regions(open(path, encoding='utf-8').read().split('\n')):
+            for r in reg['rows']:
+                if not is_banner(r):
+                    by_num[str(r['ordinal'])] = r
+        for p in rec['parts']:
+            num = str(p['row'])
+            recorded.add((rel, num))
+            label = f'{rel} row {num}'
+            row = by_num.get(num)
+            if row is None:
+                fails.append(f'{label}: named as a split part in row-splits.yaml but the page '
+                             f'carries no such row')
+                continue
+            chips = CHIP_RE.findall(row['level_cell'] or '')
+            if len(chips) != 1:
+                fails.append(f'{label}: {len(chips)} level markers, expected 1')
+            elif chips[0][1] != p['level']:
+                fails.append(f'{label}: chip {chips[0][1]} != the level row-splits.yaml '
+                             f'records for this part ({p["level"]})')
+            if norm_row_text(p['text']) not in norm_row_text(row['action']):
+                fails.append(f'{label}: the part text recorded in row-splits.yaml is not what '
+                             f'the page prints: {p["text"]!r}')
+            m = re.match(r'^p\.(\d+)#(\d+)$', str(p['pems']).strip())
+            if p.get('source') == 'ruling':
+                # the level is a recorded owner decision, not a printed badge: the ruling
+                # must exist at that level, and where it names a printed row the part must
+                # name the same one.
+                rul = rulings.get((rel, num))
+                if rul is None:
+                    fails.append(f'{label}: recorded as a `ruling` part but level-rulings.yaml '
+                                 f'has no ruling for it')
+                elif rul['level'] != p['level']:
+                    fails.append(f'{label}: row-splits.yaml records level {p["level"]} but '
+                                 f'level-rulings.yaml rules {rul["level"]}')
+                elif m and rul.get('level_from') and \
+                        (rul['level_from'].get('page'), rul['level_from'].get('ordinal')) != \
+                        (int(m.group(1)), int(m.group(2))):
+                    fails.append(f'{label}: row-splits.yaml names {p["pems"]} but the ruling '
+                                 f'is adopted from p.{rul["level_from"].get("page")}#'
+                                 f'{rul["level_from"].get("ordinal")}')
+                split_rows.append({'file': rel, 'parent': rec['row'], 'row': num,
+                                   'level': p['level'], 'pems': str(p['pems']),
+                                   'source': 'ruling'})
+                continue
+            if p.get('source') == 'owner_required':
+                # The source prints the action but scopes it in the row's own words inside
+                # a cell badged for another clause (or two printed rows disagree about its
+                # level). That is the compound-row case this checker refuses to chip as
+                # cited, so the part keeps the level the source's words give it and stays
+                # flagged: the citation is the row that PRINTS the action, not a badge.
+                b = bindings.get((rel, num)) or {}
+                if b.get('status') != 'owner_required':
+                    fails.append(f'{label}: recorded as an `owner_required` part but '
+                                 f'row-bindings.yaml does not declare it owner_required')
+                elif not str(b.get('reason') or '').strip():
+                    fails.append(f'{label}: owner_required in row-bindings.yaml without a reason')
+                if (rel, num) in rulings:
+                    fails.append(f'{label}: recorded as `owner_required` but level-rulings.yaml '
+                                 f'still rules it {rulings[(rel, num)]["level"]} — a level '
+                                 f'cannot be both an open decision and an owner ruling')
+                split_rows.append({'file': rel, 'parent': rec['row'], 'row': num,
+                                   'level': p['level'], 'pems': str(p['pems']),
+                                   'source': 'owner_required'})
+                continue
+            if not m:
+                fails.append(f'{label}: pems {p["pems"]!r} is not written p.<page>#<ordinal>')
+                continue
+            key = (int(m.group(1)), int(m.group(2)))
+            src = pems.get(key)
+            if src is None:
+                fails.append(f'{label}: the cited PEMS row p.{key[0]}#{key[1]} is not in '
+                             f'pems_table.json')
+                continue
+            badge, _brk = badge_of(src)
+            if badge != p['level']:
+                fails.append(f'{label}: row-splits.yaml records level {p["level"]}, but the '
+                             f'cited PEMS row p.{key[0]}#{key[1]} prints {badge}')
+            b = bindings.get((rel, num)) or {}
+            if (b.get('pems_page'), b.get('pems_ordinal')) != key:
+                fails.append(f'{label}: the page row does not cite p.{key[0]}#{key[1]} in '
+                             f'row-bindings.yaml (it cites p.{b.get("pems_page")}#'
+                             f'{b.get("pems_ordinal")}) — the split record and the citation '
+                             f'disagree')
+            split_rows.append({'file': rel, 'parent': rec['row'], 'row': num,
+                               'level': p['level'], 'pems': str(p['pems'])})
+    # the other direction: a lettered row on a converted page that no split record explains
+    for rel in TARGETS:
+        path = os.path.join(DOCS, rel)
+        if not os.path.exists(path):
+            continue
+        for reg in find_regions(open(path, encoding='utf-8').read().split('\n')):
+            for r in reg['rows']:
+                num = str(r['ordinal'])
+                if not is_banner(r) and not num.isdigit() and (rel, num) not in recorded:
+                    fails.append(f'{rel} row {num}: a lettered sub-row with no entry in '
+                                 f'row-splits.yaml `site_splits` — a split may not exist only '
+                                 f'on the page')
+
     # owner rulings on wording: the page must actually read the ruled phrase
     for rec in load_wording_rulings():
         p = os.path.join(ROOT, rec['file'])
@@ -3542,6 +3875,10 @@ def check():
                              for (f, row, hit) in sorted(seen_kept)],
         'level_words_removed': [{'file': r['file'], 'row': r['row'], 'hit': r['hit']}
                                 for r in removed_words],
+        'rows_relocated': len(reloc_rows),
+        'relocated': reloc_rows,
+        'site_split_parents': len(site_splits),
+        'site_split_rows': split_rows,
     }
     print(json.dumps(summary, indent=1))
     if fails:
@@ -3565,6 +3902,18 @@ def check():
           f"audit/level-scan/pems_prose.json); 0 rulings rest on free text.")
     print(f"OK — {summary['rows_cross_page']} row(s) are cited across pages (cross_page: true), "
           f"each with the cited row's own words quoted verbatim out of pems_table.json.")
+    n_own = sum(1 for r in summary['site_split_rows'] if r.get('source') == 'owner_required')
+    own_txt = (f'; {n_own} of them are flagged OWNER_REQUIRED because PEMS scopes the action '
+               f'inside a row badged for another clause (the split record says so)'
+               if n_own else '')
+    print(f"OK — {summary['site_split_parents']} bundled row(s) are split into "
+          f"{len(summary['site_split_rows'])} sub-rows, each one action; every part cites the "
+          f"PEMS 2024 row that prints it and its chip is that row's badge "
+          f"(row-splits.yaml `site_splits`, re-read against the pages){own_txt}.")
+    print(f"OK — {summary['rows_relocated']} row(s) moved out of an action table into a "
+          f"References & Good Practice block; each is recorded in relocated-rows.yaml with "
+          f"page text that proves the block is still printed, and none is still in the ledger "
+          f"as an action row.")
     print(f"OK — {summary['rows_pending_omd']} action rows across "
           f"{summary['pending_pages']} page(s) are chipped PENDING (Pending OMD Authorization) "
           f"because PEMS 2024 publishes no such protocol; 0 of them claim a PEMS citation.")

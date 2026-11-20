@@ -72,8 +72,32 @@ def load():
     return held, align, pems
 
 
-def split_partners(key, held, align):
-    """Every site row that splits `key`, derived from the artifacts."""
+def load_bindings():
+    """(file, row-str) -> (pems_page, pems_ordinal) for the conversion's explicit cites."""
+    import yaml
+    path = os.path.join(OUT, "row-bindings.yaml")
+    if not os.path.exists(path):
+        return {}
+    doc = yaml.safe_load(open(path, encoding="utf-8")) or {}
+    out = {}
+    for rec in doc.get("bindings") or []:
+        if rec.get("pems_page") is None or rec.get("pems_ordinal") is None:
+            continue
+        out[(rec["file"], str(rec["row"]))] = (int(rec["pems_page"]),
+                                              int(rec["pems_ordinal"]))
+    return out
+
+
+def split_partners(key, held, align, bindings, own=None):
+    """Every site row that splits `key`, derived from the artifacts, minus rows the
+    conversion now cites to a different PEMS row.
+
+    A row that `row-bindings.yaml` explicitly bounds to another PEMS row is not part of
+    this split any more: the 2026-11-20 row-structure pass split it, and each part cites
+    the PEMS row that prints it (e.g. Pneumothorax r12's fluid bolus is p.113#4, not
+    p.243#4). Listing it here would fail the union test — correctly — and would describe
+    the page wrongly.
+    """
     rows = {(r["file"], r["row"]) for r in held
             if (r["pems_page"], r["pems_ordinal"]) == key}
     for page in align["pages"]:
@@ -87,7 +111,13 @@ def split_partners(key, held, align):
                                 for p, o in KEY_RE.findall(r.get("reason") or "")]
             if named:
                 rows.add((page["site_page"], int(r["site_row"])))
-    return sorted(rows)
+    excluded = sorted((f, n) for f, n in rows
+                      if bindings.get((f, str(n))) not in (None, key))
+    # the row that DEFINES this entry stays in its own split: an explicit citation to
+    # another row with the same badge spread does not remove it (the union still has to
+    # add up to this PEMS row's levels, and the verifier names the entry by that row).
+    excluded = [e for e in excluded if e != own]
+    return sorted(rows - set(excluded)), excluded
 
 
 def slug(rel):
@@ -100,6 +130,7 @@ def slug(rel):
 
 def build():
     held, align, pems = load()
+    bindings = load_bindings()
     entries = []
     for r in held:
         key = (r["pems_page"], r["pems_ordinal"])
@@ -109,7 +140,8 @@ def build():
         badge = (p.get("badge_tokens") or [None])[0]
         if not badge:
             raise SystemExit(f"PEMS row {key} has no badge token")
-        partners = split_partners(key, held, align)
+        partners, excluded = split_partners(key, held, align, bindings,
+                                            own=(r["file"], r["row"]))
         if (r["file"], r["row"]) not in partners:
             raise SystemExit(f"{r['file']} row {r['row']} is not in its own split")
         if len(partners) == 1:
@@ -118,6 +150,9 @@ def build():
         else:
             note = (f"site splits one PEMS row across {len(partners)} site rows; "
                     f"they split it at the level, not the text")
+        if excluded:
+            note += (" — excluded because `row-bindings.yaml` now cites it to a different "
+                     "PEMS row: " + ", ".join(f"{os.path.basename(f)} r{n}" for f, n in excluded))
         entries.append({
             "id": f"{slug(r['file'])}-r{r['row']}",
             "pems": {"page": key[0], "ordinal": key[1], "badge": badge},

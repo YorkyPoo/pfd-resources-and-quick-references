@@ -44,23 +44,30 @@ Stridor in pediatric patients indicates upper airway obstruction requiring rapid
 | # | Level | Action / Intervention |
 |:---:|---|---|
 | 1 | <span class="lvl lvl-emr">EMR</span> | **Universal Patient Care / Initial Patient Contact**<br>• Follow the Universal Patient Care protocol for all patients. |
-| 2 | <span class="lvl lvl-emt">EMT</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | **Scene Management & Calm Environment**<br>• Keep child calm - agitation worsens obstruction<br>• Allow parent/caregiver to hold child<br>• Avoid unnecessary procedures<br>• Minimize stimulation and stranger anxiety |
 | 3 | <span class="lvl lvl-emr">EMR</span> | **Position of Comfort**<br>• Allow child to assume position of choice (usually upright or with parent)<br>• Do not force supine positioning<br>• Head-down positioning for infants <1 year if foreign body suspected |
 | 4 | <span class="lvl lvl-emr">EMR</span> | **High-Flow Oxygen**<br>• Apply high-flow oxygen via non-rebreather mask or blow-by<br>• Monitor SpO2 continuously<br>• Titrate to maintain SpO2 >94% |
-| 5 | <span class="lvl lvl-a">A</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | **Continuous Monitoring**<br>• Cardiac monitor<br>• Pulse oximetry<br>• EtCO2 when available |
+| 5 | <span class="lvl lvl-emt">EMT</span> | **Continuous Monitoring**<br>• Pulse oximetry<br>• EtCO2 when available |
+| 5a | <span class="lvl lvl-i">I</span> | • Cardiac monitor |
 | 6 | <span class="lvl lvl-emt">EMT</span> | **CPAP for Upper Airway Support**<br>• Consider CPAP for upper airway support if indicated<br>• Initial PEEP 5 cmH2O (titratable by I/P providers) |
 | 7 | <span class="lvl lvl-emt">EMT</span> | **[Albuterol](../../pharmacology/Albuterol.md) Nebulizer**<br>• **[Albuterol](../../pharmacology/Albuterol.md)** 3 mL 0.083% solution nebulized<br>• May help with lower airway component<br>• Reassess after treatment |
 | 8 | <span class="lvl lvl-a">A</span> | **Systemic Corticosteroids**<br>• **[Methylprednisolone](../../pharmacology/Methylprednisolone.md) (Solu-Medrol)** per dosing table below:<br>   • Adult: **125 mg IV/IO** slow push<br>   • Pediatric: **2 mg/kg IV/IO** slow push (max **125 mg**)<br>• Steroids take 30-60 minutes to take effect |
 | 9 | <span class="lvl lvl-a">A</span> | **IV/IO Access**<br>• Obtain IV or IO access for medication administration<br>• Use largest appropriate catheter<br>• Do NOT delay [Epinephrine](../../pharmacology/Epinephrine.md) for IV/IO placement |
 | 10 | <span class="lvl lvl-a">A</span> | **Nebulized [Epinephrine](../../pharmacology/Epinephrine.md) for Moderate to Severe Stridor**<br>• **[Epinephrine](../../pharmacology/Epinephrine.md)** **3 mg** [1 mg/mL] nebulized<br>• May be repeated once if needed<br>• Same concentration as adults and pediatrics |
-| 11 | <span class="lvl lvl-p">P</span><span class="lvl lvl-mc-req" title="this level performs the action only with Medical Control authorisation (the page printed this level cell in brackets)">+MC</span> | **Airway Protection - Advanced Airway**<br>• Prepare for advanced airway if impending respiratory failure<br>• Have appropriate sized equipment ready<br>• ⚠ Intubation of children <12 requires Paramedic skill |
+| 11 | <span class="lvl lvl-p">P</span><span class="lvl lvl-mc-req" title="this level performs the action only with Medical Control authorisation (PEMS prints the level cell in brackets)">+MC</span> | **Airway Protection - Advanced Airway**<br>• Prepare for advanced airway if impending respiratory failure<br>• Have appropriate sized equipment ready<br>• ⚠ Intubation of children <12 requires Paramedic skill |
 | 12 | <span class="lvl lvl-emt">EMT</span> | **Transport Considerations**<br>• Transport to pediatric-capable facility<br>• Alert receiving facility early<br>• Consider ALS intercept if BLS only<br>• Rapid transport if severe obstruction |
 
 </div>
 
-<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — rows 2, 5: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.
+<p class="lv-note"><strong>+MC</strong> — the marked action(s) may be performed at the level shown only with Medical Control authorisation. PEMS prints that level in brackets; the marker carries that meaning into the single-level layout. It is not a second level and not the same as an <code>MC</code> chip, which marks an action that is itself a Medical Control contact.</p>
 
-<strong>+MC</strong> — row 11: the level shown may perform this action only with Medical Control authorisation. This page printed that level in brackets; the marker carries that meaning into the single-level layout. It is not a second level and not the same as an <code>MC</code> chip, which marks an action that is itself a Medical Control contact.</p>
+### References & Good Practice
+
+**Scene management — keeping the child calm.**
+
+- Keep child calm — agitation worsens obstruction
+- Allow parent/caregiver to hold child
+- Avoid unnecessary procedures
+- Minimize stimulation and stranger anxiety
 
 ### Pearls
 1. **⚠ Critical Intubation Warning:** Intubation of children under 12 years of age is a Paramedic "red dot" skill hazard only. Intermediate providers must contact Medical Control prior to attempting intubation in pediatric patients.

@@ -20,18 +20,6 @@
 
 kept:
 
-  - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
-    row: 8
-    hits:
-      - "(as determined by EMT-I or P)"
-    reason: >-
-      CLINICAL QUALIFIER. The parenthetical appears twice and both times names WHO may
-      make the rhythm determination the AED is advising on ("If AED is advising to shock
-      or rhythm is VF or VT (as determined by EMT-I or P), defibrillate..."). It does not
-      restate this row's chip (EMT): the row is an AED/rhythm-assessment row the EMR/EMT
-      can perform, and the EMT-I-or-P phrase scopes the interpretation that follows.
-      Stripping it would widen who may determine the rhythm. Deliberate, kept.
-
   - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
     row: 5
     hits:
@@ -46,17 +34,6 @@ kept:
       OWNER_REQUIRED) while the sentence also names Intermediate. The chip/text
       difference is part of the existing OWNER_REQUIRED flag on this row, not a level
       this sweep may settle.
-
-  - file: protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md
-    row: 5
-    hits:
-      - "(AED for EMR/EMT, Manual for I/P)"
-    reason: >-
-      CLINICAL QUALIFIER. "(AED for EMR/EMT, Manual for I/P)" splits the defibrillation
-      action by the device each level may use; it is a device-scope instruction, not a
-      duplicate of the chip. The row is OWNER_REQUIRED precisely because PEMS p.63#7 is a
-      compound row (badge I with an inline [EMR]), and the ledger note for this row already
-      explains that neither I nor EMT is the whole answer. Deliberate, kept.
 
   - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
     row: 6
@@ -121,6 +98,30 @@ kept:
 
 removed:
 
+  - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
+    row: 8
+    hit: "(as determined by EMT-I or P)"
+    replaced_with: "the chip on row 8a (I)"
+    reason: >-
+      MOVED INTO A CHIP, not dropped. Owner instruction 2026-11-20 split this bundled row:
+      row 8 is now "Apply AED / Assess cardiac rhythm every 2 minutes" (EMR, p.235#4) and
+      row 8a is "Determine rhythm..." at I. The parenthetical named WHO may make the rhythm
+      determination, and that scope is now the level of the row that performs it, so leaving
+      the words on either row would duplicate the level the convention forbids in action
+      text. The judgement recorded here on 2026-11-15 — stripping it would widen who may
+      determine the rhythm — is preserved: the determination is not at EMT any more, it is a
+      row of its own at I (level-rulings.yaml, owner_ruled 2026-11-20).
+
+  - file: protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md
+    row: 5
+    hit: "(AED for EMR/EMT, Manual for I/P)"
+    replaced_with: "two rows, 5 (EMR, AED) and 5a (I, manual)"
+    reason: >-
+      MOVED INTO A CHIP, not dropped. Owner instruction 2026-11-20 split the defibrillation
+      row by device, which is exactly what the parenthetical described: row 5 is the AED
+      defibrillation at EMR (p.235#4) and row 5a is the manual defibrillation at I (p.63#7).
+      Neither level is stated twice now, which is what made the old row impossible to chip.
+
   - file: protocols/cardiac/04_Chest_Pain_ACS_PROC.md
     row: 4
     hit: "(EMT)"
@@ -159,4 +160,26 @@ removed:
       "**Unable to Ventilate - Laryngoscopy and Forceps Removal (Intermediate/Paramedic):**";
       the chip is I (p.239#8 prints laryngoscopy/forceps at I). Removed; the heading, the
       chip and every bullet are otherwise unchanged.
+
+  - file: protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md
+    row: 8
+    hit: "[MC]"
+    replaced_with: "**5 mg/kg** (Ped max 150mg, Medical Control authorisation required)"
+    reason: >-
+      INLINE AUTHORISATION TOKEN, not a level. PEMS p.64#10 prints 'PEDIATRIC: [Contact Medical
+      Control] Amiodarone (Cordarone) 5 mg/kg IV/IO slow push. Maximum dose 150 mg.' The bracket
+      scopes the PEDIATRIC dose only, so it cannot be lifted to the row chip — a `+MC` marker
+      would wrongly gate the adult dose, which needs no Medical Control contact. Operator ruling
+      2026-11-20 (R4: no inline authorisation in action text): the bracket is spelled out in
+      words instead, and the adult/pediatric distinction is kept.
+
+  - file: protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md
+    row: 9
+    hit: "[MC]"
+    replaced_with: "**40 mg/kg** (Ped max 2g, Medical Control authorisation required)"
+    reason: >-
+      INLINE AUTHORISATION TOKEN, not a level. PEMS p.64#11 prints 'PEDIATRIC: [Contact Medical
+      Control] Magnesium Sulfate 40 mg/kg IV/IO slow push. Maximum dose 2 g.' Paediatric dose
+      only, so it cannot be the row chip (the adult 2 g needs no Medical Control contact).
+      Spelled out in words under operator ruling 2026-11-20 (R4).
 

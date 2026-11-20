@@ -43,7 +43,7 @@ Guidelines and procedures for physical and chemical patient restraint to ensure 
 
 </div>
 
-<p class="lv-note"><strong>POLICY</strong> — rows 1-8: this is not a provider level. This page is a PEMS administrative policy, not a clinical protocol: each row is cited to the PEMS 2024 administrative policy that prints it — <em>Patient Restraint</em> (PEMS p.31, 32) — and no provider level is published, because PEMS prints these rules as policy rather than as level-badged protocol rows. The policy and the verbatim span for every row are recorded in <code>audit/level-scan/level-rule-ledger.md</code>.</p>
+<p class="lv-note"><strong>POLICY</strong> — rows 1-8: no provider level applies. PEMS publishes these rules as administrative policy, not as a clinical protocol: each is cited to the PEMS 2024 administrative policy that prints it — <em>Patient Restraint</em> (PEMS p.31, 32) — and no provider level is published, because PEMS prints these rules as policy rather than as level-badged protocol rows.</p>
 
 ### Pearls
 * ⚠ **NEVER restrain a patient prone.**

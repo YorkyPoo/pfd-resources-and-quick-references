@@ -1,0 +1,67 @@
+# Page-voice rulings — what the page may say about itself
+#
+# Owner ruling, 2026-11-20 (relayed verbatim by the operator):
+#
+#   "## Owner ruling on the italic self-referential lines — rewrite, don't delete
+#    The owner was shown all three forms and ruled: rewrite them as plain
+#    instruction. The information is wanted; the metadata voice is not."
+#
+#   Rules:
+#   - No sentence may refer to "this page", "this row", "the table", "the
+#     reference block", or "rows keep the numbers" — the page does not talk
+#     about itself.
+#   - No card IDs, no file paths, no audit vocabulary (OWNER_REQUIRED,
+#     source=, t_xxxx).
+#   - No "Source: PEMS 2024" and no equivalent provenance line in
+#     reader-facing text. Provenance stays in the ledger and in row citations.
+#   - Say what the provider may or may not do. Nothing else.
+
+ruling: 2026-11-20-page-voice
+
+# Forms the owner ruled on, and the status of each on the rows-one-action
+# branch. A form that is not printed on the branch has no target: it is
+# recorded here rather than invented onto a page.
+forms:
+
+  - name: split-row numbering explainer
+    seen_on: rows-one-action
+    form: >-
+      "*This is instruction to the provider, not a numbered action, so it
+      carries no provider level and no level chip.* Rows keep the numbers they
+      had in the action table."
+    owner_ruling: delete entirely, no replacement
+    status: deleted
+    files:
+      - protocols/respiratory/03_Pneumothorax_PROC.md
+      - protocols/respiratory/03_Pediatric_Stridor_PROC.md
+      - protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md
+      - protocols/trauma/09_Trauma_PROC.md   # reads "recognition and referral instruction"
+
+  - name: relocated-row pointer
+    seen_on: rows-one-action
+    form: '"*Row N is covered under References & Good Practice below.*"'
+    owner_ruling: >-
+      Same metadata voice (it names a row and the reference block). Deleted by
+      the developer under the rule above; the guidance it pointed at sits
+      directly below in the same block, unchanged.
+    status: deleted
+    noted_as: developer judgement within the owner's stated rule, not an owner utterance
+
+  - name: Pulmonary Edema contraindication explainer
+    seen_on: sibling preview/refblock branch only — NOT on rows-one-action
+    form: '"*This page records the list at **EMT**: the contraindications gate CPAP, an EMT skill.*"'
+    owner_ruling: >-
+      Replace verbatim with: "Contraindications gate CPAP. An EMT may withhold
+      CPAP on these grounds."
+    status: no target on rows-one-action (the line does not print here); nothing rewritten
+
+  - name: Cold Exposure rewarming / AED explainer
+    seen_on: sibling preview/refblock branch only — NOT on rows-one-action
+    form: >-
+      "*This page records the rewarming item at **EMR** (anyone can warm a
+      patient) and the AED item at **MC**.*"
+    owner_ruling: >-
+      Replace verbatim with: "Active external rewarming — heat packs, warm
+      blankets — is within EMR scope. Apply the AED on Medical Control
+      authority."
+    status: no target on rows-one-action (the line does not print here); nothing rewritten

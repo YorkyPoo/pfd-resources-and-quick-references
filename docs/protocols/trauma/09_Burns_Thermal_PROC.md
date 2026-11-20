@@ -40,7 +40,7 @@ Guidelines for managing thermal, chemical, and radiation burns, emphasizing airw
 
 </div>
 
-<p class="lv-note"><strong>PENDING</strong> — row 6: PEMS 2024 prints the HF calcium treatment only in the Burns protocol's PEARLS (p.87-88 prose), not as a level-badged row, so no provider level is published for it. <strong>Pending OMD authorization</strong> — no provider level applies until the OMD authorizes it. See <code>audit/level-scan/pending-protocols.yaml</code> and <code>audit/level-scan/level-rule-ledger.md</code>.</p>
+<p class="lv-note"><strong>PENDING</strong> — row 6: PEMS 2024 prints the HF calcium treatment only in the Burns protocol's PEARLS (p.87-88 prose), not as a level-badged row, so no provider level is published for it. <strong>Pending OMD authorization</strong> — no provider level applies until the OMD authorizes it.</p>
 
 ### Pearls
 • ⚠ Assess for airway / inhalation injury. Consider early definitive airway management for patients with respiratory distress, hoarse voice or stridor, carbonaceous sputum and/or facial burns. Prompt assessment by a qualified RSI paramedic, when available, is preferred.

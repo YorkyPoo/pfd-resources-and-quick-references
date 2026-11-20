@@ -26,7 +26,9 @@ Resuscitation guidelines for Asystole and Pulseless Electrical Activity (PEA), e
 | 5 | <span class="lvl lvl-emt">EMT</span> | Obtain and transmit a 12-Lead ECG. |
 | 6 | <span class="lvl lvl-a">A</span> | Obtain IV/IO access. |
 | 7 | <span class="lvl lvl-emt">EMT</span> | Monitor ETCO2. If ETCO2 < 10 or dropping, reassess and optimize compression rate, depth, and recoil. |
-| 8 | <span class="lvl lvl-emt">EMT</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | Apply AED / Assess cardiac rhythm every 2 minutes. If AED is advising to shock or rhythm is VF or VT (as determined by EMT-I or P), defibrillate at maximum joules (or **2 J/kg** for pediatrics), then refer to Cardiac Arrest: Ventricular Fibrillation / Pulseless Ventricular Tachycardia protocol. If AED is advising no shock or rhythm is asystole or PEA (as determined by EMT-I or P), continue CPR then refer to Cardiac Arrest: Asystole / Pulseless Electrical Activity protocol. |
+| 8 | <span class="lvl lvl-emr">EMR</span> | Apply the AED and repeat the AED rhythm analysis every 2 minutes; the AED announces whether a shock is advised. If the AED is advising to shock, defibrillate at maximum joules. |
+| 8a | <span class="lvl lvl-i">I</span><sup class="lvl-own" title="Provider level for this action is awaiting a Medical Control decision">&#9873;</sup> | Interpret the rhythm: VF or VT (shockable), or asystole or PEA (non-shockable). |
+| 8b | <span class="lvl lvl-i">I</span> | **Manual defibrillation:** if the rhythm is VF or VT, defibrillate immediately — **ADULT: 200 J** Biphasic / **360 J** Monophasic; **PEDIATRIC: 2 J/kg** initial, then **4 J/kg** subsequent. Then refer to Cardiac Arrest: Ventricular Fibrillation / Pulseless Ventricular Tachycardia protocol. |
 | 9 | <span class="lvl lvl-a">A</span> | Children/Infants ONLY: If unconscious and hypotensive, with HR less than 60, administer:<br>PEDIATRIC: **[Epinephrine](../../pharmacology/Epinephrine.md) 0.01 mg/kg** IV/IO [**0.1 mg/mL**] every 3 – 5 minutes, as needed. |
 | 10 | <span class="lvl lvl-i">I</span> | For cardiac arrest in renal dialysis patients, patients with crush injuries, suspected calcium channel blocker overdose, or suspected hyperkalemia only, also administer:<br>**ADULT: [Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) 1 g** IV/IO slow push followed by **20 mL 0.9% sodium chloride** flush.<br>**[Sodium Bicarbonate](../../pharmacology/Sodium%20Bicarbonate.md) 50 mEq** IV/IO slow push.<br>Repeat in 5 minutes if no change. |
 | 11 | <span class="lvl lvl-i">I</span> | For cardiac arrest in renal dialysis patients, patients with crush injuries, suspected calcium channel blocker overdose, or suspected hyperkalemia only, also administer:<br>**PEDIATRIC: [Calcium Chloride](../../pharmacology/Calcium%20Chloride.md) 20 mg/kg** (max dose **1 g**) IV/IO slow push followed by **20 mL 0.9% sodium chloride** flush.<br>**[Sodium Bicarbonate](../../pharmacology/Sodium%20Bicarbonate.md) 1 mEq/kg** (max dose **50 mEq**) IV/IO slow push.<br>Repeat in 5 minutes if no change. |
@@ -34,7 +36,7 @@ Resuscitation guidelines for Asystole and Pulseless Electrical Activity (PEA), e
 
 </div>
 
-<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — row 8: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.</p>
+<p class="lv-note">&#9873; <strong>Rhythm interpretation — level pending.</strong> PEMS scopes interpretation of the rhythm to &quot;as determined by EMT-I or P&quot; while printing it inside a row badged EMR, so the level shown is provisional. Interpret the rhythm only at the level Medical Control confirms.</p>
 
 ### Pearls
 • ⚠ Push hard and fast: rate 100 – 120 bpm. Allow complete chest recoil.
