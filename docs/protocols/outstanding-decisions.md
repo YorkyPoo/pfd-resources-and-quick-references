@@ -15,7 +15,7 @@ This page is generated from the conversion ledger (`audit/level-scan/level-rule-
 | what | how many |
 |---|---:|
 | Rows that need your level decision (`OWNER_REQUIRED`, marked &#9873; on the page) | **4** |
-| Rows pending authorization (`PENDING`) | **18** (11 whole-page + 7 single-row) |
+| Rows pending authorization (`PENDING`) | **15** (11 whole-page + 4 single-row) |
 | Open questions on how the rules themselves should read | **31** |
 | Rulings already recorded — decided, no action needed | **2** |
 
@@ -95,11 +95,11 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
-<h2 id="pending">2. Pending authorization — 18 rows</h2>
+<h2 id="pending">2. Pending authorization — 15 rows</h2>
 
-**11 whole-page rows** — a protocol that is not in PEMS 2024 at all. **3 clinical agency additions** — a row the agency wrote on a page that is otherwise PEMS-cited. **4 administrative rules** — a policy row no PEMS administrative policy prints.
+**11 whole-page rows** — a protocol that is not in PEMS 2024 at all. **3 clinical agency additions** — a row the agency wrote on a page that is otherwise PEMS-cited. **1 administrative rules** — a policy row no PEMS administrative policy prints.
 
-<p class="od-pagenote">The brief for this page said "14 PENDING rows" (11 + 3). The ledger records 7 single-row PENDING entries: 3 clinical agency additions plus 4 administrative rules. Both are listed below, so the number you see here is 18 — derived from the ledger, not from the brief. The 4 administrative rules are decided together with the Batch 6 administrative ruling (see the open questions).</p>
+<p class="od-pagenote">The brief for this page said "14 PENDING rows" (11 + 3). The ledger records 4 single-row PENDING entries: 3 clinical agency additions plus 1 administrative rules. Both are listed below, so the number you see here is 15 — derived from the ledger, not from the brief. The 1 administrative rules are decided together with the Batch 6 administrative ruling (see the open questions).</p>
 
 <h3 id="pending-whole-page">Whole page not in PEMS 2024 — 11 rows</h3>
 
@@ -221,26 +221,7 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
-<h3 id="pending-admin">Administrative rules PEMS does not print — 4 rows</h3>
-
-#### [Behavioral Health Transportation](administrative/01_Behavioral_Health_Transportation_Decision_PROC.md) — 2 rows
-
-<div class="od-page-block">
-<div class="od-card od-cat-pending">
-<p class="od-head"><span class="od-row">Row 6</span> <span class="lvl lvl-pending">PENDING</span></p>
-<p class="od-action">Law Enforcement Custody: Patients in LE custody (including ECOs) or under arrest MUST have a law enforcement officer present at all times.</p>
-<p class="od-reason"><strong>Why:</strong> PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol restraint guidelines (p.73: &quot;Patients in law enforcement custody (including emergency custody orders) or under arrest must have a law enforcement officer present at all times&quot;), not as an administrative policy and not as a level-badged row. No policy and no level is published; the wording on this page is the agency policy.</p>
-<p class="od-pagenote"><strong>Note on the page:</strong> PENDING — row 6: PEMS 2024 does not print this rule in any administrative policy; it appears only as prose in the Behavioral Emergencies restraint guidelines (p.73), which carries no level-badged row. No policy and no provider level is published for it. Pending OMD authorization — no provider level applies until the OMD authorizes it.</p>
-<p class="od-near">Was carried from the page as <strong>EMT</strong> &mdash; provenance only, not a citation.</p>
-</div>
-<div class="od-card od-cat-pending">
-<p class="od-head"><span class="od-row">Row 7</span> <span class="lvl lvl-pending">PENDING</span></p>
-<p class="od-action">Restraints: If LE restraints utilized (handcuffs, flex-cuffs), LE officer SHOULD accompany the patient.</p>
-<p class="od-reason"><strong>Why:</strong> PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol restraint guidelines (p.73: &quot;If law-enforcement restraints have been utilized (for example handcuffs or flex-cuffs), a law enforcement officer should accompany the patient&quot;), not as an administrative policy and not as a level-badged row. No policy and no level is published; the wording on this page is the agency policy.</p>
-<p class="od-pagenote"><strong>Note on the page:</strong> PENDING — row 7: PEMS 2024 does not print this rule in any administrative policy; it appears only as prose in the Behavioral Emergencies restraint guidelines (p.73), which carries no level-badged row. No policy and no provider level is published for it. Pending OMD authorization — no provider level applies until the OMD authorizes it.</p>
-<p class="od-near">Was carried from the page as <strong>EMT</strong> &mdash; provenance only, not a citation.</p>
-</div>
-</div>
+<h3 id="pending-admin">Administrative rules PEMS does not print — 1 rows</h3>
 
 #### [Infant Abandonment](administrative/01_Infant_Abandonment_PROC.md) — 1 row
 
@@ -250,19 +231,6 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 <p class="od-head"><span class="od-row">Row 2</span> <span class="lvl lvl-pending">PENDING</span></p>
 <p class="od-action">Assess infant and provide medical care per these Protocols</p>
 <p class="od-reason"><strong>Why:</strong> The Infant Abandonment policy (p.25) prints what to do with a surrendered infant (contact CPS or law enforcement, and transport if indicated) but no assessment or treatment step. &quot;Assess the infant and provide medical care per these Protocols&quot; is the agency page&#x27;s own instruction and is not printed in any PEMS administrative policy.</p>
-
-<p class="od-near">Was carried from the page as <strong>EMT</strong> &mdash; provenance only, not a citation.</p>
-</div>
-</div>
-
-#### [Stroke Field Triage](administrative/01_Stroke_Field_Triage_PROC.md) — 1 row
-
-<div class="od-page-block">
-<p class="od-pagenote"><strong>Note you will see on the page:</strong> PENDING — row 4: the Stroke Field Triage policy (p.37) prints no life-threat routing branch, so this one is the agency&#x27;s own. No policy and no provider level is published for it. Pending OMD authorization — no provider level applies until the OMD authorizes it.</p>
-<div class="od-card od-cat-pending">
-<p class="od-head"><span class="od-row">Row 4</span> <span class="lvl lvl-pending">PENDING</span></p>
-<p class="od-action">Immediate Life-Threats: If uncontrolled airway, cardiac arrest, etc. cannot be addressed during transport, route to the nearest ED.</p>
-<p class="od-reason"><strong>Why:</strong> The Stroke Field Triage policy (p.37) prints the RACE/glucose/destination algorithm and no &quot;life threats go to the nearest ED&quot; branch. That branch is the agency page&#x27;s own addition.</p>
 
 <p class="od-near">Was carried from the page as <strong>EMT</strong> &mdash; provenance only, not a citation.</p>
 </div>
@@ -372,7 +340,7 @@ These are not row-level decisions. Each one is a question about how the rule its
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 6</span></p>
-<p class="od-question"><strong>Batch 6 — the 4 administrative PENDING row(s), for the owner&#x27;s one-pass ruling.</strong> Each row below is an administrative rule that no PEMS 2024 administrative policy prints: Behavioral Health rows 6-7 (law-enforcement custody; handcuffed transport): PEMS prints the rule only as prose in the Behavioral Emergencies restraint guidelines (p.73), not in any administrative policy and not as a level-badged row. Infant Abandonment row 2 (&quot;assess infant and provide medical care&quot;): the policy prints no assessment/treatment step. Stroke Field Triage row 4 (life-threats route to nearest ED): the Stroke policy prints it nowhere. Stroke Field Triage row 1 is no longer in this set: the Pearl ruling levelled it <code>EMT</code> (p.131#4), so the administrative PENDING count is 4. Each row keeps its reason in <code>pending-protocols.yaml</code> and on the page.</p>
+<p class="od-question"><strong>Batch 6 — the 1 administrative PENDING row(s), for the owner&#x27;s one-pass ruling.</strong> Each row below is an administrative rule that no PEMS 2024 administrative policy prints: Infant Abandonment row 2 (&quot;assess infant and provide medical care&quot;): the policy prints no assessment/treatment step. Stroke Field Triage row 1 is no longer in this set: the Pearl ruling levelled it <code>EMT</code> (p.131#4), so the administrative PENDING count is 1. Each row keeps its reason in <code>pending-protocols.yaml</code> and on the page.</p>
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 6</span></p>
