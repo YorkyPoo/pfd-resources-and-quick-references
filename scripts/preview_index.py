@@ -17,6 +17,7 @@ import datetime
 import html
 import json
 import os
+import shutil
 import sys
 
 BASE = "https://yorkypoo.github.io/pfd-resources-and-quick-references/preview/"
@@ -77,6 +78,24 @@ def main() -> None:
         with open(manifest_path, encoding="utf-8") as fh:
             manifest = json.load(fh)
     slots = manifest.get("slots", {})
+
+    # The pre-slots layout served a full site build at preview/ root. Once any
+    # slot exists, anything at that root that is not the index, robots.txt,
+    # slots.json or a known slot is stale legacy content: remove it so
+    # /preview/ is an index and nothing else. Never touches live-root paths.
+    keep = {"index.html", "robots.txt", "slots.json"} | set(slots)
+    pruned = []
+    for entry in sorted(os.listdir(preview)):
+        if entry in keep:
+            continue
+        p = os.path.join(preview, entry)
+        if os.path.isdir(p) and not os.path.islink(p):
+            shutil.rmtree(p)
+        else:
+            os.remove(p)
+        pruned.append(entry)
+    if pruned:
+        print("pruned legacy preview-root entries:", ", ".join(pruned))
 
     rows = []
     for name in sorted(slots):
