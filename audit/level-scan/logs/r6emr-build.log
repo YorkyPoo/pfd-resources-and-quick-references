@@ -1,0 +1,61 @@
+
+[33m │  [1mMaterial for MkDocs reaches end of life on May 5, 2027.[0m
+[33m │[0m  Critical fixes and security updates continue until that date.
+[33m │[0m
+[33m │[0m  Zensical is its maintained successor, built by the same team.
+[33m │[0m  Try it alongside MkDocs with your existing mkdocs.yml:
+[33m │[0m  [36m[4mhttps://zensical.org/docs/compatibility/mkdocs/migration/[0m
+
+[90m  To disable this warning, set NO_MKDOCS_2_WARNING=1.[0m
+
+INFO    -  Cleaning site directory
+INFO    -  Building documentation to directory: /root/.hermes/profiles/developer/cache/scratch/wt-refblock/site
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - personnel-policies/policies/00-introduction.md
+  - personnel-policies/policies/01-general-provisions.md
+  - personnel-policies/policies/02-definitions.md
+  - personnel-policies/policies/03-personnel-administration.md
+  - personnel-policies/policies/04-code-of-ethics.md
+  - personnel-policies/policies/05-equal-employment-opportunity.md
+  - personnel-policies/policies/06-americans-with-disabilities-act.md
+  - personnel-policies/policies/07-recruitment-hiring-promotion.md
+  - personnel-policies/policies/08-types-of-employment.md
+  - personnel-policies/policies/09-work-schedules-and-attendance.md
+  - personnel-policies/policies/10-probationary-status.md
+  - personnel-policies/policies/11-employee-performance-review.md
+  - personnel-policies/policies/12-salary-increases.md
+  - personnel-policies/policies/13-overtime-compensatory-time.md
+  - personnel-policies/policies/14-administrative-leave.md
+  - personnel-policies/policies/15-annual-leave-vrs-plan-1-plan-2-and.md
+  - personnel-policies/policies/16-bereavement-leave.md
+  - personnel-policies/policies/17-civil-leave.md
+  - personnel-policies/policies/18-family-and-medical-leave.md
+  - personnel-policies/policies/19-holidays.md
+  - personnel-policies/policies/20-leave-donation.md
+  - personnel-policies/policies/21-leave-without-pay.md
+  - personnel-policies/policies/22-military-leave.md
+  - personnel-policies/policies/23-sick-leave-vrs-plan-1-plan-2-and.md
+  - personnel-policies/policies/24-workers-compensation-and-light-duty.md
+  - personnel-policies/policies/25-employee-service-awards-program.md
+  - personnel-policies/policies/26-hazardous-weather.md
+  - personnel-policies/policies/27-computer-resources-internet-and.md
+  - personnel-policies/policies/28-safety-program-procedures.md
+  - personnel-policies/policies/29-vehicle-usage-and-driving-policy.md
+  - personnel-policies/policies/30-travel-policy-and-procedures.md
+  - personnel-policies/policies/31-outside-employment.md
+  - personnel-policies/policies/32-safe-harbor-policy.md
+  - personnel-policies/policies/33-sexual-harassment.md
+  - personnel-policies/policies/34-training-and-career-development.md
+  - personnel-policies/policies/35-tuition-reimbursement-education-assistance.md
+  - personnel-policies/policies/36-uniforms-protective-clothing-and-effective-date.md
+  - personnel-policies/policies/37-smoking-in-the-workplace.md
+  - personnel-policies/policies/38-physical-examinations-for-high.md
+  - personnel-policies/policies/39-employee-conduct-progressive-discipline.md
+  - personnel-policies/policies/40-drug-and-alcohol-policy.md
+  - personnel-policies/policies/41-grievance-procedure.md
+  - personnel-policies/policies/42-resignations-and-separations.md
+  - personnel-policies/policies/43-retiree-health-insurance-coverage.md
+  - protocols/front-matter/00 - AI Formatting Guidelines.md
+INFO    -  Documentation built in 7.33 seconds
+[post_build] sitemap: dropped 1 noindex page(s): ['/resources/links.html']
+[post_build] Generated sw.js with 281 pre-cached pages (version: 20261120-043657)

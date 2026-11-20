@@ -1,0 +1,16 @@
+Tree: 5728ba7 (owner ruling 2026-11-20: Cold r6 heat packs -> EMR; drop the reader-facing
+"Source: PEMS 2024" paragraph from both pilot reference blocks). Branch
+pilot-references-block. Every gate run against this committed tree, not a dirty one.
+
+verify EXIT=0
+level_rule EXIT=0
+mc_wording EXIT=0
+mkdocs EXIT=0
+outstanding_decisions --check EXIT=0
+
+Commands (cwd = repo root):
+  python3 scripts/verify_pems_canonical.py            # r6emr-verify.log
+  python3 scripts/level_rule.py --check               # r6emr-level.log
+  python3 scripts/mc_wording.py --check               # r6emr-mc.log
+  /root/pfd-ssg-env/bin/mkdocs build --strict         # r6emr-build.log
+  python3 scripts/build_outstanding_decisions.py --check   # r6emr-od.log
