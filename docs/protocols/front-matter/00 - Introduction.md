@@ -2,7 +2,6 @@
 
 ## Patient Care Protocols, Policies, and Procedures
 
-**Effective:** 05/01/2026  
 **Pending approval by:** Poquoson Fire and Rescue Operational Medical Director (OMD)
 
 ---

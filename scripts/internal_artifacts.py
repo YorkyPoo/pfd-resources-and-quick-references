@@ -24,6 +24,13 @@ Two artifact classes leaked onto the public site and were only found by hand:
    nav is not enough: `mkdocs.yml` excludes it with `exclude_docs`, and
    `--site` fails if a built page for it still exists.
 
+4. **An effective date on a front-matter page.** The owner ruled on 2026-11-20
+   that they are not certain the protocols take effect on a particular date
+   ("I am not sure if the exact date was 05/01/2026. Leave the date out."), so
+   a `**Effective:** <date>` line must not print on a front-matter page at all —
+   and not be replaced by "unknown", "TBD" or a placeholder either. Ownership of
+   the date is the publisher's, so the guard refuses the whole line.
+
 `scripts/agency_names.py` could not catch either: it scans `.md` only, and inside
 a mapping line it deliberately scans only the text right of `➔` (the source term
 on the left is never printed), so a mapping block passes it clean.
@@ -41,6 +48,7 @@ import argparse
 import fnmatch
 import json
 import os
+import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEFAULT_DOCS = os.path.join(ROOT, 'docs')
@@ -53,6 +61,11 @@ ARTIFACT_GLOBS = ('*_report.json',)
 
 MAPPING_HEADING = 'Mandatory Text Replacements'
 MAPPING_ARROW = '\u2794'          # ➔
+
+# Any `**Effective:** …` line on a front-matter page. The tail is deliberately not
+# parsed: a date, "TBD", "unknown" and a bare placeholder all fail the same way,
+# because the ruling was to print no effective date at all.
+EFFECTIVE_LINE = re.compile(r'^\*\*\s*effective(\s+date)?\s*:?\s*\*\*', re.I)
 
 # Source files that must never be published, even though they stay in docs/.
 # The AI formatting guidelines are the conversion build prompt, not clinical
@@ -85,12 +98,21 @@ def derive(docs=DEFAULT_DOCS):
 
         if not name.endswith('.md'):
             continue
-        if slash.startswith(MAPPING_ALLOWED):
-            continue
+        in_front_matter = slash.startswith(MAPPING_ALLOWED)
 
         with open(os.path.join(docs, rel), encoding='utf-8') as fh:
             for lineno, line in enumerate(fh, 1):
                 text = line.strip()
+                if in_front_matter:
+                    if EFFECTIVE_LINE.match(text):
+                        findings.append({
+                            'file': slash, 'line': lineno, 'kind': 'effective-date',
+                            'text': text[:160],
+                            'reason': 'the owner is not certain of an effective date '
+                                      'and ruled it must not be printed; leave it out '
+                                      '(no substitute date, "unknown" or placeholder)',
+                        })
+                    continue
                 is_heading = text.lstrip('#').strip().lower().startswith(
                     MAPPING_HEADING.lower())
                 is_mapping = MAPPING_ARROW in text and (
@@ -154,7 +176,8 @@ def main():
                 print(f" - {r['file']}{where}  [{r['kind']}] {r['text']}")
             return 1
         print("OK — no conversion QA reports, no replacement-mapping block under docs/, "
-              "and no built page for an excluded source")
+              "no effective date on a front-matter page, and no built page for an "
+              "excluded source")
         return 0
 
     print(f"findings: {len(f)}")

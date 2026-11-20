@@ -57,5 +57,4 @@ Instead of listing paragraphs of text for each certification level, intervention
 ---
 
 **Poquoson Fire and Rescue Patient Care Protocols**
-**Effective:** 05/01/2026
 **Version:** Based on PEMS March 2024 / Adapted for Poquoson Fire and Rescue
