@@ -1,0 +1,82 @@
+# /preview/ slot publishing — verification evidence
+
+Card: t_1aa33a8e. Published to gh-pages `610a14c` (preview/ subtree only; live
+root untouched). All checks below come from live HTTP fetches with cache-busting
+query strings, not from a local build.
+
+gh-pages commits in this change (all preview/-only):
+  231dd99  first slot publish (slots + index, legacy root not yet pruned)
+  e1be0ca  prune legacy single-slot build from preview/ root
+  8a579d8  temporary `smoke` slot (teardown test)
+  610a14c  teardown of `smoke` (single-slot removal)
+
+Diff across the whole change, `git diff --name-only aeba5ce..origin/gh-pages`:
+  changed paths outside preview/ = 0
+
+## Index
+
+GET https://yorkypoo.github.io/pfd-resources-and-quick-references/preview/  -> 200
+
+    main/     Baseline: local main, no in-flight card changes (live root still
+              serves the older deploy) | main @ 9818904 | 2026-11-20T04:52:50Z
+    pilot/    Pilot: prose moved from action tables into a References & Good
+              Practice block (2 pages) | pilot-references-block @ fdcd3c3 | ...
+    relabel/  Provider levels relabelled R | B | A | I | P |
+              provider-level-letters @ 05addb2 | 2026-11-20T04:52:50Z
+
+index.html carries `<meta name="robots" content="noindex, nofollow">`.
+
+## Slot: pilot  (branch pilot-references-block @ fdcd3c3)
+
+GET .../preview/pilot/protocols/general/02_Cold_Exposure_PROC.html  -> 200
+
+    "References &amp; Good Practice"                       : present
+    "rewarming item at <strong>EMR</strong> (anyone can warm a patient)" : present
+    "Heat packs and warm blankets — active external rewarming."  : present
+    "Source: PEMS 2024"                                  : 0 occurrences
+    "serviceWorker"                                      : 0 occurrences
+    table header on this slot's How-to-Read page          : EMR EMT A I P
+
+The last line matters: the pilot slot still shows the OLD level headers, so the
+slot is the pilot branch alone and not the relabel tree.
+
+## Slot: relabel  (branch provider-level-letters @ 05addb2)
+
+GET .../preview/relabel/protocols/front-matter/01 - How to Read the Protocols.html  -> 200
+
+    <thead> renders: "#  Action / Intervention  R  B  A  I  P"
+    body sentence  : "locate your certification level at the top of the columns
+                      (R, B, A, I, P) and read down the grid."
+    "serviceWorker": 0 occurrences
+
+GET .../preview/relabel/protocols/general/02_Cold_Exposure_PROC.html  -> 200
+
+    "References &amp; Good Practice"            : 0 occurrences
+    "If patient is alert and responsive: Use active external rewarming" : present
+
+i.e. the relabel slot has no pilot change — the two slots serve independently
+at the same time.
+
+## Live root unchanged
+
+GET https://yorkypoo.github.io/pfd-resources-and-quick-references/protocols/general/02_Cold_Exposure_PROC.html -> 200
+
+    "References &amp; Good Practice"                                   : 0 occurrences
+    "If patient is alert and responsive: Use active external rewarming" : present (row 6 still a table row)
+    content="noindex"                                                  : 0 occurrences (live is indexable)
+
+gh-pages root files (`index.html`, `protocols/`, `sw.js`, ...) are byte-identical
+to the pre-change head aeba5ce.
+
+## Service workers
+
+    git ls-tree -r --name-only origin/gh-pages -- preview | grep -c sw.js  -> 0
+
+## Single-slot teardown
+
+    publish smoke=main  -> 8a579d8   .../preview/smoke/index.html  200
+    teardown smoke      -> 610a14c   .../preview/smoke/index.html  404
+                                     .../preview/pilot/index.html  200
+                                     .../preview/relabel/index.html 200
+                                     .../preview/main/index.html   200
+    index after teardown lists: main, pilot, relabel
