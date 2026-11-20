@@ -92,3 +92,30 @@ no file under `docs/protocols/`, `docs/procedures/`, no `pip-strip.css`, no
 
 Screenshots: `audit/homepage/evidence-2026-11-20/utility-row-390-light-r2.png` and
 `utility-row-390-dark-r2.png`.
+
+## 6. Published preview slot (re-measured live, not inferred)
+
+`bash scripts/publish_preview_slots.sh home=homepage-dashboard=…` from the
+`preview-slots` tooling published gh-pages commit `3296f7b` (built from branch tip
+`189e602`; content commit `62ccc8e`). `git diff --name-only 3296f7b^ 3296f7b | grep -v '^preview/'`
+is empty — preview subtree only, live root untouched, no push to `main`.
+`preview/slots.json` records `home → homepage-dashboard @ 189e602`.
+
+<https://yorkypoo.github.io/pfd-resources-and-quick-references/preview/home/>
+
+Measured in Chrome against that URL (cache disabled, because the origin serves
+`cache-control: max-age=600`):
+
+```
+390px  iw 390  sw 390  cards 5  scrollers 2  adminDot rgb(71,85,105)  utilDot rgb(120,113,108)  labelsOverflowing 0  md-top none
+320px  iw 320  sw 320  cards 5  scrollers 2  adminDot rgb(71,85,105)  utilDot rgb(120,113,108)  labelsOverflowing 0  md-top none
+dark   390  adminDot rgb(148,163,184)  utilDot rgb(168,162,158)  page rgb(30,33,41)  card rgb(48,51,58)
+policies page            → "Exposure / Infection Control"
+chest-pain page (live)   → 1 pip-block, 73 pips, pip-strip.css + pip-strip.js loaded
+```
+
+Note for the next reader: for the first minute after a gh-pages push the CDN keeps
+serving the previous `extra.css` (measured: the new HTML with old CSS painted the crew
+dots maroon, the fallback accent). A hard refresh or cache-disabled load shows the
+published CSS, which contains `.pfd-chip--util` on lines 374 and 383.
+
