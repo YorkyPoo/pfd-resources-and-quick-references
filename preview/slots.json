@@ -1,0 +1,29 @@
+{
+  "slots": {
+    "airway-levels": {
+      "branch": "airway-levels",
+      "built_at": "2026-11-20T05:45:18Z",
+      "description": "Airway levels: adult intubation + CPAP titration are I (owner-supplied p.239 / p.247)",
+      "sha": "5b555815acbee5465a98a4b714adb639366b061b"
+    },
+    "main": {
+      "branch": "main",
+      "built_at": "2026-11-20T05:45:38Z",
+      "description": "Baseline: local main",
+      "sha": "98189044c7e1acd89c2fd48e0ab4eb5be06a02cb"
+    },
+    "pilot": {
+      "branch": "pilot-references-block",
+      "built_at": "2026-11-20T05:45:38Z",
+      "description": "Pilot: prose moved out of action tables",
+      "sha": "c9615d945742aa2ad3465dd7461fcc0e6e9a8dec"
+    },
+    "relabel": {
+      "branch": "provider-level-letters",
+      "built_at": "2026-11-20T05:45:38Z",
+      "description": "Provider levels relabelled R|B|A|I|P",
+      "sha": "05addb26252f6259debff424aa83b68467bea4ab"
+    }
+  },
+  "updated_at": "2026-11-20T05:45:38.779026+00:00"
+}
