@@ -42,6 +42,12 @@
       "description": "Baseline: local main",
       "sha": "98189044c7e1acd89c2fd48e0ab4eb5be06a02cb"
     },
+    "peep-i": {
+      "branch": "peep-i",
+      "built_at": "2026-11-20T13:43:54Z",
+      "description": "PEEP titration at I (owner ruling 2026-11-20): Pulmonary Edema r9 and Asthma r8a",
+      "sha": "d2398483364ff6de0226ef8516b59c354824a826"
+    },
     "pilot": {
       "branch": "pilot-references-block",
       "built_at": "2026-11-20T05:45:38Z",
@@ -67,5 +73,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-20T13:10:12.381055+00:00"
+  "updated_at": "2026-11-20T13:43:54.814245+00:00"
 }
