@@ -14,10 +14,10 @@ This page is generated from the conversion ledger (`audit/level-scan/level-rule-
 
 | what | how many |
 |---|---:|
-| Rows that need your level decision (`OWNER_REQUIRED`, marked &#9873; on the page) | **4** |
+| Rows that need your level decision (`OWNER_REQUIRED`, marked &#9873; on the page) | **2** |
 | Rows pending authorization (`PENDING`) | **18** (11 whole-page + 7 single-row) |
 | Open questions on how the rules themselves should read | **31** |
-| Rulings already recorded — decided, no action needed | **2** |
+| Rulings already recorded — decided, no action needed | **4** |
 
 </div>
 
@@ -37,19 +37,19 @@ This page is generated from the conversion ledger (`audit/level-scan/level-rule-
 
 <div class="od-legend" markdown="1">
 - <span class="od-chip od-chip-nowhere">PEMS prints this nowhere</span> — **0 rows**. No PEMS 2024 row prints the action at all (or prints it only in pieces that no single row covers). Your answer is a level of our own, or `PENDING`.
-- <span class="od-chip od-chip-conflict">PEMS prints it, but the badge contradicts the row's own words</span> — **4 rows**. A PEMS row prints the action, but its printed badge conflicts with the text of that same row, or the action is spread over rows at different levels. Your answer is which one wins (and whether the row should be split).
+- <span class="od-chip od-chip-conflict">PEMS prints it, but the badge contradicts the row's own words</span> — **2 rows**. A PEMS row prints the action, but its printed badge conflicts with the text of that same row, or the action is spread over rows at different levels. Your answer is which one wins (and whether the row should be split).
 
 Jump to: [PEMS prints this nowhere](#pems-prints-this-nowhere) · [PEMS prints it, badge contradicts](#pems-prints-it-badge-contradicts)
 
 </div>
 
-<h2 id="owner-required">1. Needs your level decision — 4 rows</h2>
+<h2 id="owner-required">1. Needs your level decision — 2 rows</h2>
 
 Grouped by protocol page, in the order they appear in the site navigation. Each card shows the page, the row number, the level the page shows today with the &#9873; flag, the row text word for word, and the full reason it is flagged.
 
 <h3 id="pems-prints-this-nowhere">PEMS prints this nowhere — 0 rows</h3>
 
-<h3 id="pems-prints-it-badge-contradicts">PEMS prints it, but the badge contradicts the row&#x27;s words — 4 rows</h3>
+<h3 id="pems-prints-it-badge-contradicts">PEMS prints it, but the badge contradicts the row&#x27;s words — 2 rows</h3>
 
 #### [Asystole / PEA](cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md) — 1 row
 
@@ -69,28 +69,6 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 <p class="od-head"><span class="od-row">Row 4a</span> <span class="lvl lvl-i">I</span> &#9873;</p>
 <p class="od-action">• Interpret the rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shockable).</p>
 <p class="od-reason"><strong>Why it is flagged:</strong> Conflict, recorded: same shape as Asystole row 8a. p.235#4 / p.263#4 print rhythm assessment at badge EMR and scope the classification to &quot;(as determined by EMT-I or P)&quot; in the row&#x27;s own words, so the level I is read off the source&#x27;s text and no single printed badge authorises it. Open decision; the owner&#x27;s 2026-11-20 instruction was the split only.</p>
-
-</div>
-</div>
-
-#### [Asthma / COPD / Reactive Airway](respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md) — 1 row
-
-<div class="od-page-block">
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 8a</span> <span class="lvl lvl-i">I</span> &#9873;</p>
-<p class="od-action">• Titrate PEEP up to 10 cm H₂O to support ventilation and work of breathing.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> Conflict, recorded: PEEP titration above the initial 5 cm H2O is printed only inside rows badged EMT, and the two printed rows DISAGREE: p.239#5 (&quot;Consider CPAP (PEEP: 5 cmH2O) ... I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH2O&quot;, badge EMT) scopes the titration to I/P, while p.245#4 in the CPAP/BiPAP/PEEP procedure (&quot;Consider titrating PEEP ... CPAP, BiPAP, and PEEP are RED DOT procedures at all EMS Certification Levels&quot;, badge EMT) badges it at every level. The chip is I, the level p.239#5&#x27;s own words give it; no printed badge badges titration at I, so it is an open decision, not a citation. The same conflict is recorded for Pulmonary Edema row 9, which keeps P. The owner&#x27;s 2026-11-20 instruction was the split (initiation / titration as separate rows), not this level.</p>
-
-</div>
-</div>
-
-#### [Pulmonary Edema / Congestion](respiratory/03_Pulmonary_Edema_Congestion_PROC.md) — 1 row
-
-<div class="od-page-block">
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 9</span> <span class="lvl lvl-p">P</span> &#9873;</p>
-<p class="od-action">CPAP Titration: Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> Conflict, recorded: p.239#5 prints &#x27;Consider CPAP (PEEP: 5 cmH2O) ... I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH2O&#x27; at badge EMT, and p.245#4 (CPAP/BiPAP/PEEP procedure) prints &#x27;Consider titrating PEEP (9%-15 mmHg) as needed to improve ventilation/work of breathing. CPAP, BiPAP, and PEEP are RED DOT procedures at all EMS Certification Levels&#x27; at badge EMT. Two printed rows disagree (I/P-only scope in one, EMT badge in the other) and no printed row badges the titration at I, so neither level is a single-row citation. The page&#x27;s P is kept and flagged as an open decision for the owner. A 2026-11-20 attempt to rule it to I was reverted: it was labelled `owner_ruled` although the owner never ruled on PEEP titration, and the pearl evidence for I is on the Respiratory Distress page (Pearl 4), not this page&#x27;s source.</p>
 
 </div>
 </div>
@@ -296,7 +274,7 @@ These are not row-level decisions. Each one is a question about how the rule its
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
-<p class="od-question"><strong>Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.</strong> The owner was asked and did not rule, so the other 4 OWNER_REQUIRED rows keep their level + ⚑ flag exactly as they were. Do not convert them without a ruling.</p>
+<p class="od-question"><strong>Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.</strong> The owner was asked and did not rule, so the other 2 OWNER_REQUIRED rows keep their level + ⚑ flag exactly as they were. Do not convert them without a ruling.</p>
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
@@ -414,7 +392,7 @@ These are not row-level decisions. Each one is a question about how the rule its
 <p class="od-question"><strong>Batch 7 — CPAP units disagree with the source, and the action text was not edited.</strong> The page reads PEEP &quot;5 cmH2O&quot; (r3) and &quot;5-15 cmH2O&quot; (r6); PEMS p.245#1 prints &quot;5 mmHg&quot; and p.245#4 extracts as &quot;titratingPEEP9%-15mmHg)&quot;. Reconciliation (mmHg vs cmH2O, and 5-15 vs 9%-15) is a clinical-text decision outside this conversion, so only the chip was bound; owner to reconcile the page wording.</p>
 </div>
 
-<h2 id="ruled">4. Already ruled — recorded decisions — 2</h2>
+<h2 id="ruled">4. Already ruled — recorded decisions — 4</h2>
 
 The owner has already answered these, so they are not waiting on you. They are published as a record: the page states the level that was decided, and the answer and the PEMS citation stay in the audit trail (`audit/level-scan/level-rulings.yaml`, `audit/level-scan/relocated-rows.yaml`).
 
@@ -425,6 +403,14 @@ The owner has already answered these, so they are not waiting on you. They are p
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Decided</span></p>
 <p class="od-question"><strong>Cold Exposure row 6 — the BLS-floor question was ASKED and ANSWERED (owner ruling 2026-11-20): <code>EMR</code>.</strong> The question recorded here on 2026-11-17 was whether the rewarming item keeps <code>EMT</code> although the page&#x27;s own BLS floor is lower: the ruling&#x27;s test reads &quot;BLS-scope -&gt; the page&#x27;s BLS floor&quot;, heat packs are a BLS skill, and the page chips a floor of <code>EMR</code> (derived from the page&#x27;s 7 level chips, in file order: EMR, EMR, EMR, EMR, EMR, EMR, EMT). The owner answered on 2026-11-20: <strong>EMR</strong> — &quot;Anyone can warm a patient, EMR. Might want to move below the table.&quot;. The item stays below the action table in the page&#x27;s &quot;References &amp; Good Practice&quot; block, and that block now states <code>EMR</code>, the page&#x27;s own derived floor. The history is kept in <code>level-rulings.yaml</code>; no open question remains for this row.</p>
+</div>
+<div class="od-card od-cat-question">
+<p class="od-head"><span class="od-batch">Decided</span></p>
+<p class="od-question"><code>protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md</code> row 8a — <strong>I</strong> — decided 2026-11-20: &quot;An intermediate can also titrate peep.&quot; • Titrate PEEP up to 10 cm H₂O to support ventilation and work of breathing. - clause the level comes from: p.239#5 — &quot;I/P only: Adjust PEEP to support ventilation and work of breathing&quot;. That printed row is badged EMT; its own words scope this action to I/P, so the chip is the lowest level the clause names and NOT the row&#x27;s badge. The site row covers this clause alone (<code>clause_only</code>), so it carries no OWNER_REQUIRED flag.</p>
+</div>
+<div class="od-card od-cat-question">
+<p class="od-head"><span class="od-batch">Decided</span></p>
+<p class="od-question"><code>protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md</code> row 9 — <strong>I</strong> — decided 2026-11-20: &quot;An intermediate can also titrate peep.&quot; CPAP Titration: Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing - clause the level comes from: p.239#5 — &quot;I/P only: Adjust PEEP to support ventilation and work of breathing&quot;. That printed row is badged EMT; its own words scope this action to I/P, so the chip is the lowest level the clause names and NOT the row&#x27;s badge. The site row covers this clause alone (<code>clause_only</code>), so it carries no OWNER_REQUIRED flag.</p>
 </div>
 
 <p class="od-foot">Generated from the conversion ledger by `scripts/build_outstanding_decisions.py`. Row text and reasons are the ledger's own words; this page adds no clinical content and edits no protocol page.</p>

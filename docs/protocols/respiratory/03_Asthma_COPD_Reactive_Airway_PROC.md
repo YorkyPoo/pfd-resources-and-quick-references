@@ -40,15 +40,13 @@ This protocol addresses acute bronchospasm associated with asthma, COPD, and rea
 | 6 | <span class="lvl lvl-i">I</span> | **[Magnesium Sulfate](../../pharmacology/Magnesium%20Sulfate.md) for Severe Symptoms / Impending Respiratory Failure:**<br>• **Adult:** **2 g IV/IO infusion** over 15 minutes.<br>• **Pediatric:** **40 mg/kg IV/IO** over 15 minutes (maximum dose **2,000 mg** or **2 g**).<br>• Administer if severe bronchospasm unresponsive to initial therapy. |
 | 7 | <span class="lvl lvl-emt">EMT</span> | **Assist Ventilations / Airway Management:**<br>• Prepare for assisted ventilation if respiratory failure develops.<br>• Bag-valve-mask with PEEP valve as indicated.<br>• Consider supraglottic airway or endotracheal intubation if unable to maintain adequate ventilation. |
 | 8 | <span class="lvl lvl-emt">EMT</span> | **Continuous Positive Airway Pressure (CPAP):**<br>• Consider for COPD exacerbation or severe bronchospasm with adequate mentation.<br>• Initiate **5 cm H₂O**.<br>• Contraindicated if altered mental status, vomiting, or respiratory arrest imminent. |
-| 8a | <span class="lvl lvl-i">I</span><sup class="lvl-own" title="Provider level for this action is awaiting a Medical Control decision">&#9873;</sup> | • Titrate PEEP up to **10 cm H₂O** to support ventilation and work of breathing. |
+| 8a | <span class="lvl lvl-i">I</span> | • Titrate PEEP up to **10 cm H₂O** to support ventilation and work of breathing. |
 | 9 | <span class="lvl lvl-a">A</span> | **Related Protocol – Stridor (Upper Airway Obstruction):**<br>• **[Epinephrine](../../pharmacology/Epinephrine.md):** **3 mg** [**1 mg/mL** solution] nebulized.<br>• May be repeated **once** if needed.<br>• **Adult AND Pediatric same dosing.**<br>• For anaphylaxis with stridor, follow Allergic Reaction Protocol. |
 | 10 | <span class="lvl lvl-a">A</span> | **Methylprednisolone for Moderate to Severe Stridor:**<br>• Same dosing as the methylprednisolone dose above.<br>• Administer after [Epinephrine](../../pharmacology/Epinephrine.md) nebulization for persistent symptoms. |
 | 11 | <span class="lvl lvl-emr">EMR</span> | **Reassessment and Transport:**<br>• Continuously monitor respiratory status, auscultation, and SpO₂.<br>• Reassess after each bronchodilator treatment. |
 | 11a | <span class="lvl lvl-emt">EMT</span> | • Expedite transport for severe or deteriorating patients. |
 
 </div>
-
-<p class="lv-note">&#9873; <strong>PEEP titration above 5 cm H₂O — level pending.</strong> PEMS prints titration only inside rows badged EMT, and its two printed rows disagree: one scopes it to &quot;I/P only&quot;, the other badges it at every level. The level shown follows the I/P wording and is provisional until Medical Control confirms it. The same question is open for CPAP titration on the Pulmonary Edema protocol.</p>
 
 ### Pearls
 1. ⚠ **[Ipratropium](../../pharmacology/Ipratropium Bromide.md) Bromide is ONCE ONLY.** Do not administer repeat doses without consulting Medical Control. Excessive anticholinergic dosing may worsen outcomes.
