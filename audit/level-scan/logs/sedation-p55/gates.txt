@@ -1,0 +1,30 @@
+gate tree: 7cbb4d8bee9bd31f8f4ea484aa50db8de571f796  (audit(level-scan): gate logs with exit codes for the p.55 sedation pass)
+docs/ tree clean before run: yes
+date: 2026-11-20T07:02:50Z
+======
+cmd:  python3 scripts/verify_pems_canonical.py
+EXIT=0
+log:  audit/level-scan/logs/sedation-p55/verify_pems_canonical.log
+-----
+cmd:  python3 scripts/level_rule.py --check
+EXIT=0
+log:  audit/level-scan/logs/sedation-p55/level_rule.log
+-----
+cmd:  python3 scripts/mc_wording.py --check
+EXIT=0
+log:  audit/level-scan/logs/sedation-p55/mc_wording.log
+-----
+cmd:  python3 scripts/agency_names.py --check
+EXIT=0
+log:  audit/level-scan/logs/sedation-p55/agency_names.log
+-----
+cmd:  python3 scripts/internal_artifacts.py --check
+EXIT=0
+log:  audit/level-scan/logs/sedation-p55/internal_artifacts.log
+-----
+cmd:  /root/pfd-ssg-env/bin/mkdocs build --strict
+EXIT=0
+log:  audit/level-scan/logs/sedation-p55/mkdocs.log
+-----
+=====
+gates exit 0: 6 of 6

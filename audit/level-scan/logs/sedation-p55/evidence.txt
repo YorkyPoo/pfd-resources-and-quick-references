@@ -1,0 +1,194 @@
+evidence for the p.55 sedation pass
+tip:    7cbb4d8bee9bd31f8f4ea484aa50db8de571f796  (audit(level-scan): gate logs with exit codes for the p.55 sedation pass)
+date:   2026-11-20T07:04:07Z
+======
+
+[1] content commit 7815b5e touches no script
+EXIT=0  (0 = no script change)
+
+[1b] generator commit 8d3f90d: full scripts/ diff (all comment + emitted-string prose)
+  diffstat:
+     scripts/build_outstanding_decisions.py | 23 ++++++-------
+     scripts/level_rule.py                  | 62 +++++++++++++++++-----------------
+     2 files changed, 42 insertions(+), 43 deletions(-)
+  lines that are neither a comment nor a line containing a quote (i.e. code):
+    count = 0   (0 = every changed line is a comment, blank, or carries a string literal)
+  full diff follows:
+    diff --git a/scripts/build_outstanding_decisions.py b/scripts/build_outstanding_decisions.py
+    index cf21447..e297a99 100644
+    --- a/scripts/build_outstanding_decisions.py
+    +++ b/scripts/build_outstanding_decisions.py
+    @@ -349,20 +349,18 @@ def build():
+         n_conflict = sum(1 for r in owner if r['cat'] == 'conflict')
+         assert n_nowhere + n_conflict == len(owner)
+         # ---- The "PEMS prints this nowhere" bucket, asserted by MEMBERSHIP, not by count ----
+    -    # The owner's Pearl ruling of 2026-11-17 (BLS/ALS scope test) cleared every flag whose
+    -    # reason claimed the source is silent, EXCEPT the four rows the source genuinely does not
+    -    # print and the two rows that card put out of scope (Trauma r6: only part of the reasoning
+    -    # is false and the level question is open; Sedation r4: no dose is published). Before that
+    -    # ruling the bucket held 17 rows, 13 of them false; 11 were repaired, so 6 remain. A quiet
+    -    # re-categorisation of any row must fail the build rather than move the number the owner
+    -    # reads on the page.
+    +    # ---- The owner's Pearl ruling of 2026-11-17 (BLS/ALS scope test) cleared every flag whose
+    +    # reason claimed the source is silent, EXCEPT four rows the source genuinely does not
+    +    # print. The 2026-11-20 ketamine ruling then removed the two Sedation rows that card put
+    +    # out of scope (pre-intubation sedation r4, post-intubation ketamine r5): both rows left
+    +    # the page, so neither is a question any more and the bucket is the four absent rows.
+    +    # A quiet re-categorisation of any row must fail the build rather than move the number the
+    +    # owner reads on the page.
+         nowhere_expected = {
+             ('protocols/respiratory/03_Pediatric_Stridor_PROC.md', 2),      # genuinely absent
+             ('protocols/respiratory/03_Pneumothorax_PROC.md', 5),           # genuinely absent
+             ('protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md', 2),  # genuinely absent
+    -        ('protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md', 5),  # genuinely absent
+    -        ('protocols/trauma/09_Trauma_PROC.md', 6),                      # out of scope (this card)
+    -        ('protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md', 4),  # out of scope
+    +        ('protocols/trauma/09_Trauma_PROC.md', 6),                      # genuinely absent
+         }
+         nowhere_got = {(r['file'], int(r['row'])) for r in owner if r['cat'] == 'nowhere'}
+         assert nowhere_got == nowhere_expected, (
+    @@ -371,8 +369,9 @@ def build():
+             f'  missing:    {sorted(nowhere_expected - nowhere_got)}')
+         assert n_nowhere == len(nowhere_expected)
+         print(f'the "PEMS prints this nowhere" bucket is {n_nowhere} rows (was 17 before the '
+    -          f'2026-11-17 Pearl ruling): 4 genuinely absent from the source, 2 out of scope for '
+    -          f'that card — membership asserted, not typed', file=sys.stderr)
+    +          f'2026-11-17 Pearl ruling, 6 after it, 4 after the 2026-11-20 ketamine ruling '
+    +          f'removed the two Sedation rows it had left out of scope) — membership asserted, '
+    +          f'not typed', file=sys.stderr)
+     
+         o = []
+         w = o.append
+    diff --git a/scripts/level_rule.py b/scripts/level_rule.py
+    index 6da3846..0f26ab6 100644
+    --- a/scripts/level_rule.py
+    +++ b/scripts/level_rule.py
+    @@ -2563,25 +2563,23 @@ def emit_md(ledger):
+                   '  documentation and Medical Control written authorisation. The one-chip chassis',
+                   '  cannot reproduce a bracket, so the asterisk note carries it. Owner to confirm',
+                   '  that the analgesia ladder is A+MC in PEMS and not I.',
+    -              '- **Batch 5 — Sedation: pre-intubation sedation has no PEMS row (OWNER_REQUIRED,',
+    -              '  row 4).** p.55 is "Sedation Post Advanced Airway"; p.123#4 states outright that',
+    -              '  "RSI is not addressed in PEMS regional protocols – refer to agency specific',
+    -              '  protocols for guidance". The alignment had bound the row to the post-airway',
+    -              '  midazolam row; the binding now overrides that. Owner to say whether',
+    -              '  pre-intubation ketamine/midazolam is agency-specific (and should be PENDING like',
+    -              '  other agency additions) rather than I.',
+    -              '- **Batch 5 — Sedation row 5 (post-intubation KETAMINE) keeps `P`, flagged',
+    -              '  OWNER_REQUIRED.** Post-intubation sedation is printed at I (p.55#2 fentanyl,',
+    -              '  p.55#3 midazolam) but ketamine is printed in exactly one PEMS 2024 row — p.72#9,',
+    -              '  behavioural restraint, badge P — so no row authorises ketamine *as a sedative*.',
+    -              '  The C2 adjudication would have levelled it I (the class level, on a row that does',
+    -              '  not name the drug); the page level P is kept and flagged instead. Owner to rule:',
+    -              '  I on the class rows, or P/agency-specific.',
+    -              '- **Batch 5 — two cross-page citations reach other protocols.** Sedation row 2 cites',
+    -              '  Pain Control p.77#2 ("Assess and monitor blood pressure. Ensure patient is not',
+    -              '  hypotensive.", badge EMT) and row 3 cites Universal Patient Care p.50#9',
+    -              '  ("Establish IV / IO access when indicated.", badge A). Both print the site row',
+    -              '  verbatim; chip moves A -> EMT (row 2) and I -> A (row 3) as the source prints.',
+    +              '- **Batch 5 — Sedation: ketamine is out, and the page is p.55 verbatim (owner',
+    +              '  ruling 2026-11-20).** Verbatim: *"Remove ketamine. We do not have RSI yet. If',
+    +              '  Ketamine is in the pharm section. You can leave that alone."* Both ketamine rows',
+    +              '  are gone with the drug — pre-intubation sedation (no PEMS 2024 row; p.123#4 says',
+    +              '  "RSI is not addressed in PEMS regional protocols") and post-intubation ketamine',
+    +              '  (printed in exactly one PEMS row, p.72#9 behavioural restraint at P, never as an',
+    +              '  airway sedative). No level was re-decided to clear them: the rows were replaced by',
+    +              '  rows p.55 prints with their own badges, so the two OWNER_REQUIRED flags left with',
+    +              '  the rows. The page now publishes *Sedation Post Advanced Airway* p.55 in printed',
+    +              '  order and nothing else — EMR universal care (p.55#0), EMT airway confirmation',
+    +              '  (p.55#1), I fentanyl 25 – 50 mcg / 0.5 – 1 mcg/kg max 25 mcg with its printed',
+    +              '  repeat cell (p.55#2), I midazolam 2.5 mg / 0.1 mg/kg, max 2.5 mg IV/IO or 5 mg',
+    +              '  IN/IM, with its printed repeat cell (p.55#3), MC contact (p.55#4). The BP-',
+    +              '  assessment row (Pain Control p.77#2) and the IV/IO-access row (Universal Patient',
+    +              '  Care p.50#9) that the page used to carry are removed: p.55 prints neither, and an',
+    +              '  A chip on IV access is a level the source does not badge. `docs/pharmacology/',
+    +              '  Ketamine.md` is out of scope by the same ruling and untouched.',
+                   ] + cold_question_cards(ledger) + [
+                   '- **Batch 6 — administrative pages are chipped POLICY / PENDING, not levelled.**',
+                   '  Owner ruling 2026-11-16: *"Treat admin pages as policy."* All 14 administrative',
+    @@ -2681,18 +2679,20 @@ def emit_md(ledger):
+                   '  prints "5 mmHg" and p.245#4 extracts as "titratingPEEP9%-15mmHg)". Reconciliation',
+                   '  (mmHg vs cmH2O, and 5-15 vs 9%-15) is a clinical-text decision outside this',
+                   '  conversion, so only the chip was bound; owner to reconcile the page wording.',
+    -              '- **Pearl ruling 2026-11-17 — two rows still say "PEMS prints this nowhere", and the',
+    -              '  reason is only half true.** The BLS/ALS scope ruling cleared 11 of the 13 false',
+    -              '  "prints nowhere" flags, so that bucket now holds 6 rows, not the 4 the task card',
+    -              '  expected: the 4 genuinely absent rows (Pediatric Stridor r2, Pneumothorax r5, Upper',
+    -              '  Airway Obstruction r2, Sedation r5) plus Trauma r6 and Sedation r4, which that card',
+    -              '  put explicitly out of scope. Trauma r6 ("assess for shock") is worth a review:',
+    -              '  p.84 PEARLS #3 prints the recognition half ("Any patient who is cool/diaphoretic and',
+    -              '  tachycardic is considered to be in shock until proven otherwise") but not the',
+    -              '  "refer to the Shock protocol" half, so the reason\'s silence claim is false while the',
+    -              '  level question stays open. Sedation r4 prints only prose (p.248 PEARLS RSI bullet,',
+    -              '  p.195 ketamine INDICATIONS) with no dose and no level. Both stay flagged until the',
+    -              '  owner rules; the number the owner reads is 6 by design, not by omission.']
+    +              '- **Pearl ruling 2026-11-17 + row-structure instruction 2026-11-20 + ketamine',
+    +              '  ruling 2026-11-20 — the "prints nowhere" bucket is now empty.** It held 17 rows',
+    +              '  before the Pearl ruling and 6 after it: the 4 genuinely absent rows (Pediatric',
+    +              '  Stridor r2, Pneumothorax r5, Upper Airway Obstruction r2, Sedation r5) plus Trauma',
+    +              '  r6 and Sedation r4. Four of those six were guidance rather than actions (scene',
+    +              '  management, equipment readiness, recognition, assess-and-refer) and the row-',
+    +              '  structure instruction moved them below their pages’ tables with no level; they',
+    +              '  are recorded in `audit/level-scan/relocated-rows.yaml`, not deleted. The last two',
+    +              '  were the Sedation ketamine rows, and the owner ruled them out on 2026-11-20',
+    +              '  (*"Remove ketamine. We do not have RSI yet."*): pre-intubation sedation has no PEMS',
+    +              '  row and the department does not carry RSI, and ketamine is printed only as a',
+    +              '  restraint sedative (p.72#9, badge P), never as a sedative for airway patients. Both',
+    +              '  were replaced by the fentanyl/midazolam rows p.55 prints, so no row on any',
+    +              '  converted page now lacks a printed badge.']
+     
+         # Derived from `changed` so the prose can never disagree with the table above:
+         # an MC -> other move and an other -> MC move are counted and named from data.
+
+[2] pharmacology section untouched, base ff4fa3b -> tip
+EXIT_8d3f90d=0  (0 = untouched)
+EXIT_tip=0      (0 = untouched)
+  docs/pharmacology/Ketamine.md sha256 at tip: aea412e1014847e8d292dc538546c646766a464bd22b9daaaa3fd01963ab1579
+  docs/pharmacology/Ketamine.md sha256 at base ff4fa3b: aea412e1014847e8d292dc538546c646766a464bd22b9daaaa3fd01963ab1579
+
+[3] planted-defect test: level_rule.py --check still bites on a wrong chip
+  file:   docs/protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md
+  blob sha256 committed: ad7d1a02b046f80097fd5351cdf82a81c605579303153305ab95b08b023f91f4
+  worktree sha256 before: ad7d1a02b046f80097fd5351cdf82a81c605579303153305ab95b08b023f91f4
+  clean before plant: EXIT=0  (0 = clean)
+  planted row 3 chip I -> A:
+    | 3 | <span class="lvl lvl-a">A</span> | Administer:<br>• ADULT: **[Fentanyl](
+  level_rule.py --check EXIT=1  (expect 1)
+     - protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md row 3: marker A != expected I (p.55#2)
+     - protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md row 3: PEMS column dots start at I, badge says A
+  after revert EXIT=0  (expect 0)
+  worktree sha256 after revert: ad7d1a02b046f80097fd5351cdf82a81c605579303153305ab95b08b023f91f4
+  clean after revert: EXIT=0  (0 = clean)
+
+[4] page inventory
+  rows in the protocol table: 7
+  chips: emr emt i i i i mc 
+  ketamine occurrences in the page: 0
+  OWNER_REQUIRED flags on the page: 0
+
+[5] nowhere_expected edit in 8d3f90d (build_outstanding_decisions.py)
+         nowhere_expected = {
+             ('protocols/respiratory/03_Pediatric_Stridor_PROC.md', 2),      # genuinely absent
+             ('protocols/respiratory/03_Pneumothorax_PROC.md', 5),           # genuinely absent
+             ('protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md', 2),  # genuinely absent
+    -        ('protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md', 5),  # genuinely absent
+    -        ('protocols/trauma/09_Trauma_PROC.md', 6),                      # out of scope (this card)
+    -        ('protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md', 4),  # out of scope
+    +        ('protocols/trauma/09_Trauma_PROC.md', 6),                      # genuinely absent
+         }
+         assert nowhere_got == nowhere_expected, (
+    @@ -371,8 +369,9 @@ def build():
+             f'  missing:    {sorted(nowhere_expected - nowhere_got)}')
+         assert n_nowhere == len(nowhere_expected)
+         print(f'the "PEMS prints this nowhere" bucket is {n_nowhere} rows (was 17 before the '
+    -          f'2026-11-17 Pearl ruling): 4 genuinely absent from the source, 2 out of scope for '
+    -          f'that card — membership asserted, not typed', file=sys.stderr)
+    +          f'2026-11-17 Pearl ruling, 6 after it, 4 after the 2026-11-20 ketamine ruling '
+    +          f'removed the two Sedation rows it had left out of scope) — membership asserted, '
+    +          f'not typed', file=sys.stderr)
+     
+         o = []
+         w = o.append
+  the assertion still compares the set by EQUALITY (nowhere_got == nowhere_expected),
+  so removing an entry only makes the check stricter for that row: if the row is ever
+  flagged 'PEMS prints this nowhere' again, the extra member fails the build.
