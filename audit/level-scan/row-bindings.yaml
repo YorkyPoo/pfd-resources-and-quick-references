@@ -1547,7 +1547,11 @@ bindings:
       reads "5–15 mmHg" and the photographed page's "up to 10 cmH2O" is kept quoted here on
       purpose, its unit and cap discrepancy with the ruling visible to a reviewer rather than
       reconciled on the page (see wording-rulings.yaml). The withdrawn agent recommendation
-      that argued for keeping EMT is superseded by the owner's ruling of the same date.
+      that argued for keeping EMT is superseded by the owner's ruling of the same date. The
+      procedure page's Pearls bullet carrying the same p.245#4 "RED DOT ... at all EMS
+      certification levels" sentence is qualified to the ruling: CPAP and BiPAP stay RED DOT
+      at all levels, and PEEP titration above the initial 5 cmH2O setting is Intermediate and
+      above (review round 1, 2026-11-20).
 
   - file: procedures/Capnography.md
     row: 1
