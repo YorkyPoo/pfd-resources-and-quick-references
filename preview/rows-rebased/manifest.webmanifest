@@ -1,0 +1,25 @@
+{
+  "name": "Poquoson Fire & Rescue Protocols",
+  "short_name": "PFD Protocols",
+  "description": "Offline-capable EMS protocol and SOP dashboard for Poquoson Fire and Rescue",
+  "start_url": "/pfd-resources-and-quick-references/",
+  "scope": "/pfd-resources-and-quick-references/",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#16213e",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
