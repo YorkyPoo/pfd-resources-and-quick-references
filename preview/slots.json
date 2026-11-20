@@ -12,6 +12,12 @@
       "description": "Airway levels: adult intubation + CPAP titration I (owner p.239/p.247); bundled rows keep OWNER_REQUIRED",
       "sha": "d3280c003970c4e6a2049f553f5a6ab41f5ba802"
     },
+    "conversion-artifacts": {
+      "branch": "conversion-artifacts",
+      "built_at": "2026-11-20T06:25:48Z",
+      "description": "Conversion artifacts: 54 *_report.json + mapping block out of the published tree",
+      "sha": "8b9ba80aeef5a1263fe254cac2f5820565963203"
+    },
     "main": {
       "branch": "main",
       "built_at": "2026-11-20T05:45:38Z",
@@ -37,5 +43,5 @@
       "sha": "14dc8c493bbef0009e0e9cfcbbdff22af386d3e2"
     }
   },
-  "updated_at": "2026-11-20T06:21:26.821927+00:00"
+  "updated_at": "2026-11-20T06:25:48.298321+00:00"
 }
