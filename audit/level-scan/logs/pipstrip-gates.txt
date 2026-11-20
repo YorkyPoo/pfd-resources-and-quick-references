@@ -1,4 +1,4 @@
-tree b3ff79550943a1ec5e06afa0f2173f2fcb67c1b0 (pilot-pipstrip)
+branch: pilot-pipstrip — gates run in a clean working tree at the branch tip (git status --porcelain empty)
 
 === verify_pems_canonical ===
 verifier manifest — 8 checks
@@ -3685,7 +3685,7 @@ mc_wording EXIT=0
 [90m  To disable this warning, set NO_MKDOCS_2_WARNING=1.[0m
 
 INFO    -  Cleaning site directory
-INFO    -  Building documentation to directory: /tmp/pfd-strict-probe2
+INFO    -  Building documentation to directory: /tmp/pfd-strict-probe4
 INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
   - personnel-policies/policies/00-introduction.md
   - personnel-policies/policies/01-general-provisions.md
@@ -3732,9 +3732,9 @@ INFO    -  The following pages exist in the docs directory, but are not included
   - personnel-policies/policies/42-resignations-and-separations.md
   - personnel-policies/policies/43-retiree-health-insurance-coverage.md
   - protocols/front-matter/00 - AI Formatting Guidelines.md
-INFO    -  Documentation built in 6.47 seconds
+INFO    -  Documentation built in 6.66 seconds
 [post_build] sitemap: dropped 1 noindex page(s): ['/resources/links.html']
-[post_build] Generated sw.js with 281 pre-cached pages (version: 20261120-051230)
+[post_build] Generated sw.js with 281 pre-cached pages (version: 20261120-051514)
 mkdocs_strict EXIT=0
 
 === mapper vs prototype ===
