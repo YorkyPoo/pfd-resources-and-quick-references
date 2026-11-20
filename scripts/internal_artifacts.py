@@ -31,6 +31,16 @@ Two artifact classes leaked onto the public site and were only found by hand:
    and not be replaced by "unknown", "TBD" or a placeholder either. Ownership of
    the date is the publisher's, so the guard refuses the whole line.
 
+5. **An approval claim naming the OMD on a front-matter page.** The owner ruled
+   on 2026-11-20 (option 1) that the document must make no assertion the
+   Operational Medical Director approved, adopted, endorsed or signed it — it is
+   an adaptation, and nothing is put in the claim's place ("pending", "draft" and
+   "provisional" are equally unsupported). So any `OMD` / `Operational Medical
+   Director` / `Medical Director` mention within 60 characters of an
+   approval-family word on a front-matter page fails the gate. Mentions of
+   medical *direction* (who the protocols apply to) are not approval claims and
+   stay legal; the proximity window is what separates them.
+
 `scripts/agency_names.py` could not catch either: it scans `.md` only, and inside
 a mapping line it deliberately scans only the text right of `➔` (the source term
 on the left is never printed), so a mapping block passes it clean.
@@ -45,6 +55,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import bisect
 import fnmatch
 import json
 import os
@@ -67,6 +78,16 @@ MAPPING_ARROW = '\u2794'          # ➔
 # because the ruling was to print no effective date at all.
 EFFECTIVE_LINE = re.compile(r'^\*\*\s*effective(\s+date)?\s*:?\s*\*\*', re.I)
 
+# An approval claim on a front-matter page: a medical-director mention within this
+# many characters of an approval-family word. The window is measured over the whole
+# page with lines joined by a single space, so a claim split across lines is caught;
+# 60 characters is wide enough for "approved by the Poquoson Fire and Rescue OMD"
+# and far too narrow for a scope-of-practice sentence that merely names the OMD.
+APPROVAL_PROXIMITY = 60
+MEDICAL_DIRECTOR_TERM = re.compile(r'\bOMD\b|\bMedical\s+Director\b', re.I)
+APPROVAL_CLAIM_WORD = re.compile(
+    r'\b(approv\w*|adopt\w*|endors\w*|signed|signing|signature)\b', re.I)
+
 # Source files that must never be published, even though they stay in docs/.
 # The AI formatting guidelines are the conversion build prompt, not clinical
 # content; the owner ruled it adds friction for a medic scrolling front matter.
@@ -79,6 +100,59 @@ def walk(docs):
     for base, _dirs, files in os.walk(docs):
         for fn in sorted(files):
             yield os.path.relpath(os.path.join(base, fn), docs)
+
+
+def _flatten(lines):
+    """Join page lines with single spaces, keeping a char->line map.
+
+    The approval-claim window is measured on flattened text so a claim split
+    across two lines is still caught; ``starts`` maps an offset back to the
+    1-based line number it belongs to.
+    """
+    starts, parts, pos = [], [], 0
+    for ln in lines:
+        starts.append(pos)
+        text = ln.rstrip('\n')
+        parts.append(text)
+        pos += len(text) + 1
+    return ' '.join(parts), starts
+
+
+def approval_claims(rel, lines):
+    """Findings for OMD/Medical Director mentions near an approval word."""
+    text, starts = _flatten(lines)
+    spans = []
+    for term in MEDICAL_DIRECTOR_TERM.finditer(text):
+        for word in APPROVAL_CLAIM_WORD.finditer(text):
+            gap = max(term.start() - word.end(), word.start() - term.end())
+            if gap <= APPROVAL_PROXIMITY:
+                spans.append((min(term.start(), word.start()),
+                              max(term.end(), word.end())))
+    if not spans:
+        return []
+
+    grouped = {}
+    for lo, hi in spans:
+        line = bisect.bisect_right(starts, lo)
+        if line in grouped:
+            plo, phi = grouped[line]
+            grouped[line] = (min(lo, plo), max(hi, phi))
+        else:
+            grouped[line] = (lo, hi)
+
+    out = []
+    for line in sorted(grouped):
+        lo, hi = grouped[line]
+        snippet = re.sub(r'\s+', ' ', text[max(0, lo - 30):hi + 10]).strip()
+        out.append({
+            'file': rel, 'line': line, 'kind': 'omd-approval-claim',
+            'text': snippet[:160],
+            'reason': 'the Operational Medical Director has approved and signed '
+                      'nothing; the protocols are an adaptation and must carry no '
+                      'approval, adoption, endorsement or signature claim '
+                      '(owner ruling 2026-11-20, option 1)',
+        })
+    return out
 
 
 def derive(docs=DEFAULT_DOCS):
@@ -101,29 +175,32 @@ def derive(docs=DEFAULT_DOCS):
         in_front_matter = slash.startswith(MAPPING_ALLOWED)
 
         with open(os.path.join(docs, rel), encoding='utf-8') as fh:
-            for lineno, line in enumerate(fh, 1):
-                text = line.strip()
-                if in_front_matter:
-                    if EFFECTIVE_LINE.match(text):
-                        findings.append({
-                            'file': slash, 'line': lineno, 'kind': 'effective-date',
-                            'text': text[:160],
-                            'reason': 'the owner is not certain of an effective date '
-                                      'and ruled it must not be printed; leave it out '
-                                      '(no substitute date, "unknown" or placeholder)',
-                        })
-                    continue
-                is_heading = text.lstrip('#').strip().lower().startswith(
-                    MAPPING_HEADING.lower())
-                is_mapping = MAPPING_ARROW in text and (
-                    'PEMS' in text or 'Regional' in text or 'Peninsula' in text)
-                if is_heading or is_mapping:
+            lines = fh.readlines()
+        for lineno, line in enumerate(lines, 1):
+            text = line.strip()
+            if in_front_matter:
+                if EFFECTIVE_LINE.match(text):
                     findings.append({
-                        'file': slash, 'line': lineno, 'kind': 'replacement-mapping',
+                        'file': slash, 'line': lineno, 'kind': 'effective-date',
                         'text': text[:160],
-                        'reason': 'replacement mapping belongs in the formatting '
-                                  'guidelines, not on a provider-facing page',
+                        'reason': 'the owner is not certain of an effective date '
+                                  'and ruled it must not be printed; leave it out '
+                                  '(no substitute date, "unknown" or placeholder)',
                     })
+                continue
+            is_heading = text.lstrip('#').strip().lower().startswith(
+                MAPPING_HEADING.lower())
+            is_mapping = MAPPING_ARROW in text and (
+                'PEMS' in text or 'Regional' in text or 'Peninsula' in text)
+            if is_heading or is_mapping:
+                findings.append({
+                    'file': slash, 'line': lineno, 'kind': 'replacement-mapping',
+                    'text': text[:160],
+                    'reason': 'replacement mapping belongs in the formatting '
+                              'guidelines, not on a provider-facing page',
+                })
+        if in_front_matter:
+            findings.extend(approval_claims(slash, lines))
     return {'findings': findings}
 
 
@@ -176,8 +253,8 @@ def main():
                 print(f" - {r['file']}{where}  [{r['kind']}] {r['text']}")
             return 1
         print("OK — no conversion QA reports, no replacement-mapping block under docs/, "
-              "no effective date on a front-matter page, and no built page for an "
-              "excluded source")
+              "no effective date or OMD approval claim on a front-matter page, and no "
+              "built page for an excluded source")
         return 0
 
     print(f"findings: {len(f)}")
