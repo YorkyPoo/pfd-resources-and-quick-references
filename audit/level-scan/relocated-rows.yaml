@@ -14,7 +14,8 @@
 #      no longer there.
 #
 # Nothing here changes an action, intervention or level: `level` is the level the page
-# recorded for the row when it was a chip, and `pems` is where the prose is printed.
+# records for the row (the level it carried when it was a chip, updated by any later owner
+# ruling), and `pems` is where the prose is printed.
 relocated:
   - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
     row: 6
@@ -49,12 +50,12 @@ relocated:
   - file: protocols/general/02_Cold_Exposure_PROC.md
     row: 6
     rows_moved: "6 and 9"
-    level: EMT
+    level: EMR
     pems: "p.67 PEARLS #5"
     status_before: null
     proves:
       - "### References & Good Practice"
-      - "This page records the rewarming item at **EMT**"
+      - "This page records the rewarming item at **EMR**"
       - "Rows 6 and 9 of this table were unbadged PEMS Pearls prose"
   - file: protocols/general/02_Cold_Exposure_PROC.md
     row: 9

@@ -62,7 +62,7 @@ Management of acute cardiogenic pulmonary edema and congestion due to congestive
 - Hypotension (SBP < 90 mmHg, MAP < 65)
 - Inability to tolerate a tight-fitting mask
 
-*Source: PEMS 2024 **p.245 (CPAP/BiPAP/PEEP), heading CONTRAINDICATIONS** — a headed prose list with no provider badge on it, which is why it sits here and not as a chipped action row; the action table above lists only level-badged actions and its numbering skips 6–8, these items. This page records the list at **EMT** (owner ruling 2026-11-17: contraindications gate an EMT skill).*
+*This page records the list at **EMT**: the contraindications gate CPAP, an EMT skill.*
 
 **Why and what next:** [CPAP/BiPAP/PEEP procedure — contraindications and pearls](../../procedures/CPAP.md#contraindications) · [How to Read the Protocols — level chips, ⚠ cautions and MC](../front-matter/01 - How to Read the Protocols.md)
 

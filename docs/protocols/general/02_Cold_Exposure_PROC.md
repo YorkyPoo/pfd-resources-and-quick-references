@@ -39,7 +39,7 @@ Guidelines for managing systemic hypothermia and localized cold injuries, emphas
 
 **Medical Control before the AED.** Contact Medical Control prior to use of AED.
 
-*Source: both items are printed in PEMS 2024 **p.67 (Cold Exposure), heading PEARLS** (#5 and #3) as prose, with no provider badge on them, which is why they sit here and not as chipped action rows; the action table above lists only level-badged actions and its numbering skips 6 and 9, these items. This page records the rewarming item at **EMT** (owner ruling 2026-11-17: "Patient warming with heat packs is a BLS skill, anyone can do that") and the AED item at **MC** (owner ruling 2026-11-17).*
+*This page records the rewarming item at **EMR** (anyone can warm a patient) and the AED item at **MC**.*
 
 **Why and what next:** [Cardiac Arrest (Non-Traumatic) — AED use and defibrillation](../cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md) · [Post-Resuscitation Care](../cardiac/04_Post_Resuscitation_Care_PROC.md)
 
