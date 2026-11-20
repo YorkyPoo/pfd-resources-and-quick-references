@@ -1,2 +1,106 @@
-OK — 26 MC row(s) on 25 page(s) plus every other protocol table row (all levels): none name OMD / Poquoson / a Medical Director / a named individual.
-     prose lines still mentioning the office (out of scope, not edited): 74
+pages with MC rows: 25
+   procedures/Surgical_Airway.md
+   protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
+   protocols/cardiac/04_Bradycardia_PROC.md
+   protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
+   protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md
+   protocols/cardiac/04_Chest_Pain_ACS_PROC.md
+   protocols/cardiac/04_Hypertensive_Crisis_PROC.md
+   protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md
+   protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md
+   protocols/general/02_Behavioral_Patient_Restraint_PROC.md
+   protocols/general/02_Diving_and_Drowning_Emergencies_PROC.md
+   protocols/general/02_Pain_Control_PROC.md
+   protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md
+   protocols/medical/07_OB_Emergencies_PROC.md
+   protocols/medical/07_Sepsis_PROC.md
+   protocols/neurologic/05_Seizure_PROC.md
+   protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
+   protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
+   protocols/respiratory/03_Smoke_Inhalation_PROC.md
+   protocols/toxicology/06_Nausea_Vomiting_PROC.md
+   protocols/toxicology/06_Nerve_Agents_PROC.md
+   protocols/trauma/09_Burns_Thermal_PROC.md
+   protocols/trauma/09_Crush_Syndrome_PROC.md
+   protocols/trauma/09_Hemorrhage_Control_PROC.md
+   protocols/trauma/09_Trauma_PROC.md
+
+PROTOCOL ROWS violating the naming ban (any level): 0
+
+MC rows: 26
+
+PROSE mentions of the office (report only, not touched): 74
+  station-info.md:19  pre-fills the page name. Submissions go to the OMD; nothing changes without their approval.
+  station-info.md:33  your medical director govern.**
+  quick-refs/apgar-scoring.md:14  compressions. Follow your neonatal/resuscitation protocol and the OMD's direction.
+  quick-refs/burn-tbsa-estimation.md:14  and transfer thresholds come from your burn protocol and the OMD** — confirm them before
+  quick-refs/glasgow-coma-scale.md:9  depressed; disposition and airway decisions come from your protocol and your medical director.
+  quick-refs/glasgow-coma-scale.md:14  the OMD**, not by this page.
+  protocols/outstanding-decisions.md:27  - **`PENDING`** — no provider level is published at all yet. Either the whole protocol is not in PEMS 2024 (Aortic Dissection & AAA comes fr
+  protocols/outstanding-decisions.md:326  <p class="od-pagenote"><strong>Note you will see on the page:</strong> Pending OMD Authorization — this protocol is sourced from ODEMSA Regi
+  protocols/outstanding-decisions.md:411  <p class="od-pagenote"><strong>Note you will see on the page:</strong> PENDING — row 6: PEMS 2024 prints the HF calcium treatment only in th
+  protocols/outstanding-decisions.md:415  <p class="od-reason"><strong>Why:</strong> Agency addition. PEMS 2024 prints &#x27;Treat hypotension with 1 g Calcium Chloride IV/IO over 3 
+  protocols/outstanding-decisions.md:424  <p class="od-pagenote"><strong>Note you will see on the page:</strong> PENDING — rows 8, 9: this action has no counterpart in PEMS 2024. It 
+  protocols/outstanding-decisions.md:428  <p class="od-reason"><strong>Why:</strong> Agency addition; PEMS 2024 p.131 publishes no such action. Pending OMD authorization.</p>
+  protocols/outstanding-decisions.md:435  <p class="od-reason"><strong>Why:</strong> Agency addition; PEMS 2024 p.131 publishes no such action. Pending OMD authorization.</p>
+  protocols/outstanding-decisions.md:450  <p class="od-pagenote"><strong>Note on the page:</strong> PENDING — row 6: PEMS 2024 does not print this rule in any administrative policy; 
+  protocols/outstanding-decisions.md:457  <p class="od-pagenote"><strong>Note on the page:</strong> PENDING — row 7: PEMS 2024 does not print this rule in any administrative policy; 
+  protocols/outstanding-decisions.md:469  <p class="od-pagenote"><strong>Note on the page:</strong> PENDING — row 2: PEMS 2024 prints no assessment or treatment step in the Infant Ab
+  protocols/outstanding-decisions.md:481  <p class="od-pagenote"><strong>Note on the page:</strong> PENDING — row 4: the Stroke Field Triage policy (p.37) prints no life-threat routi
+  protocols/outstanding-decisions.md:502  <p class="od-question"><strong>Aortic Dissection &amp; AAA (<code>04b</code>) has no PEMS 2024 protocol</strong>: its source is ODEMSA Secti
+  protocols/outstanding-decisions.md:510  <p class="od-question"><strong><code>05_Stroke_TIA</code> rows 8 and 9 are agency additions</strong> — PEMS 2024 p.131 prints 6 Stroke / TIA
+  protocols/administrative/01_ALS_Release_to_BLS_PROC.md:42  3. **Medical Control**: Always consult Medical Control (**Poquoson OMD**) for edge cases or when there is any concern about the appropriaten
+  protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md:39  <strong>PENDING</strong> — row 6: PEMS 2024 does not print this rule in any administrative policy; it appears only as prose in the Behaviora
+  protocols/administrative/01_Infant_Abandonment_PROC.md:33  <strong>PENDING</strong> — row 2: PEMS 2024 prints no assessment or treatment step in the Infant Abandonment policy (p.25), so this instruct
+  protocols/administrative/01_Stroke_Field_Triage_PROC.md:41  <strong>PENDING</strong> — row 4: the Stroke Field Triage policy (p.37) prints no life-threat routing branch, so this one is the agency's ow
+  protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md:43  4. **Alternate Destinations:** If approved by the Poquoson OMD / Emergency Physician, alternate destinations may be established.
+  protocols/cardiac/04_Hypertensive_Crisis_PROC.md:52  1. ⚠ **Cautious Blood Pressure Management:** In most hypertensive emergencies, the goal is NOT to normalize blood pressure rapidly. Aggressi
+  protocols/cardiac/04_Hypertensive_Crisis_PROC.md:56  3. ⚠ **Aortic Dissection Suspicion:** If acute aortic dissection is suspected (tearing chest/back pain, pulse deficits, new neurologic defic
+  protocols/cardiac/04_Hypertensive_Crisis_PROC.md:60  5. **Ischemic Stroke Consideration:** In patients with suspected acute ischemic stroke, permissive hypertension may be appropriate to mainta
+  protocols/cardiac/04b_Aortic_Dissection_AAA_PROC.md:72  <p class="lv-note"><strong>Pending OMD Authorization</strong> — this protocol is sourced from ODEMSA Regional Patient Care Protocols, Sectio
+  protocols/trauma/09_Burns_Thermal_PROC.md:43  <p class="lv-note"><strong>PENDING</strong> — row 6: PEMS 2024 prints the HF calcium treatment only in the Burns protocol's PEARLS (p.87-88 
+  protocols/front-matter/00 - AI Formatting Guidelines.md:14  * `PEMS Medical Advisory Committee`, `Regional Medical Director` ➔ **Poquoson OMD**
+  protocols/front-matter/00 - Introduction.md:6  **Pending approval by:** Poquoson Fire and Rescue Operational Medical Director (OMD)
+  protocols/front-matter/00 - Introduction.md:24  These protocols have been adopted, adapted, and approved by the Poquoson Fire and Rescue Operational Medical Director to serve the specific 
+  protocols/front-matter/00 - Introduction.md:37  - To ensure an accountability structure for our Operational Medical Director, EMS leadership, and field providers.
+  protocols/front-matter/00 - Introduction.md:42  These protocols apply exclusively to EMS providers operating under the medical direction of the Poquoson Fire and Rescue OMD. Providers are 
+  protocols/front-matter/01 - How to Read the Protocols.md:19  > 2. EMS agency Operational Medical Director must provide specific written authorization, to include and/or limit, these specific skills and
+  protocols/front-matter/01 - How to Read the Protocols.md:45  * **Cumulative by level:** A bullet (•) at any tier implies the same standing order at every HIGHER tier (EMR→EMT→A→I→P). `MC` is never impl
+  protocols/neurologic/05_Stroke_TIA_PROC.md:38  <p class="lv-note"><strong>PENDING</strong> — rows 8, 9: this action has no counterpart in PEMS 2024. It is an agency addition, so the level
+  protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md:52  1. ⚠ **[Ipratropium](../../pharmacology/Ipratropium Bromide.md) Bromide is ONCE ONLY.** Do not administer repeat doses without consulting Po
+  protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md:54  2. **[Albuterol](../../pharmacology/Albuterol.md) is Repeat-As-Necessary.** EMTs may administer multiple treatments based on clinical respon
+  protocols/respiratory/03_Respiratory_Distress_PROC.md:89  - PEMS Medical Advisory Committee / Regional Medical Director ➔ Poquoson OMD
+  pediatric-dosing/index.md:3  !!! danger "OMD Review Required"
+  pediatric-dosing/index.md:4  This pediatric dosing reference is a **calculational aid only**. All doses must be verified against current Poquoson Fire & Rescue Patient C
+  procedures/Vaccination.md:8  *   **OMD:** Manages vaccine handling/training, acts as supervising physician, implements quality management.
+  procedures/Vaccination.md:10  *   **Provider:** Must hold valid, unrestricted ALS certification and be individually approved by the OMD.
+  sops/special-operations/so-1300-rescue-task-force-administration.md:408  e BPE for Fire and EMS will include, at a minimum: o Ballistic Vests — minimum rating of IIIA o Individual First Aid Kit (IFAK) o Personal P
+  sops/ems/EMS-100-General-EMS-Guidelines.md:24  It shall be the policy of the Fire/Rescue Department basic and advanced life support providers to follow the protocols to the level of their
+  sops/ems/EMS-1100-QA-QI.md:36  The QA/QI Committee shall consist of 6 members. The Operational Medical Director, the EMS Officer, and a Chief Officer shall maintain perman
+  sops/ems/EMS-1100-QA-QI.md:38  The Committee shall meet every other month (January, March, May, July, September, and November) at a minimum. Additional meetings may be sch
+  sops/ems/EMS-1300-EMS-Certifications.md:70  - National Registry Certifications — These are optional certifications and are not required by the City of Poquoson Fire Department. They ca
+  sops/ems/EMS-1300-EMS-Certifications.md:72  After receiving the recertification forms from the providers, the EMS Officer will contact the OMD to have the recertification forms signed.
+  sops/ems/EMS-191-Hemostatic-Agents.md:50  Each provider must be trained to use the hemostatic agent approved by the medical director. Documentation of this training will be placed in
+  sops/ems/EMS-2000-Medication-Management-and-Pharmacy.md:24  Purchase of routine pharmaceuticals is made through ordering from an established pharmaceutical vendor. The Department’s Supervising Practit
+  sops/ems/EMS-2000-Medication-Management-and-Pharmacy.md:31  Items purchased from vendors are shipped to Station 1 as the Registered Location on the department’s Controlled Substance Registry (CSR) iss
+  sops/ems/EMS-2100-Controlled-Substances.md:16  Purchase of controlled substances will be completed by the EMS Chief using the Drug Enforcement Agency (DEA) Form 22° or through an establis
+  sops/ems/EMS-2100-Controlled-Substances.md:22  Items purchased from vendors are shipped to Station 1 as the Registered Location on the department’s Controlled Substance Registry (CSR) iss
+  sops/ems/EMS-2100-Controlled-Substances.md:86  If a medication is unaccounted for at any time, all narcotics pouches and storage areas must be checked to see if the item was misplaced. Ch
+  sops/ems/EMS-400-Advanced-Life-Support-Preceptorship.md:89  required to meet the minimum competencies and will not have a minimum time requirement for this phase. Volunteer members must still complete
+  sops/ems/EMS-400-Advanced-Life-Support-Preceptorship.md:119  - During the course of the preceptorship, the trainee medic shall interact with the Preceptor, who will interact with the EMS Officer, who w
+  sops/ems/EMS-400-Advanced-Life-Support-Preceptorship.md:129  The Trainee shall meet with the EMS Officer to review and finalize any details of the preceptorship. At this time, the EMS Officer shall mak
+  sops/ems/EMS-400-Advanced-Life-Support-Preceptorship.md:131  The EMS Officer shall then meet with the Operational Medical Director and make the decision whether to release the trainee medic completely 
+  sops/ems/EMS-400-Advanced-Life-Support-Preceptorship.md:137  A Poquoson Fire/Rescue member who is a released medic or equivalent in another ALS agency may apply for reciprocal privileges as a released 
+  sops/ems/EMS-400-Advanced-Life-Support-Preceptorship.md:145  When returning to full duty from an extended absence of longer than 90 days (this includes light duty assignments) the employee must be obse
+  sops/ems/EMS-700-Failure-to-Comply-with-Regional-Protocols.md:31  al Medical Director
+  sops/ems/EMS-700-Failure-to-Comply-with-Regional-Protocols.md:41  The EMS Officer will notify the OMD as soon as all the report and the written incident reports have been received.
+  sops/ems/EMS-700-Failure-to-Comply-with-Regional-Protocols.md:47  The Fire Chief, Deputy Fire Chief, EMS Officer and OMD will review each incident and may require a re-evaluation period, during which the in
+  sops/ems/EMS-700-Failure-to-Comply-with-Regional-Protocols.md:51  These progress reports will be reviewed by the Fire Chief, Deputy Fire Chief, EMS Officer and the OMD and a decision will be made to continu
+  sops/ems/EMS-700-Failure-to-Comply-with-Regional-Protocols.md:55  Prior to disciplinary action, the employee may request, in writing, to meet with the Fire Chief, the Deputy Chief, the OMD and the EMS Offic
+  sops/ems/EMS-800-BLS-Preceptorship-Program.md:38  Phase 3 (Team Leader/Probationary Release): The OMD has granted the EMS Officer the authority to release a trainee under “Probationary” stat
+  sops/ems/EMS-800-BLS-Preceptorship-Program.md:64  During the course of the preceptorship, the EMT shall interact with the Preceptor, who will interact with the EMS Officer, who will interact
+  sops/ems/EMS-800-BLS-Preceptorship-Program.md:68  The EMS Officer shall meet with the Operational Medical Director and make the decision whether to release the EMT or to extend the preceptor
+  sops/ems/EMS-800-BLS-Preceptorship-Program.md:72  A Poquoson Fire/Rescue member who is a released EMT or equivalent in another agency may apply for reciprocal privileges as a released EMT in
+  sops/ems/EMS-800-BLS-Preceptorship-Program.md:82  determined that the employee needs continuing training, the OMD will be contacted and a training plan will be approved.
+  training/index.md:80  opens the intake form with the page name already filled in. The submission goes to the OMD;
+  training/index.md:97  timed scenario drills and CE tracking need real content ownership and OMD sign-off before
