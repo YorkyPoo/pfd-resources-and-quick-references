@@ -1,0 +1,16 @@
+# Gates — round 3 (clean worktree, tree == HEAD 1d67737)
+# worktree: /root/.hermes/profiles/developer/cache/scratch/wt-refblock (branch pilot-references-block)
+# 2026-11-20 04:50:52Z
+# tree state before run: git status --porcelain EMPTY; git diff HEAD -- scripts/level_rule.py EMPTY
+
+verify_pems_canonical EXIT=0 :: verifier manifest — 8 checks|  [stage1.pems_table] PEMS table integrity: page decisions, row fields, badges, ordinals, page-break continuations|
+level_rule_check EXIT=0 :: {| "pages": 54,|
+mc_wording_check EXIT=0 :: OK — 26 MC row(s) on 25 page(s) plus every other protocol table row (all levels): none name OMD / Poquoson / a Medical Director / a named individual.|     prose lines still mentioning the office (out of scope, not edited): 74|
+build_outstanding_decisions_check EXIT=0 :: the "PEMS prints this nowhere" bucket is 6 rows (was 17 before the 2026-11-17 Pearl ruling): 4 genuinely absent from the source, 2 out of scope for that card — membership asserted, not typed|OK — protocols/outstanding-decisions.md matches the ledger|
+mkdocs_strict EXIT=0
+
+# mkdocs tail:
+  - protocols/front-matter/00 - AI Formatting Guidelines.md
+INFO    -  Documentation built in 7.54 seconds
+[post_build] sitemap: dropped 1 noindex page(s): ['/resources/links.html']
+[post_build] Generated sw.js with 281 pre-cached pages (version: 20261120-045005)
