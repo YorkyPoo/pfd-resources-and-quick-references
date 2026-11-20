@@ -24,6 +24,12 @@
       "description": "Conversion artifacts: 54 *_report.json + mapping block out of the published tree",
       "sha": "8b9ba80aeef5a1263fe254cac2f5820565963203"
     },
+    "front-matter": {
+      "branch": "front-matter-effective",
+      "built_at": "2026-11-20T12:57:51Z",
+      "description": "Front matter: effective date removed",
+      "sha": "e389a49f495c463cb0c92eb3c2b5da25131e3b02"
+    },
     "main": {
       "branch": "main",
       "built_at": "2026-11-20T05:45:38Z",
@@ -55,5 +61,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-20T12:51:45.929942+00:00"
+  "updated_at": "2026-11-20T12:57:51.196856+00:00"
 }
