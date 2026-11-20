@@ -313,6 +313,41 @@ def topic_buckets(entries, labels):
     return {b: buckets[b] for b in sorted(buckets, key=key)}
 
 
+def ladder_answered_questions(owner, actions):
+    """OWNER_REQUIRED rows whose own words already answer the level question.
+
+    The owner's standing rule (verbatim, 2026-11-20): *"If an EMT-I can do it then so can a
+    Paramedic. You just have to put the lowest provider level and everyone above can do it
+    too."* A row whose action text scopes it to a named level ladder ("EMT-I or P",
+    "I/P only") is therefore NOT a question for him: the chip is the lowest level named.
+    Publishing it under "needs your level decision" is the defect this guard exists to
+    stop.
+
+    It FAILS the build instead of skipping the row on purpose: the row is still flagged on
+    its page, so a silent drop would publish a page and a decisions list that disagree.
+    The fix belongs in `scripts/level_rule.py` — derive the level and mark it with a
+    dagger — and this guard is what makes that mandatory before the page can ship.
+
+    The ladder detector is imported from `level_rule.py` rather than re-implemented, so the
+    generator and the checker can never drift apart on what counts as a ladder.
+    """
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import level_rule as lr
+    bad = []
+    for r in owner:
+        text = (actions.get(r['file']) or {}).get(str(r['row'])) or r.get('action') or ''
+        got = lr.derivable_floor(text)
+        if not got:
+            continue
+        badge = r.get('pems_badge')
+        if badge and badge != got[0]:
+            # the printed badge and the words disagree (badge EMT, words "I/P only"):
+            # that IS a real conflict for the owner, not a question the rule answers.
+            continue
+        bad.append((r, got, text))
+    return bad
+
+
 def build():
     labels, order = read_nav()
     ledger = load_ledger()
@@ -324,6 +359,18 @@ def build():
     pend_page = [r for r in rows if r['status'] == 'pending_omd']
     pend_row = [r for r in rows if r['status'] == 'pending_row_omd']
     actions = page_actions(owner + pend_page + pend_row)
+    bad = ladder_answered_questions(owner, actions)
+    if bad:
+        detail = '\n'.join(
+            f'  - {r["file"]} row {r["row"]}: the source scopes this action to '
+            f'"{got[1]}", so the level is the lowest it names ({got[0]}); the row is still '
+            f'published as a question' for r, got, _txt in bad)
+        raise SystemExit(
+            'REFUSING to publish a level question the ladder rule already answers:\n'
+            + detail +
+            '\nFix it in scripts/level_rule.py (derive the level, mark the chip with a '
+            'dagger) and re-run --write; do not drop the row here and leave its page '
+            'flagged.')
     nearest = nearest_pems(md)
     questions = open_questions(md)
     ruled = ruled_entries(md)

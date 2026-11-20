@@ -2237,47 +2237,16 @@ bindings:
   # quoted_row_text names the clause this row publishes so the chip can be
   # checked against the source's own words.
   #
-  # Three split parts (8a, 4a here and Asthma 8a) could be neither cited nor
-  # ruled: PEMS prints the action inside a row badged for a different clause and
-  # scopes it in that row's own words. They are declared owner_required below —
-  # the citation is the row that PRINTS the action, never a badge, and no owner
-  # statement about the level is claimed.
+  # Two split parts (8a here and 4a on Cardiac Arrest: Non-Traumatic) are neither
+  # CITED nor owner-required: PEMS prints the action inside a row badged for a different
+  # clause and scopes it in that row's own words ("as determined by EMT-I or P"). The
+  # ladder rule settles those — the chip is the lowest level the words name — so they are
+  # recorded as `derived` in level-rulings.yaml (`rule: lowest_printed_level`, quoting the
+  # scoping sentence) and carry no binding here. The third part of that shape,
+  # Asthma r8a, stays `owner_required` below: its two printed rows disagree and the row is
+  # a bundle, so no single lowest level can be derived from them.
   # --------------------------------------------------------------------------
 
-  - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
-    row: 8a
-    status: owner_required
-    owner_note: >-
-      &#9873; **Rhythm interpretation — level pending.** PEMS scopes interpretation of the rhythm
-      to &quot;as determined by EMT-I or P&quot; while printing it inside a row badged EMR, so the
-      level shown is provisional. Interpret the rhythm only at the level Medical Control
-      confirms.
-    reason: >-
-      Conflict, recorded: PEMS prints rhythm determination but never badges it on its own.
-      p.235#4 prints "Apply
-      AED / Assess cardiac rhythm every 2 minutes" at badge EMR, and in the same sentence
-      scopes the classification: "rhythm is VF or VT (as determined by EMT-I or P)"; p.263#4
-      prints the same scoping word for word. The lowest level those rows' own words give it is
-      I, which is the chip, but a single chip cannot be the printed EMR badge and the I the
-      row's text scopes, so this is an open decision, not a citation. No owner statement about
-      the level of rhythm determination exists and none is attributed to him: the owner's
-      2026-11-20 instruction was the SPLIT (rhythm determination becomes its own row).
-      p.50#10 ("Consider continuous cardiac monitoring", badge I) was cited here before and is
-      NOT the authority — that row does not print rhythm determination.
-
-  - file: protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
-    row: 4a
-    status: owner_required
-    owner_note: >-
-      &#9873; **Rhythm interpretation — level pending.** PEMS scopes interpretation of the rhythm
-      to &quot;as determined by EMT-I or P&quot; while printing it inside a row badged EMR, so the
-      level shown is provisional. Interpret the rhythm only at the level Medical Control
-      confirms.
-    reason: >-
-      Conflict, recorded: same shape as Asystole row 8a. p.235#4 / p.263#4 print rhythm
-      assessment at badge EMR and scope the classification to "(as determined by EMT-I or P)" in
-      the row's own words, so the level I is read off the source's text and no single printed
-      badge authorises it. Open decision; the owner's 2026-11-20 instruction was the split only.
 
   - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
     row: 8

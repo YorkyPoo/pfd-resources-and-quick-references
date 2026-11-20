@@ -43,7 +43,7 @@ Cardiac arrest is the cessation of cardiac mechanical activity resulting in the 
 | 2 | <span class="lvl lvl-emr">EMR</span> | **Begin High-Quality CPR:**<br>• Push hard and fast at rate **100 – 120 bpm**.<br>• Allow complete chest recoil.<br>• Minimize interruptions in chest compressions.<br>• Change compressors every **2 minutes** or sooner if fatigued. |
 | 3 | <span class="lvl lvl-emt">EMT</span> | **Airway Management:**<br>• Apply BVM with high-flow O₂.<br>• Use quantitative **EtCO₂ monitoring** with BVM:<br>  - If EtCO₂ < 10 mmHg, improve compressions<br>  - If sudden increase above 30-40 mmHg, check for ROSC<br>• Give continuous compressions with advanced airway. |
 | 4 | <span class="lvl lvl-emr">EMR</span> | **AED / Rhythm Assessment:**<br>• Apply the AED and repeat the AED rhythm analysis every **2 minutes**; the AED announces whether a shock is advised. |
-| 4a | <span class="lvl lvl-i">I</span><sup class="lvl-own" title="Provider level for this action is awaiting a Medical Control decision">&#9873;</sup> | • Interpret the rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shockable). |
+| 4a | <span class="lvl lvl-i">I</span><sup class="lvl-deriv" title="Provider level derived from the source&#39;s own wording: it names the levels that perform this action, so the lowest one is shown and every level above it may also perform it">&#8224;</sup> | • Interpret the rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shockable). |
 | 5 | <span class="lvl lvl-i">I</span> | **Defibrillation - V-Fib/V-Tach Only:**<br>• **ADULT:** **200 joules** Biphasic / **360 joules** Monophasic, or manufacturer's recommendation<br>• **PEDIATRIC:** **2 joules/kg** initial, **4 joules/kg** subsequent<br>• Ensure optimal pad placement; consider adjustment if multiple shocks delivered without rhythm change. |
 | 5a | <span class="lvl lvl-emr">EMR</span> | • After each defibrillation, perform **2 minutes of CPR**, then reassess rhythm. |
 | 6 | <span class="lvl lvl-emt">EMT</span> | **Spinal Motion Restriction:**<br>• Consider spinal motion restriction if indicated. |
@@ -58,7 +58,7 @@ Cardiac arrest is the cessation of cardiac mechanical activity resulting in the 
 
 </div>
 
-<p class="lv-note">&#9873; <strong>Rhythm interpretation — level pending.</strong> PEMS scopes interpretation of the rhythm to &quot;as determined by EMT-I or P&quot; while printing it inside a row badged EMR, so the level shown is provisional. Interpret the rhythm only at the level Medical Control confirms.</p>
+<p class="lv-note">&#8224; <strong>Level derived from the source's own wording</strong> — PEMS names the levels that perform this action (&#8220;EMT-I or P&#8221;), so the level shown is the lowest one named, and every level above it may also perform the action.</p>
 
 ### Pearls
 1. ⚠ **High-Quality CPR is Essential:** Push hard and fast at rate **100 – 120 bpm**. Allow complete chest recoil. Minimize interruptions. Change compressors every **2 minutes** or sooner if fatigued. Give continuous compressions with advanced airway.

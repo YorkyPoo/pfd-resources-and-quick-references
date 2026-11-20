@@ -1104,9 +1104,9 @@
    "row": "8a",
    "action": "Interpret the rhythm: VF or VT (shockable), or asystole or PEA (non-shockable).",
    "level_published": "I",
-   "status": "OWNER_REQUIRED",
-   "reason": "Conflict, recorded: PEMS prints rhythm determination but never badges it on its own. p.235#4 prints \"Apply AED / Assess cardiac rhythm every 2 minutes\" at badge EMR, and in the same sentence scopes the classification: \"rhythm is VF or VT (as determined by EMT-I or P)\"; p.263#4 prints the same scoping word for word. The lowest level those rows' own words give it is I, which is the chip, but a single chip cannot be the printed EMR badge and the I the row's text scopes, so this is an open decision, not a citation. No owner statement about the level of rhythm determination exists and none is attributed to him: the owner's 2026-11-20 instruction was the SPLIT (rhythm determination becomes its own row). p.50#10 (\"Consider continuous cardiac monitoring\", badge I) was cited here before and is NOT the authority \u2014 that row does not print rhythm determination.",
-   "owner_note": "&#9873; **Rhythm interpretation \u2014 level pending.** PEMS scopes interpretation of the rhythm to &quot;as determined by EMT-I or P&quot; while printing it inside a row badged EMR, so the level shown is provisional. Interpret the rhythm only at the level Medical Control confirms.",
+   "status": "derived",
+   "reason": "level derived from the source's own words, not an owner decision: PEMS scopes this action to \"EMT-I or P\" (I / P); the lowest named level is I, and every level above it may also perform the action.",
+   "owner_note": null,
    "owner_ruling": null,
    "pems_page": null,
    "pems_ordinal": null,
@@ -1121,14 +1121,25 @@
    "mc_evidence": null,
    "flag_reason": null,
    "ratified": null,
-   "basis": null,
+   "basis": "level-rulings:derived",
    "before": {
     "leftmost": "I",
     "markers": [],
     "text_label": null,
     "text_tokens": []
    },
-   "note": null,
+   "note": "Derived from the source's own words, NOT ruled by the owner. p.235#4 prints \"rhythm is VF or VT (as determined by EMT-I or P)\" (and the same scoping for asystole/PEA, and again word for word at p.263#4), so the levels that determine the rhythm are EMT-I and Paramedic. Lowest named = I, which is the chip; every level above I may also perform it by the owner's ladder rule. The printed badge on that row (EMR) belongs to the AED/analyse clause, which is row 8 with its own binding.",
+   "derived": {
+    "rule": "lowest_printed_level",
+    "ladder": "EMT-I or P",
+    "levels": [
+     "I",
+     "P"
+    ],
+    "pems_page": 235,
+    "pems_ordinal": 4
+   },
+   "derived_reason": "level derived from the source's own words, not an owner decision: PEMS scopes this action to \"EMT-I or P\" (I / P); the lowest named level is I, and every level above it may also perform the action.",
    "status_before": null
   },
   {
@@ -1746,9 +1757,9 @@
    "row": "4a",
    "action": "\u2022 Interpret the rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shockable).",
    "level_published": "I",
-   "status": "OWNER_REQUIRED",
-   "reason": "Conflict, recorded: same shape as Asystole row 8a. p.235#4 / p.263#4 print rhythm assessment at badge EMR and scope the classification to \"(as determined by EMT-I or P)\" in the row's own words, so the level I is read off the source's text and no single printed badge authorises it. Open decision; the owner's 2026-11-20 instruction was the split only.",
-   "owner_note": "&#9873; **Rhythm interpretation \u2014 level pending.** PEMS scopes interpretation of the rhythm to &quot;as determined by EMT-I or P&quot; while printing it inside a row badged EMR, so the level shown is provisional. Interpret the rhythm only at the level Medical Control confirms.",
+   "status": "derived",
+   "reason": "level derived from the source's own words, not an owner decision: PEMS scopes this action to \"EMT-I or P\" (I / P); the lowest named level is I, and every level above it may also perform the action.",
+   "owner_note": null,
    "owner_ruling": null,
    "pems_page": null,
    "pems_ordinal": null,
@@ -1763,14 +1774,25 @@
    "mc_evidence": null,
    "flag_reason": null,
    "ratified": null,
-   "basis": null,
+   "basis": "level-rulings:derived",
    "before": {
     "leftmost": "I",
     "markers": [],
     "text_label": null,
     "text_tokens": []
    },
-   "note": null,
+   "note": "As Asystole r8a: same action, same scoping sentence in the same PEMS row (p.235#4, repeated at p.263#4). Derived, not ruled \u2014 the source names EMT-I and Paramedic, so the chip is the lowest of them (I) and every level above may perform it. The AED half of the split row is row 4, cited at EMR.",
+   "derived": {
+    "rule": "lowest_printed_level",
+    "ladder": "EMT-I or P",
+    "levels": [
+     "I",
+     "P"
+    ],
+    "pems_page": 235,
+    "pems_ordinal": 4
+   },
+   "derived_reason": "level derived from the source's own words, not an owner decision: PEMS scopes this action to \"EMT-I or P\" (I / P); the lowest named level is I, and every level above it may also perform the action.",
    "status_before": null
   },
   {

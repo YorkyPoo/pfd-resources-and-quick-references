@@ -14,7 +14,7 @@ This page is generated from the conversion ledger (`audit/level-scan/level-rule-
 
 | what | how many |
 |---|---:|
-| Rows that need your level decision (`OWNER_REQUIRED`, marked &#9873; on the page) | **2** |
+| Rows that need your level decision (`OWNER_REQUIRED`, marked &#9873; on the page) | **0** |
 | Rows pending authorization (`PENDING`) | **18** (11 whole-page + 7 single-row) |
 | Open questions on how the rules themselves should read | **31** |
 | Rulings already recorded — decided, no action needed | **4** |
@@ -37,41 +37,19 @@ This page is generated from the conversion ledger (`audit/level-scan/level-rule-
 
 <div class="od-legend" markdown="1">
 - <span class="od-chip od-chip-nowhere">PEMS prints this nowhere</span> — **0 rows**. No PEMS 2024 row prints the action at all (or prints it only in pieces that no single row covers). Your answer is a level of our own, or `PENDING`.
-- <span class="od-chip od-chip-conflict">PEMS prints it, but the badge contradicts the row's own words</span> — **2 rows**. A PEMS row prints the action, but its printed badge conflicts with the text of that same row, or the action is spread over rows at different levels. Your answer is which one wins (and whether the row should be split).
+- <span class="od-chip od-chip-conflict">PEMS prints it, but the badge contradicts the row's own words</span> — **0 rows**. A PEMS row prints the action, but its printed badge conflicts with the text of that same row, or the action is spread over rows at different levels. Your answer is which one wins (and whether the row should be split).
 
 Jump to: [PEMS prints this nowhere](#pems-prints-this-nowhere) · [PEMS prints it, badge contradicts](#pems-prints-it-badge-contradicts)
 
 </div>
 
-<h2 id="owner-required">1. Needs your level decision — 2 rows</h2>
+<h2 id="owner-required">1. Needs your level decision — 0 rows</h2>
 
 Grouped by protocol page, in the order they appear in the site navigation. Each card shows the page, the row number, the level the page shows today with the &#9873; flag, the row text word for word, and the full reason it is flagged.
 
 <h3 id="pems-prints-this-nowhere">PEMS prints this nowhere — 0 rows</h3>
 
-<h3 id="pems-prints-it-badge-contradicts">PEMS prints it, but the badge contradicts the row&#x27;s words — 2 rows</h3>
-
-#### [Asystole / PEA](cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md) — 1 row
-
-<div class="od-page-block">
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 8a</span> <span class="lvl lvl-i">I</span> &#9873;</p>
-<p class="od-action">Interpret the rhythm: VF or VT (shockable), or asystole or PEA (non-shockable).</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> Conflict, recorded: PEMS prints rhythm determination but never badges it on its own. p.235#4 prints &quot;Apply AED / Assess cardiac rhythm every 2 minutes&quot; at badge EMR, and in the same sentence scopes the classification: &quot;rhythm is VF or VT (as determined by EMT-I or P)&quot;; p.263#4 prints the same scoping word for word. The lowest level those rows&#x27; own words give it is I, which is the chip, but a single chip cannot be the printed EMR badge and the I the row&#x27;s text scopes, so this is an open decision, not a citation. No owner statement about the level of rhythm determination exists and none is attributed to him: the owner&#x27;s 2026-11-20 instruction was the SPLIT (rhythm determination becomes its own row). p.50#10 (&quot;Consider continuous cardiac monitoring&quot;, badge I) was cited here before and is NOT the authority — that row does not print rhythm determination.</p>
-
-</div>
-</div>
-
-#### [Cardiac Arrest (Non-Traumatic)](cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md) — 1 row
-
-<div class="od-page-block">
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 4a</span> <span class="lvl lvl-i">I</span> &#9873;</p>
-<p class="od-action">• Interpret the rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shockable).</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> Conflict, recorded: same shape as Asystole row 8a. p.235#4 / p.263#4 print rhythm assessment at badge EMR and scope the classification to &quot;(as determined by EMT-I or P)&quot; in the row&#x27;s own words, so the level I is read off the source&#x27;s text and no single printed badge authorises it. Open decision; the owner&#x27;s 2026-11-20 instruction was the split only.</p>
-
-</div>
-</div>
+<h3 id="pems-prints-it-badge-contradicts">PEMS prints it, but the badge contradicts the row&#x27;s words — 0 rows</h3>
 
 <h2 id="pending">2. Pending authorization — 18 rows</h2>
 
@@ -274,7 +252,7 @@ These are not row-level decisions. Each one is a question about how the rule its
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
-<p class="od-question"><strong>Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.</strong> The owner was asked and did not rule, so the other 2 OWNER_REQUIRED rows keep their level + ⚑ flag exactly as they were. Do not convert them without a ruling.</p>
+<p class="od-question"><strong>Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.</strong> The owner was asked and did not rule, so the other 0 OWNER_REQUIRED rows keep their level + ⚑ flag exactly as they were. Do not convert them without a ruling.</p>
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
