@@ -44,9 +44,9 @@
     },
     "rows": {
       "branch": "rows-one-action",
-      "built_at": "2026-11-20T06:58:32Z",
-      "description": "Row structure: one action per row; Sedation r5 at I, page-voice pass (round 5)",
-      "sha": "a05c2cac56a65cfeefb4ce2f1fbb81848f124ff5"
+      "built_at": "2026-11-20T07:10:45Z",
+      "description": "Row structure: one action per row; page-voice sweep applied to the generator's notes; Sedation page untouched (round 6)",
+      "sha": "29d5378e2cdad89eedb392e27fe5cad48d4abd6f"
     },
     "sedation": {
       "branch": "sedation-p55",
@@ -55,5 +55,5 @@
       "sha": "8cd3c98fabe2fd495cc789419289ba035c565b5d"
     }
   },
-  "updated_at": "2026-11-20T07:05:20.157069+00:00"
+  "updated_at": "2026-11-20T07:10:45.391356+00:00"
 }
