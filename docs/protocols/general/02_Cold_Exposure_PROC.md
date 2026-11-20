@@ -26,12 +26,19 @@ Guidelines for managing systemic hypothermia and localized cold injuries, emphas
 | 3 | <span class="lvl lvl-emr">EMR</span> | Handle the patient gently and avoid excessive movement (risk of cardiac arrest/VF). |
 | 4 | <span class="lvl lvl-emr">EMR</span> | Apply warmed and humidified **O2** if available. |
 | 5 | <span class="lvl lvl-emr">EMR</span> | **Localized cold injury:** Apply loose, sterile dressings to the affected part. |
-| 6 | <span class="lvl lvl-emt">EMT</span> | If patient is alert and responsive: Use active external rewarming with heat packs, warm blankets, etc. |
 | 7 | <span class="lvl lvl-emr">EMR</span> | **Cardiac Arrest:** Make persistent attempts at resuscitation for victims of prolonged cold exposure. Begin CPR and continuous warming procedures. |
 | 8 | <span class="lvl lvl-emt">EMT</span> | Rapid transport immediately with resuscitation efforts continued en route. Do not delay transport waiting for ALS. |
-| 9 | <span class="lvl lvl-mc">MC</span> | Contact Medical Control prior to use of AED. |
 
 </div>
+
+### References & Good Practice
+
+Both items below are printed in PEMS 2024 **p.67 (Cold Exposure), heading PEARLS** as prose, with no provider badge on them, so they are kept here as good practice instead of as chipped action rows; the action table above now lists only level-badged actions and its numbering skips 6 and 9, which are these items.
+
+- **Active external rewarming — heat packs, warm blankets.** If the patient is alert and responsive, use active external rewarming with heat packs, warm blankets, etc. *PEMS 2024 p.67, PEARLS #5 — no badge printed; this page records it at **EMT** (owner ruling 2026-11-17: "Patient warming with heat packs is a BLS skill, anyone can do that").* Same Pearls list, #2: **do not place heat packs, hot water bottles, IV bags, or other heat-retaining devices directly on skin.**
+- **Medical Control before the AED.** Contact Medical Control prior to use of AED. *PEMS 2024 p.67, PEARLS #3 — no badge printed; this page records it at **MC** (owner ruling 2026-11-17).*
+
+**Why and what next:** [Cardiac Arrest (Non-Traumatic) — AED use and defibrillation](../cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md) · [Post-Resuscitation Care](../cardiac/04_Post_Resuscitation_Care_PROC.md)
 
 ### Pearls
 1. ⚠ Hypothermia patients are fragile: Rough handling, IV insertion, intubation, etc. might cause VF that is refractory to defibrillation and antiarrhythmic agents- use AHA guidelines for hypothermic arrest.
