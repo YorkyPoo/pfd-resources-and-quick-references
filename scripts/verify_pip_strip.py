@@ -1,212 +1,250 @@
 #!/usr/bin/env python3
-"""Report the pip-strip evidence for the two pilot pages.
+"""Verify the pip strip on every converted page, row by row, against the markdown.
 
-    python3 scripts/verify_pip_strip.py --base <site_dir or https://…/preview/pilot/>
+    python3 scripts/verify_pip_strip.py --base <site_dir or https://…/preview/all-pages/>
+    python3 scripts/verify_pip_strip.py --base site --archive audit/archive/tables-2026-11-20
 
-Reads the *rendered HTML* — the same bytes a phone gets — and prints, per page:
+The page list is **derived in code**, never hand-written: every markdown page
+that carries a convertible ``lv-wrap`` level table (plain wrapper, three
+columns, second header cell ``Level``, no ``PENDING`` / ``POLICY`` row) must
+render a strip. Pages whose only tables publish no provider level must not.
 
-  * the picker buttons and which one is aria-pressed
-  * the strip header letters
-  * the tally line
-  * row count, and how many rows are in the OWNER_REQUIRED (unverified) class
-  * one row's tag text, and every distinct tag
+Reads the *rendered HTML* — the same bytes a phone gets — and, per page:
 
-Exit 1 if a page is missing the block, the header is not R B A I P, the picker
-is not six buttons, no button is pressed on load, or **any row's rendered
-`data-states` disagrees with the level chip in the page's markdown source**
-(both are printed side by side when it does).
+  * the picker (six buttons, one pressed on load), header ``R B A I P``, tally
+  * every row's ``data-states`` against the level chip in that page's markdown
+  * the ``*`` / ``†`` markers the chip carried, which must survive the strip
+  * row count against the markdown, and the tally against the rows
+  * with ``--archive``: pages skipped by the rollout must be byte-identical to
+    the archived pre-rollout markup, so nothing outside the list moved.
 
-The source cross-check is the point: the strip's whole job is to restate the
-level chip, so a verifier that only counts rows and buttons cannot catch a
-strip that says the wrong thing.
+The chip reading here is written independently of ``mkdocs_pip_strip``'s
+rendered-HTML reader (it walks the spans of the markdown cell and word-splits
+each class list), so agreement is evidence, not a tautology; the ladder itself
+is covered by ``scripts/test_pip_strip_mapper.py`` against the owner's prototype.
+
+Exit 0 only when every expected page and every row agrees.
 """
 import argparse
+import html as html_lib
 import os
 import re
 import sys
 import urllib.request
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from mkdocs_pip_strip import LEVEL_CLASS, LEVELS, states_for  # noqa: E402
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+from mkdocs_pip_strip import LEVELS, states_for  # noqa: E402
 
-PAGES = [
-    ("protocols/general/02_Cold_Exposure_PROC.md",
-     "protocols/general/02_Cold_Exposure_PROC.html"),
-    ("protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
-     "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.html"),
-]
-
-CHIP_RE = re.compile(r'class="lvl(?P<cls>[^"]*)"')
+DIV = re.compile(r'<div class="lv-wrap(?P<cls>[^"]*)"[^>]*>(?P<body>.*?)</div>', re.S)
+LEVEL_WORD = {"lvl-emr": 0, "lvl-emt": 1, "lvl-a": 2, "lvl-i": 3, "lvl-p": 4}
+SUP = re.compile(r'<sup class="lvl-(req|deriv)"[^>]*>(.*?)</sup>', re.S)
+BLOCK = re.compile(r'<div class="pip-block" data-pip-block>(.*?)</tbody></table></div>', re.S)
+ROW = re.compile(r'<tr data-states="([^"]+)"([^>]*)>(.*?)</tr>', re.S)
 
 
-def states_from_chip(cell: str):
-    """(states, flagged) for one markdown Level cell, using the same mapper."""
-    m = CHIP_RE.search(cell)
-    cls = m.group("cls") if m else ""
-    flagged = "lvl-own" in cls
-    min_idx = None
-    for name, idx in LEVEL_CLASS.items():
-        if re.search(r"\b" + re.escape(name) + r"\b", cls):
-            min_idx = idx
-            break
-    mc_all = "lvl-mc" in cls
-    bracketed = "lvl-mc-req" in cls or "lvl-req" in cls
-    mc = {min_idx} if (bracketed and min_idx is not None) else set()
-    return states_for(min_idx, mc, mc_all), flagged
+# ---------------------------------------------------- what the markdown says
+
+def chip_states(cell):
+    """(states, marks) for one markdown Level cell — independent reader."""
+    cls_words = [cls.split() for cls in re.findall(r'<span class="([^"]*)"[^>]*>', cell)]
+    level = None
+    mc_all = False
+    for words in cls_words:
+        for name, idx in LEVEL_WORD.items():
+            if name in words:
+                level = idx
+        if 'lvl-mc' in words:
+            mc_all = True
+    bracketed = 'lvl-mc-req' in cell or 'lvl-req' in cell
+    mc = {level} if (bracketed and level is not None) else set()
+    states = states_for(level, mc, mc_all and level is None)
+    marks = [html_lib.unescape(m.group(2).strip()) for m in SUP.finditer(cell)]
+    return states, marks
 
 
-def expected_rows(md_path: str):
-    """[(num, states, flagged)] from the markdown table, in page order."""
-    with open(md_path, encoding="utf-8") as fh:
-        lines = fh.read().splitlines()
+def page_tables(md_path):
+    """[(convertible, [(num, states, marks)])] for every lv-wrap table, in order."""
+    text = open(md_path, encoding='utf-8', errors='replace').read()
     out = []
-    in_table = False
-    for line in lines:
-        s = line.strip()
-        if s.startswith("|") and s.count("|") >= 4:
-            cells = [c.strip() for c in s.strip("|").split("|")]
-            if len(cells) < 3:
-                continue
-            if not in_table:
-                in_table = True  # header row
-                continue
-            if set(cells[0]) <= set(":- "):  # separator
-                continue
-            num, chip = cells[0], cells[1]
-            if not re.fullmatch(r"\d+[a-z]?", num):
-                in_table = False
-                continue
-            states, flagged = states_from_chip(chip)
-            out.append((num, states, flagged))
-        else:
-            if in_table:
-                break
+    for m in DIV.finditer(text):
+        cls = (m.group('cls') or '').strip()
+        rows = [ln.strip() for ln in m.group('body').splitlines()
+                if ln.strip().startswith('|')]
+        cells = [[c.strip() for c in r.strip('|').split('|')] for r in rows]
+        conv = bool(cells) and 'pending' not in cls and 'policy' not in cls
+        if conv:
+            hdr = cells[0]
+            conv = len(hdr) == 3 and hdr[1].strip().lower() == 'level'
+        body = []
+        if conv:
+            for c in cells[1:]:
+                if len(c) < 3 or set(c[0]) <= set(':- ') or not re.fullmatch(r'\d+[a-z]?', c[0]):
+                    continue
+                if 'lvl-pending' in c[1] or 'lvl-policy' in c[1]:
+                    conv = False       # the hook leaves the whole table alone
+                    break
+                states, marks = chip_states(c[1])
+                body.append((c[0], states, marks))
+        out.append((conv, body))
     return out
 
 
-def load(base: str, rel: str) -> str:
-    if base.startswith("http"):
-        url = base.rstrip("/") + "/" + rel
-        req = urllib.request.Request(url, headers={"Cache-Control": "no-cache"})
+def expected_pages(docs):
+    """{docs-relative .md path: [table, ...]} for pages that must be converted."""
+    exp = {}
+    for root, dirs, files in os.walk(docs):
+        dirs.sort()
+        for f in sorted(files):
+            if not f.endswith('.md'):
+                continue
+            p = os.path.join(root, f)
+            rel = os.path.relpath(p, docs).replace(os.sep, '/')
+            tables = [b for conv, b in page_tables(p) if conv]
+            if tables:
+                exp[rel] = tables
+    return exp
+
+
+def unchanged_pages(docs):
+    """Pages that carry an lv-wrap table but must NOT be converted."""
+    out = set()
+    for root, dirs, files in os.walk(docs):
+        for f in files:
+            if not f.endswith('.md'):
+                continue
+            p = os.path.join(root, f)
+            rel = os.path.relpath(p, docs).replace(os.sep, '/')
+            tables = page_tables(p)
+            if tables and not any(conv for conv, _ in tables):
+                out.add(rel)
+    return out
+
+
+# ------------------------------------------------------------ reading a page
+
+def load(base, rel):
+    html_rel = rel[:-3] + '.html'
+    if base.startswith('http'):
+        url = base.rstrip('/') + '/' + html_rel
+        req = urllib.request.Request(url, headers={'Cache-Control': 'no-cache'})
         with urllib.request.urlopen(req, timeout=30) as fh:
-            return fh.read().decode("utf-8", "replace")
-    with open(os.path.join(base, rel), encoding="utf-8") as fh:
+            return fh.read().decode('utf-8', 'replace')
+    with open(os.path.join(base, html_rel), encoding='utf-8') as fh:
         return fh.read()
+
+
+def archive_blocks(archive, rel):
+    html_rel = rel[:-3] + '.html'
+    with open(os.path.join(archive, html_rel), encoding='utf-8') as fh:
+        return [m.group(0) for m in DIV.finditer(fh.read())]
+
+
+def check_page(rel, tables, html, problems):
+    blocks = BLOCK.findall(html)
+    if len(blocks) != len(tables):
+        problems.append(f'{rel}: {len(blocks)} pip block(s), markdown has {len(tables)} table(s)')
+        return 0, len(blocks)
+    rows_ok = 0
+    for ti, (blk, want) in enumerate(zip(blocks, tables), 1):
+        where = f'{rel} table {ti}'
+        btns = re.findall(r'<button type="button" class="pip-btn[^"]*" data-level="([^"]+)" '
+                          r'aria-pressed="([^"]+)">', blk)
+        if [d for d, _ in btns] != ['R', 'B', 'A', 'I', 'P', 'all']:
+            problems.append(f'{where}: picker is {[d for d, _ in btns]}, expected R B A I P + all')
+        if not any(p == 'true' for _, p in btns):
+            problems.append(f'{where}: nothing aria-pressed on load')
+        head = re.search(r'<span class="pip-strip pip-strip-head">((?:<i>[^<]*</i>)+)</span>', blk)
+        letters = re.findall(r'<i>([^<]*)</i>', head.group(1)) if head else []
+        if letters != LEVELS:
+            problems.append(f'{where}: header {letters}, expected R B A I P')
+        tally = re.search(r'class="pip-tally"[^>]*>(.*?)</p>', blk, re.S)
+        tally_txt = re.sub(r'\s+', ' ', re.sub('<[^>]+>', '', tally.group(1))).strip() if tally else ''
+        if not tally_txt:
+            problems.append(f'{where}: no tally line')
+        m = re.search(r'(\d+) actions', tally_txt)
+        got = ROW.findall(blk)
+        if m and int(m.group(1)) != len(got):
+            problems.append(f'{where}: tally says {m.group(1)} actions, table has {len(got)}')
+        n_unv = sum(1 for _, attrs, _ in got if 'data-unverified' in attrs)
+        if n_unv and f'{n_unv} level unverified' not in tally_txt:
+            problems.append(f'{where}: {n_unv} unverified row(s) not disclosed in the tally')
+        if len(got) != len(want):
+            problems.append(f'{where}: {len(got)} rows rendered, markdown has {len(want)}')
+        for i in range(min(len(got), len(want))):
+            states, _attrs, inner = got[i]
+            nm = re.search(r'<td class="pip-n">([^<]*)</td>', inner)
+            num = nm.group(1).strip() if nm else '?'
+            e_num, e_states, e_marks = want[i]
+            if num != e_num:
+                problems.append(f'{where}: row {i + 1} numbered {num}, markdown {e_num}')
+            if states != ','.join(e_states):
+                problems.append(f'{where}: row {e_num} renders {states}, chip says '
+                                f'{",".join(e_states)}')
+            marks = [re.sub(r'\s+', '', x) for x in
+                     re.findall(r'<span class="pip-mark pip-mark-[a-z]+"[^>]*>(.*?)</span>',
+                                inner, re.S)]
+            if marks != [re.sub(r'\s+', '', x) for x in e_marks]:
+                problems.append(f'{where}: row {e_num} markers {marks}, chip carries {e_marks}')
+            rows_ok += 1
+    return rows_ok, len(blocks)
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--base", required=True)
-    ap.add_argument("--src", default="docs",
-                    help="docs/ dir holding the markdown the site was built from "
-                         "(default: docs). Every row is checked against it.")
+    ap.add_argument('--base', required=True, help='built site dir or https://…/preview/<slot>/')
+    ap.add_argument('--src', default='docs', help='markdown dir the site was built from')
+    ap.add_argument('--archive', default='audit/archive/tables-2026-11-20',
+                    help='pre-rollout archive; skipped pages must match it byte for byte '
+                         '(empty string disables the check)')
+    ap.add_argument('--quiet', action='store_true')
     args = ap.parse_args()
 
-    failed = False
-    for md_rel, rel in PAGES:
-        print("=" * 78)
-        print(rel)
+    exp = expected_pages(args.src)
+    skip = unchanged_pages(args.src)
+    problems = []
+    total_rows = 0
+
+    for rel, tables in sorted(exp.items()):
         try:
             html = load(args.base, rel)
         except Exception as exc:  # noqa: BLE001
-            print(f"  FAIL: cannot load ({exc})")
-            failed = True
+            problems.append(f'{rel}: cannot load ({exc})')
             continue
+        n, nb = check_page(rel, tables, html, problems)
+        total_rows += n
+        if not args.quiet:
+            print(f'  ok  {rel:74s} {nb} block(s), {n} row(s)')
 
-        i = html.find("data-pip-block")
-        if i < 0:
-            print("  FAIL: no data-pip-block in the rendered page")
-            failed = True
-            continue
-        blk = html[i:html.find("</tbody></table></div>", i)]
-
-        btns = re.findall(
-            r'<button type="button" class="pip-btn[^"]*" data-level="([^"]+)" '
-            r'aria-pressed="([^"]+)">([^<]*)</button>', blk)
-        print("  picker : " + " | ".join(f"{t} pressed={p}" for d, p, t in btns))
-        if len(btns) != 6:
-            print(f"  FAIL: {len(btns)} picker buttons, expected 6")
-            failed = True
-        if not any(p == "true" for _, p, _ in btns):
-            print("  FAIL: nothing aria-pressed on load")
-            failed = True
-        if [d for d, _, _ in btns] != ["R", "B", "A", "I", "P", "all"]:
-            print("  FAIL: picker order is not R B A I P + Show all")
-            failed = True
-
-        head = re.findall(r'<span class="pip-strip pip-strip-head">((?:<i>[^<]*</i>)+)</span>', blk)
-        letters = re.findall(r"<i>([^<]*)</i>", head[0]) if head else []
-        print("  header : " + " ".join(letters))
-        if letters != ["R", "B", "A", "I", "P"]:
-            print("  FAIL: strip header is not R B A I P")
-            failed = True
-
-        tally = re.search(r'class="pip-tally"[^>]*>(.*?)</p>', blk, re.S)
-        tally_txt = re.sub(r"\s+", " ", re.sub("<[^>]+>", "", tally.group(1))).strip() if tally else ""
-        print(f"  tally  : {tally_txt}")
-        if not tally_txt:
-            print("  FAIL: no tally line")
-            failed = True
-
-        rows = re.findall(r'<tr data-states="([^"]+)"([^>]*)>(.*?)</tr>', blk, re.S)
-        flagged = sum(1 for _, a, _ in rows if "data-unverified" in a)
-        tags = [re.search(r'pip-tag [a-z]+">([^<]*)<', r[2]) for r in rows]
-        tag_txt = [t.group(1) if t else "?" for t in tags]
-        nums = [re.search(r'<td class="pip-n">([^<]*)</td>', r[2]) for r in rows]
-        nums = [n.group(1).strip() if n else "?" for n in nums]
-        print(f"  rows   : {len(rows)}  (unverified/OWNER_REQUIRED: {flagged})")
-        print(f"  row1   : states={rows[0][0]} tag=\"{tag_txt[0]}\"")
-        print("  tags   : " + " | ".join(dict.fromkeys(tag_txt)))
-
-        # ---- every row against the level chip in its own markdown source ----
-        src_path = os.path.join(args.src, md_rel)
+    for rel in sorted(skip):
         try:
-            want = expected_rows(src_path)
-        except OSError as exc:
-            print(f"  FAIL: cannot read source {src_path} ({exc})")
-            failed = True
-            want = []
-        print(f"  source : {md_rel} — {len(want)} chip rows")
-        print("  --- n | rendered | chip ---")
-        for i in range(max(len(rows), len(want))):
-            has_got = i < len(rows)
-            has_exp = i < len(want)
-            if has_got and has_exp:
-                g_num, g_st = nums[i], rows[i][0]
-                e_num, e_st = want[i][0], ",".join(want[i][1])
-                if g_st == e_st and g_num == e_num:
-                    print(f"  OK  {g_num:>3} | {g_st:<24} | {e_st}"
-                          f"  (chip row {e_num}{', OWNER_REQUIRED' if want[i][2] else ''})")
-                else:
-                    print(f"  BAD {g_num:>3} | {g_st:<24} | {e_st}")
-                    print(f"  FAIL: row {g_num} renders {g_st}, chip says {e_st}"
-                          + ("" if g_num == e_num else f" (row number {g_num} vs {e_num})"))
-                    failed = True
-            elif has_got:
-                print(f"  BAD {nums[i]:>3} | {rows[i][0]:<24} | <no chip row>")
-                print(f"  FAIL: row {nums[i]} is rendered but has no chip in the source")
-                failed = True
-            else:
-                e_st = ",".join(want[i][1])
-                print(f"  BAD {want[i][0]:>3} | {'<not rendered>':<24} | {e_st}")
-                print(f"  FAIL: source row {want[i][0]} ({e_st}) is missing from the page")
-                failed = True
-        n_in_tally = re.search(r"(\d+) actions", tally_txt)
-        if n_in_tally and int(n_in_tally.group(1)) != len(rows):
-            print(f"  FAIL: tally says {n_in_tally.group(1)} actions, "
-                  f"table has {len(rows)} rows")
-            failed = True
-        if flagged and f"{flagged} level unverified" not in tally_txt:
-            print(f"  FAIL: {flagged} unverified row(s) not disclosed in the tally")
-            failed = True
-        if 'role="img"' not in blk or "aria-label=" not in blk:
-            print("  FAIL: strip has no text alternative")
-            failed = True
+            html = load(args.base, rel)
+        except Exception as exc:  # noqa: BLE001
+            problems.append(f'{rel}: cannot load ({exc})')
+            continue
+        if 'data-pip-block' in html:
+            problems.append(f'{rel}: converted, but its only tables publish no provider level')
+            continue
+        if args.archive:
+            try:
+                if archive_blocks(args.archive, rel) != [m.group(0) for m in DIV.finditer(html)]:
+                    problems.append(f'{rel}: table markup differs from the archive')
+            except OSError as exc:
+                problems.append(f'{rel}: archive file missing ({exc})')
 
-    print("=" * 78)
-    print("FAILED" if failed else "OK — both pages carry the pip strip")
-    return 1 if failed else 0
+    print()
+    print(f'pages converted : {len(exp)}')
+    print(f'action rows     : {total_rows}')
+    print(f'pages untouched : {len(skip)} (no provider level in any table)')
+    if problems:
+        print(f'FAIL — {len(problems)} problem(s):')
+        for p in problems:
+            print('  ' + p)
+        return 1
+    print('OK — every converted page matches its markdown, row by row; '
+          'every untouched page is unchanged')
+    return 0
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     sys.exit(main())

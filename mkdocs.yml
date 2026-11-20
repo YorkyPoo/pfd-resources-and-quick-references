@@ -58,6 +58,14 @@ theme:
   font:
     text: Roboto
 
+extra:
+  # The ONE switch for the five-pip level strip (scripts/mkdocs_pip_strip.py).
+  # enabled: false restores the per-row chip table on every page and needs no
+  # other edit. pages: all, or a list of docs-relative paths.
+  pip_strip:
+    enabled: true
+    pages: all
+
 extra_css:
   - stylesheets/extra.css
   - stylesheets/pip-strip.css

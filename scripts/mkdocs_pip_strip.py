@@ -37,18 +37,50 @@ for "no level exists" and inventing one would be a clinical claim.
 
 from __future__ import annotations
 
+import html as html_lib
 import re
 
 LEVELS = ["R", "B", "A", "I", "P"]
 FULL = {"R": "EMR", "B": "EMT", "A": "AEMT", "I": "Intermediate", "P": "Paramedic"}
 LEVEL_CLASS = {"lvl-emr": 0, "lvl-emt": 1, "lvl-a": 2, "lvl-i": 3, "lvl-p": 4}
 
-# Scope: the owner's pilot is two pages, so the transform runs nowhere else.
-# Adding a page is this one line — there is no per-page markup to copy.
-PILOT_PAGES = {
-    "protocols/general/02_Cold_Exposure_PROC.md",
-    "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
-}
+# Scope lives in ONE place: `extra.pip_strip` in mkdocs.yml.
+#
+#   extra:
+#     pip_strip:
+#       enabled: true     # false restores the chip table on every page
+#       pages: all        # or a list of docs-relative paths
+#
+# Turning the format off is that one boolean and nothing else: the hook is the
+# only thing that rewrites the table, so `enabled: false` publishes exactly the
+# markup the page carries. A missing key falls back to the defaults below, so a
+# page never silently loses its level table.
+SCOPE_DEFAULT = {"enabled": True, "pages": "all"}
+
+
+def scope_from(config):
+    """{'enabled': bool, 'pages': None|set(str)} from mkdocs config."""
+    extra = {}
+    try:
+        extra = (config or {}).get("extra") or {}
+    except AttributeError:  # a plain dict-like without .get
+        extra = {}
+    raw = extra.get("pip_strip", SCOPE_DEFAULT)
+    if isinstance(raw, bool):
+        raw = {"enabled": raw}
+    raw = dict(SCOPE_DEFAULT, **(raw or {}))
+    pages = raw.get("pages")
+    if pages in (None, "all", ["all"]):
+        pages = None  # every page
+    elif pages is True:
+        pages = None
+    elif pages is False:
+        pages = set()
+    elif isinstance(pages, str):
+        pages = {pages}
+    else:
+        pages = set(pages)
+    return {"enabled": bool(raw.get("enabled", True)), "pages": pages}
 
 PIP_WORD = {
     "go": "standing order",
@@ -97,16 +129,37 @@ def states_to_min(states):
 ROW_RE = re.compile(r"<tr>(.*?)</tr>", re.S)
 CELL_RE = re.compile(r"<t([hd])\b[^>]*>(.*?)</t\1>", re.S)
 LVWRAP_RE = re.compile(r'<div class="lv-wrap(?P<cls>[^"]*)"[^>]*>(?P<body>.*?)</div>', re.S)
+# markers the level chip carries besides the level itself:
+#   lvl-mc-req  +MC  — this level acts only with Medical Control authorisation
+#   lvl-req     *    — agency training documentation + MC written authorisation
+#   lvl-deriv   †    — level derived from the source's own wording
+#   lvl-own     ⚑    — OWNER_REQUIRED: level not verified against the source
+MARK_RE = re.compile(r'<sup class="lvl-(?P<kind>req|deriv)"(?P<attrs>[^>]*)>(?P<glyph>.*?)</sup>',
+                     re.S)
+TITLE_RE = re.compile(r'title="([^"]*)"', re.S)
+MARK_CLASS = {"req": "auth", "deriv": "derived"}
 
 
 def parse_level_cell(html: str):
     """(min_idx, mc_levels, flags) from one rendered Level cell."""
     flags = {
-        "mc_all": bool(re.search(r'class="[^"]*\blvl-mc\b', html)),
+        # A bare ``MC`` chip means "Medical Control at every level". ``+MC`` is a
+        # *second* chip next to a real level and means "at that level only", so
+        # mc_all must look for the word ``lvl-mc`` exactly — a substring test
+        # matches ``lvl-mc-req`` too and turns eight real rows into "call at all
+        # five levels".
+        "mc_all": any("lvl-mc" in cls.split()
+                      for cls in re.findall(r'class="([^"]*)"', html)),
         "flagged": 'lvl-own' in html,
         "pending": 'lvl-pending' in html or 'lvl-policy' in html,
         "bracketed": 'lvl-mc-req' in html or 'lvl-req' in html,
+        "marks": [],
     }
+    for m in MARK_RE.finditer(html):
+        t = TITLE_RE.search(m.group("attrs"))
+        flags["marks"].append((MARK_CLASS[m.group("kind")],
+                               html_lib.unescape(re.sub(r"<[^>]+>", "", m.group("glyph"))).strip(),
+                               html_lib.unescape(t.group(1)) if t else ""))
     min_idx = None
     for cls, idx in LEVEL_CLASS.items():
         if re.search(r'class="[^"]*\b' + re.escape(cls) + r'\b', html):
@@ -143,7 +196,19 @@ def _aria(states, flagged):
     return "; ".join(parts)
 
 
-def _render_row(num, action_html, states, flagged):
+def _marks(flags):
+    """``*`` / ``†`` markers the chip carried, kept verbatim with their titles."""
+    if not flags.get("marks"):
+        return ""
+    parts = []
+    for kind, glyph, title in flags["marks"]:
+        t = f' title="{html_lib.escape(title, quote=True)}"' if title else ""
+        parts.append(f'<span class="pip-mark pip-mark-{kind}"{t}>{glyph}</span>')
+    return '<span class="pip-marks">' + "".join(parts) + "</span>"
+
+
+def _render_row(num, action_html, states, flagged, flags=None):
+    flags = flags or {}
     if flagged:
         # OWNER_REQUIRED: the page publishes a level the source does not
         # authorise. Outline-only pips (no solid fill anywhere) so a guess can
@@ -158,7 +223,8 @@ def _render_row(num, action_html, states, flagged):
         f'<tr data-states="{",".join(states)}"{unv}>'
         f'<td class="pip-n">{num}</td>'
         f'<td class="pip-act"><div class="pip-action">{action_html}</div>'
-        f'<span class="pip-tag-wrap"><span class="pip-tag {tcls}">{ttext}</span></span></td>'
+        f'<span class="pip-tag-wrap"><span class="pip-tag {tcls}">{ttext}</span>'
+        f'{_marks(flags)}</span></td>'
         f'<td class="pip-strip-cell"><span class="pip-strip" role="img" '
         f'aria-label="{_aria(states, flagged)}">{pips}</span></td>'
         f"</tr>"
@@ -258,15 +324,18 @@ def transform_lvwrap(match):
         states = states_for(min_idx, mc, flags["mc_all"])
         if flags["flagged"]:
             n_flag += 1
-        rows.append(_render_row(num, act, states, flags["flagged"]))
+        rows.append(_render_row(num, act, states, flags["flagged"], flags))
     if not rows:
         return match.group(0)
     return _render_block(rows, n_flag)
 
 
 def on_page_content(html, page, config, **kwargs):
+    scope = scope_from(config)
+    if not scope["enabled"]:
+        return html
     src = getattr(getattr(page, "file", None), "src_uri", None)
-    if src not in PILOT_PAGES:
+    if scope["pages"] is not None and src not in scope["pages"]:
         return html
     if 'data-pip-block' in html:
         return html

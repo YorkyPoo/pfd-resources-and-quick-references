@@ -248,6 +248,22 @@
   color: var(--pip-no);
 }
 
+/* Markers the level chip carried before the strip: * (agency documentation +
+   Medical Control written authorisation), † (level derived from the source's
+   own wording). Kept visible next to the tag, with their original title, so the
+   strip adds no information and loses none. */
+.md-typeset .pip-marks { display: inline-block; margin-left: 6px; vertical-align: 1px; }
+.md-typeset .pip-mark {
+  display: inline-block;
+  font-size: .62rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--md-default-fg-color);
+  cursor: help;
+}
+.md-typeset .pip-mark + .pip-mark { margin-left: 4px; }
+.md-typeset .pip-mark-derived { color: var(--pip-call); }
+
 /* ------------------------------------------------- tapped-level row state */
 .md-typeset .pip-table tr.pip-hit td.pip-n { box-shadow: inset 4px 0 0 var(--pip-go); }
 .md-typeset .pip-table tr.pip-hitcall td.pip-n { box-shadow: inset 4px 0 0 var(--pip-call); }
