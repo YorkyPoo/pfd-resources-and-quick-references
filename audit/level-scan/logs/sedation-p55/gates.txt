@@ -1,6 +1,6 @@
-gate tree: 7cbb4d8bee9bd31f8f4ea484aa50db8de571f796  (audit(level-scan): gate logs with exit codes for the p.55 sedation pass)
+gate tree: d18650c51e348497b82051c9053feb4018604f25  (fix(sedation): restore Trauma r6 label, correct the nowhere-bucket narrative, revert the C2 retirement)
 docs/ tree clean before run: yes
-date: 2026-11-20T07:02:50Z
+date: 2026-11-20T07:14:47Z
 ======
 cmd:  python3 scripts/verify_pems_canonical.py
 EXIT=0

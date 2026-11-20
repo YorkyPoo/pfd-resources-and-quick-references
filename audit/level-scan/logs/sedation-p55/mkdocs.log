@@ -8,13 +8,8 @@
 
 [90m  To disable this warning, set NO_MKDOCS_2_WARNING=1.[0m
 
-INFO    -  SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
-  File "/root/pfd-ssg-env/lib/python3.14/site-packages/mkdocs/config/config_options.py", line 1205, in _load_hook
-    spec.loader.exec_module(module)
-  File "/root/.hermes/profiles/developer/cache/scratch/wt-sed-gates/scripts/mkdocs_post_build.py", line 146, in 
-
 INFO    -  Cleaning site directory
-INFO    -  Building documentation to directory: /root/.hermes/profiles/developer/cache/scratch/wt-sed-gates/site
+INFO    -  Building documentation to directory: /root/.hermes/profiles/developer/cache/scratch/wt-sed-main/site
 INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
   - personnel-policies/policies/00-introduction.md
   - personnel-policies/policies/01-general-provisions.md
@@ -61,6 +56,6 @@ INFO    -  The following pages exist in the docs directory, but are not included
   - personnel-policies/policies/42-resignations-and-separations.md
   - personnel-policies/policies/43-retiree-health-insurance-coverage.md
   - protocols/front-matter/00 - AI Formatting Guidelines.md
+INFO    -  Documentation built in 7.48 seconds
 [post_build] sitemap: dropped 1 noindex page(s): ['/resources/links.html']
-[post_build] Generated sw.js with 281 pre-cached pages (version: 20261120-070307)
-INFO    -  Documentation built in 6.88 seconds
+[post_build] Generated sw.js with 281 pre-cached pages (version: 20261120-071502)
