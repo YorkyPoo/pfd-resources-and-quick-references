@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../../stylesheets/pip-strip.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -9145,69 +9147,7 @@
 </div>
 </div>
 <h3 id="interventions">Interventions</h3>
-<div class="lv-wrap">
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">#</th>
-<th>Level</th>
-<th>Action / Intervention</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">1</td>
-<td><span class="lvl lvl-emr">EMR</span></td>
-<td>Follow Universal Patient Care / Initial Patient Contact protocol</td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td><span class="lvl lvl-emr">EMR</span></td>
-<td>Perform focused evaluation including assessment of airway and lung sounds</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td><span class="lvl lvl-emr">EMR</span></td>
-<td>Provide supplemental oxygen to maintain SpO2 &gt; 94%</td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td><span class="lvl lvl-emt">EMT</span></td>
-<td>Consider non-invasive positive pressure ventilation (<strong>CPAP</strong>) for severe respiratory distress</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td><span class="lvl lvl-emt">EMT</span></td>
-<td><strong>CPAP Initial Settings:</strong> PEEP 5 cmH2O</td>
-</tr>
-<tr>
-<td style="text-align: center;">9</td>
-<td><span class="lvl lvl-p">P</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup></td>
-<td><strong>CPAP Titration:</strong> Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing</td>
-</tr>
-<tr>
-<td style="text-align: center;">10</td>
-<td><span class="lvl lvl-a">A</span></td>
-<td><strong><a href="../../pharmacology/Nitroglycerin.html">Nitroglycerin</a></strong><br>Adult: <strong>0.4 mg SL</strong></td>
-</tr>
-<tr>
-<td style="text-align: center;">11</td>
-<td><span class="lvl lvl-a">A</span></td>
-<td><strong><a href="../../pharmacology/Nitroglycerin.html">Nitroglycerin</a></strong> Repeat Administration:<br>May repeat every 5 minutes as needed if SBP remains &gt; 100 mmHg / MAP &gt; 65 mmHg (maximum 3 doses)</td>
-</tr>
-<tr>
-<td style="text-align: center;">12</td>
-<td><span class="lvl lvl-i">I</span></td>
-<td><strong>Furosemide (Lasix)</strong><br>Adult: <strong>40 mg IV/IO slow push</strong></td>
-</tr>
-<tr>
-<td style="text-align: center;">13</td>
-<td><span class="lvl lvl-mc">MC</span></td>
-<td>Contact Medical Control for guidance as needed</td>
-</tr>
-</tbody>
-</table>
-</div>
+<div class="pip-block" data-pip-block><p class="pip-pick-label">Tap your certification level</p><div class="pip-pick" role="group" aria-label="Show the protocol as your certification level"><button type="button" class="pip-btn" data-level="R" aria-pressed="false">R</button><button type="button" class="pip-btn" data-level="B" aria-pressed="false">B</button><button type="button" class="pip-btn" data-level="A" aria-pressed="false">A</button><button type="button" class="pip-btn" data-level="I" aria-pressed="false">I</button><button type="button" class="pip-btn" data-level="P" aria-pressed="false">P</button><button type="button" class="pip-btn pip-btn-all" data-level="all" aria-pressed="true">Show all</button></div><p class="pip-tally" aria-live="polite">Show all — 10 actions. Each row names the level its action starts at; tap a level to see this protocol as you. · 1 level unverified ⚑</p><div class="pip-wrap"><table class="pip-table"><colgroup><col class="pip-col-n"><col><col class="pip-col-strip"></colgroup><thead><tr><th class="pip-th-n">#</th><th>Action / Intervention</th><th class="pip-th-strip"><span class="pip-strip pip-strip-head"><i>R</i><i>B</i><i>A</i><i>I</i><i>P</i></span></th></tr></thead><tbody><tr data-states="go,go,go,go,go"><td class="pip-n">1</td><td class="pip-act"><div class="pip-action">Follow Universal Patient Care / Initial Patient Contact protocol</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from R</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): standing order; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="go,go,go,go,go"><td class="pip-n">2</td><td class="pip-act"><div class="pip-action">Perform focused evaluation including assessment of airway and lung sounds</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from R</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): standing order; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="go,go,go,go,go"><td class="pip-n">3</td><td class="pip-act"><div class="pip-action">Provide supplemental oxygen to maintain SpO2 &gt; 94%</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from R</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): standing order; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,go,go,go,go"><td class="pip-n">4</td><td class="pip-act"><div class="pip-action">Consider non-invasive positive pressure ventilation (<strong>CPAP</strong>) for severe respiratory distress</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from B</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,go,go,go,go"><td class="pip-n">5</td><td class="pip-act"><div class="pip-action"><strong>CPAP Initial Settings:</strong> PEEP 5 cmH2O</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from B</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,no,no,go" data-unverified="1"><td class="pip-n">9</td><td class="pip-act"><div class="pip-action"><strong>CPAP Titration:</strong> Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing</div><span class="pip-tag-wrap"><span class="pip-tag flag">level unverified ⚑</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="no verified provider level — OWNER_REQUIRED; the published level is not confirmed against the source"><i class="pip no unv"></i><i class="pip no unv"></i><i class="pip no unv"></i><i class="pip no unv"></i><i class="pip no unv"></i></span></td></tr><tr data-states="no,no,go,go,go"><td class="pip-n">10</td><td class="pip-act"><div class="pip-action"><strong><a href="../../pharmacology/Nitroglycerin.html">Nitroglycerin</a></strong><br>Adult: <strong>0.4 mg SL</strong></div><span class="pip-tag-wrap"><span class="pip-tag go">standing from A</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,go,go,go"><td class="pip-n">11</td><td class="pip-act"><div class="pip-action"><strong><a href="../../pharmacology/Nitroglycerin.html">Nitroglycerin</a></strong> Repeat Administration:<br>May repeat every 5 minutes as needed if SBP remains &gt; 100 mmHg / MAP &gt; 65 mmHg (maximum 3 doses)</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from A</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,no,go,go"><td class="pip-n">12</td><td class="pip-act"><div class="pip-action"><strong>Furosemide (Lasix)</strong><br>Adult: <strong>40 mg IV/IO slow push</strong></div><span class="pip-tag-wrap"><span class="pip-tag go">standing from I</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): not authorised; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="call,call,call,call,call"><td class="pip-n">13</td><td class="pip-act"><div class="pip-action">Contact Medical Control for guidance as needed</div><span class="pip-tag-wrap"><span class="pip-tag call">MC at every level</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): call Medical Control first; B (EMT): call Medical Control first; A (AEMT): call Medical Control first; I (Intermediate): call Medical Control first; P (Paramedic): call Medical Control first"><i class="pip call"></i><i class="pip call"></i><i class="pip call"></i><i class="pip call"></i><i class="pip call"></i></span></td></tr></tbody></table></div><div class="pip-legend"><p class="pip-legend-h">Reading the strip</p><ul class="pip-keys"><li><span class="pip-strip"><i class="pip go"></i></span><span><b>Solid</b> — standing order at that level. You may act.</span></li><li><span class="pip-strip"><i class="pip call"></i></span><span><b>Hatched</b> — call Medical Control first at that level.</span></li><li><span class="pip-strip"><i class="pip no"></i></span><span><b>Empty outline</b> — not authorised at that level.</span></li></ul><p class="pip-legend-levels"><span class="pip-letters">R B A I P</span> = EMR · EMT · AEMT · Intermediate · Paramedic</p><p class="pip-legend-note">Position names the level and the words name it too, so colour is never the only signal. Colour is reserved for the one question that matters on scene: <b>do I act, do I call, or is this not mine.</b></p></div></div>
 <p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — row 9: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
 <p><em>Rows 6–8 are covered under <a href="#references-good-practice">References &amp; Good Practice</a> below.</em></p>
@@ -9297,6 +9237,8 @@
     
     
       <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../javascripts/pip-strip.js"></script>
       
     
   <nav class="bbnav" aria-label="Field navigation"><a class="bbitem" href="../../index.html"><span class="bbico">⌂</span><span class="bbtxt">Home</span></a><a class="bbitem" href="../../resources/ems.html"><span class="bbico">✚</span><span class="bbtxt">EMS</span></a><a class="bbitem" href="../../resources/fire.html"><span class="bbico">▲</span><span class="bbtxt">Fire</span></a><a class="bbitem" href="../../resources/station.html"><span class="bbico">▦</span><span class="bbtxt">Station</span></a></nav>

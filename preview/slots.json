@@ -7,10 +7,10 @@
       "sha": "98189044c7e1acd89c2fd48e0ab4eb5be06a02cb"
     },
     "pilot": {
-      "branch": "pilot-references-block",
-      "built_at": "2026-11-20T05:08:19Z",
-      "description": "Pilot: prose from action tables into References & Good Practice (Cold r6 = EMR, 2 pages)",
-      "sha": "6ff87064ee378fb4b4cf8b6c1ccfa7dc748754a5"
+      "branch": "pilot-pipstrip",
+      "built_at": "2026-11-20T05:11:42Z",
+      "description": "Protocol format pilot: tapped-level R|B|A|I|P pip strip (2 pages)",
+      "sha": "dc4cd67a31187307c61a0e4ce69d47a12c4e548c"
     },
     "relabel": {
       "branch": "provider-level-letters",
@@ -19,5 +19,5 @@
       "sha": "05addb26252f6259debff424aa83b68467bea4ab"
     }
   },
-  "updated_at": "2026-11-20T05:08:19.833038+00:00"
+  "updated_at": "2026-11-20T05:11:42.755399+00:00"
 }
