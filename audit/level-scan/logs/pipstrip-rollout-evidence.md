@@ -353,3 +353,131 @@ in this worktree hit.
   as-is; renumbering is a separate card.
 - The verifier and the hook share `states_for`, so parity proves render ==
   mapper; the ladder rule itself is proved by the prototype test only.
+
+## Execution evidence, re-run on tip `2efbfb4` (reviewer round 2)
+
+Everything below was executed on this machine at `2efbfb4` after the reviewer
+reported it could not read the branch. Three builds were made from the same
+checkout with only `extra.pip_strip.enabled` changed, plus a fourth build of
+the real `main` commit `d5fd03c` for comparison:
+
+```
+site-on   : wt-piproll @ 2efbfb4, pip_strip.enabled = true
+site-off  : wt-piproll @ 2efbfb4, pip_strip.enabled = false
+site-main : wt-piproll-main @ d5fd03c (the pre-rollout main commit)
+```
+
+Builds used `mkdocs build -f mkdocs.preview.{on,off,main}.yml`, derived from
+each checkout's own `mkdocs.yml` by changing `site_dir` and, for the off build
+only, `enabled`. Exit code 0 for all three.
+
+### 1. `enabled: false` — same page, both ways, diffed against `d5fd03c`
+
+```
+page: procedures/CPAP.html
+off build   lv-wrap blocks: 1
+main build  lv-wrap blocks: 1      (d5fd03c)
+identical markup: True
+--- unified diff off vs d5fd03c ---
+(no differences)
+```
+
+Site-wide, every page carrying an `lv-wrap` table:
+
+```
+lv-wrap markup vs d5fd03c main build -> identical: 69; differing: 0
+off  build: pages with lv-wrap = 69, pages with data-pip-block = 0
+on   build: pages with lv-wrap = 17, pages with data-pip-block = 52
+main build: pages with lv-wrap = 69
+```
+
+Off build, `procedures/CPAP.html`, the chip table verbatim:
+
+```html
+<div class="lv-wrap">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">#</th>
+<th>Level</th>
+<th>Action / Intervention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td><span class="lvl lvl-emt">EMT</span></td>
+<td>Explain procedure and indications to the patient.</td>
+</tr>
+...
+<tr>
+<td style="text-align: center;">6</td>
+<td><span class="lvl lvl-i">I</span></td>
+<td>Consider titrating PEEP (5–15 mmHg) as needed to improve ventilation.</td>
+</tr>
+</tbody>
+</table>
+</div>
+```
+
+On build, same page:
+
+```html
+<div class="pip-block" data-pip-block><p class="pip-pick-label">Tap your certification level</p><div class="pip-pick" role="group" aria-label="Show the protocol as your certification level"><button type="button" class="pip-btn" data-level="R" aria-pressed="false">R</button><button type="button" class="pip-btn" data-level="B" aria-pressed="false">B</button><button type="button" class="pip-btn" data-level="A" aria-pressed="false">A</button><button type="button" class="pip-btn" data-level="I" aria-pressed="false">I</button><button type="button" class="pip-btn" data-level="P" aria-pressed="false">P</button><button type="button" class="pip-btn pip-btn-all" data-level="all" aria-pressed="true">Show all</button></div><p class="pip-tally" aria-live="polite">Show all — 6 actions. Each row names the level its action starts at; tap a level to see this protocol as you.</p><div class="pip-wrap">
+```
+
+`data-pip-block` present, `class="lv-wrap` absent — the switch is one key and
+one key only.
+
+### 2. `data-states` vs the markdown chip, three converted pages
+
+Read from the on build and from the markdown with the verifier's independent
+chip reader (`chip_states`, which word-splits class lists rather than trusting
+the hook's own parse):
+
+```
+docs/protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
+ markdown row 8a  chip -> no,no,no,go,go   marks=['†']
+ html     row 8a  data-states=no,no,no,go,go  marks=['†']  MATCH
+
+docs/protocols/cardiac/04_Chest_Pain_ACS_PROC.md
+ markdown row 14  chip -> no,no,no,call,go marks=[]
+ html     row 14  data-states=no,no,no,call,go marks=[]    MATCH
+
+docs/procedures/Tourniquet_Application.md
+ table 1: markdown rows=6  html <tr data-states>=6
+ markdown row 1   chip -> go,go,go,go,go
+ html     row 1   data-states=go,go,go,go,go               MATCH
+ (rows 2-6 likewise identical)
+```
+
+Row 14 of Chest Pain is the `+MC` case the substring bug used to break: it
+renders `call` at **I only**, not at all five levels.
+
+### 3. `verify_pip_strip.py` re-run against the built output
+
+```
+$ python3 scripts/verify_pip_strip.py --base <site-on> --src docs \
+      --archive audit/archive/tables-2026-11-20 --quiet
+pages converted : 52
+action rows     : 502
+pages untouched : 17 (no provider level in any table)
+OK — every converted page matches its markdown, row by row; every untouched page is unchanged
+VERIFY_EXIT=0
+```
+
+Parity, counted on the same build:
+
+```
+502 rows in markdown / 502 rows in HTML / 502 compared / 0 mismatches
+```
+
+### 4. Branch contents at `2efbfb4`
+
+```
+HEAD=2efbfb4ef175ab28dd3067482bf1f7c714c02cc8
+reconciliation.md present at 2efbfb4
+archive index.md present at 2efbfb4
+archive files in tree: 70   (69 page snapshots + index.md)
+tag tables-backup-2026-11-20 -> d5fd03c (object 2e88065)
+```
