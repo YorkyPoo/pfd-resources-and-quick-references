@@ -83,10 +83,28 @@ pages with lettered sub-rows in the rebased tree: 24 sub-row numbers
 OK — every lettered sub-row from rows-one-action is present, none extra
 ```
 
-Ledger: **20 bundled rows → 45 sub-rows**, each part chipped from the PEMS row that
-prints that action; 3 parts stay `owner_required` (Asystole 8a, Cardiac Arrest
-Non-Traumatic 4a, Asthma 8a) and keep their ⚑. `/preview/rows-rebased/protocols/cardiac/`
-carries the same splits.
+That script walks `docs/protocols`; the 25th lettered part (`Neonatal_Resuscitation.md`
+row 5a) is under `docs/procedures`. Total lettered parts: 25, i.e. the ledger's
+**20 bundled rows → 45 parts** (20 first parts + 25 lettered), each part chipped from the
+PEMS row that prints that action; 3 parts stay `owner_required` (Asystole 8a, Cardiac
+Arrest Non-Traumatic 4a, Asthma 8a) and keep their ⚑.
+
+### Levels: nothing was re-decided; 17 first-parts carry the split's lower level
+
+No conflict required choosing a level. Comparing the chips of every row that exists on
+both trees, 21 rows differ, and every one is explained by the split/relocation the branch
+already made:
+
+* 17 are the **first part of a split row**, so the number now carries the level of the
+  first action rather than the bundled level (e.g. Asystole r8 `EMT -> EMR` because r8 is
+  now "recognise the rhythm" at EMR, with 8a `I` and 8b `I` carrying the other halves;
+  Pneumothorax r13 `P -> I` with 13a/13b `P`). Each part's chip is compared to the badge
+  of the PEMS row it names by `level_rule.py --check` (EXIT=0), so no level here is mine.
+* 4 rows are gone from the table because they were moved below it and recorded in
+  `relocated-rows.yaml`: Pediatric Stridor r2, Pneumothorax r5, Upper Airway Obstruction
+  r2, Trauma r6.
+
+`/preview/rows-rebased/protocols/cardiac/` carries the same splits.
 
 ## 4. Row 9 defect and page-voice sweep
 
