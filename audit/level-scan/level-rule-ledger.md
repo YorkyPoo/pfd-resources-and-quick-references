@@ -830,80 +830,85 @@ fails on a bracketed row that is neither `mc_required` nor `mc_bracket_excluded`
 (`status_before`, captured by the writer); "after" is the status on this page now.
 A row that stopped being flagged is a **cross-page citation** or was closed by a
 recorded decision — the citation that cleared it is listed above and in the table.
+Rows relocated out of an action table are not in the ledger any more, so their
+pre-move status is read from `audit/level-scan/relocated-rows.yaml` (the
+**relocated** column) — these historical counts do not shrink just because a row
+left the table; a relocated row that was flagged before counts as cleared by the
+move, not by a citation.
 
-| page | flagged before | flagged after | cleared | of which cross-page |
-|---|---:|---:|---:|---:|
-| `04_Supraventricular_Tachycardia_PROC.md` | 0 | 0 | new | 0 |
-| `04_Post_Resuscitation_Care_PROC.md` | 0 | 0 | new | 0 |
-| `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` | 4 | 1 | 3 | 3 |
-| `04_Bradycardia_PROC.md` | 0 | 0 | new | 0 |
-| `04_Cardiac_Arrest_Non_Traumatic_PROC.md` | 3 | 2 | 1 | 1 |
-| `04_Cardiac_Arrest_Traumatic_PROC.md` | 3 | 1 | 2 | 2 |
-| `04_Chest_Pain_ACS_PROC.md` | 4 | 0 | 4 | 2 |
-| `04_Hypertensive_Crisis_PROC.md` | 1 | 0 | 1 | 1 |
-| `04_V_Fib_Pulseless_V_Tach_PROC.md` | 1 | 1 | 0 | 0 |
-| `07_Sepsis_PROC.md` | 0 | 0 | new | 0 |
-| `07_Allergic_Reaction_Anaphylaxis_PROC.md` | 0 | 0 | new | 0 |
-| `07_OB_Emergencies_PROC.md` | 0 | 0 | new | 0 |
-| `07_Hypotension_Shock_Non_Trauma_PROC.md` | 0 | 0 | new | 0 |
-| `05_Seizure_PROC.md` | 0 | 0 | new | 0 |
-| `05_Hypoglycemia_Hyperglycemia_PROC.md` | 0 | 0 | new | 0 |
-| `05_Stroke_TIA_PROC.md` | 2 | 2 | 0 | 0 |
-| `03_Airway_Inhalation_Irritants_PROC.md` | 5 | 1 | 4 | 2 |
-| `03_Asthma_COPD_Reactive_Airway_PROC.md` | 3 | 2 | 1 | 1 |
-| `03_Pediatric_Stridor_PROC.md` | 6 | 2 | 4 | 4 |
-| `03_Pneumothorax_PROC.md` | 10 | 5 | 5 | 5 |
-| `03_Pulmonary_Edema_Congestion_PROC.md` | 1 | 1 | 0 | 0 |
-| `03_Respiratory_Arrest_PROC.md` | 3 | 0 | 3 | 3 |
-| `03_Respiratory_Distress_PROC.md` | 6 | 2 | 4 | 4 |
-| `03_Smoke_Inhalation_PROC.md` | 8 | 1 | 7 | 6 |
-| `03_Upper_Airway_Obstruction_PROC.md` | 3 | 1 | 2 | 2 |
-| `09_Burns_Thermal_PROC.md` | 0 | 1 | new | 0 |
-| `09_Crush_Syndrome_PROC.md` | 0 | 0 | new | 0 |
-| `09_Electrical_Injuries_PROC.md` | 0 | 1 | new | 0 |
-| `09_Hemorrhage_Control_PROC.md` | 0 | 0 | new | 0 |
-| `09_Lightning_Injuries_PROC.md` | 0 | 1 | new | 0 |
-| `09_Trauma_PROC.md` | 0 | 2 | new | 0 |
-| `06_Nausea_Vomiting_PROC.md` | 0 | 0 | new | 0 |
-| `06_Nerve_Agents_PROC.md` | 0 | 0 | new | 0 |
-| `06_Overdose_Poisoning_PROC.md` | 0 | 0 | new | 0 |
-| `02_Behavioral_Patient_Restraint_PROC.md` | 0 | 0 | new | 0 |
-| `02_Cold_Exposure_PROC.md` | 0 | 0 | new | 0 |
-| `02_Diving_and_Drowning_Emergencies_PROC.md` | 0 | 0 | new | 0 |
-| `02_Heat_Exposure_PROC.md` | 0 | 0 | new | 0 |
-| `02_Pain_Control_PROC.md` | 0 | 0 | new | 0 |
-| `02_Sedation_Assisted_Non_Paralytic_PROC.md` | 0 | 2 | new | 0 |
-| `Universal Patient Care.md` | 0 | 0 | new | 0 |
-| `CPAP.md` | 0 | 0 | new | 0 |
-| `Capnography.md` | 0 | 0 | new | 0 |
-| `Chest_Decompression.md` | 0 | 0 | new | 0 |
-| `Endotracheal_Intubation.md` | 0 | 0 | new | 0 |
-| `Intraosseous_Access.md` | 0 | 0 | new | 0 |
-| `Medication_Administration.md` | 0 | 0 | new | 0 |
-| `Nasogastric_Tube.md` | 0 | 0 | new | 0 |
-| `Neonatal_Resuscitation.md` | 0 | 1 | new | 0 |
-| `Spinal_Motion_Restriction.md` | 0 | 0 | new | 0 |
-| `Surgical_Airway.md` | 0 | 0 | new | 0 |
-| `Taser_Barb_Removal.md` | 0 | 0 | new | 0 |
-| `Tourniquet_Application.md` | 0 | 0 | new | 0 |
-| `Transcutaneous_Pacing.md` | 0 | 0 | new | 0 |
-| `01_ALS_Release_to_BLS_PROC.md` | 0 | 0 | new | 0 |
-| `01_Abuse_Recognition_and_Mandated_Reporting_PROC.md` | 0 | 0 | new | 0 |
-| `01_Behavioral_Health_Transportation_Decision_PROC.md` | 0 | 2 | new | 0 |
-| `01_Communications_PROC.md` | 0 | 0 | new | 0 |
-| `01_Death_Criteria_for_Withholding_Resuscitation_PROC.md` | 0 | 0 | new | 0 |
-| `01_Helicopter_EMS_HEMS_PROC.md` | 0 | 0 | new | 0 |
-| `01_Infant_Abandonment_PROC.md` | 0 | 1 | new | 0 |
-| `01_Patient_Refusal_of_Treatment_Transport_PROC.md` | 0 | 0 | new | 0 |
-| `01_Patient_Restraint_PROC.md` | 0 | 0 | new | 0 |
-| `01_STEMI_Field_Triage_PROC.md` | 0 | 0 | new | 0 |
-| `01_Safe_Transport_of_Pediatric_Patients_PROC.md` | 0 | 0 | new | 0 |
-| `01_Stroke_Field_Triage_PROC.md` | 0 | 1 | new | 0 |
-| `01_Transportation_and_Destination_Determination_PROC.md` | 0 | 0 | new | 0 |
-| `01_Trauma_Field_Triage_PROC.md` | 0 | 0 | new | 0 |
-| `04b_Aortic_Dissection_AAA_PROC.md` | 11 | 11 | 0 | 0 |
+| page | flagged before | flagged after | cleared | of which cross-page | of which relocated |
+|---|---:|---:|---:|---:|---:|
+| `04_Supraventricular_Tachycardia_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `04_Post_Resuscitation_Care_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` | 4 | 1 | 3 | 3 | 0 |
+| `04_Bradycardia_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `04_Cardiac_Arrest_Non_Traumatic_PROC.md` | 3 | 2 | 1 | 1 | 0 |
+| `04_Cardiac_Arrest_Traumatic_PROC.md` | 3 | 1 | 2 | 2 | 0 |
+| `04_Chest_Pain_ACS_PROC.md` | 4 | 0 | 4 | 2 | 0 |
+| `04_Hypertensive_Crisis_PROC.md` | 1 | 0 | 1 | 1 | 0 |
+| `04_V_Fib_Pulseless_V_Tach_PROC.md` | 1 | 1 | 0 | 0 | 0 |
+| `07_Sepsis_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `07_Allergic_Reaction_Anaphylaxis_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `07_OB_Emergencies_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `07_Hypotension_Shock_Non_Trauma_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `05_Seizure_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `05_Hypoglycemia_Hyperglycemia_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `05_Stroke_TIA_PROC.md` | 2 | 2 | 0 | 0 | 0 |
+| `03_Airway_Inhalation_Irritants_PROC.md` | 5 | 1 | 4 | 2 | 0 |
+| `03_Asthma_COPD_Reactive_Airway_PROC.md` | 3 | 2 | 1 | 1 | 0 |
+| `03_Pediatric_Stridor_PROC.md` | 6 | 2 | 4 | 4 | 0 |
+| `03_Pneumothorax_PROC.md` | 10 | 5 | 5 | 5 | 0 |
+| `03_Pulmonary_Edema_Congestion_PROC.md` | 4 | 1 | 3 | 0 | 3 |
+| `03_Respiratory_Arrest_PROC.md` | 3 | 0 | 3 | 3 | 0 |
+| `03_Respiratory_Distress_PROC.md` | 6 | 2 | 4 | 4 | 0 |
+| `03_Smoke_Inhalation_PROC.md` | 8 | 1 | 7 | 6 | 0 |
+| `03_Upper_Airway_Obstruction_PROC.md` | 3 | 1 | 2 | 2 | 0 |
+| `09_Burns_Thermal_PROC.md` | 0 | 1 | new | 0 | 0 |
+| `09_Crush_Syndrome_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `09_Electrical_Injuries_PROC.md` | 0 | 1 | new | 0 | 0 |
+| `09_Hemorrhage_Control_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `09_Lightning_Injuries_PROC.md` | 0 | 1 | new | 0 | 0 |
+| `09_Trauma_PROC.md` | 0 | 2 | new | 0 | 0 |
+| `06_Nausea_Vomiting_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `06_Nerve_Agents_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `06_Overdose_Poisoning_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `02_Behavioral_Patient_Restraint_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `02_Cold_Exposure_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `02_Diving_and_Drowning_Emergencies_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `02_Heat_Exposure_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `02_Pain_Control_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `02_Sedation_Assisted_Non_Paralytic_PROC.md` | 0 | 2 | new | 0 | 0 |
+| `Universal Patient Care.md` | 0 | 0 | new | 0 | 0 |
+| `CPAP.md` | 0 | 0 | new | 0 | 0 |
+| `Capnography.md` | 0 | 0 | new | 0 | 0 |
+| `Chest_Decompression.md` | 0 | 0 | new | 0 | 0 |
+| `Endotracheal_Intubation.md` | 0 | 0 | new | 0 | 0 |
+| `Intraosseous_Access.md` | 0 | 0 | new | 0 | 0 |
+| `Medication_Administration.md` | 0 | 0 | new | 0 | 0 |
+| `Nasogastric_Tube.md` | 0 | 0 | new | 0 | 0 |
+| `Neonatal_Resuscitation.md` | 0 | 1 | new | 0 | 0 |
+| `Spinal_Motion_Restriction.md` | 0 | 0 | new | 0 | 0 |
+| `Surgical_Airway.md` | 0 | 0 | new | 0 | 0 |
+| `Taser_Barb_Removal.md` | 0 | 0 | new | 0 | 0 |
+| `Tourniquet_Application.md` | 0 | 0 | new | 0 | 0 |
+| `Transcutaneous_Pacing.md` | 0 | 0 | new | 0 | 0 |
+| `01_ALS_Release_to_BLS_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `01_Abuse_Recognition_and_Mandated_Reporting_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `01_Behavioral_Health_Transportation_Decision_PROC.md` | 0 | 2 | new | 0 | 0 |
+| `01_Communications_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `01_Death_Criteria_for_Withholding_Resuscitation_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `01_Helicopter_EMS_HEMS_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `01_Infant_Abandonment_PROC.md` | 0 | 1 | new | 0 | 0 |
+| `01_Patient_Refusal_of_Treatment_Transport_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `01_Patient_Restraint_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `01_STEMI_Field_Triage_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `01_Safe_Transport_of_Pediatric_Patients_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `01_Stroke_Field_Triage_PROC.md` | 0 | 1 | new | 0 | 0 |
+| `01_Transportation_and_Destination_Determination_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `01_Trauma_Field_Triage_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `04b_Aortic_Dissection_AAA_PROC.md` | 11 | 11 | 0 | 0 | 0 |
 
-**Total: 74 flagged before, 45 after (29 cleared).**
+**Total: 77 flagged before, 45 after (32 cleared).**
 
 
 ## OWNER_REQUIRED
@@ -1529,7 +1534,8 @@ decision before the page is treated as final.
   hypotensive.", badge EMT) and row 3 cites Universal Patient Care p.50#9
   ("Establish IV / IO access when indicated.", badge A). Both print the site row
   verbatim; chip moves A -> EMT (row 2) and I -> A (row 3) as the source prints.
-- **Pilot 2026-11-20 — Cold Exposure rows 6 and 9 were moved out of the action table into the page's "References & Good Practice" block.** Both are unbadged PEMS p.67 PEARLS prose (row 6 -> PEARLS #5, row 9 -> PEARLS #3); the owner's presentation ruling puts unbadged prose below the table instead of chipping it. The levels this page recorded for them (`EMT` and `MC`, Pearl ruling 2026-11-17) are stated in that block and stay in `level-rulings.yaml`; they are no longer chips, so they are no longer in this ledger.
+- **Pilot 2026-11-20 — Cold Exposure rows 6 and 9 were moved out of the action table into the page's "References & Good Practice" block.** Both are unbadged PEMS p.67 PEARLS prose; the owner's presentation ruling puts unbadged prose below the table instead of chipping it. The levels this page records for them (row 6 `EMT` (p.67 PEARLS #5), row 9 `MC` (p.67 PEARLS #3), Pearl ruling 2026-11-17) are stated in that block and stay in `level-rulings.yaml`; they are no longer chips, so they are no longer in this ledger.
+- **Pearl ruling 2026-11-17 — Cold Exposure row 6 keeps `EMT` although the page's own BLS floor is `EMR`.** The ruling's test reads "BLS-scope -> the page's BLS floor", and heat packs are a BLS skill ("anyone can do that"), yet this card's row table said the level stays unchanged, so the page's "References & Good Practice" block now states `EMT` while the page itself chips a floor of `EMR` (derived from the page's 7 level chips, in file order: EMR, EMR, EMR, EMR, EMR, EMR, EMT). Both readings agree the action is BLS-scope and that no new authority is created; they disagree only on which BLS level prints. Owner to confirm: keep `EMT` as directed, or lower it to the page floor `EMR`? Nothing changes on the page until then.
 - **Batch 6 — administrative pages are chipped POLICY / PENDING, not levelled.**
   Owner ruling 2026-11-16: *"Treat admin pages as policy."* All 14 administrative
   pages are now 3-column tables whose marker column says `POLICY` (the rule is
@@ -1671,6 +1677,7 @@ new defect. Source of truth: `audit/level-scan/verifier-exceptions.yaml`.
 | converted pages — protocol/procedure chassis | 55 |
 | converted pages — administrative policy (POLICY/PENDING) | 14 |
 | action rows — total | 599 |
+| action rows relocated out of an action table (still on the page, not in this ledger — `relocated-rows.yaml`) | 5 |
 | cited to a PEMS protocol row (incl. cross-page) | 459 |
 | cross-page citations | 47 |
 | POLICY (PEMS administrative policy) | 89 |

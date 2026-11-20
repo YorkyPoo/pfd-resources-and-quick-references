@@ -51,7 +51,7 @@ Management of acute cardiogenic pulmonary edema and congestion due to congestive
 
 ### References & Good Practice
 
-**⚠️ CPAP contraindications.** Check every item before and during CPAP.
+**⚠️ CPAP contraindications.**
 
 - Apnea / agonal respirations
 - Decreased level of consciousness (GCS ≤ 13)

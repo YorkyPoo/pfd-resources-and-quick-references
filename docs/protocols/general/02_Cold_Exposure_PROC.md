@@ -35,7 +35,7 @@ Guidelines for managing systemic hypothermia and localized cold injuries, emphas
 
 ### References & Good Practice
 
-**Heat packs and warm blankets — active external rewarming.** If the patient is alert and responsive, use active external rewarming with heat packs, warm blankets, etc. **Do not place heat packs, hot water bottles, IV bags, or other heat-retaining devices directly on skin** (same Pearls list, #2).
+**Heat packs and warm blankets — active external rewarming.** If the patient is alert and responsive, use active external rewarming with heat packs, warm blankets, etc.
 
 **Medical Control before the AED.** Contact Medical Control prior to use of AED.
 
