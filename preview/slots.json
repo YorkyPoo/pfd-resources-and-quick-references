@@ -66,6 +66,12 @@
       "description": "Pilot: prose moved out of action tables",
       "sha": "c9615d945742aa2ad3465dd7461fcc0e6e9a8dec"
     },
+    "pipstrip": {
+      "branch": "pilot-pipstrip-rebased",
+      "built_at": "2026-11-20T15:09:40Z",
+      "description": "Five-pip level strip (pilot: Cold Exposure, Pulmonary Edema), rebased onto main",
+      "sha": "c543ecceda7dcef2cdd3b66c38971abbd86e7532"
+    },
     "refs-sweep": {
       "branch": "refs-sweep",
       "built_at": "2026-11-20T13:59:20Z",
@@ -97,5 +103,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-20T14:43:16.016117+00:00"
+  "updated_at": "2026-11-20T15:09:40.367979+00:00"
 }
