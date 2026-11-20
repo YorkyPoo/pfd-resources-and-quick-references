@@ -785,8 +785,16 @@ def load_rulings():
           CONTRAINDICATIONS / INDICATIONS / CRITERIA entry (pems_prose.json). Verified
           verbatim by --check, exactly like a quoted row.
       level_from: {page, ordinal}  a printed, level-badged row whose badge IS the ruled
-          level (e.g. the CPAP procedure rows badge EMT for the contraindications the
-          page lists). Verified: the chip must equal that row's printed badge.
+          level (e.g. the CPAP procedure rows print EMT for the procedure
+          whose contraindications the page lists). Verified: the chip must equal that row's
+          printed badge.
+      clause_of: {page, ordinal, token}  a clause INSIDE a printed row that scopes the action,
+          e.g. the `I/P only` half of p.239#5 (badge EMT). Verified: the token is a verbatim
+          span of that row, and the ruled level is the lowest level the token itself names.
+          The row's printed badge is NOT the ruling's authority, which is why this needs its
+          own field rather than `level_from`. A clause_of ruling must also declare
+          `clause_only: true` — see load_rulings()'s validation: the flag may retire only
+          when the site row covers the scoped clause alone.
 
     Neither field makes the level a PEMS citation: the level is still the owner's scope
     decision (see the file header), and the ledger keeps reporting it as `owner_ruled`.
@@ -885,6 +893,26 @@ def load_rulings():
                                  f'`answered` {ans["level"]!r} but its `level` is '
                                  f'{rec["level"]!r} — an answer that changes the level must '
                                  f'be the level the ruling records')
+        co = rec.get('clause_of')
+        if co is not None:
+            if not isinstance(co, dict) or co.get('page') is None \
+                    or co.get('ordinal') is None or not str(co.get('token') or '').strip():
+                raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} '
+                                 f'clause_of must name page + ordinal + the clause token the '
+                                 f'printed row carries')
+            # THE BUNDLED-ROW RULE: a clause_of ruling adopts one level out of a compound
+            # printed row, so the OWNER_REQUIRED flag may retire ONLY when the site row
+            # covers that clause alone. `clause_only: true` is how a ruling says so; without
+            # it the mechanism is not available at all, and the row keeps its warning.
+            if not rec.get('clause_only'):
+                raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} declares '
+                                 f'a clause_of but not clause_only: true — a clause_of ruling '
+                                 f'may retire the OWNER_REQUIRED flag only when the site row '
+                                 f'covers the scoped clause alone')
+        elif rec.get('clause_only'):
+            raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} declares '
+                             f'clause_only without a clause_of — say which printed clause the '
+                             f'level comes from')
         out[(rec['file'], str(rec['row']))] = rec
     return out
 
@@ -1321,6 +1349,51 @@ def check_prose_citations(rel, label, cites, index, fails):
                     'ordinal': int(c['ordinal']), 'quote': c['quote'],
                     'text': entry['text']})
     return out
+
+
+def clause_levels(token):
+    """The provider levels a printed clause names, lowest first: `I/P only` -> ['I', 'P']."""
+    found = []
+    for part in re.split(r'[^A-Za-z]+', token or ''):
+        up = part.upper()
+        if up in LV and up not in found:
+            found.append(up)
+    return sorted(found, key=LV.index)
+
+
+def check_clause(rel, label, co, want_level, pems, fails):
+    """Verify a `clause_of:` ruling; returns the resolved record for the ledger.
+
+    The clause must be a verbatim span of the named printed row, it must name a provider
+    level, and the ruled level must be the LOWEST level it names. That is the same reading
+    the compound-token logic refuses to chip, now made a recorded owner decision with the
+    clause itself as the evidence — so the level is checkable, and the row's badge (which
+    differs by design) is recorded beside it instead of being claimed as authority.
+    """
+    page, ordinal = co.get('page'), co.get('ordinal')
+    src = pems.get((page, ordinal))
+    if src is None:
+        fails.append(f'{rel} {label}: ruling clause_of p.{page}#{ordinal} is not in '
+                     f'pems_table.json')
+        return None
+    token = ' '.join(str(co.get('token') or '').split())
+    text = ' '.join((src.get('verbatim_text') or '').split())
+    if not token or token not in text:
+        fails.append(f'{rel} {label}: the clause {co.get("token")!r} is not a verbatim span '
+                     f'of p.{page}#{ordinal}')
+        return None
+    levels = clause_levels(token)
+    if not levels:
+        fails.append(f'{rel} {label}: the clause {co.get("token")!r} names no provider level')
+        return None
+    if levels[0] != want_level:
+        fails.append(f'{rel} {label}: ruling level {want_level} != the lowest level the '
+                     f'clause {co.get("token")!r} names ({levels[0]} of '
+                     f'{"/".join(levels)})')
+        return None
+    badge, _brk = badge_of(src)
+    return {'page': int(page), 'ordinal': int(ordinal), 'token': token,
+            'badge': badge, 'levels': levels}
 
 
 def page_floor(rel):
@@ -1840,7 +1913,8 @@ def plan(rel):
                         'level derived from the source\'s own scoping words — no owner '
                         'decision is claimed'),
                 })
-            if ruled and (ruled.get('prose_citations') or ruled.get('level_from')):
+            if ruled and (ruled.get('prose_citations') or ruled.get('level_from')
+                          or ruled.get('clause_of')):
                 # The owner decided this level, and the ruling records where PEMS prints
                 # the action (prose) and/or which printed row's badge it adopts. Any row the
                 # alignment/adjudication had attached to the row is NOT the authority for the
@@ -1858,6 +1932,8 @@ def plan(rel):
                                          'quote': c['quote']}
                                         for c in (ruled.get('prose_citations') or [])],
                     'level_from': ruled.get('level_from'),
+                    'clause_of': ruled.get('clause_of'),
+                    'clause_only': bool(ruled.get('clause_only')),
                     'ruling': ruled.get('ruling'),
                     'ruling_date': ruled.get('date'),
                     'derived_floor': ruled.get('derived_floor'),
@@ -2303,6 +2379,12 @@ COLD_PAGE = 'protocols/general/02_Cold_Exposure_PROC.md'
 # "decisions still waiting on you", so an answered card there is a published falsehood.
 COLD_RULED_HEADER = '## OWNER_RULED — Cold Exposure pilot (owner ruling 2026-11-20)'
 
+# The 2026-11-20 PEEP-titration ruling, in its own section for the same reason: it is a
+# DECISION the owner made, so it must not be published in a list titled "decisions still
+# waiting on you". `build_outstanding_decisions.py` parses this heading and renders the
+# entries under "Already ruled".
+PEEP_RULED_HEADER = '## OWNER_RULED — PEEP titration (owner ruling 2026-11-20)'
+
 # Pages whose unbadged PEMS prose lives in a "References & Good Practice" block. The owner's
 # 2026-11-20 ruling: the page states the recorded level; the PEMS citation itself stays in
 # audit/level-scan/ and must NOT be printed on the page ("I do not want that Source: PEMS
@@ -2739,6 +2821,8 @@ def emit_md(ledger):
                          f"p.{e['pems_page']}#{e['pems_ordinal']}")
         lines.append(f"  - reason: {e['reason']}")
     ruled = [e for e in ledger if e['status'] == 'owner_ruled']
+    peep = [e for e in ruled if e.get('clause_of')]
+    ruled = [e for e in ruled if not e.get('clause_of')]
     lines += ['', '## OWNER_RULED', '',
               'The owner decided these levels. They are **decisions, not source citations**:',
               'no PEMS 2024 row badges the action, the row is not PEMS-verified, and the',
@@ -2785,6 +2869,33 @@ def emit_md(ledger):
                      f"{d.get('pems_ordinal')} — ladder \"{d.get('ladder')}\" "
                      f"(levels named: {', '.join(d.get('levels') or [])}); lowest = "
                      f"{e['level_published']}")
+    # ---- OWNER_RULED — PEEP titration: the 2026-11-20 ruling, kept in its own section so the
+    # ---- owner-facing page can publish it as a DECISION ("already ruled"), not a question.
+    if peep:
+        lines += ['', PEEP_RULED_HEADER, '',
+                  'Decided, not open. The owner ruled on 2026-11-20: **"An intermediate can also',
+                  'titrate peep."** Each row below is titration-only, so one chip is the whole',
+                  'authorisation and the OWNER_REQUIRED flag is retired. The level is the owner\'s',
+                  'decision read off the printed clause named for each row — not the badge of the',
+                  'printed row that carries the clause.', '']
+        for e in peep:
+            r = e.get('owner_ruling') or {}
+            co = e['clause_of']
+            _src = pems_index(load_json('pems_table.json')).get((co['page'], co['ordinal']))
+            _badge = badge_of(_src)[0] if _src else None
+            _levels = clause_levels(co.get('token'))
+            lines.append(f"- `{e['file']}` row {e['row']} — **{e['level_published']}** — "
+                         f"decided {r.get('date')}: \"{r.get('ruling')}\" {e['action']}")
+            lines.append(f"  - clause the level comes from: p.{co['page']}#{co['ordinal']} — "
+                         f"\"{co['token']}\". That printed row is badged "
+                         f"{_badge or 'nothing'}; its own words scope this action to "
+                         f"{'/'.join(_levels)}, so the chip is the lowest level the clause "
+                         f"names and NOT the row's badge. "
+                         + ("The site row covers this clause alone (`clause_only`), so it "
+                            "carries no OWNER_REQUIRED flag."
+                            if e.get('clause_only')
+                            else "The site row bundles more than this clause, so it keeps its "
+                                 "OWNER_REQUIRED flag."))
     wording = load_wording_rulings()
     lines += ['', '## OWNER_RULED — wording (not level)', '',
               'Decisions the OWNER made about how a phrase reads. These are **rulings, not',
@@ -3640,10 +3751,28 @@ def check():
                 cites = check_prose_citations(rel, f'row {row["ordinal"]}',
                                               ruled.get('prose_citations'), prose, fails)
                 lf = ruled.get('level_from')
-                if r['badge'] is not None and not cites and not lf:
+                co = check_clause(rel, f'row {row["ordinal"]}', ruled.get('clause_of'),
+                                  want_level, pems, fails) if ruled.get('clause_of') else None
+                if r['badge'] is not None and not cites and not lf and not co:
                     fails.append(f'{rel} row {row["ordinal"]}: owner ruling recorded but PEMS '
                                  f'row {r["ptr"]} already badges it and the ruling records no '
                                  f'prose citation — ruling is stale')
+                if co:
+                    # the ruling does NOT rest on the row's badge — it rests on the clause.
+                    # Say so out loud rather than silently accepting a different level.
+                    if co['badge'] == want_level:
+                        fails.append(f'{rel} row {row["ordinal"]}: clause_of ruling records '
+                                     f'level {want_level}, but p.{co["page"]}#'
+                                     f'{co["ordinal"]} already prints that badge — the clause '
+                                     f'is not what changes the level; cite the row instead')
+                    # the flag may retire only because the site row covers this clause alone.
+                    # A binding that still declares the row owner_required contradicts it.
+                    b = bindings.get((rel, str(row['ordinal']))) or {}
+                    if b.get('status') == 'owner_required':
+                        fails.append(f'{rel} row {row["ordinal"]}: level-rulings.yaml declares '
+                                     f'clause_only, but row-bindings.yaml still declares the '
+                                     f'row owner_required — a retired flag cannot keep an open '
+                                     f'decision\'s reason')
                 if lf:
                     src = pems.get((lf['page'], lf['ordinal']))
                     if src is None:
@@ -3676,6 +3805,10 @@ def check():
                     if want != got:
                         fails.append(f'{rel} row {row["ordinal"]}: ledger prose citations '
                                      f'{got} != level-rulings.yaml {want}')
+                    if (e.get('clause_of') or None) != (ruled.get('clause_of') or None):
+                        fails.append(f'{rel} row {row["ordinal"]}: ledger clause_of '
+                                     f'{e.get("clause_of")} != level-rulings.yaml clause '
+                                     f'{ruled.get("clause_of")}')
                 ruled_rows.append({'row': row['ordinal'], 'level': level, 'status': 'owner_ruled',
                                    'prose': [f"p.{c['page']} {c['heading']} #{c['ordinal']}"
                                              for c in cites]})

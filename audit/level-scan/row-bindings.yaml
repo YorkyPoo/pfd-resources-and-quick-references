@@ -357,23 +357,6 @@ bindings:
       immediately to a Level 1 or Level II Trauma Center. Goal scene time: Less than 10
       minutes.' badged EMT — the trauma-centre transport step this row expands. Cross-page:
       p.243 prints no transport row.
-  - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
-    row: 9
-    status: owner_required
-    owner_note: >-
-      &#9873; **OWNER_REQUIRED** — row 9: PEMS 2024 does not settle which provider level may
-      titrate PEEP. The level shown is unverified pending a Medical Control decision.
-    reason: >-
-      Conflict, recorded: p.239#5 prints 'Consider CPAP (PEEP: 5 cmH2O) ... I/P only: Adjust
-      PEEP to support ventilation and work of breathing, up to 10 cmH2O' at badge EMT, and
-      p.245#4 (CPAP/BiPAP/PEEP procedure) prints 'Consider titrating PEEP (9%-15 mmHg) as
-      needed to improve ventilation/work of breathing. CPAP, BiPAP, and PEEP are RED DOT
-      procedures at all EMS Certification Levels' at badge EMT. Two printed rows disagree
-      (I/P-only scope in one, EMT badge in the other) and no printed row badges the titration
-      at I, so neither level is a single-row citation. The page's P is kept and flagged as an
-      open decision for the owner. A 2026-11-20 attempt to rule it to I was reverted: it was
-      labelled `owner_ruled` although the owner never ruled on PEEP titration, and the pearl
-      evidence for I is on the Respiratory Distress page (Pearl 4), not this page's source.
   - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
     row: 3
     pems_page: 247
@@ -2264,26 +2247,6 @@ bindings:
   # a bundle, so no single lowest level can be derived from them.
   # --------------------------------------------------------------------------
 
-  - file: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
-    row: 8a
-    status: owner_required
-    owner_note: >-
-      &#9873; **PEEP titration above 5 cm H₂O — level pending.** PEMS prints titration only inside
-      rows badged EMT, and its two printed rows disagree: one scopes it to &quot;I/P only&quot;, the
-      other badges it at every level. The level shown follows the I/P wording and is provisional
-      until Medical Control confirms it. The same question is open for CPAP titration on the
-      Pulmonary Edema protocol.
-    reason: >-
-      Conflict, recorded: PEEP titration above the initial 5 cm H2O is printed only inside rows
-      badged EMT, and the
-      two printed rows DISAGREE: p.239#5 ("Consider CPAP (PEEP: 5 cmH2O) ... I/P only: Adjust
-      PEEP to support ventilation and work of breathing, up to 10 cmH2O", badge EMT) scopes the
-      titration to I/P, while p.245#4 in the CPAP/BiPAP/PEEP procedure ("Consider titrating PEEP
-      ... CPAP, BiPAP, and PEEP are RED DOT procedures at all EMS Certification Levels", badge
-      EMT) badges it at every level. The chip is I, the level p.239#5's own words give it; no
-      printed badge badges titration at I, so it is an open decision, not a citation. The same
-      conflict is recorded for Pulmonary Edema row 9, which keeps P. The owner's 2026-11-20
-      instruction was the split (initiation / titration as separate rows), not this level.
 
   - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
     row: 8
