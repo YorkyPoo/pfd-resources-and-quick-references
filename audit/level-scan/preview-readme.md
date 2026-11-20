@@ -77,8 +77,11 @@ the live root and (b) deletes `preview/`. Until the owner rules on the
 corrections, do **not** push `main`. If slots are wiped this way, re-run the
 publish command above.
 
-## Legacy single-slot teardown script
+## Legacy teardown entry point
 
-`audit/level-scan/preview-teardown.sh` still exists and removes the whole
-`preview/` subtree (`preview_slot_teardown.sh --all` does the same thing). Use
-the per-slot script for day-to-day work.
+`audit/level-scan/preview-teardown.sh` now delegates to the per-slot script:
+
+```bash
+bash audit/level-scan/preview-teardown.sh          # same as --all
+bash audit/level-scan/preview-teardown.sh pilot    # one slot
+```
