@@ -26,7 +26,7 @@ relocated:
     proves:
       - "### References & Good Practice"
       - "This page records the list at **EMT**"
-      - "Rows 6–8 of this table were the PEMS contraindication list"
+      - "Rows 6–8 are covered under"
   - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
     row: 7
     rows_moved: "6-8"
@@ -36,7 +36,7 @@ relocated:
     proves:
       - "### References & Good Practice"
       - "This page records the list at **EMT**"
-      - "Rows 6–8 of this table were the PEMS contraindication list"
+      - "Rows 6–8 are covered under"
   - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
     row: 8
     rows_moved: "6-8"
@@ -46,7 +46,7 @@ relocated:
     proves:
       - "### References & Good Practice"
       - "This page records the list at **EMT**"
-      - "Rows 6–8 of this table were the PEMS contraindication list"
+      - "Rows 6–8 are covered under"
   - file: protocols/general/02_Cold_Exposure_PROC.md
     row: 6
     rows_moved: "6 and 9"
@@ -56,7 +56,7 @@ relocated:
     proves:
       - "### References & Good Practice"
       - "This page records the rewarming item at **EMR**"
-      - "Rows 6 and 9 of this table were unbadged PEMS Pearls prose"
+      - "Rows 6 and 9 are covered under"
   - file: protocols/general/02_Cold_Exposure_PROC.md
     row: 9
     rows_moved: "6 and 9"
@@ -66,4 +66,4 @@ relocated:
     proves:
       - "### References & Good Practice"
       - "the AED item at **MC**"
-      - "Rows 6 and 9 of this table were unbadged PEMS Pearls prose"
+      - "Rows 6 and 9 are covered under"

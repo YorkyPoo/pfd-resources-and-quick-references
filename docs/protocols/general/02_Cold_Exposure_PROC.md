@@ -31,7 +31,7 @@ Guidelines for managing systemic hypothermia and localized cold injuries, emphas
 
 </div>
 
-*Rows 6 and 9 of this table were unbadged PEMS Pearls prose and now sit under [References & Good Practice](#references-good-practice) below.*
+*Rows 6 and 9 are covered under [References & Good Practice](#references-good-practice) below.*
 
 ### References & Good Practice
 

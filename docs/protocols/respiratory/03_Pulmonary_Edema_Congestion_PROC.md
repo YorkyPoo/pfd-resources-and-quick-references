@@ -47,7 +47,7 @@ Management of acute cardiogenic pulmonary edema and congestion due to congestive
 
 <p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — row 9: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
-*Rows 6–8 of this table were the PEMS contraindication list — unbadged prose — and now sit under [References & Good Practice](#references-good-practice) below.*
+*Rows 6–8 are covered under [References & Good Practice](#references-good-practice) below.*
 
 ### References & Good Practice
 
