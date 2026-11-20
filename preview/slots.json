@@ -14,9 +14,9 @@
     },
     "airway-levels": {
       "branch": "airway-levels",
-      "built_at": "2026-11-20T12:46:26Z",
+      "built_at": "2026-11-20T12:51:45Z",
       "description": "Airway levels (owner PEMS p.239/p.247), re-presented on the rows-one-action tree: adult intubation + reoxygenation I; Pulmonary Edema r9 back to P + OWNER_REQUIRED pending the p.239#5/p.245#4 conflict",
-      "sha": "07b43ac193c10f14f96c1c4a077d5beb38e5f8d5"
+      "sha": "95a3d1cc4527f606737682861419ae7b7830e491"
     },
     "conversion-artifacts": {
       "branch": "conversion-artifacts",
@@ -55,5 +55,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-20T12:46:26.707308+00:00"
+  "updated_at": "2026-11-20T12:51:45.929942+00:00"
 }
