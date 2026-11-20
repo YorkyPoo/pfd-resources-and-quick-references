@@ -272,7 +272,8 @@ the action text.
 | `03_Respiratory_Distress_PROC.md` | 3a | I | p.50#10 **×page** | Consider continuous cardiac monitoring. | row-bindings:bound | OK |
 | `03_Respiratory_Distress_PROC.md` | 4 | EMR | p.123#2 | Provide supplemental oxygen to maintain SpO2 > 94%. | alignment:matched | OK |
 | `03_Respiratory_Distress_PROC.md` | 5 | EMR | p.117#1 **×page** | Place patient in a position of comfort. If unresponsive, place in recovery position and provide suctioning. Refer to Airway Management and Ventilat… | row-bindings:bound | OK |
-| `03_Respiratory_Distress_PROC.md` | 6 | EMT | p.123#3 | Consider non-invasive (CPAP) or invasive (SGA) ventilatory support. | adjudicated:set_cells | OK |
+| `03_Respiratory_Distress_PROC.md` | 6 | EMT | p.239#5 **×page** | Consider CPAP (PEEP: 5 cmH2O) for respiratory distress. Refer to CPAP procedure. I/P only: Adjust PEEP to support ventilation and work of breathing… | row-bindings:bound | OK |
+| `03_Respiratory_Distress_PROC.md` | 6a | I | — | — | owner-rulings:ruled | owner_ruled |
 | `03_Respiratory_Distress_PROC.md` | 7 | EMT | p.123#3 | Consider non-invasive (CPAP) or invasive (SGA) ventilatory support. | adjudicated:set_cells | OK |
 | `03_Respiratory_Distress_PROC.md` | 8 | I | p.123#4 | Consider invasive ventilatory support via endotracheal intubation. Refer to Endotracheal Intubation procedure. Note: Intubation of spontaneously br… | adjudicated:set_cells | OK |
 | `03_Respiratory_Distress_PROC.md` | 9 | A | p.50#9 **×page** | Establish IV / IO access when indicated. Refer to Intraosseous (IO) Access procedure, as needed. | row-bindings:bound | OK |
@@ -455,7 +456,7 @@ the action text.
 | `CPAP.md` | 3 | EMT | p.245#1 | Set positive and expiratory pressure (PEEP) to 5 mmHg | row-bindings:bound | OK |
 | `CPAP.md` | 4 | EMT | p.245#2 | Place the mask over the mouth and nose with oxygen flowing. Secure with straps, beginning with the lower straps. Tighten until air-leak is minimal. | row-bindings:bound | OK |
 | `CPAP.md` | 5 | EMT | p.245#3 | Reassess the patient, including the SpO2, ETCO2, and work of breathing. | row-bindings:bound | OK |
-| `CPAP.md` | 6 | EMT | p.245#4 | Consider titratingPEEP9%-15mmHg) as needed to improve ventilation/work of breathing. CPAP, BiPAP, and PEEP are RED DOT procedures at all EMS Certif… | row-bindings:bound | OK |
+| `CPAP.md` | 6 | I | — | — | owner-rulings:ruled | owner_ruled |
 | `Capnography.md` | 1 | EMT | p.241#0 | Adequate respiratory effort: Apply ETCO2 sampling nasal cannula to patient. | row-bindings:bound | OK |
 | `Capnography.md` | 2 | EMT | p.241#1 | Inadequate respiratory effort / Apnea: Attach inline ETCO2 sampling device to BVM, CPAP, or ventilator. | row-bindings:bound | OK |
 | `Capnography.md` | 3 | EMT | p.241#2 | Continuously monitor reading and waveform. Refer to waveform guide below. | row-bindings:bound | OK |
@@ -648,7 +649,7 @@ the verbatim span from the cited row that the checker re-reads out of
 `pems_table.json` — a citation whose quote the cited row does not print fails
 `--check`. The chip is the badge that row prints, not the page's old level.
 
-**77 row(s).**
+**78 row(s).**
 
 - `protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 4: **EMR** from p.103#1 (was OWNER_REQUIRED) — quoted: "Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure."
   - action: Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure.
@@ -803,6 +804,9 @@ the verbatim span from the cited row that the checker re-reads out of
 - `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 5: **EMR** from p.117#1 (was OWNER_REQUIRED) — quoted: "Place patient in a position of comfort. If unresponsive, place in recovery position and provide suctioning."
   - action: Positioning: • Patient position of comfort (sitting upright preferred) • Consider reverse Trendelenburg if tolerated
   - evidence: p.117#1 prints 'Place patient in a position of comfort. If unresponsive, place in recovery position and provide suctioning.' badged EMR — the position-of-comfort step this row expands. Cross-page: p.123-124 print no positioning row.
+- `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 6: **EMT** from p.239#5 (was OK) — quoted: "Consider CPAP (PEEP: 5 cmH2O) for respiratory distress."
+  - action: CPAP (Continuous Positive Airway Pressure): • Indications: Adults with respiratory distress due to pulmonary edema, infection, or near-drowning • Init
+  - evidence: p.239#5 prints 'Consider CPAP (PEEP: 5 cmH2O) for respiratory distress. Refer to CPAP procedure.' badge EMT — the CPAP initiation and its 5 cmH2O initial setting, which is what row 6 publishes. The row no longer carries PEEP titration: the owner's 2026-11-20 ruling made titration an Intermediate action, so the titration half is its own row (6a), ruled to I off the same printed row's 'I/P only' clause. Cited here rather than to p.123#3 because p.123#3 prints 'consider CPAP support' without the initial PEEP setting the row publishes.
 - `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 9: **A** from p.50#9 (was OWNER_REQUIRED) — quoted: "Establish IV / IO access when indicated."
   - action: IV/IO Access: • Establish vascular access for medication administration and fluid therapy • IO if IV unobtainable
   - evidence: p.50#9 prints 'Establish IV / IO access when indicated. Refer to Intraosseous (IO) Access procedure, as needed.' badged A — the access step this row expands. Cross-page: p.123-124 print no access row.
@@ -1095,6 +1099,8 @@ these parts is one.
 | `03_Pneumothorax_PROC.md` | 15 | 15a | I | p.243#4 | cited |
 | `03_Respiratory_Distress_PROC.md` | 3 | 3 | EMT | p.49#6 | cited |
 | `03_Respiratory_Distress_PROC.md` | 3 | 3a | I | p.50#10 | cited |
+| `03_Respiratory_Distress_PROC.md` | 6 | 6 | EMT | p.239#5 | cited |
+| `03_Respiratory_Distress_PROC.md` | 6 | 6a | I | p.239#5 | ruling |
 | `03_Respiratory_Distress_PROC.md` | 16 | 16 | EMT | p.239#7 | cited |
 | `03_Respiratory_Distress_PROC.md` | 16 | 16a | I | p.239#9 | cited |
 | `03_Respiratory_Distress_PROC.md` | 16 | 16b | P | p.239#10 | cited |
@@ -1118,7 +1124,7 @@ these parts is one.
 | `Neonatal_Resuscitation.md` | 5 | 5 | A | p.261#10 | cited |
 | `Neonatal_Resuscitation.md` | 5 | 5a | I | p.261#12 | cited |
 
-**20 row(s) became 45 sub-rows.** Every part carries
+**21 row(s) became 47 sub-rows.** Every part carries
 exactly one level, and no part restates a level in its action text.
 
 - `protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 8: 8 `EMR` (p.235#4); 8a `I` (p.235#4); 8b `I` (p.63#7)
@@ -1141,6 +1147,8 @@ exactly one level, and no part restates a level in its action text.
   - why: The row bundled more than one action, so no single level could carry it without over- or under-granting half of itself. Each part now cites the PEMS row that prints it; the first part keeps the row number and the rest are lettered so no citation downstream shifts.
 - `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 3: 3 `EMT` (p.49#6); 3a `I` (p.50#10)
   - why: The row bundled more than one action, so no single level could carry it without over- or under-granting half of itself. Each part now cites the PEMS row that prints it; the first part keeps the row number and the rest are lettered so no citation downstream shifts.
+- `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 6: 6 `EMT` (p.239#5); 6a `I` (p.239#5)
+  - why: The row bundled CPAP initiation (printed EMT) with PEEP titration, which the owner's 2026-11-20 ruling made an Intermediate action, so one chip could not carry both halves without over-granting the titration or under-granting the initiation. Initiation keeps the row number and cites the printed row; titration becomes 6a, ruled to I off that same row's 'I/P only' clause.
 - `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 16: 16 `EMT` (p.239#7); 16a `I` (p.239#9); 16b `P` (p.239#10)
   - why: The row bundled more than one action, so no single level could carry it without over- or under-granting half of itself. Each part now cites the PEMS row that prints it; the first part keeps the row number and the rest are lettered so no citation downstream shifts.
 - `protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md` row 8: 8 `EMT` (p.239#5); 8a `I` (p.239#5)
@@ -1225,9 +1233,20 @@ authorisation and the OWNER_REQUIRED flag is retired. The level is the owner's
 decision read off the printed clause named for each row — not the badge of the
 printed row that carries the clause.
 
+The same date's second ruling — **"Only intermediates and above can titrate
+peep up to 15 mmhg"** — governs the CPAP procedure page, whose row 6 is the
+fourth entry below. It also fixes that row's **ceiling at 15 mmHg as the
+owner wrote it** (the page now reads "5–15 mmHg"). The photographed PEMS page
+prints "up to 10 cmH2O": the unit and cap discrepancy is recorded in
+`audit/level-scan/wording-rulings.yaml` and on purpose not reconciled on the
+page — the owner's number governs.
 - `protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md` row 8a — **I** — decided 2026-11-20: "An intermediate can also titrate peep." • Titrate PEEP up to 10 cm H₂O to support ventilation and work of breathing.
   - clause the level comes from: p.239#5 — "I/P only: Adjust PEEP to support ventilation and work of breathing". That printed row is badged EMT; its own words scope this action to I/P, so the chip is the lowest level the clause names and NOT the row's badge. The site row covers this clause alone (`clause_only`), so it carries no OWNER_REQUIRED flag.
 - `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` row 9 — **I** — decided 2026-11-20: "An intermediate can also titrate peep." CPAP Titration: Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing
+  - clause the level comes from: p.239#5 — "I/P only: Adjust PEEP to support ventilation and work of breathing". That printed row is badged EMT; its own words scope this action to I/P, so the chip is the lowest level the clause names and NOT the row's badge. The site row covers this clause alone (`clause_only`), so it carries no OWNER_REQUIRED flag.
+- `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 6a — **I** — decided 2026-11-20: "An intermediate can also titrate peep." • Titration: Titrate PEEP up to 10 cmH2O to support ventilation and work of breathing.
+  - clause the level comes from: p.239#5 — "I/P only: Adjust PEEP to support ventilation and work of breathing". That printed row is badged EMT; its own words scope this action to I/P, so the chip is the lowest level the clause names and NOT the row's badge. The site row covers this clause alone (`clause_only`), so it carries no OWNER_REQUIRED flag.
+- `procedures/CPAP.md` row 6 — **I** — decided 2026-11-20: "Only intermediates and above can titrate peep up to 15 mmhg" Consider titrating PEEP (5–15 mmHg) as needed to improve ventilation.
   - clause the level comes from: p.239#5 — "I/P only: Adjust PEEP to support ventilation and work of breathing". That printed row is badged EMT; its own words scope this action to I/P, so the chip is the lowest level the clause names and NOT the row's badge. The site row covers this clause alone (`clause_only`), so it carries no OWNER_REQUIRED flag.
 
 ## OWNER_RULED — wording (not level)
@@ -1238,6 +1257,8 @@ the ruling. A later pass must not "restore" the source wording.
 
 - `docs/sops/ems/EMS-100-General-EMS-Guidelines.md` — source prints "eliminate in hospital delays"; the page reads **"eliminate in-hospital delays"** (2026-11-15)
   - ruling: Owner ruling 2026-11-15 ("I like the change to in-hospital delays"): the compound is hyphenated. The SOP as printed carries no hyphen. This is an OWNER RULING, not a source reading — do not revert the page to the un-hyphenated form on the grounds that the source prints it that way.
+- `docs/procedures/CPAP.md` — source prints "PEMS "Airway Management and Ventilatory Support" (Procedures, page 1 of 2, Version 2022v0722), CPAP row: "up to 10 cmH2O"; p.245#4 in pems_table.json extracts as "titratingPEEP9%-15mmHg)". The two printed sources do not share a unit (cmH2O vs mmHg) and do not share a cap (10 vs 15)."; the page reads **"Consider titrating PEEP (5–15 mmHg) as needed to improve ventilation."** (2026-11-20)
+  - ruling: Owner ruling 2026-11-20, verbatim: "Only intermediates and above can titrate peep up to 15 mmhg". The ceiling is 15 mmHg exactly as the owner wrote it. Do not "helpfully" convert it to cmH2O and do not restore the earlier unsourced "5–15 cmH2O": the unit is part of the ruling. The printed "up to 10 cmH2O" from the photographed page stays on the record in audit/level-scan/level-rulings.yaml (row 6 evidence) and in the owner pages evidence directory — the discrepancy is visible to a reviewer on purpose, and is NOT to be resolved on the page: the owner's number governs the ceiling.
 
 ## OWNER_RULED — Cold Exposure pilot (owner ruling 2026-11-20)
 
@@ -1502,7 +1523,7 @@ Removed by decision (not restated by the chip, so not left to a later pass):
 
 ## Level moved by the source (page level -> PEMS printed level)
 
-132 row(s). These are rows where the page under- or over-granted the
+131 row(s). These are rows where the page under- or over-granted the
 level the cited PEMS row prints. Review them first.
 
 - `protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` row 4: **EMT -> EMR** (p.103#1) — Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure.
@@ -1576,7 +1597,7 @@ level the cited PEMS row prints. Review them first.
 - `protocols/respiratory/03_Respiratory_Arrest_PROC.md` row 13: **P -> EMT** (p.247#13) — Ongoing Ventilation Monitoring: • Monitor ET tube placement and ventilation continuously w
 - `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 2: **EMT -> EMR** (p.123#1) — Airway and Lung Assessment: • Focused assessment for stridor, wheezing, rales • Auscultate
 - `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 5: **EMT -> EMR** (p.117#1) — Positioning: • Patient position of comfort (sitting upright preferred) • Consider reverse 
-- `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 6: **MC -> EMT** (p.123#3) — CPAP (Continuous Positive Airway Pressure): • Indications: Adults with respiratory distres
+- `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 6: **MC -> EMT** (p.239#5) — CPAP (Continuous Positive Airway Pressure): • Indications: Adults with respiratory distres
 - `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 8: **P -> I** (p.123#4) — Advanced Airway Management (ETI): • Endotracheal intubation reserved for I-level providers
 - `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 9: **I -> A** (p.50#9) — IV/IO Access: • Establish vascular access for medication administration and fluid therapy 
 - `protocols/respiratory/03_Respiratory_Distress_PROC.md` row 10: **MC -> A** (p.113#4) — Fluid Administration: • 0.9% Sodium Chloride or appropriate fluid as clinically indicated 
@@ -1620,7 +1641,6 @@ level the cited PEMS row prints. Review them first.
 - `protocols/general/02_Pain_Control_PROC.md` row 6: **I -> A** (p.77#5) — Moderate to Severe Pain (6 - 10): • Adult: Fentanyl 25-50 mcg IV/IN/IM (Max total dose: 10
 - `protocols/general/02_Pain_Control_PROC.md` row 7: **I -> A** (p.77#5) — OR Moderate to Severe Pain (6 - 10): • Adult: Morphine Sulfate 2.5-5 mg IV/IM (Max total d
 - `protocols/front-matter/Universal Patient Care.md` row 11: **EMT -> EMR** (p.49#5) — Refer to relevant protocols: • If no protocol applies, or for clinical guidance at any tim
-- `procedures/CPAP.md` row 6: **P -> EMT** (p.245#4) — Consider titrating PEEP (5–15 cmH2O) as needed to improve ventilation.
 - `procedures/Endotracheal_Intubation.md` row 4: **P -> I** (p.247#4) — Orally intubate (Patients ≥ 12 years).
 - `procedures/Endotracheal_Intubation.md` row 6: **P -> I** (p.247#7) — If unsuccessful, re-oxygenate with 100% O₂. After 2 failed attempts, manage via most exper
 - `procedures/Endotracheal_Intubation.md` row 10: **P -> I** (p.247#11) — Administer analgesia/sedation as needed.
@@ -1854,18 +1874,21 @@ decision before the page is treated as final.
   Tourniquet p.273, Transcutaneous Pacing p.275. `Medical_Devices_Pumps.md`
   (2-column Device | Action) and `Vaccination.md` (prose list, no table) carry no
   level matrix and were left byte-identical.
-- **Batch 7 — 15 rows move to the level PEMS prints.** The rule is "chip = the
-  level PEMS prints", so the chip follows the source. 14 of these print a LOWER
+- **Batch 7 — 14 rows move to the level PEMS prints.** The rule is "chip = the
+  level PEMS prints", so the chip follows the source. 13 of these print a LOWER
   level (more permissive) than the page published, and owner should confirm each
-  ladder: CPAP r6 `P -> EMT` (PEEP titration); Endotracheal Intubation r4 and r10
+  ladder: Endotracheal Intubation r4 and r10
   `P -> I` (adult oral intubation, analgesia/sedation: PEMS prints both inside
   p.247#3 and p.247#9 at badge I); Intraosseous r8 `P -> A` (IO lidocaine); Medication
   Administration r3 and r4 `I -> A` (IV and IO administration, p.257#3/#5 badge A);
   Nasogastric Tube r1-r6 `P -> I` (the whole procedure is badge I on p.259); Neonatal
   Resuscitation r2 and r4 `EMT -> EMR` (BVM and chest compressions, p.261#5/#9 badge
-  EMR). The 15th moves the other way: Endotracheal Intubation r2 `EMT -> I`,
+  EMR). The 14th moves the other way: Endotracheal Intubation r2 `EMT -> I`,
   because the row bundles a sentence PEMS prints at I (see the bundled-row rule
   below) and an EMT chip would over-grant it. No row keeps a cumulative dot grid.
+  (CPAP r6 was the 15th row of this list; on 2026-11-20 the owner ruled its PEEP
+  titration to be Intermediate-level, so it is decided — *OWNER_RULED — PEEP
+  titration* below — and no longer counted or asked here.)
 - **Batch 7 — a row that bundles more than one PEMS level takes the HIGHEST level.**
   One rule for every bundled row: the chip is the highest (most restrictive) of the
   source levels the row prints, and the evidence names each sub-step level, so a
@@ -1877,11 +1900,6 @@ decision before the page is treated as final.
   p.261#7 badge I, EtCO2 sub-step p.261#6 badge EMT). All three are CITED rows, not
   OWNER_REQUIRED; each row's `evidence` in `row-bindings.yaml` states the rule and
   both levels.
-- **Batch 7 — CPAP units disagree with the source, and the action text was not
-  edited.** The page reads PEEP "5 cmH2O" (r3) and "5-15 cmH2O" (r6); PEMS p.245#1
-  prints "5 mmHg" and p.245#4 extracts as "titratingPEEP9%-15mmHg)". Reconciliation
-  (mmHg vs cmH2O, and 5-15 vs 9%-15) is a clinical-text decision outside this
-  conversion, so only the chip was bound; owner to reconcile the page wording.
 - **Pearl ruling 2026-11-17 + ketamine ruling 2026-11-20 and the row-structure
   instruction — the "prints nowhere" bucket is empty.** It held 17 rows before the Pearl
   ruling and 6 after it, and every one of those six has since left the action
@@ -1895,7 +1913,7 @@ decision before the page is treated as final.
   bucket and no OWNER_REQUIRED flag rests on a missing source row.
 - **Batch 3 — 3 row(s) lost a Medical-Control requirement the page printed.** Each is now chipped at the level PEMS prints:
   `03_Airway_Inhalation_Irritants_PROC.md` row 8 was `MC`, now `A` (p.153#4).
-  `03_Respiratory_Distress_PROC.md` row 6 was `MC`, now `EMT` (p.123#3).
+  `03_Respiratory_Distress_PROC.md` row 6 was `MC`, now `EMT` (p.239#5).
   `03_Respiratory_Distress_PROC.md` row 10 was `MC`, now `A` (p.113#4).
   The rule is "chip = the level PEMS prints", and the source grants these actions on standing order, but the owner should confirm that dropping a page-printed MC requirement is intended.
   Row(s) in the converted set that moved *to* MC, now matching the source's MC row: `04_Chest_Pain_ACS_PROC.md` row 7 `I` -> `MC` (p.107#9); `03_Airway_Inhalation_Irritants_PROC.md` row 12 `I` -> `MC` (p.153#5); `03_Smoke_Inhalation_PROC.md` row 12 `I` -> `MC` (p.153#5); `06_Nausea_Vomiting_PROC.md` row 6 `A` -> `MC` (p.117#5); `01_STEMI_Field_Triage_PROC.md` row 7 `EMT` -> `MC` (p.107#9).
@@ -1921,15 +1939,15 @@ new defect. Source of truth: `audit/level-scan/verifier-exceptions.yaml`.
 |---|---:|
 | converted pages — protocol/procedure chassis | 55 |
 | converted pages — administrative policy (POLICY/PENDING) | 14 |
-| action rows — total | 620 |
+| action rows — total | 621 |
 | action rows relocated out of an action table (still on the page, not in this ledger — `relocated-rows.yaml`) | 12 |
-| cited to a PEMS protocol row (incl. cross-page) | 506 |
-| cross-page citations | 77 |
+| cited to a PEMS protocol row (incl. cross-page) | 505 |
+| cross-page citations | 78 |
 | POLICY (PEMS administrative policy) | 89 |
 | PENDING (no PEMS source: whole page + row-level + administrative) | 15 |
 | OWNER_REQUIRED | 0 |
 | rows moved below the action table (References & Good Practice) | 12 |
-| OWNER_RULED | 8 |
+| OWNER_RULED | 10 |
 | DERIVED (level derived from the source's own ladder wording) | 2 |
 | +MC markers | 8 |
 

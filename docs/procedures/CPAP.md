@@ -19,7 +19,7 @@ Continuous Positive Airway Pressure (CPAP) provides positive pressure ventilatio
 | 3 | <span class="lvl lvl-emt">EMT</span> | Set positive end-expiratory pressure (PEEP) to 5 cmH2O. |
 | 4 | <span class="lvl lvl-emt">EMT</span> | Place mask over mouth/nose with oxygen flowing. Secure with straps, starting with lower straps. Minimize air leak. |
 | 5 | <span class="lvl lvl-emt">EMT</span> | Reassess patient (SpO2, EtCO2, work of breathing). |
-| 6 | <span class="lvl lvl-emt">EMT</span> | Consider titrating PEEP (5–15 cmH2O) as needed to improve ventilation. |
+| 6 | <span class="lvl lvl-i">I</span> | Consider titrating PEEP (5–15 mmHg) as needed to improve ventilation. |
 
 </div>
 
@@ -37,4 +37,4 @@ Continuous Positive Airway Pressure (CPAP) provides positive pressure ventilatio
 *   Positive pressure ventilation does not address the underlying cause of distress (e.g., bronchodilators for asthma, preload reduction for CHF).
 *   Sudden hypotension may be due to increased intrathoracic pressure (breath stacking). Assess for pneumothorax; adjust PEEP, rate, and volume.
 *   Avoid aspiration: Use only on conscious/alert patients. Remove immediately if patient vomits.
-*   CPAP, BiPAP, and PEEP are "RED DOT" procedures at all EMS certification levels (refer to department-specific authorization/training policy).
+*   CPAP and BiPAP are "RED DOT" procedures at all EMS certification levels; PEEP titration above the initial 5 cmH2O setting is Intermediate and above (refer to department-specific authorization/training policy).

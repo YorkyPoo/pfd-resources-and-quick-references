@@ -1532,10 +1532,26 @@ bindings:
     pems_page: 245
     pems_ordinal: 4
     evidence: >-
-      p.245#4 prints the PEEP-titration step (extracted as "Consider titratingPEEP9%-15mmHg) as
-      needed to improve ventilation/work of breathing.") badge EMT. The page published P, so the
-      chip moves P -> EMT: the printed level is the authority, and the move is listed for owner
-      review.
+      p.245#4 prints the PEEP-titration step (extracted as "Consider titratingPEEP9%-15mmHg)
+      as needed to improve ventilation/work of breathing.") with badge EMT, and adds "CPAP,
+      BiPAP, and PEEP are RED DOT procedures at all EMS Certification Levels". The owner
+      ruled the level on 2026-11-20, verbatim: "Only intermediates and above can titrate peep
+      up to 15 mmhg", sent with his photograph of PEMS "Airway Management and Ventilatory
+      Support" (Procedures, page 1 of 2, Version 2022v0722) whose CPAP row reads "Consider
+      CPAP (PEEP: 5 cmH2O) for respiratory distress. Refer to CPAP procedure. I/P only:
+      Adjust PEEP to support ventilation and work of breathing, up to 10 cmH2O." The ruling
+      is recorded in level-rulings.yaml as a clause_of ruling on that `I/P only` clause —
+      the same clause as Pulmonary Edema r9, Asthma/COPD r8a and Respiratory Distress r6a —
+      so the chip is I and the printed p.245#4 EMT badge is recorded here, not claimed as the
+      authority. The owner's ruling fixes the CEILING at 15 mmHg as he wrote it; the page
+      reads "5–15 mmHg" and the photographed page's "up to 10 cmH2O" is kept quoted here on
+      purpose, its unit and cap discrepancy with the ruling visible to a reviewer rather than
+      reconciled on the page (see wording-rulings.yaml). The withdrawn agent recommendation
+      that argued for keeping EMT is superseded by the owner's ruling of the same date. The
+      procedure page's Pearls bullet carrying the same p.245#4 "RED DOT ... at all EMS
+      certification levels" sentence is qualified to the ruling: CPAP and BiPAP stay RED DOT
+      at all levels, and PEEP titration above the initial 5 cmH2O setting is Intermediate and
+      above (review round 1, 2026-11-20).
 
   - file: procedures/Capnography.md
     row: 1
@@ -2502,6 +2518,21 @@ bindings:
       (row-structure pass): this action was one of several bundled in a single row, so no
       single level could carry it. It is now its own row and its chip is the badge the cited
       row prints for it.
+
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 6
+    pems_page: 239
+    pems_ordinal: 5
+    cross_page: true
+    quoted_row_text: "Consider CPAP (PEEP: 5 cmH2O) for respiratory distress."
+    evidence: >-
+      p.239#5 prints 'Consider CPAP (PEEP: 5 cmH2O) for respiratory distress. Refer to CPAP
+      procedure.' badge EMT — the CPAP initiation and its 5 cmH2O initial setting, which is
+      what row 6 publishes. The row no longer carries PEEP titration: the owner's 2026-11-20
+      ruling made titration an Intermediate action, so the titration half is its own row
+      (6a), ruled to I off the same printed row's 'I/P only' clause. Cited here rather than
+      to p.123#3 because p.123#3 prints 'consider CPAP support' without the initial PEEP
+      setting the row publishes.
 
   - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
     row: 16

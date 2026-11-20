@@ -19,3 +19,21 @@ rulings:
       hyphenated. The SOP as printed carries no hyphen. This is an OWNER RULING, not a
       source reading — do not revert the page to the un-hyphenated form on the grounds that
       the source prints it that way.
+
+  - file: docs/procedures/CPAP.md
+    date: "2026-11-20"
+    status: owner_ruled
+    source_prints: >-
+      PEMS "Airway Management and Ventilatory Support" (Procedures, page 1 of 2, Version
+      2022v0722), CPAP row: "up to 10 cmH2O"; p.245#4 in pems_table.json extracts as
+      "titratingPEEP9%-15mmHg)". The two printed sources do not share a unit (cmH2O vs mmHg)
+      and do not share a cap (10 vs 15).
+    page_reads: "Consider titrating PEEP (5–15 mmHg) as needed to improve ventilation."
+    ruling: >-
+      Owner ruling 2026-11-20, verbatim: "Only intermediates and above can titrate peep up
+      to 15 mmhg". The ceiling is 15 mmHg exactly as the owner wrote it. Do not "helpfully"
+      convert it to cmH2O and do not restore the earlier unsourced "5–15 cmH2O": the unit is
+      part of the ruling. The printed "up to 10 cmH2O" from the photographed page stays on
+      the record in audit/level-scan/level-rulings.yaml (row 6 evidence) and in the owner
+      pages evidence directory — the discrepancy is visible to a reviewer on purpose, and is
+      NOT to be resolved on the page: the owner's number governs the ceiling.

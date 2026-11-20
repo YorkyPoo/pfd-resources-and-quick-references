@@ -379,10 +379,12 @@ rulings:
   # is the owner's decision, the clause is its printed basis, and the row's EMT badge is
   # recorded beside it.
   #
-  # `clause_only: true` on both: each site row covers the titration and nothing else, so one
-  # chip is the whole authorisation and the ⚑ OWNER_REQUIRED flag retires. A row that still
-  # bundled CPAP INITIATION (printed EMT) with titration would keep its flag — see
-  # Respiratory Distress r6, which still bundles both and is therefore NOT covered here.
+  # `clause_only: true` on all three: each site row covers the titration and nothing else, so
+  # one chip is the whole authorisation and the ⚑ OWNER_REQUIRED flag retires. A row that still
+  # bundled CPAP INITIATION (printed EMT) with titration could not take this ruling, because its
+  # single chip would have to answer for the initiation as well. Respiratory Distress r6 was
+  # exactly that row; it was split on 2026-11-20 (initiation stays r6, cited EMT off p.239#5,
+  # titration becomes r6a below) and only then did the ruling reach it.
   - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
     row: 9
     level: I
@@ -426,6 +428,63 @@ rulings:
       the owner ordered on 2026-11-20 and covers nothing else, so its chip is the whole
       authorisation and the OWNER_REQUIRED flag retires. Row 8 (CPAP initiation, printed EMT
       at p.239#5) is cited and unaffected.
+
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 6a
+    level: I
+    status: owner_ruled
+    date: "2026-11-20"
+    clause_only: true
+    clause_of:
+      page: 239
+      ordinal: 5
+      token: "I/P only: Adjust PEEP to support ventilation and work of breathing"
+    ruling: "An intermediate can also titrate peep."
+    action: "Titration: Titrate PEEP up to 10 cmH2O to support ventilation and work of breathing."
+    note: >-
+      Owner ruling 2026-11-20, verbatim: "An intermediate can also titrate peep.", as
+      Pulmonary Edema row 9 and Asthma row 8a: p.239#5's own words scope PEEP titration to
+      I/P inside a row badged EMT, and the owner has ruled that reading governs. Row 6a is
+      the titration half of the CPAP row split, holding nothing but the titration — the
+      initiation half stays row 6, cited EMT off the same printed row — so its chip is the
+      whole authorisation and no OWNER_REQUIRED flag is needed. The CPAP procedure page's
+      own row 6 is a separate site row but the SAME owner ruling: it was ruled `I` on
+      2026-11-20 as well (see the `procedures/CPAP.md` row 6 entry below), so all four
+      PEEP-titration rows now publish `I` for the same printed reason.
+
+  # ------------------------------------------------- CPAP procedure row 6 — 2026-11-20
+  # The owner's second PEEP statement, verbatim: "Only intermediates and above can titrate
+  # peep up to 15 mmhg", sent with his photograph of PEMS "Airway Management and Ventilatory
+  # Support", Procedures page 1 of 2, Version 2022v0722. The photographed CPAP row prints
+  # "I/P only: Adjust PEEP ... up to 10 cmH2O" — the clause the `I` floor comes from — and
+  # the owner's 15 mmHg is the CEILING, recorded in `wording-rulings.yaml` because it is a
+  # number the page reads, not a provider level.
+  #
+  # This supersedes, rather than layers on, the 2026-11-20 hunk that kept row 6 at EMT: that
+  # hunk rested on an agent's relayed reading of the first PEEP ruling, not on the owner's
+  # words about this row.
+  - file: procedures/CPAP.md
+    row: 6
+    level: I
+    status: owner_ruled
+    date: "2026-11-20"
+    clause_only: true
+    clause_of:
+      page: 239
+      ordinal: 5
+      token: "I/P only: Adjust PEEP to support ventilation and work of breathing"
+    ruling: "Only intermediates and above can titrate peep up to 15 mmhg"
+    action: "Consider titrating PEEP (5–15 mmHg) as needed to improve ventilation."
+    note: >-
+      Owner ruling 2026-11-20, verbatim: "Only intermediates and above can titrate peep up
+      to 15 mmhg", with his photograph of PEMS "Airway Management and Ventilatory Support"
+      (Procedures, page 1 of 2, Version 2022v0722), whose CPAP row prints "I/P only: Adjust
+      PEEP ... up to 10 cmH2O". Level I comes from that printed clause, the same clause as
+      Pulmonary Edema r9, Asthma/COPD r8a and Distress r6a. Ceiling: the owner's 15 mmHg
+      governs and the page reads "5–15 mmHg"; the printed "up to 10 cmH2O" is kept
+      unreconciled in wording-rulings.yaml `source_prints`.
+      HISTORY: the earlier agent recommendation (keep EMT) is WITHDRAWN and SUPERSEDED by
+      this ruling of the same date.
 
 
 

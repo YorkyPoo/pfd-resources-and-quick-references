@@ -2877,7 +2877,14 @@ def emit_md(ledger):
                   'titrate peep."** Each row below is titration-only, so one chip is the whole',
                   'authorisation and the OWNER_REQUIRED flag is retired. The level is the owner\'s',
                   'decision read off the printed clause named for each row — not the badge of the',
-                  'printed row that carries the clause.', '']
+                  'printed row that carries the clause.', '',
+                  'The same date\'s second ruling — **"Only intermediates and above can titrate',
+                  'peep up to 15 mmhg"** — governs the CPAP procedure page, whose row 6 is the',
+                  'fourth entry below. It also fixes that row\'s **ceiling at 15 mmHg as the',
+                  'owner wrote it** (the page now reads "5–15 mmHg"). The photographed PEMS page',
+                  'prints "up to 10 cmH2O": the unit and cap discrepancy is recorded in',
+                  '`audit/level-scan/wording-rulings.yaml` and on purpose not reconciled on the',
+                  'page — the owner\'s number governs.']
         for e in peep:
             r = e.get('owner_ruling') or {}
             co = e['clause_of']
@@ -3260,18 +3267,21 @@ def emit_md(ledger):
               '  Tourniquet p.273, Transcutaneous Pacing p.275. `Medical_Devices_Pumps.md`',
               '  (2-column Device | Action) and `Vaccination.md` (prose list, no table) carry no',
               '  level matrix and were left byte-identical.',
-              '- **Batch 7 — 15 rows move to the level PEMS prints.** The rule is "chip = the',
-              '  level PEMS prints", so the chip follows the source. 14 of these print a LOWER',
+              '- **Batch 7 — 14 rows move to the level PEMS prints.** The rule is "chip = the',
+              '  level PEMS prints", so the chip follows the source. 13 of these print a LOWER',
               '  level (more permissive) than the page published, and owner should confirm each',
-              '  ladder: CPAP r6 `P -> EMT` (PEEP titration); Endotracheal Intubation r4 and r10',
+              '  ladder: Endotracheal Intubation r4 and r10',
               '  `P -> I` (adult oral intubation, analgesia/sedation: PEMS prints both inside',
               '  p.247#3 and p.247#9 at badge I); Intraosseous r8 `P -> A` (IO lidocaine); Medication',
               '  Administration r3 and r4 `I -> A` (IV and IO administration, p.257#3/#5 badge A);',
               '  Nasogastric Tube r1-r6 `P -> I` (the whole procedure is badge I on p.259); Neonatal',
               '  Resuscitation r2 and r4 `EMT -> EMR` (BVM and chest compressions, p.261#5/#9 badge',
-              '  EMR). The 15th moves the other way: Endotracheal Intubation r2 `EMT -> I`,',
+              '  EMR). The 14th moves the other way: Endotracheal Intubation r2 `EMT -> I`,',
               '  because the row bundles a sentence PEMS prints at I (see the bundled-row rule',
               '  below) and an EMT chip would over-grant it. No row keeps a cumulative dot grid.',
+              '  (CPAP r6 was the 15th row of this list; on 2026-11-20 the owner ruled its PEEP',
+              '  titration to be Intermediate-level, so it is decided — *OWNER_RULED — PEEP',
+              '  titration* below — and no longer counted or asked here.)',
               '- **Batch 7 — a row that bundles more than one PEMS level takes the HIGHEST level.**',
               '  One rule for every bundled row: the chip is the highest (most restrictive) of the',
               '  source levels the row prints, and the evidence names each sub-step level, so a',
@@ -3283,11 +3293,6 @@ def emit_md(ledger):
               '  p.261#7 badge I, EtCO2 sub-step p.261#6 badge EMT). All three are CITED rows, not',
               "  OWNER_REQUIRED; each row's `evidence` in `row-bindings.yaml` states the rule and",
               '  both levels.',
-              '- **Batch 7 — CPAP units disagree with the source, and the action text was not',
-              '  edited.** The page reads PEEP "5 cmH2O" (r3) and "5-15 cmH2O" (r6); PEMS p.245#1',
-              '  prints "5 mmHg" and p.245#4 extracts as "titratingPEEP9%-15mmHg)". Reconciliation',
-              '  (mmHg vs cmH2O, and 5-15 vs 9%-15) is a clinical-text decision outside this',
-              '  conversion, so only the chip was bound; owner to reconcile the page wording.',
               '- **Pearl ruling 2026-11-17 + ketamine ruling 2026-11-20 and the row-structure',
               '  instruction — the "prints nowhere" bucket is empty.** It held 17 rows before the Pearl',
               '  ruling and 6 after it, and every one of those six has since left the action',
@@ -3333,6 +3338,23 @@ def emit_md(ledger):
                      '(converted set, whole list): '
                      + '; '.join(f"{_mcrow(e)} (p.{e['pems_page']}#{e['pems_ordinal']})"
                                  for e in already_mc) + '.')
+    # ------------------------------------- open level questions recorded on a binding
+    # A binding may carry `open_question` text: a level question the source prints two ways
+    # and that no OWNER_REQUIRED flag can honestly carry, because the row IS cited (flagging
+    # it would republish the page's pre-conversion level and under-grant a printed row). The
+    # question is published HERE, in the section the owner reads; `--check` fails if the
+    # field outlives an owner ruling that answers it.
+    _bind_q = load_bindings()
+    for e in ledger:
+        q = (_bind_q.get((e['file'], str(e['row']))) or {}).get('open_question')
+        if not q:
+            continue
+        where = (f"p.{e['pems_page']}#{e['pems_ordinal']}" if e.get('pems_page') is not None
+                 else 'no printed row')
+        lines.append(f"- **`{e['file'].split('/')[-1]}` row {e['row']} — an open level "
+                     f"question, recorded not fixed.** The row is chipped "
+                     f"`{e.get('level_published')}` and cites {where}. "
+                     + ' '.join(str(q).split()))
     lines += [
               '- **Batch 3 — four rows published no level at all** (Respiratory Arrest r11, r14,',
               '  r15; Smoke Inhalation r8). There was nothing to keep, so each is bound to the row',
@@ -3711,6 +3733,10 @@ def check():
                     fails.append(f'{rel} row {row["ordinal"]}: '
                                  f'{"derived" if is_derived else "owner-ruled"} row still '
                                  f'carries the OWNER_REQUIRED marker')
+                if not is_derived and (r['extra'].get('binding') or {}).get('open_question'):
+                    fails.append(f'{rel} row {row["ordinal"]}: row-bindings.yaml still records '
+                                 f'an `open_question` that this owner ruling answers — drop '
+                                 f'the field, or the owner page keeps asking a decided question')
                 if not is_derived and 'lvl-deriv' in cell_txt:
                     fails.append(f'{rel} row {row["ordinal"]}: chip carries the \u2020 '
                                  f'derived-level marker but level-rulings.yaml records no '

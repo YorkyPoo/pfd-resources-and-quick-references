@@ -337,6 +337,32 @@ site_splits:
           • Cardiac monitoring
 
   - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 6
+    reason: >-
+      The row bundled CPAP initiation (printed EMT) with PEEP titration, which the owner's
+      2026-11-20 ruling made an Intermediate action, so one chip could not carry both halves
+      without over-granting the titration or under-granting the initiation. Initiation keeps
+      the row number and cites the printed row; titration becomes 6a, ruled to I off that
+      same row's 'I/P only' clause.
+    parts:
+      - row: 6
+        level: EMT
+        source: cited
+        pems: p.239#5
+        text: >-
+          ****CPAP** (Continuous Positive Airway Pressure):**<br>• **Indications:** Adults
+          with respiratory distress due to pulmonary edema, infection, or near-drowning<br>•
+          **Initial Settings:** PEEP 5 cmH2O<br>• Close monitoring for hypotension or
+          pneumothorax<br>⚠ **See Pearls for all contraindications**
+      - row: 6a
+        level: I
+        source: ruling
+        pems: p.239#5
+        text: >-
+          • **Titration:** Titrate PEEP up to **10 cmH2O** to support ventilation and work of
+          breathing.
+
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
     row: 16
     reason: >-
       The row bundled more than one action, so no single level could carry it without
