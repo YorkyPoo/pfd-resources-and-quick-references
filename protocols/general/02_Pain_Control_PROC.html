@@ -59,6 +59,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../../stylesheets/pip-strip.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -9165,59 +9167,7 @@ if ('serviceWorker' in navigator) {
 </div>
 </div>
 <h3 id="interventions">Interventions</h3>
-<div class="lv-wrap">
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">#</th>
-<th>Level</th>
-<th>Action / Intervention</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">1</td>
-<td><span class="lvl lvl-emr">EMR</span></td>
-<td>Follow Universal Patient Care / Initial Patient Contact protocol.</td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td><span class="lvl lvl-emr">EMR</span></td>
-<td>Assess baseline pain scale. Consider non-pharmacologic options (reassurance, distraction, positioning, splinting, cold therapy) first or as an adjunct.</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td><span class="lvl lvl-emt">EMT</span></td>
-<td>Assess and monitor blood pressure to ensure patient is not hypotensive (see criteria).</td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td><span class="lvl lvl-a">A</span></td>
-<td>Nausea:<br>• Adult: <strong><a href="../../pharmacology/Ondansetron.html">Ondansetron</a> 4 mg</strong> IV/IM/PO<br>• Pediatric [&gt; 1 year]: <strong><a href="../../pharmacology/Ondansetron.html">Ondansetron</a> 0.15 mg/kg</strong> IV/IM/PO (Max dose: <strong>4 mg</strong>)</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td><span class="lvl lvl-a">A</span></td>
-<td>Mild to Moderate Pain (2 - 5):<br>• Adult: <strong>Ketorolac 15 mg</strong> IV / <strong>30 mg</strong> IM</td>
-</tr>
-<tr>
-<td style="text-align: center;">6</td>
-<td><span class="lvl lvl-a">A</span><sup class="lvl-req" title="PEMS 2024 prints this badge in brackets: agency training documentation and Medical Control written authorization required">*</sup></td>
-<td>Moderate to Severe Pain (6 - 10):<br>• Adult: <strong><a href="../../pharmacology/Fentanyl.html">Fentanyl</a> 25-50 mcg</strong> IV/IN/IM (Max total dose: <strong>100 mcg</strong>)<br>• Pediatric: <strong><a href="../../pharmacology/Fentanyl.html">Fentanyl</a> 0.5-1 mcg/kg</strong> IV/IN/IM (Max dose: <strong>25 mcg</strong>, Max total dose: <strong>100 mcg</strong>)</td>
-</tr>
-<tr>
-<td style="text-align: center;">7</td>
-<td><span class="lvl lvl-a">A</span><sup class="lvl-req" title="PEMS 2024 prints this badge in brackets: agency training documentation and Medical Control written authorization required">*</sup></td>
-<td>OR Moderate to Severe Pain (6 - 10):<br>• Adult: <strong>Morphine Sulfate 2.5-5 mg</strong> IV/IM (Max total dose: <strong>10 mg</strong>)<br>• Pediatric: <strong>Morphine Sulfate 0.1 mg/kg</strong> IV/IM (Max dose: <strong>2.5 mg</strong>, Max total dose: <strong>10 mg</strong>)</td>
-</tr>
-<tr>
-<td style="text-align: center;">8</td>
-<td><span class="lvl lvl-mc">MC</span></td>
-<td>If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact Medical Control for guidance.</td>
-</tr>
-</tbody>
-</table>
-</div>
+<div class="pip-block" data-pip-block><p class="pip-pick-label">Tap your certification level</p><div class="pip-pick" role="group" aria-label="Show the protocol as your certification level"><button type="button" class="pip-btn" data-level="R" aria-pressed="false">R</button><button type="button" class="pip-btn" data-level="B" aria-pressed="false">B</button><button type="button" class="pip-btn" data-level="A" aria-pressed="false">A</button><button type="button" class="pip-btn" data-level="I" aria-pressed="false">I</button><button type="button" class="pip-btn" data-level="P" aria-pressed="false">P</button><button type="button" class="pip-btn pip-btn-all" data-level="all" aria-pressed="true">Show all</button></div><p class="pip-tally" aria-live="polite">Show all — 8 actions. Each row names the level its action starts at; tap a level to see this protocol as you.</p><div class="pip-wrap"><table class="pip-table"><colgroup><col class="pip-col-n"><col><col class="pip-col-strip"></colgroup><thead><tr><th class="pip-th-n">#</th><th>Action / Intervention</th><th class="pip-th-strip"><span class="pip-strip pip-strip-head"><i>R</i><i>B</i><i>A</i><i>I</i><i>P</i></span></th></tr></thead><tbody><tr data-states="go,go,go,go,go"><td class="pip-n">1</td><td class="pip-act"><div class="pip-action">Follow Universal Patient Care / Initial Patient Contact protocol.</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from R</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): standing order; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="go,go,go,go,go"><td class="pip-n">2</td><td class="pip-act"><div class="pip-action">Assess baseline pain scale. Consider non-pharmacologic options (reassurance, distraction, positioning, splinting, cold therapy) first or as an adjunct.</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from R</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): standing order; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,go,go,go,go"><td class="pip-n">3</td><td class="pip-act"><div class="pip-action">Assess and monitor blood pressure to ensure patient is not hypotensive (see criteria).</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from B</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,go,go,go"><td class="pip-n">4</td><td class="pip-act"><div class="pip-action">Nausea:<br>• Adult: <strong><a href="../../pharmacology/Ondansetron.html">Ondansetron</a> 4 mg</strong> IV/IM/PO<br>• Pediatric [&gt; 1 year]: <strong><a href="../../pharmacology/Ondansetron.html">Ondansetron</a> 0.15 mg/kg</strong> IV/IM/PO (Max dose: <strong>4 mg</strong>)</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from A</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,go,go,go"><td class="pip-n">5</td><td class="pip-act"><div class="pip-action">Mild to Moderate Pain (2 - 5):<br>• Adult: <strong>Ketorolac 15 mg</strong> IV / <strong>30 mg</strong> IM</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from A</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,call,go,go"><td class="pip-n">6</td><td class="pip-act"><div class="pip-action">Moderate to Severe Pain (6 - 10):<br>• Adult: <strong><a href="../../pharmacology/Fentanyl.html">Fentanyl</a> 25-50 mcg</strong> IV/IN/IM (Max total dose: <strong>100 mcg</strong>)<br>• Pediatric: <strong><a href="../../pharmacology/Fentanyl.html">Fentanyl</a> 0.5-1 mcg/kg</strong> IV/IN/IM (Max dose: <strong>25 mcg</strong>, Max total dose: <strong>100 mcg</strong>)</div><span class="pip-tag-wrap"><span class="pip-tag call">MC at A, standing from I</span><span class="pip-marks"><span class="pip-mark pip-mark-auth" title="PEMS 2024 prints this badge in brackets: agency training documentation and Medical Control written authorization required">*</span></span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): call Medical Control first; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip call"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,call,go,go"><td class="pip-n">7</td><td class="pip-act"><div class="pip-action">OR Moderate to Severe Pain (6 - 10):<br>• Adult: <strong>Morphine Sulfate 2.5-5 mg</strong> IV/IM (Max total dose: <strong>10 mg</strong>)<br>• Pediatric: <strong>Morphine Sulfate 0.1 mg/kg</strong> IV/IM (Max dose: <strong>2.5 mg</strong>, Max total dose: <strong>10 mg</strong>)</div><span class="pip-tag-wrap"><span class="pip-tag call">MC at A, standing from I</span><span class="pip-marks"><span class="pip-mark pip-mark-auth" title="PEMS 2024 prints this badge in brackets: agency training documentation and Medical Control written authorization required">*</span></span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): call Medical Control first; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip call"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="call,call,call,call,call"><td class="pip-n">8</td><td class="pip-act"><div class="pip-action">If unable to adequately control pain or safely and humanely extricate/transport a stable patient, contact Medical Control for guidance.</div><span class="pip-tag-wrap"><span class="pip-tag call">MC at every level</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): call Medical Control first; B (EMT): call Medical Control first; A (AEMT): call Medical Control first; I (Intermediate): call Medical Control first; P (Paramedic): call Medical Control first"><i class="pip call"></i><i class="pip call"></i><i class="pip call"></i><i class="pip call"></i><i class="pip call"></i></span></td></tr></tbody></table></div><div class="pip-legend"><p class="pip-legend-h">Reading the strip</p><ul class="pip-keys"><li><span class="pip-strip"><i class="pip go"></i></span><span><b>Solid</b> — standing order at that level. You may act.</span></li><li><span class="pip-strip"><i class="pip call"></i></span><span><b>Hatched</b> — call Medical Control first at that level.</span></li><li><span class="pip-strip"><i class="pip no"></i></span><span><b>Empty outline</b> — not authorised at that level.</span></li></ul><p class="pip-legend-levels"><span class="pip-letters">R B A I P</span> = EMR · EMT · AEMT · Intermediate · Paramedic</p><p class="pip-legend-note">Position names the level and the words name it too, so colour is never the only signal. Colour is reserved for the one question that matters on scene: <b>do I act, do I call, or is this not mine.</b></p></div></div>
 <p class="lv-note">* <strong>Bracketed badge</strong> — the level is printed in brackets in the source: agency post-affiliation training documentation on file, plus the Medical Control written authorization for that skill. The brackets are the source's own.</p>
 
 <h3 id="pearls">Pearls</h3>
@@ -9289,6 +9239,8 @@ if ('serviceWorker' in navigator) {
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/pip-strip.js"></script>
       
     
   <nav class="bbnav" aria-label="Field navigation"><a class="bbitem" href="../../index.html"><span class="bbico">⌂</span><span class="bbtxt">Home</span></a><a class="bbitem" href="../../resources/ems.html"><span class="bbico">✚</span><span class="bbtxt">EMS</span></a><a class="bbitem" href="../../resources/fire.html"><span class="bbico">▲</span><span class="bbtxt">Fire</span></a><a class="bbitem" href="../../resources/station.html"><span class="bbico">▦</span><span class="bbtxt">Station</span></a></nav>

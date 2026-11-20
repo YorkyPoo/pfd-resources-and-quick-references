@@ -59,6 +59,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../../stylesheets/pip-strip.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -9198,112 +9200,11 @@ This protocol outlines the management of patients experiencing an acute allergic
 </div>
 </div>
 <h3 id="interventions">Interventions</h3>
-<div class="lv-wrap">
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">#</th>
-<th>Level</th>
-<th>Action / Intervention</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">1</td>
-<td><span class="lvl lvl-emr">EMR</span></td>
-<td><strong>Universal Patient Care:</strong><br>• Follow Universal Patient Care / Initial Patient Contact protocol.</td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td><span class="lvl lvl-emt">EMT</span></td>
-<td><strong>Stinger Removal:</strong><br>• Remove stinger if present. Do not squeeze stinger. Scrape it away with a flat surface.</td>
-</tr>
-</tbody>
-</table>
-</div>
+<div class="pip-block" data-pip-block><p class="pip-pick-label">Tap your certification level</p><div class="pip-pick" role="group" aria-label="Show the protocol as your certification level"><button type="button" class="pip-btn" data-level="R" aria-pressed="false">R</button><button type="button" class="pip-btn" data-level="B" aria-pressed="false">B</button><button type="button" class="pip-btn" data-level="A" aria-pressed="false">A</button><button type="button" class="pip-btn" data-level="I" aria-pressed="false">I</button><button type="button" class="pip-btn" data-level="P" aria-pressed="false">P</button><button type="button" class="pip-btn pip-btn-all" data-level="all" aria-pressed="true">Show all</button></div><p class="pip-tally" aria-live="polite">Show all — 2 actions. Each row names the level its action starts at; tap a level to see this protocol as you.</p><div class="pip-wrap"><table class="pip-table"><colgroup><col class="pip-col-n"><col><col class="pip-col-strip"></colgroup><thead><tr><th class="pip-th-n">#</th><th>Action / Intervention</th><th class="pip-th-strip"><span class="pip-strip pip-strip-head"><i>R</i><i>B</i><i>A</i><i>I</i><i>P</i></span></th></tr></thead><tbody><tr data-states="go,go,go,go,go"><td class="pip-n">1</td><td class="pip-act"><div class="pip-action"><strong>Universal Patient Care:</strong><br>• Follow Universal Patient Care / Initial Patient Contact protocol.</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from R</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): standing order; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,go,go,go,go"><td class="pip-n">2</td><td class="pip-act"><div class="pip-action"><strong>Stinger Removal:</strong><br>• Remove stinger if present. Do not squeeze stinger. Scrape it away with a flat surface.</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from B</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr></tbody></table></div><div class="pip-legend"><p class="pip-legend-h">Reading the strip</p><ul class="pip-keys"><li><span class="pip-strip"><i class="pip go"></i></span><span><b>Solid</b> — standing order at that level. You may act.</span></li><li><span class="pip-strip"><i class="pip call"></i></span><span><b>Hatched</b> — call Medical Control first at that level.</span></li><li><span class="pip-strip"><i class="pip no"></i></span><span><b>Empty outline</b> — not authorised at that level.</span></li></ul><p class="pip-legend-levels"><span class="pip-letters">R B A I P</span> = EMR · EMT · AEMT · Intermediate · Paramedic</p><p class="pip-legend-note">Position names the level and the words name it too, so colour is never the only signal. Colour is reserved for the one question that matters on scene: <b>do I act, do I call, or is this not mine.</b></p></div></div>
 <h4 id="acute-allergic-reaction-non-anaphylaxis">Acute Allergic Reaction (non-Anaphylaxis)</h4>
-<div class="lv-wrap">
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">#</th>
-<th>Level</th>
-<th>Action / Intervention</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">3</td>
-<td><span class="lvl lvl-a">A</span></td>
-<td><strong>Antihistamine Administration:</strong><br>• <strong>ADULT:</strong> <strong>Diphenhydramine (Benadryl) 50 mg</strong> IV/IO slow push or IM.<br>• <strong>PEDIATRIC:</strong> <strong>Diphenhydramine (Benadryl) 1 mg/kg</strong> IV/IO slow push or IM (Maximum dose: <strong>50 mg</strong>).</td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td><span class="lvl lvl-a">A</span></td>
-<td><strong>Bronchodilator (Wheezing):</strong><br>• If wheezing is present, administer:<br>• <strong>ADULT &amp; PEDIATRIC:</strong> <strong><a href="../../pharmacology/Albuterol.html">Albuterol</a> sulfate (Proventil) 3 mL</strong> of 0.083% solution, nebulized. Repeat as needed for wheezing.</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td><span class="lvl lvl-a">A</span></td>
-<td><strong>Anticholinergic (Wheezing):</strong><br>• If wheezing is present, administer:<br>• <strong>ADULT &amp; PEDIATRIC:</strong> <strong><a href="../../pharmacology/Ipratropium%20Bromide.html">Ipratropium</a> bromide (Atrovent) 3 mL</strong> of 0.02% solution, nebulized, once.</td>
-</tr>
-<tr>
-<td style="text-align: center;">6</td>
-<td><span class="lvl lvl-a">A</span></td>
-<td><strong>Corticosteroid (Consideration):</strong><br>• Consider administering:<br>• <strong>ADULT:</strong> <strong><a href="../../pharmacology/Methylprednisolone.html">Methylprednisolone</a> Succinate (Solu-Medrol) 125 mg</strong> slow IV push.<br>• <strong>PEDIATRIC:</strong> <strong><a href="../../pharmacology/Methylprednisolone.html">Methylprednisolone</a> Succinate (Solu-Medrol) 2 mg/kg</strong> slow IV push (Maximum dose: <strong>125 mg</strong>).</td>
-</tr>
-</tbody>
-</table>
-</div>
+<div class="pip-block" data-pip-block><p class="pip-pick-label">Tap your certification level</p><div class="pip-pick" role="group" aria-label="Show the protocol as your certification level"><button type="button" class="pip-btn" data-level="R" aria-pressed="false">R</button><button type="button" class="pip-btn" data-level="B" aria-pressed="false">B</button><button type="button" class="pip-btn" data-level="A" aria-pressed="false">A</button><button type="button" class="pip-btn" data-level="I" aria-pressed="false">I</button><button type="button" class="pip-btn" data-level="P" aria-pressed="false">P</button><button type="button" class="pip-btn pip-btn-all" data-level="all" aria-pressed="true">Show all</button></div><p class="pip-tally" aria-live="polite">Show all — 4 actions. Each row names the level its action starts at; tap a level to see this protocol as you.</p><div class="pip-wrap"><table class="pip-table"><colgroup><col class="pip-col-n"><col><col class="pip-col-strip"></colgroup><thead><tr><th class="pip-th-n">#</th><th>Action / Intervention</th><th class="pip-th-strip"><span class="pip-strip pip-strip-head"><i>R</i><i>B</i><i>A</i><i>I</i><i>P</i></span></th></tr></thead><tbody><tr data-states="no,no,go,go,go"><td class="pip-n">3</td><td class="pip-act"><div class="pip-action"><strong>Antihistamine Administration:</strong><br>• <strong>ADULT:</strong> <strong>Diphenhydramine (Benadryl) 50 mg</strong> IV/IO slow push or IM.<br>• <strong>PEDIATRIC:</strong> <strong>Diphenhydramine (Benadryl) 1 mg/kg</strong> IV/IO slow push or IM (Maximum dose: <strong>50 mg</strong>).</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from A</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,go,go,go"><td class="pip-n">4</td><td class="pip-act"><div class="pip-action"><strong>Bronchodilator (Wheezing):</strong><br>• If wheezing is present, administer:<br>• <strong>ADULT &amp; PEDIATRIC:</strong> <strong><a href="../../pharmacology/Albuterol.html">Albuterol</a> sulfate (Proventil) 3 mL</strong> of 0.083% solution, nebulized. Repeat as needed for wheezing.</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from A</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,go,go,go"><td class="pip-n">5</td><td class="pip-act"><div class="pip-action"><strong>Anticholinergic (Wheezing):</strong><br>• If wheezing is present, administer:<br>• <strong>ADULT &amp; PEDIATRIC:</strong> <strong><a href="../../pharmacology/Ipratropium%20Bromide.html">Ipratropium</a> bromide (Atrovent) 3 mL</strong> of 0.02% solution, nebulized, once.</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from A</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,go,go,go"><td class="pip-n">6</td><td class="pip-act"><div class="pip-action"><strong>Corticosteroid (Consideration):</strong><br>• Consider administering:<br>• <strong>ADULT:</strong> <strong><a href="../../pharmacology/Methylprednisolone.html">Methylprednisolone</a> Succinate (Solu-Medrol) 125 mg</strong> slow IV push.<br>• <strong>PEDIATRIC:</strong> <strong><a href="../../pharmacology/Methylprednisolone.html">Methylprednisolone</a> Succinate (Solu-Medrol) 2 mg/kg</strong> slow IV push (Maximum dose: <strong>125 mg</strong>).</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from A</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr></tbody></table></div><div class="pip-legend"><p class="pip-legend-h">Reading the strip</p><ul class="pip-keys"><li><span class="pip-strip"><i class="pip go"></i></span><span><b>Solid</b> — standing order at that level. You may act.</span></li><li><span class="pip-strip"><i class="pip call"></i></span><span><b>Hatched</b> — call Medical Control first at that level.</span></li><li><span class="pip-strip"><i class="pip no"></i></span><span><b>Empty outline</b> — not authorised at that level.</span></li></ul><p class="pip-legend-levels"><span class="pip-letters">R B A I P</span> = EMR · EMT · AEMT · Intermediate · Paramedic</p><p class="pip-legend-note">Position names the level and the words name it too, so colour is never the only signal. Colour is reserved for the one question that matters on scene: <b>do I act, do I call, or is this not mine.</b></p></div></div>
 <h4 id="anaphylaxis">Anaphylaxis</h4>
-<div class="lv-wrap">
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">#</th>
-<th>Level</th>
-<th>Action / Intervention</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">7</td>
-<td><span class="lvl lvl-emt">EMT</span></td>
-<td><strong><a href="../../pharmacology/Epinephrine.html">Epinephrine</a> Administration:</strong><br>• Administer IM using either dose-specific clearly marked or color-coded syringe.<br>• <strong>ADULT:</strong> <strong><a href="../../pharmacology/Epinephrine.html">Epinephrine</a></strong> autoinjector or <strong>0.3 mg [1 mg/mL]</strong> IM.<br>• <strong>PEDIATRIC (&lt; 30 kg):</strong> Pediatric <strong><a href="../../pharmacology/Epinephrine.html">Epinephrine</a></strong> autoinjector or <strong>0.15 mg [1 mg/mL]</strong> IM.<br>• <strong>PEDIATRIC (&gt; 30 kg):</strong> <strong><a href="../../pharmacology/Epinephrine.html">Epinephrine</a></strong> autoinjector or <strong>0.3 mg [1 mg/mL]</strong> IM.<br>• Repeat every 5-15 minutes for up to 3 injections as needed.</td>
-</tr>
-<tr>
-<td style="text-align: center;">8</td>
-<td><span class="lvl lvl-a">A</span></td>
-<td><strong>Vascular Access:</strong><br>• Obtain IV/IO access.</td>
-</tr>
-<tr>
-<td style="text-align: center;">9</td>
-<td><span class="lvl lvl-a">A</span></td>
-<td><strong>Fluid Resuscitation (Hypotension):</strong><br>• If patient is hypotensive, administer:<br>• <strong>ADULT:</strong> <strong>0.9% Sodium chloride</strong> up to <strong>1 L</strong> IV/IO in <strong>250 – 500 mL</strong> boluses.<br>• <strong>PEDIATRIC:</strong> <strong>0.9% Sodium chloride 20 mL/kg</strong> IV/IO.<br>• Repeat as needed to maintain adequate perfusion, up to <strong>60 mL/kg</strong> total.</td>
-</tr>
-<tr>
-<td style="text-align: center;">10</td>
-<td><span class="lvl lvl-a">A</span></td>
-<td><strong>Antihistamine Administration:</strong><br>• <strong>ADULT:</strong> <strong>Diphenhydramine (Benadryl) 50 mg</strong> IV/IO slow push or IM.<br>• <strong>PEDIATRIC:</strong> <strong>Diphenhydramine (Benadryl) 1 mg/kg</strong> IV/IO slow push or IM (Maximum dose: <strong>50 mg</strong>).</td>
-</tr>
-<tr>
-<td style="text-align: center;">11</td>
-<td><span class="lvl lvl-a">A</span></td>
-<td><strong>Bronchodilator (Wheezing):</strong><br>• If wheezing is present, administer:<br>• <strong>ADULT &amp; PEDIATRIC:</strong> <strong><a href="../../pharmacology/Albuterol.html">Albuterol</a> sulfate (Proventil) 3 mL</strong> of 0.083% solution, nebulized. May repeat as needed.</td>
-</tr>
-<tr>
-<td style="text-align: center;">12</td>
-<td><span class="lvl lvl-a">A</span></td>
-<td><strong>Anticholinergic (Wheezing):</strong><br>• If wheezing is present, administer:<br>• <strong>ADULT &amp; PEDIATRIC:</strong> <strong><a href="../../pharmacology/Ipratropium%20Bromide.html">Ipratropium</a> bromide (Atrovent) 3 mL</strong> of 0.02% solution, nebulized, once.</td>
-</tr>
-<tr>
-<td style="text-align: center;">13</td>
-<td><span class="lvl lvl-a">A</span></td>
-<td><strong>Corticosteroid Administration:</strong><br>• <strong>ADULT:</strong> <strong><a href="../../pharmacology/Methylprednisolone.html">Methylprednisolone</a> succinate (Solu-Medrol) 125 mg</strong> IV/IO slow push.<br>• <strong>PEDIATRIC:</strong> <strong><a href="../../pharmacology/Methylprednisolone.html">Methylprednisolone</a> succinate (Solu-Medrol) 2 mg/kg</strong> IV/IO slow push (Maximum dose: <strong>125 mg</strong>).</td>
-</tr>
-</tbody>
-</table>
-</div>
+<div class="pip-block" data-pip-block><p class="pip-pick-label">Tap your certification level</p><div class="pip-pick" role="group" aria-label="Show the protocol as your certification level"><button type="button" class="pip-btn" data-level="R" aria-pressed="false">R</button><button type="button" class="pip-btn" data-level="B" aria-pressed="false">B</button><button type="button" class="pip-btn" data-level="A" aria-pressed="false">A</button><button type="button" class="pip-btn" data-level="I" aria-pressed="false">I</button><button type="button" class="pip-btn" data-level="P" aria-pressed="false">P</button><button type="button" class="pip-btn pip-btn-all" data-level="all" aria-pressed="true">Show all</button></div><p class="pip-tally" aria-live="polite">Show all — 7 actions. Each row names the level its action starts at; tap a level to see this protocol as you.</p><div class="pip-wrap"><table class="pip-table"><colgroup><col class="pip-col-n"><col><col class="pip-col-strip"></colgroup><thead><tr><th class="pip-th-n">#</th><th>Action / Intervention</th><th class="pip-th-strip"><span class="pip-strip pip-strip-head"><i>R</i><i>B</i><i>A</i><i>I</i><i>P</i></span></th></tr></thead><tbody><tr data-states="no,go,go,go,go"><td class="pip-n">7</td><td class="pip-act"><div class="pip-action"><strong><a href="../../pharmacology/Epinephrine.html">Epinephrine</a> Administration:</strong><br>• Administer IM using either dose-specific clearly marked or color-coded syringe.<br>• <strong>ADULT:</strong> <strong><a href="../../pharmacology/Epinephrine.html">Epinephrine</a></strong> autoinjector or <strong>0.3 mg [1 mg/mL]</strong> IM.<br>• <strong>PEDIATRIC (&lt; 30 kg):</strong> Pediatric <strong><a href="../../pharmacology/Epinephrine.html">Epinephrine</a></strong> autoinjector or <strong>0.15 mg [1 mg/mL]</strong> IM.<br>• <strong>PEDIATRIC (&gt; 30 kg):</strong> <strong><a href="../../pharmacology/Epinephrine.html">Epinephrine</a></strong> autoinjector or <strong>0.3 mg [1 mg/mL]</strong> IM.<br>• Repeat every 5-15 minutes for up to 3 injections as needed.</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from B</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,go,go,go"><td class="pip-n">8</td><td class="pip-act"><div class="pip-action"><strong>Vascular Access:</strong><br>• Obtain IV/IO access.</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from A</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,go,go,go"><td class="pip-n">9</td><td class="pip-act"><div class="pip-action"><strong>Fluid Resuscitation (Hypotension):</strong><br>• If patient is hypotensive, administer:<br>• <strong>ADULT:</strong> <strong>0.9% Sodium chloride</strong> up to <strong>1 L</strong> IV/IO in <strong>250 – 500 mL</strong> boluses.<br>• <strong>PEDIATRIC:</strong> <strong>0.9% Sodium chloride 20 mL/kg</strong> IV/IO.<br>• Repeat as needed to maintain adequate perfusion, up to <strong>60 mL/kg</strong> total.</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from A</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,go,go,go"><td class="pip-n">10</td><td class="pip-act"><div class="pip-action"><strong>Antihistamine Administration:</strong><br>• <strong>ADULT:</strong> <strong>Diphenhydramine (Benadryl) 50 mg</strong> IV/IO slow push or IM.<br>• <strong>PEDIATRIC:</strong> <strong>Diphenhydramine (Benadryl) 1 mg/kg</strong> IV/IO slow push or IM (Maximum dose: <strong>50 mg</strong>).</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from A</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,go,go,go"><td class="pip-n">11</td><td class="pip-act"><div class="pip-action"><strong>Bronchodilator (Wheezing):</strong><br>• If wheezing is present, administer:<br>• <strong>ADULT &amp; PEDIATRIC:</strong> <strong><a href="../../pharmacology/Albuterol.html">Albuterol</a> sulfate (Proventil) 3 mL</strong> of 0.083% solution, nebulized. May repeat as needed.</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from A</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,go,go,go"><td class="pip-n">12</td><td class="pip-act"><div class="pip-action"><strong>Anticholinergic (Wheezing):</strong><br>• If wheezing is present, administer:<br>• <strong>ADULT &amp; PEDIATRIC:</strong> <strong><a href="../../pharmacology/Ipratropium%20Bromide.html">Ipratropium</a> bromide (Atrovent) 3 mL</strong> of 0.02% solution, nebulized, once.</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from A</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,go,go,go"><td class="pip-n">13</td><td class="pip-act"><div class="pip-action"><strong>Corticosteroid Administration:</strong><br>• <strong>ADULT:</strong> <strong><a href="../../pharmacology/Methylprednisolone.html">Methylprednisolone</a> succinate (Solu-Medrol) 125 mg</strong> IV/IO slow push.<br>• <strong>PEDIATRIC:</strong> <strong><a href="../../pharmacology/Methylprednisolone.html">Methylprednisolone</a> succinate (Solu-Medrol) 2 mg/kg</strong> IV/IO slow push (Maximum dose: <strong>125 mg</strong>).</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from A</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr></tbody></table></div><div class="pip-legend"><p class="pip-legend-h">Reading the strip</p><ul class="pip-keys"><li><span class="pip-strip"><i class="pip go"></i></span><span><b>Solid</b> — standing order at that level. You may act.</span></li><li><span class="pip-strip"><i class="pip call"></i></span><span><b>Hatched</b> — call Medical Control first at that level.</span></li><li><span class="pip-strip"><i class="pip no"></i></span><span><b>Empty outline</b> — not authorised at that level.</span></li></ul><p class="pip-legend-levels"><span class="pip-letters">R B A I P</span> = EMR · EMT · AEMT · Intermediate · Paramedic</p><p class="pip-legend-note">Position names the level and the words name it too, so colour is never the only signal. Colour is reserved for the one question that matters on scene: <b>do I act, do I call, or is this not mine.</b></p></div></div>
 <h3 id="pearls">Pearls</h3>
 <ol>
 <li>⚠ EMTs must use either dose-specific clearly marked or color-coded syringes for <strong><a href="../../pharmacology/Epinephrine.html">Epinephrine</a></strong> IM.</li>
@@ -9376,6 +9277,8 @@ This protocol outlines the management of patients experiencing an acute allergic
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/pip-strip.js"></script>
       
     
   <nav class="bbnav" aria-label="Field navigation"><a class="bbitem" href="../../index.html"><span class="bbico">⌂</span><span class="bbtxt">Home</span></a><a class="bbitem" href="../../resources/ems.html"><span class="bbico">✚</span><span class="bbtxt">EMS</span></a><a class="bbitem" href="../../resources/fire.html"><span class="bbico">▲</span><span class="bbtxt">Fire</span></a><a class="bbitem" href="../../resources/station.html"><span class="bbico">▦</span><span class="bbtxt">Station</span></a></nav>

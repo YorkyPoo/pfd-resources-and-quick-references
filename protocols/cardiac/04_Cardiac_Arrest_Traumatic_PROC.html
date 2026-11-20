@@ -59,6 +59,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../../stylesheets/pip-strip.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -9163,79 +9165,7 @@ if ('serviceWorker' in navigator) {
 </div>
 </div>
 <h3 id="interventions">Interventions</h3>
-<div class="lv-wrap">
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">#</th>
-<th>Level</th>
-<th>Action / Intervention</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">1</td>
-<td><span class="lvl lvl-emr">EMR</span></td>
-<td>Control major active external bleeding / Begin CPR</td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td><span class="lvl lvl-emt">EMT</span></td>
-<td>Open the airway / Ventilate</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td><span class="lvl lvl-emt">EMT</span></td>
-<td>Apply AED / Monitor (Assess rhythm before CPR if possible)</td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td><span class="lvl lvl-i">I</span></td>
-<td>Asystole on arrival: Consider withholding CPR</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td><span class="lvl lvl-emt">EMT</span></td>
-<td>PEA / VF / VT: Continue CPR</td>
-</tr>
-<tr>
-<td style="text-align: center;">5a</td>
-<td><span class="lvl lvl-i">I</span></td>
-<td>Defibrillate if indicated</td>
-</tr>
-<tr>
-<td style="text-align: center;">6</td>
-<td><span class="lvl lvl-a">A</span></td>
-<td>Obtain IV/IO access (x2 preferred)</td>
-</tr>
-<tr>
-<td style="text-align: center;">7</td>
-<td><span class="lvl lvl-a">A</span></td>
-<td>If blood unavailable: <strong>0.9% Sodium Chloride</strong> up to <strong>1 L</strong> IV/IO (Adult) / <strong>20 mL/kg</strong> IV/IO (Ped)</td>
-</tr>
-<tr>
-<td style="text-align: center;">8</td>
-<td><span class="lvl lvl-i">I</span></td>
-<td>Assess Shock Index &gt; 1 / Resuscitate prior to intubation</td>
-</tr>
-<tr>
-<td style="text-align: center;">9</td>
-<td><span class="lvl lvl-i">I</span></td>
-<td>Perform bilateral chest decompression for tension pneumo</td>
-</tr>
-<tr>
-<td style="text-align: center;">10</td>
-<td><span class="lvl lvl-emt">EMT</span></td>
-<td>Rapid transport to Level I/II Trauma Center (Goal &lt; 10 mins)</td>
-</tr>
-<tr>
-<td style="text-align: center;">11</td>
-<td><span class="lvl lvl-mc">MC</span></td>
-<td>Contact Medical Control for guidance / destination</td>
-</tr>
-</tbody>
-</table>
-</div>
+<div class="pip-block" data-pip-block><p class="pip-pick-label">Tap your certification level</p><div class="pip-pick" role="group" aria-label="Show the protocol as your certification level"><button type="button" class="pip-btn" data-level="R" aria-pressed="false">R</button><button type="button" class="pip-btn" data-level="B" aria-pressed="false">B</button><button type="button" class="pip-btn" data-level="A" aria-pressed="false">A</button><button type="button" class="pip-btn" data-level="I" aria-pressed="false">I</button><button type="button" class="pip-btn" data-level="P" aria-pressed="false">P</button><button type="button" class="pip-btn pip-btn-all" data-level="all" aria-pressed="true">Show all</button></div><p class="pip-tally" aria-live="polite">Show all — 12 actions. Each row names the level its action starts at; tap a level to see this protocol as you.</p><div class="pip-wrap"><table class="pip-table"><colgroup><col class="pip-col-n"><col><col class="pip-col-strip"></colgroup><thead><tr><th class="pip-th-n">#</th><th>Action / Intervention</th><th class="pip-th-strip"><span class="pip-strip pip-strip-head"><i>R</i><i>B</i><i>A</i><i>I</i><i>P</i></span></th></tr></thead><tbody><tr data-states="go,go,go,go,go"><td class="pip-n">1</td><td class="pip-act"><div class="pip-action">Control major active external bleeding / Begin CPR</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from R</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): standing order; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,go,go,go,go"><td class="pip-n">2</td><td class="pip-act"><div class="pip-action">Open the airway / Ventilate</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from B</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,go,go,go,go"><td class="pip-n">3</td><td class="pip-act"><div class="pip-action">Apply AED / Monitor (Assess rhythm before CPR if possible)</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from B</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,no,go,go"><td class="pip-n">4</td><td class="pip-act"><div class="pip-action">Asystole on arrival: Consider withholding CPR</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from I</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): not authorised; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,go,go,go,go"><td class="pip-n">5</td><td class="pip-act"><div class="pip-action">PEA / VF / VT: Continue CPR</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from B</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,no,go,go"><td class="pip-n">5a</td><td class="pip-act"><div class="pip-action">Defibrillate if indicated</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from I</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): not authorised; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,go,go,go"><td class="pip-n">6</td><td class="pip-act"><div class="pip-action">Obtain IV/IO access (x2 preferred)</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from A</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,go,go,go"><td class="pip-n">7</td><td class="pip-act"><div class="pip-action">If blood unavailable: <strong>0.9% Sodium Chloride</strong> up to <strong>1 L</strong> IV/IO (Adult) / <strong>20 mL/kg</strong> IV/IO (Ped)</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from A</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,no,go,go"><td class="pip-n">8</td><td class="pip-act"><div class="pip-action">Assess Shock Index &gt; 1 / Resuscitate prior to intubation</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from I</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): not authorised; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,no,go,go"><td class="pip-n">9</td><td class="pip-act"><div class="pip-action">Perform bilateral chest decompression for tension pneumo</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from I</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): not authorised; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,go,go,go,go"><td class="pip-n">10</td><td class="pip-act"><div class="pip-action">Rapid transport to Level I/II Trauma Center (Goal &lt; 10 mins)</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from B</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="call,call,call,call,call"><td class="pip-n">11</td><td class="pip-act"><div class="pip-action">Contact Medical Control for guidance / destination</div><span class="pip-tag-wrap"><span class="pip-tag call">MC at every level</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): call Medical Control first; B (EMT): call Medical Control first; A (AEMT): call Medical Control first; I (Intermediate): call Medical Control first; P (Paramedic): call Medical Control first"><i class="pip call"></i><i class="pip call"></i><i class="pip call"></i><i class="pip call"></i><i class="pip call"></i></span></td></tr></tbody></table></div><div class="pip-legend"><p class="pip-legend-h">Reading the strip</p><ul class="pip-keys"><li><span class="pip-strip"><i class="pip go"></i></span><span><b>Solid</b> — standing order at that level. You may act.</span></li><li><span class="pip-strip"><i class="pip call"></i></span><span><b>Hatched</b> — call Medical Control first at that level.</span></li><li><span class="pip-strip"><i class="pip no"></i></span><span><b>Empty outline</b> — not authorised at that level.</span></li></ul><p class="pip-legend-levels"><span class="pip-letters">R B A I P</span> = EMR · EMT · AEMT · Intermediate · Paramedic</p><p class="pip-legend-note">Position names the level and the words name it too, so colour is never the only signal. Colour is reserved for the one question that matters on scene: <b>do I act, do I call, or is this not mine.</b></p></div></div>
 <h3 id="pearls">Pearls</h3>
 <p>• ⚠ <strong>Asystole on arrival survival &lt;1%</strong>: Consider withholding resuscitation if the rhythm is asystole on EMS arrival, as survival rates are extremely low unless loss of pulses was witnessed by EMS with immediate intervention.
 • ⚠ <strong>Prioritize reversible causes over prolonged CPR</strong>: Efficacy of CPR in trauma is unclear. Focus on immediate reversible causes such as chest decompression, volume expansion, and airway management. CPR is needed to circulate any fluids/medications.
@@ -9305,6 +9235,8 @@ if ('serviceWorker' in navigator) {
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/pip-strip.js"></script>
       
     
   <nav class="bbnav" aria-label="Field navigation"><a class="bbitem" href="../../index.html"><span class="bbico">⌂</span><span class="bbtxt">Home</span></a><a class="bbitem" href="../../resources/ems.html"><span class="bbico">✚</span><span class="bbtxt">EMS</span></a><a class="bbitem" href="../../resources/fire.html"><span class="bbico">▲</span><span class="bbtxt">Fire</span></a><a class="bbitem" href="../../resources/station.html"><span class="bbico">▦</span><span class="bbtxt">Station</span></a></nav>

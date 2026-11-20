@@ -59,6 +59,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../../stylesheets/pip-strip.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -9161,54 +9163,7 @@ if ('serviceWorker' in navigator) {
 </div>
 </div>
 <h3 id="interventions">Interventions</h3>
-<div class="lv-wrap">
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">#</th>
-<th>Level</th>
-<th>Action / Intervention</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">1</td>
-<td><span class="lvl lvl-emr">EMR</span></td>
-<td>Place patient in cool environment</td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td><span class="lvl lvl-emt">EMT</span></td>
-<td>Remove excess clothing</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td><span class="lvl lvl-emt">EMT</span></td>
-<td>Normal skin temp: Apply cool compresses</td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td><span class="lvl lvl-emt">EMT</span></td>
-<td>Hot skin temp (Heat Stroke): Treat as life-threatening/start rapid cooling (cool mist, ice packs to armpits/groin/neck, wet sheet)</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td><span class="lvl lvl-emt">EMT</span></td>
-<td>Shivering: Slow the cooling process</td>
-</tr>
-<tr>
-<td style="text-align: center;">6</td>
-<td><span class="lvl lvl-a">A</span></td>
-<td>Suspected heat stroke/hypovolemia: <strong>0.9% Normal Saline 20 mL/kg up to 1000 mL bolus</strong> IV/IO</td>
-</tr>
-<tr>
-<td style="text-align: center;">7</td>
-<td><span class="lvl lvl-emt">EMT</span></td>
-<td>Continuously reassess patient</td>
-</tr>
-</tbody>
-</table>
-</div>
+<div class="pip-block" data-pip-block><p class="pip-pick-label">Tap your certification level</p><div class="pip-pick" role="group" aria-label="Show the protocol as your certification level"><button type="button" class="pip-btn" data-level="R" aria-pressed="false">R</button><button type="button" class="pip-btn" data-level="B" aria-pressed="false">B</button><button type="button" class="pip-btn" data-level="A" aria-pressed="false">A</button><button type="button" class="pip-btn" data-level="I" aria-pressed="false">I</button><button type="button" class="pip-btn" data-level="P" aria-pressed="false">P</button><button type="button" class="pip-btn pip-btn-all" data-level="all" aria-pressed="true">Show all</button></div><p class="pip-tally" aria-live="polite">Show all — 7 actions. Each row names the level its action starts at; tap a level to see this protocol as you.</p><div class="pip-wrap"><table class="pip-table"><colgroup><col class="pip-col-n"><col><col class="pip-col-strip"></colgroup><thead><tr><th class="pip-th-n">#</th><th>Action / Intervention</th><th class="pip-th-strip"><span class="pip-strip pip-strip-head"><i>R</i><i>B</i><i>A</i><i>I</i><i>P</i></span></th></tr></thead><tbody><tr data-states="go,go,go,go,go"><td class="pip-n">1</td><td class="pip-act"><div class="pip-action">Place patient in cool environment</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from R</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): standing order; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,go,go,go,go"><td class="pip-n">2</td><td class="pip-act"><div class="pip-action">Remove excess clothing</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from B</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,go,go,go,go"><td class="pip-n">3</td><td class="pip-act"><div class="pip-action">Normal skin temp: Apply cool compresses</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from B</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,go,go,go,go"><td class="pip-n">4</td><td class="pip-act"><div class="pip-action">Hot skin temp (Heat Stroke): Treat as life-threatening/start rapid cooling (cool mist, ice packs to armpits/groin/neck, wet sheet)</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from B</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,go,go,go,go"><td class="pip-n">5</td><td class="pip-act"><div class="pip-action">Shivering: Slow the cooling process</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from B</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,go,go,go"><td class="pip-n">6</td><td class="pip-act"><div class="pip-action">Suspected heat stroke/hypovolemia: <strong>0.9% Normal Saline 20 mL/kg up to 1000 mL bolus</strong> IV/IO</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from A</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,go,go,go,go"><td class="pip-n">7</td><td class="pip-act"><div class="pip-action">Continuously reassess patient</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from B</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr></tbody></table></div><div class="pip-legend"><p class="pip-legend-h">Reading the strip</p><ul class="pip-keys"><li><span class="pip-strip"><i class="pip go"></i></span><span><b>Solid</b> — standing order at that level. You may act.</span></li><li><span class="pip-strip"><i class="pip call"></i></span><span><b>Hatched</b> — call Medical Control first at that level.</span></li><li><span class="pip-strip"><i class="pip no"></i></span><span><b>Empty outline</b> — not authorised at that level.</span></li></ul><p class="pip-legend-levels"><span class="pip-letters">R B A I P</span> = EMR · EMT · AEMT · Intermediate · Paramedic</p><p class="pip-legend-note">Position names the level and the words name it too, so colour is never the only signal. Colour is reserved for the one question that matters on scene: <b>do I act, do I call, or is this not mine.</b></p></div></div>
 <h3 id="pearls">Pearls</h3>
 <ol>
 <li>⚠ Hot skin to touch indicates a life-threatening emergency (Heat Stroke) - begin rapid cooling immediately.</li>
@@ -9277,6 +9232,8 @@ if ('serviceWorker' in navigator) {
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/pip-strip.js"></script>
       
     
   <nav class="bbnav" aria-label="Field navigation"><a class="bbitem" href="../../index.html"><span class="bbico">⌂</span><span class="bbtxt">Home</span></a><a class="bbitem" href="../../resources/ems.html"><span class="bbico">✚</span><span class="bbtxt">EMS</span></a><a class="bbitem" href="../../resources/fire.html"><span class="bbico">▲</span><span class="bbtxt">Fire</span></a><a class="bbitem" href="../../resources/station.html"><span class="bbico">▦</span><span class="bbtxt">Station</span></a></nav>

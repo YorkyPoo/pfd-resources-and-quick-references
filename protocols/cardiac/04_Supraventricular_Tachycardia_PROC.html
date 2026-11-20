@@ -59,6 +59,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../../stylesheets/pip-strip.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -9232,117 +9234,11 @@ if ('serviceWorker' in navigator) {
 </div>
 </div>
 <h3 id="interventions">Interventions</h3>
-<div class="lv-wrap">
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">#</th>
-<th>Level</th>
-<th>Action / Intervention</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">1</td>
-<td><span class="lvl lvl-emr">EMR</span></td>
-<td>Follow Universal Patient Care / Initial Patient Contact</td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td><span class="lvl lvl-emr">EMR</span></td>
-<td>Assess patient stability (chest pain, dyspnea, AMS, shock)</td>
-</tr>
-</tbody>
-</table>
-</div>
+<div class="pip-block" data-pip-block><p class="pip-pick-label">Tap your certification level</p><div class="pip-pick" role="group" aria-label="Show the protocol as your certification level"><button type="button" class="pip-btn" data-level="R" aria-pressed="false">R</button><button type="button" class="pip-btn" data-level="B" aria-pressed="false">B</button><button type="button" class="pip-btn" data-level="A" aria-pressed="false">A</button><button type="button" class="pip-btn" data-level="I" aria-pressed="false">I</button><button type="button" class="pip-btn" data-level="P" aria-pressed="false">P</button><button type="button" class="pip-btn pip-btn-all" data-level="all" aria-pressed="true">Show all</button></div><p class="pip-tally" aria-live="polite">Show all — 2 actions. Each row names the level its action starts at; tap a level to see this protocol as you.</p><div class="pip-wrap"><table class="pip-table"><colgroup><col class="pip-col-n"><col><col class="pip-col-strip"></colgroup><thead><tr><th class="pip-th-n">#</th><th>Action / Intervention</th><th class="pip-th-strip"><span class="pip-strip pip-strip-head"><i>R</i><i>B</i><i>A</i><i>I</i><i>P</i></span></th></tr></thead><tbody><tr data-states="go,go,go,go,go"><td class="pip-n">1</td><td class="pip-act"><div class="pip-action">Follow Universal Patient Care / Initial Patient Contact</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from R</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): standing order; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="go,go,go,go,go"><td class="pip-n">2</td><td class="pip-act"><div class="pip-action">Assess patient stability (chest pain, dyspnea, AMS, shock)</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from R</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): standing order; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr></tbody></table></div><div class="pip-legend"><p class="pip-legend-h">Reading the strip</p><ul class="pip-keys"><li><span class="pip-strip"><i class="pip go"></i></span><span><b>Solid</b> — standing order at that level. You may act.</span></li><li><span class="pip-strip"><i class="pip call"></i></span><span><b>Hatched</b> — call Medical Control first at that level.</span></li><li><span class="pip-strip"><i class="pip no"></i></span><span><b>Empty outline</b> — not authorised at that level.</span></li></ul><p class="pip-legend-levels"><span class="pip-letters">R B A I P</span> = EMR · EMT · AEMT · Intermediate · Paramedic</p><p class="pip-legend-note">Position names the level and the words name it too, so colour is never the only signal. Colour is reserved for the one question that matters on scene: <b>do I act, do I call, or is this not mine.</b></p></div></div>
 <h4 id="stable-svt-pathway">STABLE SVT PATHWAY</h4>
-<div class="lv-wrap">
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">#</th>
-<th>Level</th>
-<th>Action / Intervention</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">4</td>
-<td><span class="lvl lvl-emt">EMT</span></td>
-<td>Obtain and transmit 12-Lead ECG</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td><span class="lvl lvl-a">A</span></td>
-<td>Obtain IV access</td>
-</tr>
-<tr>
-<td style="text-align: center;">6</td>
-<td><span class="lvl lvl-a">A</span></td>
-<td><strong>0.9% Sodium chloride</strong> up to 1 L IV/IO (Adult)<br>250 – 500 mL boluses or <strong>20 mL/kg</strong> IV/IO (Pediatric)<br>Repeat as needed, max 60 mL/kg total</td>
-</tr>
-<tr>
-<td style="text-align: center;">7</td>
-<td><span class="lvl lvl-i">I</span></td>
-<td>If rhythm regular, <strong><a href="../../pharmacology/Adenosine.html">Adenosine</a> (Adenocard)</strong> <strong>6 mg</strong> IV/IO (Adult)<br>or <strong>0.1 mg/kg</strong> IV/IO (Pediatric, max 6 mg)<br>Followed by 20 mL (Adult) or 10–20 mL (Ped) <strong>0.9% Sodium chloride</strong> flush</td>
-</tr>
-<tr>
-<td style="text-align: center;">8</td>
-<td><span class="lvl lvl-i">I</span></td>
-<td>If no conversion after 2 minutes, repeat <a href="../../pharmacology/Adenosine.html">Adenosine</a> at DOUBLE initial dose</td>
-</tr>
-<tr>
-<td style="text-align: center;">9</td>
-<td><span class="lvl lvl-i">I</span></td>
-<td>If rhythm irregular/atrial fibrillation, initiate transport<br>Monitor for signs of poor perfusion</td>
-</tr>
-<tr>
-<td style="text-align: center;">10</td>
-<td><span class="lvl lvl-mc">MC</span></td>
-<td>Contact Medical Control for guidance<br>Ensure 12-Lead ECG transmitted</td>
-</tr>
-</tbody>
-</table>
-</div>
+<div class="pip-block" data-pip-block><p class="pip-pick-label">Tap your certification level</p><div class="pip-pick" role="group" aria-label="Show the protocol as your certification level"><button type="button" class="pip-btn" data-level="R" aria-pressed="false">R</button><button type="button" class="pip-btn" data-level="B" aria-pressed="false">B</button><button type="button" class="pip-btn" data-level="A" aria-pressed="false">A</button><button type="button" class="pip-btn" data-level="I" aria-pressed="false">I</button><button type="button" class="pip-btn" data-level="P" aria-pressed="false">P</button><button type="button" class="pip-btn pip-btn-all" data-level="all" aria-pressed="true">Show all</button></div><p class="pip-tally" aria-live="polite">Show all — 7 actions. Each row names the level its action starts at; tap a level to see this protocol as you.</p><div class="pip-wrap"><table class="pip-table"><colgroup><col class="pip-col-n"><col><col class="pip-col-strip"></colgroup><thead><tr><th class="pip-th-n">#</th><th>Action / Intervention</th><th class="pip-th-strip"><span class="pip-strip pip-strip-head"><i>R</i><i>B</i><i>A</i><i>I</i><i>P</i></span></th></tr></thead><tbody><tr data-states="no,go,go,go,go"><td class="pip-n">4</td><td class="pip-act"><div class="pip-action">Obtain and transmit 12-Lead ECG</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from B</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,go,go,go"><td class="pip-n">5</td><td class="pip-act"><div class="pip-action">Obtain IV access</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from A</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,go,go,go"><td class="pip-n">6</td><td class="pip-act"><div class="pip-action"><strong>0.9% Sodium chloride</strong> up to 1 L IV/IO (Adult)<br>250 – 500 mL boluses or <strong>20 mL/kg</strong> IV/IO (Pediatric)<br>Repeat as needed, max 60 mL/kg total</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from A</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,no,go,go"><td class="pip-n">7</td><td class="pip-act"><div class="pip-action">If rhythm regular, <strong><a href="../../pharmacology/Adenosine.html">Adenosine</a> (Adenocard)</strong> <strong>6 mg</strong> IV/IO (Adult)<br>or <strong>0.1 mg/kg</strong> IV/IO (Pediatric, max 6 mg)<br>Followed by 20 mL (Adult) or 10–20 mL (Ped) <strong>0.9% Sodium chloride</strong> flush</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from I</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): not authorised; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,no,go,go"><td class="pip-n">8</td><td class="pip-act"><div class="pip-action">If no conversion after 2 minutes, repeat <a href="../../pharmacology/Adenosine.html">Adenosine</a> at DOUBLE initial dose</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from I</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): not authorised; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,no,go,go"><td class="pip-n">9</td><td class="pip-act"><div class="pip-action">If rhythm irregular/atrial fibrillation, initiate transport<br>Monitor for signs of poor perfusion</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from I</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): not authorised; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="call,call,call,call,call"><td class="pip-n">10</td><td class="pip-act"><div class="pip-action">Contact Medical Control for guidance<br>Ensure 12-Lead ECG transmitted</div><span class="pip-tag-wrap"><span class="pip-tag call">MC at every level</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): call Medical Control first; B (EMT): call Medical Control first; A (AEMT): call Medical Control first; I (Intermediate): call Medical Control first; P (Paramedic): call Medical Control first"><i class="pip call"></i><i class="pip call"></i><i class="pip call"></i><i class="pip call"></i><i class="pip call"></i></span></td></tr></tbody></table></div><div class="pip-legend"><p class="pip-legend-h">Reading the strip</p><ul class="pip-keys"><li><span class="pip-strip"><i class="pip go"></i></span><span><b>Solid</b> — standing order at that level. You may act.</span></li><li><span class="pip-strip"><i class="pip call"></i></span><span><b>Hatched</b> — call Medical Control first at that level.</span></li><li><span class="pip-strip"><i class="pip no"></i></span><span><b>Empty outline</b> — not authorised at that level.</span></li></ul><p class="pip-legend-levels"><span class="pip-letters">R B A I P</span> = EMR · EMT · AEMT · Intermediate · Paramedic</p><p class="pip-legend-note">Position names the level and the words name it too, so colour is never the only signal. Colour is reserved for the one question that matters on scene: <b>do I act, do I call, or is this not mine.</b></p></div></div>
 <h4 id="unstable-svt-pathway">UNSTABLE SVT PATHWAY</h4>
-<div class="lv-wrap">
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">#</th>
-<th>Level</th>
-<th>Action / Intervention</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">12</td>
-<td><span class="lvl lvl-i">I</span></td>
-<td>For light sedation, consider <strong><a href="../../pharmacology/Midazolam.html">Midazolam</a> (Versed)</strong><br><strong>2.5 mg</strong> IV/IO or <strong>5 mg</strong> IN/IM (Adult)<br><strong>0.05 mg/kg</strong> IV/IO or <strong>0.1 mg/kg</strong> IM (Pediatric)<br>Max: 2.5 mg IV/IO or 5 mg IM</td>
-</tr>
-<tr>
-<td style="text-align: center;">13</td>
-<td><span class="lvl lvl-i">I</span></td>
-<td>Monitor SpO₂ and EtCO₂ during sedation</td>
-</tr>
-<tr>
-<td style="text-align: center;">14</td>
-<td><span class="lvl lvl-i">I</span></td>
-<td>Perform <strong>SYNCHRONIZED cardioversion</strong><br><strong>100 joules</strong> initial dose (Adult) or <strong>1 joule/kg</strong> (Pediatric)</td>
-</tr>
-<tr>
-<td style="text-align: center;">15</td>
-<td><span class="lvl lvl-i">I</span></td>
-<td>If unsuccessful, check pad placement and repeat at <strong>200 joules</strong> (Adult)<br>or <strong>2 joules/kg</strong> (Pediatric)</td>
-</tr>
-<tr>
-<td style="text-align: center;">16</td>
-<td><span class="lvl lvl-i">I</span></td>
-<td>If unsuccessful after two attempts, contact Medical Control</td>
-</tr>
-</tbody>
-</table>
-</div>
+<div class="pip-block" data-pip-block><p class="pip-pick-label">Tap your certification level</p><div class="pip-pick" role="group" aria-label="Show the protocol as your certification level"><button type="button" class="pip-btn" data-level="R" aria-pressed="false">R</button><button type="button" class="pip-btn" data-level="B" aria-pressed="false">B</button><button type="button" class="pip-btn" data-level="A" aria-pressed="false">A</button><button type="button" class="pip-btn" data-level="I" aria-pressed="false">I</button><button type="button" class="pip-btn" data-level="P" aria-pressed="false">P</button><button type="button" class="pip-btn pip-btn-all" data-level="all" aria-pressed="true">Show all</button></div><p class="pip-tally" aria-live="polite">Show all — 5 actions. Each row names the level its action starts at; tap a level to see this protocol as you.</p><div class="pip-wrap"><table class="pip-table"><colgroup><col class="pip-col-n"><col><col class="pip-col-strip"></colgroup><thead><tr><th class="pip-th-n">#</th><th>Action / Intervention</th><th class="pip-th-strip"><span class="pip-strip pip-strip-head"><i>R</i><i>B</i><i>A</i><i>I</i><i>P</i></span></th></tr></thead><tbody><tr data-states="no,no,no,go,go"><td class="pip-n">12</td><td class="pip-act"><div class="pip-action">For light sedation, consider <strong><a href="../../pharmacology/Midazolam.html">Midazolam</a> (Versed)</strong><br><strong>2.5 mg</strong> IV/IO or <strong>5 mg</strong> IN/IM (Adult)<br><strong>0.05 mg/kg</strong> IV/IO or <strong>0.1 mg/kg</strong> IM (Pediatric)<br>Max: 2.5 mg IV/IO or 5 mg IM</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from I</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): not authorised; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,no,go,go"><td class="pip-n">13</td><td class="pip-act"><div class="pip-action">Monitor SpO₂ and EtCO₂ during sedation</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from I</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): not authorised; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,no,go,go"><td class="pip-n">14</td><td class="pip-act"><div class="pip-action">Perform <strong>SYNCHRONIZED cardioversion</strong><br><strong>100 joules</strong> initial dose (Adult) or <strong>1 joule/kg</strong> (Pediatric)</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from I</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): not authorised; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,no,go,go"><td class="pip-n">15</td><td class="pip-act"><div class="pip-action">If unsuccessful, check pad placement and repeat at <strong>200 joules</strong> (Adult)<br>or <strong>2 joules/kg</strong> (Pediatric)</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from I</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): not authorised; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,no,go,go"><td class="pip-n">16</td><td class="pip-act"><div class="pip-action">If unsuccessful after two attempts, contact Medical Control</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from I</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): not authorised; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr></tbody></table></div><div class="pip-legend"><p class="pip-legend-h">Reading the strip</p><ul class="pip-keys"><li><span class="pip-strip"><i class="pip go"></i></span><span><b>Solid</b> — standing order at that level. You may act.</span></li><li><span class="pip-strip"><i class="pip call"></i></span><span><b>Hatched</b> — call Medical Control first at that level.</span></li><li><span class="pip-strip"><i class="pip no"></i></span><span><b>Empty outline</b> — not authorised at that level.</span></li></ul><p class="pip-legend-levels"><span class="pip-letters">R B A I P</span> = EMR · EMT · AEMT · Intermediate · Paramedic</p><p class="pip-legend-note">Position names the level and the words name it too, so colour is never the only signal. Colour is reserved for the one question that matters on scene: <b>do I act, do I call, or is this not mine.</b></p></div></div>
 <h3 id="pearls">Pearls</h3>
 <ol>
 <li>
@@ -9423,6 +9319,8 @@ if ('serviceWorker' in navigator) {
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/pip-strip.js"></script>
       
     
   <nav class="bbnav" aria-label="Field navigation"><a class="bbitem" href="../../index.html"><span class="bbico">⌂</span><span class="bbtxt">Home</span></a><a class="bbitem" href="../../resources/ems.html"><span class="bbico">✚</span><span class="bbtxt">EMS</span></a><a class="bbitem" href="../../resources/fire.html"><span class="bbico">▲</span><span class="bbtxt">Fire</span></a><a class="bbitem" href="../../resources/station.html"><span class="bbico">▦</span><span class="bbtxt">Station</span></a></nav>

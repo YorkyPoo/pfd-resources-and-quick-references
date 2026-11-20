@@ -59,6 +59,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../../stylesheets/pip-strip.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -9145,64 +9147,7 @@ if ('serviceWorker' in navigator) {
 </div>
 </div>
 <h3 id="interventions">Interventions</h3>
-<div class="lv-wrap">
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">#</th>
-<th>Level</th>
-<th>Action / Intervention</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">1</td>
-<td><span class="lvl lvl-emr">EMR</span></td>
-<td>Follow Universal Patient Care / Initial Patient Contact protocol. Refer to Trauma, Hemorrhage Control, and Pain Control protocols as needed.</td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td><span class="lvl lvl-emt">EMT</span></td>
-<td>If possible, obtain an ECG prior to and after release of the crushed part.</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td><span class="lvl lvl-a">A</span></td>
-<td>Administer (when able, initiate prior to release):<br>- ADULT: <strong>0.9% Sodium Chloride</strong> <strong>1 L</strong> IV/IO in <strong>250 - 500 mL</strong> boluses.<br>- PEDIATRIC: <strong>0.9% Sodium Chloride</strong> <strong>20 mL/kg</strong> IV/IO.</td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td><span class="lvl lvl-a">A</span><span class="lvl lvl-mc-req" title="this level performs the action only with Medical Control authorisation (PEMS prints the level cell in brackets)">+MC</span><sup class="lvl-req" title="PEMS 2024 prints this badge in brackets: agency training documentation and Medical Control written authorization required">*</sup></td>
-<td>Administer:<br>- ADULT / PEDIATRIC: Continuous <strong><a href="../../pharmacology/Albuterol.html">Albuterol</a> Sulfate (Proventil) 0.083% solution</strong> via nebulizer or BVM.</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td><span class="lvl lvl-i">I</span><span class="lvl lvl-mc-req" title="this level performs the action only with Medical Control authorisation (PEMS prints the level cell in brackets)">+MC</span><sup class="lvl-req" title="PEMS 2024 prints this badge in brackets: agency training documentation and Medical Control written authorization required">*</sup></td>
-<td>Administer, preferably via separate lines (when able, initiate prior to release):<br>- ADULT / PEDIATRIC: <strong><a href="../../pharmacology/Sodium%20Bicarbonate.html">Sodium Bicarbonate</a></strong> <strong>1 mEq/kg</strong> IV/IO slow push. Maximum dose <strong>50 mEq</strong>. Followed by <strong>20 mL</strong> <strong>0.9% Sodium Chloride</strong> flush.<br><em>For persistent ECG changes suggestive of crush syndrome or cardiac arrest, repeat once.</em></td>
-</tr>
-<tr>
-<td style="text-align: center;">6</td>
-<td><span class="lvl lvl-i">I</span><sup class="lvl-req" title="PEMS 2024 prints this badge in brackets: agency training documentation and Medical Control written authorization required">*</sup></td>
-<td>Administer, preferably via separate lines (when able, initiate prior to release):<br>- ADULT: <strong><a href="../../pharmacology/Calcium%20Chloride.html">Calcium Chloride</a></strong> <strong>1 g</strong> IV/IO over 3 minutes.<br>- PEDIATRIC: <strong><a href="../../pharmacology/Calcium%20Chloride.html">Calcium Chloride</a></strong> <strong>20 mg/kg</strong> IV/IO over 3 minutes. Maximum dose <strong>1,000 mg (1 g)</strong>.<br><em>For persistent ECG changes suggestive of crush syndrome or cardiac arrest, repeat once.</em></td>
-</tr>
-<tr>
-<td style="text-align: center;">7</td>
-<td><span class="lvl lvl-i">I</span></td>
-<td>Assess and continuously monitor cardiac rhythm.</td>
-</tr>
-<tr>
-<td style="text-align: center;">8</td>
-<td><span class="lvl lvl-emt">EMT</span></td>
-<td>Extricate patient from entrapment and transport per Administrative Policy – Trauma Field Triage.</td>
-</tr>
-<tr>
-<td style="text-align: center;">9</td>
-<td><span class="lvl lvl-mc">MC</span></td>
-<td>If it is anticipated the patient will not be able to be promptly and safely extricated, contact Medical Control at a regional trauma center for additional resources.</td>
-</tr>
-</tbody>
-</table>
-</div>
+<div class="pip-block" data-pip-block><p class="pip-pick-label">Tap your certification level</p><div class="pip-pick" role="group" aria-label="Show the protocol as your certification level"><button type="button" class="pip-btn" data-level="R" aria-pressed="false">R</button><button type="button" class="pip-btn" data-level="B" aria-pressed="false">B</button><button type="button" class="pip-btn" data-level="A" aria-pressed="false">A</button><button type="button" class="pip-btn" data-level="I" aria-pressed="false">I</button><button type="button" class="pip-btn" data-level="P" aria-pressed="false">P</button><button type="button" class="pip-btn pip-btn-all" data-level="all" aria-pressed="true">Show all</button></div><p class="pip-tally" aria-live="polite">Show all — 9 actions. Each row names the level its action starts at; tap a level to see this protocol as you.</p><div class="pip-wrap"><table class="pip-table"><colgroup><col class="pip-col-n"><col><col class="pip-col-strip"></colgroup><thead><tr><th class="pip-th-n">#</th><th>Action / Intervention</th><th class="pip-th-strip"><span class="pip-strip pip-strip-head"><i>R</i><i>B</i><i>A</i><i>I</i><i>P</i></span></th></tr></thead><tbody><tr data-states="go,go,go,go,go"><td class="pip-n">1</td><td class="pip-act"><div class="pip-action">Follow Universal Patient Care / Initial Patient Contact protocol. Refer to Trauma, Hemorrhage Control, and Pain Control protocols as needed.</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from R</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): standing order; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,go,go,go,go"><td class="pip-n">2</td><td class="pip-act"><div class="pip-action">If possible, obtain an ECG prior to and after release of the crushed part.</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from B</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,go,go,go"><td class="pip-n">3</td><td class="pip-act"><div class="pip-action">Administer (when able, initiate prior to release):<br>- ADULT: <strong>0.9% Sodium Chloride</strong> <strong>1 L</strong> IV/IO in <strong>250 - 500 mL</strong> boluses.<br>- PEDIATRIC: <strong>0.9% Sodium Chloride</strong> <strong>20 mL/kg</strong> IV/IO.</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from A</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,call,go,go"><td class="pip-n">4</td><td class="pip-act"><div class="pip-action">Administer:<br>- ADULT / PEDIATRIC: Continuous <strong><a href="../../pharmacology/Albuterol.html">Albuterol</a> Sulfate (Proventil) 0.083% solution</strong> via nebulizer or BVM.</div><span class="pip-tag-wrap"><span class="pip-tag call">MC at A, standing from I</span><span class="pip-marks"><span class="pip-mark pip-mark-auth" title="PEMS 2024 prints this badge in brackets: agency training documentation and Medical Control written authorization required">*</span></span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): call Medical Control first; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip call"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,no,call,go"><td class="pip-n">5</td><td class="pip-act"><div class="pip-action">Administer, preferably via separate lines (when able, initiate prior to release):<br>- ADULT / PEDIATRIC: <strong><a href="../../pharmacology/Sodium%20Bicarbonate.html">Sodium Bicarbonate</a></strong> <strong>1 mEq/kg</strong> IV/IO slow push. Maximum dose <strong>50 mEq</strong>. Followed by <strong>20 mL</strong> <strong>0.9% Sodium Chloride</strong> flush.<br><em>For persistent ECG changes suggestive of crush syndrome or cardiac arrest, repeat once.</em></div><span class="pip-tag-wrap"><span class="pip-tag call">MC at I, standing from P</span><span class="pip-marks"><span class="pip-mark pip-mark-auth" title="PEMS 2024 prints this badge in brackets: agency training documentation and Medical Control written authorization required">*</span></span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): not authorised; I (Intermediate): call Medical Control first; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip no"></i><i class="pip call"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,no,call,go"><td class="pip-n">6</td><td class="pip-act"><div class="pip-action">Administer, preferably via separate lines (when able, initiate prior to release):<br>- ADULT: <strong><a href="../../pharmacology/Calcium%20Chloride.html">Calcium Chloride</a></strong> <strong>1 g</strong> IV/IO over 3 minutes.<br>- PEDIATRIC: <strong><a href="../../pharmacology/Calcium%20Chloride.html">Calcium Chloride</a></strong> <strong>20 mg/kg</strong> IV/IO over 3 minutes. Maximum dose <strong>1,000 mg (1 g)</strong>.<br><em>For persistent ECG changes suggestive of crush syndrome or cardiac arrest, repeat once.</em></div><span class="pip-tag-wrap"><span class="pip-tag call">MC at I, standing from P</span><span class="pip-marks"><span class="pip-mark pip-mark-auth" title="PEMS 2024 prints this badge in brackets: agency training documentation and Medical Control written authorization required">*</span></span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): not authorised; I (Intermediate): call Medical Control first; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip no"></i><i class="pip call"></i><i class="pip go"></i></span></td></tr><tr data-states="no,no,no,go,go"><td class="pip-n">7</td><td class="pip-act"><div class="pip-action">Assess and continuously monitor cardiac rhythm.</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from I</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): not authorised; A (AEMT): not authorised; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip no"></i><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="no,go,go,go,go"><td class="pip-n">8</td><td class="pip-act"><div class="pip-action">Extricate patient from entrapment and transport per Administrative Policy – Trauma Field Triage.</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from B</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): not authorised; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): standing order"><i class="pip no"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i><i class="pip go"></i></span></td></tr><tr data-states="call,call,call,call,call"><td class="pip-n">9</td><td class="pip-act"><div class="pip-action">If it is anticipated the patient will not be able to be promptly and safely extricated, contact Medical Control at a regional trauma center for additional resources.</div><span class="pip-tag-wrap"><span class="pip-tag call">MC at every level</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): call Medical Control first; B (EMT): call Medical Control first; A (AEMT): call Medical Control first; I (Intermediate): call Medical Control first; P (Paramedic): call Medical Control first"><i class="pip call"></i><i class="pip call"></i><i class="pip call"></i><i class="pip call"></i><i class="pip call"></i></span></td></tr></tbody></table></div><div class="pip-legend"><p class="pip-legend-h">Reading the strip</p><ul class="pip-keys"><li><span class="pip-strip"><i class="pip go"></i></span><span><b>Solid</b> — standing order at that level. You may act.</span></li><li><span class="pip-strip"><i class="pip call"></i></span><span><b>Hatched</b> — call Medical Control first at that level.</span></li><li><span class="pip-strip"><i class="pip no"></i></span><span><b>Empty outline</b> — not authorised at that level.</span></li></ul><p class="pip-legend-levels"><span class="pip-letters">R B A I P</span> = EMR · EMT · AEMT · Intermediate · Paramedic</p><p class="pip-legend-note">Position names the level and the words name it too, so colour is never the only signal. Colour is reserved for the one question that matters on scene: <b>do I act, do I call, or is this not mine.</b></p></div></div>
 <p class="lv-note"><strong>+MC</strong> — the marked action(s) may be performed at the level shown only with Medical Control authorisation. PEMS prints that level in brackets; the marker carries that meaning into the single-level layout. It is not a second level and not the same as an <code>MC</code> chip, which marks an action that is itself a Medical Control contact.</p>
 
 <p class="lv-note">* <strong>Bracketed badge</strong> — the level is printed in brackets in the source: agency post-affiliation training documentation on file, plus the Medical Control written authorization for that skill. The brackets are the source's own.</p>
@@ -9276,6 +9221,8 @@ if ('serviceWorker' in navigator) {
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/pip-strip.js"></script>
       
     
   <nav class="bbnav" aria-label="Field navigation"><a class="bbitem" href="../../index.html"><span class="bbico">⌂</span><span class="bbtxt">Home</span></a><a class="bbitem" href="../../resources/ems.html"><span class="bbico">✚</span><span class="bbtxt">EMS</span></a><a class="bbitem" href="../../resources/fire.html"><span class="bbico">▲</span><span class="bbtxt">Fire</span></a><a class="bbitem" href="../../resources/station.html"><span class="bbico">▦</span><span class="bbtxt">Station</span></a></nav>
