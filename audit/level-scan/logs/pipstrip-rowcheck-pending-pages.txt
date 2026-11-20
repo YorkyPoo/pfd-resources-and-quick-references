@@ -1,0 +1,20 @@
+docs/protocols/neurologic/05_Stroke_TIA_PROC.md
+ table 1: markdown rows=9  html <tr data-states>=9
+  row   1 chip=go,go,go,go,go               html=go,go,go,go,go               MATCH
+  row   2 chip=go,go,go,go,go               html=go,go,go,go,go               MATCH
+  row   3 chip=go,go,go,go,go               html=go,go,go,go,go               MATCH
+  row   4 chip=no,go,go,go,go               html=no,go,go,go,go               MATCH
+  row   5 chip=no,go,go,go,go               html=no,go,go,go,go               MATCH
+  row   6 chip=no,go,go,go,go               html=no,go,go,go,go               MATCH
+  row   7 chip=no,go,go,go,go               html=no,go,go,go,go               MATCH
+  row   8 chip=pending,pending,pending,pending,pending html=pending,pending,pending,pending,pending MATCH
+  row   9 chip=pending,pending,pending,pending,pending html=pending,pending,pending,pending,pending MATCH
+docs/protocols/trauma/09_Burns_Thermal_PROC.md
+ table 1: markdown rows=7  html <tr data-states>=7
+  row   1 chip=go,go,go,go,go               html=go,go,go,go,go               MATCH
+  row   2 chip=go,go,go,go,go               html=go,go,go,go,go               MATCH
+  row   3 chip=no,go,go,go,go               html=no,go,go,go,go               MATCH
+  row   4 chip=no,go,go,go,go               html=no,go,go,go,go               MATCH
+  row   5 chip=no,no,go,go,go               html=no,no,go,go,go               MATCH
+  row   6 chip=pending,pending,pending,pending,pending html=pending,pending,pending,pending,pending MATCH
+  row   7 chip=call,call,call,call,call     html=call,call,call,call,call     MATCH
