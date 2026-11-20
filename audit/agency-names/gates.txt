@@ -1,0 +1,43 @@
+# Gates at 8784a7b2b4a048af84439770efcdb10c53b470d8 (sweep(prose): no local office or agency name in clinical prose; add agency_names guard)
+
+=== python3 scripts/verify_pems_canonical.py
+no protocol pages touched
+  ok   git status shows no modified files under docs/
+
+  ok   verifier manifest covers the run (8 of 8 checks reached: )
+
+all invariants hold
+EXIT=0
+
+=== python3 scripts/level_rule.py --check
+OK — 11 action rows across 1 page(s) are chipped PENDING (Pending OMD Authorization) because PEMS 2024 publishes no such protocol; 0 of them claim a PEMS citation.
+OK — 3 action row(s) on an otherwise PEMS-cited page are chipped PENDING as agency additions awaiting OMD authorization (pending-protocols.yaml `rows:`); 0 of them claim a PEMS citation.
+OK — 14 administrative-policy page(s) carry 95 action rows: 89 chipped POLICY (cited to one of 14 PEMS 2024 administrative policies, each with a verbatim quote out of that policy's own pages), 4 chipped PENDING (no PEMS policy prints the rule). 0 of them publish a provider level and 0 of them claim a protocol citation.
+OK — sc-wrap: 63 wide-table block(s) in 46 docs file(s) — mostly dose charts, phone lists and SOP tables that are not level matrices; 0 provider-level matrices on an sc-wrap on any page this project has converted.
+REPORTED, NOT GATED — 1 provider-level matrix/matrices inside sc-wrap remain on a page outside every conversion batch's scope (the front-matter legend, which DEFINES the level columns and must not change):
+   - protocols/front-matter/01 - How to Read the Protocols.md (line 33)
+EXIT=0
+
+=== python3 scripts/mc_wording.py --check
+OK — 27 MC row(s) on 26 page(s) plus every other protocol table row (all levels): none name OMD / Poquoson / a Medical Director / a named individual.
+     prose lines still mentioning the office (out of scope, not edited): 54
+EXIT=0
+
+=== python3 scripts/agency_names.py --check
+OK — 715 line(s) name the office or the agency; all are document-name / administrative exemptions. No clinical prose names a local office or the local agency.
+EXIT=0
+
+=== /root/pfd-ssg-env/bin/mkdocs build --strict
+  - personnel-policies/policies/42-resignations-and-separations.md
+  - personnel-policies/policies/43-retiree-health-insurance-coverage.md
+  - protocols/front-matter/00 - AI Formatting Guidelines.md
+INFO    -  Documentation built in 7.59 seconds
+[post_build] sitemap: dropped 1 noindex page(s): ['/resources/links.html']
+[post_build] Generated sw.js with 281 pre-cached pages (version: 20261120-062046)
+EXIT=0
+
+=== python3 scripts/build_outstanding_decisions.py --check
+the "PEMS prints this nowhere" bucket is 6 rows (was 17 before the 2026-11-17 Pearl ruling): 4 genuinely absent from the source, 2 out of scope for that card — membership asserted, not typed
+FAIL — protocols/outstanding-decisions.md is stale; re-run scripts/build_outstanding_decisions.py
+EXIT=1
+
