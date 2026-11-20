@@ -1,0 +1,28 @@
+# Gates at 9351610 (2026-11-20 04:45 UTC)
+# worktree: /root/.hermes/profiles/developer/cache/scratch/wt-refblock  branch: pilot-references-block
+
+$ python3 scripts/verify_pems_canonical.py
+EXIT=0
+
+all invariants hold
+
+$ python3 scripts/level_rule.py --check
+EXIT=0
+REPORTED, NOT GATED — 1 provider-level matrix/matrices inside sc-wrap remain on a page outside every conversion batch's scope (the front-matter legend, which DEFINES the level columns and must not change):
+   - protocols/front-matter/01 - How to Read the Protocols.md (line 33)
+
+$ python3 scripts/mc_wording.py --check
+EXIT=0
+OK — 26 MC row(s) on 25 page(s) plus every other protocol table row (all levels): none name OMD / Poquoson / a Medical Director / a named individual.
+     prose lines still mentioning the office (out of scope, not edited): 74
+
+$ python3 scripts/build_outstanding_decisions.py --check
+EXIT=0
+the "PEMS prints this nowhere" bucket is 6 rows (was 17 before the 2026-11-17 Pearl ruling): 4 genuinely absent from the source, 2 out of scope for that card — membership asserted, not typed
+OK — protocols/outstanding-decisions.md matches the ledger
+
+$ /root/pfd-ssg-env/bin/mkdocs build --strict
+EXIT=0
+[post_build] sitemap: dropped 1 noindex page(s): ['/resources/links.html']
+[post_build] Generated sw.js with 281 pre-cached pages (version: 20261120-044550)
+
