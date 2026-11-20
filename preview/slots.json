@@ -44,9 +44,9 @@
     },
     "peep-final": {
       "branch": "peep-final",
-      "built_at": "2026-11-20T14:34:43Z",
-      "description": "CPAP r6 -> I; PEEP ceiling 15 mmHg (owner ruling 2026-11-20, t_7a22b040) \u2014 merged with main",
-      "sha": "51e05bd857fab48845089a96d0831b77b51914db"
+      "built_at": "2026-11-20T14:39:59Z",
+      "description": "CPAP r6 -> I; PEEP ceiling 15 mmHg (owner ruling 2026-11-20, t_7a22b040); Pearls RED DOT bullet qualified to the ruling",
+      "sha": "7d0acf6a4b7f3313da9edc44e8cd4d94459ddf62"
     },
     "peep-i": {
       "branch": "peep-i",
@@ -97,5 +97,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-20T14:34:43.443561+00:00"
+  "updated_at": "2026-11-20T14:39:59.566609+00:00"
 }
