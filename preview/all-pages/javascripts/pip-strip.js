@@ -30,17 +30,28 @@
 
   function paint(block, level) {
     var rows = block.querySelectorAll("tr[data-states]");
-    var go = 0, call = 0, no = 0, unv = 0;
+    var go = 0, call = 0, no = 0, unv = 0, pend = 0;
     var n = 0;
 
     Array.prototype.forEach.call(rows, function (tr) {
       n++;
       var states = tr.getAttribute("data-states").split(",");
       var flagged = tr.hasAttribute("data-unverified");
+      var pending = tr.hasAttribute("data-pending");
       var tag = tr.querySelector(".pip-tag");
       var got;
 
       tr.classList.remove("pip-hit", "pip-hitcall", "pip-hitno", "pip-dim");
+
+      if (pending) {
+        /* PENDING: the page publishes no level for this row. It is never
+         * standing, never "call MC" and never "not permitted" — tapping a level
+         * must not invent a verdict, so the row keeps its own tag and stays at
+         * full contrast. It is counted in its own bucket so the tally is true. */
+        pend++;
+        if (tag) { tag.className = "pip-tag pending"; tag.textContent = "PENDING \u2014 no published level"; }
+        return;
+      }
 
       if (flagged) {
         /* OWNER_REQUIRED: the page publishes a level the source does not
@@ -74,11 +85,13 @@
       if (level === "all") {
         tally.innerHTML = "Show all \u2014 " + n + " actions. Each row names the level its " +
           "action starts at; tap a level to see this protocol as you." +
-          (unv ? " \u00b7 " + unv + " level unverified \u2691" : "");
+          (unv ? " \u00b7 " + unv + " level unverified \u2691" : "") +
+          (pend ? " \u00b7 " + pend + " PENDING (no published level)" : "");
       } else {
         tally.innerHTML = "<b>" + level + "</b>: of " + n + " actions on this protocol \u2014 " +
           "<b>" + go + "</b> standing, <b>" + call + "</b> need Medical Control, <b>" + no +
           "</b> not permitted (dimmed)." +
+          (pend ? " <b>" + pend + "</b> PENDING \u2014 no published level, shown undimmed." : "") +
           (unv ? " <b>" + unv + "</b> level unverified \u2691." : "");
       }
     }

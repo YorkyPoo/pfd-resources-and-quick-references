@@ -207,6 +207,24 @@
   border-color: var(--pip-no);
 }
 
+/* PENDING row: no level is published. Dashed and empty, in the neutral line
+   colour — not solid (standing order) and not the red dashed of an unverified
+   level (OWNER_REQUIRED). The tag spells it out. */
+.md-typeset .pip.pending {
+  background: transparent;
+  border-style: dashed;
+  border-color: var(--pip-line);
+  border-width: 1.5px 1.5px 1.5px 1.5px;
+  background-image: linear-gradient(
+    to bottom,
+    var(--pip-line) 0 2px,
+    transparent 2px 100%
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 4px 100%;
+}
+
 /* Header letters sit over their own pip slot: 12px wide, 3px gap. */
 .md-typeset .pip-strip-head { gap: 3px; }
 
@@ -246,6 +264,15 @@
   background: transparent;
   border: 1.5px dashed var(--pip-no);
   color: var(--pip-no);
+}
+
+/* PENDING — no level published for this row. Neutral, dashed, never the solid
+   of a standing order and never the red of "not permitted". */
+.md-typeset .pip-tag.pending {
+  background: transparent;
+  border: 1.5px dashed var(--pip-line);
+  color: var(--md-default-fg-color);
+  font-weight: 700;
 }
 
 /* Markers the level chip carried before the strip: * (agency documentation +
