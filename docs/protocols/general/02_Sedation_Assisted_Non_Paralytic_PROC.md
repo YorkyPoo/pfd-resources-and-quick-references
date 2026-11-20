@@ -26,20 +26,18 @@ Guidelines for the pharmacological facilitation of airway management and post-in
 
 | # | Level | Action / Intervention |
 |:---:|---|---|
-| 1 | <span class="lvl lvl-emr">EMR</span> | Follow Universal Patient Care / Initial Patient Contact protocol. Provide supplemental oxygen and/or ventilatory support. Refer to Airway Management and Ventilatory Support procedure. |
-| 2 | <span class="lvl lvl-emt">EMT</span> | Assess and monitor blood pressure. Ensure patient is not hypotensive. |
-| 3 | <span class="lvl lvl-a">A</span> | Establish IV/IO access. |
-| 4 | <span class="lvl lvl-i">I</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | **Pre-Intubation Sedation**, consider ONE of the following:<br><br>• ADULT: **[Ketamine](../../pharmacology/Ketamine.md) (Ketalar) 1.5 - 2 mg/kg IV/IO** (Maximum single dose: **200 mg**) OR **4 - 5 mg/kg IM/IN** (Maximum single dose: **400 mg**). If administering IV, administer over 1-2 minutes.<br>• PEDIATRIC: **[Ketamine](../../pharmacology/Ketamine.md) (Ketalar) 1 - 2 mg/kg IV/IO** (Maximum single dose: **50 mg**) OR **2 - 5 mg/kg IM/IN** (Maximum single dose: **100 mg**). If administering IV, administer over 1-2 minutes.<br><br>**OR**<br><br>• ADULT: **[Midazolam](../../pharmacology/Midazolam.md) (Versed) 2.5 - 5 mg IV/IO** (Maximum single dose: **5 mg**) OR **5 - 10 mg IN/IM** (Maximum single dose: **10 mg**).<br>• PEDIATRIC: **[Midazolam](../../pharmacology/Midazolam.md) (Versed) 0.1 mg/kg IV/IO** (Maximum single dose: **2.5 mg**) OR **0.2 mg/kg IN/IM** (Maximum single dose: **5 mg**). |
-| 5 | <span class="lvl lvl-p">P</span><sup class="lvl-own" title="OWNER_REQUIRED: no PEMS 2024 row authorises this action's provider level">&#9873;</sup> | **Post-Intubation Sedation**, consider ONE of the following:<br><br>• ADULT: **[Ketamine](../../pharmacology/Ketamine.md) (Ketalar) 1 mg/kg IV/IO** (Maximum single dose: **100 mg**). May repeat every 10-15 minutes as needed.<br>• PEDIATRIC: **[Ketamine](../../pharmacology/Ketamine.md) (Ketalar) 0.5 mg/kg IV/IO** (Maximum single dose: **25 mg**). May repeat every 10-15 minutes as needed. |
-| 6 | <span class="lvl lvl-i">I</span> | **OR Post-Intubation Sedation** ([Midazolam](../../pharmacology/Midazolam.md) / [Fentanyl](../../pharmacology/Fentanyl.md)):<br><br>• ADULT: **[Midazolam](../../pharmacology/Midazolam.md) (Versed) 2.5 mg IV/IO**. May repeat every 10-15 minutes as needed. (Maximum total dose: **10 mg**)<br>• PEDIATRIC: **[Midazolam](../../pharmacology/Midazolam.md) (Versed) 0.05 mg/kg IV/IO** (Maximum single dose: **2.5 mg**). May repeat every 10-15 minutes as needed. (Maximum total dose: **5 mg**)<br><br>**AND/OR**<br><br>• ADULT: **[Fentanyl](../../pharmacology/Fentanyl.md) (Sublimaze) 25 - 50 mcg IV/IO**. May repeat every 10-15 minutes as needed. (Maximum total dose: **150 mcg**)<br>• PEDIATRIC: **[Fentanyl](../../pharmacology/Fentanyl.md) (Sublimaze) 0.5 - 1 mcg/kg IV/IO**. May repeat every 10-15 minutes as needed. (Maximum total dose: **50 mcg**) |
+| 1 | <span class="lvl lvl-emr">EMR</span> | Follow Universal Patient Care / Initial Patient Contact protocol. |
+| 2 | <span class="lvl lvl-emt">EMT</span> | Confirm and monitor airway placement with continuous SpO₂ and box-waveform EtCO₂. |
+| 3 | <span class="lvl lvl-i">I</span> | Administer:<br>• ADULT: **[Fentanyl](../../pharmacology/Fentanyl.md) (Sublimaze) 25 – 50 mcg** IV/IO over 2 minutes or IN/IM<br>• PEDIATRIC: **[Fentanyl](../../pharmacology/Fentanyl.md) (Sublimaze) 0.5 – 1 mcg/kg** IV/IO over 2 minutes or IN/IM<br>• Maximum dose: **25 mcg** |
+| 4 | <span class="lvl lvl-i">I</span> | Repeat every 10 – 15 minutes as needed for patient safety and comfort. |
+| 5 | <span class="lvl lvl-i">I</span> | If Fentanyl is not sufficient, administer:<br>• ADULT: **[Midazolam](../../pharmacology/Midazolam.md) (Versed) 2.5 mg** IV/IO over 2 minutes or **5 mg** IN/IM<br>• PEDIATRIC: **[Midazolam](../../pharmacology/Midazolam.md) (Versed) 0.1 mg/kg** IV/IO over 2 minutes or **0.2 mg/kg** IN/IM<br>• Maximum dose: **2.5 mg** IV/IO or **5 mg** IN/IM |
+| 6 | <span class="lvl lvl-i">I</span> | Repeat every 10 – 15 minutes as needed for patient safety and comfort. |
+| 7 | <span class="lvl lvl-mc">MC</span> | Contact Medical Control for guidance if unable to adequately manage patient agitation or discomfort. |
 
 </div>
 
-<p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — rows 4, 5: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.</p>
-
 ### Pearls
-• ⚠ Concurrent use of **[Fentanyl](../../pharmacology/Fentanyl.md)** and **[Midazolam](../../pharmacology/Midazolam.md)** significantly increases the risk of hypotension and respiratory depression.
-• ⚠ **[Ketamine](../../pharmacology/Ketamine.md)** should be avoided in patients with suspected myocardial ischemia or infarction due to its sympathomimetic effects (increased heart rate and blood pressure).
-• ⚠ Consider the use of lower doses of sedatives in frail, elderly, or opiate/benzodiazepine-naive patients.
-• **[Ketamine](../../pharmacology/Ketamine.md)** is the preferred agent for sedation in patients with reactive airway disease (asthma/COPD) due to its bronchodilatory effects.
-• Ensure adequate sedation is maintained during transport to prevent unplanned extubation or patient discomfort.
+• ⚠ Adjust ventilation rate or volume to maintain EtCO₂ of **35 – 45 mmHg** following advanced airway placement.
+• ⚠ Closely monitor for hypotension following intubation and sedation. Positive pressure ventilation increases the risk of pneumothorax and reduced preload, both of which can result in sudden drops in mean arterial pressure.
+• ⚠ Use suction to remove blood, secretions and vomitus as needed.
+• ⚠ Use lower doses of **[Fentanyl](../../pharmacology/Fentanyl.md)** for opiate naïve, frail, low weight, hypotensive, hemodynamically labile, or elderly (> 65 years) patients.
