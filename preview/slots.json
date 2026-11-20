@@ -8,8 +8,8 @@
     },
     "pilot": {
       "branch": "pilot-references-block",
-      "built_at": "2026-11-20T05:16:50Z",
-      "description": "\"Pilot: prose moved from action tables into a References & Good Practice block (2 pages)\"",
+      "built_at": "2026-11-20T05:17:23Z",
+      "description": "Pilot: prose moved from action tables into a References & Good Practice block (2 pages)",
       "sha": "c9615d945742aa2ad3465dd7461fcc0e6e9a8dec"
     },
     "relabel": {
@@ -19,5 +19,5 @@
       "sha": "05addb26252f6259debff424aa83b68467bea4ab"
     }
   },
-  "updated_at": "2026-11-20T05:16:50.208571+00:00"
+  "updated_at": "2026-11-20T05:17:23.553581+00:00"
 }
