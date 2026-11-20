@@ -1,0 +1,19 @@
+reference: audit/level-scan/reference/protocol-format-sample.html
+  bytes  : 12492 (expected 12492) -> ok
+
+   #  derived input                      prototype states           mapper output              result
+   1  min=R                              go,go,go,go,go             go,go,go,go,go             ok
+   2  min=R                              go,go,go,go,go             go,go,go,go,go             ok
+   3  min=R                              go,go,go,go,go             go,go,go,go,go             ok
+   4  min=R                              go,go,go,go,go             go,go,go,go,go             ok
+   5  min=B                              no,go,go,go,go             no,go,go,go,go             ok
+   6  min=A                              no,no,go,go,go             no,no,go,go,go             ok
+   7  min=A                              no,no,go,go,go             no,no,go,go,go             ok
+   8  min=I                              no,no,no,go,go             no,no,no,go,go             ok
+   9  min=I +MC at I                     no,no,no,call,go           no,no,no,call,go           ok
+  10  MC chip (all levels)               call,call,call,call,call   call,call,call,call,call   ok
+
+  header letters              : RBAIP -> ok
+  prototype still numbers 1-5 : True (substitution confirmed)
+
+all 10 prototype rows reproduced by the mapper
