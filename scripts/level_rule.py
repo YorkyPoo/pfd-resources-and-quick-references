@@ -867,7 +867,12 @@ def sc_wrap_audit():
     matrix. `sc-wrap` is the shared wide-table wrapper, so its presence is NOT a defect —
     a provider-level matrix still wrapped in `sc-wrap` is. Derived by walking docs/, not
     from a list."""
-    header = re.compile(r'^\|\s*#\s*\|\s*Action\s*/\s*Intervention\s*\|\s*EMR\s*\|')
+    # Two header spellings are level matrices: the pre-2026-11-20 `EMR | EMT | A | I | P`
+    # columns, and the owner-ruled `R | B | A | I | P` relabel that replaced them on the
+    # front-matter legend. Detecting only the old one made the legend invisible to this
+    # audit the moment its labels changed — a silent pass is exactly what this check exists
+    # to prevent.
+    header = re.compile(r'^\|\s*#\s*\|\s*Action\s*/\s*Intervention\s*\|\s*(?:EMR|R)\s*\|')
     files, blocks, matrices = [], [], []
     for root, _dirs, names in os.walk(DOCS):
         for name in sorted(names):
@@ -2579,7 +2584,8 @@ def emit_md(ledger):
               + ' on a page this project has converted (0 expected; `--check` fails on any), '
               "the rest on page(s) outside every batch's scope and reported, not gated "
               "(since Batch 7 that is only the front-matter legend, which defines the level "
-              "columns and must stay as it is).", '']
+              "columns and is labelled by the owner's ruling — R / B / A / I / P since "
+              "2026-11-20 — never converted to one chip per row).", '']
     for m in sw_matrices:
         lines.append(f'- {m}')
     lines.append('')
@@ -3219,7 +3225,8 @@ def check():
     # docs/ on a page this project has converted. Every page that carries one is in
     # scope now: the protocol batches, the administrative policies, and (Batch 7) the
     # 13 docs/procedures/ pages. The only page left is the front-matter legend, which
-    # DEFINES the level columns and must stay exactly as it is — it is counted and
+    # DEFINES the level columns (relabelled R / B / A / I / P by the owner's 2026-11-20
+    # ruling) and is never converted to one chip per row — it is counted and
     # reported, never silently passed off as clean.
     sw_files, sw_blocks, sw_matrices = sc_wrap_audit()
     in_scope = set(TARGETS + PENDING_TARGETS + policy_targets())
@@ -3329,7 +3336,7 @@ def check():
     print(f"REPORTED, NOT GATED — "
           f"{len(summary['sc_wrap_level_matrices_out_of_scope'])} provider-level matrix/matrices "
           f"inside sc-wrap remain on a page outside every conversion batch's scope "
-          f"(the front-matter legend, which DEFINES the level columns and must not change):")
+          f"(the front-matter legend, which DEFINES the level columns — R / B / A / I / P):")
     for m in summary['sc_wrap_level_matrices_out_of_scope']:
         print('   -', m)
     return 0

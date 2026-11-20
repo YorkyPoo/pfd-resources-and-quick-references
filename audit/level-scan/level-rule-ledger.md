@@ -1700,7 +1700,7 @@ new defect. Source of truth: `audit/level-scan/verifier-exceptions.yaml`.
 
 ### `sc-wrap` — whole `docs/` tree, walked (not a directory list)
 
-63 `sc-wrap` block(s) in 46 file(s). `sc-wrap` is the shared stylesheet wrapper for any wide table, so its presence is not a defect: the defect is a provider-level matrix still inside one. **Provider-level matrices inside `sc-wrap`: 1** — 0 on a page this project has converted (0 expected; `--check` fails on any), the rest on page(s) outside every batch's scope and reported, not gated (since Batch 7 that is only the front-matter legend, which defines the level columns and must stay as it is).
+63 `sc-wrap` block(s) in 46 file(s). `sc-wrap` is the shared stylesheet wrapper for any wide table, so its presence is not a defect: the defect is a provider-level matrix still inside one. **Provider-level matrices inside `sc-wrap`: 1** — 0 on a page this project has converted (0 expected; `--check` fails on any), the rest on page(s) outside every batch's scope and reported, not gated (since Batch 7 that is only the front-matter legend, which defines the level columns and is labelled by the owner's ruling — R / B / A / I / P since 2026-11-20 — never converted to one chip per row).
 
 - protocols/front-matter/01 - How to Read the Protocols.md (line 33)
 
