@@ -21,12 +21,11 @@
   "No badge override was written: neither contradictory badge (p.61#4 EMT, p.63#7 I) is wrong. The constraints on those rows are clause-scoped inline tokens, so overriding the badge would corrupt the source record. The resolutions live here, on the site cells."
  ],
  "counts": {
-  "records": 61,
-  "retired_records": 2,
-  "queue_rows_covered": 59,
+  "records": 63,
+  "queue_rows_covered": 61,
   "by_decision": {
    "site_split_of_pems": 3,
-   "set_cells": 24,
+   "set_cells": 26,
    "held_split_review": 7,
    "ownership": 1,
    "add_from_pems": 1,
@@ -40,7 +39,7 @@
    "held_level_correct": 7,
    "site_gap_add": 1,
    "named_item": 5,
-   "ambiguous_adjudication": 40
+   "ambiguous_adjudication": 42
   },
   "raster_verified": 31,
   "unresolved": [
@@ -644,6 +643,46 @@
    "confidence": "high"
   },
   {
+   "file": "protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md",
+   "row": 5,
+   "pems_page": 55,
+   "pems_ordinal": 2,
+   "disposition": "ambiguous_adjudication",
+   "question": "2 different PEMS rows explain this row about equally well: p.55 row 2 (0.48), p.55 row 3 (0.43); the site row may merge them",
+   "decision": "set_cells",
+   "verdict": "No ketamine row exists on p.55; post-intubation sedation is an I-level act there (fentanyl p.55#2 and midazolam p.55#3 are both badge I). Site prints P only. Medium: inferred from the page's sedation badges, not from an identical row.",
+   "resolved_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "evidence_image": "audit/level-scan/evidence/page_55-055.png",
+   "evidence_basis": "PDF text layer (pems_table.json)",
+   "confidence": "medium"
+  },
+  {
+   "file": "protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md",
+   "row": 6,
+   "pems_page": 55,
+   "pems_ordinal": 3,
+   "disposition": "ambiguous_adjudication",
+   "question": "2 different PEMS rows explain this row about equally well: p.55 row 2 (0.69), p.55 row 3 (0.61); the site row may merge them",
+   "decision": "set_cells",
+   "verdict": "This row names Midazolam and Fentanyl, i.e. p.55#3 and p.55#2, both badge I -> I/P. Site prints P only.",
+   "resolved_cells": [
+    "",
+    "",
+    "",
+    "\u2022",
+    "\u2022"
+   ],
+   "evidence_image": "audit/level-scan/evidence/page_55-055.png",
+   "evidence_basis": "PDF text layer (pems_table.json)",
+   "confidence": "high"
+  },
+  {
    "file": "protocols/medical/07_OB_Emergencies_PROC.md",
    "row": 1,
    "pems_page": 147,
@@ -1052,60 +1091,6 @@
    "evidence_image": "audit/level-scan/evidence/cpap_p245-245.png",
    "evidence_basis": "raster read with vision (4x zoom on the row)",
    "confidence": "high that the print is broken; UNRESOLVED on the intended number"
-  }
- ],
- "retired_records": [
-  {
-   "file": "protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md",
-   "row": 5,
-   "retired": "2026-11-20",
-   "reason": "Retired by the owner's ketamine ruling of 2026-11-20 (card t_060d0fe8): site row 5 was the post-intubation KETAMINE row, and the page no longer publishes it. The record is kept verbatim for the audit trail but is out of `records`, so its resolved_cells (I/P) cannot chip any row. Site row 5 is now the printed MC contact (p.55#4), bound in row-bindings.yaml.",
-   "record": {
-    "file": "protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md",
-    "row": 5,
-    "pems_page": 55,
-    "pems_ordinal": 2,
-    "disposition": "ambiguous_adjudication",
-    "question": "2 different PEMS rows explain this row about equally well: p.55 row 2 (0.48), p.55 row 3 (0.43); the site row may merge them",
-    "decision": "set_cells",
-    "verdict": "No ketamine row exists on p.55; post-intubation sedation is an I-level act there (fentanyl p.55#2 and midazolam p.55#3 are both badge I). Site prints P only. Medium: inferred from the page's sedation badges, not from an identical row.",
-    "resolved_cells": [
-     "",
-     "",
-     "",
-     "\u2022",
-     "\u2022"
-    ],
-    "evidence_image": "audit/level-scan/evidence/page_55-055.png",
-    "evidence_basis": "PDF text layer (pems_table.json)",
-    "confidence": "medium"
-   }
-  },
-  {
-   "file": "protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md",
-   "row": 6,
-   "retired": "2026-11-20",
-   "reason": "Retired by the same ruling: site row 6 was the OR-post-intubation-sedation row (ketamine/midazolam/fentanyl with agency-invented maximum total doses). The page now publishes the printed p.55#3 midazolam order instead, as site row 4 (bound in row-bindings.yaml). Kept verbatim below, out of `records`.",
-   "record": {
-    "file": "protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md",
-    "row": 6,
-    "pems_page": 55,
-    "pems_ordinal": 3,
-    "disposition": "ambiguous_adjudication",
-    "question": "2 different PEMS rows explain this row about equally well: p.55 row 2 (0.69), p.55 row 3 (0.61); the site row may merge them",
-    "decision": "set_cells",
-    "verdict": "This row names Midazolam and Fentanyl, i.e. p.55#3 and p.55#2, both badge I -> I/P. Site prints P only.",
-    "resolved_cells": [
-     "",
-     "",
-     "",
-     "\u2022",
-     "\u2022"
-    ],
-    "evidence_image": "audit/level-scan/evidence/page_55-055.png",
-    "evidence_basis": "PDF text layer (pems_table.json)",
-    "confidence": "high"
-   }
   }
  ]
 }

@@ -14672,7 +14672,7 @@
     "text_label": null,
     "text_tokens": []
    },
-   "note": null,
+   "note": "No ketamine row exists on p.55; post-intubation sedation is an I-level act there (fentanyl p.55#2 and midazolam p.55#3 are both badge I). Site prints P only. Medium: inferred from the page's sedation badges, not from an identical row.",
    "status_before": null
   },
   {
@@ -14704,7 +14704,7 @@
     "text_label": null,
     "text_tokens": []
    },
-   "note": null,
+   "note": "This row names Midazolam and Fentanyl, i.e. p.55#3 and p.55#2, both badge I -> I/P. Site prints P only.",
    "status_before": null
   },
   {

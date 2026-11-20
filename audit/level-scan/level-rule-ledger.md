@@ -1512,23 +1512,26 @@ decision before the page is treated as final.
   documentation and Medical Control written authorisation. The one-chip chassis
   cannot reproduce a bracket, so the asterisk note carries it. Owner to confirm
   that the analgesia ladder is A+MC in PEMS and not I.
-- **Batch 5 — Sedation: ketamine is out, and the page is p.55 verbatim (owner
-  ruling 2026-11-20).** Verbatim: *"Remove ketamine. We do not have RSI yet. If
-  Ketamine is in the pharm section. You can leave that alone."* Both ketamine rows
-  are gone with the drug — pre-intubation sedation (no PEMS 2024 row; p.123#4 says
-  "RSI is not addressed in PEMS regional protocols") and post-intubation ketamine
-  (printed in exactly one PEMS row, p.72#9 behavioural restraint at P, never as an
-  airway sedative). No level was re-decided to clear them: the rows were replaced by
-  rows p.55 prints with their own badges, so the two OWNER_REQUIRED flags left with
-  the rows. The page now publishes *Sedation Post Advanced Airway* p.55 in printed
-  order and nothing else — EMR universal care (p.55#0), EMT airway confirmation
-  (p.55#1), I fentanyl 25 – 50 mcg / 0.5 – 1 mcg/kg max 25 mcg with its printed
+- **Batch 5 — Sedation: ketamine is out, and the action table is p.55 verbatim
+  (owner ruling 2026-11-20).** Verbatim: *"Remove ketamine. We do not have RSI yet.
+  If Ketamine is in the pharm section. You can leave that alone."* Both ketamine
+  rows are gone with the drug — pre-intubation sedation (no PEMS 2024 row; p.123#4
+  says "RSI is not addressed in PEMS regional protocols") and post-intubation
+  ketamine (printed in exactly one PEMS row, p.72#9 behavioural restraint at P,
+  never as an airway sedative). No level was re-decided to clear them: the rows were
+  replaced by rows p.55 prints with their own badges, so the two OWNER_REQUIRED
+  flags left with the rows. The action table now publishes *Sedation Post Advanced
+  Airway* p.55 in printed order — EMR universal care (p.55#0), EMT airway
+  confirmation (p.55#1), I fentanyl 25 – 50 mcg / 0.5 – 1 mcg/kg max 25 mcg with
+  its printed
   repeat cell (p.55#2), I midazolam 2.5 mg / 0.1 mg/kg, max 2.5 mg IV/IO or 5 mg
   IN/IM, with its printed repeat cell (p.55#3), MC contact (p.55#4). The BP-
   assessment row (Pain Control p.77#2) and the IV/IO-access row (Universal Patient
   Care p.50#9) that the page used to carry are removed: p.55 prints neither, and an
-  A chip on IV access is a level the source does not badge. `docs/pharmacology/
-  Ketamine.md` is out of scope by the same ruling and untouched.
+  A chip on IV access is a level the source does not badge. The page header,
+  Overview, Criteria and Differential sections are not printed on p.55 and are
+  unchanged by this pass. `docs/pharmacology/Ketamine.md` is out of scope by the
+  same ruling and untouched.
 - **Batch 6 — administrative pages are chipped POLICY / PENDING, not levelled.**
   Owner ruling 2026-11-16: *"Treat admin pages as policy."* All 14 administrative
   pages are now 3-column tables whose marker column says `POLICY` (the rule is
@@ -1629,20 +1632,19 @@ decision before the page is treated as final.
   prints "5 mmHg" and p.245#4 extracts as "titratingPEEP9%-15mmHg)". Reconciliation
   (mmHg vs cmH2O, and 5-15 vs 9%-15) is a clinical-text decision outside this
   conversion, so only the chip was bound; owner to reconcile the page wording.
-- **Pearl ruling 2026-11-17 + row-structure instruction 2026-11-20 + ketamine
-  ruling 2026-11-20 — the "prints nowhere" bucket is now empty.** It held 17 rows
-  before the Pearl ruling and 6 after it: the 4 genuinely absent rows (Pediatric
-  Stridor r2, Pneumothorax r5, Upper Airway Obstruction r2, Sedation r5) plus Trauma
-  r6 and Sedation r4. Four of those six were guidance rather than actions (scene
-  management, equipment readiness, recognition, assess-and-refer) and the row-
-  structure instruction moved them below their pages’ tables with no level; they
-  are recorded in `audit/level-scan/relocated-rows.yaml`, not deleted. The last two
-  were the Sedation ketamine rows, and the owner ruled them out on 2026-11-20
-  (*"Remove ketamine. We do not have RSI yet."*): pre-intubation sedation has no PEMS
-  row and the department does not carry RSI, and ketamine is printed only as a
-  restraint sedative (p.72#9, badge P), never as a sedative for airway patients. Both
-  were replaced by the fentanyl/midazolam rows p.55 prints, so no row on any
-  converted page now lacks a printed badge.
+- **Pearl ruling 2026-11-17 + ketamine ruling 2026-11-20 — the "prints nowhere"
+  bucket holds 4 rows.** It held 17 rows before the Pearl ruling and 6 after it.
+  Two of the six left with the 2026-11-20 ketamine ruling: the Sedation ketamine
+  rows (r4 pre-intubation sedation, r5 post-intubation ketamine) were deleted from
+  the page and replaced by the fentanyl/midazolam rows p.55 prints, so neither is a
+  row any more. The four that remain are Pediatric Stridor r2, Pneumothorax r5,
+  Upper Airway Obstruction r2 and Trauma r6. The first three are genuinely absent
+  from the source. Trauma r6 ("assess for shock") is only half absent: p.84 PEARLS
+  #3 prints the recognition half ("Any patient who is cool/diaphoretic and
+  tachycardic is considered to be in shock until proven otherwise") but not the
+  "refer to the Shock protocol" half, so its level question stays open and the row
+  stays flagged. These four are the only converted rows still without a printed
+  badge.
 - **Batch 3 — 3 row(s) lost a Medical-Control requirement the page printed.** Each is now chipped at the level PEMS prints:
   `03_Airway_Inhalation_Irritants_PROC.md` row 8 was `MC`, now `A` (p.153#4).
   `03_Respiratory_Distress_PROC.md` row 6 was `MC`, now `EMT` (p.123#3).

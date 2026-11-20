@@ -351,16 +351,18 @@ def build():
     # ---- The "PEMS prints this nowhere" bucket, asserted by MEMBERSHIP, not by count ----
     # ---- The owner's Pearl ruling of 2026-11-17 (BLS/ALS scope test) cleared every flag whose
     # reason claimed the source is silent, EXCEPT four rows the source genuinely does not
-    # print. The 2026-11-20 ketamine ruling then removed the two Sedation rows that card put
-    # out of scope (pre-intubation sedation r4, post-intubation ketamine r5): both rows left
-    # the page, so neither is a question any more and the bucket is the four absent rows.
+    # print. The 2026-11-20 ketamine ruling then removed the two Sedation rows that card had
+    # put out of scope (pre-intubation sedation r4, post-intubation ketamine r5): both rows
+    # left the page, so neither is a question any more. The bucket now holds four rows: three
+    # genuinely absent, plus Trauma r6, whose "prints nowhere" reason is only half true (p.84
+    # PEARLS #3 prints the recognition half) and whose level question therefore stays open.
     # A quiet re-categorisation of any row must fail the build rather than move the number the
     # owner reads on the page.
     nowhere_expected = {
         ('protocols/respiratory/03_Pediatric_Stridor_PROC.md', 2),      # genuinely absent
         ('protocols/respiratory/03_Pneumothorax_PROC.md', 5),           # genuinely absent
         ('protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md', 2),  # genuinely absent
-        ('protocols/trauma/09_Trauma_PROC.md', 6),                      # genuinely absent
+        ('protocols/trauma/09_Trauma_PROC.md', 6),                      # out of scope (this card)
     }
     nowhere_got = {(r['file'], int(r['row'])) for r in owner if r['cat'] == 'nowhere'}
     assert nowhere_got == nowhere_expected, (
@@ -370,7 +372,8 @@ def build():
     assert n_nowhere == len(nowhere_expected)
     print(f'the "PEMS prints this nowhere" bucket is {n_nowhere} rows (was 17 before the '
           f'2026-11-17 Pearl ruling, 6 after it, 4 after the 2026-11-20 ketamine ruling '
-          f'removed the two Sedation rows it had left out of scope) — membership asserted, '
+          f'removed the two Sedation rows it had left out of scope): 3 genuinely absent from '
+          f'the source, plus Trauma r6 whose level question stays open — membership asserted, '
           f'not typed', file=sys.stderr)
 
     o = []
