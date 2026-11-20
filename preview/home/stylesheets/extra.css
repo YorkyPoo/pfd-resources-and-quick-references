@@ -340,13 +340,26 @@
 .pfd-ico { grid-area: ico; align-self: center; display: flex;
   color: var(--pfd-accent); }
 .pfd-ico svg { width: 27px; height: 27px; display: block; }
-.pfd-t { grid-area: t; font-weight: 800; font-size: .92em; line-height: 1.2; }
+.pfd-t { grid-area: t; font-weight: 800; font-size: .92em; line-height: 1.2;
+  min-width: 0; hyphens: auto;
+  /* Material's global word-break would split "Assignments" into "Assignmen/ts" in
+     the 139px tile at 320px; hyphenate instead of breaking a word mid-syllable */
+  overflow-wrap: normal; word-break: normal; }
 .pfd-s { grid-area: s; font-size: .7em; line-height: 1.3; font-weight: 500;
-  letter-spacing: .01em;
+  letter-spacing: .01em; min-width: 0; hyphens: auto;
+  overflow-wrap: normal; word-break: normal;
   /* 80% of the body ink instead of Material's --light: the sublabel is the only
      place the domain is *written*, and it has to survive cab glare, so it is held
      well above the 4.5:1 floor (measured below) */
   color: color-mix(in srgb, var(--md-default-fg-color) 80%, transparent); }
+/* 320px: the two-up tile is 139px wide, so the icon and the type both step down
+   rather than breaking a word */
+@media only screen and (max-width: 360px) {
+  .md-typeset .pfd-card { padding: .55em .5em; column-gap: .45em; }
+  .pfd-ico svg { width: 22px; height: 22px; }
+  .pfd-t { font-size: .84em; }
+  .pfd-s { font-size: .66em; }
+}
 
 /* domain accents — one place, so a tile cannot carry the wrong colour.
    The .md-typeset prefix and this order are load-bearing: the base rules above are
