@@ -31,6 +31,7 @@ import os
 import re
 import sys
 import urllib.request
+from urllib.parse import quote as urlquote
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -126,7 +127,7 @@ def unchanged_pages(docs):
 def load(base, rel):
     html_rel = rel[:-3] + '.html'
     if base.startswith('http'):
-        url = base.rstrip('/') + '/' + html_rel
+        url = base.rstrip('/') + '/' + urlquote(html_rel, safe='/')
         req = urllib.request.Request(url, headers={'Cache-Control': 'no-cache'})
         with urllib.request.urlopen(req, timeout=30) as fh:
             return fh.read().decode('utf-8', 'replace')
