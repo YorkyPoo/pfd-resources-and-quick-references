@@ -68,9 +68,9 @@
     },
     "pipstrip": {
       "branch": "pilot-pipstrip-rebased",
-      "built_at": "2026-11-20T15:09:40Z",
+      "built_at": "2026-11-20T15:18:51Z",
       "description": "Five-pip level strip (pilot: Cold Exposure, Pulmonary Edema), rebased onto main",
-      "sha": "c543ecceda7dcef2cdd3b66c38971abbd86e7532"
+      "sha": "a370a3169b60215f8cc887168804abee2f498f2f"
     },
     "refs-sweep": {
       "branch": "refs-sweep",
@@ -103,5 +103,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-20T15:09:40.367979+00:00"
+  "updated_at": "2026-11-20T15:18:52.031941+00:00"
 }
