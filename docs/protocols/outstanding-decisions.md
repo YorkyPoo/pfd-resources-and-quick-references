@@ -16,8 +16,8 @@ This page is generated from the conversion ledger (`audit/level-scan/level-rule-
 |---|---:|
 | Rows that need your level decision (`OWNER_REQUIRED`, marked &#9873; on the page) | **2** |
 | Rows pending authorization (`PENDING`) | **18** (11 whole-page + 7 single-row) |
-| Open questions on how the rules themselves should read | **31** |
-| Rulings already recorded — decided, no action needed | **5** |
+| Open questions on how the rules themselves should read | **30** |
+| Rulings already recorded — decided, no action needed | **6** |
 
 </div>
 
@@ -246,7 +246,7 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
-<h2 id="open-questions">3. Open questions about the rules — 31</h2>
+<h2 id="open-questions">3. Open questions about the rules — 30</h2>
 
 These are not row-level decisions. Each one is a question about how the rule itself should read, recorded in the conversion ledger and grouped here by the batch that raised it — the batch is the topic of work, and every card opens with the ledger's own heading naming its subject.
 
@@ -373,7 +373,7 @@ These are not row-level decisions. Each one is a question about how the rule its
 <p class="od-question"><strong>Batch 6 — Universal Patient Care row 11 moves EMT -&gt; EMR.</strong> The page printed EMT-and-above for &quot;Refer to relevant protocols / consider contacting Medical Control&quot;; PEMS p.49#5 badges the same sentence EMR. Chip follows the source, and the move is listed under *Level moved by the source*. Its 11 row numbers are unchanged, so the 34 inbound references from other pages (none of which point at a row number or anchor) cannot break.</p>
 </div>
 
-<h3>Batch 7 <span class="od-count">4</span></h3>
+<h3>Batch 7 <span class="od-count">3</span></h3>
 
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 7</span></p>
@@ -381,18 +381,14 @@ These are not row-level decisions. Each one is a question about how the rule its
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 7</span></p>
-<p class="od-question"><strong>Batch 7 — 15 rows move to the level PEMS prints.</strong> The rule is &quot;chip = the level PEMS prints&quot;, so the chip follows the source. 14 of these print a LOWER level (more permissive) than the page published, and owner should confirm each ladder: CPAP r6 <code>P -&gt; EMT</code> (PEEP titration); Endotracheal Intubation r4 and r10 <code>P -&gt; I</code> (adult oral intubation, analgesia/sedation: PEMS prints both inside p.247#3 and p.247#9 at badge I); Intraosseous r8 <code>P -&gt; A</code> (IO lidocaine); Medication Administration r3 and r4 <code>I -&gt; A</code> (IV and IO administration, p.257#3/#5 badge A); Nasogastric Tube r1-r6 <code>P -&gt; I</code> (the whole procedure is badge I on p.259); Neonatal Resuscitation r2 and r4 <code>EMT -&gt; EMR</code> (BVM and chest compressions, p.261#5/#9 badge EMR). The 15th moves the other way: Endotracheal Intubation r2 <code>EMT -&gt; I</code>, because the row bundles a sentence PEMS prints at I (see the bundled-row rule below) and an EMT chip would over-grant it. No row keeps a cumulative dot grid.</p>
+<p class="od-question"><strong>Batch 7 — 14 rows move to the level PEMS prints.</strong> The rule is &quot;chip = the level PEMS prints&quot;, so the chip follows the source. 13 of these print a LOWER level (more permissive) than the page published, and owner should confirm each ladder: Endotracheal Intubation r4 and r10 <code>P -&gt; I</code> (adult oral intubation, analgesia/sedation: PEMS prints both inside p.247#3 and p.247#9 at badge I); Intraosseous r8 <code>P -&gt; A</code> (IO lidocaine); Medication Administration r3 and r4 <code>I -&gt; A</code> (IV and IO administration, p.257#3/#5 badge A); Nasogastric Tube r1-r6 <code>P -&gt; I</code> (the whole procedure is badge I on p.259); Neonatal Resuscitation r2 and r4 <code>EMT -&gt; EMR</code> (BVM and chest compressions, p.261#5/#9 badge EMR). The 14th moves the other way: Endotracheal Intubation r2 <code>EMT -&gt; I</code>, because the row bundles a sentence PEMS prints at I (see the bundled-row rule below) and an EMT chip would over-grant it. No row keeps a cumulative dot grid. (CPAP r6 was the 15th row of this list; on 2026-11-20 the owner ruled its PEEP titration to be Intermediate-level, so it is decided — *OWNER_RULED — PEEP titration* below — and no longer counted or asked here.)</p>
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 7</span></p>
 <p class="od-question"><strong>Batch 7 — a row that bundles more than one PEMS level takes the HIGHEST level.</strong> One rule for every bundled row: the chip is the highest (most restrictive) of the source levels the row prints, and the evidence names each sub-step level, so a lower-level sentence can never be published under a lower chip. Applied to the three bundled rows: ETT r2 <code>I</code> (C-spine sentence p.247#3 badge I, position step p.247#2 badge EMT) — the EMT over-grant the earlier draft only disclosed is now REMOVED from the page, since the chip is the higher level; ETT r6 <code>P</code> (escalation p.247#7 badge P, re-oxygenate sentence p.247#6 badge I); Neonatal r3 <code>I</code> (ECG p.261#7 badge I, EtCO2 sub-step p.261#6 badge EMT). All three are CITED rows, not OWNER_REQUIRED; each row&#x27;s <code>evidence</code> in <code>row-bindings.yaml</code> states the rule and both levels.</p>
 </div>
-<div class="od-card od-cat-question">
-<p class="od-head"><span class="od-batch">Batch 7</span></p>
-<p class="od-question"><strong>Batch 7 — CPAP units disagree with the source, and the action text was not edited.</strong> The page reads PEEP &quot;5 cmH2O&quot; (r3) and &quot;5-15 cmH2O&quot; (r6); PEMS p.245#1 prints &quot;5 mmHg&quot; and p.245#4 extracts as &quot;titratingPEEP9%-15mmHg)&quot;. Reconciliation (mmHg vs cmH2O, and 5-15 vs 9%-15) is a clinical-text decision outside this conversion, so only the chip was bound; owner to reconcile the page wording.</p>
-</div>
 
-<h2 id="ruled">4. Already ruled — recorded decisions — 5</h2>
+<h2 id="ruled">4. Already ruled — recorded decisions — 6</h2>
 
 The owner has already answered these, so they are not waiting on you. They are published as a record: the page states the level that was decided, and the answer and the PEMS citation stay in the audit trail (`audit/level-scan/level-rulings.yaml`, `audit/level-scan/relocated-rows.yaml`).
 
@@ -415,6 +411,10 @@ The owner has already answered these, so they are not waiting on you. They are p
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Decided</span></p>
 <p class="od-question"><code>protocols/respiratory/03_Respiratory_Distress_PROC.md</code> row 6a — <strong>I</strong> — decided 2026-11-20: &quot;An intermediate can also titrate peep.&quot; • Titration: Titrate PEEP up to 10 cmH2O to support ventilation and work of breathing. - clause the level comes from: p.239#5 — &quot;I/P only: Adjust PEEP to support ventilation and work of breathing&quot;. That printed row is badged EMT; its own words scope this action to I/P, so the chip is the lowest level the clause names and NOT the row&#x27;s badge. The site row covers this clause alone (<code>clause_only</code>), so it carries no OWNER_REQUIRED flag.</p>
+</div>
+<div class="od-card od-cat-question">
+<p class="od-head"><span class="od-batch">Decided</span></p>
+<p class="od-question"><code>procedures/CPAP.md</code> row 6 — <strong>I</strong> — decided 2026-11-20: &quot;Only intermediates and above can titrate peep up to 15 mmhg&quot; Consider titrating PEEP (5–15 mmHg) as needed to improve ventilation. - clause the level comes from: p.239#5 — &quot;I/P only: Adjust PEEP to support ventilation and work of breathing&quot;. That printed row is badged EMT; its own words scope this action to I/P, so the chip is the lowest level the clause names and NOT the row&#x27;s badge. The site row covers this clause alone (<code>clause_only</code>), so it carries no OWNER_REQUIRED flag.</p>
 </div>
 
 <p class="od-foot">Generated from the conversion ledger by `scripts/build_outstanding_decisions.py`. Row text and reasons are the ledger's own words; this page adds no clinical content and edits no protocol page.</p>
