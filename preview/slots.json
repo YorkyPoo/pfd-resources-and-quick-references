@@ -18,6 +18,12 @@
       "description": "Airway levels (owner PEMS p.239/p.247), re-presented on the rows-one-action tree: adult intubation + reoxygenation I; Pulmonary Edema r9 back to P + OWNER_REQUIRED pending the p.239#5/p.245#4 conflict",
       "sha": "95a3d1cc4527f606737682861419ae7b7830e491"
     },
+    "all-pages": {
+      "branch": "pipstrip-rollout",
+      "built_at": "2026-11-20T15:37:13Z",
+      "description": "All protocols: five-pip level strip (52 pages)",
+      "sha": "686d8fdd1b4add27fa0449901a5587a8b3950cd4"
+    },
     "conversion-artifacts": {
       "branch": "conversion-artifacts",
       "built_at": "2026-11-20T06:25:48Z",
@@ -103,5 +109,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-20T15:18:52.031941+00:00"
+  "updated_at": "2026-11-20T15:37:13.979810+00:00"
 }

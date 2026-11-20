@@ -1,0 +1,322 @@
+/* ============================================================================
+   pip-strip.css — the tapped-level five-pip protocol strip
+   ----------------------------------------------------------------------------
+   Rendered by scripts/mkdocs_pip_strip.py; driven by docs/javascripts/pip-strip.js.
+
+   Colour carries the ACTIONABLE STATE only (standing / call MC / not permitted).
+   Level identity is carried by POSITION across R B A I P plus the text header and
+   the legend — never by hue. A green "EMR" beside an amber "A" reads as caution
+   rather than as scope, which is the wrong question to make a provider answer
+   under load.
+   ============================================================================ */
+
+.md-typeset .pip-block {
+  --pip-go: #0d6b4f;
+  --pip-call: #8a5a00;
+  --pip-no: #8a1c1c;
+  --pip-line: #97a1ab;
+  --pip-panel: #eef1f4;
+  --pip-on: #ffffff;
+  --pip-hatch: rgba(0, 0, 0, .42);
+  margin: 1em 0 1.4em;
+}
+
+/* OS preference is honoured only when the page itself has not been pinned to
+   the light scheme. Material writes data-md-color-scheme="default" onto <body>
+   as soon as its palette JS runs, so this reads the OS preference in the same
+   window the prototype addressed (no scheme chosen) without ever painting a
+   dark strip onto a page that is light — which on this site is what a bare
+   prefers-color-scheme rule did. */
+@media (prefers-color-scheme: dark) {
+  html:not([data-md-color-scheme="default"]) body:not([data-md-color-scheme="default"]) .md-typeset .pip-block {
+    --pip-go: #4fd6b0;
+    --pip-call: #ffcf5c;
+    --pip-no: #ff8a80;
+    --pip-line: #6b7280;
+    --pip-panel: #252b36;
+    --pip-on: #12141a;
+    --pip-hatch: rgba(0, 0, 0, .5);
+  }
+}
+
+/* Material's own toggle wins over the OS preference (it always sets this attr). */
+[data-md-color-scheme="slate"] .md-typeset .pip-block {
+  --pip-go: #4fd6b0;
+  --pip-call: #ffcf5c;
+  --pip-no: #ff8a80;
+  --pip-line: #6b7280;
+  --pip-panel: #252b36;
+  --pip-on: #12141a;
+  --pip-hatch: rgba(0, 0, 0, .5);
+}
+
+/* ---------------------------------------------------------------- picker */
+.md-typeset .pip-pick-label {
+  margin: 0 0 .35em;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .pip-pick {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.md-typeset .pip-btn {
+  flex: 1 1 46px;
+  min-height: 44px;
+  padding: 0 .3em;
+  border: 1.5px solid var(--pip-line);
+  border-radius: 9px;
+  background: var(--pip-panel);
+  color: var(--md-default-fg-color);
+  font: inherit;
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  cursor: pointer;
+}
+
+.md-typeset .pip-btn--all,
+.md-typeset .pip-btn.pip-btn-all {
+  flex: 2 1 96px;
+  font-size: .74rem;
+  letter-spacing: .02em;
+}
+
+.md-typeset .pip-btn[aria-pressed="true"] {
+  background: var(--md-primary-fg-color);
+  border-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color, #fff);
+}
+
+.md-typeset .pip-tally {
+  margin: .55em 0 .7em;
+  font-size: .72rem;
+  line-height: 1.45;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ----------------------------------------------------------------- table */
+.md-typeset .pip-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  /* Reclaim the page gutter so the reading column gets every pixel the phone
+     has: at 390px that is the difference between a 247px and a 279px action
+     column. Both work, but the owner reads this in a moving truck. */
+  margin: 0 -0.8rem;
+}
+
+/* Material bleeds its table wrapper by -16px each side and pads it back by 16px.
+   Inside .pip-wrap that bleed is wider than the column and clips the action
+   text on a 390px phone, so neutralise it here (same fix the old .lv-wrap
+   chassis needed). */
+.md-typeset .pip-wrap .md-typeset__scrollwrap { margin: 0; }
+.md-typeset .pip-wrap .md-typeset__table { padding: 0; width: 100%; }
+
+.md-typeset .pip-table {
+  width: 100%;
+  margin: 0;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.md-typeset .pip-table col.pip-col-n { width: 24px; }
+.md-typeset .pip-table col.pip-col-strip { width: 86px; }
+
+.md-typeset .pip-table th,
+.md-typeset .pip-table td {
+  padding: 6px 4px;
+  vertical-align: top;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  overflow-wrap: anywhere;
+}
+
+.md-typeset .pip-table th {
+  background: var(--pip-panel);
+  font-size: .58rem;
+  font-weight: 700;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+  text-align: left;
+}
+
+.md-typeset .pip-table th.pip-th-n,
+.md-typeset .pip-table th.pip-th-strip { text-align: center; }
+
+.md-typeset .pip-table td.pip-n {
+  text-align: center;
+  font-size: .62rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .pip-table td.pip-act { text-align: left; }
+
+.md-typeset .pip-action { display: block; }
+
+/* ------------------------------------------------------------ the strip */
+.md-typeset .pip-strip {
+  display: inline-flex;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+}
+
+.md-typeset .pip {
+  display: block;
+  width: 12px;
+  height: 24px;
+  border-radius: 3px;
+  border: 1.5px solid var(--pip-line);
+  background: transparent;
+}
+
+.md-typeset .pip.go {
+  background: var(--pip-go);
+  border-color: var(--pip-go);
+}
+
+/* Hatched = call Medical Control first. The diagonal stripes must survive
+   greyscale — that is the phone-in-sunlight test — so the pattern, not the
+   hue, is what distinguishes it from a solid pip. */
+.md-typeset .pip.call {
+  background-color: var(--pip-call);
+  border-color: var(--pip-call);
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0 3px,
+    var(--pip-hatch) 3px 5px
+  );
+}
+
+.md-typeset .pip.no {
+  background: transparent;
+  border-color: var(--pip-line);
+  border-style: solid;
+}
+
+/* OWNER_REQUIRED row: outline only, dashed, in the "not authorised" ink — it
+   reads as unverified at a glance and can never pass for a standing order. */
+.md-typeset .pip.unv {
+  border-style: dashed;
+  border-color: var(--pip-no);
+}
+
+/* Header letters sit over their own pip slot: 12px wide, 3px gap. */
+.md-typeset .pip-strip-head { gap: 3px; }
+
+.md-typeset .pip-strip-head i {
+  display: block;
+  width: 12px;
+  font-style: normal;
+  font-size: .6rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--md-default-fg-color);
+}
+
+/* ------------------------------------------------------------------ tags */
+.md-typeset .pip-tag-wrap { display: block; margin-top: 6px; }
+
+.md-typeset .pip-tag {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 20px;
+  font-size: .58rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--pip-on);
+  background: var(--pip-panel);
+}
+
+.md-typeset .pip-tag.go { background: var(--pip-go); }
+.md-typeset .pip-tag.call { background: var(--pip-call); }
+.md-typeset .pip-tag.no { background: var(--pip-no); }
+
+/* OWNER_REQUIRED — the page publishes a level the source does not authorise.
+   Outline only, so it can never be read as a standing order. */
+.md-typeset .pip-tag.flag {
+  background: transparent;
+  border: 1.5px dashed var(--pip-no);
+  color: var(--pip-no);
+}
+
+/* Markers the level chip carried before the strip: * (agency documentation +
+   Medical Control written authorisation), † (level derived from the source's
+   own wording). Kept visible next to the tag, with their original title, so the
+   strip adds no information and loses none. */
+.md-typeset .pip-marks { display: inline-block; margin-left: 6px; vertical-align: 1px; }
+.md-typeset .pip-mark {
+  display: inline-block;
+  font-size: .62rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--md-default-fg-color);
+  cursor: help;
+}
+.md-typeset .pip-mark + .pip-mark { margin-left: 4px; }
+.md-typeset .pip-mark-derived { color: var(--pip-call); }
+
+/* ------------------------------------------------- tapped-level row state */
+.md-typeset .pip-table tr.pip-hit td.pip-n { box-shadow: inset 4px 0 0 var(--pip-go); }
+.md-typeset .pip-table tr.pip-hitcall td.pip-n { box-shadow: inset 4px 0 0 var(--pip-call); }
+.md-typeset .pip-table tr.pip-hitno td.pip-n { box-shadow: inset 4px 0 0 var(--pip-no); }
+
+.md-typeset .pip-table tr.pip-dim .pip-action,
+.md-typeset .pip-table tr.pip-dim .pip-n,
+.md-typeset .pip-table tr.pip-dim .pip-strip { opacity: .35; }
+
+/* ---------------------------------------------------------------- legend */
+.md-typeset .pip-legend {
+  margin-top: 10px;
+  padding: 9px 11px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  background: var(--pip-panel);
+  font-size: .7rem;
+}
+
+.md-typeset .pip-legend-h {
+  margin: 0 0 .3em;
+  font-size: .64rem;
+  font-weight: 800;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .pip-keys {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.md-typeset .pip-keys li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.md-typeset .pip-keys li .pip-strip { flex: none; width: 72px; }
+
+.md-typeset .pip-legend-levels { margin: .6em 0 0; }
+
+.md-typeset .pip-letters {
+  font-weight: 800;
+  letter-spacing: .18em;
+}
+
+.md-typeset .pip-legend-note {
+  margin: .5em 0 0;
+  padding-left: 9px;
+  border-left: 3px solid var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color--light);
+}
