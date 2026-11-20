@@ -65,4 +65,16 @@ artifact, not a link introduced here. The live-config build is clean.
 
 ## Preview
 
-Slot: `/preview/ai-prompt-exclusion/` — published on `gh-pages`; `main` untouched.
+Slot: `/preview/ai-prompt-exclusion/` — published on `gh-pages` (`c33db77`); `main`
+untouched. Branch `ai-prompt-exclusion` pushed to `origin`.
+
+Live checks after the Pages build:
+
+| URL | HTTP |
+|---|---:|
+| `/preview/ai-prompt-exclusion/` | 200 |
+| `/preview/ai-prompt-exclusion/protocols/front-matter/00 - AI Formatting Guidelines.html` | **404** |
+| `/preview/ai-prompt-exclusion/protocols/front-matter/00 - Introduction.html` | 200 |
+
+The slot's Introduction page carries no `MASTER AI SYSTEM PROMPT` text and no
+`AI Formatting` link; the slot index carries `noindex, nofollow`; `/sw.js` is 404.
