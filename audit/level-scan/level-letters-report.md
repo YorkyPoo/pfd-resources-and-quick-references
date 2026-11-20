@@ -93,7 +93,7 @@ done, not asked.
 **Pediatric dosing tables: 0.** `docs/pediatric-dosing/*` carry weight-based doses with no
 provider-level column or name at all — nothing to relabel there.
 
-## Gates (tree `1521a2e`, logs committed)
+## Gates (tree `5aea342`, logs committed; identical `docs/` at `1521a2e`)
 
 | Gate | Result |
 |---|---|
