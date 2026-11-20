@@ -81,10 +81,3 @@ This protocol addresses respiratory distress from obstructive (asthma/COPD), inf
 8. Close monitoring is required during CPAP for hypotension or development of pneumothorax
 9. Pediatric respiratory distress: Consider bronchiolitis in infants with wheezing and respiratory distress; normal saline nebulizer can reduce work of breathing
 10. Maintain continuous EtCO2 monitoring throughout care to detect early signs of respiratory fatigue and guide interventions
-
----
-
-### Mandatory Text Replacements Applied
-- Peninsula EMS / PEMS ➔ Poquoson Fire and Rescue
-- PEMS Medical Advisory Committee / Regional Medical Director ➔ Medical Control
-- Regional Protocol(s) ➔ Poquoson Protocol(s)
