@@ -37,7 +37,7 @@ Management of acute cardiogenic pulmonary edema and congestion due to congestive
 | 3 | <span class="lvl lvl-emr">EMR</span> | Provide supplemental oxygen to maintain SpO2 > 94% |
 | 4 | <span class="lvl lvl-emt">EMT</span> | Consider non-invasive positive pressure ventilation (**CPAP**) for severe respiratory distress |
 | 5 | <span class="lvl lvl-emt">EMT</span> | **CPAP Initial Settings:** PEEP 5 cmH2O |
-| 9 | <span class="lvl lvl-p">P</span><sup class="lvl-own" title="OWNER_REQUIRED: PEMS 2024 does not settle which provider level may titrate PEEP">&#9873;</sup> | **CPAP Titration:** Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing |
+| 9 | <span class="lvl lvl-p">P</span><sup class="lvl-own" title="Provider level for this action is awaiting a Medical Control decision">&#9873;</sup> | **CPAP Titration:** Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing |
 | 10 | <span class="lvl lvl-a">A</span> | **[Nitroglycerin](../../pharmacology/Nitroglycerin.md)**<br>Adult: **0.4 mg SL** |
 | 11 | <span class="lvl lvl-a">A</span> | **[Nitroglycerin](../../pharmacology/Nitroglycerin.md)** Repeat Administration:<br>May repeat every 5 minutes as needed if SBP remains > 100 mmHg / MAP > 65 mmHg (maximum 3 doses) |
 | 12 | <span class="lvl lvl-i">I</span> | **Furosemide (Lasix)**<br>Adult: **40 mg IV/IO slow push** |

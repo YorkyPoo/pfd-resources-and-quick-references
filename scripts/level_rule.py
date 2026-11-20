@@ -442,39 +442,6 @@ RULINGS_YAML = os.path.join(AUD, 'level-rulings.yaml')
 BINDINGS_YAML = os.path.join(AUD, 'row-bindings.yaml')
 WORDING_YAML = os.path.join(AUD, 'wording-rulings.yaml')
 STYLESHEET_YAML = os.path.join(AUD, 'stylesheet-changes.yaml')
-RELOCATED_YAML = os.path.join(AUD, 'relocated-rows.yaml')
-
-
-def load_relocated():
-    """Rows moved OUT of an action table into the page's References & Good Practice block.
-
-    A relocated row is still on the page, but it is no longer a chipped action row, so it
-    is no longer in the ledger. This record keeps two things honest that the ledger can no
-    longer see: the row's pre-move status (so the ledger's historical "flagged before"
-    counts do not shrink) and, via `proves`, proof that the block the owner-facing card
-    describes is actually printed on the page.
-    """
-    import yaml
-    if not os.path.exists(RELOCATED_YAML):
-        return []
-    doc = yaml.safe_load(open(RELOCATED_YAML, encoding='utf-8')) or {}
-    out = []
-    for rec in doc.get('relocated') or []:
-        missing = [k for k in ('file', 'row', 'level', 'pems', 'proves')
-                   if rec.get(k) in (None, '', [])]
-        if missing:
-            raise SystemExit(f'relocated-rows.yaml: entry {rec!r} is missing {missing}')
-        out.append(rec)
-    return out
-
-
-def relocated_proofs_missing(rec):
-    """The `proves` spans of one relocated row that its page does NOT print."""
-    path = os.path.join(DOCS, rec['file'])
-    if not os.path.exists(path):
-        return ['(page file missing)']
-    text = open(path, encoding='utf-8').read()
-    return [span for span in rec['proves'] if span not in text]
 
 
 

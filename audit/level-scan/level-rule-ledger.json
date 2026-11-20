@@ -8374,7 +8374,7 @@
    "level_published": "P",
    "status": "OWNER_REQUIRED",
    "reason": "Conflict, recorded: p.239#5 prints 'Consider CPAP (PEEP: 5 cmH2O) ... I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH2O' at badge EMT, and p.245#4 (CPAP/BiPAP/PEEP procedure) prints 'Consider titrating PEEP (9%-15 mmHg) as needed to improve ventilation/work of breathing. CPAP, BiPAP, and PEEP are RED DOT procedures at all EMS Certification Levels' at badge EMT. Two printed rows disagree (I/P-only scope in one, EMT badge in the other) and no printed row badges the titration at I, so neither level is a single-row citation. The page's P is kept and flagged as an open owner/OMD decision. A 2026-11-20 attempt to rule it to I was reverted: it was labelled `owner_ruled` although the owner never ruled on PEEP titration, and the pearl evidence for I is on the Respiratory Distress page (Pearl 4), not this page's source.",
-   "owner_note": "&#9873; **CPAP titration \u2014 level pending.** PEMS prints PEEP titration in two rows that disagree with each other, so no single printed badge assigns this level. The level shown is provisional until Medical Control confirms it.",
+   "owner_note": "&#9873; **OWNER_REQUIRED** \u2014 row 9: PEMS 2024 does not settle which provider level may titrate PEEP. The level shown is unverified pending a Medical Director decision.",
    "owner_ruling": null,
    "pems_page": 239,
    "pems_ordinal": 5,

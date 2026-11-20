@@ -14,7 +14,7 @@ This page is generated from the conversion ledger (`audit/level-scan/level-rule-
 
 | what | how many |
 |---|---:|
-| Rows that need your level decision (`OWNER_REQUIRED`, marked &#9873; on the page) | **25** |
+| Rows that need your level decision (`OWNER_REQUIRED`, marked &#9873; on the page) | **4** |
 | Rows pending authorization (`PENDING`) | **18** (11 whole-page + 7 single-row) |
 | Open questions on how the rules themselves should read | **31** |
 | Rulings already recorded — decided, no action needed | **2** |
@@ -36,179 +36,50 @@ This page is generated from the conversion ledger (`audit/level-scan/level-rule-
 <h2 id="two-kinds">Two kinds of flagged row</h2>
 
 <div class="od-legend" markdown="1">
-- <span class="od-chip od-chip-nowhere">PEMS prints this nowhere</span> — **4 rows**. No PEMS 2024 row prints the action at all (or prints it only in pieces that no single row covers). Your answer is a level of our own, or `PENDING`.
-- <span class="od-chip od-chip-conflict">PEMS prints it, but the badge contradicts the row's own words</span> — **21 rows**. A PEMS row prints the action, but its printed badge conflicts with the text of that same row, or the action is spread over rows at different levels. Your answer is which one wins (and whether the row should be split).
+- <span class="od-chip od-chip-nowhere">PEMS prints this nowhere</span> — **0 rows**. No PEMS 2024 row prints the action at all (or prints it only in pieces that no single row covers). Your answer is a level of our own, or `PENDING`.
+- <span class="od-chip od-chip-conflict">PEMS prints it, but the badge contradicts the row's own words</span> — **4 rows**. A PEMS row prints the action, but its printed badge conflicts with the text of that same row, or the action is spread over rows at different levels. Your answer is which one wins (and whether the row should be split).
 
 Jump to: [PEMS prints this nowhere](#pems-prints-this-nowhere) · [PEMS prints it, badge contradicts](#pems-prints-it-badge-contradicts)
 
 </div>
 
-<h2 id="owner-required">1. Needs your level decision — 25 rows</h2>
+<h2 id="owner-required">1. Needs your level decision — 4 rows</h2>
 
 Grouped by protocol page, in the order they appear in the site navigation. Each card shows the page, the row number, the level the page shows today with the &#9873; flag, the row text word for word, and the full reason it is flagged.
 
-<h3 id="pems-prints-this-nowhere">PEMS prints this nowhere — 4 rows</h3>
+<h3 id="pems-prints-this-nowhere">PEMS prints this nowhere — 0 rows</h3>
 
-#### [Pediatric Stridor](respiratory/03_Pediatric_Stridor_PROC.md) — 1 row
-
-<div class="od-page-block">
-<div class="od-card od-cat-nowhere">
-<p class="od-head"><span class="od-row">Row 2</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
-<p class="od-action">Scene Management &amp; Calm Environment / • Keep child calm - agitation worsens obstruction / • Allow parent/caregiver to hold child / • Avoid unnecessary procedures / • Minimize stimulation and stranger anxiety</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No PEMS 2024 row anywhere prints scene management or keeping a child calm. The nearest rows are the universal-care steps, which do not print this action; the page&#x27;s EMT is kept and flagged.</p>
-
-</div>
-</div>
-
-#### [Pneumothorax](respiratory/03_Pneumothorax_PROC.md) — 1 row
-
-<div class="od-page-block">
-<div class="od-card od-cat-nowhere">
-<p class="od-head"><span class="od-row">Row 5</span> <span class="lvl lvl-a">A</span> &#9873;</p>
-<p class="od-action">Suction and Airway Management: / • Prepare suction and airway equipment. / • Be prepared for rapid airway intervention if decompensation occurs.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No PEMS 2024 row prints equipment readiness. p.239#2 (badge EMR) prints &#x27;Provide suctioning as needed to maintain patent airway&#x27; — the act, not the preparation this row describes — so citing it would chip an action the row does not name. The page&#x27;s A is kept and flagged.</p>
-
-</div>
-</div>
-
-#### [Upper Airway Obstruction](respiratory/03_Upper_Airway_Obstruction_PROC.md) — 1 row
-
-<div class="od-page-block">
-<div class="od-card od-cat-nowhere">
-<p class="od-head"><span class="od-row">Row 2</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
-<p class="od-action">Scene Safety / Recognition: / • Rapidly identify complete vs partial obstruction. / • Recognize universal choking sign (hands to throat). / • Determine conscious vs unconscious status.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No PEMS 2024 row prints recognition. p.239#3 and p.239#8 print the obstruction-relief actions, not &#x27;rapidly identify complete vs partial obstruction&#x27;; citing either would chip a level for an action the row does not name. The page&#x27;s EMT is kept and flagged.</p>
-
-</div>
-</div>
-
-#### [Trauma](trauma/09_Trauma_PROC.md) — 1 row
-
-<div class="od-page-block">
-<div class="od-card od-cat-nowhere">
-<p class="od-head"><span class="od-row">Row 6</span> <span class="lvl lvl-a">A</span> &#9873;</p>
-<p class="od-action">Assess for shock. Refer to Shock (Hypoperfusion) protocol.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No PEMS 2024 row prints &#x27;assess for shock and refer to the Shock protocol&#x27;. p.83#3 prints &#x27;If shock or potential for shock is present, keep the patient warm&#x27; (badge EMR) — the intervention, not the assessment/referral this row names. The page&#x27;s A is kept and flagged.</p>
-<p class="od-near">Nearest PEMS row: <strong>p.83#3</strong> &mdash; <em>not cited as authority</em></p>
-</div>
-</div>
-
-<h3 id="pems-prints-it-badge-contradicts">PEMS prints it, but the badge contradicts the row&#x27;s words — 21 rows</h3>
+<h3 id="pems-prints-it-badge-contradicts">PEMS prints it, but the badge contradicts the row&#x27;s words — 4 rows</h3>
 
 #### [Asystole / PEA](cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md) — 1 row
 
 <div class="od-page-block">
 <div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 8</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
-<p class="od-action">Apply AED / Assess cardiac rhythm every 2 minutes. If AED is advising to shock or rhythm is VF or VT (as determined by EMT-I or P), defibrillate at maximum joules (or 2 J/kg for pediatrics), then refer to Cardiac Arrest: Ventricular Fibrillation / Pulseless Ventricular Tachycardia protocol. If AED is advising no shock or rhythm is asystole or PEA (as determined by EMT-I or P), continue CPR then refer to Cardiac Arrest: Asystole / Pulseless Electrical Activity protocol.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No PEMS 2024 row prints this bundled AED-application + rhythm-determination + defibrillation step at one level. The rows that print it split the badge from the words: p.235#4 and p.263#4 carry badge EMR while scoping rhythm determination to &#x27;EMT-I or P&#x27; in the same row, and p.63#7 badges defibrillation I while bracketing its AED clause &#x27;[EMR]&#x27;. Citing any of them would chip a level the row&#x27;s own text contradicts. The page&#x27;s EMT is kept and flagged.</p>
+<p class="od-head"><span class="od-row">Row 8a</span> <span class="lvl lvl-i">I</span> &#9873;</p>
+<p class="od-action">Interpret the rhythm: VF or VT (shockable), or asystole or PEA (non-shockable).</p>
+<p class="od-reason"><strong>Why it is flagged:</strong> Conflict, recorded: PEMS prints rhythm determination but never badges it on its own. p.235#4 prints &quot;Apply AED / Assess cardiac rhythm every 2 minutes&quot; at badge EMR, and in the same sentence scopes the classification: &quot;rhythm is VF or VT (as determined by EMT-I or P)&quot;; p.263#4 prints the same scoping word for word. The lowest level those rows&#x27; own words give it is I, which is the chip, but a single chip cannot be the printed EMR badge and the I the row&#x27;s text scopes, so this is an open decision, not a citation. No owner statement about the level of rhythm determination exists and none is attributed to him: the owner&#x27;s 2026-11-20 instruction was the SPLIT (rhythm determination becomes its own row). p.50#10 (&quot;Consider continuous cardiac monitoring&quot;, badge I) was cited here before and is NOT the authority — that row does not print rhythm determination.</p>
 
 </div>
 </div>
 
-#### [Cardiac Arrest (Non-Traumatic)](cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md) — 2 rows
+#### [Cardiac Arrest (Non-Traumatic)](cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md) — 1 row
 
 <div class="od-page-block">
 <div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 4</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
-<p class="od-action">AED / Rhythm Assessment: / • Apply AED and assess cardiac rhythm every 2 minutes. / • Identify rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shockable).</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No PEMS 2024 row prints AED application + rhythm assessment + defibrillation at one level. p.263#4 and p.235#4 print &#x27;Apply AED / Assess cardiac rhythm every 2 minutes&#x27; at badge EMR but scope rhythm determination to &#x27;EMT-I or P&#x27; in the same row&#x27;s text; p.63#7 badges defibrillation I and brackets its AED clause &#x27;[EMR]&#x27;. The page&#x27;s EMT is kept and flagged rather than chipped off a badge the row&#x27;s own words contradict.</p>
-<p class="od-near">Nearest PEMS row: <strong>p.63#7</strong> &mdash; <em>not cited as authority</em></p>
-</div>
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 5</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
-<p class="od-action">Defibrillation - V-Fib/V-Tach Only: / • ADULT: 200 joules Biphasic / 360 joules Monophasic, or manufacturer&#x27;s recommendation / • PEDIATRIC: 2 joules/kg initial, 4 joules/kg subsequent / • After each defibrillation, perform 2 minutes of CPR, then reassess rhythm. / • Ensure optimal pad placement; consider adjustment if multiple shocks delivered without rhythm change.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> Same conflict: the only PEMS row printing defibrillation is p.63#7 (badge I, inline &#x27;[EMR]&#x27; on the AED clause). A chip of I would contradict the [EMR] token, a chip of EMT would contradict the printed badge; p.235#4/p.263#4 badge the AED step EMR but scope rhythm determination to EMT-I/P. The page&#x27;s EMT is kept and flagged.</p>
-<p class="od-near">Nearest PEMS row: <strong>p.63#7</strong> &mdash; <em>not cited as authority</em></p>
+<p class="od-head"><span class="od-row">Row 4a</span> <span class="lvl lvl-i">I</span> &#9873;</p>
+<p class="od-action">• Interpret the rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shockable).</p>
+<p class="od-reason"><strong>Why it is flagged:</strong> Conflict, recorded: same shape as Asystole row 8a. p.235#4 / p.263#4 print rhythm assessment at badge EMR and scope the classification to &quot;(as determined by EMT-I or P)&quot; in the row&#x27;s own words, so the level I is read off the source&#x27;s text and no single printed badge authorises it. Open decision; the owner&#x27;s 2026-11-20 instruction was the split only.</p>
+
 </div>
 </div>
 
-#### [Cardiac Arrest (Traumatic)](cardiac/04_Cardiac_Arrest_Traumatic_PROC.md) — 1 row
+#### [Asthma / COPD / Reactive Airway](respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md) — 1 row
 
 <div class="od-page-block">
 <div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 5</span> <span class="lvl lvl-a">A</span> &#9873;</p>
-<p class="od-action">PEA / VF / VT: Continue CPR / Defibrillate if indicated</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No PEMS 2024 row prints &#x27;continue CPR / defibrillate if indicated&#x27; at one level: p.61#4 badges EMT while scoping the rhythm decision &#x27;(I / P)&#x27; in the same row, and p.63#7 badges defibrillation I with an inline &#x27;[EMR]&#x27; AED token. Both candidates contradict their own text. The page&#x27;s A is kept and flagged.</p>
-<p class="od-near">Nearest PEMS row: <strong>p.61#4</strong> &mdash; <em>not cited as authority</em></p>
-</div>
-</div>
-
-#### [V-Fib / Pulseless V-Tach](cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md) — 1 row
-
-<div class="od-page-block">
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 5</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
-<p class="od-action">Defibrillation: 200 J Biphasic / 360 J Monophasic (Adult) / 2 J/kg initial, 4 J/kg subsequent (Ped) (AED for EMR/EMT, Manual for I/P)</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No PEMS 2024 row prints defibrillation with an unambiguous single badge. p.63#7 badges it I but brackets its own AED clause &#x27;[EMR]&#x27; and this page&#x27;s row states &#x27;(AED for EMR/EMT, Manual for I/P)&#x27;; p.235#4/p.263#4 badge the AED/rhythm step EMR but scope rhythm determination to EMT-I/P. The page&#x27;s EMT is kept and flagged.</p>
-<p class="od-near">Nearest PEMS row: <strong>p.63#7</strong> &mdash; <em>not cited as authority</em></p>
-</div>
-</div>
-
-#### [Airway / Inhalation Irritants](respiratory/03_Airway_Inhalation_Irritants_PROC.md) — 1 row
-
-<div class="od-page-block">
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 10</span> <span class="lvl lvl-p">P</span> &#9873;</p>
-<p class="od-action">Endotracheal Intubation: / • Follow Endotracheal Intubation procedure. / • ⚠ Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> PEMS prints endotracheal intubation as two age-split rows: p.247#4 (badge I) for patients 12 and older and p.247#6 (badge P) for patients under 12. This site row invokes the procedure without an age limit, so no single badge is correct; the page&#x27;s P is kept and flagged.</p>
-
-</div>
-</div>
-
-#### [Asthma / COPD / Reactive Airway](respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md) — 2 rows
-
-<div class="od-page-block">
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 8</span> <span class="lvl lvl-i">I</span> &#9873;</p>
-<p class="od-action">Continuous Positive Airway Pressure (CPAP): / • Consider for COPD exacerbation or severe bronchospasm with adequate mentation. / • Initiate 5-10 cm H₂O, titrate to effect. / • Contraindicated if altered mental status, vomiting, or respiratory arrest imminent.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> Conflict, recorded: the CPAP rows are p.123#3 (badge EMT) and p.239#5 (badge EMT, &#x27;Consider CPAP (PEEP: 5 cmH2O)... I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH2O&#x27;). This row is the PEEP-titration row, and p.239#5&#x27;s own text reserves that titration to I/P, so an EMT chip would contradict the cited row&#x27;s words while an I chip would contradict its printed badge. The page&#x27;s I is kept and flagged.</p>
-
-</div>
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 11</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
-<p class="od-action">Reassessment and Transport: / • Continuously monitor respiratory status, auscultation, and SpO₂. / • Reassess after each bronchodilator treatment. / • Expedite transport for severe or deteriorating patients.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No single PEMS 2024 row prints this reassessment-and-transport bundle: reassessment is p.49#4 (badge EMR, reassess vitals every 15/5 minutes) and the transport step is p.50#11 (badge EMT). One chip cannot carry both, so the page&#x27;s EMT is kept and flagged.</p>
-
-</div>
-</div>
-
-#### [Pediatric Stridor](respiratory/03_Pediatric_Stridor_PROC.md) — 1 row
-
-<div class="od-page-block">
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 5</span> <span class="lvl lvl-a">A</span> &#9873;</p>
-<p class="od-action">Continuous Monitoring / • Cardiac monitor / • Pulse oximetry / • EtCO2 when available</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No single PEMS 2024 row prints this monitoring bundle: continuous cardiac monitoring is p.50#10 (badge I) and SpO2/EtCO2 assessment is p.49#6 (badge EMT), while continuous ETCO2 waveform belongs to p.241#3 (badge EMT). Two levels, so the page&#x27;s A is kept and flagged.</p>
-
-</div>
-</div>
-
-#### [Pneumothorax](respiratory/03_Pneumothorax_PROC.md) — 4 rows
-
-<div class="od-page-block">
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 4</span> <span class="lvl lvl-a">A</span> &#9873;</p>
-<p class="od-action">Positioning and Monitoring: / • Position patient for comfort (typically supine or semi-Fowler&#x27;s). / • Establish IV/IO access. / • Continuous cardiac and pulse oximetry monitoring.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No single PEMS 2024 row prints this positioning-plus-access-plus-monitoring bundle: position of comfort is p.117#1 (badge EMR), IV/IO access is p.50#9 (badge A) and continuous cardiac monitoring is p.50#10 (badge I). Three levels, so the page&#x27;s A is kept and flagged.</p>
-
-</div>
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 12</span> <span class="lvl lvl-i">I</span> &#9873;</p>
-<p class="od-action">Hemodynamic Support: / • 0.9% Sodium Chloride fluid bolus if hypotensive (SBP &lt; 90 mmHg or MAP &lt; 65). / • Consider vasopressor support if cardiogenic shock present. / • Titrate fluids to perfusion.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No single PEMS 2024 row prints this haemodynamic bundle: the fluid bolus is p.113#4 (badge A) and vasopressor support is p.113#6 (badge I). Two levels, so the page&#x27;s I is kept and flagged.</p>
-<p class="od-near">Nearest PEMS row: <strong>p.243#4</strong> &mdash; <em>not cited as authority</em></p>
-</div>
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 13</span> <span class="lvl lvl-p">P</span> &#9873;</p>
-<p class="od-action">Advanced Airway Management (if indicated): / • Prepare for or perform endotracheal intubation if respiratory failure. / • ⚠ Positive pressure ventilation (BVM/CPAP) may worsen or induce pneumothorax.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No single PEMS 2024 row prints this advanced-airway bundle: adult intubation is p.247#4 (badge I), paediatric is p.247#6 (badge P) and surgical airway is p.269#0 (badge P). Three rows, two levels, so the page&#x27;s P is kept and flagged.</p>
-
-</div>
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 15</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
-<p class="od-action">Close Monitoring En Route: / • Continuous reassessment en route. / • Monitor for recurrent tension pneumothorax. / • Secure catheter to prevent dislodgement.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No PEMS 2024 row prints this en-route monitoring bundle. Reassessment after decompression is p.243#4 (badge I) while routine reassessment is p.49#4 (badge EMR); two levels, so the page&#x27;s EMT is kept and flagged.</p>
+<p class="od-head"><span class="od-row">Row 8a</span> <span class="lvl lvl-i">I</span> &#9873;</p>
+<p class="od-action">• Titrate PEEP up to 10 cm H₂O to support ventilation and work of breathing.</p>
+<p class="od-reason"><strong>Why it is flagged:</strong> Conflict, recorded: PEEP titration above the initial 5 cm H2O is printed only inside rows badged EMT, and the two printed rows DISAGREE: p.239#5 (&quot;Consider CPAP (PEEP: 5 cmH2O) ... I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH2O&quot;, badge EMT) scopes the titration to I/P, while p.245#4 in the CPAP/BiPAP/PEEP procedure (&quot;Consider titrating PEEP ... CPAP, BiPAP, and PEEP are RED DOT procedures at all EMS Certification Levels&quot;, badge EMT) badges it at every level. The chip is I, the level p.239#5&#x27;s own words give it; no printed badge badges titration at I, so it is an open decision, not a citation. The same conflict is recorded for Pulmonary Edema row 9, which keeps P. The owner&#x27;s 2026-11-20 instruction was the split (initiation / titration as separate rows), not this level.</p>
 
 </div>
 </div>
@@ -219,79 +90,7 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 <div class="od-card od-cat-conflict">
 <p class="od-head"><span class="od-row">Row 9</span> <span class="lvl lvl-p">P</span> &#9873;</p>
 <p class="od-action">CPAP Titration: Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> Conflict, recorded: p.239#5 prints &#x27;Consider CPAP (PEEP: 5 cmH2O) ... I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH2O&#x27; at badge EMT, and p.245#4 adds &#x27;Consider titrating PEEP ... CPAP, BiPAP, and PEEP are RED DOT procedures at all EMS Certification Levels&#x27;. This row is the titration step the source&#x27;s own text reserves to I/P, so an EMT chip would contradict the cited row&#x27;s words. The page&#x27;s P is kept and flagged.</p>
-<p class="od-near">Nearest PEMS row: <strong>p.239#5</strong> &mdash; <em>not cited as authority</em></p>
-</div>
-</div>
-
-#### [Respiratory Distress](respiratory/03_Respiratory_Distress_PROC.md) — 2 rows
-
-<div class="od-page-block">
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 3</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
-<p class="od-action">Continuous Monitoring: / • Continuous EtCO2 monitoring to guide therapy / • Continuous pulse oximetry / • Cardiac monitoring</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No single PEMS 2024 row prints this monitoring bundle: continuous cardiac monitoring is p.50#10 (badge I) and SpO2/EtCO2 assessment is p.49#6 (badge EMT). Two levels, so the page&#x27;s EMT is kept and flagged.</p>
-
-</div>
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 16</span> <span class="lvl lvl-p">P</span> &#9873;</p>
-<p class="od-action">Respiratory Failure Management: / • If apnea/agonal respirations or GCS ≤13: / • Prepare for immediate airway control / • Bag-valve-mask ventilation / • Consider advanced airway per provider level / • Transport without delay</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No single PEMS 2024 row prints this respiratory-failure bundle: BVM support is p.239#7 (badge EMT), adult intubation p.239#9 (badge I) and paediatric p.239#10 (badge P). Three rows, three levels, so the page&#x27;s P is kept and flagged.</p>
-
-</div>
-</div>
-
-#### [Smoke Inhalation](respiratory/03_Smoke_Inhalation_PROC.md) — 1 row
-
-<div class="od-page-block">
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 13</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
-<p class="od-action">Monitoring and Reassessment: / • Monitor SpO2, EtCO2, and respiratory rate continuously / • Reassess airway patency frequently; edema may progress rapidly / • Observe for signs of respiratory failure requiring immediate airway intervention</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No single PEMS 2024 row prints this monitoring bundle: routine reassessment is p.49#4 (badge EMR), continuous cardiac monitoring p.50#10 (badge I) and continuous ETCO2 waveform p.241#3 (badge EMT). Multiple levels, so the page&#x27;s EMT is kept and flagged.</p>
-
-</div>
-</div>
-
-#### [Electrical Injuries](trauma/09_Electrical_Injuries_PROC.md) — 1 row
-
-<div class="od-page-block">
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 7</span> <span class="lvl lvl-a">A</span> &#9873;</p>
-<p class="od-action">Obtain 12-Lead ECG / Monitor rhythm continuously</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No single PEMS 2024 row prints this 12-lead-plus-continuous-monitoring bundle: p.96#8 badges &#x27;Obtain and transmit a 12-Lead ECG&#x27; EMT and p.96#11 badges &#x27;Assess and continuously monitor cardiac rhythm&#x27; I. Two levels, so the page&#x27;s A is kept and flagged rather than chipped off one row that would contradict the other.</p>
-<p class="od-near">Nearest PEMS row: <strong>p.96#11</strong> &mdash; <em>not cited as authority</em></p>
-</div>
-</div>
-
-#### [Lightning Injuries](trauma/09_Lightning_Injuries_PROC.md) — 1 row
-
-<div class="od-page-block">
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 7</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
-<p class="od-action">Obtain and transmit a 12-Lead ECG / Monitor rhythm.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No single PEMS 2024 row prints this 12-lead-plus-monitoring bundle: p.96#8 badges &#x27;Obtain and transmit a 12-Lead ECG&#x27; EMT and p.96#11 badges &#x27;Assess and continuously monitor cardiac rhythm&#x27; I. Two levels, so the page&#x27;s EMT is kept and flagged.</p>
-<p class="od-near">Nearest PEMS row: <strong>p.96#8</strong> &mdash; <em>not cited as authority</em></p>
-</div>
-</div>
-
-#### [Trauma](trauma/09_Trauma_PROC.md) — 1 row
-
-<div class="od-page-block">
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 2</span> <span class="lvl lvl-emt">EMT</span> &#9873;</p>
-<p class="od-action">Ensure scene safety. Extricate/move patient to safety if necessary.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No PEMS 2024 row prints scene safety plus extrication/movement to safety. p.49#1 prints scene safety/PPE (badge EMR) but not extrication; p.91#7 prints extrication from entrapment (badge EMT) but not scene safety. Two rows, two levels, so the page&#x27;s EMT is kept and flagged.</p>
-
-</div>
-</div>
-
-#### [Neonatal Resuscitation](../procedures/Neonatal_Resuscitation.md) — 1 row
-
-<div class="od-page-block">
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 5</span> <span class="lvl lvl-p">P</span> &#9873;</p>
-<p class="od-action">Obtain IV/IO access, administer Epinephrine 0.01 mg/kg (0.1 mg/mL). Repeat q3-5 mins.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> The row bundles two actions printed on two PEMS rows at two different levels: &quot;Obtain IV/IO access if not already obtained.&quot; (p.261#10, badge A) and &quot;Administer: Epinephrine (Adrenaline) 0.01mg/kg (0.1mg/mL) IV/IO&quot; (p.261#12, badge I). One chip cannot carry both; the level this page published (P) is kept and flagged.</p>
+<p class="od-reason"><strong>Why it is flagged:</strong> Conflict, recorded: p.239#5 prints &#x27;Consider CPAP (PEEP: 5 cmH2O) ... I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH2O&#x27; at badge EMT, and p.245#4 (CPAP/BiPAP/PEEP procedure) prints &#x27;Consider titrating PEEP (9%-15 mmHg) as needed to improve ventilation/work of breathing. CPAP, BiPAP, and PEEP are RED DOT procedures at all EMS Certification Levels&#x27; at badge EMT. Two printed rows disagree (I/P-only scope in one, EMT badge in the other) and no printed row badges the titration at I, so neither level is a single-row citation. The page&#x27;s P is kept and flagged as an open owner/OMD decision. A 2026-11-20 attempt to rule it to I was reverted: it was labelled `owner_ruled` although the owner never ruled on PEEP titration, and the pearl evidence for I is on the Respiratory Distress page (Pearl 4), not this page&#x27;s source.</p>
 
 </div>
 </div>
@@ -392,7 +191,7 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 #### [Burns (Thermal)](trauma/09_Burns_Thermal_PROC.md) — 1 row
 
 <div class="od-page-block">
-<p class="od-pagenote"><strong>Note you will see on the page:</strong> PENDING — row 6: PEMS 2024 prints the HF calcium treatment only in the Burns protocol&#x27;s PEARLS (p.87-88 prose), not as a level-badged row, so no provider level is published for it. Pending OMD authorization — no provider level applies until the OMD authorizes it. See audit/level-scan/pending-protocols.yaml and audit/level-scan/level-rule-ledger.md.</p>
+<p class="od-pagenote"><strong>Note you will see on the page:</strong> PENDING — row 6: PEMS 2024 prints the HF calcium treatment only in the Burns protocol&#x27;s PEARLS (p.87-88 prose), not as a level-badged row, so no provider level is published for it. Pending OMD authorization — no provider level applies until the OMD authorizes it.</p>
 <div class="od-card od-cat-pending">
 <p class="od-head"><span class="od-row">Row 6</span> <span class="lvl lvl-pending">PENDING</span></p>
 <p class="od-action">Hydrofluoric Acid (HF) Burns with Hypotension: Administer Calcium Chloride 1 g IV/IO over 3 mins (Repeat in 5 mins PRN).</p>
@@ -405,7 +204,7 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 #### [Stroke / TIA](neurologic/05_Stroke_TIA_PROC.md) — 2 rows
 
 <div class="od-page-block">
-<p class="od-pagenote"><strong>Note you will see on the page:</strong> PENDING — rows 8, 9: this action has no counterpart in PEMS 2024. It is an agency addition, so the level it used to show was never verified against the regional source and is not published as a level now. Every other row on this page is cited to its PEMS 2024 row. This is not the same case as a whole protocol sourced outside PEMS (e.g. Aortic Dissection, which comes from ODEMSA and is PENDING on every row): here only the row(s) named are pending, and the rest of the protocol stands on PEMS. Pending OMD authorization — no provider level applies until the OMD authorizes it. See audit/level-scan/pending-protocols.yaml and audit/level-scan/level-rule-ledger.md.</p>
+<p class="od-pagenote"><strong>Note you will see on the page:</strong> PENDING — rows 8, 9: this action has no counterpart in PEMS 2024. It is an agency addition, so the level it used to show was never verified against the regional source and is not published as a level now. Every other action listed is cited to its PEMS 2024 row. This is not the same case as a whole protocol sourced outside PEMS (e.g. Aortic Dissection, which comes from ODEMSA and is PENDING on every row): in this case only the action(s) named are pending, and the rest of the protocol stands on PEMS. Pending OMD authorization — no provider level applies until the OMD authorizes it.</p>
 <div class="od-card od-cat-pending">
 <p class="od-head"><span class="od-row">Row 8</span> <span class="lvl lvl-pending">PENDING</span></p>
 <p class="od-action">Establish 18g IV in Right AC (preferred for rapid imaging)</p>
@@ -431,14 +230,14 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 <p class="od-head"><span class="od-row">Row 6</span> <span class="lvl lvl-pending">PENDING</span></p>
 <p class="od-action">Law Enforcement Custody: Patients in LE custody (including ECOs) or under arrest MUST have a law enforcement officer present at all times.</p>
 <p class="od-reason"><strong>Why:</strong> PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol restraint guidelines (p.73: &quot;Patients in law enforcement custody (including emergency custody orders) or under arrest must have a law enforcement officer present at all times&quot;), not as an administrative policy and not as a level-badged row. No policy and no level is published; the wording on this page is the agency policy.</p>
-<p class="od-pagenote"><strong>Note on the page:</strong> PENDING — row 6: PEMS 2024 does not print this rule in any administrative policy; it appears only as prose in the Behavioral Emergencies restraint guidelines (p.73), which carries no level-badged row. No policy and no provider level is published for it. Pending OMD authorization — no provider level applies until the OMD authorizes it. See audit/level-scan/level-rule-ledger.md.</p>
+<p class="od-pagenote"><strong>Note on the page:</strong> PENDING — row 6: PEMS 2024 does not print this rule in any administrative policy; it appears only as prose in the Behavioral Emergencies restraint guidelines (p.73), which carries no level-badged row. No policy and no provider level is published for it. Pending OMD authorization — no provider level applies until the OMD authorizes it.</p>
 <p class="od-near">Was carried from the page as <strong>EMT</strong> &mdash; provenance only, not a citation.</p>
 </div>
 <div class="od-card od-cat-pending">
 <p class="od-head"><span class="od-row">Row 7</span> <span class="lvl lvl-pending">PENDING</span></p>
 <p class="od-action">Restraints: If LE restraints utilized (handcuffs, flex-cuffs), LE officer SHOULD accompany the patient.</p>
 <p class="od-reason"><strong>Why:</strong> PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol restraint guidelines (p.73: &quot;If law-enforcement restraints have been utilized (for example handcuffs or flex-cuffs), a law enforcement officer should accompany the patient&quot;), not as an administrative policy and not as a level-badged row. No policy and no level is published; the wording on this page is the agency policy.</p>
-<p class="od-pagenote"><strong>Note on the page:</strong> PENDING — row 7: PEMS 2024 does not print this rule in any administrative policy; it appears only as prose in the Behavioral Emergencies restraint guidelines (p.73), which carries no level-badged row. No policy and no provider level is published for it. Pending OMD authorization — no provider level applies until the OMD authorizes it. See audit/level-scan/level-rule-ledger.md.</p>
+<p class="od-pagenote"><strong>Note on the page:</strong> PENDING — row 7: PEMS 2024 does not print this rule in any administrative policy; it appears only as prose in the Behavioral Emergencies restraint guidelines (p.73), which carries no level-badged row. No policy and no provider level is published for it. Pending OMD authorization — no provider level applies until the OMD authorizes it.</p>
 <p class="od-near">Was carried from the page as <strong>EMT</strong> &mdash; provenance only, not a citation.</p>
 </div>
 </div>
@@ -446,11 +245,12 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 #### [Infant Abandonment](administrative/01_Infant_Abandonment_PROC.md) — 1 row
 
 <div class="od-page-block">
+<p class="od-pagenote"><strong>Note you will see on the page:</strong> PENDING — row 2: PEMS 2024 prints no assessment or treatment step in the Infant Abandonment policy (p.25), so this instruction is the agency&#x27;s own. No policy and no provider level is published for it. Pending OMD authorization — no provider level applies until the OMD authorizes it.</p>
 <div class="od-card od-cat-pending">
 <p class="od-head"><span class="od-row">Row 2</span> <span class="lvl lvl-pending">PENDING</span></p>
 <p class="od-action">Assess infant and provide medical care per these Protocols</p>
 <p class="od-reason"><strong>Why:</strong> The Infant Abandonment policy (p.25) prints what to do with a surrendered infant (contact CPS or law enforcement, and transport if indicated) but no assessment or treatment step. &quot;Assess the infant and provide medical care per these Protocols&quot; is the agency page&#x27;s own instruction and is not printed in any PEMS administrative policy.</p>
-<p class="od-pagenote"><strong>Note on the page:</strong> PENDING — row 2: PEMS 2024 prints no assessment or treatment step in the Infant Abandonment policy (p.25), so this instruction is the agency&#x27;s own. No policy and no provider level is published for it. Pending OMD authorization — no provider level applies until the OMD authorizes it. See audit/level-scan/level-rule-ledger.md.</p>
+
 <p class="od-near">Was carried from the page as <strong>EMT</strong> &mdash; provenance only, not a citation.</p>
 </div>
 </div>
@@ -458,11 +258,12 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 #### [Stroke Field Triage](administrative/01_Stroke_Field_Triage_PROC.md) — 1 row
 
 <div class="od-page-block">
+<p class="od-pagenote"><strong>Note you will see on the page:</strong> PENDING — row 4: the Stroke Field Triage policy (p.37) prints no life-threat routing branch, so this one is the agency&#x27;s own. No policy and no provider level is published for it. Pending OMD authorization — no provider level applies until the OMD authorizes it.</p>
 <div class="od-card od-cat-pending">
 <p class="od-head"><span class="od-row">Row 4</span> <span class="lvl lvl-pending">PENDING</span></p>
 <p class="od-action">Immediate Life-Threats: If uncontrolled airway, cardiac arrest, etc. cannot be addressed during transport, route to the nearest ED.</p>
 <p class="od-reason"><strong>Why:</strong> The Stroke Field Triage policy (p.37) prints the RACE/glucose/destination algorithm and no &quot;life threats go to the nearest ED&quot; branch. That branch is the agency page&#x27;s own addition.</p>
-<p class="od-pagenote"><strong>Note on the page:</strong> PENDING — row 4: the Stroke Field Triage policy (p.37) prints no life-threat routing branch, so this one is the agency&#x27;s own. No policy and no provider level is published for it. Pending OMD authorization — no provider level applies until the OMD authorizes it. See audit/level-scan/level-rule-ledger.md.</p>
+
 <p class="od-near">Was carried from the page as <strong>EMT</strong> &mdash; provenance only, not a citation.</p>
 </div>
 </div>
@@ -479,7 +280,7 @@ These are not row-level decisions. Each one is a question about how the rule its
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
-<p class="od-question"><strong>p.61#4 and p.63#7 are compound rows</strong> (one badge, plus an inline level token scoping a clause). Every site row bound to them without a C2 <code>resolved_cells</code> decision is flagged OWNER_REQUIRED rather than given a chip.</p>
+<p class="od-question"><strong>p.61#4 and p.63#7 are compound rows — RESOLVED for the split rows (2026-11-20).</strong> The two printed rows carry one badge plus an inline level token scoping a clause (<code>[EMR]</code> on the AED clause; <code>(I / P)</code> on the rhythm decision). A site row that published the whole row could not be chipped without contradicting one half, so it was flagged. Those rows are now split one clause per row (see *Rows split into one action each*), each citing the printed row for its own clause, and <code>--check</code> only counts a compound token that falls inside the clause the row quotes. A site row that still publishes a whole compound row without a C2 <code>resolved_cells</code> decision would still be flagged — none is left.</p>
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
@@ -495,11 +296,11 @@ These are not row-level decisions. Each one is a question about how the rule its
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
-<p class="od-question"><strong>Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.</strong> The owner was asked and did not rule, so the other 25 OWNER_REQUIRED rows keep their level + ⚑ flag exactly as they were. Do not convert them without a ruling.</p>
+<p class="od-question"><strong>Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.</strong> The owner was asked and did not rule, so the other 4 OWNER_REQUIRED rows keep their level + ⚑ flag exactly as they were. Do not convert them without a ruling.</p>
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
-<p class="od-question"><strong>Respiratory pages — the OWNER_REQUIRED rows that remain after the cross-page pass.</strong> PEMS 2024 prints one respiratory protocol (p.123-124) and one inhalation-irritant protocol (p.153); the rest of these pages&#x27; content is printed in procedures (p.239, p.241, p.243, p.245, p.247, p.269) and other protocols (Burns p.87-88, Sedation p.55). Where such a procedure prints the action it is now cited (see *Cross-page citations*); where it does not, or prints it only across rows of different levels, the row keeps the level the page published with its reason in <code>row-bindings.yaml</code>.</p>
+<p class="od-question"><strong>Respiratory pages — the OWNER_REQUIRED rows that remain after the cross-page pass.</strong> PEMS 2024 prints one respiratory protocol (p.123-124) and one inhalation-irritant protocol (p.153); the rest of these pages&#x27; content is printed in procedures (p.239, p.241, p.243, p.245, p.247, p.269) and other protocols (Burns p.87-88, Sedation p.55). Where such a procedure prints the action it is now cited (see *Cross-page citations*); where it does not, or prints it only across rows of different levels, the row keeps the level the page published with its reason in <code>row-bindings.yaml</code>. <strong>After the 2026-11-20 row-structure pass no respiratory row is flagged</strong>: each bundled row is split and each half cites the procedure row that prints it, and the four rows that were not actions moved below their tables.</p>
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
@@ -507,7 +308,7 @@ These are not row-level decisions. Each one is a question about how the rule its
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
-<p class="od-question"><strong>Pearl ruling 2026-11-17 + ketamine ruling 2026-11-20 — the &quot;prints nowhere&quot; bucket holds 4 rows.</strong> It held 17 rows before the Pearl ruling and 6 after it. Two of the six left with the 2026-11-20 ketamine ruling: the Sedation ketamine rows (r4 pre-intubation sedation, r5 post-intubation ketamine) were deleted from the page and replaced by the fentanyl/midazolam rows p.55 prints, so neither is a row any more. The four that remain are Pediatric Stridor r2, Pneumothorax r5, Upper Airway Obstruction r2 and Trauma r6. The first three are genuinely absent from the source. Trauma r6 (&quot;assess for shock&quot;) is only half absent: p.84 PEARLS #3 prints the recognition half (&quot;Any patient who is cool/diaphoretic and tachycardic is considered to be in shock until proven otherwise&quot;) but not the &quot;refer to the Shock protocol&quot; half, so its level question stays open and the row stays flagged. These four are the only converted rows still without a printed badge.</p>
+<p class="od-question"><strong>Pearl ruling 2026-11-17 + ketamine ruling 2026-11-20 and the row-structure instruction — the &quot;prints nowhere&quot; bucket is empty.</strong> It held 17 rows before the Pearl ruling and 6 after it, and every one of those six has since left the action table: the four guidance rows the owner moved below their pages’ tables on 2026-11-20 (Pediatric Stridor r2 scene management, Pneumothorax r5 equipment readiness, Upper Airway Obstruction r2 recognition, Trauma r6 assess shock — recorded in &lt;code&gt;audit/level-scan/relocated-rows.yaml&lt;/code&gt;, not deleted), and the two Sedation ketamine rows (r4 pre-intubation sedation, r5 post-intubation ketamine), which the p.55 verbatim rewrite deleted with the drug. No converted action row is left without a printed badge, so no row is counted in this bucket and no OWNER_REQUIRED flag rests on a missing source row.</p>
 </div>
 
 <h3>Batch 3 <span class="od-count">2</span></h3>
@@ -529,11 +330,11 @@ These are not row-level decisions. Each one is a question about how the rule its
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 4</span></p>
-<p class="od-question"><strong>Batch 4 — Electrical row 7 and Lightning row 7 are OWNER_REQUIRED bundles.</strong> Each row prints a 12-lead ECG (p.96#8, badge EMT) and continuous rhythm monitoring (p.96#11, badge I) as one action. One chip cannot carry both without over- or under-granting one half; the page levels (A and EMT) are kept and flagged. Owner to decide whether to split the rows or accept one level.</p>
+<p class="od-question"><strong>Batch 4 — Electrical row 7 and Lightning row 7 — RESOLVED 2026-11-20.</strong> Each row printed a 12-lead ECG (p.96#8, badge EMT) and continuous rhythm monitoring (p.96#11, badge I) as one action. Owner instruction: split rather than accept one level. Row 7 is now the 12-lead at EMT and row 7a the rhythm monitoring at I on both pages (see *Rows split into one action each*).</p>
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 4</span></p>
-<p class="od-question"><strong>Batch 4 — Trauma row 2 (scene safety + extrication) and row 6 (assess shock / refer to Shock protocol) are OWNER_REQUIRED.</strong> No PEMS row prints either bundle: scene safety is p.49#1 (EMR) and extrication is p.91#7 (EMT); the shock row p.83#3 prints &quot;keep the patient warm&quot; (EMR), not the assessment/referral the page names. The page levels (EMT and A) are kept and flagged.</p>
+<p class="od-question"><strong>Batch 4 — Trauma row 2 and row 6 — RESOLVED 2026-11-20.</strong> Row 2 (scene safety + extrication) is split: scene safety at EMR (p.49#1) and extrication at EMT (p.91#7). Row 6 (assess shock / refer to Shock protocol) is recognition and referral, not a numbered action, so it moved below the table into the page’s References &amp; Good Practice block with no level (see *Rows moved below the action table*).</p>
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 4</span></p>

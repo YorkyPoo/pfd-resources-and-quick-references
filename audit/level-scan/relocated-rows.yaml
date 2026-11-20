@@ -27,6 +27,7 @@ relocated:
   - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
     row: 6
     rows_moved: "6-8"
+    where: 'References & Good Practice — "CPAP contraindications."'
     level: EMT
     pems: "p.245 CONTRAINDICATIONS"
     status_before: OWNER_REQUIRED
@@ -38,6 +39,7 @@ relocated:
   - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
     row: 7
     rows_moved: "6-8"
+    where: 'References & Good Practice — "CPAP contraindications."'
     level: EMT
     pems: "p.245 CONTRAINDICATIONS"
     status_before: OWNER_REQUIRED
@@ -49,6 +51,7 @@ relocated:
   - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
     row: 8
     rows_moved: "6-8"
+    where: 'References & Good Practice — "CPAP contraindications."'
     level: EMT
     pems: "p.245 CONTRAINDICATIONS"
     status_before: OWNER_REQUIRED
@@ -60,6 +63,7 @@ relocated:
   - file: protocols/general/02_Cold_Exposure_PROC.md
     row: 6
     rows_moved: "6 and 9"
+    where: 'References & Good Practice — heat packs / Medical Control before the AED'
     level: EMR
     pems: "p.67 PEARLS #5"
     status_before: null
@@ -71,6 +75,7 @@ relocated:
   - file: protocols/general/02_Cold_Exposure_PROC.md
     row: 9
     rows_moved: "6 and 9"
+    where: 'References & Good Practice — heat packs / Medical Control before the AED'
     level: MC
     pems: "p.67 PEARLS #3"
     status_before: null
