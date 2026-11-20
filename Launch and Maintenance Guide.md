@@ -41,17 +41,46 @@ Open the relevant `.md` file in the `docs/` folder using Obsidian or any editor.
 - Medications & Calculator: `docs/medications.md`
 - Home page: `docs/index.md`
 
-### Step 2 — Publish (4 commands, under 60 seconds)
+### Step 2 — Publish (3 commands, under 60 seconds)
 
 ```powershell
 cd "D:\mindpalace\30 - projects\Active\Fire and EMS Resources SSG"
 git add .
 git commit -m "Update protocols"
 git push
-mkdocs gh-deploy --force
 ```
 
 That's it. The live site updates within 1–2 minutes.
+
+**Do not run `mkdocs gh-deploy --force` yourself.** Pushing to `main` is the
+deploy: GitHub Actions (`.github/workflows/deploy.yml`) builds and publishes
+the site. Running `gh-deploy` by hand does the same whole-branch replace, but
+outside the workflow, so the `/preview/` step below would not run.
+
+### Preview slots on `gh-pages`
+
+`gh-pages` carries `/preview/<slot>/` trees (parallel branches published for
+review) alongside the live root. `mkdocs gh-deploy --force` replaces the whole
+branch, so the deploy workflow restores `preview/` from the pre-deploy tip
+immediately afterwards (`scripts/preserve_preview_on_deploy.sh`) and fails the
+job if `preview/` is not byte-identical. **A `main` push therefore cannot wipe
+the previews.**
+
+If you ever deploy by hand anyway, run the same step afterwards:
+
+```bash
+PREV=$(git rev-parse origin/gh-pages)      # before gh-deploy
+mkdocs gh-deploy --force
+bash scripts/preserve_preview_on_deploy.sh "$PREV"
+```
+
+Restoring a slot is a no-op: preserved slots keep the exact branch and SHA
+recorded in `preview/slots.json`, so a deploy never republishes a newer branch
+tip under an old slot name. To refresh a slot, publish it deliberately:
+
+```bash
+bash scripts/publish_preview_slots.sh main=main="Baseline: main"
+```
 
 ---
 
