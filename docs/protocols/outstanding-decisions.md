@@ -16,8 +16,8 @@ This page is generated from the conversion ledger (`audit/level-scan/level-rule-
 |---|---:|
 | Rows that need your level decision (`OWNER_REQUIRED`, marked &#9873; on the page) | **2** |
 | Rows pending authorization (`PENDING`) | **18** (11 whole-page + 7 single-row) |
-| Open questions on how the rules themselves should read | **31** |
-| Rulings already recorded — decided, no action needed | **4** |
+| Open questions on how the rules themselves should read | **32** |
+| Rulings already recorded — decided, no action needed | **5** |
 
 </div>
 
@@ -246,11 +246,11 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
-<h2 id="open-questions">3. Open questions about the rules — 31</h2>
+<h2 id="open-questions">3. Open questions about the rules — 32</h2>
 
 These are not row-level decisions. Each one is a question about how the rule itself should read, recorded in the conversion ledger and grouped here by the batch that raised it — the batch is the topic of work, and every card opens with the ledger's own heading naming its subject.
 
-<h3>No batch recorded <span class="od-count">9</span></h3>
+<h3>No batch recorded <span class="od-count">10</span></h3>
 
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
@@ -288,12 +288,16 @@ These are not row-level decisions. Each one is a question about how the rule its
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
 <p class="od-question"><strong>Pearl ruling 2026-11-17 + ketamine ruling 2026-11-20 and the row-structure instruction — the &quot;prints nowhere&quot; bucket is empty.</strong> It held 17 rows before the Pearl ruling and 6 after it, and every one of those six has since left the action table: the four guidance rows the owner moved below their pages’ tables on 2026-11-20 (Pediatric Stridor r2 scene management, Pneumothorax r5 equipment readiness, Upper Airway Obstruction r2 recognition, Trauma r6 assess shock — recorded in &lt;code&gt;audit/level-scan/relocated-rows.yaml&lt;/code&gt;, not deleted), and the two Sedation ketamine rows (r4 pre-intubation sedation, r5 post-intubation ketamine), which the p.55 verbatim rewrite deleted with the drug. No converted action row is left without a printed badge, so no row is counted in this bucket and no OWNER_REQUIRED flag rests on a missing source row.</p>
 </div>
+<div class="od-card od-cat-question">
+<p class="od-head"><span class="od-batch">No batch recorded</span></p>
+<p class="od-question"><strong><code>CPAP.md</code> row 6 — an open level question, recorded not fixed.</strong> The row is chipped <code>EMT</code> and cites p.245#4. PEEP titration reads EMT here and I there, and the owner has ruled an Intermediate may titrate PEEP. Should this row read I, or stay EMT on the printed basis below? Which ceiling governs — the 15 cmH2O this row prints, or the 10 cmH2O p.239#5 prints?</p>
+</div>
 
 <h3>Batch 3 <span class="od-count">2</span></h3>
 
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 3</span></p>
-<p class="od-question"><strong>Batch 3 — 3 row(s) lost a Medical-Control requirement the page printed.</strong> Each is now chipped at the level PEMS prints: <code>03_Airway_Inhalation_Irritants_PROC.md</code> row 8 was <code>MC</code>, now <code>A</code> (p.153#4). <code>03_Respiratory_Distress_PROC.md</code> row 6 was <code>MC</code>, now <code>EMT</code> (p.123#3). <code>03_Respiratory_Distress_PROC.md</code> row 10 was <code>MC</code>, now <code>A</code> (p.113#4). The rule is &quot;chip = the level PEMS prints&quot;, and the source grants these actions on standing order, but the owner should confirm that dropping a page-printed MC requirement is intended. Row(s) in the converted set that moved *to* MC, now matching the source&#x27;s MC row: <code>04_Chest_Pain_ACS_PROC.md</code> row 7 <code>I</code> -&gt; <code>MC</code> (p.107#9); <code>03_Airway_Inhalation_Irritants_PROC.md</code> row 12 <code>I</code> -&gt; <code>MC</code> (p.153#5); <code>03_Smoke_Inhalation_PROC.md</code> row 12 <code>I</code> -&gt; <code>MC</code> (p.153#5); <code>06_Nausea_Vomiting_PROC.md</code> row 6 <code>A</code> -&gt; <code>MC</code> (p.117#5); <code>01_STEMI_Field_Triage_PROC.md</code> row 7 <code>EMT</code> -&gt; <code>MC</code> (p.107#9). Already <code>MC</code> on the page and matching the source, so not moved (converted set, whole list): <code>04_Supraventricular_Tachycardia_PROC.md</code> row 10 (p.136#7); <code>04_Asystole_and_Pulseless_Electrical_Activity_PROC.md</code> row 12 (p.57#8); <code>04_Bradycardia_PROC.md</code> row 8 (p.104#13); <code>04_Cardiac_Arrest_Non_Traumatic_PROC.md</code> row 13 (p.57#8); <code>04_Cardiac_Arrest_Traumatic_PROC.md</code> row 11 (p.61#9); <code>04_Chest_Pain_ACS_PROC.md</code> row 13 (p.107#9); <code>04_Hypertensive_Crisis_PROC.md</code> row 7 (p.109#5); <code>04_V_Fib_Pulseless_V_Tach_PROC.md</code> row 12 (p.64#14); <code>07_Sepsis_PROC.md</code> row 6 (p.130#5); <code>07_OB_Emergencies_PROC.md</code> row 10 (p.147#4); <code>07_Hypotension_Shock_Non_Trauma_PROC.md</code> row 10 (p.114#9); <code>05_Seizure_PROC.md</code> row 7 (p.127#6); <code>03_Pulmonary_Edema_Congestion_PROC.md</code> row 13 (p.124#13); <code>09_Burns_Thermal_PROC.md</code> row 7 (p.88#9); <code>09_Crush_Syndrome_PROC.md</code> row 9 (p.91#8); <code>09_Hemorrhage_Control_PROC.md</code> row 9 (p.273#7); <code>09_Trauma_PROC.md</code> row 13 (p.84#15); <code>06_Nerve_Agents_PROC.md</code> row 7 (p.159#6); <code>02_Behavioral_Patient_Restraint_PROC.md</code> row 8 (p.72#10); <code>02_Diving_and_Drowning_Emergencies_PROC.md</code> row 7 (p.93#6); <code>02_Pain_Control_PROC.md</code> row 8 (p.78#6); <code>02_Sedation_Assisted_Non_Paralytic_PROC.md</code> row 7 (p.55#4); <code>Surgical_Airway.md</code> row 5 (p.269#6).</p>
+<p class="od-question"><strong>Batch 3 — 3 row(s) lost a Medical-Control requirement the page printed.</strong> Each is now chipped at the level PEMS prints: <code>03_Airway_Inhalation_Irritants_PROC.md</code> row 8 was <code>MC</code>, now <code>A</code> (p.153#4). <code>03_Respiratory_Distress_PROC.md</code> row 6 was <code>MC</code>, now <code>EMT</code> (p.239#5). <code>03_Respiratory_Distress_PROC.md</code> row 10 was <code>MC</code>, now <code>A</code> (p.113#4). The rule is &quot;chip = the level PEMS prints&quot;, and the source grants these actions on standing order, but the owner should confirm that dropping a page-printed MC requirement is intended. Row(s) in the converted set that moved *to* MC, now matching the source&#x27;s MC row: <code>04_Chest_Pain_ACS_PROC.md</code> row 7 <code>I</code> -&gt; <code>MC</code> (p.107#9); <code>03_Airway_Inhalation_Irritants_PROC.md</code> row 12 <code>I</code> -&gt; <code>MC</code> (p.153#5); <code>03_Smoke_Inhalation_PROC.md</code> row 12 <code>I</code> -&gt; <code>MC</code> (p.153#5); <code>06_Nausea_Vomiting_PROC.md</code> row 6 <code>A</code> -&gt; <code>MC</code> (p.117#5); <code>01_STEMI_Field_Triage_PROC.md</code> row 7 <code>EMT</code> -&gt; <code>MC</code> (p.107#9). Already <code>MC</code> on the page and matching the source, so not moved (converted set, whole list): <code>04_Supraventricular_Tachycardia_PROC.md</code> row 10 (p.136#7); <code>04_Asystole_and_Pulseless_Electrical_Activity_PROC.md</code> row 12 (p.57#8); <code>04_Bradycardia_PROC.md</code> row 8 (p.104#13); <code>04_Cardiac_Arrest_Non_Traumatic_PROC.md</code> row 13 (p.57#8); <code>04_Cardiac_Arrest_Traumatic_PROC.md</code> row 11 (p.61#9); <code>04_Chest_Pain_ACS_PROC.md</code> row 13 (p.107#9); <code>04_Hypertensive_Crisis_PROC.md</code> row 7 (p.109#5); <code>04_V_Fib_Pulseless_V_Tach_PROC.md</code> row 12 (p.64#14); <code>07_Sepsis_PROC.md</code> row 6 (p.130#5); <code>07_OB_Emergencies_PROC.md</code> row 10 (p.147#4); <code>07_Hypotension_Shock_Non_Trauma_PROC.md</code> row 10 (p.114#9); <code>05_Seizure_PROC.md</code> row 7 (p.127#6); <code>03_Pulmonary_Edema_Congestion_PROC.md</code> row 13 (p.124#13); <code>09_Burns_Thermal_PROC.md</code> row 7 (p.88#9); <code>09_Crush_Syndrome_PROC.md</code> row 9 (p.91#8); <code>09_Hemorrhage_Control_PROC.md</code> row 9 (p.273#7); <code>09_Trauma_PROC.md</code> row 13 (p.84#15); <code>06_Nerve_Agents_PROC.md</code> row 7 (p.159#6); <code>02_Behavioral_Patient_Restraint_PROC.md</code> row 8 (p.72#10); <code>02_Diving_and_Drowning_Emergencies_PROC.md</code> row 7 (p.93#6); <code>02_Pain_Control_PROC.md</code> row 8 (p.78#6); <code>02_Sedation_Assisted_Non_Paralytic_PROC.md</code> row 7 (p.55#4); <code>Surgical_Airway.md</code> row 5 (p.269#6).</p>
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 3</span></p>
@@ -392,7 +396,7 @@ These are not row-level decisions. Each one is a question about how the rule its
 <p class="od-question"><strong>Batch 7 — CPAP units disagree with the source, and the action text was not edited.</strong> The page reads PEEP &quot;5 cmH2O&quot; (r3) and &quot;5-15 cmH2O&quot; (r6); PEMS p.245#1 prints &quot;5 mmHg&quot; and p.245#4 extracts as &quot;titratingPEEP9%-15mmHg)&quot;. Reconciliation (mmHg vs cmH2O, and 5-15 vs 9%-15) is a clinical-text decision outside this conversion, so only the chip was bound; owner to reconcile the page wording.</p>
 </div>
 
-<h2 id="ruled">4. Already ruled — recorded decisions — 4</h2>
+<h2 id="ruled">4. Already ruled — recorded decisions — 5</h2>
 
 The owner has already answered these, so they are not waiting on you. They are published as a record: the page states the level that was decided, and the answer and the PEMS citation stay in the audit trail (`audit/level-scan/level-rulings.yaml`, `audit/level-scan/relocated-rows.yaml`).
 
@@ -411,6 +415,10 @@ The owner has already answered these, so they are not waiting on you. They are p
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Decided</span></p>
 <p class="od-question"><code>protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md</code> row 9 — <strong>I</strong> — decided 2026-11-20: &quot;An intermediate can also titrate peep.&quot; CPAP Titration: Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing - clause the level comes from: p.239#5 — &quot;I/P only: Adjust PEEP to support ventilation and work of breathing&quot;. That printed row is badged EMT; its own words scope this action to I/P, so the chip is the lowest level the clause names and NOT the row&#x27;s badge. The site row covers this clause alone (<code>clause_only</code>), so it carries no OWNER_REQUIRED flag.</p>
+</div>
+<div class="od-card od-cat-question">
+<p class="od-head"><span class="od-batch">Decided</span></p>
+<p class="od-question"><code>protocols/respiratory/03_Respiratory_Distress_PROC.md</code> row 6a — <strong>I</strong> — decided 2026-11-20: &quot;An intermediate can also titrate peep.&quot; • Titration: Titrate PEEP up to 10 cmH2O to support ventilation and work of breathing. - clause the level comes from: p.239#5 — &quot;I/P only: Adjust PEEP to support ventilation and work of breathing&quot;. That printed row is badged EMT; its own words scope this action to I/P, so the chip is the lowest level the clause names and NOT the row&#x27;s badge. The site row covers this clause alone (<code>clause_only</code>), so it carries no OWNER_REQUIRED flag.</p>
 </div>
 
 <p class="od-foot">Generated from the conversion ledger by `scripts/build_outstanding_decisions.py`. Row text and reasons are the ledger's own words; this page adds no clinical content and edits no protocol page.</p>

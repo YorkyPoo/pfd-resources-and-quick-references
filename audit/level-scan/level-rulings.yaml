@@ -380,5 +380,27 @@ rulings:
       authorisation and the OWNER_REQUIRED flag retires. Row 8 (CPAP initiation, printed EMT
       at p.239#5) is cited and unaffected.
 
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 6a
+    level: I
+    status: owner_ruled
+    date: "2026-11-20"
+    clause_only: true
+    clause_of:
+      page: 239
+      ordinal: 5
+      token: "I/P only: Adjust PEEP to support ventilation and work of breathing"
+    ruling: "An intermediate can also titrate peep."
+    action: "Titration: Titrate PEEP up to 10 cmH2O to support ventilation and work of breathing."
+    note: >-
+      Owner ruling 2026-11-20, verbatim: "An intermediate can also titrate peep.", as
+      Pulmonary Edema row 9 and Asthma row 8a: p.239#5's own words scope PEEP titration to
+      I/P inside a row badged EMT, and the owner has ruled that reading governs. Row 6a is
+      the titration half of the CPAP row split, holding nothing but the titration — the
+      initiation half stays row 6, cited EMT off the same printed row — so its chip is the
+      whole authorisation and no OWNER_REQUIRED flag is needed. The CPAP procedure page's
+      own row 6 does NOT follow from this: p.245#4 prints the titration at every level, so
+      that page's row is a separate, still-open owner decision (see row-bindings.yaml).
+
 
 

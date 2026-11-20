@@ -3023,6 +3023,23 @@ def emit_md(ledger):
                      '(converted set, whole list): '
                      + '; '.join(f"{_mcrow(e)} (p.{e['pems_page']}#{e['pems_ordinal']})"
                                  for e in already_mc) + '.')
+    # ------------------------------------- open level questions recorded on a binding
+    # A binding may carry `open_question` text: a level question the source prints two ways
+    # and that no OWNER_REQUIRED flag can honestly carry, because the row IS cited (flagging
+    # it would republish the page's pre-conversion level and under-grant a printed row). The
+    # question is published HERE, in the section the owner reads; `--check` fails if the
+    # field outlives an owner ruling that answers it.
+    _bind_q = load_bindings()
+    for e in ledger:
+        q = (_bind_q.get((e['file'], str(e['row']))) or {}).get('open_question')
+        if not q:
+            continue
+        where = (f"p.{e['pems_page']}#{e['pems_ordinal']}" if e.get('pems_page') is not None
+                 else 'no printed row')
+        lines.append(f"- **`{e['file'].split('/')[-1]}` row {e['row']} — an open level "
+                     f"question, recorded not fixed.** The row is chipped "
+                     f"`{e.get('level_published')}` and cites {where}. "
+                     + ' '.join(str(q).split()))
     lines += [
               '- **Batch 3 — four rows published no level at all** (Respiratory Arrest r11, r14,',
               '  r15; Smoke Inhalation r8). There was nothing to keep, so each is bound to the row',
@@ -3372,6 +3389,10 @@ def check():
                 if 'lvl-own' in (row['level_cell'] or ''):
                     fails.append(f'{rel} row {row["ordinal"]}: owner-ruled row still carries '
                                  f'the OWNER_REQUIRED marker')
+                if (r['extra'].get('binding') or {}).get('open_question'):
+                    fails.append(f'{rel} row {row["ordinal"]}: row-bindings.yaml still records '
+                                 f'an `open_question` that this owner ruling answers — drop '
+                                 f'the field, or the owner page keeps asking a decided question')
                 # a ruling must rest on printed prose: the citation is verified verbatim
                 # against the prose index, so a ruling can no longer be free text.
                 cites = check_prose_citations(rel, f'row {row["ordinal"]}',

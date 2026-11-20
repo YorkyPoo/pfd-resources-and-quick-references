@@ -1531,11 +1531,23 @@ bindings:
     row: 6
     pems_page: 245
     pems_ordinal: 4
+    open_question: >-
+      PEEP titration reads EMT here and I there, and the owner has ruled an Intermediate may
+      titrate PEEP. Should this row read I, or stay EMT on the printed basis below? Which
+      ceiling governs — the 15 cmH2O this row prints, or the 10 cmH2O p.239#5 prints?
     evidence: >-
       p.245#4 prints the PEEP-titration step (extracted as "Consider titratingPEEP9%-15mmHg) as
-      needed to improve ventilation/work of breathing.") badge EMT. The page published P, so the
-      chip moves P -> EMT: the printed level is the authority, and the move is listed for owner
-      review.
+      needed to improve ventilation/work of breathing.") badge EMT, and adds "CPAP, BiPAP, and
+      PEEP are RED DOT procedures at all EMS Certification Levels" — so the chip is that row's
+      badge, and this page's citation is the row that prints the action. The level is ALSO an
+      open question: p.239#5 prints the same titration scoped in its own words — "I/P only:
+      Adjust PEEP to support ventilation and work of breathing, up to 10 cmH2O" — inside a row
+      badged EMT, and the owner ruled on 2026-11-20 that "An intermediate can also titrate
+      peep." Two printed rows and one owner ruling, so the chip is not settled by the source
+      alone. `open_question` above is what `emit_md()` publishes to the owner; it is removed
+      when he rules, and `--check` fails if the field outlives the ruling. The ceiling is part
+      of the same question: this row prints 15 cmH2O (extracted as "9%-15mmHg"), p.239#5 prints
+      10 cmH2O, and the page must not pick one silently.
 
   - file: procedures/Capnography.md
     row: 1
@@ -2533,6 +2545,21 @@ bindings:
       (row-structure pass): this action was one of several bundled in a single row, so no
       single level could carry it. It is now its own row and its chip is the badge the cited
       row prints for it.
+
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 6
+    pems_page: 239
+    pems_ordinal: 5
+    cross_page: true
+    quoted_row_text: "Consider CPAP (PEEP: 5 cmH2O) for respiratory distress."
+    evidence: >-
+      p.239#5 prints 'Consider CPAP (PEEP: 5 cmH2O) for respiratory distress. Refer to CPAP
+      procedure.' badge EMT — the CPAP initiation and its 5 cmH2O initial setting, which is
+      what row 6 publishes. The row no longer carries PEEP titration: the owner's 2026-11-20
+      ruling made titration an Intermediate action, so the titration half is its own row
+      (6a), ruled to I off the same printed row's 'I/P only' clause. Cited here rather than
+      to p.123#3 because p.123#3 prints 'consider CPAP support' without the initial PEEP
+      setting the row publishes.
 
   - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
     row: 16
