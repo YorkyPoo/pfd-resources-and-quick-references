@@ -1,0 +1,11 @@
+{
+  "slots": {
+    "airway-levels": {
+      "branch": "airway-levels",
+      "built_at": "2026-11-20T05:45:18Z",
+      "description": "Airway levels: adult intubation + CPAP titration are I (owner-supplied p.239 / p.247)",
+      "sha": "5b555815acbee5465a98a4b714adb639366b061b"
+    }
+  },
+  "updated_at": "2026-11-20T05:45:18.979505+00:00"
+}
