@@ -1850,9 +1850,14 @@ def cold_question_cards(ledger):
     by_row = facts['cold_by_row']
     r6, r9 = by_row.get(6), by_row.get(9)
     if r6 is None or r9 is None:
-        return ['- **Batch 5 — Cold Exposure rows 6 and 9 are no longer in this ledger.** The '
-                'rows this card recorded cannot be found; re-run `scripts/level_rule.py '
-                '--write` before publishing.']
+        return ['- **Pilot 2026-11-20 — Cold Exposure rows 6 and 9 were moved out of the action '
+                'table into the page\'s "References & Good Practice" block.** Both are '
+                'unbadged PEMS p.67 PEARLS prose (row 6 -> PEARLS #5, row 9 -> PEARLS #3); '
+                'the owner\'s presentation ruling puts unbadged prose below the table instead '
+                'of chipping it. The levels this page recorded for them (`EMT` and `MC`, '
+                'Pearl ruling 2026-11-17) are stated in that block and stay in '
+                '`level-rulings.yaml`; they are no longer chips, so they are no longer in '
+                'this ledger.']
     out = []
     if r6['status'] == 'owner_ruled' and r9['status'] == 'owner_ruled':
         c6 = ', '.join(_cite_brief(c) for c in (r6.get('prose_citations') or []))

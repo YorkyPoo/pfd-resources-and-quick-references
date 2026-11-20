@@ -107,6 +107,11 @@ rulings:
       the PROSE's own scope (EMT-I and Paramedic -> lowest I) and the chip stays I. The
       bracketed [I] page cell keeps its +MC marker.
 
+  # RELOCATED 2026-11-20 (References & Good Practice pilot): rows 6-8 of this page were
+  # the PEMS p.245 CONTRAINDICATIONS list — unbadged prose. They are now rendered under
+  # the action table in the page's "References & Good Practice" block, which still states
+  # the EMT level recorded below. level_rule.py no longer sees a row for them, so these
+  # entries are inert provenance, kept so the ruling is not lost.
   - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
     row: 6
     level: EMT
@@ -173,6 +178,11 @@ rulings:
       As row 6 (owner Pearl ruling 2026-11-17). p.245 CONTRAINDICATIONS #1, bullets 7-8.
       Level change A -> EMT.
 
+  # RELOCATED 2026-11-20 (References & Good Practice pilot): rows 6 and 9 of this page are
+  # PEMS p.67 PEARLS prose (#5 heat packs, #3 MC before AED) with no printed badge. They now
+  # sit under the action table in the page's "References & Good Practice" block, which still
+  # states the EMT / MC levels recorded below. level_rule.py no longer sees rows for them, so
+  # these entries are inert provenance, kept so the rulings are not lost.
   - file: protocols/general/02_Cold_Exposure_PROC.md
     row: 6
     level: EMT

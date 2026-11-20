@@ -1529,7 +1529,7 @@ decision before the page is treated as final.
   hypotensive.", badge EMT) and row 3 cites Universal Patient Care p.50#9
   ("Establish IV / IO access when indicated.", badge A). Both print the site row
   verbatim; chip moves A -> EMT (row 2) and I -> A (row 3) as the source prints.
-- **Batch 5 — Cold Exposure rows 6 and 9 are no longer in this ledger.** The rows this card recorded cannot be found; re-run `scripts/level_rule.py --write` before publishing.
+- **Pilot 2026-11-20 — Cold Exposure rows 6 and 9 were moved out of the action table into the page's "References & Good Practice" block.** Both are unbadged PEMS p.67 PEARLS prose (row 6 -> PEARLS #5, row 9 -> PEARLS #3); the owner's presentation ruling puts unbadged prose below the table instead of chipping it. The levels this page recorded for them (`EMT` and `MC`, Pearl ruling 2026-11-17) are stated in that block and stay in `level-rulings.yaml`; they are no longer chips, so they are no longer in this ledger.
 - **Batch 6 — administrative pages are chipped POLICY / PENDING, not levelled.**
   Owner ruling 2026-11-16: *"Treat admin pages as policy."* All 14 administrative
   pages are now 3-column tables whose marker column says `POLICY` (the rule is
