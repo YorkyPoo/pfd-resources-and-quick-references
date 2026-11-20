@@ -1,4 +1,4 @@
-verify EXIT=1
+verify EXIT=0
 level_rule EXIT=0
 mc_wording EXIT=0
 mkdocs EXIT=0

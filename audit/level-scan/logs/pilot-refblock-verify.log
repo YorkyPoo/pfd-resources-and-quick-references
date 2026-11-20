@@ -151,8 +151,8 @@ deliverables
   ok   no PEMS row in scope is unaccounted for (0)
   ok   ambiguous-rows.md states the same total (125)
 no protocol pages touched
-  FAIL git status shows no modified files under docs/
+  ok   git status shows no modified files under docs/
 
   ok   verifier manifest covers the run (8 of 8 checks reached: )
 
-1 INVARIANT(S) FAILED
+all invariants hold
