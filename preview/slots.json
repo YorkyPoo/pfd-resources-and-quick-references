@@ -72,6 +72,12 @@
       "description": "Provider levels relabelled R|B|A|I|P",
       "sha": "05addb26252f6259debff424aa83b68467bea4ab"
     },
+    "rhythm-derive": {
+      "branch": "rhythm-derive",
+      "built_at": "2026-11-20T14:21:16Z",
+      "description": "Rhythm interpretation derived (I) by the ladder rule; the generator no longer asks the owner",
+      "sha": "7ec79e1fb81e3af1df2ba245ec066d7f38ba9028"
+    },
     "rows": {
       "branch": "rows-one-action",
       "built_at": "2026-11-20T07:10:45Z",
@@ -85,5 +91,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-20T14:07:54.525732+00:00"
+  "updated_at": "2026-11-20T14:21:16.387559+00:00"
 }
