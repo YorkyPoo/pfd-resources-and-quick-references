@@ -1,0 +1,14 @@
+fetched: https://yorkypoo.github.io/pfd-resources-and-quick-references/preview/pilot/protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.html?c=1795151663
+fetched_at: 2026-11-20T05:14:23Z
+
+--- picker buttons (verbatim from the live page) ---
+<div class="pip-pick" role="group" aria-label="Show the protocol as your certification level"><button type="button" class="pip-btn" data-level="R" aria-pressed="false">R</button><button type="button" class="pip-btn" data-level="B" aria-pressed="false">B</button><button type="button" class="pip-btn" data-level="A" aria-pressed="false">A</button><button type="button" class="pip-btn" data-level="I" aria-pressed="false">I</button><button type="button" class="pip-btn" data-level="P" aria-pressed="false">P</button><button type="button" class="pip-btn pip-btn-all" data-level="all" aria-pressed="true">Show all</button></div><p class="pip-tally" aria-live="polite">Show all — 10 actions. Each row names the level its actio
+
+--- strip header ---
+<span class="pip-strip pip-strip-head"><i>R</i><i>B</i><i>A</i><i>I</i><i>P</i></span></th></tr></thead><tbody><tr data-states="go,go,go,go,go"><td class="pip-
+
+--- row 1 tag ---
+data-states="go,go,go,go,go"><td class="pip-n">1</td><td class="pip-act"><div class="pip-action">Follow Universal Patient Care / Initial Patient Contact protocol</div><span class="pip-tag-wrap"><span class="pip-tag go">standing from R</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="R (EMR): standing order; B (EMT): standing order; A (AEMT): standing order; I (Intermediate): standing order; P (Paramedic): s
+
+--- tally line ---
+<p class="pip-tally" aria-live="polite">Show all — 10 actions. Each row names the level its action starts at; tap a level to see this protocol as you. · 1 level unverified ⚑</p><div class="pip-wrap"><table class="pip-table"><colgroup><col class="pip-col-n"><col><col class="pip-col-strip"></colgroup>
