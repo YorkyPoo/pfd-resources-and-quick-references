@@ -2805,6 +2805,8 @@
     }
    ],
    "level_from": null,
+   "clause_of": null,
+   "clause_only": false,
    "ruling": "12-Lead STEMI interpretation is an ALS skill: only EMT-I and Paramedic may interpret a 12-Lead ECG as STEMI. Chip P -> I.",
    "ruling_date": "2026-11-17",
    "derived_floor": null,
@@ -3148,6 +3150,8 @@
     }
    ],
    "level_from": null,
+   "clause_of": null,
+   "clause_only": false,
    "ruling": "Right-sided / 15-Lead ECG is an EMT-I and Paramedic assessment. Level unchanged (I); the \"prints nowhere\" flag is cleared.",
    "ruling_date": "2026-11-17",
    "derived_floor": null,
@@ -6203,6 +6207,8 @@
     }
    ],
    "level_from": null,
+   "clause_of": null,
+   "clause_only": false,
    "ruling": "Assessing for airway/inhalation injury is a BLS assessment. Level unchanged (EMT); the \"prints nowhere\" flag is cleared.",
    "ruling_date": "2026-11-17",
    "derived_floor": null,
@@ -6543,6 +6549,8 @@
     }
    ],
    "level_from": null,
+   "clause_of": null,
+   "clause_only": false,
    "ruling": "Calling Poison Control needs no provider training, so the row takes this page's own lowest chip. Chip P -> FLOOR (derived, not typed).",
    "ruling_date": "2026-11-17",
    "derived_floor": {
@@ -6895,10 +6903,14 @@
    "row": "8a",
    "action": "\u2022 Titrate PEEP up to 10 cm H\u2082O to support ventilation and work of breathing.",
    "level_published": "I",
-   "status": "OWNER_REQUIRED",
-   "reason": "Conflict, recorded: PEEP titration above the initial 5 cm H2O is printed only inside rows badged EMT, and the two printed rows DISAGREE: p.239#5 (\"Consider CPAP (PEEP: 5 cmH2O) ... I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH2O\", badge EMT) scopes the titration to I/P, while p.245#4 in the CPAP/BiPAP/PEEP procedure (\"Consider titrating PEEP ... CPAP, BiPAP, and PEEP are RED DOT procedures at all EMS Certification Levels\", badge EMT) badges it at every level. The chip is I, the level p.239#5's own words give it; no printed badge badges titration at I, so it is an open decision, not a citation. The same conflict is recorded for Pulmonary Edema row 9, which keeps P. The owner's 2026-11-20 instruction was the split (initiation / titration as separate rows), not this level.",
-   "owner_note": "&#9873; **PEEP titration above 5 cm H\u2082O \u2014 level pending.** PEMS prints titration only inside rows badged EMT, and its two printed rows disagree: one scopes it to &quot;I/P only&quot;, the other badges it at every level. The level shown follows the I/P wording and is provisional until Medical Control confirms it. The same question is open for CPAP titration on the Pulmonary Edema protocol.",
-   "owner_ruling": null,
+   "status": "owner_ruled",
+   "reason": null,
+   "owner_note": null,
+   "owner_ruling": {
+    "date": "2026-11-20",
+    "ruling": "An intermediate can also titrate peep.",
+    "note": "Owner ruling 2026-11-20, verbatim: \"An intermediate can also titrate peep.\", as Pulmonary Edema row 9: p.239#5's own words scope PEEP titration to I/P inside a row badged EMT, and the owner has ruled that reading governs. The level was already I; what changes is that it is no longer provisional. Row 8a is the titration half of the split the owner ordered on 2026-11-20 and covers nothing else, so its chip is the whole authorisation and the OWNER_REQUIRED flag retires. Row 8 (CPAP initiation, printed EMT at p.239#5) is cited and unaffected."
+   },
    "pems_page": null,
    "pems_ordinal": null,
    "pems_badge": null,
@@ -6912,14 +6924,25 @@
    "mc_evidence": null,
    "flag_reason": null,
    "ratified": null,
-   "basis": null,
+   "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "I",
     "markers": [],
     "text_label": null,
     "text_tokens": []
    },
-   "note": null,
+   "note": "Owner ruling 2026-11-20, verbatim: \"An intermediate can also titrate peep.\", as Pulmonary Edema row 9: p.239#5's own words scope PEEP titration to I/P inside a row badged EMT, and the owner has ruled that reading governs. The level was already I; what changes is that it is no longer provisional. Row 8a is the titration half of the split the owner ordered on 2026-11-20 and covers nothing else, so its chip is the whole authorisation and the OWNER_REQUIRED flag retires. Row 8 (CPAP initiation, printed EMT at p.239#5) is cited and unaffected.",
+   "prose_citations": [],
+   "level_from": null,
+   "clause_of": {
+    "page": 239,
+    "ordinal": 5,
+    "token": "I/P only: Adjust PEEP to support ventilation and work of breathing"
+   },
+   "clause_only": true,
+   "ruling": "An intermediate can also titrate peep.",
+   "ruling_date": "2026-11-20",
+   "derived_floor": null,
    "status_before": null
   },
   {
@@ -8371,17 +8394,21 @@
    "file": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
    "row": 9,
    "action": "CPAP Titration: Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing",
-   "level_published": "P",
-   "status": "OWNER_REQUIRED",
-   "reason": "Conflict, recorded: p.239#5 prints 'Consider CPAP (PEEP: 5 cmH2O) ... I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH2O' at badge EMT, and p.245#4 (CPAP/BiPAP/PEEP procedure) prints 'Consider titrating PEEP (9%-15 mmHg) as needed to improve ventilation/work of breathing. CPAP, BiPAP, and PEEP are RED DOT procedures at all EMS Certification Levels' at badge EMT. Two printed rows disagree (I/P-only scope in one, EMT badge in the other) and no printed row badges the titration at I, so neither level is a single-row citation. The page's P is kept and flagged as an open decision for the owner. A 2026-11-20 attempt to rule it to I was reverted: it was labelled `owner_ruled` although the owner never ruled on PEEP titration, and the pearl evidence for I is on the Respiratory Distress page (Pearl 4), not this page's source.",
-   "owner_note": "&#9873; **OWNER_REQUIRED** \u2014 row 9: PEMS 2024 does not settle which provider level may titrate PEEP. The level shown is unverified pending a Medical Control decision.",
-   "owner_ruling": null,
-   "pems_page": 239,
-   "pems_ordinal": 5,
-   "pems_badge": "EMT",
+   "level_published": "I",
+   "status": "owner_ruled",
+   "reason": null,
+   "owner_note": null,
+   "owner_ruling": {
+    "date": "2026-11-20",
+    "ruling": "An intermediate can also titrate peep.",
+    "note": "Owner ruling 2026-11-20, verbatim: \"An intermediate can also titrate peep.\" The chip is now I. PEMS prints the action inside p.239#5 \u2014 \"Consider CPAP (PEEP: 5 cmH2O) ... I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH2O\" \u2014 a row badged EMT whose own words scope this clause to I/P, so the level is the lowest level the clause names (I) and not the row's badge. p.245#4 (CPAP/BiPAP/PEEP procedure) badges titration EMT and calls the procedures RED DOT at all levels; the owner has ruled which reading governs, so that conflict is settled, not open. The row is titration-only, so the chip is the whole authorisation and the OWNER_REQUIRED flag is retired."
+   },
+   "pems_page": null,
+   "pems_ordinal": null,
+   "pems_badge": null,
    "compound_tokens": [],
    "bracketed": false,
-   "pems_text": "Consider CPAP (PEEP: 5 cmH2O) for respiratory distress. Refer to CPAP procedure. I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH O.** 2",
+   "pems_text": null,
    "binding_evidence": null,
    "quoted_row_text": null,
    "cross_page": false,
@@ -8389,7 +8416,7 @@
    "mc_evidence": null,
    "flag_reason": null,
    "ratified": null,
-   "basis": "adjudicated:set_cells",
+   "basis": "owner-rulings:ruled",
    "before": {
     "leftmost": "P",
     "markers": [
@@ -8398,7 +8425,18 @@
     "text_label": null,
     "text_tokens": []
    },
-   "note": "PEEP titration is explicitly restricted in the source: p.239#5 'I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH2O' (raster). Site prints P only -> I/P. Upper bound confirmed as 10 cmH2O, not 15.",
+   "note": "Owner ruling 2026-11-20, verbatim: \"An intermediate can also titrate peep.\" The chip is now I. PEMS prints the action inside p.239#5 \u2014 \"Consider CPAP (PEEP: 5 cmH2O) ... I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH2O\" \u2014 a row badged EMT whose own words scope this clause to I/P, so the level is the lowest level the clause names (I) and not the row's badge. p.245#4 (CPAP/BiPAP/PEEP procedure) badges titration EMT and calls the procedures RED DOT at all levels; the owner has ruled which reading governs, so that conflict is settled, not open. The row is titration-only, so the chip is the whole authorisation and the OWNER_REQUIRED flag is retired.",
+   "prose_citations": [],
+   "level_from": null,
+   "clause_of": {
+    "page": 239,
+    "ordinal": 5,
+    "token": "I/P only: Adjust PEEP to support ventilation and work of breathing"
+   },
+   "clause_only": true,
+   "ruling": "An intermediate can also titrate peep.",
+   "ruling_date": "2026-11-20",
+   "derived_floor": null,
    "status_before": "OWNER_REQUIRED"
   },
   {
@@ -9855,6 +9893,8 @@
     }
    ],
    "level_from": null,
+   "clause_of": null,
+   "clause_only": false,
    "ruling": "Assessing for airway/inhalation injury is a BLS assessment. Level unchanged (EMT); the \"prints nowhere\" flag is cleared.",
    "ruling_date": "2026-11-17",
    "derived_floor": null,

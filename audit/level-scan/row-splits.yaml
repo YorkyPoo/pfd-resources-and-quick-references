@@ -384,7 +384,7 @@ site_splits:
           imminent.
       - row: 8a
         level: I
-        source: owner_required
+        source: ruling
         pems: p.239#5
         text: >-
           • Titrate PEEP up to **10 cm H₂O** to support ventilation and work of breathing.

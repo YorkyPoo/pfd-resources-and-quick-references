@@ -240,6 +240,7 @@ def carried_level(row):
 
 
 RULED_HEADER = '## OWNER_RULED — Cold Exposure pilot'
+PEEP_RULED_HEADER = '## OWNER_RULED — PEEP titration'
 
 
 def section_entries(md, header):
@@ -277,12 +278,13 @@ def open_questions(md):
 
 
 def ruled_entries(md):
-    """Every entry of the ledger's OWNER_RULED section for the Cold pilot, verbatim.
+    """Every entry of the ledger's OWNER_RULED sections, verbatim.
 
     These are RECORDED DECISIONS (the owner answered on 2026-11-20), so they are published
-    under their own heading and never counted as open questions.
+    under their own heading and never counted as open questions. Two sections carry them:
+    the Cold Exposure pilot decisions and the PEEP-titration ruling.
     """
-    return section_entries(md, RULED_HEADER)
+    return section_entries(md, RULED_HEADER) + section_entries(md, PEEP_RULED_HEADER)
 
 
 def inline_md(text):
