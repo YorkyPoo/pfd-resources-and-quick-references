@@ -212,7 +212,10 @@ from the main checkout after confirming the source bytes match
 
 `bash scripts/publish_preview_slots.sh home=homepage-r2=…` from the `preview-slots`
 tooling (branch `preview-slots` @ `4dce3d6`) published gh-pages **`678f3ef`** (parent
-`3296f7b`), built from branch tip **`b9d0327`**.
+`3296f7b`), built from **`b9d0327`** — the branch tip at publish time. The only commit
+after it (`fc6b220`) adds this evidence file and the gate log: `git diff --stat
+b9d0327 fc6b220 -- docs/ scripts/ mkdocs.yml` is empty, so the published bytes are the
+content under review.
 
 - `git diff --name-only 3296f7b..678f3ef | grep -v '^preview/'` → **0 files**: live root untouched.
 - Changed paths: `preview/home/**`, `preview/index.html`, `preview/slots.json`.
