@@ -1,5 +1,11 @@
 {
   "slots": {
+    "agency-names": {
+      "branch": "agency-names",
+      "built_at": "2026-11-20T06:21:07Z",
+      "description": "Agency names out of clinical prose",
+      "sha": "3d293c0d3ae764c9fd63de46b16184ef43687c81"
+    },
     "airway-levels": {
       "branch": "airway-levels",
       "built_at": "2026-11-20T05:57:51Z",
@@ -31,5 +37,5 @@
       "sha": "137cc55e102ea06dfe1085f560f4a35c94663108"
     }
   },
-  "updated_at": "2026-11-20T06:02:47.444896+00:00"
+  "updated_at": "2026-11-20T06:21:07.481550+00:00"
 }
