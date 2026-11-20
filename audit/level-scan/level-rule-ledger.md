@@ -1024,6 +1024,17 @@ the ruling. A later pass must not "restore" the source wording.
 - `docs/sops/ems/EMS-100-General-EMS-Guidelines.md` — source prints "eliminate in hospital delays"; the page reads **"eliminate in-hospital delays"** (2026-11-15)
   - ruling: Owner ruling 2026-11-15 ("I like the change to in-hospital delays"): the compound is hyphenated. The SOP as printed carries no hyphen. This is an OWNER RULING, not a source reading — do not revert the page to the un-hyphenated form on the grounds that the source prints it that way.
 
+## OWNER_RULED — Cold Exposure pilot (owner ruling 2026-11-20)
+
+Decided, not open. The owner ruled these on 2026-11-20 and the page states the
+recorded level; they are filed here so the open-question count the owner reads
+excludes them. The history is kept — what was asked, and the owner's words —
+and the PEMS citation stays in `audit/level-scan/` (`level-rulings.yaml`,
+`relocated-rows.yaml`), deliberately not printed on the page.
+
+- **Pilot 2026-11-20 — Cold Exposure rows 6 and 9 were moved out of the action table into the page's "References & Good Practice" block.** Both are unbadged PEMS p.67 PEARLS prose; the owner's presentation ruling puts unbadged prose below the table instead of chipping it. The levels this page records for them (row 6 `EMR` (p.67 PEARLS #5), row 9 `MC` (p.67 PEARLS #3), Pearl ruling 2026-11-17) are stated in that block and stay in `level-rulings.yaml`; they are no longer chips, so they are no longer in this ledger.
+- **Cold Exposure row 6 — the BLS-floor question was ASKED and ANSWERED (owner ruling 2026-11-20): `EMR`.** The question recorded here on 2026-11-17 was whether the rewarming item keeps `EMT` although the page's own BLS floor is lower: the ruling's test reads "BLS-scope -> the page's BLS floor", heat packs are a BLS skill, and the page chips a floor of `EMR` (derived from the page's 7 level chips, in file order: EMR, EMR, EMR, EMR, EMR, EMR, EMT). The owner answered on 2026-11-20: **EMR** — "Anyone can warm a patient, EMR. Might want to move below the table.". The item stays below the action table in the page's "References & Good Practice" block, and that block now states `EMR`, the page's own derived floor. The history is kept in `level-rulings.yaml`; no open question remains for this row.
+
 ## SHARED STYLESHEET CHANGES (not protocol content)
 
 Deliberate CSS changes made during conversion work. They affect **every** page
@@ -1534,8 +1545,6 @@ decision before the page is treated as final.
   hypotensive.", badge EMT) and row 3 cites Universal Patient Care p.50#9
   ("Establish IV / IO access when indicated.", badge A). Both print the site row
   verbatim; chip moves A -> EMT (row 2) and I -> A (row 3) as the source prints.
-- **Pilot 2026-11-20 — Cold Exposure rows 6 and 9 were moved out of the action table into the page's "References & Good Practice" block.** Both are unbadged PEMS p.67 PEARLS prose; the owner's presentation ruling puts unbadged prose below the table instead of chipping it. The levels this page records for them (row 6 `EMR` (p.67 PEARLS #5), row 9 `MC` (p.67 PEARLS #3), Pearl ruling 2026-11-17) are stated in that block and stay in `level-rulings.yaml`; they are no longer chips, so they are no longer in this ledger.
-- **Cold Exposure row 6 — the BLS-floor question was ASKED and ANSWERED (owner ruling 2026-11-20): `EMR`.** The question recorded here on 2026-11-17 was whether the rewarming item keeps `EMT` although the page's own BLS floor is lower: the ruling's test reads "BLS-scope -> the page's BLS floor", heat packs are a BLS skill, and the page chips a floor of `EMR` (derived from the page's 7 level chips, in file order: EMR, EMR, EMR, EMR, EMR, EMR, EMT). The owner answered on 2026-11-20: **EMR** — "Anyone can warm a patient, EMR. Might want to move below the table.". The item stays below the action table in the page's "References & Good Practice" block, and that block now states `EMR`, the page's own derived floor. The history is kept in `level-rulings.yaml`; no open question remains for this row.
 - **Batch 6 — administrative pages are chipped POLICY / PENDING, not levelled.**
   Owner ruling 2026-11-16: *"Treat admin pages as policy."* All 14 administrative
   pages are now 3-column tables whose marker column says `POLICY` (the rule is

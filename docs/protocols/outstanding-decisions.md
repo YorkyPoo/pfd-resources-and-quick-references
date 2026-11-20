@@ -8,7 +8,7 @@ search:
 # Outstanding Decisions
 
 <div class="od-intro" markdown="1">
-Every row below is a decision **still waiting on you**. Nothing here changes a protocol: the pages keep working exactly as they do today, and answering is optional row by row.
+Every row below is a decision **still waiting on you** — except the last section, which records rulings you have already made. Nothing here changes a protocol: the pages keep working exactly as they do today, and answering is optional row by row.
 
 This page is generated from the conversion ledger (`audit/level-scan/level-rule-ledger.json`) — the reasons are copied verbatim, and the counts are computed from the lists, not typed in.
 
@@ -16,7 +16,8 @@ This page is generated from the conversion ledger (`audit/level-scan/level-rule-
 |---|---:|
 | Rows that need your level decision (`OWNER_REQUIRED`, marked &#9873; on the page) | **27** |
 | Rows pending authorization (`PENDING`) | **18** (11 whole-page + 7 single-row) |
-| Open questions on how the rules themselves should read | **35** |
+| Open questions on how the rules themselves should read | **33** |
+| Rulings already recorded — decided, no action needed | **2** |
 
 </div>
 
@@ -483,11 +484,11 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
-<h2 id="open-questions">3. Open questions about the rules — 35</h2>
+<h2 id="open-questions">3. Open questions about the rules — 33</h2>
 
 These are not row-level decisions. Each one is a question about how the rule itself should read, recorded in the conversion ledger and grouped here by the batch that raised it — the batch is the topic of work, and every card opens with the ledger's own heading naming its subject.
 
-<h3>No batch recorded <span class="od-count">11</span></h3>
+<h3>No batch recorded <span class="od-count">9</span></h3>
 
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
@@ -520,14 +521,6 @@ These are not row-level decisions. Each one is a question about how the rule its
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
 <p class="od-question"><strong>Site-side <code>[X]</code> brackets — RESOLVED (owner ruling 2026-11-16).</strong> The owner ruled *&quot;Add a second marker so [X] survives in the chassis&quot;*. Bracketed rows now carry the level chip plus a distinct <code>+MC</code> marker (see the <code>+MC</code> section above); <code>row-bindings.yaml</code> is the source of truth and <code>--check</code> re-derives the bracketed rows from the pre-conversion pages. A bracketed cell whose level is not the level the row now publishes, or a row that is itself a Medical Control contact, cannot carry <code>+MC</code> without changing its meaning — those rows say so explicitly under *Bracketed rows whose bracket cannot be carried* above.</p>
-</div>
-<div class="od-card od-cat-question">
-<p class="od-head"><span class="od-batch">No batch recorded</span></p>
-<p class="od-question"><strong>Pilot 2026-11-20 — Cold Exposure rows 6 and 9 were moved out of the action table into the page&#x27;s &quot;References &amp; Good Practice&quot; block.</strong> Both are unbadged PEMS p.67 PEARLS prose; the owner&#x27;s presentation ruling puts unbadged prose below the table instead of chipping it. The levels this page records for them (row 6 <code>EMR</code> (p.67 PEARLS #5), row 9 <code>MC</code> (p.67 PEARLS #3), Pearl ruling 2026-11-17) are stated in that block and stay in <code>level-rulings.yaml</code>; they are no longer chips, so they are no longer in this ledger.</p>
-</div>
-<div class="od-card od-cat-question">
-<p class="od-head"><span class="od-batch">No batch recorded</span></p>
-<p class="od-question"><strong>Cold Exposure row 6 — the BLS-floor question was ASKED and ANSWERED (owner ruling 2026-11-20): <code>EMR</code>.</strong> The question recorded here on 2026-11-17 was whether the rewarming item keeps <code>EMT</code> although the page&#x27;s own BLS floor is lower: the ruling&#x27;s test reads &quot;BLS-scope -&gt; the page&#x27;s BLS floor&quot;, heat packs are a BLS skill, and the page chips a floor of <code>EMR</code> (derived from the page&#x27;s 7 level chips, in file order: EMR, EMR, EMR, EMR, EMR, EMR, EMT). The owner answered on 2026-11-20: <strong>EMR</strong> — &quot;Anyone can warm a patient, EMR. Might want to move below the table.&quot;. The item stays below the action table in the page&#x27;s &quot;References &amp; Good Practice&quot; block, and that block now states <code>EMR</code>, the page&#x27;s own derived floor. The history is kept in <code>level-rulings.yaml</code>; no open question remains for this row.</p>
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
@@ -643,6 +636,19 @@ These are not row-level decisions. Each one is a question about how the rule its
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 7</span></p>
 <p class="od-question"><strong>Batch 7 — CPAP units disagree with the source, and the action text was not edited.</strong> The page reads PEEP &quot;5 cmH2O&quot; (r3) and &quot;5-15 cmH2O&quot; (r6); PEMS p.245#1 prints &quot;5 mmHg&quot; and p.245#4 extracts as &quot;titratingPEEP9%-15mmHg)&quot;. Reconciliation (mmHg vs cmH2O, and 5-15 vs 9%-15) is a clinical-text decision outside this conversion, so only the chip was bound; owner to reconcile the page wording.</p>
+</div>
+
+<h2 id="ruled">4. Already ruled — recorded decisions — 2</h2>
+
+The owner has already answered these, so they are not waiting on you. They are published as a record: the page states the level that was decided, and the answer and the PEMS citation stay in the audit trail (`audit/level-scan/level-rulings.yaml`, `audit/level-scan/relocated-rows.yaml`).
+
+<div class="od-card od-cat-question">
+<p class="od-head"><span class="od-batch">Decided</span></p>
+<p class="od-question"><strong>Pilot 2026-11-20 — Cold Exposure rows 6 and 9 were moved out of the action table into the page&#x27;s &quot;References &amp; Good Practice&quot; block.</strong> Both are unbadged PEMS p.67 PEARLS prose; the owner&#x27;s presentation ruling puts unbadged prose below the table instead of chipping it. The levels this page records for them (row 6 <code>EMR</code> (p.67 PEARLS #5), row 9 <code>MC</code> (p.67 PEARLS #3), Pearl ruling 2026-11-17) are stated in that block and stay in <code>level-rulings.yaml</code>; they are no longer chips, so they are no longer in this ledger.</p>
+</div>
+<div class="od-card od-cat-question">
+<p class="od-head"><span class="od-batch">Decided</span></p>
+<p class="od-question"><strong>Cold Exposure row 6 — the BLS-floor question was ASKED and ANSWERED (owner ruling 2026-11-20): <code>EMR</code>.</strong> The question recorded here on 2026-11-17 was whether the rewarming item keeps <code>EMT</code> although the page&#x27;s own BLS floor is lower: the ruling&#x27;s test reads &quot;BLS-scope -&gt; the page&#x27;s BLS floor&quot;, heat packs are a BLS skill, and the page chips a floor of <code>EMR</code> (derived from the page&#x27;s 7 level chips, in file order: EMR, EMR, EMR, EMR, EMR, EMR, EMT). The owner answered on 2026-11-20: <strong>EMR</strong> — &quot;Anyone can warm a patient, EMR. Might want to move below the table.&quot;. The item stays below the action table in the page&#x27;s &quot;References &amp; Good Practice&quot; block, and that block now states <code>EMR</code>, the page&#x27;s own derived floor. The history is kept in <code>level-rulings.yaml</code>; no open question remains for this row.</p>
 </div>
 
 <p class="od-foot">Generated from the conversion ledger by `scripts/build_outstanding_decisions.py`. Row text and reasons are the ledger's own words; this page adds no clinical content and edits no protocol page.</p>
