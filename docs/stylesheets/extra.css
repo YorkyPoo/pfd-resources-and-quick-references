@@ -106,6 +106,10 @@
   color: var(--md-primary-fg-color);
   font-weight: 700;
 }
+/* Same defect as the body links (card t_a650f9ea): this rule paints bold text
+   inside a plain table with the header maroon, so on the slate page the emphasis
+   in every dosing/scope cell was dark crimson on #1e2129 (measured 1.6:1). */
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) td strong { color: #ff8a80; }
 
 /* ============================================================
    MAROON & GOLD BRAND COLORS
