@@ -1,0 +1,45 @@
+worktree: /root/.hermes/profiles/developer/cache/scratch/wt-refblock
+HEAD: 00b64616d1c0b42be261123219ab1525f6431374 00b6461 audit(level-scan): file the Cold r6 ruling under OWNER_RULED, not open questions
+
+## A — Cold page rewords the EMR level statement
+defect: docs/protocols/general/02_Cold_Exposure_PROC.md
+level_rule.py --check EXIT=1
+guard message matched: True -> ["+- **Batch 5 — Cold Exposure rows 6 and 9 are no longer in this ledger.** The relocation this pilot recorded does not check out: row 6: the page does not print 'This page records the rewarming item at **EMR**'. Repair the page or `relocated-rows.yaml`, then re-run `scripts/level_rule.py --write` before publishing — do not publish this card as it stands."]
+restored: level_rule.py --check EXIT=0
+
+## B — Pulmonary page rewords the relocated list statement
+defect: docs/protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
+level_rule.py --check EXIT=1
+guard message matched: True -> ["- `relocated-rows.yaml` protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md row 6: the page does not print 'This page records the list at **EMT**' — the relocation record describes a block the page no longer carries"]
+restored: level_rule.py --check EXIT=0
+
+## C — the ASKED/ANSWERED ruling is deleted from the ledger markdown
+defect: audit/level-scan/level-rule-ledger.md
+level_rule.py --check EXIT=1
+guard message matched: True -> ['- OWNER_RULED drops a Cold Exposure card the ruling derives — the relocation record or the 2026-11-20 ASKED/ANSWERED card']
+restored: level_rule.py --check EXIT=0
+
+## D — relocated-rows.yaml regresses row 6 to EMT while the ruling says EMR
+defect: audit/level-scan/relocated-rows.yaml
+level_rule.py --check EXIT=1
+guard message matched: True -> ["- `relocated-rows.yaml` records Cold Exposure row 6 at 'EMT' but `level-rulings.yaml` rules it 'EMR' — the page, the relocation record and the ruling must state one level"]
+restored: level_rule.py --check EXIT=0
+
+## E — the DECIDED card is filed back under OPEN OWNER QUESTIONS (reviewer round 3)
+defect: audit/level-scan/level-rule-ledger.md
+level_rule.py --check EXIT=1
+guard message matched: True -> ["- OPEN OWNER QUESTIONS still publishes a DECIDED Cold Exposure card — the owner answered on 2026-11-20 (`EMR`); it belongs in the ledger's OWNER_RULED section, not in the open questions the owner is asked to answer"]
+python3 scripts/build_outstanding_decisions.py --check EXIT=1
+  -> ['AssertionError: the Cold Exposure row 6 ASKED/ANSWERED ruling is missing from the OWNER_RULED section']
+restored: level_rule.py --check EXIT=0
+
+SUMMARY
+  A: defect EXIT=1  restored EXIT=0
+  B: defect EXIT=1  restored EXIT=0
+  C: defect EXIT=1  restored EXIT=0
+  D: defect EXIT=1  restored EXIT=0
+  E: defect EXIT=1  restored EXIT=0
+
+final clean level_rule.py --check EXIT=0
+final git status --porcelain: [?? audit/level-scan/logs/r6emr-round4-gates.txt
+?? audit/level-scan/logs/r6emr-round4-negative-tests.txt]
