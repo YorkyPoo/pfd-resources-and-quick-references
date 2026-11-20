@@ -2821,6 +2821,15 @@ def check():
 
     fails, report, pending_row_rows, ruling_cites = [], [], [], []
     check_ledger_markdown(ledger_rows, fails)
+    # Every relocated row's `proves` spans must be printed on its page. The Cold card
+    # already reads them, but the Pulmonary rows had no reader at all, so a reworded page
+    # could orphan the record silently. One rule for every relocated row.
+    for rec in load_relocated():
+        missing = relocated_proofs_missing(rec)
+        if missing:
+            fails.append(f'`relocated-rows.yaml` {rec["file"]} row {rec["row"]}: the page '
+                         f'does not print {", ".join(repr(s) for s in missing)} — the '
+                         f'relocation record describes a block the page no longer carries')
     kept_words, removed_words = load_token_decisions()
     seen_kept = {}
     for rel in TARGETS:
