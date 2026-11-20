@@ -76,6 +76,38 @@ exit code (never through a pipe):
 | `python3 scripts/build_outstanding_decisions.py --check` | 0 |
 | `/root/pfd-ssg-env/bin/mkdocs build --strict` | 0 |
 
+## `main` moved underneath this branch — merged, regenerated, re-gated
+
+`t_c2820e77` merged `peep-i`, `rhythm-derive` and `refs-sweep` into `main` while this card ran.
+`peep-final` was therefore merged with `origin/main` `9995acd` → merge commit `07abfd1`;
+`git merge-base --is-ancestor origin/main HEAD` exits 0 at the tip below.
+
+Conflicts were resolved the only way the repo allows:
+
+- `audit/level-scan/level-rule-ledger.md` and `docs/protocols/outstanding-decisions.md` —
+  generated files: taken from one side, then **regenerated** (`level_rule.py --write`,
+  `build_outstanding_decisions.py`), never hand-merged.
+- `scripts/level_rule.py` — a real code conflict in the owner-ruled branch of `check()`: main
+  added the derived-level (`lvl-deriv`) checks, this branch added the `open_question` guard.
+  Both are kept; the `open_question` guard is scoped `not is_derived` (a derived row has no
+  ruling to answer).
+
+The merged tree re-runs all five gates at `07abfd1` (`audit/gates/peep-final-07abfd1.log`,
+5/5 EXIT=0) and the three planted defects are re-proved there, because the 5/5 log at
+`277c945` does not carry forward.
+
+Absolute owner-page numbers on the merged tree (main's `refs-sweep` closed rows of its own, so
+these differ from the pre-merge table above):
+
+| section | `277c945` | merged `07abfd1` |
+|---|---|---|
+| 1. Needs your level decision | 2 rows | **0 rows** |
+| 2. Pending authorization | 18 | 15 |
+| 3. Open questions about the rules | 30 | 30 |
+| 4. Already ruled — recorded decisions | 6 | **6** |
+
+CPAP row 6 is in section 4 on the merged tree as well.
+
 ## Three planted defects — each one caught
 
 Each plant was applied to the real worktree, `level_rule.py --check` run, and the file restored
@@ -106,3 +138,6 @@ EXIT=1
 Defect 2 is the guard the card asked for and the repo did not have before: the ruling's unit is
 part of the ruling, and a cmH₂O revert is now a hard `--check` failure via the recorded
 `page_reads` string.
+
+All three were **re-planted on the merged tree at `07abfd1`** after the merge, with identical
+output and `EXIT=1` each; the worktree was clean afterwards apart from the new gate log.
