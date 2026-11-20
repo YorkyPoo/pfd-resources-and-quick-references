@@ -1,0 +1,19 @@
+{
+  "protocol": "Abuse Recognition and Mandated Reporting",
+  "status": "MANUAL",
+  "discrepancies": [
+    {
+      "field": "Structure and Content",
+      "pems_original": "Narrative guidance with specific hotline numbers, legal codes, and detailed reporting instructions for child, elder, and hunting reporting.",
+      "converted_text": "Summarized into a table with interventions. Missing specific reporting hotline numbers in the main procedure and simplified reporting requirements.",
+      "severity": "MODERATE",
+      "recommendation": "Re-structure from a clinical intervention protocol to a narrative administrative policy format to ensure all reporting requirements, legal codes, and contact numbers are preserved."
+    }
+  ],
+  "missing_sections": [
+    "Specific reporting procedures for each abuse category (Child/Elder/Hunting)",
+    "VA Code references",
+    "Detailed hotline/contact information in the main procedure body"
+  ],
+  "verified": false
+}
