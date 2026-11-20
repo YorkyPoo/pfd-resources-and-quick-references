@@ -44,9 +44,9 @@
     },
     "home": {
       "branch": "homepage-dashboard",
-      "built_at": "2026-11-20T18:28:52Z",
-      "description": "Homepage on-scene dashboard (card t_e787ab8d): five tool tiles, two scrollers, policies/crew utility row",
-      "sha": "3991306ad44ef1e1f4d8b7c094d62d580116472f"
+      "built_at": "2026-11-20T18:37:18Z",
+      "description": "Dashboard: crew links get a utility accent, exposure label matches its page",
+      "sha": "189e6021639cb88b2688ba51b5b786eb1c06d058"
     },
     "main": {
       "branch": "main",
@@ -115,5 +115,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-20T18:28:52.210689+00:00"
+  "updated_at": "2026-11-20T18:37:18.895986+00:00"
 }
