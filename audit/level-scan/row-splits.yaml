@@ -79,3 +79,492 @@ splits:
       - badge: I
         merge: next
         text: "Verify placement."
+
+# ============================================================================
+# site_splits: rows on the SITE split into one action each (owner instruction
+# 2026-11-20). Disjoint from `splits:` above, which repairs the PDF extraction and
+# is checked by verify_pems_canonical.py. Read and checked by
+# scripts/level_rule.py (--check): every part's chip must be the badge of the PEMS
+# row it names, the part's words must be on the page, and no lettered row may
+# exist without an entry here.
+# ============================================================================
+site_splits:
+
+  - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
+    row: 8
+    reason: >-
+      The row bundled more than one action, so no single level could carry it without
+      over- or under-granting half of itself. Each part now cites the PEMS row that prints
+      it; the first part keeps the row number and the rest are lettered so no citation
+      downstream shifts.
+    parts:
+      - row: 8
+        level: EMR
+        source: cited
+        pems: p.235#4
+        text: >-
+          Apply the AED and repeat the AED rhythm analysis every 2 minutes; the AED announces
+          whether a shock is advised. If the AED is advising to shock, defibrillate at maximum
+          joules.
+      - row: 8a
+        level: I
+        source: owner_required
+        pems: p.235#4
+        text: >-
+          Interpret the rhythm: VF or VT (shockable), or asystole or PEA (non-shockable).
+      - row: 8b
+        level: I
+        source: cited
+        pems: p.63#7
+        text: >-
+          **Manual defibrillation:** if the rhythm is VF or VT, defibrillate immediately —
+          **ADULT: 200 J** Biphasic / **360 J** Monophasic; **PEDIATRIC: 2 J/kg** initial, then
+          **4 J/kg** subsequent. Then refer to Cardiac Arrest: Ventricular Fibrillation /
+          Pulseless Ventricular Tachycardia protocol.
+
+  - file: protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
+    row: 4
+    reason: >-
+      The row bundled more than one action, so no single level could carry it without
+      over- or under-granting half of itself. Each part now cites the PEMS row that prints
+      it; the first part keeps the row number and the rest are lettered so no citation
+      downstream shifts.
+    parts:
+      - row: 4
+        level: EMR
+        source: cited
+        pems: p.235#4
+        text: >-
+          **AED / Rhythm Assessment:**<br>• Apply the AED and repeat the AED rhythm analysis
+          every **2 minutes**; the AED announces whether a shock is advised.
+      - row: 4a
+        level: I
+        source: owner_required
+        pems: p.235#4
+        text: >-
+          • Interpret the rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shockable).
+
+  - file: protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
+    row: 5
+    reason: >-
+      The row bundled more than one action, so no single level could carry it without
+      over- or under-granting half of itself. Each part now cites the PEMS row that prints
+      it; the first part keeps the row number and the rest are lettered so no citation
+      downstream shifts.
+    parts:
+      - row: 5
+        level: I
+        source: cited
+        pems: p.63#7
+        text: >-
+          **Defibrillation - V-Fib/V-Tach Only:**<br>• **ADULT:** **200 joules** Biphasic /
+          **360 joules** Monophasic, or manufacturer's recommendation<br>• **PEDIATRIC:** **2
+          joules/kg** initial, **4 joules/kg** subsequent<br>• Ensure optimal pad placement;
+          consider adjustment if multiple shocks delivered without rhythm change.
+      - row: 5a
+        level: EMR
+        source: cited
+        pems: p.235#2
+        text: >-
+          • After each defibrillation, perform **2 minutes of CPR**, then reassess rhythm.
+
+  - file: protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md
+    row: 5
+    reason: >-
+      The row bundled more than one action, so no single level could carry it without
+      over- or under-granting half of itself. Each part now cites the PEMS row that prints
+      it; the first part keeps the row number and the rest are lettered so no citation
+      downstream shifts.
+    parts:
+      - row: 5
+        level: EMT
+        source: cited
+        pems: p.61#4
+        text: >-
+          PEA / VF / VT: Continue CPR
+      - row: 5a
+        level: I
+        source: cited
+        pems: p.63#7
+        text: >-
+          Defibrillate if indicated
+
+  - file: protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md
+    row: 5
+    reason: >-
+      The row bundled more than one action, so no single level could carry it without
+      over- or under-granting half of itself. Each part now cites the PEMS row that prints
+      it; the first part keeps the row number and the rest are lettered so no citation
+      downstream shifts.
+    parts:
+      - row: 5
+        level: EMR
+        source: cited
+        pems: p.235#4
+        text: >-
+          Defibrillation — AED: apply the AED and defibrillate when the AED advises a shock
+          (the device selects the energy).
+      - row: 5a
+        level: I
+        source: cited
+        pems: p.63#7
+        text: >-
+          Defibrillation — Manual: **200 J Biphasic / 360 J Monophasic** (Adult) / **2 J/kg
+          initial, 4 J/kg subsequent** (Ped)
+
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 4
+    reason: >-
+      The row bundled more than one action, so no single level could carry it without
+      over- or under-granting half of itself. Each part now cites the PEMS row that prints
+      it; the first part keeps the row number and the rest are lettered so no citation
+      downstream shifts.
+    parts:
+      - row: 4
+        level: EMR
+        source: cited
+        pems: p.117#1
+        text: >-
+          **Positioning:**<br>• Position patient for comfort (typically supine
+          or semi-Fowler's).
+      - row: 4a
+        level: A
+        source: cited
+        pems: p.50#9
+        text: >-
+          • Establish IV/IO access.
+      - row: 4b
+        level: I
+        source: cited
+        pems: p.50#10
+        text: >-
+          • Continuous cardiac and pulse oximetry monitoring.
+
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 12
+    reason: >-
+      The row bundled more than one action, so no single level could carry it without
+      over- or under-granting half of itself. Each part now cites the PEMS row that prints
+      it; the first part keeps the row number and the rest are lettered so no citation
+      downstream shifts.
+    parts:
+      - row: 12
+        level: A
+        source: cited
+        pems: p.113#4
+        text: >-
+          **Hemodynamic Support:**<br>• **0.9% Sodium Chloride** fluid bolus if hypotensive
+          (SBP < 90 mmHg or MAP < 65).<br>• Titrate fluids to perfusion.
+      - row: 12a
+        level: I
+        source: cited
+        pems: p.113#6
+        text: >-
+          • Consider vasopressor support if cardiogenic shock present.
+
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 13
+    reason: >-
+      The row bundled more than one action, so no single level could carry it without
+      over- or under-granting half of itself. Each part now cites the PEMS row that prints
+      it; the first part keeps the row number and the rest are lettered so no citation
+      downstream shifts.
+    parts:
+      - row: 13
+        level: I
+        source: cited
+        pems: p.247#4
+        text: >-
+          **Advanced Airway Management (if indicated):**<br>• Prepare for or perform
+          endotracheal intubation if respiratory failure. Patients 12 years and older.<br>•
+          **⚠ Positive pressure ventilation (BVM/CPAP) may worsen or induce pneumothorax.**
+      - row: 13a
+        level: P
+        source: cited
+        pems: p.247#6
+        text: >-
+          • Orally intubate. Patients < 12 years old.
+      - row: 13b
+        level: P
+        source: cited
+        pems: p.247#9
+        text: >-
+          • If unable to intubate and unable to oxygenate, proceed immediately to Surgical
+          Airway.
+
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 15
+    reason: >-
+      The row bundled more than one action, so no single level could carry it without
+      over- or under-granting half of itself. Each part now cites the PEMS row that prints
+      it; the first part keeps the row number and the rest are lettered so no citation
+      downstream shifts.
+    parts:
+      - row: 15
+        level: EMR
+        source: cited
+        pems: p.49#4
+        text: >-
+          **Close Monitoring En Route:**<br>• Continuous reassessment en route.
+      - row: 15a
+        level: I
+        source: cited
+        pems: p.243#4
+        text: >-
+          • Monitor for recurrent tension pneumothorax.<br>• Reassess respiratory effort and
+          compliance after decompression.
+
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 3
+    reason: >-
+      The row bundled more than one action, so no single level could carry it without
+      over- or under-granting half of itself. Each part now cites the PEMS row that prints
+      it; the first part keeps the row number and the rest are lettered so no citation
+      downstream shifts.
+    parts:
+      - row: 3
+        level: EMT
+        source: cited
+        pems: p.49#6
+        text: >-
+          **Continuous Monitoring:**<br>• Continuous EtCO2 monitoring to guide therapy<br>•
+          Continuous pulse oximetry
+      - row: 3a
+        level: I
+        source: cited
+        pems: p.50#10
+        text: >-
+          • Cardiac monitoring
+
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 16
+    reason: >-
+      The row bundled more than one action, so no single level could carry it without
+      over- or under-granting half of itself. Each part now cites the PEMS row that prints
+      it; the first part keeps the row number and the rest are lettered so no citation
+      downstream shifts.
+    parts:
+      - row: 16
+        level: EMT
+        source: cited
+        pems: p.239#7
+        text: >-
+          **Respiratory Failure Management:**<br>• If apnea/agonal respirations or GCS
+          ≤13:<br>• Prepare for immediate airway control<br>• Bag-valve-mask ventilation<br>•
+          Transport without delay
+      - row: 16a
+        level: I
+        source: cited
+        pems: p.239#9
+        text: >-
+          • Consider advanced airway per provider level — patients 12 years and older
+      - row: 16b
+        level: P
+        source: cited
+        pems: p.239#10
+        text: >-
+          • Consider advanced airway per provider level — patients under 12 years of age
+
+  - file: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
+    row: 8
+    reason: >-
+      The row bundled more than one action, so no single level could carry it without
+      over- or under-granting half of itself. Each part now cites the PEMS row that prints
+      it; the first part keeps the row number and the rest are lettered so no citation
+      downstream shifts.
+    parts:
+      - row: 8
+        level: EMT
+        source: cited
+        pems: p.239#5
+        text: >-
+          **Continuous Positive Airway Pressure (CPAP):**<br>• Consider for COPD exacerbation
+          or severe bronchospasm with adequate mentation.<br>• Initiate **5 cm H₂O**.<br>•
+          Contraindicated if altered mental status, vomiting, or respiratory arrest
+          imminent.
+      - row: 8a
+        level: I
+        source: owner_required
+        pems: p.239#5
+        text: >-
+          • Titrate PEEP up to **10 cm H₂O** to support ventilation and work of breathing.
+
+  - file: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
+    row: 11
+    reason: >-
+      The row bundled more than one action, so no single level could carry it without
+      over- or under-granting half of itself. Each part now cites the PEMS row that prints
+      it; the first part keeps the row number and the rest are lettered so no citation
+      downstream shifts.
+    parts:
+      - row: 11
+        level: EMR
+        source: cited
+        pems: p.49#4
+        text: >-
+          **Reassessment and Transport:**<br>• Continuously monitor respiratory status,
+          auscultation, and SpO₂.<br>• Reassess after each bronchodilator treatment.
+      - row: 11a
+        level: EMT
+        source: cited
+        pems: p.50#11
+        text: >-
+          • Expedite transport for severe or deteriorating patients.
+
+  - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+    row: 5
+    reason: >-
+      The row bundled more than one action, so no single level could carry it without
+      over- or under-granting half of itself. Each part now cites the PEMS row that prints
+      it; the first part keeps the row number and the rest are lettered so no citation
+      downstream shifts.
+    parts:
+      - row: 5
+        level: EMT
+        source: cited
+        pems: p.49#6
+        text: >-
+          **Continuous Monitoring**<br>• Pulse oximetry<br>• EtCO2 when available
+      - row: 5a
+        level: I
+        source: cited
+        pems: p.50#10
+        text: >-
+          • Cardiac monitor
+
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 13
+    reason: >-
+      The row bundled more than one action, so no single level could carry it without
+      over- or under-granting half of itself. Each part now cites the PEMS row that prints
+      it; the first part keeps the row number and the rest are lettered so no citation
+      downstream shifts.
+    parts:
+      - row: 13
+        level: EMR
+        source: cited
+        pems: p.49#4
+        text: >-
+          **Monitoring and Reassessment:**<br>• Reassess airway patency frequently; edema may
+          progress rapidly<br>• Observe for signs of respiratory failure requiring immediate
+          airway intervention
+      - row: 13a
+        level: EMT
+        source: cited
+        pems: p.49#6
+        text: >-
+          • Monitor SpO2, EtCO2, and respiratory rate continuously
+      - row: 13b
+        level: I
+        source: cited
+        pems: p.50#10
+        text: >-
+          • Cardiac monitoring
+
+  - file: protocols/trauma/09_Electrical_Injuries_PROC.md
+    row: 7
+    reason: >-
+      The row bundled more than one action, so no single level could carry it without
+      over- or under-granting half of itself. Each part now cites the PEMS row that prints
+      it; the first part keeps the row number and the rest are lettered so no citation
+      downstream shifts.
+    parts:
+      - row: 7
+        level: EMT
+        source: cited
+        pems: p.96#8
+        text: >-
+          Obtain 12-Lead ECG
+      - row: 7a
+        level: I
+        source: cited
+        pems: p.96#11
+        text: >-
+          Monitor rhythm continuously
+
+  - file: protocols/trauma/09_Lightning_Injuries_PROC.md
+    row: 7
+    reason: >-
+      The row bundled more than one action, so no single level could carry it without
+      over- or under-granting half of itself. Each part now cites the PEMS row that prints
+      it; the first part keeps the row number and the rest are lettered so no citation
+      downstream shifts.
+    parts:
+      - row: 7
+        level: EMT
+        source: cited
+        pems: p.96#8
+        text: >-
+          Obtain and transmit a 12-Lead ECG
+      - row: 7a
+        level: I
+        source: cited
+        pems: p.96#11
+        text: >-
+          Monitor rhythm.
+
+  - file: protocols/trauma/09_Trauma_PROC.md
+    row: 2
+    reason: >-
+      The row bundled more than one action, so no single level could carry it without
+      over- or under-granting half of itself. Each part now cites the PEMS row that prints
+      it; the first part keeps the row number and the rest are lettered so no citation
+      downstream shifts.
+    parts:
+      - row: 2
+        level: EMR
+        source: cited
+        pems: p.49#1
+        text: >-
+          Ensure scene safety.
+      - row: 2a
+        level: EMT
+        source: cited
+        pems: p.91#7
+        text: >-
+          Extricate/move patient to safety if necessary.
+
+  - file: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
+    row: 10
+    reason: >-
+      The row bundled more than one action, so no single level could carry it without
+      over- or under-granting half of itself. Each part now cites the PEMS row that prints
+      it; the first part keeps the row number and the rest are lettered so no citation
+      downstream shifts.
+    parts:
+      - row: 10
+        level: I
+        source: cited
+        pems: p.247#4
+        text: >-
+          **Endotracheal Intubation:**<br>• Follow Endotracheal Intubation procedure. Patients
+          12 years and older.<br>• ⚠ Intubation of spontaneously breathing patients without
+          rapid sequence induction (RSI) is generally not recommended.
+      - row: 10a
+        level: P
+        source: cited
+        pems: p.247#6
+        text: >-
+          • Orally intubate. Patients under 12 years old.
+
+  - file: procedures/Neonatal_Resuscitation.md
+    row: 5
+    reason: >-
+      The row bundled more than one action, so no single level could carry it without
+      over- or under-granting half of itself. Each part now cites the PEMS row that prints
+      it; the first part keeps the row number and the rest are lettered so no citation
+      downstream shifts.
+    parts:
+      - row: 5
+        level: A
+        source: cited
+        pems: p.261#10
+        text: >-
+          Obtain IV/IO access
+      - row: 5a
+        level: I
+        source: cited
+        pems: p.261#12
+        text: >-
+          Administer [Epinephrine](../pharmacology/Epinephrine.md) 0.01 mg/kg (0.1 mg/mL).
+          Repeat q3-5 mins.

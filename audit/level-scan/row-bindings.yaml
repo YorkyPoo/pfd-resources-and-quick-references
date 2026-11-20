@@ -117,16 +117,6 @@ bindings:
       p.235#6 prints 'Monitor ETCO2. If ETCO2 < 10 or dropping, reassess and optimize
       compression rate, depth, and recoil.' badged EMT — this row verbatim. Cross-page: p.57
       has no capnography row; the CPR procedure owns it.
-  - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
-    row: 8
-    status: owner_required
-    reason: >-
-      No PEMS 2024 row prints this bundled AED-application + rhythm-determination +
-      defibrillation step at one level. The rows that print it split the badge from the words:
-      p.235#4 and p.263#4 carry badge EMR while scoping rhythm determination to 'EMT-I or P'
-      in the same row, and p.63#7 badges defibrillation I while bracketing its AED clause
-      '[EMR]'. Citing any of them would chip a level the row's own text contradicts. The
-      page's EMT is kept and flagged.
   - file: protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
     row: 3
     pems_page: 239
@@ -139,31 +129,6 @@ bindings:
       procedure. Adjust tidal volume, respiratory rate, and/or PEEP...' badged EMT — the
       BVM+EtCO2 management this row describes. Cross-page: the arrest protocols print no
       BVM/EtCO2 row; the Airway Management procedure owns it.
-  - file: protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
-    row: 4
-    status: owner_required
-    reason: >-
-      No PEMS 2024 row prints AED application + rhythm assessment + defibrillation at one
-      level. p.263#4 and p.235#4 print 'Apply AED / Assess cardiac rhythm every 2 minutes' at
-      badge EMR but scope rhythm determination to 'EMT-I or P' in the same row's text; p.63#7
-      badges defibrillation I and brackets its AED clause '[EMR]'. The page's EMT is kept and
-      flagged rather than chipped off a badge the row's own words contradict.
-  - file: protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
-    row: 5
-    status: owner_required
-    reason: >-
-      Same conflict: the only PEMS row printing defibrillation is p.63#7 (badge I, inline
-      '[EMR]' on the AED clause). A chip of I would contradict the [EMR] token, a chip of EMT
-      would contradict the printed badge; p.235#4/p.263#4 badge the AED step EMR but scope
-      rhythm determination to EMT-I/P. The page's EMT is kept and flagged.
-  - file: protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md
-    row: 5
-    status: owner_required
-    reason: >-
-      No PEMS 2024 row prints 'continue CPR / defibrillate if indicated' at one level: p.61#4
-      badges EMT while scoping the rhythm decision '(I / P)' in the same row, and p.63#7
-      badges defibrillation I with an inline '[EMR]' AED token. Both candidates contradict
-      their own text. The page's A is kept and flagged.
   - file: protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md
     row: 8
     pems_page: 84
@@ -231,14 +196,6 @@ bindings:
       p.49#2 prints 'Initial Assessment • Perform Primary and Secondary Survey as indicated by
       patient status...' badged EMR; the vital-signs clause is p.49#4, also EMR, so one chip
       is consistent with both. Cross-page: p.109 prints no primary-assessment row.
-  - file: protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md
-    row: 5
-    status: owner_required
-    reason: >-
-      No PEMS 2024 row prints defibrillation with an unambiguous single badge. p.63#7 badges
-      it I but brackets its own AED clause '[EMR]' and this page's row states '(AED for
-      EMR/EMT, Manual for I/P)'; p.235#4/p.263#4 badge the AED/rhythm step EMR but scope
-      rhythm determination to EMT-I/P. The page's EMT is kept and flagged.
   - file: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
     row: 4
     pems_page: 239
@@ -262,14 +219,6 @@ bindings:
       p.87#7 prints 'Consider endotracheal intubation vs immediate transport ... if any signs
       or symptoms of airway injury develop' badged I — the same decision on the same signs.
       Cross-page: p.153 prints no advanced-airway assessment row.
-  - file: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
-    row: 10
-    status: owner_required
-    reason: >-
-      PEMS prints endotracheal intubation as two age-split rows: p.247#4 (badge I) for
-      patients 12 and older and p.247#6 (badge P) for patients under 12. This site row invokes
-      the procedure without an age limit, so no single badge is correct; the page's P is kept
-      and flagged.
   - file: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
     row: 7
     pems_page: 239
@@ -282,23 +231,6 @@ bindings:
       procedure. Adjust tidal volume, respiratory rate, and/or PEEP...' badged EMT — the
       assisted-ventilation step this row prepares. Cross-page: p.123-124 print no
       assist-ventilation row.
-  - file: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
-    row: 8
-    status: owner_required
-    reason: >-
-      Conflict, recorded: the CPAP rows are p.123#3 (badge EMT) and p.239#5 (badge EMT,
-      'Consider CPAP (PEEP: 5 cmH2O)... I/P only: Adjust PEEP to support ventilation and work
-      of breathing, up to 10 cmH2O'). This row is the PEEP-titration row, and p.239#5's own
-      text reserves that titration to I/P, so an EMT chip would contradict the cited row's
-      words while an I chip would contradict its printed badge. The page's I is kept and
-      flagged.
-  - file: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
-    row: 11
-    status: owner_required
-    reason: >-
-      No single PEMS 2024 row prints this reassessment-and-transport bundle: reassessment is
-      p.49#4 (badge EMR, reassess vitals every 15/5 minutes) and the transport step is p.50#11
-      (badge EMT). One chip cannot carry both, so the page's EMT is kept and flagged.
   - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
     row: 2
     status: owner_required
@@ -318,14 +250,6 @@ bindings:
       p.117#1 prints 'Place patient in a position of comfort. If unresponsive, place in
       recovery position and provide suctioning.' badged EMR — the position-of-comfort step
       this row expands. Cross-page: p.123-124 print no positioning row.
-  - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
-    row: 5
-    status: owner_required
-    reason: >-
-      No single PEMS 2024 row prints this monitoring bundle: continuous cardiac monitoring is
-      p.50#10 (badge I) and SpO2/EtCO2 assessment is p.49#6 (badge EMT), while continuous
-      ETCO2 waveform belongs to p.241#3 (badge EMT). Two levels, so the page's A is kept and
-      flagged.
   - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
     row: 9
     pems_page: 50
@@ -400,14 +324,6 @@ bindings:
       that row badges oxygen I but sits inside the decompression procedure ('Administer oxygen
       at 15 LPM (100% FiO2)') and would restrict routine oxygen to I.
   - file: protocols/respiratory/03_Pneumothorax_PROC.md
-    row: 4
-    status: owner_required
-    reason: >-
-      No single PEMS 2024 row prints this positioning-plus-access-plus-monitoring bundle:
-      position of comfort is p.117#1 (badge EMR), IV/IO access is p.50#9 (badge A) and
-      continuous cardiac monitoring is p.50#10 (badge I). Three levels, so the page's A is
-      kept and flagged.
-  - file: protocols/respiratory/03_Pneumothorax_PROC.md
     row: 5
     status: owner_required
     reason: >-
@@ -429,20 +345,6 @@ bindings:
       procedure.' badged I — this row verbatim. Cross-page: p.243 prints the technique, not
       the traumatic-arrest indication.
   - file: protocols/respiratory/03_Pneumothorax_PROC.md
-    row: 12
-    status: owner_required
-    reason: >-
-      No single PEMS 2024 row prints this haemodynamic bundle: the fluid bolus is p.113#4
-      (badge A) and vasopressor support is p.113#6 (badge I). Two levels, so the page's I is
-      kept and flagged.
-  - file: protocols/respiratory/03_Pneumothorax_PROC.md
-    row: 13
-    status: owner_required
-    reason: >-
-      No single PEMS 2024 row prints this advanced-airway bundle: adult intubation is p.247#4
-      (badge I), paediatric is p.247#6 (badge P) and surgical airway is p.269#0 (badge P).
-      Three rows, two levels, so the page's P is kept and flagged.
-  - file: protocols/respiratory/03_Pneumothorax_PROC.md
     row: 14
     pems_page: 84
     pems_ordinal: 14
@@ -455,23 +357,24 @@ bindings:
       immediately to a Level 1 or Level II Trauma Center. Goal scene time: Less than 10
       minutes.' badged EMT — the trauma-centre transport step this row expands. Cross-page:
       p.243 prints no transport row.
-  - file: protocols/respiratory/03_Pneumothorax_PROC.md
-    row: 15
-    status: owner_required
-    reason: >-
-      No PEMS 2024 row prints this en-route monitoring bundle. Reassessment after
-      decompression is p.243#4 (badge I) while routine reassessment is p.49#4 (badge EMR); two
-      levels, so the page's EMT is kept and flagged.
   - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
     row: 9
     status: owner_required
+    owner_note: >-
+      &#9873; **CPAP titration — level pending.** PEMS prints PEEP titration in two rows that
+      disagree with each other, so no single printed badge assigns this level. The level shown
+      is provisional until Medical Control confirms it.
     reason: >-
       Conflict, recorded: p.239#5 prints 'Consider CPAP (PEEP: 5 cmH2O) ... I/P only: Adjust
       PEEP to support ventilation and work of breathing, up to 10 cmH2O' at badge EMT, and
-      p.245#4 adds 'Consider titrating PEEP ... CPAP, BiPAP, and PEEP are RED DOT procedures
-      at all EMS Certification Levels'. This row is the titration step the source's own text
-      reserves to I/P, so an EMT chip would contradict the cited row's words. The page's P is
-      kept and flagged.
+      p.245#4 (CPAP/BiPAP/PEEP procedure) prints 'Consider titrating PEEP (9%-15 mmHg) as
+      needed to improve ventilation/work of breathing. CPAP, BiPAP, and PEEP are RED DOT
+      procedures at all EMS Certification Levels' at badge EMT. Two printed rows disagree
+      (I/P-only scope in one, EMT badge in the other) and no printed row badges the titration
+      at I, so neither level is a single-row citation. The page's P is kept and flagged as an
+      open owner/OMD decision. A 2026-11-20 attempt to rule it to I was reverted: it was
+      labelled `owner_ruled` although the owner never ruled on PEEP titration, and the pearl
+      evidence for I is on the Respiratory Distress page (Pearl 4), not this page's source.
   - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
     row: 3
     pems_page: 247
@@ -506,13 +409,6 @@ bindings:
       p.247#13 prints 'Monitor ET tube placement and ventilation with SpO2 and Continuous box
       waveform ETCO2' badged EMT — the ongoing tube/ventilation monitoring this row expands.
       Cross-page: p.239 prints no ongoing-tube row.
-  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
-    row: 3
-    status: owner_required
-    reason: >-
-      No single PEMS 2024 row prints this monitoring bundle: continuous cardiac monitoring is
-      p.50#10 (badge I) and SpO2/EtCO2 assessment is p.49#6 (badge EMT). Two levels, so the
-      page's EMT is kept and flagged.
   - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
     row: 5
     pems_page: 117
@@ -559,13 +455,6 @@ bindings:
       p.50#7 prints 'Consider 12-Lead ECG. Refer to Chest Pain (Cardiac) protocol. Acquire
       within 5 minutes of patient contact.' badged EMT — the 12-lead/refer-to-Chest-Pain step
       this row expands. Cross-page: p.123-124 print no 12-lead row.
-  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
-    row: 16
-    status: owner_required
-    reason: >-
-      No single PEMS 2024 row prints this respiratory-failure bundle: BVM support is p.239#7
-      (badge EMT), adult intubation p.239#9 (badge I) and paediatric p.239#10 (badge P). Three
-      rows, three levels, so the page's P is kept and flagged.
   - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
     row: 2
     pems_page: 49
@@ -631,13 +520,6 @@ bindings:
       p.87#6 prints 'For an adult patient with SBP less than 90 and TBSA greater than 20%,
       administer: ADULT: 0.9% Sodium chloride at 500 mL/hr IV/IO ...' badged A — the burn
       fluid-resuscitation step this row expands. Cross-page: p.153 prints no fluid row.
-  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
-    row: 13
-    status: owner_required
-    reason: >-
-      No single PEMS 2024 row prints this monitoring bundle: routine reassessment is p.49#4
-      (badge EMR), continuous cardiac monitoring p.50#10 (badge I) and continuous ETCO2
-      waveform p.241#3 (badge EMT). Multiple levels, so the page's EMT is kept and flagged.
   - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
     row: 14
     pems_page: 50
@@ -837,16 +719,6 @@ bindings:
       chip is I and the bracket means I performs it only with Medical Control authorisation.
 
   # ---------------------------------------------------------------- Electrical Injuries (p.95-96)
-  - file: protocols/trauma/09_Electrical_Injuries_PROC.md
-    row: 7
-    status: owner_required
-    reason: >-
-      No single PEMS 2024 row prints this 12-lead-plus-continuous-monitoring bundle:
-      p.96#8 badges 'Obtain and transmit a 12-Lead ECG' EMT and p.96#11 badges 'Assess and
-      continuously monitor cardiac rhythm' I. Two levels, so the page's A is kept and
-      flagged rather than chipped off one row that would contradict the other.
-
-  # ---------------------------------------------------------------- Hemorrhage Control (p.75)
   - file: protocols/trauma/09_Hemorrhage_Control_PROC.md
     row: 8
     pems_page: 273
@@ -872,23 +744,6 @@ bindings:
       p.75#3 (badge EMR), which would chip an MC contact as EMR; the binding overrides it.
 
   # ---------------------------------------------------------------- Lightning Injuries (p.96)
-  - file: protocols/trauma/09_Lightning_Injuries_PROC.md
-    row: 7
-    status: owner_required
-    reason: >-
-      No single PEMS 2024 row prints this 12-lead-plus-monitoring bundle: p.96#8 badges
-      'Obtain and transmit a 12-Lead ECG' EMT and p.96#11 badges 'Assess and continuously
-      monitor cardiac rhythm' I. Two levels, so the page's EMT is kept and flagged.
-
-  # ---------------------------------------------------------------- Trauma (p.83-84)
-  - file: protocols/trauma/09_Trauma_PROC.md
-    row: 2
-    status: owner_required
-    reason: >-
-      No PEMS 2024 row prints scene safety plus extrication/movement to safety. p.49#1
-      prints scene safety/PPE (badge EMR) but not extrication; p.91#7 prints extrication
-      from entrapment (badge EMT) but not scene safety. Two rows, two levels, so the page's
-      EMT is kept and flagged.
   - file: protocols/trauma/09_Trauma_PROC.md
     row: 7
     pems_page: 50
@@ -1814,6 +1669,17 @@ bindings:
       badge I.
 
   - file: procedures/Endotracheal_Intubation.md
+    row: 0
+    pems_page: 247
+    pems_ordinal: 0
+    evidence: >-
+      p.247#0 prints 'Follow Universal Patient Care / Initial Patient Contact protocol.' at badge
+      EMR — the first printed row of the procedure, which the page omitted. Owner instruction
+      2026-11-20: restored in printed order (row 0 keeps the printed position ahead of row 1
+      rather than renumbering 1-11, which would shift every audit key on this page). Gap-fill
+      only; no existing row changes.
+
+  - file: procedures/Endotracheal_Intubation.md
     row: 1
     pems_page: 247
     pems_ordinal: 1
@@ -1935,6 +1801,17 @@ bindings:
       comfort. Refer to" (the sentence continues on p.247#12 with "the Sedation Post Advanced
       Airway Protocol."). badge I. The page published P, so the chip moves P -> I and the move is
       listed for owner review.
+
+  - file: procedures/Endotracheal_Intubation.md
+    row: 11
+    pems_page: 247
+    pems_ordinal: 13
+    evidence: >-
+      p.247#13 prints 'Monitor ET tube placement and ventilation with SpO2 and Continuous box
+      waveform ETCO2' at badge EMT (printed in red on the page). Owner instruction 2026-11-20:
+      the procedure page omitted this printed row — the EMT step that keeps watching an
+      intubated patient — so it is restored in printed order after row 10. Gap-fill only; no
+      existing row changes.
 
   - file: procedures/Intraosseous_Access.md
     row: 1
@@ -2371,18 +2248,567 @@ bindings:
       Same PEMS row also prints "Confirm mechanical capture by palpating femoral pulses. Reassess
       the patient." badge I.
 
-  - file: procedures/Neonatal_Resuscitation.md
-    row: 5
+  # --------------------------------------------------------------------------
+  # Owner instruction 2026-11-20 (row-structure pass): bundled rows split into
+  # one action per row. The first part keeps the row number, the rest are
+  # lettered; each part cites the PEMS row that prints that action, and
+  # quoted_row_text names the clause this row publishes so the chip can be
+  # checked against the source's own words.
+  #
+  # Three split parts (8a, 4a here and Asthma 8a) could be neither cited nor
+  # ruled: PEMS prints the action inside a row badged for a different clause and
+  # scopes it in that row's own words. They are declared owner_required below —
+  # the citation is the row that PRINTS the action, never a badge, and no owner
+  # statement about the level is claimed.
+  # --------------------------------------------------------------------------
+
+  - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
+    row: 8a
     status: owner_required
     owner_note: >-
-      &#9873; **OWNER_REQUIRED** — row 5: this row prints two actions that PEMS 2024 splits
-      across two rows at two lower levels — "Obtain IV/IO access if not already obtained."
-      (p.261#10, badge A) and "Administer: Epinephrine (Adrenaline) 0.01mg/kg (0.1mg/mL)
-      IV/IO" (p.261#12, badge I). No p.261 row prints either at P, so the P this page
-      publishes has no PEMS authorisation and stays flagged. See
-      <code>audit/level-scan/level-rule-ledger.md</code>.
+      &#9873; **Rhythm interpretation — level pending.** PEMS scopes interpretation of the rhythm
+      to &quot;as determined by EMT-I or P&quot; while printing it inside a row badged EMR, so the
+      level shown is provisional. Interpret the rhythm only at the level Medical Control
+      confirms.
     reason: >-
-      The row bundles two actions printed on two PEMS rows at two different levels: "Obtain IV/IO
-      access if not already obtained." (p.261#10, badge A) and "Administer: Epinephrine
-      (Adrenaline) 0.01mg/kg (0.1mg/mL) IV/IO" (p.261#12, badge I). One chip cannot carry both;
-      the level this page published (P) is kept and flagged.
+      Conflict, recorded: PEMS prints rhythm determination but never badges it on its own.
+      p.235#4 prints "Apply
+      AED / Assess cardiac rhythm every 2 minutes" at badge EMR, and in the same sentence
+      scopes the classification: "rhythm is VF or VT (as determined by EMT-I or P)"; p.263#4
+      prints the same scoping word for word. The lowest level those rows' own words give it is
+      I, which is the chip, but a single chip cannot be the printed EMR badge and the I the
+      row's text scopes, so this is an open decision, not a citation. No owner statement about
+      the level of rhythm determination exists and none is attributed to him: the owner's
+      2026-11-20 instruction was the SPLIT (rhythm determination becomes its own row).
+      p.50#10 ("Consider continuous cardiac monitoring", badge I) was cited here before and is
+      NOT the authority — that row does not print rhythm determination.
+
+  - file: protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
+    row: 4a
+    status: owner_required
+    owner_note: >-
+      &#9873; **Rhythm interpretation — level pending.** PEMS scopes interpretation of the rhythm
+      to &quot;as determined by EMT-I or P&quot; while printing it inside a row badged EMR, so the
+      level shown is provisional. Interpret the rhythm only at the level Medical Control
+      confirms.
+    reason: >-
+      Conflict, recorded: same shape as Asystole row 8a. p.235#4 / p.263#4 print rhythm
+      assessment at badge EMR and scope the classification to "(as determined by EMT-I or P)" in
+      the row's own words, so the level I is read off the source's text and no single printed
+      badge authorises it. Open decision; the owner's 2026-11-20 instruction was the split only.
+
+  - file: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
+    row: 8a
+    status: owner_required
+    owner_note: >-
+      &#9873; **PEEP titration above 5 cm H₂O — level pending.** PEMS prints titration only inside
+      rows badged EMT, and its two printed rows disagree: one scopes it to &quot;I/P only&quot;, the
+      other badges it at every level. The level shown follows the I/P wording and is provisional
+      until Medical Control confirms it. The same question is open for CPAP titration on the
+      Pulmonary Edema protocol.
+    reason: >-
+      Conflict, recorded: PEEP titration above the initial 5 cm H2O is printed only inside rows
+      badged EMT, and the
+      two printed rows DISAGREE: p.239#5 ("Consider CPAP (PEEP: 5 cmH2O) ... I/P only: Adjust
+      PEEP to support ventilation and work of breathing, up to 10 cmH2O", badge EMT) scopes the
+      titration to I/P, while p.245#4 in the CPAP/BiPAP/PEEP procedure ("Consider titrating PEEP
+      ... CPAP, BiPAP, and PEEP are RED DOT procedures at all EMS Certification Levels", badge
+      EMT) badges it at every level. The chip is I, the level p.239#5's own words give it; no
+      printed badge badges titration at I, so it is an open decision, not a citation. The same
+      conflict is recorded for Pulmonary Edema row 9, which keeps P. The owner's 2026-11-20
+      instruction was the split (initiation / titration as separate rows), not this level.
+
+  - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
+    row: 8
+    pems_page: 235
+    pems_ordinal: 4
+    cross_page: true
+    quoted_row_text: "Apply AED / Assess cardiac rhythm every 2 minutes. If AED is advising to shock"
+    evidence: >-
+      p.235#4 prints "Apply AED / Assess cardiac rhythm every 2 minutes. If AED is advising
+      to shock ... defibrillate at maximum joules" at badge EMR. Applying the AED and acting
+      on the AED's shock decision is the EMR half of the old bundled row, printed at EMR in
+      the source's own words. The parenthetical "(as determined by EMT-I or P)" in the same
+      printed sentence scopes the rhythm CLASSIFICATION, which is now row 8a and is flagged
+      there as an open decision — it is not used to level this row. Owner instruction
+      2026-11-20 (row-structure pass): this action was one of several bundled in a single
+      row, so no single level could carry it. Owner ruling R2 (2026-11-20): the AED half
+      carries no energy figures; the device selects the energy.
+
+  - file: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
+    row: 8b
+    pems_page: 63
+    pems_ordinal: 7
+    cross_page: true
+    quoted_row_text: "immediately defibrillate: ADULT: 200 joules Biphasic / 360 joules Monophasic, or manufacturer’s recommendation. PEDIATRIC: 2 joules/kg initial, 4 joules/kg subsequent"
+    evidence: >-
+      p.63#7 prints the manual defibrillation with its adult/pediatric energies at badge I.
+      The same printed row carries an inline "[EMR]" token, but that token scopes the AED
+      trigger, which is now row 8 (cited to p.235#4) — row 8b publishes only the manual
+      energies, which p.63#7 prints once, and it no longer carries the AED device phrase
+      ("maximum joules") that p.63#7 does not print. Review round 3, blocking #1.
+
+  - file: protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
+    row: 4
+    pems_page: 235
+    pems_ordinal: 4
+    cross_page: true
+    quoted_row_text: "Apply AED / Assess cardiac rhythm every 2 minutes."
+    evidence: >-
+      p.235#4 prints "Apply AED / Assess cardiac rhythm every 2 minutes." at badge EMR.
+      Applying the AED and reassessing every 2 minutes is the EMR half of the old bundled row.
+      Owner instruction 2026-11-20 (row-structure pass): this action was one of several
+      bundled in a single row, so no single level could carry it. It is now its own row and
+      its chip is the badge the cited row prints for it.
+
+  - file: protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
+    row: 5
+    pems_page: 63
+    pems_ordinal: 7
+    quoted_row_text: "immediately defibrillate: ADULT: 200 joules Biphasic / 360 joules Monophasic, or manufacturer’s recommendation."
+    evidence: >-
+      p.63#7 prints the defibrillation and its adult/pediatric energies at badge I. The inline
+      "[EMR]" token on that row scopes its AED clause, not the defibrillation the clause
+      quoted here publishes; the AED half is row 4.
+
+  - file: protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md
+    row: 5a
+    pems_page: 235
+    pems_ordinal: 2
+    cross_page: true
+    quoted_row_text: "Begin chest compressions. Push hard and fast."
+    evidence: >-
+      p.235#2 prints chest compressions at badge EMR ("Begin chest compressions. Push hard and
+      fast."). The two minutes of CPR after a shock is CPR, so it is EMR. Owner instruction
+      2026-11-20 (row-structure pass): this action was one of several bundled in a single row,
+      so no single level could carry it. It is now its own row and its chip is the badge the
+      cited row prints for it.
+
+  - file: protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md
+    row: 5
+    pems_page: 61
+    pems_ordinal: 4
+    quoted_row_text: "Continue CPR."
+    evidence: >-
+      p.61#4 prints "For PEA/Witnessed Asystole: Continue CPR." at badge EMT. The same row
+      scopes the rhythm decision to "(I / P)", which is the defibrillation half now in row 5a;
+      the clause quoted here scopes nothing.
+
+  - file: protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md
+    row: 5a
+    pems_page: 63
+    pems_ordinal: 7
+    cross_page: true
+    quoted_row_text: "immediately defibrillate"
+    evidence: >-
+      p.63#7 prints defibrillation at badge I; the row quoted publishes only that clause, so
+      the "[EMR]" token on its AED clause cannot contradict this chip. Owner instruction
+      2026-11-20 (row-structure pass): this action was one of several bundled in a single row,
+      so no single level could carry it. It is now its own row and its chip is the badge the
+      cited row prints for it.
+
+  - file: protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md
+    row: 5
+    pems_page: 235
+    pems_ordinal: 4
+    cross_page: true
+    quoted_row_text: "defibrillate at maximum joules"
+    evidence: >-
+      p.235#4 prints "Apply AED / Assess cardiac rhythm every 2 minutes ... If AED is advising
+      to shock ... defibrillate at maximum joules" at badge EMR: the AED half. The joules the
+      page prints (200 J biphasic / 360 J monophasic, 2 J/kg then 4 J/kg) are NOT on this row —
+      PEMS prints them once, in the manual-defibrillation clause of p.63#7, which is badge I and
+      is the row below (5a). Operator ruling 2026-11-20 (R2): a split half carries its own text;
+      the AED half names the device action and no energy figure, because an EMR does not select
+      energy — the device does.
+
+  - file: protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md
+    row: 5a
+    pems_page: 63
+    pems_ordinal: 7
+    quoted_row_text: "immediately defibrillate: ADULT: 200 joules Biphasic / 360 joules Monophasic, or manufacturer’s recommendation."
+    evidence: >-
+      p.63#7 prints the manual defibrillation and its energies at badge I. The inline "[EMR]"
+      token on that row scopes its AED clause, which is row 5 and is cited there.
+
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 4
+    pems_page: 117
+    pems_ordinal: 1
+    cross_page: true
+    quoted_row_text: "Place patient in a position of comfort."
+    evidence: >-
+      p.117#1 prints positioning at badge EMR. Owner instruction 2026-11-20 (row-structure
+      pass): this action was one of several bundled in a single row, so no single level could
+      carry it. It is now its own row and its chip is the badge the cited row prints for it.
+
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 4a
+    pems_page: 50
+    pems_ordinal: 9
+    cross_page: true
+    quoted_row_text: "Establish IV / IO access when indicated."
+    evidence: >-
+      p.50#9 (Universal Patient Care) prints IV/IO access at badge A. Owner instruction
+      2026-11-20 (row-structure pass): this action was one of several bundled in a single row,
+      so no single level could carry it. It is now its own row and its chip is the badge the
+      cited row prints for it.
+
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 4b
+    pems_page: 50
+    pems_ordinal: 10
+    cross_page: true
+    quoted_row_text: "Consider continuous cardiac monitoring."
+    evidence: >-
+      p.50#10 prints continuous cardiac monitoring at badge I. The row also names pulse
+      oximetry, which p.49#6 badges EMT; the higher level governs the row, as recorded for the
+      Batch 7 bundled rows.
+
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 12
+    pems_page: 113
+    pems_ordinal: 4
+    cross_page: true
+    quoted_row_text: "ADULT: 0.9% Sodium Chloride up to 1 L IV/IO in 250 – 500 mL boluses"
+    evidence: >-
+      p.113#4 prints the fluid bolus at badge A. Owner instruction 2026-11-20 (row-structure
+      pass): this action was one of several bundled in a single row, so no single level could
+      carry it. It is now its own row and its chip is the badge the cited row prints for it.
+
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 12a
+    pems_page: 113
+    pems_ordinal: 6
+    cross_page: true
+    quoted_row_text: "Maintain mean arterial pressure (MAP) above 65 mmHg."
+    evidence: >-
+      p.113#6 prints vasopressor support at badge I. Owner instruction 2026-11-20
+      (row-structure pass): this action was one of several bundled in a single row, so no
+      single level could carry it. It is now its own row and its chip is the badge the cited
+      row prints for it.
+
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 13
+    pems_page: 247
+    pems_ordinal: 4
+    cross_page: true
+    quoted_row_text: "Orally intubate. Patients 12 years and older."
+    evidence: >-
+      p.247#4 prints oral intubation for patients 12 years and older at badge I. Owner
+      instruction 2026-11-20 (row-structure pass): this action was one of several bundled in a
+      single row, so no single level could carry it. It is now its own row and its chip is the
+      badge the cited row prints for it.
+
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 13a
+    pems_page: 247
+    pems_ordinal: 6
+    cross_page: true
+    quoted_row_text: "Orally Intubate. Patients < 12 years old."
+    evidence: >-
+      p.247#6 prints oral intubation for patients under 12 at badge P. Owner instruction
+      2026-11-20 (row-structure pass): this action was one of several bundled in a single row,
+      so no single level could carry it. It is now its own row and its chip is the badge the
+      cited row prints for it.
+
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 13b
+    pems_page: 247
+    pems_ordinal: 9
+    cross_page: true
+    quoted_row_text: "If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway."
+    evidence: >-
+      p.247#9 prints the surgical-airway escalation at badge P. The action was named in the
+      old row’s OWNER_REQUIRED reason (p.269#0 badge P) but not printed on the page; the split
+      states it in the source’s own words at the level PEMS prints.
+
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 15
+    pems_page: 49
+    pems_ordinal: 4
+    cross_page: true
+    quoted_row_text: "Closely monitor the patient, paying specific attention to their condition immediately before or after an intervention."
+    evidence: >-
+      p.49#4 prints continuous reassessment at badge EMR. Owner instruction 2026-11-20
+      (row-structure pass): this action was one of several bundled in a single row, so no
+      single level could carry it. It is now its own row and its chip is the badge the cited
+      row prints for it.
+
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 15a
+    pems_page: 243
+    pems_ordinal: 4
+    quoted_row_text: "Reassess the patient, including vital signs and respiratory effort / compliance. Consider repeating the above steps for continued or recurrent hemodynamic instability."
+    evidence: >-
+      p.243#4 prints reassessment for recurrent instability after decompression at badge I.
+      The row previously also carried "Secure catheter to prevent dislodgement" and this
+      binding explained it as p.247#11 — that was wrong: p.247#11 prints "Secure the tube"
+      for an endotracheal tube in the intubation procedure, not a chest catheter, and no
+      printed row in the Chest Decompression procedure (p.243#0-#4) secures the catheter
+      (p.243#3 stops at removing the needle). The clause was removed in review round 3,
+      blocking #2; both remaining clauses rest on p.243#4.
+
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 3
+    pems_page: 49
+    pems_ordinal: 6
+    cross_page: true
+    quoted_row_text: "Assess SpO2. Consider assessing EtCO2 and/or SpCO as indicated."
+    evidence: >-
+      p.49#6 prints SpO2/EtCO2 assessment at badge EMT. Owner instruction 2026-11-20
+      (row-structure pass): this action was one of several bundled in a single row, so no
+      single level could carry it. It is now its own row and its chip is the badge the cited
+      row prints for it.
+
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 3a
+    pems_page: 50
+    pems_ordinal: 10
+    cross_page: true
+    quoted_row_text: "Consider continuous cardiac monitoring."
+    evidence: >-
+      p.50#10 prints continuous cardiac monitoring at badge I. Owner instruction 2026-11-20
+      (row-structure pass): this action was one of several bundled in a single row, so no
+      single level could carry it. It is now its own row and its chip is the badge the cited
+      row prints for it.
+
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 16
+    pems_page: 239
+    pems_ordinal: 7
+    cross_page: true
+    quoted_row_text: "Support respirations with BVM."
+    evidence: >-
+      p.239#7 prints BVM support at badge EMT. The transport bullet stays with this row
+      (p.50#11 badges transport EMT, the same level). Owner instruction 2026-11-20
+      (row-structure pass): this action was one of several bundled in a single row, so no
+      single level could carry it. It is now its own row and its chip is the badge the cited
+      row prints for it.
+
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 16a
+    pems_page: 239
+    pems_ordinal: 9
+    cross_page: true
+    quoted_row_text: "If apneic and ≥ 12 years old: Consider endotracheal intubation if unable to ventilate adequately by less invasive means."
+    evidence: >-
+      p.239#9 prints adult advanced airway at badge I. Owner instruction 2026-11-20
+      (row-structure pass): this action was one of several bundled in a single row, so no
+      single level could carry it. It is now its own row and its chip is the badge the cited
+      row prints for it.
+
+  - file: protocols/respiratory/03_Respiratory_Distress_PROC.md
+    row: 16b
+    pems_page: 239
+    pems_ordinal: 10
+    cross_page: true
+    quoted_row_text: "If apneic and < 12 years old: consider endotracheal intubation if unable to ventilate adequately by less invasive means."
+    evidence: >-
+      p.239#10 prints paediatric advanced airway at badge P. Owner instruction 2026-11-20
+      (row-structure pass): this action was one of several bundled in a single row, so no
+      single level could carry it. It is now its own row and its chip is the badge the cited
+      row prints for it.
+
+  - file: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
+    row: 8
+    pems_page: 239
+    pems_ordinal: 5
+    cross_page: true
+    quoted_row_text: "Consider CPAP (PEEP: 5 cmH2O) for respiratory distress."
+    evidence: >-
+      p.239#5 prints CPAP initiation at PEEP 5 at badge EMT. The same row scopes the PEEP
+      titration to "I/P only", which is now row 8a (owner ruling, level-rulings.yaml); the
+      clause quoted here scopes nothing.
+
+  - file: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
+    row: 11
+    pems_page: 49
+    pems_ordinal: 4
+    cross_page: true
+    quoted_row_text: "Closely monitor the patient, paying specific attention to their condition immediately before or after an intervention."
+    evidence: >-
+      p.49#4 prints continuous monitoring and reassessment at badge EMR. Owner instruction
+      2026-11-20 (row-structure pass): this action was one of several bundled in a single row,
+      so no single level could carry it. It is now its own row and its chip is the badge the
+      cited row prints for it.
+
+  - file: protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md
+    row: 11a
+    pems_page: 50
+    pems_ordinal: 11
+    cross_page: true
+    quoted_row_text: "Transport decisions should be based on patient’s clinical condition."
+    evidence: >-
+      p.50#11 prints transport at badge EMT. Owner instruction 2026-11-20 (row-structure
+      pass): this action was one of several bundled in a single row, so no single level could
+      carry it. It is now its own row and its chip is the badge the cited row prints for it.
+
+  - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+    row: 5
+    pems_page: 49
+    pems_ordinal: 6
+    cross_page: true
+    quoted_row_text: "Assess SpO2. Consider assessing EtCO2 and/or SpCO as indicated."
+    evidence: >-
+      p.49#6 prints pulse oximetry and EtCO2 assessment at badge EMT. Owner instruction
+      2026-11-20 (row-structure pass): this action was one of several bundled in a single row,
+      so no single level could carry it. It is now its own row and its chip is the badge the
+      cited row prints for it.
+
+  - file: protocols/respiratory/03_Pediatric_Stridor_PROC.md
+    row: 5a
+    pems_page: 50
+    pems_ordinal: 10
+    cross_page: true
+    quoted_row_text: "Consider continuous cardiac monitoring."
+    evidence: >-
+      p.50#10 prints continuous cardiac monitoring at badge I. Owner instruction 2026-11-20
+      (row-structure pass): this action was one of several bundled in a single row, so no
+      single level could carry it. It is now its own row and its chip is the badge the cited
+      row prints for it.
+
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 13
+    pems_page: 49
+    pems_ordinal: 4
+    cross_page: true
+    quoted_row_text: "Closely monitor the patient, paying specific attention to their condition immediately before or after an intervention."
+    evidence: >-
+      p.49#4 prints continuous monitoring of the patient at badge EMR. Owner instruction
+      2026-11-20 (row-structure pass): this action was one of several bundled in a single row,
+      so no single level could carry it. It is now its own row and its chip is the badge the
+      cited row prints for it.
+
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 13a
+    pems_page: 49
+    pems_ordinal: 6
+    cross_page: true
+    quoted_row_text: "Assess SpO2. Consider assessing EtCO2 and/or SpCO as indicated."
+    evidence: >-
+      p.49#6 prints SpO2/EtCO2 assessment at badge EMT. Owner instruction 2026-11-20
+      (row-structure pass): this action was one of several bundled in a single row, so no
+      single level could carry it. It is now its own row and its chip is the badge the cited
+      row prints for it.
+
+  - file: protocols/respiratory/03_Smoke_Inhalation_PROC.md
+    row: 13b
+    pems_page: 50
+    pems_ordinal: 10
+    cross_page: true
+    quoted_row_text: "Consider continuous cardiac monitoring."
+    evidence: >-
+      p.50#10 prints continuous cardiac monitoring at badge I; PEMS’s own words are used
+      because the row did not name it. Owner instruction 2026-11-20 (row-structure pass): this
+      action was one of several bundled in a single row, so no single level could carry it. It
+      is now its own row and its chip is the badge the cited row prints for it.
+
+  - file: protocols/trauma/09_Electrical_Injuries_PROC.md
+    row: 7
+    pems_page: 96
+    pems_ordinal: 8
+    quoted_row_text: "Obtain and transmit a 12-Lead ECG."
+    evidence: >-
+      p.96#8 prints the 12-lead at badge EMT. Owner instruction 2026-11-20 (row-structure
+      pass): this action was one of several bundled in a single row, so no single level could
+      carry it. It is now its own row and its chip is the badge the cited row prints for it.
+
+  - file: protocols/trauma/09_Electrical_Injuries_PROC.md
+    row: 7a
+    pems_page: 96
+    pems_ordinal: 11
+    quoted_row_text: "Assess and continuously monitor cardiac rhythm."
+    evidence: >-
+      p.96#11 prints continuous cardiac rhythm monitoring at badge I. Owner instruction
+      2026-11-20 (row-structure pass): this action was one of several bundled in a single row,
+      so no single level could carry it. It is now its own row and its chip is the badge the
+      cited row prints for it.
+
+  - file: protocols/trauma/09_Lightning_Injuries_PROC.md
+    row: 7
+    pems_page: 96
+    pems_ordinal: 8
+    quoted_row_text: "Obtain and transmit a 12-Lead ECG."
+    evidence: >-
+      p.96#8 prints the 12-lead at badge EMT. Owner instruction 2026-11-20 (row-structure
+      pass): this action was one of several bundled in a single row, so no single level could
+      carry it. It is now its own row and its chip is the badge the cited row prints for it.
+
+  - file: protocols/trauma/09_Lightning_Injuries_PROC.md
+    row: 7a
+    pems_page: 96
+    pems_ordinal: 11
+    quoted_row_text: "Assess and continuously monitor cardiac rhythm."
+    evidence: >-
+      p.96#11 prints continuous cardiac rhythm monitoring at badge I. Owner instruction
+      2026-11-20 (row-structure pass): this action was one of several bundled in a single row,
+      so no single level could carry it. It is now its own row and its chip is the badge the
+      cited row prints for it.
+
+  - file: protocols/trauma/09_Trauma_PROC.md
+    row: 2
+    pems_page: 49
+    pems_ordinal: 1
+    cross_page: true
+    quoted_row_text: "Scene Safety / PPE / Patient Contact"
+    evidence: >-
+      p.49#1 prints scene safety at badge EMR. Owner instruction 2026-11-20 (row-structure
+      pass): this action was one of several bundled in a single row, so no single level could
+      carry it. It is now its own row and its chip is the badge the cited row prints for it.
+
+  - file: protocols/trauma/09_Trauma_PROC.md
+    row: 2a
+    pems_page: 91
+    pems_ordinal: 7
+    cross_page: true
+    quoted_row_text: "Extricate patient from entrapment and transport per Administrative Policy – Trauma Field Triage."
+    evidence: >-
+      p.91#7 prints extrication at badge EMT. Owner instruction 2026-11-20 (row-structure
+      pass): this action was one of several bundled in a single row, so no single level could
+      carry it. It is now its own row and its chip is the badge the cited row prints for it.
+
+  - file: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
+    row: 10
+    pems_page: 247
+    pems_ordinal: 4
+    cross_page: true
+    quoted_row_text: "Orally intubate. Patients 12 years and older."
+    evidence: >-
+      p.247#4 prints oral intubation for patients 12 years and older at badge I. Owner
+      instruction 2026-11-20 (row-structure pass): this action was one of several bundled in a
+      single row, so no single level could carry it. It is now its own row and its chip is the
+      badge the cited row prints for it.
+
+  - file: protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md
+    row: 10a
+    pems_page: 247
+    pems_ordinal: 6
+    cross_page: true
+    quoted_row_text: "Orally Intubate. Patients < 12 years old."
+    evidence: >-
+      p.247#6 prints oral intubation for patients under 12 at badge P. Owner instruction
+      2026-11-20 (row-structure pass): this action was one of several bundled in a single row,
+      so no single level could carry it. It is now its own row and its chip is the badge the
+      cited row prints for it.
+
+  - file: procedures/Neonatal_Resuscitation.md
+    row: 5
+    pems_page: 261
+    pems_ordinal: 10
+    quoted_row_text: "Obtain IV/IO access if not already obtained."
+    evidence: >-
+      p.261#10 prints IV/IO access at badge A. Owner instruction 2026-11-20 (row-structure
+      pass): this action was one of several bundled in a single row, so no single level could
+      carry it. It is now its own row and its chip is the badge the cited row prints for it.
+
+  - file: procedures/Neonatal_Resuscitation.md
+    row: 5a
+    pems_page: 261
+    pems_ordinal: 12
+    quoted_row_text: "Administer: Epinephrine (Adrenaline) 0.01mg/kg (0.1mg/mL) IV/IO"
+    evidence: >-
+      p.261#12 prints the epinephrine dose at badge I. Owner instruction 2026-11-20
+      (row-structure pass): this action was one of several bundled in a single row, so no
+      single level could carry it. It is now its own row and its chip is the badge the cited
+      row prints for it.

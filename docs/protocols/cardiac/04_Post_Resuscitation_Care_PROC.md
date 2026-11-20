@@ -32,7 +32,7 @@ Guidelines for managing patients following Return of Spontaneous Circulation (RO
 
 </div>
 
-<p class="lv-note">* <strong>[ ] badge in PEMS 2024</strong> — the source prints this level in brackets: agency post-affiliation training documentation on file, plus the Medical Control written authorization for that skill. The bracketing is the source's, not this page's.</p>
+<p class="lv-note">* <strong>Bracketed badge</strong> — the level is printed in brackets in the source: agency post-affiliation training documentation on file, plus the Medical Control written authorization for that skill. The brackets are the source's own.</p>
 
 ### Pearls
 • Most patients will require at least some vasopressor support to maintain a MAP > 65 following cardiac arrest.

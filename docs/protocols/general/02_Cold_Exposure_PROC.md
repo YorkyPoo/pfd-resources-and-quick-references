@@ -31,15 +31,13 @@ Guidelines for managing systemic hypothermia and localized cold injuries, emphas
 
 </div>
 
-*Rows 6 and 9 are covered under [References & Good Practice](#references-good-practice) below.*
-
 ### References & Good Practice
 
 **Heat packs and warm blankets — active external rewarming.** If the patient is alert and responsive, use active external rewarming with heat packs, warm blankets, etc.
 
 **Medical Control before the AED.** Contact Medical Control prior to use of AED.
 
-*This page records the rewarming item at **EMR** (anyone can warm a patient) and the AED item at **MC**.*
+**Heat packs and warm blankets are an EMR skill** — anyone can warm a patient; **contacting Medical Control before the AED is a Medical Control decision.**
 
 **Why and what next:** [Cardiac Arrest (Non-Traumatic) — AED use and defibrillation](../cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md) · [Post-Resuscitation Care](../cardiac/04_Post_Resuscitation_Care_PROC.md)
 

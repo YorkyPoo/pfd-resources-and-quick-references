@@ -309,3 +309,16 @@ rulings:
       assessment signs in the source's own words, so the old reason ("No PEMS 2024 row
       anywhere prints this airway-injury assessment") was false as written. Recognition is
       BLS-scope; the advanced-airway step is r5/r6, cited at I. Level unchanged (EMT).
+
+  # ---------------------------------------------------------------------------
+  # Owner instruction 2026-11-20 (row-structure pass). Three rows could not be CITED
+  # and are NOT owner rulings either: PEMS prints the action inside a row whose printed
+  # badge belongs to a different clause and scopes this one in the row's own words
+  # ("(as determined by EMT-I or P)", "I/P only"). No owner statement about those levels
+  # exists, so they are not listed here — a ruling must quote the owner's words. They are
+  # recorded as `owner_required` in row-bindings.yaml with the row that prints the action
+  # and why its badge cannot carry it, and the row-splits entry says `source: owner_required`.
+  # (2026-11-20 later ruling: `owner_ruled` was dropped from all three for exactly this
+  # reason — a level the owner never spoke to must not be attributed to him.)
+
+

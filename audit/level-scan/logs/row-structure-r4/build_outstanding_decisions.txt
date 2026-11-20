@@ -1,0 +1,3 @@
+the "PEMS prints this nowhere" bucket is 2 rows (was 17 before the 2026-11-17 Pearl ruling, 6 after it, and 2 after the 2026-11-20 row-structure pass moved four guidance rows below their tables): the two Sedation rows, which carry real doses and stay open as OMD questions — membership asserted, not typed
+wrote protocols/outstanding-decisions.md (58943 bytes)
+EXIT=0

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SAMPLE — provider level as a number line</title>
+<style>
+  /* Colour carries the ACTIONABLE STATE only (standing / call MC / not permitted).
+     Level identity is carried by POSITION on the 1-5 line plus text, never by hue —
+     a green "EMR" beside an amber "A" reads as caution rather than as scope, which is
+     the wrong question to make a provider answer under load. */
+  :root{
+    --bg:#fff; --fg:#1a1a1a; --muted:#5c5c5c; --line:#d8d8d8; --panel:#f5f5f5;
+    --go:#0d6b4f; --call:#8a5a00; --no:#8a1c1c; --ink:#fff; --call-soft:#fbf0d8;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#1e2129; --fg:#f2f2f2; --muted:#b9bec9; --line:#3a3f4b; --panel:#252932;
+      --go:#4fd6b0; --call:#ffcf5c; --no:#ff8a80; --ink:#12141a; --call-soft:#332b16;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.45 -apple-system,"Segoe UI",Roboto,sans-serif}
+  header{background:#800000;color:#fff;padding:12px 14px 14px}
+  header .t{font-size:15px;font-weight:700}
+  header .s{font-size:12px;opacity:.92;margin-top:3px}
+  main{padding:12px 10px 44px}
+  .warn{border:2px solid var(--call);background:var(--call-soft);padding:9px 11px;border-radius:8px;font-size:12.5px;margin:0 0 14px}
+  .warn b{text-transform:uppercase;letter-spacing:.4px}
+  h2{font-size:12.5px;margin:20px 0 7px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted)}
+  .pick{display:flex;gap:6px;flex-wrap:wrap}
+  .pick button{flex:1 1 58px;min-height:44px;border:1.5px solid var(--line);background:var(--panel);
+        color:var(--fg);border-radius:9px;font-size:13px;font-weight:700;cursor:pointer}
+  .pick button[aria-pressed=true]{background:#800000;color:#fff;border-color:#800000}
+  .tally{font-size:12.5px;margin:8px 0 2px;min-height:18px;color:var(--muted)}
+  table{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed}
+  th{background:var(--panel);font-size:10.5px;text-transform:uppercase;letter-spacing:.3px;
+     color:var(--muted);text-align:left;padding:7px 6px;border:1px solid var(--line)}
+  /* digits, not words: "EMR" at 8.5px overflows a 12px slot and the five labels ran together
+     into one blob (measured: header rendered as 'EMR EMT A I P' with no gaps). 1-5 is also the
+     number line the owner asked for, and it maps to the ladder once, in the legend. */
+  th.pips{text-align:center;padding-bottom:5px}
+  th.pips span{display:inline-flex;gap:3px;justify-content:center}
+  th.pips i{display:block;width:12px;font-style:normal;font-size:10.5px;line-height:1.2;
+     font-weight:800;color:var(--fg);text-align:center}
+  td{border:1px solid var(--line);padding:8px 6px;vertical-align:top}
+  .c-n{width:24px;text-align:center;color:var(--muted);font-size:11px}
+  .c-strip{width:86px;padding-top:11px}
+  .c-old{width:38px;text-align:center;padding-left:1px;padding-right:1px;font-size:12px}
+  .strip{display:flex;gap:3px;justify-content:center}
+  .pip{width:12px;height:24px;border-radius:3px;border:1.5px solid var(--line);background:transparent}
+  .pip.go{background:var(--go);border-color:var(--go)}
+  .pip.call{background:var(--call);border-color:var(--call);
+     background-image:repeating-linear-gradient(135deg,transparent 0 3px,rgba(0,0,0,.34) 3px 5px)}
+  .pip.no{background:transparent;border-color:var(--line)}
+  .tag{display:inline-block;margin-top:6px;font-size:10.5px;font-weight:800;letter-spacing:.4px;
+       text-transform:uppercase;padding:3px 7px;border-radius:20px;min-height:20px;color:var(--ink)}
+  .tag.call{background:var(--call)} .tag.no{background:var(--no)} .tag.go{background:var(--go)}
+  tr.dim td{opacity:.3}
+  tr.hit td:first-child{border-left:4px solid var(--go)}
+  tr.hitcall td:first-child{border-left:4px solid var(--call)}
+  tr.hitno td:first-child{border-left:4px solid var(--no)}
+  .legend{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 11px;font-size:12.5px}
+  .legend .row{display:flex;align-items:center;gap:10px;margin:7px 0}
+  .legend .lab{width:76px;flex:none;text-align:center;font-weight:800;letter-spacing:2px}
+  .old{opacity:.9}
+  .old th{font-size:10px}
+  .cmp{font-size:12px;color:var(--muted);margin:5px 0 0}
+  .note{font-size:12px;color:var(--muted);margin-top:14px;border-left:3px solid var(--line);padding-left:9px}
+</style>
+</head>
+<body>
+<header>
+  <div class="t">Poquoson Fire &amp; Rescue — PROTOCOL FORMAT SAMPLE</div>
+  <div class="s">Asystole / PEA · levels read from PEMS 2024 p.57–58 · not yet reconciled to Poquoson doctrine</div>
+</header>
+<main>
+  <div class="warn"><b>Design sample — not a clinical reference.</b> The wording is the regional
+    protocol, used here to judge the <i>layout</i>. Your OMD-signed Poquoson set governs in the field.</div>
+
+  <h2>Tap your certification level</h2>
+  <div class="pick" id="pick">
+    <button data-l="0">EMR</button><button data-l="1">EMT</button><button data-l="2">A</button>
+    <button data-l="3">I</button><button data-l="4">P</button>
+    <button data-l="x" aria-pressed="true">Show all</button>
+  </div>
+  <p class="tally" id="tally">Show-all mode — each row names the level its action starts at. Tap a level to see this protocol as you.</p>
+
+  <h2>New format — one action per row, 259px of reading width</h2>
+  <table id="new"></table>
+
+  <div class="legend" style="margin-top:12px">
+    <b style="font-size:12px">Reading the line</b>
+    <div class="row"><span class="lab"><span class="strip"><i class="pip go"></i></span></span>
+      <span><b>Solid</b> — standing order at that level. You may act.</span></div>
+    <div class="row"><span class="lab"><span class="strip"><i class="pip call"></i></span></span>
+      <span><b>Hatched</b> — call Medical Control first at that level. This is the source's
+      <code>[A]</code> notation, which the current site represents nowhere.</span></div>
+    <div class="row"><span class="lab"><span class="strip"><i class="pip no"></i></span></span>
+      <span><b>Empty</b> — not authorised at that level.</span></div>
+    <div class="row"><span class="lab">1 2 3 4 5</span>
+      <span>EMR · EMT · A (Advanced EMT) · I (Intermediate) · P (Paramedic)</span></div>
+    <p style="margin:9px 0 0">Position names the level and the words name it too, so colour is never
+      the only signal — and colour stays reserved for the single question that matters on scene:
+      <b>do I act, do I call, or is this not mine.</b></p>
+  </div>
+
+  <h2>Same protocol today — 5-column matrix</h2>
+  <table class="old" id="old"></table>
+  <p class="cmp">Action text gets <b>180px</b> there; five role columns take <b>221px</b>.
+    And its row 1 merges four source actions carrying <b>two different</b> minimum levels
+    (EMR ×3, EMT ×1) — one row cannot show both, which is why the matrix loses information
+    however it is styled.</p>
+
+  <p class="note">Data model behind this sample: one source action = one row, each carrying
+    <code>{min_level, mc_required}</code> — the two fields the regional document actually prints.
+    The matrix encodes the same fact five times and still cannot express <code>[X]</code>.</p>
+</main>
+<script>
+const LV=["EMR","EMT","A","I","P"];
+const NUM=["1","2","3","4","5"];
+/* state per level: "go" standing, "call" needs MC at that level, "no" not authorised */
+const ROWS=[
+ {a:"Follow Universal Patient Care / Initial Patient Contact protocol.",s:["go","go","go","go","go"]},
+ {a:"Determine DNR status. Refer to Death and Criteria for Withholding Resuscitation protocol.",s:["go","go","go","go","go"]},
+ {a:"Begin chest compressions. Refer to Adult / Pediatric Cardiopulmonary Resuscitation (CPR) procedure.",s:["go","go","go","go","go"]},
+ {a:"Identify and treat potentially reversible causes. See Pearls below.",s:["go","go","go","go","go"]},
+ {a:"Consider spinal motion restriction.",s:["no","go","go","go","go"]},
+ {a:"Obtain IV/IO access (humeral IO preferred if IV unavailable).",s:["no","no","go","go","go"]},
+ {a:"Epinephrine — ADULT 1 mg IV/IO (0.1 mg/mL); PEDIATRIC 0.01 mg/kg IV/IO. Repeat every 3–5 minutes during arrest.",s:["no","no","go","go","go"]},
+ {a:"Renal dialysis / crush injury / CCB overdose / suspected hyperkalaemia only — ADULT Calcium Chloride 1 g IV/IO slow push + 20 mL NS flush; ADULT Sodium Bicarbonate 50 mEq IV/IO; PEDIATRIC Calcium Chloride 20 mg/kg (max 1 g); Sodium Bicarbonate 1 mEq/kg (max 50 mEq).",s:["no","no","no","go","go"]},
+ {a:"Defibrillation, PEDIATRIC — 2 J/kg initial, 4 J/kg subsequent.",s:["no","no","no","call","go"]},
+ {a:"See Pearls regarding Termination of Resuscitation.",s:["call","call","call","call","call"]},
+];
+function strip(s){
+  const lab=s.map((x,i)=>LV[i]+": "+(x==="go"?"standing order":x==="call"?"call Medical Control first":"not authorised")).join("; ");
+  return '<td class="c-strip"><span class="strip" role="img" aria-label="'+lab+'">'+
+    s.map(x=>'<i class="pip '+x+'"></i>').join("")+'</span></td>';
+}
+const nt=document.getElementById("new");
+nt.innerHTML='<tr><th class="c-n">#</th><th>Action / Intervention</th>'+
+  '<th class="pips" style="width:86px"><span>'+NUM.map(n=>'<i>'+n+'</i>').join("")+'</span></th></tr>'+
+  ROWS.map((r,i)=>{
+    const m=r.s.findIndex(x=>x!=="no");
+    return '<tr data-min="'+m+'" data-myrow="'+r.s.join(',')+'">'+
+      '<td class="c-n">'+(i+1)+'</td><td><div class="act">'+r.a+'</div><span class="vtag"></span></td>'+strip(r.s)+'</tr>';
+  }).join("");
+
+const ot=document.getElementById("old");
+const OLD=[["","•","•","•","•","Follow Universal Patient Care / Initial Patient Contact protocol. Determine DNR status. Consider spinal motion restriction."],
+           ["","•","•","•","•","Begin chest compressions. Refer to Adult / Pediatric CPR procedure."],
+           ["","•","•","•","•","Identify and treat potentially reversible causes."],
+           ["","","","•","•","Obtain IV/IO access."],
+           ["MC","MC","MC","MC","MC","Contact Poquoson Medical Control for guidance as needed."]];
+ot.innerHTML='<tr><th class="c-n">#</th><th>Action / Intervention</th>'+LV.map(l=>'<th class="c-old">'+l+'</th>').join("")+'</tr>'+
+  OLD.map((o,i)=>'<tr><td class="c-n">'+(i+1)+'</td><td class="act">'+o[5]+'</td>'+
+    o.slice(0,5).map(x=>'<td class="c-old">'+x+'</td>').join("")+'</tr>').join("");
+
+const tally=document.getElementById("tally");
+function paint(l){
+  let go=0,call=0,no=0;
+  document.querySelectorAll("#new tr[data-min]").forEach(tr=>{
+    tr.classList.remove("dim","hit","hitcall","hitno");
+    const tag=tr.querySelector(".vtag"); tag.innerHTML="";
+    const v=verdictChip(tr, tag, l);
+    if(v===1) go++; else if(v===2) call++; else if(v===0) no++;
+  });
+  tally.innerHTML = l==="x"
+    ? "Show-all mode — each row names the level its action starts at. Tap a level to see this protocol as you."
+    : '<b>'+LV[l]+'</b>: of '+ROWS.length+' actions on this protocol — <b>'+go+'</b> standing, <b>'+call+
+      '</b> need Medical Control, <b>'+no+'</b> not permitted (dimmed).';
+}
+paint("x");   /* the default state must be rendered on load, not only after a tap */
+document.getElementById("pick").addEventListener("click",e=>{
+  const b=e.target.closest("button"); if(!b) return;
+  [...e.currentTarget.children].forEach(x=>x.removeAttribute("aria-pressed"));
+  b.setAttribute("aria-pressed","true");
+  paint(b.dataset.l);
+});
+function verdictChip(tr, tag, lv){
+  const s=tr.dataset.myrow.split(",");
+  if(lv==="x"){
+    const m=s.findIndex(x=>x!=="no");
+    if(m<0){ tag.innerHTML='<span class="tag no">no level authorised</span>'; return; }
+    if(s.every(x=>x==="call")){ tag.innerHTML='<span class="tag call">MC at every level</span>'; return; }
+    if(s[m]==="call"){
+      const g=s.slice(m).findIndex(x=>x==="go");
+      tag.innerHTML='<span class="tag call">MC at '+LV[m]+(g<0?"":", standing at "+LV[m+g])+'</span>';
+    } else {
+      tag.innerHTML='<span class="tag go">standing from '+LV[m]+'</span>';
+    }
+    return;
+  }
+  const st=s[+lv];
+  if(st==="go"){ tr.classList.add("hit"); tag.innerHTML='<span class="tag go">standing</span>'; return 1; }
+  if(st==="call"){ tr.classList.add("hitcall"); tag.innerHTML='<span class="tag call">call MC</span>'; return 2; }
+  tr.classList.add("dim","hitno"); tag.innerHTML='<span class="tag no">not permitted</span>'; return 0;
+}
+</script>
+</body>
+</html>
