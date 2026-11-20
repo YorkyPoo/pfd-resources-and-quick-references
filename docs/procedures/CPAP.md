@@ -37,4 +37,4 @@ Continuous Positive Airway Pressure (CPAP) provides positive pressure ventilatio
 *   Positive pressure ventilation does not address the underlying cause of distress (e.g., bronchodilators for asthma, preload reduction for CHF).
 *   Sudden hypotension may be due to increased intrathoracic pressure (breath stacking). Assess for pneumothorax; adjust PEEP, rate, and volume.
 *   Avoid aspiration: Use only on conscious/alert patients. Remove immediately if patient vomits.
-*   CPAP, BiPAP, and PEEP are "RED DOT" procedures at all EMS certification levels (refer to department-specific authorization/training policy).
+*   CPAP and BiPAP are "RED DOT" procedures at all EMS certification levels; PEEP titration above the initial 5 cmH2O setting is Intermediate and above (refer to department-specific authorization/training policy).
