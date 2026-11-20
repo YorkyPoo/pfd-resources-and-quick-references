@@ -332,10 +332,12 @@ rulings:
   # is the owner's decision, the clause is its printed basis, and the row's EMT badge is
   # recorded beside it.
   #
-  # `clause_only: true` on both: each site row covers the titration and nothing else, so one
-  # chip is the whole authorisation and the ⚑ OWNER_REQUIRED flag retires. A row that still
-  # bundled CPAP INITIATION (printed EMT) with titration would keep its flag — see
-  # Respiratory Distress r6, which still bundles both and is therefore NOT covered here.
+  # `clause_only: true` on all three: each site row covers the titration and nothing else, so
+  # one chip is the whole authorisation and the ⚑ OWNER_REQUIRED flag retires. A row that still
+  # bundled CPAP INITIATION (printed EMT) with titration could not take this ruling, because its
+  # single chip would have to answer for the initiation as well. Respiratory Distress r6 was
+  # exactly that row; it was split on 2026-11-20 (initiation stays r6, cited EMT off p.239#5,
+  # titration becomes r6a below) and only then did the ruling reach it.
   - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
     row: 9
     level: I
