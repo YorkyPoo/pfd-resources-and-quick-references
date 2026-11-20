@@ -610,3 +610,39 @@ PASS K-pending-untallied          EXIT=1  hid the PENDING rows from the tally
   with their chip tables, which is exactly the state a fallback restores).
 * The PENDING rendering above is the one chat ruled for: dashed, unfilled, tagged, and
   never a level. It is not an owner-level claim and adds none.
+
+## 4.7 Live slot re-published from this tip, and re-verified against the live HTML
+
+Slot `all-pages` rebuilt from `pipstrip-rollout @ 11a3949`, gh-pages commit
+`cfa2b3c`; `preview/slots.json` records `sha: 11a3949cff1c…`. Only
+`preview/all-pages/`, `preview/index.html` and `preview/slots.json` changed
+(`git diff --name-only 2b71ea0..origin/gh-pages | grep -v '^preview/all-pages/'`
+→ those two files and nothing else); the live root is untouched; `preview/` still
+carries no `sw.js` (0 matches).
+
+```
+$ python3 scripts/verify_pip_strip.py --base https://yorkypoo.github.io/pfd-resources-and-quick-references/preview/all-pages/ --quiet
+pages converted : 54
+action rows     : 518
+pages untouched : 15 (no provider level in any table)
+518 rows in markdown / 518 rows in HTML / 518 compared / 0 mismatches
+OK — every converted page matches its markdown, row by row; every untouched page is unchanged
+LIVE_VERIFY_EXIT=0
+```
+
+Live fetches (cache-busted, HTTP 200):
+
+```
+protocols/neurologic/05_Stroke_TIA_PROC   pip-blocks=1  data-pending rows=2
+protocols/trauma/09_Burns_Thermal_PROC    pip-blocks=1  data-pending rows=1
+protocols/cardiac/04b_Aortic_Dissection   pip-blocks=0  data-pending rows=0
+```
+
+Rendered on the live slot at 390 px wide (`document.scrollWidth = 390 =
+window.innerWidth`, no horizontal overflow): rows 8 and 9 of Stroke/TIA show five
+dashed outlines with the tag `PENDING — NO PUBLISHED LEVEL`, visually distinct from
+the solid pips above them and from a plain (empty, solid-outline) "not authorised"
+pip. Tapping `B` on that page gives the tally `B: of 9 actions on this protocol — 7
+standing, 0 need Medical Control, 0 not permitted (dimmed). 2 PENDING — no published
+level, shown undimmed.` — the PENDING rows are neither counted as permitted nor
+dimmed.
