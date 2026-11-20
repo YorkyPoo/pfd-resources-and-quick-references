@@ -1,0 +1,41 @@
+# Gates at d1696af83df70533488bd227f907e46e570ec8cc (audit(conversion-artifacts): report — 54 reports + 1 mapping block unpublished, with before/after counts)
+
+=== python3 scripts/verify_pems_canonical.py
+
+  ok   verifier manifest covers the run (8 of 8 checks reached: )
+
+all invariants hold
+EXIT=0
+
+=== python3 scripts/level_rule.py --check
+OK — 14 administrative-policy page(s) carry 95 action rows: 89 chipped POLICY (cited to one of 14 PEMS 2024 administrative policies, each with a verbatim quote out of that policy's own pages), 4 chipped PENDING (no PEMS policy prints the rule). 0 of them publish a provider level and 0 of them claim a protocol citation.
+OK — sc-wrap: 63 wide-table block(s) in 46 docs file(s) — mostly dose charts, phone lists and SOP tables that are not level matrices; 0 provider-level matrices on an sc-wrap on any page this project has converted.
+REPORTED, NOT GATED — 1 provider-level matrix/matrices inside sc-wrap remain on a page outside every conversion batch's scope (the front-matter legend, which DEFINES the level columns and must not change):
+   - protocols/front-matter/01 - How to Read the Protocols.md (line 33)
+EXIT=0
+
+=== python3 scripts/mc_wording.py --check
+OK — 27 MC row(s) on 26 page(s) plus every other protocol table row (all levels): none name OMD / Poquoson / a Medical Director / a named individual.
+     prose lines still mentioning the office (out of scope, not edited): 53
+EXIT=0
+
+=== python3 scripts/agency_names.py --check
+OK — 713 line(s) name the office or the agency; all are document-name / administrative exemptions. No clinical prose names a local office or the local agency.
+EXIT=0
+
+=== python3 scripts/internal_artifacts.py --check
+OK — no conversion QA reports and no replacement-mapping block under docs/
+EXIT=0
+
+=== /root/pfd-ssg-env/bin/mkdocs build --strict
+  - protocols/front-matter/00 - AI Formatting Guidelines.md
+INFO    -  Documentation built in 7.06 seconds
+[post_build] sitemap: dropped 1 noindex page(s): ['/resources/links.html']
+[post_build] Generated sw.js with 281 pre-cached pages (version: 20261120-062535)
+EXIT=0
+
+=== python3 scripts/build_outstanding_decisions.py --check
+the "PEMS prints this nowhere" bucket is 6 rows (was 17 before the 2026-11-17 Pearl ruling): 4 genuinely absent from the source, 2 out of scope for that card — membership asserted, not typed
+FAIL — protocols/outstanding-decisions.md is stale; re-run scripts/build_outstanding_decisions.py
+EXIT=1
+
