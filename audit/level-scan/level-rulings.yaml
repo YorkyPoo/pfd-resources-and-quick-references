@@ -477,24 +477,14 @@ rulings:
     action: "Consider titrating PEEP (5–15 mmHg) as needed to improve ventilation."
     note: >-
       Owner ruling 2026-11-20, verbatim: "Only intermediates and above can titrate peep up
-      to 15 mmhg", accompanied by the owner's photograph of PEMS "Airway Management and
-      Ventilatory Support" (Procedures, page 1 of 2, Version 2022v0722) whose CPAP row reads
-      "I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH2O".
-      The chip is now I: the level is the lowest provider level the printed `I/P only`
-      clause names, on the same clause as Pulmonary Edema row 9, Asthma/COPD row 8a and
-      Respiratory Distress row 6a. The row is titration-only, so the chip is the whole
-      authorisation and no OWNER_REQUIRED flag is carried. p.245#4 badges the
-      CPAP/BiPAP/PEEP procedure EMT and calls it RED DOT at all levels; the owner has ruled
-      which reading governs. CEILING: the owner states 15 mmHg and that number governs the
-      page — the page now reads "5–15 mmHg". The photographed page prints "up to 10 cmH2O"
-      and p.245#4 extracts as "9%-15mmHg"; the unit and cap discrepancy between the
-      photograph and the ruling is left on the record here and in `wording-rulings.yaml`
-      (the cell is quoted verbatim there), deliberately not reconciled on the page.
-      HISTORY (kept): an earlier agent recommendation on this row — relayed 2026-11-20 and
-      rejected by review as an agent comment rather than the owner's words — argued for
-      keeping EMT. It is WITHDRAWN and SUPERSEDED by the owner's ruling of the same date.
-      The level and the ceiling both come from the owner; nothing here is attributed to
-      that recommendation.
+      to 15 mmhg", with his photograph of PEMS "Airway Management and Ventilatory Support"
+      (Procedures, page 1 of 2, Version 2022v0722), whose CPAP row prints "I/P only: Adjust
+      PEEP ... up to 10 cmH2O". Level I comes from that printed clause, the same clause as
+      Pulmonary Edema r9, Asthma/COPD r8a and Distress r6a. Ceiling: the owner's 15 mmHg
+      governs and the page reads "5–15 mmHg"; the printed "up to 10 cmH2O" is kept
+      unreconciled in wording-rulings.yaml `source_prints`.
+      HISTORY: the earlier agent recommendation (keep EMT) is WITHDRAWN and SUPERSEDED by
+      this ruling of the same date.
 
 
 
