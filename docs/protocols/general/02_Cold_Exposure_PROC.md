@@ -31,12 +31,15 @@ Guidelines for managing systemic hypothermia and localized cold injuries, emphas
 
 </div>
 
+*Rows 6 and 9 of this table were unbadged PEMS Pearls prose and now sit under [References & Good Practice](#references-good-practice) below.*
+
 ### References & Good Practice
 
-Both items below are printed in PEMS 2024 **p.67 (Cold Exposure), heading PEARLS** as prose, with no provider badge on them, so they are kept here as good practice instead of as chipped action rows; the action table above now lists only level-badged actions and its numbering skips 6 and 9, which are these items.
+**Heat packs and warm blankets — active external rewarming.** If the patient is alert and responsive, use active external rewarming with heat packs, warm blankets, etc. **Do not place heat packs, hot water bottles, IV bags, or other heat-retaining devices directly on skin** (same Pearls list, #2).
 
-- **Active external rewarming — heat packs, warm blankets.** If the patient is alert and responsive, use active external rewarming with heat packs, warm blankets, etc. *PEMS 2024 p.67, PEARLS #5 — no badge printed; this page records it at **EMT** (owner ruling 2026-11-17: "Patient warming with heat packs is a BLS skill, anyone can do that").* Same Pearls list, #2: **do not place heat packs, hot water bottles, IV bags, or other heat-retaining devices directly on skin.**
-- **Medical Control before the AED.** Contact Medical Control prior to use of AED. *PEMS 2024 p.67, PEARLS #3 — no badge printed; this page records it at **MC** (owner ruling 2026-11-17).*
+**Medical Control before the AED.** Contact Medical Control prior to use of AED.
+
+*Source: both items are printed in PEMS 2024 **p.67 (Cold Exposure), heading PEARLS** (#5 and #3) as prose, with no provider badge on them, which is why they sit here and not as chipped action rows; the action table above lists only level-badged actions and its numbering skips 6 and 9, these items. This page records the rewarming item at **EMT** (owner ruling 2026-11-17: "Patient warming with heat packs is a BLS skill, anyone can do that") and the AED item at **MC** (owner ruling 2026-11-17).*
 
 **Why and what next:** [Cardiac Arrest (Non-Traumatic) — AED use and defibrillation](../cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md) · [Post-Resuscitation Care](../cardiac/04_Post_Resuscitation_Care_PROC.md)
 

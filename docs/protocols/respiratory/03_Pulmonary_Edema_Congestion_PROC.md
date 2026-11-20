@@ -47,9 +47,11 @@ Management of acute cardiogenic pulmonary edema and congestion due to congestive
 
 <p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — row 9: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
+*Rows 6–8 of this table were the PEMS contraindication list — unbadged prose — and now sit under [References & Good Practice](#references-good-practice) below.*
+
 ### References & Good Practice
 
-**⚠️ CPAP contraindications** — PEMS 2024 **p.245 (CPAP/BiPAP/PEEP), heading CONTRAINDICATIONS**. PEMS prints this list above the procedure table as prose and badges none of it, so it is kept here rather than as a chipped action row; the action table above now lists only level-badged actions and its numbering skips 6–8, which are these items. This page records the list at **EMT** (owner ruling 2026-11-17: contraindications gate an EMT skill).
+**⚠️ CPAP contraindications.** Check every item before and during CPAP.
 
 - Apnea / agonal respirations
 - Decreased level of consciousness (GCS ≤ 13)
@@ -59,6 +61,8 @@ Management of acute cardiogenic pulmonary edema and congestion due to congestive
 - Active vomiting / severe nausea
 - Hypotension (SBP < 90 mmHg, MAP < 65)
 - Inability to tolerate a tight-fitting mask
+
+*Source: PEMS 2024 **p.245 (CPAP/BiPAP/PEEP), heading CONTRAINDICATIONS** — a headed prose list with no provider badge on it, which is why it sits here and not as a chipped action row; the action table above lists only level-badged actions and its numbering skips 6–8, these items. This page records the list at **EMT** (owner ruling 2026-11-17: contraindications gate an EMT skill).*
 
 **Why and what next:** [CPAP/BiPAP/PEEP procedure — contraindications and pearls](../../procedures/CPAP.md#contraindications) · [How to Read the Protocols — level chips, ⚠ cautions and MC](../front-matter/01 - How to Read the Protocols.md)
 
