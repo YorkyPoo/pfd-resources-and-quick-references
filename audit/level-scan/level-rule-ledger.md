@@ -554,8 +554,6 @@ the action text.
 | `01_Behavioral_Health_Transportation_Decision_PROC.md` | 3 | POLICY | — | — | — | policy |
 | `01_Behavioral_Health_Transportation_Decision_PROC.md` | 4 | POLICY | — | — | — | policy |
 | `01_Behavioral_Health_Transportation_Decision_PROC.md` | 5 | POLICY | — | — | — | policy |
-| `01_Behavioral_Health_Transportation_Decision_PROC.md` | 6 | PENDING | — | — | — | pending_row_omd |
-| `01_Behavioral_Health_Transportation_Decision_PROC.md` | 7 | PENDING | — | — | — | pending_row_omd |
 | `01_Communications_PROC.md` | 1 | POLICY | — | — | — | policy |
 | `01_Communications_PROC.md` | 2 | POLICY | — | — | — | policy |
 | `01_Communications_PROC.md` | 3 | POLICY | — | — | — | policy |
@@ -609,7 +607,6 @@ the action text.
 | `01_Stroke_Field_Triage_PROC.md` | 1 | EMT | p.131#4 **×page** | Initiate transport. Goal scene time < 15 minutes: Symptoms less than 24 hours (or unknown) AND suspected LVO (RACE = 5 - 9) : Transport to the clos… | row-bindings:bound | OK |
 | `01_Stroke_Field_Triage_PROC.md` | 2 | POLICY | — | — | — | policy |
 | `01_Stroke_Field_Triage_PROC.md` | 3 | POLICY | — | — | — | policy |
-| `01_Stroke_Field_Triage_PROC.md` | 4 | PENDING | — | — | — | pending_row_omd |
 | `01_Stroke_Field_Triage_PROC.md` | 5 | POLICY | — | — | — | policy |
 | `01_Stroke_Field_Triage_PROC.md` | 6 | POLICY | — | — | — | policy |
 | `01_Stroke_Field_Triage_PROC.md` | 7 | POLICY | — | — | — | policy |
@@ -1008,7 +1005,7 @@ move, not by a citation.
 | `Transcutaneous_Pacing.md` | 0 | 0 | new | 0 | 0 |
 | `01_ALS_Release_to_BLS_PROC.md` | 0 | 0 | new | 0 | 0 |
 | `01_Abuse_Recognition_and_Mandated_Reporting_PROC.md` | 0 | 0 | new | 0 | 0 |
-| `01_Behavioral_Health_Transportation_Decision_PROC.md` | 0 | 2 | new | 0 | 0 |
+| `01_Behavioral_Health_Transportation_Decision_PROC.md` | 2 | 0 | 2 | 0 | 2 |
 | `01_Communications_PROC.md` | 0 | 0 | new | 0 | 0 |
 | `01_Death_Criteria_for_Withholding_Resuscitation_PROC.md` | 0 | 0 | new | 0 | 0 |
 | `01_Helicopter_EMS_HEMS_PROC.md` | 0 | 0 | new | 0 | 0 |
@@ -1017,12 +1014,12 @@ move, not by a citation.
 | `01_Patient_Restraint_PROC.md` | 0 | 0 | new | 0 | 0 |
 | `01_STEMI_Field_Triage_PROC.md` | 0 | 0 | new | 0 | 0 |
 | `01_Safe_Transport_of_Pediatric_Patients_PROC.md` | 0 | 0 | new | 0 | 0 |
-| `01_Stroke_Field_Triage_PROC.md` | 0 | 1 | new | 0 | 0 |
+| `01_Stroke_Field_Triage_PROC.md` | 1 | 0 | 1 | 0 | 1 |
 | `01_Transportation_and_Destination_Determination_PROC.md` | 0 | 0 | new | 0 | 0 |
 | `01_Trauma_Field_Triage_PROC.md` | 0 | 0 | new | 0 | 0 |
 | `04b_Aortic_Dissection_AAA_PROC.md` | 11 | 11 | 0 | 0 | 0 |
 
-**Total: 78 flagged before, 18 after (60 cleared).**
+**Total: 81 flagged before, 15 after (66 cleared).**
 
 
 ## Rows moved below the action table (References & Good Practice)
@@ -1034,7 +1031,7 @@ here and in `audit/level-scan/relocated-rows.yaml` with what it was and where
 it now reads, so nothing can be deleted silently. `--check` re-reads the page
 and fails if the recorded block is not printed there.
 
-**9 row(s).**
+**12 row(s).**
 
 - `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` row 6: level `EMT` (was `OWNER_REQUIRED`) — References & Good Practice — "CPAP contraindications."
 - `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` row 7: level `EMT` (was `OWNER_REQUIRED`) — References & Good Practice — "CPAP contraindications."
@@ -1049,6 +1046,12 @@ and fails if the recorded block is not printed there.
   - Preparation (suction and airway equipment ready, ready for rapid airway intervention). p.239#2 prints suctioning as an act at EMR, not preparation; equipment readiness is not a numbered action in PEMS at any level.
 - `protocols/trauma/09_Trauma_PROC.md` row 6: no level — guidance, not an action (was `OWNER_REQUIRED`) — References & Good Practice — "Assessment — recognising shock."
   - Assessment and referral (assess for shock, refer to the Shock protocol). p.84 PEARLS #3 prints the recognition half as guidance, and a referral to another protocol is not a level-gated action; no PEMS row badges either half.
+- `protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md` row 6: no level — guidance, not an action (was `pending_row_omd`) — References & Good Practice — "Law-enforcement custody — who stays with the patient."
+  - Law-enforcement custody: a patient in LE custody or under arrest must have an officer present at all times. Not an intervention — a rule about who stays with the patient — and PEMS 2024 prints it only as prose in the Behavioral Emergencies restraint guidelines (p.73), never as an administrative policy or a level-badged row. It carried a PENDING chip and an unexplained "Pending OMD authorization" claim; the relocation retires both. The words are unchanged and still read below the table.
+- `protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md` row 7: no level — guidance, not an action (was `pending_row_omd`) — References & Good Practice — "Law-enforcement custody — who stays with the patient."
+  - Restraint carriage: if LE restraints are used, the officer should accompany the patient. Guidance, not an action a provider performs, and printed by PEMS only as prose in the Behavioral Emergencies restraint guidelines (p.73). Same disposition as row 6: relocated, PENDING chip and "Pending OMD authorization" claim retired, wording unchanged.
+- `protocols/administrative/01_Stroke_Field_Triage_PROC.md` row 4: no level — guidance, not an action (was `pending_row_omd`) — References & Good Practice — "Routing exception — immediate life-threats outrank stroke destination criteria."
+  - Routing exception: if a life threat cannot be managed during transport, go to the nearest ED instead of the stroke destination. A conditional rule about destination, not a provider action. The Stroke Field Triage policy (p.37) prints the RACE/glucose/destination algorithm and no life-threat branch, so the row was chipped PENDING with an unresolved OMD question; the page's own Pearls already stated the exception. Relocated under the standing rule; wording unchanged, the gap at row 4 is explained by the pointer above the block.
 
 ## Rows split into one action each (owner instruction 2026-11-20)
 
@@ -1297,7 +1300,7 @@ source.
 
 ## PENDING_OMD — row-level (agency additions on PEMS-cited pages)
 
-**7 row(s).** The page is PEMS-cited and every other row on it names the PEMS 2024 row that authorizes it. These rows do not: the agency added them and PEMS publishes no such action, so no provider level is published for them until the OMD authorizes one. The chip is `PENDING`; `carried_from_page` records the level the page published before conversion and is **provenance only**.
+**4 row(s).** The page is PEMS-cited and every other row on it names the PEMS 2024 row that authorizes it. These rows do not: the agency added them and PEMS publishes no such action, so no provider level is published for them until the OMD authorizes one. The chip is `PENDING`; `carried_from_page` records the level the page published before conversion and is **provenance only**.
 
 - `protocols/neurologic/05_Stroke_TIA_PROC.md` row 8: PENDING (carried from the page as **I**) — Establish 18g IV in Right AC (preferred for rapid imaging)
   - reason: Agency addition; PEMS 2024 p.131 publishes no such action. Pending OMD authorization.
@@ -1305,14 +1308,8 @@ source.
   - reason: Agency addition; PEMS 2024 p.131 publishes no such action. Pending OMD authorization.
 - `protocols/trauma/09_Burns_Thermal_PROC.md` row 6: PENDING (carried from the page as **NONE**) — Hydrofluoric Acid (HF) Burns with Hypotension: Administer Calcium Chloride 1 g IV/IO over 
   - reason: Agency addition. PEMS 2024 prints 'Treat hypotension with 1 g Calcium Chloride IV/IO over 3 minutes' for hydrofluoric acid burns only in the Burns protocol's PEARLS (p.87-88 prose), not as a level-badged table row; the only table rows printing calcium chloride 1 g IV/IO over 3 minutes are p.91#5 (crush syndrome, badge [I]) and p.120#8 (CCB/BB overdose, badge I), whose indications differ. No PEMS row authorises this action's provider level, and the page published none. Pending OMD authorization.
-- `protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md` row 6: PENDING (carried from the page as **EMT**) — Law Enforcement Custody: Patients in LE custody (including ECOs) or under arrest MUST have
-  - reason: PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol restraint guidelines (p.73: "Patients in law enforcement custody (including emergency custody orders) or under arrest must have a law enforcement officer present at all times"), not as an administrative policy and not as a level-badged row. No policy and no level is published; the wording on this page is the agency policy.
-- `protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md` row 7: PENDING (carried from the page as **EMT**) — Restraints: If LE restraints utilized (handcuffs, flex-cuffs), LE officer SHOULD accompany
-  - reason: PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol restraint guidelines (p.73: "If law-enforcement restraints have been utilized (for example handcuffs or flex-cuffs), a law enforcement officer should accompany the patient"), not as an administrative policy and not as a level-badged row. No policy and no level is published; the wording on this page is the agency policy.
 - `protocols/administrative/01_Infant_Abandonment_PROC.md` row 2: PENDING (carried from the page as **EMT**) — Assess infant and provide medical care per these Protocols
   - reason: The Infant Abandonment policy (p.25) prints what to do with a surrendered infant (contact CPS or law enforcement, and transport if indicated) but no assessment or treatment step. "Assess the infant and provide medical care per these Protocols" is the agency page's own instruction and is not printed in any PEMS administrative policy.
-- `protocols/administrative/01_Stroke_Field_Triage_PROC.md` row 4: PENDING (carried from the page as **EMT**) — Immediate Life-Threats: If uncontrolled airway, cardiac arrest, etc. cannot be addressed d
-  - reason: The Stroke Field Triage policy (p.37) prints the RACE/glucose/destination algorithm and no "life threats go to the nearest ED" branch. That branch is the agency page's own addition.
 
 ## POLICY — PEMS 2024 administrative policy (owner ruling 2026-11-16)
 
@@ -1802,9 +1799,9 @@ decision before the page is treated as final.
   owner wants those three pages levelled from the policy's own badges, that is a
   second ruling and a small change: the badges are in pems_table.json and every
   row prints its policy id here.
-- **Batch 6 — the 4 administrative PENDING row(s), for the owner's one-pass ruling.** Each row below is an administrative rule that no PEMS 2024 administrative policy prints:
-  Behavioral Health rows 6-7 (law-enforcement custody; handcuffed transport): PEMS prints the rule only as prose in the Behavioral Emergencies restraint guidelines (p.73), not in any administrative policy and not as a level-badged row. Infant Abandonment row 2 ("assess infant and provide medical care"): the policy prints no assessment/treatment step. Stroke Field Triage row 4 (life-threats route to nearest ED): the Stroke policy prints it nowhere.
-  Stroke Field Triage row 1 is no longer in this set: the Pearl ruling levelled it `EMT` (p.131#4), so the administrative PENDING count is 4. Each row keeps its reason in `pending-protocols.yaml` and on the page.
+- **Batch 6 — the 1 administrative PENDING row(s), for the owner's one-pass ruling.** Each row below is an administrative rule that no PEMS 2024 administrative policy prints:
+  Infant Abandonment row 2 ("assess infant and provide medical care"): the policy prints no assessment/treatment step.
+  Stroke Field Triage row 1 is no longer in this set: the Pearl ruling levelled it `EMT` (p.131#4), so the administrative PENDING count is 1. Each row keeps its reason in `pending-protocols.yaml` and on the page.
 - **Batch 6 — the STEMI page has one PEMS level, cited where printed.** STEMI row 7
   (serial ECGs every 10 minutes) is not in the STEMI Field Triage policy; it is
   printed verbatim as row p.107#9 of the Chest Pain protocol, badge MC, and is cited
@@ -1924,14 +1921,14 @@ new defect. Source of truth: `audit/level-scan/verifier-exceptions.yaml`.
 |---|---:|
 | converted pages — protocol/procedure chassis | 55 |
 | converted pages — administrative policy (POLICY/PENDING) | 14 |
-| action rows — total | 623 |
-| action rows relocated out of an action table (still on the page, not in this ledger — `relocated-rows.yaml`) | 9 |
+| action rows — total | 620 |
+| action rows relocated out of an action table (still on the page, not in this ledger — `relocated-rows.yaml`) | 12 |
 | cited to a PEMS protocol row (incl. cross-page) | 506 |
 | cross-page citations | 77 |
 | POLICY (PEMS administrative policy) | 89 |
-| PENDING (no PEMS source: whole page + row-level + administrative) | 18 |
+| PENDING (no PEMS source: whole page + row-level + administrative) | 15 |
 | OWNER_REQUIRED | 0 |
-| rows moved below the action table (References & Good Practice) | 9 |
+| rows moved below the action table (References & Good Practice) | 12 |
 | OWNER_RULED | 8 |
 | DERIVED (level derived from the source's own ladder wording) | 2 |
 | +MC markers | 8 |

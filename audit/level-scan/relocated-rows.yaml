@@ -143,3 +143,58 @@ relocated:
       - "### References & Good Practice"
       - "**Assessment — recognising shock.**"
       - "- Assess for shock. Refer to Shock (Hypoperfusion) protocol."
+
+  # --- Standing owner rule 2026-11-20 ("just move it to References & Good Practice"),
+  # --- applied by the refs-sweep of that date. Administrative pages.
+
+  - file: protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md
+    row: 6
+    rows_moved: "6"
+    where: 'References & Good Practice — "Law-enforcement custody — who stays with the patient."'
+    status_before: pending_row_omd
+    guidance: true
+    note: >-
+      Law-enforcement custody: a patient in LE custody or under arrest must have an officer
+      present at all times. Not an intervention — a rule about who stays with the patient — and
+      PEMS 2024 prints it only as prose in the Behavioral Emergencies restraint guidelines
+      (p.73), never as an administrative policy or a level-badged row. It carried a PENDING chip
+      and an unexplained "Pending OMD authorization" claim; the relocation retires both. The
+      words are unchanged and still read below the table.
+    proves:
+      - "### References & Good Practice"
+      - "**Law-enforcement custody — who stays with the patient.**"
+      - "- Patients in LE custody (including ECOs) or under arrest **MUST** have a law enforcement officer present at all times."
+
+  - file: protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md
+    row: 7
+    rows_moved: "7"
+    where: 'References & Good Practice — "Law-enforcement custody — who stays with the patient."'
+    status_before: pending_row_omd
+    guidance: true
+    note: >-
+      Restraint carriage: if LE restraints are used, the officer should accompany the patient.
+      Guidance, not an action a provider performs, and printed by PEMS only as prose in the
+      Behavioral Emergencies restraint guidelines (p.73). Same disposition as row 6: relocated,
+      PENDING chip and "Pending OMD authorization" claim retired, wording unchanged.
+    proves:
+      - "### References & Good Practice"
+      - "**Law-enforcement custody — who stays with the patient.**"
+      - "- If LE restraints utilized (handcuffs, flex-cuffs), LE officer **SHOULD** accompany the patient."
+
+  - file: protocols/administrative/01_Stroke_Field_Triage_PROC.md
+    row: 4
+    rows_moved: "4"
+    where: 'References & Good Practice — "Routing exception — immediate life-threats outrank stroke destination criteria."'
+    status_before: pending_row_omd
+    guidance: true
+    note: >-
+      Routing exception: if a life threat cannot be managed during transport, go to the nearest
+      ED instead of the stroke destination. A conditional rule about destination, not a provider
+      action. The Stroke Field Triage policy (p.37) prints the RACE/glucose/destination algorithm
+      and no life-threat branch, so the row was chipped PENDING with an unresolved OMD question;
+      the page's own Pearls already stated the exception. Relocated under the standing rule;
+      wording unchanged, the gap at row 4 is explained by the pointer above the block.
+    proves:
+      - "### References & Good Practice"
+      - "**Routing exception — immediate life-threats outrank stroke destination criteria.**"
+      - "- If uncontrolled airway, cardiac arrest, etc. cannot be addressed during transport, route to the nearest ED."
