@@ -49,11 +49,11 @@
       "sha": "2d2b0b37a8ba6252411cf696abae9be8b708c511"
     },
     "sedation": {
-      "branch": "sedation-integration",
-      "built_at": "2026-11-20T06:45:16Z",
-      "description": "Sedation: ketamine removed, printed fentanyl/midazolam regimen",
-      "sha": "1d0ff5b09c0ad20041f950e3a62fe89422d56db4"
+      "branch": "sedation-p55",
+      "built_at": "2026-11-20T06:57:37Z",
+      "description": "\"Sedation: PEMS p.55 verbatim, ketamine removed\"",
+      "sha": "7cbb4d8bee9bd31f8f4ea484aa50db8de571f796"
     }
   },
-  "updated_at": "2026-11-20T06:45:16.626265+00:00"
+  "updated_at": "2026-11-20T06:57:37.762766+00:00"
 }
