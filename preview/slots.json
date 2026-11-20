@@ -20,9 +20,9 @@
     },
     "all-pages": {
       "branch": "pipstrip-rollout",
-      "built_at": "2026-11-20T15:37:13Z",
+      "built_at": "2026-11-20T15:38:54Z",
       "description": "All protocols: five-pip level strip (52 pages)",
-      "sha": "686d8fdd1b4add27fa0449901a5587a8b3950cd4"
+      "sha": "2b4fac524f1d8212b067b349a0df6fb64dffc1f7"
     },
     "conversion-artifacts": {
       "branch": "conversion-artifacts",
@@ -109,5 +109,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-20T15:37:13.979810+00:00"
+  "updated_at": "2026-11-20T15:38:54.192255+00:00"
 }
