@@ -1,0 +1,62 @@
+worktree: /root/.hermes/profiles/developer/cache/scratch/wt-r6-tip1
+HEAD: 6ff87064ee378fb4b4cf8b6c1ccfa7dc748754a5 6ff8706 audit(level-scan): round-4 gate log from the clean worktree at 9ba0e10 (five gates, all EXIT=0)
+run at: 2026-11-20T05:15:34Z UTC
+clean-tree proof BEFORE: git status --porcelain: []
+
+## A — Cold page rewords the EMR level statement
+defect: docs/protocols/general/02_Cold_Exposure_PROC.md
+guard EXIT=1
+  > - audit/level-scan/level-rule-ledger.md != what emit_md() derives from level-rule-ledger.json — re-run `scripts/level_rule.py --write`:
+  > - OWNER_RULED carries no Cold Exposure ruling card although `level-rulings.yaml` records the 2026-11-20 answer (EMR)
+  > - OPEN OWNER QUESTIONS drops a Cold Exposure card that is still open (a relocation the page does not carry, or a floor question the owner has not answered)
+  > - `relocated-rows.yaml` protocols/general/02_Cold_Exposure_PROC.md row 6: the page does not print 'This page records the rewarming item at **EMR**' — the relocation record describes a block the page no longer carries
+restored: guard EXIT=0
+
+## B — Pulmonary page rewords the relocated list statement
+defect: docs/protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
+guard EXIT=1
+  > - `relocated-rows.yaml` protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md row 6: the page does not print 'This page records the list at **EMT**' — the relocation record describes a block the page no longer carries
+  > - `relocated-rows.yaml` protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md row 7: the page does not print 'This page records the list at **EMT**' — the relocation record describes a block the page no longer carries
+  > - `relocated-rows.yaml` protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md row 8: the page does not print 'This page records the list at **EMT**' — the relocation record describes a block the page no longer carries
+restored: guard EXIT=0
+
+## C — the ASKED/ANSWERED ruling is deleted from the ledger markdown
+defect: audit/level-scan/level-rule-ledger.md
+guard EXIT=1
+  > - audit/level-scan/level-rule-ledger.md != what emit_md() derives from level-rule-ledger.json — re-run `scripts/level_rule.py --write`:
+  > - OWNER_RULED drops a Cold Exposure card the ruling derives — the relocation record or the 2026-11-20 ASKED/ANSWERED card
+restored: guard EXIT=0
+
+## D — relocated-rows.yaml regresses Cold row 6 to EMT while the ruling says EMR
+defect: audit/level-scan/relocated-rows.yaml
+guard EXIT=1
+  > - audit/level-scan/level-rule-ledger.md != what emit_md() derives from level-rule-ledger.json — re-run `scripts/level_rule.py --write`:
+  > - OWNER_RULED drops a Cold Exposure card the ruling derives — the relocation record or the 2026-11-20 ASKED/ANSWERED card
+  > - `relocated-rows.yaml` records Cold Exposure row 6 at 'EMT' but `level-rulings.yaml` rules it 'EMR' — the page, the relocation record and the ruling must state one level
+restored: guard EXIT=0
+
+## E — the DECIDED card is filed back under OPEN OWNER QUESTIONS (reviewer round 3)
+defect: audit/level-scan/level-rule-ledger.md
+guard EXIT=1
+  > - audit/level-scan/level-rule-ledger.md != what emit_md() derives from level-rule-ledger.json — re-run `scripts/level_rule.py --write`:
+  > - OWNER_RULED drops a Cold Exposure card the ruling derives — the relocation record or the 2026-11-20 ASKED/ANSWERED card
+  > - OPEN OWNER QUESTIONS still publishes a DECIDED Cold Exposure card — the owner answered on 2026-11-20 (`EMR`); it belongs in the ledger's OWNER_RULED section, not in the open questions the owner is asked to answer
+python3 scripts/build_outstanding_decisions.py --check EXIT=1
+  > AssertionError: the Cold Exposure row 6 ASKED/ANSWERED ruling is missing from the OWNER_RULED section
+restored: guard EXIT=0
+
+SUMMARY
+  A: defect EXIT=1  restored EXIT=0
+  B: defect EXIT=1  restored EXIT=0
+  C: defect EXIT=1  restored EXIT=0
+  D: defect EXIT=1  restored EXIT=0
+  E: defect EXIT=1  restored EXIT=0
+
+final clean level_rule.py --check EXIT=0
+final git status --porcelain: []
+final git diff HEAD --stat: []
+
+PIN — this log was produced on a clean worktree at 6ff8706 and is committed with only these
+log files added. `git diff --stat 6ff8706 HEAD -- . ":(exclude)audit/level-scan/logs"` is
+empty, so the tree the gates/tests ran on is byte-identical to the tree at the tip that
+carries this log.
