@@ -12,7 +12,7 @@
         <meta name="author" content="YorkyPoo">
       
       
-        <link rel="canonical" href="https://yorkypoo.github.io/pfd-resources-and-quick-references/preview/rows-rebased/station-info.html">
+        <link rel="canonical" href="https://yorkypoo.github.io/pfd-resources-and-quick-references/station-info.html">
       
       
         <link rel="prev" href="resources/station.html">
@@ -44,6 +44,8 @@
     
     
       
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
     
     
       
@@ -65,8 +67,32 @@
     
   
   
-  <meta name="robots" content="noindex, nofollow" />
+  
+  <link rel="manifest" href="manifest.webmanifest" />
   <meta name="theme-color" content="#16213e" />
+  <script>
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/pfd-resources-and-quick-references/sw.js')
+            .then(function(reg) {
+                console.log('[PFD] Service Worker registered');
+                if (reg.installing) {
+                    var banner = document.createElement('div');
+                    banner.style.cssText = 'position:fixed;bottom:16px;right:16px;background:#16213e;color:#fff;padding:12px 20px;border-radius:8px;font-family:system-ui;font-size:14px;z-index:9999;box-shadow:0 4px 12px rgba(0,0,0,0.3);';
+                    banner.textContent = '📡 Downloading protocols for offline use...';
+                    document.body.appendChild(banner);
+                    reg.installing.addEventListener('statechange', function() {
+                        if (this.state === 'activated') {
+                            banner.textContent = '✅ All protocols available offline';
+                            banner.style.background = '#1b5e20';
+                            setTimeout(function() { banner.remove(); }, 3000);
+                        }
+                    });
+                }
+            });
+    });
+}
+</script>
 
   </head>
   
@@ -9060,12 +9086,12 @@ Medical Control govern.</strong></p>
 <hr />
 <h2 id="new-updated">New &amp; Updated</h2>
 <p><em>Last 45 days, newest first — generated automatically from the site's change history.</em></p>
-<ul class="recent-list"><li><span class="recent-date">2026-11-20</span> <b>audit(gates): gate log for rows-rebased at acec1ce (9/9 gates EXIT=0)</b><span class="recent-sha">8eff9cd</span></li><li><span class="recent-date">2026-11-20</span> <b>Rows rebased: row-9 flag names the function "Medical Control", not a director</b><div class='recent-files'><a href="protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.html">03 Pulmonary Edema Congestion PROC</a></div><span class="recent-sha">acec1ce</span></li><li><span class="recent-date">2026-11-20</span> <b>Rows rebased: regenerate ledger, row-9 note without a repo path, guard repo path</b><div class='recent-files'><a href="protocols/outstanding-decisions.html">outstanding decisions</a> · <a href="protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.html">03 Pulmonary Edema Congestion PROC</a></div><span class="recent-sha">7957884</span></li><li><span class="recent-date">2026-11-20</span> <b>Rebase rows-one-action onto main (8132ac3): row splits kept, pilot blocks kept</b><div class='recent-files'><a href="procedures/Endotracheal_Intubation.html">Endotracheal Intubation</a> · <a href="procedures/Neonatal_Resuscitation.html">Neonatal Resuscitation</a> · <a href="protocols/administrative/01_ALS_Release_to_BLS_PROC.html">01 ALS Release to BLS PROC</a> · <a href="protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.html">01 Abuse Recognition and Mandated Reporting PROC</a><span class='recent-more'>+38 more</span></div><span class="recent-sha">9578ad3</span></li><li><span class="recent-date">2026-11-20</span> <b>audit(gates): gate log for ai-prompt-exclusion at ba9c0bf, run on merge 5367f86 </b><span class="recent-sha">8132ac3</span></li><li><span class="recent-date">2026-11-20</span> <b>merge ai-prompt-exclusion: AI formatting build prompt excluded from the publishe</b><span class="recent-sha">5367f86</span></li><li><span class="recent-date">2026-11-20</span> <b>audit(gates): gate log for sedation-p55 at dea24d5, run on merge e41f00a (6/6 EX</b><span class="recent-sha">9ce54ed</span></li><li><span class="recent-date">2026-11-20</span> <b>merge sedation-p55: Sedation page republished as PEMS p.55 verbatim (t_920e8a81)</b><span class="recent-sha">e41f00a</span></li><li><span class="recent-date">2026-11-20</span> <b>audit(level-scan): gates on d18650c + evidence transcript for the sedation round</b><span class="recent-sha">dea24d5</span></li><li><span class="recent-date">2026-11-20</span> <b>fix(sedation): restore Trauma r6 label, correct the nowhere-bucket narrative, re</b><div class='recent-files'><a href="protocols/outstanding-decisions.html">outstanding decisions</a></div><span class="recent-sha">d18650c</span></li><li><span class="recent-date">2026-11-20</span> <b>audit(level-scan): commit gate exit codes, rename logs, add diff + planted-defec</b><span class="recent-sha">8cd3c98</span></li><li><span class="recent-date">2026-11-20</span> <b>audit(level-scan): gate logs with exit codes for the p.55 sedation pass</b><span class="recent-sha">7cbb4d8</span></li></ul>
+<ul class="recent-list"><li><span class="recent-date">2026-11-20</span> <b>Rows rebased: Cold Exposure row 6/9 gap explained in plain reader text</b><div class='recent-files'><a href="protocols/general/02_Cold_Exposure_PROC.html">02 Cold Exposure PROC</a></div><span class="recent-sha">4155092</span></li><li><span class="recent-date">2026-11-20</span> <b>Rows rebased: gap sentence below the row-9 note; row-9 record says owner decisio</b><div class='recent-files'><a href="protocols/outstanding-decisions.html">outstanding decisions</a> · <a href="protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.html">03 Pulmonary Edema Congestion PROC</a></div><span class="recent-sha">d174664</span></li><li><span class="recent-date">2026-11-20</span> <b>Rows rebased: explain the row 5->9 gap in plain reader text</b><div class='recent-files'><a href="protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.html">03 Pulmonary Edema Congestion PROC</a></div><span class="recent-sha">77a7a5d</span></li><li><span class="recent-date">2026-11-20</span> <b>audit(gates): evidence — level delta of the split rows, and the 25th lettered pa</b><span class="recent-sha">dd9b7bb</span></li><li><span class="recent-date">2026-11-20</span> <b>audit(gates): rebase evidence transcript for rows-rebased at acec1ce</b><span class="recent-sha">d3eee0a</span></li><li><span class="recent-date">2026-11-20</span> <b>audit(gates): gate log for rows-rebased at acec1ce (9/9 gates EXIT=0)</b><span class="recent-sha">8eff9cd</span></li><li><span class="recent-date">2026-11-20</span> <b>Rows rebased: row-9 flag names the function "Medical Control", not a director</b><div class='recent-files'><a href="protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.html">03 Pulmonary Edema Congestion PROC</a></div><span class="recent-sha">acec1ce</span></li><li><span class="recent-date">2026-11-20</span> <b>Rows rebased: regenerate ledger, row-9 note without a repo path, guard repo path</b><div class='recent-files'><a href="protocols/outstanding-decisions.html">outstanding decisions</a> · <a href="protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.html">03 Pulmonary Edema Congestion PROC</a></div><span class="recent-sha">7957884</span></li><li><span class="recent-date">2026-11-20</span> <b>Rebase rows-one-action onto main (8132ac3): row splits kept, pilot blocks kept</b><div class='recent-files'><a href="procedures/Endotracheal_Intubation.html">Endotracheal Intubation</a> · <a href="procedures/Neonatal_Resuscitation.html">Neonatal Resuscitation</a> · <a href="protocols/administrative/01_ALS_Release_to_BLS_PROC.html">01 ALS Release to BLS PROC</a> · <a href="protocols/administrative/01_Abuse_Recognition_and_Mandated_Reporting_PROC.html">01 Abuse Recognition and Mandated Reporting PROC</a><span class='recent-more'>+38 more</span></div><span class="recent-sha">9578ad3</span></li><li><span class="recent-date">2026-11-20</span> <b>audit(gates): gate log for ai-prompt-exclusion at ba9c0bf, run on merge 5367f86 </b><span class="recent-sha">8132ac3</span></li><li><span class="recent-date">2026-11-20</span> <b>merge ai-prompt-exclusion: AI formatting build prompt excluded from the publishe</b><span class="recent-sha">5367f86</span></li><li><span class="recent-date">2026-11-20</span> <b>audit(gates): gate log for sedation-p55 at dea24d5, run on merge e41f00a (6/6 EX</b><span class="recent-sha">9ce54ed</span></li></ul>
 
 <hr />
 <div class="admonition info">
 <p class="admonition-title">Last Updated</p>
-<p>Site content last changed: <strong>8eff9cd · build of 2026-11-20 12:50 UTC</strong></p>
+<p>Site content last changed: <strong>4155092 · build of 2026-11-20 13:03 UTC</strong></p>
 </div>
 
 

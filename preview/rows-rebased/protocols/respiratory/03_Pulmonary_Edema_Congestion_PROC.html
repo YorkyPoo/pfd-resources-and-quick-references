@@ -12,7 +12,7 @@
         <meta name="author" content="YorkyPoo">
       
       
-        <link rel="canonical" href="https://yorkypoo.github.io/pfd-resources-and-quick-references/preview/rows-rebased/protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.html">
+        <link rel="canonical" href="https://yorkypoo.github.io/pfd-resources-and-quick-references/protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.html">
       
       
         <link rel="prev" href="03_Pneumothorax_PROC.html">
@@ -44,6 +44,8 @@
     
     
       
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
     
     
       
@@ -65,8 +67,32 @@
     
   
   
-  <meta name="robots" content="noindex, nofollow" />
+  
+  <link rel="manifest" href="../../manifest.webmanifest" />
   <meta name="theme-color" content="#16213e" />
+  <script>
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/pfd-resources-and-quick-references/sw.js')
+            .then(function(reg) {
+                console.log('[PFD] Service Worker registered');
+                if (reg.installing) {
+                    var banner = document.createElement('div');
+                    banner.style.cssText = 'position:fixed;bottom:16px;right:16px;background:#16213e;color:#fff;padding:12px 20px;border-radius:8px;font-family:system-ui;font-size:14px;z-index:9999;box-shadow:0 4px 12px rgba(0,0,0,0.3);';
+                    banner.textContent = '📡 Downloading protocols for offline use...';
+                    document.body.appendChild(banner);
+                    reg.installing.addEventListener('statechange', function() {
+                        if (this.state === 'activated') {
+                            banner.textContent = '✅ All protocols available offline';
+                            banner.style.background = '#1b5e20';
+                            setTimeout(function() { banner.remove(); }, 3000);
+                        }
+                    });
+                }
+            });
+    });
+}
+</script>
 
   </head>
   
@@ -9210,6 +9236,7 @@
 </div>
 <p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — row 9: PEMS 2024 does not settle which provider level may titrate PEEP. The level shown is unverified pending a Medical Control decision.</p>
 
+<p>Rows 6–8 were conditional rules for CPAP; they are listed under References &amp; Good Practice below.</p>
 <h3 id="references-good-practice">References &amp; Good Practice</h3>
 <p><strong>⚠️ CPAP contraindications.</strong></p>
 <ul>
