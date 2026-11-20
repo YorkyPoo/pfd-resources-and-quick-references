@@ -47,7 +47,13 @@
       "built_at": "2026-11-20T06:35:13Z",
       "description": "Row structure: one action per row (round 4)",
       "sha": "2d2b0b37a8ba6252411cf696abae9be8b708c511"
+    },
+    "sedation": {
+      "branch": "sedation-integration",
+      "built_at": "2026-11-20T06:44:28Z",
+      "description": "Sedation: ketamine removed, printed fentanyl/midazolam regimen",
+      "sha": "289a1240c87b73b70672477787d4a5f8d652ef09"
     }
   },
-  "updated_at": "2026-11-20T06:41:35.617207+00:00"
+  "updated_at": "2026-11-20T06:44:28.645661+00:00"
 }
