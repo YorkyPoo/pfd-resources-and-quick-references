@@ -54,6 +54,12 @@
       "description": "Pilot: prose moved out of action tables",
       "sha": "c9615d945742aa2ad3465dd7461fcc0e6e9a8dec"
     },
+    "refs-sweep": {
+      "branch": "refs-sweep",
+      "built_at": "2026-11-20T13:56:41Z",
+      "description": "Refs sweep: three guidance rows moved below their tables",
+      "sha": "61b4ed10f68b3b3baaa1605870b1779081375291"
+    },
     "relabel": {
       "branch": "provider-level-letters",
       "built_at": "2026-11-20T05:45:38Z",
@@ -73,5 +79,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-20T13:43:54.814245+00:00"
+  "updated_at": "2026-11-20T13:56:41.187882+00:00"
 }
