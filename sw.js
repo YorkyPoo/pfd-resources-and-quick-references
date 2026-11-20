@@ -1,11 +1,12 @@
 // Pre-Cache Service Worker for Poquoson Fire & Rescue Protocols
-// Generated: 20261120-160950
+// Generated: 20261120-203647
 // Caches ALL protocols on first visit for full offline access
 
-const CACHE_NAME = "pfd-protocols-v20261120-160950";
+const CACHE_NAME = "pfd-protocols-v20261120-203647";
 
 const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/404.html",
+    "/pfd-resources-and-quick-references/ems/index.html",
     "/pfd-resources-and-quick-references/fire-ems-references/frameworks/mnemonics.html",
     "/pfd-resources-and-quick-references/fire-ems-references/frameworks/reference-cards.html",
     "/pfd-resources-and-quick-references/fire-ems-references/frameworks/saw-css-receo-vss.html",
@@ -284,6 +285,7 @@ const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/sops/special-operations/so-1300-rescue-task-force-administration.html",
     "/pfd-resources-and-quick-references/sops/special-operations/so-900-carbon-monoxide-incident-operations.html",
     "/pfd-resources-and-quick-references/station-info.html",
+    "/pfd-resources-and-quick-references/station/policies.html",
     "/pfd-resources-and-quick-references/training/index.html"
 ];
 
