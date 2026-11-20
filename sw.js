@@ -1,8 +1,8 @@
 // Pre-Cache Service Worker for Poquoson Fire & Rescue Protocols
-// Generated: 20261113-195726
+// Generated: 20261120-054135
 // Caches ALL protocols on first visit for full offline access
 
-const CACHE_NAME = "pfd-protocols-v20261113-195726";
+const CACHE_NAME = "pfd-protocols-v20261120-054135";
 
 const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/404.html",
@@ -154,6 +154,7 @@ const PRECACHE_URLS = [
     "/pfd-resources-and-quick-references/protocols/neurologic/05_Hypoglycemia_Hyperglycemia_PROC.html",
     "/pfd-resources-and-quick-references/protocols/neurologic/05_Seizure_PROC.html",
     "/pfd-resources-and-quick-references/protocols/neurologic/05_Stroke_TIA_PROC.html",
+    "/pfd-resources-and-quick-references/protocols/outstanding-decisions.html",
     "/pfd-resources-and-quick-references/protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.html",
     "/pfd-resources-and-quick-references/protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.html",
     "/pfd-resources-and-quick-references/protocols/respiratory/03_Pediatric_Stridor_PROC.html",
