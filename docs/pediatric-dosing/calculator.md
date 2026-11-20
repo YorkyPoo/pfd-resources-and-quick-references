@@ -351,15 +351,15 @@ function resetCalc() {
 !!! warning "Hypotension is age-scaled — memorize the formula"
 <div class="sc-wrap tw" markdown="1">
 
-    | Age | Systolic hypotensive below |
-    |---|---|
-    | 1 month – 1 year | **70 mmHg** |
-    | 1 – 10 years | **70 + (2 × age-in-years) mmHg** |
-    | 11 years – adult | **90 mmHg** |
+| Age | Systolic hypotensive below |
+|---|---|
+| 1 month – 1 year | **70 mmHg** |
+| 1 – 10 years | **70 + (2 × age-in-years) mmHg** |
+| 11 years – adult | **90 mmHg** |
 
 </div>
 
-    Anaphylaxis generally drops systolic BP **30% or more** — in a known-allergen call the downward trend is the shock signal, even while the absolute number still looks acceptable.
+Anaphylaxis generally drops systolic BP **30% or more** — in a known-allergen call the downward trend is the shock signal, even while the absolute number still looks acceptable.
 
 !!! note "Weights reconcile with the zone table"
     Weight ranges above match this site's length-based zone table (Red 6–7 kg ≈ 3–6 mo, Purple 8–9 kg ≈ 6–12 mo). Where an external quick-reference disagrees, trust the Broselow zone / an actual scale — never a printed age column — for dosing.

@@ -191,8 +191,10 @@ nav:
     - Station Tours: sops/public-relations/PR-300-Station-Tours.md
     - Apparatus Displays & Standbys: sops/public-relations/PR-400-Apparatus-Displays-Standbys.md
 - EMS Resources:
-  - Outstanding Decisions: protocols/outstanding-decisions.md
   - EMS Resources Home: resources/ems.md
+  - EMS Clinical Hub: ems/index.md
+  - Orientation:
+    - Outstanding Decisions: protocols/outstanding-decisions.md
   - Cardiac:
     - Asystole / PEA: protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md
     - Bradycardia: protocols/cardiac/04_Bradycardia_PROC.md
@@ -352,5 +354,7 @@ nav:
     - How to Use & Recent Updates: station-info.md
   - Portals & Systems:
     - Crew Links & Portals: resources/links.md
+  - Policies & Administration:
+    - City & Personnel Policies: station/policies.md
   - Training:
     - Training & Drills: training/index.md
