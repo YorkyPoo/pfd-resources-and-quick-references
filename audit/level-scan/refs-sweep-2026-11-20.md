@@ -1,8 +1,23 @@
 # Refs sweep — 2026-11-20 (card t_07d23947)
 
-Owner standing rule: guidance that is published as a numbered action row is relocated to
-that page's **References & Good Practice** block, never escalated. This file is the record
-of the sweep that applied it to every published page.
+Owner standing rule, verbatim (2026-11-20):
+
+> "If anything else comes back about extra rows, just move it to the References & Good Practice
+> section."
+
+It is the default, not a question: guidance published as a numbered action row is relocated to
+that page's **References & Good Practice** block, never carded, never asked, never listed as an
+outstanding decision. It is written into the `pems-level-batch-conversion` workflow skill
+(section "Extra / unbadged rows — relocate, never escalate") so it is in a worker's context
+before the decision, with this boundary attached:
+
+- **A genuine badged intervention with no published level (PENDING class) is not prose** — it
+  stays PENDING and waits for the OMD signature; relocating "Administer Norepinephrine" would
+  delete it from the protocol.
+- **No relocation may change a clinical level** — never invent one, never drop one (a level the
+  owner set by ruling counts as a level).
+
+This file is the record of the sweep that applied the rule to every published page.
 
 ## Method
 
