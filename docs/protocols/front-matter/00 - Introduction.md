@@ -2,8 +2,6 @@
 
 ## Patient Care Protocols, Policies, and Procedures
 
-**Pending approval by:** Poquoson Fire and Rescue Operational Medical Director (OMD)
-
 ---
 
 **Poquoson Fire and Rescue**  
@@ -20,7 +18,7 @@ Poquoson, VA 23662
 
 This document was originally developed by the Peninsula's EMS (PEMS) Council. Poquoson Fire and Rescue extends its gratitude to the PEMS Medical Advisory Committee and the regional partners who established the foundational evidence-based guidelines utilized in this document.
 
-These protocols have been adopted, adapted, and approved by the Poquoson Fire and Rescue Operational Medical Director to serve the specific operational and clinical needs of our agency and the citizens of Poquoson.
+These protocols have been adapted from the PEMS Council guidelines to serve the specific operational and clinical needs of this agency and the citizens of Poquoson.
 
 ---
 
