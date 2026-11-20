@@ -122,7 +122,10 @@ POLICY_TILES = [
      "Pay codes & comp banks"),
     ("Leave", "personnel-policies/policies/15-annual-leave-vrs-plan-1-plan-2-and.md",
      "Annual, sick, FMLA"),
-    ("Exposure Reporting", "sops/ems/EMS-1900-Incident-Infection-Control.md",
+    # The label names the destination page (EMS 19.00 Incident Infection Control): there
+    # is no standalone exposure-reporting page and that SOP has no exposure anchor, so a
+    # label promising "Exposure Reporting" would over-promise the target.
+    ("Exposure / Infection Control", "sops/ems/EMS-1900-Incident-Infection-Control.md",
      "Post-exposure steps"),
     ("City HR Manual", "personnel-policies/index.md",
      "City HR policy manual"),
@@ -190,7 +193,7 @@ POLICY_GROUPS = [
     ("Safety & exposure", [
         ("Safety Program", "personnel-policies/policies/28-safety-program-procedures.md"),
         ("Workers' Comp", "personnel-policies/policies/24-workers-compensation-and-light-duty.md"),
-        ("Exposure Reporting", "sops/ems/EMS-1900-Incident-Infection-Control.md"),
+        ("Exposure / Infection Control", "sops/ems/EMS-1900-Incident-Infection-Control.md"),
     ]),
     ("Conduct & benefits", [
         ("Conduct & Discipline", "personnel-policies/policies/39-employee-conduct-progressive-discipline.md"),
@@ -469,7 +472,10 @@ def quicklinks_block(records):
               f'**[Crew Links &amp; Portals]({LINKS_PAGE})**'
               '{: .pfd-cap .pfd-cap--link }', "",
               '<div class="pfd-chips" markdown="1">', ""]
-    parts += [chip(label, href, "admin") for label, href in CREW_CHIPS]
+    # Utility, not admin: maps, run docs, apparatus, training and the station hub are
+    # "where do I go" links, not policy. They carry their own neutral accent so the
+    # colour code never claims the crew row is administrative.
+    parts += [chip(label, href, "util") for label, href in CREW_CHIPS]
     parts += ["", "</div>", "", "</div>", "", "</section>", "",
               QL_END]
     return "\n".join(parts)

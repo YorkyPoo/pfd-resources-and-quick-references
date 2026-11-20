@@ -63,7 +63,7 @@
 [Hazardous Weather](personnel-policies/policies/26-hazardous-weather.md){ .pfd-chip .pfd-chip--admin }
 [Overtime / Comp Time](personnel-policies/policies/13-overtime-compensatory-time.md){ .pfd-chip .pfd-chip--admin }
 [Leave](personnel-policies/policies/15-annual-leave-vrs-plan-1-plan-2-and.md){ .pfd-chip .pfd-chip--admin }
-[Exposure Reporting](sops/ems/EMS-1900-Incident-Infection-Control.md){ .pfd-chip .pfd-chip--admin }
+[Exposure / Infection Control](sops/ems/EMS-1900-Incident-Infection-Control.md){ .pfd-chip .pfd-chip--admin }
 [City HR Manual](personnel-policies/index.md){ .pfd-chip .pfd-chip--admin }
 [All policies](station/policies.md){ .pfd-chip .pfd-chip--admin }
 
@@ -77,12 +77,12 @@
 
 <div class="pfd-chips" markdown="1">
 
-[Maps & Danger](resources/links.md#response){ .pfd-chip .pfd-chip--admin }
-[Run Docs](resources/links.md#doc){ .pfd-chip .pfd-chip--admin }
-[Apparatus](resources/links.md#readiness){ .pfd-chip .pfd-chip--admin }
-[Training](resources/links.md#training){ .pfd-chip .pfd-chip--admin }
-[City](resources/links.md#city){ .pfd-chip .pfd-chip--admin }
-[Station Hub](resources/station.md){ .pfd-chip .pfd-chip--admin }
+[Maps & Danger](resources/links.md#response){ .pfd-chip .pfd-chip--util }
+[Run Docs](resources/links.md#doc){ .pfd-chip .pfd-chip--util }
+[Apparatus](resources/links.md#readiness){ .pfd-chip .pfd-chip--util }
+[Training](resources/links.md#training){ .pfd-chip .pfd-chip--util }
+[City](resources/links.md#city){ .pfd-chip .pfd-chip--util }
+[Station Hub](resources/station.md){ .pfd-chip .pfd-chip--util }
 
 </div>
 

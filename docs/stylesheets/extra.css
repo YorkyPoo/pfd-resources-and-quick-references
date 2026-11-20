@@ -368,6 +368,10 @@
 .md-typeset .pfd-card--ems, .md-typeset a.pfd-chip--ems { --pfd-accent: #0284c7; }
 .md-typeset .pfd-card--fire, .md-typeset a.pfd-chip--fire { --pfd-accent: #b91c1c; }
 .md-typeset .pfd-card--admin, .md-typeset a.pfd-chip--admin { --pfd-accent: #475569; }
+/* utility row (crew links & portals): a fourth accent, deliberately NOT admin. These
+   are "where do I go" links, not policy, so they get a warm neutral that is a different
+   hue from all three domains (measured deltaE vs admin below in the evidence file). */
+.md-typeset a.pfd-chip--util { --pfd-accent: #78716c; }
 /* dark scheme: the same three hues at icon/bar lightness, so the accent bar and
    icon measure >=3:1 on the dark card (the light-scheme hexes do not) */
 [data-md-color-scheme="slate"] .md-typeset .pfd-card--ems,
@@ -376,6 +380,7 @@
 [data-md-color-scheme="slate"] .md-typeset a.pfd-chip--fire { --pfd-accent: #f87171; }
 [data-md-color-scheme="slate"] .md-typeset .pfd-card--admin,
 [data-md-color-scheme="slate"] .md-typeset a.pfd-chip--admin { --pfd-accent: #94a3b8; }
+[data-md-color-scheme="slate"] .md-typeset a.pfd-chip--util { --pfd-accent: #a8a29e; }
 
 /* --- the two scrollers --------------------------------------------------- */
 .md-typeset .pfd-scroller {
