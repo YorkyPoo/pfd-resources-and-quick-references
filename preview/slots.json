@@ -8,9 +8,9 @@
     },
     "pilot": {
       "branch": "pilot-references-block",
-      "built_at": "2026-11-20T04:53:33Z",
-      "description": "Pilot: prose moved from action tables into a References & Good Practice block (2 pages)",
-      "sha": "fdcd3c3714830ffa6b94d6d71a511a2a2945690f"
+      "built_at": "2026-11-20T05:08:19Z",
+      "description": "Pilot: prose from action tables into References & Good Practice (Cold r6 = EMR, 2 pages)",
+      "sha": "6ff87064ee378fb4b4cf8b6c1ccfa7dc748754a5"
     },
     "relabel": {
       "branch": "provider-level-letters",
@@ -19,5 +19,5 @@
       "sha": "05addb26252f6259debff424aa83b68467bea4ab"
     }
   },
-  "updated_at": "2026-11-20T04:54:29.975083+00:00"
+  "updated_at": "2026-11-20T05:08:19.833038+00:00"
 }
