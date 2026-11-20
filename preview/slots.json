@@ -14,9 +14,9 @@
     },
     "airway-levels": {
       "branch": "airway-levels",
-      "built_at": "2026-11-20T05:57:51Z",
-      "description": "Airway levels: adult intubation + CPAP titration I (owner p.239/p.247); bundled rows keep OWNER_REQUIRED",
-      "sha": "d3280c003970c4e6a2049f553f5a6ab41f5ba802"
+      "built_at": "2026-11-20T12:46:26Z",
+      "description": "Airway levels (owner PEMS p.239/p.247), re-presented on the rows-one-action tree: adult intubation + reoxygenation I; Pulmonary Edema r9 back to P + OWNER_REQUIRED pending the p.239#5/p.245#4 conflict",
+      "sha": "07b43ac193c10f14f96c1c4a077d5beb38e5f8d5"
     },
     "conversion-artifacts": {
       "branch": "conversion-artifacts",
@@ -55,5 +55,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-20T07:16:16.798000+00:00"
+  "updated_at": "2026-11-20T12:46:26.707308+00:00"
 }
