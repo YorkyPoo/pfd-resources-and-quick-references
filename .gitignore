@@ -2,7 +2,7 @@
 site/
 # Preview build output + derived preview config (see audit/level-scan/preview-readme.md)
 site_preview/
-mkdocs.preview.yml
+mkdocs.preview*.yml
 
 # Python
 __pycache__/
