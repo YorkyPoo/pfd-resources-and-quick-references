@@ -6,12 +6,12 @@ provenance: original
 # Glasgow Coma Scale
 
 **Reference scale, not a standing order.** Scoring tells you *how much* brain function is
-depressed; disposition and airway decisions come from your protocol and your medical director.
+depressed; disposition and airway decisions come from your protocol and Medical Control.
 
 !!! warning "Verify before you act on it"
     Use this card to score and to communicate. Clinical thresholds — including any
     "intubate at GCS 8" shortcut — are governed by **Poquoson Fire & Rescue protocols and
-    the OMD**, not by this page.
+    Medical Control**, not by this page.
 
 ## The three components
 

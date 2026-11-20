@@ -11,7 +11,7 @@ recorded by the team after care has started.
 !!! warning "APGAR never decides whether to resuscitate"
     Resuscitation begins on **tone, breathing and heart rate**, not on a score, and never
     waits on a clock. Scoring does not delay positive-pressure ventilation or chest
-    compressions. Follow your neonatal/resuscitation protocol and the OMD's direction.
+    compressions. Follow your neonatal/resuscitation protocol and Medical Control's direction.
 
 ## The five signs, 0 to 2 each — total 0 to 10
 

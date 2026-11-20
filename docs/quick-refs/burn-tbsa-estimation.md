@@ -11,7 +11,7 @@ say it out loud, and let the receiving team re-measure.
 
 !!! warning "Reference only"
     Percentages below are the standard teaching tables. **Fluid volumes, airway decisions
-    and transfer thresholds come from your burn protocol and the OMD** — confirm them before
+    and transfer thresholds come from your burn protocol and Medical Control** — confirm them before
     acting on any number on this page.
 
 ## Adult Rule of Nines (quick field estimate)

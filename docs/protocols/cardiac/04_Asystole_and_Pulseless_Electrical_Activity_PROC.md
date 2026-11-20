@@ -39,4 +39,4 @@ Resuscitation guidelines for Asystole and Pulseless Electrical Activity (PEA), e
 ### Pearls
 • ⚠ Push hard and fast: rate 100 – 120 bpm. Allow complete chest recoil.
 • ⚠ Minimize interruptions in chest compressions.
-• ⚠ Termination of resuscitative efforts is a **Poquoson Medical Control** decision only.
+• ⚠ Termination of resuscitative efforts is a **Medical Control** decision only.

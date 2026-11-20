@@ -39,5 +39,5 @@ This administrative protocol outlines the procedure for safely transferring pati
 ### Pearls
 1. ⚠ **Thorough Assessment**: The ALS provider is strictly responsible for a comprehensive clinical assessment before handoff to ensure no hidden acuity exists.
 2. **Documentation Requirements**: Both providers have strict documentation responsibilities. The BLS provider completes the primary PCR, while the ALS provider must complete an addendum detailing physical findings, the transfer of care process, and any physician consultation.
-3. **Medical Control**: Always consult Medical Control (**Poquoson OMD**) for edge cases or when there is any concern about the appropriateness of the release to BLS.
+3. **Medical Control**: Always consult Medical Control for edge cases or when there is any concern about the appropriateness of the release to BLS.
 4. ⚠ **Pain Management**: Anticipated need for pain management is an ALS indicator; do not release patients to BLS if they will likely require analgesia in the near future.

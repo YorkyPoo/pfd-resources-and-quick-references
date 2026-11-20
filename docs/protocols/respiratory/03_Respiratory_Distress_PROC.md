@@ -86,5 +86,5 @@ This protocol addresses respiratory distress from obstructive (asthma/COPD), inf
 
 ### Mandatory Text Replacements Applied
 - Peninsula EMS / PEMS ➔ Poquoson Fire and Rescue
-- PEMS Medical Advisory Committee / Regional Medical Director ➔ Poquoson OMD
+- PEMS Medical Advisory Committee / Regional Medical Director ➔ Medical Control
 - Regional Protocol(s) ➔ Poquoson Protocol(s)

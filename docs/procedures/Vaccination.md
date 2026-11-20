@@ -5,9 +5,9 @@
 Guidelines for vaccination administration by authorized, appropriately trained, and supervised EMS providers for public health.
 
 ### Responsibilities
-*   **OMD:** Manages vaccine handling/training, acts as supervising physician, implements quality management.
+*   **Medical Control:** Manages vaccine handling/training, acts as supervising physician, implements quality management.
 *   **Agency:** Must be a licensed ALS agency, establish MOU/registration for immunization programs, and maintain records per VIIS guidelines.
-*   **Provider:** Must hold valid, unrestricted ALS certification and be individually approved by the OMD.
+*   **Provider:** Must hold valid, unrestricted ALS certification and be individually approved by Medical Control.
 
 ### Procedure
 1. Don PPE per CDC/agency guidelines.

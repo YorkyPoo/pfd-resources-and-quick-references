@@ -40,5 +40,5 @@ Respecting patient decision-making capacity while ensuring safe, appropriate med
 1. ⚠ **Destination Changes:** Any time a patient is transported to the most appropriate facility other than the one requested, the reason for the change and destination shall be documented on the Patient Care Report (PCR).
 2. ⚠ **Time-Critical Exceptions:** STEMI, Stroke/CVA, and other life-threatening conditions the AIC believes to be time critical override patient hospital preference to ensure specialized care.
 3. ⚠ **HEMS Delays:** If the patient is ready for transport AND air ambulance is delayed >10 minutes, initiate ground transport to the closest hospital or helispot/helipad.
-4. **Alternate Destinations:** If approved by the Poquoson OMD / Emergency Physician, alternate destinations may be established.
+4. **Alternate Destinations:** If approved by Medical Control / Emergency Physician, alternate destinations may be established.
 5. **Internal Policy:** Agencies shall have an internal policy explaining destination policy specific to that agency (i.e., time away from community limits).
