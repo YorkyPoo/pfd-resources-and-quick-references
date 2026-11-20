@@ -167,7 +167,7 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 <div class="od-card od-cat-conflict">
 <p class="od-head"><span class="od-row">Row 10</span> <span class="lvl lvl-p">P</span> &#9873;</p>
 <p class="od-action">Endotracheal Intubation: / • Follow Endotracheal Intubation procedure. / • ⚠ Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> PEMS prints endotracheal intubation as two age-split rows: p.247#3 (badge I) for patients 12 and older and p.247#5 (badge P) for patients under 12. This site row invokes the procedure without an age limit, so no single badge is correct; the page&#x27;s P is kept and flagged.</p>
+<p class="od-reason"><strong>Why it is flagged:</strong> PEMS prints endotracheal intubation as two age-split rows: p.247#4 (badge I) for patients 12 and older and p.247#6 (badge P) for patients under 12. This site row invokes the procedure without an age limit, so no single badge is correct; the page&#x27;s P is kept and flagged.</p>
 
 </div>
 </div>
@@ -218,7 +218,7 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 <div class="od-card od-cat-conflict">
 <p class="od-head"><span class="od-row">Row 13</span> <span class="lvl lvl-p">P</span> &#9873;</p>
 <p class="od-action">Advanced Airway Management (if indicated): / • Prepare for or perform endotracheal intubation if respiratory failure. / • ⚠ Positive pressure ventilation (BVM/CPAP) may worsen or induce pneumothorax.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> No single PEMS 2024 row prints this advanced-airway bundle: adult intubation is p.247#3 (badge I), paediatric is p.247#5 (badge P) and surgical airway is p.269#0 (badge P). Three rows, two levels, so the page&#x27;s P is kept and flagged.</p>
+<p class="od-reason"><strong>Why it is flagged:</strong> No single PEMS 2024 row prints this advanced-airway bundle: adult intubation is p.247#4 (badge I), paediatric is p.247#6 (badge P) and surgical airway is p.269#0 (badge P). Three rows, two levels, so the page&#x27;s P is kept and flagged.</p>
 
 </div>
 <div class="od-card od-cat-conflict">
@@ -487,7 +487,7 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 
 These are not row-level decisions. Each one is a question about how the rule itself should read, recorded in the conversion ledger and grouped here by the batch that raised it — the batch is the topic of work, and every card opens with the ledger's own heading naming its subject.
 
-<h3>No batch recorded <span class="od-count">10</span></h3>
+<h3>No batch recorded <span class="od-count">11</span></h3>
 
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
@@ -523,7 +523,11 @@ These are not row-level decisions. Each one is a question about how the rule its
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
-<p class="od-question"><strong>Pearl ruling 2026-11-17 — Cold Exposure row 6 keeps <code>EMT</code> although the page&#x27;s own BLS floor is <code>EMR</code>.</strong> The ruling&#x27;s test reads &quot;BLS-scope -&gt; the page&#x27;s BLS floor&quot;, and heat packs are a BLS skill (&quot;anyone can do that&quot;), yet this card&#x27;s row table said the level stays unchanged, so the row now reads <code>EMT</code> while the page itself chips a floor of <code>EMR</code> (derived from the page&#x27;s 8 level chips, in file order: EMR, EMR, EMR, EMR, EMR, EMT, EMR, EMT). Both readings agree the action is BLS-scope and that no new authority is created; they disagree only on which BLS level prints. Owner to confirm: keep <code>EMT</code> as directed, or lower the row to the page floor <code>EMR</code>? Nothing changes on the page until then.</p>
+<p class="od-question"><strong>Pilot 2026-11-20 — Cold Exposure rows 6 and 9 were moved out of the action table into the page&#x27;s &quot;References &amp; Good Practice&quot; block.</strong> Both are unbadged PEMS p.67 PEARLS prose; the owner&#x27;s presentation ruling puts unbadged prose below the table instead of chipping it. The levels this page records for them (row 6 <code>EMT</code> (p.67 PEARLS #5), row 9 <code>MC</code> (p.67 PEARLS #3), Pearl ruling 2026-11-17) are stated in that block and stay in <code>level-rulings.yaml</code>; they are no longer chips, so they are no longer in this ledger.</p>
+</div>
+<div class="od-card od-cat-question">
+<p class="od-head"><span class="od-batch">No batch recorded</span></p>
+<p class="od-question"><strong>Pearl ruling 2026-11-17 — Cold Exposure row 6 keeps <code>EMT</code> although the page&#x27;s own BLS floor is <code>EMR</code>.</strong> The ruling&#x27;s test reads &quot;BLS-scope -&gt; the page&#x27;s BLS floor&quot;, and heat packs are a BLS skill (&quot;anyone can do that&quot;), yet this card&#x27;s row table said the level stays unchanged, so the page&#x27;s &quot;References &amp; Good Practice&quot; block now states <code>EMT</code> while the page itself chips a floor of <code>EMR</code> (derived from the page&#x27;s 7 level chips, in file order: EMR, EMR, EMR, EMR, EMR, EMR, EMT). Both readings agree the action is BLS-scope and that no new authority is created; they disagree only on which BLS level prints. Owner to confirm: keep <code>EMT</code> as directed, or lower it to the page floor <code>EMR</code>? Nothing changes on the page until then.</p>
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
@@ -564,7 +568,7 @@ These are not row-level decisions. Each one is a question about how the rule its
 <p class="od-question"><strong>Batch 4 — three cross-page citations reach procedures.</strong> Hemorrhage rows 8-9 cite the Tourniquet Application procedure (p.273#6 EMR, p.273#7 MC) and Trauma row 7 cites Universal Patient Care (p.50#9 A). Each cited row prints the action verbatim; confirm citing a procedure for a protocol-page row is intended.</p>
 </div>
 
-<h3>Batch 5 <span class="od-count">6</span></h3>
+<h3>Batch 5 <span class="od-count">5</span></h3>
 
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 5</span></p>
@@ -585,10 +589,6 @@ These are not row-level decisions. Each one is a question about how the rule its
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 5</span></p>
 <p class="od-question"><strong>Batch 5 — two cross-page citations reach other protocols.</strong> Sedation row 2 cites Pain Control p.77#2 (&quot;Assess and monitor blood pressure. Ensure patient is not hypotensive.&quot;, badge EMT) and row 3 cites Universal Patient Care p.50#9 (&quot;Establish IV / IO access when indicated.&quot;, badge A). Both print the site row verbatim; chip moves A -&gt; EMT (row 2) and I -&gt; A (row 3) as the source prints.</p>
-</div>
-<div class="od-card od-cat-question">
-<p class="od-head"><span class="od-batch">Batch 5</span></p>
-<p class="od-question"><strong>Batch 5 — Cold Exposure rows 6 and 9 are OWNER_RULED (Pearl ruling 2026-11-17); the &quot;prints nowhere&quot; reason was false and no flag remains.</strong> Row 6 (active external rewarming with heat packs) is printed in the protocol&#x27;s own Pearls — p.67 PEARLS #5: &quot;use active external rewarming with heat packs, warm blankets, etc&quot; — so the level stays <code>EMT</code>: a Pearl that restates a BLS skill does not create a new provider authority, and PEMS prints no badge for it. Row 9 (Medical Control before use of AED) is printed — p.67 PEARLS #3: &quot;Contact Medical Control prior to use of AED&quot; — so the level stays <code>MC</code>: a Medical Control contact is not a provider level. Neither row is flagged on its page any more; both were cleared by the ruling, not left as questions.</p>
 </div>
 
 <h3>Batch 6 <span class="od-count">8</span></h3>
