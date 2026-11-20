@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Preview slots — Poquoson Fire &amp; Rescue Protocols</title>
+<style>
+  body { background:#16213e; color:#e8e8e8; font:16px/1.5 system-ui, sans-serif;
+         margin:0; padding:2rem 1.25rem; }
+  main { max-width:60rem; margin:0 auto; }
+  h1 { font-size:1.5rem; margin:0 0 .25rem; }
+  p.lede { color:#a9b4c9; margin:.25rem 0 1.75rem; }
+  table { border-collapse:collapse; width:100%; }
+  th, td { text-align:left; padding:.6rem .5rem; border-bottom:1px solid #2c3a5e;
+            vertical-align:top; }
+  th { color:#a9b4c9; font-weight:600; font-size:.85rem; text-transform:uppercase;
+        letter-spacing:.04em; }
+  a { color:#7fb2ff; }
+  code { background:#0f1830; padding:.1rem .35rem; border-radius:3px; font-size:.85em; }
+  .meta { color:#8b97ad; font-size:.85rem; }
+  footer { margin-top:2rem; color:#8b97ad; font-size:.8rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>Preview slots</h1>
+<p class="lede">Each slot is built from one branch/commit and lives at its own
+subpath, so parallel cards cannot overwrite each other. Not indexed; no service
+worker anywhere under <code>/preview/</code>.</p>
+<table>
+<thead><tr><th>Slot</th><th>What it is</th><th>Built from</th><th>Built</th></tr></thead>
+<tbody>
+<tr><td><a href="agency-names/index.html"><code>agency-names/</code></a></td><td>Agency names out of clinical prose</td><td><code>agency-names</code> @ <code>3d293c0</code></td><td class="meta">2026-11-20T06:21:07Z</td></tr>
+<tr><td><a href="ai-prompt-exclusion/index.html"><code>ai-prompt-exclusion/</code></a></td><td>AI build prompt excluded from the published site; guard added</td><td><code>ai-prompt-exclusion</code> @ <code>ba9c0bf</code></td><td class="meta">2026-11-20T06:41:35Z</td></tr>
+<tr><td><a href="airway-levels/index.html"><code>airway-levels/</code></a></td><td>Airway levels (owner PEMS p.239/p.247), re-presented on the rows-one-action tree: adult intubation + reoxygenation I; Pulmonary Edema r9 back to P + OWNER_REQUIRED pending the p.239#5/p.245#4 conflict</td><td><code>airway-levels</code> @ <code>95a3d1c</code></td><td class="meta">2026-11-20T12:51:45Z</td></tr>
+<tr><td><a href="all-pages/index.html"><code>all-pages/</code></a></td><td>All protocols: five-pip level strip (54 pages, 58 tables, 518 rows; PENDING rows rendered as pending)</td><td><code>pipstrip-rollout</code> @ <code>b3ff73b</code></td><td class="meta">2026-11-20T16:04:00Z</td></tr>
+<tr><td><a href="conversion-artifacts/index.html"><code>conversion-artifacts/</code></a></td><td>Conversion artifacts: 54 *_report.json + mapping block out of the published tree</td><td><code>conversion-artifacts</code> @ <code>8b9ba80</code></td><td class="meta">2026-11-20T06:25:48Z</td></tr>
+<tr><td><a href="front-matter/index.html"><code>front-matter/</code></a></td><td>Front matter: effective date removed</td><td><code>front-matter-effective</code> @ <code>e389a49</code></td><td class="meta">2026-11-20T12:57:51Z</td></tr>
+<tr><td><a href="front-matter-2/index.html"><code>front-matter-2/</code></a></td><td>Introduction: OMD approval claims stripped (t_041a6f40)</td><td><code>front-matter-2</code> @ <code>7579315</code></td><td class="meta">2026-11-20T13:10:12Z</td></tr>
+<tr><td><a href="main/index.html"><code>main/</code></a></td><td>Baseline: local main</td><td><code>main</code> @ <code>9818904</code></td><td class="meta">2026-11-20T05:45:38Z</td></tr>
+<tr><td><a href="peep-final/index.html"><code>peep-final/</code></a></td><td>CPAP r6 -&gt; I; PEEP ceiling 15 mmHg (owner ruling 2026-11-20, t_7a22b040); Pearls RED DOT bullet qualified to the ruling</td><td><code>peep-final</code> @ <code>d92dfbc</code></td><td class="meta">2026-11-20T14:43:15Z</td></tr>
+<tr><td><a href="peep-i/index.html"><code>peep-i/</code></a></td><td>PEEP titration at I (owner ruling 2026-11-20): Pulmonary Edema r9 and Asthma r8a</td><td><code>peep-i</code> @ <code>d239848</code></td><td class="meta">2026-11-20T13:43:54Z</td></tr>
+<tr><td><a href="peep-split/index.html"><code>peep-split/</code></a></td><td>CPAP r6 kept EMT; PEEP titration split at I</td><td><code>peep-split</code> @ <code>db1e72d</code></td><td class="meta">2026-11-20T14:07:54Z</td></tr>
+<tr><td><a href="pilot/index.html"><code>pilot/</code></a></td><td>Pilot: prose moved out of action tables</td><td><code>pilot-references-block</code> @ <code>c9615d9</code></td><td class="meta">2026-11-20T05:45:38Z</td></tr>
+<tr><td><a href="pipstrip/index.html"><code>pipstrip/</code></a></td><td>Five-pip level strip (pilot: Cold Exposure, Pulmonary Edema), rebased onto main</td><td><code>pilot-pipstrip-rebased</code> @ <code>a370a31</code></td><td class="meta">2026-11-20T15:18:51Z</td></tr>
+<tr><td><a href="refs-sweep/index.html"><code>refs-sweep/</code></a></td><td>Refs sweep: three guidance rows moved below their tables</td><td><code>refs-sweep</code> @ <code>dee3957</code></td><td class="meta">2026-11-20T13:59:20Z</td></tr>
+<tr><td><a href="relabel/index.html"><code>relabel/</code></a></td><td>Provider levels relabelled R|B|A|I|P</td><td><code>provider-level-letters</code> @ <code>05addb2</code></td><td class="meta">2026-11-20T05:45:38Z</td></tr>
+<tr><td><a href="rhythm-derive/index.html"><code>rhythm-derive/</code></a></td><td>Rhythm interpretation derived (I) by the ladder rule; the generator no longer asks the owner</td><td><code>rhythm-derive</code> @ <code>7ec79e1</code></td><td class="meta">2026-11-20T14:21:16Z</td></tr>
+<tr><td><a href="rows/index.html"><code>rows/</code></a></td><td>Row structure: one action per row; page-voice sweep applied to the generator&#x27;s notes; Sedation page untouched (round 6)</td><td><code>rows-one-action</code> @ <code>29d5378</code></td><td class="meta">2026-11-20T07:10:45Z</td></tr>
+<tr><td><a href="sedation/index.html"><code>sedation/</code></a></td><td>Sedation: PEMS p.55 regimen, ketamine removed; C2 retirement reverted</td><td><code>sedation-p55</code> @ <code>dea24d5</code></td><td class="meta">2026-11-20T07:16:16Z</td></tr>
+</tbody>
+</table>
+<footer>Index regenerated 2026-11-20 16:04 UTC. Live site: <a href="../">root</a>.</footer>
+</main>
+</body>
+</html>
