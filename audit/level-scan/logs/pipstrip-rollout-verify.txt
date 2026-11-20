@@ -33,6 +33,7 @@
   ok  protocols/medical/07_Sepsis_PROC.md                                        1 block(s), 6 row(s)
   ok  protocols/neurologic/05_Hypoglycemia_Hyperglycemia_PROC.md                 1 block(s), 5 row(s)
   ok  protocols/neurologic/05_Seizure_PROC.md                                    1 block(s), 7 row(s)
+  ok  protocols/neurologic/05_Stroke_TIA_PROC.md                                 1 block(s), 9 row(s)
   ok  protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md               1 block(s), 13 row(s)
   ok  protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md               1 block(s), 13 row(s)
   ok  protocols/respiratory/03_Pediatric_Stridor_PROC.md                         1 block(s), 12 row(s)
@@ -45,13 +46,15 @@
   ok  protocols/toxicology/06_Nausea_Vomiting_PROC.md                            1 block(s), 6 row(s)
   ok  protocols/toxicology/06_Nerve_Agents_PROC.md                               1 block(s), 7 row(s)
   ok  protocols/toxicology/06_Overdose_Poisoning_PROC.md                         1 block(s), 10 row(s)
+  ok  protocols/trauma/09_Burns_Thermal_PROC.md                                  1 block(s), 7 row(s)
   ok  protocols/trauma/09_Crush_Syndrome_PROC.md                                 1 block(s), 9 row(s)
   ok  protocols/trauma/09_Electrical_Injuries_PROC.md                            1 block(s), 10 row(s)
   ok  protocols/trauma/09_Hemorrhage_Control_PROC.md                             1 block(s), 9 row(s)
   ok  protocols/trauma/09_Lightning_Injuries_PROC.md                             1 block(s), 10 row(s)
   ok  protocols/trauma/09_Trauma_PROC.md                                         1 block(s), 13 row(s)
 
-pages converted : 52
-action rows     : 502
-pages untouched : 17 (no provider level in any table)
+pages converted : 54
+action rows     : 518
+pages untouched : 15 (no provider level in any table)
+518 rows in markdown / 518 rows in HTML / 518 compared / 0 mismatches
 OK — every converted page matches its markdown, row by row; every untouched page is unchanged

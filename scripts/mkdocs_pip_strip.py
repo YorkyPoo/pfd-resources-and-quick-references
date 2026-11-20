@@ -30,13 +30,36 @@ Rows that publish a level the source does not authorise (``lvl-own`` /
 OWNER_REQUIRED) are rendered **outline-only** with a distinct tag: a solid pip
 would make a guess look like a citation.
 
-Tables whose level cell is ``PENDING`` or ``POLICY`` publish no provider level
-at all; they are left exactly as they are, because a five-pip strip has no slot
-for "no level exists" and inventing one would be a clinical claim.
+``PENDING`` rows
+----------------
+A level table can be **mixed**: most rows publish a provider level, a few carry
+``lvl-pending`` (no level published, pending OMD authorisation). Those pages are
+converted; a PENDING row gets five *dashed* pips, no fill, and the tag
+``PENDING — no published level``, plus ``data-pending="1"`` so the picker never
+counts it as standing, call or not-permitted. Nothing is inferred: the row reads
+as "not yet published", which is what the page says.
+
+A table where **every** row is PENDING (Aortic Dissection) publishes no level at
+all and is left exactly as it is — five empty-looking pips across a whole
+protocol would read as "nobody may act".
+
+Which tables are converted is decided from the **table itself**, never from a
+page's folder, title or the presence of a PENDING chip:
+
+* ``policy`` wrapper or a header whose second cell is not ``Level`` → not a
+  level table (the administrative pages are ``| # | Basis | Action |``); left
+  alone.
+* header ``| # | Level | Action |`` → a level table. Converted, PENDING rows
+  included.
+
+The classifier **fails the build** if a level table carries a level chip no rule
+claims, or if a ``policy``-wrapped table actually has a ``Level`` column with
+level chips — that combination is what silently skipped two level tables before.
 """
 
 from __future__ import annotations
 
+import functools
 import html as html_lib
 import re
 
@@ -151,7 +174,8 @@ def parse_level_cell(html: str):
         "mc_all": any("lvl-mc" in cls.split()
                       for cls in re.findall(r'class="([^"]*)"', html)),
         "flagged": 'lvl-own' in html,
-        "pending": 'lvl-pending' in html or 'lvl-policy' in html,
+        "pending": 'lvl-pending' in html,
+        "policy": 'lvl-policy' in html,
         "bracketed": 'lvl-mc-req' in html or 'lvl-req' in html,
         "marks": [],
     }
@@ -172,7 +196,13 @@ def parse_level_cell(html: str):
 # ----------------------------------------------------------------- rendering
 
 
-def _tag(states, flagged):
+PENDING_STATES = ["pending"] * 5
+PENDING_TAG = "PENDING \u2014 no published level"
+
+
+def _tag(states, flagged, pending=False):
+    if pending:
+        return "pending", PENDING_TAG
     if flagged:
         return "flag", "level unverified \u2691"
     if all(s == "call" for s in states):
@@ -188,7 +218,10 @@ def _tag(states, flagged):
     return "go", f"standing from {LEVELS[m]}"
 
 
-def _aria(states, flagged):
+def _aria(states, flagged, pending=False):
+    if pending:
+        return ("no provider level published yet \u2014 PENDING; this row is neither "
+                "a standing order nor a bar at any level")
     if flagged:
         return ("no verified provider level \u2014 OWNER_REQUIRED; "
                 "the published level is not confirmed against the source")
@@ -207,9 +240,14 @@ def _marks(flags):
     return '<span class="pip-marks">' + "".join(parts) + "</span>"
 
 
-def _render_row(num, action_html, states, flagged, flags=None):
+def _render_row(num, action_html, states, flagged, flags=None, pending=False):
     flags = flags or {}
-    if flagged:
+    if pending:
+        # PENDING: no level is published. Dashed, unfilled pips and an explicit
+        # tag — never a solid pip (standing order) and never the plain empty
+        # outline (not authorised), because neither is what the page says.
+        pips = "".join('<i class="pip pending"></i>' for _ in states)
+    elif flagged:
         # OWNER_REQUIRED: the page publishes a level the source does not
         # authorise. Outline-only pips (no solid fill anywhere) so a guess can
         # never read as a standing order. data-states keeps the page's own
@@ -217,16 +255,17 @@ def _render_row(num, action_html, states, flagged, flags=None):
         pips = "".join('<i class="pip no unv"></i>' for _ in states)
     else:
         pips = "".join(f'<i class="pip {s}"></i>' for s in states)
-    tcls, ttext = _tag(states, flagged)
+    tcls, ttext = _tag(states, flagged, pending)
     unv = ' data-unverified="1"' if flagged else ""
+    pend = ' data-pending="1"' if pending else ""
     return (
-        f'<tr data-states="{",".join(states)}"{unv}>'
+        f'<tr data-states="{",".join(states)}"{unv}{pend}>'
         f'<td class="pip-n">{num}</td>'
         f'<td class="pip-act"><div class="pip-action">{action_html}</div>'
         f'<span class="pip-tag-wrap"><span class="pip-tag {tcls}">{ttext}</span>'
         f'{_marks(flags)}</span></td>'
         f'<td class="pip-strip-cell"><span class="pip-strip" role="img" '
-        f'aria-label="{_aria(states, flagged)}">{pips}</span></td>'
+        f'aria-label="{_aria(states, flagged, pending)}">{pips}</span></td>'
         f"</tr>"
     )
 
@@ -267,7 +306,7 @@ def _legend():
     )
 
 
-def _render_block(rows, flagged=0):
+def _render_block(rows, flagged=0, pending=0):
     head = (
         '<div class="pip-wrap"><table class="pip-table">'
         "<colgroup><col class=\"pip-col-n\"><col><col class=\"pip-col-strip\"></colgroup>"
@@ -283,6 +322,7 @@ def _render_block(rows, flagged=0):
         f"Show all \u2014 {len(rows)} actions. Each row names the level its action starts at; "
         "tap a level to see this protocol as you."
         + (f" \u00b7 {flagged} level unverified \u2691" if flagged else "")
+        + (f" \u00b7 {pending} PENDING (no published level)" if pending else "")
         + "</p>"
     )
     return (
@@ -297,37 +337,97 @@ def _render_block(rows, flagged=0):
     )
 
 
-def transform_lvwrap(match):
-    """Rewrite one rendered .lv-wrap table, or return it untouched."""
+KNOWN_CHIP = {
+    "lvl", "lvl-emr", "lvl-emt", "lvl-a", "lvl-i", "lvl-p",
+    "lvl-mc", "lvl-mc-req", "lvl-req", "lvl-deriv", "lvl-own",
+    "lvl-pending", "lvl-policy",
+}
+
+
+def chip_classes(cell):
+    """Every ``lvl*`` class word in one rendered Level cell."""
+    return {w for cls in re.findall(r'class="([^"]*)"', cell)
+            for w in cls.split() if w.startswith("lvl")}
+
+
+def transform_lvwrap(match, rel="<unknown>"):
+    """Rewrite one rendered .lv-wrap table, or return it untouched.
+
+    The decision is made from the table: a header ``| # | Level | Action |`` is
+    a level table and is converted (PENDING rows included); anything else is
+    left alone. Contradictions fail the build instead of silently skipping.
+    """
     cls = match.group("cls") or ""
-    if "pending" in cls or "policy" in cls:
-        return match.group(0)
     body = match.group("body")
     row_mt = ROW_RE.findall(body)
     if not row_mt:
         return match.group(0)
 
     header_cells = CELL_RE.findall(row_mt[0])
-    if len(header_cells) != 3 or header_cells[1][1].strip().lower() != "level":
+    is_level = (len(header_cells) == 3
+                and header_cells[1][1].strip().lower() == "level")
+
+    if "policy" in cls.split():
+        levels_named = [r for r in row_mt[1:]
+                        if len(CELL_RE.findall(r)) == 3
+                        and chip_classes(CELL_RE.findall(r)[1][1]) & set(LEVEL_CLASS)]
+        if is_level and levels_named:
+            raise ValueError(
+                f"{rel}: a table is wrapped in 'policy' but has a Level column "
+                f"with provider-level chips — refusing to skip a level table")
+        if levels_named:
+            # A Basis column, not a Level column: `| # | Basis | Action |` where
+            # one row names a level as its basis. Rendering a five-pip level
+            # strip over a Basis column would be a category error, so it stays a
+            # table — but it is named, never silently skipped.
+            nums = ", ".join(CELL_RE.findall(r)[0][1].strip() for r in levels_named)
+            print(f"pip_strip: {rel}: policy (Basis) table not converted; "
+                  f"row(s) {nums} name a provider level as basis")
+        return match.group(0)
+    if not is_level:
+        if any(chip_classes(CELL_RE.findall(r)[1][1]) & set(LEVEL_CLASS)
+               for r in row_mt[1:] if len(CELL_RE.findall(r)) == 3):
+            raise ValueError(
+                f"{rel}: table has provider-level chips but its header is not "
+                f"'| # | Level | Action |' — refusing to skip a level table")
         return match.group(0)
 
     rows = []
     n_flag = 0
+    n_pending = 0
     for raw in row_mt[1:]:
         cells = CELL_RE.findall(raw)
         if len(cells) != 3:
-            return match.group(0)
-        num, act = cells[0][1].strip(), cells[2][1].strip()
-        min_idx, mc, flags = parse_level_cell(cells[1][1])
+            raise ValueError(f"{rel}: level table row has {len(cells)} cells, expected 3")
+        num, lvl_cell, act = cells[0][1].strip(), cells[1][1], cells[2][1].strip()
+        unknown = chip_classes(lvl_cell) - KNOWN_CHIP
+        if unknown:
+            raise ValueError(
+                f"{rel}: row {num} carries level chip class(es) {sorted(unknown)} "
+                f"that no rule claims — classify it before shipping the strip")
+        min_idx, mc, flags = parse_level_cell(lvl_cell)
         if flags["pending"]:
-            return match.group(0)
+            n_pending += 1
+            rows.append(_render_row(num, act, PENDING_STATES, False, flags, pending=True))
+            continue
+        if flags["policy"]:
+            raise ValueError(
+                f"{rel}: row {num} has a policy chip inside a Level-column table")
+        if min_idx is None and not flags["mc_all"] and not flags["flagged"]:
+            raise ValueError(
+                f"{rel}: row {num} publishes no level and is not PENDING — "
+                f"refusing to render it as 'not authorised at any level'")
         states = states_for(min_idx, mc, flags["mc_all"])
         if flags["flagged"]:
             n_flag += 1
         rows.append(_render_row(num, act, states, flags["flagged"], flags))
     if not rows:
         return match.group(0)
-    return _render_block(rows, n_flag)
+    if n_pending == len(rows):
+        # The whole table is PENDING (Aortic Dissection): no level exists
+        # anywhere, so a five-pip strip would misread as "nobody may act".
+        return match.group(0)
+    return _render_block(rows, n_flag, n_pending)
 
 
 def on_page_content(html, page, config, **kwargs):
@@ -339,4 +439,5 @@ def on_page_content(html, page, config, **kwargs):
         return html
     if 'data-pip-block' in html:
         return html
-    return LVWRAP_RE.sub(transform_lvwrap, html)
+    return LVWRAP_RE.sub(functools.partial(transform_lvwrap, rel=src or "<unknown>"), html)
+

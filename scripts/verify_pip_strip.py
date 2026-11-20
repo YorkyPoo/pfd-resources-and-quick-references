@@ -5,14 +5,18 @@
     python3 scripts/verify_pip_strip.py --base site --archive audit/archive/tables-2026-11-20
 
 The page list is **derived in code**, never hand-written: every markdown page
-that carries a convertible ``lv-wrap`` level table (plain wrapper, three
-columns, second header cell ``Level``, no ``PENDING`` / ``POLICY`` row) must
-render a strip. Pages whose only tables publish no provider level must not.
+that carries a level table — wrapper without ``policy``, three columns, second
+header cell ``Level``, and at least one row that publishes a level — must
+render a strip. A table whose every row is ``PENDING`` publishes no level and
+must not be converted; a page whose only tables have no ``Level`` column must
+not either.
 
 Reads the *rendered HTML* — the same bytes a phone gets — and, per page:
 
   * the picker (six buttons, one pressed on load), header ``R B A I P``, tally
   * every row's ``data-states`` against the level chip in that page's markdown
+  * a ``PENDING`` row renders ``pending,pending,pending,pending,pending`` with
+    ``data-pending`` and its own tag; it is never ``no,no,no,no,no``
   * the ``*`` / ``†`` markers the chip carried, which must survive the strip
   * row count against the markdown, and the tally against the rows
   * with ``--archive``: pages skipped by the rollout must be byte-identical to
@@ -35,7 +39,7 @@ from urllib.parse import quote as urlquote
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from mkdocs_pip_strip import LEVELS, states_for  # noqa: E402
+from mkdocs_pip_strip import LEVELS, PENDING_STATES, states_for  # noqa: E402
 
 DIV = re.compile(r'<div class="lv-wrap(?P<cls>[^"]*)"[^>]*>(?P<body>.*?)</div>', re.S)
 LEVEL_WORD = {"lvl-emr": 0, "lvl-emt": 1, "lvl-a": 2, "lvl-i": 3, "lvl-p": 4}
@@ -48,6 +52,8 @@ ROW = re.compile(r'<tr data-states="([^"]+)"([^>]*)>(.*?)</tr>', re.S)
 
 def chip_states(cell):
     """(states, marks) for one markdown Level cell — independent reader."""
+    if 'lvl-pending' in cell:
+        return list(PENDING_STATES), []
     cls_words = [cls.split() for cls in re.findall(r'<span class="([^"]*)"[^>]*>', cell)]
     level = None
     mc_all = False
@@ -64,30 +70,56 @@ def chip_states(cell):
     return states, marks
 
 
-def page_tables(md_path):
-    """[(convertible, [(num, states, marks)])] for every lv-wrap table, in order."""
+def page_tables(md_path, rel=None):
+    """[(kind, [(num, states, marks)])] per lv-wrap table, in order.
+
+    kind is 'convert' (a level table with at least one published level),
+    'pending' (a level table where every row is PENDING — no level exists) or
+    'policy' (no Level column). A level chip in a table the rules would not
+    convert is a contradiction and raises, so a misclassified page can never be
+    silently skipped again.
+    """
     text = open(md_path, encoding='utf-8', errors='replace').read()
     out = []
     for m in DIV.finditer(text):
-        cls = (m.group('cls') or '').strip()
+        cls = (m.group('cls') or '').split()
         rows = [ln.strip() for ln in m.group('body').splitlines()
                 if ln.strip().startswith('|')]
         cells = [[c.strip() for c in r.strip('|').split('|')] for r in rows]
-        conv = bool(cells) and 'pending' not in cls and 'policy' not in cls
-        if conv:
-            hdr = cells[0]
-            conv = len(hdr) == 3 and hdr[1].strip().lower() == 'level'
+        hdr = cells[0] if cells else []
+        is_level = len(hdr) == 3 and hdr[1].strip().lower() == 'level'
         body = []
-        if conv:
-            for c in cells[1:]:
-                if len(c) < 3 or set(c[0]) <= set(':- ') or not re.fullmatch(r'\d+[a-z]?', c[0]):
-                    continue
-                if 'lvl-pending' in c[1] or 'lvl-policy' in c[1]:
-                    conv = False       # the hook leaves the whole table alone
-                    break
-                states, marks = chip_states(c[1])
-                body.append((c[0], states, marks))
-        out.append((conv, body))
+        for c in cells[1:]:
+            if len(c) < 3 or set(c[0]) <= set(':- ') or not re.fullmatch(r'\d+[a-z]?', c[0]):
+                continue
+            body.append(c)
+        level_chips = [c for c in body
+                       if any(w in LEVEL_WORD
+                              for cl in re.findall(r'class="([^"]*)"', c[1])
+                              for w in cl.split())]
+        if not (is_level and 'policy' not in cls):
+            if level_chips and 'policy' in cls:
+                out.append(('policy-named-level', []))
+                continue
+            if level_chips:
+                raise ValueError(f'{rel or md_path}: provider-level chips in a table with no '
+                                 f'Level column — refusing to treat it as a policy table')
+            out.append(('policy', []))
+            continue
+        parsed = []
+        pending = 0
+        for c in body:
+            states, marks = chip_states(c[1])
+            if states == PENDING_STATES:
+                pending += 1
+            elif all(s == 'no' for s in states):
+                raise ValueError(f'{rel or md_path}: row {c[0]} publishes no level and is not '
+                                 f'PENDING — refusing to render it as "not authorised"')
+            parsed.append((c[0], states, marks))
+        if parsed and pending == len(parsed):
+            out.append(('pending', parsed))
+        else:
+            out.append(('convert', parsed))
     return out
 
 
@@ -101,7 +133,7 @@ def expected_pages(docs):
                 continue
             p = os.path.join(root, f)
             rel = os.path.relpath(p, docs).replace(os.sep, '/')
-            tables = [b for conv, b in page_tables(p) if conv]
+            tables = [b for kind, b in page_tables(p, rel) if kind == 'convert']
             if tables:
                 exp[rel] = tables
     return exp
@@ -116,8 +148,8 @@ def unchanged_pages(docs):
                 continue
             p = os.path.join(root, f)
             rel = os.path.relpath(p, docs).replace(os.sep, '/')
-            tables = page_tables(p)
-            if tables and not any(conv for conv, _ in tables):
+            tables = page_tables(p, rel)
+            if tables and not any(kind == 'convert' for kind, _ in tables):
                 out.add(rel)
     return out
 
@@ -145,8 +177,10 @@ def check_page(rel, tables, html, problems):
     blocks = BLOCK.findall(html)
     if len(blocks) != len(tables):
         problems.append(f'{rel}: {len(blocks)} pip block(s), markdown has {len(tables)} table(s)')
-        return 0, len(blocks)
+        return 0, len(blocks), sum(len(t) for t in tables), sum(
+            len(ROW.findall(b)) for b in blocks)
     rows_ok = 0
+    md_rows = html_rows = 0
     for ti, (blk, want) in enumerate(zip(blocks, tables), 1):
         where = f'{rel} table {ti}'
         btns = re.findall(r'<button type="button" class="pip-btn[^"]*" data-level="([^"]+)" '
@@ -165,11 +199,16 @@ def check_page(rel, tables, html, problems):
             problems.append(f'{where}: no tally line')
         m = re.search(r'(\d+) actions', tally_txt)
         got = ROW.findall(blk)
+        md_rows += len(want)
+        html_rows += len(got)
         if m and int(m.group(1)) != len(got):
             problems.append(f'{where}: tally says {m.group(1)} actions, table has {len(got)}')
         n_unv = sum(1 for _, attrs, _ in got if 'data-unverified' in attrs)
         if n_unv and f'{n_unv} level unverified' not in tally_txt:
             problems.append(f'{where}: {n_unv} unverified row(s) not disclosed in the tally')
+        n_pend = sum(1 for _, attrs, _ in got if 'data-pending' in attrs)
+        if n_pend and f'{n_pend} PENDING (no published level)' not in tally_txt:
+            problems.append(f'{where}: {n_pend} PENDING row(s) not disclosed in the tally')
         if len(got) != len(want):
             problems.append(f'{where}: {len(got)} rows rendered, markdown has {len(want)}')
         for i in range(min(len(got), len(want))):
@@ -177,8 +216,20 @@ def check_page(rel, tables, html, problems):
             nm = re.search(r'<td class="pip-n">([^<]*)</td>', inner)
             num = nm.group(1).strip() if nm else '?'
             e_num, e_states, e_marks = want[i]
+            e_pending = e_states == PENDING_STATES
             if num != e_num:
                 problems.append(f'{where}: row {i + 1} numbered {num}, markdown {e_num}')
+            if ('data-pending' in _attrs) != e_pending:
+                problems.append(f'{where}: row {e_num} data-pending is '
+                                f'{"present" if "data-pending" in _attrs else "absent"}, '
+                                f'chip is {"PENDING" if e_pending else "a level"}')
+            if e_pending:
+                pips = re.findall(r'<i class="([^"]*)"></i>', inner)
+                if pips != ['pip pending'] * 5:
+                    problems.append(f'{where}: PENDING row {e_num} renders pips {pips}, '
+                                    f'expected 5 dashed "pip pending"')
+                if 'pip-tag pending' not in inner:
+                    problems.append(f'{where}: PENDING row {e_num} has no pending tag')
             if states != ','.join(e_states):
                 problems.append(f'{where}: row {e_num} renders {states}, chip says '
                                 f'{",".join(e_states)}')
@@ -188,7 +239,7 @@ def check_page(rel, tables, html, problems):
             if marks != [re.sub(r'\s+', '', x) for x in e_marks]:
                 problems.append(f'{where}: row {e_num} markers {marks}, chip carries {e_marks}')
             rows_ok += 1
-    return rows_ok, len(blocks)
+    return rows_ok, len(blocks), md_rows, html_rows
 
 
 def main() -> int:
@@ -205,6 +256,7 @@ def main() -> int:
     skip = unchanged_pages(args.src)
     problems = []
     total_rows = 0
+    total_md = total_html = 0
 
     for rel, tables in sorted(exp.items()):
         try:
@@ -212,8 +264,10 @@ def main() -> int:
         except Exception as exc:  # noqa: BLE001
             problems.append(f'{rel}: cannot load ({exc})')
             continue
-        n, nb = check_page(rel, tables, html, problems)
+        n, nb, md, ht = check_page(rel, tables, html, problems)
         total_rows += n
+        total_md += md
+        total_html += ht
         if not args.quiet:
             print(f'  ok  {rel:74s} {nb} block(s), {n} row(s)')
 
@@ -237,6 +291,9 @@ def main() -> int:
     print(f'pages converted : {len(exp)}')
     print(f'action rows     : {total_rows}')
     print(f'pages untouched : {len(skip)} (no provider level in any table)')
+    mismatches = len(problems)
+    print(f'{total_md} rows in markdown / {total_html} rows in HTML / {total_rows} compared '
+          f'/ {mismatches} mismatches')
     if problems:
         print(f'FAIL — {len(problems)} problem(s):')
         for p in problems:

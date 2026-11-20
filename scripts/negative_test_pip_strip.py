@@ -2,10 +2,10 @@
 confirm scripts/verify_pip_strip.py rejects it. Control run must exit 0."""
 import os, shutil, subprocess, sys
 
-ROOT = '/root/.hermes/profiles/developer/cache/scratch'
-SRC = os.path.join(ROOT, 'site-rollout')
-WT = '/root/.hermes/profiles/developer/cache/scratch/wt-piproll'
-WORK = os.path.join(ROOT, 'negative')
+WT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(WT)
+SRC = os.environ.get('PIP_SITE', os.path.join(WT, 'site'))
+WORK = os.path.join(ROOT, 'negative-pipstrip')
 
 
 def run_case(name, mutate=None, expect=1):
@@ -87,6 +87,44 @@ def drop_tally(dest):
     return 'removed the tally (row count check)'
 
 
+def pending_as_no(dest):
+    p = os.path.join(dest, 'protocols/neurologic/05_Stroke_TIA_PROC.html')
+    t = open(p, encoding='utf-8').read()
+    old = 'data-states="pending,pending,pending,pending,pending" data-pending="1"><td class="pip-n">8'
+    assert old in t
+    open(p, 'w', encoding='utf-8').write(t.replace(
+        old, 'data-states="no,no,no,no,no"><td class="pip-n">8', 1))
+    return 'rendered a PENDING row as "not authorised at every level"'
+
+
+def pending_no_attr(dest):
+    p = os.path.join(dest, 'protocols/trauma/09_Burns_Thermal_PROC.html')
+    t = open(p, encoding='utf-8').read()
+    old = 'data-states="pending,pending,pending,pending,pending" data-pending="1"><td class="pip-n">6'
+    assert old in t
+    open(p, 'w', encoding='utf-8').write(t.replace(
+        old, 'data-states="pending,pending,pending,pending,pending"><td class="pip-n">6', 1))
+    return 'dropped data-pending from a PENDING row'
+
+
+def pending_no_tag(dest):
+    p = os.path.join(dest, 'protocols/neurologic/05_Stroke_TIA_PROC.html')
+    t = open(p, encoding='utf-8').read()
+    old = '<span class="pip-tag pending">PENDING \u2014 no published level</span>'
+    assert old in t
+    open(p, 'w', encoding='utf-8').write(t.replace(old, '', 1))
+    return 'removed the PENDING tag'
+
+
+def pending_untallied(dest):
+    p = os.path.join(dest, 'protocols/neurologic/05_Stroke_TIA_PROC.html')
+    t = open(p, encoding='utf-8').read()
+    old = ' \u00b7 2 PENDING (no published level)'
+    assert old in t
+    open(p, 'w', encoding='utf-8').write(t.replace(old, '', 1))
+    return 'hid the PENDING rows from the tally'
+
+
 if __name__ == '__main__':
     os.makedirs(WORK, exist_ok=True)
     ok = [run_case('control', None, 0)]
@@ -97,6 +135,10 @@ if __name__ == '__main__':
     ok.append(run_case('E-policy-table-edited', touch_skipped))
     ok.append(run_case('F-fake-strip-on-pending', convert_skipped))
     ok.append(run_case('G-no-tally-count', drop_tally))
+    ok.append(run_case('H-pending-as-not-authorised', pending_as_no))
+    ok.append(run_case('I-pending-no-data-attr', pending_no_attr))
+    ok.append(run_case('J-pending-no-tag', pending_no_tag))
+    ok.append(run_case('K-pending-untallied', pending_untallied))
     print()
     print('all negative cases behaved as expected' if all(ok) else 'SOME CASES DID NOT BEHAVE AS EXPECTED')
     sys.exit(0 if all(ok) else 1)

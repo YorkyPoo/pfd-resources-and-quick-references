@@ -481,3 +481,132 @@ archive index.md present at 2efbfb4
 archive files in tree: 70   (69 page snapshots + index.md)
 tag tables-backup-2026-11-20 -> d5fd03c (object 2e88065)
 ```
+
+---
+
+# Round 4 — PENDING rows converted, classifier rebuilt from the table header
+
+Reviewer round 3 asked for two things: correct the reconciliation's reason text and
+either convert the two mixed-PENDING level tables under an owner-ruled rendering or
+state the rollout as 54 of 56 with 2 deferred. Chat ruled that the pages are level
+tables and must be converted, with PENDING rendered honestly, and that the *classifier*
+— not just the two pages — must be fixed. That is what this round does.
+
+## 4.1 What changed
+
+* `scripts/mkdocs_pip_strip.py` — the convert/skip decision is taken from the table
+  alone: `policy` wrapper or a header whose second cell is not `Level` → leave it;
+  header `| # | Level | Action |` → convert, PENDING rows included. It **raises**
+  (so `mkdocs build --strict` fails) if a level table carries a chip class no rule
+  claims, if a `policy` wrapper has a `Level` column with level chips, or if a row
+  publishes neither a level nor PENDING. That guard fired on its first run and named
+  `protocols/administrative/01_Stroke_Field_Triage_PROC.md` — a `Basis` column whose
+  row 1 names EMT — which is now its own named class in the reconciliation instead of
+  being counted as a plain policy table.
+* PENDING rendering: `data-states="pending,pending,pending,pending,pending"`,
+  `data-pending="1"`, five dashed unfilled pips (`<i class="pip pending">`), tag
+  `PENDING — no published level`, aria `no provider level published yet — PENDING;
+  this row is neither a standing order nor a bar at any level`, and the tally says
+  `· N PENDING (no published level)`. The picker never paints a PENDING row as
+  standing, call or not-permitted; it keeps its tag and full contrast.
+* `scripts/verify_pip_strip.py` — same header-driven classifier (independent chip
+  reader kept), PENDING rows verified as `pending,pending,pending,pending,pending`
+  with `data-pending` and a pending tag, and it prints the parity line itself now.
+* `scripts/reconcile_rollout.py` — committed for the first time. The previous
+  reconciliation cited a generator of that name that was never committed; this one is
+  in the tree and derives the whole table from `page_tables()`.
+* `scripts/negative_test_pip_strip.py` — four new planted defects for the PENDING path.
+
+## 4.2 New numbers (from `reconcile_rollout.py`, arithmetic checked in code)
+
+```
+total pages under docs/protocols + docs/procedures: 75
+  carry an lv-wrap table: 69
+    converted: 54  (58 tables, 518 action rows, 3 of them PENDING)
+    skipped: 15  (no level table to convert — see section 3)
+  no lv-wrap table: 6
+check: 54 + 15 + 6 = 75 -> True
+```
+
+54 pages / 58 tables / 518 rows, of which 3 rows are PENDING (Stroke/TIA rows 8 and 9,
+Burns row 6). Skips: 13 `policy` tables (no `Level` column), 1 `policy`-wrapped `Basis`
+table naming EMT as a basis, 1 all-PENDING table (Aortic Dissection), 6 pages with no
+table. `52 + 2 = 54` and `502 + 16 = 518`; the 16 new rows are Stroke 9 + Burns 7, with
+no row added, removed or renumbered.
+
+## 4.3 The two converted pages, row by row (chip in markdown vs `data-states` in HTML)
+
+Full output: `audit/level-scan/logs/pipstrip-rowcheck-pending-pages.txt`.
+
+```
+docs/protocols/neurologic/05_Stroke_TIA_PROC.md
+ table 1: markdown rows=9  html <tr data-states>=9
+  row   7 chip=no,go,go,go,go               html=no,go,go,go,go               MATCH
+  row   8 chip=pending,pending,pending,pending,pending html=pending,pending,pending,pending,pending MATCH
+  row   9 chip=pending,pending,pending,pending,pending html=pending,pending,pending,pending,pending MATCH
+docs/protocols/trauma/09_Burns_Thermal_PROC.md
+ table 1: markdown rows=7  html <tr data-states>=7
+  row   6 chip=pending,pending,pending,pending,pending html=pending,pending,pending,pending,pending MATCH
+  row   7 chip=call,call,call,call,call     html=call,call,call,call,call     MATCH
+```
+
+How a PENDING row reads in the built HTML (`site/protocols/neurologic/05_Stroke_TIA_PROC.html`):
+
+```html
+<tr data-states="pending,pending,pending,pending,pending" data-pending="1"><td class="pip-n">8</td><td class="pip-act"><div class="pip-action">Establish 18g IV in Right AC (preferred for rapid imaging)</div><span class="pip-tag-wrap"><span class="pip-tag pending">PENDING — no published level</span></span></td><td class="pip-strip-cell"><span class="pip-strip" role="img" aria-label="no provider level published yet — PENDING; this row is neither a standing order nor a bar at any level"><i class="pip pending"></i><i class="pip pending"></i><i class="pip pending"></i><i class="pip pending"></i><i class="pip pending"></i></span></td></tr>
+```
+
+Tally on the same page:
+
+```
+Show all — 9 actions. Each row names the level its action starts at; tap a level to see this protocol as you. · 2 PENDING (no published level)
+```
+
+No clinical word, level or PENDING marker moved: the row's action text is byte-identical
+to the markdown, and the `lvl-note` under each table (which says which rows are pending
+and why) is untouched.
+
+## 4.4 Switch still works (`enabled: false`, one key)
+
+```
+off build: pages with lv-wrap = 69, pages with data-pip-block = 0
+on  build: pages with lv-wrap = 15, pages with data-pip-block = 54
+lv-wrap markup, off build vs a real main d5fd03c build:
+  pages compared 69; identical 69; differing 0; missing 0
+off build, Stroke/TIA: 0 pip blocks, and row 8 still
+  <td><span class="lvl lvl-pending">PENDING</span></td>
+```
+
+`enabled: false` needs no other edit, and the two new pages are covered by it too.
+
+## 4.5 Parity and negative tests
+
+```
+$ python3 scripts/verify_pip_strip.py --base site
+pages converted : 54
+action rows     : 518
+pages untouched : 15 (no provider level in any table)
+518 rows in markdown / 518 rows in HTML / 518 compared / 0 mismatches
+OK — every converted page matches its markdown, row by row; every untouched page is unchanged
+VERIFY_EXIT=0
+```
+
+Negative tests (`scripts/negative_test_pip_strip.py`, control must exit 0 and every
+planted defect must exit 1): control, A flipped row state, B missing block, C missing `*`
+marker, D renumbered row, E edited policy table, F faked strip on the all-PENDING page,
+G no tally count, plus the new PENDING cases —
+
+```
+PASS H-pending-as-not-authorised  EXIT=1  rendered a PENDING row as "not authorised at every level"
+PASS I-pending-no-data-attr       EXIT=1  dropped data-pending from a PENDING row
+PASS J-pending-no-tag             EXIT=1  removed the PENDING tag
+PASS K-pending-untallied          EXIT=1  hid the PENDING rows from the tally
+```
+
+## 4.6 What is NOT claimed
+
+* The tag `tables-backup-2026-11-20` and `audit/archive/tables-2026-11-20/` are
+  unchanged — the pre-rollout snapshot already contains both pages (they were archived
+  with their chip tables, which is exactly the state a fallback restores).
+* The PENDING rendering above is the one chat ruled for: dashed, unfilled, tagged, and
+  never a level. It is not an owner-level claim and adds none.
