@@ -14,8 +14,8 @@ This page is generated from the conversion ledger (`audit/level-scan/level-rule-
 
 | what | how many |
 |---|---:|
-| Rows that need your level decision (`OWNER_REQUIRED`, marked &#9873; on the page) | **2** |
-| Rows pending authorization (`PENDING`) | **18** (11 whole-page + 7 single-row) |
+| Rows that need your level decision (`OWNER_REQUIRED`, marked &#9873; on the page) | **0** |
+| Rows pending authorization (`PENDING`) | **15** (11 whole-page + 4 single-row) |
 | Open questions on how the rules themselves should read | **30** |
 | Rulings already recorded — decided, no action needed | **6** |
 
@@ -37,47 +37,25 @@ This page is generated from the conversion ledger (`audit/level-scan/level-rule-
 
 <div class="od-legend" markdown="1">
 - <span class="od-chip od-chip-nowhere">PEMS prints this nowhere</span> — **0 rows**. No PEMS 2024 row prints the action at all (or prints it only in pieces that no single row covers). Your answer is a level of our own, or `PENDING`.
-- <span class="od-chip od-chip-conflict">PEMS prints it, but the badge contradicts the row's own words</span> — **2 rows**. A PEMS row prints the action, but its printed badge conflicts with the text of that same row, or the action is spread over rows at different levels. Your answer is which one wins (and whether the row should be split).
+- <span class="od-chip od-chip-conflict">PEMS prints it, but the badge contradicts the row's own words</span> — **0 rows**. A PEMS row prints the action, but its printed badge conflicts with the text of that same row, or the action is spread over rows at different levels. Your answer is which one wins (and whether the row should be split).
 
 Jump to: [PEMS prints this nowhere](#pems-prints-this-nowhere) · [PEMS prints it, badge contradicts](#pems-prints-it-badge-contradicts)
 
 </div>
 
-<h2 id="owner-required">1. Needs your level decision — 2 rows</h2>
+<h2 id="owner-required">1. Needs your level decision — 0 rows</h2>
 
 Grouped by protocol page, in the order they appear in the site navigation. Each card shows the page, the row number, the level the page shows today with the &#9873; flag, the row text word for word, and the full reason it is flagged.
 
 <h3 id="pems-prints-this-nowhere">PEMS prints this nowhere — 0 rows</h3>
 
-<h3 id="pems-prints-it-badge-contradicts">PEMS prints it, but the badge contradicts the row&#x27;s words — 2 rows</h3>
+<h3 id="pems-prints-it-badge-contradicts">PEMS prints it, but the badge contradicts the row&#x27;s words — 0 rows</h3>
 
-#### [Asystole / PEA](cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md) — 1 row
+<h2 id="pending">2. Pending authorization — 15 rows</h2>
 
-<div class="od-page-block">
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 8a</span> <span class="lvl lvl-i">I</span> &#9873;</p>
-<p class="od-action">Interpret the rhythm: VF or VT (shockable), or asystole or PEA (non-shockable).</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> Conflict, recorded: PEMS prints rhythm determination but never badges it on its own. p.235#4 prints &quot;Apply AED / Assess cardiac rhythm every 2 minutes&quot; at badge EMR, and in the same sentence scopes the classification: &quot;rhythm is VF or VT (as determined by EMT-I or P)&quot;; p.263#4 prints the same scoping word for word. The lowest level those rows&#x27; own words give it is I, which is the chip, but a single chip cannot be the printed EMR badge and the I the row&#x27;s text scopes, so this is an open decision, not a citation. No owner statement about the level of rhythm determination exists and none is attributed to him: the owner&#x27;s 2026-11-20 instruction was the SPLIT (rhythm determination becomes its own row). p.50#10 (&quot;Consider continuous cardiac monitoring&quot;, badge I) was cited here before and is NOT the authority — that row does not print rhythm determination.</p>
+**11 whole-page rows** — a protocol that is not in PEMS 2024 at all. **3 clinical agency additions** — a row the agency wrote on a page that is otherwise PEMS-cited. **1 administrative rules** — a policy row no PEMS administrative policy prints.
 
-</div>
-</div>
-
-#### [Cardiac Arrest (Non-Traumatic)](cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md) — 1 row
-
-<div class="od-page-block">
-<div class="od-card od-cat-conflict">
-<p class="od-head"><span class="od-row">Row 4a</span> <span class="lvl lvl-i">I</span> &#9873;</p>
-<p class="od-action">• Interpret the rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shockable).</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> Conflict, recorded: same shape as Asystole row 8a. p.235#4 / p.263#4 print rhythm assessment at badge EMR and scope the classification to &quot;(as determined by EMT-I or P)&quot; in the row&#x27;s own words, so the level I is read off the source&#x27;s text and no single printed badge authorises it. Open decision; the owner&#x27;s 2026-11-20 instruction was the split only.</p>
-
-</div>
-</div>
-
-<h2 id="pending">2. Pending authorization — 18 rows</h2>
-
-**11 whole-page rows** — a protocol that is not in PEMS 2024 at all. **3 clinical agency additions** — a row the agency wrote on a page that is otherwise PEMS-cited. **4 administrative rules** — a policy row no PEMS administrative policy prints.
-
-<p class="od-pagenote">The brief for this page said "14 PENDING rows" (11 + 3). The ledger records 7 single-row PENDING entries: 3 clinical agency additions plus 4 administrative rules. Both are listed below, so the number you see here is 18 — derived from the ledger, not from the brief. The 4 administrative rules are decided together with the Batch 6 administrative ruling (see the open questions).</p>
+<p class="od-pagenote">The brief for this page said "14 PENDING rows" (11 + 3). The ledger records 4 single-row PENDING entries: 3 clinical agency additions plus 1 administrative rules. Both are listed below, so the number you see here is 15 — derived from the ledger, not from the brief. The 1 administrative rules are decided together with the Batch 6 administrative ruling (see the open questions).</p>
 
 <h3 id="pending-whole-page">Whole page not in PEMS 2024 — 11 rows</h3>
 
@@ -199,26 +177,7 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
-<h3 id="pending-admin">Administrative rules PEMS does not print — 4 rows</h3>
-
-#### [Behavioral Health Transportation](administrative/01_Behavioral_Health_Transportation_Decision_PROC.md) — 2 rows
-
-<div class="od-page-block">
-<div class="od-card od-cat-pending">
-<p class="od-head"><span class="od-row">Row 6</span> <span class="lvl lvl-pending">PENDING</span></p>
-<p class="od-action">Law Enforcement Custody: Patients in LE custody (including ECOs) or under arrest MUST have a law enforcement officer present at all times.</p>
-<p class="od-reason"><strong>Why:</strong> PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol restraint guidelines (p.73: &quot;Patients in law enforcement custody (including emergency custody orders) or under arrest must have a law enforcement officer present at all times&quot;), not as an administrative policy and not as a level-badged row. No policy and no level is published; the wording on this page is the agency policy.</p>
-<p class="od-pagenote"><strong>Note on the page:</strong> PENDING — row 6: PEMS 2024 does not print this rule in any administrative policy; it appears only as prose in the Behavioral Emergencies restraint guidelines (p.73), which carries no level-badged row. No policy and no provider level is published for it. Pending OMD authorization — no provider level applies until the OMD authorizes it.</p>
-<p class="od-near">Was carried from the page as <strong>EMT</strong> &mdash; provenance only, not a citation.</p>
-</div>
-<div class="od-card od-cat-pending">
-<p class="od-head"><span class="od-row">Row 7</span> <span class="lvl lvl-pending">PENDING</span></p>
-<p class="od-action">Restraints: If LE restraints utilized (handcuffs, flex-cuffs), LE officer SHOULD accompany the patient.</p>
-<p class="od-reason"><strong>Why:</strong> PEMS 2024 prints this rule only as prose in the Behavioral Emergencies protocol restraint guidelines (p.73: &quot;If law-enforcement restraints have been utilized (for example handcuffs or flex-cuffs), a law enforcement officer should accompany the patient&quot;), not as an administrative policy and not as a level-badged row. No policy and no level is published; the wording on this page is the agency policy.</p>
-<p class="od-pagenote"><strong>Note on the page:</strong> PENDING — row 7: PEMS 2024 does not print this rule in any administrative policy; it appears only as prose in the Behavioral Emergencies restraint guidelines (p.73), which carries no level-badged row. No policy and no provider level is published for it. Pending OMD authorization — no provider level applies until the OMD authorizes it.</p>
-<p class="od-near">Was carried from the page as <strong>EMT</strong> &mdash; provenance only, not a citation.</p>
-</div>
-</div>
+<h3 id="pending-admin">Administrative rules PEMS does not print — 1 rows</h3>
 
 #### [Infant Abandonment](administrative/01_Infant_Abandonment_PROC.md) — 1 row
 
@@ -228,19 +187,6 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 <p class="od-head"><span class="od-row">Row 2</span> <span class="lvl lvl-pending">PENDING</span></p>
 <p class="od-action">Assess infant and provide medical care per these Protocols</p>
 <p class="od-reason"><strong>Why:</strong> The Infant Abandonment policy (p.25) prints what to do with a surrendered infant (contact CPS or law enforcement, and transport if indicated) but no assessment or treatment step. &quot;Assess the infant and provide medical care per these Protocols&quot; is the agency page&#x27;s own instruction and is not printed in any PEMS administrative policy.</p>
-
-<p class="od-near">Was carried from the page as <strong>EMT</strong> &mdash; provenance only, not a citation.</p>
-</div>
-</div>
-
-#### [Stroke Field Triage](administrative/01_Stroke_Field_Triage_PROC.md) — 1 row
-
-<div class="od-page-block">
-<p class="od-pagenote"><strong>Note you will see on the page:</strong> PENDING — row 4: the Stroke Field Triage policy (p.37) prints no life-threat routing branch, so this one is the agency&#x27;s own. No policy and no provider level is published for it. Pending OMD authorization — no provider level applies until the OMD authorizes it.</p>
-<div class="od-card od-cat-pending">
-<p class="od-head"><span class="od-row">Row 4</span> <span class="lvl lvl-pending">PENDING</span></p>
-<p class="od-action">Immediate Life-Threats: If uncontrolled airway, cardiac arrest, etc. cannot be addressed during transport, route to the nearest ED.</p>
-<p class="od-reason"><strong>Why:</strong> The Stroke Field Triage policy (p.37) prints the RACE/glucose/destination algorithm and no &quot;life threats go to the nearest ED&quot; branch. That branch is the agency page&#x27;s own addition.</p>
 
 <p class="od-near">Was carried from the page as <strong>EMT</strong> &mdash; provenance only, not a citation.</p>
 </div>
@@ -274,7 +220,7 @@ These are not row-level decisions. Each one is a question about how the rule its
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
-<p class="od-question"><strong>Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.</strong> The owner was asked and did not rule, so the other 2 OWNER_REQUIRED rows keep their level + ⚑ flag exactly as they were. Do not convert them without a ruling.</p>
+<p class="od-question"><strong>Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.</strong> The owner was asked and did not rule, so the other 0 OWNER_REQUIRED rows keep their level + ⚑ flag exactly as they were. Do not convert them without a ruling.</p>
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
@@ -350,7 +296,7 @@ These are not row-level decisions. Each one is a question about how the rule its
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 6</span></p>
-<p class="od-question"><strong>Batch 6 — the 4 administrative PENDING row(s), for the owner&#x27;s one-pass ruling.</strong> Each row below is an administrative rule that no PEMS 2024 administrative policy prints: Behavioral Health rows 6-7 (law-enforcement custody; handcuffed transport): PEMS prints the rule only as prose in the Behavioral Emergencies restraint guidelines (p.73), not in any administrative policy and not as a level-badged row. Infant Abandonment row 2 (&quot;assess infant and provide medical care&quot;): the policy prints no assessment/treatment step. Stroke Field Triage row 4 (life-threats route to nearest ED): the Stroke policy prints it nowhere. Stroke Field Triage row 1 is no longer in this set: the Pearl ruling levelled it <code>EMT</code> (p.131#4), so the administrative PENDING count is 4. Each row keeps its reason in <code>pending-protocols.yaml</code> and on the page.</p>
+<p class="od-question"><strong>Batch 6 — the 1 administrative PENDING row(s), for the owner&#x27;s one-pass ruling.</strong> Each row below is an administrative rule that no PEMS 2024 administrative policy prints: Infant Abandonment row 2 (&quot;assess infant and provide medical care&quot;): the policy prints no assessment/treatment step. Stroke Field Triage row 1 is no longer in this set: the Pearl ruling levelled it <code>EMT</code> (p.131#4), so the administrative PENDING count is 1. Each row keeps its reason in <code>pending-protocols.yaml</code> and on the page.</p>
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 6</span></p>

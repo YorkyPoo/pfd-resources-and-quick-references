@@ -26,7 +26,6 @@ To rapidly evaluate and get patients experiencing a suspected stroke to the most
 | 1 | <span class="lvl lvl-emt">EMT</span> | **Time Management:** Maintain a goal scene time of less than 15 minutes. |
 | 2 | <span class="lvl lvl-policy">POLICY</span> | **Diagnostics:** Assess blood glucose. If < 60 mg/dL, treat per Hypoglycemia protocol. |
 | 3 | <span class="lvl lvl-policy">POLICY</span> | **Neurological Assessment:** Evaluate patient using **BEFAST** criteria and **RACE** scale. |
-| 4 | <span class="lvl lvl-pending">PENDING</span> | **Immediate Life-Threats:** If uncontrolled airway, cardiac arrest, etc. cannot be addressed during transport, route to the nearest ED. |
 | 5 | <span class="lvl lvl-policy">POLICY</span> | **Routing (< 24 Hours & LVO):** If Symptoms < 24 Hours (or unknown) AND Suspected LVO (RACE Score 5-9), transport to closest Comprehensive Stroke Center IF it does not increase transport time by 30 mins or greater. If it does, transport to nearest Primary Stroke Center. |
 | 6 | <span class="lvl lvl-policy">POLICY</span> | **Routing (> 24 Hours OR No LVO):** If Symptoms > 24 Hours OR Low Suspicion for LVO (RACE Score 0-4), transport to closest Stroke Center (Acute Stroke Ready, Primary, or Comprehensive). |
 | 7 | <span class="lvl lvl-policy">POLICY</span> | **Stroke Alert Activation:** If RACE ≥ 1, activate stroke alert system by notifying appropriate facility early. |
@@ -38,7 +37,15 @@ To rapidly evaluate and get patients experiencing a suspected stroke to the most
 
 <p class="lv-note">A provider level does not by itself make an administrative rule a protocol: one of them is printed as row p.131#4 of the PEMS 2024 protocol and is cited there, so its chip is that row's level (EMT). No administrative policy prints it.</p>
 
-<p class="lv-note"><strong>PENDING</strong> — row 4: the Stroke Field Triage policy (p.37) prints no life-threat routing branch, so this one is the agency's own. No policy and no provider level is published for it. <strong>Pending OMD authorization</strong> — no provider level applies until the OMD authorizes it.</p>
+Row 4 was a routing exception for immediate life-threats, not a provider action; it is listed under References & Good Practice below.
+
+### References & Good Practice
+
+**Routing exception — immediate life-threats outrank stroke destination criteria.**
+
+- If uncontrolled airway, cardiac arrest, etc. cannot be addressed during transport, route to the nearest ED.
+
+**Why and what next:** [Trauma Field Triage — immediate life-threat routing](01_Trauma_Field_Triage_PROC.md) · [Stroke / TIA](../neurologic/05_Stroke_TIA_PROC.md) · [How to Read the Protocols — level chips, ⚠ cautions and MC](../front-matter/01 - How to Read the Protocols.md)
 
 ### Pearls
 1. ⚠ **Time is Brain:** It is critical to accurately record the "last seen normal" time to determine the appropriate treatment window.

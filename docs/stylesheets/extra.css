@@ -665,11 +665,15 @@ details.fc p { margin: .2em 0 .9em; }
   width: 7em; min-width: 7em; max-width: 7em; }
 
 .md-typeset .lvl-own,
-.md-typeset .lvl-req {
+.md-typeset .lvl-req,
+.md-typeset .lvl-deriv {
   font-size: .68rem; font-weight: 800; vertical-align: super; line-height: 0;
   margin-left: .1em; }
 .md-typeset .lvl-own { color: #b3261e; }
 .md-typeset .lvl-req { color: var(--md-default-fg-color--light); }
+/* The ladder rule: the chip is the lowest level the source names for the action, and
+   every level above may also perform it. The dagger is provenance, not a warning. */
+.md-typeset .lvl-deriv { color: var(--md-primary-fg-color); }
 [data-md-color-scheme="slate"] .md-typeset .lvl-own { color: #ff8a80; }
 
 .md-typeset .lv-note {

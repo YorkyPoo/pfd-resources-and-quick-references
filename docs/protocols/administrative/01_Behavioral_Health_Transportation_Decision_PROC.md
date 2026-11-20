@@ -29,14 +29,21 @@ Appropriately identify patients experiencing a mental health crisis that can ben
 | 3 | <span class="lvl lvl-policy">POLICY</span> | **Medical Control:** When in doubt regarding appropriate destination or patient status, contact Medical Control. |
 | 4 | <span class="lvl lvl-policy">POLICY</span> | **Psychiatric Emergencies:** Acute psychiatric emergencies with significant risk of harm to self/others refusing treatment/transport: contact law enforcement regarding Emergency Custody Order (ECO) for psychiatric evaluation. |
 | 5 | <span class="lvl lvl-policy">POLICY</span> | **Medical Emergencies:** Acute medical emergencies lacking decision-making capacity refusing treatment/transport: contact Medical Control regarding ECO for medical evaluation. MC must petition a magistrate. Contact law enforcement to assist. |
-| 6 | <span class="lvl lvl-pending">PENDING</span> | **Law Enforcement Custody:** Patients in LE custody (including ECOs) or under arrest **MUST** have a law enforcement officer present at all times. |
-| 7 | <span class="lvl lvl-pending">PENDING</span> | **Restraints:** If LE restraints utilized (handcuffs, flex-cuffs), LE officer **SHOULD** accompany the patient. |
 
 </div>
 
 <p class="lv-note"><strong>POLICY</strong> — rows 1-5: no provider level applies. PEMS publishes these rules as administrative policy, not as a clinical protocol: each is cited to the PEMS 2024 administrative policy that prints it — <em>Patient Refusal of Treatment/Transport</em> (PEMS p.27, 28, 29); <em>Behavioral Health Transportation Decision</em> (PEMS p.41) — and no provider level is published, because PEMS prints these rules as policy rather than as level-badged protocol rows.</p>
 
-<p class="lv-note"><strong>PENDING</strong> — row 6: PEMS 2024 does not print this rule in any administrative policy; it appears only as prose in the Behavioral Emergencies restraint guidelines (p.73), which carries no level-badged row. No policy and no provider level is published for it. <strong>Pending OMD authorization</strong> — no provider level applies until the OMD authorizes it. <strong>PENDING</strong> — row 7: PEMS 2024 does not print this rule in any administrative policy; it appears only as prose in the Behavioral Emergencies restraint guidelines (p.73), which carries no level-badged row. No policy and no provider level is published for it. <strong>Pending OMD authorization</strong> — no provider level applies until the OMD authorizes it.</p>
+Rows 6 and 7 were rules about law-enforcement custody, not provider actions; they are listed under References & Good Practice below.
+
+### References & Good Practice
+
+**Law-enforcement custody — who stays with the patient.**
+
+- Patients in LE custody (including ECOs) or under arrest **MUST** have a law enforcement officer present at all times.
+- If LE restraints utilized (handcuffs, flex-cuffs), LE officer **SHOULD** accompany the patient.
+
+**Why and what next:** [Behavioral Patient Restraint](../general/02_Behavioral_Patient_Restraint_PROC.md) · [How to Read the Protocols — level chips, ⚠ cautions and MC](../front-matter/01 - How to Read the Protocols.md)
 
 ### Pearls
 * ⚠ **Medical vs. Psychiatric ECO:** A Psychiatric ECO is obtained by Law Enforcement for psychiatric evaluations. A Medical ECO requires Medical Control to petition a magistrate for patients lacking decision-making capacity due to medical emergencies.
