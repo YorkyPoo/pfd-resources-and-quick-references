@@ -16,7 +16,7 @@ This page is generated from the conversion ledger (`audit/level-scan/level-rule-
 |---|---:|
 | Rows that need your level decision (`OWNER_REQUIRED`, marked &#9873; on the page) | **2** |
 | Rows pending authorization (`PENDING`) | **18** (11 whole-page + 7 single-row) |
-| Open questions on how the rules themselves should read | **32** |
+| Open questions on how the rules themselves should read | **31** |
 | Rulings already recorded — decided, no action needed | **5** |
 
 </div>
@@ -246,11 +246,11 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 </div>
 </div>
 
-<h2 id="open-questions">3. Open questions about the rules — 32</h2>
+<h2 id="open-questions">3. Open questions about the rules — 31</h2>
 
 These are not row-level decisions. Each one is a question about how the rule itself should read, recorded in the conversion ledger and grouped here by the batch that raised it — the batch is the topic of work, and every card opens with the ledger's own heading naming its subject.
 
-<h3>No batch recorded <span class="od-count">10</span></h3>
+<h3>No batch recorded <span class="od-count">9</span></h3>
 
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
@@ -287,10 +287,6 @@ These are not row-level decisions. Each one is a question about how the rule its
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
 <p class="od-question"><strong>Pearl ruling 2026-11-17 + ketamine ruling 2026-11-20 and the row-structure instruction — the &quot;prints nowhere&quot; bucket is empty.</strong> It held 17 rows before the Pearl ruling and 6 after it, and every one of those six has since left the action table: the four guidance rows the owner moved below their pages’ tables on 2026-11-20 (Pediatric Stridor r2 scene management, Pneumothorax r5 equipment readiness, Upper Airway Obstruction r2 recognition, Trauma r6 assess shock — recorded in &lt;code&gt;audit/level-scan/relocated-rows.yaml&lt;/code&gt;, not deleted), and the two Sedation ketamine rows (r4 pre-intubation sedation, r5 post-intubation ketamine), which the p.55 verbatim rewrite deleted with the drug. No converted action row is left without a printed badge, so no row is counted in this bucket and no OWNER_REQUIRED flag rests on a missing source row.</p>
-</div>
-<div class="od-card od-cat-question">
-<p class="od-head"><span class="od-batch">No batch recorded</span></p>
-<p class="od-question"><strong><code>CPAP.md</code> row 6 — an open level question, recorded not fixed.</strong> The row is chipped <code>EMT</code> and cites p.245#4. PEEP titration reads EMT here and I there, and the owner has ruled an Intermediate may titrate PEEP. Should this row read I, or stay EMT on the printed basis below? Which ceiling governs — the 15 cmH2O this row prints, or the 10 cmH2O p.239#5 prints?</p>
 </div>
 
 <h3>Batch 3 <span class="od-count">2</span></h3>
