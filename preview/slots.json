@@ -1,0 +1,65 @@
+{
+  "slots": {
+    "agency-names": {
+      "branch": "agency-names",
+      "built_at": "2026-11-20T06:21:07Z",
+      "description": "Agency names out of clinical prose",
+      "sha": "3d293c0d3ae764c9fd63de46b16184ef43687c81"
+    },
+    "ai-prompt-exclusion": {
+      "branch": "ai-prompt-exclusion",
+      "built_at": "2026-11-20T06:41:35Z",
+      "description": "AI build prompt excluded from the published site; guard added",
+      "sha": "ba9c0bf9852885fe270a4a6eb7e3146b73eaa402"
+    },
+    "airway-levels": {
+      "branch": "airway-levels",
+      "built_at": "2026-11-20T12:51:45Z",
+      "description": "Airway levels (owner PEMS p.239/p.247), re-presented on the rows-one-action tree: adult intubation + reoxygenation I; Pulmonary Edema r9 back to P + OWNER_REQUIRED pending the p.239#5/p.245#4 conflict",
+      "sha": "95a3d1cc4527f606737682861419ae7b7830e491"
+    },
+    "conversion-artifacts": {
+      "branch": "conversion-artifacts",
+      "built_at": "2026-11-20T06:25:48Z",
+      "description": "Conversion artifacts: 54 *_report.json + mapping block out of the published tree",
+      "sha": "8b9ba80aeef5a1263fe254cac2f5820565963203"
+    },
+    "front-matter": {
+      "branch": "front-matter-effective",
+      "built_at": "2026-11-20T12:57:51Z",
+      "description": "Front matter: effective date removed",
+      "sha": "e389a49f495c463cb0c92eb3c2b5da25131e3b02"
+    },
+    "main": {
+      "branch": "main",
+      "built_at": "2026-11-20T05:45:38Z",
+      "description": "Baseline: local main",
+      "sha": "98189044c7e1acd89c2fd48e0ab4eb5be06a02cb"
+    },
+    "pilot": {
+      "branch": "pilot-references-block",
+      "built_at": "2026-11-20T05:45:38Z",
+      "description": "Pilot: prose moved out of action tables",
+      "sha": "c9615d945742aa2ad3465dd7461fcc0e6e9a8dec"
+    },
+    "relabel": {
+      "branch": "provider-level-letters",
+      "built_at": "2026-11-20T05:45:38Z",
+      "description": "Provider levels relabelled R|B|A|I|P",
+      "sha": "05addb26252f6259debff424aa83b68467bea4ab"
+    },
+    "rows": {
+      "branch": "rows-one-action",
+      "built_at": "2026-11-20T07:10:45Z",
+      "description": "Row structure: one action per row; page-voice sweep applied to the generator's notes; Sedation page untouched (round 6)",
+      "sha": "29d5378e2cdad89eedb392e27fe5cad48d4abd6f"
+    },
+    "sedation": {
+      "branch": "sedation-p55",
+      "built_at": "2026-11-20T07:16:16Z",
+      "description": "Sedation: PEMS p.55 regimen, ketamine removed; C2 retirement reverted",
+      "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
+    }
+  },
+  "updated_at": "2026-11-20T12:57:51.196856+00:00"
+}
