@@ -2,22 +2,22 @@
   "slots": {
     "main": {
       "branch": "main",
-      "built_at": "2026-11-20T04:52:50Z",
+      "built_at": "2026-11-20T04:53:33Z",
       "description": "Baseline: local main, no in-flight card changes (live root still serves the older deploy)",
       "sha": "98189044c7e1acd89c2fd48e0ab4eb5be06a02cb"
     },
     "pilot": {
       "branch": "pilot-references-block",
-      "built_at": "2026-11-20T04:52:50Z",
+      "built_at": "2026-11-20T04:53:33Z",
       "description": "Pilot: prose moved from action tables into a References & Good Practice block (2 pages)",
       "sha": "fdcd3c3714830ffa6b94d6d71a511a2a2945690f"
     },
     "relabel": {
       "branch": "provider-level-letters",
-      "built_at": "2026-11-20T04:52:50Z",
+      "built_at": "2026-11-20T04:53:33Z",
       "description": "Provider levels relabelled R | B | A | I | P",
       "sha": "05addb26252f6259debff424aa83b68467bea4ab"
     }
   },
-  "updated_at": "2026-11-20T04:52:50.670232+00:00"
+  "updated_at": "2026-11-20T04:53:33.620915+00:00"
 }
