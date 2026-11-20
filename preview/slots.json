@@ -56,9 +56,9 @@
     },
     "refs-sweep": {
       "branch": "refs-sweep",
-      "built_at": "2026-11-20T13:56:41Z",
+      "built_at": "2026-11-20T13:59:20Z",
       "description": "Refs sweep: three guidance rows moved below their tables",
-      "sha": "61b4ed10f68b3b3baaa1605870b1779081375291"
+      "sha": "dee3957b6049ebd6d9ee133fcf307bdae1673231"
     },
     "relabel": {
       "branch": "provider-level-letters",
@@ -79,5 +79,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-20T13:56:41.187882+00:00"
+  "updated_at": "2026-11-20T13:59:20.848763+00:00"
 }
