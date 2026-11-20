@@ -1,4 +1,4 @@
-tree 00b64616d1c0b42be261123219ab1525f6431374 (pilot-pipstrip)
+tree b3ff79550943a1ec5e06afa0f2173f2fcb67c1b0 (pilot-pipstrip)
 
 === verify_pems_canonical ===
 verifier manifest — 8 checks
@@ -120,7 +120,7 @@ deliverables
   ok   ambiguous-rows.md exists
   ok   alignment.json exists
   ok   pems_table.json exists
-  FAIL .cache/pems_rows.jsonl exists
+  ok   .cache/pems_rows.jsonl exists
   ok   pems_prose.json exists
   ok   pems_prose.json indexes all 280 pages (280)
   ok   every prose entry verifies against the flattened text layer (0 failure(s))
@@ -154,12 +154,12 @@ deliverables
   ok   no PEMS row in scope is unaccounted for (0)
   ok   ambiguous-rows.md states the same total (125)
 no protocol pages touched
-  FAIL git status shows no modified files under docs/
+  ok   git status shows no modified files under docs/
 
   ok   verifier manifest covers the run (8 of 8 checks reached: )
 
-2 INVARIANT(S) FAILED
-verify_pems_canonical EXIT=1
+all invariants hold
+verify_pems_canonical EXIT=0
 
 === level_rule --check ===
 {
@@ -3684,13 +3684,8 @@ mc_wording EXIT=0
 
 [90m  To disable this warning, set NO_MKDOCS_2_WARNING=1.[0m
 
-INFO    -  SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
-  File "/root/pfd-ssg-env/lib/python3.14/site-packages/mkdocs/config/config_options.py", line 1205, in _load_hook
-    spec.loader.exec_module(module)
-  File "/root/.hermes/profiles/developer/cache/scratch/wt-pipstrip/scripts/mkdocs_post_build.py", line 146, in 
-
 INFO    -  Cleaning site directory
-INFO    -  Building documentation to directory: /tmp/pfd-strict-probe
+INFO    -  Building documentation to directory: /tmp/pfd-strict-probe2
 INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
   - personnel-policies/policies/00-introduction.md
   - personnel-policies/policies/01-general-provisions.md
@@ -3737,7 +3732,29 @@ INFO    -  The following pages exist in the docs directory, but are not included
   - personnel-policies/policies/42-resignations-and-separations.md
   - personnel-policies/policies/43-retiree-health-insurance-coverage.md
   - protocols/front-matter/00 - AI Formatting Guidelines.md
-INFO    -  Documentation built in 6.94 seconds
+INFO    -  Documentation built in 6.47 seconds
 [post_build] sitemap: dropped 1 noindex page(s): ['/resources/links.html']
-[post_build] Generated sw.js with 281 pre-cached pages (version: 20261120-051105)
+[post_build] Generated sw.js with 281 pre-cached pages (version: 20261120-051230)
 mkdocs_strict EXIT=0
+
+=== mapper vs prototype ===
+reference: audit/level-scan/reference/protocol-format-sample.html
+  bytes  : 12492 (expected 12492) -> ok
+
+   #  derived input                      prototype states           mapper output              result
+   1  min=R                              go,go,go,go,go             go,go,go,go,go             ok
+   2  min=R                              go,go,go,go,go             go,go,go,go,go             ok
+   3  min=R                              go,go,go,go,go             go,go,go,go,go             ok
+   4  min=R                              go,go,go,go,go             go,go,go,go,go             ok
+   5  min=B                              no,go,go,go,go             no,go,go,go,go             ok
+   6  min=A                              no,no,go,go,go             no,no,go,go,go             ok
+   7  min=A                              no,no,go,go,go             no,no,go,go,go             ok
+   8  min=I                              no,no,no,go,go             no,no,no,go,go             ok
+   9  min=I +MC at I                     no,no,no,call,go           no,no,no,call,go           ok
+  10  MC chip (all levels)               call,call,call,call,call   call,call,call,call,call   ok
+
+  header letters              : RBAIP -> ok
+  prototype still numbers 1-5 : True (substitution confirmed)
+
+all 10 prototype rows reproduced by the mapper
+mapper_test EXIT=0
