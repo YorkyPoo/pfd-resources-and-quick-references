@@ -8,9 +8,9 @@
     },
     "pilot": {
       "branch": "pilot-pipstrip",
-      "built_at": "2026-11-20T05:12:42Z",
+      "built_at": "2026-11-20T05:15:46Z",
       "description": "Protocol format pilot: tapped-level R|B|A|I|P pip strip (2 pages)",
-      "sha": "57466fd539b987a4bf81ecb8d9ecb87d0f442b61"
+      "sha": "6339178bd898cf6186528896e7e506c46d99c077"
     },
     "relabel": {
       "branch": "provider-level-letters",
@@ -19,5 +19,5 @@
       "sha": "05addb26252f6259debff424aa83b68467bea4ab"
     }
   },
-  "updated_at": "2026-11-20T05:12:42.408183+00:00"
+  "updated_at": "2026-11-20T05:15:46.320932+00:00"
 }
