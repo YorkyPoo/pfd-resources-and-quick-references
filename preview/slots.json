@@ -48,6 +48,12 @@
       "description": "PEEP titration at I (owner ruling 2026-11-20): Pulmonary Edema r9 and Asthma r8a",
       "sha": "d2398483364ff6de0226ef8516b59c354824a826"
     },
+    "peep-split": {
+      "branch": "peep-split",
+      "built_at": "2026-11-20T14:07:54Z",
+      "description": "CPAP r6 kept EMT; PEEP titration split at I",
+      "sha": "db1e72de96ede818996bfaf16d5a1a7e49edd92a"
+    },
     "pilot": {
       "branch": "pilot-references-block",
       "built_at": "2026-11-20T05:45:38Z",
@@ -79,5 +85,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-20T13:59:20.848763+00:00"
+  "updated_at": "2026-11-20T14:07:54.525732+00:00"
 }
