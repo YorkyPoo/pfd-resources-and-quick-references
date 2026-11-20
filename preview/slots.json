@@ -6,6 +6,12 @@
       "description": "Agency names out of clinical prose",
       "sha": "3d293c0d3ae764c9fd63de46b16184ef43687c81"
     },
+    "ai-prompt-exclusion": {
+      "branch": "ai-prompt-exclusion",
+      "built_at": "2026-11-20T06:41:35Z",
+      "description": "AI build prompt excluded from the published site; guard added",
+      "sha": "4b7674bc23a28ac5d5cfcd3ce3a52b8c9db7fd64"
+    },
     "airway-levels": {
       "branch": "airway-levels",
       "built_at": "2026-11-20T05:57:51Z",
@@ -43,5 +49,5 @@
       "sha": "2d2b0b37a8ba6252411cf696abae9be8b708c511"
     }
   },
-  "updated_at": "2026-11-20T06:35:13.465227+00:00"
+  "updated_at": "2026-11-20T06:41:35.617207+00:00"
 }
