@@ -23,7 +23,13 @@
       "built_at": "2026-11-20T05:45:38Z",
       "description": "Provider levels relabelled R|B|A|I|P",
       "sha": "05addb26252f6259debff424aa83b68467bea4ab"
+    },
+    "rows": {
+      "branch": "rows-one-action",
+      "built_at": "2026-11-20T05:51:54Z",
+      "description": "Row structure: one action per row",
+      "sha": "88ad4752677973a8f5ab9704f0c26d7a223d89d7"
     }
   },
-  "updated_at": "2026-11-20T05:45:38.779026+00:00"
+  "updated_at": "2026-11-20T05:51:54.541165+00:00"
 }
