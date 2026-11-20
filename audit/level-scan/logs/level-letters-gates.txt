@@ -1,4 +1,4 @@
-tree 1521a2e ; modified docs files: 0
+tree 5aea342 ; modified docs files: 0
 verifier manifest — 8 checks
   [stage1.pems_table] PEMS table integrity: page decisions, row fields, badges, ordinals, page-break continuations
   [stage2.alignment] alignment integrity: totals, ambiguity classifications, containment evidence, 0.40 floor, text-binding verdicts
@@ -3806,7 +3806,7 @@ INFO    -  The following pages exist in the docs directory, but are not included
   - personnel-policies/policies/42-resignations-and-separations.md
   - personnel-policies/policies/43-retiree-health-insurance-coverage.md
   - protocols/front-matter/00 - AI Formatting Guidelines.md
-INFO    -  Documentation built in 6.96 seconds
+INFO    -  Documentation built in 7.18 seconds
 [post_build] sitemap: dropped 1 noindex page(s): ['/resources/links.html']
-[post_build] Generated sw.js with 281 pre-cached pages (version: 20261120-043657)
+[post_build] Generated sw.js with 281 pre-cached pages (version: 20261120-044003)
 EXIT=0
