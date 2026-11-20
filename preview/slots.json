@@ -32,10 +32,10 @@
     },
     "rows": {
       "branch": "rows-one-action",
-      "built_at": "2026-11-20T06:02:47Z",
-      "description": "Row structure: one action per row",
-      "sha": "137cc55e102ea06dfe1085f560f4a35c94663108"
+      "built_at": "2026-11-20T06:21:26Z",
+      "description": "audit(level-scan): gate logs with exit codes for 710011e (row-structure round 3)",
+      "sha": "14dc8c493bbef0009e0e9cfcbbdff22af386d3e2"
     }
   },
-  "updated_at": "2026-11-20T06:21:07.481550+00:00"
+  "updated_at": "2026-11-20T06:21:26.821927+00:00"
 }
