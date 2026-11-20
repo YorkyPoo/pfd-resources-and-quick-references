@@ -30,6 +30,12 @@
       "description": "Front matter: effective date removed",
       "sha": "e389a49f495c463cb0c92eb3c2b5da25131e3b02"
     },
+    "front-matter-2": {
+      "branch": "front-matter-2",
+      "built_at": "2026-11-20T13:10:12Z",
+      "description": "Introduction: OMD approval claims stripped (t_041a6f40)",
+      "sha": "75793158f0b521bb774b5fc58ca9d726dfa2e171"
+    },
     "main": {
       "branch": "main",
       "built_at": "2026-11-20T05:45:38Z",
@@ -61,5 +67,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-20T12:57:51.196856+00:00"
+  "updated_at": "2026-11-20T13:10:12.381055+00:00"
 }
