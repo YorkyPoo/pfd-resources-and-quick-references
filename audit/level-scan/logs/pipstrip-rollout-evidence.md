@@ -64,7 +64,48 @@ extra:
 Same commit, built twice, changing **only** `enabled`:
 
 ```
-{SWITCH}
+off build: pages with lv-wrap = 69, pages with data-pip-block = 0
+on  build: pages with lv-wrap = 17, pages with data-pip-block = 52
+```
+
+Same page (`procedures/CPAP.html`), chip table in the off build:
+
+```html
+<div class="lv-wrap">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">#</th>
+<th>Level</th>
+<th>Action / Intervention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td>
+<span class="lvl lvl-emt">EMT</span>
+</td>
+<td>Explain procedure and indications to the patient.</td>
+</tr>
+```
+
+Same page in the on build:
+
+```html
+<div class="pip-block" data-pip-block>
+<p class="pip-pick-label">Tap your certification level</p>
+<div class="pip-pick" role="group" aria-label="Show the protocol as your certification level">
+<button type="button" class="pip-btn" data-level="R" aria-pressed="false">R</button>
+<button type="button" class="pip-btn" data-level="B" aria-pressed="false">B</button>
+<button type="button" class="pip-btn" data-level="A" aria-pressed="false">A</button>
+<button type="button" class="pip-btn" data-level="I" aria-pressed="false">I</button>
+<button type="button" class="pip-btn" data-level="P" aria-pressed="false">P</button>
+<button type="button" class="pip-btn pip-btn-all" data-level="all" aria-pressed="true">Show all</button>
+</div>
+<p class="pip-tally" aria-live="polite">Show all — 6 actions. Each row names the level its action starts at; tap a level to see this protocol as you.</p>
+<div class="pip-wrap">
+<table class="pip-table">
 ```
 
 Machine check of the off build: all 69 pages' `lv-wrap` markup byte-identical
@@ -73,6 +114,9 @@ to the `main` build, `data-pip-block` count 0.
 ```
 pages with lv-wrap tables, identical markup: 69; differing: 0; missing: 0
 ```
+
+The full page-by-page reconciliation for all 75 pages in scope is in
+`audit/level-scan/logs/pipstrip-reconciliation.md`.
 
 ## Step 2 — rollout, derived in code
 
