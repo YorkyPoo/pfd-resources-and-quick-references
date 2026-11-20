@@ -14,7 +14,7 @@ This page is generated from the conversion ledger (`audit/level-scan/level-rule-
 
 | what | how many |
 |---|---:|
-| Rows that need your level decision (`OWNER_REQUIRED`, marked &#9873; on the page) | **27** |
+| Rows that need your level decision (`OWNER_REQUIRED`, marked &#9873; on the page) | **25** |
 | Rows pending authorization (`PENDING`) | **18** (11 whole-page + 7 single-row) |
 | Open questions on how the rules themselves should read | **33** |
 | Rulings already recorded — decided, no action needed | **2** |
@@ -36,18 +36,18 @@ This page is generated from the conversion ledger (`audit/level-scan/level-rule-
 <h2 id="two-kinds">Two kinds of flagged row</h2>
 
 <div class="od-legend" markdown="1">
-- <span class="od-chip od-chip-nowhere">PEMS prints this nowhere</span> — **6 rows**. No PEMS 2024 row prints the action at all (or prints it only in pieces that no single row covers). Your answer is a level of our own, or `PENDING`.
+- <span class="od-chip od-chip-nowhere">PEMS prints this nowhere</span> — **4 rows**. No PEMS 2024 row prints the action at all (or prints it only in pieces that no single row covers). Your answer is a level of our own, or `PENDING`.
 - <span class="od-chip od-chip-conflict">PEMS prints it, but the badge contradicts the row's own words</span> — **21 rows**. A PEMS row prints the action, but its printed badge conflicts with the text of that same row, or the action is spread over rows at different levels. Your answer is which one wins (and whether the row should be split).
 
 Jump to: [PEMS prints this nowhere](#pems-prints-this-nowhere) · [PEMS prints it, badge contradicts](#pems-prints-it-badge-contradicts)
 
 </div>
 
-<h2 id="owner-required">1. Needs your level decision — 27 rows</h2>
+<h2 id="owner-required">1. Needs your level decision — 25 rows</h2>
 
 Grouped by protocol page, in the order they appear in the site navigation. Each card shows the page, the row number, the level the page shows today with the &#9873; flag, the row text word for word, and the full reason it is flagged.
 
-<h3 id="pems-prints-this-nowhere">PEMS prints this nowhere — 6 rows</h3>
+<h3 id="pems-prints-this-nowhere">PEMS prints this nowhere — 4 rows</h3>
 
 #### [Pediatric Stridor](respiratory/03_Pediatric_Stridor_PROC.md) — 1 row
 
@@ -90,23 +90,6 @@ Grouped by protocol page, in the order they appear in the site navigation. Each 
 <p class="od-action">Assess for shock. Refer to Shock (Hypoperfusion) protocol.</p>
 <p class="od-reason"><strong>Why it is flagged:</strong> No PEMS 2024 row prints &#x27;assess for shock and refer to the Shock protocol&#x27;. p.83#3 prints &#x27;If shock or potential for shock is present, keep the patient warm&#x27; (badge EMR) — the intervention, not the assessment/referral this row names. The page&#x27;s A is kept and flagged.</p>
 <p class="od-near">Nearest PEMS row: <strong>p.83#3</strong> &mdash; <em>not cited as authority</em></p>
-</div>
-</div>
-
-#### [Sedation (Non-Paralytic)](general/02_Sedation_Assisted_Non_Paralytic_PROC.md) — 2 rows
-
-<div class="od-page-block">
-<div class="od-card od-cat-nowhere">
-<p class="od-head"><span class="od-row">Row 4</span> <span class="lvl lvl-i">I</span> &#9873;</p>
-<p class="od-action">Pre-Intubation Sedation, consider ONE of the following: / / • ADULT: Ketamine (Ketalar) 1.5 - 2 mg/kg IV/IO (Maximum single dose: 200 mg) OR 4 - 5 mg/kg IM/IN (Maximum single dose: 400 mg). If administering IV, administer over 1-2 minutes. / • PEDIATRIC: Ketamine (Ketalar) 1 - 2 mg/kg IV/IO (Maximum single dose: 50 mg) OR 2 - 5 mg/kg IM/IN (Maximum single dose: 100 mg). If administering IV, administer over 1-2 minutes. / / OR / / • ADULT: Midazolam (Versed) 2.5 - 5 mg IV/IO (Maximum single dose: 5 mg) OR 5 - 10 mg IN/IM (Maximum single dose: 10 mg). / • PEDIATRIC: Midazolam (Versed) 0.1 mg/kg IV/IO (Maximum single dose: 2.5 mg) OR 0.2 mg/kg IN/IM (Maximum single dose: 5 mg).</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> PRE-INTUBATION sedation has no PEMS 2024 row. p.55 is &quot;Sedation Post Advanced Airway&quot; and its only midazolam row (#3, badge I) is post-airway sedation after fentanyl; the alignment bound r4 to it on text overlap, which would cite a post-airway row for a pre-airway act. PEMS states the gap itself: p.123#4 &quot;Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended. RSI is not addressed in PEMS regional protocols - refer to agency specific protocols for guidance.&quot; Ketamine appears in exactly one PEMS 2024 row, p.72#9 (behavioral restraint, badge P), which does not authorise sedation for intubation. The page&#x27;s I is kept and flagged.</p>
-<p class="od-near">Nearest PEMS row: <strong>p.55#3</strong> &mdash; <em>not cited as authority</em></p>
-</div>
-<div class="od-card od-cat-nowhere">
-<p class="od-head"><span class="od-row">Row 5</span> <span class="lvl lvl-p">P</span> &#9873;</p>
-<p class="od-action">Post-Intubation Sedation, consider ONE of the following: / / • ADULT: Ketamine (Ketalar) 1 mg/kg IV/IO (Maximum single dose: 100 mg). May repeat every 10-15 minutes as needed. / • PEDIATRIC: Ketamine (Ketalar) 0.5 mg/kg IV/IO (Maximum single dose: 25 mg). May repeat every 10-15 minutes as needed.</p>
-<p class="od-reason"><strong>Why it is flagged:</strong> The act is printed at I (p.55#2 fentanyl, p.55#3 midazolam, both badge I) but the drug this row names is not printed anywhere as a sedative: ketamine occurs in exactly one PEMS 2024 row, p.72#9 (behavioral restraint, badge P). The C2 adjudication bound this row to p.55#2 and levelled it I — that is the class level, and chipping it I would widen the authority for ketamine post-intubation sedation from the P this page published to I on a citation that does not name the drug. The page&#x27;s P is kept and flagged: is post-intubation ketamine to sit at I on the strength of the p.55 sedation rows, or is it agency-specific like RSI (p.123#4)?</p>
-<p class="od-near">Nearest PEMS row: <strong>p.55#2</strong> &mdash; <em>not cited as authority</em></p>
 </div>
 </div>
 
@@ -512,7 +495,7 @@ These are not row-level decisions. Each one is a question about how the rule its
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
-<p class="od-question"><strong>Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.</strong> The owner was asked and did not rule, so the other 27 OWNER_REQUIRED rows keep their level + ⚑ flag exactly as they were. Do not convert them without a ruling.</p>
+<p class="od-question"><strong>Whether every OWNER_REQUIRED row should become PENDING is UNANSWERED.</strong> The owner was asked and did not rule, so the other 25 OWNER_REQUIRED rows keep their level + ⚑ flag exactly as they were. Do not convert them without a ruling.</p>
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">No batch recorded</span></p>
@@ -531,7 +514,7 @@ These are not row-level decisions. Each one is a question about how the rule its
 
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 3</span></p>
-<p class="od-question"><strong>Batch 3 — 3 row(s) lost a Medical-Control requirement the page printed.</strong> Each is now chipped at the level PEMS prints: <code>03_Airway_Inhalation_Irritants_PROC.md</code> row 8 was <code>MC</code>, now <code>A</code> (p.153#4). <code>03_Respiratory_Distress_PROC.md</code> row 6 was <code>MC</code>, now <code>EMT</code> (p.123#3). <code>03_Respiratory_Distress_PROC.md</code> row 10 was <code>MC</code>, now <code>A</code> (p.113#4). The rule is &quot;chip = the level PEMS prints&quot;, and the source grants these actions on standing order, but the owner should confirm that dropping a page-printed MC requirement is intended. Row(s) in the converted set that moved *to* MC, now matching the source&#x27;s MC row: <code>04_Chest_Pain_ACS_PROC.md</code> row 7 <code>I</code> -&gt; <code>MC</code> (p.107#9); <code>03_Airway_Inhalation_Irritants_PROC.md</code> row 12 <code>I</code> -&gt; <code>MC</code> (p.153#5); <code>03_Smoke_Inhalation_PROC.md</code> row 12 <code>I</code> -&gt; <code>MC</code> (p.153#5); <code>06_Nausea_Vomiting_PROC.md</code> row 6 <code>A</code> -&gt; <code>MC</code> (p.117#5); <code>01_STEMI_Field_Triage_PROC.md</code> row 7 <code>EMT</code> -&gt; <code>MC</code> (p.107#9). Already <code>MC</code> on the page and matching the source, so not moved (converted set, whole list): <code>04_Supraventricular_Tachycardia_PROC.md</code> row 10 (p.136#7); <code>04_Asystole_and_Pulseless_Electrical_Activity_PROC.md</code> row 12 (p.57#8); <code>04_Bradycardia_PROC.md</code> row 8 (p.104#13); <code>04_Cardiac_Arrest_Non_Traumatic_PROC.md</code> row 13 (p.57#8); <code>04_Cardiac_Arrest_Traumatic_PROC.md</code> row 11 (p.61#9); <code>04_Chest_Pain_ACS_PROC.md</code> row 13 (p.107#9); <code>04_Hypertensive_Crisis_PROC.md</code> row 7 (p.109#5); <code>04_V_Fib_Pulseless_V_Tach_PROC.md</code> row 12 (p.64#14); <code>07_Sepsis_PROC.md</code> row 6 (p.130#5); <code>07_OB_Emergencies_PROC.md</code> row 10 (p.147#4); <code>07_Hypotension_Shock_Non_Trauma_PROC.md</code> row 10 (p.114#9); <code>05_Seizure_PROC.md</code> row 7 (p.127#6); <code>03_Pulmonary_Edema_Congestion_PROC.md</code> row 13 (p.124#13); <code>09_Burns_Thermal_PROC.md</code> row 7 (p.88#9); <code>09_Crush_Syndrome_PROC.md</code> row 9 (p.91#8); <code>09_Hemorrhage_Control_PROC.md</code> row 9 (p.273#7); <code>09_Trauma_PROC.md</code> row 13 (p.84#15); <code>06_Nerve_Agents_PROC.md</code> row 7 (p.159#6); <code>02_Behavioral_Patient_Restraint_PROC.md</code> row 8 (p.72#10); <code>02_Diving_and_Drowning_Emergencies_PROC.md</code> row 7 (p.93#6); <code>02_Pain_Control_PROC.md</code> row 8 (p.78#6); <code>Surgical_Airway.md</code> row 5 (p.269#6).</p>
+<p class="od-question"><strong>Batch 3 — 3 row(s) lost a Medical-Control requirement the page printed.</strong> Each is now chipped at the level PEMS prints: <code>03_Airway_Inhalation_Irritants_PROC.md</code> row 8 was <code>MC</code>, now <code>A</code> (p.153#4). <code>03_Respiratory_Distress_PROC.md</code> row 6 was <code>MC</code>, now <code>EMT</code> (p.123#3). <code>03_Respiratory_Distress_PROC.md</code> row 10 was <code>MC</code>, now <code>A</code> (p.113#4). The rule is &quot;chip = the level PEMS prints&quot;, and the source grants these actions on standing order, but the owner should confirm that dropping a page-printed MC requirement is intended. Row(s) in the converted set that moved *to* MC, now matching the source&#x27;s MC row: <code>04_Chest_Pain_ACS_PROC.md</code> row 7 <code>I</code> -&gt; <code>MC</code> (p.107#9); <code>03_Airway_Inhalation_Irritants_PROC.md</code> row 12 <code>I</code> -&gt; <code>MC</code> (p.153#5); <code>03_Smoke_Inhalation_PROC.md</code> row 12 <code>I</code> -&gt; <code>MC</code> (p.153#5); <code>06_Nausea_Vomiting_PROC.md</code> row 6 <code>A</code> -&gt; <code>MC</code> (p.117#5); <code>01_STEMI_Field_Triage_PROC.md</code> row 7 <code>EMT</code> -&gt; <code>MC</code> (p.107#9). Already <code>MC</code> on the page and matching the source, so not moved (converted set, whole list): <code>04_Supraventricular_Tachycardia_PROC.md</code> row 10 (p.136#7); <code>04_Asystole_and_Pulseless_Electrical_Activity_PROC.md</code> row 12 (p.57#8); <code>04_Bradycardia_PROC.md</code> row 8 (p.104#13); <code>04_Cardiac_Arrest_Non_Traumatic_PROC.md</code> row 13 (p.57#8); <code>04_Cardiac_Arrest_Traumatic_PROC.md</code> row 11 (p.61#9); <code>04_Chest_Pain_ACS_PROC.md</code> row 13 (p.107#9); <code>04_Hypertensive_Crisis_PROC.md</code> row 7 (p.109#5); <code>04_V_Fib_Pulseless_V_Tach_PROC.md</code> row 12 (p.64#14); <code>07_Sepsis_PROC.md</code> row 6 (p.130#5); <code>07_OB_Emergencies_PROC.md</code> row 10 (p.147#4); <code>07_Hypotension_Shock_Non_Trauma_PROC.md</code> row 10 (p.114#9); <code>05_Seizure_PROC.md</code> row 7 (p.127#6); <code>03_Pulmonary_Edema_Congestion_PROC.md</code> row 13 (p.124#13); <code>09_Burns_Thermal_PROC.md</code> row 7 (p.88#9); <code>09_Crush_Syndrome_PROC.md</code> row 9 (p.91#8); <code>09_Hemorrhage_Control_PROC.md</code> row 9 (p.273#7); <code>09_Trauma_PROC.md</code> row 13 (p.84#15); <code>06_Nerve_Agents_PROC.md</code> row 7 (p.159#6); <code>02_Behavioral_Patient_Restraint_PROC.md</code> row 8 (p.72#10); <code>02_Diving_and_Drowning_Emergencies_PROC.md</code> row 7 (p.93#6); <code>02_Pain_Control_PROC.md</code> row 8 (p.78#6); <code>02_Sedation_Assisted_Non_Paralytic_PROC.md</code> row 7 (p.55#4); <code>Surgical_Airway.md</code> row 5 (p.269#6).</p>
 </div>
 <div class="od-card od-cat-question">
 <p class="od-head"><span class="od-batch">Batch 3</span></p>
