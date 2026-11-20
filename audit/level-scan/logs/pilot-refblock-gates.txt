@@ -1,0 +1,5 @@
+verify EXIT=0
+level_rule EXIT=0
+mc_wording EXIT=0
+mkdocs EXIT=0
+outstanding_decisions --check EXIT=0

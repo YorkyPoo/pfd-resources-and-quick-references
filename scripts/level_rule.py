@@ -436,6 +436,40 @@ RULINGS_YAML = os.path.join(AUD, 'level-rulings.yaml')
 BINDINGS_YAML = os.path.join(AUD, 'row-bindings.yaml')
 WORDING_YAML = os.path.join(AUD, 'wording-rulings.yaml')
 STYLESHEET_YAML = os.path.join(AUD, 'stylesheet-changes.yaml')
+RELOCATED_YAML = os.path.join(AUD, 'relocated-rows.yaml')
+
+
+def load_relocated():
+    """Rows moved OUT of an action table into the page's References & Good Practice block.
+
+    A relocated row is still on the page, but it is no longer a chipped action row, so it
+    is no longer in the ledger. This record keeps two things honest that the ledger can no
+    longer see: the row's pre-move status (so the ledger's historical "flagged before"
+    counts do not shrink) and, via `proves`, proof that the block the owner-facing card
+    describes is actually printed on the page.
+    """
+    import yaml
+    if not os.path.exists(RELOCATED_YAML):
+        return []
+    doc = yaml.safe_load(open(RELOCATED_YAML, encoding='utf-8')) or {}
+    out = []
+    for rec in doc.get('relocated') or []:
+        missing = [k for k in ('file', 'row', 'level', 'pems', 'proves')
+                   if rec.get(k) in (None, '', [])]
+        if missing:
+            raise SystemExit(f'relocated-rows.yaml: entry {rec!r} is missing {missing}')
+        out.append(rec)
+    return out
+
+
+def relocated_proofs_missing(rec):
+    """The `proves` spans of one relocated row that its page does NOT print."""
+    path = os.path.join(DOCS, rec['file'])
+    if not os.path.exists(path):
+        return ['(page file missing)']
+    text = open(path, encoding='utf-8').read()
+    return [span for span in rec['proves'] if span not in text]
+
 
 
 def policy_pages_text(pages):
@@ -576,6 +610,18 @@ def load_rulings():
             if not isinstance(lf, dict) or lf.get('page') is None or lf.get('ordinal') is None:
                 raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} '
                                  f'level_from must name page + ordinal')
+        ans = rec.get('answered')
+        if ans is not None:
+            if not isinstance(ans, dict) or not all(
+                    ans.get(k) not in (None, '') for k in ('date', 'level', 'quote')):
+                raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} '
+                                 f'`answered` must carry date + level + quote (the owner\'s '
+                                 f'words) — a question is only closed by a recorded answer')
+            if ans['level'] != rec['level']:
+                raise SystemExit(f'level-rulings.yaml: {rec["file"]} row {rec["row"]} is '
+                                 f'`answered` {ans["level"]!r} but its `level` is '
+                                 f'{rec["level"]!r} — an answer that changes the level must '
+                                 f'be the level the ruling records')
         out[(rec['file'], str(rec['row']))] = rec
     return out
 
@@ -1849,17 +1895,105 @@ ADMIN_PAGE_NAME = {
 }
 
 
+COLD_PAGE = 'protocols/general/02_Cold_Exposure_PROC.md'
+
+# The Cold page's owner ruling is a RECORDED DECISION, not an open question: the owner
+# answered "Anyone can warm a patient, EMR" on 2026-11-20. It is emitted in its own
+# OWNER_RULED section, never in OPEN OWNER QUESTIONS — the page the owner reads is titled
+# "decisions still waiting on you", so an answered card there is a published falsehood.
+COLD_RULED_HEADER = '## OWNER_RULED — Cold Exposure pilot (owner ruling 2026-11-20)'
+
+# Pages whose unbadged PEMS prose lives in a "References & Good Practice" block. The owner's
+# 2026-11-20 ruling: the page states the recorded level; the PEMS citation itself stays in
+# audit/level-scan/ and must NOT be printed on the page ("I do not want that Source: PEMS
+# 2024 post in the final product"). `--check` fails if the line comes back.
+AUDIT_ONLY_PROVENANCE = {
+    'protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md',
+    'protocols/general/02_Cold_Exposure_PROC.md',
+}
+
+
+def _cold_relocated_rows():
+    """The recorded relocations for the Cold Exposure page, keyed by row."""
+    return {r['row']: r for r in load_relocated() if r['file'].endswith('02_Cold_Exposure_PROC.md')}
+
+
 def cold_question_cards(ledger):
-    """The Batch-5 Cold Exposure card plus the floor-tension question, from the ledger."""
+    """The Cold-page cards that are genuinely OPEN — normally none.
+
+    Rows 6 and 9 left the action table in the 2026-11-20 pilot and the owner ANSWERED the
+    floor question the same day (`EMR`), so neither is a question any more: the recorded
+    decision is emitted by `cold_ruled_cards()` into the ledger's OWNER_RULED section. What
+    stays here is the failure mode — a relocation the page or `relocated-rows.yaml` does not
+    actually carry, or a ledger that still records the rows as open — because that is work
+    the owner still has to see.
+    """
     facts = open_question_facts(ledger)
     by_row = facts['cold_by_row']
     r6, r9 = by_row.get(6), by_row.get(9)
     if r6 is None or r9 is None:
-        return ['- **Batch 5 — Cold Exposure rows 6 and 9 are no longer in this ledger.** The '
-                'rows this card recorded cannot be found; re-run `scripts/level_rule.py '
-                '--write` before publishing.']
-    out = []
+        # The rows left the ledger because they left the action table. Say that ONLY if the
+        # page really carries the block: `relocated-rows.yaml` says what moved, and the
+        # page's own text has to prove it. Otherwise this card would be an assertion about
+        # a block nobody can see — the exact failure the card exists to prevent.
+        moved = _cold_relocated_rows()
+        unrecorded = [n for n in (6, 9) if n not in moved]
+        unproved = {n: relocated_proofs_missing(moved[n]) for n in (6, 9)
+                    if n in moved and relocated_proofs_missing(moved[n])}
+        if unrecorded or unproved:
+            why = []
+            if unrecorded:
+                why.append(f'row(s) {", ".join(str(n) for n in unrecorded)} have no entry in '
+                           '`audit/level-scan/relocated-rows.yaml`')
+            for n, spans in sorted(unproved.items()):
+                why.append(f'row {n}: the page does not print {", ".join(repr(s) for s in spans)}')
+            out = ['- **Batch 5 — Cold Exposure rows 6 and 9 are no longer in this ledger.** '
+                   'The relocation this pilot recorded does not check out: ' + '; '.join(why)
+                   + '. Repair the page or `relocated-rows.yaml`, then re-run '
+                   '`scripts/level_rule.py --write` before publishing — do not publish this '
+                   'card as it stands.']
+            floor_cards, answered = cold_floor_question(ledger)
+            return out + ([] if answered else floor_cards)
+        # The relocation itself is a RECORDED ruling, not a question — `cold_ruled_cards()`
+        # publishes it in the ledger's OWNER_RULED section.
+        return []
     if r6['status'] == 'owner_ruled' and r9['status'] == 'owner_ruled':
+        return []
+    floor_cards, answered = cold_floor_question(ledger)
+    return ['- **Batch 5 — Cold Exposure rows 6 and 9, as the ledger records them today.** '
+            + '; '.join(f"row {e['row']} is `{e['status']}` at `{e['level_published']}`"
+                        for e in sorted(facts['cold'], key=lambda e: e['row']))
+            + '. Any row not `owner_ruled` here is still open and carries its flag.'] \
+        + ([] if answered else floor_cards)
+
+
+def cold_ruled_cards(ledger):
+    """The Cold page's RECORDED rulings, emitted into the ledger's OWNER_RULED section.
+
+    Nothing here is a question. Two decisions live in this block: the 2026-11-20 pilot
+    relocation (rows 6 and 9 out of the action table, by the owner's presentation ruling)
+    and the owner's answer to the BLS-floor question the 2026-11-17 card left open — `EMR`,
+    "anyone can warm a patient". The history is kept and the owner's words are quoted, but
+    the cards are filed as decisions, so the open-question count the owner reads excludes
+    them.
+    """
+    facts = open_question_facts(ledger)
+    r6, r9 = facts['cold_by_row'].get(6), facts['cold_by_row'].get(9)
+    out = []
+    if r6 is None or r9 is None:
+        moved = _cold_relocated_rows()
+        if any(n not in moved or relocated_proofs_missing(moved[n]) for n in (6, 9)):
+            return []
+        levels = ', '.join(f"row {n} `{moved[n]['level']}` ({moved[n]['pems']})"
+                           for n in (6, 9))
+        out.append('- **Pilot 2026-11-20 — Cold Exposure rows 6 and 9 were moved out of the '
+                   'action table into the page\'s "References & Good Practice" block.** Both '
+                   'are unbadged PEMS p.67 PEARLS prose; the owner\'s presentation ruling puts '
+                   'unbadged prose below the table instead of chipping it. The levels this '
+                   f'page records for them ({levels}, Pearl ruling 2026-11-17) are stated in '
+                   'that block and stay in `level-rulings.yaml`; they are no longer chips, so '
+                   'they are no longer in this ledger.')
+    elif r6['status'] == 'owner_ruled' and r9['status'] == 'owner_ruled':
         c6 = ', '.join(_cite_brief(c) for c in (r6.get('prose_citations') or []))
         c9 = ', '.join(_cite_brief(c) for c in (r9.get('prose_citations') or []))
         out.append(
@@ -1874,41 +2008,77 @@ def cold_question_cards(ledger):
             'level. Neither row is flagged on its page any more; both were cleared by the '
             'ruling, not left as questions.')
     else:
-        out.append(
-            '- **Batch 5 — Cold Exposure rows 6 and 9, as the ledger records them today.** '
-            + '; '.join(f"row {e['row']} is `{e['status']}` at `{e['level_published']}`"
-                        for e in sorted(facts['cold'], key=lambda e: e['row']))
-            + '. Any row not `owner_ruled` here is still open and carries its flag.')
-    out += cold_floor_question(ledger)
+        return []
+    floor_cards, answered = cold_floor_question(ledger)
+    if answered:
+        out += floor_cards
     return out
 
 
 def cold_floor_question(ledger):
-    """The Cold r6 floor tension, in a card the owner can actually see.
+    """The Cold r6 floor tension: `(cards, answered)`.
 
     The card's own table kept row 6 at `EMT`, but the ruling's test is "BLS-scope -> the
     page's BLS floor" and this page chips a lower floor. The level is not changed here;
     the disagreement is recorded so a reader comparing the two rules is not left with an
     unexplained contradiction.
+
+    Since the 2026-11-20 pilot row 6 is no longer a chipped row, so the same tension is
+    read off the page's References & Good Practice block — which states the level in prose
+    and is exactly where the owner would now meet it.
+
+    `answered` is True only when the owner has ruled and the recorded level now equals the
+    page's own floor: the card is then a RECORDED DECISION (it belongs in the ledger's
+    OWNER_RULED section), not a question waiting on the owner.
     """
     by_row = open_question_facts(ledger)['cold_by_row']
     r6 = by_row.get(6)
-    if r6 is None or r6['status'] != 'owner_ruled':
-        return []
-    floor, chips, _seen = page_floor(r6['file'])
-    if floor == r6['level_published']:
-        return []
+    where = f'the row now reads `{r6["level_published"]}`' if r6 is not None else ''
+    if r6 is not None:
+        if r6['status'] != 'owner_ruled':
+            return [], False
+        file_rel, level = r6['file'], r6['level_published']
+    else:
+        moved = _cold_relocated_rows().get(6)
+        if moved is None or relocated_proofs_missing(moved):
+            return [], False
+        file_rel, level = moved['file'], moved['level']
+        where = ('the page\'s "References & Good Practice" block now states '
+                 f'`{level}`')
+    floor, chips, _seen = page_floor(file_rel)
+    if floor == level:
+        # The level now equals the page's own BLS floor, so the tension recorded on
+        # 2026-11-17 is closed. Do not drop it: the owner was ASKED and ANSWERED, and the
+        # answer is the reason the level is what it is. The card is rebuilt from the ruling
+        # (`answered`) and the page floor, so deleting the answer, changing the recorded
+        # level away from the floor, or changing the page's chips all make the ledger's md
+        # stop matching --check.
+        rul = (load_rulings().get((file_rel, '6')) or {})
+        ans = rul.get('answered') or {}
+        if not ans:
+            return [], False
+        return [f'- **Cold Exposure row 6 — the BLS-floor question was ASKED and ANSWERED '
+                f'(owner ruling {ans["date"]}): `{ans["level"]}`.** The question recorded '
+                f'here on 2026-11-17 was whether the rewarming item keeps `EMT` although '
+                f'the page\'s own BLS floor is lower: the ruling\'s test reads "BLS-scope -> '
+                f'the page\'s BLS floor", heat packs are a BLS skill, and the page chips a '
+                f'floor of `{floor}` (derived from the page\'s {len(chips)} level chips, in '
+                f'file order: {", ".join(chips)}). The owner answered on {ans["date"]}: '
+                f'**{ans["level"]}** — "{ans["quote"]}". The item stays below the action '
+                f'table in the page\'s "References & Good Practice" block, and that block '
+                f'now states `{ans["level"]}`, the page\'s own derived floor. The history is '
+                f'kept in `level-rulings.yaml`; no open question remains for this row.'], True
     return [f'- **Pearl ruling 2026-11-17 — Cold Exposure row 6 keeps '
-            f'`{r6["level_published"]}` although the page\'s own BLS floor is `{floor}`.** '
+            f'`{level}` although the page\'s own BLS floor is `{floor}`.** '
             f'The ruling\'s test reads "BLS-scope -> the page\'s BLS floor", and heat packs '
             f'are a BLS skill ("anyone can do that"), yet this card\'s row table said the '
-            f'level stays unchanged, so the row now reads `{r6["level_published"]}` while '
+            f'level stays unchanged, so {where} while '
             f'the page itself chips a floor of `{floor}` (derived from the page\'s '
             f'{len(chips)} level chips, in file order: {", ".join(chips)}). Both readings '
             f'agree the action is BLS-scope and that no new authority is created; they '
             f'disagree only on which BLS level prints. Owner to confirm: keep '
-            f'`{r6["level_published"]}` as directed, or lower the row to the page floor '
-            f'`{floor}`? Nothing changes on the page until then.']
+            f'`{level}` as directed, or lower it to the page floor '
+            f'`{floor}`? Nothing changes on the page until then.'], False
 
 
 def admin_pending_cards(ledger):
@@ -2056,21 +2226,31 @@ def emit_md(ledger):
               '"Before" is the status the previous `level-rule-ledger.json` recorded for that row',
               '(`status_before`, captured by the writer); "after" is the status on this page now.',
               'A row that stopped being flagged is a **cross-page citation** or was closed by a',
-              'recorded decision — the citation that cleared it is listed above and in the table.', '',
-              '| page | flagged before | flagged after | cleared | of which cross-page |',
-              '|---|---:|---:|---:|---:|']
+              'recorded decision — the citation that cleared it is listed above and in the table.',
+              'Rows relocated out of an action table are not in the ledger any more, so their',
+              'pre-move status is read from `audit/level-scan/relocated-rows.yaml` (the',
+              '**relocated** column) — these historical counts do not shrink just because a row',
+              'left the table; a relocated row that was flagged before counts as cleared by the',
+              'move, not by a citation.', '',
+              '| page | flagged before | flagged after | cleared | of which cross-page '
+              '| of which relocated |',
+              '|---|---:|---:|---:|---:|---:|']
+    reloc_all = load_relocated()
     for f in files:
         rows = [e for e in ledger if e['file'] == f]
+        rel = [r for r in reloc_all if r['file'] == f]
         before = sum(1 for e in rows if _flagged(e.get('status_before')))
+        rel_before = sum(1 for r in rel if _flagged(r.get('status_before')))
         after = sum(1 for e in rows if _flagged(e['status']))
         cross_n = sum(1 for e in rows if e.get('cross_page')
                       and _flagged(e.get('status_before')))
         # A page with no prior ledger record is newly converted: it had no flags to
         # clear, so "before - after" would print a negative. Say "new" instead.
-        cleared = str(before - after) if before else 'new'
-        lines.append(f"| `{f.split('/')[-1]}` | {before} | {after} | {cleared} | "
-                     f"{cross_n} |")
-    tot_before = sum(1 for e in ledger if _flagged(e.get('status_before')))
+        cleared = (str(before + rel_before - after) if (before or rel_before) else 'new')
+        lines.append(f"| `{f.split('/')[-1]}` | {before + rel_before} | {after} | {cleared} | "
+                     f"{cross_n} | {rel_before} |")
+    tot_before = sum(1 for e in ledger if _flagged(e.get('status_before'))) \
+        + sum(1 for r in reloc_all if _flagged(r.get('status_before')))
     tot_after = sum(1 for e in ledger if _flagged(e['status']))
     lines += ['', f'**Total: {tot_before} flagged before, {tot_after} after '
                   f'({tot_before - tot_after} cleared).**', '']
@@ -2131,6 +2311,17 @@ def emit_md(ledger):
         lines.append(f"- `{rec['file']}` — source prints \"{rec.get('source_prints') or '—'}\"; "
                      f"the page reads **\"{rec['page_reads']}\"** ({rec.get('date')})")
         lines.append(f"  - ruling: {rec['ruling'].strip()}")
+
+    cold_ruled = cold_ruled_cards(ledger)
+    lines += ['', COLD_RULED_HEADER, '',
+              'Decided, not open. The owner ruled these on 2026-11-20 and the page states the',
+              'recorded level; they are filed here so the open-question count the owner reads',
+              'excludes them. The history is kept — what was asked, and the owner\'s words —',
+              'and the PEMS citation stays in `audit/level-scan/` (`level-rulings.yaml`,',
+              '`relocated-rows.yaml`), deliberately not printed on the page.', '']
+    if not cold_ruled:
+        lines.append('None.')
+    lines += cold_ruled
 
     sheet = load_stylesheet_changes()
     lines += ['', '## SHARED STYLESHEET CHANGES (not protocol content)', '',
@@ -2564,6 +2755,8 @@ def emit_md(ledger):
               f'| converted pages — administrative policy (POLICY/PENDING) | '
               f'{len(policy_targets())} |',
               f'| action rows — total | {len(ledger)} |',
+              f'| action rows relocated out of an action table (still on the page, not in '
+              f'this ledger — `relocated-rows.yaml`) | {len(load_relocated())} |',
               f'| cited to a PEMS protocol row (incl. cross-page) | '
               f"{sum(1 for e in ledger if e['status'] == 'OK')} |",
               f'| cross-page citations | {sum(1 for e in ledger if e.get("cross_page"))} |',
@@ -2620,8 +2813,10 @@ def check_ledger_markdown(ledger, fails):
         fails.append('audit/level-scan/level-rule-ledger.md != what emit_md() derives from '
                      'level-rule-ledger.json — re-run `scripts/level_rule.py --write`:\n    '
                      + '\n    '.join(diff))
-    section = md.split('## OPEN OWNER QUESTIONS', 1)
+    section = disk.split('## OPEN OWNER QUESTIONS', 1)
     section = section[1].split('\n## ', 1)[0] if len(section) > 1 else ''
+    ruled = disk.split(COLD_RULED_HEADER, 1)
+    ruled = ruled[1].split('\n## ', 1)[0] if len(ruled) > 1 else ''
     facts = open_question_facts(ledger)
     cold = facts['cold_by_row']
     # a row the card says is still flagged must really be flagged
@@ -2640,6 +2835,43 @@ def check_ledger_markdown(ledger, fails):
             if head and head not in section:
                 fails.append(f'OPEN OWNER QUESTIONS omits the verbatim citation {head} that '
                              f'clears Cold Exposure row {n}')
+    elif cold.get(6) is None and any(r['row'] == 6 for r in load_relocated()):
+        # Row 6 left the ledger with the pilot relocation and the owner has RULED (EMR,
+        # 2026-11-20). The record must sit in the OWNER_RULED section and must NOT sit in the
+        # open questions — the page the owner reads is titled "decisions still waiting on
+        # you", so a decided card there is a published falsehood (review round 3, 2026-11-20).
+        if 'Cold Exposure rows 6 and 9' not in ruled:
+            fails.append('OWNER_RULED no longer names Cold Exposure rows 6 and 9, which '
+                         '`relocated-rows.yaml` records as moved into the page\'s '
+                         'References & Good Practice block')
+        ruled_cards = cold_ruled_cards(ledger)
+        if not ruled_cards:
+            fails.append('OWNER_RULED carries no Cold Exposure ruling card although '
+                         '`level-rulings.yaml` records the 2026-11-20 answer (EMR)')
+        for card in ruled_cards:
+            if card not in ruled:
+                fails.append('OWNER_RULED drops a Cold Exposure card the ruling derives — '
+                             'the relocation record or the 2026-11-20 ASKED/ANSWERED card')
+            if card in section:
+                fails.append('OPEN OWNER QUESTIONS still publishes a DECIDED Cold Exposure '
+                             'card — the owner answered on 2026-11-20 (`EMR`); it belongs in '
+                             'the ledger\'s OWNER_RULED section, not in the open questions '
+                             'the owner is asked to answer')
+        for card in cold_question_cards(ledger):
+            if card not in section:
+                fails.append('OPEN OWNER QUESTIONS drops a Cold Exposure card that is still '
+                             'open (a relocation the page does not carry, or a floor '
+                             'question the owner has not answered)')
+        # the level the page prints, the level the audit trail records and the level the
+        # ruling records must be one number: a relocation cannot drift away from its ruling.
+        rulings = load_rulings()
+        for n, moved in sorted(_cold_relocated_rows().items()):
+            rul = rulings.get((moved['file'], str(n))) or {}
+            if rul and rul.get('level') != moved['level']:
+                fails.append(f'`relocated-rows.yaml` records Cold Exposure row {n} at '
+                             f'{moved["level"]!r} but `level-rulings.yaml` rules it '
+                             f'{rul["level"]!r} — the page, the relocation record and the '
+                             f'ruling must state one level')
     # the administrative card's count and row set must be the ledger's
     n_admin = len(facts['admin_pending'])
     if n_admin and f'the {n_admin} administrative PENDING row(s)' not in section:
@@ -2666,12 +2898,26 @@ def check():
 
     fails, report, pending_row_rows, ruling_cites = [], [], [], []
     check_ledger_markdown(ledger_rows, fails)
+    # Every relocated row's `proves` spans must be printed on its page. The Cold card
+    # already reads them, but the Pulmonary rows had no reader at all, so a reworded page
+    # could orphan the record silently. One rule for every relocated row.
+    for rec in load_relocated():
+        missing = relocated_proofs_missing(rec)
+        if missing:
+            fails.append(f'`relocated-rows.yaml` {rec["file"]} row {rec["row"]}: the page '
+                         f'does not print {", ".join(repr(s) for s in missing)} — the '
+                         f'relocation record describes a block the page no longer carries')
     kept_words, removed_words = load_token_decisions()
     seen_kept = {}
     for rel in TARGETS:
         path = os.path.join(DOCS, rel)
         raw = open(path, encoding='utf-8').read()
         base = base_brackets(rel)
+        if rel in AUDIT_ONLY_PROVENANCE and 'Source: PEMS 2024' in raw:
+            fails.append(f'{rel}: the reader-facing "Source: PEMS 2024 ..." paragraph is back '
+                         f'on the page — the owner\'s 2026-11-20 ruling removed it from the '
+                         f'published product; the citation belongs in audit/level-scan/ '
+                         f'(`level-rulings.yaml`, `relocated-rows.yaml`), not on the page')
         if NEW_HEADER not in raw:
             fails.append(f'{rel}: no collapsed level table ({NEW_HEADER!r} missing)')
         if re.search(r'^\|\s*#\s*\|\s*Action\s*/\s*Intervention\s*\|\s*EMR\s*\|', raw, re.M):

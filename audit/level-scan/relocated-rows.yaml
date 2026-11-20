@@ -1,0 +1,69 @@
+# Rows moved OUT of an action table into that page's "References & Good Practice" block
+# (owner presentation ruling: unbadged PEARLS / NOTES / CONTRAINDICATIONS prose does not
+# sit as a chipped action row). Pilot 2026-11-20 — Pulmonary Edema rows 6-8, Cold
+# Exposure rows 6 and 9.
+#
+# level_rule.py reads this file for two things, and both are verified, not asserted:
+#
+#   1. The ledger's historical "flagged before / cleared" counts. A relocated row is no
+#      longer in the ledger, so its pre-ruling status would silently disappear from those
+#      totals; `status_before` keeps that history immutable.
+#   2. The owner-facing Cold Exposure card. `proves` lists spans that must appear
+#      verbatim in the page's markdown. If the block or the level statement it describes
+#      is edited away, `--check` fails instead of publishing a card about a block that is
+#      no longer there.
+#
+# Nothing here changes an action, intervention or level: `level` is the level the page
+# records for the row (the level it carried when it was a chip, updated by any later owner
+# ruling), and `pems` is where the prose is printed.
+relocated:
+  - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
+    row: 6
+    rows_moved: "6-8"
+    level: EMT
+    pems: "p.245 CONTRAINDICATIONS"
+    status_before: OWNER_REQUIRED
+    proves:
+      - "### References & Good Practice"
+      - "This page records the list at **EMT**"
+      - "Rows 6–8 are covered under"
+  - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
+    row: 7
+    rows_moved: "6-8"
+    level: EMT
+    pems: "p.245 CONTRAINDICATIONS"
+    status_before: OWNER_REQUIRED
+    proves:
+      - "### References & Good Practice"
+      - "This page records the list at **EMT**"
+      - "Rows 6–8 are covered under"
+  - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
+    row: 8
+    rows_moved: "6-8"
+    level: EMT
+    pems: "p.245 CONTRAINDICATIONS"
+    status_before: OWNER_REQUIRED
+    proves:
+      - "### References & Good Practice"
+      - "This page records the list at **EMT**"
+      - "Rows 6–8 are covered under"
+  - file: protocols/general/02_Cold_Exposure_PROC.md
+    row: 6
+    rows_moved: "6 and 9"
+    level: EMR
+    pems: "p.67 PEARLS #5"
+    status_before: null
+    proves:
+      - "### References & Good Practice"
+      - "This page records the rewarming item at **EMR**"
+      - "Rows 6 and 9 are covered under"
+  - file: protocols/general/02_Cold_Exposure_PROC.md
+    row: 9
+    rows_moved: "6 and 9"
+    level: MC
+    pems: "p.67 PEARLS #3"
+    status_before: null
+    proves:
+      - "### References & Good Practice"
+      - "the AED item at **MC**"
+      - "Rows 6 and 9 are covered under"

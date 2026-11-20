@@ -107,6 +107,11 @@ rulings:
       the PROSE's own scope (EMT-I and Paramedic -> lowest I) and the chip stays I. The
       bracketed [I] page cell keeps its +MC marker.
 
+  # RELOCATED 2026-11-20 (References & Good Practice pilot): rows 6-8 of this page were
+  # the PEMS p.245 CONTRAINDICATIONS list — unbadged prose. They are now rendered under
+  # the action table in the page's "References & Good Practice" block, which still states
+  # the EMT level recorded below. level_rule.py no longer sees a row for them, so these
+  # entries are inert provenance, kept so the ruling is not lost.
   - file: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md
     row: 6
     level: EMT
@@ -173,14 +178,24 @@ rulings:
       As row 6 (owner Pearl ruling 2026-11-17). p.245 CONTRAINDICATIONS #1, bullets 7-8.
       Level change A -> EMT.
 
+  # RELOCATED 2026-11-20 (References & Good Practice pilot): rows 6 and 9 of this page are
+  # PEMS p.67 PEARLS prose (#5 heat packs, #3 MC before AED) with no printed badge. They now
+  # sit under the action table in the page's "References & Good Practice" block, which states
+  # the levels recorded below (EMR / MC). level_rule.py no longer sees rows for them, so
+  # these entries are inert provenance, kept so the rulings are not lost.
   - file: protocols/general/02_Cold_Exposure_PROC.md
     row: 6
-    level: EMT
+    level: EMR
     status: owner_ruled
     date: "2026-11-17"
+    answered:
+      date: "2026-11-20"
+      level: EMR
+      quote: "Anyone can warm a patient, EMR. Might want to move below the table."
     ruling: >-
-      Active external rewarming with heat packs is a BLS skill. Level unchanged (EMT); the
-      "prints nowhere" flag is cleared.
+      Active external rewarming with heat packs is a BLS skill: the page's own BLS floor,
+      EMR. Chip EMT -> EMR (owner ruling 2026-11-20, answering the floor question raised on
+      2026-11-17).
     action: "If patient is alert and responsive: active external rewarming with heat packs"
     prose_citations:
       - page: 67
@@ -190,18 +205,20 @@ rulings:
     note: >-
       Owner Pearl ruling 2026-11-17: "Patient warming with heat packs is a BLS skill, anyone
       can do that." The action is printed — p.67 PEARLS #5, verbatim — so the old reason
-      ("PEMS prints this action nowhere") was false. No badge is printed, so the level stays
-      the one the page published (EMT). p.67 PEARLS #2 also warns "DO NOT place heat packs
-      ... directly on skin": that is a site-wording question (the page does not carry the
-      caution), reported, not decided here, and it does not change the level. FLOOR TENSION,
-      recorded for the owner and not decided here: this card's row table kept the level
-      unchanged at EMT, while the ruling's test is "BLS-scope -> the page's BLS floor" and
-      this page's own lowest chip is EMR (the page chips EMR, EMR, EMR, EMR, EMR, EMT, EMR,
-      EMT). Both readings call the action BLS-scope and neither grants new authority; they
-      disagree only on which BLS level prints. The row therefore publishes EMT as directed,
-      and the disagreement is raised in the ledger's OPEN OWNER QUESTIONS ("Cold Exposure row
-      6 keeps EMT although the page's own BLS floor is EMR") so the owner can confirm EMT or
-      lower it to EMR. Nothing changes on the page until that answer.
+      ("PEMS prints this action nowhere") was false. No badge is printed, so the level is
+      the owner's scope decision, not a source citation.
+      HISTORY (kept, not deleted): the 2026-11-17 card kept the level at EMT and left a
+      FLOOR TENSION open — the ruling's own test is "BLS-scope -> the page's BLS floor" and
+      this page's lowest chip is EMR (it chips EMR, EMR, EMR, EMR, EMR, EMT, EMR, EMT), so
+      both readings called the action BLS-scope but disagreed on which BLS level prints.
+      That question was put to the owner and ANSWERED on 2026-11-20: "Anyone can warm a
+      patient, EMR. Might want to move below the table." The level is now EMR, the page's
+      own derived floor, and the item stays below the action table in the page's
+      "References & Good Practice" block. No open question remains for this row.
+    # The page-facing provenance paragraph ("Source: PEMS 2024 ...") was removed on the
+    # owner's 2026-11-20 ruling ("I do not want that Source: PEMS 2024 post in the final
+    # product"). The citation above stays here, in the audit trail, and on the page only as
+    # the reader-facing level statement that `relocated-rows.yaml` proves.
 
   - file: protocols/general/02_Cold_Exposure_PROC.md
     row: 9

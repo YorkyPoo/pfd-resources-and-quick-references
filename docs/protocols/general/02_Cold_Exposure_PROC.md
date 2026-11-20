@@ -26,12 +26,22 @@ Guidelines for managing systemic hypothermia and localized cold injuries, emphas
 | 3 | <span class="lvl lvl-emr">EMR</span> | Handle the patient gently and avoid excessive movement (risk of cardiac arrest/VF). |
 | 4 | <span class="lvl lvl-emr">EMR</span> | Apply warmed and humidified **O2** if available. |
 | 5 | <span class="lvl lvl-emr">EMR</span> | **Localized cold injury:** Apply loose, sterile dressings to the affected part. |
-| 6 | <span class="lvl lvl-emt">EMT</span> | If patient is alert and responsive: Use active external rewarming with heat packs, warm blankets, etc. |
 | 7 | <span class="lvl lvl-emr">EMR</span> | **Cardiac Arrest:** Make persistent attempts at resuscitation for victims of prolonged cold exposure. Begin CPR and continuous warming procedures. |
 | 8 | <span class="lvl lvl-emt">EMT</span> | Rapid transport immediately with resuscitation efforts continued en route. Do not delay transport waiting for ALS. |
-| 9 | <span class="lvl lvl-mc">MC</span> | Contact Medical Control prior to use of AED. |
 
 </div>
+
+*Rows 6 and 9 are covered under [References & Good Practice](#references-good-practice) below.*
+
+### References & Good Practice
+
+**Heat packs and warm blankets — active external rewarming.** If the patient is alert and responsive, use active external rewarming with heat packs, warm blankets, etc.
+
+**Medical Control before the AED.** Contact Medical Control prior to use of AED.
+
+*This page records the rewarming item at **EMR** (anyone can warm a patient) and the AED item at **MC**.*
+
+**Why and what next:** [Cardiac Arrest (Non-Traumatic) — AED use and defibrillation](../cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md) · [Post-Resuscitation Care](../cardiac/04_Post_Resuscitation_Care_PROC.md)
 
 ### Pearls
 1. ⚠ Hypothermia patients are fragile: Rough handling, IV insertion, intubation, etc. might cause VF that is refractory to defibrillation and antiarrhythmic agents- use AHA guidelines for hypothermic arrest.

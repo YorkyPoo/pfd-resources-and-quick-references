@@ -232,9 +232,6 @@ the action text.
 | `03_Pulmonary_Edema_Congestion_PROC.md` | 3 | EMR | p.123#2 | Provide supplemental oxygen to maintain SpO2 > 94%. | alignment:matched | OK |
 | `03_Pulmonary_Edema_Congestion_PROC.md` | 4 | EMT | p.123#3 | Consider non-invasive (CPAP) or invasive (SGA) ventilatory support. | alignment:matched | OK |
 | `03_Pulmonary_Edema_Congestion_PROC.md` | 5 | EMT | p.123#3 | Consider non-invasive (CPAP) or invasive (SGA) ventilatory support. | adjudicated:set_cells | OK |
-| `03_Pulmonary_Edema_Congestion_PROC.md` | 6 | EMT | — | — | owner-rulings:ruled | owner_ruled |
-| `03_Pulmonary_Edema_Congestion_PROC.md` | 7 | EMT | — | — | owner-rulings:ruled | owner_ruled |
-| `03_Pulmonary_Edema_Congestion_PROC.md` | 8 | EMT | — | — | owner-rulings:ruled | owner_ruled |
 | `03_Pulmonary_Edema_Congestion_PROC.md` | 9 | P | p.239#5 | Consider CPAP (PEEP: 5 cmH2O) for respiratory distress. Refer to CPAP procedure. I/P only: Adjust PEEP to support ventilation and work of breathing… | adjudicated:set_cells | OWNER_REQUIRED |
 | `03_Pulmonary_Edema_Congestion_PROC.md` | 10 | A | p.124#11 | Administer: ADULT: Nitroglycerine 0.4 mg SL If SBP remains greater than 100 mmHg (MAP 65 mmHg), may repeat every five minutes as needed, up to thre… | adjudicated:set_cells | OK |
 | `03_Pulmonary_Edema_Congestion_PROC.md` | 11 | A | p.124#11 | Administer: ADULT: Nitroglycerine 0.4 mg SL If SBP remains greater than 100 mmHg (MAP 65 mmHg), may repeat every five minutes as needed, up to thre… | alignment:matched | OK |
@@ -391,10 +388,8 @@ the action text.
 | `02_Cold_Exposure_PROC.md` | 3 | EMR | p.67#1 | 2 Place patient in a warm environment and prevent further heat loss Remove all wet clothing and replace with warm blankets. Handle the patient gently | adjudicated:confirm | OK |
 | `02_Cold_Exposure_PROC.md` | 4 | EMR | p.67#0 | Follow General – Universal Patient Care/Initial Patient Contact Protocol. Use warmed and humidified O if available. | row-bindings:bound | OK |
 | `02_Cold_Exposure_PROC.md` | 5 | EMR | p.67#5 | Apply loose, sterile dressings to affected part | alignment:matched | OK |
-| `02_Cold_Exposure_PROC.md` | 6 | EMT | — | — | owner-rulings:ruled | owner_ruled |
 | `02_Cold_Exposure_PROC.md` | 7 | EMR | p.67#2 | and avoid excessive movement (risk of cardiac arrest) In the event of cardiac arrest, make persistent attempts at resuscitation for victims of prol… | alignment:matched | OK |
 | `02_Cold_Exposure_PROC.md` | 8 | EMT | p.67#3 | Transport patient immediately with resuscitation efforts continued en route | alignment:matched | OK |
-| `02_Cold_Exposure_PROC.md` | 9 | MC | — | — | owner-rulings:ruled | owner_ruled |
 | `02_Diving_and_Drowning_Emergencies_PROC.md` | 1 | EMR | p.93#0 | Follow Universal Patient Care / Initial Patient Contact protocol. | alignment:matched | OK |
 | `02_Diving_and_Drowning_Emergencies_PROC.md` | 2 | EMR | p.93#1 | Remove the patient from the water. Consider spinal motion restriction. Refer to Spinal Motion Restriction procedure. | alignment:matched | OK |
 | `02_Diving_and_Drowning_Emergencies_PROC.md` | 3 | EMR | p.93#2 | Assess airway and ventilation. Refer to Airway Management and Ventilatory Support protocol. | alignment:matched | OK |
@@ -835,78 +830,83 @@ fails on a bracketed row that is neither `mc_required` nor `mc_bracket_excluded`
 (`status_before`, captured by the writer); "after" is the status on this page now.
 A row that stopped being flagged is a **cross-page citation** or was closed by a
 recorded decision — the citation that cleared it is listed above and in the table.
+Rows relocated out of an action table are not in the ledger any more, so their
+pre-move status is read from `audit/level-scan/relocated-rows.yaml` (the
+**relocated** column) — these historical counts do not shrink just because a row
+left the table; a relocated row that was flagged before counts as cleared by the
+move, not by a citation.
 
-| page | flagged before | flagged after | cleared | of which cross-page |
-|---|---:|---:|---:|---:|
-| `04_Supraventricular_Tachycardia_PROC.md` | 0 | 0 | new | 0 |
-| `04_Post_Resuscitation_Care_PROC.md` | 0 | 0 | new | 0 |
-| `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` | 4 | 1 | 3 | 3 |
-| `04_Bradycardia_PROC.md` | 0 | 0 | new | 0 |
-| `04_Cardiac_Arrest_Non_Traumatic_PROC.md` | 3 | 2 | 1 | 1 |
-| `04_Cardiac_Arrest_Traumatic_PROC.md` | 3 | 1 | 2 | 2 |
-| `04_Chest_Pain_ACS_PROC.md` | 4 | 0 | 4 | 2 |
-| `04_Hypertensive_Crisis_PROC.md` | 1 | 0 | 1 | 1 |
-| `04_V_Fib_Pulseless_V_Tach_PROC.md` | 1 | 1 | 0 | 0 |
-| `07_Sepsis_PROC.md` | 0 | 0 | new | 0 |
-| `07_Allergic_Reaction_Anaphylaxis_PROC.md` | 0 | 0 | new | 0 |
-| `07_OB_Emergencies_PROC.md` | 0 | 0 | new | 0 |
-| `07_Hypotension_Shock_Non_Trauma_PROC.md` | 0 | 0 | new | 0 |
-| `05_Seizure_PROC.md` | 0 | 0 | new | 0 |
-| `05_Hypoglycemia_Hyperglycemia_PROC.md` | 0 | 0 | new | 0 |
-| `05_Stroke_TIA_PROC.md` | 2 | 2 | 0 | 0 |
-| `03_Airway_Inhalation_Irritants_PROC.md` | 5 | 1 | 4 | 2 |
-| `03_Asthma_COPD_Reactive_Airway_PROC.md` | 3 | 2 | 1 | 1 |
-| `03_Pediatric_Stridor_PROC.md` | 6 | 2 | 4 | 4 |
-| `03_Pneumothorax_PROC.md` | 10 | 5 | 5 | 5 |
-| `03_Pulmonary_Edema_Congestion_PROC.md` | 4 | 1 | 3 | 0 |
-| `03_Respiratory_Arrest_PROC.md` | 3 | 0 | 3 | 3 |
-| `03_Respiratory_Distress_PROC.md` | 6 | 2 | 4 | 4 |
-| `03_Smoke_Inhalation_PROC.md` | 8 | 1 | 7 | 6 |
-| `03_Upper_Airway_Obstruction_PROC.md` | 3 | 1 | 2 | 2 |
-| `09_Burns_Thermal_PROC.md` | 0 | 1 | new | 0 |
-| `09_Crush_Syndrome_PROC.md` | 0 | 0 | new | 0 |
-| `09_Electrical_Injuries_PROC.md` | 0 | 1 | new | 0 |
-| `09_Hemorrhage_Control_PROC.md` | 0 | 0 | new | 0 |
-| `09_Lightning_Injuries_PROC.md` | 0 | 1 | new | 0 |
-| `09_Trauma_PROC.md` | 0 | 2 | new | 0 |
-| `06_Nausea_Vomiting_PROC.md` | 0 | 0 | new | 0 |
-| `06_Nerve_Agents_PROC.md` | 0 | 0 | new | 0 |
-| `06_Overdose_Poisoning_PROC.md` | 0 | 0 | new | 0 |
-| `02_Behavioral_Patient_Restraint_PROC.md` | 0 | 0 | new | 0 |
-| `02_Cold_Exposure_PROC.md` | 0 | 0 | new | 0 |
-| `02_Diving_and_Drowning_Emergencies_PROC.md` | 0 | 0 | new | 0 |
-| `02_Heat_Exposure_PROC.md` | 0 | 0 | new | 0 |
-| `02_Pain_Control_PROC.md` | 0 | 0 | new | 0 |
-| `02_Sedation_Assisted_Non_Paralytic_PROC.md` | 0 | 2 | new | 0 |
-| `Universal Patient Care.md` | 0 | 0 | new | 0 |
-| `CPAP.md` | 0 | 0 | new | 0 |
-| `Capnography.md` | 0 | 0 | new | 0 |
-| `Chest_Decompression.md` | 0 | 0 | new | 0 |
-| `Endotracheal_Intubation.md` | 0 | 0 | new | 0 |
-| `Intraosseous_Access.md` | 0 | 0 | new | 0 |
-| `Medication_Administration.md` | 0 | 0 | new | 0 |
-| `Nasogastric_Tube.md` | 0 | 0 | new | 0 |
-| `Neonatal_Resuscitation.md` | 0 | 1 | new | 0 |
-| `Spinal_Motion_Restriction.md` | 0 | 0 | new | 0 |
-| `Surgical_Airway.md` | 0 | 0 | new | 0 |
-| `Taser_Barb_Removal.md` | 0 | 0 | new | 0 |
-| `Tourniquet_Application.md` | 0 | 0 | new | 0 |
-| `Transcutaneous_Pacing.md` | 0 | 0 | new | 0 |
-| `01_ALS_Release_to_BLS_PROC.md` | 0 | 0 | new | 0 |
-| `01_Abuse_Recognition_and_Mandated_Reporting_PROC.md` | 0 | 0 | new | 0 |
-| `01_Behavioral_Health_Transportation_Decision_PROC.md` | 0 | 2 | new | 0 |
-| `01_Communications_PROC.md` | 0 | 0 | new | 0 |
-| `01_Death_Criteria_for_Withholding_Resuscitation_PROC.md` | 0 | 0 | new | 0 |
-| `01_Helicopter_EMS_HEMS_PROC.md` | 0 | 0 | new | 0 |
-| `01_Infant_Abandonment_PROC.md` | 0 | 1 | new | 0 |
-| `01_Patient_Refusal_of_Treatment_Transport_PROC.md` | 0 | 0 | new | 0 |
-| `01_Patient_Restraint_PROC.md` | 0 | 0 | new | 0 |
-| `01_STEMI_Field_Triage_PROC.md` | 0 | 0 | new | 0 |
-| `01_Safe_Transport_of_Pediatric_Patients_PROC.md` | 0 | 0 | new | 0 |
-| `01_Stroke_Field_Triage_PROC.md` | 0 | 1 | new | 0 |
-| `01_Transportation_and_Destination_Determination_PROC.md` | 0 | 0 | new | 0 |
-| `01_Trauma_Field_Triage_PROC.md` | 0 | 0 | new | 0 |
-| `04b_Aortic_Dissection_AAA_PROC.md` | 11 | 11 | 0 | 0 |
+| page | flagged before | flagged after | cleared | of which cross-page | of which relocated |
+|---|---:|---:|---:|---:|---:|
+| `04_Supraventricular_Tachycardia_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `04_Post_Resuscitation_Care_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` | 4 | 1 | 3 | 3 | 0 |
+| `04_Bradycardia_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `04_Cardiac_Arrest_Non_Traumatic_PROC.md` | 3 | 2 | 1 | 1 | 0 |
+| `04_Cardiac_Arrest_Traumatic_PROC.md` | 3 | 1 | 2 | 2 | 0 |
+| `04_Chest_Pain_ACS_PROC.md` | 4 | 0 | 4 | 2 | 0 |
+| `04_Hypertensive_Crisis_PROC.md` | 1 | 0 | 1 | 1 | 0 |
+| `04_V_Fib_Pulseless_V_Tach_PROC.md` | 1 | 1 | 0 | 0 | 0 |
+| `07_Sepsis_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `07_Allergic_Reaction_Anaphylaxis_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `07_OB_Emergencies_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `07_Hypotension_Shock_Non_Trauma_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `05_Seizure_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `05_Hypoglycemia_Hyperglycemia_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `05_Stroke_TIA_PROC.md` | 2 | 2 | 0 | 0 | 0 |
+| `03_Airway_Inhalation_Irritants_PROC.md` | 5 | 1 | 4 | 2 | 0 |
+| `03_Asthma_COPD_Reactive_Airway_PROC.md` | 3 | 2 | 1 | 1 | 0 |
+| `03_Pediatric_Stridor_PROC.md` | 6 | 2 | 4 | 4 | 0 |
+| `03_Pneumothorax_PROC.md` | 10 | 5 | 5 | 5 | 0 |
+| `03_Pulmonary_Edema_Congestion_PROC.md` | 4 | 1 | 3 | 0 | 3 |
+| `03_Respiratory_Arrest_PROC.md` | 3 | 0 | 3 | 3 | 0 |
+| `03_Respiratory_Distress_PROC.md` | 6 | 2 | 4 | 4 | 0 |
+| `03_Smoke_Inhalation_PROC.md` | 8 | 1 | 7 | 6 | 0 |
+| `03_Upper_Airway_Obstruction_PROC.md` | 3 | 1 | 2 | 2 | 0 |
+| `09_Burns_Thermal_PROC.md` | 0 | 1 | new | 0 | 0 |
+| `09_Crush_Syndrome_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `09_Electrical_Injuries_PROC.md` | 0 | 1 | new | 0 | 0 |
+| `09_Hemorrhage_Control_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `09_Lightning_Injuries_PROC.md` | 0 | 1 | new | 0 | 0 |
+| `09_Trauma_PROC.md` | 0 | 2 | new | 0 | 0 |
+| `06_Nausea_Vomiting_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `06_Nerve_Agents_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `06_Overdose_Poisoning_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `02_Behavioral_Patient_Restraint_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `02_Cold_Exposure_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `02_Diving_and_Drowning_Emergencies_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `02_Heat_Exposure_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `02_Pain_Control_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `02_Sedation_Assisted_Non_Paralytic_PROC.md` | 0 | 2 | new | 0 | 0 |
+| `Universal Patient Care.md` | 0 | 0 | new | 0 | 0 |
+| `CPAP.md` | 0 | 0 | new | 0 | 0 |
+| `Capnography.md` | 0 | 0 | new | 0 | 0 |
+| `Chest_Decompression.md` | 0 | 0 | new | 0 | 0 |
+| `Endotracheal_Intubation.md` | 0 | 0 | new | 0 | 0 |
+| `Intraosseous_Access.md` | 0 | 0 | new | 0 | 0 |
+| `Medication_Administration.md` | 0 | 0 | new | 0 | 0 |
+| `Nasogastric_Tube.md` | 0 | 0 | new | 0 | 0 |
+| `Neonatal_Resuscitation.md` | 0 | 1 | new | 0 | 0 |
+| `Spinal_Motion_Restriction.md` | 0 | 0 | new | 0 | 0 |
+| `Surgical_Airway.md` | 0 | 0 | new | 0 | 0 |
+| `Taser_Barb_Removal.md` | 0 | 0 | new | 0 | 0 |
+| `Tourniquet_Application.md` | 0 | 0 | new | 0 | 0 |
+| `Transcutaneous_Pacing.md` | 0 | 0 | new | 0 | 0 |
+| `01_ALS_Release_to_BLS_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `01_Abuse_Recognition_and_Mandated_Reporting_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `01_Behavioral_Health_Transportation_Decision_PROC.md` | 0 | 2 | new | 0 | 0 |
+| `01_Communications_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `01_Death_Criteria_for_Withholding_Resuscitation_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `01_Helicopter_EMS_HEMS_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `01_Infant_Abandonment_PROC.md` | 0 | 1 | new | 0 | 0 |
+| `01_Patient_Refusal_of_Treatment_Transport_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `01_Patient_Restraint_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `01_STEMI_Field_Triage_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `01_Safe_Transport_of_Pediatric_Patients_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `01_Stroke_Field_Triage_PROC.md` | 0 | 1 | new | 0 | 0 |
+| `01_Transportation_and_Destination_Determination_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `01_Trauma_Field_Triage_PROC.md` | 0 | 0 | new | 0 | 0 |
+| `04b_Aortic_Dissection_AAA_PROC.md` | 11 | 11 | 0 | 0 | 0 |
 
 **Total: 77 flagged before, 45 after (32 cleared).**
 
@@ -1012,21 +1012,8 @@ whose badge the ruling adopts, when the level itself comes from one.
   - printed in unbadged prose: p.154 PEARLS #13 — "Contact the Poison Control Center at 1-800-222-1222 with any questions. Note: Although Poison Control can provide invaluable expert guidance, it is not online medical control."
   - printed in unbadged prose: p.121 PEARLS #1 — "Contact the Poison Control Center at 1-800-222-1222 with any questions. Note: Although Poison Control can provide invaluable expert guidance, it is not online medical control."
   - level derived: the page's own lowest chip = EMR (chips on the page: EMR, EMT, EMT, EMT, EMT, A, A, A, I, P, EMR) — read out of the page by `page_floor()`, not typed
-- `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` row 6 — **EMT** — status `owner_ruled`. Owner Pearl ruling 2026-11-17: "EMT and above can do CPAP." p.245 prints the contraindication list above the procedure table as a headed CONTRAINDICATIONS block (prose, no badge anywhere on it) and badges all five procedure rows EMT, so the contraindications are gated at the level of the procedure they contraindicate: EMT. Level change A -> EMT (this bullet group is p.245 CONTRAINDICATIONS #1, bullets 1-3).
-  - printed in unbadged prose: p.245 CONTRAINDICATIONS #1 — "Apnea / agonal respirations • Decreased level of consciousness (GCS ≤ 13) • Pneumothorax"
-  - level from: p.245#0 (the badge PEMS prints for the procedure the rule governs)
-- `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` row 7 — **EMT** — status `owner_ruled`. As row 6 (owner Pearl ruling 2026-11-17). p.245 CONTRAINDICATIONS #1, bullets 4-6. Level change A -> EMT.
-  - printed in unbadged prose: p.245 CONTRAINDICATIONS #1 — "Facial trauma, burns, or recent surgery • Penetrating neck and/or chest trauma • Active vomiting / severe nausea"
-  - level from: p.245#0 (the badge PEMS prints for the procedure the rule governs)
-- `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` row 8 — **EMT** — status `owner_ruled`. As row 6 (owner Pearl ruling 2026-11-17). p.245 CONTRAINDICATIONS #1, bullets 7-8. Level change A -> EMT.
-  - printed in unbadged prose: p.245 CONTRAINDICATIONS #1 — "Hypotension (SBP < 90 mmHg, MAP < 65) • Inability to tolerate tight fitting mask"
-  - level from: p.245#0 (the badge PEMS prints for the procedure the rule governs)
 - `protocols/respiratory/03_Smoke_Inhalation_PROC.md` row 3 — **EMT** — status `owner_ruled`. Owner Pearl ruling 2026-11-17, as Inhalation Irritants r3. p.88 PEARLS #1 prints the assessment signs in the source's own words, so the old reason ("No PEMS 2024 row anywhere prints this airway-injury assessment") was false as written. Recognition is BLS-scope; the advanced-airway step is r5/r6, cited at I. Level unchanged (EMT).
   - printed in unbadged prose: p.88 PEARLS #1 — "Consider early definitive airway management for patients with respiratory distress, hoarse voice or stridor, carbonaceous sputum and/or facial burns"
-- `protocols/general/02_Cold_Exposure_PROC.md` row 6 — **EMT** — status `owner_ruled`. Owner Pearl ruling 2026-11-17: "Patient warming with heat packs is a BLS skill, anyone can do that." The action is printed — p.67 PEARLS #5, verbatim — so the old reason ("PEMS prints this action nowhere") was false. No badge is printed, so the level stays the one the page published (EMT). p.67 PEARLS #2 also warns "DO NOT place heat packs ... directly on skin": that is a site-wording question (the page does not carry the caution), reported, not decided here, and it does not change the level. FLOOR TENSION, recorded for the owner and not decided here: this card's row table kept the level unchanged at EMT, while the ruling's test is "BLS-scope -> the page's BLS floor" and this page's own lowest chip is EMR (the page chips EMR, EMR, EMR, EMR, EMR, EMT, EMR, EMT). Both readings call the action BLS-scope and neither grants new authority; they disagree only on which BLS level prints. The row therefore publishes EMT as directed, and the disagreement is raised in the ledger's OPEN OWNER QUESTIONS ("Cold Exposure row 6 keeps EMT although the page's own BLS floor is EMR") so the owner can confirm EMT or lower it to EMR. Nothing changes on the page until that answer.
-  - printed in unbadged prose: p.67 PEARLS #5 — "use active external rewarming with heat packs, warm blankets, etc"
-- `protocols/general/02_Cold_Exposure_PROC.md` row 9 — **MC** — status `owner_ruled`. Owner Pearl ruling 2026-11-17: "a lot of the pearls are just guidance" — so the Pearl does not create a new provider authority, but it does prove the row is not silent: p.67 PEARLS #3 prints it verbatim in the Cold Exposure protocol's own Pearls. What is true is narrower than the old reason: p.67's six badged rows (#0-#5) contain no AED row. Level unchanged (MC): the gate is a Medical Control contact, not a provider level.
-  - printed in unbadged prose: p.67 PEARLS #3 — "Contact Medical Control prior to use of AED"
 
 ## OWNER_RULED — wording (not level)
 
@@ -1036,6 +1023,17 @@ the ruling. A later pass must not "restore" the source wording.
 
 - `docs/sops/ems/EMS-100-General-EMS-Guidelines.md` — source prints "eliminate in hospital delays"; the page reads **"eliminate in-hospital delays"** (2026-11-15)
   - ruling: Owner ruling 2026-11-15 ("I like the change to in-hospital delays"): the compound is hyphenated. The SOP as printed carries no hyphen. This is an OWNER RULING, not a source reading — do not revert the page to the un-hyphenated form on the grounds that the source prints it that way.
+
+## OWNER_RULED — Cold Exposure pilot (owner ruling 2026-11-20)
+
+Decided, not open. The owner ruled these on 2026-11-20 and the page states the
+recorded level; they are filed here so the open-question count the owner reads
+excludes them. The history is kept — what was asked, and the owner's words —
+and the PEMS citation stays in `audit/level-scan/` (`level-rulings.yaml`,
+`relocated-rows.yaml`), deliberately not printed on the page.
+
+- **Pilot 2026-11-20 — Cold Exposure rows 6 and 9 were moved out of the action table into the page's "References & Good Practice" block.** Both are unbadged PEMS p.67 PEARLS prose; the owner's presentation ruling puts unbadged prose below the table instead of chipping it. The levels this page records for them (row 6 `EMR` (p.67 PEARLS #5), row 9 `MC` (p.67 PEARLS #3), Pearl ruling 2026-11-17) are stated in that block and stay in `level-rulings.yaml`; they are no longer chips, so they are no longer in this ledger.
+- **Cold Exposure row 6 — the BLS-floor question was ASKED and ANSWERED (owner ruling 2026-11-20): `EMR`.** The question recorded here on 2026-11-17 was whether the rewarming item keeps `EMT` although the page's own BLS floor is lower: the ruling's test reads "BLS-scope -> the page's BLS floor", heat packs are a BLS skill, and the page chips a floor of `EMR` (derived from the page's 7 level chips, in file order: EMR, EMR, EMR, EMR, EMR, EMR, EMT). The owner answered on 2026-11-20: **EMR** — "Anyone can warm a patient, EMR. Might want to move below the table.". The item stays below the action table in the page's "References & Good Practice" block, and that block now states `EMR`, the page's own derived floor. The history is kept in `level-rulings.yaml`; no open question remains for this row.
 
 ## SHARED STYLESHEET CHANGES (not protocol content)
 
@@ -1547,8 +1545,6 @@ decision before the page is treated as final.
   hypotensive.", badge EMT) and row 3 cites Universal Patient Care p.50#9
   ("Establish IV / IO access when indicated.", badge A). Both print the site row
   verbatim; chip moves A -> EMT (row 2) and I -> A (row 3) as the source prints.
-- **Batch 5 — Cold Exposure rows 6 and 9 are OWNER_RULED (Pearl ruling 2026-11-17); the "prints nowhere" reason was false and no flag remains.** Row 6 (active external rewarming with heat packs) is printed in the protocol's own Pearls — p.67 PEARLS #5: "use active external rewarming with heat packs, warm blankets, etc" — so the level stays `EMT`: a Pearl that restates a BLS skill does not create a new provider authority, and PEMS prints no badge for it. Row 9 (Medical Control before use of AED) is printed — p.67 PEARLS #3: "Contact Medical Control prior to use of AED" — so the level stays `MC`: a Medical Control contact is not a provider level. Neither row is flagged on its page any more; both were cleared by the ruling, not left as questions.
-- **Pearl ruling 2026-11-17 — Cold Exposure row 6 keeps `EMT` although the page's own BLS floor is `EMR`.** The ruling's test reads "BLS-scope -> the page's BLS floor", and heat packs are a BLS skill ("anyone can do that"), yet this card's row table said the level stays unchanged, so the row now reads `EMT` while the page itself chips a floor of `EMR` (derived from the page's 8 level chips, in file order: EMR, EMR, EMR, EMR, EMR, EMT, EMR, EMT). Both readings agree the action is BLS-scope and that no new authority is created; they disagree only on which BLS level prints. Owner to confirm: keep `EMT` as directed, or lower the row to the page floor `EMR`? Nothing changes on the page until then.
 - **Batch 6 — administrative pages are chipped POLICY / PENDING, not levelled.**
   Owner ruling 2026-11-16: *"Treat admin pages as policy."* All 14 administrative
   pages are now 3-column tables whose marker column says `POLICY` (the rule is
@@ -1689,13 +1685,14 @@ new defect. Source of truth: `audit/level-scan/verifier-exceptions.yaml`.
 |---|---:|
 | converted pages — protocol/procedure chassis | 55 |
 | converted pages — administrative policy (POLICY/PENDING) | 14 |
-| action rows — total | 604 |
+| action rows — total | 599 |
+| action rows relocated out of an action table (still on the page, not in this ledger — `relocated-rows.yaml`) | 5 |
 | cited to a PEMS protocol row (incl. cross-page) | 459 |
 | cross-page citations | 47 |
 | POLICY (PEMS administrative policy) | 89 |
 | PENDING (no PEMS source: whole page + row-level + administrative) | 18 |
 | OWNER_REQUIRED | 27 |
-| OWNER_RULED | 11 |
+| OWNER_RULED | 6 |
 | +MC markers | 8 |
 
 ### `sc-wrap` — whole `docs/` tree, walked (not a directory list)

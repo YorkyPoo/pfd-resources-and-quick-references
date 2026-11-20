@@ -239,10 +239,15 @@ def carried_level(row):
     return row.get('carried_from_page') or (row.get('before') or {}).get('leftmost') or 'NONE'
 
 
-def open_questions(md):
-    """Every entry of the ledger's OPEN OWNER QUESTIONS section, verbatim."""
+RULED_HEADER = '## OWNER_RULED — Cold Exposure pilot'
+
+
+def section_entries(md, header):
+    """Every `- ` entry of one ledger section, verbatim (head + continuation lines)."""
     lines = md.split('\n')
-    start = next(i for i, l in enumerate(lines) if l.startswith('## OPEN OWNER QUESTIONS'))
+    start = next((i for i, l in enumerate(lines) if l.startswith(header)), None)
+    if start is None:
+        raise SystemExit(f'ledger markdown has no section starting {header!r}')
     end = next((i for i in range(start + 1, len(lines)) if lines[i].startswith('## ')),
                len(lines))
     entries = []
@@ -254,7 +259,6 @@ def open_questions(md):
     out = []
     for chunk in entries:
         head = chunk[0]
-        body = ' '.join(chunk[1:])
         bold = re.search(r'\*\*(.+?)\*\*', head)
         lead = bold.group(1) if bold else head
         batch = re.search(r'\bBatch (\d+)\b', head)
@@ -265,6 +269,20 @@ def open_questions(md):
             'batch': f'Batch {batch.group(1)}' if batch else 'No batch recorded',
         })
     return out
+
+
+def open_questions(md):
+    """Every entry of the ledger's OPEN OWNER QUESTIONS section, verbatim."""
+    return section_entries(md, '## OPEN OWNER QUESTIONS')
+
+
+def ruled_entries(md):
+    """Every entry of the ledger's OWNER_RULED section for the Cold pilot, verbatim.
+
+    These are RECORDED DECISIONS (the owner answered on 2026-11-20), so they are published
+    under their own heading and never counted as open questions.
+    """
+    return section_entries(md, RULED_HEADER)
 
 
 def inline_md(text):
@@ -306,7 +324,18 @@ def build():
     actions = page_actions(owner + pend_page + pend_row)
     nearest = nearest_pems(md)
     questions = open_questions(md)
+    ruled = ruled_entries(md)
     buckets = topic_buckets(questions, labels)
+    # ---- The 2026-11-20 owner ruling is a DECISION, not a question. It is published under
+    # ---- its own heading and must never drift back into the open list the page asks the
+    # ---- owner to answer: this page is titled "decisions still waiting on you".
+    assert ruled, 'the ledger records no Cold Exposure ruling — nothing to publish as decided'
+    assert any('ASKED and ANSWERED' in r['text'] for r in ruled), \
+        'the Cold Exposure row 6 ASKED/ANSWERED ruling is missing from the OWNER_RULED section'
+    assert not any('ASKED and ANSWERED' in q['text'] for q in questions), \
+        'the Cold Exposure row 6 ruling is still published as an OPEN question'
+    assert not any('Cold Exposure rows 6 and 9' in q['text'] for q in questions), \
+        'the Cold Exposure relocation is still published as an OPEN question'
 
     # ---- counts are derived from the lists, then asserted against the ledger's
     # ---- own stated totals. A disagreement is a hard failure, never a warning.
@@ -357,7 +386,8 @@ def build():
     w('# Outstanding Decisions')
     w('')
     w('<div class="od-intro" markdown="1">')
-    w('Every row below is a decision **still waiting on you**. Nothing here changes a '
+    w('Every row below is a decision **still waiting on you** — except the last section, '
+      'which records rulings you have already made. Nothing here changes a '
       'protocol: the pages keep working exactly as they do today, and answering is '
       'optional row by row.')
     w('')
@@ -372,6 +402,7 @@ def build():
     w(f'| Rows pending authorization (`PENDING`) | **{len(pend_page) + len(pend_row)}** '
       f'({len(pend_page)} whole-page + {len(pend_row)} single-row) |')
     w(f'| Open questions on how the rules themselves should read | **{len(questions)}** |')
+    w(f'| Rulings already recorded — decided, no action needed | **{len(ruled)}** |')
     w('')
     w('</div>')
     w('')
@@ -507,6 +538,20 @@ def build():
             w(f'<p class="od-question">{inline_md(entry["text"])}</p>')
             w('</div>')
         w('')
+    # ------------------------------------------- 4. RECORDED RULINGS (already decided)
+    w(f'<h2 id="ruled">4. Already ruled — recorded decisions — {len(ruled)}</h2>')
+    w('')
+    w('The owner has already answered these, so they are not waiting on you. They are '
+      'published as a record: the page states the level that was decided, and the answer '
+      'and the PEMS citation stay in the audit trail '
+      '(`audit/level-scan/level-rulings.yaml`, `audit/level-scan/relocated-rows.yaml`).')
+    w('')
+    for entry in ruled:
+        w('<div class="od-card od-cat-question">')
+        w('<p class="od-head"><span class="od-batch">Decided</span></p>')
+        w(f'<p class="od-question">{inline_md(entry["text"])}</p>')
+        w('</div>')
+    w('')
     w('<p class="od-foot">Generated from the conversion ledger by '
       '`scripts/build_outstanding_decisions.py`. Row text and reasons are the ledger\'s '
       'own words; this page adds no clinical content and edits no protocol page.</p>')

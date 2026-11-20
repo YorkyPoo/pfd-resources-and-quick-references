@@ -1,0 +1,20 @@
+== baseline
+EXIT=0
+== A: Cold meta-note reworded (proves span gone)
+EXIT=1
+    +- **Batch 5 — Cold Exposure rows 6 and 9 are no longer in this ledger.** The relocation this pilot recorded does not check out: row 6: the page does not print 'Rows 6 and 9 are covered under'; row 9: the page does not print 'Rows 6 and 9 are covered under'. Repair the page or `relocated-rows.yaml`, then re-run `scripts/level_rule.py --write` before publishing — do not publish this card as it stands.
+ - `relocated-rows.yaml` protocols/general/02_Cold_Exposure_PROC.md row 6: the page does not print 'Rows 6 and 9 are covered under' — the relocation record describes a block the page no longer carries
+== B: Pulmonary meta-note reworded (proves span gone)
+EXIT=1
+ - `relocated-rows.yaml` protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md row 6: the page does not print 'Rows 6–8 are covered under' — the relocation record describes a block the page no longer carries
+ - `relocated-rows.yaml` protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md row 7: the page does not print 'Rows 6–8 are covered under' — the relocation record describes a block the page no longer carries
+== C: reader-facing 'Source: PEMS 2024' paragraph replanted on Cold
+EXIT=1
+ - protocols/general/02_Cold_Exposure_PROC.md: the reader-facing "Source: PEMS 2024 ..." paragraph is back on the page — the owner's 2026-11-20 ruling removed it from the published product; the citation belongs in audit/level-scan/ (`level-rulings.yaml`, `relocated-rows.yaml`), not on the page
+== D: Cold level statement regressed to EMT
+EXIT=1
+    +- **Batch 5 — Cold Exposure rows 6 and 9 are no longer in this ledger.** The relocation this pilot recorded does not check out: row 6: the page does not print 'This page records the rewarming item at **EMR**'. Repair the page or `relocated-rows.yaml`, then re-run `scripts/level_rule.py --write` before publishing — do not publish this card as it stands.
+ - `relocated-rows.yaml` protocols/general/02_Cold_Exposure_PROC.md row 6: the page does not print 'This page records the rewarming item at **EMR**' — the relocation record describes a block the page no longer carries
+== restored
+ M scripts/level_rule.py
+EXIT=0
