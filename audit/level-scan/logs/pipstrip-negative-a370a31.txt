@@ -1,0 +1,24 @@
+# pip-strip verifier — planted-defect negative tests
+
+card            : t_10349df8
+tip under test  : a370a3169b60215f8cc887168804abee2f498f2f
+verifier blob   : 27574de1fc5dd304b1d00339f263aa8c94caedab  (scripts/verify_pip_strip.py at that tip)
+html source     : live slot https://yorkypoo.github.io/pfd-resources-and-quick-references/preview/pipstrip (cache-busted) copied into a scratch tree
+run at          : 2026-11-20 15:23:25 UTC
+
+## control — unmodified copy of the live HTML
+EXIT=0  (expected 0)
+OK — both pages carry the pip strip
+
+## PLANTED DEFECT A — Pulmonary Edema row 9 states changed no,no,no,go,go -> no,go,go,go,go
+  BAD   9 | no,go,go,go,go           | no,no,no,go,go
+  FAIL: row 9 renders no,go,go,go,go, chip says no,no,no,go,go
+  FAILED
+EXIT=1  (expected 1)
+
+## PLANTED DEFECT B — Pulmonary Edema row 13 removed from the table
+  BAD  13 | <not rendered>           | call,call,call,call,call
+  FAIL: source row 13 (call,call,call,call,call) is missing from the page
+  FAIL: tally says 10 actions, table has 9 rows
+  FAILED
+EXIT=1  (expected 1)

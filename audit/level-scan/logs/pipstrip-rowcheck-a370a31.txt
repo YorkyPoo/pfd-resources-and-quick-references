@@ -1,0 +1,104 @@
+# pip-strip — live per-row check against the published slot
+
+card            : t_10349df8
+branch          : pilot-pipstrip
+tip / slot sha  : a370a3169b60215f8cc887168804abee2f498f2f
+gh-pages commit : e5239516eebc2d0d7bb03269145c57554b2c9d8b
+slot            : /preview/pipstrip/
+fetched at      : 2026-11-20 15:22:56 UTC
+cache-bust      : cb=1795188176884569 (query param) + Cache-Control: no-cache
+checked against : docs/ at commit a370a3169b60215f8cc887168804abee2f498f2f (the markdown this build came from)
+
+NOTE ON PROVENANCE: this file is committed in an audit-only commit made
+immediately after the publish. `git diff --name-only a370a31 <this commit> -- docs/ scripts/ mkdocs.yml`
+is empty, so the site served by the slot is byte-identical to what this
+file describes. The slot sha recorded in preview/slots.json is the tip
+above; the branch tip is one audit commit further.
+
+==============================================================================
+page: protocols/general/02_Cold_Exposure_PROC.html
+url : https://yorkypoo.github.io/pfd-resources-and-quick-references/preview/pipstrip/protocols/general/02_Cold_Exposure_PROC.html?cb=1795188176884569
+http: 200   bytes: 136201   sha256: b05e1b29701d4a774e573a045e28f2c1835df48612d81f1a7992c3edf764c4cf
+`grep -o '<tr data-states' | wc -l` on that fetch -> 7
+
+  n | data-states (live)       | tag (live)         | chip(md)
+------------------------------------------------------------------------------
+  1 | go,go,go,go,go           | standing from R    | 1 go,go,go,go,go [ lvl-emr]
+  2 | go,go,go,go,go           | standing from R    | 2 go,go,go,go,go [ lvl-emr]
+  3 | go,go,go,go,go           | standing from R    | 3 go,go,go,go,go [ lvl-emr]
+  4 | go,go,go,go,go           | standing from R    | 4 go,go,go,go,go [ lvl-emr]
+  5 | go,go,go,go,go           | standing from R    | 5 go,go,go,go,go [ lvl-emr]
+  7 | go,go,go,go,go           | standing from R    | 7 go,go,go,go,go [ lvl-emr]
+  8 | no,go,go,go,go           | standing from B    | 8 no,go,go,go,go [ lvl-emt]
+------------------------------------------------------------------------------
+7 rows in markdown / 7 rows in HTML / 7 compared / 0 mismatches
+
+==============================================================================
+page: protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.html
+url : https://yorkypoo.github.io/pfd-resources-and-quick-references/preview/pipstrip/protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.html?cb=1795188176884569
+http: 200   bytes: 138935   sha256: e0ddfeada539e6ef52240618da3fbd9eba20119dc9d527a73829717cb313df31
+`grep -o '<tr data-states' | wc -l` on that fetch -> 10
+
+  n | data-states (live)       | tag (live)         | chip(md)
+------------------------------------------------------------------------------
+  1 | go,go,go,go,go           | standing from R    | 1 go,go,go,go,go [ lvl-emr]
+  2 | go,go,go,go,go           | standing from R    | 2 go,go,go,go,go [ lvl-emr]
+  3 | go,go,go,go,go           | standing from R    | 3 go,go,go,go,go [ lvl-emr]
+  4 | no,go,go,go,go           | standing from B    | 4 no,go,go,go,go [ lvl-emt]
+  5 | no,go,go,go,go           | standing from B    | 5 no,go,go,go,go [ lvl-emt]
+  9 | no,no,no,go,go           | standing from I    | 9 no,no,no,go,go [ lvl-i]
+ 10 | no,no,go,go,go           | standing from A    | 10 no,no,go,go,go [ lvl-a]
+ 11 | no,no,go,go,go           | standing from A    | 11 no,no,go,go,go [ lvl-a]
+ 12 | no,no,no,go,go           | standing from I    | 12 no,no,no,go,go [ lvl-i]
+ 13 | call,call,call,call,call | MC at every level  | 13 call,call,call,call,call [ lvl-mc]
+------------------------------------------------------------------------------
+10 rows in markdown / 10 rows in HTML / 10 compared / 0 mismatches
+
+==============================================================================
+## verbatim run of the verifier against the live slot
+cmd: python3 scripts/verify_pip_strip.py --base https://yorkypoo.github.io/pfd-resources-and-quick-references/preview/pipstrip --src docs
+
+==============================================================================
+protocols/general/02_Cold_Exposure_PROC.html
+  picker : R pressed=false | B pressed=false | A pressed=false | I pressed=false | P pressed=false | Show all pressed=true
+  header : R B A I P
+  tally  : Show all — 7 actions. Each row names the level its action starts at; tap a level to see this protocol as you.
+  rows   : 7  (unverified/OWNER_REQUIRED: 0)
+  row1   : states=go,go,go,go,go tag="standing from R"
+  tags   : standing from R | standing from B
+  source : protocols/general/02_Cold_Exposure_PROC.md — 7 chip rows
+  --- n | rendered | chip ---
+  OK    1 | go,go,go,go,go           | go,go,go,go,go  (chip row 1)
+  OK    2 | go,go,go,go,go           | go,go,go,go,go  (chip row 2)
+  OK    3 | go,go,go,go,go           | go,go,go,go,go  (chip row 3)
+  OK    4 | go,go,go,go,go           | go,go,go,go,go  (chip row 4)
+  OK    5 | go,go,go,go,go           | go,go,go,go,go  (chip row 5)
+  OK    7 | go,go,go,go,go           | go,go,go,go,go  (chip row 7)
+  OK    8 | no,go,go,go,go           | no,go,go,go,go  (chip row 8)
+==============================================================================
+protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.html
+  picker : R pressed=false | B pressed=false | A pressed=false | I pressed=false | P pressed=false | Show all pressed=true
+  header : R B A I P
+  tally  : Show all — 10 actions. Each row names the level its action starts at; tap a level to see this protocol as you.
+  rows   : 10  (unverified/OWNER_REQUIRED: 0)
+  row1   : states=go,go,go,go,go tag="standing from R"
+  tags   : standing from R | standing from B | standing from I | standing from A | MC at every level
+  source : protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md — 10 chip rows
+  --- n | rendered | chip ---
+  OK    1 | go,go,go,go,go           | go,go,go,go,go  (chip row 1)
+  OK    2 | go,go,go,go,go           | go,go,go,go,go  (chip row 2)
+  OK    3 | go,go,go,go,go           | go,go,go,go,go  (chip row 3)
+  OK    4 | no,go,go,go,go           | no,go,go,go,go  (chip row 4)
+  OK    5 | no,go,go,go,go           | no,go,go,go,go  (chip row 5)
+  OK    9 | no,no,no,go,go           | no,no,no,go,go  (chip row 9)
+  OK   10 | no,no,go,go,go           | no,no,go,go,go  (chip row 10)
+  OK   11 | no,no,go,go,go           | no,no,go,go,go  (chip row 11)
+  OK   12 | no,no,no,go,go           | no,no,no,go,go  (chip row 12)
+  OK   13 | call,call,call,call,call | call,call,call,call,call  (chip row 13)
+==============================================================================
+OK — both pages carry the pip strip
+EXIT=0
+
+## total
+pages checked: 2 / rows mismatched: 0 / verifier EXIT=0
+RESULT: PASS
