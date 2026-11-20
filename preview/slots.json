@@ -50,10 +50,10 @@
     },
     "sedation": {
       "branch": "sedation-p55",
-      "built_at": "2026-11-20T07:05:20Z",
-      "description": "Sedation page: PEMS p.55 verbatim, ketamine rows removed",
-      "sha": "8cd3c98fabe2fd495cc789419289ba035c565b5d"
+      "built_at": "2026-11-20T07:16:16Z",
+      "description": "Sedation: PEMS p.55 regimen, ketamine removed; C2 retirement reverted",
+      "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-20T07:10:45.391356+00:00"
+  "updated_at": "2026-11-20T07:16:16.798000+00:00"
 }
