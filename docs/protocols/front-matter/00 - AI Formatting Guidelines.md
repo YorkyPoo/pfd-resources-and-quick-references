@@ -11,7 +11,7 @@
 ## 2. Global Text Replacements
 Automatically replace the following terms in the source text:
 * `Peninsula EMS`, `PEMS`, `Peninsula EMS Council` ➔ **Poquoson Fire and Rescue**
-* `PEMS Medical Advisory Committee`, `Regional Medical Director` ➔ **Poquoson OMD**
+* `PEMS Medical Advisory Committee`, `Regional Medical Director` ➔ **Medical Control**
 * `Regional Protocol(s)` ➔ **Poquoson Protocol(s)**
 
 ## 3. Required Protocol Structure

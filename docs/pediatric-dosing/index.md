@@ -1,7 +1,7 @@
 # Poquoson Pediatric Dosing Reference
 
-!!! danger "OMD Review Required"
-    This pediatric dosing reference is a **calculational aid only**. All doses must be verified against current Poquoson Fire & Rescue Patient Care Protocols and approved by the Operational Medical Director (OMD) before clinical use. In the event of any discrepancy between this reference and the published protocols, the published protocols take precedence.
+!!! danger "Medical Control Review Required"
+    This pediatric dosing reference is a **calculational aid only**. All doses must be verified against current Poquoson Fire & Rescue Patient Care Protocols and approved by Medical Control before clinical use. In the event of any discrepancy between this reference and the published protocols, the published protocols take precedence.
 
 
 A **length-based pediatric dosing system** for rapid, accurate medication dosing, equipment sizing, and defibrillation/cardioversion energy selection. All doses below are derived from **Poquoson Fire & Rescue Patient Care Protocols**.

@@ -49,12 +49,12 @@ Hypertensive crisis is characterized by severely elevated blood pressure with po
 </div>
 
 ### Pearls
-1. ⚠ **Cautious Blood Pressure Management:** In most hypertensive emergencies, the goal is NOT to normalize blood pressure rapidly. Aggressive reduction can precipitate cerebral, coronary, or renal hypoperfusion. Specific blood pressure targets and medications should be determined by **Poquoson OMD** based on the underlying cause.
+1. ⚠ **Cautious Blood Pressure Management:** In most hypertensive emergencies, the goal is NOT to normalize blood pressure rapidly. Aggressive reduction can precipitate cerebral, coronary, or renal hypoperfusion. Specific blood pressure targets and medications should be determined by **Medical Control** based on the underlying cause.
 
 2. ⚠ **Acute End-Organ Assessment:** Always assess for signs of acute end-organ damage including altered mental status, focal neurological deficits, chest pain, pulmonary edema, or acute renal failure. The presence of these findings defines a true hypertensive emergency requiring immediate intervention.
 
-3. ⚠ **Aortic Dissection Suspicion:** If acute aortic dissection is suspected (tearing chest/back pain, pulse deficits, new neurologic deficits), immediate **Poquoson OMD** notification is critical. These patients require specific management protocols and rapid transport to appropriate facilities.
+3. ⚠ **Aortic Dissection Suspicion:** If acute aortic dissection is suspected (tearing chest/back pain, pulse deficits, new neurologic deficits), immediate **Medical Control** notification is critical. These patients require specific management protocols and rapid transport to appropriate facilities.
 
 4. **Referral-Based Protocol:** This protocol is primarily a gateway to condition-specific management. The primary therapeutic interventions will occur through the referred protocols (Stroke, Chest Pain, Respiratory Distress, etc.) based on the patient's presentation and target organ involvement.
 
-5. **Ischemic Stroke Consideration:** In patients with suspected acute ischemic stroke, permissive hypertension may be appropriate to maintain cerebral perfusion. Do NOT lower blood pressure without specific **Poquoson OMD** direction.
+5. **Ischemic Stroke Consideration:** In patients with suspected acute ischemic stroke, permissive hypertension may be appropriate to maintain cerebral perfusion. Do NOT lower blood pressure without specific **Medical Control** direction.

@@ -49,9 +49,9 @@ This protocol addresses acute bronchospasm associated with asthma, COPD, and rea
 <p class="lv-note">&#9873; <strong>OWNER_REQUIRED</strong> — rows 8, 11: no PEMS 2024 row authorises a provider level for this action. The level shown is the one this page already published; it is not verified against the source. See <code>audit/level-scan/level-rule-ledger.md</code>.</p>
 
 ### Pearls
-1. ⚠ **[Ipratropium](../../pharmacology/Ipratropium Bromide.md) Bromide is ONCE ONLY.** Do not administer repeat doses without consulting Poquoson OMD. Excessive anticholinergic dosing may worsen outcomes.
+1. ⚠ **[Ipratropium](../../pharmacology/Ipratropium Bromide.md) Bromide is ONCE ONLY.** Do not administer repeat doses without consulting Medical Control. Excessive anticholinergic dosing may worsen outcomes.
 
-2. **[Albuterol](../../pharmacology/Albuterol.md) is Repeat-As-Necessary.** EMTs may administer multiple treatments based on clinical response. Continuous nebulized [Albuterol](../../pharmacology/Albuterol.md) may be initiated for severe cases with Poquoson OMD direction.
+2. **[Albuterol](../../pharmacology/Albuterol.md) is Repeat-As-Necessary.** EMTs may administer multiple treatments based on clinical response. Continuous nebulized [Albuterol](../../pharmacology/Albuterol.md) may be initiated for severe cases with Medical Control direction.
 
 3. ⚠ **Route Selection Matters.** Nebulized medications deliver drug directly to airways for bronchospasm. Reserve IV/IO bronchodilators for patients unable to tolerate nebulizer or in impending respiratory failure.
 

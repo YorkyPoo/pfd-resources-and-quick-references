@@ -77,7 +77,7 @@ is a bug: [report it](../station-info.md#field-basics).
 <details class="fc">
   <summary>You spotted a wrong value on a protocol page. What do you do between calls?</summary>
   <p>Tap <strong>Report a correction on this page</strong> at the bottom of that protocol — it
-  opens the intake form with the page name already filled in. The submission goes to the OMD;
+  opens the intake form with the page name already filled in. The submission goes to Medical Control;
   the page does not change until they approve it. See
   <a href="../station-info.html">How to Use This Site</a>.</p>
 </details>
@@ -94,7 +94,7 @@ is a bug: [report it](../station-info.md#field-basics).
 ??? info "How this page is meant to grow"
     Static `<details>` cards are deliberately the first step: no JavaScript, no new dependency,
     cached by the service worker, and they work offline on a phone. Quizzes with scoring,
-    timed scenario drills and CE tracking need real content ownership and OMD sign-off before
+    timed scenario drills and CE tracking need real content ownership and Medical Control sign-off before
     they can claim to say anything about practice — so they stay out until that exists.
     Anything that states a clinical number should live on a ratified protocol page first and
     be *quoted* here, never invented here.

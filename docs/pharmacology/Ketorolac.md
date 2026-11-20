@@ -18,7 +18,7 @@
 ## Precautions
 - Anaphylaxis has been reported in patients with a history of Asthma
 - May increase risk of bleeding – avoid use in patients with known or suspected active bleeding
-- Contact Poquoson Medical Control before administering to patients with multisystem trauma
+- Contact Medical Control before administering to patients with multisystem trauma
 
 ## Dosage
 ### Adults
@@ -46,5 +46,5 @@
 
 ## Pearls
 - ⚠ **Warning:** May increase risk of bleeding – avoid use in patients with known or suspected active bleeding.
-- ⚠ **Warning:** Contact Poquoson Medical Control before administering to patients with multisystem trauma.
+- ⚠ **Warning:** Contact Medical Control before administering to patients with multisystem trauma.
 - ⚠ **Warning:** Anaphylaxis has been reported in patients with a history of Asthma.

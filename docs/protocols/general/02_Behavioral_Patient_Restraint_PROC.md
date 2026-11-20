@@ -18,7 +18,7 @@ Guidelines for managing agitated or combative patients, emphasizing de-escalatio
 
 === "Differential Considerations"
     - Potential medical or traumatic causes (SMASHED2)
-    - Patients less than 25 kg who cannot be safely managed with de-escalation require Poquoson Medical Control guidance
+    - Patients less than 25 kg who cannot be safely managed with de-escalation require Medical Control guidance
 
 ### Interventions
 
