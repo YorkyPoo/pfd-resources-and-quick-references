@@ -3,6 +3,13 @@ site_description: Frictionless, offline-capable EMS protocol and SOP dashboard
 site_author: YorkyPoo
 site_url: "https://yorkypoo.github.io/pfd-resources-and-quick-references/"
 
+# Never publish the conversion build prompt. It stays in docs/ as the conversion
+# spec, but it is not clinical content and a medic scrolling front matter must not
+# land on an AI prompt. It is also deliberately absent from `nav`: MkDocs builds
+# every Markdown file under docs/, so leaving it out of nav alone is not enough.
+exclude_docs: |
+  protocols/front-matter/00 - AI Formatting Guidelines.md
+
 hooks:
   - scripts/mkdocs_post_build.py
   - scripts/mkdocs_recent_updates.py

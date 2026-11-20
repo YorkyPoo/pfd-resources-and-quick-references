@@ -1,0 +1,54 @@
+# Gates — AI build prompt excluded from the published site
+
+Branch: ai-prompt-exclusion (base conversion-artifacts 8b9ba80)
+Date: 2026-11-20T06:40:29Z
+
+## Guard, pre-fix built tree (site/ still carries the page)
+$ python3 scripts/internal_artifacts.py --check --site site
+FAIL — 1 internal conversion artifact(s) published under docs/
+ - protocols/front-matter/00 - AI Formatting Guidelines.html  [excluded-page-built] protocols/front-matter/00 - AI Formatting Guidelines.md
+EXIT=1
+
+## Guard, fixed build (build-fix-ai-063928)
+$ python3 scripts/internal_artifacts.py --check --site build-fix-ai-063928
+OK — no conversion QA reports, no replacement-mapping block under docs/, and no built page for an excluded source
+EXIT=0
+
+## mkdocs build --strict
+$ mkdocs build --strict -d build-fix-ai-063928
+EXIT=0 (see build-fix-ai-063928.log)
+
+## link_sweep.py on the strict build
+$ python3 scripts/link_sweep.py build-fix-ai-063928
+swept 280 pages, 71585 internal hrefs (+ fragment checks)
+clean — every internal href and #anchor resolves to a built file and a real id
+EXIT=0
+
+## Other gates
+### python3 scripts/verify_pems_canonical.py
+
+  ok   verifier manifest covers the run (8 of 8 checks reached: )
+
+all invariants hold
+EXIT=0
+
+### python3 scripts/level_rule.py --check
+OK — 14 administrative-policy page(s) carry 95 action rows: 89 chipped POLICY (cited to one of 14 PEMS 2024 administrative policies, each with a verbatim quote out of that policy's own pages), 4 chipped PENDING (no PEMS policy prints the rule). 0 of them publish a provider level and 0 of them claim a protocol citation.
+OK — sc-wrap: 63 wide-table block(s) in 46 docs file(s) — mostly dose charts, phone lists and SOP tables that are not level matrices; 0 provider-level matrices on an sc-wrap on any page this project has converted.
+REPORTED, NOT GATED — 1 provider-level matrix/matrices inside sc-wrap remain on a page outside every conversion batch's scope (the front-matter legend, which DEFINES the level columns and must not change):
+   - protocols/front-matter/01 - How to Read the Protocols.md (line 33)
+EXIT=0
+
+### python3 scripts/mc_wording.py --check
+OK — 27 MC row(s) on 26 page(s) plus every other protocol table row (all levels): none name OMD / Poquoson / a Medical Director / a named individual.
+     prose lines still mentioning the office (out of scope, not edited): 53
+EXIT=0
+
+### python3 scripts/agency_names.py --check
+OK — 713 line(s) name the office or the agency; all are document-name / administrative exemptions. No clinical prose names a local office or the local agency.
+EXIT=0
+
+### python3 scripts/internal_artifacts.py --check
+OK — no conversion QA reports, no replacement-mapping block under docs/, and no built page for an excluded source
+EXIT=0
+
