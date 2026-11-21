@@ -68,27 +68,85 @@
   <meta name="theme-color" content="#16213e" />
   <script>
 if ('serviceWorker' in navigator) {
+    /* Offline-download banner.
+       It belongs directly beneath the top chrome, never over the bottom nav. The offset is
+       MEASURED at runtime, not hardcoded: the header height differs between phone and desktop,
+       and this theme renders the tab bar as a sibling of .md-header (not inside it), so the
+       banner has to clear both. Position it at the lowest visible chrome edge and re-measure on
+       resize, rotation and scroll. Styling lives in docs/stylesheets/extra.css
+       (.pfd-offline-banner) — z-index there keeps it under the header (4) and the phone bottom
+       bar (28), so it can never sit above navigation. */
+    var banner = null;
+
+    function chromeBottom() {
+        var bottom = 0;
+        var nodes = document.querySelectorAll('.md-header, .md-tabs');
+        for (var i = 0; i < nodes.length; i++) {
+            // display:none chrome (tabs below 76.2em, header in print) measures 0.
+            var edge = nodes[i].getBoundingClientRect().bottom;
+            if (edge > bottom) bottom = edge;
+        }
+        return bottom;
+    }
+
+    function placeBanner() {
+        var root = document.documentElement;
+        root.style.setProperty('--pfd-banner-top', chromeBottom() + 'px');
+        if (banner) {
+            root.style.setProperty('--pfd-banner-h', banner.offsetHeight + 'px');
+        }
+    }
+
+    function showBanner(text) {
+        if (!banner) {
+            banner = document.createElement('div');
+            banner.className = 'pfd-offline-banner';
+            banner.setAttribute('role', 'status');
+            document.body.appendChild(banner);
+            // Reserve the same height at the top of the content so the page heading is never
+            // hidden behind a fixed strip.
+            document.documentElement.classList.add('pfd-banner-active');
+        }
+        banner.textContent = text;
+        placeBanner();
+    }
+
+    function hideBanner() {
+        if (!banner) return;
+        banner.remove();
+        banner = null;
+        document.documentElement.classList.remove('pfd-banner-active');
+        document.documentElement.style.removeProperty('--pfd-banner-h');
+        window.removeEventListener('scroll', placeBanner);
+    }
+
+    window.addEventListener('resize', placeBanner);
+    // On rotation the new viewport metrics can land after the event; re-measure once they settle.
+    window.addEventListener('orientationchange', function() {
+        placeBanner();
+        setTimeout(placeBanner, 150);
+    });
+
     window.addEventListener('load', function() {
         navigator.serviceWorker.register('/pfd-resources-and-quick-references/sw.js')
             .then(function(reg) {
                 console.log('[PFD] Service Worker registered');
                 if (reg.installing) {
-                    var banner = document.createElement('div');
-                    banner.style.cssText = 'position:fixed;bottom:16px;right:16px;background:#16213e;color:#fff;padding:12px 20px;border-radius:8px;font-family:system-ui;font-size:14px;z-index:9999;box-shadow:0 4px 12px rgba(0,0,0,0.3);';
-                    banner.textContent = '📡 Downloading protocols for offline use...';
-                    document.body.appendChild(banner);
+                    showBanner('📡 Downloading protocols for offline use...');
+                    window.addEventListener('scroll', placeBanner, { passive: true });
                     reg.installing.addEventListener('statechange', function() {
                         if (this.state === 'activated') {
-                            banner.textContent = '✅ All protocols available offline';
-                            banner.style.background = '#1b5e20';
-                            setTimeout(function() { banner.remove(); }, 3000);
+                            showBanner('✅ All protocols available offline');
+                            banner.classList.add('pfd-offline-banner--done');
+                            placeBanner();
+                            setTimeout(hideBanner, 3000);
                         }
                     });
                 }
             });
     });
 }
-</script>
+  </script>
 
   </head>
   
