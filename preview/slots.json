@@ -50,9 +50,9 @@
     },
     "ia-r3": {
       "branch": "ia-r3",
-      "built_at": "2026-11-21T00:54:25Z",
-      "description": "IA r3: Protocols / SOPs rename, static category buttons, Fire Resources split",
-      "sha": "a75ffce7779825795ed09c52a0d38f0a5ade101d"
+      "built_at": "2026-11-21T01:00:42Z",
+      "description": "IA round 3: Protocols/SOPs hubs, static category buttons",
+      "sha": "fbe71bc7ee25db55bcf6a868e786353aaa612171"
     },
     "main": {
       "branch": "main",
@@ -121,5 +121,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-21T00:54:25.290629+00:00"
+  "updated_at": "2026-11-21T01:00:42.752375+00:00"
 }
