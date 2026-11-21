@@ -2412,6 +2412,23 @@ bindings:
       Batch 7 bundled rows.
 
   - file: protocols/respiratory/03_Pneumothorax_PROC.md
+    row: 10
+    pems_page: 243
+    pems_ordinal: 4
+    cross_page: false
+    quoted_row_text: "Reassess the patient, including vital signs and respiratory effort / compliance."
+    evidence: >-
+      p.243#4 prints 'Reassess the patient, including vital signs and respiratory effort /
+      compliance. Consider repeating the above steps for continued or recurrent hemodynamic
+      instability.' badged I — the post-decompression reassessment this row restates. This
+      row's source used to come from the C1 alignment alone (match_basis page-flat+text,
+      similarity 0.549); regenerating alignment.json from the tree on 2026-11-21 — which now
+      includes the row_splits.yaml rows the frozen file predated — attributes p.243#4 to
+      row 15a instead, so the citation is written down here rather than inferred. The badge
+      is unchanged (I) and the page's chip does not move. Shared row: 10, 11 and 15a all
+      restate p.243#4 at badge I; 10 and 15a are the two halves of a fused site row.
+
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
     row: 12
     pems_page: 113
     pems_ordinal: 4
