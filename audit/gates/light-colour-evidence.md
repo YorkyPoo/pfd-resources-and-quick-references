@@ -145,3 +145,12 @@ CSS, captions, chips or cards.
     before-1280-home.png           pre-change homepage
     before-1280-protocols.png      pre-change Protocols page
     before-1280-protocol.png       pre-change protocol page
+    before-390-home-top.png        pre-change homepage, 390
+    live-390-home-top.png          the PUBLISHED slot /preview/light-colour/, 390
+
+Published: https://yorkypoo.github.io/pfd-resources-and-quick-references/preview/light-colour/
+(gh-pages commit `8c3f494f`; 0 non-preview paths changed, 0 deletions, 0 `sw.js`
+under `preview/`, sibling slot `home-r4` still present, page carries
+`noindex, nofollow`.) Verified on the live URL after the CDN settled: cards
+compute to the EMS tint `#edf6fb` with a `#0284c7` border and the captions to
+`#0369a1` / `#991b1b` / `#334155` / `#57534e`.
