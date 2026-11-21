@@ -73,10 +73,10 @@
       "sha": "fbe71bc7ee25db55bcf6a868e786353aaa612171"
     },
     "light-colour": {
-      "branch": "light-colour",
-      "built_at": "2026-11-21T02:56:24Z",
-      "description": "Light mode: domain colour in cards, captions and chips",
-      "sha": "b4e71d12bbb63be5ddcebc411a0b9200daf221f2"
+      "branch": "light-colour-r2",
+      "built_at": "2026-11-21T03:05:20Z",
+      "description": "Light scheme domain colour on the round-4 homepage",
+      "sha": "1aa622c36355506a6ca1232b4822c0892d66451d"
     },
     "main": {
       "branch": "main",
@@ -145,5 +145,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-21T02:56:24.177818+00:00"
+  "updated_at": "2026-11-21T03:05:20.072580+00:00"
 }
