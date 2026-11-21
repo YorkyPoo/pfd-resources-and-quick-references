@@ -338,6 +338,10 @@ def main():
                     help="also touch pages the porter regenerates (default: skip — "
                          "port_reference.py calls apply_to_page instead)")
     ap.add_argument("--report", default=str(Path.home() / ".hermes/cache/scratch/connected_notes_report.json"))
+    ap.add_argument("--check", action="store_true",
+                    help="drift check: exit 1 if any page's Connected Notes box is out of "
+                         "date. Evaluates porter-owned pages too (they are what a re-port "
+                         "would write), and writes nothing.")
     a = ap.parse_args()
 
     ctx = build_context()
@@ -345,7 +349,7 @@ def main():
              for a2 in sorted(SOPS.rglob("*.md")) if "index" not in a2.stem.lower()]
     owned = porter_owned()
     ported_in_scope = [p for p in pages if p in owned]
-    if not a.allow_ported:
+    if not a.allow_ported and not a.check:
         pages = [p for p in pages if p not in owned]
     if a.only:
         pages = [p for p in pages if a.only in p]
@@ -374,6 +378,16 @@ def main():
     Path(a.report).write_text(json.dumps({"stats": dict(stats),
                                           "skipped_porter_owned": ported_in_scope,
                                           "pages": detail}, indent=1))
+    if a.check:
+        print(f"[CHECK] pages={stats['pages']} with-box={stats['boxed']} "
+              f"links={stats['links']} changed={stats['changed']}")
+        if changes:
+            print("DRIFT — these pages would be rewritten:")
+            for r in sorted(changes):
+                print(f"  {r}")
+            return 1
+        print("no drift — every Connected Notes box is current")
+        return 0
     if a.apply:
         for r, new in changes.items():
             (DOCS / r).write_text(new)
