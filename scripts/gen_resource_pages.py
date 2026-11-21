@@ -501,9 +501,11 @@ def build_hub(bucket, title, groups):
     lines = [f"# {title}", "", HUB_LEAD[bucket], ""]
     if bucket == "EMS":
         anchors = {slugify(g) for g, _ in groups}
-        dead = [t for _l, t in EMS_BUTTONS if t.lstrip("#") not in anchors]
+        dead = [f"{l} -> {t}" for l, t in EMS_BUTTONS if t.lstrip("#") not in anchors]
         if dead:
-            raise SystemExit(f"EMS_BUTTONS point at headings that do not exist: {dead}")
+            raise SystemExit(
+                "EMS_BUTTONS point at headings that do not exist on the Protocols page: "
+                + ", ".join(dead))
         missing = [t for _l, t in EMS_TOOLS
                    if not (DOCS / "resources" / t.split("#")[0]).resolve().exists()]
         if missing:

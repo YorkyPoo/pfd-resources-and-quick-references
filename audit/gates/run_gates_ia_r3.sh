@@ -5,6 +5,8 @@
 #
 # Same 12 gates as homepage-r2, plus three this card adds:
 #   scroller_hrefs   no two controls in one row may share an href (the crew-links bug)
+#   hub_anchors      every nav control's in-page/cross-page anchor must exist in the
+#                    rendered page (a button row drifting from its own sections)
 #   bottom_bar       the four-cell field bar still names its four destinations
 #   protocols_untouched  no file under docs/protocols/ changed
 set -uo pipefail
@@ -45,6 +47,7 @@ run verify_pip_strip python3 scripts/verify_pip_strip.py --base site --archive a
 run link_sweep python3 scripts/link_sweep.py site
 run internal_artifacts_site python3 scripts/internal_artifacts.py --check --site site
 run scroller_hrefs python3 scripts/check_scroller_hrefs.py site
+run hub_anchors python3 scripts/check_hub_anchors.py site
 run bottom_bar python3 scripts/check_bottom_bar.py site
 
 echo "## gate: protocols_untouched"
@@ -55,5 +58,5 @@ echo "protocol files changed: ${CHANGED}"
 if [ "${CHANGED}" -eq 0 ]; then echo "EXIT=0"; else echo "EXIT=1"; FAILED="${FAILED} protocols_untouched=1"; fi
 echo
 echo "## summary"
-if [ -z "$FAILED" ]; then echo "ALL GATES EXIT=0 (15 of 15)"; else echo "FAILED:${FAILED}"; fi
+if [ -z "$FAILED" ]; then echo "ALL GATES EXIT=0 (16 of 16)"; else echo "FAILED:${FAILED}"; fi
 } 2>&1 | tee "${LOG}"
