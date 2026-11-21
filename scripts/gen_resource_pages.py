@@ -664,14 +664,14 @@ def quicklinks_block(records):
               # to ems/index.md, the page that is actually the hub, so the old
               # "EMS Clinical Hub" chip is gone — it was the same destination twice.
               f'**[EMS Hub]({EMS_CLINICAL_HUB})**'
-              '{: .pfd-cap .pfd-cap--link }', "",
+              '{: .pfd-cap .pfd-cap--link .pfd-cap--ems }', "",
               '<div class="pfd-scroller pfd-scroller--ems" markdown="1">', ""]
     parts += [chip(*EMS_HUB_CHIP, "all"), chip(*EMS_PROCEDURES_CHIP, "ems")]
     parts += [chip(label, href, "ems") for label, href in EMS_SOP_STRIP]
     parts += [chip(label, href, "ems") for label, href in EMS_CLINICAL_STRIP]
     parts += ["", "</div>", "",
               f'**[Fire resources]({FIRE_REF_HUB})**'
-              '{: .pfd-cap .pfd-cap--link }', "",
+              '{: .pfd-cap .pfd-cap--link .pfd-cap--fire }', "",
               '<div class="pfd-scroller pfd-scroller--fire" markdown="1">', ""]
     parts += [chip(*FIRE_REF_HUB_CHIP, "all")]
     parts += [chip(label, href, "fire") for label, href in FIRE_REF_STRIP]
@@ -679,7 +679,7 @@ def quicklinks_block(records):
               '<section class="pfd-secondary-row" markdown="1">', "",
               '<div class="pfd-secondary" markdown="1">', "",
               f'**[City &amp; personnel policies]({STATION_POLICIES})**'
-              '{: .pfd-cap .pfd-cap--link }', "",
+              '{: .pfd-cap .pfd-cap--link .pfd-cap--admin }', "",
               '<div class="pfd-scroller pfd-scroller--admin" markdown="1">', ""]
     # Scroller order is the owner's: the hub, the full list, then the five policies a
     # crew actually reaches for.
@@ -689,7 +689,7 @@ def quicklinks_block(records):
     parts += ["", "</div>", "", "</div>", "",
               '<div class="pfd-secondary" markdown="1">', "",
               f'**[Crew links &amp; portals]({LINKS_PAGE})**'
-              '{: .pfd-cap .pfd-cap--link }', "",
+              '{: .pfd-cap .pfd-cap--link .pfd-cap--util }', "",
               '<div class="pfd-scroller pfd-scroller--util" markdown="1">', ""]
     # Utility, not admin: these are "where do I go" links, not policy, so they carry
     # their own neutral accent and the colour code never claims the crew row is policy.
@@ -717,7 +717,7 @@ def build_ems_hub(ems_groups):
              "most, and the calculators. Every clinical protocol, by category, is on "
              "[Protocols](../resources/ems.md).", "",
              '<section class="pfd-zone" markdown="1">', "",
-             '<p class="pfd-cap">Administrative protocols</p>', "",
+             '<p class="pfd-cap pfd-cap--ems">Administrative protocols</p>', "",
              '<div class="pfd-quick-grid" markdown="1">', ""]
     for label, path, sub in EMS_ADMIN:
         lines.append(card(label, rel("ems", path), sub, "EMS", plain=True))
@@ -726,7 +726,7 @@ def build_ems_hub(ems_groups):
               "under [Administrative](../resources/ems.md#administrative) on the Protocols "
               "page.", "", "</section>", "",
               '<section class="pfd-zone" markdown="1">', "",
-             '<p class="pfd-cap">EMS SOPs — the six that come up most</p>', "",
+             '<p class="pfd-cap pfd-cap--ems">EMS SOPs — the six that come up most</p>', "",
              '<div class="pfd-quick-grid" markdown="1">', ""]
     for label, path, sub in EMS_SOP_SHORT:
         lines.append(card(label, rel("ems", path), sub, "EMS", plain=True))
@@ -734,7 +734,7 @@ def build_ems_hub(ems_groups):
               "All 23 EMS SOPs are listed under "
               "[EMS SOPs](../resources/ems.md#ems-sops).", "", "</section>", "",
               '<section class="pfd-zone" markdown="1">', "",
-              '<p class="pfd-cap">Calculators</p>', "",
+              '<p class="pfd-cap pfd-cap--ems">Calculators</p>', "",
               '<div class="pfd-quick-grid" markdown="1">', ""]
     for label, path, sub, icon in EMS_CALCS:
         lines.append(card(label, rel("ems", path), sub, "EMS", icon, plain=True))
@@ -756,7 +756,7 @@ def build_policies_page():
              "[EMS Clinical Hub](../ems/index.md) and fireground procedure is under "
              "[SOPs](../resources/fire.md).", "",
              '<section class="pfd-zone" markdown="1">', "",
-             '<p class="pfd-cap">Most reached</p>', "",
+             '<p class="pfd-cap pfd-cap--admin">Most reached</p>', "",
              '<div class="pfd-quick-grid" markdown="1">', ""]
     for label, path, sub in POLICY_TILES:
         lines.append(card(label, rel("station", path), sub, "ADMIN", plain=True))

@@ -4,7 +4,7 @@ City of Poquoson personnel policy and department policy, out of the on-scene flo
 
 <section class="pfd-zone" markdown="1">
 
-<p class="pfd-cap">Most reached</p>
+<p class="pfd-cap pfd-cap--admin">Most reached</p>
 
 <div class="pfd-quick-grid" markdown="1">
 
