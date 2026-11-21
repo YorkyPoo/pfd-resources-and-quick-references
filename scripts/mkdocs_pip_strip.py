@@ -484,8 +484,12 @@ def on_page_content(html, page, config, **kwargs):
         return html
     # Placeholder first, and before the pip-block short circuit below: a page
     # with no level table at all (station-info.md) still asks for the legend.
+    # The wrapper carries the class the pip colours are scoped to (they are
+    # defined on `.md-typeset .pip-block`), so the legend on a page with no
+    # strip still gets the same swatches; it is not a live block (no
+    # data-pip-block → pip-strip.js never touches it).
     if LEGEND_TOKEN in html:
-        html = html.replace(LEGEND_TOKEN, _legend())
+        html = html.replace(LEGEND_TOKEN, '<div class="pip-block">' + _legend() + "</div>")
     if 'data-pip-block' in html:
         return html
     return LVWRAP_RE.sub(functools.partial(transform_lvwrap, rel=src or "<unknown>"), html)
