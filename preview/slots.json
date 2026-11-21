@@ -72,6 +72,12 @@
       "description": "IA round 3: Protocols/SOPs hubs, static category buttons",
       "sha": "fbe71bc7ee25db55bcf6a868e786353aaa612171"
     },
+    "light-colour": {
+      "branch": "light-colour",
+      "built_at": "2026-11-21T02:53:35Z",
+      "description": "Light mode: domain colour in cards, captions and chips",
+      "sha": "c3ca3304c545d8b785fdb4d26e8dc056df674584"
+    },
     "main": {
       "branch": "main",
       "built_at": "2026-11-20T05:45:38Z",
@@ -139,5 +145,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-21T02:41:40.704183+00:00"
+  "updated_at": "2026-11-21T02:53:35.349475+00:00"
 }
