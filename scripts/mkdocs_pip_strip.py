@@ -61,6 +61,7 @@ from __future__ import annotations
 
 import functools
 import html as html_lib
+import os
 import re
 
 LEVELS = ["R", "B", "A", "I", "P"]
@@ -306,6 +307,50 @@ def _legend():
     )
 
 
+# The legend's markup may exist in THIS module only. `_legend()` is the single
+# definition; a page that wants the swatches writes the placeholder below and
+# the hook splices the function's output in at build time. A second copy in a
+# page or an override would drift the first time a pip colour changed, so the
+# build fails when one appears under docs/ or overrides/.
+LEGEND_OWNER = "scripts/mkdocs_pip_strip.py"
+LEGEND_MARKER = b'class="pip-legend"'
+LEGEND_TOKEN = "<!-- PIP_LEGEND -->"
+GUARD_DIRS = ("docs", "overrides")
+
+
+def legend_duplicates(repo_root=None):
+    """Relative paths under docs/ + overrides/ that carry the legend markup."""
+    root = repo_root or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    hits = []
+    for sub in GUARD_DIRS:
+        base = os.path.join(root, sub)
+        for dirpath, dirnames, filenames in os.walk(base):
+            dirnames[:] = sorted(d for d in dirnames if d not in (".git", "__pycache__"))
+            for name in sorted(filenames):
+                path = os.path.join(dirpath, name)
+                try:
+                    with open(path, "rb") as fh:
+                        data = fh.read()
+                except OSError:
+                    continue
+                if LEGEND_MARKER in data:
+                    hits.append(os.path.relpath(path, root))
+    return hits
+
+
+def on_config(config, **kwargs):
+    """Fail the build when the legend markup is copied outside this module."""
+    hits = legend_duplicates()
+    if hits:
+        detail = "\n".join(f"  {rel}" for rel in hits)
+        raise RuntimeError(
+            "the protocol legend's markup may exist only in "
+            f"{LEGEND_OWNER} (pages get it from the {LEGEND_TOKEN} placeholder); "
+            f"found a copy in:\n{detail}"
+        )
+    return config
+
+
 def _render_block(rows, flagged=0, pending=0):
     head = (
         '<div class="pip-wrap"><table class="pip-table">'
@@ -437,6 +482,14 @@ def on_page_content(html, page, config, **kwargs):
     src = getattr(getattr(page, "file", None), "src_uri", None)
     if scope["pages"] is not None and src not in scope["pages"]:
         return html
+    # Placeholder first, and before the pip-block short circuit below: a page
+    # with no level table at all (station-info.md) still asks for the legend.
+    # The wrapper carries the class the pip colours are scoped to (they are
+    # defined on `.md-typeset .pip-block`), so the legend on a page with no
+    # strip still gets the same swatches; it is not a live block (no
+    # data-pip-block → pip-strip.js never touches it).
+    if LEGEND_TOKEN in html:
+        html = html.replace(LEGEND_TOKEN, '<div class="pip-block">' + _legend() + "</div>")
     if 'data-pip-block' in html:
         return html
     return LVWRAP_RE.sub(functools.partial(transform_lvwrap, rel=src or "<unknown>"), html)
