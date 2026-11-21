@@ -73,10 +73,10 @@
       "sha": "fbe71bc7ee25db55bcf6a868e786353aaa612171"
     },
     "legend": {
-      "branch": "legend",
-      "built_at": "2026-11-21T03:18:15Z",
-      "description": "Legend: single source of truth for the pip legend block",
-      "sha": "aaf5b0279445b336f7ef51a28272872a4f7018f4"
+      "branch": "legend-r2",
+      "built_at": "2026-11-21T03:27:07Z",
+      "description": "Legend: /preview/legend/ rebuilt from legend-r2 \u2014 real pip swatches on the reading section, two-way legend/strip guard",
+      "sha": "15a543504fce3f18c19e2467f4675ce532d47ff0"
     },
     "light-colour": {
       "branch": "light-colour-r2",
@@ -157,5 +157,5 @@
       "sha": "cc0735af60dcd20ce46ca5dca7d48a852ad81274"
     }
   },
-  "updated_at": "2026-11-21T03:18:15.263310+00:00"
+  "updated_at": "2026-11-21T03:27:07.979082+00:00"
 }
