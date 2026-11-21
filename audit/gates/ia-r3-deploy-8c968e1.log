@@ -1,0 +1,67 @@
+# ia-r3 merge + deploy log — card t_c8781266
+# written 2026-11-21 01:41:52 UTC by the developer worker
+#
+# branch ia-r3 (fbe71bc) merged --no-ff into main -> 8c968e1263baa158a4d82c07c95af7767c0d194a
+# Actions run 44851324175 "Deploy MkDocs site to GitHub Pages": conclusion=success
+#   steps: Build and deploy / Restore /preview/ slots / Verify /preview/ survived -> all success
+# gh-pages: b22176d7 "Deployed 8c968e12 with MkDocs version: 1.6.1"
+#           tip 59467308 "preview: preserve /preview/ slots across the main deploy"
+# preview tree identity: before=b44ce57f909da4e686e2f6d7a6e5a1c6ece4c0be after=b44ce57f909da4e686e2f6d7a6e5a1c6ece4c0be (identical)
+#
+# ---- preconditions (all green) ----
+# git fetch origin                                  EXIT=0
+# git merge-base --is-ancestor origin/main ia-r3    EXIT=0
+# git diff --stat origin/main...ia-r3 -- docs/protocols/   -> empty (0 lines)
+# python3 scripts/gen_resource_pages.py --check     EXIT=0  "drift: none - all files current"
+#                                       (pages 233, sop groups 6 (80), fire-ref groups 4 (10), ems groups 16 (136), station groups 4 (4))
+#
+# ---- merge ----
+# git merge --ff-only origin/main   (d5fd03c -> 806bfe1, 126 files)
+# git merge --no-ff --no-edit ia-r3 EXIT=0, clean, no conflicts, 52 files / +1519 -394
+#
+# ---- pre-push gates on the merged tree (14 of 14 EXIT=0) ----
+# gen_resource_pages --check                 EXIT=0
+# connected_notes --check                    EXIT=0  (pages=103 with-box=31 links=80 changed=0)
+# test_pip_strip_mapper.py                   EXIT=0  (10/10 prototype rows reproduced)
+# verify_pems_canonical.py --check           EXIT=0  (all invariants hold)
+# level_rule.py --check                      EXIT=0
+# mc_wording.py --check                      EXIT=0
+# agency_names.py --check                    EXIT=0  (708 lines, all exempt)
+# build_outstanding_decisions.py --check     EXIT=0
+# internal_artifacts.py --check              EXIT=0
+# mkdocs build --strict -d /root/.hermes/profiles/developer/cache/scratch/mrg-ia3-013703  EXIT=0
+# verify_pip_strip.py                        EXIT=0  (518 rows md/html compared, 0 mismatches)
+# link_sweep.py <site>                       EXIT=0  (283 pages, 73782 hrefs, clean)
+# internal_artifacts.py --check --site <site>EXIT=0
+# check_scroller_hrefs.py <site>             EXIT=0  (283 pages, 9 rows, 70 controls, distinct hrefs)
+# check_hub_anchors.py <site>                EXIT=0  (283 pages, 67 controls, every anchor resolves)
+# check_bottom_bar.py <site>                 EXIT=0  (['Home','Protocols','SOPs','Station'])
+#
+# tail of the strict build:
+#     - personnel-policies/policies/42-resignations-and-separations.md
+#     - personnel-policies/policies/43-retiree-health-insurance-coverage.md
+#   pip_strip: protocols/administrative/01_Stroke_Field_Triage_PROC.md: policy (Basis) table not converted; row(s) 1 name a provider level as basis
+#   [post_build] sitemap: dropped 1 noindex page(s): ['/resources/links.html']
+#   [post_build] Generated sw.js with 283 pre-cached pages (version: 20261121-013711)
+#   INFO    -  Documentation built in 8.42 seconds
+
+# ---- LIVE verification on https://yorkypoo.github.io/pfd-resources-and-quick-references/ ----
+# PASS  1_home_bottom_bar: labels=['Home', 'Protocols', 'SOPs', 'Station'] hrefs=['index.html', 'resources/ems.html', 'resources/fire.html', 'resources/station.html'] (Last-Modified=Sat, 21 Nov 2026 01:39:50 GMT, Age=48)
+# PASS  1_no_ems_fire_labels: >EMS< occurrences=0, >Fire<=0
+# PASS  2_protocols_title: title='Protocols Home - Poquoson Fire & Rescue Protocols' (Last-Modified=Sat, 21 Nov 2026 01:39:46 GMT, Age=48)
+# PASS  2_protocols_buttons_14: count=14 labels=['Cardiac', 'Respiratory', 'Trauma', 'Medical', 'Pediatric', 'Administrative', 'Procedures', 'Toxicology', 'Neurologic', 'General', 'Pharmacology', 'EMS SOPs', 'Drug Calculator', 'Pediatric Calculator']
+# PASS  2_front_matter_immediately_after: qldots@131268 < front-matter@131935
+# PASS  2_outstanding_decisions_last: outstanding anchor 2196 chars after the ems-sops heading
+# PASS  3_sops_title: title='SOPs Home - Poquoson Fire & Rescue Protocols' (Last-Modified=Sat, 21 Nov 2026 01:39:47 GMT, Age=48)
+# PASS  3_sops_no_reference_sections: h2 ids=['emergency-operations', 'special-operations', 'equipment-apparatus', 'safety-health', 'general-administration', 'public-relations']
+# PASS  3_sops_keyword_context: 16 hit(s):  Frameworks ||  Frameworks ||  <a href="../fire-ems-references/frameworks/mnemonics.html" class="md-nav__link"> ||  <a href="../fire-ems-references/frameworks/saw-css-receo-vss.html" class="md-nav__link"> ||  <a href="../fire-ems-references/frameworks/reference-cards.html" class="md-nav__link"> ||  Field References ||  Field References ||  Strategies ||  Strategies ||  <a href="../fire-ems-references/strategies/offensive.html" class="md-nav__link"> ||  <a href="../fire-ems-references/strategies/defensive.html" class="md-nav__link"> ||  <a href="../fire-ems-references/strategies/transitional.html" class="md-nav__link"> ||  <a href="../fire-ems-references/strategies/signal-victim-profiling.html" class="md-nav__link"> ||  <a href="../sops/emergency-operations/EO-600a-FORCES-Mnemonic.html" class="md-nav__link"> ||  FORCES Mnemonic (Study Aid) || ions, special operations, equipment and apparatus, safety, and department administration. Frameworks, field references, strategies and the FORCES study aid are on the <a href="fire-resource
+# PASS  4_fire_resources_groups: title='Fire Resources Home - Poquoson Fire & Rescue Protocols' h2=['frameworks', 'field-references', 'strategies', 'study-aids'] (Last-Modified=Sat, 21 Nov 2026 01:39:54 GMT, Age=48)
+# PASS  5_ems_hub_decluttered: missing in <article>=[] (Last-Modified=Sat, 21 Nov 2026 01:39:47 GMT, Age=48)
+# PASS  5_ems_hub_no_protocol_dump: protocol links inside <article>=5 (whole page incl. nav=60)
+# PASS  6_pip_strip_live: pip-strip occurrences=27 pip-wrap=True (Last-Modified=Sat, 21 Nov 2026 01:39:47 GMT, Age=48)
+# PASS  7_fm00_404: status=404
+# PASS  8_preview_slot_live: status=200 bytes=134266 (Last-Modified=Sat, 21 Nov 2026 01:39:54 GMT)
+# PASS  live_matches_ghpages_resources_ems.html: live=148024 bytes artifact=148024 bytes identical_after_ws_norm=True
+# PASS  live_matches_ghpages_: live=135567 bytes artifact=135567 bytes identical_after_ws_norm=True
+# 
+# SUMMARY: 17/17 PASS
