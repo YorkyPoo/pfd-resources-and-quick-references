@@ -116,6 +116,34 @@ Material transitions link colours over 125 ms. The first pass showed phantom
 chip differences; injecting `*{transition:none!important}` before the switch
 made them disappear. The slate attribute lives on `<body>`, not `<html>`.
 
+## Published slot — verified on the live URL, not just locally
+
+`bash scripts/publish_preview_slots.sh light-colour=light-colour-r2` (tooling
+from `origin/preview-slots` @ `4dce3d6c`) replaced the **existing** slot; no
+second slot was opened. gh-pages commit `baba2319`:
+
+    git diff --name-only 859cce67..origin/gh-pages | grep -v '^preview/'   -> empty
+    changed paths outside preview/light-colour/  -> preview/index.html, preview/slots.json
+    sw.js files under preview/                   -> 0
+    preview/slots.json: light-colour -> branch light-colour-r2, sha 1aa622c3…
+    sibling slot home-r4                         -> still present (333 files)
+
+Live DOM (`preview/light-colour/index.html`, cache-busted):
+
+- captions render **EMS Hub**, **Fire resources**, **City & personnel policies**,
+  **Crew links & portals** — one `pfd-cap--ems/fire/admin/util` each, plus the
+  neutral mixed-tools caption
+- six scene tiles incl. **Drug Calculator** and **Pharmacology**; no SOPs scroller
+- contrast re-measured on the published page: card EMS title 14.95, sublabel
+  8.08, border 3.75; chips 8.96 / 5.23 / 7.02 / 8.91 / 6.75; captions 5.93 /
+  8.31 / 10.35 / 7.63; neutral caption 4.59 — same values as the local build
+- dark mode on the live slot vs the live `home-r4` slot, both forced to slate
+  with transitions disabled, 12 selectors: **0 differences**
+
+The rebased tip also carries the offline banner (`0763113d`), which home-r4
+predates: its JS creates the strip at runtime, so its absence from the static
+HTML is expected — the CSS and the override script are both in the build.
+
 ## Screenshots (rebased build)
 
     evidence/rebased-1280-home-light.png   homepage, light, 1280
