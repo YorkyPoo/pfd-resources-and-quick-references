@@ -74,9 +74,9 @@
     },
     "legend": {
       "branch": "legend-r2",
-      "built_at": "2026-11-21T03:27:07Z",
-      "description": "Legend: /preview/legend/ rebuilt from legend-r2 \u2014 real pip swatches on the reading section, two-way legend/strip guard",
-      "sha": "15a543504fce3f18c19e2467f4675ce532d47ff0"
+      "built_at": "2026-11-21T03:28:20Z",
+      "description": "Legend: /preview/legend/ from legend-r2 \u2014 real pip swatches on the reading section; legend must match the strip in both directions",
+      "sha": "510761415999a29c7bf8545f636ab2bbb6c00e4f"
     },
     "light-colour": {
       "branch": "light-colour-r2",
@@ -157,5 +157,5 @@
       "sha": "cc0735af60dcd20ce46ca5dca7d48a852ad81274"
     }
   },
-  "updated_at": "2026-11-21T03:27:07.979082+00:00"
+  "updated_at": "2026-11-21T03:28:20.760531+00:00"
 }
