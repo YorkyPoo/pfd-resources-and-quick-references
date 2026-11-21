@@ -559,6 +559,22 @@ article:has(.pfd-quick-grid) h2:first-of-type { font-size: 1.15em; margin: .45em
   /* clearance = 90px of existing breathing room + 56px bar + the notch band */
   html .md-content { padding-bottom: calc(148px + env(safe-area-inset-bottom, 0px)); }
 }
+/* Offline-download banner (overrides/main.html): a full-width strip pinned directly below the
+   top chrome. --pfd-banner-top is the MEASURED bottom of the header/tab bar, set by the script —
+   never a hardcoded 48px: the header is 2.4rem on desktop, taller with tabs, and the tab bar is
+   a sibling of .md-header in this theme, so it has to be cleared too.
+   z-index 2 keeps it above page content but BELOW the header (4) and the phone bottom bar (28):
+   the strip may never sit above navigation. The page heading is kept clear by the matching
+   padding-top on .md-main while the banner is on screen. */
+.pfd-offline-banner {
+  position: fixed; left: 0; right: 0; top: var(--pfd-banner-top, 0px); z-index: 2;
+  padding: .5rem .8rem; background: #16213e; color: #fff;
+  font-family: var(--md-text-font-family, system-ui); font-size: .72rem; font-weight: 600;
+  line-height: 1.4; text-align: center; box-shadow: 0 2px 6px rgba(0, 0, 0, .28);
+}
+/* success state: #1b5e20 + #fff = 7.9:1, still AA at this size and AAA for normal text */
+.pfd-offline-banner--done { background: #1b5e20; }
+html.pfd-banner-active .md-main { padding-top: var(--pfd-banner-h, 0px); }
 /* Wide-table framing: scroll horizontally on phones instead of crushing columns */
 .md-typeset__table { display: block; overflow-x: auto; max-width: 100%; }
 
