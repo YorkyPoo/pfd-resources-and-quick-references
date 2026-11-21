@@ -2,9 +2,16 @@
 """Invariant checks for the level-scan rebuild artifacts (stages 1+2).
 
 Run after `pems_canonical.py --stage all`. Exits non-zero and prints the failed
-invariant when something does not add up. This exists because the previous
-pipeline's report was believed without checking: "0 fixable mismatches" was true
-by its own definition while 154 rows were wrong.
+invariant when something does not add up.
+
+It is also runnable on a clean clone: the one input it cannot get from git is
+the derived `.cache/pems_rows.jsonl` (git-ignored), so when it is absent the
+script builds it from the PDF itself — writing the cache and nothing else, never
+`pems_table.json` / `alignment.json` / `missing-rows.md`.
+
+This exists because the previous pipeline's report was believed without
+checking: "0 fixable mismatches" was true by its own definition while 154 rows
+were wrong.
 
     python scripts/verify_pems_canonical.py
 """
@@ -815,8 +822,49 @@ def main() -> int:
     section("deliverables")
     print("deliverables")
     for name in ("missing-rows.md", "ambiguous-rows.md", "alignment.json",
-                 "pems_table.json", ".cache/pems_rows.jsonl", "pems_prose.json"):
+                 "pems_table.json", "pems_prose.json"):
         check(os.path.exists(os.path.join(OUT, name)), f"{name} exists")
+    # `.cache/pems_rows.jsonl` is a *derived* artifact inside a git-ignored
+    # directory, so a clean clone never has one; testing `os.path.exists` made
+    # this gate red on every fresh checkout (and green on a stale cache, which
+    # nothing read). Build it here when it is missing — the cache is the only
+    # thing written, never the table/alignment/markdown the gate audits — and
+    # then require it to be the canonical table's rows, row for row, so the
+    # check still fails on a cache that has drifted from the table.
+    cache_path = os.path.join(OUT, ".cache", "pems_rows.jsonl")
+    cache_rows: list[dict] = []
+    built = False
+    have_cache = os.path.exists(cache_path)
+    if have_cache:
+        with open(cache_path, encoding="utf-8") as fh:
+            cache_rows = [json.loads(line) for line in fh if line.strip()]
+    else:
+        print("  note  .cache/pems_rows.jsonl is derived and git-ignored: a clean\n"
+              "        checkout has none, so it is built from the PDF now (cache only)")
+        try:
+            cache_rows = C.build_rows_cache()
+            built = True
+        except SystemExit as exc:            # pems_level_scan exits if the PDF is gone
+            check(False, f"rows cache could not be built: {exc}")
+    if have_cache or built:
+        print(f"        rows cache: {len(cache_rows)} rows"
+              + (" (built for this run)" if built else " (existing)"))
+        tbl = {(r["page"], r["ordinal"]): r for r in rows}
+        got = {(r["page"], r["ordinal"]): r for r in cache_rows}
+        absent = sorted(set(tbl) - set(got))
+        surplus = sorted(set(got) - set(tbl))
+        drifted = sorted(k for k in set(tbl) & set(got)
+                         if (got[k].get("section_heading"), got[k].get("verbatim_text"))
+                         != (tbl[k].get("section_heading"), tbl[k].get("verbatim_text")))
+        check(not absent and not surplus and not drifted,
+              f"the rows cache is the canonical table's row set "
+              f"({len(cache_rows)} rows; {len(absent)} absent, {len(surplus)} surplus, "
+              f"{len(drifted)} drifted)")
+        for label, keys in (("absent from cache", absent[:3]),
+                            ("not in the table", surplus[:3]),
+                            ("drifted (heading/text)", drifted[:3])):
+            for k in keys:
+                print(f"        {label}: p.{k[0]} #{k[1]}")
     # The prose index is the only place the unbadged PEARLS / NOTES /
     # CONTRAINDICATIONS text lives (pems_table.json stores grid rows only), so a
     # stale index silently re-opens the "PEMS prints this nowhere" defect. Compare

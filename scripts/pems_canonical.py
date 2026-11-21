@@ -669,6 +669,38 @@ def _row_record(r: dict) -> dict:
     return rec
 
 
+def rows_cache_records(docs: list[dict]) -> list[dict]:
+    """Every document's rows, flattened, for the sibling pipeline stages."""
+    return [{"doc": d["title"], **_row_record(r)} for d in docs for r in d["rows"]]
+
+
+def write_rows_cache(docs: list[dict]) -> list[dict]:
+    """Write `audit/level-scan/.cache/pems_rows.jsonl` and return its records."""
+    os.makedirs(CACHE, exist_ok=True)
+    recs = rows_cache_records(docs)
+    with open(ROWS_CACHE, "w", encoding="utf-8") as fh:
+        for rec in recs:
+            fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
+    return recs
+
+
+def build_rows_cache() -> list[dict]:
+    """Derive the row cache from the PDF and write nothing else.
+
+    The cache is git-ignored, so a clean clone never has one; a gate that only
+    checks the path is red on every fresh checkout. This is the side-effect-free
+    build the verifier calls: stage 1's parse and row splits, then the cache —
+    no `pems_table.json`, `alignment.json` or `missing-rows.md` is touched, so a
+    gate run can never rewrite the artifacts it is judging.
+    """
+    pages = parse_pdf()
+    docs = build_docs(pages)
+    splits, _ = _load_row_splits()
+    if splits:
+        _apply_row_splits(docs, splits)
+    return write_rows_cache(docs)
+
+
 def stage1(verbose: bool = False) -> dict:
     os.makedirs(CACHE, exist_ok=True)
     pages = parse_pdf()
@@ -679,11 +711,7 @@ def stage1(verbose: bool = False) -> dict:
         if verbose:
             print(f"  row splits: {len(applied)} fused row(s) split")
     os.makedirs(OUTDIR, exist_ok=True)
-    # every document's rows, flattened, for the sibling pipeline stages
-    with open(ROWS_CACHE, "w", encoding="utf-8") as fh:
-        for d in docs:
-            for r in d["rows"]:
-                fh.write(json.dumps({"doc": d["title"], **_row_record(r)}, ensure_ascii=False) + "\n")
+    write_rows_cache(docs)
     exc, repairs = _load_exceptions()
     decisions = []
     paths = {p for d in docs for p in d["pages"]}
@@ -2228,7 +2256,15 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--stage", choices=["1", "2", "all"], default="all")
     ap.add_argument("--verbose", action="store_true")
+    ap.add_argument("--rows-cache-only", action="store_true",
+                    help="build only the git-ignored .cache/pems_rows.jsonl "
+                         "(no pems_table.json / alignment.json / missing-rows.md "
+                         "is written) — what the verifier runs on a clean checkout")
     args = ap.parse_args(argv)
+    if args.rows_cache_only:
+        recs = build_rows_cache()
+        print(f"rows cache: {len(recs)} rows -> {os.path.relpath(ROWS_CACHE, REPO)}")
+        return 0
     seed = None
     if args.stage in ("1", "all"):
         seed = stage1(args.verbose)
