@@ -660,26 +660,28 @@ def quicklinks_block(records):
               for label, path, sub, domain, icon in SCENE_TOOLS]
     parts += ["", "</div>", "", "</section>", "",
               '<section class="pfd-zone" markdown="1">', "",
-              # Renamed Protocols -> EMS Hub (owner ruling 2026-11-21): the caption links
-              # to ems/index.md, the page that is actually the hub, so the old
-              # "EMS Clinical Hub" chip is gone — it was the same destination twice.
-              f'**[EMS Hub]({EMS_CLINICAL_HUB})**'
-              '{: .pfd-cap .pfd-cap--link .pfd-cap--ems }', "",
+              # Captions are LABELS, not links (t_75b6aba8): the anchor was a 14px tap
+              # target dressed as a label and it duplicated the row's first chip. A raw
+              # <p> has no href to rewrite, so uncounted .md links cannot leak either.
+              '<p class="pfd-cap pfd-cap--ems">EMS Hub</p>', "",
               '<div class="pfd-scroller pfd-scroller--ems" markdown="1">', ""]
-    parts += [chip(*EMS_HUB_CHIP, "all"), chip(*EMS_PROCEDURES_CHIP, "ems")]
+    # Every row starts with the section page itself (t_75b6aba8 guard). The EMS row
+    # lost that chip in round 4 only because the caption duplicated its destination;
+    # with the caption now an honest label, ems/index.md needs its chip back or the
+    # hub is unreachable from the homepage.
+    parts += [chip("EMS Hub", EMS_CLINICAL_HUB, "ems"),
+              chip(*EMS_HUB_CHIP, "all"), chip(*EMS_PROCEDURES_CHIP, "ems")]
     parts += [chip(label, href, "ems") for label, href in EMS_SOP_STRIP]
     parts += [chip(label, href, "ems") for label, href in EMS_CLINICAL_STRIP]
     parts += ["", "</div>", "",
-              f'**[Fire resources]({FIRE_REF_HUB})**'
-              '{: .pfd-cap .pfd-cap--link .pfd-cap--fire }', "",
+              '<p class="pfd-cap pfd-cap--fire">Fire resources</p>', "",
               '<div class="pfd-scroller pfd-scroller--fire" markdown="1">', ""]
     parts += [chip(*FIRE_REF_HUB_CHIP, "all")]
     parts += [chip(label, href, "fire") for label, href in FIRE_REF_STRIP]
     parts += ["", "</div>", "", "</section>", "",
               '<section class="pfd-secondary-row" markdown="1">', "",
               '<div class="pfd-secondary" markdown="1">', "",
-              f'**[City &amp; personnel policies]({STATION_POLICIES})**'
-              '{: .pfd-cap .pfd-cap--link .pfd-cap--admin }', "",
+              '<p class="pfd-cap pfd-cap--admin">City &amp; personnel policies</p>', "",
               '<div class="pfd-scroller pfd-scroller--admin" markdown="1">', ""]
     # Scroller order is the owner's: the hub, the full list, then the five policies a
     # crew actually reaches for.
@@ -688,8 +690,7 @@ def quicklinks_block(records):
     parts += [chip(label, path, "admin") for label, path, _s in POLICY_TILES]
     parts += ["", "</div>", "", "</div>", "",
               '<div class="pfd-secondary" markdown="1">', "",
-              f'**[Crew links &amp; portals]({LINKS_PAGE})**'
-              '{: .pfd-cap .pfd-cap--link .pfd-cap--util }', "",
+              '<p class="pfd-cap pfd-cap--util">Crew links &amp; portals</p>', "",
               '<div class="pfd-scroller pfd-scroller--util" markdown="1">', ""]
     # Utility, not admin: these are "where do I go" links, not policy, so they carry
     # their own neutral accent and the colour code never claims the crew row is policy.
