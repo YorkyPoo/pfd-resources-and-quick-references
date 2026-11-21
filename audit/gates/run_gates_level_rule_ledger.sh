@@ -59,5 +59,5 @@ echo "protocol files changed: ${CHANGED}"
 if [ "${CHANGED}" -eq 0 ]; then echo "EXIT=0"; else echo "EXIT=1"; FAILED="${FAILED} protocols_untouched=1"; fi
 echo
 echo "## summary"
-if [ -z "$FAILED" ]; then echo "ALL GATES EXIT=0 (16 of 16)"; else echo "FAILED:${FAILED}"; fi
+if [ -z "$FAILED" ]; then echo "ALL GATES EXIT=0 (17 gates: 16 script gates + protocols_untouched)"; else echo "FAILED:${FAILED}"; fi
 } 2>&1 | tee "${LOG}"
