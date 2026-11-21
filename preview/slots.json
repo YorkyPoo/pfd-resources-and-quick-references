@@ -74,9 +74,9 @@
     },
     "light-colour": {
       "branch": "light-colour-r2",
-      "built_at": "2026-11-21T03:05:20Z",
+      "built_at": "2026-11-21T03:07:17Z",
       "description": "Light scheme domain colour on the round-4 homepage",
-      "sha": "1aa622c36355506a6ca1232b4822c0892d66451d"
+      "sha": "629ce10bb14dc29621a18f1e278e7e914755102e"
     },
     "main": {
       "branch": "main",
@@ -145,5 +145,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-21T03:05:20.072580+00:00"
+  "updated_at": "2026-11-21T03:07:17.853995+00:00"
 }
