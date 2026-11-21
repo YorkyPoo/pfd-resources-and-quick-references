@@ -143,7 +143,13 @@
       "built_at": "2026-11-20T07:16:16Z",
       "description": "Sedation: PEMS p.55 regimen, ketamine removed; C2 retirement reverted",
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
+    },
+    "station-legend": {
+      "branch": "station-legend",
+      "built_at": "2026-11-21T03:11:58Z",
+      "description": "Reading section shows the real pip legend",
+      "sha": "8b9fd79b9af0f4f69f48b3e25549d159b95a6674"
     }
   },
-  "updated_at": "2026-11-21T03:07:17.853995+00:00"
+  "updated_at": "2026-11-21T03:11:58.379572+00:00"
 }
