@@ -150,6 +150,12 @@
       "description": "Row structure: one action per row; page-voice sweep applied to the generator's notes; Sedation page untouched (round 6)",
       "sha": "29d5378e2cdad89eedb392e27fe5cad48d4abd6f"
     },
+    "scrapbook": {
+      "branch": "scrapbook-header",
+      "built_at": "2026-11-21T03:36:48Z",
+      "description": "FD SCRAPbook coming-soon placeholder under Crew links",
+      "sha": "ab2a2979342cc11ea9ae04df03b98635085579a2"
+    },
     "sedation": {
       "branch": "sedation-p55",
       "built_at": "2026-11-20T07:16:16Z",
@@ -163,5 +169,5 @@
       "sha": "cc0735af60dcd20ce46ca5dca7d48a852ad81274"
     }
   },
-  "updated_at": "2026-11-21T03:29:12.955390+00:00"
+  "updated_at": "2026-11-21T03:36:48.975312+00:00"
 }
