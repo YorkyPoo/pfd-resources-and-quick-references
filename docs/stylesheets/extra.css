@@ -159,10 +159,11 @@
 .md-typeset { --md-typeset-a-color: #800000; }               /* light: 10.95:1 on #fff */
 [data-md-color-scheme="slate"] .md-typeset { --md-typeset-a-color: #ff8a80; }  /* dark: 7.05:1 on #1e2129 */
 
-/* The "all / hub" scroller chip has no domain accent of its own, so it fell back to
-   the maroon primary; in dark that dot was #800000 on a #262a33 chip. Lift it with
-   the same red as the links. */
-[data-md-color-scheme="slate"] .md-typeset a.pfd-chip--all { --pfd-accent: #ff8a80; }
+/* The "all / hub" scroller chip has no domain of its own — it is "the full list for
+   this row", not a fourth colour. It used to fall back to the maroon brand primary,
+   which reads as FIRE at a glance when it sits inside the blue EMS row (card
+   t_a4b01dd6). It now carries a neutral dark grey, deliberately outside the
+   ems/fire/admin/util hues, in both schemes. */
 
 /* ============================================================
    NAV SECTION HEADER READABILITY
@@ -309,17 +310,9 @@
   margin: 0 0 .42em; font-size: .72em; font-weight: 700;
   letter-spacing: .07em; text-transform: uppercase;
   color: var(--md-default-fg-color--light); }
-.md-typeset .pfd-cap a { color: inherit !important; text-decoration: underline;
-  text-underline-offset: 2px; text-decoration-thickness: 1px; }
-/* the two utility-column headings are links, so they are bold markdown with the
-   cap class rather than a <p> (a raw <a href="x.md"> would ship an unrewritten
-   .md href; MkDocs only rewrites markdown links) */
-.md-typeset .pfd-cap--link {
-  display: block; margin: 0 0 .42em; font-size: .72em; font-weight: 700;
-  letter-spacing: .07em; text-transform: uppercase;
-  color: var(--md-default-fg-color--light); }
-.md-typeset .pfd-cap--link a { color: inherit !important; text-decoration: underline;
-  text-underline-offset: 2px; text-decoration-thickness: 1px; }
+/* Section captions are labels, never controls (t_75b6aba8): they are plain <p>,
+   so there is no anchor to style, underline or point at and no pointer cursor.
+   The chip at the head of each row is the only route to the section page. */
 
 /* --- tile grid: 2 up on a phone, 3 up from 761px ------------------------- */
 /* .md-typeset prefix is load-bearing: Material's own `ul` rules are (0,1,1) and
@@ -405,6 +398,9 @@
    are "where do I go" links, not policy, so they get a warm neutral that is a different
    hue from all three domains (measured deltaE vs admin below in the evidence file). */
 .md-typeset a.pfd-chip--util { --pfd-accent: #78716c; }
+/* "all" chip: neutral zinc, outside all four domain hues (#0284c7 / #b91c1c /
+   #475569 / #78716c), so it never reads as fire inside the EMS row. */
+.md-typeset a.pfd-chip--all { --pfd-accent: #3f3f46; }
 /* dark scheme: the same three hues at icon/bar lightness, so the accent bar and
    icon measure >=3:1 on the dark card (the light-scheme hexes do not) */
 [data-md-color-scheme="slate"] .md-typeset .pfd-card--ems,
@@ -414,6 +410,7 @@
 [data-md-color-scheme="slate"] .md-typeset .pfd-card--admin,
 [data-md-color-scheme="slate"] .md-typeset a.pfd-chip--admin { --pfd-accent: #94a3b8; }
 [data-md-color-scheme="slate"] .md-typeset a.pfd-chip--util { --pfd-accent: #a8a29e; }
+[data-md-color-scheme="slate"] .md-typeset a.pfd-chip--all { --pfd-accent: #a1a1aa; }
 
 /* ---------------------------------------------------------------------------
    LIGHT SCHEME: TEXT-SIZE ACCENT INK (owner card t_19a7477e)
@@ -443,13 +440,15 @@
 [data-md-color-scheme="default"] .md-typeset .pfd-cap--admin { --pfd-ink: #334155; }
 [data-md-color-scheme="default"] .md-typeset a.pfd-chip--util,
 [data-md-color-scheme="default"] .md-typeset .pfd-cap--util { --pfd-ink: #57534e; }
+/* the "all" chip's label is read as a word too: same neutral family, dark enough
+   for body-size text on the chip tint. */
+[data-md-color-scheme="default"] .md-typeset a.pfd-chip--all { --pfd-ink: #27272a; }
 
 /* section captions ("Protocols", "SOPs", "Fire resources", "City & personnel
    policies", "Crew links & portals"): domain ink instead of one grey. Still
    uppercase, still a word — the colour only echoes what the caption already
    says. A caption with no domain modifier keeps Material's grey. */
-[data-md-color-scheme="default"] .md-typeset .pfd-cap,
-[data-md-color-scheme="default"] .md-typeset .pfd-cap--link {
+[data-md-color-scheme="default"] .md-typeset .pfd-cap {
   color: var(--pfd-ink, var(--md-default-fg-color--light)); }
 
 /* --- the two scrollers --------------------------------------------------- */

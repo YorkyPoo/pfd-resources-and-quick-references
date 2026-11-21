@@ -25,10 +25,11 @@
 
 <section class="pfd-zone" markdown="1">
 
-**[EMS Hub](ems/index.md)**{: .pfd-cap .pfd-cap--link .pfd-cap--ems }
+<p class="pfd-cap pfd-cap--ems">EMS Hub</p>
 
 <div class="pfd-scroller pfd-scroller--ems" markdown="1">
 
+[EMS Clinical Hub](ems/index.md){ .pfd-chip .pfd-chip--ems }
 [All protocols](resources/ems.md){ .pfd-chip .pfd-chip--all }
 [Procedures](resources/ems.md#procedures){ .pfd-chip .pfd-chip--ems }
 [Controlled Substances](sops/ems/EMS-2100-Controlled-Substances.md){ .pfd-chip .pfd-chip--ems }
@@ -44,11 +45,11 @@
 
 </div>
 
-**[Fire resources](resources/fire-resources.md)**{: .pfd-cap .pfd-cap--link .pfd-cap--fire }
+<p class="pfd-cap pfd-cap--fire">Fire resources</p>
 
 <div class="pfd-scroller pfd-scroller--fire" markdown="1">
 
-[Fire resources](resources/fire-resources.md){ .pfd-chip .pfd-chip--all }
+[Reference shelf](resources/fire-resources.md){ .pfd-chip .pfd-chip--all }
 [Frameworks](resources/fire-resources.md#frameworks){ .pfd-chip .pfd-chip--fire }
 [Field References](resources/fire-resources.md#field-references){ .pfd-chip .pfd-chip--fire }
 [Strategies](resources/fire-resources.md#strategies){ .pfd-chip .pfd-chip--fire }
@@ -62,11 +63,11 @@
 
 <div class="pfd-secondary" markdown="1">
 
-**[City &amp; personnel policies](station/policies.md)**{: .pfd-cap .pfd-cap--link .pfd-cap--admin }
+<p class="pfd-cap pfd-cap--admin">City &amp; personnel policies</p>
 
 <div class="pfd-scroller pfd-scroller--admin" markdown="1">
 
-[City &amp; Personnel Policies](station/policies.md){ .pfd-chip .pfd-chip--admin }
+[Station Policies](station/policies.md){ .pfd-chip .pfd-chip--admin }
 [All policies](station/policies.md#full-policy-list){ .pfd-chip .pfd-chip--admin }
 [Hazardous Weather](personnel-policies/policies/26-hazardous-weather.md){ .pfd-chip .pfd-chip--admin }
 [Overtime / Comp Time](personnel-policies/policies/13-overtime-compensatory-time.md){ .pfd-chip .pfd-chip--admin }
@@ -80,7 +81,7 @@
 
 <div class="pfd-secondary" markdown="1">
 
-**[Crew links &amp; portals](resources/links.md)**{: .pfd-cap .pfd-cap--link .pfd-cap--util }
+<p class="pfd-cap pfd-cap--util">Crew links &amp; portals</p>
 
 <div class="pfd-scroller pfd-scroller--util" markdown="1">
 
