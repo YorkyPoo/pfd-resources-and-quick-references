@@ -1,5 +1,12 @@
 # Light mode: bringing the domain accents into the light scheme
 
+> **Superseded sequencing (card t_ecef0aea):** this branch was cut from
+> `origin/main` `420d1f74`, so its preview showed the pre-round-4 homepage.
+> The rebased branch `light-colour-r2` (base home-r4 `a869a4c3`, tip
+> `f75bc4ef`) is the one to review; see `light-colour-r2-evidence.md`.
+> The CSS findings below still hold — only the base and the generated pages
+> moved.
+
 Card t_19a7477e. Branch `light-colour`, base `origin/main` @ `420d1f74`
 (the integrated line: ia-r3 + the offline banner). Content commit `39192bc5`.
 
