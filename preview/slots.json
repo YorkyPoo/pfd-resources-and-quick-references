@@ -30,6 +30,12 @@
       "description": "Offline banner moved under the top chrome, off the bottom nav",
       "sha": "bd05d19ab96cc19c09aaee5d7c8b169e02efda1b"
     },
+    "caption-labels": {
+      "branch": "caption-labels",
+      "built_at": "2026-11-21T03:29:12Z",
+      "description": "Section captions are labels; chips are the buttons",
+      "sha": "aff6cfbcb431a8f302e3d7e8ef5d8782226efa9a"
+    },
     "conversion-artifacts": {
       "branch": "conversion-artifacts",
       "built_at": "2026-11-20T06:25:48Z",
@@ -157,5 +163,5 @@
       "sha": "cc0735af60dcd20ce46ca5dca7d48a852ad81274"
     }
   },
-  "updated_at": "2026-11-21T03:28:20.760531+00:00"
+  "updated_at": "2026-11-21T03:29:12.955390+00:00"
 }
