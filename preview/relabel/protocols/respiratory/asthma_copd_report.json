@@ -1,0 +1,15 @@
+{
+  "protocol": "Asthma, COPD, and Reactive Airway Disease",
+  "status": "FIXABLE",
+  "discrepancies": [
+    {
+      "field": "Magnesium Sulfate Dosage",
+      "pems_original": "No specific dose for MgSO4 listed in the Asthma/COPD protocol text snippet, though MagSulfate is a known intervention. I need to re-verify if MagSulfate is in the protocol text. Looking back at pems_chunks, it seems I missed checking for MgSulfate in the Respiratory section or if it was supposed to be included.",
+      "converted_text": "Includes specific weight-based pediatric Magnesium Sulfate dosing: '40 mg/kg IV/IO over 15 minutes (maximum dose 2,000 mg or 2 g)'.",
+      "severity": "MODERATE",
+      "recommendation": "Verify if the 40 mg/kg dose is authorized by the Poquoson OMD as a local modification, as it is not listed in the standard PEMS protocol text snippet found."
+    }
+  ],
+  "missing_sections": [],
+  "verified": false
+}
