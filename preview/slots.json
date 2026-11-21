@@ -74,9 +74,9 @@
     },
     "light-colour": {
       "branch": "light-colour",
-      "built_at": "2026-11-21T02:53:35Z",
+      "built_at": "2026-11-21T02:56:24Z",
       "description": "Light mode: domain colour in cards, captions and chips",
-      "sha": "c3ca3304c545d8b785fdb4d26e8dc056df674584"
+      "sha": "b4e71d12bbb63be5ddcebc411a0b9200daf221f2"
     },
     "main": {
       "branch": "main",
@@ -145,5 +145,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-21T02:53:35.349475+00:00"
+  "updated_at": "2026-11-21T02:56:24.177818+00:00"
 }
