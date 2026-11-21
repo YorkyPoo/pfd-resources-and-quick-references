@@ -93,9 +93,9 @@ pages:
   - file: protocols/trauma/09_Lightning_Injuries_PROC.md
     pems_pages: [96]
     reason: "PEMS has no lightning protocol; the regional Electrical Injuries page (p.96) is the governing source"
-  - file: protocols/trauma/09_Pneumothorax_PROC.md
+  - file: protocols/respiratory/03_Pneumothorax_PROC.md
     pems_pages: [243]
-    reason: "regional source for needle/finger thoracostomy is the Chest Decompression procedure (p.243), not a protocol page"
+    reason: "regional source for needle/finger thoracostomy is the Chest Decompression procedure (p.243), not a protocol page; the page moved from trauma/ to respiratory/ and the declared path was repointed"
   - file: protocols/respiratory/03_Respiratory_Arrest_PROC.md
     pems_pages: [239]
     reason: "regional source is the Airway Management and Ventilatory Support procedure (p.239), which this page expands"

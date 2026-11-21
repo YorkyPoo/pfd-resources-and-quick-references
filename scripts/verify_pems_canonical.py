@@ -13,12 +13,20 @@ This exists because the previous pipeline's report was believed without
 checking: "0 fixable mismatches" was true by its own definition while 154 rows
 were wrong.
 
+A failure may be declared stale in `audit/level-scan/known-stale.yaml` by owner
+ruling. Registered failures are still printed, with their reason, on every run;
+they no longer decide the exit code. The run fails on any UNREGISTERED failure
+and on any registered entry that has stopped firing, so the register cannot
+silently grow or silently rot.
+
     python scripts/verify_pems_canonical.py
 """
 from __future__ import annotations
 
+import glob
 import json
 import os
+import re
 import subprocess
 import sys
 
@@ -29,7 +37,12 @@ OUT = os.path.join(REPO, "audit", "level-scan")
 sys.path.insert(0, os.path.join(REPO, "scripts"))
 import pems_canonical as C  # noqa: E402  (for the human-review table)
 import pems_level_scan as P  # noqa: E402  (text cleaning, same tokeniser as the aligner)
-fails: list[str] = []
+
+# Every failure is recorded with the check section that produced it and a stable
+# `identity` for the thing that diverged. The identity is what the known-stale
+# register matches on, so it must not carry run-varying numbers (counts, lists).
+fails: list[dict] = []
+_current_section = "?"
 
 LV = ["EMR", "EMT", "A", "I", "P"]
 
@@ -40,6 +53,10 @@ MANIFEST = [
     ("stage1.pems_table",
      "PEMS table integrity: page decisions, row fields, badges, ordinals, "
      "page-break continuations"),
+    ("stage1.tree_walk",
+     "the table describes the tree as it is NOW: an independent walk of docs/ "
+     "finds exactly the pages the table decides, every decided path exists, and "
+     "every page's row counts re-derive from a fresh parse"),
     ("stage2.alignment",
      "alignment integrity: totals, ambiguity classifications, containment "
      "evidence, 0.40 floor, text-binding verdicts"),
@@ -69,14 +86,123 @@ _ran: set[str] = set()
 
 
 def section(cid: str) -> None:
+    global _current_section
     assert cid in dict(MANIFEST), f"unlisted check section {cid}"
+    _current_section = cid
     _ran.add(cid)
 
 
-def check(cond: bool, msg: str) -> None:
+def check(cond: bool, msg: str, *, check_id: str | None = None,
+          identity: str | None = None) -> None:
+    """Record and print one invariant.
+
+    `identity` names the thing that diverged so the known-stale register can
+    match it; it defaults to the message, which is fine for a normal FAIL (it is
+    unregistered by definition) but must be given explicitly for a registered
+    one, whose message carries run-varying counts.
+    """
     print(("  ok   " if cond else "  FAIL ") + msg)
     if not cond:
-        fails.append(msg)
+        fails.append({"check": check_id or _current_section,
+                      "identity": identity or msg,
+                      "msg": msg})
+
+
+def load_known_stale() -> tuple[list[dict], list[str]]:
+    """Read audit/level-scan/known-stale.yaml — declared stale failures.
+
+    This is a register, not a mute: an entry needs a reason and an owner ruling
+    or it is itself a problem, and an entry that stops firing is a problem too
+    (see `report_known_stale`). Returns (entries, problems).
+    """
+    path = os.path.join(OUT, "known-stale.yaml")
+    if not os.path.exists(path):
+        return [], [f"{path} is missing"]
+    doc = yaml.safe_load(open(path, encoding="utf-8")) or {}
+    entries = doc.get("entries")
+    if not isinstance(entries, list):
+        return [], ["known-stale.yaml carries no `entries` list"]
+    out, problems = [], []
+    seen: dict[tuple[str, str], int] = {}
+    for i, e in enumerate(entries):
+        if not isinstance(e, dict):
+            problems.append(f"entry {i} is not a mapping")
+            continue
+        key = (str(e.get("check") or "").strip(), str(e.get("identity") or "").strip())
+        reason = str(e.get("reason") or "").strip()
+        ruling = str(e.get("owner_ruling") or "").strip()
+        if not key[0] or not key[1]:
+            problems.append(f"entry {i} lacks `check` or `identity`: {e!r}")
+            continue
+        if not reason:
+            problems.append(f"[{key[0]}] {key[1]}: no reason")
+        if not ruling:
+            problems.append(f"[{key[0]}] {key[1]}: no owner_ruling date")
+        if key in seen:
+            problems.append(f"[{key[0]}] {key[1]}: duplicate entry")
+        seen[key] = i
+        out.append({"check": key[0], "identity": key[1], "reason": reason,
+                    "owner_ruling": ruling})
+    return out, problems
+
+
+def report_known_stale(failures: list[dict]) -> int:
+    """Partition the run's failures through the register. Returns extra fails.
+
+    Registered failures are printed with their reason on every run — they stay
+    visible, they just no longer decide the exit code. Unregistered failures and
+    registered entries that stopped failing are each a failing condition.
+    """
+    entries, problems = load_known_stale()
+    print()
+    print(f"known-stale register — audit/level-scan/known-stale.yaml "
+          f"({len(entries)} entries)")
+    by_key = {(e["check"], e["identity"]): e for e in entries}
+    fired: dict[tuple[str, str], dict] = {}
+    unregistered: list[dict] = []
+    for f in failures:
+        k = (f["check"], f["identity"])
+        if k in by_key:
+            fired[k] = f
+        else:
+            unregistered.append(f)
+
+    print()
+    print("REGISTERED KNOWN-STALE — visible every run, does not fail the run:")
+    if not fired:
+        print("  (none fired)")
+    for k, e in by_key.items():
+        if k not in fired:
+            continue
+        print(f"  [{e['check']}] {e['identity']}")
+        print(f"      failure: {fired[k]['msg']}")
+        print(f"      reason:  {e['reason']}")
+        print(f"      ruling:  {e['owner_ruling']}")
+
+    print()
+    print("UNREGISTERED — new divergences; these fail the run:")
+    if not unregistered:
+        print("  (none)")
+    for f in unregistered:
+        print(f"  [{f['check']}] {f['msg']}")
+
+    obsolete = [e for k, e in by_key.items() if k not in fired]
+    print()
+    print("REGISTERED BUT NO LONGER FAILING — delete the entry or re-point it; "
+          "these fail the run:")
+    if not obsolete:
+        print("  (none)")
+    for e in obsolete:
+        print(f"  [{e['check']}] {e['identity']} (ruled {e['owner_ruling']}) — "
+              f"fix landed or check moved: {e['reason'][:100]}")
+
+    extra = len(unregistered) + len(obsolete) + len(problems)
+    if problems:
+        print()
+        print("REGISTER PROBLEMS — the register itself is not honest:")
+        for p in problems:
+            print(f"  {p}")
+    return extra
 
 
 def load_verifier_exceptions() -> dict[tuple[int, int], str]:
@@ -423,7 +549,8 @@ def check_recheck(table: dict, pems_row: dict, align: dict) -> None:
     listed = counts.get("at_risk_matched_rows")
     check(isinstance(listed, list), "c2-scope.json carries counts.at_risk_matched_rows")
     check(listed == ar, "at_risk_matched_rows equals the recheck script's output "
-                        f"({len(listed or [])} listed, {len(ar)} derived)")
+                        f"({len(listed or [])} listed, {len(ar)} derived)",
+          check_id="at_risk_matched_rows", identity="c2-scope.json")
     check(counts.get("at_risk_matched_rows_count") == len(ar),
           "at_risk_matched_rows_count matches the list length")
     named = {(os.path.basename(a["file"]), a["row"]) for a in ar}
@@ -431,16 +558,18 @@ def check_recheck(table: dict, pems_row: dict, align: dict) -> None:
                        (("04_Cardiac_Arrest_Traumatic_PROC.md", 5), (61, 4))):
         if pkey in unresolved:
             check(want in named,
-                  f"at-risk list names {want[0]} r{want[1]} (mapped to an ambiguous badge)")
+                  f"at-risk list names {want[0]} r{want[1]} (mapped to an ambiguous badge)",
+                  check_id="at-risk row", identity=f"{want[0]} r{want[1]}")
         else:
             check(want not in named,
                   f"{want[0]} r{want[1]}: p.{pkey[0]}#{pkey[1]} is resolved, so it is "
-                  "a settled flip, not an at-risk row")
+                  "a settled flip, not an at-risk row",
+                  check_id="at-risk row (settled flip)", identity=f"{want[0]} r{want[1]}")
 
     # provisional flags are derived from the table, not hand-set
     expect = set()
     import build_c2_scope as B  # noqa: E402
-    align_idx = {(p["site_page"], int(r["site_row"])): r
+    align_idx = {(p["site_page"], B.row_key(r["site_row"])): r
                  for p in align["pages"] for r in p["rows"]}
     for r in rows:
         if r.get("row") is None:
@@ -486,6 +615,94 @@ def row_badge_conflict(row: dict) -> bool:
     return flag
 
 
+def walk_level_tables() -> dict[str, list[int]]:
+    """Independent walk of docs/: page -> line numbers of level-table headers.
+
+    Deliberately does NOT use `pems_canonical.SITE_HDR_RE` or the legacy
+    `HDR_RE`. Those are the readers under test: a page whose grid header drifts
+    out of their shape (e.g. `R | B | A | I | P`) silently leaves the scan, and
+    the table that was frozen before the drift keeps passing every self-count.
+    This detector is structural — a `#` index column plus either a named level
+    column (Level / Basis / POLICY) or all five `R B A I P` columns — so it
+    agrees with the readers on a healthy tree but disagrees loudly when a
+    published grid stops matching them.
+    """
+    out: dict[str, list[int]] = {}
+    for f in sorted(glob.glob(os.path.join(C.DOCS, "protocols", "**", "*.md"), recursive=True)):
+        rel = os.path.relpath(f, C.DOCS).replace(os.sep, "/")
+        if rel in C.NOT_A_PROTOCOL_PAGE:
+            continue
+        lines = open(f, encoding="utf-8", errors="replace").read().splitlines()
+        for i, line in enumerate(lines):
+            s = line.strip()
+            if not s.startswith("|") or i + 1 >= len(lines):
+                continue
+            cells = [c.strip().strip("*").strip() for c in s.strip("|").split("|")]
+            if len(cells) < 3 or cells[0] != "#":
+                continue
+            if not re.match(r"^\|?[\s:|-]+\|?$", lines[i + 1].strip()):
+                continue
+            cols = {c.upper() for c in cells[1:]}
+            if cols & {"LEVEL", "BASIS", "POLICY", "EMR", "EMT"} or \
+                    {"R", "B", "A", "I", "P"} <= cols:
+                out.setdefault(rel, []).append(i + 1)
+    return out
+
+
+def check_tree_alignment(table: dict) -> None:
+    """A frozen-but-consistent table must not pass: re-derive from docs/."""
+    dec = table["page_decisions"]
+    decided = {d["site_page"]: d for d in dec}
+    fresh = {p["rel"]: p for p in C.site_pages()}
+    tree = walk_level_tables()
+
+    check(len(dec) == table["counts"].get("site_pages_with_level_table"),
+          f"counts.site_pages_with_level_table equals the decisions written "
+          f"({table['counts'].get('site_pages_with_level_table')} vs {len(dec)})")
+    check(len(fresh) == len(dec),
+          f"a fresh walk of docs/ finds the same number of level-table pages "
+          f"({len(fresh)} in the tree, {len(dec)} in the table)")
+    check(set(tree) == set(fresh),
+          "the structural header detector and the page readers agree on which "
+          "pages carry a level table"
+          + ("" if set(tree) == set(fresh) else
+             f" (detector only: {sorted(set(tree) - set(fresh))}; "
+             f"readers only: {sorted(set(fresh) - set(tree))})"))
+
+    undecided = sorted(set(tree) - set(decided))
+    check(not undecided,
+          f"every page under docs/ with a level table carries a decision "
+          f"({len(undecided)} missing)"
+          + ("" if not undecided else f": {', '.join(undecided)}"))
+    phantom = sorted(set(decided) - set(tree))
+    check(not phantom,
+          f"every decided page still carries a level table today "
+          f"({len(phantom)} stale)"
+          + ("" if not phantom else f": {', '.join(phantom)}"))
+
+    gone = [d["site_page"] for d in dec
+            if not os.path.isfile(os.path.join(C.DOCS, d["site_page"]))]
+    check(not gone,
+          "every decided path exists under docs/"
+          + ("" if not gone else f" (missing: {', '.join(gone)})"))
+
+    exc, _repairs = C._load_exceptions()
+    docs = table["pems_docs"]
+    drifted = []
+    for rel in sorted(set(fresh) & set(decided)):
+        want = C.decide(fresh[rel], exc, docs)
+        have = decided[rel]
+        for fld in ("decision", "rows", "numbered_rows",
+                    "filled_level_cells", "blank_level_cells"):
+            if want.get(fld) != have.get(fld):
+                drifted.append((rel, fld, have.get(fld), want.get(fld)))
+    check(not drifted,
+          f"every row count and decision re-derives from the page as published "
+          f"({len(drifted)} drift(s))")
+    for item in drifted[:20]:
+        print(f"        drift: {item[0]} {item[1]}: table {item[2]} != tree {item[3]}")
+
+
 def main() -> int:
     print(f"verifier manifest — {len(MANIFEST)} checks")
     for cid, desc in MANIFEST:
@@ -497,8 +714,10 @@ def main() -> int:
 
     print("stage 1 — canonical PEMS table")
     dec = table["page_decisions"]
-    check(len(dec) == 57, f"57 site pages carry a decision (found {len(dec)})")
-    check(len({d["site_page"] for d in dec}) == 57, "every decision is a distinct page")
+    check(len(dec) == table["counts"].get("site_pages_with_level_table"),
+          f"every counted site page carries a decision "
+          f"({len(dec)} decisions, count says {table['counts'].get('site_pages_with_level_table')})")
+    check(len({d["site_page"] for d in dec}) == len(dec), "every decision is a distinct page")
     check(all(d.get("decision") in ("level_gated", "administrative", "skipped") for d in dec),
           "every decision is level_gated / administrative / skipped")
     check(all(d.get("reason") or d.get("ruling") or d.get("source_declared") for d in dec),
@@ -510,6 +729,10 @@ def main() -> int:
           "all administrative pages report whether the page still carries a level grid")
     check(all(d.get("decision") != "skipped" or d.get("reason") for d in dec),
           "no skipped page without a stated reason")
+
+    section("stage1.tree_walk")
+    print("stage 1 — the table against the tree as it is now")
+    check_tree_alignment(table)
 
     rows = [r for d in table["pems_docs"] for r in d["rows"]]
     need = {"page", "section_heading", "ordinal", "section_ordinal", "verbatim_text",
@@ -925,7 +1148,15 @@ def main() -> int:
             (r["site_page"], r["pems_page_now"], r["pems_ordinal_now"])
             for k in rec["prior_to_now"]["rows"] if k.startswith(("paired_to_site_row", "resolved_by"))
             for r in rec["prior_to_now"]["rows"][k]}
-        check(not stale, f"every recorded human review still maps to a pairing ({len(stale)} stale)")
+        if stale:
+            for s in sorted(stale):
+                check(False,
+                      f"every recorded human review still maps to a pairing — "
+                      f"stale: {s[0]} p.{s[1]} #{s[2]}",
+                      check_id="stale human review",
+                      identity=f"{s[0]} p.{s[1]} #{s[2]}")
+        else:
+            check(True, "every recorded human review still maps to a pairing (0 stale)")
         check(b["prior_missing_now_paired_reviewed_suspect"] == hr.get("suspect", 0),
               f"{hr.get('suspect', 0)} pairings are recorded as suspect, not as settled")
         # a pairing counted as a win must show its evidence
@@ -958,9 +1189,15 @@ def main() -> int:
           + ", ".join(cid for cid, _ in MANIFEST if cid not in _ran) + ")")
 
     print()
-    if fails:
-        print(f"{len(fails)} INVARIANT(S) FAILED")
+    extra = report_known_stale(fails)
+    print()
+    if extra:
+        print(f"{extra} UNREGISTERED / OBSOLETE CONDITION(S) — the run fails")
         return 1
+    if fails:
+        print(f"{len(fails)} KNOWN-STALE INVARIANT(S) REGISTERED — no new divergence")
+        print("all other invariants hold")
+        return 0
     print("all invariants hold")
     return 0
 

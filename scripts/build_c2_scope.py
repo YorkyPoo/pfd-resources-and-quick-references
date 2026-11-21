@@ -335,7 +335,7 @@ def badge_ambiguity(pems_row):
 # sources
 # --------------------------------------------------------------------------
 SEC_RE = re.compile(r"^## `([^`]+)` — (\d+) ambiguous\s*$")
-ROW_RE = re.compile(r"^- row \*\*(\d+)\*\* \(([^)]*)\) \[`([a-z_]+)`\] — (.*)$")
+ROW_RE = re.compile(r"^- row \*\*(\d+[a-z]?)\*\* \(([^)]*)\) \[`([a-z_]+)`\] — (.*)$")
 TOTAL_RE = re.compile(
     r"^\*\*Total: (\d+) rows\*\* \(multiple_candidates (\d+), no_counterpart (\d+), "
     r"shared_pems_row (\d+)\)", re.M)
@@ -361,7 +361,7 @@ def read_ambiguous_md():
             continue
         mr = ROW_RE.match(ln)
         if mr and cur:
-            recs.append({"file": cur, "row": int(mr.group(1)),
+            recs.append({"file": cur, "row": row_key(mr.group(1)),
                          "section": mr.group(2), "reason_kind": mr.group(3),
                          "action_head": mr.group(4)})
             section_seen[cur] = section_seen.get(cur, 0) + 1
@@ -390,9 +390,20 @@ def read_ambiguous_md():
     return recs, stated_kinds
 
 
+def row_key(value):
+    """A site row label as a lookup key: ints stay ints, split labels stay str.
+
+    `row_splits.yaml` names split rows `4a`/`5a`; `int()` on those raised
+    ValueError and crashed the re-check the first time a regenerated alignment
+    carried one.
+    """
+    s = str(value).strip()
+    return int(s) if s.isdigit() else s
+
+
 def load_alignment_index():
     doc = json.load(open(ALIGN, encoding="utf-8"))
-    return {(p["site_page"], int(r["site_row"])): r
+    return {(p["site_page"], row_key(r["site_row"])): r
             for p in doc["pages"] for r in p["rows"]}
 
 

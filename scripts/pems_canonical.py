@@ -34,9 +34,9 @@ Pages are read lazily: a page is parsed only when something needs it, and the
 result is cached in `audit/level-scan/.cache/pems_rows.jsonl` so a later stage
 re-reads instead of recomputing.
 
-Every one of the 57 site pages that carries a level table gets a
+Every site page that carries a level table gets a
 `page_decisions` entry (`level_gated` / `administrative` / `skipped`) with the
-reason. The 14 administrative pages keep their decision, but the contested
+reason. The administrative pages keep their decision, but the contested
 owner ruling behind it is recorded next to it instead of being inherited
 silently from `exceptions.yaml`.
 
@@ -464,7 +464,7 @@ def build_docs(pages: dict[int, dict]) -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
-# stage 1: the 57 site pages and their decision
+# stage 1: the site pages that carry a level table, and their decision
 # ---------------------------------------------------------------------------
 # `scripts/level_rule.py` rewrote every protocol page's level matrix to the
 # one-chip table `| # | Level | Action / Intervention |` (and the administrative

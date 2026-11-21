@@ -159,10 +159,11 @@
 .md-typeset { --md-typeset-a-color: #800000; }               /* light: 10.95:1 on #fff */
 [data-md-color-scheme="slate"] .md-typeset { --md-typeset-a-color: #ff8a80; }  /* dark: 7.05:1 on #1e2129 */
 
-/* The "all / hub" scroller chip has no domain accent of its own, so it fell back to
-   the maroon primary; in dark that dot was #800000 on a #262a33 chip. Lift it with
-   the same red as the links. */
-[data-md-color-scheme="slate"] .md-typeset a.pfd-chip--all { --pfd-accent: #ff8a80; }
+/* The "all / hub" scroller chip has no domain of its own — it is "the full list for
+   this row", not a fourth colour. It used to fall back to the maroon brand primary,
+   which reads as FIRE at a glance when it sits inside the blue EMS row (card
+   t_a4b01dd6). It now carries a neutral dark grey, deliberately outside the
+   ems/fire/admin/util hues, in both schemes. */
 
 /* ============================================================
    NAV SECTION HEADER READABILITY
@@ -305,21 +306,28 @@
    ========================================================================== */
 
 .md-typeset .pfd-zone { margin: 0 0 1.15em; }
+
+/* FD SCRAPbook placeholder (owner card t_515ccda5). Announced, not built: a quiet
+   heading above a one-line note, full width and last on the homepage. No
+   text-transform here on purpose — the owner writes it "SCRAPbook", and uppercasing
+   the label would print SCRAPBOOK and correct him without saying so. Nothing in
+   this block is clickable, so it carries no cursor or hover state. */
+.md-typeset .pfd-coming {
+  margin-top: 1.2em; padding-top: .9em;
+  border-top: 1px solid var(--md-default-fg-color--lightest); }
+.md-typeset .pfd-coming__title {
+  margin: 0 0 .3em; font-size: .86em; font-weight: 700; letter-spacing: .04em;
+  color: var(--md-default-fg-color--light); }
+.md-typeset .pfd-coming p:not(.pfd-coming__title) {
+  margin: 0; font-size: .74em; line-height: 1.5;
+  color: var(--md-default-fg-color--light); }
 .md-typeset .pfd-cap {
   margin: 0 0 .42em; font-size: .72em; font-weight: 700;
   letter-spacing: .07em; text-transform: uppercase;
   color: var(--md-default-fg-color--light); }
-.md-typeset .pfd-cap a { color: inherit !important; text-decoration: underline;
-  text-underline-offset: 2px; text-decoration-thickness: 1px; }
-/* the two utility-column headings are links, so they are bold markdown with the
-   cap class rather than a <p> (a raw <a href="x.md"> would ship an unrewritten
-   .md href; MkDocs only rewrites markdown links) */
-.md-typeset .pfd-cap--link {
-  display: block; margin: 0 0 .42em; font-size: .72em; font-weight: 700;
-  letter-spacing: .07em; text-transform: uppercase;
-  color: var(--md-default-fg-color--light); }
-.md-typeset .pfd-cap--link a { color: inherit !important; text-decoration: underline;
-  text-underline-offset: 2px; text-decoration-thickness: 1px; }
+/* Section captions are labels, never controls (t_75b6aba8): they are plain <p>,
+   so there is no anchor to style, underline or point at and no pointer cursor.
+   The chip at the head of each row is the only route to the section page. */
 
 /* --- tile grid: 2 up on a phone, 3 up from 761px ------------------------- */
 /* .md-typeset prefix is load-bearing: Material's own `ul` rules are (0,1,1) and
@@ -348,9 +356,19 @@
   border-left: 4px solid var(--pfd-accent);
   box-shadow: 0 1px 2px rgba(16, 24, 40, .18), 0 3px 10px rgba(16, 24, 40, .10);
   transition: box-shadow .12s ease, transform .12s ease; }
-/* light scheme only: a neutral (not blush) surface a hair off the white page, so
-   elevation is legible even where the box-shadow is lost in glare */
-[data-md-color-scheme="default"] .md-typeset .pfd-card { background: #f8fafc; }
+/* light scheme only: the card takes its DOMAIN's colour, not a neutral grey. The
+   7% accent tint is the thing that makes a row of tiles read as five different
+   domains at arm's length instead of five identical near-white rectangles; the
+   1px accent border (plus the 4px left bar) carries the same hue again. Every
+   accent hex here is >=3:1 on this tint (EMS 3.74, FIRE 5.75, ADMIN 6.82,
+   util 4.41 — measured, see audit/light-colour-evidence.md), so the border and
+   the icon are meaningful UI that survives greyscale as a distinct tone. */
+[data-md-color-scheme="default"] .md-typeset .pfd-card {
+  background: color-mix(in srgb, var(--pfd-accent) 7%, var(--md-default-bg-color));
+  border-color: var(--pfd-accent); }
+[data-md-color-scheme="default"] .md-typeset .pfd-card:hover,
+[data-md-color-scheme="default"] .md-typeset .pfd-card:focus-visible {
+  background: color-mix(in srgb, var(--pfd-accent) 12%, var(--md-default-bg-color)); }
 .md-typeset .pfd-card--plain { grid-template-columns: 1fr; grid-template-areas: "t" "s"; }
 .md-typeset .pfd-card:hover,
 .md-typeset .pfd-card:focus-visible {
@@ -395,6 +413,9 @@
    are "where do I go" links, not policy, so they get a warm neutral that is a different
    hue from all three domains (measured deltaE vs admin below in the evidence file). */
 .md-typeset a.pfd-chip--util { --pfd-accent: #78716c; }
+/* "all" chip: neutral zinc, outside all four domain hues (#0284c7 / #b91c1c /
+   #475569 / #78716c), so it never reads as fire inside the EMS row. */
+.md-typeset a.pfd-chip--all { --pfd-accent: #3f3f46; }
 /* dark scheme: the same three hues at icon/bar lightness, so the accent bar and
    icon measure >=3:1 on the dark card (the light-scheme hexes do not) */
 [data-md-color-scheme="slate"] .md-typeset .pfd-card--ems,
@@ -404,6 +425,46 @@
 [data-md-color-scheme="slate"] .md-typeset .pfd-card--admin,
 [data-md-color-scheme="slate"] .md-typeset a.pfd-chip--admin { --pfd-accent: #94a3b8; }
 [data-md-color-scheme="slate"] .md-typeset a.pfd-chip--util { --pfd-accent: #a8a29e; }
+[data-md-color-scheme="slate"] .md-typeset a.pfd-chip--all { --pfd-accent: #a1a1aa; }
+
+/* ---------------------------------------------------------------------------
+   LIGHT SCHEME: TEXT-SIZE ACCENT INK (owner card t_19a7477e)
+   ---------------------------------------------------------------------------
+   The four hexes above are UI weights — they carry a 4px bar, an icon and a 1px
+   border, all of which need 3:1, not 4.5:1. As *text* they do not all survive:
+   EMS #0284c7 is 4.10:1 on white, under the 4.5:1 floor for body-size text. So
+   each domain gets a second, darker "ink" tone for anything that is read as a
+   word (section captions, chip labels). Measured against the surface it actually
+   sits on — the 7% card tint and the 10% chip tint, not plain white:
+       EMS   #0369a1  5.42:1 on card tint   5.24:1 on chip tint
+       FIRE  #991b1b  7.38:1                7.00:1
+       ADMIN #334155  9.32:1                8.92:1
+       util  #57534e  7.01:1                6.76:1
+   The four inked tones also differ in LIGHTNESS (5.4 / 7.4 / 9.3 / 7.0), so the
+   domains stay ordered and distinguishable in greyscale and in cab glare, where
+   hue is gone. Nothing here is set under the slate scheme.
+   --------------------------------------------------------------------------- */
+[data-md-color-scheme="default"] .md-typeset .pfd-card--ems,
+[data-md-color-scheme="default"] .md-typeset a.pfd-chip--ems,
+[data-md-color-scheme="default"] .md-typeset .pfd-cap--ems { --pfd-ink: #0369a1; }
+[data-md-color-scheme="default"] .md-typeset .pfd-card--fire,
+[data-md-color-scheme="default"] .md-typeset a.pfd-chip--fire,
+[data-md-color-scheme="default"] .md-typeset .pfd-cap--fire { --pfd-ink: #991b1b; }
+[data-md-color-scheme="default"] .md-typeset .pfd-card--admin,
+[data-md-color-scheme="default"] .md-typeset a.pfd-chip--admin,
+[data-md-color-scheme="default"] .md-typeset .pfd-cap--admin { --pfd-ink: #334155; }
+[data-md-color-scheme="default"] .md-typeset a.pfd-chip--util,
+[data-md-color-scheme="default"] .md-typeset .pfd-cap--util { --pfd-ink: #57534e; }
+/* the "all" chip's label is read as a word too: same neutral family, dark enough
+   for body-size text on the chip tint. */
+[data-md-color-scheme="default"] .md-typeset a.pfd-chip--all { --pfd-ink: #27272a; }
+
+/* section captions ("Protocols", "SOPs", "Fire resources", "City & personnel
+   policies", "Crew links & portals"): domain ink instead of one grey. Still
+   uppercase, still a word — the colour only echoes what the caption already
+   says. A caption with no domain modifier keeps Material's grey. */
+[data-md-color-scheme="default"] .md-typeset .pfd-cap {
+  color: var(--pfd-ink, var(--md-default-fg-color--light)); }
 
 /* --- the two scrollers --------------------------------------------------- */
 .md-typeset .pfd-scroller {
@@ -432,6 +493,18 @@
 .md-typeset .pfd-chip:hover,
 .md-typeset .pfd-chip:focus-visible {
   background: color-mix(in srgb, var(--pfd-accent) 14%, var(--md-default-bg-color)); }
+/* light scheme only: a chip is a DOMAIN object, not a uniform pink pill. Tinted
+   fill + the accent that owns the row as its border + the darker ink as its
+   label. Label ratios on the 10% tint: EMS 5.24, FIRE 7.00, ADMIN 8.92,
+   util 6.76 — all over the 4.5:1 floor; the border measures 3.6-6.5:1 on the
+   same tint (>3:1). The ::before dot keeps the raw accent. */
+[data-md-color-scheme="default"] .md-typeset .pfd-chip {
+  background: color-mix(in srgb, var(--pfd-accent) 10%, var(--md-default-bg-color));
+  border-color: var(--pfd-accent);
+  color: var(--pfd-ink, var(--pfd-accent)) !important; }
+[data-md-color-scheme="default"] .md-typeset .pfd-chip:hover,
+[data-md-color-scheme="default"] .md-typeset .pfd-chip:focus-visible {
+  background: color-mix(in srgb, var(--pfd-accent) 18%, var(--md-default-bg-color)); }
 
 /* --- bottom utility row: policies beside crew links ---------------------- */
 .md-typeset .pfd-secondary-row {

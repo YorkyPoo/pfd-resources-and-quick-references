@@ -1,4 +1,4 @@
-# Medications & Calculators
+# Drug Calculator
 
 Use the search bar at the top of the screen to quickly find specific dosages or protocols.
 

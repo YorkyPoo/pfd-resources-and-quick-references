@@ -4,7 +4,7 @@
 
 <section class="pfd-zone" markdown="1">
 
-<p class="pfd-cap">Administrative protocols</p>
+<p class="pfd-cap pfd-cap--ems">Administrative protocols</p>
 
 <div class="pfd-quick-grid" markdown="1">
 
@@ -23,7 +23,7 @@ All 14 administrative protocols are listed under [Administrative](../resources/e
 
 <section class="pfd-zone" markdown="1">
 
-<p class="pfd-cap">EMS SOPs — the six that come up most</p>
+<p class="pfd-cap pfd-cap--ems">EMS SOPs — the six that come up most</p>
 
 <div class="pfd-quick-grid" markdown="1">
 
@@ -42,11 +42,11 @@ All 23 EMS SOPs are listed under [EMS SOPs](../resources/ems.md#ems-sops).
 
 <section class="pfd-zone" markdown="1">
 
-<p class="pfd-cap">Calculators</p>
+<p class="pfd-cap pfd-cap--ems">Calculators</p>
 
 <div class="pfd-quick-grid" markdown="1">
 
-- [<span class="pfd-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(-45 12 12)"><rect x="2.6" y="8.4" width="18.8" height="7.2" rx="3.6" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="12" y1="8.4" x2="12" y2="15.6" stroke="currentColor" stroke-width="1.8"/></g></svg></span><span class="pfd-t">Drug &amp; Drip Rates</span><span class="pfd-s">EMS · Push and infusion calculator</span>](../medications.md){ .pfd-card .pfd-card--ems .pfd-card--plain }
+- [<span class="pfd-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(-45 12 12)"><rect x="2.6" y="8.4" width="18.8" height="7.2" rx="3.6" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="12" y1="8.4" x2="12" y2="15.6" stroke="currentColor" stroke-width="1.8"/></g></svg></span><span class="pfd-t">Drug Calculator</span><span class="pfd-s">EMS · Push and infusion calculator</span>](../medications.md){ .pfd-card .pfd-card--ems .pfd-card--plain }
 - [<span class="pfd-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="2.5" width="16" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="6.6" y="5" width="10.8" height="3.6" rx="1" fill="currentColor"/><circle cx="8.6" cy="12.6" r="1.25" fill="currentColor"/><circle cx="12" cy="12.6" r="1.25" fill="currentColor"/><circle cx="15.4" cy="12.6" r="1.25" fill="currentColor"/><circle cx="8.6" cy="16.6" r="1.25" fill="currentColor"/><circle cx="12" cy="16.6" r="1.25" fill="currentColor"/><circle cx="15.4" cy="16.6" r="1.25" fill="currentColor"/></svg></span><span class="pfd-t">Pediatric Dosing Calculator</span><span class="pfd-s">EMS · Weight-based dosing</span>](../pediatric-dosing/calculator.md){ .pfd-card .pfd-card--ems .pfd-card--plain }
 - [<span class="pfd-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="2.5" width="16" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="6.6" y="5" width="10.8" height="3.6" rx="1" fill="currentColor"/><circle cx="8.6" cy="12.6" r="1.25" fill="currentColor"/><circle cx="12" cy="12.6" r="1.25" fill="currentColor"/><circle cx="15.4" cy="12.6" r="1.25" fill="currentColor"/><circle cx="8.6" cy="16.6" r="1.25" fill="currentColor"/><circle cx="12" cy="16.6" r="1.25" fill="currentColor"/><circle cx="15.4" cy="16.6" r="1.25" fill="currentColor"/></svg></span><span class="pfd-t">Pediatric Dosing Tables</span><span class="pfd-s">EMS · Length-based, no math</span>](../pediatric-dosing/dosing-tables.md){ .pfd-card .pfd-card--ems .pfd-card--plain }
 

@@ -45,6 +45,12 @@ TABLE = os.path.join(OUT, "pems_table.json")
 DEST = os.path.join(OUT, "split-map.yaml")
 
 KEY_RE = re.compile(r"p\.(\d+) row (\d+)")
+
+
+def row_key(value):
+    """A site row label as a lookup key: ints stay ints, split labels stay str."""
+    s = str(value).strip()
+    return int(s) if s.isdigit() else s
 HEADER = """\
 # Durable record of the split rows: a site row that splits a PEMS row the
 # region merges. Every entry is checked by scripts/verify_pems_canonical.py
@@ -110,7 +116,7 @@ def split_partners(key, held, align, bindings, own=None):
                 named = key in [(int(p), int(o))
                                 for p, o in KEY_RE.findall(r.get("reason") or "")]
             if named:
-                rows.add((page["site_page"], int(r["site_row"])))
+                rows.add((page["site_page"], row_key(r["site_row"])))
     excluded = sorted((f, n) for f, n in rows
                       if bindings.get((f, str(n))) not in (None, key))
     # the row that DEFINES this entry stays in its own split: an explicit citation to

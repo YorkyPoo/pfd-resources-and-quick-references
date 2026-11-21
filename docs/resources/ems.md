@@ -153,7 +153,7 @@ Every **protocol** in one index — clinical categories, skills procedures, medi
 - [Vecuronium](../pharmacology/Vecuronium.md)
 - [Ziprasidone](../pharmacology/Ziprasidone.md)
 
-## [Medications & Calculators](../medications.md)
+## [Drug Calculator](../medications.md)
 
 ## Pediatric Dosing Reference
 

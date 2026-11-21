@@ -2,36 +2,36 @@
 
 Every PEMS 2024 intervention that has no counterpart on the Poquoson protocol page it belongs to. These are content gaps: the site documents the protocol but not this intervention, and nothing downstream will notice because the site row it should live on simply is not there.
 
-**Total: 86 rows across 27 pages.** (matched 292, ambiguous 125, site rows 417)
+**Total: 83 rows across 25 pages.** (matched 298, ambiguous 136, site rows 434)
 
 ## Reconciliation with the previous scan's 152, by cause
 
-The 2026-11-14 scan reported **152** PEMS rows with no site row. This run reports **86**. The delta is accounted for below by cause, with every row named in `reconciliation.json` (`prior_to_now.rows`). Rows are matched by verbatim text, not row number: the two scans number rows differently.
+The 2026-11-14 scan reported **152** PEMS rows with no site row. This run reports **83**. The delta is accounted for below by cause, with every row named in `reconciliation.json` (`prior_to_now.rows`). Rows are matched by verbatim text, not row number: the two scans number rows differently.
 
 | what happened to the prior scan's 152 rows | rows |
 |---|---|
-| still `absent_from_site` | 80 |
+| still `absent_from_site` | 77 |
 | paired to a site row on section + ordinal | 0 |
 | paired to a site row on its label | 7 |
-| paired to a site row on text evidence | 22 |
+| paired to a site row on text evidence | 26 |
 | paired to a site row by the C1d text-binding pass (this fix) | 1 |
 | paired by the section-fallback scoring (this fix) | 0 |
 | a duplicate copy inside the merged PEMS source | 6 |
 | the site does write it, inside a wider site row | 21 |
-| explained by an ambiguous site row (not a gap) | 13 |
+| explained by an ambiguous site row (not a gap) | 12 |
 | not found in this run's scope (needs a look) | 1 |
 | two prior claims that this run's parse merges into one PEMS row | 1 |
 | page not aligned this run | 0 |
 
-Of the 30 rows that now pair, the mechanical screen trusts 12 outright (0 section+ordinal, 3 distinctive label, 8 text evidence, 1 text-binding pass) and finds **18 too weak to accept without a human**. All 18 were read against both texts and are recorded in `reconciliation.json` under `prior_to_now.rows[*].human_verdict` / `human_note`:
+Of the 34 rows that now pair, the mechanical screen trusts 17 outright (0 section+ordinal, 3 distinctive label, 13 text evidence, 1 text-binding pass) and finds **17 too weak to accept without a human**. All 17 were read against both texts and are recorded in `reconciliation.json` under `prior_to_now.rows[*].human_verdict` / `human_note`:
 
 - **13 correct** — same intervention, wording or dose split differs.
 - **3 correct but partial** — the site row merges this PEMS intervention with another, and the PEMS row covers part of it.
-- **3 suspect** — the two rows are about different interventions and the binding rests on one shared word: 07_OB_Emergencies_PROC.md p.141#3; 03_Upper_Airway_Obstruction_PROC.md p.239#10; 09_Trauma_PROC.md p.83#3. These are counted as paired here only because that is what the aligner did; they are adjudication work for C2, not settled matches.
+- **2 suspect** — the two rows are about different interventions and the binding rests on one shared word: 07_OB_Emergencies_PROC.md p.141#3; 03_Upper_Airway_Obstruction_PROC.md p.239#10. These are counted as paired here only because that is what the aligner did; they are adjudication work for C2, not settled matches.
 
-Going the other way, **16 rows** this run leaves unpaired were not on the old list (6 absent, 3 duplicate, 7 merged): the old scan paired them on text similarity alone, and this one will not pair a row without structural evidence. They are the rows most worth a human glance and are named in `reconciliation.json` (`new_unpaired.rows`).
+Going the other way, **15 rows** this run leaves unpaired were not on the old list (6 absent, 3 duplicate, 6 merged): the old scan paired them on text similarity alone, and this one will not pair a row without structural evidence. They are the rows most worth a human glance and are named in `reconciliation.json` (`new_unpaired.rows`).
 
-**Check:** absent now 86 = 80 prior rows still absent + 6 newly absent. Of the 152 prior rows, the 72 that left the gap list are: 30 paired to a site row (0 section+ordinal, 7 label, 22 text, 1 text-binding pass, 0 section-fallback), 13 explained by an ambiguous site row, 21 merged inside a wider site row, 6 duplicate copies, 1 not in this run's scope and 1 collapsed into a single parse row.
+**Check:** absent now 83 = 77 prior rows still absent + 6 newly absent. Of the 152 prior rows, the 75 that left the gap list are: 34 paired to a site row (0 section+ordinal, 7 label, 26 text, 1 text-binding pass, 0 section-fallback), 12 explained by an ambiguous site row, 21 merged inside a wider site row, 6 duplicate copies, 1 not in this run's scope and 1 collapsed into a single parse row.
 
 ## `protocols/cardiac/04_Bradycardia_PROC.md` — 4 missing (PEMS p.103, p.104)
 - p.103 row 1 [base section #1] badge `EMR` — Ensure adequate oxygenation. Refer to Airway Management and Ventilatory Support procedure.
@@ -73,10 +73,6 @@ Going the other way, **16 rows** this run leaves unpaired were not on the old li
 
 ## `protocols/general/02_Heat_Exposure_PROC.md` — 1 missing (PEMS p.69)
 - p.69 row 0 [base section #0] badge `EMR` — Follow General – Universal Patient Care/Initial Patient Contact protocol.
-
-## `protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md` — 2 missing (PEMS p.55)
-- p.55 row 1 [base section #1] badge `EMT` — Confirm and monitor airway placement with continuous SpO2 and box-waveform EtCO2.
-- p.55 row 4 [base section #4] badge `MC` — Contact Medical Control for guidance if unable to adequately manage patient agitation or discomfort.
 
 ## `protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md` — 4 missing (PEMS p.99, p.100, p.101)
 - p.101 row 13 [Anaphylaxis #7] badge `I` — Maintain mean arterial pressure (MAP) above 65 mmHg. If the patient has not responded to repeat IM Epinephrine injections, consider: ADULT: Epinephrine infusion 2 – 10 mcg/min IV/IO (Add 1 mg of Epinephrine [1mg/mL] to 100 mL of 0.9% Sodium chloride = 10 mcg/mL)
@@ -134,7 +130,7 @@ Going the other way, **16 rows** this run leaves unpaired were not on the old li
 - p.124 row 12 [Pulmonary Edema #1] badge `I` — Administer: ADULT: Furosemide (Lasix) 40 mg IV/IO slow push
 - p.124 row 13 [Pulmonary Edema #2] badge `MC` — Contact Medical Control for guidance as needed.
 
-## `protocols/respiratory/03_Smoke_Inhalation_PROC.md` — 10 missing (PEMS p.153, p.239)
+## `protocols/respiratory/03_Smoke_Inhalation_PROC.md` — 9 missing (PEMS p.153, p.239)
 - p.153 row 1 [base section #1] badge `EMT` — Consider gross decontamination.
 - p.153 row 3 [base section #3] badge `A` — Administer: ADULT: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary.
 - p.153 row 4 [base section #4] badge `A` — PEDIATRIC: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. Administer: ADULT: Methylprednisolone (Solu-Medrol) 125 mg IV/IO slow push. PEDIATRIC: Methylprednisolone (Solu-Medrol) 2 mg/kg IV/IO slow push. Maximum dose: 125 mg For suspected Chlorine gas exposure, consider: ADULT: Sodium bicarbonate 2 mL diluted with 2 mL 0.9% Sodium chloride, nebulized. Once. PEDIATRIC: Sodium bicarbonate 2 mL diluted with 2 mL 0.9% Sodium chloride, nebulized. Once.
@@ -143,7 +139,6 @@ Going the other way, **16 rows** this run leaves unpaired were not on the old li
 - p.239 row 4 [CONSCIOUS PATIENT #1] badge `EMT` — Provide / titrate supplemental oxygen via NC or NRB to maintain SpO 94 – 98%. 2 Use EtCO2 monitor to guide therapy. Refer to Capnography procedure.
 - p.239 row 5 [CONSCIOUS PATIENT #2] badge `EMT` — Consider CPAP (PEEP: 5 cmH2O) for respiratory distress. Refer to CPAP procedure. I/P only: Adjust PEEP to support ventilation and work of breathing, up to 10 cmH O.** 2
 - p.239 row 6 [UNCONSCIOUS / OBTUNDED PATIENT #0] badge `EMT` — Position the patient and open the airway. Use BLS airway adjuncts (OPA/NPA/SGA) as necessary.
-- p.239 row 7 [UNCONSCIOUS / OBTUNDED PATIENT #1] badge `EMT` — Support respirations with BVM. Use in-line EtCO2. Refer to Capnography procedure. Adjust tidal volume, respiratory rate, and/or PEEP (if available) to maintain EtCO 35 – 45mmHg.** 2
 - p.239 row 8 [UNCONSCIOUS / OBTUNDED PATIENT #2] badge `I` — Foreign body airway obstruction: If unable to ventilate, perform laryngoscopy. Remove with forceps.
 
 ## `protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md` — 4 missing (PEMS p.239)
@@ -165,10 +160,8 @@ Going the other way, **16 rows** this run leaves unpaired were not on the old li
 ## `protocols/trauma/09_Electrical_Injuries_PROC.md` — 1 missing (PEMS p.95, p.96)
 - p.95 row 0 [base section #0] badge `I` — Consider endotracheal intubation vs immediate transport to the nearest emergency department if any signs of symptoms of airway injury develop: • Singed facial or nasal hairs • Burns or soot on the face, nose, or mouth • Hoarse voice or stridor • Carbonaceous sputum • Difficulty breathing / respiratory distress • Hypoxia • Tachypnea Follow Endotracheal Intubation procedure if proceeding with intubation. Note: Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended. RSI is not addressed in regional protocols – refer to agency specific protocols for guidance. Note: Intubation of children under 12 years old is a Paramedic “red dot” skill only.
 
-## `protocols/trauma/09_Lightning_Injuries_PROC.md` — 1 missing (PEMS p.95, p.96)
-- p.96 row 11 [base section #11] badge `I` — Assess and continuously monitor cardiac rhythm.
-
-## `protocols/trauma/09_Trauma_PROC.md` — 3 missing (PEMS p.83, p.84)
+## `protocols/trauma/09_Trauma_PROC.md` — 4 missing (PEMS p.83, p.84)
+- p.83 row 3 [base section #3] badge `EMR` — If shock or potential for shock is present, keep the patient warm.
 - p.83 row 4 [base section #4] badge `EMR` — Immobilize, secure in place, and do not remove any impaled object unless impeding CPR.
 - p.83 row 5 [base section #5] badge `EMR` — Acutely deformed /dislocated extremities: • Assess distal perfusion. Contact Medical Control for direction if distal pulse is absent. • Splint or immobilize suspected long bone fractures. • Assess distal perfusion before and after splinting.
 - p.83 row 6 [base section #6] badge `EMR` — Complete amputation of any part: • Wrap the amputated part in a dry, sterile dressing • Place the part in a dry, sealed plastic bag • Place the plastic bag with the part in an ice water filled container • Mark the container with date, patient name, and name of the part

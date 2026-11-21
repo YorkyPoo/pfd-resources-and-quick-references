@@ -1,34 +1,34 @@
 {
  "bridge": {
   "prior_reported": 152,
-  "now_absent": 86,
-  "still_absent_from_prior": 80,
-  "prior_missing_now_paired": 30,
+  "now_absent": 83,
+  "still_absent_from_prior": 77,
+  "prior_missing_now_paired": 34,
   "prior_missing_now_paired_reviewed_correct": 13,
   "prior_missing_now_paired_reviewed_partial": 3,
-  "prior_missing_now_paired_reviewed_suspect": 3,
-  "prior_missing_now_paired_unreviewed": 11,
+  "prior_missing_now_paired_reviewed_suspect": 2,
+  "prior_missing_now_paired_unreviewed": 16,
   "prior_missing_now_duplicate_or_merged": 27,
-  "prior_missing_now_claimed_by_ambiguous": 13,
+  "prior_missing_now_claimed_by_ambiguous": 12,
   "prior_rows_not_found_in_current_scope": 1,
   "prior_claims_collapsed_into_one_current_row": 1,
-  "newly_unpaired_not_in_prior_list": 16,
-  "identity": "absent now 86 = 80 prior rows still absent + 6 newly absent. Of the 152 prior rows, the 72 that left the gap list are: 30 paired to a site row (0 section+ordinal, 7 label, 22 text, 1 text-binding pass, 0 section-fallback), 13 explained by an ambiguous site row, 21 merged inside a wider site row, 6 duplicate copies, 1 not in this run's scope and 1 collapsed into a single parse row"
+  "newly_unpaired_not_in_prior_list": 15,
+  "identity": "absent now 83 = 77 prior rows still absent + 6 newly absent. Of the 152 prior rows, the 75 that left the gap list are: 34 paired to a site row (0 section+ordinal, 7 label, 26 text, 1 text-binding pass, 0 section-fallback), 12 explained by an ambiguous site row, 21 merged inside a wider site row, 6 duplicate copies, 1 not in this run's scope and 1 collapsed into a single parse row"
  },
  "prior_reported": 152,
  "prior_pages": 31,
  "pages_aligned_this_run": 41,
  "prior_to_now": {
   "counts": {
-   "claimed_by_an_ambiguous_site_row": 13,
+   "claimed_by_an_ambiguous_site_row": 12,
    "duplicate_copy_in_merged_source": 6,
    "merged_into_a_site_row": 21,
    "paired_to_site_row_label": 7,
-   "paired_to_site_row_text": 22,
+   "paired_to_site_row_text": 26,
    "paired_to_site_row_text_binding": 1,
    "prior_claims_collapsed_into_one_current_row": 1,
    "prior_row_not_in_current_scope": 1,
-   "still_absent": 80
+   "still_absent": 77
   },
   "rows": {
    "claimed_by_an_ambiguous_site_row": [
@@ -129,21 +129,6 @@
      "pems_text_now": "If ROSC is not achieved, and rhythm remains PEA, administer: ADULT: 1 mg Epinephrine 0.1 mg/mL IV/IO PEDIATRIC: 0.01 mg/kg Epinephrine IV/IO Single dose only.",
      "claimed_by_site_rows": [
       "3"
-     ]
-    },
-    {
-     "site_page": "protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md",
-     "pems_page": 55,
-     "prior_row": 2,
-     "prior_badges": "['I']",
-     "prior_text": "ADULT: Fentanyl (Sublimaze) 25 – 50 mcg IV/IO over 2 minutes or IN/IM PEDIATRIC: Fentanyl (Sublimaze) 0.5 – 1 mcg/kg IV/IO over 2 minutes or",
-     "current_disposition": "claimed_by_ambiguous_site_row",
-     "pems_page_now": 55,
-     "pems_ordinal_now": 2,
-     "pems_text_now": "Administer: ADULT: Fentanyl (Sublimaze) 25 – 50 mcg IV/IO over 2 minutes or IN/IM PEDIATRIC: Fentanyl (Sublimaze) 0.5 – 1 mcg/kg IV/IO over 2 minutes or IN/IM Maximum dose 25 mcg. Repeat every 10 – 15 minutes as needed for patient safety and comfort.",
-     "claimed_by_site_rows": [
-      "5",
-      "6"
      ]
     },
     {
@@ -426,28 +411,6 @@
      "pems_page_now": 69,
      "pems_ordinal_now": 0,
      "pems_text_now": "Follow General – Universal Patient Care/Initial Patient Contact protocol."
-    },
-    {
-     "site_page": "protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md",
-     "pems_page": 55,
-     "prior_row": 1,
-     "prior_badges": "['EMT']",
-     "prior_text": "Confirm and monitor airway placement with continuous SpO2 and box-waveform EtCO2. Administer:",
-     "current_disposition": "absent",
-     "pems_page_now": 55,
-     "pems_ordinal_now": 1,
-     "pems_text_now": "Confirm and monitor airway placement with continuous SpO2 and box-waveform EtCO2."
-    },
-    {
-     "site_page": "protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md",
-     "pems_page": 55,
-     "prior_row": 4,
-     "prior_badges": "['MC']",
-     "prior_text": "Repeat every 10 - 15 minutes as needed for patient safety and comfort. Contact Medical Control for guidance if unable to adequately manage p",
-     "current_disposition": "absent",
-     "pems_page_now": 55,
-     "pems_ordinal_now": 4,
-     "pems_text_now": "Contact Medical Control for guidance if unable to adequately manage patient agitation or discomfort."
     },
     {
      "site_page": "protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md",
@@ -925,17 +888,6 @@
     {
      "site_page": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
      "pems_page": 239,
-     "prior_row": 7,
-     "prior_badges": "['EMT']",
-     "prior_text": "Support respirations with BVM. Use in-line EtCO2. Refer to Capnography procedure. Adjust tidal volume, respiratory rate, and/or PEEP (if ava",
-     "current_disposition": "absent",
-     "pems_page_now": 239,
-     "pems_ordinal_now": 7,
-     "pems_text_now": "Support respirations with BVM. Use in-line EtCO2. Refer to Capnography procedure. Adjust tidal volume, respiratory rate, and/or PEEP (if available) to maintain EtCO 35 – 45mmHg.** 2"
-    },
-    {
-     "site_page": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
-     "pems_page": 239,
      "prior_row": 8,
      "prior_badges": "['I']",
      "prior_text": "Foreign body airway obstruction: If unable to ventilate, perform laryngoscopy. Remove with forceps.",
@@ -1055,15 +1007,15 @@
      "pems_text_now": "For altered mental status, seizures, hypotension, and/or cardiac arrest following exposure to combustion products in an enclosed space or suspected cyanide poisoning, administer (if available): ADULT: Hydroxocobalamin (CYANOKIT) 5 g IV/IO, infuse over 15 minutes PEDIATRIC: Hydroxocobalamin (CYANOKIT) 70 mg/kg IV/IO, infuse over 15 minutes To reconstitute for infusion: Add: 200mL of 0.9% Sodium Chloride to Hydroxocobalamin (CYANOKIT) vial using the transfer spike included in the kit. Fill to the line. Mix: Repeatedly invert or rock the vial for at least 60 seconds. Do not shake."
     },
     {
-     "site_page": "protocols/trauma/09_Lightning_Injuries_PROC.md",
-     "pems_page": 96,
-     "prior_row": 9,
-     "prior_badges": "['I']",
-     "prior_text": "Assess and continuously monitor cardiac rhythm.",
+     "site_page": "protocols/trauma/09_Trauma_PROC.md",
+     "pems_page": 83,
+     "prior_row": 3,
+     "prior_badges": "['EMR']",
+     "prior_text": "If shock or potential for shock is present, keep the patient warm.",
      "current_disposition": "absent",
-     "pems_page_now": 96,
-     "pems_ordinal_now": 11,
-     "pems_text_now": "Assess and continuously monitor cardiac rhythm."
+     "pems_page_now": 83,
+     "pems_ordinal_now": 3,
+     "pems_text_now": "If shock or potential for shock is present, keep the patient warm."
     },
     {
      "site_page": "protocols/trauma/09_Trauma_PROC.md",
@@ -1458,9 +1410,9 @@
      "pems_page_now": 63,
      "pems_ordinal_now": 7,
      "pems_text_now": "If VF or VT is present, or AED is advising to shock [EMR], immediately defibrillate: ADULT: 200 joules Biphasic / 360 joules Monophasic, or manufacturer’s recommendation. PEDIATRIC: 2 joules/kg initial, 4 joules/kg subsequent After each defibrillation, perform 2 minutes of CPR, followed by rhythm assessment. If VF / VT persists, defibrillate again, then consider medication therapy as listed below.",
-     "site_row_now": "5",
-     "site_action": "Defibrillation - V-Fib/V-Tach Only: • ADULT: 200 joules Biphasic / 360 joules Monophasic, or manufacturer's recommendation • PEDIATRIC: 2 joules/kg initial, 4 joules/kg subsequent • After each defibri",
-     "similarity": 0.45,
+     "site_row_now": "5a",
+     "site_action": "• After each defibrillation, perform 2 minutes of CPR, then reassess rhythm.",
+     "similarity": 0.49,
      "match_basis": "page-flat+text",
      "label_keys": null,
      "section_fallback": false,
@@ -1561,6 +1513,60 @@
      "verdict": "needs_a_human_eye",
      "human_verdict": "correct",
      "human_note": "both are contact medical control for hyperbaric transport destination"
+    },
+    {
+     "site_page": "protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md",
+     "pems_page": 55,
+     "prior_row": 1,
+     "prior_badges": "['EMT']",
+     "prior_text": "Confirm and monitor airway placement with continuous SpO2 and box-waveform EtCO2. Administer:",
+     "current_disposition": "matched",
+     "pems_page_now": 55,
+     "pems_ordinal_now": 1,
+     "pems_text_now": "Confirm and monitor airway placement with continuous SpO2 and box-waveform EtCO2.",
+     "site_row_now": "2",
+     "site_action": "Confirm and monitor airway placement with continuous SpO₂ and box-waveform EtCO₂.",
+     "similarity": 0.873,
+     "match_basis": "page-flat+ordinal",
+     "label_keys": null,
+     "section_fallback": false,
+     "verdict": "correct_text"
+    },
+    {
+     "site_page": "protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md",
+     "pems_page": 55,
+     "prior_row": 2,
+     "prior_badges": "['I']",
+     "prior_text": "ADULT: Fentanyl (Sublimaze) 25 – 50 mcg IV/IO over 2 minutes or IN/IM PEDIATRIC: Fentanyl (Sublimaze) 0.5 – 1 mcg/kg IV/IO over 2 minutes or",
+     "current_disposition": "matched",
+     "pems_page_now": 55,
+     "pems_ordinal_now": 2,
+     "pems_text_now": "Administer: ADULT: Fentanyl (Sublimaze) 25 – 50 mcg IV/IO over 2 minutes or IN/IM PEDIATRIC: Fentanyl (Sublimaze) 0.5 – 1 mcg/kg IV/IO over 2 minutes or IN/IM Maximum dose 25 mcg. Repeat every 10 – 15 minutes as needed for patient safety and comfort.",
+     "site_row_now": "3",
+     "site_action": "Administer: • ADULT: Fentanyl (Sublimaze) 25 – 50 mcg IV/IO over 2 minutes or IN/IM • PEDIATRIC: Fentanyl (Sublimaze) 0.5 – 1 mcg/kg IV/IO over 2 minutes or IN/IM • Maximum dose: 25 mcg",
+     "similarity": 0.936,
+     "match_basis": "page-flat+ordinal",
+     "label_keys": null,
+     "section_fallback": false,
+     "verdict": "correct_text"
+    },
+    {
+     "site_page": "protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md",
+     "pems_page": 55,
+     "prior_row": 4,
+     "prior_badges": "['MC']",
+     "prior_text": "Repeat every 10 - 15 minutes as needed for patient safety and comfort. Contact Medical Control for guidance if unable to adequately manage p",
+     "current_disposition": "matched",
+     "pems_page_now": 55,
+     "pems_ordinal_now": 4,
+     "pems_text_now": "Contact Medical Control for guidance if unable to adequately manage patient agitation or discomfort.",
+     "site_row_now": "7",
+     "site_action": "Contact Medical Control for guidance if unable to adequately manage patient agitation or discomfort.",
+     "similarity": 1.0,
+     "match_basis": "page-flat+text",
+     "label_keys": null,
+     "section_fallback": false,
+     "verdict": "correct_text"
     },
     {
      "site_page": "protocols/medical/07_OB_Emergencies_PROC.md",
@@ -1681,6 +1687,24 @@
      "verdict": "correct_text"
     },
     {
+     "site_page": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
+     "pems_page": 239,
+     "prior_row": 7,
+     "prior_badges": "['EMT']",
+     "prior_text": "Support respirations with BVM. Use in-line EtCO2. Refer to Capnography procedure. Adjust tidal volume, respiratory rate, and/or PEEP (if ava",
+     "current_disposition": "matched",
+     "pems_page_now": 239,
+     "pems_ordinal_now": 7,
+     "pems_text_now": "Support respirations with BVM. Use in-line EtCO2. Refer to Capnography procedure. Adjust tidal volume, respiratory rate, and/or PEEP (if available) to maintain EtCO 35 – 45mmHg.** 2",
+     "site_row_now": "13a",
+     "site_action": "• Monitor SpO2, EtCO2, and respiratory rate continuously",
+     "similarity": 0.515,
+     "match_basis": "page-flat+text",
+     "label_keys": null,
+     "section_fallback": false,
+     "verdict": "needs_a_human_eye"
+    },
+    {
      "site_page": "protocols/toxicology/06_Overdose_Poisoning_PROC.md",
      "pems_page": 119,
      "prior_row": 5,
@@ -1730,15 +1754,33 @@
      "pems_page_now": 96,
      "pems_ordinal_now": 11,
      "pems_text_now": "Assess and continuously monitor cardiac rhythm.",
-     "site_row_now": "7",
-     "site_action": "Obtain 12-Lead ECG / Monitor rhythm continuously",
-     "similarity": 0.704,
+     "site_row_now": "7a",
+     "site_action": "Monitor rhythm continuously",
+     "similarity": 0.939,
      "match_basis": "page-flat+text",
      "label_keys": null,
      "section_fallback": false,
-     "verdict": "needs_a_human_eye",
+     "verdict": "correct_text",
      "human_verdict": "correct_partial",
      "human_note": "site row merges 12-lead + rhythm monitoring; the PEMS row covers the monitoring half"
+    },
+    {
+     "site_page": "protocols/trauma/09_Lightning_Injuries_PROC.md",
+     "pems_page": 96,
+     "prior_row": 9,
+     "prior_badges": "['I']",
+     "prior_text": "Assess and continuously monitor cardiac rhythm.",
+     "current_disposition": "matched",
+     "pems_page_now": 96,
+     "pems_ordinal_now": 11,
+     "pems_text_now": "Assess and continuously monitor cardiac rhythm.",
+     "site_row_now": "7a",
+     "site_action": "Monitor rhythm.",
+     "similarity": 0.777,
+     "match_basis": "page-flat+text",
+     "label_keys": null,
+     "section_fallback": false,
+     "verdict": "correct_text"
     },
     {
      "site_page": "protocols/trauma/09_Trauma_PROC.md",
@@ -1757,26 +1799,6 @@
      "label_keys": null,
      "section_fallback": false,
      "verdict": "correct_text"
-    },
-    {
-     "site_page": "protocols/trauma/09_Trauma_PROC.md",
-     "pems_page": 83,
-     "prior_row": 3,
-     "prior_badges": "['EMR']",
-     "prior_text": "If shock or potential for shock is present, keep the patient warm.",
-     "current_disposition": "matched",
-     "pems_page_now": 83,
-     "pems_ordinal_now": 3,
-     "pems_text_now": "If shock or potential for shock is present, keep the patient warm.",
-     "site_row_now": "6",
-     "site_action": "Assess for shock. Refer to Shock (Hypoperfusion) protocol.",
-     "similarity": 0.487,
-     "match_basis": "page-flat+text",
-     "label_keys": null,
-     "section_fallback": false,
-     "verdict": "needs_a_human_eye",
-     "human_verdict": "suspect",
-     "human_note": "site row is 'assess for shock, refer to Shock protocol'; PEMS row is 'keep the patient warm' — bound on the word 'shock'"
     }
    ],
    "duplicate_copy_in_merged_source": [
@@ -2046,23 +2068,23 @@
   },
   "verdicts": {
    "correct_label": 3,
-   "correct_text": 8,
+   "correct_text": 13,
    "correct_text_binding": 1,
-   "needs_a_human_eye": 18
+   "needs_a_human_eye": 17
   },
   "human_review": {
    "correct": 13,
    "correct_partial": 3,
-   "suspect": 3
+   "suspect": 2
   },
-  "paired_total": 30
+  "paired_total": 34
  },
  "new_unpaired": {
-  "count": 16,
+  "count": 15,
   "counts": {
    "absent": 6,
    "duplicate_in_source": 3,
-   "merged_into_site_row": 7
+   "merged_into_site_row": 6
   },
   "rows": [
    {
@@ -2174,22 +2196,13 @@
     "note": 0.195
    },
    {
-    "site_page": "protocols/trauma/09_Electrical_Injuries_PROC.md",
-    "pems_page": 96,
-    "ordinal": 8,
-    "pems_text": "Obtain and transmit a 12-Lead ECG.",
-    "section": "",
-    "cause": "merged_into_site_row",
-    "note": 0.667
-   },
-   {
     "site_page": "protocols/trauma/09_Lightning_Injuries_PROC.md",
     "pems_page": 95,
     "ordinal": 0,
     "pems_text": "Consider endotracheal intubation vs immediate transport to the nearest emergency department if any signs of symptoms of airway injury develop: • Singed facial or nasal hairs • Burns or soot on the face, nose, or mouth • Hoarse voice or stridor • Carbonaceous sputum • Difficulty breathing / respiratory distress • Hypoxia • Tachypnea Follow Endotracheal Intubation procedure if proceeding with intubation. Note: Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended. RSI is not addressed in regional protocols – refer to agency specific protocols for guidance. Note: Intubation of children under 12 years old is a Paramedic “red dot” skill only.",
     "section": "",
     "cause": "merged_into_site_row",
-    "note": 0.175
+    "note": 0.221
    },
    {
     "site_page": "protocols/trauma/09_Lightning_Injuries_PROC.md",
@@ -2213,10 +2226,10 @@
  },
  "absent_arithmetic": {
   "prior_absent": 152,
-  "still_absent_from_prior": 80,
+  "still_absent_from_prior": 77,
   "newly_absent_not_on_prior_list": 6,
-  "now_absent": 86,
-  "identity": "absent now 86 = 80 prior rows still absent + 6 newly absent. Of the 152 prior rows, the 72 that left the gap list are: 30 paired to a site row (0 section+ordinal, 7 label, 22 text, 1 text-binding pass, 0 section-fallback), 13 explained by an ambiguous site row, 21 merged inside a wider site row, 6 duplicate copies, 1 not in this run's scope and 1 collapsed into a single parse row"
+  "now_absent": 83,
+  "identity": "absent now 83 = 77 prior rows still absent + 6 newly absent. Of the 152 prior rows, the 75 that left the gap list are: 34 paired to a site row (0 section+ordinal, 7 label, 26 text, 1 text-binding pass, 0 section-fallback), 12 explained by an ambiguous site row, 21 merged inside a wider site row, 6 duplicate copies, 1 not in this run's scope and 1 collapsed into a single parse row"
  },
- "identity": "absent now 86 = 80 prior rows still absent + 6 newly absent. Of the 152 prior rows, the 72 that left the gap list are: 30 paired to a site row (0 section+ordinal, 7 label, 22 text, 1 text-binding pass, 0 section-fallback), 13 explained by an ambiguous site row, 21 merged inside a wider site row, 6 duplicate copies, 1 not in this run's scope and 1 collapsed into a single parse row"
+ "identity": "absent now 83 = 77 prior rows still absent + 6 newly absent. Of the 152 prior rows, the 75 that left the gap list are: 34 paired to a site row (0 section+ordinal, 7 label, 26 text, 1 text-binding pass, 0 section-fallback), 12 explained by an ambiguous site row, 21 merged inside a wider site row, 6 duplicate copies, 1 not in this run's scope and 1 collapsed into a single parse row"
 }
