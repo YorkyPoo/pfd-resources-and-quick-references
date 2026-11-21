@@ -72,6 +72,12 @@
       "description": "IA round 3: Protocols/SOPs hubs, static category buttons",
       "sha": "fbe71bc7ee25db55bcf6a868e786353aaa612171"
     },
+    "legend": {
+      "branch": "legend",
+      "built_at": "2026-11-21T03:15:33Z",
+      "description": "audit(gates): fix the gate runner's repo root (audit/gates is two levels down)",
+      "sha": "b4e71d12bbb63be5ddcebc411a0b9200daf221f2"
+    },
     "light-colour": {
       "branch": "light-colour-r2",
       "built_at": "2026-11-21T03:07:17Z",
@@ -151,5 +157,5 @@
       "sha": "cc0735af60dcd20ce46ca5dca7d48a852ad81274"
     }
   },
-  "updated_at": "2026-11-21T03:12:56.251517+00:00"
+  "updated_at": "2026-11-21T03:15:33.471391+00:00"
 }
