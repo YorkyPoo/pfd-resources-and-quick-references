@@ -1,6 +1,6 @@
-# gate log — branch ia-r3, content commit a75ffce
-# written 2026-11-21 00:59:03 UTC by run_gates_ia_r3.sh (card t_f135bb3f)
-# gates run on the content commit a75ffce; site gates after the strict build
+# gate log — branch ia-r3, content commit 63959e7
+# written 2026-11-21 00:59:44 UTC by run_gates_ia_r3.sh (card t_f135bb3f)
+# gates run on the content commit 63959e7; site gates after the strict build
 
 ## gate: gen_resource_pages
 cmd: python3 scripts/gen_resource_pages.py --check
@@ -155,10 +155,10 @@ cmd: mkdocs build --strict
   - personnel-policies/policies/41-grievance-procedure.md
   - personnel-policies/policies/42-resignations-and-separations.md
   - personnel-policies/policies/43-retiree-health-insurance-coverage.md
+INFO    -  Documentation built in 9.78 seconds
 pip_strip: protocols/administrative/01_Stroke_Field_Triage_PROC.md: policy (Basis) table not converted; row(s) 1 name a provider level as basis
 [post_build] sitemap: dropped 1 noindex page(s): ['/resources/links.html']
-[post_build] Generated sw.js with 283 pre-cached pages (version: 20261121-005931)
-INFO    -  Documentation built in 8.96 seconds
+[post_build] Generated sw.js with 283 pre-cached pages (version: 20261121-010012)
 EXIT=0
 
 ## gate: verify_pip_strip
@@ -197,7 +197,7 @@ EXIT=0
 
 ## gate: link_sweep
 cmd: python3 scripts/link_sweep.py site
-swept 283 pages, 73785 internal hrefs (+ fragment checks)
+swept 283 pages, 73784 internal hrefs (+ fragment checks)
 clean — every internal href and #anchor resolves to a built file and a real id
 EXIT=0
 
