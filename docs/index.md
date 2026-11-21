@@ -13,8 +13,9 @@
 <div class="pfd-quick-grid" markdown="1">
 
 - [<span class="pfd-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="2.5" width="16" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="6.6" y="5" width="10.8" height="3.6" rx="1" fill="currentColor"/><circle cx="8.6" cy="12.6" r="1.25" fill="currentColor"/><circle cx="12" cy="12.6" r="1.25" fill="currentColor"/><circle cx="15.4" cy="12.6" r="1.25" fill="currentColor"/><circle cx="8.6" cy="16.6" r="1.25" fill="currentColor"/><circle cx="12" cy="16.6" r="1.25" fill="currentColor"/><circle cx="15.4" cy="16.6" r="1.25" fill="currentColor"/></svg></span><span class="pfd-t">Pediatric Dosing Calculator</span><span class="pfd-s">EMS · Weight-based dosing</span>](pediatric-dosing/calculator.md){ .pfd-card .pfd-card--ems }
-- [<span class="pfd-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(-45 12 12)"><rect x="2.6" y="8.4" width="18.8" height="7.2" rx="3.6" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="12" y1="8.4" x2="12" y2="15.6" stroke="currentColor" stroke-width="1.8"/></g></svg></span><span class="pfd-t">Drugs & Drip Rates</span><span class="pfd-s">EMS · Push & infusion rates</span>](medications.md){ .pfd-card .pfd-card--ems }
+- [<span class="pfd-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(-45 12 12)"><rect x="2.6" y="8.4" width="18.8" height="7.2" rx="3.6" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="12" y1="8.4" x2="12" y2="15.6" stroke="currentColor" stroke-width="1.8"/></g></svg></span><span class="pfd-t">Drug Calculator</span><span class="pfd-s">EMS · Push & infusion rates</span>](medications.md){ .pfd-card .pfd-card--ems }
 - [<span class="pfd-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="9.4" y="2.8" width="5.2" height="18.4" rx="1.6" fill="currentColor"/><rect x="2.8" y="9.4" width="18.4" height="5.2" rx="1.6" fill="currentColor"/></svg></span><span class="pfd-t">Skills Procedures</span><span class="pfd-s">EMS · Step-by-step skills</span>](resources/ems.md#procedures){ .pfd-card .pfd-card--ems }
+- [<span class="pfd-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.3 2.9h5.4v2.6l4.5 8.6a3.7 3.7 0 0 1-3.3 5.4H8.1a3.7 3.7 0 0 1-3.3-5.4l4.5-8.6V2.9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><line x1="8.1" y1="2.9" x2="15.9" y2="2.9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M6.4 15.2h11.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><span class="pfd-t">Pharmacology</span><span class="pfd-s">EMS · Every medication</span>](resources/ems.md#pharmacology){ .pfd-card .pfd-card--ems }
 - [<span class="pfd-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.6a5.6 5.6 0 0 0-5.6 5.6v3.3L4 16h16l-2.4-4.5V8.2A5.6 5.6 0 0 0 12 2.6z" fill="currentColor"/><rect x="10.2" y="17.2" width="3.6" height="3.8" rx="1.8" fill="currentColor"/></svg></span><span class="pfd-t">Alarm Assignments</span><span class="pfd-s">FIRE · Who rides what</span>](fire-ems-references/initial-alarm-company-assignments.md){ .pfd-card .pfd-card--fire }
 - [<span class="pfd-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="6.6" width="11.4" height="8.8" rx="1.5" fill="currentColor"/><rect x="14.4" y="9.4" width="6.6" height="6" rx="1.4" fill="currentColor"/><circle cx="6.6" cy="17.8" r="1.9" fill="currentColor"/><circle cx="17.2" cy="17.8" r="1.9" fill="currentColor"/></svg></span><span class="pfd-t">First to Arrive (EO 6.00)</span><span class="pfd-s">FIRE · Initial company roles</span>](sops/emergency-operations/EO-600-First-to-Arrive-Duties.md){ .pfd-card .pfd-card--fire }
 
@@ -24,12 +25,11 @@
 
 <section class="pfd-zone" markdown="1">
 
-**[Protocols](resources/ems.md)**{: .pfd-cap .pfd-cap--link }
+**[EMS Hub](ems/index.md)**{: .pfd-cap .pfd-cap--link }
 
 <div class="pfd-scroller pfd-scroller--ems" markdown="1">
 
 [All protocols](resources/ems.md){ .pfd-chip .pfd-chip--all }
-[EMS Clinical Hub](ems/index.md){ .pfd-chip .pfd-chip--ems }
 [Procedures](resources/ems.md#procedures){ .pfd-chip .pfd-chip--ems }
 [Controlled Substances](sops/ems/EMS-2100-Controlled-Substances.md){ .pfd-chip .pfd-chip--ems }
 [Refusals / AMA](protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md){ .pfd-chip .pfd-chip--ems }
@@ -41,20 +41,6 @@
 [Trauma](resources/ems.md#trauma){ .pfd-chip .pfd-chip--ems }
 [Medical](resources/ems.md#medical){ .pfd-chip .pfd-chip--ems }
 [Pediatric](resources/ems.md#pediatric-dosing-reference){ .pfd-chip .pfd-chip--ems }
-
-</div>
-
-**[SOPs](resources/fire.md)**{: .pfd-cap .pfd-cap--link }
-
-<div class="pfd-scroller pfd-scroller--fire" markdown="1">
-
-[All SOPs](resources/fire.md){ .pfd-chip .pfd-chip--all }
-[Emergency Operations](resources/fire.md#emergency-operations){ .pfd-chip .pfd-chip--fire }
-[Special Operations](resources/fire.md#special-operations){ .pfd-chip .pfd-chip--fire }
-[Equipment & Apparatus](resources/fire.md#equipment-apparatus){ .pfd-chip .pfd-chip--fire }
-[Safety & Health](resources/fire.md#safety-health){ .pfd-chip .pfd-chip--fire }
-[General Administration](resources/fire.md#general-administration){ .pfd-chip .pfd-chip--fire }
-[Public Relations](resources/fire.md#public-relations){ .pfd-chip .pfd-chip--fire }
 
 </div>
 

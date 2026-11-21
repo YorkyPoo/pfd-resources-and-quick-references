@@ -87,7 +87,9 @@ GROUP_RENAME = {
 # and Outstanding Decisions must keep its own heading instead of inheriting the
 # section name "Protocols".
 PATH_GROUP = {
-    "medications.md": "Medications & Calculators",
+    # The page title is "Drug Calculator" (owner ruling 2026-11-21): the homepage tile,
+    # the page H1, the nav label and this group heading must all wear the same name.
+    "medications.md": "Drug Calculator",
     "protocols/outstanding-decisions.md": "Outstanding Decisions",
 }
 
@@ -105,7 +107,7 @@ FIRE_REF_ORDER = ["Frameworks", "Field References", "Strategies", "Study Aids"]
 # References are orientation material and go first; the audit page goes last.
 EMS_ORDER = ["Front Matter", "Quick References", "Cardiac", "Respiratory", "Trauma",
              "Medical", "Administrative", "Procedures", "Toxicology", "Neurologic",
-             "General", "Pharmacology", "Medications & Calculators",
+             "General", "Pharmacology", "Drug Calculator",
              "Pediatric Dosing Reference", "EMS SOPs", "Outstanding Decisions"]
 # Owner ruled Procedures ABOVE Pharmacology. Assert it here rather than trusting the
 # table above: a future reorder that breaks the ruling must fail the generator.
@@ -124,10 +126,15 @@ STATION_ORDER = ["Orientation", "Portals & Systems", "Policies & Administration"
 SCENE_TOOLS = [
     ("Pediatric Dosing Calculator", "pediatric-dosing/calculator.md",
      "Weight-based dosing", "EMS", "dose"),
-    ("Drugs & Drip Rates", "medications.md",
+    ("Drug Calculator", "medications.md",
      "Push & infusion rates", "EMS", "drug"),
     ("Skills Procedures", "resources/ems.md#procedures",
      "Step-by-step skills", "EMS", "skills"),
+    # Added at the owner's request (2026-11-21) so the drug index is one tap from the
+    # homepage instead of two. Sixth tile: the grid is 2-per-row, so six leaves no
+    # orphan on the last row.
+    ("Pharmacology", "resources/ems.md#pharmacology",
+     "Every medication", "EMS", "pharm"),
     ("Alarm Assignments", "fire-ems-references/initial-alarm-company-assignments.md",
      "Who rides what", "FIRE", "alarm"),
     ("First to Arrive (EO 6.00)", "sops/emergency-operations/EO-600-First-to-Arrive-Duties.md",
@@ -144,20 +151,13 @@ EMS_CLINICAL_STRIP = [
     ("Medical", EMS_HUB + "#medical"),
     ("Pediatric", EMS_HUB + "#pediatric-dosing-reference"),
 ]
-EMS_CLINICAL_HUB_CHIP = ("EMS Clinical Hub", EMS_CLINICAL_HUB)
 EMS_HUB_CHIP = ("All protocols", EMS_HUB)
 EMS_PROCEDURES_CHIP = ("Procedures", "resources/ems.md#procedures")
-# Fire side, split in two (owner ruling 2026-11-20): the SOP index and the
-# reference shelf are different pages now, so each scroller points at its own page.
-SOP_HUB_CHIP = ("All SOPs", FIRE_HUB)
-SOP_STRIP = [
-    ("Emergency Operations", FIRE_HUB + "#emergency-operations"),
-    ("Special Operations", FIRE_HUB + "#special-operations"),
-    ("Equipment & Apparatus", FIRE_HUB + "#equipment-apparatus"),
-    ("Safety & Health", FIRE_HUB + "#safety-health"),
-    ("General Administration", FIRE_HUB + "#general-administration"),
-    ("Public Relations", FIRE_HUB + "#public-relations"),
-]
+# The SOPs scroller was deleted at the owner's request (2026-11-21): SOPs has a
+# permanent bottom-bar tab, so a homepage row was a second route to the same page.
+# SOP_HUB_CHIP / SOP_STRIP went with it — nothing else referenced them.
+# Fire side: the reference shelf still has its own scroller, because Fire Resources
+# has no bottom-bar tab and would otherwise be unreachable from the homepage.
 FIRE_REF_HUB_CHIP = ("Fire resources", FIRE_REF_HUB)
 FIRE_REF_STRIP = [
     ("Frameworks", FIRE_REF_HUB + "#frameworks"),
@@ -247,7 +247,8 @@ EMS_ADMIN = [
 ]
 # Calculator entry points. Icons come from ICONS (drawn SVG, no icon font).
 EMS_CALCS = [
-    ("Drug &amp; Drip Rates", "medications.md", "Push and infusion calculator", "drug"),
+    # Same name as the page it opens and the homepage tile (owner ruling 2026-11-21).
+    ("Drug Calculator", "medications.md", "Push and infusion calculator", "drug"),
     ("Pediatric Dosing Calculator", "pediatric-dosing/calculator.md",
      "Weight-based dosing", "dose"),
     ("Pediatric Dosing Tables", "pediatric-dosing/dosing-tables.md",
@@ -366,6 +367,15 @@ ICONS = {
                '<rect x="14.4" y="9.4" width="6.6" height="6" rx="1.4" fill="currentColor"/>'
                '<circle cx="6.6" cy="17.8" r="1.9" fill="currentColor"/>'
                '<circle cx="17.2" cy="17.8" r="1.9" fill="currentColor"/></svg>'),
+    "pharm": ('<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+              # Erlenmeyer flask: a pharmacology index, not another capsule (the Drug
+              # Calculator tile already owns the capsule glyph).
+              '<path d="M9.3 2.9h5.4v2.6l4.5 8.6a3.7 3.7 0 0 1-3.3 5.4H8.1a3.7 3.7 0 0 1-3.3-5.4l4.5-8.6V2.9z" '
+              'fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>'
+              '<line x1="8.1" y1="2.9" x2="15.9" y2="2.9" stroke="currentColor" '
+              'stroke-width="1.8" stroke-linecap="round"/>'
+              '<path d="M6.4 15.2h11.2" stroke="currentColor" stroke-width="1.6" '
+              'stroke-linecap="round"/></svg>'),
 }
 
 # Personnel policies are not in the nav (only the index page is), so the strip
@@ -613,13 +623,11 @@ def check_targets(records):
     missing += [p for _l, p, _s in POLICY_TILES if not on_disk(p)]
     missing += [p for _l, p in EMS_SOP_STRIP if not on_disk(p)]
     missing += [p for _l, p in EMS_CLINICAL_STRIP if not on_disk(p)]
-    missing += [p for _l, p in SOP_STRIP if not on_disk(p)]
     missing += [p for _l, p in FIRE_REF_STRIP if not on_disk(p)]
     missing += [p for _l, p, _s in EMS_SOP_SHORT if not on_disk(p)]
     # FIRE_REF_HUB is created by this script, so on the FIRST run after the split it is
     # not in the on-disk nav yet; every later --check run has it and checks it.
-    missing += [p for p in (SOP_HUB_CHIP[1], FIRE_REF_HUB_CHIP[1], EMS_CLINICAL_HUB_CHIP[1],
-                            EMS_HUB_CHIP[1])
+    missing += [p for p in (FIRE_REF_HUB_CHIP[1], EMS_HUB_CHIP[1])
                 if p not in nav_paths and p != FIRE_REF_HUB]
     missing += [EMS_PROCEDURES_CHIP[1].split("#")[0]] * (not on_disk(EMS_PROCEDURES_CHIP[1]))
     missing += [p for _l, p in CREW_CHIPS if not p.startswith("http") and not on_disk(p)]
@@ -635,7 +643,7 @@ def check_targets(records):
 
 
 def quicklinks_block(records):
-    """The on-scene dashboard: five high-acuity tools and four scrollers.
+    """The on-scene dashboard: six high-acuity tools and four scrollers.
 
     Card t_a650f9ea (owner's words, applied literally): every scroller starts with the
     section itself, then the real destinations. The two bottom groups are scrollers
@@ -652,19 +660,15 @@ def quicklinks_block(records):
               for label, path, sub, domain, icon in SCENE_TOOLS]
     parts += ["", "</div>", "", "</section>", "",
               '<section class="pfd-zone" markdown="1">', "",
-              f'**[Protocols]({EMS_HUB})**'
+              # Renamed Protocols -> EMS Hub (owner ruling 2026-11-21): the caption links
+              # to ems/index.md, the page that is actually the hub, so the old
+              # "EMS Clinical Hub" chip is gone — it was the same destination twice.
+              f'**[EMS Hub]({EMS_CLINICAL_HUB})**'
               '{: .pfd-cap .pfd-cap--link }', "",
               '<div class="pfd-scroller pfd-scroller--ems" markdown="1">', ""]
-    parts += [chip(*EMS_HUB_CHIP, "all"), chip(*EMS_CLINICAL_HUB_CHIP, "ems"),
-              chip(*EMS_PROCEDURES_CHIP, "ems")]
+    parts += [chip(*EMS_HUB_CHIP, "all"), chip(*EMS_PROCEDURES_CHIP, "ems")]
     parts += [chip(label, href, "ems") for label, href in EMS_SOP_STRIP]
     parts += [chip(label, href, "ems") for label, href in EMS_CLINICAL_STRIP]
-    parts += ["", "</div>", "",
-              f'**[SOPs]({FIRE_HUB})**'
-              '{: .pfd-cap .pfd-cap--link }', "",
-              '<div class="pfd-scroller pfd-scroller--fire" markdown="1">', ""]
-    parts += [chip(*SOP_HUB_CHIP, "all")]
-    parts += [chip(label, href, "fire") for label, href in SOP_STRIP]
     parts += ["", "</div>", "",
               f'**[Fire resources]({FIRE_REF_HUB})**'
               '{: .pfd-cap .pfd-cap--link }', "",

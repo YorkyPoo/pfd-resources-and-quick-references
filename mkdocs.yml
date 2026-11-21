@@ -213,7 +213,7 @@ nav:
     - Succinylcholine: pharmacology/Succinylcholine.md
     - Vecuronium: pharmacology/Vecuronium.md
     - Ziprasidone: pharmacology/Ziprasidone.md
-  - Medications & Calculators: medications.md
+  - Drug Calculator: medications.md
   - Pediatric Dosing Reference:
     - Overview: pediatric-dosing/index.md
     - Pre-Calculated Dosing Tables: pediatric-dosing/dosing-tables.md
