@@ -84,7 +84,7 @@ echo "cmd: git diff origin/main..HEAD -- docs/stylesheets/extra.css | grep -E '^
 echo "     permitted: the neutral .pfd-chip--all accent, which is a slate-scheme value by design (card t_a4b01dd6)"
 git diff origin/main..HEAD -- docs/stylesheets/extra.css | grep -E '^[+-].*\[data-md-color-scheme="slate"\]' | tee /tmp/cap_labels_slate.txt
 SLATE_TOTAL=$(grep -c . /tmp/cap_labels_slate.txt || true)
-SLATE_ALLOWED=$(grep -cE '\-\-pfd-accent: #a1a1aa' /tmp/cap_labels_slate.txt || true)
+SLATE_ALLOWED=$(grep -cE 'a\.pfd-chip--all \{ --pfd-accent:' /tmp/cap_labels_slate.txt || true)
 SLATE=$(( SLATE_TOTAL - SLATE_ALLOWED ))
 echo "changed slate-selector lines: ${SLATE_TOTAL} (${SLATE_ALLOWED} permitted pfd-chip--all, ${SLATE} unexpected)"
 if [ "${SLATE}" -eq 0 ]; then echo "EXIT=0"; else echo "EXIT=1"; FAILED="${FAILED} slate_untouched=${SLATE}"; fi
