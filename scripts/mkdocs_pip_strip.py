@@ -310,43 +310,124 @@ def _legend():
 # The legend's markup may exist in THIS module only. `_legend()` is the single
 # definition; a page that wants the swatches writes the placeholder below and
 # the hook splices the function's output in at build time. A second copy in a
-# page or an override would drift the first time a pip colour changed, so the
-# build fails when one appears under docs/ or overrides/.
+# page, an override or a script would drift the first time a pip colour changed,
+# so the build fails when one appears anywhere except this file.
 LEGEND_OWNER = "scripts/mkdocs_pip_strip.py"
-LEGEND_MARKER = b'class="pip-legend"'
 LEGEND_TOKEN = "<!-- PIP_LEGEND -->"
-GUARD_DIRS = ("docs", "overrides")
+# (marker bytes, suffixes it applies to or None for every file). The CSS file
+# legitimately names `.pip-legend-h` as a selector, so that marker is only
+# banned in markup/code files — a *copy of the block* is what must not exist.
+LEGEND_MARKERS = (
+    (b'class="pip-legend"', None),
+    (b"pip-legend-h", (".md", ".markdown", ".html", ".htm", ".jinja", ".j2", ".json", ".py")),
+)
+GUARD_DIRS = ("docs", "overrides", "scripts")
 
 
 def legend_duplicates(repo_root=None):
-    """Relative paths under docs/ + overrides/ that carry the legend markup."""
+    """Relative paths under docs/, overrides/, scripts/ that carry the legend markup."""
     root = repo_root or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    owner = os.path.normpath(os.path.join(root, LEGEND_OWNER))
     hits = []
     for sub in GUARD_DIRS:
         base = os.path.join(root, sub)
         for dirpath, dirnames, filenames in os.walk(base):
-            dirnames[:] = sorted(d for d in dirnames if d not in (".git", "__pycache__"))
+            dirnames[:] = sorted(d for d in dirnames if d not in (".git", "__pycache__", "site"))
             for name in sorted(filenames):
                 path = os.path.join(dirpath, name)
+                if os.path.normpath(path) == owner:
+                    continue
                 try:
                     with open(path, "rb") as fh:
                         data = fh.read()
                 except OSError:
                     continue
-                if LEGEND_MARKER in data:
-                    hits.append(os.path.relpath(path, root))
+                for marker, suffixes in LEGEND_MARKERS:
+                    if suffixes is not None and not name.lower().endswith(suffixes):
+                        continue
+                    if marker in data:
+                        hits.append((os.path.relpath(path, root), marker.decode()))
+                        break
     return hits
 
 
+# ---------------------------------------------------------- legend vs strip
+#
+# A legend that can silently disagree with the thing it explains is worse than
+# no legend. `_legend()` is compared against the renderer in BOTH directions:
+# every swatch it shows must be a state the strip emits, and every state the
+# strip emits must have a swatch. Adding a state to `states_for()` without a
+# legend line (or a legend line for a state that no longer exists) fails here.
+
+PIP_CLASS_RE = re.compile(r'class="pip ([^"]+)"')
+
+
+def legend_states(legend_html=None):
+    """Pip state class names the legend renders, e.g. {"go", "call", "no"}."""
+    html = _legend() if legend_html is None else legend_html
+    states = set()
+    for m in PIP_CLASS_RE.finditer(html):
+        tokens = m.group(1).split()
+        if len(tokens) != 1:
+            raise RuntimeError(
+                "legend swatch carries more than one class "
+                f"({m.group(1)!r}) — it must be exactly `pip <state>` so the "
+                "guard can compare it with the strip"
+            )
+        states.add(tokens[0])
+    return states
+
+
+def strip_states():
+    """Every state `states_for()` can emit, over its whole input space."""
+    seen = set()
+    n = len(LEVELS)
+    for min_idx in range(n):
+        for mc_all in (False, True):
+            for mask in range(1 << n):
+                mc = tuple(i for i in range(n) if mask >> i & 1)
+                seen.update(states_for(min_idx, mc, mc_all))
+    return seen
+
+
+def legend_state_problems(legend_html=None):
+    """Empty when legend, renderer and PIP_WORD agree; otherwise the reasons."""
+    problems = []
+    declared = set(PIP_WORD)
+    emitted = strip_states()
+    shown = legend_states(legend_html)
+    if emitted != declared:
+        problems.append(
+            "states_for() emits states PIP_WORD does not name: "
+            f"+{sorted(emitted - declared)} -{sorted(declared - emitted)}"
+        )
+    missing = emitted - shown
+    if missing:
+        problems.append(f"the strip emits {sorted(missing)} but the legend shows no swatch for it")
+    extra = shown - emitted
+    if extra:
+        problems.append(f"the legend shows {sorted(extra)} but the strip never emits it")
+    if not shown:
+        problems.append("the legend renders no pip swatches at all")
+    return problems
+
+
 def on_config(config, **kwargs):
-    """Fail the build when the legend markup is copied outside this module."""
-    hits = legend_duplicates()
+    """Fail the build if the legend is copied outside this module or disagrees."""
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    hits = legend_duplicates(root)
     if hits:
-        detail = "\n".join(f"  {rel}" for rel in hits)
+        detail = "\n".join(f"  {rel}  ({marker})" for rel, marker in hits)
         raise RuntimeError(
             "the protocol legend's markup may exist only in "
             f"{LEGEND_OWNER} (pages get it from the {LEGEND_TOKEN} placeholder); "
             f"found a copy in:\n{detail}"
+        )
+    problems = legend_state_problems()
+    if problems:
+        raise RuntimeError(
+            "the protocol legend disagrees with the pip strip it explains:\n  "
+            + "\n  ".join(problems)
         )
     return config
 
