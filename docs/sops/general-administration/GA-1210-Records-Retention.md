@@ -6,7 +6,7 @@
 <!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
 !!! abstract "Connected Notes"
     - **Named on this page:** [Radio Communications](../emergency-operations/EO-500-Radio-Communications.md)
-    - **Browse the rest of this side:** [Fire Resources · General Administration](../../resources/fire.md#general-administration)
+    - **Browse the rest of this side:** [SOPs · General Administration](../../resources/fire.md#general-administration)
 <!-- CONNECTED:END -->
 
 ## I. Purpose

@@ -6,7 +6,7 @@
 <!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
 !!! abstract "Connected Notes"
     - **Referenced SOPs:** [Promotional Process - Fire Lieutenant](GA-1900-Promotional-Process-for-Fire-Lieutenant-202407120905160146.md)
-    - **Browse the rest of this side:** [Fire Resources · General Administration](../../resources/fire.md#general-administration)
+    - **Browse the rest of this side:** [SOPs · General Administration](../../resources/fire.md#general-administration)
 <!-- CONNECTED:END -->
 
 ## I. Purpose

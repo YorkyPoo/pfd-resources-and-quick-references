@@ -484,6 +484,29 @@ body:has(.pfd-quick-grid) .md-top { display: none !important; }
 [data-md-color-scheme="slate"] .qljump a:hover { background: rgba(255, 138, 128, .26); }
 [data-md-color-scheme="slate"] .qljump p::-webkit-scrollbar-thumb { background: rgba(255,138,128,.5); }
 
+/* Static category buttons (Protocols page — owner ruling 2026-11-20). Every category
+   is on screen at once: the row WRAPS instead of scrolling sideways, so nothing can
+   hide off the right edge of a 360px phone and there is no right-edge fade to misread
+   as "nothing more here". Same 44px minimum hit area as the jump chips. */
+.qldots { margin: .3em 0 .9em; }
+.qldots p {
+  display: flex; flex-wrap: wrap; gap: .4em; margin: 0; }
+.qldots a {
+  flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center;
+  min-height: 44px; padding: .3em .95em; border-radius: 999px;
+  font-size: .8em; font-weight: 600; text-decoration: none; white-space: nowrap;
+  background: color-mix(in srgb, var(--md-primary-fg-color) 12%, var(--md-default-bg-color)); }
+.qldots a:hover { background: color-mix(in srgb, var(--md-primary-fg-color) 26%, var(--md-default-bg-color)); }
+/* Tools, not categories: an outlined pill so the two calculators read apart from the
+   category buttons beside them. The outline is not the only signal — both labels end
+   in "Calculator". */
+.qldots a.qdtool {
+  border: 1.5px solid color-mix(in srgb, var(--md-primary-fg-color) 45%, transparent);
+  font-weight: 700; }
+[data-md-color-scheme="slate"] .qldots a { color: #ffab91; background: rgba(255, 171, 145, .14); }
+[data-md-color-scheme="slate"] .qldots a:hover { background: rgba(255, 138, 128, .26); }
+[data-md-color-scheme="slate"] .qldots a.qdtool { border-color: rgba(255, 171, 145, .55); }
+
 /* Home page only: the site name already sits in the top bar, so the page title
    costs a screen of scroll for nothing. Compress it when the dashboard block
    is present (:has() — degrades to the normal title on older engines). */

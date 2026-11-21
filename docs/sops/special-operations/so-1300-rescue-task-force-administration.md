@@ -6,7 +6,7 @@
 <!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
 !!! abstract "Connected Notes"
     - **Named on this page:** [Incident Management System](../emergency-operations/EO-100-Incident-Management-System.md)
-    - **Browse the rest of this side:** [Fire Resources · Special Operations](../../resources/fire.md#special-operations)
+    - **Browse the rest of this side:** [SOPs · Special Operations](../../resources/fire.md#special-operations)
 <!-- CONNECTED:END -->
 
 ## I. Purpose

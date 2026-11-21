@@ -6,7 +6,7 @@
 <!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
 !!! abstract "Connected Notes"
     - **Named on this page:** [Elevator Emergencies](EO-110-Elevator-Emergencies.md) &nbsp;|&nbsp; [Chain of Command](../general-administration/GA-100-Chain-of-Command.md) &nbsp;|&nbsp; [Portable Radios](../equipment-and-apparatus/EA-600-Portable-Radios.md)
-    - **Browse the rest of this side:** [Fire Resources · Emergency Operations](../../resources/fire.md#emergency-operations)
+    - **Browse the rest of this side:** [SOPs · Emergency Operations](../../resources/fire.md#emergency-operations)
 <!-- CONNECTED:END -->
 
 ## IV. Operational Description

@@ -6,7 +6,7 @@
 <!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
 !!! abstract "Connected Notes"
     - **Referenced SOPs:** [Incident Infection Control](EMS-1900-Incident-Infection-Control.md)
-    - **Browse the rest of this side:** [EMS Resources · EMS SOPs](../../resources/ems.md#ems-sops)
+    - **Browse the rest of this side:** [Protocols · EMS SOPs](../../resources/ems.md#ems-sops)
 <!-- CONNECTED:END -->
 
 ## II. Applicability

@@ -7,7 +7,7 @@
 !!! abstract "Connected Notes"
     - **Referenced SOPs:** [Extreme Weather & Natural Disaster Call-Back](so-1100-extreme-weather-emergencies-and-natural-disaster-call-back-policy.md)
     - **Named on this page:** [Radio Communications](../emergency-operations/EO-500-Radio-Communications.md) &nbsp;|&nbsp; [Records Retention](../general-administration/GA-1210-Records-Retention.md)
-    - **Browse the rest of this side:** [Fire Resources · Special Operations](../../resources/fire.md#special-operations)
+    - **Browse the rest of this side:** [SOPs · Special Operations](../../resources/fire.md#special-operations)
 <!-- CONNECTED:END -->
 
 ## I. Purpose

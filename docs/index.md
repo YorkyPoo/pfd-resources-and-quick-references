@@ -24,39 +24,49 @@
 
 <section class="pfd-zone" markdown="1">
 
-**[Clinical protocols](ems/index.md)**{: .pfd-cap .pfd-cap--link }
+**[Protocols](resources/ems.md)**{: .pfd-cap .pfd-cap--link }
 
 <div class="pfd-scroller pfd-scroller--ems" markdown="1">
 
-[EMS Clinical Hub](ems/index.md){ .pfd-chip .pfd-chip--all }
+[All protocols](resources/ems.md){ .pfd-chip .pfd-chip--all }
+[EMS Clinical Hub](ems/index.md){ .pfd-chip .pfd-chip--ems }
 [Procedures](resources/ems.md#procedures){ .pfd-chip .pfd-chip--ems }
 [Controlled Substances](sops/ems/EMS-2100-Controlled-Substances.md){ .pfd-chip .pfd-chip--ems }
 [Refusals / AMA](protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md){ .pfd-chip .pfd-chip--ems }
 [Diversion](protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md){ .pfd-chip .pfd-chip--ems }
 [Documentation](sops/ems/EMS-1700-Mandatory-Reporting.md){ .pfd-chip .pfd-chip--ems }
 [MCI](sops/emergency-operations/EO-100-Incident-Management-System.md){ .pfd-chip .pfd-chip--ems }
-[Cardiac](ems/index.md#cardiac){ .pfd-chip .pfd-chip--ems }
-[Respiratory](ems/index.md#respiratory){ .pfd-chip .pfd-chip--ems }
-[Trauma](ems/index.md#trauma){ .pfd-chip .pfd-chip--ems }
-[Medical](ems/index.md#medical){ .pfd-chip .pfd-chip--ems }
-[Pediatric](ems/index.md#pediatric){ .pfd-chip .pfd-chip--ems }
+[Cardiac](resources/ems.md#cardiac){ .pfd-chip .pfd-chip--ems }
+[Respiratory](resources/ems.md#respiratory){ .pfd-chip .pfd-chip--ems }
+[Trauma](resources/ems.md#trauma){ .pfd-chip .pfd-chip--ems }
+[Medical](resources/ems.md#medical){ .pfd-chip .pfd-chip--ems }
+[Pediatric](resources/ems.md#pediatric-dosing-reference){ .pfd-chip .pfd-chip--ems }
 
 </div>
 
-**[Fire EOs &amp; field guides](resources/fire.md)**{: .pfd-cap .pfd-cap--link }
+**[SOPs](resources/fire.md)**{: .pfd-cap .pfd-cap--link }
 
 <div class="pfd-scroller pfd-scroller--fire" markdown="1">
 
-[All Fire SOPs](resources/fire.md){ .pfd-chip .pfd-chip--all }
+[All SOPs](resources/fire.md){ .pfd-chip .pfd-chip--all }
 [Emergency Operations](resources/fire.md#emergency-operations){ .pfd-chip .pfd-chip--fire }
-[Field References](resources/fire.md#field-references){ .pfd-chip .pfd-chip--fire }
-[Strategies](resources/fire.md#strategies){ .pfd-chip .pfd-chip--fire }
-[Frameworks](resources/fire.md#frameworks){ .pfd-chip .pfd-chip--fire }
 [Special Operations](resources/fire.md#special-operations){ .pfd-chip .pfd-chip--fire }
 [Equipment & Apparatus](resources/fire.md#equipment-apparatus){ .pfd-chip .pfd-chip--fire }
 [Safety & Health](resources/fire.md#safety-health){ .pfd-chip .pfd-chip--fire }
 [General Administration](resources/fire.md#general-administration){ .pfd-chip .pfd-chip--fire }
 [Public Relations](resources/fire.md#public-relations){ .pfd-chip .pfd-chip--fire }
+
+</div>
+
+**[Fire resources](resources/fire-resources.md)**{: .pfd-cap .pfd-cap--link }
+
+<div class="pfd-scroller pfd-scroller--fire" markdown="1">
+
+[Fire resources](resources/fire-resources.md){ .pfd-chip .pfd-chip--all }
+[Frameworks](resources/fire-resources.md#frameworks){ .pfd-chip .pfd-chip--fire }
+[Field References](resources/fire-resources.md#field-references){ .pfd-chip .pfd-chip--fire }
+[Strategies](resources/fire-resources.md#strategies){ .pfd-chip .pfd-chip--fire }
+[FORCES Study Aid](resources/fire-resources.md#study-aids){ .pfd-chip .pfd-chip--fire }
 
 </div>
 

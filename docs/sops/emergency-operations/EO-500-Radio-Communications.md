@@ -7,7 +7,7 @@
 !!! abstract "Connected Notes"
     - **Referenced SOPs:** [General EMS Guidelines](../ems/EMS-100-General-EMS-Guidelines.md) &nbsp;|&nbsp; [Infection Control Plan](../ems/EMS-200-Infection-Control-Plan-Policy.md) &nbsp;|&nbsp; [EMS Supplies & Equipment](../ems/EMS-300-EMS-Supplies-and-Equipment.md)
     - **Named on this page:** [Incident Management System](EO-100-Incident-Management-System.md)
-    - **Browse the rest of this side:** [Fire Resources · Emergency Operations](../../resources/fire.md#emergency-operations)
+    - **Browse the rest of this side:** [SOPs · Emergency Operations](../../resources/fire.md#emergency-operations)
 <!-- CONNECTED:END -->
 
 ## I. Purpose

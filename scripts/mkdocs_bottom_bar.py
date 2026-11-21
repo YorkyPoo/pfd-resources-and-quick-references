@@ -1,10 +1,10 @@
-"""Fixed 4-item mobile bottom bar (Home / EMS / Fire / Station).
+"""Fixed 4-item mobile bottom bar (Home / Protocols / SOPs / Station).
 
 Injected at build time so removing it later is deleting one line from mkdocs.yml; no page
 source is touched. Merged to main 2026-11-11 after the phone hand-test of /prototype/.
 
 Design constraints this satisfies, and why each one is here:
- - 4 items (Home / EMS / Fire / Station), equal width, min 44px hit area, glyph + label each.
+ - 4 items, equal width, min 44px hit area, glyph + label each.
  - padding-bottom: env(safe-area-inset-bottom) so the home-indicator band on iPhone does not
    eat half of the tap target — a bar measured at 56px in a browser can be effectively 24px
    on a notched phone without it.
@@ -14,6 +14,11 @@ Design constraints this satisfies, and why each one is here:
  - The existing drawer FAB at (320,770) is RAISED above the bar, not removed: the bar holds
    four destinations, the FAB still holds the full menu and search. Overlapping them would
    put a 54px circle on top of a live tab.
+
+Labels: "EMS"→"Protocols" and "Fire"→"SOPs" (owner ruling 2026-11-20 — a wrong name is a
+wrong signpost). Longer words in the same four equal cells, so the fit was MEASURED at
+360px, not assumed: see audit/gates/ia-r3-bottom-bar-360px.md. "Protocols" is the widest
+label at 9 characters and still fits on one line inside a 90px cell.
 """
 import os
 import posixpath
@@ -21,8 +26,8 @@ import re
 
 ITEMS = [
     ("Home", "index.html"),
-    ("EMS", "resources/ems.html"),
-    ("Fire", "resources/fire.html"),
+    ("Protocols", "resources/ems.html"),
+    ("SOPs", "resources/fire.html"),
     ("Station", "resources/station.html"),
 ]
 
@@ -33,7 +38,7 @@ ITEMS = [
 # Glyph presence was measured, not assumed: in the built page at font:40px sans-serif, ▦ has an
 # advance width of 37.8px while the unmapped .notdef box measures 30.0px — equal widths would
 # have meant tofu, which no CSS rule can reveal.
-ICON = {"Home": "⌂", "EMS": "✚", "Fire": "▲", "Station": "▦"}
+ICON = {"Home": "⌂", "Protocols": "✚", "SOPs": "▲", "Station": "▦"}
 
 
 def render_bar(here="."):

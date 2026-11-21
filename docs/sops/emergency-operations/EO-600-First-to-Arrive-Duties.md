@@ -12,7 +12,7 @@
 !!! abstract "Connected Notes"
     - **Same SOP family:** [FORCES Mnemonic (Study Aid)](EO-600a-FORCES-Mnemonic.md)
     - **Named on this page:** [Initial Alarm Company Assignments](../../fire-ems-references/initial-alarm-company-assignments.md) &nbsp;|&nbsp; [SAW CSS RECEO VSS](../../fire-ems-references/frameworks/saw-css-receo-vss.md) &nbsp;|&nbsp; [Reference Cards](../../fire-ems-references/frameworks/reference-cards.md)
-    - **Browse the rest of this side:** [Fire Resources · Emergency Operations](../../resources/fire.md#emergency-operations)
+    - **Browse the rest of this side:** [SOPs · Emergency Operations](../../resources/fire.md#emergency-operations)
 <!-- CONNECTED:END -->
 
 ---

@@ -6,7 +6,7 @@
 <!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
 !!! abstract "Connected Notes"
     - **Referenced SOPs:** [Incident Management System](EO-100-Incident-Management-System.md)
-    - **Browse the rest of this side:** [Fire Resources · Emergency Operations](../../resources/fire.md#emergency-operations)
+    - **Browse the rest of this side:** [SOPs · Emergency Operations](../../resources/fire.md#emergency-operations)
 <!-- CONNECTED:END -->
 
 ## I. Purpose

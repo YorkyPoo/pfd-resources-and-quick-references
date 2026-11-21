@@ -9,7 +9,7 @@
 !!! abstract "Connected Notes"
     - **Same SOP family:** [First to Arrive Duties](EO-600-First-to-Arrive-Duties.md)
     - **Named on this page:** [Initial Alarm Company Assignments](../../fire-ems-references/initial-alarm-company-assignments.md)
-    - **Browse the rest of this side:** [Fire Resources · Emergency Operations](../../resources/fire.md#emergency-operations)
+    - **Browse the rest of this side:** [Fire Resources · Study Aids](../../resources/fire-resources.md#study-aids)
 <!-- CONNECTED:END -->
 
 ## The Top Level

@@ -6,7 +6,7 @@
 <!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
 !!! abstract "Connected Notes"
     - **Named on this page:** [Chest Pain](../../protocols/cardiac/04_Chest_Pain_ACS_PROC.md)
-    - **Browse the rest of this side:** [Fire Resources · Emergency Operations](../../resources/fire.md#emergency-operations)
+    - **Browse the rest of this side:** [SOPs · Emergency Operations](../../resources/fire.md#emergency-operations)
 <!-- CONNECTED:END -->
 
 ## I. Purpose
