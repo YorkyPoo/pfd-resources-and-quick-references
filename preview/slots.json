@@ -54,6 +54,12 @@
       "description": "Dashboard round 2: scheme-scoped links, dosing table fixed, four scrollers",
       "sha": "b9d03275670435af73af48ed2cdd144f29080d56"
     },
+    "home-r4": {
+      "branch": "home-r4",
+      "built_at": "2026-11-21T02:41:40Z",
+      "description": "Homepage r4: Drug Calculator rename, Pharmacology tile, SOPs scroller removed, Protocols scroller -> EMS Hub",
+      "sha": "a869a4c31fb4fca071d2a951d60bc71b2e6e09a0"
+    },
     "howto": {
       "branch": "howto-pipstrip",
       "built_at": "2026-11-21T02:30:44Z",
@@ -133,5 +139,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-21T02:35:28.348138+00:00"
+  "updated_at": "2026-11-21T02:41:40.704183+00:00"
 }
