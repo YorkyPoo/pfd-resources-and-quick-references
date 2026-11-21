@@ -696,6 +696,18 @@ def quicklinks_block(records):
     parts += [chip(*LINKS_HUB_CHIP, "util")]
     parts += [chip(label, href, "util") for label, href in CREW_CHIPS]
     parts += ["", "</div>", "", "</div>", "", "</section>", "",
+              # Last block on the page (owner card t_515ccda5): a placeholder for the
+              # FD SCRAPbook. It does not exist yet, so it is a quiet heading and
+              # nothing else — no <a>, no cursor:pointer, no hover state. A control
+              # that looks live and goes nowhere is the defect this page just lost.
+              # The owner's spelling "SCRAPbook" is applied literally; the CSS for
+              # this block therefore does NOT text-transform, which would print
+              # SCRAPBOOK and silently correct it.
+              '<section class="pfd-zone pfd-coming" markdown="1">', "",
+              '<p class="pfd-coming__title">FD SCRAPbook — Coming Soon… Hopefully</p>', "",
+              "A home for the field guides, cheat sheets and station knowledge that "
+              "don't belong in a protocol.", "",
+              "</section>", "",
               QL_END]
     return "\n".join(parts)
 
