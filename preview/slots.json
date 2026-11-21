@@ -24,6 +24,12 @@
       "description": "All protocols: five-pip level strip (54 pages, 58 tables, 518 rows; PENDING rows rendered as pending)",
       "sha": "b3ff73b86f80fb626b9a7e133103136d249e9d14"
     },
+    "banner": {
+      "branch": "offline-banner",
+      "built_at": "2026-11-21T02:35:28Z",
+      "description": "Offline banner moved under the top chrome, off the bottom nav",
+      "sha": "bd05d19ab96cc19c09aaee5d7c8b169e02efda1b"
+    },
     "conversion-artifacts": {
       "branch": "conversion-artifacts",
       "built_at": "2026-11-20T06:25:48Z",
@@ -127,5 +133,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-21T02:30:44.231012+00:00"
+  "updated_at": "2026-11-21T02:35:28.348138+00:00"
 }
