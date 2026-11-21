@@ -1,0 +1,146 @@
+[
+ [
+  "card ems title",
+  "rgba(0, 0, 0, 0.87)",
+  "rgb(237,246,251)",
+  14.95
+ ],
+ [
+  "card ems sublabel",
+  "color(srgb 0 0 0 / 0.696471)",
+  "rgb(237,246,251)",
+  8.08
+ ],
+ [
+  "card ems 1px border",
+  "rgb(2, 132, 199)",
+  "color(srgb 0.930549 0.966235 0.984627)",
+  3.75
+ ],
+ [
+  "card ems icon",
+  "rgb(2, 132, 199)",
+  "color(srgb 0.930549 0.966235 0.984627)",
+  3.75
+ ],
+ [
+  "card fire title",
+  "rgba(0, 0, 0, 0.87)",
+  "rgb(250,239,239)",
+  14.59
+ ],
+ [
+  "card fire sublabel",
+  "color(srgb 0 0 0 / 0.696471)",
+  "rgb(250,239,239)",
+  7.97
+ ],
+ [
+  "card fire 1px border",
+  "rgb(185, 28, 28)",
+  "color(srgb 0.980784 0.937686 0.937686)",
+  5.75
+ ],
+ [
+  "card fire icon",
+  "rgb(185, 28, 28)",
+  "color(srgb 0.980784 0.937686 0.937686)",
+  5.75
+ ],
+ [
+  "chip all label",
+  "rgb(128, 0, 0)",
+  "rgb(242,230,230)",
+  8.96
+ ],
+ [
+  "chip all border",
+  "rgb(128, 0, 0)",
+  "color(srgb 0.950196 0.9 0.9)",
+  8.96
+ ],
+ [
+  "chip ems label",
+  "rgb(3, 105, 161)",
+  "rgb(230,243,249)",
+  5.23
+ ],
+ [
+  "chip ems border",
+  "rgb(2, 132, 199)",
+  "color(srgb 0.900784 0.951765 0.978039)",
+  3.61
+ ],
+ [
+  "chip fire label",
+  "rgb(153, 27, 27)",
+  "rgb(248,232,232)",
+  7.02
+ ],
+ [
+  "chip fire border",
+  "rgb(185, 28, 28)",
+  "color(srgb 0.972549 0.91098 0.91098)",
+  5.46
+ ],
+ [
+  "chip admin label",
+  "rgb(51, 65, 85)",
+  "rgb(237,238,240)",
+  8.91
+ ],
+ [
+  "chip admin border",
+  "rgb(71, 85, 105)",
+  "color(srgb 0.927843 0.933333 0.941176)",
+  6.52
+ ],
+ [
+  "chip util label",
+  "rgb(87, 83, 78)",
+  "rgb(242,241,240)",
+  6.75
+ ],
+ [
+  "chip util border",
+  "rgb(120, 113, 108)",
+  "color(srgb 0.947059 0.944314 0.942353)",
+  4.24
+ ],
+ [
+  "cap High-acuity tools \u2014 one ",
+  "rgba(0, 0, 0, 0.54)",
+  "rgb(255,255,255)",
+  4.59
+ ],
+ [
+  "cap Protocols",
+  "rgb(3, 105, 161)",
+  "rgb(255,255,255)",
+  5.93
+ ],
+ [
+  "cap SOPs",
+  "rgb(153, 27, 27)",
+  "rgb(255,255,255)",
+  8.31
+ ],
+ [
+  "cap Fire resources",
+  "rgb(153, 27, 27)",
+  "rgb(255,255,255)",
+  8.31
+ ],
+ [
+  "cap City & personnel policie",
+  "rgb(51, 65, 85)",
+  "rgb(255,255,255)",
+  10.35
+ ],
+ [
+  "cap Crew links & portals",
+  "rgb(87, 83, 78)",
+  "rgb(255,255,255)",
+  7.63
+ ]
+]

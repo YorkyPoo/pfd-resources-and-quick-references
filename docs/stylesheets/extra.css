@@ -348,9 +348,19 @@
   border-left: 4px solid var(--pfd-accent);
   box-shadow: 0 1px 2px rgba(16, 24, 40, .18), 0 3px 10px rgba(16, 24, 40, .10);
   transition: box-shadow .12s ease, transform .12s ease; }
-/* light scheme only: a neutral (not blush) surface a hair off the white page, so
-   elevation is legible even where the box-shadow is lost in glare */
-[data-md-color-scheme="default"] .md-typeset .pfd-card { background: #f8fafc; }
+/* light scheme only: the card takes its DOMAIN's colour, not a neutral grey. The
+   7% accent tint is the thing that makes a row of tiles read as five different
+   domains at arm's length instead of five identical near-white rectangles; the
+   1px accent border (plus the 4px left bar) carries the same hue again. Every
+   accent hex here is >=3:1 on this tint (EMS 3.74, FIRE 5.75, ADMIN 6.82,
+   util 4.41 — measured, see audit/light-colour-evidence.md), so the border and
+   the icon are meaningful UI that survives greyscale as a distinct tone. */
+[data-md-color-scheme="default"] .md-typeset .pfd-card {
+  background: color-mix(in srgb, var(--pfd-accent) 7%, var(--md-default-bg-color));
+  border-color: var(--pfd-accent); }
+[data-md-color-scheme="default"] .md-typeset .pfd-card:hover,
+[data-md-color-scheme="default"] .md-typeset .pfd-card:focus-visible {
+  background: color-mix(in srgb, var(--pfd-accent) 12%, var(--md-default-bg-color)); }
 .md-typeset .pfd-card--plain { grid-template-columns: 1fr; grid-template-areas: "t" "s"; }
 .md-typeset .pfd-card:hover,
 .md-typeset .pfd-card:focus-visible {
@@ -405,6 +415,43 @@
 [data-md-color-scheme="slate"] .md-typeset a.pfd-chip--admin { --pfd-accent: #94a3b8; }
 [data-md-color-scheme="slate"] .md-typeset a.pfd-chip--util { --pfd-accent: #a8a29e; }
 
+/* ---------------------------------------------------------------------------
+   LIGHT SCHEME: TEXT-SIZE ACCENT INK (owner card t_19a7477e)
+   ---------------------------------------------------------------------------
+   The four hexes above are UI weights — they carry a 4px bar, an icon and a 1px
+   border, all of which need 3:1, not 4.5:1. As *text* they do not all survive:
+   EMS #0284c7 is 4.10:1 on white, under the 4.5:1 floor for body-size text. So
+   each domain gets a second, darker "ink" tone for anything that is read as a
+   word (section captions, chip labels). Measured against the surface it actually
+   sits on — the 7% card tint and the 10% chip tint, not plain white:
+       EMS   #0369a1  5.42:1 on card tint   5.24:1 on chip tint
+       FIRE  #991b1b  7.38:1                7.00:1
+       ADMIN #334155  9.32:1                8.92:1
+       util  #57534e  7.01:1                6.76:1
+   The four inked tones also differ in LIGHTNESS (5.4 / 7.4 / 9.3 / 7.0), so the
+   domains stay ordered and distinguishable in greyscale and in cab glare, where
+   hue is gone. Nothing here is set under the slate scheme.
+   --------------------------------------------------------------------------- */
+[data-md-color-scheme="default"] .md-typeset .pfd-card--ems,
+[data-md-color-scheme="default"] .md-typeset a.pfd-chip--ems,
+[data-md-color-scheme="default"] .md-typeset .pfd-cap--ems { --pfd-ink: #0369a1; }
+[data-md-color-scheme="default"] .md-typeset .pfd-card--fire,
+[data-md-color-scheme="default"] .md-typeset a.pfd-chip--fire,
+[data-md-color-scheme="default"] .md-typeset .pfd-cap--fire { --pfd-ink: #991b1b; }
+[data-md-color-scheme="default"] .md-typeset .pfd-card--admin,
+[data-md-color-scheme="default"] .md-typeset a.pfd-chip--admin,
+[data-md-color-scheme="default"] .md-typeset .pfd-cap--admin { --pfd-ink: #334155; }
+[data-md-color-scheme="default"] .md-typeset a.pfd-chip--util,
+[data-md-color-scheme="default"] .md-typeset .pfd-cap--util { --pfd-ink: #57534e; }
+
+/* section captions ("Protocols", "SOPs", "Fire resources", "City & personnel
+   policies", "Crew links & portals"): domain ink instead of one grey. Still
+   uppercase, still a word — the colour only echoes what the caption already
+   says. A caption with no domain modifier keeps Material's grey. */
+[data-md-color-scheme="default"] .md-typeset .pfd-cap,
+[data-md-color-scheme="default"] .md-typeset .pfd-cap--link {
+  color: var(--pfd-ink, var(--md-default-fg-color--light)); }
+
 /* --- the two scrollers --------------------------------------------------- */
 .md-typeset .pfd-scroller {
   display: flex; align-items: center; gap: .38em;
@@ -432,6 +479,18 @@
 .md-typeset .pfd-chip:hover,
 .md-typeset .pfd-chip:focus-visible {
   background: color-mix(in srgb, var(--pfd-accent) 14%, var(--md-default-bg-color)); }
+/* light scheme only: a chip is a DOMAIN object, not a uniform pink pill. Tinted
+   fill + the accent that owns the row as its border + the darker ink as its
+   label. Label ratios on the 10% tint: EMS 5.24, FIRE 7.00, ADMIN 8.92,
+   util 6.76 — all over the 4.5:1 floor; the border measures 3.6-6.5:1 on the
+   same tint (>3:1). The ::before dot keeps the raw accent. */
+[data-md-color-scheme="default"] .md-typeset .pfd-chip {
+  background: color-mix(in srgb, var(--pfd-accent) 10%, var(--md-default-bg-color));
+  border-color: var(--pfd-accent);
+  color: var(--pfd-ink, var(--pfd-accent)) !important; }
+[data-md-color-scheme="default"] .md-typeset .pfd-chip:hover,
+[data-md-color-scheme="default"] .md-typeset .pfd-chip:focus-visible {
+  background: color-mix(in srgb, var(--pfd-accent) 18%, var(--md-default-bg-color)); }
 
 /* --- bottom utility row: policies beside crew links ---------------------- */
 .md-typeset .pfd-secondary-row {
