@@ -1,0 +1,56 @@
+# Known-stale invariants — recorded, not muted.
+#
+# Every entry here is a FAIL the verifier still produces on every run. The
+# verifier prints them under "REGISTERED KNOWN-STALE" with the reason below, and
+# they do NOT fail the run. Anything it prints under "UNREGISTERED" does fail.
+#
+# An entry that stops failing also fails the run: either the cause was fixed
+# (delete the entry) or the check moved (re-point it). A register that can only
+# grow is a junk drawer, so this is the rule that keeps it honest.
+#
+# `check` + `identity` must match what verify_pems_canonical.py emits verbatim.
+# Do not add an entry because a green run is wanted; add it only with an owner
+# ruling, a reason, and a date.
+owner_ruling: 2026-11-21
+entries:
+  - check: at_risk_matched_rows
+    identity: c2-scope.json
+    reason: >
+      counts.at_risk_matched_rows is the 61-row C2 queue as adjudicated before
+      the row-splits rollout. Two cardiac rows adjudicated at row 5 are
+      published as rows 5 and 5a after row_splits.yaml, so the recheck script
+      now derives a different list (04_Cardiac_Arrest_Non_Traumatic_PROC.md r5a
+      and 04_V_Fib_Pulseless_V_Tach_PROC.md r5a) than the queue records
+      (Non_Traumatic r5 and Traumatic r5). The queue itself is the owner's
+      ruling and must not be regenerated; only the derived comparison is stale.
+    owner_ruling: 2026-11-21
+
+  - check: at-risk row
+    identity: 04_Cardiac_Arrest_Non_Traumatic_PROC.md r5
+    reason: >
+      The pairing for this page now sits at row 5a after row_splits.yaml
+      (row 5 was split), so an at-risk list keyed on row 5 can no longer name
+      it. For this page the finding also changed to site_broader: the page
+      publishes levels against EMR at 5a while the mapped PEMS row is p.63#7.
+      The queue keeps the pre-split adjudication; the split relabel is real.
+    owner_ruling: 2026-11-21
+
+  - check: at-risk row
+    identity: 04_Cardiac_Arrest_Traumatic_PROC.md r5
+    reason: >
+      Same relabel as the non-traumatic page: row 5 became 5a under
+      row_splits.yaml, so an at-risk list keyed on row 5 no longer names the
+      page. The underlying ambiguity (row 5 mapped to the ambiguous badge on
+      p.61#4) was adjudicated by the owner and is not re-derived here.
+    owner_ruling: 2026-11-21
+
+  - check: stale human review
+    identity: "protocols/trauma/09_Trauma_PROC.md p.83 #3"
+    reason: >
+      The recorded human review of 09_Trauma_PROC.md against PEMS p.83 #3
+      ("Assess for shock") no longer maps to a pairing: that row was moved out
+      of the intervention grid into "### References & Good Practice", so the
+      pairing the review was written against no longer exists in the alignment.
+      The review is historical; re-pointing or retiring it is a decision for
+      the owner, not for a generator.
+    owner_ruling: 2026-11-21

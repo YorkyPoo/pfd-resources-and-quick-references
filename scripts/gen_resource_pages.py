@@ -87,7 +87,9 @@ GROUP_RENAME = {
 # and Outstanding Decisions must keep its own heading instead of inheriting the
 # section name "Protocols".
 PATH_GROUP = {
-    "medications.md": "Medications & Calculators",
+    # The page title is "Drug Calculator" (owner ruling 2026-11-21): the homepage tile,
+    # the page H1, the nav label and this group heading must all wear the same name.
+    "medications.md": "Drug Calculator",
     "protocols/outstanding-decisions.md": "Outstanding Decisions",
 }
 
@@ -105,7 +107,7 @@ FIRE_REF_ORDER = ["Frameworks", "Field References", "Strategies", "Study Aids"]
 # References are orientation material and go first; the audit page goes last.
 EMS_ORDER = ["Front Matter", "Quick References", "Cardiac", "Respiratory", "Trauma",
              "Medical", "Administrative", "Procedures", "Toxicology", "Neurologic",
-             "General", "Pharmacology", "Medications & Calculators",
+             "General", "Pharmacology", "Drug Calculator",
              "Pediatric Dosing Reference", "EMS SOPs", "Outstanding Decisions"]
 # Owner ruled Procedures ABOVE Pharmacology. Assert it here rather than trusting the
 # table above: a future reorder that breaks the ruling must fail the generator.
@@ -124,10 +126,15 @@ STATION_ORDER = ["Orientation", "Portals & Systems", "Policies & Administration"
 SCENE_TOOLS = [
     ("Pediatric Dosing Calculator", "pediatric-dosing/calculator.md",
      "Weight-based dosing", "EMS", "dose"),
-    ("Drugs & Drip Rates", "medications.md",
+    ("Drug Calculator", "medications.md",
      "Push & infusion rates", "EMS", "drug"),
     ("Skills Procedures", "resources/ems.md#procedures",
      "Step-by-step skills", "EMS", "skills"),
+    # Added at the owner's request (2026-11-21) so the drug index is one tap from the
+    # homepage instead of two. Sixth tile: the grid is 2-per-row, so six leaves no
+    # orphan on the last row.
+    ("Pharmacology", "resources/ems.md#pharmacology",
+     "Every medication", "EMS", "pharm"),
     ("Alarm Assignments", "fire-ems-references/initial-alarm-company-assignments.md",
      "Who rides what", "FIRE", "alarm"),
     ("First to Arrive (EO 6.00)", "sops/emergency-operations/EO-600-First-to-Arrive-Duties.md",
@@ -144,21 +151,20 @@ EMS_CLINICAL_STRIP = [
     ("Medical", EMS_HUB + "#medical"),
     ("Pediatric", EMS_HUB + "#pediatric-dosing-reference"),
 ]
-EMS_CLINICAL_HUB_CHIP = ("EMS Clinical Hub", EMS_CLINICAL_HUB)
 EMS_HUB_CHIP = ("All protocols", EMS_HUB)
 EMS_PROCEDURES_CHIP = ("Procedures", "resources/ems.md#procedures")
-# Fire side, split in two (owner ruling 2026-11-20): the SOP index and the
-# reference shelf are different pages now, so each scroller points at its own page.
-SOP_HUB_CHIP = ("All SOPs", FIRE_HUB)
-SOP_STRIP = [
-    ("Emergency Operations", FIRE_HUB + "#emergency-operations"),
-    ("Special Operations", FIRE_HUB + "#special-operations"),
-    ("Equipment & Apparatus", FIRE_HUB + "#equipment-apparatus"),
-    ("Safety & Health", FIRE_HUB + "#safety-health"),
-    ("General Administration", FIRE_HUB + "#general-administration"),
-    ("Public Relations", FIRE_HUB + "#public-relations"),
-]
-FIRE_REF_HUB_CHIP = ("Fire resources", FIRE_REF_HUB)
+# The SOPs scroller was deleted at the owner's request (2026-11-21): SOPs has a
+# permanent bottom-bar tab, so a homepage row was a second route to the same page.
+# SOP_HUB_CHIP / SOP_STRIP went with it — nothing else referenced them.
+# Fire side: the reference shelf still has its own scroller, because Fire Resources
+# has no bottom-bar tab and would otherwise be unreachable from the homepage.
+# Card t_a4b01dd6: the chip must not repeat its own section caption ("Fire resources"
+# under a FIRE RESOURCES heading said nothing). "Reference shelf" is what the page
+# calls itself in its own first line, so the chip names a place, not a heading.
+FIRE_REF_HUB_CHIP = ("Reference shelf", FIRE_REF_HUB)
+# Same rule, EMS row: ems/index.md is titled "EMS Clinical Hub", so the chip carries
+# that name instead of repeating the "EMS Hub" caption directly above it.
+EMS_CLINICAL_HUB_CHIP = ("EMS Clinical Hub", EMS_CLINICAL_HUB)
 FIRE_REF_STRIP = [
     ("Frameworks", FIRE_REF_HUB + "#frameworks"),
     ("Field References", FIRE_REF_HUB + "#field-references"),
@@ -247,7 +253,8 @@ EMS_ADMIN = [
 ]
 # Calculator entry points. Icons come from ICONS (drawn SVG, no icon font).
 EMS_CALCS = [
-    ("Drug &amp; Drip Rates", "medications.md", "Push and infusion calculator", "drug"),
+    # Same name as the page it opens and the homepage tile (owner ruling 2026-11-21).
+    ("Drug Calculator", "medications.md", "Push and infusion calculator", "drug"),
     ("Pediatric Dosing Calculator", "pediatric-dosing/calculator.md",
      "Weight-based dosing", "dose"),
     ("Pediatric Dosing Tables", "pediatric-dosing/dosing-tables.md",
@@ -366,6 +373,15 @@ ICONS = {
                '<rect x="14.4" y="9.4" width="6.6" height="6" rx="1.4" fill="currentColor"/>'
                '<circle cx="6.6" cy="17.8" r="1.9" fill="currentColor"/>'
                '<circle cx="17.2" cy="17.8" r="1.9" fill="currentColor"/></svg>'),
+    "pharm": ('<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+              # Erlenmeyer flask: a pharmacology index, not another capsule (the Drug
+              # Calculator tile already owns the capsule glyph).
+              '<path d="M9.3 2.9h5.4v2.6l4.5 8.6a3.7 3.7 0 0 1-3.3 5.4H8.1a3.7 3.7 0 0 1-3.3-5.4l4.5-8.6V2.9z" '
+              'fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>'
+              '<line x1="8.1" y1="2.9" x2="15.9" y2="2.9" stroke="currentColor" '
+              'stroke-width="1.8" stroke-linecap="round"/>'
+              '<path d="M6.4 15.2h11.2" stroke="currentColor" stroke-width="1.6" '
+              'stroke-linecap="round"/></svg>'),
 }
 
 # Personnel policies are not in the nav (only the index page is), so the strip
@@ -613,13 +629,11 @@ def check_targets(records):
     missing += [p for _l, p, _s in POLICY_TILES if not on_disk(p)]
     missing += [p for _l, p in EMS_SOP_STRIP if not on_disk(p)]
     missing += [p for _l, p in EMS_CLINICAL_STRIP if not on_disk(p)]
-    missing += [p for _l, p in SOP_STRIP if not on_disk(p)]
     missing += [p for _l, p in FIRE_REF_STRIP if not on_disk(p)]
     missing += [p for _l, p, _s in EMS_SOP_SHORT if not on_disk(p)]
     # FIRE_REF_HUB is created by this script, so on the FIRST run after the split it is
     # not in the on-disk nav yet; every later --check run has it and checks it.
-    missing += [p for p in (SOP_HUB_CHIP[1], FIRE_REF_HUB_CHIP[1], EMS_CLINICAL_HUB_CHIP[1],
-                            EMS_HUB_CHIP[1])
+    missing += [p for p in (FIRE_REF_HUB_CHIP[1], EMS_HUB_CHIP[1])
                 if p not in nav_paths and p != FIRE_REF_HUB]
     missing += [EMS_PROCEDURES_CHIP[1].split("#")[0]] * (not on_disk(EMS_PROCEDURES_CHIP[1]))
     missing += [p for _l, p in CREW_CHIPS if not p.startswith("http") and not on_disk(p)]
@@ -635,7 +649,7 @@ def check_targets(records):
 
 
 def quicklinks_block(records):
-    """The on-scene dashboard: five high-acuity tools and four scrollers.
+    """The on-scene dashboard: six high-acuity tools and four scrollers.
 
     Card t_a650f9ea (owner's words, applied literally): every scroller starts with the
     section itself, then the real destinations. The two bottom groups are scrollers
@@ -652,46 +666,57 @@ def quicklinks_block(records):
               for label, path, sub, domain, icon in SCENE_TOOLS]
     parts += ["", "</div>", "", "</section>", "",
               '<section class="pfd-zone" markdown="1">', "",
-              f'**[Protocols]({EMS_HUB})**'
-              '{: .pfd-cap .pfd-cap--link }', "",
+              # Captions are LABELS, not links (t_75b6aba8): the anchor was a 14px tap
+              # target dressed as a label and it duplicated the row's first chip. A raw
+              # <p> has no href to rewrite, so uncounted .md links cannot leak either.
+              '<p class="pfd-cap pfd-cap--ems">EMS Hub</p>', "",
               '<div class="pfd-scroller pfd-scroller--ems" markdown="1">', ""]
-    parts += [chip(*EMS_HUB_CHIP, "all"), chip(*EMS_CLINICAL_HUB_CHIP, "ems"),
-              chip(*EMS_PROCEDURES_CHIP, "ems")]
+    # Every row starts with the section page itself (t_75b6aba8 guard). The EMS row
+    # lost that chip in round 4 only because the caption duplicated its destination;
+    # with the caption now an honest label, ems/index.md needs its chip back or the
+    # hub is unreachable from the homepage.
+    parts += [chip(*EMS_CLINICAL_HUB_CHIP, "ems"),
+              chip(*EMS_HUB_CHIP, "all"), chip(*EMS_PROCEDURES_CHIP, "ems")]
     parts += [chip(label, href, "ems") for label, href in EMS_SOP_STRIP]
     parts += [chip(label, href, "ems") for label, href in EMS_CLINICAL_STRIP]
     parts += ["", "</div>", "",
-              f'**[SOPs]({FIRE_HUB})**'
-              '{: .pfd-cap .pfd-cap--link }', "",
-              '<div class="pfd-scroller pfd-scroller--fire" markdown="1">', ""]
-    parts += [chip(*SOP_HUB_CHIP, "all")]
-    parts += [chip(label, href, "fire") for label, href in SOP_STRIP]
-    parts += ["", "</div>", "",
-              f'**[Fire resources]({FIRE_REF_HUB})**'
-              '{: .pfd-cap .pfd-cap--link }', "",
+              '<p class="pfd-cap pfd-cap--fire">Fire resources</p>', "",
               '<div class="pfd-scroller pfd-scroller--fire" markdown="1">', ""]
     parts += [chip(*FIRE_REF_HUB_CHIP, "all")]
     parts += [chip(label, href, "fire") for label, href in FIRE_REF_STRIP]
     parts += ["", "</div>", "", "</section>", "",
               '<section class="pfd-secondary-row" markdown="1">', "",
               '<div class="pfd-secondary" markdown="1">', "",
-              f'**[City &amp; personnel policies]({STATION_POLICIES})**'
-              '{: .pfd-cap .pfd-cap--link }', "",
+              '<p class="pfd-cap pfd-cap--admin">City &amp; personnel policies</p>', "",
               '<div class="pfd-scroller pfd-scroller--admin" markdown="1">', ""]
     # Scroller order is the owner's: the hub, the full list, then the five policies a
-    # crew actually reaches for.
-    parts += [chip("City &amp; Personnel Policies", STATION_POLICIES, "admin"),
+    # crew actually reaches for. Card t_a4b01dd6: the first chip may not repeat the
+    # caption ("City & personnel policies"), so the page is named by where it lives —
+    # station policy — and "All policies" stays the in-page full list below it.
+    parts += [chip("Station Policies", STATION_POLICIES, "admin"),
               chip("All policies", STATION_POLICIES + "#full-policy-list", "admin")]
     parts += [chip(label, path, "admin") for label, path, _s in POLICY_TILES]
     parts += ["", "</div>", "", "</div>", "",
               '<div class="pfd-secondary" markdown="1">', "",
-              f'**[Crew links &amp; portals]({LINKS_PAGE})**'
-              '{: .pfd-cap .pfd-cap--link }', "",
+              '<p class="pfd-cap pfd-cap--util">Crew links &amp; portals</p>', "",
               '<div class="pfd-scroller pfd-scroller--util" markdown="1">', ""]
     # Utility, not admin: these are "where do I go" links, not policy, so they carry
     # their own neutral accent and the colour code never claims the crew row is policy.
     parts += [chip(*LINKS_HUB_CHIP, "util")]
     parts += [chip(label, href, "util") for label, href in CREW_CHIPS]
     parts += ["", "</div>", "", "</div>", "", "</section>", "",
+              # Last block on the page (owner card t_515ccda5): a placeholder for the
+              # FD SCRAPbook. It does not exist yet, so it is a quiet heading and
+              # nothing else — no <a>, no cursor:pointer, no hover state. A control
+              # that looks live and goes nowhere is the defect this page just lost.
+              # The owner's spelling "SCRAPbook" is applied literally; the CSS for
+              # this block therefore does NOT text-transform, which would print
+              # SCRAPBOOK and silently correct it.
+              '<section class="pfd-zone pfd-coming" markdown="1">', "",
+              '<p class="pfd-coming__title">FD SCRAPbook — Coming Soon… Hopefully</p>', "",
+              "A home for the field guides, cheat sheets and station knowledge that "
+              "don't belong in a protocol.", "",
+              "</section>", "",
               QL_END]
     return "\n".join(parts)
 
@@ -713,7 +738,7 @@ def build_ems_hub(ems_groups):
              "most, and the calculators. Every clinical protocol, by category, is on "
              "[Protocols](../resources/ems.md).", "",
              '<section class="pfd-zone" markdown="1">', "",
-             '<p class="pfd-cap">Administrative protocols</p>', "",
+             '<p class="pfd-cap pfd-cap--ems">Administrative protocols</p>', "",
              '<div class="pfd-quick-grid" markdown="1">', ""]
     for label, path, sub in EMS_ADMIN:
         lines.append(card(label, rel("ems", path), sub, "EMS", plain=True))
@@ -722,7 +747,7 @@ def build_ems_hub(ems_groups):
               "under [Administrative](../resources/ems.md#administrative) on the Protocols "
               "page.", "", "</section>", "",
               '<section class="pfd-zone" markdown="1">', "",
-             '<p class="pfd-cap">EMS SOPs — the six that come up most</p>', "",
+             '<p class="pfd-cap pfd-cap--ems">EMS SOPs — the six that come up most</p>', "",
              '<div class="pfd-quick-grid" markdown="1">', ""]
     for label, path, sub in EMS_SOP_SHORT:
         lines.append(card(label, rel("ems", path), sub, "EMS", plain=True))
@@ -730,7 +755,7 @@ def build_ems_hub(ems_groups):
               "All 23 EMS SOPs are listed under "
               "[EMS SOPs](../resources/ems.md#ems-sops).", "", "</section>", "",
               '<section class="pfd-zone" markdown="1">', "",
-              '<p class="pfd-cap">Calculators</p>', "",
+              '<p class="pfd-cap pfd-cap--ems">Calculators</p>', "",
               '<div class="pfd-quick-grid" markdown="1">', ""]
     for label, path, sub, icon in EMS_CALCS:
         lines.append(card(label, rel("ems", path), sub, "EMS", icon, plain=True))
@@ -752,7 +777,7 @@ def build_policies_page():
              "[EMS Clinical Hub](../ems/index.md) and fireground procedure is under "
              "[SOPs](../resources/fire.md).", "",
              '<section class="pfd-zone" markdown="1">', "",
-             '<p class="pfd-cap">Most reached</p>', "",
+             '<p class="pfd-cap pfd-cap--admin">Most reached</p>', "",
              '<div class="pfd-quick-grid" markdown="1">', ""]
     for label, path, sub in POLICY_TILES:
         lines.append(card(label, rel("station", path), sub, "ADMIN", plain=True))

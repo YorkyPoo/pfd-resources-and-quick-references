@@ -5,11 +5,11 @@ Input to C2. A row is ambiguous when the structure cannot settle it. `reason_kin
 - `shared_pems_row` — one PEMS row backs the site's TWO rows. Either the site row's label names an intervention whose PEMS row already backs a different site row (CPAP and SGA share p.123 row 3), or the site row has no distinctive label word and its every word is inside a PEMS row another site row already holds ("A: Obtain IV access" is the head of p.135 row 2, whose fluid-bolus tail the next row matched). The containment case carries `contained_in_pems` with the PEMS row, the overlapping words and the ratio.
 
 Rows that carry `section_fallback: true` sit under a site section heading with no single PEMS counterpart, so they were scored against the whole page grid instead. That is an annotation on the row, never a disposition: the row is still `matched`, `ambiguous` or a gap on its own evidence.
-**Total: 125 rows** (multiple_candidates 12, no_counterpart 82, shared_pems_row 31) across 27 pages.
+**Total: 136 rows** (multiple_candidates 12, no_counterpart 94, shared_pems_row 30) across 28 pages.
 
 Raster crops already exist in `audit/level-scan/evidence/` for the six known hard cases (`vfib_p63`, `vfib_p64`, `crush_p91`, `crush_p92`, `cpap_p245`, `respdist_p125`); where an entry below names one, look at the crop instead of re-rastering.
 
-## `protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` — 7 ambiguous
+## `protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md` — 9 ambiguous
 - row **1** (base section) [`multiple_candidates`] — Follow Universal Patient Care / Initial Patient Contact protocol. Determine DNR status. Refer to Death and Criteria for Withholding Resuscitation prot
   - why: 2 different PEMS rows explain this row about equally well: p.57 row 1 (0.88), p.57 row 0 (0.79); the site row may merge them
 - row **12** (base section) [`multiple_candidates`] — If ROSC is achieved, refer to Post Cardiac Arrest Care (ROSC) protocol. If ROSC is not achieved, refer to Death and Criteria for Withholding Resuscita
@@ -23,14 +23,20 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 - row **7** (base section) [`no_counterpart`] — Monitor ETCO2. If ETCO2 < 10 or dropping, reassess and optimize compression rate, depth, and recoil.
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.57 row 4) (best coverage 0.00, p.57 row 4; see `text-binding.md`)
-- row **8** (base section) [`no_counterpart`] — Apply AED / Assess cardiac rhythm every 2 minutes. If AED is advising to shock or rhythm is VF or VT (as determined by EMT-I or P), defibrillate at ma
+- row **8** (base section) [`no_counterpart`] — Apply the AED and repeat the AED rhythm analysis every 2 minutes; the AED announces whether a shock is advised. If the AED is advising to shock, defib
+  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.57 row 8) (best coverage 0.00, p.57 row 8; see `text-binding.md`)
+- row **8a** (base section) [`no_counterpart`] — Interpret the rhythm: VF or VT (shockable), or asystole or PEA (non-shockable).
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.57 row 1) (best coverage 0.00, p.57 row 1; see `text-binding.md`)
+- row **8b** (base section) [`no_counterpart`] — Manual defibrillation: if the rhythm is VF or VT, defibrillate immediately — ADULT: 200 J Biphasic / 360 J Monophasic; PEDIATRIC: 2 J/kg initial, then
+  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.57 row 8) (best coverage 0.00, p.57 row 8; see `text-binding.md`)
 - row **11** (base section) [`shared_pems_row`] — For cardiac arrest in renal dialysis patients, patients with crush injuries, suspected calcium channel blocker overdose, or suspected hyperkalemia onl
   - why: site row label names an intervention that p.57 row 7 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
   - evidence: `crush_p91-091.png`, `crush_p92-092.png`
 
-## `protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md` — 4 ambiguous
+## `protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md` — 5 ambiguous
 - row **14** (base section) [`multiple_candidates`] — Post-Resuscitation: • If ROSC achieved, refer to Post Cardiac Arrest Care (ROSC) protocol. • If ROSC not achieved, refer to Death and Criteria for Wit
   - why: 3 different PEMS rows explain this row about equally well: p.64 row 13 (0.65), p.57 row 1 (0.64), p.63 row 1 (0.64); the site row may merge them
 - row **9** (base section) [`multiple_candidates`] — Amiodarone - V-Fib/V-Tach Only (if persists after defibrillation and Epinephrine): • ADULT: 300 mg IV/IO slow push • PEDIATRIC: 5 mg/kg IV/IO slow pus
@@ -38,11 +44,14 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 - row **3** (base section) [`no_counterpart`] — Airway Management: • Apply BVM with high-flow O₂. • Use quantitative EtCO₂ monitoring with BVM: - If EtCO₂ < 10 mmHg, improve compressions - If sudden
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.06 against p.64 row 13) (best coverage 0.06, p.64 row 13; see `text-binding.md`)
-- row **4** (base section) [`no_counterpart`] — AED / Rhythm Assessment: • Apply AED and assess cardiac rhythm every 2 minutes. • Identify rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shock
+- row **4** (base section) [`no_counterpart`] — AED / Rhythm Assessment: • Apply the AED and repeat the AED rhythm analysis every 2 minutes; the AED announces whether a shock is advised.
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
-  - text pass: `no_evidence_local` / `best_evidence_is_held` — this row's best text evidence is p.63 row 7 (coverage 1.00, badge I), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix (best coverage 1.00, p.63 row 7; see `text-binding.md`)
+  - text pass: `no_evidence_local` / `best_evidence_is_held` — this row's best text evidence is p.63 row 7 (coverage 1.00, badge I), which site row 5a already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix (best coverage 1.00, p.63 row 7; see `text-binding.md`)
+- row **4a** (base section) [`no_counterpart`] — • Interpret the rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shockable).
+  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.63 row 2) (best coverage 0.00, p.63 row 2; see `text-binding.md`)
 
-## `protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md` — 5 ambiguous
+## `protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md` — 6 ambiguous
 - row **3** (base section) [`multiple_candidates`] — Apply AED / Monitor (Assess rhythm before CPR if possible)
   - why: 3 different PEMS rows explain this row about equally well: p.61 row 8 (0.40), p.61 row 4 (0.38), p.61 row 5 (0.38); the site row may merge them
 - row **10** (base section) [`no_counterpart`] — Rapid transport to Level I/II Trauma Center (Goal < 10 mins)
@@ -54,7 +63,9 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 - row **8** (base section) [`no_counterpart`] — Assess Shock Index > 1 / Resuscitate prior to intubation
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.20 against p.61 row 6) (best coverage 0.20, p.61 row 6; see `text-binding.md`)
-- row **4** (base section) [`shared_pems_row`] — Asystole on arrival: Consider withholding CPR
+- row **5** (base section) [`shared_pems_row`] — PEA / VF / VT: Continue CPR
+  - why: every word of this row (continue) occurs in p.61 row 4 — 1 of that row's 12 significant words — which site row 4 already holds; the site splits one PEMS row into two
+- row **5a** (base section) [`shared_pems_row`] — Defibrillate if indicated
   - why: site row label names an intervention that p.61 row 4 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
 
 ## `protocols/cardiac/04_Chest_Pain_ACS_PROC.md` — 6 ambiguous
@@ -96,18 +107,16 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 - row **8** (base section) [`shared_pems_row`] — If no conversion after 2 minutes, repeat Adenosine at DOUBLE initial dose
   - why: site row label names an intervention that p.135 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
 
+## `protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md` — 1 ambiguous
+- row **5** (base section) [`shared_pems_row`] — Defibrillation — AED: apply the AED and defibrillate when the AED advises a shock (the device selects the energy).
+  - why: site row label names an intervention that p.63 row 7 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
+
 ## `protocols/general/02_Behavioral_Patient_Restraint_PROC.md` — 1 ambiguous
 - row **2** (base section) [`no_counterpart`] — Apply de-escalation techniques. Remain calm, maintain soothing tone, allow space, do not reinforce delusions, set boundaries.
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.71 row 0) (best coverage 0.00, p.71 row 0; see `text-binding.md`)
 
-## `protocols/general/02_Cold_Exposure_PROC.md` — 3 ambiguous
-- row **6** (base section) [`no_counterpart`] — If patient is alert and responsive: Use active external rewarming with heat packs, warm blankets, etc.
-  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
-  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.38 against p.67 row 1) (best coverage 0.38, p.67 row 1; see `text-binding.md`)
-- row **9** (base section) [`no_counterpart`] — Contact Medical Control prior to use of AED.
-  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
-  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.20 against p.67 row 4) (best coverage 0.20, p.67 row 4; see `text-binding.md`)
+## `protocols/general/02_Cold_Exposure_PROC.md` — 1 ambiguous
 - row **3** (base section) [`shared_pems_row`] — Handle the patient gently and avoid excessive movement (risk of cardiac arrest/VF).
   - why: site row label names an intervention that p.67 row 1 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
 
@@ -123,17 +132,11 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 - row **7** (base section) [`shared_pems_row`] — OR Moderate to Severe Pain (6 - 10): • Adult: Morphine Sulfate 2.5-5 mg IV/IM (Max total dose: 10 mg) • Pediatric: Morphine Sulfate 0.1 mg/kg IV/IM (M
   - why: site row label names an intervention that p.77 row 4 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
 
-## `protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md` — 4 ambiguous
-- row **5** (base section) [`multiple_candidates`] — Post-Intubation Sedation, consider ONE of the following: • ADULT: Ketamine (Ketalar) 1 mg/kg IV/IO (Maximum single dose: 100 mg). May repeat every 10-
-  - why: 2 different PEMS rows explain this row about equally well: p.55 row 2 (0.48), p.55 row 3 (0.43); the site row may merge them
-- row **6** (base section) [`multiple_candidates`] — OR Post-Intubation Sedation (Midazolam / Fentanyl): • ADULT: Midazolam (Versed) 2.5 mg IV/IO. May repeat every 10-15 minutes as needed. (Maximum total
-  - why: 2 different PEMS rows explain this row about equally well: p.55 row 2 (0.69), p.55 row 3 (0.61); the site row may merge them
-- row **2** (base section) [`no_counterpart`] — Assess and monitor blood pressure. Ensure patient is not hypotensive.
-  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
-  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.55 row 1) (best coverage 0.00, p.55 row 1; see `text-binding.md`)
-- row **3** (base section) [`no_counterpart`] — Establish IV/IO access.
-  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
-  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.33 against p.55 row 2) (best coverage 0.33, p.55 row 2; see `text-binding.md`)
+## `protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md` — 2 ambiguous
+- row **4** (base section) [`multiple_candidates`] — Repeat every 10 – 15 minutes as needed for patient safety and comfort.
+  - why: 2 different PEMS rows explain this row about equally well: p.55 row 3 (0.82), p.55 row 2 (0.85); the site row may merge them
+- row **6** (base section) [`multiple_candidates`] — Repeat every 10 – 15 minutes as needed for patient safety and comfort.
+  - why: 2 different PEMS rows explain this row about equally well: p.55 row 2 (0.85), p.55 row 3 (0.82); the site row may merge them
 
 ## `protocols/medical/07_OB_Emergencies_PROC.md` — 2 ambiguous
 - row **1** (base section) [`multiple_candidates`] — Follow Universal Patient Care, don appropriate PPE, and visualize perineum for crowning or presenting part.
@@ -158,10 +161,13 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 - row **9** (base section) [`shared_pems_row`] — Call COR at the receiving facility with Name/DOB for rapid registration
   - why: site row label names an intervention that p.131 row 2 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
 
-## `protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md` — 6 ambiguous
-- row **10** (base section) [`no_counterpart`] — Endotracheal Intubation: • Follow Endotracheal Intubation procedure. • ⚠ Intubation of spontaneously breathing patients without rapid sequence inducti
+## `protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md` — 7 ambiguous
+- row **10** (base section) [`no_counterpart`] — Endotracheal Intubation: • Follow Endotracheal Intubation procedure. Patients 12 years and older. • ⚠ Intubation of spontaneously breathing patients w
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
-  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.09 against p.153 row 2) (best coverage 0.09, p.153 row 2; see `text-binding.md`)
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.08 against p.153 row 2) (best coverage 0.08, p.153 row 2; see `text-binding.md`)
+- row **10a** (base section) [`no_counterpart`] — • Orally intubate. Patients under 12 years old.
+  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.153 row 0) (best coverage 0.00, p.153 row 0; see `text-binding.md`)
 - row **11** (base section) [`no_counterpart`] — Poison Control Consultation: • Contact Poison Control Center at 1-800-222-1222 with any questions. (Note: Poison Control is not online medical control
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.33 against p.153 row 5) (best coverage 0.33, p.153 row 5; see `text-binding.md`)
@@ -177,19 +183,25 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 - row **7** (base section) [`shared_pems_row`] — Methylprednisolone (Solu-Medrol): • Adult: 125 mg IV/IO slow push • Pediatric: 2 mg/kg IV/IO slow push (Maximum dose: 125 mg)
   - why: site row label names an intervention that p.153 row 4 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
 
-## `protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md` — 4 ambiguous
+## `protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md` — 6 ambiguous
 - row **4** (base section) [`multiple_candidates`] — Ipratropium Bromide (Anticholinergic): • Adult & Pediatric: 3 mL of 0.02% solution via nebulizer. • ⚠ ONCE ONLY – Do NOT repeat without Medical Contro
   - why: 2 different PEMS rows explain this row about equally well: p.123 row 5 (0.50), p.124 row 13 (0.46); the site row may merge them
-- row **11** (base section) [`no_counterpart`] — Reassessment and Transport: • Continuously monitor respiratory status, auscultation, and SpO₂. • Reassess after each bronchodilator treatment. • Exped
+- row **11** (base section) [`no_counterpart`] — Reassessment and Transport: • Continuously monitor respiratory status, auscultation, and SpO₂. • Reassess after each bronchodilator treatment.
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
-  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 11) (best coverage 0.00, p.124 row 11; see `text-binding.md`)
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 13) (best coverage 0.00, p.124 row 13; see `text-binding.md`)
+- row **11a** (base section) [`no_counterpart`] — • Expedite transport for severe or deteriorating patients.
+  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 10) (best coverage 0.00, p.124 row 10; see `text-binding.md`)
 - row **7** (base section) [`no_counterpart`] — Assist Ventilations / Airway Management: • Prepare for assisted ventilation if respiratory failure develops. • Bag-valve-mask with PEEP valve as indic
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `no_anchor` — coverage 0.50 (whole row 0.11) clears the 0.40 floor, but the row shares no drug name, no dose and no whole label head with that PEMS row, so the binding would rest on an ordinary word: Perform a focused evaluation including pertinent history and assessment of airway and lung sounds. Refer to Airway Management and Ventilatory Support procedure  (best coverage 0.50, p.123 row 1; see `text-binding.md`)
-- row **8** (base section) [`no_counterpart`] — Continuous Positive Airway Pressure (CPAP): • Consider for COPD exacerbation or severe bronchospasm with adequate mentation. • Initiate 5-10 cm H₂O, t
+- row **8** (base section) [`no_counterpart`] — Continuous Positive Airway Pressure (CPAP): • Consider for COPD exacerbation or severe bronchospasm with adequate mentation. • Initiate 5 cm H₂O. • Co
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - evidence: `cpap_p245-245.png`
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.25 against p.123 row 1) (best coverage 0.25, p.123 row 1; see `text-binding.md`)
+- row **8a** (base section) [`no_counterpart`] — • Titrate PEEP up to 10 cm H₂O to support ventilation and work of breathing.
+  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.33 against p.124 row 10) (best coverage 0.33, p.124 row 10; see `text-binding.md`)
 
 ## `protocols/respiratory/03_Pediatric_Stridor_PROC.md` — 6 ambiguous
 - row **11** (base section) [`no_counterpart`] — Airway Protection - Advanced Airway • Prepare for advanced airway if impending respiratory failure • Have appropriate sized equipment ready • ⚠ Intuba
@@ -198,34 +210,46 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 - row **12** (base section) [`no_counterpart`] — Transport Considerations • Transport to pediatric-capable facility • Alert receiving facility early • Consider ALS intercept if BLS only • Rapid trans
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.08 against p.124 row 9) (best coverage 0.08, p.124 row 9; see `text-binding.md`)
-- row **2** (base section) [`no_counterpart`] — Scene Management & Calm Environment • Keep child calm - agitation worsens obstruction • Allow parent/caregiver to hold child • Avoid unnecessary proce
-  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
-  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.25 against p.123 row 1) (best coverage 0.25, p.123 row 1; see `text-binding.md`)
 - row **3** (base section) [`no_counterpart`] — Position of Comfort • Allow child to assume position of choice (usually upright or with parent) • Do not force supine positioning • Head-down position
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.12 against p.123 row 1) (best coverage 0.12, p.123 row 1; see `text-binding.md`)
-- row **5** (base section) [`no_counterpart`] — Continuous Monitoring • Cardiac monitor • Pulse oximetry • EtCO2 when available
+- row **5** (base section) [`no_counterpart`] — Continuous Monitoring • Pulse oximetry • EtCO2 when available
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 11) (best coverage 0.00, p.124 row 11; see `text-binding.md`)
+- row **5a** (base section) [`no_counterpart`] — • Cardiac monitor
+  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 13) (best coverage 0.00, p.124 row 13; see `text-binding.md`)
 - row **9** (base section) [`no_counterpart`] — IV/IO Access • Obtain IV or IO access for medication administration • Use largest appropriate catheter • Do NOT delay Epinephrine for IV/IO placement
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `no_anchor` — coverage 0.50 (whole row 0.11) clears the 0.40 floor, but the row shares no drug name, no dose and no whole label head with that PEMS row, so the binding would rest on an ordinary word: For moderate to severe symptoms, also administer: ADULT: Methylprednisolone (Solu-Medrol) 125 mg IV/IO slow push. PEDIATRIC: Methylprednisolone (Solu-Medrol) 2  (best coverage 0.50, p.124 row 9; see `text-binding.md`)
 
-## `protocols/respiratory/03_Pneumothorax_PROC.md` — 11 ambiguous
+## `protocols/respiratory/03_Pneumothorax_PROC.md` — 16 ambiguous
 - row **1** (base section) [`no_counterpart`] — Universal Patient Care / Scene Safety: • Ensure scene safety and appropriate PPE. • Bring all necessary equipment to patient side.
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0) (best coverage 0.00, p.243 row 0; see `text-binding.md`)
+- row **10** (base section) [`no_counterpart`] — Reassessment After Decompression: • Continuously reassess vital signs, respiratory effort, and compliance. • Auscultate for return of breath sounds. •
+  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
+  - text pass: `no_evidence_local` / `best_evidence_is_held` — this row's best text evidence is p.243 row 4 (coverage 0.54, badge I), which site row 15a already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix (best coverage 0.54, p.243 row 4; see `text-binding.md`)
 - row **11** (base section) [`no_counterpart`] — Repeat Decompression if Needed: • Consider repeating procedure for continued or recurrent hemodynamic instability or absent breath sounds.
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
-  - text pass: `no_evidence_local` / `best_evidence_is_held` — this row's best text evidence is p.243 row 4 (coverage 0.57, badge I), which site row 10 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix (best coverage 0.57, p.243 row 4; see `text-binding.md`)
-- row **13** (base section) [`no_counterpart`] — Advanced Airway Management (if indicated): • Prepare for or perform endotracheal intubation if respiratory failure. • ⚠ Positive pressure ventilation 
+  - text pass: `no_evidence_local` / `best_evidence_is_held` — this row's best text evidence is p.243 row 4 (coverage 0.57, badge I), which site row 15a already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix (best coverage 0.57, p.243 row 4; see `text-binding.md`)
+- row **12a** (base section) [`no_counterpart`] — • Consider vasopressor support if cardiogenic shock present.
+  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0) (best coverage 0.00, p.243 row 0; see `text-binding.md`)
+- row **13** (base section) [`no_counterpart`] — Advanced Airway Management (if indicated): • Prepare for or perform endotracheal intubation if respiratory failure. Patients 12 years and older. • ⚠ P
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - evidence: `cpap_p245-245.png`
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0) (best coverage 0.00, p.243 row 0; see `text-binding.md`)
+- row **13a** (base section) [`no_counterpart`] — • Orally intubate. Patients < 12 years old.
+  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0) (best coverage 0.00, p.243 row 0; see `text-binding.md`)
+- row **13b** (base section) [`no_counterpart`] — • If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway.
+  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0) (best coverage 0.00, p.243 row 0; see `text-binding.md`)
 - row **14** (base section) [`no_counterpart`] — Transport Considerations: • Transport to appropriate trauma center if traumatic etiology. • Alert receiving facility of needle decompression performed
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0) (best coverage 0.00, p.243 row 0; see `text-binding.md`)
-- row **15** (base section) [`no_counterpart`] — Close Monitoring En Route: • Continuous reassessment en route. • Monitor for recurrent tension pneumothorax. • Secure catheter to prevent dislodgement
+- row **15** (base section) [`no_counterpart`] — Close Monitoring En Route: • Continuous reassessment en route.
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0) (best coverage 0.00, p.243 row 0; see `text-binding.md`)
 - row **2** (base section) [`no_counterpart`] — Primary Assessment: • Assess airway, breathing, circulation, and disability. • Assess vital signs and SpO2. • Identify life threats immediately.
@@ -234,31 +258,25 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 - row **3** (base section) [`no_counterpart`] — Oxygen Administration: • Administer Oxygen via nasal cannula or mask as needed to maintain SpO2 > 94%. • Titrate to patient condition.
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `no_anchor` — coverage 0.50 (whole row 0.10) clears the 0.40 floor, but the row shares no drug name, no dose and no whole label head with that PEMS row, so the binding would rest on an ordinary word: Administer oxygen at 15 LPM (100% FiO2). (best coverage 0.50, p.243 row 0; see `text-binding.md`)
-- row **4** (base section) [`no_counterpart`] — Positioning and Monitoring: • Position patient for comfort (typically supine or semi-Fowler's). • Establish IV/IO access. • Continuous cardiac and pul
+- row **4** (base section) [`no_counterpart`] — Positioning: • Position patient for comfort (typically supine or semi-Fowler's).
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0) (best coverage 0.00, p.243 row 0; see `text-binding.md`)
-- row **5** (base section) [`no_counterpart`] — Suction and Airway Management: • Prepare suction and airway equipment. • Be prepared for rapid airway intervention if decompensation occurs.
+- row **4a** (base section) [`no_counterpart`] — • Establish IV/IO access.
+  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0) (best coverage 0.00, p.243 row 0; see `text-binding.md`)
+- row **4b** (base section) [`no_counterpart`] — • Continuous cardiac and pulse oximetry monitoring.
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0) (best coverage 0.00, p.243 row 0; see `text-binding.md`)
 - row **9** (base section) [`no_counterpart`] — Bilateral Chest Decompression (Traumatic Cardiac Arrest): • For traumatic cardiac arrest with suspicion of thoracoabdominal trauma, perform bilateral 
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0) (best coverage 0.00, p.243 row 0; see `text-binding.md`)
-- row **12** (base section) [`shared_pems_row`] — Hemodynamic Support: • 0.9% Sodium Chloride fluid bolus if hypotensive (SBP < 90 mmHg or MAP < 65). • Consider vasopressor support if cardiogenic shoc
+- row **12** (base section) [`shared_pems_row`] — Hemodynamic Support: • 0.9% Sodium Chloride fluid bolus if hypotensive (SBP < 90 mmHg or MAP < 65). • Titrate fluids to perfusion.
   - why: site row label names an intervention that p.243 row 4 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
 
-## `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` — 6 ambiguous
+## `protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md` — 3 ambiguous
 - row **10** (base section) [`shared_pems_row`] — Nitroglycerin Adult: 0.4 mg SL
   - why: site row label names an intervention that p.124 row 11 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
 - row **5** (base section) [`shared_pems_row`] — CPAP Initial Settings: PEEP 5 cmH2O
-  - why: site row label names an intervention that p.123 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
-  - evidence: `cpap_p245-245.png`
-- row **6** (base section) [`shared_pems_row`] — CPAP CONTRAINDICATIONS (⚠️): • Apnea/agonal respirations • GCS ≤ 13 • Pneumothorax
-  - why: site row label names an intervention that p.123 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
-  - evidence: `cpap_p245-245.png`
-- row **7** (base section) [`shared_pems_row`] — CPAP CONTRAINDICATIONS (⚠️): • Facial trauma/burns/recent surgery • Penetrating neck/chest trauma • Active vomiting/severe nausea
-  - why: site row label names an intervention that p.123 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
-  - evidence: `cpap_p245-245.png`
-- row **8** (base section) [`shared_pems_row`] — CPAP CONTRAINDICATIONS (⚠️): • Hypotension (SBP < 90 mmHg, MAP < 65) • Inability to tolerate tight fitting mask
   - why: site row label names an intervention that p.123 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
   - evidence: `cpap_p245-245.png`
 - row **9** (base section) [`shared_pems_row`] — CPAP Titration: Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing
@@ -290,7 +308,7 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 - row **2** (base section) [`shared_pems_row`] — Position Patient and Open Airway: • Position the patient appropriately (supine for intubation, recovery position if vomiting). • Open the airway using
   - why: site row label names an intervention that p.239 row 6 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
 
-## `protocols/respiratory/03_Respiratory_Distress_PROC.md` — 10 ambiguous
+## `protocols/respiratory/03_Respiratory_Distress_PROC.md` — 14 ambiguous
 - row **10** (base section) [`no_counterpart`] — Fluid Administration: • 0.9% Sodium Chloride or appropriate fluid as clinically indicated • Monitor for signs of fluid overload in CHF patients
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `best_evidence_is_held` — this row's best text evidence is p.124 row 10 (coverage 0.44, badge A), which site row 12 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix (best coverage 0.44, p.124 row 10; see `text-binding.md`)
@@ -300,15 +318,27 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 - row **15** (base section) [`no_counterpart`] — Cardiac Ischemia Management: • Evaluate for cardiac origin • Consider 12-lead ECG • Refer to Chest Pain/ACS protocol if indicated
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.123 row 5) (best coverage 0.00, p.123 row 5; see `text-binding.md`)
-- row **16** (base section) [`no_counterpart`] — Respiratory Failure Management: • If apnea/agonal respirations or GCS ≤13: • Prepare for immediate airway control • Bag-valve-mask ventilation • Consi
+- row **16** (base section) [`no_counterpart`] — Respiratory Failure Management: • If apnea/agonal respirations or GCS ≤13: • Prepare for immediate airway control • Bag-valve-mask ventilation • Trans
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
-  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.07 against p.124 row 13) (best coverage 0.07, p.124 row 13; see `text-binding.md`)
-- row **3** (base section) [`no_counterpart`] — Continuous Monitoring: • Continuous EtCO2 monitoring to guide therapy • Continuous pulse oximetry • Cardiac monitoring
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.09 against p.124 row 13) (best coverage 0.09, p.124 row 13; see `text-binding.md`)
+- row **16a** (base section) [`no_counterpart`] — • Consider advanced airway per provider level — patients 12 years and older
+  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.123 row 5) (best coverage 0.00, p.123 row 5; see `text-binding.md`)
+- row **16b** (base section) [`no_counterpart`] — • Consider advanced airway per provider level — patients under 12 years of age
+  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 12) (best coverage 0.00, p.124 row 12; see `text-binding.md`)
+- row **3** (base section) [`no_counterpart`] — Continuous Monitoring: • Continuous EtCO2 monitoring to guide therapy • Continuous pulse oximetry
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 13) (best coverage 0.00, p.124 row 13; see `text-binding.md`)
+- row **3a** (base section) [`no_counterpart`] — • Cardiac monitoring
+  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 12) (best coverage 0.00, p.124 row 12; see `text-binding.md`)
 - row **5** (base section) [`no_counterpart`] — Positioning: • Patient position of comfort (sitting upright preferred) • Consider reverse Trendelenburg if tolerated
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 13) (best coverage 0.00, p.124 row 13; see `text-binding.md`)
+- row **6a** (base section) [`no_counterpart`] — • Titration: Titrate PEEP up to 10 cmH2O to support ventilation and work of breathing.
+  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.25 against p.123 row 4) (best coverage 0.25, p.123 row 4; see `text-binding.md`)
 - row **8** (base section) [`no_counterpart`] — Advanced Airway Management (ETI): • Endotracheal intubation reserved for I-level providers per protocol
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `best_evidence_is_held` — this row's best text evidence is p.123 row 1 (coverage 0.67, badge EMR), which site row 2 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix (best coverage 0.67, p.123 row 1; see `text-binding.md`)
@@ -322,7 +352,7 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
   - why: two site rows name this same PEMS intervention; p.123 row 3 merges what the site splits — adjudicate which site row's cells that PEMS badge governs
   - evidence: `cpap_p245-245.png`
 
-## `protocols/respiratory/03_Smoke_Inhalation_PROC.md` — 11 ambiguous
+## `protocols/respiratory/03_Smoke_Inhalation_PROC.md` — 12 ambiguous
 - row **5** (base section) [`multiple_candidates`] — Advanced Airway Considerations: • Consider endotracheal intubation versus immediate transport to the nearest emergency department if any signs or symp
   - why: 2 different PEMS rows explain this row about equally well: p.153 row 2 (0.43), p.239 row 10 (0.34); the site row may merge them
 - row **10** (base section) [`no_counterpart`] — Burn Assessment: • Assess for concomitant thermal burn injuries • Estimate total body surface area (TBSA) involved • Evaluate burn depth and critical 
@@ -331,9 +361,12 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 - row **11** (base section) [`no_counterpart`] — Fluid Management (If Burns Present): • Initiate fluid resuscitation per Burn Injuries Protocol • Titrate fluid administration to hemodynamic response 
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `best_evidence_is_held` — this row's best text evidence is p.153 row 2 (coverage 0.50, badge EMT), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix (best coverage 0.50, p.153 row 2; see `text-binding.md`)
-- row **13** (base section) [`no_counterpart`] — Monitoring and Reassessment: • Monitor SpO2, EtCO2, and respiratory rate continuously • Reassess airway patency frequently; edema may progress rapidly
+- row **13** (base section) [`no_counterpart`] — Monitoring and Reassessment: • Reassess airway patency frequently; edema may progress rapidly • Observe for signs of respiratory failure requiring imm
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
-  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.17 against p.239 row 7) (best coverage 0.17, p.239 row 7; see `text-binding.md`)
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.07 against p.239 row 1) (best coverage 0.07, p.239 row 1; see `text-binding.md`)
+- row **13b** (base section) [`no_counterpart`] — • Cardiac monitoring
+  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.239 row 0) (best coverage 0.00, p.239 row 0; see `text-binding.md`)
 - row **14** (base section) [`no_counterpart`] — Transport Considerations: • Expedited transport given risk of rapid airway compromise • Transport to facility capable of managing combined trauma/burn
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.05 against p.153 row 2) (best coverage 0.05, p.153 row 2; see `text-binding.md`)
@@ -356,16 +389,13 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.239 row 4) (best coverage 0.00, p.239 row 4; see `text-binding.md`)
 
-## `protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md` — 7 ambiguous
+## `protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md` — 6 ambiguous
 - row **13** (base section) [`no_counterpart`] — Post-Obstruction Advanced Airway - Sedation: • If endotracheal intubation performed, refer to Sedation Post Advanced Airway protocol. • Fentanyl (25 m
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.06 against p.239 row 1) (best coverage 0.06, p.239 row 1; see `text-binding.md`)
 - row **14** (base section) [`no_counterpart`] — Expanding Hematoma / Edema - Advanced Airway: • Early airway intervention before complete obstruction. • Consider difficult airway algorithm; prepare 
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.239 row 1) (best coverage 0.00, p.239 row 1; see `text-binding.md`)
-- row **2** (base section) [`no_counterpart`] — Scene Safety / Recognition: • Rapidly identify complete vs partial obstruction. • Recognize universal choking sign (hands to throat). • Determine cons
-  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
-  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.239 row 7) (best coverage 0.00, p.239 row 7; see `text-binding.md`)
 - row **3** (base section) [`no_counterpart`] — Conscious Adult (≥12 years) - Abdominal Thrusts: • Stand behind patient, wrap arms around waist. • Make fist with one hand; thumb side against patient
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `best_evidence_is_held` — this row's best text evidence is p.239 row 3 (coverage 0.50, badge EMT), which site row 4 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix (best coverage 0.50, p.239 row 3; see `text-binding.md`)
@@ -399,10 +429,13 @@ Raster crops already exist in `audit/level-scan/evidence/` for the six known har
 - row **9** (base section) [`shared_pems_row`] — Contact Medical Control if hemorrhage cannot be controlled and transport immediately.
   - why: site row label names an intervention that p.75 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs
 
-## `protocols/trauma/09_Trauma_PROC.md` — 2 ambiguous
-- row **2** (base section) [`no_counterpart`] — Ensure scene safety. Extricate/move patient to safety if necessary.
+## `protocols/trauma/09_Trauma_PROC.md` — 3 ambiguous
+- row **2** (base section) [`no_counterpart`] — Ensure scene safety.
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
-  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.83 row 6) (best coverage 0.00, p.83 row 6; see `text-binding.md`)
+  - text pass: `no_evidence_local` / `best_evidence_is_held` — this row's best text evidence is p.84 row 14 (coverage 0.50, badge EMT), which site row 12 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix (best coverage 0.50, p.84 row 14; see `text-binding.md`)
+- row **2a** (base section) [`no_counterpart`] — Extricate/move patient to safety if necessary.
+  - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
+  - text pass: `no_evidence_local` / `below_floor` — no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.83 row 4) (best coverage 0.00, p.83 row 4; see `text-binding.md`)
 - row **7** (base section) [`no_counterpart`] — Obtain IV/IO access.
   - why: no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)
   - text pass: `no_evidence_local` / `best_evidence_is_held` — this row's best text evidence is p.83 row 10 (coverage 0.50, badge A), which site row 8 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix (best coverage 0.50, p.83 row 10; see `text-binding.md`)
