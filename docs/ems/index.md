@@ -4,7 +4,7 @@
 
 <section class="pfd-zone" markdown="1">
 
-<p class="pfd-cap">Administrative protocols</p>
+<p class="pfd-cap pfd-cap--ems">Administrative protocols</p>
 
 <div class="pfd-quick-grid" markdown="1">
 
@@ -23,7 +23,7 @@ All 14 administrative protocols are listed under [Administrative](../resources/e
 
 <section class="pfd-zone" markdown="1">
 
-<p class="pfd-cap">EMS SOPs — the six that come up most</p>
+<p class="pfd-cap pfd-cap--ems">EMS SOPs — the six that come up most</p>
 
 <div class="pfd-quick-grid" markdown="1">
 
@@ -42,7 +42,7 @@ All 23 EMS SOPs are listed under [EMS SOPs](../resources/ems.md#ems-sops).
 
 <section class="pfd-zone" markdown="1">
 
-<p class="pfd-cap">Calculators</p>
+<p class="pfd-cap pfd-cap--ems">Calculators</p>
 
 <div class="pfd-quick-grid" markdown="1">
 

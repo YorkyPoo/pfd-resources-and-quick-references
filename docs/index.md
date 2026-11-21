@@ -24,7 +24,7 @@
 
 <section class="pfd-zone" markdown="1">
 
-**[Protocols](resources/ems.md)**{: .pfd-cap .pfd-cap--link }
+**[Protocols](resources/ems.md)**{: .pfd-cap .pfd-cap--link .pfd-cap--ems }
 
 <div class="pfd-scroller pfd-scroller--ems" markdown="1">
 
@@ -44,7 +44,7 @@
 
 </div>
 
-**[SOPs](resources/fire.md)**{: .pfd-cap .pfd-cap--link }
+**[SOPs](resources/fire.md)**{: .pfd-cap .pfd-cap--link .pfd-cap--fire }
 
 <div class="pfd-scroller pfd-scroller--fire" markdown="1">
 
@@ -58,7 +58,7 @@
 
 </div>
 
-**[Fire resources](resources/fire-resources.md)**{: .pfd-cap .pfd-cap--link }
+**[Fire resources](resources/fire-resources.md)**{: .pfd-cap .pfd-cap--link .pfd-cap--fire }
 
 <div class="pfd-scroller pfd-scroller--fire" markdown="1">
 
@@ -76,7 +76,7 @@
 
 <div class="pfd-secondary" markdown="1">
 
-**[City &amp; personnel policies](station/policies.md)**{: .pfd-cap .pfd-cap--link }
+**[City &amp; personnel policies](station/policies.md)**{: .pfd-cap .pfd-cap--link .pfd-cap--admin }
 
 <div class="pfd-scroller pfd-scroller--admin" markdown="1">
 
@@ -94,7 +94,7 @@
 
 <div class="pfd-secondary" markdown="1">
 
-**[Crew links &amp; portals](resources/links.md)**{: .pfd-cap .pfd-cap--link }
+**[Crew links &amp; portals](resources/links.md)**{: .pfd-cap .pfd-cap--link .pfd-cap--util }
 
 <div class="pfd-scroller pfd-scroller--util" markdown="1">
 
