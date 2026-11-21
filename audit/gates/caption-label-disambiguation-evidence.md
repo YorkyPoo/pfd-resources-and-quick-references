@@ -81,8 +81,8 @@ restored                      EXIT=0
 
 ## 4. Gates
 
-`bash audit/gates/run_gates_caption_labels.sh` — 21 gates, **ALL GATES EXIT=0**
-(log: `audit/gates/caption-labels-<sha>.log`). Two things worth stating:
+`bash audit/gates/run_gates_caption_labels.sh` — 25 gate sections, **ALL GATES
+EXIT=0** (log: `audit/gates/caption-labels-4efe8a3d.log`). Two things worth stating:
 
 - `verify_pems_canonical` needs the git-ignored
   `audit/level-scan/.cache/pems_rows.jsonl`; a fresh worktree does not have it,
@@ -91,3 +91,36 @@ restored                      EXIT=0
 - `slate_untouched` permits exactly two slate-selector lines: the removed maroon
   `pfd-chip--all` accent and the added zinc one. Everything else in the dark
   scheme is untouched.
+
+## 5. Published preview (not merged, not deployed)
+
+Slot `caption-labels` republished from `caption-labels-r2`:
+`https://yorkypoo.github.io/pfd-resources-and-quick-references/preview/caption-labels/`
+(gh-pages commit `d154422b`; the only paths that changed were
+`preview/caption-labels/**`, `preview/index.html`, `preview/slots.json` —
+nothing outside `preview/`, so the live root is byte-identical).
+
+Measured on the **served** page after the CDN caught up (cache-busted fetches,
+first two returned the old build — a preview slot 404s/stales for 1–2 minutes
+after the push and that is not a failed publish):
+
+```
+scanned index.html: 5 caption(s), 4 scroller row(s)
+  .pfd-scroller--ems   first chip "EMS Clinical Hub"   → ems/index.html              44px
+  .pfd-scroller--fire  first chip "Reference shelf"    → resources/fire-resources.html 44px
+  .pfd-scroller--admin first chip "Station Policies"   → station/policies.html         44px
+  .pfd-scroller--util  first chip "All Links"          → resources/links.html         44px
+captions are labels · every row leads with its section page · no chip repeats its caption
+```
+
+`check_caption_labels.py` run against the downloaded live HTML: exit 0. The
+live `a.pfd-chip--all` computes `--pfd-accent: #3f3f46` (light) / `#a1a1aa`
+(slate), 390px viewport, overflow 0, caption anchors 0, in both schemes.
+Sibling slots (`legend`, `station-legend`, `home-r4`, `ia-r3`, `light-colour`,
+`banner`) all still 200 — publishing this slot pruned nothing.
+
+## 6. Not done, by instruction
+
+No merge to `main`, no deploy. Branch `caption-labels-r2` is pushed at the three
+commits above for the reviewer to merge normally.
+
