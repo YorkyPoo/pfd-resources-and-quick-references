@@ -18,16 +18,31 @@ share an href — a caption is not in the scroller):
      chip is dropped or repointed, leaving the caption's old destination with no
      control that reaches it.
 
-Both are exit-1 failures naming the page, the caption/row and the href.
+A third regression appeared once the captions became honest labels (card
+t_a4b01dd6): the first chip kept the caption's words, so the page printed
+"EMS HUB" and then a chip reading "EMS Hub" — one thing under two names, the
+same defect moved from an invisible link to a visible chip. So:
+
+  3. no chip label may equal its own row's caption, compared case-insensitively
+     with punctuation ignored. A chip names a place ("EMS Clinical Hub",
+     "Reference shelf"); the caption names the row. This generalises: it catches
+     "City & Personnel Policies" under "City & personnel policies" and would
+     catch "All Links" under an "All links" heading.
+
+All three are exit-1 failures naming the page, the caption/row, the label and
+the href.
 
 Usage:  python3 scripts/check_caption_labels.py [site_dir]   (default: site)
-Exit 0 = captions are labels and every row leads with its section page,
-     1 = a caption contains an anchor or a row's first chip is the wrong page,
+Exit 0 = captions are labels, every row leads with its section page, and no chip
+         repeats its row's caption,
+     1 = a caption contains an anchor, a row's first chip is the wrong page, or a
+         chip label equals its row's caption,
      2 = no site dir.
 """
 from __future__ import annotations
 
 import os
+import re
 import sys
 from html.parser import HTMLParser
 from pathlib import Path
@@ -53,11 +68,15 @@ class Scan(HTMLParser):
 
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
-        self.caps: list[dict] = []       # {"text": str, "anchors": [href, ...]}
-        self.rows: list[dict] = []       # {"kind": class, "hrefs": [href, ...]}
-        self._stack: list[tuple[str, str]] = []   # (tag, role: "cap"|"row"|"")
+        # {"text": str, "anchors": [href, ...], "order": int}
+        self.caps: list[dict] = []
+        # {"kind": class, "hrefs": [href, ...], "chips": [{"label","href"}], "order": int}
+        self.rows: list[dict] = []
+        self._seq = 0
+        self._stack: list[tuple[str, str]] = []   # (tag, role: "cap"|"row"|"chip"|"")
         self._cap: dict | None = None
         self._row: dict | None = None
+        self._chip: dict | None = None
 
     # -- helpers ---------------------------------------------------------
     @staticmethod
@@ -71,12 +90,14 @@ class Scan(HTMLParser):
         classes = self._classes(attrs)
         role = ""
         if "pfd-cap" in classes and tag != "a":
-            self._cap = {"text": "", "anchors": [], "tag": tag}
+            self._seq += 1
+            self._cap = {"text": "", "anchors": [], "tag": tag, "order": self._seq}
             self.caps.append(self._cap)
             role = "cap"
         elif tag == "div" and "pfd-scroller" in classes and self._row is None:
             kind = next((c for c in classes if c.startswith("pfd-scroller--")), "")
-            self._row = {"kind": kind, "hrefs": []}
+            self._seq += 1
+            self._row = {"kind": kind, "hrefs": [], "chips": [], "order": self._seq}
             self.rows.append(self._row)
             role = "row"
 
@@ -86,6 +107,11 @@ class Scan(HTMLParser):
                 self._cap["anchors"].append(href)
             if self._row is not None:
                 self._row["hrefs"].append(href)
+                # a chip is an <a> directly inside the scroller; its label is the
+                # text the parser reads until the anchor closes
+                self._chip = {"label": "", "href": href}
+                self._row["chips"].append(self._chip)
+                role = "chip"
 
         if tag not in ("area", "base", "br", "col", "embed", "hr", "img", "input",
                        "link", "meta", "source", "track", "wbr"):
@@ -104,12 +130,16 @@ class Scan(HTMLParser):
                 self._cap = None
             if role == "row":
                 self._row = None
+            if role == "chip":
+                self._chip = None
             if open_tag == tag:
                 break
 
     def handle_data(self, data):
         if self._cap is not None:
             self._cap["text"] += data
+        if self._chip is not None:
+            self._chip["label"] += data
 
 
 def _norm_href(href: str) -> str:
@@ -118,6 +148,17 @@ def _norm_href(href: str) -> str:
     if not path:
         return ""
     return os.path.normpath(path).replace(os.sep, "/").lstrip("./")
+
+
+def _norm_label(text: str) -> str:
+    """A label reduced to words: lowercased, punctuation and spacing ignored."""
+    return " ".join(re.sub(r"[^a-z0-9]+", " ", text.lower()).split())
+
+
+def caption_for(row: dict, caps: list[dict]) -> dict | None:
+    """The caption that heads this row: the last one emitted before it."""
+    before = [c for c in caps if c["order"] < row.get("order", 0)]
+    return before[-1] if before else None
 
 
 def main() -> int:
@@ -165,19 +206,40 @@ def main() -> int:
             bad.append(f"{HOME}  .{kind}  first chip → {got or '(no href)'}, "
                        f"expected the section page {want}")
 
+    # --- 3. no chip repeats its own row's caption ------------------------
+    # A chip names a place; the caption names the row. Compared case-insensitively
+    # with punctuation ignored, so "EMS Hub" == "EMS HUB" and "City & Personnel
+    # Policies" == "City & personnel policies".
+    for row in scan.rows:
+        cap = caption_for(row, scan.caps)
+        if cap is None:
+            bad.append(f"{HOME}  .{row['kind']}  has no caption above it")
+            continue
+        cap_norm = _norm_label(cap["text"])
+        if not cap_norm:
+            continue
+        for chip in row["chips"]:
+            if _norm_label(chip["label"]) == cap_norm:
+                bad.append(f"{HOME}  .{row['kind']}  chip \"{chip['label'].strip()}\" "
+                           f"({_norm_href(chip['href'])}) repeats its row caption "
+                           f"\"{' '.join(cap['text'].split())}\"")
+
     print(f"scanned {HOME}: {len(scan.caps)} caption(s), {len(scan.rows)} scroller row(s)")
     for cap in scan.caps:
         print(f"  caption  \"{' '.join(cap['text'].split())}\"")
     for row in scan.rows:
         first = _norm_href(row["hrefs"][0]) if row["hrefs"] else "(no chips)"
+        labels = " | ".join(c["label"].strip() for c in row["chips"][:3])
         print(f"  row .{row['kind']}  {len(row['hrefs'])} chip(s), first → {first}")
+        print(f"    chips: {labels}{' …' if len(row['chips']) > 3 else ''}")
 
     if bad:
         print(f"\nCAPTION/ROW CHECK FAILED ({len(bad)}):")
         for line in bad:
             print(f"  {line}")
         return 1
-    print("\ncaptions are labels · every row leads with its section page")
+    print("\ncaptions are labels · every row leads with its section page · "
+          "no chip repeats its caption")
     return 0
 
 

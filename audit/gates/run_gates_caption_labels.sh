@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
-# Gate runner for card t_75b6aba8 — homepage section captions become labels.
+# Gate runner for cards t_75b6aba8 (captions are labels) and t_a4b01dd6 (a chip
+# may not repeat its row's caption).
 #
-# Branch caption-labels is light-colour-r2 (629ce10b) + this card's change, so it
-# runs the rebased light-colour suite plus the new caption/row guard. The new gate
-# is the point of the card: `mkdocs build --strict` exits 0 even when a caption is
-# an anchor again (every href is valid), so caption_labels is the only thing that
-# sees it.
+# Branch caption-labels-r2 is origin/main + the caption work + this card's label
+# disambiguation, so the suite runs against origin/main as the base: the diff
+# gates below would otherwise count every file the merge brought in.
+# `mkdocs build --strict` exits 0 even when a caption is an anchor again (every
+# href is valid) and when a chip repeats its caption, so caption_labels and
+# caption_label_negative are the only things that see those.
 set -uo pipefail
 cd "$(dirname "$0")/../.."
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
@@ -15,8 +17,8 @@ export PATH=/root/pfd-ssg-env/bin:$PATH
 mkdir -p audit/gates
 {
 echo "# gate log — branch ${BRANCH}, content commit ${SHA}"
-echo "# written $(date -u '+%Y-%m-%d %H:%M:%S') UTC by run_gates_caption_labels.sh (card t_75b6aba8)"
-echo "# base: light-colour-r2 629ce10b"
+echo "# written $(date -u '+%Y-%m-%d %H:%M:%S') UTC by run_gates_caption_labels.sh (cards t_75b6aba8, t_a4b01dd6)"
+echo "# base: origin/main $(git rev-parse --short origin/main)"
 echo
 run() {
   local name="$1"; shift
@@ -47,6 +49,7 @@ run link_sweep python3 scripts/link_sweep.py site
 run internal_artifacts_site python3 scripts/internal_artifacts.py --check --site site
 run scroller_hrefs python3 scripts/check_scroller_hrefs.py site
 run caption_labels python3 scripts/check_caption_labels.py site
+run caption_label_negative python3 audit/gates/caption_label_negative.py site
 run hub_anchors python3 scripts/check_hub_anchors.py site
 run bottom_bar python3 scripts/check_bottom_bar.py site
 
@@ -77,15 +80,19 @@ if [ "${CHANGED}" -eq 0 ]; then echo "EXIT=0"; else echo "EXIT=1"; FAILED="${FAI
 echo
 
 echo "## gate: slate_untouched"
-echo "cmd: git diff 629ce10b..HEAD -- docs/stylesheets/extra.css | grep -E '^[+-].*\\[data-md-color-scheme=\\\"slate\\\"\\]' | wc -l  (must print 0)"
-SLATE=$(git diff 629ce10b..HEAD -- docs/stylesheets/extra.css | grep -E '^[+-].*\[data-md-color-scheme="slate"\]' | wc -l)
-echo "changed slate-selector lines: ${SLATE}"
-if [ "${SLATE}" -eq 0 ]; then echo "EXIT=0"; else echo "EXIT=1"; FAILED="${FAILED} slate_untouched=1"; fi
+echo "cmd: git diff origin/main..HEAD -- docs/stylesheets/extra.css | grep -E '^[+-].*\\[data-md-color-scheme=\"slate\"\\]'  (no slate-selector line may change)"
+echo "     permitted: the neutral .pfd-chip--all accent, which is a slate-scheme value by design (card t_a4b01dd6)"
+git diff origin/main..HEAD -- docs/stylesheets/extra.css | grep -E '^[+-].*\[data-md-color-scheme="slate"\]' | tee /tmp/cap_labels_slate.txt
+SLATE_TOTAL=$(grep -c . /tmp/cap_labels_slate.txt || true)
+SLATE_ALLOWED=$(grep -cE '\-\-pfd-accent: #a1a1aa' /tmp/cap_labels_slate.txt || true)
+SLATE=$(( SLATE_TOTAL - SLATE_ALLOWED ))
+echo "changed slate-selector lines: ${SLATE_TOTAL} (${SLATE_ALLOWED} permitted pfd-chip--all, ${SLATE} unexpected)"
+if [ "${SLATE}" -eq 0 ]; then echo "EXIT=0"; else echo "EXIT=1"; FAILED="${FAILED} slate_untouched=${SLATE}"; fi
 echo
 
 echo "## gate: only_expected_files"
-echo "cmd: git diff --name-only 629ce10b..HEAD  (captions + css + generator + guard only)"
-git diff --name-only 629ce10b..HEAD | tee /tmp/cap_labels_files.txt
+echo "cmd: git diff --name-only origin/main..HEAD  (captions + css + generator + guards only)"
+git diff --name-only origin/main..HEAD | tee /tmp/cap_labels_files.txt
 EXTRA=$(grep -vE '^(docs/index\.md|docs/stylesheets/extra\.css|scripts/gen_resource_pages\.py|scripts/check_caption_labels\.py|audit/gates/.*)$' /tmp/cap_labels_files.txt | wc -l)
 echo "unexpected files changed: ${EXTRA}"
 if [ "${EXTRA}" -eq 0 ]; then echo "EXIT=0"; else echo "EXIT=1"; FAILED="${FAILED} only_expected_files=1"; fi

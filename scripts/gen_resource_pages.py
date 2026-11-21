@@ -158,7 +158,13 @@ EMS_PROCEDURES_CHIP = ("Procedures", "resources/ems.md#procedures")
 # SOP_HUB_CHIP / SOP_STRIP went with it — nothing else referenced them.
 # Fire side: the reference shelf still has its own scroller, because Fire Resources
 # has no bottom-bar tab and would otherwise be unreachable from the homepage.
-FIRE_REF_HUB_CHIP = ("Fire resources", FIRE_REF_HUB)
+# Card t_a4b01dd6: the chip must not repeat its own section caption ("Fire resources"
+# under a FIRE RESOURCES heading said nothing). "Reference shelf" is what the page
+# calls itself in its own first line, so the chip names a place, not a heading.
+FIRE_REF_HUB_CHIP = ("Reference shelf", FIRE_REF_HUB)
+# Same rule, EMS row: ems/index.md is titled "EMS Clinical Hub", so the chip carries
+# that name instead of repeating the "EMS Hub" caption directly above it.
+EMS_CLINICAL_HUB_CHIP = ("EMS Clinical Hub", EMS_CLINICAL_HUB)
 FIRE_REF_STRIP = [
     ("Frameworks", FIRE_REF_HUB + "#frameworks"),
     ("Field References", FIRE_REF_HUB + "#field-references"),
@@ -669,7 +675,7 @@ def quicklinks_block(records):
     # lost that chip in round 4 only because the caption duplicated its destination;
     # with the caption now an honest label, ems/index.md needs its chip back or the
     # hub is unreachable from the homepage.
-    parts += [chip("EMS Hub", EMS_CLINICAL_HUB, "ems"),
+    parts += [chip(*EMS_CLINICAL_HUB_CHIP, "ems"),
               chip(*EMS_HUB_CHIP, "all"), chip(*EMS_PROCEDURES_CHIP, "ems")]
     parts += [chip(label, href, "ems") for label, href in EMS_SOP_STRIP]
     parts += [chip(label, href, "ems") for label, href in EMS_CLINICAL_STRIP]
@@ -684,8 +690,10 @@ def quicklinks_block(records):
               '<p class="pfd-cap pfd-cap--admin">City &amp; personnel policies</p>', "",
               '<div class="pfd-scroller pfd-scroller--admin" markdown="1">', ""]
     # Scroller order is the owner's: the hub, the full list, then the five policies a
-    # crew actually reaches for.
-    parts += [chip("City &amp; Personnel Policies", STATION_POLICIES, "admin"),
+    # crew actually reaches for. Card t_a4b01dd6: the first chip may not repeat the
+    # caption ("City & personnel policies"), so the page is named by where it lives —
+    # station policy — and "All policies" stays the in-page full list below it.
+    parts += [chip("Station Policies", STATION_POLICIES, "admin"),
               chip("All policies", STATION_POLICIES + "#full-policy-list", "admin")]
     parts += [chip(label, path, "admin") for label, path, _s in POLICY_TILES]
     parts += ["", "</div>", "", "</div>", "",
