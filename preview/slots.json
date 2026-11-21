@@ -74,9 +74,9 @@
     },
     "legend": {
       "branch": "legend",
-      "built_at": "2026-11-21T03:15:33Z",
-      "description": "audit(gates): fix the gate runner's repo root (audit/gates is two levels down)",
-      "sha": "b4e71d12bbb63be5ddcebc411a0b9200daf221f2"
+      "built_at": "2026-11-21T03:18:15Z",
+      "description": "Legend: single source of truth for the pip legend block",
+      "sha": "aaf5b0279445b336f7ef51a28272872a4f7018f4"
     },
     "light-colour": {
       "branch": "light-colour-r2",
@@ -157,5 +157,5 @@
       "sha": "cc0735af60dcd20ce46ca5dca7d48a852ad81274"
     }
   },
-  "updated_at": "2026-11-21T03:15:33.471391+00:00"
+  "updated_at": "2026-11-21T03:18:15.263310+00:00"
 }
