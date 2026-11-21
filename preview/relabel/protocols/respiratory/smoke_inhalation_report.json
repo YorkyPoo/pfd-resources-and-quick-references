@@ -1,0 +1,15 @@
+{
+  "protocol": "Smoke Inhalation",
+  "status": "FIXABLE",
+  "discrepancies": [
+    {
+      "field": "Content/Completeness",
+      "pems_original": "Contains basic guidance for managing cyanide poisoning.",
+      "converted_text": "Includes significant, highly detailed instructions on Hydroxocobalamin preparation, administration, side effects, and burn center coordination, which are missing from the base PEMS protocol.",
+      "severity": "MODERATE",
+      "recommendation": "Review these extensive procedural details. If they are specific to Poquoson, mark them as local modifications or move them to a more appropriate place if they are intended to be universal for PEMS."
+    }
+  ],
+  "missing_sections": [],
+  "verified": false
+}
