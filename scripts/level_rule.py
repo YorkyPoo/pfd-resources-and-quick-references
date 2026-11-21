@@ -3402,14 +3402,18 @@ def emit_md(ledger):
               'shared stylesheet wrapper for any wide table, so its presence is not a defect: '
               'the defect is a provider-level matrix still inside one. '
               f'**Provider-level matrices inside `sc-wrap`: {len(sw_matrices)}** — '
-              + str(sum(1 for m in sw_matrices
-                        if m.split(' (line')[0]
-                        in set(TARGETS + PENDING_TARGETS + policy_targets())))
-              + ' on a page this project has converted (0 expected; `--check` fails on any), '
-              "the rest on page(s) outside every batch's scope and reported, not gated "
-              "(since Batch 7 that is only the front-matter legend, which defines the level "
-              "columns and is labelled by the owner's ruling — R / B / A / I / P since "
-              "2026-11-20 — never converted to one chip per row).", '']
+              + (str(sum(1 for m in sw_matrices
+                         if m.split(' (line')[0]
+                         in set(TARGETS + PENDING_TARGETS + policy_targets())))
+                 + ' on a page this project has converted (0 expected; `--check` fails on any), '
+                 "the rest on page(s) outside every batch's scope and reported, not gated "
+                 '(listed below).'
+                 if sw_matrices else
+                 'none, on any page under `docs/`. The front-matter page `01 - How to Read the '
+                 'Protocols.md` used to carry the intervention matrix inside one; that block '
+                 'was removed when the page was rewritten to explain the pip-strip format, so '
+                 'it now describes the format in prose and carries no convertible level table. '
+                 'Every `sc-wrap` block left is a non-level table.'), '']
     for m in sw_matrices:
         lines.append(f'- {m}')
     lines.append('')
@@ -4516,12 +4520,17 @@ def check():
           f"{summary['sc_wrap_files']} docs file(s) — mostly dose charts, phone lists and SOP "
           f"tables that are not level matrices; 0 provider-level matrices on an sc-wrap on any "
           f"page this project has converted.")
-    print(f"REPORTED, NOT GATED — "
-          f"{len(summary['sc_wrap_level_matrices_out_of_scope'])} provider-level matrix/matrices "
-          f"inside sc-wrap remain on a page outside every conversion batch's scope "
-          f"(the front-matter legend, which DEFINES the level columns — R / B / A / I / P):")
-    for m in summary['sc_wrap_level_matrices_out_of_scope']:
-        print('   -', m)
+    if summary['sc_wrap_level_matrices_out_of_scope']:
+        print(f"REPORTED, NOT GATED — "
+              f"{len(summary['sc_wrap_level_matrices_out_of_scope'])} provider-level "
+              f"matrix/matrices inside sc-wrap remain on a page outside every conversion "
+              f"batch's scope:")
+        for m in summary['sc_wrap_level_matrices_out_of_scope']:
+            print('   -', m)
+    else:
+        print("OK — sc-wrap: 0 provider-level matrices wrapped in sc-wrap on any page under "
+              "docs/; the front-matter format page carries none (it explains the pip strip in "
+              "prose), and every remaining sc-wrap block is a non-level table.")
     return 0
 
 
