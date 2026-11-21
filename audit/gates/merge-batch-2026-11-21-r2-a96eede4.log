@@ -1,0 +1,267 @@
+# gate log — merge batch 2 (caption-labels-r2, scrapbook-header, pems-table-reconcile, gate-rows-cache, legend-r2) into main
+# merge commit a96eede4 on branch main
+# written 2026-11-21 03:54:12 UTC by run_gates_merge_batch_r2.sh (card t_f0da5f65)
+# base origin/main was 73766d972fef461d0d5d6b722932564843269efe
+# site gates run after the strict build; level-scan cache present (git-ignored, as in the primary checkout)
+
+## gate: verify_pems_canonical
+cmd: python3 scripts/verify_pems_canonical.py
+  FAIL every recorded human review still maps to a pairing — stale: protocols/trauma/09_Trauma_PROC.md p.83 #3
+  ok   2 pairings are recorded as suspect, not as settled
+  ok   the 17 flagged pairings show similarity and PEMS text
+  ok   the ledger covers every in-scope PEMS row
+  ok   no PEMS row in scope is unaccounted for (0)
+  ok   ambiguous-rows.md states the same total (136)
+no protocol pages touched
+  ok   git status shows no modified files under docs/
+
+  ok   verifier manifest covers the run (9 of 9 checks reached: )
+
+
+known-stale register — audit/level-scan/known-stale.yaml (4 entries)
+
+REGISTERED KNOWN-STALE — visible every run, does not fail the run:
+  [at_risk_matched_rows] c2-scope.json
+      failure: at_risk_matched_rows equals the recheck script's output (2 listed, 2 derived)
+      reason:  counts.at_risk_matched_rows is the 61-row C2 queue as adjudicated before the row-splits rollout. Two cardiac rows adjudicated at row 5 are published as rows 5 and 5a after row_splits.yaml, so the recheck script now derives a different list (04_Cardiac_Arrest_Non_Traumatic_PROC.md r5a and 04_V_Fib_Pulseless_V_Tach_PROC.md r5a) than the queue records (Non_Traumatic r5 and Traumatic r5). The queue itself is the owner's ruling and must not be regenerated; only the derived comparison is stale.
+      ruling:  2026-11-21
+  [at-risk row] 04_Cardiac_Arrest_Non_Traumatic_PROC.md r5
+      failure: at-risk list names 04_Cardiac_Arrest_Non_Traumatic_PROC.md r5 (mapped to an ambiguous badge)
+      reason:  The pairing for this page now sits at row 5a after row_splits.yaml (row 5 was split), so an at-risk list keyed on row 5 can no longer name it. For this page the finding also changed to site_broader: the page publishes levels against EMR at 5a while the mapped PEMS row is p.63#7. The queue keeps the pre-split adjudication; the split relabel is real.
+      ruling:  2026-11-21
+  [at-risk row] 04_Cardiac_Arrest_Traumatic_PROC.md r5
+      failure: at-risk list names 04_Cardiac_Arrest_Traumatic_PROC.md r5 (mapped to an ambiguous badge)
+      reason:  Same relabel as the non-traumatic page: row 5 became 5a under row_splits.yaml, so an at-risk list keyed on row 5 no longer names the page. The underlying ambiguity (row 5 mapped to the ambiguous badge on p.61#4) was adjudicated by the owner and is not re-derived here.
+      ruling:  2026-11-21
+  [stale human review] protocols/trauma/09_Trauma_PROC.md p.83 #3
+      failure: every recorded human review still maps to a pairing — stale: protocols/trauma/09_Trauma_PROC.md p.83 #3
+      reason:  The recorded human review of 09_Trauma_PROC.md against PEMS p.83 #3 ("Assess for shock") no longer maps to a pairing: that row was moved out of the intervention grid into "### References & Good Practice", so the pairing the review was written against no longer exists in the alignment. The review is historical; re-pointing or retiring it is a decision for the owner, not for a generator.
+      ruling:  2026-11-21
+
+UNREGISTERED — new divergences; these fail the run:
+  (none)
+
+REGISTERED BUT NO LONGER FAILING — delete the entry or re-point it; these fail the run:
+  (none)
+
+4 KNOWN-STALE INVARIANT(S) REGISTERED — no new divergence
+all other invariants hold
+EXIT=0
+
+## gate: level_rule
+cmd: python3 scripts/level_rule.py --check
+   "parent": 10,
+   "row": "10",
+   "level": "I",
+   "pems": "p.247#4"
+  },
+  {
+   "file": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
+   "parent": 10,
+   "row": "10a",
+   "level": "P",
+   "pems": "p.247#6"
+  },
+  {
+   "file": "procedures/Neonatal_Resuscitation.md",
+   "parent": 5,
+   "row": "5",
+   "level": "A",
+   "pems": "p.261#10"
+  },
+  {
+   "file": "procedures/Neonatal_Resuscitation.md",
+   "parent": 5,
+   "row": "5a",
+   "level": "I",
+   "pems": "p.261#12"
+  }
+ ]
+}
+
+OK — 518 action rows across 54 pages: 503 carry exactly one marker equal to the level printed by the cited PEMS 2024 row, 0 are flagged OWNER_REQUIRED with a recorded reason, 10 are owner_ruled, 2 carry a level DERIVED from the source's own ladder wording (the lowest level it names; not an owner decision). 8 level word(s) survive in action text as recorded clinical qualifiers (audit/level-scan/token-decisions.yaml); every other level token found by an independent sweep of the action text is either kept there or gone.
+OK — 8 row(s) carry the +MC marker (a bracketed page level cell: that level performs the action only with Medical Control authorisation), exactly one marker each.
+OK — 5 owner_ruled row(s) cite unbadged PEMS prose by page + heading + ordinal, each quoting a verbatim span of its indexed entry (9 citation(s) checked against audit/level-scan/pems_prose.json); 0 rulings rest on free text.
+OK — 94 row(s) are cited across pages (cross_page: true), each with the cited row's own words quoted verbatim out of pems_table.json.
+OK — 21 bundled row(s) are split into 47 sub-rows, each one action; every part cites the PEMS 2024 row that prints it and its chip is that row's badge (row-splits.yaml `site_splits`, re-read against the pages).
+OK — 12 row(s) moved out of an action table into a References & Good Practice block; each is recorded in relocated-rows.yaml with page text that proves the block is still printed, and none is still in the ledger as an action row.
+OK — 11 action rows across 1 page(s) are chipped PENDING (Pending OMD Authorization) because PEMS 2024 publishes no such protocol; 0 of them claim a PEMS citation.
+OK — 3 action row(s) on an otherwise PEMS-cited page are chipped PENDING as agency additions awaiting OMD authorization (pending-protocols.yaml `rows:`); 0 of them claim a PEMS citation.
+OK — 14 administrative-policy page(s) carry 92 action rows: 89 chipped POLICY (cited to one of 14 PEMS 2024 administrative policies, each with a verbatim quote out of that policy's own pages), 1 chipped PENDING (no PEMS policy prints the rule). 0 of them publish a provider level and 0 of them claim a protocol citation.
+OK — sc-wrap: 62 wide-table block(s) in 45 docs file(s) — mostly dose charts, phone lists and SOP tables that are not level matrices; 0 provider-level matrices on an sc-wrap on any page this project has converted.
+OK — sc-wrap: 0 provider-level matrices wrapped in sc-wrap on any page under docs/; the front-matter format page carries none (it explains the pip strip in prose), and every remaining sc-wrap block is a non-level table.
+EXIT=0
+
+## gate: pip_legend_unique
+cmd: python3 scripts/check_pip_legend_unique.py
+OK: no copy of the legend markup anywhere in the repo — it is defined only in scripts/mkdocs_pip_strip.py
+OK: docs/station-info.md carries the <!-- PIP_LEGEND --> placeholder
+OK: legend swatches and strip states agree in both directions (legend ['call', 'go', 'no'] == strip ['call', 'go', 'no'])
+EXIT=0
+
+## gate: gen_resource_pages
+cmd: python3 scripts/gen_resource_pages.py --check
+pages: 233  sop groups: 6 (80)  fire-ref groups: 4 (10)  ems groups: 16 (136)  station groups: 4 (4)
+drift: none — all files current
+EXIT=0
+
+## gate: mc_wording
+cmd: python3 scripts/mc_wording.py --check
+OK — 27 MC row(s) on 26 page(s) plus every other protocol table row (all levels): none name OMD / Poquoson / a Medical Director / a named individual.
+     prose lines still mentioning the office (out of scope, not edited): 46
+EXIT=0
+
+## gate: agency_names
+cmd: python3 scripts/agency_names.py --check
+OK — 708 line(s) name the office or the agency; all are document-name / administrative exemptions. No clinical prose names a local office or the local agency.
+EXIT=0
+
+## gate: build_outstanding
+cmd: python3 scripts/build_outstanding_decisions.py --check
+the "PEMS prints this nowhere" bucket is 0 rows (was 17 before the 2026-11-17 Pearl ruling, 6 after it, then 4 after the 2026-11-20 ketamine ruling removed the two Sedation rows, and 0 once the row-structure pass moved the last four guidance rows below their tables): every converted action row now cites a printed PEMS badge — membership asserted, not typed
+OK — protocols/outstanding-decisions.md matches the ledger
+EXIT=0
+
+## gate: internal_artifacts
+cmd: python3 scripts/internal_artifacts.py --check
+OK — no conversion QA reports, no replacement-mapping block under docs/, no effective date or OMD approval claim on a front-matter page, and no built page for an excluded source
+EXIT=0
+
+## gate: mkdocs_strict
+cmd: /root/pfd-ssg-env/bin/mkdocs build --strict
+  - personnel-policies/policies/08-types-of-employment.md
+  - personnel-policies/policies/09-work-schedules-and-attendance.md
+  - personnel-policies/policies/10-probationary-status.md
+  - personnel-policies/policies/11-employee-performance-review.md
+  - personnel-policies/policies/12-salary-increases.md
+  - personnel-policies/policies/13-overtime-compensatory-time.md
+  - personnel-policies/policies/14-administrative-leave.md
+  - personnel-policies/policies/15-annual-leave-vrs-plan-1-plan-2-and.md
+  - personnel-policies/policies/16-bereavement-leave.md
+  - personnel-policies/policies/17-civil-leave.md
+  - personnel-policies/policies/18-family-and-medical-leave.md
+  - personnel-policies/policies/19-holidays.md
+  - personnel-policies/policies/20-leave-donation.md
+  - personnel-policies/policies/21-leave-without-pay.md
+  - personnel-policies/policies/22-military-leave.md
+  - personnel-policies/policies/23-sick-leave-vrs-plan-1-plan-2-and.md
+  - personnel-policies/policies/24-workers-compensation-and-light-duty.md
+  - personnel-policies/policies/25-employee-service-awards-program.md
+  - personnel-policies/policies/26-hazardous-weather.md
+  - personnel-policies/policies/27-computer-resources-internet-and.md
+  - personnel-policies/policies/28-safety-program-procedures.md
+  - personnel-policies/policies/29-vehicle-usage-and-driving-policy.md
+  - personnel-policies/policies/30-travel-policy-and-procedures.md
+  - personnel-policies/policies/31-outside-employment.md
+  - personnel-policies/policies/32-safe-harbor-policy.md
+  - personnel-policies/policies/33-sexual-harassment.md
+  - personnel-policies/policies/34-training-and-career-development.md
+  - personnel-policies/policies/35-tuition-reimbursement-education-assistance.md
+  - personnel-policies/policies/36-uniforms-protective-clothing-and-effective-date.md
+  - personnel-policies/policies/37-smoking-in-the-workplace.md
+  - personnel-policies/policies/38-physical-examinations-for-high.md
+  - personnel-policies/policies/39-employee-conduct-progressive-discipline.md
+  - personnel-policies/policies/40-drug-and-alcohol-policy.md
+  - personnel-policies/policies/41-grievance-procedure.md
+  - personnel-policies/policies/42-resignations-and-separations.md
+  - personnel-policies/policies/43-retiree-health-insurance-coverage.md
+INFO    -  Documentation built in 6.76 seconds
+pip_strip: protocols/administrative/01_Stroke_Field_Triage_PROC.md: policy (Basis) table not converted; row(s) 1 name a provider level as basis
+[post_build] sitemap: dropped 1 noindex page(s): ['/resources/links.html']
+[post_build] Generated sw.js with 283 pre-cached pages (version: 20261121-035429)
+EXIT=0
+
+## gate: caption_labels
+cmd: python3 scripts/check_caption_labels.py site
+scanned index.html: 5 caption(s), 4 scroller row(s)
+  caption  "High-acuity tools — one tap"
+  caption  "EMS Hub"
+  caption  "Fire resources"
+  caption  "City & personnel policies"
+  caption  "Crew links & portals"
+  row .pfd-scroller--ems  13 chip(s), first → ems/index.html
+    chips: EMS Clinical Hub | All protocols | Procedures …
+  row .pfd-scroller--fire  5 chip(s), first → resources/fire-resources.html
+    chips: Reference shelf | Frameworks | Field References …
+  row .pfd-scroller--admin  7 chip(s), first → station/policies.html
+    chips: Station Policies | All policies | Hazardous Weather …
+  row .pfd-scroller--util  10 chip(s), first → resources/links.html
+    chips: All Links | ESO Suite | LogRx …
+
+captions are labels · every row leads with its section page · no chip repeats its caption
+EXIT=0
+
+## gate: verify_pip_strip
+cmd: python3 scripts/verify_pip_strip.py --base site --archive audit/archive/tables-2026-11-20
+  ok  protocols/cardiac/04_Supraventricular_Tachycardia_PROC.md                  3 block(s), 14 row(s)
+  ok  protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md                        1 block(s), 13 row(s)
+  ok  protocols/front-matter/Universal Patient Care.md                           1 block(s), 11 row(s)
+  ok  protocols/general/02_Behavioral_Patient_Restraint_PROC.md                  1 block(s), 8 row(s)
+  ok  protocols/general/02_Cold_Exposure_PROC.md                                 1 block(s), 7 row(s)
+  ok  protocols/general/02_Diving_and_Drowning_Emergencies_PROC.md               1 block(s), 7 row(s)
+  ok  protocols/general/02_Heat_Exposure_PROC.md                                 1 block(s), 7 row(s)
+  ok  protocols/general/02_Pain_Control_PROC.md                                  1 block(s), 8 row(s)
+  ok  protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md               1 block(s), 7 row(s)
+  ok  protocols/medical/07_Allergic_Reaction_Anaphylaxis_PROC.md                 3 block(s), 13 row(s)
+  ok  protocols/medical/07_Hypotension_Shock_Non_Trauma_PROC.md                  1 block(s), 10 row(s)
+  ok  protocols/medical/07_OB_Emergencies_PROC.md                                1 block(s), 10 row(s)
+  ok  protocols/medical/07_Sepsis_PROC.md                                        1 block(s), 6 row(s)
+  ok  protocols/neurologic/05_Hypoglycemia_Hyperglycemia_PROC.md                 1 block(s), 5 row(s)
+  ok  protocols/neurologic/05_Seizure_PROC.md                                    1 block(s), 7 row(s)
+  ok  protocols/neurologic/05_Stroke_TIA_PROC.md                                 1 block(s), 9 row(s)
+  ok  protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md               1 block(s), 13 row(s)
+  ok  protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md               1 block(s), 13 row(s)
+  ok  protocols/respiratory/03_Pediatric_Stridor_PROC.md                         1 block(s), 12 row(s)
+  ok  protocols/respiratory/03_Pneumothorax_PROC.md                              1 block(s), 20 row(s)
+  ok  protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md                1 block(s), 10 row(s)
+  ok  protocols/respiratory/03_Respiratory_Arrest_PROC.md                        1 block(s), 15 row(s)
+  ok  protocols/respiratory/03_Respiratory_Distress_PROC.md                      1 block(s), 20 row(s)
+  ok  protocols/respiratory/03_Smoke_Inhalation_PROC.md                          1 block(s), 16 row(s)
+  ok  protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md                  1 block(s), 13 row(s)
+  ok  protocols/toxicology/06_Nausea_Vomiting_PROC.md                            1 block(s), 6 row(s)
+  ok  protocols/toxicology/06_Nerve_Agents_PROC.md                               1 block(s), 7 row(s)
+  ok  protocols/toxicology/06_Overdose_Poisoning_PROC.md                         1 block(s), 10 row(s)
+  ok  protocols/trauma/09_Burns_Thermal_PROC.md                                  1 block(s), 7 row(s)
+  ok  protocols/trauma/09_Crush_Syndrome_PROC.md                                 1 block(s), 9 row(s)
+  ok  protocols/trauma/09_Electrical_Injuries_PROC.md                            1 block(s), 10 row(s)
+  ok  protocols/trauma/09_Hemorrhage_Control_PROC.md                             1 block(s), 9 row(s)
+  ok  protocols/trauma/09_Lightning_Injuries_PROC.md                             1 block(s), 10 row(s)
+  ok  protocols/trauma/09_Trauma_PROC.md                                         1 block(s), 13 row(s)
+
+pages converted : 54
+action rows     : 518
+pages untouched : 15 (no provider level in any table)
+518 rows in markdown / 518 rows in HTML / 518 compared / 0 mismatches
+OK — every converted page matches its markdown, row by row; every untouched page is unchanged
+EXIT=0
+
+## gate: link_sweep
+cmd: python3 scripts/link_sweep.py site
+swept 283 pages, 73767 internal hrefs (+ fragment checks)
+clean — every internal href and #anchor resolves to a built file and a real id
+EXIT=0
+
+## gate: internal_artifacts_site
+cmd: python3 scripts/internal_artifacts.py --check --site site
+OK — no conversion QA reports, no replacement-mapping block under docs/, no effective date or OMD approval claim on a front-matter page, and no built page for an excluded source
+EXIT=0
+
+## gate: scroller_hrefs
+cmd: python3 scripts/check_scroller_hrefs.py site
+scanned 283 pages · 8 rows · 63 controls
+every row has distinct hrefs
+EXIT=0
+
+## gate: hub_anchors
+cmd: python3 scripts/check_hub_anchors.py site
+scanned 283 pages · 8 controls rows · 60 controls
+every navigation control resolves to an id that exists
+EXIT=0
+
+## gate: bottom_bar
+cmd: python3 scripts/check_bottom_bar.py site
+bottom bar OK: ['Home', 'Protocols', 'SOPs', 'Station'] -> ['../index.html', 'ems.html', 'fire.html', 'station.html'] (4 equal cells, glyph + label each)
+EXIT=0
+
+## summary
+ALL GATES EXIT=0 (16 of 16)
