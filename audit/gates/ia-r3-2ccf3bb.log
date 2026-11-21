@@ -1,6 +1,6 @@
-# gate log — branch ia-r3, content commit 773b529
-# written 2026-11-21 00:50:47 UTC by run_gates_ia_r3.sh (card t_f135bb3f)
-# gates run on the content commit 773b529; site gates after the strict build
+# gate log — branch ia-r3, content commit 2ccf3bb
+# written 2026-11-21 00:52:23 UTC by run_gates_ia_r3.sh (card t_f135bb3f)
+# gates run on the content commit 2ccf3bb; site gates after the strict build
 
 ## gate: gen_resource_pages
 cmd: python3 scripts/gen_resource_pages.py --check
@@ -10,10 +10,9 @@ EXIT=0
 
 ## gate: connected_notes
 cmd: python3 scripts/gen_connected_notes.py --check
-usage: gen_connected_notes.py [-h] [--apply] [--headers] [--limit LIMIT]
-                              [--only ONLY] [--allow-ported] [--report REPORT]
-gen_connected_notes.py: error: unrecognized arguments: --check
-EXIT=2
+[CHECK] pages=103 with-box=31 links=80 changed=0
+no drift — every Connected Notes box is current
+EXIT=0
 
 ## gate: pip_mapper
 cmd: python3 scripts/test_pip_strip_mapper.py
@@ -158,8 +157,8 @@ cmd: mkdocs build --strict
   - personnel-policies/policies/43-retiree-health-insurance-coverage.md
 pip_strip: protocols/administrative/01_Stroke_Field_Triage_PROC.md: policy (Basis) table not converted; row(s) 1 name a provider level as basis
 [post_build] sitemap: dropped 1 noindex page(s): ['/resources/links.html']
-[post_build] Generated sw.js with 283 pre-cached pages (version: 20261121-005109)
-INFO    -  Documentation built in 9.86 seconds
+[post_build] Generated sw.js with 283 pre-cached pages (version: 20261121-005250)
+INFO    -  Documentation built in 8.73 seconds
 EXIT=0
 
 ## gate: verify_pip_strip
@@ -224,4 +223,4 @@ protocol files changed: 0
 EXIT=0
 
 ## summary
-FAILED: connected_notes=2
+ALL GATES EXIT=0 (15 of 15)
