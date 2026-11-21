@@ -146,10 +146,10 @@
     },
     "station-legend": {
       "branch": "station-legend",
-      "built_at": "2026-11-21T03:11:58Z",
-      "description": "Reading section shows the real pip legend",
-      "sha": "8b9fd79b9af0f4f69f48b3e25549d159b95a6674"
+      "built_at": "2026-11-21T03:12:56Z",
+      "description": "Reading section shows the real pip legend (swatches)",
+      "sha": "cc0735af60dcd20ce46ca5dca7d48a852ad81274"
     }
   },
-  "updated_at": "2026-11-21T03:11:58.379572+00:00"
+  "updated_at": "2026-11-21T03:12:56.251517+00:00"
 }
