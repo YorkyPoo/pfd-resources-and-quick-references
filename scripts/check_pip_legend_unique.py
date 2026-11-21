@@ -7,8 +7,8 @@ so ``mkdocs build --strict`` fails on either:
 1. **Single source.** ``_legend()`` in ``scripts/mkdocs_pip_strip.py`` is the
    only definition of the "Reading the strip" block. Pages get it by writing
    the ``<!-- PIP_LEGEND -->`` placeholder, which ``on_page_content`` splices.
-   A copy of the block in any other file under ``docs/``, ``overrides/`` or
-   ``scripts/`` fails the check.
+   A copy of the block anywhere in the repo (build output excepted) fails the
+   check.
 
 2. **No silent drift (both directions).** Every swatch the legend renders must
    be a state ``states_for()`` can emit, and every state the strip emits must
@@ -28,7 +28,6 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from mkdocs_pip_strip import (  # noqa: E402
-    GUARD_DIRS,
     LEGEND_OWNER,
     LEGEND_TOKEN,
     legend_duplicates,
@@ -56,10 +55,8 @@ def main() -> int:
         )
     else:
         print(
-            "OK: no legend markup under "
-            + ", ".join(f"{d}/" for d in GUARD_DIRS)
-            + " — the legend is defined only in "
-            + LEGEND_OWNER
+            "OK: no copy of the legend markup anywhere in the repo — it is "
+            "defined only in " + LEGEND_OWNER
         )
 
     try:

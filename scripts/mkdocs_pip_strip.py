@@ -321,33 +321,34 @@ LEGEND_MARKERS = (
     (b'class="pip-legend"', None),
     (b"pip-legend-h", (".md", ".markdown", ".html", ".htm", ".jinja", ".j2", ".json", ".py")),
 )
-GUARD_DIRS = ("docs", "overrides", "scripts")
+# Whole repo, minus build output and other checkouts. The only legitimate hits
+# are this module and the `.pip-legend-h` selector in the stylesheet, which the
+# suffix rule above ignores.
+GUARD_EXCLUDE_DIRS = (".git", ".worktrees", "site", "site_preview", "__pycache__", "node_modules")
 
 
 def legend_duplicates(repo_root=None):
-    """Relative paths under docs/, overrides/, scripts/ that carry the legend markup."""
+    """Relative paths under the repo that carry a copy of the legend markup."""
     root = repo_root or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     owner = os.path.normpath(os.path.join(root, LEGEND_OWNER))
     hits = []
-    for sub in GUARD_DIRS:
-        base = os.path.join(root, sub)
-        for dirpath, dirnames, filenames in os.walk(base):
-            dirnames[:] = sorted(d for d in dirnames if d not in (".git", "__pycache__", "site"))
-            for name in sorted(filenames):
-                path = os.path.join(dirpath, name)
-                if os.path.normpath(path) == owner:
+    for dirpath, dirnames, filenames in os.walk(root):
+        dirnames[:] = sorted(d for d in dirnames if d not in GUARD_EXCLUDE_DIRS)
+        for name in sorted(filenames):
+            path = os.path.join(dirpath, name)
+            if os.path.normpath(path) == owner:
+                continue
+            try:
+                with open(path, "rb") as fh:
+                    data = fh.read()
+            except OSError:
+                continue
+            for marker, suffixes in LEGEND_MARKERS:
+                if suffixes is not None and not name.lower().endswith(suffixes):
                     continue
-                try:
-                    with open(path, "rb") as fh:
-                        data = fh.read()
-                except OSError:
-                    continue
-                for marker, suffixes in LEGEND_MARKERS:
-                    if suffixes is not None and not name.lower().endswith(suffixes):
-                        continue
-                    if marker in data:
-                        hits.append((os.path.relpath(path, root), marker.decode()))
-                        break
+                if marker in data:
+                    hits.append((os.path.relpath(path, root), marker.decode()))
+                    break
     return hits
 
 
