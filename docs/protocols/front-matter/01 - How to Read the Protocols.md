@@ -23,29 +23,38 @@ The protocols use the following abbreviations to indicate provider levels:
 
 ## Understanding the Protocol Format
 
-The following are your new protocols. These have been formatted to maximize clarity and speed of use in the field. The new layout utilizes a matrix-style grid system, allowing providers to quickly scan down the page and immediately identify the interventions authorized for their specific certification level.
+The following are your new protocols. They are formatted to maximize clarity and speed of use in the field. Interventions are still listed sequentially, one action per row — but the quick read no longer asks you to find a column. Every protocol carries the same five-pip strip, **R B A I P**, so you learn to read one page and you can read them all.
 
-### The Intervention Matrix
+### Tap your certification level
 
-Instead of listing paragraphs of text for each certification level, interventions are listed sequentially in a table. To determine your authorized actions, locate your certification level at the top of the columns (R, B, A, I, P) and read down the grid.
+Above the action list sits the picker: **R**, **B**, **A**, **I**, **P**, and **Show all**. Tap your level and the protocol reads as *you*: each action is tagged with what you may do with it, the actions that are not yours dim down, and a count under the strip tells you how many actions you may perform, how many need a call, and how many are not yours.
 
-<div class="sc-wrap" markdown="1">
+* **Solid** pip — standing order at the tapped level. You may act.
+* **Hatched** pip — call **Medical Control** first at the tapped level.
+* **Empty outline** — not authorised at the tapped level.
 
-| # | Action / Intervention | R | B | A | I | P |
-|---|---|:---:|:---:|:---:|:---:|:---:|
-| 1 | **Perform general patient management.** |  | • | • | • | • |
-| 2 | **Administer [Epinephrine](../../pharmacology/Epinephrine.md) Auto-injector** |  |  | • | • | • |
-| 3 | **Obtain IV/IO access.** |  |  |  | • | • |
-| 4 | **Administer [Epinephrine](../../pharmacology/Epinephrine.md) Infusion** |  |  |  | [I] | • |
+Tap **Show all** and the whole protocol is visible at once: every row still shows its five pips, and the tag under each action names the level where it starts — *standing from B*, *MC at I, standing from P*, *MC at every level*, *no level authorised*. Position names the level and the words name it too, so colour is never the only signal.
 
-</div>
+### A worked example
 
-#### Matrix Key & Symbols:
-* **Dot (•):** You are authorized to perform that intervention as a **Standing Order**.
-* **Blank Space:** The intervention is **NOT** within your scope of practice or protocol authorization.
-* **Cumulative by level:** A bullet (•) at any tier implies the same standing order at every HIGHER tier (R→B→A→I→P). `MC` is never implied — each tier that requires Medical Control for a step carries its own explicit `MC`. A blank cell excludes a tier only when no lower tier is authorized; any row that seems to violate these rules (for example a label reading "EMT and above" beside a blank EMT cell) is a source-data conflict — report it through the chain of command for Medical Control review.
-* **MC:** You must contact **Medical Control** for authorization prior to performing that intervention.
+Four actions, read off the strip — the example this page has always used. Each row's tag says
+the same thing in words, so you can check your reading of the pips against it.
+
+* **Perform general patient management** — solid from **B**: an empty outline at R; B, A, I and P act. Tag: *standing from B*.
+* **Administer [Epinephrine](../../pharmacology/Epinephrine.md) auto-injector** — solid from **A**: empty outlines at R and B; A, I and P act. Tag: *standing from A*.
+* **Obtain IV/IO access** — solid from **I**: empty outlines at R, B and A; I and P act. Tag: *standing from I*.
+* **Administer [Epinephrine](../../pharmacology/Epinephrine.md) infusion** — hatched at **I**, solid at **P**: empty outlines at R, B and A; at I you call Medical Control first; P acts. Tag: *MC at I, standing from P*.
+
+### Pips are cumulative by level
+
+A solid pip at one tier implies the same standing order at every HIGHER tier (R→B→A→I→P). Medical Control is never implied — each tier that requires Medical Control for a step carries its own hatched pip. An empty outline excludes a tier only when no lower tier is authorized; any row that seems to violate these rules (for example a label reading "EMT and above" beside an empty outline at EMT) is a source-data conflict — report it through the chain of command for Medical Control review.
+
+### Other marks on an action
+
+* **MC:** the hatched pip means you must contact **Medical Control** for authorization prior to performing that intervention.
 * **Caution (⚠):** Special considerations, critical safety warnings, or contraindications apply to this step.
+* **`*` beside a level:** agency training documentation and written Medical Control authorization for that specific skill or medication are required before you perform it — see **Special Requirements** above.
+* **`†` beside a level:** the provider level was derived from the source's own wording rather than printed as a badge.
 
 ### Protocol Structure
 
