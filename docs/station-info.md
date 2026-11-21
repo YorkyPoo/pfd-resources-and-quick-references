@@ -38,17 +38,15 @@ action: do I act, do I call, or is this not mine.
 - **Tap your level** and the protocol reads as *you*: each action is tagged with what you may do
   with it, the actions that are not yours dim down, and a count under the strip tells you how many
   you may perform, how many need a call, and how many are not yours.
-- **Solid** — standing order at your level. You may act.
-- **Hatched** — call Medical Control first at your level.
-- **Empty outline** — not authorised at your level.
+
+<!-- PIP_LEGEND -->
 
 Leave it on **Show all** and every row names the level its action starts at — *standing from B*,
 *MC at I, standing from P*, *MC at every level*, *no level authorised* — so a whole protocol reads
 in one pass without tapping anything.
 
 Levels are **R** (Emergency Medical Responder) · **B** (Emergency Medical Technician) · **A**
-(AEMT) · **I** (Intermediate) · **P** (Paramedic). Position names the level and the words name it
-too, so colour is never the only signal.
+(AEMT) · **I** (Intermediate) · **P** (Paramedic).
 
 The authority rules — which tiers inherit, when Medical Control applies, what an empty pip really
 excludes — are defined in one place: **[How to Read the Protocols](protocols/front-matter/01 - How to Read the Protocols.md)**.
