@@ -17,7 +17,7 @@ is a bug: [report it](../station-info.md#field-basics).
 !!! danger "Not a field reference"
     Nothing on this page is an authorization, a dose, or a decision rule. It exists for
     station drills and recertification study. On a call, use
-    [EMS Resources](../resources/ems.md) or [Fire Resources](../resources/fire.md).
+    [Protocols](../resources/ems.md) or [SOPs](../resources/fire.md).
 
 ## Scale & placement cards
 

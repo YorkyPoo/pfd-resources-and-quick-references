@@ -1,14 +1,24 @@
 #!/usr/bin/env python3
 """gen_resource_pages.py — mkdocs.yml nav is the single source of truth.
 
-Reads the nav tree, classifies every page into FIRE / EMS / DEPT, then writes
-(idempotently, only when content differs):
+Reads the nav tree, classifies every page into FIRE (SOPs) / FIRE_REF (fire
+references) / EMS (protocols) / STATION / DEPT, then writes (idempotently, only
+when content differs):
 
-  docs/resources/fire.md   fire hub — every fire page, grouped
-  docs/resources/ems.md    ems hub  — every EMS page, procedures included
-  docs/index.md            QUICKLINKS block: name + link only, phone-compact
-  mkdocs.yml               nav block: Home / Fire Resources / EMS Resources /
-                           Personnel Policies
+  docs/resources/ems.md             "Protocols" — every EMS page, static category
+                                    buttons on top, Front Matter first
+  docs/resources/fire.md            "SOPs" — every fire SOP page, grouped
+  docs/resources/fire-resources.md  "Fire Resources" — frameworks, field
+                                    references, strategies, FORCES study aid
+  docs/resources/station.md         "Station Hub"
+  docs/ems/index.md                 EMS clinical/learning hub
+  docs/station/policies.md          City & personnel policies
+  docs/index.md                     QUICKLINKS block: name + link only
+  mkdocs.yml                        nav block
+
+Naming is the owner's ruling of 2026-11-20: the protocol index is **Protocols**,
+the fire SOP index is **SOPs**, and what is left over (frameworks, field
+references, strategies, the FORCES study aid) is **Fire Resources**.
 
 Safety: every page path in the OLD nav must survive into the NEW nav and into
 exactly one hub. Anything dropped, duplicated, or unclassified aborts the run.
@@ -29,8 +39,11 @@ DOCS = ROOT / "docs"
 CONFIG = ROOT / "mkdocs.yml"
 
 HOME_PAGE = "index.md"
-FIRE_HUB = "resources/fire.md"
-EMS_HUB = "resources/ems.md"
+FIRE_HUB = "resources/fire.md"           # page title "SOPs" (owner ruling 2026-11-20)
+EMS_HUB = "resources/ems.md"             # page title "Protocols"
+# What is NOT an SOP on the fire side: frameworks, field references, strategies and
+# the FORCES study aid. Owner ruling 2026-11-20, split out of the old fire hub.
+FIRE_REF_HUB = "resources/fire-resources.md"
 STATION_HUB = "resources/station.md"
 LINKS_PAGE = "resources/links.md"
 # Clinical landing page behind the homepage scroller (owner card t_e787ab8d): the
@@ -49,10 +62,18 @@ QL_END = "<!-- QUICKLINKS:END -->"
 GROUP_RENAME = {
     ("EMS", "EMS"): "EMS SOPs",                     # was buried under "Fire SOPs"
     ("Fire & EMS References", "FIRE"): "Field References",
+    ("Fire & EMS References", "FIRE_REF"): "Field References",
     # A page flat under the top-level EMS section inherits that section's own label,
     # which repeated the page title as a group heading on the hub. Same failure class
     # as "Station Hub inside Station Hub" (owner report 2026-11-11).
-    ("EMS Resources", "EMS"): "Orientation",
+    #
+    # Outstanding Decisions: the group was called "Orientation" and sat FIRST on the
+    # Protocols page. It is an audit page, not a clinical entry point, and the owner
+    # ruled it to the bottom (2026-11-20) — so both the label and the position follow.
+    ("Orientation", "EMS"): "Outstanding Decisions",
+    # FORCES is a study aid, not an SOP. It keeps its nav home (Emergency Operations)
+    # but the group is renamed for the Fire Resources page, where it now sits.
+    ("Emergency Operations", "FIRE_REF"): "Study Aids",
     # A page placed flat under a section inherits that section's own label as its group,
     # which put "Station Hub" INSIDE "Station Hub" in the drawer (owner report 2026-11-11) and
     # repeated the page title as an H2 on the hub. Give those groups names that describe the
@@ -61,16 +82,35 @@ GROUP_RENAME = {
     ("Crew Links", "STATION"): "Portals & Systems",
 }
 
+# Pages that sit FLAT in their nav section (no group of their own). Their group name is
+# pinned by path so it survives every nav rewrite: medications.md is a group of one,
+# and Outstanding Decisions must keep its own heading instead of inheriting the
+# section name "Protocols".
+PATH_GROUP = {
+    "medications.md": "Medications & Calculators",
+    "protocols/outstanding-decisions.md": "Outstanding Decisions",
+}
+
 # display order inside each hub AND in the homepage jump strips — highest-traffic
 # first (owner ruling 2026-11-10: "the more important things need to be a higher
 # hierarchy to the left"). Reorder here and both hubs + strips follow.
-FIRE_ORDER = ["Emergency Operations", "Field References", "Strategies", "Frameworks",
-              "Special Operations", "Equipment & Apparatus", "Safety & Health",
-              "General Administration", "Public Relations"]
-EMS_ORDER = ["Orientation", "Cardiac", "Respiratory", "Trauma", "Medical", "Administrative",
-             "Procedures", "Quick References", "Toxicology", "Neurologic", "General",
-             "Pharmacology", "Medications & Calculators", "Pediatric Dosing Reference",
-             "EMS SOPs", "Front Matter"]
+#
+# FIRE = the SOPs page, so only SOP families are listed here; the reference shelf
+# (frameworks / field references / strategies) moved to Fire Resources.
+FIRE_ORDER = ["Emergency Operations", "Special Operations", "Equipment & Apparatus",
+              "Safety & Health", "General Administration", "Public Relations"]
+# Fire Resources order is the owner's own listing order (2026-11-20).
+FIRE_REF_ORDER = ["Frameworks", "Field References", "Strategies", "Study Aids"]
+# Protocols page, top to bottom (owner ruling 2026-11-20): Front Matter and Quick
+# References are orientation material and go first; the audit page goes last.
+EMS_ORDER = ["Front Matter", "Quick References", "Cardiac", "Respiratory", "Trauma",
+             "Medical", "Administrative", "Procedures", "Toxicology", "Neurologic",
+             "General", "Pharmacology", "Medications & Calculators",
+             "Pediatric Dosing Reference", "EMS SOPs", "Outstanding Decisions"]
+# Owner ruled Procedures ABOVE Pharmacology. Assert it here rather than trusting the
+# table above: a future reorder that breaks the ruling must fail the generator.
+if EMS_ORDER.index("Procedures") > EMS_ORDER.index("Pharmacology"):
+    raise SystemExit("EMS_ORDER: Procedures must stay above Pharmacology (owner ruling)")
 
 # Station groups in display order. These are the RENAMED group labels (see GROUP_RENAME):
 # naming the section's own word here would re-render "Station Hub" inside "Station Hub".
@@ -98,25 +138,58 @@ SCENE_TOOLS = [
 # then real destinations"). Each strip leads with the hub it belongs to, so the first
 # tap is never a surprise, and every chip after it carries its own URL.
 EMS_CLINICAL_STRIP = [
-    ("Cardiac", EMS_CLINICAL_HUB + "#cardiac"),
-    ("Respiratory", EMS_CLINICAL_HUB + "#respiratory"),
-    ("Trauma", EMS_CLINICAL_HUB + "#trauma"),
-    ("Medical", EMS_CLINICAL_HUB + "#medical"),
-    ("Pediatric", EMS_CLINICAL_HUB + "#pediatric"),
+    ("Cardiac", EMS_HUB + "#cardiac"),
+    ("Respiratory", EMS_HUB + "#respiratory"),
+    ("Trauma", EMS_HUB + "#trauma"),
+    ("Medical", EMS_HUB + "#medical"),
+    ("Pediatric", EMS_HUB + "#pediatric-dosing-reference"),
 ]
-EMS_HUB_CHIP = ("EMS Clinical Hub", EMS_CLINICAL_HUB)
+EMS_CLINICAL_HUB_CHIP = ("EMS Clinical Hub", EMS_CLINICAL_HUB)
+EMS_HUB_CHIP = ("All protocols", EMS_HUB)
 EMS_PROCEDURES_CHIP = ("Procedures", "resources/ems.md#procedures")
-FIRE_HUB_CHIP = ("All Fire SOPs", FIRE_HUB)
-FIRE_STRIP = [
+# Fire side, split in two (owner ruling 2026-11-20): the SOP index and the
+# reference shelf are different pages now, so each scroller points at its own page.
+SOP_HUB_CHIP = ("All SOPs", FIRE_HUB)
+SOP_STRIP = [
     ("Emergency Operations", FIRE_HUB + "#emergency-operations"),
-    ("Field References", FIRE_HUB + "#field-references"),
-    ("Strategies", FIRE_HUB + "#strategies"),
-    ("Frameworks", FIRE_HUB + "#frameworks"),
     ("Special Operations", FIRE_HUB + "#special-operations"),
     ("Equipment & Apparatus", FIRE_HUB + "#equipment-apparatus"),
     ("Safety & Health", FIRE_HUB + "#safety-health"),
     ("General Administration", FIRE_HUB + "#general-administration"),
     ("Public Relations", FIRE_HUB + "#public-relations"),
+]
+FIRE_REF_HUB_CHIP = ("Fire resources", FIRE_REF_HUB)
+FIRE_REF_STRIP = [
+    ("Frameworks", FIRE_REF_HUB + "#frameworks"),
+    ("Field References", FIRE_REF_HUB + "#field-references"),
+    ("Strategies", FIRE_REF_HUB + "#strategies"),
+    ("FORCES Study Aid", FIRE_REF_HUB + "#study-aids"),
+]
+
+# Static category buttons across the top of the Protocols page — one button per
+# category, ALL visible at once, no horizontal scroller and no drawer (owner ruling
+# 2026-11-20: the scroller hid half the categories off the right edge of a phone).
+# Anchors are validated against the headings the page actually gets, so a renamed
+# group aborts the build instead of shipping a dead button.
+EMS_BUTTONS = [
+    ("Cardiac", "#cardiac"),
+    ("Respiratory", "#respiratory"),
+    ("Trauma", "#trauma"),
+    ("Medical", "#medical"),
+    ("Pediatric", "#pediatric-dosing-reference"),
+    ("Administrative", "#administrative"),
+    ("Procedures", "#procedures"),
+    ("Toxicology", "#toxicology"),
+    ("Neurologic", "#neurologic"),
+    ("General", "#general"),
+    ("Pharmacology", "#pharmacology"),
+    ("EMS SOPs", "#ems-sops"),
+]
+# Tools, not categories: these leave the page for a working calculator, so they carry
+# .qdtool and sit after the categories in the same wrapping button block.
+EMS_TOOLS = [
+    ("Drug Calculator", "../medications.md#advanced-drip-rate-protocol-calculator"),
+    ("Pediatric Calculator", "../pediatric-dosing/calculator.md"),
 ]
 
 # Bottom utility row, left column: the five policies a crew actually reaches for.
@@ -153,20 +226,32 @@ CREW_CHIPS = [
 ]
 LINKS_HUB_CHIP = ("All Links", LINKS_PAGE)
 
-# EMS clinical hub categories, in the order a call is triaged.
-EMS_CATEGORIES = [
-    ("Cardiac", "Chest pain, arrest, SVT, bradycardia"),
-    ("Respiratory", "Distress, asthma/COPD, edema, airway"),
-    ("Trauma", "Bleeding, burns, crush, electrical"),
-    ("Medical", "Anaphylaxis, sepsis, OB, shock"),
+# EMS clinical hub — the administrative set a crew reaches for before/after the call
+# (owner's words: "refusals, destination, documentation, reporting").
+EMS_ADMIN = [
+    ("Refusals / AMA",
+     "protocols/administrative/01_Patient_Refusal_of_Treatment_Transport_PROC.md",
+     "Capacity, signature, risk"),
+    ("Destination &amp; Diversion",
+     "protocols/administrative/01_Transportation_and_Destination_Determination_PROC.md",
+     "Where and why"),
+    ("Documentation &amp; Reporting", "sops/ems/EMS-1700-Mandatory-Reporting.md",
+     "Mandatory reports"),
+    ("Death Criteria / Withholding",
+     "protocols/administrative/01_Death_Criteria_for_Withholding_Resuscitation_PROC.md",
+     "When not to start"),
+    ("Field Triage", "protocols/administrative/01_STEMI_Field_Triage_PROC.md",
+     "STEMI, stroke, trauma"),
+    ("ALS Release to BLS", "protocols/administrative/01_ALS_Release_to_BLS_PROC.md",
+     "Handing a call down"),
 ]
-# Pediatric has no nav group of its own (its pages sit in Dosing/Respiratory/Admin),
-# so the hub names the three entry points explicitly and each is checked on disk.
-EMS_PEDIATRIC = [
-    ("Pediatric Dosing Reference", "resources/ems.md#pediatric-dosing-reference"),
-    ("Pediatric Stridor", "protocols/respiratory/03_Pediatric_Stridor_PROC.md"),
-    ("Safe Transport of Pediatric Patients",
-     "protocols/administrative/01_Safe_Transport_of_Pediatric_Patients_PROC.md"),
+# Calculator entry points. Icons come from ICONS (drawn SVG, no icon font).
+EMS_CALCS = [
+    ("Drug &amp; Drip Rates", "medications.md", "Push and infusion calculator", "drug"),
+    ("Pediatric Dosing Calculator", "pediatric-dosing/calculator.md",
+     "Weight-based dosing", "dose"),
+    ("Pediatric Dosing Tables", "pediatric-dosing/dosing-tables.md",
+     "Length-based, no math", "dose"),
 ]
 # EMS Operations & SOPs (owner-named set). Every target is checked against disk in
 # quicklinks_block(); only the labels are ours.
@@ -186,6 +271,27 @@ EMS_OPS = [
     ("Mass Casualty / IMS", "sops/emergency-operations/EO-100-Incident-Management-System.md",
      "Command, triage, branches"),
 ]
+
+# The EMS SOP entry points on the clinical hub — a SHORT list (owner ruling
+# 2026-11-20: "remove most of the SOP… make it more of the EMS resources and learning
+# page"), never all 23. The complete list stays on the Protocols page's EMS SOPs
+# section, which is where the hub links for the rest.
+EMS_SOP_SHORT = [
+    ("General EMS Guidelines", "sops/ems/EMS-100-General-EMS-Guidelines.md",
+     "How we run EMS calls"),
+    ("Controlled Substances", "sops/ems/EMS-2100-Controlled-Substances.md",
+     "Waste, sign-out, drug box"),
+    ("Medication Management & Pharmacy",
+     "sops/ems/EMS-2000-Medication-Management-and-Pharmacy.md",
+     "Stocking, expiries, exchange"),
+    ("EMS Do Not Resuscitate", "sops/ems/EMS-600-EMS-Do-Not-Resuscitate.md",
+     "DNR orders in the field"),
+    ("Patient Transport", "sops/ems/EMS-1200-Patient-Transport.md",
+     "Transport decisions"),
+    ("EMS Certifications", "sops/ems/EMS-1300-EMS-Certifications.md",
+     "Who is credentialed for what"),
+]
+
 
 # The EMS SOP chips on the homepage scroller. Labels are the owner's own group names
 # (card t_a650f9ea); every target is one of EMS_OPS' verified pages, so the chip and
@@ -279,6 +385,10 @@ def load_cfg():
 # idempotent after it has rewritten the nav into Fire/EMS hubs.
 EMS_PATHS = ("protocols/", "procedures/", "pharmacology/", "medications.md",
              "pediatric-dosing/", "sops/ems/", "quick-refs/", "ems/")
+# Fire reference shelf: what is NOT an SOP (owner ruling 2026-11-20). Checked before
+# FIRE_PATHS, which still claims everything under sops/.
+FIRE_REF_PATHS = ("fire-ems-references/",)
+FIRE_REF_PAGES = {"sops/emergency-operations/EO-600a-FORCES-Mnemonic.md"}
 FIRE_PATHS = ("fire-ems-references/", "sops/")
 # Station = non-clinical, non-fireground utility pages (the "station mode" tempo).
 # bucket_of checks the HUB constants first, so resources/station.md classifies as HUB
@@ -311,7 +421,7 @@ def bucket_of(rec):
     path = rec["file"] or ""
     if path == HOME_PAGE:
         return "HOME"
-    if path in (FIRE_HUB, EMS_HUB, STATION_HUB, EMS_CLINICAL_HUB):
+    if path in (FIRE_HUB, EMS_HUB, STATION_HUB, EMS_CLINICAL_HUB, FIRE_REF_HUB):
         return "HUB"
     if path.startswith(STATION_PATHS):
         return "STATION"
@@ -319,6 +429,8 @@ def bucket_of(rec):
         return "DEPT"
     if path.startswith(EMS_PATHS):
         return "EMS"
+    if path in FIRE_REF_PAGES or path.startswith(FIRE_REF_PATHS):
+        return "FIRE_REF"
     if path.startswith(FIRE_PATHS):
         return "FIRE"
     raise SystemExit(f"UNCLASSIFIED page {path!r} (nav top {rec['top']!r}) — add a rule")
@@ -330,6 +442,12 @@ def group_of(rec):
 
 
 def group_name(rec, bucket):
+    # A page that sits FLAT in its section takes the section name as its nav parent,
+    # so on the next run it would invent a group called after the section ("Protocols").
+    # Key these by path: the classification then never depends on how the nav was
+    # written last time.
+    if rec.get("file") in PATH_GROUP:
+        return PATH_GROUP[rec["file"]]
     return GROUP_RENAME.get((group_of(rec), bucket), group_of(rec))
 
 
@@ -352,25 +470,62 @@ def slugify(text):
 
 
 HUB_LEAD = {
-    "FIRE": ("Everything attached to the **fire side** — tactical references, "
-             "emergency operations, equipment and apparatus, special operations, "
-             "safety, and department administration. EMS clinical content lives on "
-             "the [EMS Resources](ems.md) page."),
-    "EMS": ("Everything attached to the **EMS side** — protocols, skills "
-            "procedures, medications, pediatric dosing, and EMS administration. "
-            "Fire content lives on the [Fire Resources](fire.md) page."),
+    "FIRE": ("**Standard operating procedures** for the fire side — emergency "
+             "operations, special operations, equipment and apparatus, safety, and "
+             "department administration. Frameworks, field references, strategies and "
+             "the FORCES study aid are on the [Fire Resources](fire-resources.md) page; "
+             "clinical protocols are on [Protocols](ems.md)."),
+    "FIRE_REF": ("The fire side's **reference shelf** — frameworks, field references, "
+                 "strategies, and the FORCES mnemonic study aid. None of it is an SOP: "
+                 "the SOPs themselves are on the [SOPs](fire.md) page."),
+    "EMS": ("Every **protocol** in one index — clinical categories, skills procedures, "
+            "medications, pediatric dosing, and the EMS SOPs. Front Matter and Quick "
+            "References are at the top because they are how you read the rest. Fire "
+            "SOPs live on the [SOPs](fire.md) page, reference material on "
+            "[Fire Resources](fire-resources.md)."),
     "STATION": ("**Station mode** — the things you look up between calls, not during "
                 "one: how this site works, what changed recently, training drills, and "
                 "the [Crew Links & Portals](links.md) launchpad. Clinical decisions live "
-                "on the [EMS Resources](ems.md) and [Fire Resources](fire.md) pages."),
+                "on the [Protocols](ems.md) and [SOPs](fire.md) pages."),
 }
 
 
 def build_hub(bucket, title, groups):
-    chip = "**Jump:** " + " ".join(f"[{g}](#{slugify(g)})" for g, _ in groups)
-    lines = [f"# {title}", "", HUB_LEAD[bucket], "",
-             '<div class="qljump" markdown="1">', "", chip, "", "</div>", ""]
+    """Hub page: H1, lead, navigation control, then one section per group.
+
+    On the Protocols page the navigation control is a block of STATIC category
+    buttons (owner ruling 2026-11-20) — every category visible at once, wrapping
+    into rows, never a horizontal scroller. Every other hub keeps the one-row
+    jump strip.
+    """
+    lines = [f"# {title}", "", HUB_LEAD[bucket], ""]
+    if bucket == "EMS":
+        anchors = {slugify(g) for g, _ in groups}
+        dead = [f"{l} -> {t}" for l, t in EMS_BUTTONS if t.lstrip("#") not in anchors]
+        if dead:
+            raise SystemExit(
+                "EMS_BUTTONS point at headings that do not exist on the Protocols page: "
+                + ", ".join(dead))
+        missing = [t for _l, t in EMS_TOOLS
+                   if not (DOCS / "resources" / t.split("#")[0]).resolve().exists()]
+        if missing:
+            raise SystemExit(f"EMS_TOOLS point at pages that do not exist: {missing}")
+        buttons = " ".join(f"[{l}]({t})" for l, t in EMS_BUTTONS)
+        tools = " ".join(f"[{l}]({t}){{ .qdtool }}" for l, t in EMS_TOOLS)
+        lines += ['<div class="qldots" markdown="1">', "", buttons + " " + tools, "",
+                  "</div>", ""]
+    else:
+        chip = "**Jump:** " + " ".join(f"[{g}](#{slugify(g)})" for g, _ in groups)
+        lines += ['<div class="qljump" markdown="1">', "", chip, "", "</div>", ""]
     for g, recs in groups:
+        # A group holding exactly one page with the same name (Outstanding Decisions)
+        # would otherwise read "## Outstanding Decisions / - Outstanding Decisions".
+        # Link the heading instead: the anchor is still #outstanding-decisions because
+        # MkDocs slugs a heading by its text, links included.
+        if len(recs) == 1 and recs[0]["label"] == g:
+            rel = posixpath.relpath("docs/" + recs[0]["file"], "docs/resources")
+            lines += [f"## [{g}]({rel})", ""]
+            continue
         lines += [f"## {g}", ""]
         for r in recs:
             rel = posixpath.relpath("docs/" + r["file"], "docs/resources")
@@ -385,15 +540,23 @@ def build_nav(records):
         nodes = []
         for g, recs in ordered_groups([r for r in records
                                        if bucket_of(r) == bucket and r["file"]], bucket, order):
-            nodes.append({g: [{r["label"]: r["file"]} for r in recs]})
+            # One page whose label IS the group label (Outstanding Decisions, Training, …)
+            # would otherwise nest "X" inside "X" in the drawer — the same duplicate the
+            # owner flagged for Station Hub. Emit it flat instead.
+            if len(recs) == 1 and recs[0]["label"] == g:
+                nodes.append({recs[0]["label"]: recs[0]["file"]})
+            else:
+                nodes.append({g: [{r["label"]: r["file"]} for r in recs]})
         return nodes
 
     dept = [r for r in records if bucket_of(r) == "DEPT" and r["file"]]
     return [{"Home": HOME_PAGE},
-            {"Fire Resources": [{"Fire Resources Home": FIRE_HUB}, *group_nodes("FIRE", FIRE_ORDER)]},
-            {"EMS Resources": [{"EMS Resources Home": EMS_HUB},
-                               {"EMS Clinical Hub": EMS_CLINICAL_HUB},
-                               *group_nodes("EMS", EMS_ORDER)]},
+            {"Protocols": [{"Protocols Home": EMS_HUB},
+                           {"EMS Clinical Hub": EMS_CLINICAL_HUB},
+                           *group_nodes("EMS", EMS_ORDER)]},
+            {"SOPs": [{"SOPs Home": FIRE_HUB}, *group_nodes("FIRE", FIRE_ORDER)]},
+            {"Fire Resources": [{"Fire Resources Home": FIRE_REF_HUB},
+                                *group_nodes("FIRE_REF", FIRE_REF_ORDER)]},
             {"Personnel Policies": [{r["label"]: r["file"]} for r in dept]},
             {"Station Hub": [{"Station Hub Home": STATION_HUB},
                              *group_nodes("STATION", STATION_ORDER)]}]
@@ -444,16 +607,25 @@ def chip(label, href, kind):
 def check_targets(records):
     """Every curated target must exist — a renamed page breaks the build, never a tile."""
     nav_paths = {r["file"] for r in records if r["file"]}
-    on_disk = lambda p: (DOCS / p.split("#")[0]).exists()
+    on_disk = lambda p: ((DOCS / p.split("#")[0]).exists()
+                         or p.split("#")[0] == FIRE_REF_HUB)  # this script writes it
     missing = [p for _l, p, *_ in SCENE_TOOLS if p.split("#")[0] not in nav_paths]
     missing += [p for _l, p, _s in POLICY_TILES if not on_disk(p)]
     missing += [p for _l, p in EMS_SOP_STRIP if not on_disk(p)]
     missing += [p for _l, p in EMS_CLINICAL_STRIP if not on_disk(p)]
-    missing += [p for _l, p in FIRE_STRIP if not on_disk(p)]
+    missing += [p for _l, p in SOP_STRIP if not on_disk(p)]
+    missing += [p for _l, p in FIRE_REF_STRIP if not on_disk(p)]
+    missing += [p for _l, p, _s in EMS_SOP_SHORT if not on_disk(p)]
+    # FIRE_REF_HUB is created by this script, so on the FIRST run after the split it is
+    # not in the on-disk nav yet; every later --check run has it and checks it.
+    missing += [p for p in (SOP_HUB_CHIP[1], FIRE_REF_HUB_CHIP[1], EMS_CLINICAL_HUB_CHIP[1],
+                            EMS_HUB_CHIP[1])
+                if p not in nav_paths and p != FIRE_REF_HUB]
     missing += [EMS_PROCEDURES_CHIP[1].split("#")[0]] * (not on_disk(EMS_PROCEDURES_CHIP[1]))
     missing += [p for _l, p in CREW_CHIPS if not p.startswith("http") and not on_disk(p)]
     missing += [p for _l, p, _s in EMS_OPS if not on_disk(p)]
-    missing += [p for _l, p in EMS_PEDIATRIC if not on_disk(p)]
+    missing += [p for _l, p, _s in EMS_ADMIN if not on_disk(p)]
+    missing += [p for _l, p, _s, _i in EMS_CALCS if not on_disk(p)]
     missing += [p for _g, pairs in POLICY_GROUPS for _l, p in pairs if not on_disk(p)]
     missing += [p for _l, p in POLICY_CHIPS if not on_disk(p)]
     missing += [p for p in (LINKS_PAGE, STATION_HUB, STATION_POLICIES, EMS_CLINICAL_HUB)
@@ -480,18 +652,25 @@ def quicklinks_block(records):
               for label, path, sub, domain, icon in SCENE_TOOLS]
     parts += ["", "</div>", "", "</section>", "",
               '<section class="pfd-zone" markdown="1">', "",
-              f'**[Clinical protocols]({EMS_CLINICAL_HUB})**'
+              f'**[Protocols]({EMS_HUB})**'
               '{: .pfd-cap .pfd-cap--link }', "",
               '<div class="pfd-scroller pfd-scroller--ems" markdown="1">', ""]
-    parts += [chip(*EMS_HUB_CHIP, "all"), chip(*EMS_PROCEDURES_CHIP, "ems")]
+    parts += [chip(*EMS_HUB_CHIP, "all"), chip(*EMS_CLINICAL_HUB_CHIP, "ems"),
+              chip(*EMS_PROCEDURES_CHIP, "ems")]
     parts += [chip(label, href, "ems") for label, href in EMS_SOP_STRIP]
     parts += [chip(label, href, "ems") for label, href in EMS_CLINICAL_STRIP]
     parts += ["", "</div>", "",
-              f'**[Fire EOs &amp; field guides]({FIRE_HUB})**'
+              f'**[SOPs]({FIRE_HUB})**'
               '{: .pfd-cap .pfd-cap--link }', "",
               '<div class="pfd-scroller pfd-scroller--fire" markdown="1">', ""]
-    parts += [chip(*FIRE_HUB_CHIP, "all")]
-    parts += [chip(label, href, "fire") for label, href in FIRE_STRIP]
+    parts += [chip(*SOP_HUB_CHIP, "all")]
+    parts += [chip(label, href, "fire") for label, href in SOP_STRIP]
+    parts += ["", "</div>", "",
+              f'**[Fire resources]({FIRE_REF_HUB})**'
+              '{: .pfd-cap .pfd-cap--link }', "",
+              '<div class="pfd-scroller pfd-scroller--fire" markdown="1">', ""]
+    parts += [chip(*FIRE_REF_HUB_CHIP, "all")]
+    parts += [chip(label, href, "fire") for label, href in FIRE_REF_STRIP]
     parts += ["", "</div>", "", "</section>", "",
               '<section class="pfd-secondary-row" markdown="1">', "",
               '<div class="pfd-secondary" markdown="1">', "",
@@ -518,45 +697,50 @@ def quicklinks_block(records):
 
 
 def build_ems_hub(ems_groups):
-    """ems/index.md — the clinical landing page the homepage scroller points into."""
+    """ems/index.md — the EMS learning page, not a second protocol index.
+
+    Owner ruling 2026-11-20: "Remove most of the SOP. Make it more of the EMS resources
+    and learning page." The full clinical category listing was dropped because it
+    duplicated the Protocols page (the "jump to another jump" complaint). What stays:
+    administrative protocols, a SHORT EMS SOP entry list, and the calculators. Every
+    page dropped from here is still listed on resources/ems.md — the nav-coverage
+    check in main() proves each nav page is placed on exactly one hub.
+    """
     counts = {g: len(recs) for g, recs in ems_groups}
     lines = ["# EMS Clinical Hub", "",
-             "**On-scene EMS.** Pick the category, then the protocol — the lists are on this "
-             "page, so nothing here is a jump to another jump. Operations and administrative "
-             "SOPs are in the second section; the complete A-to-Z index of every EMS page is on "
-             "[EMS Resources](../resources/ems.md).", "",
+             "**On-scene EMS.** This is the learning page: the administrative protocols "
+             "you reach for before and after the call, the few EMS SOPs that come up "
+             "most, and the calculators. Every clinical protocol, by category, is on "
+             "[Protocols](../resources/ems.md).", "",
              '<section class="pfd-zone" markdown="1">', "",
-             '<p class="pfd-cap">Clinical treatment protocols</p>', "",
+             '<p class="pfd-cap">Administrative protocols</p>', "",
              '<div class="pfd-quick-grid" markdown="1">', ""]
-    for cat, hint in EMS_CATEGORIES:
-        lines.append(card(cat, "#" + slugify(cat),
-                          f"{counts.get(cat, 0)} protocols · {hint}", "EMS", plain=True))
-    lines.append(card("Pediatric", "#pediatric",
-                      "EMS · dosing, stridor, transport", "EMS", plain=True))
-    lines += ["", "</div>", "", "</section>", "",
-              '<section class="pfd-zone" markdown="1">', "",
-              '<p class="pfd-cap">EMS operations &amp; SOPs</p>', "",
-              '<div class="pfd-quick-grid" markdown="1">', ""]
-    for label, path, sub in EMS_OPS:
-        # EMS accent, not ADMIN: these are EMS operational SOPs. The label spells the
-        # domain out, so the colour is never the only signal.
+    for label, path, sub in EMS_ADMIN:
         lines.append(card(label, rel("ems", path), sub, "EMS", plain=True))
-    lines += ["", "</div>", "", "</section>", "", "---", "",
-              "## Clinical Treatment Protocols", ""]
-    for cat, _hint in EMS_CATEGORIES:
-        recs = dict(ems_groups).get(cat, [])
-        lines += [f"### {cat}", ""]
-        lines += [f"- [{r['label']}]({rel('ems', r['file'])})" for r in recs] or ["- (none)"]
-        lines.append("")
-    lines += ["### Pediatric", "",
-              "Pediatric protocols sit in the dosing reference and in the Respiratory and "
-              "Administrative lists; these are the three entry points a crew needs first.", ""]
-    lines += [f"- [{label}]({rel('ems', path)})" for label, path in EMS_PEDIATRIC]
-    lines += ["", "## EMS Operations &amp; SOPs", "",
-              "The operational side of EMS: medication and controlled-substance handling, "
-              "refusals, destination decisions, reporting, and mass casualty. Every EMS SOP "
-              "(23 pages) is listed on [EMS Resources](../resources/ems.md#ems-sops).", ""]
-    lines += [f"- [{label}]({rel('ems', path)}) — {sub}" for label, path, sub in EMS_OPS]
+    lines += ["", "</div>", "",
+              f"All {counts.get('Administrative', 0)} administrative protocols are listed "
+              "under [Administrative](../resources/ems.md#administrative) on the Protocols "
+              "page.", "", "</section>", "",
+              '<section class="pfd-zone" markdown="1">', "",
+             '<p class="pfd-cap">EMS SOPs — the six that come up most</p>', "",
+             '<div class="pfd-quick-grid" markdown="1">', ""]
+    for label, path, sub in EMS_SOP_SHORT:
+        lines.append(card(label, rel("ems", path), sub, "EMS", plain=True))
+    lines += ["", "</div>", "",
+              "All 23 EMS SOPs are listed under "
+              "[EMS SOPs](../resources/ems.md#ems-sops).", "", "</section>", "",
+              '<section class="pfd-zone" markdown="1">', "",
+              '<p class="pfd-cap">Calculators</p>', "",
+              '<div class="pfd-quick-grid" markdown="1">', ""]
+    for label, path, sub, icon in EMS_CALCS:
+        lines.append(card(label, rel("ems", path), sub, "EMS", icon, plain=True))
+    lines += ["", "</div>", "", "</section>", "",
+              "## Where the rest is", "",
+              "- **Every protocol** — [Protocols](../resources/ems.md), with a button for "
+              "each category at the top of the page.",
+              "- **Fire-side SOPs** — [SOPs](../resources/fire.md).",
+              "- **Frameworks, field references, strategies, FORCES** — "
+              "[Fire Resources](../resources/fire-resources.md)."]
     return "\n".join(lines).rstrip() + "\n"
 
 
@@ -565,8 +749,8 @@ def build_policies_page():
     lines = ["# City & Personnel Policies", "",
              "City of Poquoson personnel policy and department policy, out of the on-scene "
              "flow. Nothing on this page is a clinical decision — protocols are on the "
-             "[EMS Clinical Hub](../ems/index.md) and fireground policy is under "
-             "[Fire Resources](../resources/fire.md).", "",
+             "[EMS Clinical Hub](../ems/index.md) and fireground procedure is under "
+             "[SOPs](../resources/fire.md).", "",
              '<section class="pfd-zone" markdown="1">', "",
              '<p class="pfd-cap">Most reached</p>', "",
              '<div class="pfd-quick-grid" markdown="1">', ""]
@@ -611,7 +795,8 @@ def main():
     cfg = load_cfg()
     records = flatten(cfg["nav"])
     old = [r["file"] for r in records if r["file"] and bucket_of(r) != "HUB"]
-    old_set, hub_set = set(old), {FIRE_HUB, EMS_HUB, STATION_HUB, EMS_CLINICAL_HUB}
+    old_set = set(old)
+    hub_set = {FIRE_HUB, EMS_HUB, STATION_HUB, EMS_CLINICAL_HUB, FIRE_REF_HUB}
 
     nav = build_nav(records)
     new = nav_paths(nav)
@@ -625,11 +810,14 @@ def main():
 
     fire_g = ordered_groups([r for r in records if bucket_of(r) == "FIRE" and r["file"]],
                             "FIRE", FIRE_ORDER)
+    fire_ref_g = ordered_groups([r for r in records if bucket_of(r) == "FIRE_REF" and r["file"]],
+                                "FIRE_REF", FIRE_REF_ORDER)
     ems_g = ordered_groups([r for r in records if bucket_of(r) == "EMS" and r["file"]],
                            "EMS", EMS_ORDER)
     station_g = ordered_groups([r for r in records if bucket_of(r) == "STATION" and r["file"]],
                                "STATION", STATION_ORDER)
-    placed = [r["file"] for _, gs in (("FIRE", fire_g), ("EMS", ems_g), ("STATION", station_g))
+    placed = [r["file"] for _, gs in (("FIRE", fire_g), ("FIRE_REF", fire_ref_g),
+                                      ("EMS", ems_g), ("STATION", station_g))
               for _g, recs in gs for r in recs]
     non_hub = {r["file"] for r in records if bucket_of(r) in ("HOME", "DEPT")}
     hub_missing = old_set - set(placed) - non_hub
@@ -639,8 +827,9 @@ def main():
         raise SystemExit("HUB COVERAGE FAILURE: a page is listed twice")
 
     files = {
-        "docs/" + FIRE_HUB: build_hub("FIRE", "Fire Resources", fire_g),
-        "docs/" + EMS_HUB: build_hub("EMS", "EMS Resources", ems_g),
+        "docs/" + EMS_HUB: build_hub("EMS", "Protocols", ems_g),
+        "docs/" + FIRE_HUB: build_hub("FIRE", "SOPs", fire_g),
+        "docs/" + FIRE_REF_HUB: build_hub("FIRE_REF", "Fire Resources", fire_ref_g),
         "docs/" + STATION_HUB: build_hub("STATION", "Station Hub", station_g),
         "docs/" + EMS_CLINICAL_HUB: build_ems_hub(ems_g),
         "docs/" + STATION_POLICIES: build_policies_page(),
@@ -650,8 +839,9 @@ def main():
 
     drift = [rel for rel, text in files.items()
              if not (ROOT / rel).exists() or (ROOT / rel).read_text() != text]
-    print(f"pages: {len(old_set)}  fire groups: {len(fire_g)} "
-          f"({sum(len(g[1]) for g in fire_g)})  ems groups: {len(ems_g)} "
+    print(f"pages: {len(old_set)}  sop groups: {len(fire_g)} "
+          f"({sum(len(g[1]) for g in fire_g)})  fire-ref groups: {len(fire_ref_g)} "
+          f"({sum(len(g[1]) for g in fire_ref_g)})  ems groups: {len(ems_g)} "
           f"({sum(len(g[1]) for g in ems_g)})  station groups: {len(station_g)} "
           f"({sum(len(g[1]) for g in station_g)})")
     print("drift:", ", ".join(drift) or "none — all files current")

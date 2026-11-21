@@ -1,6 +1,6 @@
 # Station Hub
 
-**Station mode** — the things you look up between calls, not during one: how this site works, what changed recently, training drills, and the [Crew Links & Portals](links.md) launchpad. Clinical decisions live on the [EMS Resources](ems.md) and [Fire Resources](fire.md) pages.
+**Station mode** — the things you look up between calls, not during one: how this site works, what changed recently, training drills, and the [Crew Links & Portals](links.md) launchpad. Clinical decisions live on the [Protocols](ems.md) and [SOPs](fire.md) pages.
 
 <div class="qljump" markdown="1">
 

@@ -1,16 +1,25 @@
-# EMS Resources
+# Protocols
 
-Everything attached to the **EMS side** — protocols, skills procedures, medications, pediatric dosing, and EMS administration. Fire content lives on the [Fire Resources](fire.md) page.
+Every **protocol** in one index — clinical categories, skills procedures, medications, pediatric dosing, and the EMS SOPs. Front Matter and Quick References are at the top because they are how you read the rest. Fire SOPs live on the [SOPs](fire.md) page, reference material on [Fire Resources](fire-resources.md).
 
-<div class="qljump" markdown="1">
+<div class="qldots" markdown="1">
 
-**Jump:** [Orientation](#orientation) [Cardiac](#cardiac) [Respiratory](#respiratory) [Trauma](#trauma) [Medical](#medical) [Administrative](#administrative) [Procedures](#procedures) [Quick References](#quick-references) [Toxicology](#toxicology) [Neurologic](#neurologic) [General](#general) [Pharmacology](#pharmacology) [Medications & Calculators](#medications-calculators) [Pediatric Dosing Reference](#pediatric-dosing-reference) [EMS SOPs](#ems-sops) [Front Matter](#front-matter)
+[Cardiac](#cardiac) [Respiratory](#respiratory) [Trauma](#trauma) [Medical](#medical) [Pediatric](#pediatric-dosing-reference) [Administrative](#administrative) [Procedures](#procedures) [Toxicology](#toxicology) [Neurologic](#neurologic) [General](#general) [Pharmacology](#pharmacology) [EMS SOPs](#ems-sops) [Drug Calculator](../medications.md#advanced-drip-rate-protocol-calculator){ .qdtool } [Pediatric Calculator](../pediatric-dosing/calculator.md){ .qdtool }
 
 </div>
 
-## Orientation
+## Front Matter
 
-- [Outstanding Decisions](../protocols/outstanding-decisions.md)
+- [Introduction](../protocols/front-matter/00 - Introduction.md)
+- [How to Read the Protocols](../protocols/front-matter/01 - How to Read the Protocols.md)
+- [Universal Patient Care](../protocols/front-matter/Universal Patient Care.md)
+
+## Quick References
+
+- [Glasgow Coma Scale (Adult & Pediatric)](../quick-refs/glasgow-coma-scale.md)
+- [APGAR Scoring](../quick-refs/apgar-scoring.md)
+- [Burn TBSA Estimation](../quick-refs/burn-tbsa-estimation.md)
+- [12-Lead ECG Placement & Territories](../quick-refs/ecg-12-lead-placement.md)
 
 ## Cardiac
 
@@ -88,13 +97,6 @@ Everything attached to the **EMS side** — protocols, skills procedures, medica
 - [Transcutaneous Pacing](../procedures/Transcutaneous_Pacing.md)
 - [Vaccination Administration](../procedures/Vaccination.md)
 
-## Quick References
-
-- [Glasgow Coma Scale (Adult & Pediatric)](../quick-refs/glasgow-coma-scale.md)
-- [APGAR Scoring](../quick-refs/apgar-scoring.md)
-- [Burn TBSA Estimation](../quick-refs/burn-tbsa-estimation.md)
-- [12-Lead ECG Placement & Territories](../quick-refs/ecg-12-lead-placement.md)
-
 ## Toxicology
 
 - [Nausea & Vomiting](../protocols/toxicology/06_Nausea_Vomiting_PROC.md)
@@ -151,9 +153,7 @@ Everything attached to the **EMS side** — protocols, skills procedures, medica
 - [Vecuronium](../pharmacology/Vecuronium.md)
 - [Ziprasidone](../pharmacology/Ziprasidone.md)
 
-## Medications & Calculators
-
-- [Medications & Calculators](../medications.md)
+## [Medications & Calculators](../medications.md)
 
 ## Pediatric Dosing Reference
 
@@ -186,8 +186,4 @@ Everything attached to the **EMS side** — protocols, skills procedures, medica
 - [BLS Preceptorship Program](../sops/ems/EMS-800-BLS-Preceptorship-Program.md)
 - [Drug Box Procedures](../sops/ems/EMS-900-Drug-Box-Procedures.md)
 
-## Front Matter
-
-- [Introduction](../protocols/front-matter/00 - Introduction.md)
-- [How to Read the Protocols](../protocols/front-matter/01 - How to Read the Protocols.md)
-- [Universal Patient Care](../protocols/front-matter/Universal Patient Care.md)
+## [Outstanding Decisions](../protocols/outstanding-decisions.md)

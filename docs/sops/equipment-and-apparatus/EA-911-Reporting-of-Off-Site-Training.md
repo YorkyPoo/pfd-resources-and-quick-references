@@ -6,7 +6,7 @@
 <!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
 !!! abstract "Connected Notes"
     - **Named on this page:** [Reporting Off-Site Training](../general-administration/GA-911-Reporting-of-Off-Site-Training.md)
-    - **Browse the rest of this side:** [Fire Resources · Equipment & Apparatus](../../resources/fire.md#equipment-apparatus)
+    - **Browse the rest of this side:** [SOPs · Equipment & Apparatus](../../resources/fire.md#equipment-apparatus)
 <!-- CONNECTED:END -->
 
 ## I. Purpose

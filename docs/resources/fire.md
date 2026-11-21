@@ -1,10 +1,10 @@
-# Fire Resources
+# SOPs
 
-Everything attached to the **fire side** — tactical references, emergency operations, equipment and apparatus, special operations, safety, and department administration. EMS clinical content lives on the [EMS Resources](ems.md) page.
+**Standard operating procedures** for the fire side — emergency operations, special operations, equipment and apparatus, safety, and department administration. Frameworks, field references, strategies and the FORCES study aid are on the [Fire Resources](fire-resources.md) page; clinical protocols are on [Protocols](ems.md).
 
 <div class="qljump" markdown="1">
 
-**Jump:** [Emergency Operations](#emergency-operations) [Field References](#field-references) [Strategies](#strategies) [Frameworks](#frameworks) [Special Operations](#special-operations) [Equipment & Apparatus](#equipment-apparatus) [Safety & Health](#safety-health) [General Administration](#general-administration) [Public Relations](#public-relations)
+**Jump:** [Emergency Operations](#emergency-operations) [Special Operations](#special-operations) [Equipment & Apparatus](#equipment-apparatus) [Safety & Health](#safety-health) [General Administration](#general-administration) [Public Relations](#public-relations)
 
 </div>
 
@@ -21,28 +21,9 @@ Everything attached to the **fire side** — tactical references, emergency oper
 - [Radio Communications](../sops/emergency-operations/EO-500-Radio-Communications.md)
 - [Paging Day/Night Switch](../sops/emergency-operations/EO-510-Paging-Day-Night-Switch.md)
 - [First to Arrive Duties](../sops/emergency-operations/EO-600-First-to-Arrive-Duties.md)
-- [FORCES Mnemonic (Study Aid)](../sops/emergency-operations/EO-600a-FORCES-Mnemonic.md)
 - [Engine Company Operations](../sops/emergency-operations/EO-700-Engine-Company-Operations.md)
 - [Ladder Company Operations](../sops/emergency-operations/EO-800-Ladder-Company-Operations.md)
 - [Emergency Incident Rehabilitation](../sops/emergency-operations/EO-900-Emergency-Incident-Rehabilitation.md)
-
-## Field References
-
-- [Overview](../fire-ems-references/index.md)
-- [Initial Alarm Company Assignments](../fire-ems-references/initial-alarm-company-assignments.md)
-
-## Strategies
-
-- [Offensive](../fire-ems-references/strategies/offensive.md)
-- [Defensive](../fire-ems-references/strategies/defensive.md)
-- [Transitional](../fire-ems-references/strategies/transitional.md)
-- [SIGNAL Victim Profiling](../fire-ems-references/strategies/signal-victim-profiling.md)
-
-## Frameworks
-
-- [Mnemonics](../fire-ems-references/frameworks/mnemonics.md)
-- [SAW CSS RECEO VSS](../fire-ems-references/frameworks/saw-css-receo-vss.md)
-- [Reference Cards](../fire-ems-references/frameworks/reference-cards.md)
 
 ## Special Operations
 

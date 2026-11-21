@@ -1,6 +1,6 @@
 # City & Personnel Policies
 
-City of Poquoson personnel policy and department policy, out of the on-scene flow. Nothing on this page is a clinical decision — protocols are on the [EMS Clinical Hub](../ems/index.md) and fireground policy is under [Fire Resources](../resources/fire.md).
+City of Poquoson personnel policy and department policy, out of the on-scene flow. Nothing on this page is a clinical decision — protocols are on the [EMS Clinical Hub](../ems/index.md) and fireground procedure is under [SOPs](../resources/fire.md).
 
 <section class="pfd-zone" markdown="1">
 

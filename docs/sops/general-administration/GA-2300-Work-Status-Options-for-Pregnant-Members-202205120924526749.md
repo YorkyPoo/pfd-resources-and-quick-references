@@ -7,7 +7,7 @@
 !!! abstract "Connected Notes"
     - **Referenced SOPs:** [Family Medical Leave Act (FMLA)](GA-2200-Family-Medical-Leave-Act-FMLA-202205120924326282.md)
     - **Named on this page:** [Heat Exposure](../../protocols/general/02_Heat_Exposure_PROC.md)
-    - **Browse the rest of this side:** [Fire Resources · General Administration](../../resources/fire.md#general-administration)
+    - **Browse the rest of this side:** [SOPs · General Administration](../../resources/fire.md#general-administration)
 <!-- CONNECTED:END -->
 
 ## I. Purpose

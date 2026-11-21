@@ -6,7 +6,7 @@
 <!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
 !!! abstract "Connected Notes"
     - **Named on this page:** [Patient Transport](../ems/EMS-1200-Patient-Transport.md)
-    - **Browse the rest of this side:** [Fire Resources · Safety & Health](../../resources/fire.md#safety-health)
+    - **Browse the rest of this side:** [SOPs · Safety & Health](../../resources/fire.md#safety-health)
 <!-- CONNECTED:END -->
 
 ## I. Purpose

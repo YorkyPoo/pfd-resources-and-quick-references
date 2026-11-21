@@ -6,7 +6,7 @@
 <!-- CONNECTED:START (auto — scripts/gen_connected_notes.py; do not hand-edit) -->
 !!! abstract "Connected Notes"
     - **Named on this page:** [Endotracheal Intubation](../../procedures/Endotracheal_Intubation.md) &nbsp;|&nbsp; [Respiratory Arrest](../../protocols/respiratory/03_Respiratory_Arrest_PROC.md)
-    - **Browse the rest of this side:** [EMS Resources · EMS SOPs](../../resources/ems.md#ems-sops)
+    - **Browse the rest of this side:** [Protocols · EMS SOPs](../../resources/ems.md#ems-sops)
 <!-- CONNECTED:END -->
 
 ## I. Purpose

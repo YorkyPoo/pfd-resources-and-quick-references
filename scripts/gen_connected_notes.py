@@ -186,12 +186,16 @@ def collect(r, path, exact, base, labels, groups, ems_targets):
         return []
 
     b = bucket_of({"file": r})
-    if b in ("FIRE", "EMS"):
-        hub = "resources/fire.md" if b == "FIRE" else "resources/ems.md"
+    # Hub + label per bucket. Renamed 2026-11-20: the EMS hub page is "Protocols", the
+    # fire SOP page is "SOPs", and the reference shelf has its own "Fire Resources" page.
+    hub_for = {"FIRE": ("resources/fire.md", "SOPs"),
+               "FIRE_REF": ("resources/fire-resources.md", "Fire Resources"),
+               "EMS": ("resources/ems.md", "Protocols")}
+    if b in hub_for:
+        hub, label = hub_for[b]
         g = groups.get(r)
-        add("Browse the rest of this side",
-            [(labels.get(hub, "Resources") + (f" · {g}" if g else ""),
-              rel(d, hub) + (f"#{slugify(g)}" if g else ""))])
+        target = rel(d, hub) + (f"#{slugify(g)}" if g else "")
+        add("Browse the rest of this side", [(label + (f" · {g}" if g else ""), target)])
     return out
 
 
@@ -275,8 +279,9 @@ def porter_owned():
 def build_context():
     records = flatten(load_cfg()["nav"])
     labels, groups = nav_labels(records)
-    labels["resources/fire.md"] = "Fire Resources"
-    labels["resources/ems.md"] = "EMS Resources"
+    labels["resources/fire.md"] = "SOPs"
+    labels["resources/fire-resources.md"] = "Fire Resources"
+    labels["resources/ems.md"] = "Protocols"
     exact, base = code_index()
 
     # "named on this page" targets: any real page whose MENU label is distinctive
@@ -287,7 +292,7 @@ def build_context():
     group_names = {g.lower() for g in groups.values() if g}
     named = []
     for r in sorted(labels):
-        if bucket_of({"file": r}) not in ("FIRE", "EMS"):
+        if bucket_of({"file": r}) not in ("FIRE", "FIRE_REF", "EMS"):
             continue
         key = re.split(r"\s*/\s*", labels[r].strip())[0].strip()
         low = key.lower()
@@ -333,6 +338,10 @@ def main():
                     help="also touch pages the porter regenerates (default: skip — "
                          "port_reference.py calls apply_to_page instead)")
     ap.add_argument("--report", default=str(Path.home() / ".hermes/cache/scratch/connected_notes_report.json"))
+    ap.add_argument("--check", action="store_true",
+                    help="drift check: exit 1 if any page's Connected Notes box is out of "
+                         "date. Evaluates porter-owned pages too (they are what a re-port "
+                         "would write), and writes nothing.")
     a = ap.parse_args()
 
     ctx = build_context()
@@ -340,7 +349,7 @@ def main():
              for a2 in sorted(SOPS.rglob("*.md")) if "index" not in a2.stem.lower()]
     owned = porter_owned()
     ported_in_scope = [p for p in pages if p in owned]
-    if not a.allow_ported:
+    if not a.allow_ported and not a.check:
         pages = [p for p in pages if p not in owned]
     if a.only:
         pages = [p for p in pages if a.only in p]
@@ -369,6 +378,16 @@ def main():
     Path(a.report).write_text(json.dumps({"stats": dict(stats),
                                           "skipped_porter_owned": ported_in_scope,
                                           "pages": detail}, indent=1))
+    if a.check:
+        print(f"[CHECK] pages={stats['pages']} with-box={stats['boxed']} "
+              f"links={stats['links']} changed={stats['changed']}")
+        if changes:
+            print("DRIFT — these pages would be rewritten:")
+            for r in sorted(changes):
+                print(f"  {r}")
+            return 1
+        print("no drift — every Connected Notes box is current")
+        return 0
     if a.apply:
         for r, new in changes.items():
             (DOCS / r).write_text(new)
