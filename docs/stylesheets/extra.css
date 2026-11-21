@@ -306,6 +306,21 @@
    ========================================================================== */
 
 .md-typeset .pfd-zone { margin: 0 0 1.15em; }
+
+/* FD SCRAPbook placeholder (owner card t_515ccda5). Announced, not built: a quiet
+   heading above a one-line note, full width and last on the homepage. No
+   text-transform here on purpose — the owner writes it "SCRAPbook", and uppercasing
+   the label would print SCRAPBOOK and correct him without saying so. Nothing in
+   this block is clickable, so it carries no cursor or hover state. */
+.md-typeset .pfd-coming {
+  margin-top: 1.2em; padding-top: .9em;
+  border-top: 1px solid var(--md-default-fg-color--lightest); }
+.md-typeset .pfd-coming__title {
+  margin: 0 0 .3em; font-size: .86em; font-weight: 700; letter-spacing: .04em;
+  color: var(--md-default-fg-color--light); }
+.md-typeset .pfd-coming p:not(.pfd-coming__title) {
+  margin: 0; font-size: .74em; line-height: 1.5;
+  color: var(--md-default-fg-color--light); }
 .md-typeset .pfd-cap {
   margin: 0 0 .42em; font-size: .72em; font-weight: 700;
   letter-spacing: .07em; text-transform: uppercase;
