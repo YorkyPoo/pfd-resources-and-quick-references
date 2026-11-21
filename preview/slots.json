@@ -48,6 +48,12 @@
       "description": "Dashboard round 2: scheme-scoped links, dosing table fixed, four scrollers",
       "sha": "b9d03275670435af73af48ed2cdd144f29080d56"
     },
+    "howto": {
+      "branch": "howto-pipstrip",
+      "built_at": "2026-11-21T02:30:44Z",
+      "description": "How-to page + How to Read: four-tab nav and the pip strip",
+      "sha": "d4893ca5486a6d06eccfde7076ab7851b653f281"
+    },
     "ia-r3": {
       "branch": "ia-r3",
       "built_at": "2026-11-21T01:00:42Z",
@@ -121,5 +127,5 @@
       "sha": "dea24d543775ef1ce58792e4c40fc75108695ce9"
     }
   },
-  "updated_at": "2026-11-21T01:00:42.752375+00:00"
+  "updated_at": "2026-11-21T02:30:44.231012+00:00"
 }
