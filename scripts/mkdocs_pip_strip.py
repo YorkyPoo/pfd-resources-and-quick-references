@@ -321,10 +321,13 @@ LEGEND_MARKERS = (
     (b'class="pip-legend"', None),
     (b"pip-legend-h", (".md", ".markdown", ".html", ".htm", ".jinja", ".j2", ".json", ".py")),
 )
-# Whole repo, minus build output and other checkouts. The only legitimate hits
-# are this module and the `.pip-legend-h` selector in the stylesheet, which the
-# suffix rule above ignores.
-GUARD_EXCLUDE_DIRS = (".git", ".worktrees", "site", "site_preview", "__pycache__", "node_modules")
+# Whole repo, minus build output, other checkouts, and the audit evidence tree.
+# `audit/` is excluded because its gate logs capture command output verbatim —
+# including the failure text of this very guard, which quotes the banned marker —
+# so scanning it would make every previously red log a permanent red here.
+# Nothing under `audit/` is published (`internal_artifacts --check` proves it), so
+# a hit there was never a copy of the rendered legend.
+GUARD_EXCLUDE_DIRS = (".git", ".worktrees", "site", "site_preview", "__pycache__", "node_modules", "audit")
 
 
 def legend_duplicates(repo_root=None):
