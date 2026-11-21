@@ -159,10 +159,11 @@
 .md-typeset { --md-typeset-a-color: #800000; }               /* light: 10.95:1 on #fff */
 [data-md-color-scheme="slate"] .md-typeset { --md-typeset-a-color: #ff8a80; }  /* dark: 7.05:1 on #1e2129 */
 
-/* The "all / hub" scroller chip has no domain accent of its own, so it fell back to
-   the maroon primary; in dark that dot was #800000 on a #262a33 chip. Lift it with
-   the same red as the links. */
-[data-md-color-scheme="slate"] .md-typeset a.pfd-chip--all { --pfd-accent: #ff8a80; }
+/* The "all / hub" scroller chip has no domain of its own — it is "the full list for
+   this row", not a fourth colour. It used to fall back to the maroon brand primary,
+   which reads as FIRE at a glance when it sits inside the blue EMS row (card
+   t_a4b01dd6). It now carries a neutral dark grey, deliberately outside the
+   ems/fire/admin/util hues, in both schemes. */
 
 /* ============================================================
    NAV SECTION HEADER READABILITY
@@ -397,6 +398,9 @@
    are "where do I go" links, not policy, so they get a warm neutral that is a different
    hue from all three domains (measured deltaE vs admin below in the evidence file). */
 .md-typeset a.pfd-chip--util { --pfd-accent: #78716c; }
+/* "all" chip: neutral zinc, outside all four domain hues (#0284c7 / #b91c1c /
+   #475569 / #78716c), so it never reads as fire inside the EMS row. */
+.md-typeset a.pfd-chip--all { --pfd-accent: #3f3f46; }
 /* dark scheme: the same three hues at icon/bar lightness, so the accent bar and
    icon measure >=3:1 on the dark card (the light-scheme hexes do not) */
 [data-md-color-scheme="slate"] .md-typeset .pfd-card--ems,
@@ -406,6 +410,7 @@
 [data-md-color-scheme="slate"] .md-typeset .pfd-card--admin,
 [data-md-color-scheme="slate"] .md-typeset a.pfd-chip--admin { --pfd-accent: #94a3b8; }
 [data-md-color-scheme="slate"] .md-typeset a.pfd-chip--util { --pfd-accent: #a8a29e; }
+[data-md-color-scheme="slate"] .md-typeset a.pfd-chip--all { --pfd-accent: #a1a1aa; }
 
 /* ---------------------------------------------------------------------------
    LIGHT SCHEME: TEXT-SIZE ACCENT INK (owner card t_19a7477e)
@@ -435,6 +440,9 @@
 [data-md-color-scheme="default"] .md-typeset .pfd-cap--admin { --pfd-ink: #334155; }
 [data-md-color-scheme="default"] .md-typeset a.pfd-chip--util,
 [data-md-color-scheme="default"] .md-typeset .pfd-cap--util { --pfd-ink: #57534e; }
+/* the "all" chip's label is read as a word too: same neutral family, dark enough
+   for body-size text on the chip tint. */
+[data-md-color-scheme="default"] .md-typeset a.pfd-chip--all { --pfd-ink: #27272a; }
 
 /* section captions ("Protocols", "SOPs", "Fire resources", "City & personnel
    policies", "Crew links & portals"): domain ink instead of one grey. Still
