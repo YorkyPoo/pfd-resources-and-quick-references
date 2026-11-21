@@ -8873,6 +8873,17 @@ if ('serviceWorker' in navigator) {
 </li>
       
         <li class="md-nav__item">
+  <a href="#where-things-live" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where things live
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reading-the-clinical-pages" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9235,6 +9246,17 @@ if ('serviceWorker' in navigator) {
 </li>
       
         <li class="md-nav__item">
+  <a href="#where-things-live" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where things live
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reading-the-clinical-pages" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9280,50 +9302,55 @@ one-screen tool you can use with a glove on.</p>
 <ul>
 <li><strong>Search:</strong> the search bar is in the header and stays visible while you scroll — it works
   with no signal once the site has loaded.</li>
-<li><strong>Menu:</strong> on phones the menu button sits <strong>bottom-right</strong> for thumb reach.</li>
+<li><strong>Getting around:</strong> on a phone, four tabs ride along the bottom of the screen — <strong>Home</strong>,
+  <strong>Protocols</strong>, <strong>SOPs</strong>, <strong>Station</strong>. The menu button just above the bar opens the full
+  menu, for everything that is not one of the four.</li>
 <li><strong>Offline:</strong> after the first load, every page is cached — basements, rural scenes, steel
   buildings.</li>
 <li><strong>Install:</strong> add to your home screen on iOS or Android to open it like a native app.</li>
 <li><strong>Corrections:</strong> every protocol and SOP page ends with a <strong>Report a correction</strong> button that
   pre-fills the page name. Submissions go to Medical Control; nothing changes without their approval.</li>
 </ul>
+<h2 id="where-things-live">Where things live</h2>
+<ul>
+<li><strong>Protocols</strong> — clinical protocols by category, skills procedures, pharmacology, pediatric
+  dosing, and the EMS SOPs.</li>
+<li><strong>SOPs</strong> — the fire standard operating procedures.</li>
+<li><strong>Fire Resources</strong> — frameworks, field references, strategies, and the FORCES study aid;
+  reached from the SOPs page or the full menu.</li>
+<li><strong>Station</strong> — city and personnel policies, crew links and portals, station administration.</li>
+</ul>
 <h2 id="reading-the-clinical-pages">Reading the clinical pages</h2>
-<table>
-<thead>
-<tr>
-<th>What you see</th>
-<th>What it means</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>•</code> in a level column</td>
-<td>Standing order at that certification level</td>
-</tr>
-<tr>
-<td><code>MC</code></td>
-<td>Contact Medical Control first</td>
-</tr>
-<tr>
-<td>Blank cell</td>
-<td>Not authorized at that level</td>
-</tr>
-</tbody>
-</table>
-<p>Levels run <strong>EMR | EMT | A | I | P</strong>. Do not read a single cell on its own — the authority
-rules (which tiers inherit, when <code>MC</code> applies, what a blank really excludes) are defined in
-one place: <strong><a href="protocols/front-matter/01%20-%20How%20to%20Read%20the%20Protocols.html">How to Read the Protocols</a></strong>.
+<p>Every protocol carries the same five-pip strip, <strong>R B A I P</strong>. Tap your certification level at
+the top of the strip — or leave it on <strong>Show all</strong> — and the page answers one question for every
+action: do I act, do I call, or is this not mine.</p>
+<ul>
+<li><strong>Tap your level</strong> and the protocol reads as <em>you</em>: each action is tagged with what you may do
+  with it, the actions that are not yours dim down, and a count under the strip tells you how many
+  you may perform, how many need a call, and how many are not yours.</li>
+<li><strong>Solid</strong> — standing order at your level. You may act.</li>
+<li><strong>Hatched</strong> — call Medical Control first at your level.</li>
+<li><strong>Empty outline</strong> — not authorised at your level.</li>
+</ul>
+<p>Leave it on <strong>Show all</strong> and every row names the level its action starts at — <em>standing from B</em>,
+<em>MC at I, standing from P</em>, <em>MC at every level</em>, <em>no level authorised</em> — so a whole protocol reads
+in one pass without tapping anything.</p>
+<p>Levels are <strong>R</strong> (Emergency Medical Responder) · <strong>B</strong> (Emergency Medical Technician) · <strong>A</strong>
+(AEMT) · <strong>I</strong> (Intermediate) · <strong>P</strong> (Paramedic). Position names the level and the words name it
+too, so colour is never the only signal.</p>
+<p>The authority rules — which tiers inherit, when Medical Control applies, what an empty pip really
+excludes — are defined in one place: <strong><a href="protocols/front-matter/01%20-%20How%20to%20Read%20the%20Protocols.html">How to Read the Protocols</a></strong>.
 Clinical numbers on this site are references, not prescriptions: <strong>your local protocols and
 Medical Control govern.</strong></p>
 <hr />
 <h2 id="new-updated">New &amp; Updated</h2>
 <p><em>Last 45 days, newest first — generated automatically from the site's change history.</em></p>
-<ul class="recent-list"><li><span class="recent-date">2026-11-21</span> <b>audit(gates): ia-r3 deploy evidence — merge 8c968e1, Actions success, 17/17 live</b><span class="recent-sha">5661884a</span></li><li><span class="recent-date">2026-11-21</span> <b>Merge branch 'ia-r3'</b><span class="recent-sha">8c968e12</span></li><li><span class="recent-date">2026-11-21</span> <b>audit(gates): 16/16 EXIT=0 on ia-r3 (63959e7) including hub_anchors</b><span class="recent-sha">fbe71bc7</span></li><li><span class="recent-date">2026-11-21</span> <b>Protocols page: gate every nav control's anchor against the rendered page</b><span class="recent-sha">63959e7f</span></li><li><span class="recent-date">2026-11-21</span> <b>audit(gates): 15/15 gates EXIT=0 on ia-r3 (2ccf3bb), four planted defects proved</b><span class="recent-sha">a75ffce7</span></li><li><span class="recent-date">2026-11-21</span> <b>gates: connected-notes drift check, scroller/bottom-bar guards, ia-r3 runner</b><span class="recent-sha">2ccf3bbb</span></li><li><span class="recent-date">2026-11-21</span> <b>IA r3: rename hubs to Protocols and SOPs, split Fire Resources, static category </b><div class='recent-files'><a href="ems/index.html">index</a> · <a href="index.html">index</a> · <a href="resources/ems.html">ems</a> · <a href="resources/fire-resources.html">fire resources</a><span class='recent-more'>+35 more</span></div><span class="recent-sha">773b5298</span></li><li><span class="recent-date">2026-11-20</span> <b>audit(gates): 12/12 gates EXIT=0 on merge of homepage-r2 (87c9e9a) into main</b><span class="recent-sha">806bfe1c</span></li><li><span class="recent-date">2026-11-20</span> <b>Merge branch 'homepage-r2' into deploy-homepage-r2</b><span class="recent-sha">d75e43d6</span></li><li><span class="recent-date">2026-11-20</span> <b>audit(dashboard r2): say exactly which commit the slot was built from</b><span class="recent-sha">87c9e9a2</span></li><li><span class="recent-date">2026-11-20</span> <b>audit(dashboard r2): gate log (12/12 EXIT=0 on b9d0327), measured evidence, scre</b><span class="recent-sha">fc6b2205</span></li><li><span class="recent-date">2026-11-20</span> <b>dark: bold emphasis inside plain tables is no longer the header maroon</b><span class="recent-sha">b9d03275</span></li></ul>
+<ul class="recent-list"><li><span class="recent-date">2026-11-21</span> <b>Merge branch 'howto-pipstrip'</b><span class="recent-sha">ebb1efb4</span></li><li><span class="recent-date">2026-11-21</span> <b>howto: describe the four-tab nav and the pip strip (drop the level-column/grid t</b><div class='recent-files'><a href="protocols/front-matter/01 - How to Read the Protocols.html">01   How to Read the Protocols</a> · <a href="station-info.html">station info</a></div><span class="recent-sha">d4893ca5</span></li><li><span class="recent-date">2026-11-21</span> <b>audit(gates): ia-r3 deploy evidence — merge 8c968e1, Actions success, 17/17 live</b><span class="recent-sha">5661884a</span></li><li><span class="recent-date">2026-11-21</span> <b>Merge branch 'ia-r3'</b><span class="recent-sha">8c968e12</span></li><li><span class="recent-date">2026-11-21</span> <b>audit(gates): 16/16 EXIT=0 on ia-r3 (63959e7) including hub_anchors</b><span class="recent-sha">fbe71bc7</span></li><li><span class="recent-date">2026-11-21</span> <b>Protocols page: gate every nav control's anchor against the rendered page</b><span class="recent-sha">63959e7f</span></li><li><span class="recent-date">2026-11-21</span> <b>audit(gates): 15/15 gates EXIT=0 on ia-r3 (2ccf3bb), four planted defects proved</b><span class="recent-sha">a75ffce7</span></li><li><span class="recent-date">2026-11-21</span> <b>gates: connected-notes drift check, scroller/bottom-bar guards, ia-r3 runner</b><span class="recent-sha">2ccf3bbb</span></li><li><span class="recent-date">2026-11-21</span> <b>IA r3: rename hubs to Protocols and SOPs, split Fire Resources, static category </b><div class='recent-files'><a href="ems/index.html">index</a> · <a href="index.html">index</a> · <a href="resources/ems.html">ems</a> · <a href="resources/fire-resources.html">fire resources</a><span class='recent-more'>+35 more</span></div><span class="recent-sha">773b5298</span></li><li><span class="recent-date">2026-11-20</span> <b>audit(gates): 12/12 gates EXIT=0 on merge of homepage-r2 (87c9e9a) into main</b><span class="recent-sha">806bfe1c</span></li><li><span class="recent-date">2026-11-20</span> <b>Merge branch 'homepage-r2' into deploy-homepage-r2</b><span class="recent-sha">d75e43d6</span></li><li><span class="recent-date">2026-11-20</span> <b>audit(dashboard r2): say exactly which commit the slot was built from</b><span class="recent-sha">87c9e9a2</span></li></ul>
 
 <hr />
 <div class="admonition info">
 <p class="admonition-title">Last Updated</p>
-<p>Site content last changed: <strong>5661884a · build of 2026-11-21 01:41 UTC</strong></p>
+<p>Site content last changed: <strong>ebb1efb4 · build of 2026-11-21 02:31 UTC</strong></p>
 </div>
 
 
