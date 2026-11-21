@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Gate runner for card t_19a7477e — light-colour. Writes the log to audit/gates/.
 set -uo pipefail
-cd "$(dirname "$0")/.."
+cd "$(dirname "$0")/../.."
 BRANCH=light-colour
 SHA=$(git rev-parse --short HEAD)
 LOG="audit/gates/${BRANCH}-${SHA}.log"
