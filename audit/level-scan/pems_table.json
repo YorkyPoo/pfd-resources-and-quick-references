@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T17:25:59",
+ "generated": "2026-11-21T03:27:24",
  "sources": {
   "bbox_xml": "audit/level-scan/.cache/pems_bbox.xml",
   "text_layer": "pems_chunks/PEMS2024_full.txt",
@@ -18,8 +18,8 @@
   "columns"
  ],
  "counts": {
-  "site_pages_with_level_table": 57,
-  "administrative": 15,
+  "site_pages_with_level_table": 56,
+  "administrative": 14,
   "level_gated": 41,
   "skipped": 1
  },
@@ -65,10 +65,10 @@
   {
    "site_page": "protocols/administrative/01_Behavioral_Health_Transportation_Decision_PROC.md",
    "title": "Administrative - Behavioral Health Transportation Decision",
-   "rows": 7,
-   "numbered_rows": 7,
-   "blank_level_cells": 28,
-   "filled_level_cells": 7,
+   "rows": 5,
+   "numbered_rows": 5,
+   "blank_level_cells": 20,
+   "filled_level_cells": 5,
    "pems_pages": [
     41
    ],
@@ -77,7 +77,7 @@
    "ruling": "administrative transport-eligibility policy, not a clinical intervention grid",
    "ruling_citation": "owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`)",
    "ruling_status": "contested",
-   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 7 filled level cells against 28 blank ones, so the grid is not merely decorative",
+   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 5 filled level cells against 20 blank ones, so the grid is not merely decorative",
    "level_grid_present": true
   },
   {
@@ -232,10 +232,10 @@
   {
    "site_page": "protocols/administrative/01_Stroke_Field_Triage_PROC.md",
    "title": "Administrative - Stroke Field Triage",
-   "rows": 8,
-   "numbered_rows": 8,
-   "blank_level_cells": 32,
-   "filled_level_cells": 8,
+   "rows": 7,
+   "numbered_rows": 7,
+   "blank_level_cells": 28,
+   "filled_level_cells": 7,
    "pems_pages": [
     35,
     37
@@ -245,7 +245,7 @@
    "ruling": "administrative field-triage / destination policy",
    "ruling_citation": "owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`)",
    "ruling_status": "contested",
-   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 8 filled level cells against 32 blank ones, so the grid is not merely decorative",
+   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 7 filled level cells against 28 blank ones, so the grid is not merely decorative",
    "level_grid_present": true
   },
   {
@@ -287,10 +287,10 @@
   {
    "site_page": "protocols/cardiac/04_Asystole_and_Pulseless_Electrical_Activity_PROC.md",
    "title": "Asystole and Pulseless Electrical Activity",
-   "rows": 12,
-   "numbered_rows": 12,
-   "blank_level_cells": 48,
-   "filled_level_cells": 12,
+   "rows": 14,
+   "numbered_rows": 14,
+   "blank_level_cells": 56,
+   "filled_level_cells": 14,
    "pems_pages": [
     57
    ],
@@ -314,10 +314,10 @@
   {
    "site_page": "protocols/cardiac/04_Cardiac_Arrest_Non_Traumatic_PROC.md",
    "title": "Cardiac - Cardiac Arrest Non-Traumatic",
-   "rows": 14,
-   "numbered_rows": 14,
-   "blank_level_cells": 56,
-   "filled_level_cells": 14,
+   "rows": 16,
+   "numbered_rows": 16,
+   "blank_level_cells": 64,
+   "filled_level_cells": 16,
    "pems_pages": [
     57,
     63,
@@ -329,10 +329,10 @@
   {
    "site_page": "protocols/cardiac/04_Cardiac_Arrest_Traumatic_PROC.md",
    "title": "Cardiac Arrest (Traumatic)",
-   "rows": 11,
-   "numbered_rows": 11,
-   "blank_level_cells": 44,
-   "filled_level_cells": 11,
+   "rows": 12,
+   "numbered_rows": 12,
+   "blank_level_cells": 48,
+   "filled_level_cells": 12,
    "pems_pages": [
     61
    ],
@@ -395,10 +395,10 @@
   {
    "site_page": "protocols/cardiac/04_V_Fib_Pulseless_V_Tach_PROC.md",
    "title": "V-Fib / Pulseless V-Tach",
-   "rows": 12,
-   "numbered_rows": 12,
-   "blank_level_cells": 48,
-   "filled_level_cells": 12,
+   "rows": 13,
+   "numbered_rows": 13,
+   "blank_level_cells": 52,
+   "filled_level_cells": 13,
    "pems_pages": [
     63,
     64
@@ -415,21 +415,6 @@
    "filled_level_cells": 11,
    "decision": "skipped",
    "reason": "no PEMS 2024 protocol matches this page (best title score 0.37, 'Allergic Reaction / Anaphylaxis'); the page is gated from a non-PEMS source"
-  },
-  {
-   "site_page": "protocols/front-matter/01 - How to Read the Protocols.md",
-   "title": "Levels of Certification",
-   "rows": 4,
-   "numbered_rows": 4,
-   "blank_level_cells": 9,
-   "filled_level_cells": 11,
-   "decision": "administrative",
-   "ruling": "front-matter explainer for the level columns themselves; it defines no interventions",
-   "ruling_citation": "owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`)",
-   "ruling_status": "contested",
-   "contested_because": "the blanket administrative flag rests on a comment citing owner ruling 2026-11-11 (exceptions.yaml blanket `kind: administrative`); the audit records that ruling as open, and the page carries 11 filled level cells against 9 blank ones, so the grid is not merely decorative",
-   "level_grid_present": true,
-   "pems_pages": []
   },
   {
    "site_page": "protocols/front-matter/Universal Patient Care.md",
@@ -463,10 +448,10 @@
   {
    "site_page": "protocols/general/02_Cold_Exposure_PROC.md",
    "title": "Cold Exposure (Environmental)",
-   "rows": 9,
-   "numbered_rows": 9,
-   "blank_level_cells": 36,
-   "filled_level_cells": 9,
+   "rows": 7,
+   "numbered_rows": 7,
+   "blank_level_cells": 28,
+   "filled_level_cells": 7,
    "pems_pages": [
     67
    ],
@@ -516,10 +501,10 @@
   {
    "site_page": "protocols/general/02_Sedation_Assisted_Non_Paralytic_PROC.md",
    "title": "Sedation Assisted (Non-Paralytic)",
-   "rows": 6,
-   "numbered_rows": 6,
-   "blank_level_cells": 24,
-   "filled_level_cells": 6,
+   "rows": 7,
+   "numbered_rows": 7,
+   "blank_level_cells": 28,
+   "filled_level_cells": 7,
    "pems_pages": [
     55
    ],
@@ -627,10 +612,10 @@
   {
    "site_page": "protocols/respiratory/03_Airway_Inhalation_Irritants_PROC.md",
    "title": "Respiratory - Airway / Inhalation Irritants",
-   "rows": 12,
-   "numbered_rows": 12,
-   "blank_level_cells": 48,
-   "filled_level_cells": 12,
+   "rows": 13,
+   "numbered_rows": 13,
+   "blank_level_cells": 52,
+   "filled_level_cells": 13,
    "pems_pages": [
     153
    ],
@@ -640,10 +625,10 @@
   {
    "site_page": "protocols/respiratory/03_Asthma_COPD_Reactive_Airway_PROC.md",
    "title": "Respiratory - Asthma, COPD, and Reactive Airway Disease",
-   "rows": 11,
-   "numbered_rows": 11,
-   "blank_level_cells": 44,
-   "filled_level_cells": 11,
+   "rows": 13,
+   "numbered_rows": 13,
+   "blank_level_cells": 52,
+   "filled_level_cells": 13,
    "pems_pages": [
     123,
     124
@@ -668,27 +653,23 @@
   {
    "site_page": "protocols/respiratory/03_Pneumothorax_PROC.md",
    "title": "Respiratory - Pneumothorax / Tension Pneumothorax",
-   "rows": 15,
-   "numbered_rows": 15,
-   "blank_level_cells": 60,
-   "filled_level_cells": 15,
+   "rows": 20,
+   "numbered_rows": 20,
+   "blank_level_cells": 80,
+   "filled_level_cells": 20,
    "pems_pages": [
     243
    ],
    "source_declared": "exceptions.yaml forces p.[243]",
-   "decision": "level_gated",
-   "exception_path_repaired": {
-    "declared": "protocols/trauma/09_Pneumothorax_PROC.md",
-    "used": "protocols/respiratory/03_Pneumothorax_PROC.md"
-   }
+   "decision": "level_gated"
   },
   {
    "site_page": "protocols/respiratory/03_Pulmonary_Edema_Congestion_PROC.md",
    "title": "Respiratory - Pulmonary Edema and Congestion",
-   "rows": 13,
-   "numbered_rows": 13,
-   "blank_level_cells": 52,
-   "filled_level_cells": 13,
+   "rows": 10,
+   "numbered_rows": 10,
+   "blank_level_cells": 40,
+   "filled_level_cells": 10,
    "pems_pages": [
     123,
     124
@@ -712,10 +693,10 @@
   {
    "site_page": "protocols/respiratory/03_Respiratory_Distress_PROC.md",
    "title": "Respiratory - Respiratory Distress",
-   "rows": 16,
-   "numbered_rows": 16,
-   "blank_level_cells": 64,
-   "filled_level_cells": 16,
+   "rows": 20,
+   "numbered_rows": 20,
+   "blank_level_cells": 80,
+   "filled_level_cells": 20,
    "pems_pages": [
     123,
     124
@@ -726,10 +707,10 @@
   {
    "site_page": "protocols/respiratory/03_Smoke_Inhalation_PROC.md",
    "title": "Respiratory - Smoke Inhalation",
-   "rows": 14,
-   "numbered_rows": 14,
-   "blank_level_cells": 56,
-   "filled_level_cells": 14,
+   "rows": 16,
+   "numbered_rows": 16,
+   "blank_level_cells": 64,
+   "filled_level_cells": 16,
    "pems_pages": [
     153,
     239
@@ -740,10 +721,10 @@
   {
    "site_page": "protocols/respiratory/03_Upper_Airway_Obstruction_PROC.md",
    "title": "Respiratory - Upper Airway Obstruction / Foreign Body Airway Obstruction",
-   "rows": 14,
-   "numbered_rows": 14,
-   "blank_level_cells": 56,
-   "filled_level_cells": 14,
+   "rows": 13,
+   "numbered_rows": 13,
+   "blank_level_cells": 52,
+   "filled_level_cells": 13,
    "pems_pages": [
     239
    ],
@@ -821,10 +802,10 @@
   {
    "site_page": "protocols/trauma/09_Electrical_Injuries_PROC.md",
    "title": "Electrical Injuries",
-   "rows": 9,
-   "numbered_rows": 9,
-   "blank_level_cells": 36,
-   "filled_level_cells": 9,
+   "rows": 10,
+   "numbered_rows": 10,
+   "blank_level_cells": 40,
+   "filled_level_cells": 10,
    "pems_pages": [
     95,
     96
@@ -848,10 +829,10 @@
   {
    "site_page": "protocols/trauma/09_Lightning_Injuries_PROC.md",
    "title": "Lightning Injuries",
-   "rows": 9,
-   "numbered_rows": 9,
-   "blank_level_cells": 36,
-   "filled_level_cells": 9,
+   "rows": 10,
+   "numbered_rows": 10,
+   "blank_level_cells": 40,
+   "filled_level_cells": 10,
    "pems_pages": [
     95,
     96
@@ -12667,9 +12648,7 @@
    ]
   }
  ],
- "stale_exception_paths": [
-  "protocols/trauma/09_Pneumothorax_PROC.md"
- ],
+ "stale_exception_paths": [],
  "pems_pages_parsed": [
   7,
   15,

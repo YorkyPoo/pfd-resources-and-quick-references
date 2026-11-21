@@ -171,7 +171,7 @@ def linked_rows(align_doc, keys) -> list[dict]:
             for pp, oo in re.findall(r"p\.(\d+) row (\d+)", r.get("reason") or ""):
                 add(pp, oo, "named_in_reason")
             for k, basis in refs:
-                out.append({"file": rel, "row": int(r["site_row"]), "pems": k,
+                out.append({"file": rel, "row": B.row_key(r["site_row"]), "pems": k,
                             "basis": basis, "status": r.get("status"),
                             "reason_kind": r.get("reason_kind"),
                             "old_verdict": ("matched" if r.get("status") == "matched"

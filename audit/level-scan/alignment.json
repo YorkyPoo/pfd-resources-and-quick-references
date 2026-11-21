@@ -1,34 +1,34 @@
 {
- "generated": "2026-11-17T13:34:21",
+ "generated": "2026-11-21T03:27:29",
  "method": "primary key = section heading + ordinal within section, then the site row's own intervention label (bold head noun); text similarity only breaks ties and never creates a pair on its own",
  "totals": {
-  "site_rows": 417,
-  "matched": 292,
-  "ambiguous": 125,
-  "absent_from_site": 86,
+  "site_rows": 434,
+  "matched": 298,
+  "ambiguous": 136,
+  "absent_from_site": 83,
   "duplicate_in_source": 10,
-  "merged_into_site_row": 28,
-  "total_accounted": 503,
-  "site_rows_plus_absent": 503,
+  "merged_into_site_row": 27,
+  "total_accounted": 517,
+  "site_rows_plus_absent": 517,
   "pems_rows_by_disposition": {
-   "absent": 86,
-   "claimed_by_ambiguous_site_row": 20,
+   "absent": 83,
+   "claimed_by_ambiguous_site_row": 18,
    "duplicate_in_source": 9,
-   "matched": 292,
-   "merged_into_site_row": 28
+   "matched": 298,
+   "merged_into_site_row": 27
   },
   "pems_rows_in_scope": 435,
   "ambiguous_by_kind": {
    "multiple_candidates": 12,
-   "no_counterpart": 82,
-   "shared_pems_row": 31
+   "no_counterpart": 94,
+   "shared_pems_row": 30
   },
   "text_binding": {
    "bound_by_text": 1,
-   "no_evidence_local": 82,
+   "no_evidence_local": 94,
    "no_evidence_local_by_subtype": {
-    "below_floor": 60,
-    "best_evidence_is_held": 15,
+    "below_floor": 70,
+    "best_evidence_is_held": 17,
     "no_anchor": 7
    }
   }
@@ -281,9 +281,9 @@
     {
      "site_row": "8",
      "section": "",
-     "action": "Apply AED / Assess cardiac rhythm every 2 minutes. If AED is advising to shock or rhythm is VF or VT (as determined by EMT-I or P), defibrillate at maximum joules (or 2 J/kg for pediatrics), then refe",
+     "action": "Apply the AED and repeat the AED rhythm analysis every 2 minutes; the AED announces whether a shock is advised. If the AED is advising to shock, defibrillate at maximum joules.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -294,30 +294,71 @@
      "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
      "text_binding": {
       "query": [
-       "2 j",
-       "activity",
+       "advised",
        "advising",
        "aed",
-       "arrest",
-       "asystole",
-       "cardiac",
-       "cpr",
+       "analysis",
+       "announces",
        "defibrillate",
-       "determined",
-       "electrical",
-       "emt-i",
        "every",
-       "fibrillation",
-       "j/kg",
        "joules",
        "minutes",
-       "pea",
-       "pediatrics",
-       "pulseless",
        "rhythm",
        "shock",
-       "tachycardia",
-       "ventricular"
+       "whether"
+      ],
+      "pages_searched": [
+       57
+      ],
+      "free_candidates": 4,
+      "verdict": "no_evidence_local",
+      "pems_page": 57,
+      "pems_ordinal": 8,
+      "pems_row_text": "Contact Medical Control for guidance as needed. See Pearls below regarding Termination of Resuscitation.",
+      "badge_tokens": [
+       "MC"
+      ],
+      "badge_columns": [
+       "EMR",
+       "EMT",
+       "A",
+       "I",
+       "P"
+      ],
+      "coverage": 0.0,
+      "coverage_row": 0.0,
+      "coverage_basis": "row",
+      "anchors": [],
+      "similarity": 0.098,
+      "held_by_site_row": "12",
+      "disposition": "claimed_by_ambiguous_site_row",
+      "badge_agrees_with_site": true,
+      "subtype": "below_floor",
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.57 row 8)"
+     }
+    },
+    {
+     "site_row": "8a",
+     "section": "",
+     "action": "Interpret the rhythm: VF or VT (shockable), or asystole or PEA (non-shockable).",
+     "cells": [
+      "",
+      "",
+      "",
+      "•",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "no_counterpart",
+     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+     "text_binding": {
+      "query": [
+       "asystole",
+       "interpret",
+       "non-shockable",
+       "pea",
+       "rhythm",
+       "shockable"
       ],
       "pages_searched": [
        57
@@ -341,12 +382,80 @@
       "coverage_row": 0.0,
       "coverage_basis": "row",
       "anchors": [],
-      "similarity": 0.103,
+      "similarity": 0.099,
       "held_by_site_row": "1,12",
       "disposition": "claimed_by_ambiguous_site_row",
       "badge_agrees_with_site": false,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.57 row 1)"
+     }
+    },
+    {
+     "site_row": "8b",
+     "section": "",
+     "action": "Manual defibrillation: if the rhythm is VF or VT, defibrillate immediately — ADULT: 200 J Biphasic / 360 J Monophasic; PEDIATRIC: 2 J/kg initial, then 4 J/kg subsequent. Then refer to Cardiac Arrest: ",
+     "cells": [
+      "",
+      "",
+      "",
+      "•",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "no_counterpart",
+     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+     "text_binding": {
+      "query": [
+       "2 j",
+       "200",
+       "200 j",
+       "360",
+       "360 j",
+       "4 j",
+       "arrest",
+       "biphasic",
+       "cardiac",
+       "defibrillate",
+       "defibrillation",
+       "fibrillation",
+       "immediately",
+       "j/kg",
+       "manual",
+       "monophasic",
+       "pulseless",
+       "rhythm",
+       "subsequent",
+       "tachycardia",
+       "ventricular"
+      ],
+      "pages_searched": [
+       57
+      ],
+      "free_candidates": 4,
+      "verdict": "no_evidence_local",
+      "pems_page": 57,
+      "pems_ordinal": 8,
+      "pems_row_text": "Contact Medical Control for guidance as needed. See Pearls below regarding Termination of Resuscitation.",
+      "badge_tokens": [
+       "MC"
+      ],
+      "badge_columns": [
+       "EMR",
+       "EMT",
+       "A",
+       "I",
+       "P"
+      ],
+      "coverage": 0.0,
+      "coverage_row": 0.0,
+      "coverage_basis": "row",
+      "anchors": [],
+      "similarity": 0.073,
+      "held_by_site_row": "12",
+      "disposition": "claimed_by_ambiguous_site_row",
+      "badge_agrees_with_site": false,
+      "subtype": "below_floor",
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.57 row 8)"
      }
     },
     {
@@ -1172,7 +1281,7 @@
        63,
        64
       ],
-      "free_candidates": 14,
+      "free_candidates": 13,
       "verdict": "no_evidence_local",
       "pems_page": 64,
       "pems_ordinal": 13,
@@ -1202,9 +1311,9 @@
     {
      "site_row": "4",
      "section": "",
-     "action": "AED / Rhythm Assessment: • Apply AED and assess cardiac rhythm every 2 minutes. • Identify rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shockable).",
+     "action": "AED / Rhythm Assessment: • Apply the AED and repeat the AED rhythm analysis every 2 minutes; the AED announces whether a shock is advised.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -1215,27 +1324,26 @@
      "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
      "text_binding": {
       "query": [
+       "advised",
        "aed",
+       "analysis",
+       "announces",
        "assessment",
-       "asystole/pea",
-       "cardiac",
        "every",
-       "identify",
        "minutes",
-       "non-shockable",
        "rhythm",
-       "shockable",
-       "v-fib/v-tach"
+       "shock",
+       "whether"
       ],
       "pages_searched": [
        57,
        63,
        64
       ],
-      "free_candidates": 14,
+      "free_candidates": 13,
       "verdict": "no_evidence_local",
       "subtype": "best_evidence_is_held",
-      "note": "this row's best text evidence is p.63 row 7 (coverage 1.00, badge I), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix",
+      "note": "this row's best text evidence is p.63 row 7 (coverage 1.00, badge I), which site row 5a already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix",
       "pems_page": 63,
       "pems_ordinal": 7,
       "pems_row_text": "If VF or VT is present, or AED is advising to shock [EMR], immediately defibrillate: ADULT: 200 joules Biphasic / 360 joules Monophasic, or manufacturer’s recommendation. PEDIATRIC: 2 joules/kg initial, 4 joules/kg subsequent After each defibrillation, perform 2 minutes of CPR, followed by rhythm assessment. If VF / VT persists, defibrillate again, then consider medication therapy as listed below.",
@@ -1247,21 +1355,102 @@
        "P"
       ],
       "coverage": 1.0,
-      "coverage_row": 0.364,
+      "coverage_row": 0.5,
       "coverage_basis": "label",
       "anchors": [],
-      "similarity": 0.204,
-      "held_by_site_row": "5",
+      "similarity": 0.31,
+      "held_by_site_row": "5a",
       "disposition": "matched",
       "badge_agrees_with_site": false
      }
     },
     {
-     "site_row": "5",
+     "site_row": "4a",
      "section": "",
-     "action": "Defibrillation - V-Fib/V-Tach Only: • ADULT: 200 joules Biphasic / 360 joules Monophasic, or manufacturer's recommendation • PEDIATRIC: 2 joules/kg initial, 4 joules/kg subsequent • After each defibri",
+     "action": "• Interpret the rhythm: V-Fib/V-Tach (shockable) or Asystole/PEA (non-shockable).",
      "cells": [
       "",
+      "",
+      "",
+      "•",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "no_counterpart",
+     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+     "text_binding": {
+      "query": [
+       "asystole/pea",
+       "interpret",
+       "non-shockable",
+       "rhythm",
+       "shockable",
+       "v-fib/v-tach"
+      ],
+      "pages_searched": [
+       57,
+       63,
+       64
+      ],
+      "free_candidates": 13,
+      "verdict": "no_evidence_local",
+      "pems_page": 63,
+      "pems_ordinal": 2,
+      "pems_row_text": "Begin chest compression. Follow Adult/Pediatric Cardiopulmonary Resuscitation (CPR) procedure.",
+      "badge_tokens": [
+       "EMR"
+      ],
+      "badge_columns": [
+       "EMR",
+       "EMT",
+       "A",
+       "I",
+       "P"
+      ],
+      "coverage": 0.0,
+      "coverage_row": 0.0,
+      "coverage_basis": "row",
+      "anchors": [],
+      "similarity": 0.115,
+      "held_by_site_row": null,
+      "disposition": "absent",
+      "badge_agrees_with_site": false,
+      "subtype": "below_floor",
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.63 row 2)"
+     }
+    },
+    {
+     "site_row": "5",
+     "section": "",
+     "action": "Defibrillation - V-Fib/V-Tach Only: • ADULT: 200 joules Biphasic / 360 joules Monophasic, or manufacturer's recommendation • PEDIATRIC: 2 joules/kg initial, 4 joules/kg subsequent • Ensure optimal pad",
+     "cells": [
+      "",
+      "",
+      "",
+      "•",
+      "•"
+     ],
+     "label_keys": [
+      "defibr"
+     ],
+     "status": "matched",
+     "pems_section_ordinal": 19,
+     "pems_page": 64,
+     "pems_ordinal": 10,
+     "pems_section": "",
+     "pems_text": "If VF / VT persists, ensure optimal defibrillator pad placement, then administer: ADULT: Amiodarone (Cordarone) 150 mg IV/IO slow push PEDIATRIC: [Contact Medical Control] Amiodarone (Cordarone) 5 mg/kg IV/IO slow push. Maximum dose 150 mg.",
+     "badges": [
+      "I"
+     ],
+     "similarity": 0.234,
+     "match_basis": "label+keyword"
+    },
+    {
+     "site_row": "5a",
+     "section": "",
+     "action": "• After each defibrillation, perform 2 minutes of CPR, then reassess rhythm.",
+     "cells": [
+      "•",
       "•",
       "•",
       "•",
@@ -1276,7 +1465,7 @@
      "badges": [
       "I"
      ],
-     "similarity": 0.45,
+     "similarity": 0.49,
      "match_basis": "page-flat+text"
     },
     {
@@ -1888,7 +2077,7 @@
       "I"
      ],
      "disposition": "matched",
-     "site_row": "5",
+     "site_row": "5a",
      "claimed_by_site_rows": [],
      "note": null
     },
@@ -1931,8 +2120,8 @@
      "badges": [
       "I"
      ],
-     "disposition": "claimed_by_ambiguous_site_row",
-     "site_row": null,
+     "disposition": "matched",
+     "site_row": "5",
      "claimed_by_site_rows": [
       "9"
      ],
@@ -2075,21 +2264,6 @@
       "•",
       "•"
      ],
-     "status": "ambiguous",
-     "reason_kind": "shared_pems_row",
-     "reason": "site row label names an intervention that p.61 row 4 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs"
-    },
-    {
-     "site_row": "5",
-     "section": "",
-     "action": "PEA / VF / VT: Continue CPR / Defibrillate if indicated",
-     "cells": [
-      "",
-      "",
-      "•",
-      "•",
-      "•"
-     ],
      "status": "matched",
      "pems_section_ordinal": 4,
      "pems_page": 61,
@@ -2099,8 +2273,49 @@
      "badges": [
       "EMT"
      ],
-     "similarity": 0.757,
-     "match_basis": "page-flat+ordinal"
+     "similarity": 0.786,
+     "match_basis": "page-flat+text"
+    },
+    {
+     "site_row": "5",
+     "section": "",
+     "action": "PEA / VF / VT: Continue CPR",
+     "cells": [
+      "",
+      "•",
+      "•",
+      "•",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "shared_pems_row",
+     "contained_in_pems": {
+      "pems_page": 61,
+      "pems_ordinal": 4,
+      "pems_text": "Apply AED or cardiac monitor. Assess rhythm (I / P): For Asystole at the time of EMS arrival: Consider withholding / terminating resuscitation. For PEA/Witnessed Asystole: Continue CPR. For VF/VT: Continue CPR and defibrillate.",
+      "overlap_tokens": [
+       "continue"
+      ],
+      "tokens_in_site_row": 1,
+      "tokens_in_pems_row": 12,
+      "containment": 0.083
+     },
+     "reason": "every word of this row (continue) occurs in p.61 row 4 — 1 of that row's 12 significant words — which site row 4 already holds; the site splits one PEMS row into two"
+    },
+    {
+     "site_row": "5a",
+     "section": "",
+     "action": "Defibrillate if indicated",
+     "cells": [
+      "",
+      "",
+      "",
+      "•",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "shared_pems_row",
+     "reason": "site row label names an intervention that p.61 row 4 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs"
     },
     {
      "site_row": "6",
@@ -2455,7 +2670,7 @@
       "EMT"
      ],
      "disposition": "matched",
-     "site_row": "5",
+     "site_row": "4",
      "claimed_by_site_rows": [],
      "note": null
     },
@@ -2667,7 +2882,7 @@
       "",
       "",
       "",
-      "",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -4421,11 +4636,26 @@
     {
      "site_row": "5",
      "section": "",
-     "action": "Defibrillation: 200 J Biphasic / 360 J Monophasic (Adult) / 2 J/kg initial, 4 J/kg subsequent (Ped) (AED for EMR/EMT, Manual for I/P)",
+     "action": "Defibrillation — AED: apply the AED and defibrillate when the AED advises a shock (the device selects the energy).",
+     "cells": [
+      "•",
+      "•",
+      "•",
+      "•",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "shared_pems_row",
+     "reason": "site row label names an intervention that p.63 row 7 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs"
+    },
+    {
+     "site_row": "5a",
+     "section": "",
+     "action": "Defibrillation — Manual: 200 J Biphasic / 360 J Monophasic (Adult) / 2 J/kg initial, 4 J/kg subsequent (Ped)",
      "cells": [
       "",
-      "•",
-      "•",
+      "",
+      "",
       "•",
       "•"
      ],
@@ -4438,7 +4668,7 @@
      "badges": [
       "I"
      ],
-     "similarity": 0.491,
+     "similarity": 0.547,
      "match_basis": "page-flat+text"
     },
     {
@@ -4490,7 +4720,7 @@
     {
      "site_row": "8",
      "section": "",
-     "action": "Second Antiarrhythmic: Amiodarone 150 mg IV/IO (Adult) / [MC] 5 mg/kg (Ped max 150mg) OR Lidocaine 0.5 mg/kg IV/IO (Adult max 100mg) / 1 mg/kg (Ped max 50mg)",
+     "action": "Second Antiarrhythmic: Amiodarone 150 mg IV/IO (Adult) / 5 mg/kg (Ped max 150mg, Medical Control authorisation required) OR Lidocaine 0.5 mg/kg IV/IO (Adult max 100mg) / 1 mg/kg (Ped max 50mg)",
      "cells": [
       "",
       "",
@@ -4507,13 +4737,13 @@
      "badges": [
       "I"
      ],
-     "similarity": 0.567,
+     "similarity": 0.571,
      "match_basis": "page-flat+text"
     },
     {
      "site_row": "9",
      "section": "",
-     "action": "Persistent VF/VT: Magnesium Sulfate 2 g IV/IO (Adult) / [MC] 40 mg/kg (Ped max 2g)",
+     "action": "Persistent VF/VT: Magnesium Sulfate 2 g IV/IO (Adult) / 40 mg/kg (Ped max 2g, Medical Control authorisation required)",
      "cells": [
       "",
       "",
@@ -4530,7 +4760,7 @@
      "badges": [
       "I"
      ],
-     "similarity": 0.69,
+     "similarity": 0.676,
      "match_basis": "page-flat+text"
     },
     {
@@ -4777,7 +5007,7 @@
       "I"
      ],
      "disposition": "matched",
-     "site_row": "5",
+     "site_row": "5a",
      "claimed_by_site_rows": [],
      "note": null
     },
@@ -6049,63 +6279,6 @@
      "match_basis": "page-flat+text"
     },
     {
-     "site_row": "6",
-     "section": "",
-     "action": "If patient is alert and responsive: Use active external rewarming with heat packs, warm blankets, etc.",
-     "cells": [
-      "",
-      "•",
-      "•",
-      "•",
-      "•"
-     ],
-     "status": "ambiguous",
-     "reason_kind": "no_counterpart",
-     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
-     "text_binding": {
-      "query": [
-       "active",
-       "alert",
-       "blankets",
-       "etc",
-       "external",
-       "heat",
-       "packs",
-       "responsive",
-       "rewarming",
-       "warm"
-      ],
-      "pages_searched": [
-       67
-      ],
-      "free_candidates": 0,
-      "verdict": "no_evidence_local",
-      "pems_page": 67,
-      "pems_ordinal": 1,
-      "pems_row_text": "2 Place patient in a warm environment and prevent further heat loss Remove all wet clothing and replace with warm blankets. Handle the patient gently",
-      "badge_tokens": [
-       "EMR"
-      ],
-      "badge_columns": [
-       "EMR",
-       "EMT",
-       "A",
-       "I",
-       "P"
-      ],
-      "coverage": 0.375,
-      "coverage_row": 0.3,
-      "coverage_basis": "body",
-      "anchors": [],
-      "similarity": 0.39,
-      "held_by_site_row": "2",
-      "disposition": "matched",
-      "badge_agrees_with_site": false,
-      "subtype": "below_floor",
-      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.38 against p.67 row 1)"
-     }
-    },
-    {
      "site_row": "7",
      "section": "",
      "action": "Cardiac Arrest: Make persistent attempts at resuscitation for victims of prolonged cold exposure. Begin CPR and continuous warming procedures.",
@@ -6150,58 +6323,6 @@
      ],
      "similarity": 0.949,
      "match_basis": "page-flat+text"
-    },
-    {
-     "site_row": "9",
-     "section": "",
-     "action": "Contact Medical Control prior to use of AED.",
-     "cells": [
-      "MC",
-      "MC",
-      "MC",
-      "MC",
-      "MC"
-     ],
-     "status": "ambiguous",
-     "reason_kind": "no_counterpart",
-     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
-     "text_binding": {
-      "query": [
-       "aed",
-       "contact",
-       "control",
-       "medical",
-       "prior"
-      ],
-      "pages_searched": [
-       67
-      ],
-      "free_candidates": 0,
-      "verdict": "no_evidence_local",
-      "pems_page": 67,
-      "pems_ordinal": 4,
-      "pems_row_text": "Follow General – Universal Patient Care/Initial Patient Contact Protocol.",
-      "badge_tokens": [
-       "EMR"
-      ],
-      "badge_columns": [
-       "EMR",
-       "EMT",
-       "A",
-       "I",
-       "P"
-      ],
-      "coverage": 0.2,
-      "coverage_row": 0.2,
-      "coverage_basis": "label",
-      "anchors": [],
-      "similarity": 0.314,
-      "held_by_site_row": "1",
-      "disposition": "matched",
-      "badge_agrees_with_site": true,
-      "subtype": "below_floor",
-      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.20 against p.67 row 4)"
-     }
     }
    ],
    "absent": [],
@@ -7126,7 +7247,7 @@
     {
      "site_row": "1",
      "section": "",
-     "action": "Follow Universal Patient Care / Initial Patient Contact protocol. Provide supplemental oxygen and/or ventilatory support. Refer to Airway Management and Ventilatory Support procedure.",
+     "action": "Follow Universal Patient Care / Initial Patient Contact protocol.",
      "cells": [
       "•",
       "•",
@@ -7143,13 +7264,13 @@
      "badges": [
       "EMR"
      ],
-     "similarity": 0.803,
+     "similarity": 1.0,
      "match_basis": "page-flat+ordinal"
     },
     {
      "site_row": "2",
      "section": "",
-     "action": "Assess and monitor blood pressure. Ensure patient is not hypotensive.",
+     "action": "Confirm and monitor airway placement with continuous SpO₂ and box-waveform EtCO₂.",
      "cells": [
       "",
       "•",
@@ -7157,95 +7278,60 @@
       "•",
       "•"
      ],
-     "status": "ambiguous",
-     "reason_kind": "no_counterpart",
-     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
-     "text_binding": {
-      "query": [
-       "blood",
-       "hypotensive",
-       "pressure"
-      ],
-      "pages_searched": [
-       55
-      ],
-      "free_candidates": 3,
-      "verdict": "no_evidence_local",
-      "pems_page": 55,
-      "pems_ordinal": 1,
-      "pems_row_text": "Confirm and monitor airway placement with continuous SpO2 and box-waveform EtCO2.",
-      "badge_tokens": [
-       "EMT"
-      ],
-      "badge_columns": [
-       "EMT",
-       "A",
-       "I",
-       "P"
-      ],
-      "coverage": 0.0,
-      "coverage_row": 0.0,
-      "coverage_basis": "row",
-      "anchors": [],
-      "similarity": 0.068,
-      "held_by_site_row": null,
-      "disposition": "absent",
-      "badge_agrees_with_site": true,
-      "subtype": "below_floor",
-      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.55 row 1)"
-     }
+     "status": "matched",
+     "pems_section_ordinal": 1,
+     "pems_page": 55,
+     "pems_ordinal": 1,
+     "pems_section": "",
+     "pems_text": "Confirm and monitor airway placement with continuous SpO2 and box-waveform EtCO2.",
+     "badges": [
+      "EMT"
+     ],
+     "similarity": 0.873,
+     "match_basis": "page-flat+ordinal"
     },
     {
      "site_row": "3",
      "section": "",
-     "action": "Establish IV/IO access.",
+     "action": "Administer: • ADULT: Fentanyl (Sublimaze) 25 – 50 mcg IV/IO over 2 minutes or IN/IM • PEDIATRIC: Fentanyl (Sublimaze) 0.5 – 1 mcg/kg IV/IO over 2 minutes or IN/IM • Maximum dose: 25 mcg",
      "cells": [
       "",
       "",
-      "•",
+      "",
       "•",
       "•"
      ],
-     "status": "ambiguous",
-     "reason_kind": "no_counterpart",
-     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
-     "text_binding": {
-      "query": [
-       "access",
-       "establish",
-       "iv/io"
-      ],
-      "pages_searched": [
-       55
-      ],
-      "free_candidates": 3,
-      "verdict": "no_evidence_local",
-      "pems_page": 55,
-      "pems_ordinal": 2,
-      "pems_row_text": "Administer: ADULT: Fentanyl (Sublimaze) 25 – 50 mcg IV/IO over 2 minutes or IN/IM PEDIATRIC: Fentanyl (Sublimaze) 0.5 – 1 mcg/kg IV/IO over 2 minutes or IN/IM Maximum dose 25 mcg. Repeat every 10 – 15 minutes as needed for patient safety and comfort.",
-      "badge_tokens": [
-       "I"
-      ],
-      "badge_columns": [
-       "I",
-       "P"
-      ],
-      "coverage": 0.333,
-      "coverage_row": 0.333,
-      "coverage_basis": "label",
-      "anchors": [],
-      "similarity": 0.3,
-      "held_by_site_row": "5,6",
-      "disposition": "claimed_by_ambiguous_site_row",
-      "badge_agrees_with_site": false,
-      "subtype": "below_floor",
-      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.33 against p.55 row 2)"
-     }
+     "status": "matched",
+     "pems_section_ordinal": 2,
+     "pems_page": 55,
+     "pems_ordinal": 2,
+     "pems_section": "",
+     "pems_text": "Administer: ADULT: Fentanyl (Sublimaze) 25 – 50 mcg IV/IO over 2 minutes or IN/IM PEDIATRIC: Fentanyl (Sublimaze) 0.5 – 1 mcg/kg IV/IO over 2 minutes or IN/IM Maximum dose 25 mcg. Repeat every 10 – 15 minutes as needed for patient safety an",
+     "badges": [
+      "I"
+     ],
+     "similarity": 0.936,
+     "match_basis": "page-flat+ordinal"
     },
     {
      "site_row": "4",
      "section": "",
-     "action": "Pre-Intubation Sedation, consider ONE of the following: • ADULT: Ketamine (Ketalar) 1.5 - 2 mg/kg IV/IO (Maximum single dose: 200 mg) OR 4 - 5 mg/kg IM/IN (Maximum single dose: 400 mg). If administeri",
+     "action": "Repeat every 10 – 15 minutes as needed for patient safety and comfort.",
+     "cells": [
+      "",
+      "",
+      "",
+      "•",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "multiple_candidates",
+     "reason": "2 different PEMS rows explain this row about equally well: p.55 row 3 (0.82), p.55 row 2 (0.85); the site row may merge them"
+    },
+    {
+     "site_row": "5",
+     "section": "",
+     "action": "If Fentanyl is not sufficient, administer: • ADULT: Midazolam (Versed) 2.5 mg IV/IO over 2 minutes or 5 mg IN/IM • PEDIATRIC: Midazolam (Versed) 0.1 mg/kg IV/IO over 2 minutes or 0.2 mg/kg IN/IM • Max",
      "cells": [
       "",
       "",
@@ -7262,28 +7348,13 @@
      "badges": [
       "I"
      ],
-     "similarity": 0.633,
-     "match_basis": "page-flat+ordinal"
-    },
-    {
-     "site_row": "5",
-     "section": "",
-     "action": "Post-Intubation Sedation, consider ONE of the following: • ADULT: Ketamine (Ketalar) 1 mg/kg IV/IO (Maximum single dose: 100 mg). May repeat every 10-15 minutes as needed. • PEDIATRIC: Ketamine (Ketal",
-     "cells": [
-      "",
-      "",
-      "",
-      "",
-      "•"
-     ],
-     "status": "ambiguous",
-     "reason_kind": "multiple_candidates",
-     "reason": "2 different PEMS rows explain this row about equally well: p.55 row 2 (0.48), p.55 row 3 (0.43); the site row may merge them"
+     "similarity": 0.949,
+     "match_basis": "page-flat+text"
     },
     {
      "site_row": "6",
      "section": "",
-     "action": "OR Post-Intubation Sedation (Midazolam / Fentanyl): • ADULT: Midazolam (Versed) 2.5 mg IV/IO. May repeat every 10-15 minutes as needed. (Maximum total dose: 10 mg) • PEDIATRIC: Midazolam (Versed) 0.05",
+     "action": "Repeat every 10 – 15 minutes as needed for patient safety and comfort.",
      "cells": [
       "",
       "",
@@ -7293,45 +7364,33 @@
      ],
      "status": "ambiguous",
      "reason_kind": "multiple_candidates",
-     "reason": "2 different PEMS rows explain this row about equally well: p.55 row 2 (0.69), p.55 row 3 (0.61); the site row may merge them"
-    }
-   ],
-   "absent": [
-    {
-     "pems_page": 55,
-     "ordinal": 1,
-     "section": "",
-     "section_ordinal": 1,
-     "verbatim_text": "Confirm and monitor airway placement with continuous SpO2 and box-waveform EtCO2.",
-     "badges": [
-      "EMT"
-     ],
-     "columns": {
-      "EMR": "",
-      "EMT": "•",
-      "A": "•",
-      "I": "•",
-      "P": "•"
-     }
+     "reason": "2 different PEMS rows explain this row about equally well: p.55 row 2 (0.85), p.55 row 3 (0.82); the site row may merge them"
     },
     {
-     "pems_page": 55,
-     "ordinal": 4,
+     "site_row": "7",
      "section": "",
-     "section_ordinal": 4,
-     "verbatim_text": "Contact Medical Control for guidance if unable to adequately manage patient agitation or discomfort.",
+     "action": "Contact Medical Control for guidance if unable to adequately manage patient agitation or discomfort.",
+     "cells": [
+      "MC",
+      "MC",
+      "MC",
+      "MC",
+      "MC"
+     ],
+     "status": "matched",
+     "pems_section_ordinal": 4,
+     "pems_page": 55,
+     "pems_ordinal": 4,
+     "pems_section": "",
+     "pems_text": "Contact Medical Control for guidance if unable to adequately manage patient agitation or discomfort.",
      "badges": [
       "MC"
      ],
-     "columns": {
-      "EMR": "MC",
-      "EMT": "MC",
-      "A": "MC",
-      "I": "MC",
-      "P": "MC"
-     }
+     "similarity": 1.0,
+     "match_basis": "page-flat+text"
     }
    ],
+   "absent": [],
    "notes": [],
    "pems_doc": "Sedation Post Advanced Airway",
    "pems_pages": [
@@ -7367,8 +7426,8 @@
      "badges": [
       "EMT"
      ],
-     "disposition": "absent",
-     "site_row": null,
+     "disposition": "matched",
+     "site_row": "2",
      "claimed_by_site_rows": [],
      "note": null
     },
@@ -7381,10 +7440,10 @@
      "badges": [
       "I"
      ],
-     "disposition": "claimed_by_ambiguous_site_row",
-     "site_row": null,
+     "disposition": "matched",
+     "site_row": "3",
      "claimed_by_site_rows": [
-      "5",
+      "4",
       "6"
      ],
      "note": null
@@ -7399,9 +7458,9 @@
       "I"
      ],
      "disposition": "matched",
-     "site_row": "4",
+     "site_row": "5",
      "claimed_by_site_rows": [
-      "5",
+      "4",
       "6"
      ],
      "note": null
@@ -7415,8 +7474,8 @@
      "badges": [
       "MC"
      ],
-     "disposition": "absent",
-     "site_row": null,
+     "disposition": "matched",
+     "site_row": "7",
      "claimed_by_site_rows": [],
      "note": null
     }
@@ -10656,12 +10715,12 @@
     {
      "site_row": "10",
      "section": "",
-     "action": "Endotracheal Intubation: • Follow Endotracheal Intubation procedure. • ⚠ Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended.",
+     "action": "Endotracheal Intubation: • Follow Endotracheal Intubation procedure. Patients 12 years and older. • ⚠ Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally",
      "cells": [
       "",
       "",
       "",
-      "",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -10675,11 +10734,13 @@
        "generally",
        "induction",
        "intubation",
+       "older",
        "rapid",
        "recommended",
        "rsi",
        "sequence",
-       "spontaneously"
+       "spontaneously",
+       "years"
       ],
       "pages_searched": [
        153
@@ -10698,16 +10759,67 @@
        "I",
        "P"
       ],
-      "coverage": 0.091,
-      "coverage_row": 0.091,
+      "coverage": 0.077,
+      "coverage_row": 0.077,
       "coverage_basis": "body",
       "anchors": [],
-      "similarity": 0.346,
+      "similarity": 0.336,
       "held_by_site_row": "5",
       "disposition": "matched",
       "badge_agrees_with_site": false,
       "subtype": "below_floor",
-      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.09 against p.153 row 2)"
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.08 against p.153 row 2)"
+     }
+    },
+    {
+     "site_row": "10a",
+     "section": "",
+     "action": "• Orally intubate. Patients under 12 years old.",
+     "cells": [
+      "",
+      "",
+      "",
+      "",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "no_counterpart",
+     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+     "text_binding": {
+      "query": [
+       "intubate",
+       "old",
+       "orally",
+       "years"
+      ],
+      "pages_searched": [
+       153
+      ],
+      "free_candidates": 0,
+      "verdict": "no_evidence_local",
+      "pems_page": 153,
+      "pems_ordinal": 0,
+      "pems_row_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+      "badge_tokens": [
+       "EMR"
+      ],
+      "badge_columns": [
+       "EMR",
+       "EMT",
+       "A",
+       "I",
+       "P"
+      ],
+      "coverage": 0.0,
+      "coverage_row": 0.0,
+      "coverage_basis": "row",
+      "anchors": [],
+      "similarity": 0.178,
+      "held_by_site_row": "1",
+      "disposition": "matched",
+      "badge_agrees_with_site": false,
+      "subtype": "below_floor",
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.153 row 0)"
      }
     },
     {
@@ -10715,10 +10827,10 @@
      "section": "",
      "action": "Poison Control Consultation: • Contact Poison Control Center at 1-800-222-1222 with any questions. (Note: Poison Control is not online medical control.)",
      "cells": [
-      "",
-      "",
-      "",
-      "",
+      "•",
+      "•",
+      "•",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -10762,7 +10874,7 @@
       "similarity": 0.609,
       "held_by_site_row": "12",
       "disposition": "matched",
-      "badge_agrees_with_site": false,
+      "badge_agrees_with_site": true,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.33 against p.153 row 5)"
      }
@@ -11092,11 +11204,11 @@
     {
      "site_row": "8",
      "section": "",
-     "action": "Continuous Positive Airway Pressure (CPAP): • Consider for COPD exacerbation or severe bronchospasm with adequate mentation. • Initiate 5-10 cm H₂O, titrate to effect. • Contraindicated if altered men",
+     "action": "Continuous Positive Airway Pressure (CPAP): • Consider for COPD exacerbation or severe bronchospasm with adequate mentation. • Initiate 5 cm H₂O. • Contraindicated if altered mental status, vomiting, ",
      "cells": [
       "",
-      "",
-      "",
+      "•",
+      "•",
       "•",
       "•"
      ],
@@ -11105,7 +11217,6 @@
      "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
      "text_binding": {
       "query": [
-       "5-10",
        "adequate",
        "airway",
        "altered",
@@ -11115,7 +11226,6 @@
        "contraindicated",
        "copd",
        "cpap",
-       "effect",
        "exacerbation",
        "imminent",
        "mental",
@@ -11125,7 +11235,6 @@
        "respiratory",
        "severe",
        "status",
-       "titrate",
        "vomiting"
       ],
       "pages_searched": [
@@ -11148,15 +11257,67 @@
        "P"
       ],
       "coverage": 0.25,
-      "coverage_row": 0.045,
+      "coverage_row": 0.053,
       "coverage_basis": "label",
       "anchors": [],
-      "similarity": 0.139,
+      "similarity": 0.146,
       "held_by_site_row": null,
       "disposition": "absent",
       "badge_agrees_with_site": false,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.25 against p.123 row 1)"
+     }
+    },
+    {
+     "site_row": "8a",
+     "section": "",
+     "action": "• Titrate PEEP up to 10 cm H₂O to support ventilation and work of breathing.",
+     "cells": [
+      "",
+      "",
+      "",
+      "•",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "no_counterpart",
+     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+     "text_binding": {
+      "query": [
+       "breathing",
+       "peep",
+       "support",
+       "titrate",
+       "ventilation",
+       "work"
+      ],
+      "pages_searched": [
+       123,
+       124
+      ],
+      "free_candidates": 6,
+      "verdict": "no_evidence_local",
+      "pems_page": 124,
+      "pems_ordinal": 10,
+      "pems_row_text": "Provide suctioning as needed and consider: PEDIATRIC: 0.9% Sodium Chloride, 6 mL nebulized. Repeat as needed for increased work of breathing due to secretions.",
+      "badge_tokens": [
+       "A"
+      ],
+      "badge_columns": [
+       "A",
+       "I",
+       "P"
+      ],
+      "coverage": 0.333,
+      "coverage_row": 0.333,
+      "coverage_basis": "body",
+      "anchors": [],
+      "similarity": 0.33,
+      "held_by_site_row": null,
+      "disposition": "absent",
+      "badge_agrees_with_site": false,
+      "subtype": "below_floor",
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.33 against p.124 row 10)"
      }
     },
     {
@@ -11185,7 +11346,7 @@
     {
      "site_row": "10",
      "section": "",
-     "action": "Methylprednisolone for Moderate to Severe Stridor: • Same dosing as above (Row 5). • Administer after Epinephrine nebulization for persistent symptoms.",
+     "action": "Methylprednisolone for Moderate to Severe Stridor: • Same dosing as the methylprednisolone dose above. • Administer after Epinephrine nebulization for persistent symptoms.",
      "cells": [
       "",
       "",
@@ -11208,9 +11369,9 @@
     {
      "site_row": "11",
      "section": "",
-     "action": "Reassessment and Transport: • Continuously monitor respiratory status, auscultation, and SpO₂. • Reassess after each bronchodilator treatment. • Expedite transport for severe or deteriorating patients",
+     "action": "Reassessment and Transport: • Continuously monitor respiratory status, auscultation, and SpO₂. • Reassess after each bronchodilator treatment.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -11224,12 +11385,9 @@
        "auscultation",
        "bronchodilator",
        "continuously",
-       "deteriorating",
-       "expedite",
        "reassess",
        "reassessment",
        "respiratory",
-       "severe",
        "spo",
        "status",
        "transport",
@@ -11242,8 +11400,60 @@
       "free_candidates": 6,
       "verdict": "no_evidence_local",
       "pems_page": 124,
-      "pems_ordinal": 11,
-      "pems_row_text": "Administer: ADULT: Nitroglycerine 0.4 mg SL If SBP remains greater than 100 mmHg (MAP 65 mmHg), may repeat every five minutes as needed, up to three doses.",
+      "pems_ordinal": 13,
+      "pems_row_text": "Contact Medical Control for guidance as needed.",
+      "badge_tokens": [
+       "MC"
+      ],
+      "badge_columns": [
+       "EMR",
+       "EMT",
+       "A",
+       "I",
+       "P"
+      ],
+      "coverage": 0.0,
+      "coverage_row": 0.0,
+      "coverage_basis": "row",
+      "anchors": [],
+      "similarity": 0.084,
+      "held_by_site_row": "4",
+      "disposition": "claimed_by_ambiguous_site_row",
+      "badge_agrees_with_site": true,
+      "subtype": "below_floor",
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 13)"
+     }
+    },
+    {
+     "site_row": "11a",
+     "section": "",
+     "action": "• Expedite transport for severe or deteriorating patients.",
+     "cells": [
+      "",
+      "•",
+      "•",
+      "•",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "no_counterpart",
+     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+     "text_binding": {
+      "query": [
+       "deteriorating",
+       "expedite",
+       "severe",
+       "transport"
+      ],
+      "pages_searched": [
+       123,
+       124
+      ],
+      "free_candidates": 6,
+      "verdict": "no_evidence_local",
+      "pems_page": 124,
+      "pems_ordinal": 10,
+      "pems_row_text": "Provide suctioning as needed and consider: PEDIATRIC: 0.9% Sodium Chloride, 6 mL nebulized. Repeat as needed for increased work of breathing due to secretions.",
       "badge_tokens": [
        "A"
       ],
@@ -11256,12 +11466,12 @@
       "coverage_row": 0.0,
       "coverage_basis": "row",
       "anchors": [],
-      "similarity": 0.091,
+      "similarity": 0.128,
       "held_by_site_row": null,
       "disposition": "absent",
       "badge_agrees_with_site": false,
       "subtype": "below_floor",
-      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 11)"
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 10)"
      }
     }
    ],
@@ -11618,72 +11828,6 @@
      "match_basis": "page-flat+ordinal"
     },
     {
-     "site_row": "2",
-     "section": "",
-     "action": "Scene Management & Calm Environment • Keep child calm - agitation worsens obstruction • Allow parent/caregiver to hold child • Avoid unnecessary procedures • Minimize stimulation and stranger anxiety",
-     "cells": [
-      "",
-      "•",
-      "•",
-      "•",
-      "•"
-     ],
-     "status": "ambiguous",
-     "reason_kind": "no_counterpart",
-     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
-     "text_binding": {
-      "query": [
-       "agitation",
-       "allow",
-       "anxiety",
-       "avoid",
-       "calm",
-       "child",
-       "environment",
-       "hold",
-       "keep",
-       "management",
-       "minimize",
-       "obstruction",
-       "parent/caregiver",
-       "scene",
-       "stimulation",
-       "stranger",
-       "unnecessary",
-       "worsens"
-      ],
-      "pages_searched": [
-       123,
-       124
-      ],
-      "free_candidates": 5,
-      "verdict": "no_evidence_local",
-      "pems_page": 123,
-      "pems_ordinal": 1,
-      "pems_row_text": "Perform a focused evaluation including pertinent history and assessment of airway and lung sounds. Refer to Airway Management and Ventilatory Support procedure (includes airway foreign body).",
-      "badge_tokens": [
-       "EMR"
-      ],
-      "badge_columns": [
-       "EMR",
-       "EMT",
-       "A",
-       "I",
-       "P"
-      ],
-      "coverage": 0.25,
-      "coverage_row": 0.056,
-      "coverage_basis": "label",
-      "anchors": [],
-      "similarity": 0.186,
-      "held_by_site_row": null,
-      "disposition": "absent",
-      "badge_agrees_with_site": false,
-      "subtype": "below_floor",
-      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.25 against p.123 row 1)"
-     }
-    },
-    {
      "site_row": "3",
      "section": "",
      "action": "Position of Comfort • Allow child to assume position of choice (usually upright or with parent) • Do not force supine positioning • Head-down positioning for infants <1 year if foreign body suspected",
@@ -11770,15 +11914,15 @@
       "EMR"
      ],
      "similarity": 0.607,
-     "match_basis": "page-flat+text"
+     "match_basis": "page-flat+ordinal"
     },
     {
      "site_row": "5",
      "section": "",
-     "action": "Continuous Monitoring • Cardiac monitor • Pulse oximetry • EtCO2 when available",
+     "action": "Continuous Monitoring • Pulse oximetry • EtCO2 when available",
      "cells": [
       "",
-      "",
+      "•",
       "•",
       "•",
       "•"
@@ -11789,7 +11933,6 @@
      "text_binding": {
       "query": [
        "available",
-       "cardiac",
        "continuous",
        "etco2",
        "oximetry",
@@ -11816,12 +11959,61 @@
       "coverage_row": 0.0,
       "coverage_basis": "row",
       "anchors": [],
-      "similarity": 0.123,
+      "similarity": 0.119,
       "held_by_site_row": null,
       "disposition": "absent",
-      "badge_agrees_with_site": true,
+      "badge_agrees_with_site": false,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 11)"
+     }
+    },
+    {
+     "site_row": "5a",
+     "section": "",
+     "action": "• Cardiac monitor",
+     "cells": [
+      "",
+      "",
+      "",
+      "•",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "no_counterpart",
+     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+     "text_binding": {
+      "query": [
+       "cardiac"
+      ],
+      "pages_searched": [
+       123,
+       124
+      ],
+      "free_candidates": 5,
+      "verdict": "no_evidence_local",
+      "pems_page": 124,
+      "pems_ordinal": 13,
+      "pems_row_text": "Contact Medical Control for guidance as needed.",
+      "badge_tokens": [
+       "MC"
+      ],
+      "badge_columns": [
+       "EMR",
+       "EMT",
+       "A",
+       "I",
+       "P"
+      ],
+      "coverage": 0.0,
+      "coverage_row": 0.0,
+      "coverage_basis": "row",
+      "anchors": [],
+      "similarity": 0.036,
+      "held_by_site_row": null,
+      "disposition": "absent",
+      "badge_agrees_with_site": false,
+      "subtype": "below_floor",
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 13)"
      }
     },
     {
@@ -12627,10 +12819,10 @@
     {
      "site_row": "4",
      "section": "",
-     "action": "Positioning and Monitoring: • Position patient for comfort (typically supine or semi-Fowler's). • Establish IV/IO access. • Continuous cardiac and pulse oximetry monitoring.",
+     "action": "Positioning: • Position patient for comfort (typically supine or semi-Fowler's).",
      "cells": [
-      "",
-      "",
+      "•",
+      "•",
       "•",
       "•",
       "•"
@@ -12640,16 +12832,9 @@
      "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
      "text_binding": {
       "query": [
-       "access",
-       "cardiac",
        "comfort",
-       "continuous",
-       "establish",
-       "iv/io",
-       "oximetry",
        "position",
        "positioning",
-       "pulse",
        "semi-fowler",
        "supine",
        "typically"
@@ -12673,7 +12858,7 @@
       "coverage_row": 0.0,
       "coverage_basis": "row",
       "anchors": [],
-      "similarity": 0.047,
+      "similarity": 0.035,
       "held_by_site_row": null,
       "disposition": "absent",
       "badge_agrees_with_site": false,
@@ -12682,9 +12867,9 @@
      }
     },
     {
-     "site_row": "5",
+     "site_row": "4a",
      "section": "",
-     "action": "Suction and Airway Management: • Prepare suction and airway equipment. • Be prepared for rapid airway intervention if decompensation occurs.",
+     "action": "• Establish IV/IO access.",
      "cells": [
       "",
       "",
@@ -12697,16 +12882,9 @@
      "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
      "text_binding": {
       "query": [
-       "airway",
-       "decompensation",
-       "equipment",
-       "intervention",
-       "management",
-       "occurs",
-       "prepare",
-       "prepared",
-       "rapid",
-       "suction"
+       "access",
+       "establish",
+       "iv/io"
       ],
       "pages_searched": [
        243
@@ -12727,10 +12905,58 @@
       "coverage_row": 0.0,
       "coverage_basis": "row",
       "anchors": [],
-      "similarity": 0.024,
+      "similarity": 0.062,
       "held_by_site_row": null,
       "disposition": "absent",
       "badge_agrees_with_site": false,
+      "subtype": "below_floor",
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0)"
+     }
+    },
+    {
+     "site_row": "4b",
+     "section": "",
+     "action": "• Continuous cardiac and pulse oximetry monitoring.",
+     "cells": [
+      "",
+      "",
+      "",
+      "•",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "no_counterpart",
+     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+     "text_binding": {
+      "query": [
+       "cardiac",
+       "continuous",
+       "oximetry",
+       "pulse"
+      ],
+      "pages_searched": [
+       243
+      ],
+      "free_candidates": 1,
+      "verdict": "no_evidence_local",
+      "pems_page": 243,
+      "pems_ordinal": 0,
+      "pems_row_text": "Administer oxygen at 15 LPM (100% FiO2).",
+      "badge_tokens": [
+       "I"
+      ],
+      "badge_columns": [
+       "I",
+       "P"
+      ],
+      "coverage": 0.0,
+      "coverage_row": 0.0,
+      "coverage_basis": "row",
+      "anchors": [],
+      "similarity": 0.063,
+      "held_by_site_row": null,
+      "disposition": "absent",
+      "badge_agrees_with_site": true,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0)"
      }
@@ -12869,17 +13095,53 @@
       "•",
       "•"
      ],
-     "status": "matched",
-     "pems_section_ordinal": 4,
-     "pems_page": 243,
-     "pems_ordinal": 4,
-     "pems_section": "",
-     "pems_text": "Reassess the patient, including vital signs and respiratory effort / compliance. Consider repeating the above steps for continued or recurrent hemodynamic instability.",
-     "badges": [
-      "I"
-     ],
-     "similarity": 0.549,
-     "match_basis": "page-flat+text"
+     "status": "ambiguous",
+     "reason_kind": "no_counterpart",
+     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+     "text_binding": {
+      "query": [
+       "auscultate",
+       "breath",
+       "compliance",
+       "continuously",
+       "decompression",
+       "effort",
+       "hemodynamic",
+       "improvement",
+       "reassess",
+       "reassessment",
+       "respiratory",
+       "return",
+       "signs",
+       "sounds",
+       "vital"
+      ],
+      "pages_searched": [
+       243
+      ],
+      "free_candidates": 1,
+      "verdict": "no_evidence_local",
+      "subtype": "best_evidence_is_held",
+      "note": "this row's best text evidence is p.243 row 4 (coverage 0.54, badge I), which site row 15a already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix",
+      "pems_page": 243,
+      "pems_ordinal": 4,
+      "pems_row_text": "Reassess the patient, including vital signs and respiratory effort / compliance. Consider repeating the above steps for continued or recurrent hemodynamic instability.",
+      "badge_tokens": [
+       "I"
+      ],
+      "badge_columns": [
+       "I",
+       "P"
+      ],
+      "coverage": 0.538,
+      "coverage_row": 0.467,
+      "coverage_basis": "body",
+      "anchors": [],
+      "similarity": 0.549,
+      "held_by_site_row": "15a",
+      "disposition": "matched",
+      "badge_agrees_with_site": true
+     }
     },
     {
      "site_row": "11",
@@ -12912,7 +13174,7 @@
       "free_candidates": 1,
       "verdict": "no_evidence_local",
       "subtype": "best_evidence_is_held",
-      "note": "this row's best text evidence is p.243 row 4 (coverage 0.57, badge I), which site row 10 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix",
+      "note": "this row's best text evidence is p.243 row 4 (coverage 0.57, badge I), which site row 15a already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix",
       "pems_page": 243,
       "pems_ordinal": 4,
       "pems_row_text": "Reassess the patient, including vital signs and respiratory effort / compliance. Consider repeating the above steps for continued or recurrent hemodynamic instability.",
@@ -12928,7 +13190,7 @@
       "coverage_basis": "body",
       "anchors": [],
       "similarity": 0.547,
-      "held_by_site_row": "10",
+      "held_by_site_row": "15a",
       "disposition": "matched",
       "badge_agrees_with_site": true
      }
@@ -12936,11 +13198,11 @@
     {
      "site_row": "12",
      "section": "",
-     "action": "Hemodynamic Support: • 0.9% Sodium Chloride fluid bolus if hypotensive (SBP < 90 mmHg or MAP < 65). • Consider vasopressor support if cardiogenic shock present. • Titrate fluids to perfusion.",
+     "action": "Hemodynamic Support: • 0.9% Sodium Chloride fluid bolus if hypotensive (SBP < 90 mmHg or MAP < 65). • Titrate fluids to perfusion.",
      "cells": [
       "",
       "",
-      "",
+      "•",
       "•",
       "•"
      ],
@@ -12949,14 +13211,14 @@
      "reason": "site row label names an intervention that p.243 row 4 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs"
     },
     {
-     "site_row": "13",
+     "site_row": "12a",
      "section": "",
-     "action": "Advanced Airway Management (if indicated): • Prepare for or perform endotracheal intubation if respiratory failure. • ⚠ Positive pressure ventilation (BVM/CPAP) may worsen or induce pneumothorax.",
+     "action": "• Consider vasopressor support if cardiogenic shock present.",
      "cells": [
       "",
       "",
       "",
-      "",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -12964,21 +13226,11 @@
      "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
      "text_binding": {
       "query": [
-       "advanced",
-       "airway",
-       "bvm/cpap",
-       "endotracheal",
-       "failure",
-       "induce",
-       "intubation",
-       "management",
-       "pneumothorax",
-       "positive",
-       "prepare",
-       "pressure",
-       "respiratory",
-       "ventilation",
-       "worsen"
+       "cardiogenic",
+       "present",
+       "shock",
+       "support",
+       "vasopressor"
       ],
       "pages_searched": [
        243
@@ -12999,7 +13251,167 @@
       "coverage_row": 0.0,
       "coverage_basis": "row",
       "anchors": [],
-      "similarity": 0.021,
+      "similarity": 0.051,
+      "held_by_site_row": null,
+      "disposition": "absent",
+      "badge_agrees_with_site": true,
+      "subtype": "below_floor",
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0)"
+     }
+    },
+    {
+     "site_row": "13",
+     "section": "",
+     "action": "Advanced Airway Management (if indicated): • Prepare for or perform endotracheal intubation if respiratory failure. Patients 12 years and older. • ⚠ Positive pressure ventilation (BVM/CPAP) may worsen",
+     "cells": [
+      "",
+      "",
+      "",
+      "•",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "no_counterpart",
+     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+     "text_binding": {
+      "query": [
+       "advanced",
+       "airway",
+       "bvm/cpap",
+       "endotracheal",
+       "failure",
+       "induce",
+       "intubation",
+       "management",
+       "older",
+       "pneumothorax",
+       "positive",
+       "prepare",
+       "pressure",
+       "respiratory",
+       "ventilation",
+       "worsen",
+       "years"
+      ],
+      "pages_searched": [
+       243
+      ],
+      "free_candidates": 1,
+      "verdict": "no_evidence_local",
+      "pems_page": 243,
+      "pems_ordinal": 0,
+      "pems_row_text": "Administer oxygen at 15 LPM (100% FiO2).",
+      "badge_tokens": [
+       "I"
+      ],
+      "badge_columns": [
+       "I",
+       "P"
+      ],
+      "coverage": 0.0,
+      "coverage_row": 0.0,
+      "coverage_basis": "row",
+      "anchors": [],
+      "similarity": 0.023,
+      "held_by_site_row": null,
+      "disposition": "absent",
+      "badge_agrees_with_site": true,
+      "subtype": "below_floor",
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0)"
+     }
+    },
+    {
+     "site_row": "13a",
+     "section": "",
+     "action": "• Orally intubate. Patients < 12 years old.",
+     "cells": [
+      "",
+      "",
+      "",
+      "",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "no_counterpart",
+     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+     "text_binding": {
+      "query": [
+       "intubate",
+       "old",
+       "orally",
+       "years"
+      ],
+      "pages_searched": [
+       243
+      ],
+      "free_candidates": 1,
+      "verdict": "no_evidence_local",
+      "pems_page": 243,
+      "pems_ordinal": 0,
+      "pems_row_text": "Administer oxygen at 15 LPM (100% FiO2).",
+      "badge_tokens": [
+       "I"
+      ],
+      "badge_columns": [
+       "I",
+       "P"
+      ],
+      "coverage": 0.0,
+      "coverage_row": 0.0,
+      "coverage_basis": "row",
+      "anchors": [],
+      "similarity": 0.06,
+      "held_by_site_row": null,
+      "disposition": "absent",
+      "badge_agrees_with_site": false,
+      "subtype": "below_floor",
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0)"
+     }
+    },
+    {
+     "site_row": "13b",
+     "section": "",
+     "action": "• If unable to intubate and unable to oxygenate, proceed immediately to Surgical Airway.",
+     "cells": [
+      "",
+      "",
+      "",
+      "",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "no_counterpart",
+     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+     "text_binding": {
+      "query": [
+       "airway",
+       "immediately",
+       "intubate",
+       "oxygenate",
+       "proceed",
+       "surgical",
+       "unable"
+      ],
+      "pages_searched": [
+       243
+      ],
+      "free_candidates": 1,
+      "verdict": "no_evidence_local",
+      "pems_page": 243,
+      "pems_ordinal": 0,
+      "pems_row_text": "Administer oxygen at 15 LPM (100% FiO2).",
+      "badge_tokens": [
+       "I"
+      ],
+      "badge_columns": [
+       "I",
+       "P"
+      ],
+      "coverage": 0.0,
+      "coverage_row": 0.0,
+      "coverage_basis": "row",
+      "anchors": [],
+      "similarity": 0.067,
       "held_by_site_row": null,
       "disposition": "absent",
       "badge_agrees_with_site": false,
@@ -13069,9 +13481,9 @@
     {
      "site_row": "15",
      "section": "",
-     "action": "Close Monitoring En Route: • Continuous reassessment en route. • Monitor for recurrent tension pneumothorax. • Secure catheter to prevent dislodgement.",
+     "action": "Close Monitoring En Route: • Continuous reassessment en route.",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -13082,17 +13494,10 @@
      "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
      "text_binding": {
       "query": [
-       "catheter",
        "close",
        "continuous",
-       "dislodgement",
-       "pneumothorax",
-       "prevent",
        "reassessment",
-       "recurrent",
-       "route",
-       "secure",
-       "tension"
+       "route"
       ],
       "pages_searched": [
        243
@@ -13113,13 +13518,36 @@
       "coverage_row": 0.0,
       "coverage_basis": "row",
       "anchors": [],
-      "similarity": 0.036,
+      "similarity": 0.061,
       "held_by_site_row": null,
       "disposition": "absent",
       "badge_agrees_with_site": false,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.243 row 0)"
      }
+    },
+    {
+     "site_row": "15a",
+     "section": "",
+     "action": "• Monitor for recurrent tension pneumothorax. • Reassess respiratory effort and compliance after decompression.",
+     "cells": [
+      "",
+      "",
+      "",
+      "•",
+      "•"
+     ],
+     "status": "matched",
+     "pems_section_ordinal": 4,
+     "pems_page": 243,
+     "pems_ordinal": 4,
+     "pems_section": "",
+     "pems_text": "Reassess the patient, including vital signs and respiratory effort / compliance. Consider repeating the above steps for continued or recurrent hemodynamic instability.",
+     "badges": [
+      "I"
+     ],
+     "similarity": 0.617,
+     "match_basis": "page-flat+text"
     }
    ],
    "absent": [
@@ -13219,7 +13647,7 @@
       "I"
      ],
      "disposition": "matched",
-     "site_row": "10",
+     "site_row": "15a",
      "claimed_by_site_rows": [],
      "note": null
     }
@@ -13336,51 +13764,6 @@
      "reason": "site row label names an intervention that p.123 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs"
     },
     {
-     "site_row": "6",
-     "section": "",
-     "action": "CPAP CONTRAINDICATIONS (⚠️): • Apnea/agonal respirations • GCS ≤ 13 • Pneumothorax",
-     "cells": [
-      "",
-      "",
-      "•",
-      "•",
-      "•"
-     ],
-     "status": "ambiguous",
-     "reason_kind": "shared_pems_row",
-     "reason": "site row label names an intervention that p.123 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs"
-    },
-    {
-     "site_row": "7",
-     "section": "",
-     "action": "CPAP CONTRAINDICATIONS (⚠️): • Facial trauma/burns/recent surgery • Penetrating neck/chest trauma • Active vomiting/severe nausea",
-     "cells": [
-      "",
-      "",
-      "•",
-      "•",
-      "•"
-     ],
-     "status": "ambiguous",
-     "reason_kind": "shared_pems_row",
-     "reason": "site row label names an intervention that p.123 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs"
-    },
-    {
-     "site_row": "8",
-     "section": "",
-     "action": "CPAP CONTRAINDICATIONS (⚠️): • Hypotension (SBP < 90 mmHg, MAP < 65) • Inability to tolerate tight fitting mask",
-     "cells": [
-      "",
-      "",
-      "•",
-      "•",
-      "•"
-     ],
-     "status": "ambiguous",
-     "reason_kind": "shared_pems_row",
-     "reason": "site row label names an intervention that p.123 row 3 already backs with another site row; PEMS merges what the site splits (or the labels collide) — adjudicate which cell source governs"
-    },
-    {
      "site_row": "9",
      "section": "",
      "action": "CPAP Titration: Adjust PEEP up to 10 cmH2O to support ventilation and work of breathing",
@@ -13388,7 +13771,7 @@
       "",
       "",
       "",
-      "",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -14730,7 +15113,7 @@
     {
      "site_row": "3",
      "section": "",
-     "action": "Continuous Monitoring: • Continuous EtCO2 monitoring to guide therapy • Continuous pulse oximetry • Cardiac monitoring",
+     "action": "Continuous Monitoring: • Continuous EtCO2 monitoring to guide therapy • Continuous pulse oximetry",
      "cells": [
       "",
       "•",
@@ -14743,7 +15126,6 @@
      "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
      "text_binding": {
       "query": [
-       "cardiac",
        "continuous",
        "etco2",
        "guide",
@@ -14774,12 +15156,58 @@
       "coverage_row": 0.0,
       "coverage_basis": "row",
       "anchors": [],
-      "similarity": 0.139,
+      "similarity": 0.135,
       "held_by_site_row": null,
       "disposition": "absent",
       "badge_agrees_with_site": false,
       "subtype": "below_floor",
       "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 13)"
+     }
+    },
+    {
+     "site_row": "3a",
+     "section": "",
+     "action": "• Cardiac monitoring",
+     "cells": [
+      "",
+      "",
+      "",
+      "•",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "no_counterpart",
+     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+     "text_binding": {
+      "query": [
+       "cardiac"
+      ],
+      "pages_searched": [
+       123,
+       124
+      ],
+      "free_candidates": 4,
+      "verdict": "no_evidence_local",
+      "pems_page": 124,
+      "pems_ordinal": 12,
+      "pems_row_text": "Administer: ADULT: Furosemide (Lasix) 40 mg IV/IO slow push",
+      "badge_tokens": [
+       "I"
+      ],
+      "badge_columns": [
+       "I",
+       "P"
+      ],
+      "coverage": 0.0,
+      "coverage_row": 0.0,
+      "coverage_basis": "row",
+      "anchors": [],
+      "similarity": 0.053,
+      "held_by_site_row": null,
+      "disposition": "absent",
+      "badge_agrees_with_site": true,
+      "subtype": "below_floor",
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 12)"
      }
     },
     {
@@ -14865,7 +15293,7 @@
     {
      "site_row": "6",
      "section": "",
-     "action": "CPAP (Continuous Positive Airway Pressure): • Indications: Adults with respiratory distress due to pulmonary edema, infection, or near-drowning • Initial Settings: PEEP 5 cmH2O • Titration: Up to 10 c",
+     "action": "CPAP (Continuous Positive Airway Pressure): • Indications: Adults with respiratory distress due to pulmonary edema, infection, or near-drowning • Initial Settings: PEEP 5 cmH2O • Close monitoring for ",
      "cells": [
       "",
       "•",
@@ -14876,6 +15304,59 @@
      "status": "ambiguous",
      "reason_kind": "shared_pems_row",
      "reason": "two site rows name this same PEMS intervention; p.123 row 3 merges what the site splits — adjudicate which site row's cells that PEMS badge governs"
+    },
+    {
+     "site_row": "6a",
+     "section": "",
+     "action": "• Titration: Titrate PEEP up to 10 cmH2O to support ventilation and work of breathing.",
+     "cells": [
+      "",
+      "",
+      "",
+      "•",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "no_counterpart",
+     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+     "text_binding": {
+      "query": [
+       "breathing",
+       "cmh2o",
+       "peep",
+       "support",
+       "titrate",
+       "titration",
+       "ventilation",
+       "work"
+      ],
+      "pages_searched": [
+       123,
+       124
+      ],
+      "free_candidates": 4,
+      "verdict": "no_evidence_local",
+      "pems_page": 123,
+      "pems_ordinal": 4,
+      "pems_row_text": "Consider invasive ventilatory support via endotracheal intubation. Refer to Endotracheal Intubation procedure. Note: Intubation of spontaneously breathing patients without rapid sequence induction (RSI) is generally not recommended. RSI is not addressed in PEMS regional protocols – refer to agency specific protocols for guidance.",
+      "badge_tokens": [
+       "I"
+      ],
+      "badge_columns": [
+       "I",
+       "P"
+      ],
+      "coverage": 0.25,
+      "coverage_row": 0.25,
+      "coverage_basis": "body",
+      "anchors": [],
+      "similarity": 0.178,
+      "held_by_site_row": null,
+      "disposition": "absent",
+      "badge_agrees_with_site": true,
+      "subtype": "below_floor",
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.25 against p.123 row 4)"
+     }
     },
     {
      "site_row": "7",
@@ -15255,12 +15736,12 @@
     {
      "site_row": "16",
      "section": "",
-     "action": "Respiratory Failure Management: • If apnea/agonal respirations or GCS ≤13: • Prepare for immediate airway control • Bag-valve-mask ventilation • Consider advanced airway per provider level • Transport",
+     "action": "Respiratory Failure Management: • If apnea/agonal respirations or GCS ≤13: • Prepare for immediate airway control • Bag-valve-mask ventilation • Transport without delay",
      "cells": [
       "",
-      "",
-      "",
-      "",
+      "•",
+      "•",
+      "•",
       "•"
      ],
      "status": "ambiguous",
@@ -15268,7 +15749,6 @@
      "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
      "text_binding": {
       "query": [
-       "advanced",
        "airway",
        "apnea/agonal",
        "bag-valve-mask",
@@ -15277,10 +15757,8 @@
        "failure",
        "gcs",
        "immediate",
-       "level",
        "management",
        "prepare",
-       "provider",
        "respirations",
        "respiratory",
        "transport",
@@ -15305,16 +15783,120 @@
        "I",
        "P"
       ],
-      "coverage": 0.071,
-      "coverage_row": 0.059,
+      "coverage": 0.091,
+      "coverage_row": 0.071,
       "coverage_basis": "body",
       "anchors": [],
-      "similarity": 0.243,
+      "similarity": 0.251,
       "held_by_site_row": null,
       "disposition": "absent",
       "badge_agrees_with_site": false,
       "subtype": "below_floor",
-      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.07 against p.124 row 13)"
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.09 against p.124 row 13)"
+     }
+    },
+    {
+     "site_row": "16a",
+     "section": "",
+     "action": "• Consider advanced airway per provider level — patients 12 years and older",
+     "cells": [
+      "",
+      "",
+      "",
+      "•",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "no_counterpart",
+     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+     "text_binding": {
+      "query": [
+       "advanced",
+       "airway",
+       "level",
+       "older",
+       "provider",
+       "years"
+      ],
+      "pages_searched": [
+       123,
+       124
+      ],
+      "free_candidates": 4,
+      "verdict": "no_evidence_local",
+      "pems_page": 123,
+      "pems_ordinal": 5,
+      "pems_row_text": "Administer: ADULT: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. ADULT: Ipratropium Bromide 3 mL of 0.02% solution, nebulized. Once. PEDIATRIC: Albuterol Sulfate 3 mL of 0.083% solution, nebulized. Repeat as necessary. PEDIATRIC: Ipratropium Bromide 3 mL of 0.02% solution, nebulized. Once.",
+      "badge_tokens": [
+       "EMT"
+      ],
+      "badge_columns": [
+       "EMT",
+       "A",
+       "I",
+       "P"
+      ],
+      "coverage": 0.0,
+      "coverage_row": 0.0,
+      "coverage_basis": "row",
+      "anchors": [],
+      "similarity": 0.083,
+      "held_by_site_row": null,
+      "disposition": "absent",
+      "badge_agrees_with_site": false,
+      "subtype": "below_floor",
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.123 row 5)"
+     }
+    },
+    {
+     "site_row": "16b",
+     "section": "",
+     "action": "• Consider advanced airway per provider level — patients under 12 years of age",
+     "cells": [
+      "",
+      "",
+      "",
+      "",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "no_counterpart",
+     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+     "text_binding": {
+      "query": [
+       "advanced",
+       "age",
+       "airway",
+       "level",
+       "provider",
+       "years"
+      ],
+      "pages_searched": [
+       123,
+       124
+      ],
+      "free_candidates": 4,
+      "verdict": "no_evidence_local",
+      "pems_page": 124,
+      "pems_ordinal": 12,
+      "pems_row_text": "Administer: ADULT: Furosemide (Lasix) 40 mg IV/IO slow push",
+      "badge_tokens": [
+       "I"
+      ],
+      "badge_columns": [
+       "I",
+       "P"
+      ],
+      "coverage": 0.0,
+      "coverage_row": 0.0,
+      "coverage_basis": "row",
+      "anchors": [],
+      "similarity": 0.087,
+      "held_by_site_row": null,
+      "disposition": "absent",
+      "badge_agrees_with_site": false,
+      "subtype": "below_floor",
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.124 row 12)"
      }
     }
    ],
@@ -15742,7 +16324,7 @@
        153,
        239
       ],
-      "free_candidates": 13,
+      "free_candidates": 12,
       "verdict": "no_evidence_local",
       "pems_page": 153,
       "pems_ordinal": 4,
@@ -15812,7 +16394,7 @@
        153,
        239
       ],
-      "free_candidates": 13,
+      "free_candidates": 12,
       "verdict": "no_evidence_local",
       "pems_page": 153,
       "pems_ordinal": 2,
@@ -15871,7 +16453,7 @@
        153,
        239
       ],
-      "free_candidates": 13,
+      "free_candidates": 12,
       "verdict": "no_evidence_local",
       "subtype": "best_evidence_is_held",
       "note": "this row's best text evidence is p.153 row 2 (coverage 1.00, badge EMT), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix",
@@ -15973,7 +16555,7 @@
        153,
        239
       ],
-      "free_candidates": 13,
+      "free_candidates": 12,
       "verdict": "no_evidence_local",
       "pems_page": 153,
       "pems_ordinal": 4,
@@ -16036,7 +16618,7 @@
        153,
        239
       ],
-      "free_candidates": 13,
+      "free_candidates": 12,
       "verdict": "no_evidence_local",
       "pems_page": 153,
       "pems_ordinal": 4,
@@ -16102,7 +16684,7 @@
        153,
        239
       ],
-      "free_candidates": 13,
+      "free_candidates": 12,
       "verdict": "no_evidence_local",
       "pems_page": 239,
       "pems_ordinal": 4,
@@ -16170,7 +16752,7 @@
        153,
        239
       ],
-      "free_candidates": 13,
+      "free_candidates": 12,
       "verdict": "no_evidence_local",
       "pems_page": 239,
       "pems_ordinal": 8,
@@ -16230,7 +16812,7 @@
        153,
        239
       ],
-      "free_candidates": 13,
+      "free_candidates": 12,
       "verdict": "no_evidence_local",
       "subtype": "best_evidence_is_held",
       "note": "this row's best text evidence is p.153 row 2 (coverage 0.50, badge EMT), which site row 5 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix",
@@ -16282,9 +16864,9 @@
     {
      "site_row": "13",
      "section": "",
-     "action": "Monitoring and Reassessment: • Monitor SpO2, EtCO2, and respiratory rate continuously • Reassess airway patency frequently; edema may progress rapidly • Observe for signs of respiratory failure requir",
+     "action": "Monitoring and Reassessment: • Reassess airway patency frequently; edema may progress rapidly • Observe for signs of respiratory failure requiring immediate airway intervention",
      "cells": [
-      "",
+      "•",
       "•",
       "•",
       "•",
@@ -16296,9 +16878,7 @@
      "text_binding": {
       "query": [
        "airway",
-       "continuously",
        "edema",
-       "etco2",
        "failure",
        "frequently",
        "immediate",
@@ -16307,42 +16887,113 @@
        "patency",
        "progress",
        "rapidly",
-       "rate",
        "reassess",
        "reassessment",
        "requiring",
        "respiratory",
-       "signs",
-       "spo2"
+       "signs"
       ],
       "pages_searched": [
        153,
        239
       ],
-      "free_candidates": 13,
+      "free_candidates": 12,
       "verdict": "no_evidence_local",
       "pems_page": 239,
-      "pems_ordinal": 7,
-      "pems_row_text": "Support respirations with BVM. Use in-line EtCO2. Refer to Capnography procedure. Adjust tidal volume, respiratory rate, and/or PEEP (if available) to maintain EtCO 35 – 45mmHg.** 2",
+      "pems_ordinal": 1,
+      "pems_row_text": "Refer to appropriate protocol (e.g. Respiratory Distress) for condition specific therapy guidelines.",
       "badge_tokens": [
-       "EMT"
+       "EMR"
       ],
       "badge_columns": [
+       "EMR",
        "EMT",
        "A",
        "I",
        "P"
       ],
-      "coverage": 0.167,
-      "coverage_row": 0.158,
+      "coverage": 0.071,
+      "coverage_row": 0.067,
       "coverage_basis": "body",
       "anchors": [],
-      "similarity": 0.242,
+      "similarity": 0.227,
       "held_by_site_row": null,
       "disposition": "absent",
       "badge_agrees_with_site": true,
       "subtype": "below_floor",
-      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.17 against p.239 row 7)"
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.07 against p.239 row 1)"
+     }
+    },
+    {
+     "site_row": "13a",
+     "section": "",
+     "action": "• Monitor SpO2, EtCO2, and respiratory rate continuously",
+     "cells": [
+      "",
+      "•",
+      "•",
+      "•",
+      "•"
+     ],
+     "status": "matched",
+     "pems_section_ordinal": 1,
+     "pems_page": 239,
+     "pems_ordinal": 7,
+     "pems_section": "UNCONSCIOUS / OBTUNDED PATIENT",
+     "pems_text": "Support respirations with BVM. Use in-line EtCO2. Refer to Capnography procedure. Adjust tidal volume, respiratory rate, and/or PEEP (if available) to maintain EtCO 35 – 45mmHg.** 2",
+     "badges": [
+      "EMT"
+     ],
+     "similarity": 0.515,
+     "match_basis": "page-flat+text"
+    },
+    {
+     "site_row": "13b",
+     "section": "",
+     "action": "• Cardiac monitoring",
+     "cells": [
+      "",
+      "",
+      "",
+      "•",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "no_counterpart",
+     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+     "text_binding": {
+      "query": [
+       "cardiac"
+      ],
+      "pages_searched": [
+       153,
+       239
+      ],
+      "free_candidates": 12,
+      "verdict": "no_evidence_local",
+      "pems_page": 239,
+      "pems_ordinal": 0,
+      "pems_row_text": "Follow Universal Patient Care / Initial Patient Contact protocol.",
+      "badge_tokens": [
+       "EMR"
+      ],
+      "badge_columns": [
+       "EMR",
+       "EMT",
+       "A",
+       "I",
+       "P"
+      ],
+      "coverage": 0.0,
+      "coverage_row": 0.0,
+      "coverage_basis": "row",
+      "anchors": [],
+      "similarity": 0.149,
+      "held_by_site_row": null,
+      "disposition": "duplicate_in_source",
+      "badge_agrees_with_site": false,
+      "subtype": "below_floor",
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.239 row 0)"
      }
     },
     {
@@ -16386,7 +17037,7 @@
        153,
        239
       ],
-      "free_candidates": 13,
+      "free_candidates": 12,
       "verdict": "no_evidence_local",
       "pems_page": 153,
       "pems_ordinal": 2,
@@ -16539,23 +17190,6 @@
      "section": "UNCONSCIOUS / OBTUNDED PATIENT",
      "section_ordinal": 0,
      "verbatim_text": "Position the patient and open the airway. Use BLS airway adjuncts (OPA/NPA/SGA) as necessary.",
-     "badges": [
-      "EMT"
-     ],
-     "columns": {
-      "EMR": "",
-      "EMT": "•",
-      "A": "•",
-      "I": "•",
-      "P": "•"
-     }
-    },
-    {
-     "pems_page": 239,
-     "ordinal": 7,
-     "section": "UNCONSCIOUS / OBTUNDED PATIENT",
-     "section_ordinal": 1,
-     "verbatim_text": "Support respirations with BVM. Use in-line EtCO2. Refer to Capnography procedure. Adjust tidal volume, respiratory rate, and/or PEEP (if available) to maintain EtCO 35 – 45mmHg.** 2",
      "badges": [
       "EMT"
      ],
@@ -16851,8 +17485,8 @@
      "badges": [
       "EMT"
      ],
-     "disposition": "absent",
-     "site_row": null,
+     "disposition": "matched",
+     "site_row": "13a",
      "claimed_by_site_rows": [],
      "note": null
     },
@@ -16925,69 +17559,6 @@
      ],
      "similarity": 0.878,
      "match_basis": "page-flat+ordinal"
-    },
-    {
-     "site_row": "2",
-     "section": "",
-     "action": "Scene Safety / Recognition: • Rapidly identify complete vs partial obstruction. • Recognize universal choking sign (hands to throat). • Determine conscious vs unconscious status.",
-     "cells": [
-      "",
-      "•",
-      "•",
-      "•",
-      "•"
-     ],
-     "status": "ambiguous",
-     "reason_kind": "no_counterpart",
-     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
-     "text_binding": {
-      "query": [
-       "choking",
-       "complete",
-       "conscious",
-       "hands",
-       "identify",
-       "obstruction",
-       "partial",
-       "rapidly",
-       "recognition",
-       "recognize",
-       "safety",
-       "scene",
-       "sign",
-       "status",
-       "throat",
-       "unconscious",
-       "universal"
-      ],
-      "pages_searched": [
-       239
-      ],
-      "free_candidates": 4,
-      "verdict": "no_evidence_local",
-      "pems_page": 239,
-      "pems_ordinal": 7,
-      "pems_row_text": "Support respirations with BVM. Use in-line EtCO2. Refer to Capnography procedure. Adjust tidal volume, respiratory rate, and/or PEEP (if available) to maintain EtCO 35 – 45mmHg.** 2",
-      "badge_tokens": [
-       "EMT"
-      ],
-      "badge_columns": [
-       "EMT",
-       "A",
-       "I",
-       "P"
-      ],
-      "coverage": 0.0,
-      "coverage_row": 0.0,
-      "coverage_basis": "row",
-      "anchors": [],
-      "similarity": 0.087,
-      "held_by_site_row": null,
-      "disposition": "absent",
-      "badge_agrees_with_site": true,
-      "subtype": "below_floor",
-      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.239 row 7)"
-     }
     },
     {
      "site_row": "3",
@@ -19691,11 +20262,34 @@
     {
      "site_row": "7",
      "section": "",
-     "action": "Obtain 12-Lead ECG / Monitor rhythm continuously",
+     "action": "Obtain 12-Lead ECG",
+     "cells": [
+      "",
+      "•",
+      "•",
+      "•",
+      "•"
+     ],
+     "status": "matched",
+     "pems_section_ordinal": 8,
+     "pems_page": 96,
+     "pems_ordinal": 8,
+     "pems_section": "",
+     "pems_text": "Obtain and transmit a 12-Lead ECG.",
+     "badges": [
+      "EMT"
+     ],
+     "similarity": 0.891,
+     "match_basis": "page-flat+text"
+    },
+    {
+     "site_row": "7a",
+     "section": "",
+     "action": "Monitor rhythm continuously",
      "cells": [
       "",
       "",
-      "•",
+      "",
       "•",
       "•"
      ],
@@ -19708,7 +20302,7 @@
      "badges": [
       "I"
      ],
-     "similarity": 0.704,
+     "similarity": 0.939,
      "match_basis": "page-flat+text"
     },
     {
@@ -19808,24 +20402,6 @@
      },
      "best_similarity_to_a_site_row": 0.195,
      "label_key_match": 1
-    },
-    {
-     "pems_page": 96,
-     "ordinal": 8,
-     "section": "",
-     "section_ordinal": 8,
-     "verbatim_text": "Obtain and transmit a 12-Lead ECG.",
-     "badges": [
-      "EMT"
-     ],
-     "columns": {
-      "EMR": "",
-      "EMT": "•",
-      "A": "•",
-      "I": "•",
-      "P": "•"
-     },
-     "best_similarity_to_a_site_row": 0.667
     }
    ],
    "pems_row_ledger": [
@@ -19950,10 +20526,10 @@
      "badges": [
       "EMT"
      ],
-     "disposition": "merged_into_site_row",
-     "site_row": null,
+     "disposition": "matched",
+     "site_row": "7",
      "claimed_by_site_rows": [],
-     "note": 0.667
+     "note": null
     },
     {
      "pems_page": 96,
@@ -19993,7 +20569,7 @@
       "I"
      ],
      "disposition": "matched",
-     "site_row": "7",
+     "site_row": "7a",
      "claimed_by_site_rows": [],
      "note": null
     }
@@ -20495,7 +21071,7 @@
     {
      "site_row": "7",
      "section": "",
-     "action": "Obtain and transmit a 12-Lead ECG / Monitor rhythm.",
+     "action": "Obtain and transmit a 12-Lead ECG",
      "cells": [
       "",
       "•",
@@ -20512,7 +21088,30 @@
      "badges": [
       "EMT"
      ],
-     "similarity": 0.946,
+     "similarity": 1.0,
+     "match_basis": "page-flat+text"
+    },
+    {
+     "site_row": "7a",
+     "section": "",
+     "action": "Monitor rhythm.",
+     "cells": [
+      "",
+      "",
+      "",
+      "•",
+      "•"
+     ],
+     "status": "matched",
+     "pems_section_ordinal": 11,
+     "pems_page": 96,
+     "pems_ordinal": 11,
+     "pems_section": "",
+     "pems_text": "Assess and continuously monitor cardiac rhythm.",
+     "badges": [
+      "I"
+     ],
+     "similarity": 0.777,
      "match_basis": "page-flat+text"
     },
     {
@@ -20562,25 +21161,7 @@
      "match_basis": "page-flat+text"
     }
    ],
-   "absent": [
-    {
-     "pems_page": 96,
-     "ordinal": 11,
-     "section": "",
-     "section_ordinal": 11,
-     "verbatim_text": "Assess and continuously monitor cardiac rhythm.",
-     "badges": [
-      "I"
-     ],
-     "columns": {
-      "EMR": "",
-      "EMT": "",
-      "A": "",
-      "I": "•",
-      "P": "•"
-     }
-    }
-   ],
+   "absent": [],
    "notes": [],
    "pems_doc": "Electrical Injuries",
    "pems_pages": [
@@ -20610,7 +21191,7 @@
       "I": "•",
       "P": "•"
      },
-     "best_similarity_to_a_site_row": 0.175,
+     "best_similarity_to_a_site_row": 0.221,
      "label_key_match": 1
     },
     {
@@ -20646,7 +21227,7 @@
      "disposition": "merged_into_site_row",
      "site_row": null,
      "claimed_by_site_rows": [],
-     "note": 0.175
+     "note": 0.221
     },
     {
      "pems_page": 95,
@@ -20797,8 +21378,8 @@
      "badges": [
       "I"
      ],
-     "disposition": "absent",
-     "site_row": null,
+     "disposition": "matched",
+     "site_row": "7a",
      "claimed_by_site_rows": [],
      "note": null
     }
@@ -20833,7 +21414,56 @@
     {
      "site_row": "2",
      "section": "",
-     "action": "Ensure scene safety. Extricate/move patient to safety if necessary.",
+     "action": "Ensure scene safety.",
+     "cells": [
+      "•",
+      "•",
+      "•",
+      "•",
+      "•"
+     ],
+     "status": "ambiguous",
+     "reason_kind": "no_counterpart",
+     "reason": "no PEMS row in the page grid reaches the text floor and no label word binds it; the site row has no PEMS counterpart (local addition, or a PEMS row worded beyond recognition)",
+     "text_binding": {
+      "query": [
+       "safety",
+       "scene"
+      ],
+      "pages_searched": [
+       83,
+       84
+      ],
+      "free_candidates": 4,
+      "verdict": "no_evidence_local",
+      "subtype": "best_evidence_is_held",
+      "note": "this row's best text evidence is p.84 row 14 (coverage 0.50, badge EMT), which site row 12 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix",
+      "pems_page": 84,
+      "pems_ordinal": 14,
+      "pems_row_text": "If the patient meets the trauma triage criteria according to Administrative Policy – Trauma Field Triage, transport immediately to a Level 1 or Level II Trauma Center. Goal scene time: Less than 10 minutes.",
+      "badge_tokens": [
+       "EMT"
+      ],
+      "badge_columns": [
+       "EMT",
+       "A",
+       "I",
+       "P"
+      ],
+      "coverage": 0.5,
+      "coverage_row": 0.5,
+      "coverage_basis": "label",
+      "anchors": [],
+      "similarity": 0.286,
+      "held_by_site_row": "12",
+      "disposition": "matched",
+      "badge_agrees_with_site": false
+     }
+    },
+    {
+     "site_row": "2a",
+     "section": "",
+     "action": "Extricate/move patient to safety if necessary.",
      "cells": [
       "",
       "•",
@@ -20848,18 +21478,17 @@
       "query": [
        "extricate/move",
        "necessary",
-       "safety",
-       "scene"
+       "safety"
       ],
       "pages_searched": [
        83,
        84
       ],
-      "free_candidates": 3,
+      "free_candidates": 4,
       "verdict": "no_evidence_local",
       "pems_page": 83,
-      "pems_ordinal": 6,
-      "pems_row_text": "Complete amputation of any part: • Wrap the amputated part in a dry, sterile dressing • Place the part in a dry, sealed plastic bag • Place the plastic bag with the part in an ice water filled container • Mark the container with date, patient name, and name of the part",
+      "pems_ordinal": 4,
+      "pems_row_text": "Immobilize, secure in place, and do not remove any impaled object unless impeding CPR.",
       "badge_tokens": [
        "EMR"
       ],
@@ -20874,12 +21503,12 @@
       "coverage_row": 0.0,
       "coverage_basis": "row",
       "anchors": [],
-      "similarity": 0.106,
+      "similarity": 0.107,
       "held_by_site_row": null,
       "disposition": "absent",
       "badge_agrees_with_site": false,
       "subtype": "below_floor",
-      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.83 row 6)"
+      "note": "no free PEMS row in scope reaches the 0.40 floor for this row (best 0.00 against p.83 row 4)"
      }
     },
     {
@@ -20903,7 +21532,7 @@
       "EMR"
      ],
      "similarity": 0.656,
-     "match_basis": "page-flat+ordinal"
+     "match_basis": "page-flat+text"
     },
     {
      "site_row": "4",
@@ -20952,29 +21581,6 @@
      "match_basis": "page-flat+text"
     },
     {
-     "site_row": "6",
-     "section": "",
-     "action": "Assess for shock. Refer to Shock (Hypoperfusion) protocol.",
-     "cells": [
-      "",
-      "",
-      "•",
-      "•",
-      "•"
-     ],
-     "status": "matched",
-     "pems_section_ordinal": 3,
-     "pems_page": 83,
-     "pems_ordinal": 3,
-     "pems_section": "",
-     "pems_text": "If shock or potential for shock is present, keep the patient warm.",
-     "badges": [
-      "EMR"
-     ],
-     "similarity": 0.487,
-     "match_basis": "page-flat+text"
-    },
-    {
      "site_row": "7",
      "section": "",
      "action": "Obtain IV/IO access.",
@@ -20997,7 +21603,7 @@
        83,
        84
       ],
-      "free_candidates": 3,
+      "free_candidates": 4,
       "verdict": "no_evidence_local",
       "subtype": "best_evidence_is_held",
       "note": "this row's best text evidence is p.83 row 10 (coverage 0.50, badge A), which site row 8 already holds: the row is not a local addition, it is a second site row on an already-attributed PEMS row — a shared-row adjudication, not a level fix",
@@ -21164,6 +21770,23 @@
    "absent": [
     {
      "pems_page": 83,
+     "ordinal": 3,
+     "section": "",
+     "section_ordinal": 3,
+     "verbatim_text": "If shock or potential for shock is present, keep the patient warm.",
+     "badges": [
+      "EMR"
+     ],
+     "columns": {
+      "EMR": "•",
+      "EMT": "•",
+      "A": "•",
+      "I": "•",
+      "P": "•"
+     }
+    },
+    {
+     "pems_page": 83,
      "ordinal": 4,
      "section": "",
      "section_ordinal": 4,
@@ -21317,8 +21940,8 @@
      "badges": [
       "EMR"
      ],
-     "disposition": "matched",
-     "site_row": "6",
+     "disposition": "absent",
+     "site_row": null,
      "claimed_by_site_rows": [],
      "note": null
     },

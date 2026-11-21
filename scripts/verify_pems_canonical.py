@@ -10,8 +10,10 @@ by its own definition while 154 rows were wrong.
 """
 from __future__ import annotations
 
+import glob
 import json
 import os
+import re
 import subprocess
 import sys
 
@@ -33,6 +35,10 @@ MANIFEST = [
     ("stage1.pems_table",
      "PEMS table integrity: page decisions, row fields, badges, ordinals, "
      "page-break continuations"),
+    ("stage1.tree_walk",
+     "the table describes the tree as it is NOW: an independent walk of docs/ "
+     "finds exactly the pages the table decides, every decided path exists, and "
+     "every page's row counts re-derive from a fresh parse"),
     ("stage2.alignment",
      "alignment integrity: totals, ambiguity classifications, containment "
      "evidence, 0.40 floor, text-binding verdicts"),
@@ -433,7 +439,7 @@ def check_recheck(table: dict, pems_row: dict, align: dict) -> None:
     # provisional flags are derived from the table, not hand-set
     expect = set()
     import build_c2_scope as B  # noqa: E402
-    align_idx = {(p["site_page"], int(r["site_row"])): r
+    align_idx = {(p["site_page"], B.row_key(r["site_row"])): r
                  for p in align["pages"] for r in p["rows"]}
     for r in rows:
         if r.get("row") is None:
@@ -479,6 +485,94 @@ def row_badge_conflict(row: dict) -> bool:
     return flag
 
 
+def walk_level_tables() -> dict[str, list[int]]:
+    """Independent walk of docs/: page -> line numbers of level-table headers.
+
+    Deliberately does NOT use `pems_canonical.SITE_HDR_RE` or the legacy
+    `HDR_RE`. Those are the readers under test: a page whose grid header drifts
+    out of their shape (e.g. `R | B | A | I | P`) silently leaves the scan, and
+    the table that was frozen before the drift keeps passing every self-count.
+    This detector is structural — a `#` index column plus either a named level
+    column (Level / Basis / POLICY) or all five `R B A I P` columns — so it
+    agrees with the readers on a healthy tree but disagrees loudly when a
+    published grid stops matching them.
+    """
+    out: dict[str, list[int]] = {}
+    for f in sorted(glob.glob(os.path.join(C.DOCS, "protocols", "**", "*.md"), recursive=True)):
+        rel = os.path.relpath(f, C.DOCS).replace(os.sep, "/")
+        if rel in C.NOT_A_PROTOCOL_PAGE:
+            continue
+        lines = open(f, encoding="utf-8", errors="replace").read().splitlines()
+        for i, line in enumerate(lines):
+            s = line.strip()
+            if not s.startswith("|") or i + 1 >= len(lines):
+                continue
+            cells = [c.strip().strip("*").strip() for c in s.strip("|").split("|")]
+            if len(cells) < 3 or cells[0] != "#":
+                continue
+            if not re.match(r"^\|?[\s:|-]+\|?$", lines[i + 1].strip()):
+                continue
+            cols = {c.upper() for c in cells[1:]}
+            if cols & {"LEVEL", "BASIS", "POLICY", "EMR", "EMT"} or \
+                    {"R", "B", "A", "I", "P"} <= cols:
+                out.setdefault(rel, []).append(i + 1)
+    return out
+
+
+def check_tree_alignment(table: dict) -> None:
+    """A frozen-but-consistent table must not pass: re-derive from docs/."""
+    dec = table["page_decisions"]
+    decided = {d["site_page"]: d for d in dec}
+    fresh = {p["rel"]: p for p in C.site_pages()}
+    tree = walk_level_tables()
+
+    check(len(dec) == table["counts"].get("site_pages_with_level_table"),
+          f"counts.site_pages_with_level_table equals the decisions written "
+          f"({table['counts'].get('site_pages_with_level_table')} vs {len(dec)})")
+    check(len(fresh) == len(dec),
+          f"a fresh walk of docs/ finds the same number of level-table pages "
+          f"({len(fresh)} in the tree, {len(dec)} in the table)")
+    check(set(tree) == set(fresh),
+          "the structural header detector and the page readers agree on which "
+          "pages carry a level table"
+          + ("" if set(tree) == set(fresh) else
+             f" (detector only: {sorted(set(tree) - set(fresh))}; "
+             f"readers only: {sorted(set(fresh) - set(tree))})"))
+
+    undecided = sorted(set(tree) - set(decided))
+    check(not undecided,
+          f"every page under docs/ with a level table carries a decision "
+          f"({len(undecided)} missing)"
+          + ("" if not undecided else f": {', '.join(undecided)}"))
+    phantom = sorted(set(decided) - set(tree))
+    check(not phantom,
+          f"every decided page still carries a level table today "
+          f"({len(phantom)} stale)"
+          + ("" if not phantom else f": {', '.join(phantom)}"))
+
+    gone = [d["site_page"] for d in dec
+            if not os.path.isfile(os.path.join(C.DOCS, d["site_page"]))]
+    check(not gone,
+          "every decided path exists under docs/"
+          + ("" if not gone else f" (missing: {', '.join(gone)})"))
+
+    exc, _repairs = C._load_exceptions()
+    docs = table["pems_docs"]
+    drifted = []
+    for rel in sorted(set(fresh) & set(decided)):
+        want = C.decide(fresh[rel], exc, docs)
+        have = decided[rel]
+        for fld in ("decision", "rows", "numbered_rows",
+                    "filled_level_cells", "blank_level_cells"):
+            if want.get(fld) != have.get(fld):
+                drifted.append((rel, fld, have.get(fld), want.get(fld)))
+    check(not drifted,
+          f"every row count and decision re-derives from the page as published "
+          f"({len(drifted)} drift(s))")
+    for item in drifted[:20]:
+        print(f"        drift: {item[0]} {item[1]}: table {item[2]} != tree {item[3]}")
+
+
 def main() -> int:
     print(f"verifier manifest — {len(MANIFEST)} checks")
     for cid, desc in MANIFEST:
@@ -490,8 +584,10 @@ def main() -> int:
 
     print("stage 1 — canonical PEMS table")
     dec = table["page_decisions"]
-    check(len(dec) == 57, f"57 site pages carry a decision (found {len(dec)})")
-    check(len({d["site_page"] for d in dec}) == 57, "every decision is a distinct page")
+    check(len(dec) == table["counts"].get("site_pages_with_level_table"),
+          f"every counted site page carries a decision "
+          f"({len(dec)} decisions, count says {table['counts'].get('site_pages_with_level_table')})")
+    check(len({d["site_page"] for d in dec}) == len(dec), "every decision is a distinct page")
     check(all(d.get("decision") in ("level_gated", "administrative", "skipped") for d in dec),
           "every decision is level_gated / administrative / skipped")
     check(all(d.get("reason") or d.get("ruling") or d.get("source_declared") for d in dec),
@@ -503,6 +599,10 @@ def main() -> int:
           "all administrative pages report whether the page still carries a level grid")
     check(all(d.get("decision") != "skipped" or d.get("reason") for d in dec),
           "no skipped page without a stated reason")
+
+    section("stage1.tree_walk")
+    print("stage 1 — the table against the tree as it is now")
+    check_tree_alignment(table)
 
     rows = [r for d in table["pems_docs"] for r in d["rows"]]
     need = {"page", "section_heading", "ordinal", "section_ordinal", "verbatim_text",
